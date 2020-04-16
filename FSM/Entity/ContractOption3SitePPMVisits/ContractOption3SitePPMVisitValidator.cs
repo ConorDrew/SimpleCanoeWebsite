@@ -9,18 +9,18 @@ using System.Collections;
 
 namespace FSM.Entity.ContractOption3SitePPMVisits
 {
-  public class ContractOption3SitePPMVisitValidator : BaseValidator
-  {
-    public void Validate(
-      ContractOption3SitePPMVisit oContractOption3SitePPMVisit)
+    public class ContractOption3SitePPMVisitValidator : BaseValidator
     {
-      if (oContractOption3SitePPMVisit.Errors.Count > 0)
-      {
-        foreach (object error in oContractOption3SitePPMVisit.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(
+          ContractOption3SitePPMVisit oContractOption3SitePPMVisit)
+        {
+            if (oContractOption3SitePPMVisit.Errors.Count > 0)
+            {
+                foreach (object error in oContractOption3SitePPMVisit.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

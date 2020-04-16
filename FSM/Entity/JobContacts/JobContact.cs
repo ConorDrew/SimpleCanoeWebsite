@@ -10,109 +10,109 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.JobContacts
 {
-  public class JobContact
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private int _jobContactID;
-    private int _jobID;
-    private string _contactType;
-    private DateTime _dateActioned;
-
-    public JobContact()
+    public class JobContact
     {
-      this._jobContactID = 0;
-      this._jobID = 0;
-      this._contactType = "";
-      this._dateActioned = DateTime.MinValue;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private int _jobContactID;
+        private int _jobID;
+        private string _contactType;
+        private DateTime _dateActioned;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public JobContact()
+        {
+            this._jobContactID = 0;
+            this._jobID = 0;
+            this._contactType = "";
+            this._dateActioned = DateTime.MinValue;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public int jobContactID
-    {
-      get
-      {
-        return this._jobContactID;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public object SetjobContactID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_jobContactID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int jobContactID
+        {
+            get
+            {
+                return this._jobContactID;
+            }
+        }
 
-    public int JobID
-    {
-      get
-      {
-        return this._jobID;
-      }
-    }
+        public object SetjobContactID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_jobContactID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetJobID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_jobID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int JobID
+        {
+            get
+            {
+                return this._jobID;
+            }
+        }
 
-    public string contactType
-    {
-      get
-      {
-        return this._contactType;
-      }
-    }
+        public object SetJobID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_jobID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetcontactType
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_contactType", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string contactType
+        {
+            get
+            {
+                return this._contactType;
+            }
+        }
 
-    public DateTime dateActioned
-    {
-      get
-      {
-        return this._dateActioned;
-      }
-      set
-      {
-        this._dateActioned = value;
-      }
+        public object SetcontactType
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_contactType", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
+
+        public DateTime dateActioned
+        {
+            get
+            {
+                return this._dateActioned;
+            }
+            set
+            {
+                this._dateActioned = value;
+            }
+        }
     }
-  }
 }

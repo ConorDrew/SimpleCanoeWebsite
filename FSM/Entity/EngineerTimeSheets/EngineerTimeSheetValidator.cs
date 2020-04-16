@@ -11,23 +11,23 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerTimeSheets
 {
-  public class EngineerTimeSheetValidator : BaseValidator
-  {
-    public void Validate(EngineerTimeSheet oEngineerTimeSheet)
+    public class EngineerTimeSheetValidator : BaseValidator
     {
-      if (oEngineerTimeSheet.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerTimeSheet.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oEngineerTimeSheet.EngineerID == 0)
-        this.AddCriticalMessage("Engineer Missing");
-      if (oEngineerTimeSheet.TimeSheetTypeID == 0)
-        this.AddCriticalMessage("Type Missing");
-      if (DateTime.Compare(Conversions.ToDate(Strings.Format((object) oEngineerTimeSheet.StartDateTime, "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format((object) oEngineerTimeSheet.EndDateTime, "dd/MM/yyyy HH:mm"))) >= 0)
-        this.AddCriticalMessage("End Date/Time must be greater than Start Date/Time Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(EngineerTimeSheet oEngineerTimeSheet)
+        {
+            if (oEngineerTimeSheet.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerTimeSheet.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oEngineerTimeSheet.EngineerID == 0)
+                this.AddCriticalMessage("Engineer Missing");
+            if (oEngineerTimeSheet.TimeSheetTypeID == 0)
+                this.AddCriticalMessage("Type Missing");
+            if (DateTime.Compare(Conversions.ToDate(Strings.Format((object)oEngineerTimeSheet.StartDateTime, "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format((object)oEngineerTimeSheet.EndDateTime, "dd/MM/yyyy HH:mm"))) >= 0)
+                this.AddCriticalMessage("End Date/Time must be greater than Start Date/Time Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

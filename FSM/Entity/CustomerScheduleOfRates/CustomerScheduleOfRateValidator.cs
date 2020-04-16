@@ -9,25 +9,25 @@ using System.Collections;
 
 namespace FSM.Entity.CustomerScheduleOfRates
 {
-  public class CustomerScheduleOfRateValidator : BaseValidator
-  {
-    public void Validate(CustomerScheduleOfRate oCustomerScheduleOfRate)
+    public class CustomerScheduleOfRateValidator : BaseValidator
     {
-      if (oCustomerScheduleOfRate.Errors.Count > 0)
-      {
-        foreach (object error in oCustomerScheduleOfRate.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oCustomerScheduleOfRate.ScheduleOfRatesCategoryID == 0)
-        this.AddCriticalMessage("* Category is missing");
-      if (oCustomerScheduleOfRate.Description.Trim().Length == 0)
-        this.AddCriticalMessage("* Description is missing");
-      if (!Versioned.IsNumeric((object) oCustomerScheduleOfRate.Price))
-        this.AddCriticalMessage("* Price must be numeric");
-      if (!Versioned.IsNumeric((object) oCustomerScheduleOfRate.TimeInMins))
-        this.AddCriticalMessage("* Time must be numeric");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(CustomerScheduleOfRate oCustomerScheduleOfRate)
+        {
+            if (oCustomerScheduleOfRate.Errors.Count > 0)
+            {
+                foreach (object error in oCustomerScheduleOfRate.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oCustomerScheduleOfRate.ScheduleOfRatesCategoryID == 0)
+                this.AddCriticalMessage("* Category is missing");
+            if (oCustomerScheduleOfRate.Description.Trim().Length == 0)
+                this.AddCriticalMessage("* Description is missing");
+            if (!Versioned.IsNumeric((object)oCustomerScheduleOfRate.Price))
+                this.AddCriticalMessage("* Price must be numeric");
+            if (!Versioned.IsNumeric((object)oCustomerScheduleOfRate.TimeInMins))
+                this.AddCriticalMessage("* Time must be numeric");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

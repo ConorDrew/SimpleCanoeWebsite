@@ -9,19 +9,19 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerVisitDefectss
 {
-  public class EngineerVisitDefectsValidator : BaseValidator
-  {
-    public void Validate(EngineerVisitDefects oEngineerVisitDefects)
+    public class EngineerVisitDefectsValidator : BaseValidator
     {
-      if (oEngineerVisitDefects.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerVisitDefects.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oEngineerVisitDefects.CategoryID == 0)
-        this.AddCriticalMessage("Category Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(EngineerVisitDefects oEngineerVisitDefects)
+        {
+            if (oEngineerVisitDefects.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerVisitDefects.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oEngineerVisitDefects.CategoryID == 0)
+                this.AddCriticalMessage("Category Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

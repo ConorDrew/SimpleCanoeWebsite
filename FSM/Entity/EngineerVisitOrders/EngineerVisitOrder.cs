@@ -9,145 +9,145 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.EngineerVisitOrders
 {
-  public class EngineerVisitOrder
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _EngineerVisitOrderID;
-    private int _OrderID;
-    private int _EngineerVisitID;
-    private int _WarehouseID;
-
-    public EngineerVisitOrder()
+    public class EngineerVisitOrder
     {
-      this._exists = false;
-      this._deleted = false;
-      this._EngineerVisitOrderID = 0;
-      this._OrderID = 0;
-      this._EngineerVisitID = 0;
-      this._WarehouseID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _EngineerVisitOrderID;
+        private int _OrderID;
+        private int _EngineerVisitID;
+        private int _WarehouseID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public EngineerVisitOrder()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._EngineerVisitOrderID = 0;
+            this._OrderID = 0;
+            this._EngineerVisitID = 0;
+            this._WarehouseID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int EngineerVisitOrderID
-    {
-      get
-      {
-        return this._EngineerVisitOrderID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetEngineerVisitOrderID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitOrderID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerVisitOrderID
+        {
+            get
+            {
+                return this._EngineerVisitOrderID;
+            }
+        }
 
-    public int OrderID
-    {
-      get
-      {
-        return this._OrderID;
-      }
-    }
+        public object SetEngineerVisitOrderID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitOrderID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetOrderID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_OrderID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int OrderID
+        {
+            get
+            {
+                return this._OrderID;
+            }
+        }
 
-    public int EngineerVisitID
-    {
-      get
-      {
-        return this._EngineerVisitID;
-      }
-    }
+        public object SetOrderID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_OrderID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEngineerVisitID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerVisitID
+        {
+            get
+            {
+                return this._EngineerVisitID;
+            }
+        }
 
-    public int WarehouseID
-    {
-      get
-      {
-        return this._WarehouseID;
-      }
-    }
+        public object SetEngineerVisitID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetWarehouseID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_WarehouseID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int WarehouseID
+        {
+            get
+            {
+                return this._WarehouseID;
+            }
+        }
+
+        public object SetWarehouseID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_WarehouseID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

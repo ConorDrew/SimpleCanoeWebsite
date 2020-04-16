@@ -8,81 +8,81 @@ using System;
 
 namespace FSM.Entity.JobLock
 {
-  public class JobLock
-  {
-    private int _jobLockID;
-    private int _jobID;
-    private int _userID;
-    private DateTime _dateLock;
-    private string _nameOfUserWhoLocked;
-
-    public JobLock()
+    public class JobLock
     {
-      this._jobLockID = 0;
-      this._jobID = 0;
-      this._userID = 0;
-      this._dateLock = DateTime.MinValue;
-      this._nameOfUserWhoLocked = "";
-    }
+        private int _jobLockID;
+        private int _jobID;
+        private int _userID;
+        private DateTime _dateLock;
+        private string _nameOfUserWhoLocked;
 
-    public int JobLockID
-    {
-      get
-      {
-        return this._jobLockID;
-      }
-      set
-      {
-        this._jobLockID = value;
-      }
-    }
+        public JobLock()
+        {
+            this._jobLockID = 0;
+            this._jobID = 0;
+            this._userID = 0;
+            this._dateLock = DateTime.MinValue;
+            this._nameOfUserWhoLocked = "";
+        }
 
-    public int JobID
-    {
-      get
-      {
-        return this._jobID;
-      }
-      set
-      {
-        this._jobID = value;
-      }
-    }
+        public int JobLockID
+        {
+            get
+            {
+                return this._jobLockID;
+            }
+            set
+            {
+                this._jobLockID = value;
+            }
+        }
 
-    public int UserID
-    {
-      get
-      {
-        return this._userID;
-      }
-      set
-      {
-        this._userID = value;
-      }
-    }
+        public int JobID
+        {
+            get
+            {
+                return this._jobID;
+            }
+            set
+            {
+                this._jobID = value;
+            }
+        }
 
-    public DateTime DateLock
-    {
-      get
-      {
-        return this._dateLock;
-      }
-      set
-      {
-        this._dateLock = value;
-      }
-    }
+        public int UserID
+        {
+            get
+            {
+                return this._userID;
+            }
+            set
+            {
+                this._userID = value;
+            }
+        }
 
-    public string NameOfUserWhoLocked
-    {
-      get
-      {
-        return this._nameOfUserWhoLocked;
-      }
-      set
-      {
-        this._nameOfUserWhoLocked = value;
-      }
+        public DateTime DateLock
+        {
+            get
+            {
+                return this._dateLock;
+            }
+            set
+            {
+                this._dateLock = value;
+            }
+        }
+
+        public string NameOfUserWhoLocked
+        {
+            get
+            {
+                return this._nameOfUserWhoLocked;
+            }
+            set
+            {
+                this._nameOfUserWhoLocked = value;
+            }
+        }
     }
-  }
 }

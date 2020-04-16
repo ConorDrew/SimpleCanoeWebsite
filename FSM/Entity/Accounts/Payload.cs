@@ -8,13 +8,13 @@ using System.Collections.Generic;
 
 namespace FSM.Entity.Accounts
 {
-  public class Payload
-  {
-    public Payload()
+    public class Payload
     {
-      this.Ledger = new List<Line>();
-    }
+        public Payload()
+        {
+            this.Ledger = new List<Line>();
+        }
 
-    public List<Line> Ledger { get; set; }
-  }
+        public List<Line> Ledger { get; set; }
+    }
 }

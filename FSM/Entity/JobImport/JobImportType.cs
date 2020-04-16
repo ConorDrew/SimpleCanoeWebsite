@@ -9,181 +9,181 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.JobImport
 {
-  public class JobImportType
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _jobImportTypeId;
-    private string _name;
-    private int _jobTypeID;
-    private string _jobTypeName;
-    private int _engineerQualID;
-    private int _cycle;
-
-    public JobImportType()
+    public class JobImportType
     {
-      this._exists = false;
-      this._deleted = false;
-      this._jobImportTypeId = 0;
-      this._name = string.Empty;
-      this._jobTypeID = 0;
-      this._jobTypeName = string.Empty;
-      this._engineerQualID = 0;
-      this._cycle = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _jobImportTypeId;
+        private string _name;
+        private int _jobTypeID;
+        private string _jobTypeName;
+        private int _engineerQualID;
+        private int _cycle;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public JobImportType()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._jobImportTypeId = 0;
+            this._name = string.Empty;
+            this._jobTypeID = 0;
+            this._jobTypeName = string.Empty;
+            this._engineerQualID = 0;
+            this._cycle = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int JobImportTypeID
-    {
-      get
-      {
-        return this._jobImportTypeId;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetJobImportTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_jobImportTypeId", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int JobImportTypeID
+        {
+            get
+            {
+                return this._jobImportTypeId;
+            }
+        }
 
-    public string Name
-    {
-      get
-      {
-        return this._name;
-      }
-    }
+        public object SetJobImportTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_jobImportTypeId", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetName
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_name", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Name
+        {
+            get
+            {
+                return this._name;
+            }
+        }
 
-    public int JobTypeID
-    {
-      get
-      {
-        return this._jobTypeID;
-      }
-    }
+        public object SetName
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_name", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetJobTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_jobTypeID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int JobTypeID
+        {
+            get
+            {
+                return this._jobTypeID;
+            }
+        }
 
-    public string JobTypeName
-    {
-      get
-      {
-        return this._jobTypeName;
-      }
-    }
+        public object SetJobTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_jobTypeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetJobTypeName
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_jobTypeName", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string JobTypeName
+        {
+            get
+            {
+                return this._jobTypeName;
+            }
+        }
 
-    public int EngineerQualID
-    {
-      get
-      {
-        return this._engineerQualID;
-      }
-    }
+        public object SetJobTypeName
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_jobTypeName", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEngineerQualID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_engineerQualID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerQualID
+        {
+            get
+            {
+                return this._engineerQualID;
+            }
+        }
 
-    public int Cycle
-    {
-      get
-      {
-        return this._cycle;
-      }
-    }
+        public object SetEngineerQualID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_engineerQualID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCycle
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_cycle", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int Cycle
+        {
+            get
+            {
+                return this._cycle;
+            }
+        }
+
+        public object SetCycle
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_cycle", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

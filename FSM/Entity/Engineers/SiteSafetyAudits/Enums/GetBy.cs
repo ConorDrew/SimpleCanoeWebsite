@@ -6,10 +6,10 @@
 
 namespace FSM.Entity.Engineers.SiteSafetyAudits.Enums
 {
-  public enum GetBy
-  {
-    All,
-    Id,
-    EngineerId,
-  }
+    public enum GetBy
+    {
+        All,
+        Id,
+        EngineerId,
+    }
 }

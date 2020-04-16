@@ -9,109 +9,109 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ContractAlternativeSiteAssets
 {
-  public class ContractAlternativeSiteAsset
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private int _ContractSiteAssetID;
-    private int _ContractSiteJobItemID;
-    private int _AssetID;
-
-    public ContractAlternativeSiteAsset()
+    public class ContractAlternativeSiteAsset
     {
-      this._exists = false;
-      this._ContractSiteAssetID = 0;
-      this._ContractSiteJobItemID = 0;
-      this._AssetID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private int _ContractSiteAssetID;
+        private int _ContractSiteJobItemID;
+        private int _AssetID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public ContractAlternativeSiteAsset()
+        {
+            this._exists = false;
+            this._ContractSiteAssetID = 0;
+            this._ContractSiteJobItemID = 0;
+            this._AssetID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public int ContractSiteAssetID
-    {
-      get
-      {
-        return this._ContractSiteAssetID;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public object SetContractSiteAssetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractSiteAssetID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractSiteAssetID
+        {
+            get
+            {
+                return this._ContractSiteAssetID;
+            }
+        }
 
-    public int ContractSiteJobItemID
-    {
-      get
-      {
-        return this._ContractSiteJobItemID;
-      }
-    }
+        public object SetContractSiteAssetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractSiteAssetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetContractSiteJobItemID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractSiteJobItemID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractSiteJobItemID
+        {
+            get
+            {
+                return this._ContractSiteJobItemID;
+            }
+        }
 
-    public int AssetID
-    {
-      get
-      {
-        return this._AssetID;
-      }
-    }
+        public object SetContractSiteJobItemID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractSiteJobItemID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAssetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int AssetID
+        {
+            get
+            {
+                return this._AssetID;
+            }
+        }
+
+        public object SetAssetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

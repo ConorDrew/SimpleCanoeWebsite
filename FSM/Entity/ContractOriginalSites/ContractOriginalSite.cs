@@ -11,406 +11,406 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ContractOriginalSites
 {
-  public class ContractOriginalSite
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _ContractSiteID;
-    private int _ContractID;
-    private int _PropertyID;
-    private int _VisitFrequencyID;
-    private int _VisitDuration;
-    private DateTime _FirstVisitDate;
-    private bool _IncludeAssetPrice;
-    private double _AverageMileage;
-    private double _PricePerMile;
-    private bool _IncludeMileagePrice;
-    private double _PricePerVisit;
-    private double _TotalSitePrice;
-    private DataView _ContractSiteScheduleOfRates;
-    private bool _IncludeRates;
-    private bool _LLCertReqd;
-    private string _AdditionalNotes;
-    private bool _Commercial;
-    private int _MainAppliances;
-    private int _SecondryAppliances;
-
-    public ContractOriginalSite()
+    public class ContractOriginalSite
     {
-      this._exists = false;
-      this._deleted = false;
-      this._ContractSiteID = 0;
-      this._ContractID = 0;
-      this._PropertyID = 0;
-      this._VisitFrequencyID = 0;
-      this._VisitDuration = 0;
-      this._FirstVisitDate = DateTime.MinValue;
-      this._IncludeAssetPrice = false;
-      this._AverageMileage = 0.0;
-      this._PricePerMile = 0.0;
-      this._IncludeMileagePrice = false;
-      this._PricePerVisit = 0.0;
-      this._TotalSitePrice = 0.0;
-      this._IncludeRates = false;
-      this._LLCertReqd = false;
-      this._AdditionalNotes = string.Empty;
-      this._Commercial = false;
-      this._MainAppliances = 0;
-      this._SecondryAppliances = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _ContractSiteID;
+        private int _ContractID;
+        private int _PropertyID;
+        private int _VisitFrequencyID;
+        private int _VisitDuration;
+        private DateTime _FirstVisitDate;
+        private bool _IncludeAssetPrice;
+        private double _AverageMileage;
+        private double _PricePerMile;
+        private bool _IncludeMileagePrice;
+        private double _PricePerVisit;
+        private double _TotalSitePrice;
+        private DataView _ContractSiteScheduleOfRates;
+        private bool _IncludeRates;
+        private bool _LLCertReqd;
+        private string _AdditionalNotes;
+        private bool _Commercial;
+        private int _MainAppliances;
+        private int _SecondryAppliances;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public ContractOriginalSite()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._ContractSiteID = 0;
+            this._ContractID = 0;
+            this._PropertyID = 0;
+            this._VisitFrequencyID = 0;
+            this._VisitDuration = 0;
+            this._FirstVisitDate = DateTime.MinValue;
+            this._IncludeAssetPrice = false;
+            this._AverageMileage = 0.0;
+            this._PricePerMile = 0.0;
+            this._IncludeMileagePrice = false;
+            this._PricePerVisit = 0.0;
+            this._TotalSitePrice = 0.0;
+            this._IncludeRates = false;
+            this._LLCertReqd = false;
+            this._AdditionalNotes = string.Empty;
+            this._Commercial = false;
+            this._MainAppliances = 0;
+            this._SecondryAppliances = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int ContractSiteID
-    {
-      get
-      {
-        return this._ContractSiteID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetContractSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractSiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractSiteID
+        {
+            get
+            {
+                return this._ContractSiteID;
+            }
+        }
 
-    public int ContractID
-    {
-      get
-      {
-        return this._ContractID;
-      }
-    }
+        public object SetContractSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractSiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetContractID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractID
+        {
+            get
+            {
+                return this._ContractID;
+            }
+        }
 
-    public int PropertyID
-    {
-      get
-      {
-        return this._PropertyID;
-      }
-    }
+        public object SetContractID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPropertyID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PropertyID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int PropertyID
+        {
+            get
+            {
+                return this._PropertyID;
+            }
+        }
 
-    public int VisitFrequencyID
-    {
-      get
-      {
-        return this._VisitFrequencyID;
-      }
-    }
+        public object SetPropertyID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PropertyID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetVisitFrequencyID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VisitFrequencyID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VisitFrequencyID
+        {
+            get
+            {
+                return this._VisitFrequencyID;
+            }
+        }
 
-    public int VisitDuration
-    {
-      get
-      {
-        return this._VisitDuration;
-      }
-    }
+        public object SetVisitFrequencyID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VisitFrequencyID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetVisitDuration
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VisitDuration", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VisitDuration
+        {
+            get
+            {
+                return this._VisitDuration;
+            }
+        }
 
-    public DateTime FirstVisitDate
-    {
-      get
-      {
-        return this._FirstVisitDate;
-      }
-      set
-      {
-        this._FirstVisitDate = value;
-      }
-    }
+        public object SetVisitDuration
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VisitDuration", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public bool IncludeAssetPrice
-    {
-      get
-      {
-        return this._IncludeAssetPrice;
-      }
-    }
+        public DateTime FirstVisitDate
+        {
+            get
+            {
+                return this._FirstVisitDate;
+            }
+            set
+            {
+                this._FirstVisitDate = value;
+            }
+        }
 
-    public object SetIncludeAssetPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_IncludeAssetPrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool IncludeAssetPrice
+        {
+            get
+            {
+                return this._IncludeAssetPrice;
+            }
+        }
 
-    public double AverageMileage
-    {
-      get
-      {
-        return this._AverageMileage;
-      }
-    }
+        public object SetIncludeAssetPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_IncludeAssetPrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAverageMileage
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AverageMileage", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double AverageMileage
+        {
+            get
+            {
+                return this._AverageMileage;
+            }
+        }
 
-    public double PricePerMile
-    {
-      get
-      {
-        return this._PricePerMile;
-      }
-    }
+        public object SetAverageMileage
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AverageMileage", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPricePerMile
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PricePerMile", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double PricePerMile
+        {
+            get
+            {
+                return this._PricePerMile;
+            }
+        }
 
-    public bool IncludeMileagePrice
-    {
-      get
-      {
-        return this._IncludeMileagePrice;
-      }
-    }
+        public object SetPricePerMile
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PricePerMile", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetIncludeMileagePrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_IncludeMileagePrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool IncludeMileagePrice
+        {
+            get
+            {
+                return this._IncludeMileagePrice;
+            }
+        }
 
-    public double PricePerVisit
-    {
-      get
-      {
-        return this._PricePerVisit;
-      }
-    }
+        public object SetIncludeMileagePrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_IncludeMileagePrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPricePerVisit
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PricePerVisit", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double PricePerVisit
+        {
+            get
+            {
+                return this._PricePerVisit;
+            }
+        }
 
-    public double TotalSitePrice
-    {
-      get
-      {
-        return this._TotalSitePrice;
-      }
-    }
+        public object SetPricePerVisit
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PricePerVisit", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetTotalSitePrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_TotalSitePrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double TotalSitePrice
+        {
+            get
+            {
+                return this._TotalSitePrice;
+            }
+        }
 
-    public DataView ContractSiteScheduleOfRates
-    {
-      get
-      {
-        return this._ContractSiteScheduleOfRates;
-      }
-      set
-      {
-        this._ContractSiteScheduleOfRates = value;
-      }
-    }
+        public object SetTotalSitePrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_TotalSitePrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public bool IncludeRates
-    {
-      get
-      {
-        return this._IncludeRates;
-      }
-    }
+        public DataView ContractSiteScheduleOfRates
+        {
+            get
+            {
+                return this._ContractSiteScheduleOfRates;
+            }
+            set
+            {
+                this._ContractSiteScheduleOfRates = value;
+            }
+        }
 
-    public object SetIncludeRates
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_IncludeRates", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool IncludeRates
+        {
+            get
+            {
+                return this._IncludeRates;
+            }
+        }
 
-    public bool LLCertReqd
-    {
-      get
-      {
-        return this._LLCertReqd;
-      }
-    }
+        public object SetIncludeRates
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_IncludeRates", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetLLCertReqd
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_LLCertReqd", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool LLCertReqd
+        {
+            get
+            {
+                return this._LLCertReqd;
+            }
+        }
 
-    public string AdditionalNotes
-    {
-      get
-      {
-        return this._AdditionalNotes;
-      }
-    }
+        public object SetLLCertReqd
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_LLCertReqd", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAdditionalNotes
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AdditionalNotes", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string AdditionalNotes
+        {
+            get
+            {
+                return this._AdditionalNotes;
+            }
+        }
 
-    public bool Commercial
-    {
-      get
-      {
-        return this._Commercial;
-      }
-    }
+        public object SetAdditionalNotes
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AdditionalNotes", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCommercial
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Commercial", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool Commercial
+        {
+            get
+            {
+                return this._Commercial;
+            }
+        }
 
-    public int MainAppliances
-    {
-      get
-      {
-        return this._MainAppliances;
-      }
-    }
+        public object SetCommercial
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Commercial", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetMainAppliances
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_MainAppliances", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int MainAppliances
+        {
+            get
+            {
+                return this._MainAppliances;
+            }
+        }
 
-    public int SecondryAppliances
-    {
-      get
-      {
-        return this._SecondryAppliances;
-      }
-    }
+        public object SetMainAppliances
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_MainAppliances", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSecondryAppliances
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SecondryAppliances", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int SecondryAppliances
+        {
+            get
+            {
+                return this._SecondryAppliances;
+            }
+        }
+
+        public object SetSecondryAppliances
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SecondryAppliances", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

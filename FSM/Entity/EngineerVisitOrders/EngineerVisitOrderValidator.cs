@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerVisitOrders
 {
-  public class EngineerVisitOrderValidator : BaseValidator
-  {
-    public void Validate(EngineerVisitOrder oEngineerVistOrder)
+    public class EngineerVisitOrderValidator : BaseValidator
     {
-      if (oEngineerVistOrder.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerVistOrder.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(EngineerVisitOrder oEngineerVistOrder)
+        {
+            if (oEngineerVistOrder.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerVistOrder.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

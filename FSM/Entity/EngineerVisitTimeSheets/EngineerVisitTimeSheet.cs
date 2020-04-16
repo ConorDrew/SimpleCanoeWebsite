@@ -10,173 +10,173 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.EngineerVisitTimeSheets
 {
-  public class EngineerVisitTimeSheet
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _EngineerVisitTimeSheetID;
-    private int _EngineerVisitID;
-    private DateTime _StartDateTime;
-    private DateTime _EndDateTime;
-    private string _Comments;
-    private int _TimeSheetTypeID;
-
-    public EngineerVisitTimeSheet()
+    public class EngineerVisitTimeSheet
     {
-      this._exists = false;
-      this._deleted = false;
-      this._EngineerVisitTimeSheetID = 0;
-      this._EngineerVisitID = 0;
-      this._StartDateTime = DateTime.MinValue;
-      this._EndDateTime = DateTime.MinValue;
-      this._Comments = string.Empty;
-      this._TimeSheetTypeID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _EngineerVisitTimeSheetID;
+        private int _EngineerVisitID;
+        private DateTime _StartDateTime;
+        private DateTime _EndDateTime;
+        private string _Comments;
+        private int _TimeSheetTypeID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public EngineerVisitTimeSheet()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._EngineerVisitTimeSheetID = 0;
+            this._EngineerVisitID = 0;
+            this._StartDateTime = DateTime.MinValue;
+            this._EndDateTime = DateTime.MinValue;
+            this._Comments = string.Empty;
+            this._TimeSheetTypeID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int EngineerVisitTimeSheetID
-    {
-      get
-      {
-        return this._EngineerVisitTimeSheetID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetEngineerVisitTimeSheetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitTimeSheetID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerVisitTimeSheetID
+        {
+            get
+            {
+                return this._EngineerVisitTimeSheetID;
+            }
+        }
 
-    public int EngineerVisitID
-    {
-      get
-      {
-        return this._EngineerVisitID;
-      }
-    }
+        public object SetEngineerVisitTimeSheetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitTimeSheetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEngineerVisitID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerVisitID
+        {
+            get
+            {
+                return this._EngineerVisitID;
+            }
+        }
 
-    public DateTime StartDateTime
-    {
-      get
-      {
-        return this._StartDateTime;
-      }
-      set
-      {
-        this._StartDateTime = value;
-      }
-    }
+        public object SetEngineerVisitID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime EndDateTime
-    {
-      get
-      {
-        return this._EndDateTime;
-      }
-      set
-      {
-        this._EndDateTime = value;
-      }
-    }
+        public DateTime StartDateTime
+        {
+            get
+            {
+                return this._StartDateTime;
+            }
+            set
+            {
+                this._StartDateTime = value;
+            }
+        }
 
-    public string Comments
-    {
-      get
-      {
-        return this._Comments;
-      }
-    }
+        public DateTime EndDateTime
+        {
+            get
+            {
+                return this._EndDateTime;
+            }
+            set
+            {
+                this._EndDateTime = value;
+            }
+        }
 
-    public object SetComments
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Comments", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Comments
+        {
+            get
+            {
+                return this._Comments;
+            }
+        }
 
-    public int TimeSheetTypeID
-    {
-      get
-      {
-        return this._TimeSheetTypeID;
-      }
-    }
+        public object SetComments
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Comments", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetTimeSheetTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_TimeSheetTypeID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int TimeSheetTypeID
+        {
+            get
+            {
+                return this._TimeSheetTypeID;
+            }
+        }
+
+        public object SetTimeSheetTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_TimeSheetTypeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

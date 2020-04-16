@@ -10,229 +10,229 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanMaintenance
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _vanMaintenanceID;
-    private int _vanID;
-    private DateTime _lastService;
-    private DateTime _nextService;
-    private int _lastServiceMileage;
-    private DateTime _MOTExpiry;
-    private DateTime _taxExpiry;
-    private string _breakdown;
-    private DateTime _warrantyExpiry;
-    private DateTime _breakdownExpiry;
-
-    public FleetVanMaintenance()
+    public class FleetVanMaintenance
     {
-      this._exists = false;
-      this._deleted = false;
-      this._vanMaintenanceID = 0;
-      this._vanID = 0;
-      this._lastService = DateTime.MinValue;
-      this._nextService = DateTime.MinValue;
-      this._lastServiceMileage = 0;
-      this._MOTExpiry = DateTime.MinValue;
-      this._taxExpiry = DateTime.MinValue;
-      this._breakdown = string.Empty;
-      this._warrantyExpiry = DateTime.MinValue;
-      this._breakdownExpiry = DateTime.MinValue;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _vanMaintenanceID;
+        private int _vanID;
+        private DateTime _lastService;
+        private DateTime _nextService;
+        private int _lastServiceMileage;
+        private DateTime _MOTExpiry;
+        private DateTime _taxExpiry;
+        private string _breakdown;
+        private DateTime _warrantyExpiry;
+        private DateTime _breakdownExpiry;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public FleetVanMaintenance()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._vanMaintenanceID = 0;
+            this._vanID = 0;
+            this._lastService = DateTime.MinValue;
+            this._nextService = DateTime.MinValue;
+            this._lastServiceMileage = 0;
+            this._MOTExpiry = DateTime.MinValue;
+            this._taxExpiry = DateTime.MinValue;
+            this._breakdown = string.Empty;
+            this._warrantyExpiry = DateTime.MinValue;
+            this._breakdownExpiry = DateTime.MinValue;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int VanMaintenanceID
-    {
-      get
-      {
-        return this._vanMaintenanceID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetVanMaintenanceID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_vanMaintenanceID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VanMaintenanceID
+        {
+            get
+            {
+                return this._vanMaintenanceID;
+            }
+        }
 
-    public int VanID
-    {
-      get
-      {
-        return this._vanID;
-      }
-    }
+        public object SetVanMaintenanceID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_vanMaintenanceID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetVanID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_vanID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VanID
+        {
+            get
+            {
+                return this._vanID;
+            }
+        }
 
-    public DateTime LastService
-    {
-      get
-      {
-        return this._lastService;
-      }
-      set
-      {
-        this._lastService = value;
-      }
-    }
+        public object SetVanID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_vanID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime NextService
-    {
-      get
-      {
-        return this._nextService;
-      }
-      set
-      {
-        this._nextService = value;
-      }
-    }
+        public DateTime LastService
+        {
+            get
+            {
+                return this._lastService;
+            }
+            set
+            {
+                this._lastService = value;
+            }
+        }
 
-    public int LastServiceMileage
-    {
-      get
-      {
-        return this._lastServiceMileage;
-      }
-    }
+        public DateTime NextService
+        {
+            get
+            {
+                return this._nextService;
+            }
+            set
+            {
+                this._nextService = value;
+            }
+        }
 
-    public object SetLastServiceMileage
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_lastServiceMileage", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int LastServiceMileage
+        {
+            get
+            {
+                return this._lastServiceMileage;
+            }
+        }
 
-    public DateTime MOTExpiry
-    {
-      get
-      {
-        return this._MOTExpiry;
-      }
-      set
-      {
-        this._MOTExpiry = value;
-      }
-    }
+        public object SetLastServiceMileage
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_lastServiceMileage", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime RoadTaxExpiry
-    {
-      get
-      {
-        return this._taxExpiry;
-      }
-      set
-      {
-        this._taxExpiry = value;
-      }
-    }
+        public DateTime MOTExpiry
+        {
+            get
+            {
+                return this._MOTExpiry;
+            }
+            set
+            {
+                this._MOTExpiry = value;
+            }
+        }
 
-    public string Breakdown
-    {
-      get
-      {
-        return this._breakdown;
-      }
-    }
+        public DateTime RoadTaxExpiry
+        {
+            get
+            {
+                return this._taxExpiry;
+            }
+            set
+            {
+                this._taxExpiry = value;
+            }
+        }
 
-    public object SetBreakdown
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_breakdown", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Breakdown
+        {
+            get
+            {
+                return this._breakdown;
+            }
+        }
 
-    public DateTime WarrantyExpiry
-    {
-      get
-      {
-        return this._warrantyExpiry;
-      }
-      set
-      {
-        this._warrantyExpiry = value;
-      }
-    }
+        public object SetBreakdown
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_breakdown", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime BreakdownExpiry
-    {
-      get
-      {
-        return this._breakdownExpiry;
-      }
-      set
-      {
-        this._breakdownExpiry = value;
-      }
+        public DateTime WarrantyExpiry
+        {
+            get
+            {
+                return this._warrantyExpiry;
+            }
+            set
+            {
+                this._warrantyExpiry = value;
+            }
+        }
+
+        public DateTime BreakdownExpiry
+        {
+            get
+            {
+                return this._breakdownExpiry;
+            }
+            set
+            {
+                this._breakdownExpiry = value;
+            }
+        }
     }
-  }
 }

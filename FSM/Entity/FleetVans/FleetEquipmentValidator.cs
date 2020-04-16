@@ -9,22 +9,22 @@ using System.Collections;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetEquipmentValidator : BaseValidator
-  {
-    public void Validate(FleetEquipment oFleetEquipment)
+    public class FleetEquipmentValidator : BaseValidator
     {
-      if (oFleetEquipment.Errors.Count > 0)
-      {
-        foreach (object error in oFleetEquipment.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      FleetEquipment fleetEquipment = oFleetEquipment;
-      if (fleetEquipment.Name.Trim().Length == 0)
-        this.AddCriticalMessage("Name missing");
-      if (fleetEquipment.Cost == 0.0)
-        this.AddCriticalMessage("Cost missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(FleetEquipment oFleetEquipment)
+        {
+            if (oFleetEquipment.Errors.Count > 0)
+            {
+                foreach (object error in oFleetEquipment.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            FleetEquipment fleetEquipment = oFleetEquipment;
+            if (fleetEquipment.Name.Trim().Length == 0)
+                this.AddCriticalMessage("Name missing");
+            if (fleetEquipment.Cost == 0.0)
+                this.AddCriticalMessage("Cost missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

@@ -10,62 +10,62 @@ using System.Data;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanEquipmentSQL
-  {
-    private Database _database;
-
-    public FleetVanEquipmentSQL(Database database)
+    public class FleetVanEquipmentSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView Get(int vanEquipmentID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@VanEquipmentID", (object) vanEquipmentID, false);
-      DataTable table = this._database.ExecuteSP_DataTable("FleetVanEquipment_Get", true);
-      table.TableName = Enums.TableNames.tblFleetVanEquipment.ToString();
-      return new DataView(table);
-    }
+        public FleetVanEquipmentSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public DataView Get_ByVanID(int vanID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@VanID", (object) vanID, false);
-      DataTable table = this._database.ExecuteSP_DataTable("FleetVanEquipment_Get_ForVan", true);
-      table.TableName = Enums.TableNames.tblFleetVanEquipment.ToString();
-      return new DataView(table);
-    }
+        public DataView Get(int vanEquipmentID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@VanEquipmentID", (object)vanEquipmentID, false);
+            DataTable table = this._database.ExecuteSP_DataTable("FleetVanEquipment_Get", true);
+            table.TableName = Enums.TableNames.tblFleetVanEquipment.ToString();
+            return new DataView(table);
+        }
 
-    public int Insert(int vanID, int equipmentID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@VanID", (object) vanID, false);
-      this._database.AddParameter("@EquipmentID", (object) equipmentID, false);
-      return Conversions.ToInteger(this._database.ExecuteSP_OBJECT("FleetVanEquipment_Insert", true));
-    }
+        public DataView Get_ByVanID(int vanID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@VanID", (object)vanID, false);
+            DataTable table = this._database.ExecuteSP_DataTable("FleetVanEquipment_Get_ForVan", true);
+            table.TableName = Enums.TableNames.tblFleetVanEquipment.ToString();
+            return new DataView(table);
+        }
 
-    public int Check(int vanID, int equipmentID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@VanID", (object) vanID, false);
-      this._database.AddParameter("@EquipmentID", (object) equipmentID, false);
-      return Conversions.ToInteger(this._database.ExecuteSP_OBJECT("FleetVanEquipment_Check", true));
-    }
+        public int Insert(int vanID, int equipmentID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@VanID", (object)vanID, false);
+            this._database.AddParameter("@EquipmentID", (object)equipmentID, false);
+            return Conversions.ToInteger(this._database.ExecuteSP_OBJECT("FleetVanEquipment_Insert", true));
+        }
 
-    public void Update(int vanEquipmentID, int vanID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@VanEquipmentID", (object) vanEquipmentID, false);
-      this._database.AddParameter("@VanID", (object) vanID, false);
-      this._database.ExecuteSP_NO_Return("FleetVanEquipment_Update", true);
-    }
+        public int Check(int vanID, int equipmentID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@VanID", (object)vanID, false);
+            this._database.AddParameter("@EquipmentID", (object)equipmentID, false);
+            return Conversions.ToInteger(this._database.ExecuteSP_OBJECT("FleetVanEquipment_Check", true));
+        }
 
-    public void Delete(int vanEquipmentID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@VanEquipmentID", (object) vanEquipmentID, false);
-      this._database.ExecuteSP_NO_Return("FleetVanEquipment_Delete", true);
+        public void Update(int vanEquipmentID, int vanID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@VanEquipmentID", (object)vanEquipmentID, false);
+            this._database.AddParameter("@VanID", (object)vanID, false);
+            this._database.ExecuteSP_NO_Return("FleetVanEquipment_Update", true);
+        }
+
+        public void Delete(int vanEquipmentID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@VanEquipmentID", (object)vanEquipmentID, false);
+            this._database.ExecuteSP_NO_Return("FleetVanEquipment_Delete", true);
+        }
     }
-  }
 }

@@ -9,21 +9,21 @@ using System.Collections;
 
 namespace FSM.Entity.InvoiceAddresss
 {
-  public class InvoiceAddressValidator : BaseValidator
-  {
-    public void Validate(InvoiceAddress oInvoiceAddress)
+    public class InvoiceAddressValidator : BaseValidator
     {
-      if (oInvoiceAddress.Errors.Count > 0)
-      {
-        foreach (object error in oInvoiceAddress.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oInvoiceAddress.Address1.Trim().Length == 0)
-        this.AddCriticalMessage("Address1 Missing");
-      if (oInvoiceAddress.Postcode.Trim().Length == 0)
-        this.AddCriticalMessage("Postcode Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(InvoiceAddress oInvoiceAddress)
+        {
+            if (oInvoiceAddress.Errors.Count > 0)
+            {
+                foreach (object error in oInvoiceAddress.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oInvoiceAddress.Address1.Trim().Length == 0)
+                this.AddCriticalMessage("Address1 Missing");
+            if (oInvoiceAddress.Postcode.Trim().Length == 0)
+                this.AddCriticalMessage("Postcode Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.CustomerOrders
 {
-  public class CustomerOrderValidator : BaseValidator
-  {
-    public void Validate(CustomerOrder oCustomerOrder)
+    public class CustomerOrderValidator : BaseValidator
     {
-      if (oCustomerOrder.Errors.Count > 0)
-      {
-        foreach (object error in oCustomerOrder.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(CustomerOrder oCustomerOrder)
+        {
+            if (oCustomerOrder.Errors.Count > 0)
+            {
+                foreach (object error in oCustomerOrder.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

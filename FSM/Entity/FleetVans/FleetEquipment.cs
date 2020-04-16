@@ -9,145 +9,145 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetEquipment
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _equipmentID;
-    private string _name;
-    private string _description;
-    private double _cost;
-
-    public FleetEquipment()
+    public class FleetEquipment
     {
-      this._exists = false;
-      this._deleted = false;
-      this._equipmentID = 0;
-      this._name = string.Empty;
-      this._description = string.Empty;
-      this._cost = 0.0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _equipmentID;
+        private string _name;
+        private string _description;
+        private double _cost;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public FleetEquipment()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._equipmentID = 0;
+            this._name = string.Empty;
+            this._description = string.Empty;
+            this._cost = 0.0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int EquipmentID
-    {
-      get
-      {
-        return this._equipmentID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetEquipmentID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_equipmentID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EquipmentID
+        {
+            get
+            {
+                return this._equipmentID;
+            }
+        }
 
-    public string Name
-    {
-      get
-      {
-        return this._name;
-      }
-    }
+        public object SetEquipmentID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_equipmentID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetName
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_name", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Name
+        {
+            get
+            {
+                return this._name;
+            }
+        }
 
-    public string Description
-    {
-      get
-      {
-        return this._description;
-      }
-    }
+        public object SetName
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_name", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDescription
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_description", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Description
+        {
+            get
+            {
+                return this._description;
+            }
+        }
 
-    public double Cost
-    {
-      get
-      {
-        return this._cost;
-      }
-    }
+        public object SetDescription
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_description", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCost
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_cost", RuntimeHelpers.GetObjectValue(value));
-      }
+        public double Cost
+        {
+            get
+            {
+                return this._cost;
+            }
+        }
+
+        public object SetCost
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_cost", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

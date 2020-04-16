@@ -10,155 +10,155 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanEngineer
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _vanEngineerID;
-    private int _vanID;
-    private int _engineerID;
-    private DateTime _startDate;
-    private DateTime _endDate;
-
-    public FleetVanEngineer()
+    public class FleetVanEngineer
     {
-      this._exists = false;
-      this._deleted = false;
-      this._vanEngineerID = 0;
-      this._vanID = 0;
-      this._engineerID = 0;
-      this._startDate = DateTime.MinValue;
-      this._endDate = DateTime.MinValue;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _vanEngineerID;
+        private int _vanID;
+        private int _engineerID;
+        private DateTime _startDate;
+        private DateTime _endDate;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public FleetVanEngineer()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._vanEngineerID = 0;
+            this._vanID = 0;
+            this._engineerID = 0;
+            this._startDate = DateTime.MinValue;
+            this._endDate = DateTime.MinValue;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int VanEngineerID
-    {
-      get
-      {
-        return this._vanEngineerID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetVanEngineerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_vanEngineerID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VanEngineerID
+        {
+            get
+            {
+                return this._vanEngineerID;
+            }
+        }
 
-    public int VanID
-    {
-      get
-      {
-        return this._vanID;
-      }
-    }
+        public object SetVanEngineerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_vanEngineerID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetVanID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_vanID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VanID
+        {
+            get
+            {
+                return this._vanID;
+            }
+        }
 
-    public int EngineerID
-    {
-      get
-      {
-        return this._engineerID;
-      }
-    }
+        public object SetVanID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_vanID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEngineerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_engineerID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerID
+        {
+            get
+            {
+                return this._engineerID;
+            }
+        }
 
-    public DateTime StartDate
-    {
-      get
-      {
-        return this._startDate;
-      }
-      set
-      {
-        this._startDate = value;
-      }
-    }
+        public object SetEngineerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_engineerID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime EndDate
-    {
-      get
-      {
-        return this._endDate;
-      }
-      set
-      {
-        this._endDate = value;
-      }
+        public DateTime StartDate
+        {
+            get
+            {
+                return this._startDate;
+            }
+            set
+            {
+                this._startDate = value;
+            }
+        }
+
+        public DateTime EndDate
+        {
+            get
+            {
+                return this._endDate;
+            }
+            set
+            {
+                this._endDate = value;
+            }
+        }
     }
-  }
 }

@@ -9,235 +9,235 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.EngineerVisitDefectss
 {
-  public class EngineerVisitDefects
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _EngineerVisitDefectID;
-    private int _CategoryID;
-    private string _Reason;
-    private string _ActionTaken;
-    private bool _WarningNoticeIssued;
-    private bool _Disconnected;
-    private string _Comments;
-    private int _AssetID;
-    private int _EngineerVisitID;
-
-    public EngineerVisitDefects()
+    public class EngineerVisitDefects
     {
-      this._exists = false;
-      this._deleted = false;
-      this._EngineerVisitDefectID = 0;
-      this._CategoryID = 0;
-      this._Reason = string.Empty;
-      this._ActionTaken = string.Empty;
-      this._WarningNoticeIssued = false;
-      this._Disconnected = false;
-      this._Comments = string.Empty;
-      this._AssetID = 0;
-      this._EngineerVisitID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _EngineerVisitDefectID;
+        private int _CategoryID;
+        private string _Reason;
+        private string _ActionTaken;
+        private bool _WarningNoticeIssued;
+        private bool _Disconnected;
+        private string _Comments;
+        private int _AssetID;
+        private int _EngineerVisitID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public EngineerVisitDefects()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._EngineerVisitDefectID = 0;
+            this._CategoryID = 0;
+            this._Reason = string.Empty;
+            this._ActionTaken = string.Empty;
+            this._WarningNoticeIssued = false;
+            this._Disconnected = false;
+            this._Comments = string.Empty;
+            this._AssetID = 0;
+            this._EngineerVisitID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int EngineerVisitDefectID
-    {
-      get
-      {
-        return this._EngineerVisitDefectID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetEngineerVisitDefectID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitDefectID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerVisitDefectID
+        {
+            get
+            {
+                return this._EngineerVisitDefectID;
+            }
+        }
 
-    public int CategoryID
-    {
-      get
-      {
-        return this._CategoryID;
-      }
-    }
+        public object SetEngineerVisitDefectID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitDefectID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCategoryID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_CategoryID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int CategoryID
+        {
+            get
+            {
+                return this._CategoryID;
+            }
+        }
 
-    public string Reason
-    {
-      get
-      {
-        return this._Reason;
-      }
-    }
+        public object SetCategoryID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_CategoryID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetReason
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Reason", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Reason
+        {
+            get
+            {
+                return this._Reason;
+            }
+        }
 
-    public string ActionTaken
-    {
-      get
-      {
-        return this._ActionTaken;
-      }
-    }
+        public object SetReason
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Reason", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetActionTaken
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ActionTaken", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string ActionTaken
+        {
+            get
+            {
+                return this._ActionTaken;
+            }
+        }
 
-    public bool WarningNoticeIssued
-    {
-      get
-      {
-        return this._WarningNoticeIssued;
-      }
-    }
+        public object SetActionTaken
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ActionTaken", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetWarningNoticeIssued
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_WarningNoticeIssued", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool WarningNoticeIssued
+        {
+            get
+            {
+                return this._WarningNoticeIssued;
+            }
+        }
 
-    public bool Disconnected
-    {
-      get
-      {
-        return this._Disconnected;
-      }
-    }
+        public object SetWarningNoticeIssued
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_WarningNoticeIssued", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDisconnected
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Disconnected", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool Disconnected
+        {
+            get
+            {
+                return this._Disconnected;
+            }
+        }
 
-    public string Comments
-    {
-      get
-      {
-        return this._Comments;
-      }
-    }
+        public object SetDisconnected
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Disconnected", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetComments
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Comments", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Comments
+        {
+            get
+            {
+                return this._Comments;
+            }
+        }
 
-    public int AssetID
-    {
-      get
-      {
-        return this._AssetID;
-      }
-    }
+        public object SetComments
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Comments", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAssetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int AssetID
+        {
+            get
+            {
+                return this._AssetID;
+            }
+        }
 
-    public int EngineerVisitID
-    {
-      get
-      {
-        return this._EngineerVisitID;
-      }
-    }
+        public object SetAssetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEngineerVisitID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int EngineerVisitID
+        {
+            get
+            {
+                return this._EngineerVisitID;
+            }
+        }
+
+        public object SetEngineerVisitID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

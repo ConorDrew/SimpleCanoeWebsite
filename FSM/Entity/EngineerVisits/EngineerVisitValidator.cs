@@ -9,33 +9,33 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerVisits
 {
-  public class EngineerVisitValidator : BaseValidator
-  {
-    public void Validate(EngineerVisit oEngineerVisit, int CustomerID)
+    public class EngineerVisitValidator : BaseValidator
     {
-      if (oEngineerVisit.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerVisit.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      switch (oEngineerVisit.OutcomeEnumID)
-      {
-        case 0:
-          this.AddCriticalMessage("Outcome Missing");
-          goto case 1;
-        case 1:
-          if (this.ValidatorMessages.CriticalMessages.Count <= 0)
-            break;
-          throw new ValidationException((BaseValidator) this);
-        default:
-          if (oEngineerVisit.OutcomeDetails.Trim().Length == 0)
-          {
-            this.AddCriticalMessage("Outcome Details Missing");
-            goto case 1;
-          }
-          else
-            goto case 1;
-      }
+        public void Validate(EngineerVisit oEngineerVisit, int CustomerID)
+        {
+            if (oEngineerVisit.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerVisit.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            switch (oEngineerVisit.OutcomeEnumID)
+            {
+                case 0:
+                    this.AddCriticalMessage("Outcome Missing");
+                    goto case 1;
+                case 1:
+                    if (this.ValidatorMessages.CriticalMessages.Count <= 0)
+                        break;
+                    throw new ValidationException((BaseValidator)this);
+                default:
+                    if (oEngineerVisit.OutcomeDetails.Trim().Length == 0)
+                    {
+                        this.AddCriticalMessage("Outcome Details Missing");
+                        goto case 1;
+                    }
+                    else
+                        goto case 1;
+            }
+        }
     }
-  }
 }

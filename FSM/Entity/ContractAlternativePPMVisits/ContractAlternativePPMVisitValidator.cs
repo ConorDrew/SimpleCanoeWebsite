@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.ContractAlternativePPMVisits
 {
-  public class ContractAlternativePPMVisitValidator : BaseValidator
-  {
-    public void Validate(ContractAlternativePPMVisit oContractPPMVisit)
+    public class ContractAlternativePPMVisitValidator : BaseValidator
     {
-      if (oContractPPMVisit.Errors.Count > 0)
-      {
-        foreach (object error in oContractPPMVisit.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(ContractAlternativePPMVisit oContractPPMVisit)
+        {
+            if (oContractPPMVisit.Errors.Count > 0)
+            {
+                foreach (object error in oContractPPMVisit.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

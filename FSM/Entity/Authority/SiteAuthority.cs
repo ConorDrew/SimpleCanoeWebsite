@@ -9,127 +9,127 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Authority
 {
-  public class SiteAuthority
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _siteAuthorityID;
-    private int _siteId;
-    private int _authorityID;
-
-    public SiteAuthority()
+    public class SiteAuthority
     {
-      this._exists = false;
-      this._deleted = false;
-      this._siteAuthorityID = 0;
-      this._siteId = 0;
-      this._authorityID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _siteAuthorityID;
+        private int _siteId;
+        private int _authorityID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public SiteAuthority()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._siteAuthorityID = 0;
+            this._siteId = 0;
+            this._authorityID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int SiteAuthorityID
-    {
-      get
-      {
-        return this._siteAuthorityID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetSiteAuthorityID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_siteAuthorityID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteAuthorityID
+        {
+            get
+            {
+                return this._siteAuthorityID;
+            }
+        }
 
-    public int SiteID
-    {
-      get
-      {
-        return this._siteId;
-      }
-    }
+        public object SetSiteAuthorityID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_siteAuthorityID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_siteId", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteID
+        {
+            get
+            {
+                return this._siteId;
+            }
+        }
 
-    public int AuthorityID
-    {
-      get
-      {
-        return this._authorityID;
-      }
-    }
+        public object SetSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_siteId", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAuthorityID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_authorityID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int AuthorityID
+        {
+            get
+            {
+                return this._authorityID;
+            }
+        }
+
+        public object SetAuthorityID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_authorityID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

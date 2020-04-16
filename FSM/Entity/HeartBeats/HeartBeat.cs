@@ -9,59 +9,59 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.HeartBeats
 {
-  public class HeartBeat
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private int _LockedVisitID;
-    private DateTime _LastHeartBeat;
-    private DateTime _LastCheck;
-
-    public HeartBeat()
+    public class HeartBeat
     {
-      this._LockedVisitID = 0;
-      this._LastHeartBeat = DateTime.MinValue;
-      this._LastCheck = DateTime.MinValue;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private int _LockedVisitID;
+        private DateTime _LastHeartBeat;
+        private DateTime _LastCheck;
 
-    public int LockedVisitID
-    {
-      get
-      {
-        return this._LockedVisitID;
-      }
-    }
+        public HeartBeat()
+        {
+            this._LockedVisitID = 0;
+            this._LastHeartBeat = DateTime.MinValue;
+            this._LastCheck = DateTime.MinValue;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public object SetLockedVisitID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_LockedVisitID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int LockedVisitID
+        {
+            get
+            {
+                return this._LockedVisitID;
+            }
+        }
 
-    public DateTime LastHeartBeat
-    {
-      get
-      {
-        return this._LastHeartBeat;
-      }
-      set
-      {
-        this._LastHeartBeat = value;
-      }
-    }
+        public object SetLockedVisitID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_LockedVisitID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime LastCheck
-    {
-      get
-      {
-        return this._LastCheck;
-      }
-      set
-      {
-        this._LastCheck = value;
-      }
+        public DateTime LastHeartBeat
+        {
+            get
+            {
+                return this._LastHeartBeat;
+            }
+            set
+            {
+                this._LastHeartBeat = value;
+            }
+        }
+
+        public DateTime LastCheck
+        {
+            get
+            {
+                return this._LastCheck;
+            }
+            set
+            {
+                this._LastCheck = value;
+            }
+        }
     }
-  }
 }

@@ -10,21 +10,21 @@ using System.Collections;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanEngineerValidator : BaseValidator
-  {
-    public void Validate(FleetVanEngineer oFleetVan)
+    public class FleetVanEngineerValidator : BaseValidator
     {
-      if (oFleetVan.Errors.Count > 0)
-      {
-        foreach (object error in oFleetVan.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oFleetVan.VanID == 0)
-        this.AddCriticalMessage("Van type missing");
-      if (DateTime.Compare(oFleetVan.StartDate, DateTime.MinValue) == 0)
-        this.AddCriticalMessage("Start date missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(FleetVanEngineer oFleetVan)
+        {
+            if (oFleetVan.Errors.Count > 0)
+            {
+                foreach (object error in oFleetVan.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oFleetVan.VanID == 0)
+                this.AddCriticalMessage("Van type missing");
+            if (DateTime.Compare(oFleetVan.StartDate, DateTime.MinValue) == 0)
+                this.AddCriticalMessage("Start date missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

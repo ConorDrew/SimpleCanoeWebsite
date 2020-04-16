@@ -9,22 +9,22 @@ using System.Collections;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanFaultValidator : BaseValidator
-  {
-    public void Validate(FleetVanFault oFleetVan)
+    public class FleetVanFaultValidator : BaseValidator
     {
-      if (oFleetVan.Errors.Count > 0)
-      {
-        foreach (object error in oFleetVan.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      FleetVanFault fleetVanFault = oFleetVan;
-      if (fleetVanFault.FaultTypeID == 0)
-        this.AddCriticalMessage("Fault type missing");
-      if (fleetVanFault.Notes.Trim().Length == 0)
-        this.AddCriticalMessage("Notes are missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(FleetVanFault oFleetVan)
+        {
+            if (oFleetVan.Errors.Count > 0)
+            {
+                foreach (object error in oFleetVan.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            FleetVanFault fleetVanFault = oFleetVan;
+            if (fleetVanFault.FaultTypeID == 0)
+                this.AddCriticalMessage("Fault type missing");
+            if (fleetVanFault.Notes.Trim().Length == 0)
+                this.AddCriticalMessage("Notes are missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

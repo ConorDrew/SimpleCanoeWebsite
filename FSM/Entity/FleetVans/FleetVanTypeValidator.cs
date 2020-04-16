@@ -9,25 +9,25 @@ using System.Collections;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanTypeValidator : BaseValidator
-  {
-    public void Validate(FleetVanType oFleetVanType)
+    public class FleetVanTypeValidator : BaseValidator
     {
-      if (oFleetVanType.Errors.Count > 0)
-      {
-        foreach (object error in oFleetVanType.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oFleetVanType.Make.Trim().Length == 0)
-        this.AddCriticalMessage("Make Missing");
-      if (oFleetVanType.Model.Trim().Length == 0)
-        this.AddCriticalMessage("Model Missing");
-      if (oFleetVanType.MileageServiceInterval < 0)
-        this.AddCriticalMessage("The mileage service intervals cannot be less than 0");
-      if (oFleetVanType.DateServiceInterval < 0)
-        this.AddCriticalMessage("The date service intervals cannot be less than 0");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(FleetVanType oFleetVanType)
+        {
+            if (oFleetVanType.Errors.Count > 0)
+            {
+                foreach (object error in oFleetVanType.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oFleetVanType.Make.Trim().Length == 0)
+                this.AddCriticalMessage("Make Missing");
+            if (oFleetVanType.Model.Trim().Length == 0)
+                this.AddCriticalMessage("Model Missing");
+            if (oFleetVanType.MileageServiceInterval < 0)
+                this.AddCriticalMessage("The mileage service intervals cannot be less than 0");
+            if (oFleetVanType.DateServiceInterval < 0)
+                this.AddCriticalMessage("The date service intervals cannot be less than 0");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
