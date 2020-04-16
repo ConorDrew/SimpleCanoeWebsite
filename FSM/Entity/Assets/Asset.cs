@@ -10,413 +10,413 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Assets
 {
-  public class Asset
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _AssetID;
-    private int _PropertyID;
-    private int _ProductID;
-    private string _SerialNum;
-    private DateTime _DateFitted;
-    private string _Location;
-    private DateTime _CertificateLastIssued;
-    private DateTime _LastServicedDate;
-    private string _BoughtFrom;
-    private string _SuppliedBy;
-    private string _Notes;
-    private string _GCNumber;
-    private string _YearOfManufacture;
-    private double _ApproximateValue;
-    private DateTime _WarrantyStartDate;
-    private DateTime _WarrantyEndDate;
-    private int _GasTypeID;
-    private int _FlueTypeID;
-    private bool _Active;
-    private bool _TenantsAppliance;
-
-    public Asset()
+    public class Asset
     {
-      this._exists = false;
-      this._deleted = false;
-      this._AssetID = 0;
-      this._PropertyID = 0;
-      this._ProductID = 0;
-      this._SerialNum = string.Empty;
-      this._DateFitted = DateTime.MinValue;
-      this._Location = string.Empty;
-      this._CertificateLastIssued = DateTime.MinValue;
-      this._LastServicedDate = DateTime.MinValue;
-      this._BoughtFrom = string.Empty;
-      this._SuppliedBy = string.Empty;
-      this._Notes = string.Empty;
-      this._GCNumber = string.Empty;
-      this._YearOfManufacture = string.Empty;
-      this._ApproximateValue = 0.0;
-      this._WarrantyStartDate = DateTime.MinValue;
-      this._WarrantyEndDate = DateTime.MinValue;
-      this._GasTypeID = 0;
-      this._FlueTypeID = 0;
-      this._Active = false;
-      this._TenantsAppliance = false;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _AssetID;
+        private int _PropertyID;
+        private int _ProductID;
+        private string _SerialNum;
+        private DateTime _DateFitted;
+        private string _Location;
+        private DateTime _CertificateLastIssued;
+        private DateTime _LastServicedDate;
+        private string _BoughtFrom;
+        private string _SuppliedBy;
+        private string _Notes;
+        private string _GCNumber;
+        private string _YearOfManufacture;
+        private double _ApproximateValue;
+        private DateTime _WarrantyStartDate;
+        private DateTime _WarrantyEndDate;
+        private int _GasTypeID;
+        private int _FlueTypeID;
+        private bool _Active;
+        private bool _TenantsAppliance;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public Asset()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._AssetID = 0;
+            this._PropertyID = 0;
+            this._ProductID = 0;
+            this._SerialNum = string.Empty;
+            this._DateFitted = DateTime.MinValue;
+            this._Location = string.Empty;
+            this._CertificateLastIssued = DateTime.MinValue;
+            this._LastServicedDate = DateTime.MinValue;
+            this._BoughtFrom = string.Empty;
+            this._SuppliedBy = string.Empty;
+            this._Notes = string.Empty;
+            this._GCNumber = string.Empty;
+            this._YearOfManufacture = string.Empty;
+            this._ApproximateValue = 0.0;
+            this._WarrantyStartDate = DateTime.MinValue;
+            this._WarrantyEndDate = DateTime.MinValue;
+            this._GasTypeID = 0;
+            this._FlueTypeID = 0;
+            this._Active = false;
+            this._TenantsAppliance = false;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int AssetID
-    {
-      get
-      {
-        return this._AssetID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetAssetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int AssetID
+        {
+            get
+            {
+                return this._AssetID;
+            }
+        }
 
-    public int PropertyID
-    {
-      get
-      {
-        return this._PropertyID;
-      }
-    }
+        public object SetAssetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPropertyID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PropertyID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int PropertyID
+        {
+            get
+            {
+                return this._PropertyID;
+            }
+        }
 
-    public int ProductID
-    {
-      get
-      {
-        return this._ProductID;
-      }
-    }
+        public object SetPropertyID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PropertyID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetProductID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ProductID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ProductID
+        {
+            get
+            {
+                return this._ProductID;
+            }
+        }
 
-    public string SerialNum
-    {
-      get
-      {
-        return this._SerialNum;
-      }
-    }
+        public object SetProductID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ProductID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSerialNum
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SerialNum", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string SerialNum
+        {
+            get
+            {
+                return this._SerialNum;
+            }
+        }
 
-    public DateTime DateFitted
-    {
-      get
-      {
-        return this._DateFitted;
-      }
-      set
-      {
-        this._DateFitted = value;
-      }
-    }
+        public object SetSerialNum
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SerialNum", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public string Location
-    {
-      get
-      {
-        return this._Location;
-      }
-    }
+        public DateTime DateFitted
+        {
+            get
+            {
+                return this._DateFitted;
+            }
+            set
+            {
+                this._DateFitted = value;
+            }
+        }
 
-    public object SetLocation
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Location", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Location
+        {
+            get
+            {
+                return this._Location;
+            }
+        }
 
-    public DateTime CertificateLastIssued
-    {
-      get
-      {
-        return this._CertificateLastIssued;
-      }
-      set
-      {
-        this._CertificateLastIssued = value;
-      }
-    }
+        public object SetLocation
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Location", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime LastServicedDate
-    {
-      get
-      {
-        return this._LastServicedDate;
-      }
-      set
-      {
-        this._LastServicedDate = value;
-      }
-    }
+        public DateTime CertificateLastIssued
+        {
+            get
+            {
+                return this._CertificateLastIssued;
+            }
+            set
+            {
+                this._CertificateLastIssued = value;
+            }
+        }
 
-    public string BoughtFrom
-    {
-      get
-      {
-        return this._BoughtFrom;
-      }
-    }
+        public DateTime LastServicedDate
+        {
+            get
+            {
+                return this._LastServicedDate;
+            }
+            set
+            {
+                this._LastServicedDate = value;
+            }
+        }
 
-    public object SetBoughtFrom
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_BoughtFrom", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string BoughtFrom
+        {
+            get
+            {
+                return this._BoughtFrom;
+            }
+        }
 
-    public string SuppliedBy
-    {
-      get
-      {
-        return this._SuppliedBy;
-      }
-    }
+        public object SetBoughtFrom
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_BoughtFrom", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSuppliedBy
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SuppliedBy", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string SuppliedBy
+        {
+            get
+            {
+                return this._SuppliedBy;
+            }
+        }
 
-    public string Notes
-    {
-      get
-      {
-        return this._Notes;
-      }
-    }
+        public object SetSuppliedBy
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SuppliedBy", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetNotes
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Notes", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Notes
+        {
+            get
+            {
+                return this._Notes;
+            }
+        }
 
-    public string GCNumber
-    {
-      get
-      {
-        return this._GCNumber;
-      }
-    }
+        public object SetNotes
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Notes", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetGCNumber
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_GCNumber", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string GCNumber
+        {
+            get
+            {
+                return this._GCNumber;
+            }
+        }
 
-    public string YearOfManufacture
-    {
-      get
-      {
-        return this._YearOfManufacture;
-      }
-    }
+        public object SetGCNumber
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_GCNumber", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetYearOfManufacture
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_YearOfManufacture", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string YearOfManufacture
+        {
+            get
+            {
+                return this._YearOfManufacture;
+            }
+        }
 
-    public double ApproximateValue
-    {
-      get
-      {
-        return this._ApproximateValue;
-      }
-    }
+        public object SetYearOfManufacture
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_YearOfManufacture", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetApproximateValue
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ApproximateValue", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double ApproximateValue
+        {
+            get
+            {
+                return this._ApproximateValue;
+            }
+        }
 
-    public DateTime WarrantyStartDate
-    {
-      get
-      {
-        return this._WarrantyStartDate;
-      }
-      set
-      {
-        this._WarrantyStartDate = value;
-      }
-    }
+        public object SetApproximateValue
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ApproximateValue", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime WarrantyEndDate
-    {
-      get
-      {
-        return this._WarrantyEndDate;
-      }
-      set
-      {
-        this._WarrantyEndDate = value;
-      }
-    }
+        public DateTime WarrantyStartDate
+        {
+            get
+            {
+                return this._WarrantyStartDate;
+            }
+            set
+            {
+                this._WarrantyStartDate = value;
+            }
+        }
 
-    public int GasTypeID
-    {
-      get
-      {
-        return this._GasTypeID;
-      }
-    }
+        public DateTime WarrantyEndDate
+        {
+            get
+            {
+                return this._WarrantyEndDate;
+            }
+            set
+            {
+                this._WarrantyEndDate = value;
+            }
+        }
 
-    public object SetGasTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_GasTypeID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int GasTypeID
+        {
+            get
+            {
+                return this._GasTypeID;
+            }
+        }
 
-    public int FlueTypeID
-    {
-      get
-      {
-        return this._FlueTypeID;
-      }
-    }
+        public object SetGasTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_GasTypeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetFlueTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_FlueTypeID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int FlueTypeID
+        {
+            get
+            {
+                return this._FlueTypeID;
+            }
+        }
 
-    public bool Active
-    {
-      get
-      {
-        return this._Active;
-      }
-    }
+        public object SetFlueTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_FlueTypeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetActive
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Active", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool Active
+        {
+            get
+            {
+                return this._Active;
+            }
+        }
 
-    public bool TenantsAppliance
-    {
-      get
-      {
-        return this._TenantsAppliance;
-      }
-    }
+        public object SetActive
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Active", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetTenantsAppliance
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_TenantsAppliance", RuntimeHelpers.GetObjectValue(value));
-      }
+        public bool TenantsAppliance
+        {
+            get
+            {
+                return this._TenantsAppliance;
+            }
+        }
+
+        public object SetTenantsAppliance
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_TenantsAppliance", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }
