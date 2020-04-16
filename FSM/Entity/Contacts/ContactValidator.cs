@@ -10,41 +10,41 @@ using System.Collections;
 
 namespace FSM.Entity.Contacts
 {
-  public class ContactValidator : BaseValidator
-  {
-    public void Validate(Contact oContact)
+    public class ContactValidator : BaseValidator
     {
-      if (oContact.Errors.Count > 0)
-      {
-        foreach (object error in oContact.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oContact.Salutation.Trim().Length == 0)
-        this.AddCriticalMessage("Title Missing");
-      if (oContact.FirstName.Trim().Length == 0)
-        this.AddCriticalMessage("First Name Missing");
-      if (oContact.Surname.Trim().Length == 0)
-        this.AddCriticalMessage("Last Name Missing");
-      if (oContact.MobileNo.Trim().Length == 0)
-        this.AddCriticalMessage("Mobile Number Missing");
-      if (oContact.EmailAddress.Trim().Length == 0)
-        this.AddCriticalMessage("Email Address Missing");
-      if (oContact.RelationshipID == 0)
-        this.AddCriticalMessage("Relationship To Tennet Missing");
-      if (!Helper.ValidatePhoneNumber(oContact.MobileNo))
-        this.AddCriticalMessage("Phone Number Not a Valid Format (07xxxxxxxxx)");
-      if (!Helper.IsEmailValid(oContact.EmailAddress))
-        this.AddCriticalMessage("Email Not a Valid Format (email@email.co.uk)");
-      if (oContact.Address1.Trim().Length == 0)
-        this.AddCriticalMessage("Address 1 Missing");
-      if (oContact.Address2.Trim().Length == 0)
-        this.AddCriticalMessage("Address 2 Missing");
-      if (oContact.Address3.Trim().Length == 0)
-        this.AddCriticalMessage("Address 3 Missing");
-      if (oContact.Postcode.Trim().Length == 0)
-        this.AddCriticalMessage("Postcode Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(Contact oContact)
+        {
+            if (oContact.Errors.Count > 0)
+            {
+                foreach (object error in oContact.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oContact.Salutation.Trim().Length == 0)
+                this.AddCriticalMessage("Title Missing");
+            if (oContact.FirstName.Trim().Length == 0)
+                this.AddCriticalMessage("First Name Missing");
+            if (oContact.Surname.Trim().Length == 0)
+                this.AddCriticalMessage("Last Name Missing");
+            if (oContact.MobileNo.Trim().Length == 0)
+                this.AddCriticalMessage("Mobile Number Missing");
+            if (oContact.EmailAddress.Trim().Length == 0)
+                this.AddCriticalMessage("Email Address Missing");
+            if (oContact.RelationshipID == 0)
+                this.AddCriticalMessage("Relationship To Tennet Missing");
+            if (!Helper.ValidatePhoneNumber(oContact.MobileNo))
+                this.AddCriticalMessage("Phone Number Not a Valid Format (07xxxxxxxxx)");
+            if (!Helper.IsEmailValid(oContact.EmailAddress))
+                this.AddCriticalMessage("Email Not a Valid Format (email@email.co.uk)");
+            if (oContact.Address1.Trim().Length == 0)
+                this.AddCriticalMessage("Address 1 Missing");
+            if (oContact.Address2.Trim().Length == 0)
+                this.AddCriticalMessage("Address 2 Missing");
+            if (oContact.Address3.Trim().Length == 0)
+                this.AddCriticalMessage("Address 3 Missing");
+            if (oContact.Postcode.Trim().Length == 0)
+                this.AddCriticalMessage("Postcode Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
