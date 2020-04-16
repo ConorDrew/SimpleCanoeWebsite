@@ -16,142 +16,123 @@ using System.Windows.Forms;
 
 namespace FSM
 {
-  public class UCBase : UserControl
-  {
-    private IContainer components;
-    private ArrayList _FormButtons;
-
-    public UCBase()
+    public class UCBase : UserControl
     {
-      this._FormButtons = (ArrayList) null;
-      this.InitializeComponent();
-    }
+        private IContainer components;
+        private ArrayList _FormButtons;
 
-    protected override void Dispose(bool disposing)
-    {
-      if (disposing && this.components != null)
-        this.components.Dispose();
-      base.Dispose(disposing);
-    }
-
-    [DebuggerStepThrough]
-    private void InitializeComponent()
-    {
-      this.AutoScroll = true;
-      this.BackColor = Color.White;
-      this.Font = new Font("Verdana", 8.25f, FontStyle.Regular, GraphicsUnit.Point, (byte) 0);
-      this.Name = "CTRLBase";
-    }
-
-    public ArrayList FormButtons
-    {
-      get
-      {
-        return this._FormButtons;
-      }
-      set
-      {
-        this._FormButtons = value;
-      }
-    }
-
-    public void LoadBaseControl(Control ctrl)
-    {
-      this.Dock = DockStyle.Fill;
-      this._FormButtons = new ArrayList();
-      this.LoopControls(ctrl);
-      this.SetupButtonMouseOvers();
-    }
-
-    private void LoopControls(Control controlToLoop)
-    {
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = controlToLoop.Controls.GetEnumerator();
-        while (enumerator.MoveNext())
+        public UCBase()
         {
-          Control current = (Control) enumerator.Current;
-          if (Operators.CompareString(current.GetType().Name, "TabControl", false) == 0)
-            this.LoopControls(current);
-          else if (Operators.CompareString(current.GetType().Name, "TabPage", false) == 0)
-          {
-            ((TabPage) current).BackColor = Color.White;
-            this.LoopControls(current);
-          }
-          else if (Operators.CompareString(current.GetType().Name, "GroupBox", false) == 0)
-          {
-            ((GroupBox) current).FlatStyle = FlatStyle.System;
-            this.LoopControls(current);
-          }
-          else if (Operators.CompareString(current.GetType().Name, "Panel", false) == 0)
-            this.LoopControls(current);
-          else if (Operators.CompareString(current.GetType().Name, "Button", false) == 0)
-          {
-            ((ButtonBase) current).FlatStyle = FlatStyle.Standard;
-            current.Cursor = Cursors.Hand;
-            ((ButtonBase) current).UseVisualStyleBackColor = false;
-            ((ButtonBase) current).BackColor = SystemColors.Control;
-            current.AccessibleDescription = ((ButtonBase) current).Text;
-            this.FormButtons.Add((object) current);
-          }
-          else if (Operators.CompareString(current.GetType().Name, "ComboBox", false) == 0)
-          {
-            ((ComboBox) current).DropDownStyle = ComboBoxStyle.DropDownList;
-            current.Cursor = Cursors.Hand;
-          }
-          else if (Operators.CompareString(current.GetType().Name, "CheckBox", false) == 0)
-          {
-            ((ButtonBase) current).FlatStyle = FlatStyle.System;
-            current.Cursor = Cursors.Hand;
-          }
-          else if (Operators.CompareString(current.GetType().Name, "NumericUpDown", false) == 0)
-            current.Cursor = Cursors.Hand;
-          else if (Operators.CompareString(current.GetType().Name, "DataGrid", false) == 0)
-          {
-            Helper.SetUpDataGrid((DataGrid) current, false);
-            DataGridTableStyle tableStyle = ((DataGrid) current).TableStyles[0];
-            tableStyle.ReadOnly = true;
-            tableStyle.MappingName = Enums.TableNames.NO_TABLE.ToString();
-            ((DataGrid) current).TableStyles.Add(tableStyle);
-          }
-          else if (Operators.CompareString(current.GetType().Name, "UCButton", false) == 0)
-          {
-            current.AccessibleDescription = ((ButtonBase) current).Text;
-            this.FormButtons.Add((object) current);
-          }
-          else if (current.GetType().IsSubclassOf(typeof (UCBase)))
-            this.LoopControls(current);
+            this._FormButtons = (ArrayList)null;
+            this.InitializeComponent();
         }
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
-    }
 
-    public void SetupButtonMouseOvers()
-    {
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = this.FormButtons.GetEnumerator();
-        while (enumerator.MoveNext())
-          ((Control) RuntimeHelpers.GetObjectValue(enumerator.Current)).MouseHover += new EventHandler(this.CreateHover);
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
-    }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && this.components != null)
+                this.components.Dispose();
+            base.Dispose(disposing);
+        }
 
-    private void CreateHover(object sender, EventArgs e)
-    {
-      Button btn = (Button) sender;
-      Helper.Setup_Button(ref btn, ((Control) sender).AccessibleDescription);
-      sender = (object) btn;
+        [DebuggerStepThrough]
+        private void InitializeComponent()
+        {
+            this.AutoScroll = true;
+            this.BackColor = Color.White;
+            this.Font = new Font("Verdana", 8.25f, FontStyle.Regular, GraphicsUnit.Point, (byte)0);
+            this.Name = "CTRLBase";
+        }
+
+        public ArrayList FormButtons
+        {
+            get
+            {
+                return this._FormButtons;
+            }
+            set
+            {
+                this._FormButtons = value;
+            }
+        }
+
+        public void LoadBaseControl(Control ctrl)
+        {
+            this.Dock = DockStyle.Fill;
+            this._FormButtons = new ArrayList();
+            this.LoopControls(ctrl);
+            this.SetupButtonMouseOvers();
+        }
+
+        private void LoopControls(Control controlToLoop)
+        {
+            foreach (Control control in controlToLoop.Controls)
+            {
+                if (Operators.CompareString(control.GetType().Name, "TabControl", false) == 0)
+                    this.LoopControls(control);
+                else if (Operators.CompareString(control.GetType().Name, "TabPage", false) == 0)
+                {
+                    ((TabPage)control).BackColor = Color.White;
+                    this.LoopControls(control);
+                }
+                else if (Operators.CompareString(control.GetType().Name, "GroupBox", false) == 0)
+                {
+                    ((GroupBox)control).FlatStyle = FlatStyle.System;
+                    this.LoopControls(control);
+                }
+                else if (Operators.CompareString(control.GetType().Name, "Panel", false) == 0)
+                    this.LoopControls(control);
+                else if (Operators.CompareString(control.GetType().Name, "Button", false) == 0)
+                {
+                    ((ButtonBase)control).FlatStyle = FlatStyle.Standard;
+                    control.Cursor = Cursors.Hand;
+                    ((ButtonBase)control).UseVisualStyleBackColor = false;
+                    ((ButtonBase)control).BackColor = SystemColors.Control;
+                    control.AccessibleDescription = ((ButtonBase)control).Text;
+                    this.FormButtons.Add((object)control);
+                }
+                else if (Operators.CompareString(control.GetType().Name, "ComboBox", false) == 0)
+                {
+                    ((ComboBox)control).DropDownStyle = ComboBoxStyle.DropDownList;
+                    control.Cursor = Cursors.Hand;
+                }
+                else if (Operators.CompareString(control.GetType().Name, "CheckBox", false) == 0)
+                {
+                    ((ButtonBase)control).FlatStyle = FlatStyle.System;
+                    control.Cursor = Cursors.Hand;
+                }
+                else if (Operators.CompareString(control.GetType().Name, "NumericUpDown", false) == 0)
+                    control.Cursor = Cursors.Hand;
+                else if (Operators.CompareString(control.GetType().Name, "DataGrid", false) == 0)
+                {
+                    Helper.SetUpDataGrid((DataGrid)control, false);
+                    DataGridTableStyle tableStyle = ((DataGrid)control).TableStyles[0];
+                    tableStyle.ReadOnly = true;
+                    tableStyle.MappingName = Enums.TableNames.NO_TABLE.ToString();
+                    ((DataGrid)control).TableStyles.Add(tableStyle);
+                }
+                else if (Operators.CompareString(control.GetType().Name, "UCButton", false) == 0)
+                {
+                    control.AccessibleDescription = ((ButtonBase)control).Text;
+                    this.FormButtons.Add((object)control);
+                }
+                else if (control.GetType().IsSubclassOf(typeof(UCBase)))
+                    this.LoopControls(control);
+            }
+        }
+
+        public void SetupButtonMouseOvers()
+        {
+            foreach (object btn in FormButtons)
+            {
+                ((Control)RuntimeHelpers.GetObjectValue(btn)).MouseHover += new EventHandler(this.CreateHover);
+            }
+        }
+
+        private void CreateHover(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Helper.Setup_Button(ref btn, ((Control)sender).AccessibleDescription);
+            sender = (object)btn;
+        }
     }
-  }
 }
