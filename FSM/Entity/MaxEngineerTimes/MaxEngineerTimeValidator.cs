@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.MaxEngineerTimes
 {
-  public class MaxEngineerTimeValidator : BaseValidator
-  {
-    public void Validate(MaxEngineerTime oMaxEngineerTime)
+    public class MaxEngineerTimeValidator : BaseValidator
     {
-      if (oMaxEngineerTime.Errors.Count > 0)
-      {
-        foreach (object error in oMaxEngineerTime.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(MaxEngineerTime oMaxEngineerTime)
+        {
+            if (oMaxEngineerTime.Errors.Count > 0)
+            {
+                foreach (object error in oMaxEngineerTime.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

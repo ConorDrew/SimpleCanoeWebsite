@@ -8,85 +8,57 @@ using FSM.Entity.EngineerVisits;
 using FSM.Entity.JobItems;
 using FSM.Entity.JobOfWorks;
 using Microsoft.VisualBasic.CompilerServices;
-using System;
 using System.Collections;
 
 namespace FSM.Entity.Jobs
 {
-  public class JobValidator : BaseValidator
-  {
-    public void Validate(Job oJob)
+    public class JobValidator : BaseValidator
     {
-      if (oJob.Errors.Count > 0)
-      {
-        foreach (object error in oJob.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oJob.PropertyID == 0)
-        this.AddCriticalMessage("Property not set");
-      if (oJob.JobNumber.Trim().Length == 0)
-        this.AddCriticalMessage("Job Number not set");
-      if (oJob.JobTypeID == 0)
-        this.AddCriticalMessage("Job Type not selected");
-      if (-(oJob.FOC ? 1 : 0) == 0 & -(oJob.OTI ? 1 : 0) == 0 & -(oJob.POC ? 1 : 0) == 0)
-        this.AddCriticalMessage("Payment Method not selected");
-      int num1 = 1;
-      IEnumerator enumerator1;
-      try
-      {
-        enumerator1 = oJob.JobOfWorks.GetEnumerator();
-        while (enumerator1.MoveNext())
+        public void Validate(Job oJob)
         {
-          JobOfWork current1 = (JobOfWork) enumerator1.Current;
-          if (current1.Priority == 0 & App.DB.Job.JobOfWork_Required_Priority(oJob.PropertyID))
-            this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Priority Missing");
-          int num2 = 1;
-          IEnumerator enumerator2;
-          try
-          {
-            enumerator2 = current1.JobItems.GetEnumerator();
-            while (enumerator2.MoveNext())
+            if (oJob.Errors.Count > 0)
             {
-              if (((JobItem) enumerator2.Current).Summary.Trim().Length == 0)
-                this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Job Item #" + Conversions.ToString(num2) + " Summary Missing");
-              checked { ++num2; }
+                foreach (object error in oJob.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
             }
-          }
-          finally
-          {
-            if (enumerator2 is IDisposable)
-              (enumerator2 as IDisposable).Dispose();
-          }
-          int num3 = 1;
-          IEnumerator enumerator3;
-          try
-          {
-            enumerator3 = current1.EngineerVisits.GetEnumerator();
-            while (enumerator3.MoveNext())
+            if (oJob.PropertyID == 0)
+                this.AddCriticalMessage("Property not set");
+            if (oJob.JobNumber.Trim().Length == 0)
+                this.AddCriticalMessage("Job Number not set");
+            if (oJob.JobTypeID == 0)
+                this.AddCriticalMessage("Job Type not selected");
+            if (-(oJob.FOC ? 1 : 0) == 0 & -(oJob.OTI ? 1 : 0) == 0 & -(oJob.POC ? 1 : 0) == 0)
+                this.AddCriticalMessage("Payment Method not selected");
+            int num1 = 1;
+
+            foreach (JobOfWork current1 in oJob.JobOfWorks)
             {
-              EngineerVisit current2 = (EngineerVisit) enumerator3.Current;
-              if (current2.StatusEnumID == 0)
-                this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Visit #" + Conversions.ToString(num3) + " Status Not Selected");
-              if (current2.NotesToEngineer.Trim().Length == 0)
-                this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Visit #" + Conversions.ToString(num3) + " Notes To Engineer Missing");
-              checked { ++num3; }
+                if (current1.Priority == 0 & App.DB.Job.JobOfWork_Required_Priority(oJob.PropertyID))
+                    this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Priority Missing");
+                int num2 = 1;
+                foreach (JobItem current in current1.JobItems)
+                {
+                    if (current.Summary.Trim().Length == 0)
+                        this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Job Item #" + Conversions.ToString(num2) + " Summary Missing");
+                    checked { ++num2; }
+                }
+
+                int num3 = 1;
+
+                foreach (EngineerVisit current2 in current1.EngineerVisits)
+                {
+                    if (current2.StatusEnumID == 0)
+                        this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Visit #" + Conversions.ToString(num3) + " Status Not Selected");
+                    if (current2.NotesToEngineer.Trim().Length == 0)
+                        this.AddCriticalMessage("Job Of Work #" + Conversions.ToString(num1) + " Visit #" + Conversions.ToString(num3) + " Notes To Engineer Missing");
+                    checked { ++num3; }
+                }
+
+                checked { ++num1; }
             }
-          }
-          finally
-          {
-            if (enumerator3 is IDisposable)
-              (enumerator3 as IDisposable).Dispose();
-          }
-          checked { ++num1; }
+
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
         }
-      }
-      finally
-      {
-        if (enumerator1 is IDisposable)
-          (enumerator1 as IDisposable).Dispose();
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
     }
-  }
 }
