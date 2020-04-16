@@ -9,23 +9,23 @@ using System.Collections;
 
 namespace FSM.Entity.Warehouses
 {
-  public class WarehouseValidator : BaseValidator
-  {
-    public void Validate(Warehouse oWarehouse)
+    public class WarehouseValidator : BaseValidator
     {
-      if (oWarehouse.Errors.Count > 0)
-      {
-        foreach (object error in oWarehouse.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oWarehouse.Name.Trim().Length == 0)
-        this.AddCriticalMessage("Name Missing");
-      if (oWarehouse.Address1.Trim().Length == 0)
-        this.AddCriticalMessage("Address1 Missing");
-      if (oWarehouse.Postcode.Trim().Length == 0)
-        this.AddCriticalMessage("Postcode Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(Warehouse oWarehouse)
+        {
+            if (oWarehouse.Errors.Count > 0)
+            {
+                foreach (object error in oWarehouse.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oWarehouse.Name.Trim().Length == 0)
+                this.AddCriticalMessage("Name Missing");
+            if (oWarehouse.Address1.Trim().Length == 0)
+                this.AddCriticalMessage("Address1 Missing");
+            if (oWarehouse.Postcode.Trim().Length == 0)
+                this.AddCriticalMessage("Postcode Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

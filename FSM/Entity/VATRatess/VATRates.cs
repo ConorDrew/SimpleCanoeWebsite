@@ -10,141 +10,141 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.VATRatess
 {
-  public class VATRates
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _VATRateID;
-    private double _VATRate;
-    private DateTime _DateIntroduced;
-    private string _VATRateCode;
-
-    public VATRates()
+    public class VATRates
     {
-      this._exists = false;
-      this._deleted = false;
-      this._VATRateID = 0;
-      this._VATRate = 0.0;
-      this._DateIntroduced = DateTime.MinValue;
-      this._VATRateCode = "";
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _VATRateID;
+        private double _VATRate;
+        private DateTime _DateIntroduced;
+        private string _VATRateCode;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public VATRates()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._VATRateID = 0;
+            this._VATRate = 0.0;
+            this._DateIntroduced = DateTime.MinValue;
+            this._VATRateCode = "";
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int VATRateID
-    {
-      get
-      {
-        return this._VATRateID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetVATRateID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VATRateID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VATRateID
+        {
+            get
+            {
+                return this._VATRateID;
+            }
+        }
 
-    public double VATRate
-    {
-      get
-      {
-        return this._VATRate;
-      }
-    }
+        public object SetVATRateID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VATRateID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetVATRate
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VATRate", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double VATRate
+        {
+            get
+            {
+                return this._VATRate;
+            }
+        }
 
-    public DateTime DateIntroduced
-    {
-      get
-      {
-        return this._DateIntroduced;
-      }
-      set
-      {
-        this._DateIntroduced = value;
-      }
-    }
+        public object SetVATRate
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VATRate", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public string VATRateCode
-    {
-      get
-      {
-        return this._VATRateCode;
-      }
-    }
+        public DateTime DateIntroduced
+        {
+            get
+            {
+                return this._DateIntroduced;
+            }
+            set
+            {
+                this._DateIntroduced = value;
+            }
+        }
 
-    public object SetVATRateCode
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VATRateCode", RuntimeHelpers.GetObjectValue(value));
-      }
+        public string VATRateCode
+        {
+            get
+            {
+                return this._VATRateCode;
+            }
+        }
+
+        public object SetVATRateCode
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VATRateCode", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

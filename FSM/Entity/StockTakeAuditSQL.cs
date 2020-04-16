@@ -9,32 +9,32 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity
 {
-  public class StockTakeAuditSQL
-  {
-    private Database _database;
-
-    public StockTakeAuditSQL(Database database)
+    public class StockTakeAuditSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    private void AddStockTakeAuditParametersToCommand(StockTakeAudit oStockTakeAudit)
-    {
-      this._database.AddParameter("@PartID", (object) oStockTakeAudit.PartID, true);
-      this._database.AddParameter("@UserID", (object) App.loggedInUser.UserID, true);
-      this._database.AddParameter("@OriginalAmount", (object) oStockTakeAudit.OriginalAmount, true);
-      this._database.AddParameter("@NewAmount", (object) oStockTakeAudit.NewAmount, true);
-      this._database.AddParameter("@ReasonChangeID", (object) oStockTakeAudit.ReasonChange, true);
-      this._database.AddParameter("@LocationID", (object) oStockTakeAudit.LocationID, true);
-    }
+        public StockTakeAuditSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public StockTakeAudit Insert(StockTakeAudit oStockTakeAudit)
-    {
-      this._database.ClearParameter();
-      this.AddStockTakeAuditParametersToCommand(oStockTakeAudit);
-      oStockTakeAudit.SetStockTakeAuditID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("StockTakeAudit_Insert", true)));
-      oStockTakeAudit.Exists = true;
-      return oStockTakeAudit;
+        private void AddStockTakeAuditParametersToCommand(StockTakeAudit oStockTakeAudit)
+        {
+            this._database.AddParameter("@PartID", (object)oStockTakeAudit.PartID, true);
+            this._database.AddParameter("@UserID", (object)App.loggedInUser.UserID, true);
+            this._database.AddParameter("@OriginalAmount", (object)oStockTakeAudit.OriginalAmount, true);
+            this._database.AddParameter("@NewAmount", (object)oStockTakeAudit.NewAmount, true);
+            this._database.AddParameter("@ReasonChangeID", (object)oStockTakeAudit.ReasonChange, true);
+            this._database.AddParameter("@LocationID", (object)oStockTakeAudit.LocationID, true);
+        }
+
+        public StockTakeAudit Insert(StockTakeAudit oStockTakeAudit)
+        {
+            this._database.ClearParameter();
+            this.AddStockTakeAuditParametersToCommand(oStockTakeAudit);
+            oStockTakeAudit.SetStockTakeAuditID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("StockTakeAudit_Insert", true)));
+            oStockTakeAudit.Exists = true;
+            return oStockTakeAudit;
+        }
     }
-  }
 }

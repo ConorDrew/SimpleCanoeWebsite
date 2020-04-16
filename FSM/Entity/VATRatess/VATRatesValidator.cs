@@ -9,19 +9,19 @@ using System.Collections;
 
 namespace FSM.Entity.VATRatess
 {
-  public class VATRatesValidator : BaseValidator
-  {
-    public void Validate(VATRates oVATRates)
+    public class VATRatesValidator : BaseValidator
     {
-      if (oVATRates.Errors.Count > 0)
-      {
-        foreach (object error in oVATRates.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oVATRates.VATRateCode.Trim().Length == 0)
-        this.AddCriticalMessage("Code Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(VATRates oVATRates)
+        {
+            if (oVATRates.Errors.Count > 0)
+            {
+                foreach (object error in oVATRates.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oVATRates.VATRateCode.Trim().Length == 0)
+                this.AddCriticalMessage("Code Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
