@@ -9,19 +9,19 @@ using System.Data;
 
 namespace FSM.Entity.Accounts
 {
-  public class SunFinanceSQL
-  {
-    private Database _database;
-
-    public SunFinanceSQL(Database database)
+    public class SunFinanceSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataTable GetAllMaps()
-    {
-      this._database.ClearParameter();
-      return this._database.ExecuteSP_DataTable("AccountsMapping_Get_All", true);
+        public SunFinanceSQL(Database database)
+        {
+            this._database = database;
+        }
+
+        public DataTable GetAllMaps()
+        {
+            this._database.ClearParameter();
+            return this._database.ExecuteSP_DataTable("AccountsMapping_Get_All", true);
+        }
     }
-  }
 }
