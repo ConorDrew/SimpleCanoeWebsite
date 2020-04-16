@@ -6610,7 +6610,7 @@ label_73:
       int ref2 = nullable1.Value;
       List<CostCentre> source = costCentre1.Get(@ref, ref2, FSM.Entity.CostCentres.Enums.GetBy.JobTypeIdAndCutomerId);
       CostCentre costCentre2 = source != null ? source.FirstOrDefault<CostCentre>() : (CostCentre) null;
-      return costCentre2 != null ? costCentre2.CostCentre : -1;
+      return costCentre2 != null ? costCentre2.Name : -1;
     }
 
     private void Email()

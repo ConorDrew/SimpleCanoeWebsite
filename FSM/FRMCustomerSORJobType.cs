@@ -963,7 +963,7 @@ namespace FSM
         list = list.Where<CostCentre>((Func<CostCentre, bool>) (x => x.JobTypeId == @ref & x.LinkId == num1 & x.LinkTypeId == num2)).ToList<CostCentre>();
       if (list != null && list.Count > 0)
       {
-        list.FirstOrDefault<CostCentre>().CostCentre = Conversions.ToInteger(Left);
+        list.FirstOrDefault<CostCentre>().Name = Conversions.ToInteger(Left);
         list.FirstOrDefault<CostCentre>().JobTypeId = @ref;
         list.FirstOrDefault<CostCentre>().LinkId = num1;
         list.FirstOrDefault<CostCentre>().LinkTypeId = num2;
@@ -975,7 +975,7 @@ namespace FSM
       {
         CostCentre ccm = new CostCentre()
         {
-          CostCentre = Conversions.ToInteger(Left),
+          Name = Conversions.ToInteger(Left),
           JobTypeId = @ref,
           LinkId = num1,
           LinkTypeId = num2,
@@ -1069,7 +1069,7 @@ namespace FSM
         return;
       CostCentre costCentre = App.DB.CostCentre.Get(Conversions.ToInteger(this.SelectedDataRowCCM["Id"]), 0, GetBy.Id).FirstOrDefault<CostCentre>();
       ComboBox cboCostCentre = this.cboCostCentre;
-      Combo.SetSelectedComboItem_By_Value(ref cboCostCentre, Conversions.ToString(costCentre.CostCentre));
+      Combo.SetSelectedComboItem_By_Value(ref cboCostCentre, Conversions.ToString(costCentre.Name));
       this.cboCostCentre = cboCostCentre;
       ComboBox combo = this.cboCCJobType;
       Combo.SetSelectedComboItem_By_Value(ref combo, Conversions.ToString(costCentre.JobTypeId));

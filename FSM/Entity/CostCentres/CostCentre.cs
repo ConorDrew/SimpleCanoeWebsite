@@ -8,18 +8,18 @@ using System;
 
 namespace FSM.Entity.CostCentres
 {
-  public class CostCentre
-  {
-    public int Id { get; set; }
+    public class CostCentre
+    {
+        public int Id { get; set; }
 
-    public int CostCentre { get; set; }
+        public int Name { get; set; }
 
-    public int JobTypeId { get; set; }
+        public int JobTypeId { get; set; }
 
-    public int LinkId { get; set; }
+        public int LinkId { get; set; }
 
-    public int LinkTypeId { get; set; }
+        public int LinkTypeId { get; set; }
 
-    public Decimal JobSpendLimit { get; set; }
-  }
+        public Decimal JobSpendLimit { get; set; }
+    }
 }

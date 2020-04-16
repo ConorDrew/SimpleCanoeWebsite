@@ -9505,7 +9505,7 @@ label_45:
     {
       List<CostCentre> source = App.DB.CostCentre.Get(this.Job?.JobTypeID.Value, this.theSite.CustomerID, FSM.Entity.CostCentres.Enums.GetBy.JobTypeIdAndCutomerId);
       CostCentre costCentre = source != null ? source.FirstOrDefault<CostCentre>() : (CostCentre) null;
-      return costCentre != null ? costCentre.CostCentre : -1;
+      return costCentre != null ? costCentre.Name : -1;
     }
 
     private void ShutdownNonChargableVisits(FormClosingEventArgs e)

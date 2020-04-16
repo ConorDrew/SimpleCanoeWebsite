@@ -2891,7 +2891,7 @@ namespace FSM
         List<CostCentre> source = App.DB.CostCentre.Get(this.CurrentQuoteJob?.JobTypeID.Value, this.CurrentSite?.CustomerID.Value, FSM.Entity.CostCentres.Enums.GetBy.JobTypeIdAndCutomerId);
         CostCentre costCentre = source != null ? source.FirstOrDefault<CostCentre>() : (CostCentre) null;
         ComboBox cboDept = this.cboDept;
-        Combo.SetSelectedComboItem_By_Value(ref cboDept, Conversions.ToString(costCentre?.CostCentre.Value));
+        Combo.SetSelectedComboItem_By_Value(ref cboDept, Conversions.ToString(costCentre?.Name.Value));
         this.cboDept = cboDept;
       }
       else
@@ -2901,7 +2901,7 @@ namespace FSM
         List<CostCentre> source = App.DB.CostCentre.Get(this.CurrentQuoteJob?.JobTypeID.Value, this.CurrentSite?.CustomerID.Value, FSM.Entity.CostCentres.Enums.GetBy.JobTypeIdAndCutomerId);
         CostCentre costCentre = source != null ? source.FirstOrDefault<CostCentre>() : (CostCentre) null;
         ComboBox cboDept = this.cboDept;
-        Combo.SetSelectedComboItem_By_Value(ref cboDept, Helper.MakeStringValid((object) costCentre?.CostCentre));
+        Combo.SetSelectedComboItem_By_Value(ref cboDept, Helper.MakeStringValid((object) costCentre?.Name));
         this.cboDept = cboDept;
       }
     }
