@@ -9,95 +9,95 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.JobAudits
 {
-  public class JobAudit
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private int _jobAuditID;
-    private int _jobID;
-    private string _actionChange;
-
-    public JobAudit()
+    public class JobAudit
     {
-      this._jobAuditID = 0;
-      this._jobID = 0;
-      this._actionChange = "";
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private int _jobAuditID;
+        private int _jobID;
+        private string _actionChange;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public JobAudit()
+        {
+            this._jobAuditID = 0;
+            this._jobID = 0;
+            this._actionChange = "";
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public int JobAuditID
-    {
-      get
-      {
-        return this._jobAuditID;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public object SetJobAuditID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_jobAuditID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int JobAuditID
+        {
+            get
+            {
+                return this._jobAuditID;
+            }
+        }
 
-    public int JobID
-    {
-      get
-      {
-        return this._jobID;
-      }
-    }
+        public object SetJobAuditID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_jobAuditID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetJobID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_jobID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int JobID
+        {
+            get
+            {
+                return this._jobID;
+            }
+        }
 
-    public string ActionChange
-    {
-      get
-      {
-        return this._actionChange;
-      }
-    }
+        public object SetJobID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_jobID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetActionChange
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_actionChange", RuntimeHelpers.GetObjectValue(value));
-      }
+        public string ActionChange
+        {
+            get
+            {
+                return this._actionChange;
+            }
+        }
+
+        public object SetActionChange
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_actionChange", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

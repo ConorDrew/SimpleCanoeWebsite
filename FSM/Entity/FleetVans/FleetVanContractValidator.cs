@@ -9,24 +9,24 @@ using System.Collections;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanContractValidator : BaseValidator
-  {
-    public void Validate(FleetVanContract oFleetVan)
+    public class FleetVanContractValidator : BaseValidator
     {
-      if (oFleetVan.Errors.Count > 0)
-      {
-        foreach (object error in oFleetVan.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      FleetVanContract fleetVanContract = oFleetVan;
-      if (fleetVanContract.VanID == 0)
-        this.AddCriticalMessage("Van missing");
-      if (fleetVanContract.Lessor.Trim().Length == 0)
-        this.AddCriticalMessage("Lessor missing");
-      if (fleetVanContract.ProcurementMethod == 0)
-        this.AddCriticalMessage("Procurement method missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(FleetVanContract oFleetVan)
+        {
+            if (oFleetVan.Errors.Count > 0)
+            {
+                foreach (object error in oFleetVan.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            FleetVanContract fleetVanContract = oFleetVan;
+            if (fleetVanContract.VanID == 0)
+                this.AddCriticalMessage("Van missing");
+            if (fleetVanContract.Lessor.Trim().Length == 0)
+                this.AddCriticalMessage("Lessor missing");
+            if (fleetVanContract.ProcurementMethod == 0)
+                this.AddCriticalMessage("Procurement method missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.JobAssets
 {
-  public class JobAssetValidator : BaseValidator
-  {
-    public void Validate(JobAsset oJobAsset)
+    public class JobAssetValidator : BaseValidator
     {
-      if (oJobAsset.Errors.Count > 0)
-      {
-        foreach (object error in oJobAsset.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(JobAsset oJobAsset)
+        {
+            if (oJobAsset.Errors.Count > 0)
+            {
+                foreach (object error in oJobAsset.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

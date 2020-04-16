@@ -9,19 +9,19 @@ using System.Data;
 
 namespace FSM.Entity.Ibc
 {
-  public class IbcSql
-  {
-    private Database _database;
-
-    public IbcSql(Database database)
+    public class IbcSql
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView GetAll()
-    {
-      this._database.ClearParameter();
-      return new DataView(this._database.ExecuteSP_DataTable("Ibc_GetAll", true));
+        public IbcSql(Database database)
+        {
+            this._database = database;
+        }
+
+        public DataView GetAll()
+        {
+            this._database.ClearParameter();
+            return new DataView(this._database.ExecuteSP_DataTable("Ibc_GetAll", true));
+        }
     }
-  }
 }

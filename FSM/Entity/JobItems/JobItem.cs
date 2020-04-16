@@ -10,148 +10,148 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.JobItems
 {
-  public class JobItem
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private int _JobItemID;
-    private int _JobOfWorkID;
-    private string _Summary;
-    private int _RateID;
-    private Decimal _Qty;
-    private int _systemLinkId;
-
-    public JobItem()
+    public class JobItem
     {
-      this._JobItemID = 0;
-      this._JobOfWorkID = 0;
-      this._Summary = string.Empty;
-      this._RateID = 0;
-      this._systemLinkId = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private int _JobItemID;
+        private int _JobOfWorkID;
+        private string _Summary;
+        private int _RateID;
+        private Decimal _Qty;
+        private int _systemLinkId;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public JobItem()
+        {
+            this._JobItemID = 0;
+            this._JobOfWorkID = 0;
+            this._Summary = string.Empty;
+            this._RateID = 0;
+            this._systemLinkId = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public int JobItemID
-    {
-      get
-      {
-        return this._JobItemID;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public object SetJobItemID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_JobItemID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int JobItemID
+        {
+            get
+            {
+                return this._JobItemID;
+            }
+        }
 
-    public int JobOfWorkID
-    {
-      get
-      {
-        return this._JobOfWorkID;
-      }
-    }
+        public object SetJobItemID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_JobItemID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetJobOfWorkID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_JobOfWorkID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int JobOfWorkID
+        {
+            get
+            {
+                return this._JobOfWorkID;
+            }
+        }
 
-    public string Summary
-    {
-      get
-      {
-        return this._Summary;
-      }
-    }
+        public object SetJobOfWorkID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_JobOfWorkID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSummary
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Summary", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Summary
+        {
+            get
+            {
+                return this._Summary;
+            }
+        }
 
-    public int RateID
-    {
-      get
-      {
-        return this._RateID;
-      }
-    }
+        public object SetSummary
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Summary", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetRateID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_RateID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int RateID
+        {
+            get
+            {
+                return this._RateID;
+            }
+        }
 
-    public Decimal Qty
-    {
-      get
-      {
-        return this._Qty;
-      }
-    }
+        public object SetRateID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_RateID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQty
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Qty", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public Decimal Qty
+        {
+            get
+            {
+                return this._Qty;
+            }
+        }
 
-    public int SystemLinkID
-    {
-      get
-      {
-        return this._systemLinkId;
-      }
-    }
+        public object SetQty
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Qty", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSystemLinkID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_systemLinkId", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int SystemLinkID
+        {
+            get
+            {
+                return this._systemLinkId;
+            }
+        }
+
+        public object SetSystemLinkID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_systemLinkId", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

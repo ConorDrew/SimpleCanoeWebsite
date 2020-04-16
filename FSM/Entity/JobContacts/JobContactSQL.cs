@@ -10,38 +10,38 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.JobContacts
 {
-  public class JobContactSQL
-  {
-    private Database _database;
-
-    public JobContactSQL(Database database)
+    public class JobContactSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public JobContact Insert(JobContact oJobContact)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@JobID", (object) oJobContact.JobID, true);
-      this._database.AddParameter("@ContactType", (object) oJobContact.contactType, true);
-      oJobContact.SetjobContactID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("JobContact_Insert", true)));
-      return oJobContact;
-    }
+        public JobContactSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public void Update_Access(int JobID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@JobID", (object) JobID, true);
-      this._database.ExecuteSP_OBJECT("JobContact_Update_Access", true);
-    }
+        public JobContact Insert(JobContact oJobContact)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@JobID", (object)oJobContact.JobID, true);
+            this._database.AddParameter("@ContactType", (object)oJobContact.contactType, true);
+            oJobContact.SetjobContactID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("JobContact_Insert", true)));
+            return oJobContact;
+        }
 
-    public DataView Get_For_Job(int JobID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@JobID", (object) JobID, true);
-      DataTable table = this._database.ExecuteSP_DataTable("JobContact_Get", true);
-      table.TableName = Enums.TableNames.tblJobAudit.ToString();
-      return new DataView(table);
+        public void Update_Access(int JobID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@JobID", (object)JobID, true);
+            this._database.ExecuteSP_OBJECT("JobContact_Update_Access", true);
+        }
+
+        public DataView Get_For_Job(int JobID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@JobID", (object)JobID, true);
+            DataTable table = this._database.ExecuteSP_DataTable("JobContact_Get", true);
+            table.TableName = Enums.TableNames.tblJobAudit.ToString();
+            return new DataView(table);
+        }
     }
-  }
 }

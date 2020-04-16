@@ -9,21 +9,21 @@ using System.Data;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetSQL
-  {
-    private Database _database;
-
-    public FleetSQL(Database database)
+    public class FleetSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView FleetJobType_GetAll()
-    {
-      this._database.ClearParameter();
-      DataTable table = this._database.ExecuteSP_DataTable(nameof (FleetJobType_GetAll), true);
-      table.TableName = Enums.TableNames.tblFleetJobType.ToString();
-      return new DataView(table);
+        public FleetSQL(Database database)
+        {
+            this._database = database;
+        }
+
+        public DataView FleetJobType_GetAll()
+        {
+            this._database.ClearParameter();
+            DataTable table = this._database.ExecuteSP_DataTable(nameof(FleetJobType_GetAll), true);
+            table.TableName = Enums.TableNames.tblFleetJobType.ToString();
+            return new DataView(table);
+        }
     }
-  }
 }

@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.InvoicedLiness
 {
-  public class InvoicedLinesValidator : BaseValidator
-  {
-    public void Validate(InvoicedLines oInvoicedLines)
+    public class InvoicedLinesValidator : BaseValidator
     {
-      if (oInvoicedLines.Errors.Count > 0)
-      {
-        foreach (object error in oInvoicedLines.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(InvoicedLines oInvoicedLines)
+        {
+            if (oInvoicedLines.Errors.Count > 0)
+            {
+                foreach (object error in oInvoicedLines.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

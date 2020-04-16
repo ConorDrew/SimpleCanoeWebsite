@@ -9,145 +9,145 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.InvoicedLiness
 {
-  public class InvoicedLines
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _InvoicedLineID;
-    private int _InvoicedID;
-    private int _InvoiceToBeRaisedID;
-    private double _Amount;
-
-    public InvoicedLines()
+    public class InvoicedLines
     {
-      this._exists = false;
-      this._deleted = false;
-      this._InvoicedLineID = 0;
-      this._InvoicedID = 0;
-      this._InvoiceToBeRaisedID = 0;
-      this._Amount = 0.0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _InvoicedLineID;
+        private int _InvoicedID;
+        private int _InvoiceToBeRaisedID;
+        private double _Amount;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public InvoicedLines()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._InvoicedLineID = 0;
+            this._InvoicedID = 0;
+            this._InvoiceToBeRaisedID = 0;
+            this._Amount = 0.0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int InvoicedLineID
-    {
-      get
-      {
-        return this._InvoicedLineID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetInvoicedLineID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_InvoicedLineID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int InvoicedLineID
+        {
+            get
+            {
+                return this._InvoicedLineID;
+            }
+        }
 
-    public int InvoicedID
-    {
-      get
-      {
-        return this._InvoicedID;
-      }
-    }
+        public object SetInvoicedLineID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_InvoicedLineID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetInvoicedID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_InvoicedID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int InvoicedID
+        {
+            get
+            {
+                return this._InvoicedID;
+            }
+        }
 
-    public int InvoiceToBeRaisedID
-    {
-      get
-      {
-        return this._InvoiceToBeRaisedID;
-      }
-    }
+        public object SetInvoicedID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_InvoicedID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetInvoiceToBeRaisedID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_InvoiceToBeRaisedID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int InvoiceToBeRaisedID
+        {
+            get
+            {
+                return this._InvoiceToBeRaisedID;
+            }
+        }
 
-    public double Amount
-    {
-      get
-      {
-        return this._Amount;
-      }
-    }
+        public object SetInvoiceToBeRaisedID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_InvoiceToBeRaisedID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAmount
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Amount", RuntimeHelpers.GetObjectValue(value));
-      }
+        public double Amount
+        {
+            get
+            {
+                return this._Amount;
+            }
+        }
+
+        public object SetAmount
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Amount", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

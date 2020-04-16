@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.InvoiceToBeRaiseds
 {
-  public class InvoiceToBeRaisedValidator : BaseValidator
-  {
-    public void Validate(InvoiceToBeRaised oInvoiceToBeRaised)
+    public class InvoiceToBeRaisedValidator : BaseValidator
     {
-      if (oInvoiceToBeRaised.Errors.Count > 0)
-      {
-        foreach (object error in oInvoiceToBeRaised.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(InvoiceToBeRaised oInvoiceToBeRaised)
+        {
+            if (oInvoiceToBeRaised.Errors.Count > 0)
+            {
+                foreach (object error in oInvoiceToBeRaised.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

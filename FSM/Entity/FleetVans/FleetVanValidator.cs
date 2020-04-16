@@ -9,23 +9,23 @@ using System.Collections;
 
 namespace FSM.Entity.FleetVans
 {
-  public class FleetVanValidator : BaseValidator
-  {
-    public void Validate(FleetVan oFleetVan)
+    public class FleetVanValidator : BaseValidator
     {
-      if (oFleetVan.Errors.Count > 0)
-      {
-        foreach (object error in oFleetVan.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oFleetVan.VanTypeID == 0)
-        this.AddCriticalMessage("Van type missing");
-      if (oFleetVan.Registration.Trim().Length == 0)
-        this.AddCriticalMessage("Registration missing");
-      if (oFleetVan.Mileage == 0)
-        this.AddCriticalMessage("Current mileage missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(FleetVan oFleetVan)
+        {
+            if (oFleetVan.Errors.Count > 0)
+            {
+                foreach (object error in oFleetVan.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oFleetVan.VanTypeID == 0)
+                this.AddCriticalMessage("Van type missing");
+            if (oFleetVan.Registration.Trim().Length == 0)
+                this.AddCriticalMessage("Registration missing");
+            if (oFleetVan.Mileage == 0)
+                this.AddCriticalMessage("Current mileage missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
