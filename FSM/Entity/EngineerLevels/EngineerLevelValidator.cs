@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerLevels
 {
-  public class EngineerLevelValidator : BaseValidator
-  {
-    public void Validate(EngineerLevel oEngineerLevel)
+    public class EngineerLevelValidator : BaseValidator
     {
-      if (oEngineerLevel.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerLevel.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(EngineerLevel oEngineerLevel)
+        {
+            if (oEngineerLevel.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerLevel.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

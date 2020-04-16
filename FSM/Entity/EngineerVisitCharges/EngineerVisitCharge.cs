@@ -10,378 +10,378 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.EngineerVisitCharges
 {
-  public class EngineerVisitCharge
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _EngineerVisitChargeID;
-    private int _EngineerVisitID;
-    private double _LabourRate;
-    private bool _ApplyMileageToTotal;
-    private double _JobValue;
-    private int _ChargeTypeID;
-    private double _Charge;
-    private int _InvoiceReadyID;
-    private Decimal _mainContractorDiscount;
-    private string _NominalCode;
-    private string _Department;
-    private string _ForSageAccountCode;
-    private int _TaxRateID;
-    private int _partsMarkUp;
-    private Decimal _partsPrice;
-    private Decimal _labourPrice;
-    private bool _hasChargeFromJob;
-
-    public EngineerVisitCharge()
+    public class EngineerVisitCharge
     {
-      this._exists = false;
-      this._deleted = false;
-      this._EngineerVisitChargeID = 0;
-      this._EngineerVisitID = 0;
-      this._LabourRate = 1.0;
-      this._ApplyMileageToTotal = true;
-      this._JobValue = 0.0;
-      this._ChargeTypeID = 0;
-      this._Charge = 0.0;
-      this._InvoiceReadyID = 0;
-      this._mainContractorDiscount = new Decimal();
-      this._NominalCode = "";
-      this._Department = "";
-      this._ForSageAccountCode = "";
-      this._TaxRateID = 0;
-      this._partsMarkUp = 0;
-      this._partsPrice = new Decimal();
-      this._labourPrice = new Decimal();
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _EngineerVisitChargeID;
+        private int _EngineerVisitID;
+        private double _LabourRate;
+        private bool _ApplyMileageToTotal;
+        private double _JobValue;
+        private int _ChargeTypeID;
+        private double _Charge;
+        private int _InvoiceReadyID;
+        private Decimal _mainContractorDiscount;
+        private string _NominalCode;
+        private string _Department;
+        private string _ForSageAccountCode;
+        private int _TaxRateID;
+        private int _partsMarkUp;
+        private Decimal _partsPrice;
+        private Decimal _labourPrice;
+        private bool _hasChargeFromJob;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public EngineerVisitCharge()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._EngineerVisitChargeID = 0;
+            this._EngineerVisitID = 0;
+            this._LabourRate = 1.0;
+            this._ApplyMileageToTotal = true;
+            this._JobValue = 0.0;
+            this._ChargeTypeID = 0;
+            this._Charge = 0.0;
+            this._InvoiceReadyID = 0;
+            this._mainContractorDiscount = new Decimal();
+            this._NominalCode = "";
+            this._Department = "";
+            this._ForSageAccountCode = "";
+            this._TaxRateID = 0;
+            this._partsMarkUp = 0;
+            this._partsPrice = new Decimal();
+            this._labourPrice = new Decimal();
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int EngineerVisitChargeID
-    {
-      get
-      {
-        return this._EngineerVisitChargeID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetEngineerVisitChargeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitChargeID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerVisitChargeID
+        {
+            get
+            {
+                return this._EngineerVisitChargeID;
+            }
+        }
 
-    public int EngineerVisitID
-    {
-      get
-      {
-        return this._EngineerVisitID;
-      }
-    }
+        public object SetEngineerVisitChargeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitChargeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEngineerVisitID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EngineerVisitID
+        {
+            get
+            {
+                return this._EngineerVisitID;
+            }
+        }
 
-    public double LabourRate
-    {
-      get
-      {
-        return this._LabourRate;
-      }
-    }
+        public object SetEngineerVisitID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerVisitID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetLabourRate
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_LabourRate", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double LabourRate
+        {
+            get
+            {
+                return this._LabourRate;
+            }
+        }
 
-    public bool ApplyMileageToTotal
-    {
-      get
-      {
-        return this._ApplyMileageToTotal;
-      }
-    }
+        public object SetLabourRate
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_LabourRate", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetApplyMileageToTotal
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ApplyMileageToTotal", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool ApplyMileageToTotal
+        {
+            get
+            {
+                return this._ApplyMileageToTotal;
+            }
+        }
 
-    public double JobValue
-    {
-      get
-      {
-        return this._JobValue;
-      }
-    }
+        public object SetApplyMileageToTotal
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ApplyMileageToTotal", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetJobValue
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_JobValue", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double JobValue
+        {
+            get
+            {
+                return this._JobValue;
+            }
+        }
 
-    public int ChargeTypeID
-    {
-      get
-      {
-        return this._ChargeTypeID;
-      }
-    }
+        public object SetJobValue
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_JobValue", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetChargeTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ChargeTypeID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ChargeTypeID
+        {
+            get
+            {
+                return this._ChargeTypeID;
+            }
+        }
 
-    public double Charge
-    {
-      get
-      {
-        return this._Charge;
-      }
-    }
+        public object SetChargeTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ChargeTypeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCharge
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Charge", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double Charge
+        {
+            get
+            {
+                return this._Charge;
+            }
+        }
 
-    public int InvoiceReadyID
-    {
-      get
-      {
-        return this._InvoiceReadyID;
-      }
-    }
+        public object SetCharge
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Charge", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetInvoiceReadyID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_InvoiceReadyID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int InvoiceReadyID
+        {
+            get
+            {
+                return this._InvoiceReadyID;
+            }
+        }
 
-    public Decimal MainContractorDiscount
-    {
-      get
-      {
-        return this._mainContractorDiscount;
-      }
-    }
+        public object SetInvoiceReadyID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_InvoiceReadyID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetMainContractorDiscount
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_mainContractorDiscount", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public Decimal MainContractorDiscount
+        {
+            get
+            {
+                return this._mainContractorDiscount;
+            }
+        }
 
-    public string NominalCode
-    {
-      get
-      {
-        return this._NominalCode;
-      }
-    }
+        public object SetMainContractorDiscount
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_mainContractorDiscount", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetNominalCode
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_NominalCode", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string NominalCode
+        {
+            get
+            {
+                return this._NominalCode;
+            }
+        }
 
-    public string Department
-    {
-      get
-      {
-        return this._Department;
-      }
-    }
+        public object SetNominalCode
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_NominalCode", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDepartment
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Department", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Department
+        {
+            get
+            {
+                return this._Department;
+            }
+        }
 
-    public string ForSageAccountCode
-    {
-      get
-      {
-        return this._ForSageAccountCode;
-      }
-    }
+        public object SetDepartment
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Department", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetForSageAccountCode
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ForSageAccountCode", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string ForSageAccountCode
+        {
+            get
+            {
+                return this._ForSageAccountCode;
+            }
+        }
 
-    public int TaxRateID
-    {
-      get
-      {
-        return this._TaxRateID;
-      }
-    }
+        public object SetForSageAccountCode
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ForSageAccountCode", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetTaxRateID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_TaxRateID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int TaxRateID
+        {
+            get
+            {
+                return this._TaxRateID;
+            }
+        }
 
-    public int PartsMarkUp
-    {
-      get
-      {
-        return this._partsMarkUp;
-      }
-    }
+        public object SetTaxRateID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_TaxRateID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPartsMarkUp
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_partsMarkUp", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int PartsMarkUp
+        {
+            get
+            {
+                return this._partsMarkUp;
+            }
+        }
 
-    public Decimal PartsPrice
-    {
-      get
-      {
-        return this._partsPrice;
-      }
-    }
+        public object SetPartsMarkUp
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_partsMarkUp", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPartsPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_partsPrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public Decimal PartsPrice
+        {
+            get
+            {
+                return this._partsPrice;
+            }
+        }
 
-    public Decimal LabourPrice
-    {
-      get
-      {
-        return this._labourPrice;
-      }
-    }
+        public object SetPartsPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_partsPrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetLabourPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_labourPrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public Decimal LabourPrice
+        {
+            get
+            {
+                return this._labourPrice;
+            }
+        }
 
-    public bool HasChargesFromJob
-    {
-      get
-      {
-        return this._hasChargeFromJob;
-      }
-    }
+        public object SetLabourPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_labourPrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetHasChargesFromJob
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_hasChargeFromJob", RuntimeHelpers.GetObjectValue(value));
-      }
+        public bool HasChargesFromJob
+        {
+            get
+            {
+                return this._hasChargeFromJob;
+            }
+        }
+
+        public object SetHasChargesFromJob
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_hasChargeFromJob", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

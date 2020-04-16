@@ -10,23 +10,23 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerVans
 {
-  public class EngineerVanValidator : BaseValidator
-  {
-    public void Validate(EngineerVan oEngineerVan)
+    public class EngineerVanValidator : BaseValidator
     {
-      if (oEngineerVan.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerVan.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oEngineerVan.VanID == 0)
-        this.AddCriticalMessage("Van Missing");
-      if (oEngineerVan.EngineerID == 0)
-        this.AddCriticalMessage("Engineer Missing");
-      if ((uint) DateTime.Compare(oEngineerVan.EndDateTime, DateTime.MinValue) > 0U && DateTime.Compare(oEngineerVan.StartDateTime, oEngineerVan.EndDateTime) >= 0)
-        this.AddCriticalMessage("Start Date Time Must Be Before End Date Time");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(EngineerVan oEngineerVan)
+        {
+            if (oEngineerVan.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerVan.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oEngineerVan.VanID == 0)
+                this.AddCriticalMessage("Van Missing");
+            if (oEngineerVan.EngineerID == 0)
+                this.AddCriticalMessage("Engineer Missing");
+            if ((uint)DateTime.Compare(oEngineerVan.EndDateTime, DateTime.MinValue) > 0U && DateTime.Compare(oEngineerVan.StartDateTime, oEngineerVan.EndDateTime) >= 0)
+                this.AddCriticalMessage("Start Date Time Must Be Before End Date Time");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

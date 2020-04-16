@@ -8,14 +8,14 @@ using System;
 
 namespace FSM.Entity.EngineerRoles
 {
-  public class EngineerRole
-  {
-    public int Id { get; set; }
+    public class EngineerRole
+    {
+        public int Id { get; set; }
 
-    public string Name { get; set; }
+        public string Name { get; set; }
 
-    public string Description { get; set; }
+        public string Description { get; set; }
 
-    public Decimal HourlyCostToCompany { get; set; }
-  }
+        public Decimal HourlyCostToCompany { get; set; }
+    }
 }

@@ -9,24 +9,24 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerVisitPartProductAllocateds
 {
-  public class EngineerVisitPartProductAllocatedValidator : BaseValidator
-  {
-    public void Validate(
-      EngineerVisitPartProductAllocated oEngineerVisitPartAllocated)
+    public class EngineerVisitPartProductAllocatedValidator : BaseValidator
     {
-      if (oEngineerVisitPartAllocated.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerVisitPartAllocated.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oEngineerVisitPartAllocated.Type.Trim().Length == 0)
-        this.AddCriticalMessage("Item Type Missing");
-      if (oEngineerVisitPartAllocated.PartProductID == 0)
-        this.AddCriticalMessage("Item Missing");
-      if (oEngineerVisitPartAllocated.Quantity <= 0)
-        this.AddCriticalMessage("Quantity Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(
+          EngineerVisitPartProductAllocated oEngineerVisitPartAllocated)
+        {
+            if (oEngineerVisitPartAllocated.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerVisitPartAllocated.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oEngineerVisitPartAllocated.Type.Trim().Length == 0)
+                this.AddCriticalMessage("Item Type Missing");
+            if (oEngineerVisitPartAllocated.PartProductID == 0)
+                this.AddCriticalMessage("Item Missing");
+            if (oEngineerVisitPartAllocated.Quantity <= 0)
+                this.AddCriticalMessage("Quantity Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

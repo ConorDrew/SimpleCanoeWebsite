@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.EngineerPostalRegions
 {
-  public class EngineerPostalRegionValidator : BaseValidator
-  {
-    public void Validate(EngineerPostalRegion oEngineerPostalRegion)
+    public class EngineerPostalRegionValidator : BaseValidator
     {
-      if (oEngineerPostalRegion.Errors.Count > 0)
-      {
-        foreach (object error in oEngineerPostalRegion.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(EngineerPostalRegion oEngineerPostalRegion)
+        {
+            if (oEngineerPostalRegion.Errors.Count > 0)
+            {
+                foreach (object error in oEngineerPostalRegion.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
