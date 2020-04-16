@@ -13,63 +13,53 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.UserLevels
 {
-  public class UserLevelSQL
-  {
-    private Database _database;
-
-    public UserLevelSQL(Database database)
+    public class UserLevelSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public void Insert(int UserID, DataTable t)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@UserID", (object) UserID, true);
-      this._database.ExecuteSP_NO_Return("UserLevel_Delete", true);
-      if (t == null)
-        return;
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = t.Rows.GetEnumerator();
-        while (enumerator.MoveNext())
+        public UserLevelSQL(Database database)
         {
-          DataRow current = (DataRow) enumerator.Current;
-          this._database.ClearParameter();
-          this._database.AddParameter("@UserID", (object) UserID, true);
-          this._database.AddParameter("@LevelID", RuntimeHelpers.GetObjectValue(current["LevelID"]), true);
-          this._database.AddParameter("@Notes", (object) Helper.MakeStringValid(RuntimeHelpers.GetObjectValue(current["Notes"])), true);
-          this._database.AddParameter("@DatePassed", RuntimeHelpers.GetObjectValue(current["DatePassed"]), true);
-          this._database.AddParameter("@DateExpires", RuntimeHelpers.GetObjectValue(current["DateExpires"]), true);
-          this._database.AddParameter("@DateBooked", RuntimeHelpers.GetObjectValue(current["DateBooked"]), true);
-          this._database.ExecuteSP_NO_Return("UserLevel_Insert", true);
+            this._database = database;
         }
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
-    }
 
-    public DataView Get(int UserID)
-    {
-      SqlCommand Command = new SqlCommand("UserLevels_Get", new SqlConnection(this._database.ServerConnectionString));
-      Command.CommandType = CommandType.StoredProcedure;
-      Command.Parameters.AddWithValue("@UserID", (object) UserID);
-      DataTable table = this._database.ExecuteCommand_DataTable(Command);
-      table.TableName = Enums.TableNames.tblUserQualification.ToString();
-      return new DataView(table);
-    }
+        public void Insert(int UserID, DataTable t)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@UserID", (object)UserID, true);
+            this._database.ExecuteSP_NO_Return("UserLevel_Delete", true);
+            if (t == null)
+                return;
 
-    public DataView GetForSetup(int UserID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@UserID", (object) UserID, true);
-      DataTable table = this._database.ExecuteSP_DataTable("UserLevels_Setup_Get", true);
-      table.TableName = Enums.TableNames.tblUserQualification.ToString();
-      return new DataView(table);
+            foreach (DataRow current in t.Rows)
+            {
+                this._database.ClearParameter();
+                this._database.AddParameter("@UserID", (object)UserID, true);
+                this._database.AddParameter("@LevelID", RuntimeHelpers.GetObjectValue(current["LevelID"]), true);
+                this._database.AddParameter("@Notes", (object)Helper.MakeStringValid(RuntimeHelpers.GetObjectValue(current["Notes"])), true);
+                this._database.AddParameter("@DatePassed", RuntimeHelpers.GetObjectValue(current["DatePassed"]), true);
+                this._database.AddParameter("@DateExpires", RuntimeHelpers.GetObjectValue(current["DateExpires"]), true);
+                this._database.AddParameter("@DateBooked", RuntimeHelpers.GetObjectValue(current["DateBooked"]), true);
+                this._database.ExecuteSP_NO_Return("UserLevel_Insert", true);
+            }
+        }
+
+        public DataView Get(int UserID)
+        {
+            SqlCommand Command = new SqlCommand("UserLevels_Get", new SqlConnection(this._database.ServerConnectionString));
+            Command.CommandType = CommandType.StoredProcedure;
+            Command.Parameters.AddWithValue("@UserID", (object)UserID);
+            DataTable table = this._database.ExecuteCommand_DataTable(Command);
+            table.TableName = Enums.TableNames.tblUserQualification.ToString();
+            return new DataView(table);
+        }
+
+        public DataView GetForSetup(int UserID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@UserID", (object)UserID, true);
+            DataTable table = this._database.ExecuteSP_DataTable("UserLevels_Setup_Get", true);
+            table.TableName = Enums.TableNames.tblUserQualification.ToString();
+            return new DataView(table);
+        }
     }
-  }
 }

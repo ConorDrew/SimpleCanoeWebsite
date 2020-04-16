@@ -9,127 +9,127 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.UserLevels
 {
-  public class UserLevel
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _UserLevelID;
-    private int _LevelID;
-    private int _UserID;
-
-    public UserLevel()
+    public class UserLevel
     {
-      this._exists = false;
-      this._deleted = false;
-      this._UserLevelID = 0;
-      this._LevelID = 0;
-      this._UserID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _UserLevelID;
+        private int _LevelID;
+        private int _UserID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public UserLevel()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._UserLevelID = 0;
+            this._LevelID = 0;
+            this._UserID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int UserLevelID
-    {
-      get
-      {
-        return this._UserLevelID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetUserLevelID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_UserLevelID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int UserLevelID
+        {
+            get
+            {
+                return this._UserLevelID;
+            }
+        }
 
-    public int LevelID
-    {
-      get
-      {
-        return this._LevelID;
-      }
-    }
+        public object SetUserLevelID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_UserLevelID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetLevelID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_LevelID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int LevelID
+        {
+            get
+            {
+                return this._LevelID;
+            }
+        }
 
-    public int UserID
-    {
-      get
-      {
-        return this._UserID;
-      }
-    }
+        public object SetLevelID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_LevelID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetUserID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_UserID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int UserID
+        {
+            get
+            {
+                return this._UserID;
+            }
+        }
+
+        public object SetUserID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_UserID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

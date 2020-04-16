@@ -9,145 +9,145 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Tasks
 {
-  public class Task
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _TaskID;
-    private int _AreaID;
-    private string _Description;
-    private int _OrderNumber;
-
-    public Task()
+    public class Task
     {
-      this._exists = false;
-      this._deleted = false;
-      this._TaskID = 0;
-      this._AreaID = 0;
-      this._Description = string.Empty;
-      this._OrderNumber = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _TaskID;
+        private int _AreaID;
+        private string _Description;
+        private int _OrderNumber;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public Task()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._TaskID = 0;
+            this._AreaID = 0;
+            this._Description = string.Empty;
+            this._OrderNumber = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int TaskID
-    {
-      get
-      {
-        return this._TaskID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetTaskID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_TaskID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int TaskID
+        {
+            get
+            {
+                return this._TaskID;
+            }
+        }
 
-    public int AreaID
-    {
-      get
-      {
-        return this._AreaID;
-      }
-    }
+        public object SetTaskID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_TaskID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAreaID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AreaID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int AreaID
+        {
+            get
+            {
+                return this._AreaID;
+            }
+        }
 
-    public string Description
-    {
-      get
-      {
-        return this._Description;
-      }
-    }
+        public object SetAreaID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AreaID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDescription
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Description", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+        }
 
-    public int OrderNumber
-    {
-      get
-      {
-        return this._OrderNumber;
-      }
-    }
+        public object SetDescription
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Description", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetOrderNumber
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_OrderNumber", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int OrderNumber
+        {
+            get
+            {
+                return this._OrderNumber;
+            }
+        }
+
+        public object SetOrderNumber
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_OrderNumber", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }
