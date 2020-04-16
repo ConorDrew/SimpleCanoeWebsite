@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.ContractOption3SiteAsset
 {
-  public class ContractOption3SiteAssetValidator : BaseValidator
-  {
-    public void Validate(FSM.Entity.ContractOption3SiteAsset.ContractOption3SiteAsset oContractOption3SiteAsset)
+    public class ContractOption3SiteAssetValidator : BaseValidator
     {
-      if (oContractOption3SiteAsset.Errors.Count > 0)
-      {
-        foreach (object error in oContractOption3SiteAsset.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(FSM.Entity.ContractOption3SiteAsset.ContractOption3SiteAsset oContractOption3SiteAsset)
+        {
+            if (oContractOption3SiteAsset.Errors.Count > 0)
+            {
+                foreach (object error in oContractOption3SiteAsset.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

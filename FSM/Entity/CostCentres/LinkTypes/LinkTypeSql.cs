@@ -9,19 +9,19 @@ using System.Data;
 
 namespace FSM.Entity.CostCentres.LinkTypes
 {
-  public class LinkTypeSql
-  {
-    private Database _database;
-
-    public LinkTypeSql(Database database)
+    public class LinkTypeSql
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView GetAll()
-    {
-      this._database.ClearParameter();
-      return new DataView(this._database.ExecuteSP_DataTable("CostCentreLinkType_GetAll", true));
+        public LinkTypeSql(Database database)
+        {
+            this._database = database;
+        }
+
+        public DataView GetAll()
+        {
+            this._database.ClearParameter();
+            return new DataView(this._database.ExecuteSP_DataTable("CostCentreLinkType_GetAll", true));
+        }
     }
-  }
 }

@@ -9,27 +9,27 @@ using System.Collections;
 
 namespace FSM.Entity.Documentss
 {
-  public class DocumentsValidator : BaseValidator
-  {
-    public void Validate(Documents oDocuments)
+    public class DocumentsValidator : BaseValidator
     {
-      if (oDocuments.Errors.Count > 0)
-      {
-        foreach (object error in oDocuments.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oDocuments.TableEnumID == 0)
-        this.AddCriticalMessage("Document Entity Missing");
-      if (oDocuments.RecordID == 0)
-        this.AddCriticalMessage("Document Record ID Missing");
-      if (oDocuments.DocumentTypeID == 0)
-        this.AddCriticalMessage("Document Type Missing");
-      if (oDocuments.Name.Trim().Length == 0)
-        this.AddCriticalMessage("Document Reference Missing");
-      if (oDocuments.Location.Trim().Length == 0)
-        this.AddCriticalMessage("Document Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(Documents oDocuments)
+        {
+            if (oDocuments.Errors.Count > 0)
+            {
+                foreach (object error in oDocuments.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oDocuments.TableEnumID == 0)
+                this.AddCriticalMessage("Document Entity Missing");
+            if (oDocuments.RecordID == 0)
+                this.AddCriticalMessage("Document Record ID Missing");
+            if (oDocuments.DocumentTypeID == 0)
+                this.AddCriticalMessage("Document Type Missing");
+            if (oDocuments.Name.Trim().Length == 0)
+                this.AddCriticalMessage("Document Reference Missing");
+            if (oDocuments.Location.Trim().Length == 0)
+                this.AddCriticalMessage("Document Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

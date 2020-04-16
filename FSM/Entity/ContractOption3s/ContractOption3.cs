@@ -9,181 +9,181 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ContractOption3s
 {
-  public class ContractOption3
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _ContractID;
-    private int _CustomerID;
-    private string _ContractReference;
-    private int _ContractStatusID;
-    private double _ContractPrice;
-    private int _QuoteContractID;
-
-    public ContractOption3()
+    public class ContractOption3
     {
-      this._exists = false;
-      this._deleted = false;
-      this._ContractID = 0;
-      this._CustomerID = 0;
-      this._ContractReference = string.Empty;
-      this._ContractStatusID = 0;
-      this._ContractPrice = 0.0;
-      this._QuoteContractID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _ContractID;
+        private int _CustomerID;
+        private string _ContractReference;
+        private int _ContractStatusID;
+        private double _ContractPrice;
+        private int _QuoteContractID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public ContractOption3()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._ContractID = 0;
+            this._CustomerID = 0;
+            this._ContractReference = string.Empty;
+            this._ContractStatusID = 0;
+            this._ContractPrice = 0.0;
+            this._QuoteContractID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int ContractID
-    {
-      get
-      {
-        return this._ContractID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetContractID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractID
+        {
+            get
+            {
+                return this._ContractID;
+            }
+        }
 
-    public int CustomerID
-    {
-      get
-      {
-        return this._CustomerID;
-      }
-    }
+        public object SetContractID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCustomerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_CustomerID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int CustomerID
+        {
+            get
+            {
+                return this._CustomerID;
+            }
+        }
 
-    public string ContractReference
-    {
-      get
-      {
-        return this._ContractReference;
-      }
-    }
+        public object SetCustomerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_CustomerID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetContractReference
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractReference", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string ContractReference
+        {
+            get
+            {
+                return this._ContractReference;
+            }
+        }
 
-    public int ContractStatusID
-    {
-      get
-      {
-        return this._ContractStatusID;
-      }
-    }
+        public object SetContractReference
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractReference", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetContractStatusID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractStatusID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractStatusID
+        {
+            get
+            {
+                return this._ContractStatusID;
+            }
+        }
 
-    public double ContractPrice
-    {
-      get
-      {
-        return this._ContractPrice;
-      }
-    }
+        public object SetContractStatusID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractStatusID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetContractPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractPrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double ContractPrice
+        {
+            get
+            {
+                return this._ContractPrice;
+            }
+        }
 
-    public int QuoteContractID
-    {
-      get
-      {
-        return this._QuoteContractID;
-      }
-    }
+        public object SetContractPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractPrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuoteContractID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteContractID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int QuoteContractID
+        {
+            get
+            {
+                return this._QuoteContractID;
+            }
+        }
+
+        public object SetQuoteContractID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteContractID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

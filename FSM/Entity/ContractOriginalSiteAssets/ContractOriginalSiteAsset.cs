@@ -9,181 +9,181 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ContractOriginalSiteAssets
 {
-  public class ContractOriginalSiteAsset
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private int _ContractSiteAssetID;
-    private int _ContractSiteID;
-    private int _AssetID;
-    private double _PricePerVisit;
-    private bool _PrimaryAsset;
-    private string _Type;
-    private string _Product;
-
-    public ContractOriginalSiteAsset()
+    public class ContractOriginalSiteAsset
     {
-      this._exists = false;
-      this._ContractSiteAssetID = 0;
-      this._ContractSiteID = 0;
-      this._AssetID = 0;
-      this._PricePerVisit = 0.0;
-      this._PrimaryAsset = false;
-      this._Type = "";
-      this._Product = "";
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private int _ContractSiteAssetID;
+        private int _ContractSiteID;
+        private int _AssetID;
+        private double _PricePerVisit;
+        private bool _PrimaryAsset;
+        private string _Type;
+        private string _Product;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public ContractOriginalSiteAsset()
+        {
+            this._exists = false;
+            this._ContractSiteAssetID = 0;
+            this._ContractSiteID = 0;
+            this._AssetID = 0;
+            this._PricePerVisit = 0.0;
+            this._PrimaryAsset = false;
+            this._Type = "";
+            this._Product = "";
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public int ContractSiteAssetID
-    {
-      get
-      {
-        return this._ContractSiteAssetID;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public object SetContractSiteAssetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractSiteAssetID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractSiteAssetID
+        {
+            get
+            {
+                return this._ContractSiteAssetID;
+            }
+        }
 
-    public int ContractSiteID
-    {
-      get
-      {
-        return this._ContractSiteID;
-      }
-    }
+        public object SetContractSiteAssetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractSiteAssetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetContractSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractSiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractSiteID
+        {
+            get
+            {
+                return this._ContractSiteID;
+            }
+        }
 
-    public int AssetID
-    {
-      get
-      {
-        return this._AssetID;
-      }
-    }
+        public object SetContractSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractSiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAssetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int AssetID
+        {
+            get
+            {
+                return this._AssetID;
+            }
+        }
 
-    public double PricePerVisit
-    {
-      get
-      {
-        return this._PricePerVisit;
-      }
-    }
+        public object SetAssetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPricePerVisit
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PricePerVisit", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double PricePerVisit
+        {
+            get
+            {
+                return this._PricePerVisit;
+            }
+        }
 
-    public bool PrimaryAsset
-    {
-      get
-      {
-        return this._PrimaryAsset;
-      }
-    }
+        public object SetPricePerVisit
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PricePerVisit", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPrimaryAsset
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PrimaryAsset", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool PrimaryAsset
+        {
+            get
+            {
+                return this._PrimaryAsset;
+            }
+        }
 
-    public string Type
-    {
-      get
-      {
-        return this._Type;
-      }
-    }
+        public object SetPrimaryAsset
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PrimaryAsset", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetType
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Type", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Type
+        {
+            get
+            {
+                return this._Type;
+            }
+        }
 
-    public string Product
-    {
-      get
-      {
-        return this._Product;
-      }
-    }
+        public object SetType
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Type", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetProduct
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Product", RuntimeHelpers.GetObjectValue(value));
-      }
+        public string Product
+        {
+            get
+            {
+                return this._Product;
+            }
+        }
+
+        public object SetProduct
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Product", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

@@ -9,217 +9,217 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.CustomerScheduleOfRates
 {
-  public class CustomerScheduleOfRate
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _CustomerScheduleOfRateID;
-    private int _CustomerID;
-    private int _ScheduleOfRatesCategoryID;
-    private string _Code;
-    private string _Description;
-    private double _Price;
-    private bool _AllowDeleted;
-    private int _TimeInMins;
-
-    public CustomerScheduleOfRate()
+    public class CustomerScheduleOfRate
     {
-      this._exists = false;
-      this._deleted = false;
-      this._CustomerScheduleOfRateID = 0;
-      this._CustomerID = 0;
-      this._ScheduleOfRatesCategoryID = 0;
-      this._Code = string.Empty;
-      this._Description = string.Empty;
-      this._Price = 0.0;
-      this._AllowDeleted = true;
-      this._TimeInMins = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _CustomerScheduleOfRateID;
+        private int _CustomerID;
+        private int _ScheduleOfRatesCategoryID;
+        private string _Code;
+        private string _Description;
+        private double _Price;
+        private bool _AllowDeleted;
+        private int _TimeInMins;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public CustomerScheduleOfRate()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._CustomerScheduleOfRateID = 0;
+            this._CustomerID = 0;
+            this._ScheduleOfRatesCategoryID = 0;
+            this._Code = string.Empty;
+            this._Description = string.Empty;
+            this._Price = 0.0;
+            this._AllowDeleted = true;
+            this._TimeInMins = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int CustomerScheduleOfRateID
-    {
-      get
-      {
-        return this._CustomerScheduleOfRateID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetCustomerScheduleOfRateID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_CustomerScheduleOfRateID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int CustomerScheduleOfRateID
+        {
+            get
+            {
+                return this._CustomerScheduleOfRateID;
+            }
+        }
 
-    public int CustomerID
-    {
-      get
-      {
-        return this._CustomerID;
-      }
-    }
+        public object SetCustomerScheduleOfRateID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_CustomerScheduleOfRateID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCustomerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_CustomerID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int CustomerID
+        {
+            get
+            {
+                return this._CustomerID;
+            }
+        }
 
-    public int ScheduleOfRatesCategoryID
-    {
-      get
-      {
-        return this._ScheduleOfRatesCategoryID;
-      }
-    }
+        public object SetCustomerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_CustomerID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetScheduleOfRatesCategoryID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ScheduleOfRatesCategoryID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ScheduleOfRatesCategoryID
+        {
+            get
+            {
+                return this._ScheduleOfRatesCategoryID;
+            }
+        }
 
-    public string Code
-    {
-      get
-      {
-        return this._Code;
-      }
-    }
+        public object SetScheduleOfRatesCategoryID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ScheduleOfRatesCategoryID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCode
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Code", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Code
+        {
+            get
+            {
+                return this._Code;
+            }
+        }
 
-    public string Description
-    {
-      get
-      {
-        return this._Description;
-      }
-    }
+        public object SetCode
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Code", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDescription
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Description", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+        }
 
-    public double Price
-    {
-      get
-      {
-        return this._Price;
-      }
-    }
+        public object SetDescription
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Description", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Price", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double Price
+        {
+            get
+            {
+                return this._Price;
+            }
+        }
 
-    public bool AllowDeleted
-    {
-      get
-      {
-        return this._AllowDeleted;
-      }
-    }
+        public object SetPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Price", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAllowDeleted
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AllowDeleted", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public bool AllowDeleted
+        {
+            get
+            {
+                return this._AllowDeleted;
+            }
+        }
 
-    public int TimeInMins
-    {
-      get
-      {
-        return this._TimeInMins;
-      }
-    }
+        public object SetAllowDeleted
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AllowDeleted", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetTimeInMins
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_TimeInMins", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int TimeInMins
+        {
+            get
+            {
+                return this._TimeInMins;
+            }
+        }
+
+        public object SetTimeInMins
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_TimeInMins", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

@@ -10,123 +10,123 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ContractOriginalPPMVisits
 {
-  public class ContractOriginalPPMVisit
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private int _ContractPPMVisitID;
-    private int _ContractSiteID;
-    private DateTime _EstimatedVisitDate;
-    private int _JobID;
-
-    public ContractOriginalPPMVisit()
+    public class ContractOriginalPPMVisit
     {
-      this._exists = false;
-      this._ContractPPMVisitID = 0;
-      this._ContractSiteID = 0;
-      this._EstimatedVisitDate = DateTime.MinValue;
-      this._JobID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private int _ContractPPMVisitID;
+        private int _ContractSiteID;
+        private DateTime _EstimatedVisitDate;
+        private int _JobID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public ContractOriginalPPMVisit()
+        {
+            this._exists = false;
+            this._ContractPPMVisitID = 0;
+            this._ContractSiteID = 0;
+            this._EstimatedVisitDate = DateTime.MinValue;
+            this._JobID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public int ContractPPMVisitID
-    {
-      get
-      {
-        return this._ContractPPMVisitID;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public object SetContractPPMVisitID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractPPMVisitID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractPPMVisitID
+        {
+            get
+            {
+                return this._ContractPPMVisitID;
+            }
+        }
 
-    public int ContractSiteID
-    {
-      get
-      {
-        return this._ContractSiteID;
-      }
-    }
+        public object SetContractPPMVisitID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractPPMVisitID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetContractSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ContractSiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ContractSiteID
+        {
+            get
+            {
+                return this._ContractSiteID;
+            }
+        }
 
-    public DateTime EstimatedVisitDate
-    {
-      get
-      {
-        return this._EstimatedVisitDate;
-      }
-      set
-      {
-        this._EstimatedVisitDate = value;
-      }
-    }
+        public object SetContractSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ContractSiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public int JobID
-    {
-      get
-      {
-        return this._JobID;
-      }
-    }
+        public DateTime EstimatedVisitDate
+        {
+            get
+            {
+                return this._EstimatedVisitDate;
+            }
+            set
+            {
+                this._EstimatedVisitDate = value;
+            }
+        }
 
-    public object SetJobID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_JobID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int JobID
+        {
+            get
+            {
+                return this._JobID;
+            }
+        }
+
+        public object SetJobID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_JobID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }
