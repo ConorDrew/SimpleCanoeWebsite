@@ -9,19 +9,19 @@ using System.Collections;
 
 namespace FSM.Entity.Areas
 {
-  public class AreaValidator : BaseValidator
-  {
-    public void Validate(Area oArea)
+    public class AreaValidator : BaseValidator
     {
-      if (oArea.Errors.Count > 0)
-      {
-        foreach (object error in oArea.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oArea.Description.Trim().Length == 0)
-        this.AddCriticalMessage("Description Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(Area oArea)
+        {
+            if (oArea.Errors.Count > 0)
+            {
+                foreach (object error in oArea.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oArea.Description.Trim().Length == 0)
+                this.AddCriticalMessage("Description Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
