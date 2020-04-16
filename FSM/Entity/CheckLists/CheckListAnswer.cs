@@ -9,163 +9,163 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.CheckLists
 {
-  public class CheckListAnswer
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private int _ChecklistAnswerID;
-    private int _CheckListID;
-    private int _EnumTableID;
-    private int _QuestionID;
-    private int _ResultID;
-    private string _Comments;
-
-    public CheckListAnswer()
+    public class CheckListAnswer
     {
-      this._exists = false;
-      this._ChecklistAnswerID = 0;
-      this._CheckListID = 0;
-      this._EnumTableID = 0;
-      this._QuestionID = 0;
-      this._ResultID = 0;
-      this._Comments = string.Empty;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private int _ChecklistAnswerID;
+        private int _CheckListID;
+        private int _EnumTableID;
+        private int _QuestionID;
+        private int _ResultID;
+        private string _Comments;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public CheckListAnswer()
+        {
+            this._exists = false;
+            this._ChecklistAnswerID = 0;
+            this._CheckListID = 0;
+            this._EnumTableID = 0;
+            this._QuestionID = 0;
+            this._ResultID = 0;
+            this._Comments = string.Empty;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public int ChecklistAnswerID
-    {
-      get
-      {
-        return this._ChecklistAnswerID;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public object SetChecklistAnswerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ChecklistAnswerID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ChecklistAnswerID
+        {
+            get
+            {
+                return this._ChecklistAnswerID;
+            }
+        }
 
-    public int CheckListID
-    {
-      get
-      {
-        return this._CheckListID;
-      }
-    }
+        public object SetChecklistAnswerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ChecklistAnswerID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCheckListID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_CheckListID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int CheckListID
+        {
+            get
+            {
+                return this._CheckListID;
+            }
+        }
 
-    public int EnumTableID
-    {
-      get
-      {
-        return this._EnumTableID;
-      }
-    }
+        public object SetCheckListID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_CheckListID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEnumTableID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EnumTableID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EnumTableID
+        {
+            get
+            {
+                return this._EnumTableID;
+            }
+        }
 
-    public int QuestionID
-    {
-      get
-      {
-        return this._QuestionID;
-      }
-    }
+        public object SetEnumTableID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EnumTableID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuestionID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuestionID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuestionID
+        {
+            get
+            {
+                return this._QuestionID;
+            }
+        }
 
-    public int ResultID
-    {
-      get
-      {
-        return this._ResultID;
-      }
-    }
+        public object SetQuestionID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuestionID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetResultID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ResultID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ResultID
+        {
+            get
+            {
+                return this._ResultID;
+            }
+        }
 
-    public string Comments
-    {
-      get
-      {
-        return this._Comments;
-      }
-    }
+        public object SetResultID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ResultID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetComments
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Comments", RuntimeHelpers.GetObjectValue(value));
-      }
+        public string Comments
+        {
+            get
+            {
+                return this._Comments;
+            }
+        }
+
+        public object SetComments
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Comments", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }
