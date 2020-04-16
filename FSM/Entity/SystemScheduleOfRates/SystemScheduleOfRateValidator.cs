@@ -9,25 +9,25 @@ using System.Collections;
 
 namespace FSM.Entity.SystemScheduleOfRates
 {
-  public class SystemScheduleOfRateValidator : BaseValidator
-  {
-    public void Validate(SystemScheduleOfRate oSystemScheduleOfRate)
+    public class SystemScheduleOfRateValidator : BaseValidator
     {
-      if (oSystemScheduleOfRate.Errors.Count > 0)
-      {
-        foreach (object error in oSystemScheduleOfRate.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oSystemScheduleOfRate.Description.Length == 0)
-        this.AddCriticalMessage("* Description is missing");
-      if (oSystemScheduleOfRate.ScheduleOfRatesCategoryID == 0)
-        this.AddCriticalMessage("* Category is missing");
-      if (!Versioned.IsNumeric((object) oSystemScheduleOfRate.Price))
-        this.AddCriticalMessage("* Price must be numeric");
-      if (!Versioned.IsNumeric((object) oSystemScheduleOfRate.TimeInMins))
-        this.AddCriticalMessage("* Time must be numeric");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(SystemScheduleOfRate oSystemScheduleOfRate)
+        {
+            if (oSystemScheduleOfRate.Errors.Count > 0)
+            {
+                foreach (object error in oSystemScheduleOfRate.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oSystemScheduleOfRate.Description.Length == 0)
+                this.AddCriticalMessage("* Description is missing");
+            if (oSystemScheduleOfRate.ScheduleOfRatesCategoryID == 0)
+                this.AddCriticalMessage("* Category is missing");
+            if (!Versioned.IsNumeric((object)oSystemScheduleOfRate.Price))
+                this.AddCriticalMessage("* Price must be numeric");
+            if (!Versioned.IsNumeric((object)oSystemScheduleOfRate.TimeInMins))
+                this.AddCriticalMessage("* Time must be numeric");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
