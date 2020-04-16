@@ -9,137 +9,137 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteJobOfWorks
 {
-  public class QuoteJobOfWork
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _QuoteJobOfWorkID;
-    private int _QuoteJobID;
-    private ArrayList _QuotejobItems;
-    private ArrayList _QuoteengineerVisits;
-
-    public QuoteJobOfWork()
+    public class QuoteJobOfWork
     {
-      this._exists = false;
-      this._deleted = false;
-      this._QuoteJobOfWorkID = 0;
-      this._QuoteJobID = 0;
-      this._QuotejobItems = new ArrayList();
-      this._QuoteengineerVisits = new ArrayList();
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _QuoteJobOfWorkID;
+        private int _QuoteJobID;
+        private ArrayList _QuotejobItems;
+        private ArrayList _QuoteengineerVisits;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public QuoteJobOfWork()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._QuoteJobOfWorkID = 0;
+            this._QuoteJobID = 0;
+            this._QuotejobItems = new ArrayList();
+            this._QuoteengineerVisits = new ArrayList();
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int QuoteJobOfWorkID
-    {
-      get
-      {
-        return this._QuoteJobOfWorkID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetQuoteJobOfWorkID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteJobOfWorkID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteJobOfWorkID
+        {
+            get
+            {
+                return this._QuoteJobOfWorkID;
+            }
+        }
 
-    public int QuoteJobID
-    {
-      get
-      {
-        return this._QuoteJobID;
-      }
-    }
+        public object SetQuoteJobOfWorkID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteJobOfWorkID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuoteJobID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteJobID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteJobID
+        {
+            get
+            {
+                return this._QuoteJobID;
+            }
+        }
 
-    public ArrayList QuoteJobItems
-    {
-      get
-      {
-        return this._QuotejobItems;
-      }
-      set
-      {
-        this._QuotejobItems = value;
-      }
-    }
+        public object SetQuoteJobID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteJobID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public ArrayList QuoteEngineerVisits
-    {
-      get
-      {
-        return this._QuoteengineerVisits;
-      }
-      set
-      {
-        this._QuoteengineerVisits = value;
-      }
+        public ArrayList QuoteJobItems
+        {
+            get
+            {
+                return this._QuotejobItems;
+            }
+            set
+            {
+                this._QuotejobItems = value;
+            }
+        }
+
+        public ArrayList QuoteEngineerVisits
+        {
+            get
+            {
+                return this._QuoteengineerVisits;
+            }
+            set
+            {
+                this._QuoteengineerVisits = value;
+            }
+        }
     }
-  }
 }

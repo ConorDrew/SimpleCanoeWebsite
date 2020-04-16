@@ -13,64 +13,54 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteEngineerVisits
 {
-  public class QuoteEngineerVisitSQL
-  {
-    private Database _database;
-
-    public QuoteEngineerVisitSQL(Database database)
+    public class QuoteEngineerVisitSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public QuoteEngineerVisit Insert(QuoteEngineerVisit qEngineerVisit)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteJobOfWorkID", (object) qEngineerVisit.QuoteJobOfWorkID, true);
-      this._database.AddParameter("@StatusEnumID", (object) qEngineerVisit.StatusEnumID, true);
-      this._database.AddParameter("@NotesToEngineer", (object) qEngineerVisit.NotesToEngineer, true);
-      qEngineerVisit.SetQuoteEngineerVisitID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteEngineerVisit_Insert", true)));
-      qEngineerVisit.Exists = true;
-      return qEngineerVisit;
-    }
-
-    public DataView QuoteEngineerVisits_Get_For_QuoteJob_Of_Work(int QuoteJobOfWorkID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteJobOfWorkID", (object) QuoteJobOfWorkID, true);
-      DataTable table = this._database.ExecuteSP_DataTable(nameof (QuoteEngineerVisits_Get_For_QuoteJob_Of_Work), true);
-      table.TableName = Enums.TableNames.tblQuoteEngineerVisit.ToString();
-      return new DataView(table);
-    }
-
-    public ArrayList QuoteEngineerVisits_Get_For_QuoteJob_Of_Work_As_Objects(
-      int QuoteJobOfWorkID)
-    {
-      ArrayList arrayList = new ArrayList();
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = this.QuoteEngineerVisits_Get_For_QuoteJob_Of_Work(QuoteJobOfWorkID).Table.Rows.GetEnumerator();
-        while (enumerator.MoveNext())
+        public QuoteEngineerVisitSQL(Database database)
         {
-          DataRow current = (DataRow) enumerator.Current;
-          arrayList.Add((object) new QuoteEngineerVisit()
-          {
-            IgnoreExceptionsOnSetMethods = true,
-            Exists = true,
-            SetQuoteEngineerVisitID = RuntimeHelpers.GetObjectValue(current["QuoteEngineerVisitID"]),
-            SetQuoteJobOfWorkID = RuntimeHelpers.GetObjectValue(current[nameof (QuoteJobOfWorkID)]),
-            SetStatusEnumID = RuntimeHelpers.GetObjectValue(current["StatusEnumID"]),
-            SetNotesToEngineer = RuntimeHelpers.GetObjectValue(current["NotesToEngineer"]),
-            SetDeleted = Conversions.ToBoolean(current["Deleted"])
-          });
+            this._database = database;
         }
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
-      return arrayList;
+
+        public QuoteEngineerVisit Insert(QuoteEngineerVisit qEngineerVisit)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteJobOfWorkID", (object)qEngineerVisit.QuoteJobOfWorkID, true);
+            this._database.AddParameter("@StatusEnumID", (object)qEngineerVisit.StatusEnumID, true);
+            this._database.AddParameter("@NotesToEngineer", (object)qEngineerVisit.NotesToEngineer, true);
+            qEngineerVisit.SetQuoteEngineerVisitID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteEngineerVisit_Insert", true)));
+            qEngineerVisit.Exists = true;
+            return qEngineerVisit;
+        }
+
+        public DataView QuoteEngineerVisits_Get_For_QuoteJob_Of_Work(int QuoteJobOfWorkID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteJobOfWorkID", (object)QuoteJobOfWorkID, true);
+            DataTable table = this._database.ExecuteSP_DataTable(nameof(QuoteEngineerVisits_Get_For_QuoteJob_Of_Work), true);
+            table.TableName = Enums.TableNames.tblQuoteEngineerVisit.ToString();
+            return new DataView(table);
+        }
+
+        public ArrayList QuoteEngineerVisits_Get_For_QuoteJob_Of_Work_As_Objects(
+          int QuoteJobOfWorkID)
+        {
+            ArrayList arrayList = new ArrayList();
+
+            foreach (DataRow current in this.QuoteEngineerVisits_Get_For_QuoteJob_Of_Work(QuoteJobOfWorkID).Table.Rows)
+            {
+                arrayList.Add((object)new QuoteEngineerVisit()
+                {
+                    IgnoreExceptionsOnSetMethods = true,
+                    Exists = true,
+                    SetQuoteEngineerVisitID = RuntimeHelpers.GetObjectValue(current["QuoteEngineerVisitID"]),
+                    SetQuoteJobOfWorkID = RuntimeHelpers.GetObjectValue(current[nameof(QuoteJobOfWorkID)]),
+                    SetStatusEnumID = RuntimeHelpers.GetObjectValue(current["StatusEnumID"]),
+                    SetNotesToEngineer = RuntimeHelpers.GetObjectValue(current["NotesToEngineer"]),
+                    SetDeleted = Conversions.ToBoolean(current["Deleted"])
+                });
+            }
+            return arrayList;
+        }
     }
-  }
 }

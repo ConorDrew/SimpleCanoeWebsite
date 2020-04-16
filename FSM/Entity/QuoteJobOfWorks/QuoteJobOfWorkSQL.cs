@@ -13,62 +13,51 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteJobOfWorks
 {
-  public class QuoteJobOfWorkSQL
-  {
-    private Database _database;
-
-    public QuoteJobOfWorkSQL(Database database)
+    public class QuoteJobOfWorkSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public QuoteJobOfWork Insert(QuoteJobOfWork qJobOfWork)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteJobID", (object) qJobOfWork.QuoteJobID, true);
-      qJobOfWork.SetQuoteJobOfWorkID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteJobOfWork_Insert", true)));
-      qJobOfWork.Exists = true;
-      return qJobOfWork;
-    }
-
-    public DataView QuoteJobOfWork_Get_For_QuoteJob(int QuoteJobID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteJobID", (object) QuoteJobID, true);
-      DataTable table = this._database.ExecuteSP_DataTable(nameof (QuoteJobOfWork_Get_For_QuoteJob), true);
-      table.TableName = Enums.TableNames.tblQuoteJobOfWork.ToString();
-      return new DataView(table);
-    }
-
-    public ArrayList QuoteJobOfWork_Get_For_QuoteJob_As_Objects(int QuoteJobID)
-    {
-      ArrayList arrayList = new ArrayList();
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = this.QuoteJobOfWork_Get_For_QuoteJob(QuoteJobID).Table.Rows.GetEnumerator();
-        while (enumerator.MoveNext())
+        public QuoteJobOfWorkSQL(Database database)
         {
-          DataRow current = (DataRow) enumerator.Current;
-          QuoteJobOfWork quoteJobOfWork = new QuoteJobOfWork()
-          {
-            IgnoreExceptionsOnSetMethods = true,
-            Exists = true,
-            SetQuoteJobOfWorkID = RuntimeHelpers.GetObjectValue(current["QuoteJobOFWorkID"]),
-            SetQuoteJobID = RuntimeHelpers.GetObjectValue(current[nameof (QuoteJobID)]),
-            SetDeleted = Conversions.ToBoolean(current["Deleted"])
-          };
-          quoteJobOfWork.QuoteJobItems = this._database.QuoteJobItems.QuoteJobOfWork_Get_For_QuoteJob_Of_Work_As_Objects(quoteJobOfWork.QuoteJobOfWorkID);
-          quoteJobOfWork.QuoteEngineerVisits = this._database.QuoteEngineerVisits.QuoteEngineerVisits_Get_For_QuoteJob_Of_Work_As_Objects(quoteJobOfWork.QuoteJobOfWorkID);
-          arrayList.Add((object) quoteJobOfWork);
+            this._database = database;
         }
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
-      return arrayList;
+
+        public QuoteJobOfWork Insert(QuoteJobOfWork qJobOfWork)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteJobID", (object)qJobOfWork.QuoteJobID, true);
+            qJobOfWork.SetQuoteJobOfWorkID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteJobOfWork_Insert", true)));
+            qJobOfWork.Exists = true;
+            return qJobOfWork;
+        }
+
+        public DataView QuoteJobOfWork_Get_For_QuoteJob(int QuoteJobID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteJobID", (object)QuoteJobID, true);
+            DataTable table = this._database.ExecuteSP_DataTable(nameof(QuoteJobOfWork_Get_For_QuoteJob), true);
+            table.TableName = Enums.TableNames.tblQuoteJobOfWork.ToString();
+            return new DataView(table);
+        }
+
+        public ArrayList QuoteJobOfWork_Get_For_QuoteJob_As_Objects(int QuoteJobID)
+        {
+            ArrayList arrayList = new ArrayList();
+            foreach (DataRow current in this.QuoteJobOfWork_Get_For_QuoteJob(QuoteJobID).Table.Rows)
+            {
+                QuoteJobOfWork quoteJobOfWork = new QuoteJobOfWork()
+                {
+                    IgnoreExceptionsOnSetMethods = true,
+                    Exists = true,
+                    SetQuoteJobOfWorkID = RuntimeHelpers.GetObjectValue(current["QuoteJobOFWorkID"]),
+                    SetQuoteJobID = RuntimeHelpers.GetObjectValue(current[nameof(QuoteJobID)]),
+                    SetDeleted = Conversions.ToBoolean(current["Deleted"])
+                };
+                quoteJobOfWork.QuoteJobItems = this._database.QuoteJobItems.QuoteJobOfWork_Get_For_QuoteJob_Of_Work_As_Objects(quoteJobOfWork.QuoteJobOfWorkID);
+                quoteJobOfWork.QuoteEngineerVisits = this._database.QuoteEngineerVisits.QuoteEngineerVisits_Get_For_QuoteJob_Of_Work_As_Objects(quoteJobOfWork.QuoteJobOfWorkID);
+                arrayList.Add((object)quoteJobOfWork);
+            }
+            return arrayList;
+        }
     }
-  }
 }

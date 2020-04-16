@@ -9,19 +9,19 @@ using System.Collections;
 
 namespace FSM.Entity.QuoteContractOriginalSites
 {
-  public class QuoteContractOriginalSiteValidator : BaseValidator
-  {
-    public void Validate(QuoteContractOriginalSite oQuoteContractSite)
+    public class QuoteContractOriginalSiteValidator : BaseValidator
     {
-      if (oQuoteContractSite.Errors.Count > 0)
-      {
-        foreach (object error in oQuoteContractSite.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oQuoteContractSite.VisitFrequencyID == 0)
-        this.AddCriticalMessage("Visit Frequency Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(QuoteContractOriginalSite oQuoteContractSite)
+        {
+            if (oQuoteContractSite.Errors.Count > 0)
+            {
+                foreach (object error in oQuoteContractSite.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oQuoteContractSite.VisitFrequencyID == 0)
+                this.AddCriticalMessage("Visit Frequency Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

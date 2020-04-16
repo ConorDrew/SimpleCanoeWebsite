@@ -12,72 +12,63 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteJobItems
 {
-  public class QuoteJobItemSQL
-  {
-    private Database _database;
-
-    public QuoteJobItemSQL(Database database)
+    public class QuoteJobItemSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public QuoteJobItem Insert(QuoteJobItem qJobItem)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteJobOfWorkID", (object) qJobItem.QuoteJobOfWorkID, true);
-      this._database.AddParameter("@Summary", (object) qJobItem.Summary, true);
-      this._database.AddParameter("@RateID", (object) qJobItem.RateID, true);
-      this._database.AddParameter("@Qty", (object) qJobItem.Qty, true);
-      this._database.AddParameter("@SystemLinkID", (object) qJobItem.SystemLinkID, true);
-      qJobItem.SetQuoteJobItemID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteJobItem_Insert", true)));
-      return qJobItem;
-    }
-
-    public DataView QuoteJobItems_Get_For_QuoteJob_Of_Work(int QuoteJobOfWorkID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteJobOfWorkID", (object) QuoteJobOfWorkID, true);
-      DataTable table = this._database.ExecuteSP_DataTable(nameof (QuoteJobItems_Get_For_QuoteJob_Of_Work), true);
-      table.TableName = Enums.TableNames.tblQuoteJobItem.ToString();
-      return new DataView(table);
-    }
-
-    public ArrayList QuoteJobOfWork_Get_For_QuoteJob_Of_Work_As_Objects(
-      int QuoteJobOfWorkID)
-    {
-      ArrayList arrayList = new ArrayList();
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = this.QuoteJobItems_Get_For_QuoteJob_Of_Work(QuoteJobOfWorkID).Table.Rows.GetEnumerator();
-        while (enumerator.MoveNext())
+        public QuoteJobItemSQL(Database database)
         {
-          DataRow current = (DataRow) enumerator.Current;
-          arrayList.Add((object) new QuoteJobItem()
-          {
-            IgnoreExceptionsOnSetMethods = true,
-            SetQuoteJobItemID = RuntimeHelpers.GetObjectValue(current["QuoteJobItemID"]),
-            SetQuoteJobOfWorkID = RuntimeHelpers.GetObjectValue(current[nameof (QuoteJobOfWorkID)]),
-            SetSummary = RuntimeHelpers.GetObjectValue(current["Summary"]),
-            SetRateID = RuntimeHelpers.GetObjectValue(current["RateID"]),
-            SetQty = RuntimeHelpers.GetObjectValue(current["Qty"]),
-            SetSystemLinkID = RuntimeHelpers.GetObjectValue(current["SystemLinkID"])
-          });
+            this._database = database;
         }
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
-      return arrayList;
-    }
 
-    public void Delete(int QuoteJobOfWorkID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteJobOfWorkID", (object) QuoteJobOfWorkID, true);
-      this._database.ExecuteSP_NO_Return("QuoteJobItem_Delete", true);
+        public QuoteJobItem Insert(QuoteJobItem qJobItem)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteJobOfWorkID", (object)qJobItem.QuoteJobOfWorkID, true);
+            this._database.AddParameter("@Summary", (object)qJobItem.Summary, true);
+            this._database.AddParameter("@RateID", (object)qJobItem.RateID, true);
+            this._database.AddParameter("@Qty", (object)qJobItem.Qty, true);
+            this._database.AddParameter("@SystemLinkID", (object)qJobItem.SystemLinkID, true);
+            qJobItem.SetQuoteJobItemID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteJobItem_Insert", true)));
+            return qJobItem;
+        }
+
+        public DataView QuoteJobItems_Get_For_QuoteJob_Of_Work(int QuoteJobOfWorkID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteJobOfWorkID", (object)QuoteJobOfWorkID, true);
+            DataTable table = this._database.ExecuteSP_DataTable(nameof(QuoteJobItems_Get_For_QuoteJob_Of_Work), true);
+            table.TableName = Enums.TableNames.tblQuoteJobItem.ToString();
+            return new DataView(table);
+        }
+
+        public ArrayList QuoteJobOfWork_Get_For_QuoteJob_Of_Work_As_Objects(
+          int QuoteJobOfWorkID)
+        {
+            ArrayList arrayList = new ArrayList();
+
+            foreach (DataRow current in this.QuoteJobItems_Get_For_QuoteJob_Of_Work(QuoteJobOfWorkID).Table.Rows)
+            {
+                arrayList.Add((object)new QuoteJobItem()
+                {
+                    IgnoreExceptionsOnSetMethods = true,
+                    SetQuoteJobItemID = RuntimeHelpers.GetObjectValue(current["QuoteJobItemID"]),
+                    SetQuoteJobOfWorkID = RuntimeHelpers.GetObjectValue(current[nameof(QuoteJobOfWorkID)]),
+                    SetSummary = RuntimeHelpers.GetObjectValue(current["Summary"]),
+                    SetRateID = RuntimeHelpers.GetObjectValue(current["RateID"]),
+                    SetQty = RuntimeHelpers.GetObjectValue(current["Qty"]),
+                    SetSystemLinkID = RuntimeHelpers.GetObjectValue(current["SystemLinkID"])
+                });
+            }
+
+            return arrayList;
+        }
+
+        public void Delete(int QuoteJobOfWorkID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteJobOfWorkID", (object)QuoteJobOfWorkID, true);
+            this._database.ExecuteSP_NO_Return("QuoteJobItem_Delete", true);
+        }
     }
-  }
 }
