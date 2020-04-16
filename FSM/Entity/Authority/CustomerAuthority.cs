@@ -9,127 +9,127 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Authority
 {
-  public class CustomerAuthority
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _customerAuthorityID;
-    private int _customerId;
-    private int _authorityID;
-
-    public CustomerAuthority()
+    public class CustomerAuthority
     {
-      this._exists = false;
-      this._deleted = false;
-      this._customerAuthorityID = 0;
-      this._customerId = 0;
-      this._authorityID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _customerAuthorityID;
+        private int _customerId;
+        private int _authorityID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public CustomerAuthority()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._customerAuthorityID = 0;
+            this._customerId = 0;
+            this._authorityID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int CustomerAuthorityID
-    {
-      get
-      {
-        return this._customerAuthorityID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetCustomerAuthorityID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_customerAuthorityID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int CustomerAuthorityID
+        {
+            get
+            {
+                return this._customerAuthorityID;
+            }
+        }
 
-    public int CustomerID
-    {
-      get
-      {
-        return this._customerId;
-      }
-    }
+        public object SetCustomerAuthorityID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_customerAuthorityID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetCustomerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_customerId", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int CustomerID
+        {
+            get
+            {
+                return this._customerId;
+            }
+        }
 
-    public int AuthorityID
-    {
-      get
-      {
-        return this._authorityID;
-      }
-    }
+        public object SetCustomerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_customerId", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAuthorityID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_authorityID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int AuthorityID
+        {
+            get
+            {
+                return this._authorityID;
+            }
+        }
+
+        public object SetAuthorityID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_authorityID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }
