@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.SiteOrders
 {
-  public class SiteOrderValidator : BaseValidator
-  {
-    public void Validate(SiteOrder oSiteOrder)
+    public class SiteOrderValidator : BaseValidator
     {
-      if (oSiteOrder.Errors.Count > 0)
-      {
-        foreach (object error in oSiteOrder.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(SiteOrder oSiteOrder)
+        {
+            if (oSiteOrder.Errors.Count > 0)
+            {
+                foreach (object error in oSiteOrder.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

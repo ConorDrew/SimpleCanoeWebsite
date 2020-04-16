@@ -9,109 +9,109 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Sections
 {
-  public class Section
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _SectionID;
-    private string _Description;
-
-    public Section()
+    public class Section
     {
-      this._exists = false;
-      this._deleted = false;
-      this._SectionID = 0;
-      this._Description = string.Empty;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _SectionID;
+        private string _Description;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public Section()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._SectionID = 0;
+            this._Description = string.Empty;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int SectionID
-    {
-      get
-      {
-        return this._SectionID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetSectionID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SectionID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SectionID
+        {
+            get
+            {
+                return this._SectionID;
+            }
+        }
 
-    public string Description
-    {
-      get
-      {
-        return this._Description;
-      }
-    }
+        public object SetSectionID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SectionID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDescription
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Description", RuntimeHelpers.GetObjectValue(value));
-      }
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+        }
+
+        public object SetDescription
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Description", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

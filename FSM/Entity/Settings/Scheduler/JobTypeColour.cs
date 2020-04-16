@@ -6,14 +6,14 @@
 
 namespace FSM.Entity.Settings.Scheduler
 {
-  public class JobTypeColour
-  {
-    public int Id { get; set; }
+    public class JobTypeColour
+    {
+        public int Id { get; set; }
 
-    public int JobTypeId { get; set; }
+        public int JobTypeId { get; set; }
 
-    public string JobType { get; set; }
+        public string JobType { get; set; }
 
-    public string Colour { get; set; }
-  }
+        public string Colour { get; set; }
+    }
 }

@@ -9,19 +9,19 @@ using System.Data;
 
 namespace FSM.Entity.RagRating
 {
-  public class RagRatingSql
-  {
-    private Database _database;
-
-    public RagRatingSql(Database database)
+    public class RagRatingSql
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView Get_All()
-    {
-      this._database.ClearParameter();
-      return new DataView(this._database.ExecuteSP_DataTable("RagRating_Get_All", true));
+        public RagRatingSql(Database database)
+        {
+            this._database = database;
+        }
+
+        public DataView Get_All()
+        {
+            this._database.ClearParameter();
+            return new DataView(this._database.ExecuteSP_DataTable("RagRating_Get_All", true));
+        }
     }
-  }
 }

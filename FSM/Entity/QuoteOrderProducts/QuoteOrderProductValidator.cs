@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.QuoteOrderProducts
 {
-  public class QuoteOrderProductValidator : BaseValidator
-  {
-    public void Validate(QuoteOrderProduct oQuoteOrderProduct)
+    public class QuoteOrderProductValidator : BaseValidator
     {
-      if (oQuoteOrderProduct.Errors.Count > 0)
-      {
-        foreach (object error in oQuoteOrderProduct.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(QuoteOrderProduct oQuoteOrderProduct)
+        {
+            if (oQuoteOrderProduct.Errors.Count > 0)
+            {
+                foreach (object error in oQuoteOrderProduct.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
