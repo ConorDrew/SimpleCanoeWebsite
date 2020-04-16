@@ -10,41 +10,41 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ContractAlternativePPMVisits
 {
-  public class ContractAlternativePPMVisitSQL
-  {
-    private Database _database;
-
-    public ContractAlternativePPMVisitSQL(Database database)
+    public class ContractAlternativePPMVisitSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView GetAll_For_ContractSiteJobOfWorkID(int ContractSiteJobOfWorkID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@ContractSiteJobOfWorkID", (object) ContractSiteJobOfWorkID, true);
-      DataTable table = this._database.ExecuteSP_DataTable("ContractAlternativePPMVisit_GetAll_For_ContractSiteJobOfWorkID", true);
-      table.TableName = Enums.TableNames.tblContractPPMVisit.ToString();
-      return new DataView(table);
-    }
+        public ContractAlternativePPMVisitSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public ContractAlternativePPMVisit Insert(
-      ContractAlternativePPMVisit oContractPPMVisit)
-    {
-      this._database.ClearParameter();
-      this.AddContractPPMVisitParametersToCommand(ref oContractPPMVisit);
-      oContractPPMVisit.SetContractPPMVisitID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("ContractAlternativePPMVisit_Insert", true)));
-      oContractPPMVisit.Exists = true;
-      return oContractPPMVisit;
-    }
+        public DataView GetAll_For_ContractSiteJobOfWorkID(int ContractSiteJobOfWorkID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@ContractSiteJobOfWorkID", (object)ContractSiteJobOfWorkID, true);
+            DataTable table = this._database.ExecuteSP_DataTable("ContractAlternativePPMVisit_GetAll_For_ContractSiteJobOfWorkID", true);
+            table.TableName = Enums.TableNames.tblContractPPMVisit.ToString();
+            return new DataView(table);
+        }
 
-    private void AddContractPPMVisitParametersToCommand(
-      ref ContractAlternativePPMVisit oContractPPMVisit)
-    {
-      Database database = this._database;
-      database.AddParameter("@ContractSiteJobOfWorkID", (object) oContractPPMVisit.ContractSiteJobOfWorkID, true);
-      database.AddParameter("@EstimatedVisitDate", (object) oContractPPMVisit.EstimatedVisitDate, true);
-      database.AddParameter("@JobID", (object) oContractPPMVisit.JobID, true);
+        public ContractAlternativePPMVisit Insert(
+          ContractAlternativePPMVisit oContractPPMVisit)
+        {
+            this._database.ClearParameter();
+            this.AddContractPPMVisitParametersToCommand(ref oContractPPMVisit);
+            oContractPPMVisit.SetContractPPMVisitID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("ContractAlternativePPMVisit_Insert", true)));
+            oContractPPMVisit.Exists = true;
+            return oContractPPMVisit;
+        }
+
+        private void AddContractPPMVisitParametersToCommand(
+          ref ContractAlternativePPMVisit oContractPPMVisit)
+        {
+            Database database = this._database;
+            database.AddParameter("@ContractSiteJobOfWorkID", (object)oContractPPMVisit.ContractSiteJobOfWorkID, true);
+            database.AddParameter("@EstimatedVisitDate", (object)oContractPPMVisit.EstimatedVisitDate, true);
+            database.AddParameter("@JobID", (object)oContractPPMVisit.JobID, true);
+        }
     }
-  }
 }
