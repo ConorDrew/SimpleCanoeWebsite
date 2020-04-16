@@ -1,0 +1,184 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Office.Interop.Excel.Constants
+// Assembly: FSM, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+// MVID: FAB6F0E2-B68A-47AB-AF95-A9E31DED7575
+// Assembly location: C:\github\gabriel.fieldservicemanager\src\bin\x86\Debug\FSM.exe
+
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace Microsoft.Office.Interop.Excel
+{
+  [CompilerGenerated]
+  [TypeIdentifier("00020813-0000-0000-c000-000000000046", "Microsoft.Office.Interop.Excel.Constants")]
+  public enum Constants
+  {
+    xlRTL = -5004, // 0xFFFFEC74
+    xlLTR = -5003, // 0xFFFFEC75
+    xlContext = -5002, // 0xFFFFEC76
+    xlLatin = -5001, // 0xFFFFEC77
+    xlBidi = -5000, // 0xFFFFEC78
+    xlTop = -4160, // 0xFFFFEFC0
+    xlSimple = -4154, // 0xFFFFEFC6
+    xlRight = -4152, // 0xFFFFEFC8
+    xlOff = -4146, // 0xFFFFEFCE
+    xlNotes = -4144, // 0xFFFFEFD0
+    xlNone = -4142, // 0xFFFFEFD2
+    xlModule = -4141, // 0xFFFFEFD3
+    xlManual = -4135, // 0xFFFFEFD9
+    xlLow = -4134, // 0xFFFFEFDA
+    xlLeft = -4131, // 0xFFFFEFDD
+    xlJustify = -4130, // 0xFFFFEFDE
+    xlHigh = -4127, // 0xFFFFEFE1
+    xlGray75 = -4126, // 0xFFFFEFE2
+    xlGray50 = -4125, // 0xFFFFEFE3
+    xlGray25 = -4124, // 0xFFFFEFE4
+    xlFormats = -4122, // 0xFFFFEFE6
+    xlDistributed = -4117, // 0xFFFFEFEB
+    xlCustom = -4114, // 0xFFFFEFEE
+    xlCombination = -4111, // 0xFFFFEFF1
+    xlCenter = -4108, // 0xFFFFEFF4
+    xlBottom = -4107, // 0xFFFFEFF5
+    xlAutomatic = -4105, // 0xFFFFEFF7
+    xlAll = -4104, // 0xFFFFEFF8
+    xl3DSurface = -4103, // 0xFFFFEFF9
+    xl3DBar = -4099, // 0xFFFFEFFD
+    xlDefaultAutoFormat = -1, // 0xFFFFFFFF
+    xlAbove = 0,
+    xlFirst = 0,
+    xlBelow = 1,
+    xlBoth = 1,
+    xlClassic1 = 1,
+    xlDirect = 1,
+    xlDoubleQuote = 1,
+    xlExcelMenus = 1,
+    xlFixedValue = 1,
+    xlFullScript = 1,
+    xlGeneral = 1,
+    xlIcons = 1,
+    xlLast = 1,
+    xlLogicalCursor = 1,
+    xlNarrow = 1,
+    xlOn = 1,
+    xlShort = 1,
+    xlSolid = 1,
+    xlSquare = 1,
+    xlSystem = 1,
+    xlTiled = 1,
+    xlToolbar = 1,
+    xlTopToBottom = 1,
+    xlWorksheet4 = 1,
+    xlAdd = 2,
+    xlBar = 2,
+    xlChart4 = 2,
+    xlClassic2 = 2,
+    xlConstants = 2,
+    xlContents = 2,
+    xlCorner = 2,
+    xlDiamond = 2,
+    xlGregorian = 2,
+    xlInside = 2,
+    xlInteger = 2,
+    xlLeftToRight = 2,
+    xlLotusHelp = 2,
+    xlMaximum = 2,
+    xlMixed = 2,
+    xlOpen = 2,
+    xlPartialScript = 2,
+    xlPercent = 2,
+    xlPlusValues = 2,
+    xlSemiautomatic = 2,
+    xlShowValue = 2,
+    xlSingle = 2,
+    xlSingleQuote = 2,
+    xlStrict = 2,
+    xlToolbarButton = 2,
+    xlTransparent = 2,
+    xlVeryHidden = 2,
+    xlVisualCursor = 2,
+    xlBidiCalendar = 3,
+    xlClassic3 = 3,
+    xlClosed = 3,
+    xlColumn = 3,
+    xlExtended = 3,
+    xlHindiNumerals = 3,
+    xlLong = 3,
+    xlMinusValues = 3,
+    xlMixedScript = 3,
+    xlNoDocuments = 3,
+    xlOpaque = 3,
+    xlOutside = 3,
+    xlPartial = 3,
+    xlScale = 3,
+    xlShowPercent = 3,
+    xlSubtract = 3,
+    xlTriangle = 3,
+    xlWide = 3,
+    xlWorksheetCell = 3,
+    xlAccounting1 = 4,
+    xlComplete = 4,
+    xlCross = 4,
+    xlDoubleOpen = 4,
+    xlMinimum = 4,
+    xlMixedAuthorizedScript = 4,
+    xlMultiply = 4,
+    xlNextToAxis = 4,
+    xlReference = 4,
+    xlShowLabel = 4,
+    xlSingleAccounting = 4,
+    xlStError = 4,
+    xlAccounting2 = 5,
+    xlDivide = 5,
+    xlDoubleAccounting = 5,
+    xlDoubleClosed = 5,
+    xlFill = 5,
+    xlFloating = 5,
+    xlFormula = 5,
+    xlShowLabelAndPercent = 5,
+    xlStar = 5,
+    xlWorksheetShort = 5,
+    xlAccounting3 = 6,
+    xlChartShort = 6,
+    xlWorkbookTab = 6,
+    xlAllExceptBorders = 7,
+    xlCascade = 7,
+    xlCenterAcrossSelection = 7,
+    xlColor1 = 7,
+    xlMacrosheetCell = 7,
+    xlCircle = 8,
+    xlColor2 = 8,
+    xlTitleBar = 8,
+    xlChecker = 9,
+    xlColor3 = 9,
+    xlDesktop = 9,
+    xlPlus = 9,
+    xlList1 = 10, // 0x0000000A
+    xlSemiGray75 = 10, // 0x0000000A
+    xlLastCell = 11, // 0x0000000B
+    xlLightHorizontal = 11, // 0x0000000B
+    xlList2 = 11, // 0x0000000B
+    xlWatchPane = 11, // 0x0000000B
+    xlImmediatePane = 12, // 0x0000000C
+    xlLightVertical = 12, // 0x0000000C
+    xlList3 = 12, // 0x0000000C
+    xlVisible = 12, // 0x0000000C
+    xl3DEffects1 = 13, // 0x0000000D
+    xlDebugCodePane = 13, // 0x0000000D
+    xlLightDown = 13, // 0x0000000D
+    xl3DEffects2 = 14, // 0x0000000E
+    xlDrawingObject = 14, // 0x0000000E
+    xlLightUp = 14, // 0x0000000E
+    xlGrid = 15, // 0x0000000F
+    xlLocalFormat1 = 15, // 0x0000000F
+    xlCrissCross = 16, // 0x00000010
+    xlLocalFormat2 = 16, // 0x00000010
+    xlTextBox = 16, // 0x00000010
+    xlAccounting4 = 17, // 0x00000011
+    xlChartSeries = 17, // 0x00000011
+    xlGray16 = 17, // 0x00000011
+    xlChartTitles = 18, // 0x00000012
+    xlGray8 = 18, // 0x00000012
+    xlEntireChart = 20, // 0x00000014
+    xlGridline = 22, // 0x00000016
+  }
+}

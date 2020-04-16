@@ -1,0 +1,2045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\github\gabriel.fieldservicemanager\src\bin\x86\Debug\FSM.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB52225A-C0D1-4022-905B-A4B9261A92B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>FSM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.12.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>lib\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel">
+      <HintPath>lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MigraDoc.DocumentObjectModel">
+      <HintPath>lib\MigraDoc.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering">
+      <HintPath>lib\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="MonthCalendar">
+      <HintPath>lib\MonthCalendar.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenXmlPowerTools">
+      <HintPath>lib\OpenXmlPowerTools.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>lib\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Words.NET">
+      <HintPath>lib\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>lib\itextsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\Office\Interop\Excel\AppEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\AppEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Axis.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Border.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Chart.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\ChartEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\ChartEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\ChartObject.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\ChartObjects.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Constants.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\DocEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\DocEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Font.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Gridlines.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Interior.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\PageSetup.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Range.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Sheets.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Style.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Styles.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Workbook.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\WorkbookEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\WorkbookEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Workbooks.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Worksheet.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlAxisGroup.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlAxisType.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlBorderWeight.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlBordersIndex.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlCategoryType.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlChartType.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlColorIndex.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlLineStyle.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlPageOrientation.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlRowCol.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\XlSaveAsAccessMode.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Chart.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Workbook.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Worksheet.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\ApplicationEvents4.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\ApplicationEvents4_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Bookmark.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Bookmarks.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Border.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Borders.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Cell.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Document.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\DocumentEvents2.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\DocumentEvents2_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Documents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Find.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Font.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\InlineShape.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\InlineShapes.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\PageSetup.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\ParagraphFormat.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Range.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Replacement.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Row.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Rows.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Selection.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Table.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Tables.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdAlertLevel.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdAutoFitBehavior.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdBorderType.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdBreakType.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdLineStyle.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdParagraphAlignment.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdRelativeHorizontalPosition.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdRelativeVerticalPosition.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdReplace.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdSaveFormat.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdUnits.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\_Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\_Document.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\_Font.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\_ParagraphFormat.cs" />
+    <Compile Include="FSM\FRMEngineerRolesDeleteMe.cs" />
+    <Compile Include="FSM\FRMReleaseNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSchedulerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridContractColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridDistrictColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridJobTypeColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridSchedulerJobColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridSiteFuelColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridSiteSafetyAuditColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridVisitManagerColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridVoidColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMBulkJobCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMDuplicateInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSupplierInvoiceImporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCDataPODuplicateInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCAbsences.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMNewJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMRescheduleVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSchedulerFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMViewEngineer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\PriorityCheck.cs" />
+    <Compile Include="FSM\FRMHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGPasswordOverrideINV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeOverridePassword_Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGPasswordOverride_Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGFindRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGPasswordOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeOverridePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContactDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSelectDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSignature.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\IBaseForm.cs" />
+    <Compile Include="FSM\IForm.cs" />
+    <Compile Include="FSM\App.cs" />
+    <Compile Include="FSM\MouseHandler.cs" />
+    <Compile Include="FSM\VersionChecker.cs" />
+    <Compile Include="FSM\ActiveReminderColourColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\Combo.cs" />
+    <Compile Include="FSM\Contract3AssetsColourColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\Contract3AssetsColourColumnConvert.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\BitToStringDescriptionColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\ColourColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DueDateColourColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\BindableCollection.cs" />
+    <Compile Include="FSM\BindableRootCollection.cs" />
+    <Compile Include="FSM\BindableItem.cs" />
+    <Compile Include="FSM\BindableChildItem.cs" />
+    <Compile Include="FSM\BindableRootItem.cs" />
+    <Compile Include="FSM\DataGridComboBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\FullyQualifiedFileName.cs" />
+    <Compile Include="FSM\Interfaces.cs" />
+    <Compile Include="FSM\CalculatedProperties.cs" />
+    <Compile Include="FSM\CalculatedProperty.cs" />
+    <Compile Include="FSM\CollectionProperties.cs" />
+    <Compile Include="FSM\CollectionProperty.cs" />
+    <Compile Include="FSM\Properties.cs" />
+    <Compile Include="FSM\Property.cs" />
+    <Compile Include="FSM\PersistedProperties.cs" />
+    <Compile Include="FSM\PersistedProperty.cs" />
+    <Compile Include="FSM\RootObject.cs" />
+    <Compile Include="FSM\SimpleBooleanArray.cs" />
+    <Compile Include="FSM\SimpleObjectArrayByKey.cs" />
+    <Compile Include="FSM\SimpleObjectArray.cs" />
+    <Compile Include="FSM\SimpleStringArray.cs" />
+    <Compile Include="FSM\SimpleStringArrayOld.cs" />
+    <Compile Include="FSM\XmlPersister.cs" />
+    <Compile Include="FSM\DataGridLabelColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridRowHeightSetter.cs" />
+    <Compile Include="FSM\DataGridSchedulerColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridTinyIntColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\JobCompletedIn1Column.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\JobNumber.cs" />
+    <Compile Include="FSM\OutOfHoursColourColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\PaidStatusColourColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\StockReplenishmentColourColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\UnscheduledCallsColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\MessageFilter.cs" />
+    <Compile Include="FSM\IOleMessageFilter.cs" />
+    <Compile Include="FSM\BaseValidator.cs" />
+    <Compile Include="FSM\ValidationException.cs" />
+    <Compile Include="FSM\DataTypeValidator.cs" />
+    <Compile Include="FSM\ErrorMsg.cs" />
+    <Compile Include="FSM\ValidatorMessages.cs" />
+    <Compile Include="FSM\UCDataPartsOrderedImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMItemReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGSetupVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGFindSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractUpgradeDowngrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMNewPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMManualApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMGenDropBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractWiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCContractWiz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\Simple3Des.cs" />
+    <Compile Include="FSM\FRMEngineerRaiseJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMFindCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCCustomerServiceProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAddPostcodeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCEquipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMCustomerSORJobType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAddVanEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMFleetEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMFleetVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMFleetVanImporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMFleetVanManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCFleetEquipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCFleetVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSearchFleetVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeInvoiceLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeRaiseDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeSageDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangePaymentTerms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMInvoiceExtraDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSalesCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPaidBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobCostings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMMoveParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContactAttempt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobImportManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGVisitAdditionalWorkSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSmokeComo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMCreateServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCASHPWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCComercialWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCGasWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCGSHPWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCHIUWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOilWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOtherWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSolarWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSolidWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCUnventedWorksheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMConvertToVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmEngineerVisitPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\ucEngineerVisitPhoto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartsForCreditList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSpecialOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPOInvoiceAuthReasons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCDataPOInvoiceAuthorisation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPOInvoiceAuthorisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPOInvoiceIncludedItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCDataPartsInvoiceImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartsInvoiceImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartsImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMErrors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\ImporterLabelColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\UCData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAbsenceColourKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmBlockAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\frmDetailsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmDisplayEngineers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmEngineerAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\frmAbsences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\frmEngineerSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\frmSchedulerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmUserAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\frmVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\ISchedulerForm.cs" />
+    <Compile Include="FSM\ModScheduler.cs" />
+    <Compile Include="FSM\pnlScheduleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\pnlUnscheduledCalls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\AbsenceOverlapCheck.cs" />
+    <Compile Include="FSM\DueDateCheck.cs" />
+    <Compile Include="FSM\LevelsCheck.cs" />
+    <Compile Include="FSM\PostcodeRegionCheck.cs" />
+    <Compile Include="FSM\RegionCheck.cs" />
+    <Compile Include="FSM\ScheduleTest.cs" />
+    <Compile Include="FSM\SOROverloadCheck.cs" />
+    <Compile Include="FSM\VisitOverlapCheck.cs" />
+    <Compile Include="FSM\Scheduler.cs" />
+    <Compile Include="FSM\EngineerAbsenceValidator.cs" />
+    <Compile Include="FSM\UserAbsenceValidator.cs" />
+    <Compile Include="FSM\CSVExporter.cs" />
+    <Compile Include="FSM\DynamicDataTables.cs" />
+    <Compile Include="FSM\Navigation.cs" />
+    <Compile Include="FSM\ISearchControl.cs" />
+    <Compile Include="FSM\IUserControl.cs" />
+    <Compile Include="FSM\DataGridEditableTextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\SubMenuNode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCAsset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAnswers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMCheckListManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCNotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobItemAssets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCJobItemAssets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractAlternativeSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMViewContractAlternativeChargeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCContractAlternativeSite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCJobOfWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractOption3Site.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCContractOption3Site.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAvailableContractNos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractOriginalSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSiteScheduleOfRateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCContractOriginalSite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractOriginal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContractRenewal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCContractOriginal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCDocuments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCDocumentsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEngineerTimesheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEngineerTimesheets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEngineer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPostcodeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMVanHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCEngineer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobLocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStandardSentences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMVATRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCMainButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSideBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSearchCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSearchJobs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSearchSpares.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSearchStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMInvoiceAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCInvoiceAddress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAddInvoiceAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeInvoicedTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeVAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmInvoicedPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMInvoicedManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMInvoiceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmRaiseInvoiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangeJobType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMLogCallout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCCalloutBreakdown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCJobCostings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCLogCallout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCVisitBreakdown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMVisitManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChangePriority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSelectInvoiceAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGEngineerVisitDefect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGVisitAssetWorkSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChooseAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMDistributeAllocated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEngineerVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMTypeMakeModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMLetterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMChooseSupplierPacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMConvertToAnOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPickDespatchDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMConsolidation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DataGridOrderTextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGAdvancedItemSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\DLGPickPartProductSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAddtoOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAddToQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEnterEmailAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMOrderCharges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMOrderManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMReceiveStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSelectLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStockMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStockReplenishment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStockTake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMOrderRejection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOrderRejection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\TabletOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCStockReplenishmentData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCGenerateQuote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOrderForCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOrderForJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOrderForVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCOrderForWarehouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMAddPartToBeCredited.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMCreditReceived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartsToBeCredited.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartsToBeCreditedManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCPartsToBeCredited.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCPartSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMFindPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartSelectLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMBookJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMLetterManagerMK3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCPartPack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCPart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMProductSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCProductSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteContractAlternativeConvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCConvertJobOfWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteContractAlternativeConvert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteJobItemAssets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteJobItemAssets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteContractAlternativeSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteContractAlternativeSite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteJobOfWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteContractAlternative.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteContractOption3Convert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteContractOption3Convert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteContractOption3Site.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteContractOption3Site.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteContractOption3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteContractOption3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteJobSelectASite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteJobSelectASite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMQuoteRejection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuoteRejection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCQuotesList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMBatchVisitCosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEquipmentUsed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMBatchGSRPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPartsUsed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStockMoved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStockUsed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStockCategoryValuation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMStockValuation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMLastGSRReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMDirectDebitReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEngineerTimesheetReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSelectAMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCLiveVisitCost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMCustomerScheduleOfRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCCustomerScheduleOfRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSystemScheduleOfRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSystemScheduleOfRateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSystemScheduleOfRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FrmAdditionalNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMCostCentre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMContactInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMPrivNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSelectAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMLastServiceDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMJobWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSiteFuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSiteLetterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSitePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSiteCustomerAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSiteVisitManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCContacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCJobWizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSubcontractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSubcontractor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMTimeSlotRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMUserQualification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCUserQualification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEngineerVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCEngineerVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMEngineerHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMFleetVanType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\UCFleetVanType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FRMWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\UCWarehouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSM\FSMDataSet.cs" />
+    <Compile Include="FSM\MySettings.cs" />
+    <Compile Include="FSM\FRMEngineerRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM\My\MyApplication.cs" />
+    <Compile Include="FSM\My\MyComputer.cs" />
+    <Compile Include="FSM\My\MyProject.cs" />
+    <Compile Include="FSM\My\MySettingsProperty.cs" />
+    <Compile Include="FSM\My\Resources\Resources.cs" />
+    <Compile Include="FSM\Entity\StockTakeAudit.cs" />
+    <Compile Include="FSM\Entity\StockTakeAuditSQL.cs" />
+    <Compile Include="FSM\Entity\Sys\Consts.cs" />
+    <Compile Include="FSM\Entity\Sys\DateHelper.cs" />
+    <Compile Include="FSM\Entity\Sys\EmailAddress.cs" />
+    <Compile Include="FSM\Entity\Sys\ExportHelper.cs" />
+    <Compile Include="FSM\Entity\Sys\ImageHelper.cs" />
+    <Compile Include="FSM\Entity\Sys\PdfFactory.cs" />
+    <Compile Include="FSM\Entity\Sys\PrintHelper.cs" />
+    <Compile Include="FSM\Entity\Sys\TemplateHelper.cs" />
+    <Compile Include="FSM\Entity\Sys\Configuration.cs" />
+    <Compile Include="FSM\Entity\Sys\Database.cs" />
+    <Compile Include="FSM\Entity\Sys\Enums.cs" />
+    <Compile Include="FSM\Entity\Sys\SystemData.cs" />
+    <Compile Include="FSM\Entity\Sys\TransactionalDatabase.cs" />
+    <Compile Include="FSM\Entity\Sys\Emails.cs" />
+    <Compile Include="FSM\Entity\Sys\Exporting.cs" />
+    <Compile Include="FSM\Entity\Sys\Helper.cs" />
+    <Compile Include="FSM\Entity\Sys\Printing.cs" />
+    <Compile Include="FSM\Entity\Sys\SignatureBox.cs" />
+    <Compile Include="FSM\Entity\Sys\ObjectMap.cs" />
+    <Compile Include="FSM\Entity\Accounts\AccountsHelper.cs" />
+    <Compile Include="FSM\Entity\Accounts\SSC.cs" />
+    <Compile Include="FSM\Entity\Accounts\Payload.cs" />
+    <Compile Include="FSM\Entity\Accounts\Line.cs" />
+    <Compile Include="FSM\Entity\Accounts\SunFinanceSQL.cs" />
+    <Compile Include="FSM\Entity\Appointments\Appointment.cs" />
+    <Compile Include="FSM\Entity\Appointments\AppointmentConverter.cs" />
+    <Compile Include="FSM\Entity\Appointments\AppointmentsSQL.cs" />
+    <Compile Include="FSM\Entity\Management\ManagerSQL.cs" />
+    <Compile Include="FSM\Entity\Management\Settings.cs" />
+    <Compile Include="FSM\Entity\Management\SettingsValidator.cs" />
+    <Compile Include="FSM\Entity\PickLists\PickList.cs" />
+    <Compile Include="FSM\Entity\PickLists\PickListSQL.cs" />
+    <Compile Include="FSM\Entity\PickLists\PickListValidator.cs" />
+    <Compile Include="FSM\Entity\Users\User.cs" />
+    <Compile Include="FSM\Entity\Users\UserSQL.cs" />
+    <Compile Include="FSM\Entity\Users\UserValidator.cs" />
+    <Compile Include="FSM\Entity\Authority\Authority.cs" />
+    <Compile Include="FSM\Entity\Authority\AuthoritySQL.cs" />
+    <Compile Include="FSM\Entity\Authority\CustomerAuthority.cs" />
+    <Compile Include="FSM\Entity\Authority\SiteAuthority.cs" />
+    <Compile Include="FSM\Entity\CompanyDetails\CompanyDetails.cs" />
+    <Compile Include="FSM\Entity\CompanyDetails\CompanyDetailsSql.cs" />
+    <Compile Include="FSM\Entity\ContactAttempts\ContactAttempt.cs" />
+    <Compile Include="FSM\Entity\ContactAttempts\ContactAttemptSql.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalVisits\ContractOriginalVisit.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalVisits\ContractOriginalVisitSQL.cs" />
+    <Compile Include="FSM\Entity\CostCentres\CostCentre.cs" />
+    <Compile Include="FSM\Entity\CostCentres\CostCentreSql.cs" />
+    <Compile Include="FSM\Entity\CostCentres\Enums\GetBy.cs" />
+    <Compile Include="FSM\Entity\CostCentres\LinkTypes\LinkTypeSql.cs" />
+    <Compile Include="FSM\Entity\CostCentres\LinkTypes\Enums\LinkType.cs" />
+    <Compile Include="FSM\Entity\Customers\CustomerAlert.cs" />
+    <Compile Include="FSM\Entity\Customers\CustomerAlertSql.cs" />
+    <Compile Include="FSM\Entity\Customers\CustomerServiceProcess.cs" />
+    <Compile Include="FSM\Entity\Customers\Customer.cs" />
+    <Compile Include="FSM\Entity\Customers\CustomerSQL.cs" />
+    <Compile Include="FSM\Entity\Customers\CustomerValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerRoles\EngineerAssignedToRole.cs" />
+    <Compile Include="FSM\Entity\EngineerRoles\EngineerRole.cs" />
+    <Compile Include="FSM\Entity\EngineerRoles\EngineerRoleSql.cs" />
+    <Compile Include="FSM\Entity\Engineers\Equipment.cs" />
+    <Compile Include="FSM\Entity\Engineers\Engineer.cs" />
+    <Compile Include="FSM\Entity\Engineers\EngineerSQL.cs" />
+    <Compile Include="FSM\Entity\Engineers\EngineerValidator.cs" />
+    <Compile Include="FSM\Entity\Engineers\SiteSafetyAudits\SiteSafetyAudit.cs" />
+    <Compile Include="FSM\Entity\Engineers\SiteSafetyAudits\SiteSafetyAuditSql.cs" />
+    <Compile Include="FSM\Entity\Engineers\SiteSafetyAudits\Enums\GetBy.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVan.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanType.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanEngineer.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanMaintenance.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanFault.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanContract.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetEquipment.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanTypeSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanEngineerSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanMaintenanceSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanFaultSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanContractSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanServiceSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetEquipmentSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanEquipmentSQL.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanValidator.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanTypeValidator.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanEngineerValidator.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanMaintenanceValidator.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanFaultValidator.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetVanContractValidator.cs" />
+    <Compile Include="FSM\Entity\FleetVans\FleetEquipmentValidator.cs" />
+    <Compile Include="FSM\Entity\Ibc\IbcSql.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAdditionals\EngineerVisitAdditional.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAdditionals\EngineerVisitAdditionalSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAdditionals\EngineerVisitAdditionalValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorASHP.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorComCat.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorGas.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorGSHP.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorHIU.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorOil.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorOther.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorSolar.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorSolid.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidatorUnvented.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheet.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitAssetWorkSheets\EngineerVisitAssetWorkSheetValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisits\EngineerVisit.cs" />
+    <Compile Include="FSM\Entity\EngineerVisits\EngineerVisitSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisits\EngineerVisitValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisits\EngineerVisitEngineers\EngineerVisitEngineer.cs" />
+    <Compile Include="FSM\Entity\EngineerVisits\EngineerVisitEngineers\EngineerVisitEngineerSql.cs" />
+    <Compile Include="FSM\Entity\EngineerVisits\EngineerVisitEngineers\Enums\DeleteBy.cs" />
+    <Compile Include="FSM\Entity\EngineerVisits\EngineerVisitEngineers\Enums\GetBy.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitPhotos\EngineerVisitPhoto.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitPhotos\EngineerVisitPhotoSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitPhotos\EngineerVisitPhotoValidator.cs" />
+    <Compile Include="FSM\Entity\JobContacts\JobContact.cs" />
+    <Compile Include="FSM\Entity\JobContacts\JobContactSQL.cs" />
+    <Compile Include="FSM\Entity\JobImport\JobImport.cs" />
+    <Compile Include="FSM\Entity\JobImport\JobImportType.cs" />
+    <Compile Include="FSM\Entity\JobImport\JobImportSQL.cs" />
+    <Compile Include="FSM\Entity\JobImport\JobImportTypeValidator.cs" />
+    <Compile Include="FSM\Entity\Jobs\GetBy.cs" />
+    <Compile Include="FSM\Entity\Jobs\Job.cs" />
+    <Compile Include="FSM\Entity\Jobs\JobSQL.cs" />
+    <Compile Include="FSM\Entity\Jobs\JobValidator.cs" />
+    <Compile Include="FSM\Entity\JobInstalls\JobInstall.cs" />
+    <Compile Include="FSM\Entity\JobInstalls\JobInstallSQL.cs" />
+    <Compile Include="FSM\Entity\JobInstalls\JobInstallValidator.cs" />
+    <Compile Include="FSM\Entity\Orders\POInvoiceSQL.cs" />
+    <Compile Include="FSM\Entity\Orders\Order.cs" />
+    <Compile Include="FSM\Entity\Orders\OrderSQL.cs" />
+    <Compile Include="FSM\Entity\Orders\SupplierInvoice.cs" />
+    <Compile Include="FSM\Entity\Orders\OrderValidator.cs" />
+    <Compile Include="FSM\Entity\Orders\SupplierInvoiceSQL.cs" />
+    <Compile Include="FSM\Entity\RagRating\RagRatingSql.cs" />
+    <Compile Include="FSM\Entity\SalesCredits\SalesCredit.cs" />
+    <Compile Include="FSM\Entity\SalesCredits\SalesCreditSQL.cs" />
+    <Compile Include="FSM\Entity\PartsToBeCrediteds\SalesCreditValidator.cs" />
+    <Compile Include="FSM\Entity\PartsToBeCrediteds\PartsToBeCredited.cs" />
+    <Compile Include="FSM\Entity\PartsToBeCrediteds\PartsToBeCreditedSQL.cs" />
+    <Compile Include="FSM\Entity\PartsToBeCrediteds\PartsToBeCreditedValidator.cs" />
+    <Compile Include="FSM\Entity\Reports\ReportSQL.cs" />
+    <Compile Include="FSM\Entity\HeartBeats\HeartBeat.cs" />
+    <Compile Include="FSM\Entity\Skills\Skill.cs" />
+    <Compile Include="FSM\Entity\Skills\SkillType.cs" />
+    <Compile Include="FSM\Entity\Skills\SkillsSQL.cs" />
+    <Compile Include="FSM\Entity\TabletOrders\TabletOrderItem.cs" />
+    <Compile Include="FSM\Entity\TabletOrders\TabletOrderPart.cs" />
+    <Compile Include="FSM\Entity\TabletOrders\TabletOrderSQL.cs" />
+    <Compile Include="FSM\Entity\UserLevels\UserLevel.cs" />
+    <Compile Include="FSM\Entity\UserLevels\UserLevelSQL.cs" />
+    <Compile Include="FSM\Entity\Settings\Scheduler\JobTypeColour.cs" />
+    <Compile Include="FSM\Entity\Settings\Scheduler\JobTypeColourSql.cs" />
+    <Compile Include="FSM\Entity\Vans\Van.cs" />
+    <Compile Include="FSM\Entity\Vans\VanSQL.cs" />
+    <Compile Include="FSM\Entity\Vans\VanValidator.cs" />
+    <Compile Include="FSM\Entity\Vans\Equipments\EquipmentSql.cs" />
+    <Compile Include="FSM\Entity\Assets\Asset.cs" />
+    <Compile Include="FSM\Entity\Assets\AssetSQL.cs" />
+    <Compile Include="FSM\Entity\Assets\AssetValidator.cs" />
+    <Compile Include="FSM\Entity\Areas\Area.cs" />
+    <Compile Include="FSM\Entity\Areas\AreaSQL.cs" />
+    <Compile Include="FSM\Entity\Areas\AreaValidator.cs" />
+    <Compile Include="FSM\Entity\CheckLists\CheckList.cs" />
+    <Compile Include="FSM\Entity\CheckLists\CheckListAnswer.cs" />
+    <Compile Include="FSM\Entity\CheckLists\CheckListSQL.cs" />
+    <Compile Include="FSM\Entity\Sections\Section.cs" />
+    <Compile Include="FSM\Entity\Sections\SectionSQL.cs" />
+    <Compile Include="FSM\Entity\Sections\SectionValidator.cs" />
+    <Compile Include="FSM\Entity\SubTasks\SubTask.cs" />
+    <Compile Include="FSM\Entity\SubTasks\SubTaskSQL.cs" />
+    <Compile Include="FSM\Entity\SubTasks\SubTaskValidator.cs" />
+    <Compile Include="FSM\Entity\Tasks\Task.cs" />
+    <Compile Include="FSM\Entity\Tasks\TaskSQL.cs" />
+    <Compile Include="FSM\Entity\Tasks\TaskValidator.cs" />
+    <Compile Include="FSM\Entity\Contacts\Contact.cs" />
+    <Compile Include="FSM\Entity\Contacts\ContactSQL.cs" />
+    <Compile Include="FSM\Entity\Contacts\ContactValidator.cs" />
+    <Compile Include="FSM\Entity\ContractManager\ContractManagerSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOption3SiteAsset\ContractOption3AssetSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOption3SiteAsset\ContractOption3SiteAsset.cs" />
+    <Compile Include="FSM\Entity\ContractOption3SiteAsset\ContractOption3SiteAssetValidator.cs" />
+    <Compile Include="FSM\Entity\ContractOption3SitePPMVisits\ContractOption3SitePPMVisit.cs" />
+    <Compile Include="FSM\Entity\ContractOption3SitePPMVisits\ContractOption3SitePPMVisitSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOption3SitePPMVisits\ContractOption3SitePPMVisitValidator.cs" />
+    <Compile Include="FSM\Entity\ContractOption3Sites\ContractOption3Site.cs" />
+    <Compile Include="FSM\Entity\ContractOption3Sites\ContractOption3SiteSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOption3Sites\ContractOption3SiteValidator.cs" />
+    <Compile Include="FSM\Entity\ContractOption3s\ContractOption3.cs" />
+    <Compile Include="FSM\Entity\ContractOption3s\ContractOption3SQL.cs" />
+    <Compile Include="FSM\Entity\ContractOption3s\ContractOption3Validator.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSiteRatess\ContractOriginalSiteRates.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSiteRatess\ContractOriginalSiteRatesSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSiteRatess\ContractOriginalSiteRatesValidator.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativePPMVisits\ContractAlternativePPMVisit.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativePPMVisits\ContractAlternativePPMVisitSQL.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativePPMVisits\ContractAlternativePPMVisitValidator.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteAssets\ContractAlternativeSiteAsset.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteAssets\ContractAlternativeSiteAssetSQL.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteAssets\ContractAlternativeSiteAssetValidator.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteJobItems\ContractAlternativeSiteJobItems.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteJobItems\ContractAlternativeSiteJobItemsSQL.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteJobItems\ContractAlternativeSiteJobItemsValidator.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteJobOfWorks\ContractAlternativeSiteJobOfWork.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteJobOfWorks\ContractAlternativeSiteJobOfWorkSQL.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSiteJobOfWorks\ContractAlternativeSiteJobOfWorkValidator.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSites\ContractAlternativeSite.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSites\ContractAlternativeSiteSQL.cs" />
+    <Compile Include="FSM\Entity\ContractAlternativeSites\ContractAlternativeSiteValidator.cs" />
+    <Compile Include="FSM\Entity\ContractsAlternative\ContractAlternative.cs" />
+    <Compile Include="FSM\Entity\ContractsAlternative\ContractAlternativeSQL.cs" />
+    <Compile Include="FSM\Entity\ContractsAlternative\ContractAlternativeValidator.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalPPMVisits\ContractOriginalPPMVisit.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalPPMVisits\ContractOriginalPPMVisitSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalPPMVisits\ContractOriginalPPMVisitValidator.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSiteAssets\ContractOriginalSiteAsset.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSiteAssets\ContractOriginalSiteAssetSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSiteAssets\ContractOriginalSiteAssetValidator.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSites\ContractOriginalSite.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSites\ContractOriginalSiteSQL.cs" />
+    <Compile Include="FSM\Entity\ContractOriginalSites\ContractOriginalSiteValidator.cs" />
+    <Compile Include="FSM\Entity\ContractsOriginal\ContractOriginal.cs" />
+    <Compile Include="FSM\Entity\ContractsOriginal\ContractOriginalSQL.cs" />
+    <Compile Include="FSM\Entity\ContractsOriginal\ContractOriginalValidator.cs" />
+    <Compile Include="FSM\Entity\CustomerCharges\CustomerCharge.cs" />
+    <Compile Include="FSM\Entity\CustomerCharges\CustomerChargeSQL.cs" />
+    <Compile Include="FSM\Entity\CustomerCharges\CustomerChargeValidator.cs" />
+    <Compile Include="FSM\Entity\CustomerScheduleOfRates\CustomerScheduleOfRate.cs" />
+    <Compile Include="FSM\Entity\CustomerScheduleOfRates\CustomerScheduleOfRateSQL.cs" />
+    <Compile Include="FSM\Entity\CustomerScheduleOfRates\CustomerScheduleOfRateValidator.cs" />
+    <Compile Include="FSM\Entity\Documentss\Documents.cs" />
+    <Compile Include="FSM\Entity\Documentss\DocumentsSQL.cs" />
+    <Compile Include="FSM\Entity\Documentss\DocumentsValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerAbsence\EngineerAbsence.cs" />
+    <Compile Include="FSM\Entity\EngineerAbsence\EngineerAbsenceSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerLevels\EngineerLevel.cs" />
+    <Compile Include="FSM\Entity\EngineerLevels\EngineerLevelSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerLevels\EngineerLevelValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerPostalRegions\EngineerPostalRegion.cs" />
+    <Compile Include="FSM\Entity\EngineerPostalRegions\EngineerPostalRegionSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerPostalRegions\EngineerPostalRegionValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerTimeSheets\EngineerTimeSheet.cs" />
+    <Compile Include="FSM\Entity\EngineerTimeSheets\EngineerTimeSheetSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerTimeSheets\EngineerTimeSheetValidator.cs" />
+    <Compile Include="FSM\Entity\InvoiceAddresss\InvoiceAddress.cs" />
+    <Compile Include="FSM\Entity\InvoiceAddresss\InvoiceAddressSQL.cs" />
+    <Compile Include="FSM\Entity\InvoiceAddresss\InvoiceAddressValidator.cs" />
+    <Compile Include="FSM\Entity\InvoicedLiness\InvoicedLines.cs" />
+    <Compile Include="FSM\Entity\InvoicedLiness\InvoicedLinesSQL.cs" />
+    <Compile Include="FSM\Entity\InvoicedLiness\InvoicedLinesValidator.cs" />
+    <Compile Include="FSM\Entity\Invoiceds\Invoiced.cs" />
+    <Compile Include="FSM\Entity\Invoiceds\InvoicedSQL.cs" />
+    <Compile Include="FSM\Entity\Invoiceds\InvoicedValidator.cs" />
+    <Compile Include="FSM\Entity\InvoiceToBeRaiseds\InvoiceToBeRaised.cs" />
+    <Compile Include="FSM\Entity\InvoiceToBeRaiseds\InvoiceToBeRaisedSQL.cs" />
+    <Compile Include="FSM\Entity\InvoiceToBeRaiseds\InvoiceToBeRaisedValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitCharges\EngineerVisitCharge.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitCharges\EngineerVisitChargeSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitCharges\EngineerVisitChargeValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitDefectss\EngineerVisitDefects.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitDefectss\EngineerVisitDefectsSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitDefectss\EngineerVisitDefectsValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitNCCGSRs\EngineerVisitNCCGSR.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitNCCGSRs\EngineerVisitNCCGSRSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitNCCGSRs\EngineerVisitNCCGSRValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitPartProductAllocateds\EngineerVisitPartProductAllocated.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitPartProductAllocateds\EngineerVisitPartProductAllocatedSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitPartProductAllocateds\EngineerVisitPartProductAllocatedValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitsPartsAndProducts\EngineerVisitPartsAndProducts.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitsPartsAndProducts\EngineerVisitPartsAndProductsSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitQCs\EngineerVisitQC.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitQCs\EngineerVisitQCSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitQCs\EngineerVisitQCValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitTimeSheets\EngineerVisitTimeSheet.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitTimeSheets\EngineerVisitTimeSheetSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitTimeSheets\EngineerVisitTimeSheetValidator.cs" />
+    <Compile Include="FSM\Entity\JobAssets\JobAsset.cs" />
+    <Compile Include="FSM\Entity\JobAssets\JobAssetSQL.cs" />
+    <Compile Include="FSM\Entity\JobAssets\JobAssetValidator.cs" />
+    <Compile Include="FSM\Entity\JobAudits\JobAudit.cs" />
+    <Compile Include="FSM\Entity\JobAudits\JobAuditSQL.cs" />
+    <Compile Include="FSM\Entity\JobItems\JobItem.cs" />
+    <Compile Include="FSM\Entity\JobItems\JobItemSQL.cs" />
+    <Compile Include="FSM\Entity\JobItems\JobItemValidator.cs" />
+    <Compile Include="FSM\Entity\JobOfWorks\JobOfWork.cs" />
+    <Compile Include="FSM\Entity\JobOfWorks\JobOfWorkSQL.cs" />
+    <Compile Include="FSM\Entity\JobOfWorks\JobOfWorkValidator.cs" />
+    <Compile Include="FSM\Entity\LetterManager\LetterManagerSQL.cs" />
+    <Compile Include="FSM\Entity\MaxEngineerTimes\MaxEngineerTime.cs" />
+    <Compile Include="FSM\Entity\MaxEngineerTimes\MaxEngineerTimeSQL.cs" />
+    <Compile Include="FSM\Entity\MaxEngineerTimes\MaxEngineerTimeValidator.cs" />
+    <Compile Include="FSM\Entity\Notes\Notes.cs" />
+    <Compile Include="FSM\Entity\Notes\NotesSQL.cs" />
+    <Compile Include="FSM\Entity\Notes\NotesValidator.cs" />
+    <Compile Include="FSM\Entity\CustomerOrders\CustomerOrder.cs" />
+    <Compile Include="FSM\Entity\CustomerOrders\CustomerOrderSQL.cs" />
+    <Compile Include="FSM\Entity\CustomerOrders\CustomerOrderValidator.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitOrders\EngineerVisitOrder.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitOrders\EngineerVisitOrderSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVisitOrders\EngineerVisitOrderValidator.cs" />
+    <Compile Include="FSM\Entity\OrderCharges\OrderCharge.cs" />
+    <Compile Include="FSM\Entity\OrderCharges\OrderChargeSQL.cs" />
+    <Compile Include="FSM\Entity\OrderCharges\OrderChargeValidator.cs" />
+    <Compile Include="FSM\Entity\OrderConsolidations\OrderConsolidation.cs" />
+    <Compile Include="FSM\Entity\OrderConsolidations\OrderConsolidationSQL.cs" />
+    <Compile Include="FSM\Entity\OrderConsolidations\OrderConsolidationValidator.cs" />
+    <Compile Include="FSM\Entity\OrderLocationPart\OrderLocationPart.cs" />
+    <Compile Include="FSM\Entity\OrderLocationPart\OrderLocationPartSQL.cs" />
+    <Compile Include="FSM\Entity\OrderLocationPart\OrderLocationPartValidator.cs" />
+    <Compile Include="FSM\Entity\OrderLocationProduct\OrderLocationProduct.cs" />
+    <Compile Include="FSM\Entity\OrderLocationProduct\OrderLocationProductSQL.cs" />
+    <Compile Include="FSM\Entity\OrderLocationProduct\OrderLocationProductValidator.cs" />
+    <Compile Include="FSM\Entity\OrderLocations\OrderLocation.cs" />
+    <Compile Include="FSM\Entity\OrderLocations\OrderLocationSQL.cs" />
+    <Compile Include="FSM\Entity\OrderLocations\OrderLocationValidator.cs" />
+    <Compile Include="FSM\Entity\OrderParts\OrderPart.cs" />
+    <Compile Include="FSM\Entity\OrderParts\OrderPartSQL.cs" />
+    <Compile Include="FSM\Entity\OrderParts\OrderPartValidator.cs" />
+    <Compile Include="FSM\Entity\OrderProducts\OrderProduct.cs" />
+    <Compile Include="FSM\Entity\OrderProducts\OrderProductSQL.cs" />
+    <Compile Include="FSM\Entity\OrderProducts\OrderProductValidator.cs" />
+    <Compile Include="FSM\Entity\PartSupplierPriceRequests\PartSupplierPriceRequest.cs" />
+    <Compile Include="FSM\Entity\PartSupplierPriceRequests\PartSupplierPriceRequestSQL.cs" />
+    <Compile Include="FSM\Entity\PartSupplierPriceRequests\PartSupplierPriceRequestValidator.cs" />
+    <Compile Include="FSM\Entity\ProductSupplierPriceRequests\ProductSupplierPriceRequest.cs" />
+    <Compile Include="FSM\Entity\ProductSupplierPriceRequests\ProductSupplierPriceRequestSQL.cs" />
+    <Compile Include="FSM\Entity\ProductSupplierPriceRequests\ProductSupplierPriceRequestValidator.cs" />
+    <Compile Include="FSM\Entity\SiteOrders\SiteOrder.cs" />
+    <Compile Include="FSM\Entity\SiteOrders\SiteOrderSQL.cs" />
+    <Compile Include="FSM\Entity\SiteOrders\SiteOrderValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativePPMVisits\QuoteContractAlternativePPMVisit.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativePPMVisits\QuoteContractAlternativePPMVisitSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativePPMVisits\QuoteContractAlternativePPMVisitValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteAssets\QuoteContractAlternativeSiteAsset.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteAssets\QuoteContractAlternativeSiteAssetSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteAssets\QuoteContractAlternativeSiteAssetValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteJobItems\QuoteContractAlternativeSiteJobItemsValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteJobItems\QuoteContractAlternativeSiteJobItems.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteJobItems\QuoteContractAlternativeSiteJobItemsSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteJobOfWorks\QuoteContractAlternativeSiteJobOfWorkValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteJobOfWorks\QuoteContractAlternativeSiteJobOfWork.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSiteJobOfWorks\QuoteContractAlternativeSiteJobOfWorkSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSites\QuoteContractAlternativeSite.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSites\QuoteContractAlternativeSiteSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternativeSites\QuoteContractAlternativeSiteValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternatives\QuoteContractAlternative.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternatives\QuoteContractAlternativeSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractAlternatives\QuoteContractAlternativeValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3SiteAssetDurations\QuoteContractOption3SiteAssetDuration.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3SiteAssetDurations\QuoteContractOption3SiteAssetDurationSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3SiteAssetDurations\QuoteContractOption3SiteAssetDurationValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3Sites\QuoteContractOption3Site.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3Sites\QuoteContractOption3SiteSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3Sites\QuoteContractOption3SiteValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3s\QuoteContractOption3.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3s\QuoteContractOption3SQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOption3s\QuoteContractOption3Validator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalPPMVisits\QuoteContractOriginalPPMVisit.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalPPMVisits\QuoteContractOriginalPPMVisitSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalPPMVisits\QuoteContractOriginalPPMVisitValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalSiteAssets\QuoteContractOriginalSiteAsset.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalSiteAssets\QuoteContractOriginalSiteAssetSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalSiteAssets\QuoteContractOriginalSiteAssetValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalSites\QuoteContractOriginalSite.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalSites\QuoteContractOriginalSiteSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginalSites\QuoteContractOriginalSiteValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginals\QuoteContractOriginal.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginals\QuoteContractOriginalSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteContractOriginals\QuoteContractOriginalValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteEngineerVisits\QuoteEngineerVisit.cs" />
+    <Compile Include="FSM\Entity\QuoteEngineerVisits\QuoteEngineerVisitSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteJobAssets\QuoteJobAsset.cs" />
+    <Compile Include="FSM\Entity\QuoteJobAssets\QuoteJobAssetSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteJobItems\QuoteJobItem.cs" />
+    <Compile Include="FSM\Entity\QuoteJobItems\QuoteJobItemSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteJobOfWorks\QuoteJobOfWork.cs" />
+    <Compile Include="FSM\Entity\QuoteJobOfWorks\QuoteJobOfWorkSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteJobPartss\QuoteJobParts.cs" />
+    <Compile Include="FSM\Entity\QuoteJobPartss\QuoteJobPartsSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteJobProductss\QuoteJobProducts.cs" />
+    <Compile Include="FSM\Entity\QuoteJobProductss\QuoteJobProductsSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteJobs\QuoteJob.cs" />
+    <Compile Include="FSM\Entity\QuoteJobs\QuoteJobsSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteJobs\QuoteJobValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteOrders\QuoteOrder.cs" />
+    <Compile Include="FSM\Entity\QuoteOrders\QuoteOrderSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteOrders\QuoteOrderValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteOrderParts\QuoteOrderPart.cs" />
+    <Compile Include="FSM\Entity\QuoteOrderParts\QuoteOrderPartSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteOrderParts\QuoteOrderPartValidator.cs" />
+    <Compile Include="FSM\Entity\QuoteOrderProducts\QuoteOrderProduct.cs" />
+    <Compile Include="FSM\Entity\QuoteOrderProducts\QuoteOrderProductSQL.cs" />
+    <Compile Include="FSM\Entity\QuoteOrderProducts\QuoteOrderProductValidator.cs" />
+    <Compile Include="FSM\Entity\Quotes\QuotesSQL.cs" />
+    <Compile Include="FSM\Entity\Scheduler\SchedulerSQL.cs" />
+    <Compile Include="FSM\Entity\Sites\Site.cs" />
+    <Compile Include="FSM\Entity\Sites\SiteFuel.cs" />
+    <Compile Include="FSM\Entity\Sites\SiteSQL.cs" />
+    <Compile Include="FSM\Entity\Sites\SiteValidator.cs" />
+    <Compile Include="FSM\Entity\SiteCustomerAudits\SiteCustomerAudit.cs" />
+    <Compile Include="FSM\Entity\SiteCustomerAudits\SiteCustomerAuditSQL.cs" />
+    <Compile Include="FSM\Entity\SiteCustomerAudits\SiteCustomerAuditValidator.cs" />
+    <Compile Include="FSM\Entity\Locationss\Locations.cs" />
+    <Compile Include="FSM\Entity\Locationss\LocationsSQL.cs" />
+    <Compile Include="FSM\Entity\Locationss\LocationsValidator.cs" />
+    <Compile Include="FSM\Entity\PartSuppliers\PartSupplier.cs" />
+    <Compile Include="FSM\Entity\PartSuppliers\PartSupplierSQL.cs" />
+    <Compile Include="FSM\Entity\PartSuppliers\PartSupplierValidator.cs" />
+    <Compile Include="FSM\Entity\PartTransactions\PartTransaction.cs" />
+    <Compile Include="FSM\Entity\PartTransactions\PartTransactionSQL.cs" />
+    <Compile Include="FSM\Entity\PartTransactions\PartTransactionValidator.cs" />
+    <Compile Include="FSM\Entity\Parts\Part.cs" />
+    <Compile Include="FSM\Entity\Parts\PartSQL.cs" />
+    <Compile Include="FSM\Entity\Parts\PartValidator.cs" />
+    <Compile Include="FSM\Entity\ProductSuppliers\ProductSupplier.cs" />
+    <Compile Include="FSM\Entity\ProductSuppliers\ProductSupplierSQL.cs" />
+    <Compile Include="FSM\Entity\ProductSuppliers\ProductSupplierValidator.cs" />
+    <Compile Include="FSM\Entity\ProductTransactions\ProductTransaction.cs" />
+    <Compile Include="FSM\Entity\ProductTransactions\ProductTransactionSQL.cs" />
+    <Compile Include="FSM\Entity\ProductTransactions\ProductTransactionValidator.cs" />
+    <Compile Include="FSM\Entity\Products\Product.cs" />
+    <Compile Include="FSM\Entity\Products\ProductSQL.cs" />
+    <Compile Include="FSM\Entity\Products\ProductValidator.cs" />
+    <Compile Include="FSM\Entity\ProductAssociatedParts\ProductAssociatedPart.cs" />
+    <Compile Include="FSM\Entity\ProductAssociatedParts\ProductAssociatedPartSQL.cs" />
+    <Compile Include="FSM\Entity\ProductAssociatedParts\ProductAssociatedPartValidator.cs" />
+    <Compile Include="FSM\Entity\StandardSentences\StandardSentence.cs" />
+    <Compile Include="FSM\Entity\StandardSentences\StandardSentenceSQL.cs" />
+    <Compile Include="FSM\Entity\StandardSentences\StandardSentenceValidator.cs" />
+    <Compile Include="FSM\Entity\Subcontractors\Subcontractor.cs" />
+    <Compile Include="FSM\Entity\Subcontractors\SubcontractorSQL.cs" />
+    <Compile Include="FSM\Entity\Subcontractors\SubcontractorValidator.cs" />
+    <Compile Include="FSM\Entity\Suppliers\Supplier.cs" />
+    <Compile Include="FSM\Entity\Suppliers\SupplierSQL.cs" />
+    <Compile Include="FSM\Entity\Suppliers\SupplierValidator.cs" />
+    <Compile Include="FSM\Entity\SystemScheduleOfRates\SystemScheduleOfRate.cs" />
+    <Compile Include="FSM\Entity\SystemScheduleOfRates\SystemScheduleOfRateSQL.cs" />
+    <Compile Include="FSM\Entity\SystemScheduleOfRates\SystemScheduleOfRateValidator.cs" />
+    <Compile Include="FSM\Entity\TimeSlotRates\TimeSlotRatesSQL.cs" />
+    <Compile Include="FSM\Entity\UserAbsence\UserAbsence.cs" />
+    <Compile Include="FSM\Entity\UserAbsence\UserAbsenceSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVans\EngineerVan.cs" />
+    <Compile Include="FSM\Entity\EngineerVans\EngineerVanSQL.cs" />
+    <Compile Include="FSM\Entity\EngineerVans\EngineerVanValidator.cs" />
+    <Compile Include="FSM\Entity\VATRatess\VATRates.cs" />
+    <Compile Include="FSM\Entity\VATRatess\VATRatesSQL.cs" />
+    <Compile Include="FSM\Entity\VATRatess\VATRatesValidator.cs" />
+    <Compile Include="FSM\Entity\Warehouses\Warehouse.cs" />
+    <Compile Include="FSM\Entity\Warehouses\WarehouseSQL.cs" />
+    <Compile Include="FSM\Entity\Warehouses\WarehouseValidator.cs" />
+    <Compile Include="FSM\Entity\JobLock\JobLock.cs" />
+    <Compile Include="FSM\Entity\JobLock\JobLockSQL.cs" />
+    <Compile Include="FSM\Business\Orders\OrderControl.cs" />
+    <Compile Include="FSM\LSR\LSRError.cs" />
+    <Compile Include="FSM\LocationServices\DataIn.cs" />
+    <Compile Include="FSM\LocationServices\LocationServices.cs" />
+    <Compile Include="FSM\MessageBird\Sending.cs" />
+    <Compile Include="FSM\MessageBird\TextClient.cs" />
+    <Compile Include="FSM\Importer\Importer.cs" />
+    <Compile Include="FSM\Importer\DuplicateInvoice.cs" />
+    <Compile Include="FSM\Importer\Validator.cs" />
+    <Compile Include="FSM\Importer\Validation\ValidationSQL.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\Customer_Get_ForSiteIDTableAdapter.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\EngineerVisitAssetWorkSheet_GetForVisitTableAdapte.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\EngineerVisitDefects_GetForEngineerVisitTableAdapt.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\EngineerVisitScheduleOfRatesCharge_Get_For_Enginee.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\EngineerVisitTimeSheet_Get_For_EngineerVisitIDTabl.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\EngineerVisitUnitsUsed_Get_For_EngineerVisitIDTabl.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\InvoiceAddress_Get_EngineerVisitIDTableAdapter.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\Job_Get_For_An_EngineerVisit_IDTableAdapter.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\JobItems_Get_For_JobTableAdapter.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\Site_Get_ForEngineerVisitIDTableAdapter.cs" />
+    <Compile Include="FSM\FSMDataSetTableAdapters\TableAdapterManager.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FSM\19\01\03_RN.txt" />
+    <EmbeddedResource Include="FSM\ActiveReminderColourColumn.resx" />
+    <EmbeddedResource Include="FSM\Authenticate.sql" />
+    <EmbeddedResource Include="FSM\BitToStringDescriptionColumn.resx" />
+    <EmbeddedResource Include="FSM\ColourColumn.resx" />
+    <EmbeddedResource Include="FSM\Contract3AssetsColourColumn.resx" />
+    <EmbeddedResource Include="FSM\Contract3AssetsColourColumnConvert.resx" />
+    <EmbeddedResource Include="FSM\DataGridCheckBox.resx" />
+    <EmbeddedResource Include="FSM\DataGridEditableTextBoxColumn.resx" />
+    <EmbeddedResource Include="FSM\DataGridLabelColumn.resx" />
+    <EmbeddedResource Include="FSM\DataGridOrderTextBoxColumn.resx" />
+    <EmbeddedResource Include="FSM\DataGridTinyIntColumn.resx" />
+    <EmbeddedResource Include="FSM\DLGAdvancedItemSearch.resx" />
+    <EmbeddedResource Include="FSM\DLGEngineerVisitDefect.resx" />
+    <EmbeddedResource Include="FSM\DLGFindRecord.resx" />
+    <EmbeddedResource Include="FSM\DLGFindSite.resx" />
+    <EmbeddedResource Include="FSM\DLGPasswordOverride.resx" />
+    <EmbeddedResource Include="FSM\DLGPasswordOverride_Service.resx" />
+    <EmbeddedResource Include="FSM\DLGPasswordOverrideINV.resx" />
+    <EmbeddedResource Include="FSM\DLGPickPartProductSupplier.resx" />
+    <EmbeddedResource Include="FSM\DLGSetupVisit.resx" />
+    <EmbeddedResource Include="FSM\DLGVisitAdditionalWorkSheet.resx" />
+    <EmbeddedResource Include="FSM\DLGVisitAssetWorkSheet.resx" />
+    <EmbeddedResource Include="FSM\DueDateColourColumn.resx" />
+    <EmbeddedResource Include="FSM\FRMAbout.resx" />
+    <EmbeddedResource Include="FSM\FRMAbsenceColourKey.resx" />
+    <EmbeddedResource Include="FSM\frmAbsences.resx" />
+    <EmbeddedResource Include="FSM\FRMAddInvoiceAddress.resx" />
+    <EmbeddedResource Include="FSM\FrmAdditionalNotes.resx" />
+    <EmbeddedResource Include="FSM\FRMAddPartToBeCredited.resx" />
+    <EmbeddedResource Include="FSM\FRMAddPostcodeManager.resx" />
+    <EmbeddedResource Include="FSM\FRMAddtoOrder.resx" />
+    <EmbeddedResource Include="FSM\FRMAddToQuote.resx" />
+    <EmbeddedResource Include="FSM\FRMAddVanEquipment.resx" />
+    <EmbeddedResource Include="FSM\FRMAnswers.resx" />
+    <EmbeddedResource Include="FSM\FRMAsset.resx" />
+    <EmbeddedResource Include="FSM\FRMAvailableContractNos.resx" />
+    <EmbeddedResource Include="FSM\FRMBaseForm.resx" />
+    <EmbeddedResource Include="FSM\FRMBatchGSRPrint.resx" />
+    <EmbeddedResource Include="FSM\FRMBatchVisitCosts.resx" />
+    <EmbeddedResource Include="FSM\FrmBlockAbsence.resx" />
+    <EmbeddedResource Include="FSM\FRMBookJob.resx" />
+    <EmbeddedResource Include="FSM\FRMBulkJobCreation.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeInvoicedTotal.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeInvoiceLine.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeJobType.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeOverridePassword.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeOverridePassword_Service.resx" />
+    <EmbeddedResource Include="FSM\FRMChangePassword.resx" />
+    <EmbeddedResource Include="FSM\FRMChangePaymentTerms.resx" />
+    <EmbeddedResource Include="FSM\FRMChangePriority.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeRaiseDate.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeSageDate.resx" />
+    <EmbeddedResource Include="FSM\FRMChangeVAT.resx" />
+    <EmbeddedResource Include="FSM\FRMCheckListManager.resx" />
+    <EmbeddedResource Include="FSM\FRMChooseAsset.resx" />
+    <EmbeddedResource Include="FSM\FRMChooseSupplierPacks.resx" />
+    <EmbeddedResource Include="FSM\FRMConsolidation.resx" />
+    <EmbeddedResource Include="FSM\FRMContact.resx" />
+    <EmbeddedResource Include="FSM\FRMContactAttempt.resx" />
+    <EmbeddedResource Include="FSM\FRMContactDetails.resx" />
+    <EmbeddedResource Include="FSM\FRMContactInfo.resx" />
+    <EmbeddedResource Include="FSM\FRMContractAlternativeSite.resx" />
+    <EmbeddedResource Include="FSM\FRMContractManager.resx" />
+    <EmbeddedResource Include="FSM\FRMContractOption3Site.resx" />
+    <EmbeddedResource Include="FSM\FRMContractOriginal.resx" />
+    <EmbeddedResource Include="FSM\FRMContractOriginalSite.resx" />
+    <EmbeddedResource Include="FSM\FRMContractRenewal.resx" />
+    <EmbeddedResource Include="FSM\FRMContractUpgradeDowngrade.resx" />
+    <EmbeddedResource Include="FSM\FRMContractWiz.resx" />
+    <EmbeddedResource Include="FSM\FRMConvertToAnOrder.resx" />
+    <EmbeddedResource Include="FSM\FRMConvertToVan.resx" />
+    <EmbeddedResource Include="FSM\FRMCostCentre.resx" />
+    <EmbeddedResource Include="FSM\FRMCreateServices.resx" />
+    <EmbeddedResource Include="FSM\FRMCreditReceived.resx" />
+    <EmbeddedResource Include="FSM\FRMCustomer.resx" />
+    <EmbeddedResource Include="FSM\FRMCustomerScheduleOfRate.resx" />
+    <EmbeddedResource Include="FSM\FRMCustomerSORJobType.resx" />
+    <EmbeddedResource Include="FSM\frmDetailsPopup.resx" />
+    <EmbeddedResource Include="FSM\FRMDirectDebitReport.resx" />
+    <EmbeddedResource Include="FSM\FrmDisplayEngineers.resx" />
+    <EmbeddedResource Include="FSM\FRMDistributeAllocated.resx" />
+    <EmbeddedResource Include="FSM\FRMDocuments.resx" />
+    <EmbeddedResource Include="FSM\FRMDuplicateInvoices.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineer.resx" />
+    <EmbeddedResource Include="FSM\FrmEngineerAbsence.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerHistory.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerRaiseJob.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerRole.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerRolesDeleteMe.resx" />
+    <EmbeddedResource Include="FSM\frmEngineerSchedule.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerTimesheet.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerTimesheetReport.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerTimesheets.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerVan.resx" />
+    <EmbeddedResource Include="FSM\FRMEngineerVisit.resx" />
+    <EmbeddedResource Include="FSM\FrmEngineerVisitPhoto.resx" />
+    <EmbeddedResource Include="FSM\FRMEnterEmailAddress.resx" />
+    <EmbeddedResource Include="FSM\FRMEquipment.resx" />
+    <EmbeddedResource Include="FSM\FRMEquipmentUsed.resx" />
+    <EmbeddedResource Include="FSM\FRMErrors.resx" />
+    <EmbeddedResource Include="FSM\FRMFindCustomers.resx" />
+    <EmbeddedResource Include="FSM\FRMFindPart.resx" />
+    <EmbeddedResource Include="FSM\FRMFleetEquipment.resx" />
+    <EmbeddedResource Include="FSM\FRMFleetVan.resx" />
+    <EmbeddedResource Include="FSM\FRMFleetVanImporter.resx" />
+    <EmbeddedResource Include="FSM\FRMFleetVanManager.resx" />
+    <EmbeddedResource Include="FSM\FRMFleetVanType.resx" />
+    <EmbeddedResource Include="FSM\FRMGenDropBox.resx" />
+    <EmbeddedResource Include="FSM\FRMHistory.resx" />
+    <EmbeddedResource Include="FSM\FRMImport.resx" />
+    <EmbeddedResource Include="FSM\FRMInvoiceAddress.resx" />
+    <EmbeddedResource Include="FSM\FRMInvoicedManager.resx" />
+    <EmbeddedResource Include="FSM\FrmInvoicedPayment.resx" />
+    <EmbeddedResource Include="FSM\FRMInvoiceExtraDetail.resx" />
+    <EmbeddedResource Include="FSM\FRMInvoiceManager.resx" />
+    <EmbeddedResource Include="FSM\FRMItemReturn.resx" />
+    <EmbeddedResource Include="FSM\FRMJobAudit.resx" />
+    <EmbeddedResource Include="FSM\FRMJobCostings.resx" />
+    <EmbeddedResource Include="FSM\FRMJobImport.resx" />
+    <EmbeddedResource Include="FSM\FRMJobImportManager.resx" />
+    <EmbeddedResource Include="FSM\FRMJobItemAssets.resx" />
+    <EmbeddedResource Include="FSM\FRMJobLocks.resx" />
+    <EmbeddedResource Include="FSM\FRMJobManager.resx" />
+    <EmbeddedResource Include="FSM\FRMJobSkills.resx" />
+    <EmbeddedResource Include="FSM\FRMJobWizard.resx" />
+    <EmbeddedResource Include="FSM\FRMLastGSRReport.resx" />
+    <EmbeddedResource Include="FSM\FRMLastServiceDate.resx" />
+    <EmbeddedResource Include="FSM\FRMLetterManager.resx" />
+    <EmbeddedResource Include="FSM\FRMLetterManagerMK3.resx" />
+    <EmbeddedResource Include="FSM\FRMLogCallout.resx" />
+    <EmbeddedResource Include="FSM\FRMLogin.resx" />
+    <EmbeddedResource Include="FSM\FRMMain.resx" />
+    <EmbeddedResource Include="FSM\FRMManager.resx" />
+    <EmbeddedResource Include="FSM\FRMManualApp.resx" />
+    <EmbeddedResource Include="FSM\FRMMoveParts.resx" />
+    <EmbeddedResource Include="FSM\FRMNewJob.resx" />
+    <EmbeddedResource Include="FSM\FRMNewPrice.resx" />
+    <EmbeddedResource Include="FSM\FRMNotes.resx" />
+    <EmbeddedResource Include="FSM\FRMOrder.resx" />
+    <EmbeddedResource Include="FSM\FRMOrderCharges.resx" />
+    <EmbeddedResource Include="FSM\FRMOrderManager.resx" />
+    <EmbeddedResource Include="FSM\FRMOrderRejection.resx" />
+    <EmbeddedResource Include="FSM\FrmOverride.resx" />
+    <EmbeddedResource Include="FSM\FRMPaidBy.resx" />
+    <EmbeddedResource Include="FSM\FRMPart.resx" />
+    <EmbeddedResource Include="FSM\FRMPartCategories.resx" />
+    <EmbeddedResource Include="FSM\FRMPartPack.resx" />
+    <EmbeddedResource Include="FSM\FRMPartSelectLocation.resx" />
+    <EmbeddedResource Include="FSM\FRMPartsForCreditList.resx" />
+    <EmbeddedResource Include="FSM\FRMPartsImport.resx" />
+    <EmbeddedResource Include="FSM\FRMPartsInvoiceImport.resx" />
+    <EmbeddedResource Include="FSM\FRMPartsToBeCredited.resx" />
+    <EmbeddedResource Include="FSM\FRMPartsToBeCreditedManager.resx" />
+    <EmbeddedResource Include="FSM\FRMPartSupplier.resx" />
+    <EmbeddedResource Include="FSM\FRMPartsUsed.resx" />
+    <EmbeddedResource Include="FSM\FRMPickDespatchDetails.resx" />
+    <EmbeddedResource Include="FSM\FRMPOInvoiceAuthorisation.resx" />
+    <EmbeddedResource Include="FSM\FRMPOInvoiceAuthReasons.resx" />
+    <EmbeddedResource Include="FSM\FRMPOInvoiceIncludedItems.resx" />
+    <EmbeddedResource Include="FSM\FRMPostcodeManager.resx" />
+    <EmbeddedResource Include="FSM\FRMPrivNotes.resx" />
+    <EmbeddedResource Include="FSM\FRMProduct.resx" />
+    <EmbeddedResource Include="FSM\FRMProductSupplier.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteContractAlternativeConvert.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteContractAlternativeSite.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteContractOption3.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteContractOption3Convert.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteContractOption3Site.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteJob.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteJobItemAssets.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteJobSelectASite.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteManager.resx" />
+    <EmbeddedResource Include="FSM\FRMQuoteRejection.resx" />
+    <EmbeddedResource Include="FSM\FrmRaiseInvoiceDetails.resx" />
+    <EmbeddedResource Include="FSM\FRMReceiveStock.resx" />
+    <EmbeddedResource Include="FSM\FRMReleaseNotes.resx" />
+    <EmbeddedResource Include="FSM\FRMRescheduleVisit.resx" />
+    <EmbeddedResource Include="FSM\FRMSalesCredit.resx" />
+    <EmbeddedResource Include="FSM\FRMSchedulerFind.resx" />
+    <EmbeddedResource Include="FSM\frmSchedulerMain.resx" />
+    <EmbeddedResource Include="FSM\FRMSchedulerSettings.resx" />
+    <EmbeddedResource Include="FSM\FRMSelectAMonth.resx" />
+    <EmbeddedResource Include="FSM\FRMSelectAsset.resx" />
+    <EmbeddedResource Include="FSM\FRMSelectDatabase.resx" />
+    <EmbeddedResource Include="FSM\FRMSelectInvoiceAddress.resx" />
+    <EmbeddedResource Include="FSM\FRMSelectLocation.resx" />
+    <EmbeddedResource Include="FSM\FRMSite.resx" />
+    <EmbeddedResource Include="FSM\FRMSiteCustomerAudit.resx" />
+    <EmbeddedResource Include="FSM\FRMSiteFuel.resx" />
+    <EmbeddedResource Include="FSM\FRMSiteLetterList.resx" />
+    <EmbeddedResource Include="FSM\FRMSitePopup.resx" />
+    <EmbeddedResource Include="FSM\FRMSiteScheduleOfRateList.resx" />
+    <EmbeddedResource Include="FSM\FRMSiteVisitManager.resx" />
+    <EmbeddedResource Include="FSM\FRMSmokeComo.resx" />
+    <EmbeddedResource Include="FSM\FRMSpecialOrder.resx" />
+    <EmbeddedResource Include="FSM\FRMStandardSentences.resx" />
+    <EmbeddedResource Include="FSM\FRMStockCategoryValuation.resx" />
+    <EmbeddedResource Include="FSM\FRMStockMove.resx" />
+    <EmbeddedResource Include="FSM\FRMStockMoved.resx" />
+    <EmbeddedResource Include="FSM\FRMStockReplenishment.resx" />
+    <EmbeddedResource Include="FSM\FRMStockTake.resx" />
+    <EmbeddedResource Include="FSM\FRMStockUsed.resx" />
+    <EmbeddedResource Include="FSM\FRMStockValuation.resx" />
+    <EmbeddedResource Include="FSM\FRMSubcontractor.resx" />
+    <EmbeddedResource Include="FSM\FRMSupplier.resx" />
+    <EmbeddedResource Include="FSM\FRMSupplierInvoiceImporter.resx" />
+    <EmbeddedResource Include="FSM\FRMSupport.resx" />
+    <EmbeddedResource Include="FSM\FRMSystemScheduleOfRate.resx" />
+    <EmbeddedResource Include="FSM\FRMSystemScheduleOfRateList.resx" />
+    <EmbeddedResource Include="FSM\FRMTimeSlotRates.resx" />
+    <EmbeddedResource Include="FSM\FRMTypeMakeModel.resx" />
+    <EmbeddedResource Include="FSM\FrmUserAbsence.resx" />
+    <EmbeddedResource Include="FSM\FRMUserQualification.resx" />
+    <EmbeddedResource Include="FSM\FRMUsers.resx" />
+    <EmbeddedResource Include="FSM\FRMVan.resx" />
+    <EmbeddedResource Include="FSM\FRMVanHistory.resx" />
+    <EmbeddedResource Include="FSM\FRMVATRates.resx" />
+    <EmbeddedResource Include="FSM\FRMViewContractAlternativeChargeDetails.resx" />
+    <EmbeddedResource Include="FSM\FRMViewEngineer.resx" />
+    <EmbeddedResource Include="FSM\frmVisit.resx" />
+    <EmbeddedResource Include="FSM\FRMVisitManager.resx" />
+    <EmbeddedResource Include="FSM\FRMWarehouse.resx" />
+    <EmbeddedResource Include="FSM\GaswayLogo.jpg" />
+    <EmbeddedResource Include="FSM\History_Delete.sql" />
+    <EmbeddedResource Include="FSM\History_Get.sql" />
+    <EmbeddedResource Include="FSM\Hover.bmp" />
+    <EmbeddedResource Include="FSM\ImporterLabelColumn.resx" />
+    <EmbeddedResource Include="FSM\JobCompletedIn1Column.resx" />
+    <EmbeddedResource Include="FSM\LastLogon.sql" />
+    <EmbeddedResource Include="FSM\Logo.ico" />
+    <EmbeddedResource Include="FSM\OutOfHoursColourColumn.resx" />
+    <EmbeddedResource Include="FSM\PaidStatusColourColumn.resx" />
+    <EmbeddedResource Include="FSM\Picklists_Delete.sql" />
+    <EmbeddedResource Include="FSM\Picklists_DeletePartMapping.sql" />
+    <EmbeddedResource Include="FSM\Picklists_Get.sql" />
+    <EmbeddedResource Include="FSM\Picklists_Get_PartMapping.sql" />
+    <EmbeddedResource Include="FSM\Picklists_GetOne.sql" />
+    <EmbeddedResource Include="FSM\Picklists_Insert.sql" />
+    <EmbeddedResource Include="FSM\Picklists_InsertPartMapping.sql" />
+    <EmbeddedResource Include="FSM\Picklists_Update.sql" />
+    <EmbeddedResource Include="FSM\Picklists_UpdatePartMapping.sql" />
+    <EmbeddedResource Include="FSM\pnlScheduleControl.resx" />
+    <EmbeddedResource Include="FSM\pnlUnscheduledCalls.resx" />
+    <EmbeddedResource Include="FSM\Properties.gif" />
+    <EmbeddedResource Include="FSM\Resources.resx" />
+    <EmbeddedResource Include="FSM\Selected.bmp" />
+    <EmbeddedResource Include="FSM\Settings_Get.sql" />
+    <EmbeddedResource Include="FSM\Settings_Update.sql" />
+    <EmbeddedResource Include="FSM\Settings_UpdateOverridePassword.sql" />
+    <EmbeddedResource Include="FSM\Settings_UpdateOverridePassword_Service.sql" />
+    <EmbeddedResource Include="FSM\Setup.gif" />
+    <EmbeddedResource Include="FSM\StockReplenishmentColourColumn.resx" />
+    <EmbeddedResource Include="FSM\TabletOrder.resx" />
+    <EmbeddedResource Include="FSM\UCAbsences.resx" />
+    <EmbeddedResource Include="FSM\UCASHPWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCAsset.resx" />
+    <EmbeddedResource Include="FSM\UCBase.resx" />
+    <EmbeddedResource Include="FSM\UCCalloutBreakdown.resx" />
+    <EmbeddedResource Include="FSM\UCComercialWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCContact.resx" />
+    <EmbeddedResource Include="FSM\UCContacts.resx" />
+    <EmbeddedResource Include="FSM\UCContractAlternativeSite.resx" />
+    <EmbeddedResource Include="FSM\UCContractOption3Site.resx" />
+    <EmbeddedResource Include="FSM\UCContractOriginal.resx" />
+    <EmbeddedResource Include="FSM\UCContractOriginalSite.resx" />
+    <EmbeddedResource Include="FSM\UCContractWiz.resx" />
+    <EmbeddedResource Include="FSM\UCConvertJobOfWork.resx" />
+    <EmbeddedResource Include="FSM\UCCustomer.resx" />
+    <EmbeddedResource Include="FSM\UCCustomerScheduleOfRate.resx" />
+    <EmbeddedResource Include="FSM\UCCustomerServiceProcess.resx" />
+    <EmbeddedResource Include="FSM\UCData.resx" />
+    <EmbeddedResource Include="FSM\UCDataPartsInvoiceImport.resx" />
+    <EmbeddedResource Include="FSM\UCDataPartsOrderedImport.resx" />
+    <EmbeddedResource Include="FSM\UCDataPODuplicateInvoice.resx" />
+    <EmbeddedResource Include="FSM\UCDataPOInvoiceAuthorisation.resx" />
+    <EmbeddedResource Include="FSM\UCDocuments.resx" />
+    <EmbeddedResource Include="FSM\UCDocumentsList.resx" />
+    <EmbeddedResource Include="FSM\UCEngineer.resx" />
+    <EmbeddedResource Include="FSM\UCEngineerVan.resx" />
+    <EmbeddedResource Include="FSM\ucEngineerVisitPhoto.resx" />
+    <EmbeddedResource Include="FSM\UCEquipment.resx" />
+    <EmbeddedResource Include="FSM\UCFleetEquipment.resx" />
+    <EmbeddedResource Include="FSM\UCFleetVan.resx" />
+    <EmbeddedResource Include="FSM\UCFleetVanType.resx" />
+    <EmbeddedResource Include="FSM\UCGasWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCGenerateQuote.resx" />
+    <EmbeddedResource Include="FSM\UCGSHPWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCHIUWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCInvoiceAddress.resx" />
+    <EmbeddedResource Include="FSM\UCJobCostings.resx" />
+    <EmbeddedResource Include="FSM\UCJobItemAssets.resx" />
+    <EmbeddedResource Include="FSM\UCJobOfWork.resx" />
+    <EmbeddedResource Include="FSM\UCJobWizard.resx" />
+    <EmbeddedResource Include="FSM\UCLiveVisitCost.resx" />
+    <EmbeddedResource Include="FSM\UCLogCallout.resx" />
+    <EmbeddedResource Include="FSM\UCMainButton.resx" />
+    <EmbeddedResource Include="FSM\UCNotes.resx" />
+    <EmbeddedResource Include="FSM\UCOilWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCOrder.resx" />
+    <EmbeddedResource Include="FSM\UCOrderForCustomer.resx" />
+    <EmbeddedResource Include="FSM\UCOrderForJob.resx" />
+    <EmbeddedResource Include="FSM\UCOrderForVan.resx" />
+    <EmbeddedResource Include="FSM\UCOrderForWarehouse.resx" />
+    <EmbeddedResource Include="FSM\UCOrderRejection.resx" />
+    <EmbeddedResource Include="FSM\UCOtherWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCPart.resx" />
+    <EmbeddedResource Include="FSM\UCPartPack.resx" />
+    <EmbeddedResource Include="FSM\UCPartsToBeCredited.resx" />
+    <EmbeddedResource Include="FSM\UCPartSupplier.resx" />
+    <EmbeddedResource Include="FSM\UCProduct.resx" />
+    <EmbeddedResource Include="FSM\UCProductSupplier.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteContractAlternative.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteContractAlternativeConvert.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteContractAlternativeSite.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteContractOption3.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteContractOption3Convert.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteContractOption3Site.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteJob.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteJobItemAssets.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteJobOfWork.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteJobSelectASite.resx" />
+    <EmbeddedResource Include="FSM\UCQuoteRejection.resx" />
+    <EmbeddedResource Include="FSM\UCQuotesList.resx" />
+    <EmbeddedResource Include="FSM\UCSearchCustomers.resx" />
+    <EmbeddedResource Include="FSM\UCSearchFleetVan.resx" />
+    <EmbeddedResource Include="FSM\UCSearchJobs.resx" />
+    <EmbeddedResource Include="FSM\UCSearchSpares.resx" />
+    <EmbeddedResource Include="FSM\UCSearchStaff.resx" />
+    <EmbeddedResource Include="FSM\UCSideBar.resx" />
+    <EmbeddedResource Include="FSM\UCSignature.resx" />
+    <EmbeddedResource Include="FSM\UCSite.resx" />
+    <EmbeddedResource Include="FSM\UCSolarWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCSolidWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCStockReplenishmentData.resx" />
+    <EmbeddedResource Include="FSM\UCSubcontractor.resx" />
+    <EmbeddedResource Include="FSM\UCSupplier.resx" />
+    <EmbeddedResource Include="FSM\UCSystemScheduleOfRate.resx" />
+    <EmbeddedResource Include="FSM\UCUnventedWorksheet.resx" />
+    <EmbeddedResource Include="FSM\UCUserQualification.resx" />
+    <EmbeddedResource Include="FSM\UCVan.resx" />
+    <EmbeddedResource Include="FSM\UCVisitBreakdown.resx" />
+    <EmbeddedResource Include="FSM\UCWarehouse.resx" />
+    <EmbeddedResource Include="FSM\Unselected.bmp" />
+    <EmbeddedResource Include="FSM\Users_Delete.sql" />
+    <EmbeddedResource Include="FSM\Users_Get.sql" />
+    <EmbeddedResource Include="FSM\Users_GetAll.sql" />
+    <EmbeddedResource Include="FSM\Users_Insert.sql" />
+    <EmbeddedResource Include="FSM\Users_Search.sql" />
+    <EmbeddedResource Include="FSM\Users_Update.sql" />
+    <EmbeddedResource Include="FSM\Users_UpdatePassword.sql" />
+    <EmbeddedResource Include="FSM\Versions.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
