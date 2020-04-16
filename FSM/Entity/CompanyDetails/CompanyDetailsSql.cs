@@ -10,20 +10,20 @@ using System.Linq;
 
 namespace FSM.Entity.CompanyDetails
 {
-  public class CompanyDetailsSql
-  {
-    private Database _database;
-
-    public CompanyDetailsSql(Database database)
+    public class CompanyDetailsSql
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public FSM.Entity.CompanyDetails.CompanyDetails Get()
-    {
-      this._database.ClearParameter();
-      DataTable table = this._database.ExecuteSP_DataTable("CompanyDetails_Get", true);
-      return table != null && table.Rows.Count > 0 ? ObjectMap.DataTableToList<FSM.Entity.CompanyDetails.CompanyDetails>(table).FirstOrDefault<FSM.Entity.CompanyDetails.CompanyDetails>() : (FSM.Entity.CompanyDetails.CompanyDetails) null;
+        public CompanyDetailsSql(Database database)
+        {
+            this._database = database;
+        }
+
+        public FSM.Entity.CompanyDetails.CompanyDetails Get()
+        {
+            this._database.ClearParameter();
+            DataTable table = this._database.ExecuteSP_DataTable("CompanyDetails_Get", true);
+            return table != null && table.Rows.Count > 0 ? ObjectMap.DataTableToList<FSM.Entity.CompanyDetails.CompanyDetails>(table).FirstOrDefault<FSM.Entity.CompanyDetails.CompanyDetails>() : (FSM.Entity.CompanyDetails.CompanyDetails)null;
+        }
     }
-  }
 }
