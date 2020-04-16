@@ -10,56 +10,56 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteContractAlternativeSiteAssets
 {
-  public class QuoteContractAlternativeSiteAssetSQL
-  {
-    private Database _database;
-
-    public QuoteContractAlternativeSiteAssetSQL(Database database)
+    public class QuoteContractAlternativeSiteAssetSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView GetAll_SiteID(int SiteID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@SiteID", (object) SiteID, true);
-      DataTable table = this._database.ExecuteSP_DataTable("QuoteContractAlternativeSiteAsset_GetAll_SiteID", true);
-      table.TableName = Enums.TableNames.tblContractSiteAsset.ToString();
-      return new DataView(table);
-    }
+        public QuoteContractAlternativeSiteAssetSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public DataView GetAll_JobItemID(int QuoteContractSiteJobItemID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteContractSiteJobItemID", (object) QuoteContractSiteJobItemID, true);
-      DataTable table = this._database.ExecuteSP_DataTable("QuoteContractAlternativeSiteAsset_GetAll_JobItemID", true);
-      table.TableName = Enums.TableNames.tblContractSiteAsset.ToString();
-      return new DataView(table);
-    }
+        public DataView GetAll_SiteID(int SiteID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@SiteID", (object)SiteID, true);
+            DataTable table = this._database.ExecuteSP_DataTable("QuoteContractAlternativeSiteAsset_GetAll_SiteID", true);
+            table.TableName = Enums.TableNames.tblContractSiteAsset.ToString();
+            return new DataView(table);
+        }
 
-    public QuoteContractAlternativeSiteAsset Insert(
-      QuoteContractAlternativeSiteAsset oQuoteContractSiteAsset)
-    {
-      this._database.ClearParameter();
-      this.AddContractSiteAssetParametersToCommand(ref oQuoteContractSiteAsset);
-      oQuoteContractSiteAsset.SetQuoteContractSiteAssetID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteContractAlternativeSiteAsset_Insert", true)));
-      oQuoteContractSiteAsset.Exists = true;
-      return oQuoteContractSiteAsset;
-    }
+        public DataView GetAll_JobItemID(int QuoteContractSiteJobItemID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteContractSiteJobItemID", (object)QuoteContractSiteJobItemID, true);
+            DataTable table = this._database.ExecuteSP_DataTable("QuoteContractAlternativeSiteAsset_GetAll_JobItemID", true);
+            table.TableName = Enums.TableNames.tblContractSiteAsset.ToString();
+            return new DataView(table);
+        }
 
-    public void Delete(int QuoteContractSiteJobItemID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@QuoteContractSiteJobItemID", (object) QuoteContractSiteJobItemID, true);
-      this._database.ExecuteSP_NO_Return("QuoteContractAlternativeSiteAsset_Delete", true);
-    }
+        public QuoteContractAlternativeSiteAsset Insert(
+          QuoteContractAlternativeSiteAsset oQuoteContractSiteAsset)
+        {
+            this._database.ClearParameter();
+            this.AddContractSiteAssetParametersToCommand(ref oQuoteContractSiteAsset);
+            oQuoteContractSiteAsset.SetQuoteContractSiteAssetID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("QuoteContractAlternativeSiteAsset_Insert", true)));
+            oQuoteContractSiteAsset.Exists = true;
+            return oQuoteContractSiteAsset;
+        }
 
-    private void AddContractSiteAssetParametersToCommand(
-      ref QuoteContractAlternativeSiteAsset oQuoteContractSiteAsset)
-    {
-      Database database = this._database;
-      database.AddParameter("@QuoteContractSiteJobItemID", (object) oQuoteContractSiteAsset.QuoteContractSiteJobItemID, true);
-      database.AddParameter("@AssetID", (object) oQuoteContractSiteAsset.AssetID, true);
+        public void Delete(int QuoteContractSiteJobItemID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@QuoteContractSiteJobItemID", (object)QuoteContractSiteJobItemID, true);
+            this._database.ExecuteSP_NO_Return("QuoteContractAlternativeSiteAsset_Delete", true);
+        }
+
+        private void AddContractSiteAssetParametersToCommand(
+          ref QuoteContractAlternativeSiteAsset oQuoteContractSiteAsset)
+        {
+            Database database = this._database;
+            database.AddParameter("@QuoteContractSiteJobItemID", (object)oQuoteContractSiteAsset.QuoteContractSiteJobItemID, true);
+            database.AddParameter("@AssetID", (object)oQuoteContractSiteAsset.AssetID, true);
+        }
     }
-  }
 }

@@ -10,23 +10,23 @@ using System.Collections;
 
 namespace FSM.Entity.QuoteContractOption3s
 {
-  public class QuoteContractOption3Validator : BaseValidator
-  {
-    public void Validate(QuoteContractOption3 oQuoteContractOption3)
+    public class QuoteContractOption3Validator : BaseValidator
     {
-      if (oQuoteContractOption3.Errors.Count > 0)
-      {
-        foreach (object error in oQuoteContractOption3.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oQuoteContractOption3.QuoteContractReference.Trim().Length == 0)
-        this.AddCriticalMessage("* Quote Contract Referenece is required");
-      if (Strings.InStr(oQuoteContractOption3.QuoteContractReference, "-", CompareMethod.Binary) > 0)
-        this.AddCriticalMessage("* Quote Contract Referenece cannot contain '-'.");
-      if (oQuoteContractOption3.QuoteContractStatusID == 0)
-        this.AddCriticalMessage("* Quote Status is required");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(QuoteContractOption3 oQuoteContractOption3)
+        {
+            if (oQuoteContractOption3.Errors.Count > 0)
+            {
+                foreach (object error in oQuoteContractOption3.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oQuoteContractOption3.QuoteContractReference.Trim().Length == 0)
+                this.AddCriticalMessage("* Quote Contract Referenece is required");
+            if (Strings.InStr(oQuoteContractOption3.QuoteContractReference, "-", CompareMethod.Binary) > 0)
+                this.AddCriticalMessage("* Quote Contract Referenece cannot contain '-'.");
+            if (oQuoteContractOption3.QuoteContractStatusID == 0)
+                this.AddCriticalMessage("* Quote Status is required");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

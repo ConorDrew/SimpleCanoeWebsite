@@ -9,20 +9,20 @@ using System.Collections;
 
 namespace FSM.Entity.QuoteContractAlternativeSiteJobItems
 {
-  public class QuoteContractAlternativeSiteJobItemsValidator : BaseValidator
-  {
-    public void Validate(
-      FSM.Entity.QuoteContractAlternativeSiteJobItems.QuoteContractAlternativeSiteJobItems oQuoteContractAlternativeSiteJobItems)
+    public class QuoteContractAlternativeSiteJobItemsValidator : BaseValidator
     {
-      if (oQuoteContractAlternativeSiteJobItems.Errors.Count > 0)
-      {
-        foreach (object error in oQuoteContractAlternativeSiteJobItems.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oQuoteContractAlternativeSiteJobItems.VisitFrequencyID == 0)
-        this.AddCriticalMessage("Visit Frequency Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(
+          FSM.Entity.QuoteContractAlternativeSiteJobItems.QuoteContractAlternativeSiteJobItems oQuoteContractAlternativeSiteJobItems)
+        {
+            if (oQuoteContractAlternativeSiteJobItems.Errors.Count > 0)
+            {
+                foreach (object error in oQuoteContractAlternativeSiteJobItems.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oQuoteContractAlternativeSiteJobItems.VisitFrequencyID == 0)
+                this.AddCriticalMessage("Visit Frequency Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

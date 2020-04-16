@@ -10,223 +10,223 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteContractOption3Sites
 {
-  public class QuoteContractOption3Site
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _QuoteContractSiteID;
-    private int _QuoteContractID;
-    private int _SiteID;
-    private string _QuoteContractSiteReference;
-    private DateTime _StartDate;
-    private DateTime _EndDate;
-    private DateTime _FirstVisitDate;
-    private int _VisitFrequencyID;
-    private double _SitePrice;
-
-    public QuoteContractOption3Site()
+    public class QuoteContractOption3Site
     {
-      this._exists = false;
-      this._deleted = false;
-      this._QuoteContractSiteID = 0;
-      this._QuoteContractID = 0;
-      this._SiteID = 0;
-      this._QuoteContractSiteReference = string.Empty;
-      this._StartDate = DateTime.MinValue;
-      this._EndDate = DateTime.MinValue;
-      this._FirstVisitDate = DateTime.MinValue;
-      this._VisitFrequencyID = 0;
-      this._SitePrice = 0.0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _QuoteContractSiteID;
+        private int _QuoteContractID;
+        private int _SiteID;
+        private string _QuoteContractSiteReference;
+        private DateTime _StartDate;
+        private DateTime _EndDate;
+        private DateTime _FirstVisitDate;
+        private int _VisitFrequencyID;
+        private double _SitePrice;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public QuoteContractOption3Site()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._QuoteContractSiteID = 0;
+            this._QuoteContractID = 0;
+            this._SiteID = 0;
+            this._QuoteContractSiteReference = string.Empty;
+            this._StartDate = DateTime.MinValue;
+            this._EndDate = DateTime.MinValue;
+            this._FirstVisitDate = DateTime.MinValue;
+            this._VisitFrequencyID = 0;
+            this._SitePrice = 0.0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int QuoteContractSiteID
-    {
-      get
-      {
-        return this._QuoteContractSiteID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetQuoteContractSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteContractSiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteContractSiteID
+        {
+            get
+            {
+                return this._QuoteContractSiteID;
+            }
+        }
 
-    public int QuoteContractID
-    {
-      get
-      {
-        return this._QuoteContractID;
-      }
-    }
+        public object SetQuoteContractSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteContractSiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuoteContractID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteContractID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteContractID
+        {
+            get
+            {
+                return this._QuoteContractID;
+            }
+        }
 
-    public int SiteID
-    {
-      get
-      {
-        return this._SiteID;
-      }
-    }
+        public object SetQuoteContractID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteContractID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteID
+        {
+            get
+            {
+                return this._SiteID;
+            }
+        }
 
-    public string QuoteContractSiteReference
-    {
-      get
-      {
-        return this._QuoteContractSiteReference;
-      }
-    }
+        public object SetSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuoteContractSiteReference
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteContractSiteReference", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string QuoteContractSiteReference
+        {
+            get
+            {
+                return this._QuoteContractSiteReference;
+            }
+        }
 
-    public DateTime StartDate
-    {
-      get
-      {
-        return this._StartDate;
-      }
-      set
-      {
-        this._StartDate = value;
-      }
-    }
+        public object SetQuoteContractSiteReference
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteContractSiteReference", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime EndDate
-    {
-      get
-      {
-        return this._EndDate;
-      }
-      set
-      {
-        this._EndDate = value;
-      }
-    }
+        public DateTime StartDate
+        {
+            get
+            {
+                return this._StartDate;
+            }
+            set
+            {
+                this._StartDate = value;
+            }
+        }
 
-    public DateTime FirstVisitDate
-    {
-      get
-      {
-        return this._FirstVisitDate;
-      }
-      set
-      {
-        this._FirstVisitDate = value;
-      }
-    }
+        public DateTime EndDate
+        {
+            get
+            {
+                return this._EndDate;
+            }
+            set
+            {
+                this._EndDate = value;
+            }
+        }
 
-    public int VisitFrequencyID
-    {
-      get
-      {
-        return this._VisitFrequencyID;
-      }
-    }
+        public DateTime FirstVisitDate
+        {
+            get
+            {
+                return this._FirstVisitDate;
+            }
+            set
+            {
+                this._FirstVisitDate = value;
+            }
+        }
 
-    public object SetVisitFrequencyID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VisitFrequencyID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VisitFrequencyID
+        {
+            get
+            {
+                return this._VisitFrequencyID;
+            }
+        }
 
-    public double SitePrice
-    {
-      get
-      {
-        return this._SitePrice;
-      }
-    }
+        public object SetVisitFrequencyID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VisitFrequencyID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSitePrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SitePrice", RuntimeHelpers.GetObjectValue(value));
-      }
+        public double SitePrice
+        {
+            get
+            {
+                return this._SitePrice;
+            }
+        }
+
+        public object SetSitePrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SitePrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

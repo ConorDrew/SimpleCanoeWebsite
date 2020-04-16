@@ -10,159 +10,159 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteContractOption3SiteAssetDurations
 {
-  public class QuoteContractOption3SiteAssetDuration
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _QuoteContractSiteAssetDurationID;
-    private int _QuoteContractSiteID;
-    private int _AssetID;
-    private DateTime _ScheduledMonth;
-    private double _VisitDuration;
-
-    public QuoteContractOption3SiteAssetDuration()
+    public class QuoteContractOption3SiteAssetDuration
     {
-      this._exists = false;
-      this._deleted = false;
-      this._QuoteContractSiteAssetDurationID = 0;
-      this._QuoteContractSiteID = 0;
-      this._AssetID = 0;
-      this._ScheduledMonth = DateTime.MinValue;
-      this._VisitDuration = 0.0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _QuoteContractSiteAssetDurationID;
+        private int _QuoteContractSiteID;
+        private int _AssetID;
+        private DateTime _ScheduledMonth;
+        private double _VisitDuration;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public QuoteContractOption3SiteAssetDuration()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._QuoteContractSiteAssetDurationID = 0;
+            this._QuoteContractSiteID = 0;
+            this._AssetID = 0;
+            this._ScheduledMonth = DateTime.MinValue;
+            this._VisitDuration = 0.0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int QuoteContractSiteAssetDurationID
-    {
-      get
-      {
-        return this._QuoteContractSiteAssetDurationID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetQuoteContractSiteAssetDurationID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteContractSiteAssetDurationID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteContractSiteAssetDurationID
+        {
+            get
+            {
+                return this._QuoteContractSiteAssetDurationID;
+            }
+        }
 
-    public int QuoteContractSiteID
-    {
-      get
-      {
-        return this._QuoteContractSiteID;
-      }
-    }
+        public object SetQuoteContractSiteAssetDurationID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteContractSiteAssetDurationID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuoteContractSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteContractSiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteContractSiteID
+        {
+            get
+            {
+                return this._QuoteContractSiteID;
+            }
+        }
 
-    public int AssetID
-    {
-      get
-      {
-        return this._AssetID;
-      }
-    }
+        public object SetQuoteContractSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteContractSiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAssetID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int AssetID
+        {
+            get
+            {
+                return this._AssetID;
+            }
+        }
 
-    public DateTime ScheduledMonth
-    {
-      get
-      {
-        return this._ScheduledMonth;
-      }
-      set
-      {
-        this._ScheduledMonth = value;
-      }
-    }
+        public object SetAssetID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AssetID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public double VisitDuration
-    {
-      get
-      {
-        return this._VisitDuration;
-      }
-    }
+        public DateTime ScheduledMonth
+        {
+            get
+            {
+                return this._ScheduledMonth;
+            }
+            set
+            {
+                this._ScheduledMonth = value;
+            }
+        }
 
-    public object SetVisitDuration
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VisitDuration", RuntimeHelpers.GetObjectValue(value));
-      }
+        public double VisitDuration
+        {
+            get
+            {
+                return this._VisitDuration;
+            }
+        }
+
+        public object SetVisitDuration
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VisitDuration", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

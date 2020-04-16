@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.ProductAssociatedParts
 {
-  public class ProductAssociatedPartValidator : BaseValidator
-  {
-    public void Validate(ProductAssociatedPart oProductAssociatedPart)
+    public class ProductAssociatedPartValidator : BaseValidator
     {
-      if (oProductAssociatedPart.Errors.Count > 0)
-      {
-        foreach (object error in oProductAssociatedPart.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(ProductAssociatedPart oProductAssociatedPart)
+        {
+            if (oProductAssociatedPart.Errors.Count > 0)
+            {
+                foreach (object error in oProductAssociatedPart.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

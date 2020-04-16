@@ -9,18 +9,18 @@ using System.Collections;
 
 namespace FSM.Entity.QuoteContractOption3SiteAssetDurations
 {
-  public class QuoteContractOption3SiteAssetDurationValidator : BaseValidator
-  {
-    public void Validate(
-      QuoteContractOption3SiteAssetDuration oQuoteContractOption3SiteAssetDuration)
+    public class QuoteContractOption3SiteAssetDurationValidator : BaseValidator
     {
-      if (oQuoteContractOption3SiteAssetDuration.Errors.Count > 0)
-      {
-        foreach (object error in oQuoteContractOption3SiteAssetDuration.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(
+          QuoteContractOption3SiteAssetDuration oQuoteContractOption3SiteAssetDuration)
+        {
+            if (oQuoteContractOption3SiteAssetDuration.Errors.Count > 0)
+            {
+                foreach (object error in oQuoteContractOption3SiteAssetDuration.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

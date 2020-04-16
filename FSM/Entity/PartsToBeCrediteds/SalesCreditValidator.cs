@@ -10,17 +10,17 @@ using System.Collections;
 
 namespace FSM.Entity.PartsToBeCrediteds
 {
-  public class SalesCreditValidator : BaseValidator
-  {
-    public void Validate(SalesCredit oPartsToBeCredited)
+    public class SalesCreditValidator : BaseValidator
     {
-      if (oPartsToBeCredited.Errors.Count > 0)
-      {
-        foreach (object error in oPartsToBeCredited.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(SalesCredit oPartsToBeCredited)
+        {
+            if (oPartsToBeCredited.Errors.Count > 0)
+            {
+                foreach (object error in oPartsToBeCredited.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

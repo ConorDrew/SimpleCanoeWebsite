@@ -9,18 +9,18 @@ using System.Collections;
 
 namespace FSM.Entity.QuoteContractAlternativeSiteJobOfWorks
 {
-  public class QuoteContractAlternativeSiteJobOfWorkValidator : BaseValidator
-  {
-    public void Validate(
-      QuoteContractAlternativeSiteJobOfWork oQuoteContractAlternativeSiteJobOfWork)
+    public class QuoteContractAlternativeSiteJobOfWorkValidator : BaseValidator
     {
-      if (oQuoteContractAlternativeSiteJobOfWork.Errors.Count > 0)
-      {
-        foreach (object error in oQuoteContractAlternativeSiteJobOfWork.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(
+          QuoteContractAlternativeSiteJobOfWork oQuoteContractAlternativeSiteJobOfWork)
+        {
+            if (oQuoteContractAlternativeSiteJobOfWork.Errors.Count > 0)
+            {
+                foreach (object error in oQuoteContractAlternativeSiteJobOfWork.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

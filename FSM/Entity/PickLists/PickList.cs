@@ -9,181 +9,181 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.PickLists
 {
-  public class PickList
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _ManagerID;
-    private int _EnumTypeID;
-    private string _Name;
-    private string _Description;
-    private double _PercentageRate;
-    private bool _Mandatory;
-
-    public PickList()
+    public class PickList
     {
-      this._exists = false;
-      this._deleted = false;
-      this._ManagerID = 0;
-      this._EnumTypeID = 0;
-      this._Name = string.Empty;
-      this._Description = string.Empty;
-      this._PercentageRate = 0.0;
-      this._Mandatory = false;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _ManagerID;
+        private int _EnumTypeID;
+        private string _Name;
+        private string _Description;
+        private double _PercentageRate;
+        private bool _Mandatory;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public PickList()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._ManagerID = 0;
+            this._EnumTypeID = 0;
+            this._Name = string.Empty;
+            this._Description = string.Empty;
+            this._PercentageRate = 0.0;
+            this._Mandatory = false;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int ManagerID
-    {
-      get
-      {
-        return this._ManagerID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetManagerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ManagerID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ManagerID
+        {
+            get
+            {
+                return this._ManagerID;
+            }
+        }
 
-    public int EnumTypeID
-    {
-      get
-      {
-        return this._EnumTypeID;
-      }
-    }
+        public object SetManagerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ManagerID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEnumTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EnumTypeID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int EnumTypeID
+        {
+            get
+            {
+                return this._EnumTypeID;
+            }
+        }
 
-    public string Name
-    {
-      get
-      {
-        return this._Name;
-      }
-    }
+        public object SetEnumTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EnumTypeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetName
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Name", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+        }
 
-    public string Description
-    {
-      get
-      {
-        return this._Description;
-      }
-    }
+        public object SetName
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Name", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDescription
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Description", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+        }
 
-    public double PercentageRate
-    {
-      get
-      {
-        return this._PercentageRate;
-      }
-    }
+        public object SetDescription
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Description", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPercentageRate
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PercentageRate", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double PercentageRate
+        {
+            get
+            {
+                return this._PercentageRate;
+            }
+        }
 
-    public bool Mandatory
-    {
-      get
-      {
-        return this._Mandatory;
-      }
-    }
+        public object SetPercentageRate
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PercentageRate", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public bool SetMandatory
-    {
-      set
-      {
-        this._Mandatory = value;
-      }
+        public bool Mandatory
+        {
+            get
+            {
+                return this._Mandatory;
+            }
+        }
+
+        public bool SetMandatory
+        {
+            set
+            {
+                this._Mandatory = value;
+            }
+        }
     }
-  }
 }

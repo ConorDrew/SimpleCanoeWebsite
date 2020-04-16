@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.PartTransactions
 {
-  public class PartTransactionValidator : BaseValidator
-  {
-    public void Validate(PartTransaction oPartTransaction)
+    public class PartTransactionValidator : BaseValidator
     {
-      if (oPartTransaction.Errors.Count > 0)
-      {
-        foreach (object error in oPartTransaction.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(PartTransaction oPartTransaction)
+        {
+            if (oPartTransaction.Errors.Count > 0)
+            {
+                foreach (object error in oPartTransaction.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

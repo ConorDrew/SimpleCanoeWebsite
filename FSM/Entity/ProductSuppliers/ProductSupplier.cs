@@ -9,181 +9,181 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ProductSuppliers
 {
-  public class ProductSupplier
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _ProductSupplierID;
-    private int _ProductID;
-    private int _SupplierID;
-    private string _ProductCode;
-    private double _Price;
-    private double _QuantityInPack;
-
-    public ProductSupplier()
+    public class ProductSupplier
     {
-      this._exists = false;
-      this._deleted = false;
-      this._ProductSupplierID = 0;
-      this._ProductID = 0;
-      this._SupplierID = 0;
-      this._ProductCode = string.Empty;
-      this._Price = 0.0;
-      this._QuantityInPack = 0.0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _ProductSupplierID;
+        private int _ProductID;
+        private int _SupplierID;
+        private string _ProductCode;
+        private double _Price;
+        private double _QuantityInPack;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public ProductSupplier()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._ProductSupplierID = 0;
+            this._ProductID = 0;
+            this._SupplierID = 0;
+            this._ProductCode = string.Empty;
+            this._Price = 0.0;
+            this._QuantityInPack = 0.0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int ProductSupplierID
-    {
-      get
-      {
-        return this._ProductSupplierID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetProductSupplierID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ProductSupplierID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ProductSupplierID
+        {
+            get
+            {
+                return this._ProductSupplierID;
+            }
+        }
 
-    public int ProductID
-    {
-      get
-      {
-        return this._ProductID;
-      }
-    }
+        public object SetProductSupplierID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ProductSupplierID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetProductID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ProductID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ProductID
+        {
+            get
+            {
+                return this._ProductID;
+            }
+        }
 
-    public int SupplierID
-    {
-      get
-      {
-        return this._SupplierID;
-      }
-    }
+        public object SetProductID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ProductID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSupplierID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SupplierID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SupplierID
+        {
+            get
+            {
+                return this._SupplierID;
+            }
+        }
 
-    public string ProductCode
-    {
-      get
-      {
-        return this._ProductCode;
-      }
-    }
+        public object SetSupplierID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SupplierID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetProductCode
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ProductCode", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string ProductCode
+        {
+            get
+            {
+                return this._ProductCode;
+            }
+        }
 
-    public double Price
-    {
-      get
-      {
-        return this._Price;
-      }
-    }
+        public object SetProductCode
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ProductCode", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Price", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double Price
+        {
+            get
+            {
+                return this._Price;
+            }
+        }
 
-    public double QuantityInPack
-    {
-      get
-      {
-        return this._QuantityInPack;
-      }
-    }
+        public object SetPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Price", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuantityInPack
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuantityInPack", RuntimeHelpers.GetObjectValue(value));
-      }
+        public double QuantityInPack
+        {
+            get
+            {
+                return this._QuantityInPack;
+            }
+        }
+
+        public object SetQuantityInPack
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuantityInPack", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }
