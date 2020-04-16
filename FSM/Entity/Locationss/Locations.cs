@@ -9,127 +9,127 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Locationss
 {
-  public class Locations
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _LocationID;
-    private int _VanID;
-    private int _WarehouseID;
-
-    public Locations()
+    public class Locations
     {
-      this._exists = false;
-      this._deleted = false;
-      this._LocationID = 0;
-      this._VanID = 0;
-      this._WarehouseID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _LocationID;
+        private int _VanID;
+        private int _WarehouseID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public Locations()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._LocationID = 0;
+            this._VanID = 0;
+            this._WarehouseID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int LocationID
-    {
-      get
-      {
-        return this._LocationID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetLocationID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_LocationID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int LocationID
+        {
+            get
+            {
+                return this._LocationID;
+            }
+        }
 
-    public int VanID
-    {
-      get
-      {
-        return this._VanID;
-      }
-    }
+        public object SetLocationID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_LocationID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetVanID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_VanID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int VanID
+        {
+            get
+            {
+                return this._VanID;
+            }
+        }
 
-    public int WarehouseID
-    {
-      get
-      {
-        return this._WarehouseID;
-      }
-    }
+        public object SetVanID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_VanID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetWarehouseID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_WarehouseID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int WarehouseID
+        {
+            get
+            {
+                return this._WarehouseID;
+            }
+        }
+
+        public object SetWarehouseID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_WarehouseID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

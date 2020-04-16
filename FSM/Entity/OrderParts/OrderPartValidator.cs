@@ -10,23 +10,23 @@ using System.Collections;
 
 namespace FSM.Entity.OrderParts
 {
-  public class OrderPartValidator : BaseValidator
-  {
-    public void Validate(OrderPart oOrderPart)
+    public class OrderPartValidator : BaseValidator
     {
-      if (oOrderPart.Errors.Count > 0)
-      {
-        foreach (object error in oOrderPart.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oOrderPart.Quantity <= 0)
-        this.AddCriticalMessage("Quantity must be greater than 0");
-      if (Information.IsDBNull((object) oOrderPart.BuyPrice))
-        this.AddCriticalMessage("Buy Price not entered");
-      if (Information.IsDBNull((object) oOrderPart.SellPrice))
-        this.AddCriticalMessage("Sell Price not entered");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(OrderPart oOrderPart)
+        {
+            if (oOrderPart.Errors.Count > 0)
+            {
+                foreach (object error in oOrderPart.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oOrderPart.Quantity <= 0)
+                this.AddCriticalMessage("Quantity must be greater than 0");
+            if (Information.IsDBNull((object)oOrderPart.BuyPrice))
+                this.AddCriticalMessage("Buy Price not entered");
+            if (Information.IsDBNull((object)oOrderPart.SellPrice))
+                this.AddCriticalMessage("Sell Price not entered");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

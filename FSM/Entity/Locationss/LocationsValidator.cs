@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.Locationss
 {
-  public class LocationsValidator : BaseValidator
-  {
-    public void Validate(Locations oLocations)
+    public class LocationsValidator : BaseValidator
     {
-      if (oLocations.Errors.Count > 0)
-      {
-        foreach (object error in oLocations.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(Locations oLocations)
+        {
+            if (oLocations.Errors.Count > 0)
+            {
+                foreach (object error in oLocations.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

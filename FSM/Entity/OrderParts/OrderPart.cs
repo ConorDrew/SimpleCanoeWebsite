@@ -9,289 +9,289 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.OrderParts
 {
-  public class OrderPart
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _OrderPartID;
-    private int _OrderID;
-    private int _PartSupplierID;
-    private int _Quantity;
-    private int _QuantityReceived;
-    private double _BuyPrice;
-    private double _SellPrice;
-    private int _DispatchSiteID;
-    private int _DispatchWarehouseID;
-    private int _ChildSupplierID;
-    private string _spn;
-    private string _specialDescription;
-
-    public OrderPart()
+    public class OrderPart
     {
-      this._exists = false;
-      this._deleted = false;
-      this._OrderPartID = 0;
-      this._OrderID = 0;
-      this._PartSupplierID = 0;
-      this._Quantity = 0;
-      this._QuantityReceived = 0;
-      this._BuyPrice = 0.0;
-      this._SellPrice = 0.0;
-      this._DispatchSiteID = 0;
-      this._DispatchWarehouseID = 0;
-      this._ChildSupplierID = 0;
-      this._spn = "";
-      this._specialDescription = "";
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _OrderPartID;
+        private int _OrderID;
+        private int _PartSupplierID;
+        private int _Quantity;
+        private int _QuantityReceived;
+        private double _BuyPrice;
+        private double _SellPrice;
+        private int _DispatchSiteID;
+        private int _DispatchWarehouseID;
+        private int _ChildSupplierID;
+        private string _spn;
+        private string _specialDescription;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public OrderPart()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._OrderPartID = 0;
+            this._OrderID = 0;
+            this._PartSupplierID = 0;
+            this._Quantity = 0;
+            this._QuantityReceived = 0;
+            this._BuyPrice = 0.0;
+            this._SellPrice = 0.0;
+            this._DispatchSiteID = 0;
+            this._DispatchWarehouseID = 0;
+            this._ChildSupplierID = 0;
+            this._spn = "";
+            this._specialDescription = "";
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int OrderPartID
-    {
-      get
-      {
-        return this._OrderPartID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetOrderPartID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_OrderPartID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int OrderPartID
+        {
+            get
+            {
+                return this._OrderPartID;
+            }
+        }
 
-    public int OrderID
-    {
-      get
-      {
-        return this._OrderID;
-      }
-    }
+        public object SetOrderPartID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_OrderPartID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetOrderID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_OrderID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int OrderID
+        {
+            get
+            {
+                return this._OrderID;
+            }
+        }
 
-    public int PartSupplierID
-    {
-      get
-      {
-        return this._PartSupplierID;
-      }
-    }
+        public object SetOrderID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_OrderID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPartSupplierID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PartSupplierID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int PartSupplierID
+        {
+            get
+            {
+                return this._PartSupplierID;
+            }
+        }
 
-    public int Quantity
-    {
-      get
-      {
-        return this._Quantity;
-      }
-    }
+        public object SetPartSupplierID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PartSupplierID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuantity
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Quantity", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int Quantity
+        {
+            get
+            {
+                return this._Quantity;
+            }
+        }
 
-    public int QuantityReceived
-    {
-      get
-      {
-        return this._QuantityReceived;
-      }
-    }
+        public object SetQuantity
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Quantity", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuantityReceived
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuantityReceived", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuantityReceived
+        {
+            get
+            {
+                return this._QuantityReceived;
+            }
+        }
 
-    public double BuyPrice
-    {
-      get
-      {
-        return this._BuyPrice;
-      }
-    }
+        public object SetQuantityReceived
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuantityReceived", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetBuyPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_BuyPrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double BuyPrice
+        {
+            get
+            {
+                return this._BuyPrice;
+            }
+        }
 
-    public double SellPrice
-    {
-      get
-      {
-        return this._SellPrice;
-      }
-    }
+        public object SetBuyPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_BuyPrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSellPrice
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SellPrice", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public double SellPrice
+        {
+            get
+            {
+                return this._SellPrice;
+            }
+        }
 
-    public int DispatchSiteID
-    {
-      get
-      {
-        return this._DispatchSiteID;
-      }
-    }
+        public object SetSellPrice
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SellPrice", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDispatchSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_DispatchSiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int DispatchSiteID
+        {
+            get
+            {
+                return this._DispatchSiteID;
+            }
+        }
 
-    public int DispatchWarehouseID
-    {
-      get
-      {
-        return this._DispatchWarehouseID;
-      }
-    }
+        public object SetDispatchSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_DispatchSiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetDispatchWarehouseID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_DispatchWarehouseID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int DispatchWarehouseID
+        {
+            get
+            {
+                return this._DispatchWarehouseID;
+            }
+        }
 
-    public int ChildSupplierID
-    {
-      get
-      {
-        return this._ChildSupplierID;
-      }
-    }
+        public object SetDispatchWarehouseID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_DispatchWarehouseID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetChildSupplierID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ChildSupplierID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ChildSupplierID
+        {
+            get
+            {
+                return this._ChildSupplierID;
+            }
+        }
 
-    public string SpecialPartNumber
-    {
-      get
-      {
-        return this._spn;
-      }
-    }
+        public object SetChildSupplierID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ChildSupplierID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSpecialPartNumber
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_spn", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string SpecialPartNumber
+        {
+            get
+            {
+                return this._spn;
+            }
+        }
 
-    public string SpecialDescription
-    {
-      get
-      {
-        return this._specialDescription;
-      }
-    }
+        public object SetSpecialPartNumber
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_spn", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSpecialDescription
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_specialDescription", RuntimeHelpers.GetObjectValue(value));
-      }
+        public string SpecialDescription
+        {
+            get
+            {
+                return this._specialDescription;
+            }
+        }
+
+        public object SetSpecialDescription
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_specialDescription", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

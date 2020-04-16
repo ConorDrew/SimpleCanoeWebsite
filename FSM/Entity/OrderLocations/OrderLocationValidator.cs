@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.OrderLocations
 {
-  public class OrderLocationValidator : BaseValidator
-  {
-    public void Validate(OrderLocation oOrderLocation)
+    public class OrderLocationValidator : BaseValidator
     {
-      if (oOrderLocation.Errors.Count > 0)
-      {
-        foreach (object error in oOrderLocation.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(OrderLocation oOrderLocation)
+        {
+            if (oOrderLocation.Errors.Count > 0)
+            {
+                foreach (object error in oOrderLocation.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

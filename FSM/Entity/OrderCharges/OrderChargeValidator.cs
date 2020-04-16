@@ -9,21 +9,21 @@ using System.Collections;
 
 namespace FSM.Entity.OrderCharges
 {
-  public class OrderChargeValidator : BaseValidator
-  {
-    public void Validate(OrderCharge oOrderCharge)
+    public class OrderChargeValidator : BaseValidator
     {
-      if (oOrderCharge.Errors.Count > 0)
-      {
-        foreach (object error in oOrderCharge.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oOrderCharge.OrderChargeTypeID == 0)
-        this.AddCriticalMessage("Charge Type Missing");
-      if (oOrderCharge.Amount <= 0.0)
-        this.AddCriticalMessage("Amount Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(OrderCharge oOrderCharge)
+        {
+            if (oOrderCharge.Errors.Count > 0)
+            {
+                foreach (object error in oOrderCharge.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oOrderCharge.OrderChargeTypeID == 0)
+                this.AddCriticalMessage("Charge Type Missing");
+            if (oOrderCharge.Amount <= 0.0)
+                this.AddCriticalMessage("Amount Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
