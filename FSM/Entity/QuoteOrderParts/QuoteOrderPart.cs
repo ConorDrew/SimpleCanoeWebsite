@@ -9,8 +9,8 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteOrderParts
 {
-    public class QuoteOrderPartC :\GitHub\GabrielC#\FSM\Entity\QuoteOrderParts\QuoteOrderPart.cs
-  {
+    public class QuoteOrderPart
+    {
         private DataTypeValidator _dataTypeValidator;
         private bool _exists;
         private bool _deleted;

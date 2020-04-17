@@ -134,21 +134,11 @@ namespace FSM.Entity.QuoteOrders
             this._database.AddParameter("@QuoteID", (object)QuoteID, true);
             DataTable table = this._database.ExecuteSP_DataTable(nameof(Quote_PriceRequests_GetConfirmed), true);
             table.TableName = Enums.TableNames.NOT_IN_DATABASE_PriceRequests.ToString();
-            IEnumerator enumerator;
-            try
+
+            foreach (DataRow current in table.Rows)
             {
-                enumerator = table.Rows.GetEnumerator();
-                while (enumerator.MoveNext())
-                {
-                    DataRow current = (DataRow)enumerator.Current;
-                    if (Information.IsDBNull(RuntimeHelpers.GetObjectValue(current["Included"])))
-                        current["Included"] = (object)0;
-                }
-            }
-            finally
-            {
-                if (enumerator is IDisposable)
-                    (enumerator as IDisposable).Dispose();
+                if (Information.IsDBNull(RuntimeHelpers.GetObjectValue(current["Included"])))
+                    current["Included"] = (object)0;
             }
             return new DataView(table);
         }
