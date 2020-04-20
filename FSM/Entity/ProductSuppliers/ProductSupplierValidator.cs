@@ -9,23 +9,23 @@ using System.Collections;
 
 namespace FSM.Entity.ProductSuppliers
 {
-  public class ProductSupplierValidator : BaseValidator
-  {
-    public void Validate(ProductSupplier oProductSupplier)
+    public class ProductSupplierValidator : BaseValidator
     {
-      if (oProductSupplier.Errors.Count > 0)
-      {
-        foreach (object error in oProductSupplier.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oProductSupplier.SupplierID <= 0)
-        this.AddCriticalMessage("*Supplier Missing");
-      if (oProductSupplier.QuantityInPack < 1.0)
-        this.AddCriticalMessage("*Invalid Quantity In Pack");
-      if (oProductSupplier.Price <= 0.0)
-        this.AddCriticalMessage("*Invalid Price");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(ProductSupplier oProductSupplier)
+        {
+            if (oProductSupplier.Errors.Count > 0)
+            {
+                foreach (object error in oProductSupplier.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oProductSupplier.SupplierID <= 0)
+                this.AddCriticalMessage("*Supplier Missing");
+            if (oProductSupplier.QuantityInPack < 1.0)
+                this.AddCriticalMessage("*Invalid Quantity In Pack");
+            if (oProductSupplier.Price <= 0.0)
+                this.AddCriticalMessage("*Invalid Price");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

@@ -10,205 +10,205 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Sites
 {
-  public class SiteFuel
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _SiteFuelID;
-    private int _SiteID;
-    private int _FuelID;
-    private int _SiteFuelChargeID;
-    private DateTime _LastServiceDate;
-    private DateTime _ActualServiceDate;
-    private DateTime _DateAdded;
-    private int _AddedBy;
-
-    public SiteFuel()
+    public class SiteFuel
     {
-      this._exists = false;
-      this._deleted = false;
-      this._SiteFuelID = 0;
-      this._SiteID = 0;
-      this._FuelID = 0;
-      this._SiteFuelChargeID = 0;
-      this._LastServiceDate = DateTime.MinValue;
-      this._ActualServiceDate = DateTime.MinValue;
-      this._DateAdded = DateTime.MinValue;
-      this._AddedBy = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _SiteFuelID;
+        private int _SiteID;
+        private int _FuelID;
+        private int _SiteFuelChargeID;
+        private DateTime _LastServiceDate;
+        private DateTime _ActualServiceDate;
+        private DateTime _DateAdded;
+        private int _AddedBy;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public SiteFuel()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._SiteFuelID = 0;
+            this._SiteID = 0;
+            this._FuelID = 0;
+            this._SiteFuelChargeID = 0;
+            this._LastServiceDate = DateTime.MinValue;
+            this._ActualServiceDate = DateTime.MinValue;
+            this._DateAdded = DateTime.MinValue;
+            this._AddedBy = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int SiteFuelID
-    {
-      get
-      {
-        return this._SiteFuelID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetSiteFuelID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SiteFuelID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteFuelID
+        {
+            get
+            {
+                return this._SiteFuelID;
+            }
+        }
 
-    public int SiteID
-    {
-      get
-      {
-        return this._SiteID;
-      }
-    }
+        public object SetSiteFuelID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SiteFuelID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteID
+        {
+            get
+            {
+                return this._SiteID;
+            }
+        }
 
-    public int FuelID
-    {
-      get
-      {
-        return this._FuelID;
-      }
-    }
+        public object SetSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetFuelID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_FuelID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int FuelID
+        {
+            get
+            {
+                return this._FuelID;
+            }
+        }
 
-    public int SiteFuelChargeID
-    {
-      get
-      {
-        return this._SiteFuelChargeID;
-      }
-    }
+        public object SetFuelID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_FuelID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSiteFuelChargeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SiteFuelChargeID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteFuelChargeID
+        {
+            get
+            {
+                return this._SiteFuelChargeID;
+            }
+        }
 
-    public DateTime LastServiceDate
-    {
-      get
-      {
-        return this._LastServiceDate;
-      }
-      set
-      {
-        this._LastServiceDate = value;
-      }
-    }
+        public object SetSiteFuelChargeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SiteFuelChargeID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public DateTime ActualServiceDate
-    {
-      get
-      {
-        return this._ActualServiceDate;
-      }
-      set
-      {
-        this._ActualServiceDate = value;
-      }
-    }
+        public DateTime LastServiceDate
+        {
+            get
+            {
+                return this._LastServiceDate;
+            }
+            set
+            {
+                this._LastServiceDate = value;
+            }
+        }
 
-    public DateTime DateAdded
-    {
-      get
-      {
-        return this._DateAdded;
-      }
-      set
-      {
-        this._DateAdded = value;
-      }
-    }
+        public DateTime ActualServiceDate
+        {
+            get
+            {
+                return this._ActualServiceDate;
+            }
+            set
+            {
+                this._ActualServiceDate = value;
+            }
+        }
 
-    public int AddedBy
-    {
-      get
-      {
-        return this._AddedBy;
-      }
-    }
+        public DateTime DateAdded
+        {
+            get
+            {
+                return this._DateAdded;
+            }
+            set
+            {
+                this._DateAdded = value;
+            }
+        }
 
-    public object SetAddedBy
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_AddedBy", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int AddedBy
+        {
+            get
+            {
+                return this._AddedBy;
+            }
+        }
+
+        public object SetAddedBy
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_AddedBy", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

@@ -10,148 +10,148 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.QuoteJobItems
 {
-  public class QuoteJobItem
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private int _QuoteJobItemID;
-    private int _QuoteJobOfWorkID;
-    private string _Summary;
-    private int _RateID;
-    private Decimal _Qty;
-    private int _systemLinkId;
-
-    public QuoteJobItem()
+    public class QuoteJobItem
     {
-      this._QuoteJobItemID = 0;
-      this._QuoteJobOfWorkID = 0;
-      this._Summary = string.Empty;
-      this._RateID = 0;
-      this._systemLinkId = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private int _QuoteJobItemID;
+        private int _QuoteJobOfWorkID;
+        private string _Summary;
+        private int _RateID;
+        private Decimal _Qty;
+        private int _systemLinkId;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public QuoteJobItem()
+        {
+            this._QuoteJobItemID = 0;
+            this._QuoteJobOfWorkID = 0;
+            this._Summary = string.Empty;
+            this._RateID = 0;
+            this._systemLinkId = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public int QuoteJobItemID
-    {
-      get
-      {
-        return this._QuoteJobItemID;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public object SetQuoteJobItemID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteJobItemID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteJobItemID
+        {
+            get
+            {
+                return this._QuoteJobItemID;
+            }
+        }
 
-    public int QuoteJobOfWorkID
-    {
-      get
-      {
-        return this._QuoteJobOfWorkID;
-      }
-    }
+        public object SetQuoteJobItemID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteJobItemID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQuoteJobOfWorkID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_QuoteJobOfWorkID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int QuoteJobOfWorkID
+        {
+            get
+            {
+                return this._QuoteJobOfWorkID;
+            }
+        }
 
-    public string Summary
-    {
-      get
-      {
-        return this._Summary;
-      }
-    }
+        public object SetQuoteJobOfWorkID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_QuoteJobOfWorkID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSummary
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Summary", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Summary
+        {
+            get
+            {
+                return this._Summary;
+            }
+        }
 
-    public int RateID
-    {
-      get
-      {
-        return this._RateID;
-      }
-    }
+        public object SetSummary
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Summary", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetRateID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_RateID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int RateID
+        {
+            get
+            {
+                return this._RateID;
+            }
+        }
 
-    public Decimal Qty
-    {
-      get
-      {
-        return this._Qty;
-      }
-    }
+        public object SetRateID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_RateID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetQty
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Qty", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public Decimal Qty
+        {
+            get
+            {
+                return this._Qty;
+            }
+        }
 
-    public int SystemLinkID
-    {
-      get
-      {
-        return this._systemLinkId;
-      }
-    }
+        public object SetQty
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Qty", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSystemLinkID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_systemLinkId", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int SystemLinkID
+        {
+            get
+            {
+                return this._systemLinkId;
+            }
+        }
+
+        public object SetSystemLinkID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_systemLinkId", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

@@ -9,48 +9,48 @@ using System.Data;
 
 namespace FSM.Entity.StandardSentences
 {
-  public class StandardSentenceSQL
-  {
-    private Database _database;
-
-    public StandardSentenceSQL(Database database)
+    public class StandardSentenceSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView GetAll()
-    {
-      this._database.ClearParameter();
-      DataTable table = this._database.ExecuteSP_DataTable("StandardSentence_GetAll", true);
-      table.TableName = Enums.TableNames.tblStandardSentences.ToString();
-      return new DataView(table);
-    }
+        public StandardSentenceSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public void Insert(StandardSentence oStandardSentence)
-    {
-      this._database.ClearParameter();
-      this.AddSentenceParametersToCommand(ref oStandardSentence);
-      this._database.ExecuteSP_NO_Return("StandardSentence_Insert", true);
-    }
+        public DataView GetAll()
+        {
+            this._database.ClearParameter();
+            DataTable table = this._database.ExecuteSP_DataTable("StandardSentence_GetAll", true);
+            table.TableName = Enums.TableNames.tblStandardSentences.ToString();
+            return new DataView(table);
+        }
 
-    public void Update(StandardSentence oStandardSentence)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@SentenceID", (object) oStandardSentence.SentenceID, true);
-      this.AddSentenceParametersToCommand(ref oStandardSentence);
-      this._database.ExecuteSP_NO_Return("StandardSentence_Update", true);
-    }
+        public void Insert(StandardSentence oStandardSentence)
+        {
+            this._database.ClearParameter();
+            this.AddSentenceParametersToCommand(ref oStandardSentence);
+            this._database.ExecuteSP_NO_Return("StandardSentence_Insert", true);
+        }
 
-    private void AddSentenceParametersToCommand(ref StandardSentence oStandardSentence)
-    {
-      this._database.AddParameter("@Sentence", (object) oStandardSentence.Sentence, true);
-    }
+        public void Update(StandardSentence oStandardSentence)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@SentenceID", (object)oStandardSentence.SentenceID, true);
+            this.AddSentenceParametersToCommand(ref oStandardSentence);
+            this._database.ExecuteSP_NO_Return("StandardSentence_Update", true);
+        }
 
-    public void Delete(int SentenceID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@SentenceID", (object) SentenceID, true);
-      this._database.ExecuteSP_NO_Return("StandardSentence_Delete", true);
+        private void AddSentenceParametersToCommand(ref StandardSentence oStandardSentence)
+        {
+            this._database.AddParameter("@Sentence", (object)oStandardSentence.Sentence, true);
+        }
+
+        public void Delete(int SentenceID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@SentenceID", (object)SentenceID, true);
+            this._database.ExecuteSP_NO_Return("StandardSentence_Delete", true);
+        }
     }
-  }
 }

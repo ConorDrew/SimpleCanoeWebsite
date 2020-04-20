@@ -10,358 +10,358 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Subcontractors
 {
-  public class Subcontractor
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _SubcontractorID;
-    private int _EngineerID;
-    private int _LinkToSupplierID;
-    private int _taxRate;
-    private string _Name;
-    private string _Address1;
-    private string _Address2;
-    private string _Address3;
-    private string _Address4;
-    private string _Address5;
-    private string _Postcode;
-    private string _TelephoneNum;
-    private string _FaxNum;
-    private string _EmailAddress;
-    private string _Notes;
-    private Engineer _Engineer;
-
-    public Subcontractor()
+    public class Subcontractor
     {
-      this._exists = false;
-      this._deleted = false;
-      this._SubcontractorID = 0;
-      this._EngineerID = 0;
-      this._LinkToSupplierID = 0;
-      this._taxRate = 0;
-      this._Name = string.Empty;
-      this._Address1 = string.Empty;
-      this._Address2 = string.Empty;
-      this._Address3 = string.Empty;
-      this._Address4 = string.Empty;
-      this._Address5 = string.Empty;
-      this._Postcode = string.Empty;
-      this._TelephoneNum = string.Empty;
-      this._FaxNum = string.Empty;
-      this._EmailAddress = string.Empty;
-      this._Notes = string.Empty;
-      this._Engineer = (Engineer) null;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _SubcontractorID;
+        private int _EngineerID;
+        private int _LinkToSupplierID;
+        private int _taxRate;
+        private string _Name;
+        private string _Address1;
+        private string _Address2;
+        private string _Address3;
+        private string _Address4;
+        private string _Address5;
+        private string _Postcode;
+        private string _TelephoneNum;
+        private string _FaxNum;
+        private string _EmailAddress;
+        private string _Notes;
+        private Engineer _Engineer;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public Subcontractor()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._SubcontractorID = 0;
+            this._EngineerID = 0;
+            this._LinkToSupplierID = 0;
+            this._taxRate = 0;
+            this._Name = string.Empty;
+            this._Address1 = string.Empty;
+            this._Address2 = string.Empty;
+            this._Address3 = string.Empty;
+            this._Address4 = string.Empty;
+            this._Address5 = string.Empty;
+            this._Postcode = string.Empty;
+            this._TelephoneNum = string.Empty;
+            this._FaxNum = string.Empty;
+            this._EmailAddress = string.Empty;
+            this._Notes = string.Empty;
+            this._Engineer = (Engineer)null;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int SubcontractorID
-    {
-      get
-      {
-        return this._SubcontractorID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetSubcontractorID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SubcontractorID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SubcontractorID
+        {
+            get
+            {
+                return this._SubcontractorID;
+            }
+        }
 
-    public int EngineerID
-    {
-      get
-      {
-        return this._EngineerID;
-      }
-    }
+        public object SetSubcontractorID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SubcontractorID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEngineerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EngineerID", RuntimeHelpers.GetObjectValue(value));
-        this.Engineer = App.DB.Engineer.Engineer_Get(this.EngineerID);
-      }
-    }
+        public int EngineerID
+        {
+            get
+            {
+                return this._EngineerID;
+            }
+        }
 
-    public int LinkToSupplierID
-    {
-      get
-      {
-        return this._LinkToSupplierID;
-      }
-    }
+        public object SetEngineerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EngineerID", RuntimeHelpers.GetObjectValue(value));
+                this.Engineer = App.DB.Engineer.Engineer_Get(this.EngineerID);
+            }
+        }
 
-    public object SetLinkToSupplierID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_LinkToSupplierID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int LinkToSupplierID
+        {
+            get
+            {
+                return this._LinkToSupplierID;
+            }
+        }
 
-    public int TaxRate
-    {
-      get
-      {
-        return this._taxRate;
-      }
-    }
+        public object SetLinkToSupplierID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_LinkToSupplierID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetTaxRate
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_taxRate", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int TaxRate
+        {
+            get
+            {
+                return this._taxRate;
+            }
+        }
 
-    public string Name
-    {
-      get
-      {
-        return this._Name;
-      }
-    }
+        public object SetTaxRate
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_taxRate", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetName
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Name", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+        }
 
-    public string Address1
-    {
-      get
-      {
-        return this._Address1;
-      }
-    }
+        public object SetName
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Name", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAddress1
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Address1", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Address1
+        {
+            get
+            {
+                return this._Address1;
+            }
+        }
 
-    public string Address2
-    {
-      get
-      {
-        return this._Address2;
-      }
-    }
+        public object SetAddress1
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Address1", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAddress2
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Address2", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Address2
+        {
+            get
+            {
+                return this._Address2;
+            }
+        }
 
-    public string Address3
-    {
-      get
-      {
-        return this._Address3;
-      }
-    }
+        public object SetAddress2
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Address2", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAddress3
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Address3", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Address3
+        {
+            get
+            {
+                return this._Address3;
+            }
+        }
 
-    public string Address4
-    {
-      get
-      {
-        return this._Address4;
-      }
-    }
+        public object SetAddress3
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Address3", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAddress4
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Address4", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Address4
+        {
+            get
+            {
+                return this._Address4;
+            }
+        }
 
-    public string Address5
-    {
-      get
-      {
-        return this._Address5;
-      }
-    }
+        public object SetAddress4
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Address4", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetAddress5
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Address5", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Address5
+        {
+            get
+            {
+                return this._Address5;
+            }
+        }
 
-    public string Postcode
-    {
-      get
-      {
-        return this._Postcode;
-      }
-    }
+        public object SetAddress5
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Address5", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPostcode
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Postcode", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Postcode
+        {
+            get
+            {
+                return this._Postcode;
+            }
+        }
 
-    public string TelephoneNum
-    {
-      get
-      {
-        return this._TelephoneNum;
-      }
-    }
+        public object SetPostcode
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Postcode", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetTelephoneNum
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_TelephoneNum", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string TelephoneNum
+        {
+            get
+            {
+                return this._TelephoneNum;
+            }
+        }
 
-    public string FaxNum
-    {
-      get
-      {
-        return this._FaxNum;
-      }
-    }
+        public object SetTelephoneNum
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_TelephoneNum", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetFaxNum
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_FaxNum", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string FaxNum
+        {
+            get
+            {
+                return this._FaxNum;
+            }
+        }
 
-    public string EmailAddress
-    {
-      get
-      {
-        return this._EmailAddress;
-      }
-    }
+        public object SetFaxNum
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_FaxNum", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetEmailAddress
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_EmailAddress", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string EmailAddress
+        {
+            get
+            {
+                return this._EmailAddress;
+            }
+        }
 
-    public string Notes
-    {
-      get
-      {
-        return this._Notes;
-      }
-    }
+        public object SetEmailAddress
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_EmailAddress", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetNotes
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Notes", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Notes
+        {
+            get
+            {
+                return this._Notes;
+            }
+        }
 
-    public Engineer Engineer
-    {
-      get
-      {
-        return this._Engineer;
-      }
-      set
-      {
-        this._Engineer = value;
-      }
+        public object SetNotes
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Notes", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
+
+        public Engineer Engineer
+        {
+            get
+            {
+                return this._Engineer;
+            }
+            set
+            {
+                this._Engineer = value;
+            }
+        }
     }
-  }
 }

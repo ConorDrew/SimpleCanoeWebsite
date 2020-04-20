@@ -9,17 +9,17 @@ using System.Collections;
 
 namespace FSM.Entity.SiteCustomerAudits
 {
-  public class SiteCustomerAuditValidator : BaseValidator
-  {
-    public void Validate(SiteCustomerAudit oSiteCustomerAudit)
+    public class SiteCustomerAuditValidator : BaseValidator
     {
-      if (oSiteCustomerAudit.Errors.Count > 0)
-      {
-        foreach (object error in oSiteCustomerAudit.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(SiteCustomerAudit oSiteCustomerAudit)
+        {
+            if (oSiteCustomerAudit.Errors.Count > 0)
+            {
+                foreach (object error in oSiteCustomerAudit.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

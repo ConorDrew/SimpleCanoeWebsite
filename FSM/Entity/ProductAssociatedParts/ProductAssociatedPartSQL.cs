@@ -9,44 +9,44 @@ using System.Data;
 
 namespace FSM.Entity.ProductAssociatedParts
 {
-  public class ProductAssociatedPartSQL
-  {
-    private Database _database;
-
-    public ProductAssociatedPartSQL(Database database)
+    public class ProductAssociatedPartSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView GetAll_For_ProductID(int ProductID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@ProductID", (object) ProductID, true);
-      DataTable table = this._database.ExecuteSP_DataTable("ProductAssociatedPart_GetAll_For_ProductID", true);
-      table.TableName = Enums.TableNames.tblProductAssociatedPart.ToString();
-      return new DataView(table);
-    }
+        public ProductAssociatedPartSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public void Insert(ProductAssociatedPart oProductAssociatedPart)
-    {
-      this._database.ClearParameter();
-      this.AddProductAssociatedPartParametersToCommand(ref oProductAssociatedPart);
-      this._database.ExecuteSP_NO_Return("ProductAssociatedPart_Insert", true);
-    }
+        public DataView GetAll_For_ProductID(int ProductID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@ProductID", (object)ProductID, true);
+            DataTable table = this._database.ExecuteSP_DataTable("ProductAssociatedPart_GetAll_For_ProductID", true);
+            table.TableName = Enums.TableNames.tblProductAssociatedPart.ToString();
+            return new DataView(table);
+        }
 
-    public void Delete(int ProductID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@ProductID", (object) ProductID, true);
-      this._database.ExecuteSP_NO_Return("ProductAssociatedPart_Delete", true);
-    }
+        public void Insert(ProductAssociatedPart oProductAssociatedPart)
+        {
+            this._database.ClearParameter();
+            this.AddProductAssociatedPartParametersToCommand(ref oProductAssociatedPart);
+            this._database.ExecuteSP_NO_Return("ProductAssociatedPart_Insert", true);
+        }
 
-    private void AddProductAssociatedPartParametersToCommand(
-      ref ProductAssociatedPart oProductAssociatedPart)
-    {
-      Database database = this._database;
-      database.AddParameter("@ProductID", (object) oProductAssociatedPart.ProductID, true);
-      database.AddParameter("@PartID", (object) oProductAssociatedPart.PartID, true);
+        public void Delete(int ProductID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@ProductID", (object)ProductID, true);
+            this._database.ExecuteSP_NO_Return("ProductAssociatedPart_Delete", true);
+        }
+
+        private void AddProductAssociatedPartParametersToCommand(
+          ref ProductAssociatedPart oProductAssociatedPart)
+        {
+            Database database = this._database;
+            database.AddParameter("@ProductID", (object)oProductAssociatedPart.ProductID, true);
+            database.AddParameter("@PartID", (object)oProductAssociatedPart.PartID, true);
+        }
     }
-  }
 }

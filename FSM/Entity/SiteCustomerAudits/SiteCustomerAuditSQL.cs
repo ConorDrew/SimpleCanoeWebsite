@@ -10,40 +10,40 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.SiteCustomerAudits
 {
-  public class SiteCustomerAuditSQL
-  {
-    private Database _database;
-
-    public SiteCustomerAuditSQL(Database database)
+    public class SiteCustomerAuditSQL
     {
-      this._database = database;
-    }
+        private Database _database;
 
-    public DataView SiteCustomerAudit_GetAll(int SiteID)
-    {
-      this._database.ClearParameter();
-      this._database.AddParameter("@SiteID", (object) SiteID, false);
-      DataTable table = this._database.ExecuteSP_DataTable(nameof (SiteCustomerAudit_GetAll), true);
-      table.TableName = Enums.TableNames.tblSite.ToString();
-      return new DataView(table);
-    }
+        public SiteCustomerAuditSQL(Database database)
+        {
+            this._database = database;
+        }
 
-    public SiteCustomerAudit Insert(SiteCustomerAudit oSiteCustomerAudit)
-    {
-      this._database.ClearParameter();
-      this.AddSiteCustomerAuditParametersToCommand(ref oSiteCustomerAudit);
-      oSiteCustomerAudit.SetSiteCustomerAuditID = (object) Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("SiteCustomerAudit_Insert", true)));
-      oSiteCustomerAudit.Exists = true;
-      return oSiteCustomerAudit;
-    }
+        public DataView SiteCustomerAudit_GetAll(int SiteID)
+        {
+            this._database.ClearParameter();
+            this._database.AddParameter("@SiteID", (object)SiteID, false);
+            DataTable table = this._database.ExecuteSP_DataTable(nameof(SiteCustomerAudit_GetAll), true);
+            table.TableName = Enums.TableNames.tblSite.ToString();
+            return new DataView(table);
+        }
 
-    private void AddSiteCustomerAuditParametersToCommand(ref SiteCustomerAudit oSiteCustomerAudit)
-    {
-      Database database = this._database;
-      database.AddParameter("@SiteID", (object) oSiteCustomerAudit.SiteID, true);
-      database.AddParameter("@PreviousCustomerID", (object) oSiteCustomerAudit.PreviousCustomerID, true);
-      database.AddParameter("@DateChanged", (object) oSiteCustomerAudit.DateChanged, true);
-      database.AddParameter("@UserID", (object) oSiteCustomerAudit.UserID, true);
+        public SiteCustomerAudit Insert(SiteCustomerAudit oSiteCustomerAudit)
+        {
+            this._database.ClearParameter();
+            this.AddSiteCustomerAuditParametersToCommand(ref oSiteCustomerAudit);
+            oSiteCustomerAudit.SetSiteCustomerAuditID = (object)Helper.MakeIntegerValid(RuntimeHelpers.GetObjectValue(this._database.ExecuteSP_OBJECT("SiteCustomerAudit_Insert", true)));
+            oSiteCustomerAudit.Exists = true;
+            return oSiteCustomerAudit;
+        }
+
+        private void AddSiteCustomerAuditParametersToCommand(ref SiteCustomerAudit oSiteCustomerAudit)
+        {
+            Database database = this._database;
+            database.AddParameter("@SiteID", (object)oSiteCustomerAudit.SiteID, true);
+            database.AddParameter("@PreviousCustomerID", (object)oSiteCustomerAudit.PreviousCustomerID, true);
+            database.AddParameter("@DateChanged", (object)oSiteCustomerAudit.DateChanged, true);
+            database.AddParameter("@UserID", (object)oSiteCustomerAudit.UserID, true);
+        }
     }
-  }
 }

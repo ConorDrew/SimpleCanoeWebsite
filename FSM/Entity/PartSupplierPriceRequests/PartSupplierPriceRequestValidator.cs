@@ -9,25 +9,25 @@ using System.Collections;
 
 namespace FSM.Entity.PartSupplierPriceRequests
 {
-  public class PartSupplierPriceRequestValidator : BaseValidator
-  {
-    public void Validate(PartSupplierPriceRequest oPartSupplierPriceRequest)
+    public class PartSupplierPriceRequestValidator : BaseValidator
     {
-      if (oPartSupplierPriceRequest.Errors.Count > 0)
-      {
-        foreach (object error in oPartSupplierPriceRequest.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oPartSupplierPriceRequest.OrderID == 0)
-        this.AddCriticalMessage("Order missing");
-      if (oPartSupplierPriceRequest.SupplierID == 0)
-        this.AddCriticalMessage("Supplier missing");
-      if (oPartSupplierPriceRequest.PartID == 0)
-        this.AddCriticalMessage("Part missing");
-      if (oPartSupplierPriceRequest.QuantityInPack <= 0)
-        this.AddCriticalMessage("Quantity must be greater than 0");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(PartSupplierPriceRequest oPartSupplierPriceRequest)
+        {
+            if (oPartSupplierPriceRequest.Errors.Count > 0)
+            {
+                foreach (object error in oPartSupplierPriceRequest.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oPartSupplierPriceRequest.OrderID == 0)
+                this.AddCriticalMessage("Order missing");
+            if (oPartSupplierPriceRequest.SupplierID == 0)
+                this.AddCriticalMessage("Supplier missing");
+            if (oPartSupplierPriceRequest.PartID == 0)
+                this.AddCriticalMessage("Part missing");
+            if (oPartSupplierPriceRequest.QuantityInPack <= 0)
+                this.AddCriticalMessage("Quantity must be greater than 0");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

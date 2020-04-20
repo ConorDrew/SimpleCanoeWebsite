@@ -9,19 +9,19 @@ using System.Collections;
 
 namespace FSM.Entity.Sections
 {
-  public class SectionValidator : BaseValidator
-  {
-    public void Validate(Section oSection)
+    public class SectionValidator : BaseValidator
     {
-      if (oSection.Errors.Count > 0)
-      {
-        foreach (object error in oSection.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oSection.Description.Trim().Length == 0)
-        this.AddCriticalMessage("Description Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(Section oSection)
+        {
+            if (oSection.Errors.Count > 0)
+            {
+                foreach (object error in oSection.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oSection.Description.Trim().Length == 0)
+                this.AddCriticalMessage("Description Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

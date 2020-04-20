@@ -9,127 +9,127 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.ProductAssociatedParts
 {
-  public class ProductAssociatedPart
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _ProductAssociatedPartID;
-    private int _ProductID;
-    private int _PartID;
-
-    public ProductAssociatedPart()
+    public class ProductAssociatedPart
     {
-      this._exists = false;
-      this._deleted = false;
-      this._ProductAssociatedPartID = 0;
-      this._ProductID = 0;
-      this._PartID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _ProductAssociatedPartID;
+        private int _ProductID;
+        private int _PartID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public ProductAssociatedPart()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._ProductAssociatedPartID = 0;
+            this._ProductID = 0;
+            this._PartID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int ProductAssociatedPartID
-    {
-      get
-      {
-        return this._ProductAssociatedPartID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetProductAssociatedPartID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ProductAssociatedPartID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ProductAssociatedPartID
+        {
+            get
+            {
+                return this._ProductAssociatedPartID;
+            }
+        }
 
-    public int ProductID
-    {
-      get
-      {
-        return this._ProductID;
-      }
-    }
+        public object SetProductAssociatedPartID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ProductAssociatedPartID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetProductID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_ProductID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int ProductID
+        {
+            get
+            {
+                return this._ProductID;
+            }
+        }
 
-    public int PartID
-    {
-      get
-      {
-        return this._PartID;
-      }
-    }
+        public object SetProductID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_ProductID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPartID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PartID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int PartID
+        {
+            get
+            {
+                return this._PartID;
+            }
+        }
+
+        public object SetPartID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PartID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

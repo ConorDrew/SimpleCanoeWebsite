@@ -9,19 +9,19 @@ using System.Collections;
 
 namespace FSM.Entity.StandardSentences
 {
-  public class StandardSentenceValidator : BaseValidator
-  {
-    public void Validate(StandardSentence oStandardSentence)
+    public class StandardSentenceValidator : BaseValidator
     {
-      if (oStandardSentence.Errors.Count > 0)
-      {
-        foreach (object error in oStandardSentence.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oStandardSentence.Sentence.Trim().Length == 0)
-        this.AddCriticalMessage("Sentence Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(StandardSentence oStandardSentence)
+        {
+            if (oStandardSentence.Errors.Count > 0)
+            {
+                foreach (object error in oStandardSentence.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oStandardSentence.Sentence.Trim().Length == 0)
+                this.AddCriticalMessage("Sentence Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

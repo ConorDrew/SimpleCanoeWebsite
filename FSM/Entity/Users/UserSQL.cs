@@ -280,48 +280,28 @@ namespace FSM.Entity.Users
                 {
                     string actionChange = string.Empty;
                     bool flag = false;
-                    IEnumerator enumerator;
-                    try
+
+                    foreach (DataRow current in changes.Rows)
                     {
-                        enumerator = changes.Rows.GetEnumerator();
-                        while (enumerator.MoveNext())
-                        {
-                            DataRow current = (DataRow)enumerator.Current;
-                            if (flag)
-                                actionChange += " and ";
-                            actionChange = actionChange + Helper.MakeStringValid(RuntimeHelpers.GetObjectValue(current["ModuleName"])) + " set to " + Helper.MakeStringValid(RuntimeHelpers.GetObjectValue(current["AccessPermitted"]));
-                            flag = true;
-                        }
-                    }
-                    finally
-                    {
-                        if (enumerator is IDisposable)
-                            (enumerator as IDisposable).Dispose();
+                        if (flag)
+                            actionChange += " and ";
+                        actionChange = actionChange + Helper.MakeStringValid(RuntimeHelpers.GetObjectValue(current["ModuleName"])) + " set to " + Helper.MakeStringValid(RuntimeHelpers.GetObjectValue(current["AccessPermitted"]));
+                        flag = true;
                     }
                     if (!string.IsNullOrEmpty(actionChange))
                         this.UserAccessAudit_Insert(u.UserID, actionChange);
                 }
-                IEnumerator enumerator1;
-                try
+
+                foreach (DataRow current in table.Rows)
                 {
-                    enumerator1 = table.Rows.GetEnumerator();
-                    while (enumerator1.MoveNext())
-                    {
-                        DataRow current = (DataRow)enumerator1.Current;
-                        this._database.ClearParameter();
-                        this._database.AddParameter("@UserID", (object)u.UserID, true);
-                        this._database.AddParameter("@SystemModuleID", (object)Conversions.ToInteger(current["SystemModuleID"]), true);
-                        this._database.AddParameter("@AccessPermitted", (object)Conversions.ToBoolean(current["AccessPermitted"]), true);
-                        if (Conversions.ToInteger(current["UserModuleID"]) == 0)
-                            this._database.ExecuteSP_NO_Return("SecurityUserModules_Insert", true);
-                        else
-                            this._database.ExecuteSP_NO_Return("SecurityUserModules_Update", true);
-                    }
-                }
-                finally
-                {
-                    if (enumerator1 is IDisposable)
-                        (enumerator1 as IDisposable).Dispose();
+                    this._database.ClearParameter();
+                    this._database.AddParameter("@UserID", (object)u.UserID, true);
+                    this._database.AddParameter("@SystemModuleID", (object)Conversions.ToInteger(current["SystemModuleID"]), true);
+                    this._database.AddParameter("@AccessPermitted", (object)Conversions.ToBoolean(current["AccessPermitted"]), true);
+                    if (Conversions.ToInteger(current["UserModuleID"]) == 0)
+                        this._database.ExecuteSP_NO_Return("SecurityUserModules_Insert", true);
+                    else
+                        this._database.ExecuteSP_NO_Return("SecurityUserModules_Update", true);
                 }
                 u.SecurityUserModules = this.GetSecurityUserModules(u.UserID);
             }

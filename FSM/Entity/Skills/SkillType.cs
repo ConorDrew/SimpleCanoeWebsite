@@ -9,109 +9,109 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Skills
 {
-  public class SkillType
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _skillTypeId;
-    private string _name;
-
-    public SkillType()
+    public class SkillType
     {
-      this._exists = false;
-      this._deleted = false;
-      this._skillTypeId = 0;
-      this._name = string.Empty;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _skillTypeId;
+        private string _name;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public SkillType()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._skillTypeId = 0;
+            this._name = string.Empty;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int SkillTypeID
-    {
-      get
-      {
-        return this._skillTypeId;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetSkillTypeID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_skillTypeId", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SkillTypeID
+        {
+            get
+            {
+                return this._skillTypeId;
+            }
+        }
 
-    public string Name
-    {
-      get
-      {
-        return this._name;
-      }
-    }
+        public object SetSkillTypeID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_skillTypeId", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetName
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_name", RuntimeHelpers.GetObjectValue(value));
-      }
+        public string Name
+        {
+            get
+            {
+                return this._name;
+            }
+        }
+
+        public object SetName
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_name", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

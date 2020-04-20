@@ -10,159 +10,159 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.SiteCustomerAudits
 {
-  public class SiteCustomerAudit
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _SiteCustomerAuditID;
-    private int _SiteID;
-    private int _PreviousCustomerID;
-    private DateTime _DateChanged;
-    private int _userID;
-
-    public SiteCustomerAudit()
+    public class SiteCustomerAudit
     {
-      this._exists = false;
-      this._deleted = false;
-      this._SiteCustomerAuditID = 0;
-      this._SiteID = 0;
-      this._PreviousCustomerID = 0;
-      this._DateChanged = DateTime.MinValue;
-      this._userID = 0;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _SiteCustomerAuditID;
+        private int _SiteID;
+        private int _PreviousCustomerID;
+        private DateTime _DateChanged;
+        private int _userID;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public SiteCustomerAudit()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._SiteCustomerAuditID = 0;
+            this._SiteID = 0;
+            this._PreviousCustomerID = 0;
+            this._DateChanged = DateTime.MinValue;
+            this._userID = 0;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int SiteCustomerAuditID
-    {
-      get
-      {
-        return this._SiteCustomerAuditID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetSiteCustomerAuditID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SiteCustomerAuditID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteCustomerAuditID
+        {
+            get
+            {
+                return this._SiteCustomerAuditID;
+            }
+        }
 
-    public int SiteID
-    {
-      get
-      {
-        return this._SiteID;
-      }
-    }
+        public object SetSiteCustomerAuditID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SiteCustomerAuditID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSiteID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SiteID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SiteID
+        {
+            get
+            {
+                return this._SiteID;
+            }
+        }
 
-    public int PreviousCustomerID
-    {
-      get
-      {
-        return this._PreviousCustomerID;
-      }
-    }
+        public object SetSiteID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SiteID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetPreviousCustomerID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_PreviousCustomerID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int PreviousCustomerID
+        {
+            get
+            {
+                return this._PreviousCustomerID;
+            }
+        }
 
-    public DateTime DateChanged
-    {
-      get
-      {
-        return this._DateChanged;
-      }
-      set
-      {
-        this._DateChanged = value;
-      }
-    }
+        public object SetPreviousCustomerID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_PreviousCustomerID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public int UserID
-    {
-      get
-      {
-        return this._userID;
-      }
-    }
+        public DateTime DateChanged
+        {
+            get
+            {
+                return this._DateChanged;
+            }
+            set
+            {
+                this._DateChanged = value;
+            }
+        }
 
-    public object SetUserID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_userID", RuntimeHelpers.GetObjectValue(value));
-      }
+        public int UserID
+        {
+            get
+            {
+                return this._userID;
+            }
+        }
+
+        public object SetUserID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_userID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
     }
-  }
 }

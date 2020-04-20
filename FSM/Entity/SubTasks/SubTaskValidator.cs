@@ -9,19 +9,19 @@ using System.Collections;
 
 namespace FSM.Entity.SubTasks
 {
-  public class SubTaskValidator : BaseValidator
-  {
-    public void Validate(SubTask oSubTask)
+    public class SubTaskValidator : BaseValidator
     {
-      if (oSubTask.Errors.Count > 0)
-      {
-        foreach (object error in oSubTask.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oSubTask.Description.Trim().Length == 0)
-        this.AddCriticalMessage("Description Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(SubTask oSubTask)
+        {
+            if (oSubTask.Errors.Count > 0)
+            {
+                foreach (object error in oSubTask.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oSubTask.Description.Trim().Length == 0)
+                this.AddCriticalMessage("Description Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }

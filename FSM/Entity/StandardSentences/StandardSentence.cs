@@ -10,123 +10,123 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.StandardSentences
 {
-  public class StandardSentence
-  {
-    private DataTypeValidator _dataTypeValidator;
-    private bool _exists;
-    private bool _deleted;
-    private int _SentenceID;
-    private string _Sentence;
-    private DateTime _LastChanged;
-
-    public StandardSentence()
+    public class StandardSentence
     {
-      this._exists = false;
-      this._deleted = false;
-      this._SentenceID = 0;
-      this._Sentence = string.Empty;
-      this._LastChanged = DateTime.MinValue;
-      this._dataTypeValidator = new DataTypeValidator();
-    }
+        private DataTypeValidator _dataTypeValidator;
+        private bool _exists;
+        private bool _deleted;
+        private int _SentenceID;
+        private string _Sentence;
+        private DateTime _LastChanged;
 
-    public bool IgnoreExceptionsOnSetMethods
-    {
-      get
-      {
-        return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
-      }
-      set
-      {
-        this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-      }
-    }
+        public StandardSentence()
+        {
+            this._exists = false;
+            this._deleted = false;
+            this._SentenceID = 0;
+            this._Sentence = string.Empty;
+            this._LastChanged = DateTime.MinValue;
+            this._dataTypeValidator = new DataTypeValidator();
+        }
 
-    public Hashtable Errors
-    {
-      get
-      {
-        return this._dataTypeValidator.Errors;
-      }
-    }
+        public bool IgnoreExceptionsOnSetMethods
+        {
+            get
+            {
+                return this._dataTypeValidator.IgnoreExceptionsOnSetMethods;
+            }
+            set
+            {
+                this._dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
+            }
+        }
 
-    public DataTypeValidator DTValidator
-    {
-      get
-      {
-        return this._dataTypeValidator;
-      }
-    }
+        public Hashtable Errors
+        {
+            get
+            {
+                return this._dataTypeValidator.Errors;
+            }
+        }
 
-    public bool Exists
-    {
-      get
-      {
-        return this._exists;
-      }
-      set
-      {
-        this._exists = value;
-      }
-    }
+        public DataTypeValidator DTValidator
+        {
+            get
+            {
+                return this._dataTypeValidator;
+            }
+        }
 
-    public bool Deleted
-    {
-      get
-      {
-        return this._deleted;
-      }
-    }
+        public bool Exists
+        {
+            get
+            {
+                return this._exists;
+            }
+            set
+            {
+                this._exists = value;
+            }
+        }
 
-    public bool SetDeleted
-    {
-      set
-      {
-        this._deleted = value;
-      }
-    }
+        public bool Deleted
+        {
+            get
+            {
+                return this._deleted;
+            }
+        }
 
-    public int SentenceID
-    {
-      get
-      {
-        return this._SentenceID;
-      }
-    }
+        public bool SetDeleted
+        {
+            set
+            {
+                this._deleted = value;
+            }
+        }
 
-    public object SetSentenceID
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_SentenceID", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public int SentenceID
+        {
+            get
+            {
+                return this._SentenceID;
+            }
+        }
 
-    public string Sentence
-    {
-      get
-      {
-        return this._Sentence;
-      }
-    }
+        public object SetSentenceID
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_SentenceID", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
 
-    public object SetSentence
-    {
-      set
-      {
-        this._dataTypeValidator.SetValue((object) this, "_Sentence", RuntimeHelpers.GetObjectValue(value));
-      }
-    }
+        public string Sentence
+        {
+            get
+            {
+                return this._Sentence;
+            }
+        }
 
-    public DateTime LastChanged
-    {
-      get
-      {
-        return this._LastChanged;
-      }
-      set
-      {
-        this._LastChanged = value;
-      }
+        public object SetSentence
+        {
+            set
+            {
+                this._dataTypeValidator.SetValue((object)this, "_Sentence", RuntimeHelpers.GetObjectValue(value));
+            }
+        }
+
+        public DateTime LastChanged
+        {
+            get
+            {
+                return this._LastChanged;
+            }
+            set
+            {
+                this._LastChanged = value;
+            }
+        }
     }
-  }
 }

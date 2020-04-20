@@ -13,53 +13,40 @@ using System.Runtime.CompilerServices;
 
 namespace FSM.Entity.Sys
 {
-  public class ObjectMap
-  {
-    public static List<T> DataTableToList<T>(DataTable table) where T : class, new()
+    public class ObjectMap
     {
-      List<T> objList1;
-      try
-      {
-        List<T> objList2 = new List<T>();
-        try
+        public static List<T> DataTableToList<T>(DataTable table) where T : class, new()
         {
-          foreach (DataRow dataRow in table.AsEnumerable())
-          {
-            T obj = new T();
-            PropertyInfo[] properties = obj.GetType().GetProperties();
-            int index = 0;
-            while (index < properties.Length)
+            try
             {
-              PropertyInfo propertyInfo = properties[index];
-              try
-              {
-                PropertyInfo property = obj.GetType().GetProperty(propertyInfo.Name);
-                property.SetValue((object) obj, RuntimeHelpers.GetObjectValue(Convert.ChangeType(RuntimeHelpers.GetObjectValue(dataRow[propertyInfo.Name]), property.PropertyType)), (object[]) null);
-              }
-              catch (Exception ex)
-              {
-                ProjectData.SetProjectError(ex);
-                ProjectData.ClearProjectError();
-              }
-              checked { ++index; }
+                List<T> list = new List<T>();
+
+                foreach (DataRow row in table.AsEnumerable())
+                {
+                    T obj = new T();
+
+                    foreach (PropertyInfo prop in obj.GetType().GetProperties())
+                    {
+                        try
+                        {
+                            PropertyInfo propertyInfo = obj.GetType().GetProperty(prop.Name);
+                            propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null/* TODO Change to default(_) if this is not a reference type */);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
+                    }
+
+                    list.Add(obj);
+                }
+
+                return list;
             }
-            objList2.Add(obj);
-          }
+            catch
+            {
+                return null;
+            }
         }
-        finally
-        {
-          IEnumerator<DataRow> enumerator;
-          enumerator?.Dispose();
-        }
-        objList1 = objList2;
-      }
-      catch (Exception ex)
-      {
-        ProjectData.SetProjectError(ex);
-        objList1 = (List<T>) null;
-        ProjectData.ClearProjectError();
-      }
-      return objList1;
     }
-  }
 }

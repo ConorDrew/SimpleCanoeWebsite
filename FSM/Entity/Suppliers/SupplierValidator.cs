@@ -9,25 +9,25 @@ using System.Collections;
 
 namespace FSM.Entity.Suppliers
 {
-  public class SupplierValidator : BaseValidator
-  {
-    public void Validate(Supplier oSupplier)
+    public class SupplierValidator : BaseValidator
     {
-      if (oSupplier.Errors.Count > 0)
-      {
-        foreach (object error in oSupplier.Errors)
-          this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry) error : new DictionaryEntry()).Value));
-      }
-      if (oSupplier.AccountNumber.Trim().Length == 0)
-        this.AddCriticalMessage("Account Number Missing");
-      if (oSupplier.Name.Trim().Length == 0)
-        this.AddCriticalMessage("Name Missing");
-      if (oSupplier.Address1.Trim().Length == 0)
-        this.AddCriticalMessage("Address 1 Missing");
-      if (oSupplier.Postcode.Trim().Length == 0)
-        this.AddCriticalMessage("Postcode Missing");
-      if (this.ValidatorMessages.CriticalMessages.Count > 0)
-        throw new ValidationException((BaseValidator) this);
+        public void Validate(Supplier oSupplier)
+        {
+            if (oSupplier.Errors.Count > 0)
+            {
+                foreach (object error in oSupplier.Errors)
+                    this.AddCriticalMessage(Conversions.ToString((error != null ? (DictionaryEntry)error : new DictionaryEntry()).Value));
+            }
+            if (oSupplier.AccountNumber.Trim().Length == 0)
+                this.AddCriticalMessage("Account Number Missing");
+            if (oSupplier.Name.Trim().Length == 0)
+                this.AddCriticalMessage("Name Missing");
+            if (oSupplier.Address1.Trim().Length == 0)
+                this.AddCriticalMessage("Address 1 Missing");
+            if (oSupplier.Postcode.Trim().Length == 0)
+                this.AddCriticalMessage("Postcode Missing");
+            if (this.ValidatorMessages.CriticalMessages.Count > 0)
+                throw new ValidationException((BaseValidator)this);
+        }
     }
-  }
 }
