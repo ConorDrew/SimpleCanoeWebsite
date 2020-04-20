@@ -16,11 +16,10 @@ namespace FSM
 {
     public class FRMPartsImport : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPartsImport() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             this.Load += FRMPartsImport_Load;
@@ -583,9 +582,9 @@ namespace FSM
             _grpExcelFile.SuspendLayout();
             _grpCatImport.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpExcelFile
-            // 
+            //
             _grpExcelFile.Controls.Add(_chkPFH);
             _grpExcelFile.Controls.Add(_btnFindExcelFile);
             _grpExcelFile.Controls.Add(_txtSupplier);
@@ -600,9 +599,9 @@ namespace FSM
             _grpExcelFile.TabIndex = 3;
             _grpExcelFile.TabStop = false;
             _grpExcelFile.Text = "Initial Import";
-            // 
+            //
             // chkPFH
-            // 
+            //
             _chkPFH.AutoSize = true;
             _chkPFH.Location = new Point(452, 22);
             _chkPFH.Name = "chkPFH";
@@ -610,9 +609,9 @@ namespace FSM
             _chkPFH.TabIndex = 21;
             _chkPFH.Text = "PFH";
             _chkPFH.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnFindExcelFile
-            // 
+            //
             _btnFindExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindExcelFile.FlatStyle = FlatStyle.System;
             _btnFindExcelFile.Location = new Point(413, 51);
@@ -620,27 +619,27 @@ namespace FSM
             _btnFindExcelFile.Size = new Size(32, 23);
             _btnFindExcelFile.TabIndex = 20;
             _btnFindExcelFile.Text = "...";
-            // 
+            //
             // txtSupplier
-            // 
+            //
             _txtSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSupplier.Location = new Point(71, 19);
             _txtSupplier.Name = "txtSupplier";
             _txtSupplier.ReadOnly = true;
             _txtSupplier.Size = new Size(336, 21);
             _txtSupplier.TabIndex = 19;
-            // 
+            //
             // lblSupplier
-            // 
+            //
             _lblSupplier.AutoSize = true;
             _lblSupplier.Location = new Point(6, 22);
             _lblSupplier.Name = "lblSupplier";
             _lblSupplier.Size = new Size(59, 13);
             _lblSupplier.TabIndex = 18;
             _lblSupplier.Text = "Supplier:";
-            // 
+            //
             // btnImport
-            // 
+            //
             _btnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnImport.Enabled = false;
             _btnImport.FlatStyle = FlatStyle.System;
@@ -649,9 +648,9 @@ namespace FSM
             _btnImport.Size = new Size(58, 23);
             _btnImport.TabIndex = 17;
             _btnImport.Text = "Import";
-            // 
+            //
             // btnFindSupplier
-            // 
+            //
             _btnFindSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindSupplier.FlatStyle = FlatStyle.System;
             _btnFindSupplier.Location = new Point(413, 17);
@@ -659,27 +658,27 @@ namespace FSM
             _btnFindSupplier.Size = new Size(32, 23);
             _btnFindSupplier.TabIndex = 16;
             _btnFindSupplier.Text = "...";
-            // 
+            //
             // txtExcelFile
-            // 
+            //
             _txtExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtExcelFile.Location = new Point(43, 53);
             _txtExcelFile.Name = "txtExcelFile";
             _txtExcelFile.ReadOnly = true;
             _txtExcelFile.Size = new Size(364, 21);
             _txtExcelFile.TabIndex = 15;
-            // 
+            //
             // lblFile
-            // 
+            //
             _lblFile.AutoSize = true;
             _lblFile.Location = new Point(6, 56);
             _lblFile.Name = "lblFile";
             _lblFile.Size = new Size(31, 13);
             _lblFile.TabIndex = 14;
             _lblFile.Text = "File:";
-            // 
+            //
             // btnExportResults
-            // 
+            //
             _btnExportResults.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnExportResults.Location = new Point(860, 641);
             _btnExportResults.Name = "btnExportResults";
@@ -687,9 +686,9 @@ namespace FSM
             _btnExportResults.TabIndex = 5;
             _btnExportResults.Text = "Export";
             _btnExportResults.UseVisualStyleBackColor = true;
-            // 
+            //
             // tcData
-            // 
+            //
             _tcData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcData.Location = new Point(8, 131);
@@ -697,18 +696,18 @@ namespace FSM
             _tcData.SelectedIndex = 0;
             _tcData.Size = new Size(920, 487);
             _tcData.TabIndex = 8;
-            // 
+            //
             // pbStatus
-            // 
+            //
             _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _pbStatus.Location = new Point(10, 645);
             _pbStatus.Name = "pbStatus";
             _pbStatus.Size = new Size(780, 23);
             _pbStatus.Step = 1;
             _pbStatus.TabIndex = 10;
-            // 
+            //
             // lblProgress
-            // 
+            //
             _lblProgress.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _lblProgress.Location = new Point(796, 652);
             _lblProgress.Name = "lblProgress";
@@ -716,9 +715,9 @@ namespace FSM
             _lblProgress.TabIndex = 11;
             _lblProgress.Text = "0%";
             _lblProgress.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // lblMessages
-            // 
+            //
             _lblMessages.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _lblMessages.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblMessages.ForeColor = Color.Red;
@@ -728,9 +727,9 @@ namespace FSM
             _lblMessages.TabIndex = 12;
             _lblMessages.TextAlign = ContentAlignment.MiddleLeft;
             _lblMessages.Visible = false;
-            // 
+            //
             // btnExportParts
-            // 
+            //
             _btnExportParts.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnExportParts.Location = new Point(840, 8);
             _btnExportParts.Name = "btnExportParts";
@@ -738,18 +737,18 @@ namespace FSM
             _btnExportParts.TabIndex = 13;
             _btnExportParts.TabStop = true;
             _btnExportParts.Text = "Export Parts";
-            // 
+            //
             // cboValidateType
-            // 
+            //
             _cboValidateType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboValidateType.FormattingEnabled = true;
             _cboValidateType.Location = new Point(6, 19);
             _cboValidateType.Name = "cboValidateType";
             _cboValidateType.Size = new Size(387, 21);
             _cboValidateType.TabIndex = 1;
-            // 
+            //
             // btnProcessIndiv
-            // 
+            //
             _btnProcessIndiv.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnProcessIndiv.Location = new Point(178, 51);
             _btnProcessIndiv.Name = "btnProcessIndiv";
@@ -757,9 +756,9 @@ namespace FSM
             _btnProcessIndiv.TabIndex = 4;
             _btnProcessIndiv.Text = "Process -->";
             _btnProcessIndiv.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpCatImport
-            // 
+            //
             _grpCatImport.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpCatImport.Controls.Add(_btnProcessIndiv);
             _grpCatImport.Controls.Add(_cboValidateType);
@@ -769,17 +768,17 @@ namespace FSM
             _grpCatImport.TabIndex = 6;
             _grpCatImport.TabStop = false;
             _grpCatImport.Text = "Category Processing";
-            // 
+            //
             // lbl_Stats
-            // 
+            //
             _lbl_Stats.AutoSize = true;
             _lbl_Stats.Location = new Point(126, 8);
             _lbl_Stats.Name = "lbl_Stats";
             _lbl_Stats.Size = new Size(0, 13);
             _lbl_Stats.TabIndex = 15;
-            // 
+            //
             // llOpenFolder
-            // 
+            //
             _llOpenFolder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _llOpenFolder.Location = new Point(707, 8);
             _llOpenFolder.Name = "llOpenFolder";
@@ -787,9 +786,9 @@ namespace FSM
             _llOpenFolder.TabIndex = 16;
             _llOpenFolder.TabStop = true;
             _llOpenFolder.Text = "View Parts Files";
-            // 
+            //
             // FRMPartsImport
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(940, 680);
             Controls.Add(_llOpenFolder);
@@ -825,6 +824,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -1103,6 +1103,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void ShowData()
         {
             tcData.TabPages.Clear();
@@ -1183,44 +1184,33 @@ namespace FSM
 
         private void KillInstances(Microsoft.Office.Interop.Excel.Application app)
         {
-            ;
-#error Cannot convert OnErrorResumeNextStatementSyntax - see comment for details
-            /* Cannot convert OnErrorResumeNextStatementSyntax, CONVERSION ERROR: Conversion for OnErrorResumeNextStatement not implemented, please report this issue in 'On Error Resume Next' at character 32489
-
-
-            Input:
-                    On Error Resume Next
-
+            /*TODO, CHeck trycatch - Conor
              */
             app.Quit();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
             app = null;
             GC.Collect();
             var mp = Process.GetProcessesByName("EXCEL");
-            Process p;
             foreach (var p in mp)
             {
-                if (p.Responding)
+                try
                 {
-                    if (string.IsNullOrEmpty(p.MainWindowTitle))
+                    if (p.Responding)
+                    {
+                        if (string.IsNullOrEmpty(p.MainWindowTitle))
+                        {
+                            p.Kill();
+                        }
+                    }
+                    else
                     {
                         p.Kill();
                     }
                 }
-                else
+                catch
                 {
-                    p.Kill();
                 }
             };
-#error Cannot convert OnErrorGoToStatementSyntax - see comment for details
-            /* Cannot convert OnErrorGoToStatementSyntax, CONVERSION ERROR: Conversion for OnErrorGoToMinusOneStatement not implemented, please report this issue in 'On Error GoTo - 1' at character 33094
-
-
-            Input:
-
-                    On Error GoTo - 1
-
-             */
         }
 
         public void MoveProgressOn(bool toMaximum = false)

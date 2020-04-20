@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using FSM.Entity.Sys;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 
@@ -14,7 +15,6 @@ namespace FSM
     {
         public FRMConvertToAnOrder(System.Data.SqlClient.SqlTransaction trans) : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMConvertToAnOrder_Load;
@@ -24,10 +24,10 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMConvertToAnOrder() : base()
         {
             base.Load += FRMConvertToAnOrder_Load;
@@ -58,7 +58,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpJob;
 
@@ -864,9 +864,9 @@ namespace FSM
             _grpCharges.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgCharges).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpJob
-            // 
+            //
             _grpJob.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpJob.Controls.Add(_dgEngineerVisits);
             _grpJob.Location = new Point(8, 40);
@@ -875,9 +875,9 @@ namespace FSM
             _grpJob.TabIndex = 1;
             _grpJob.TabStop = false;
             _grpJob.Text = "More than one engineer visit exists for this job, please select the visit to assi" + "gn this order to and click OK";
-            // 
+            //
             // dgEngineerVisits
-            // 
+            //
             _dgEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgEngineerVisits.DataMember = "";
@@ -886,9 +886,9 @@ namespace FSM
             _dgEngineerVisits.Name = "dgEngineerVisits";
             _dgEngineerVisits.Size = new Size(960, 114);
             _dgEngineerVisits.TabIndex = 1;
-            // 
+            //
             // grpPartsAndProducts
-            // 
+            //
             _grpPartsAndProducts.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpPartsAndProducts.Controls.Add(_btnExport);
             _grpPartsAndProducts.Controls.Add(_btnRemove);
@@ -901,27 +901,27 @@ namespace FSM
             _grpPartsAndProducts.TabIndex = 2;
             _grpPartsAndProducts.TabStop = false;
             _grpPartsAndProducts.Text = "Parts && Products";
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(198, 243);
             _btnExport.Name = "btnExport";
             _btnExport.Size = new Size(88, 23);
             _btnExport.TabIndex = 9;
             _btnExport.Text = "Export";
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemove.Location = new Point(788, 241);
             _btnRemove.Name = "btnRemove";
             _btnRemove.Size = new Size(164, 23);
             _btnRemove.TabIndex = 8;
             _btnRemove.Text = "Remove Part / Product";
-            // 
+            //
             // dgPartsAndProducts
-            // 
+            //
             _dgPartsAndProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgPartsAndProducts.DataMember = "";
@@ -930,45 +930,45 @@ namespace FSM
             _dgPartsAndProducts.Name = "dgPartsAndProducts";
             _dgPartsAndProducts.Size = new Size(952, 215);
             _dgPartsAndProducts.TabIndex = 3;
-            // 
+            //
             // btnAddProduct
-            // 
+            //
             _btnAddProduct.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddProduct.Location = new Point(104, 243);
             _btnAddProduct.Name = "btnAddProduct";
             _btnAddProduct.Size = new Size(88, 23);
             _btnAddProduct.TabIndex = 6;
             _btnAddProduct.Text = "Add Product";
-            // 
+            //
             // btnAddPart
-            // 
+            //
             _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddPart.Location = new Point(8, 243);
             _btnAddPart.Name = "btnAddPart";
             _btnAddPart.Size = new Size(88, 23);
             _btnAddPart.TabIndex = 7;
             _btnAddPart.Text = "Add Part";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(928, 536);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 23);
             _btnSave.TabIndex = 4;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 536);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 5;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // lblinformation
-            // 
+            //
             _lblinformation.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _lblinformation.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblinformation.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -977,9 +977,9 @@ namespace FSM
             _lblinformation.Size = new Size(600, 24);
             _lblinformation.TabIndex = 8;
             _lblinformation.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // chkAwaiting
-            // 
+            //
             _chkAwaiting.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkAwaiting.AutoSize = true;
             _chkAwaiting.Location = new Point(91, 508);
@@ -988,9 +988,9 @@ namespace FSM
             _chkAwaiting.TabIndex = 9;
             _chkAwaiting.Text = "Awaiting Confirmation";
             _chkAwaiting.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkConfirmed
-            // 
+            //
             _chkConfirmed.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkConfirmed.AutoSize = true;
             _chkConfirmed.Location = new Point(249, 508);
@@ -999,9 +999,9 @@ namespace FSM
             _chkConfirmed.TabIndex = 10;
             _chkConfirmed.Text = "Confirmed";
             _chkConfirmed.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label1.AutoSize = true;
             _Label1.Location = new Point(5, 508);
@@ -1009,9 +1009,9 @@ namespace FSM
             _Label1.Size = new Size(80, 13);
             _Label1.TabIndex = 11;
             _Label1.Text = "Order Status";
-            // 
+            //
             // dtpDeadline
-            // 
+            //
             _dtpDeadline.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _dtpDeadline.CustomFormat = "dddd dd MMMM yyyy";
             _dtpDeadline.Format = DateTimePickerFormat.Custom;
@@ -1019,9 +1019,9 @@ namespace FSM
             _dtpDeadline.Name = "dtpDeadline";
             _dtpDeadline.Size = new Size(244, 21);
             _dtpDeadline.TabIndex = 12;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label2.AutoSize = true;
             _Label2.Location = new Point(341, 509);
@@ -1029,9 +1029,9 @@ namespace FSM
             _Label2.Size = new Size(109, 13);
             _Label2.TabIndex = 13;
             _Label2.Text = "Delivery Deadline";
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Controls.Add(_TabPage1);
             _TabControl1.Controls.Add(_TabPage2);
             _TabControl1.Location = new Point(8, 198);
@@ -1039,9 +1039,9 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(976, 304);
             _TabControl1.TabIndex = 14;
-            // 
+            //
             // TabPage1
-            // 
+            //
             _TabPage1.Controls.Add(_grpPartsAndProducts);
             _TabPage1.Location = new Point(4, 22);
             _TabPage1.Name = "TabPage1";
@@ -1050,9 +1050,9 @@ namespace FSM
             _TabPage1.TabIndex = 0;
             _TabPage1.Text = "Parts & Products";
             _TabPage1.UseVisualStyleBackColor = true;
-            // 
+            //
             // TabPage2
-            // 
+            //
             _TabPage2.Controls.Add(_grpCharges);
             _TabPage2.Location = new Point(4, 22);
             _TabPage2.Name = "TabPage2";
@@ -1061,9 +1061,9 @@ namespace FSM
             _TabPage2.TabIndex = 1;
             _TabPage2.Text = "Charges";
             _TabPage2.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpCharges
-            // 
+            //
             _grpCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCharges.Controls.Add(_btnDelete);
@@ -1079,61 +1079,61 @@ namespace FSM
             _grpCharges.TabIndex = 3;
             _grpCharges.TabStop = false;
             _grpCharges.Text = "Charges";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Location = new Point(884, 208);
             _btnDelete.Name = "btnDelete";
             _btnDelete.Size = new Size(64, 23);
             _btnDelete.TabIndex = 5;
             _btnDelete.Text = "Remove";
-            // 
+            //
             // btnChargesSave
-            // 
+            //
             _btnChargesSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnChargesSave.Location = new Point(884, 240);
             _btnChargesSave.Name = "btnChargesSave";
             _btnChargesSave.Size = new Size(64, 23);
             _btnChargesSave.TabIndex = 4;
             _btnChargesSave.Text = "Add";
-            // 
+            //
             // txtAmount
-            // 
+            //
             _txtAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtAmount.Location = new Point(804, 240);
             _txtAmount.Name = "txtAmount";
             _txtAmount.Size = new Size(72, 21);
             _txtAmount.TabIndex = 3;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label3.Location = new Point(740, 240);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(56, 23);
             _Label3.TabIndex = 3;
             _Label3.Text = "Amount:";
-            // 
+            //
             // cboChargeType
-            // 
+            //
             _cboChargeType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _cboChargeType.Location = new Point(96, 240);
             _cboChargeType.Name = "cboChargeType";
             _cboChargeType.Size = new Size(636, 21);
             _cboChargeType.TabIndex = 2;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label4.Location = new Point(8, 240);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(88, 23);
             _Label4.TabIndex = 1;
             _Label4.Text = "Charge Type:";
-            // 
+            //
             // dgCharges
-            // 
+            //
             _dgCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgCharges.DataMember = "";
@@ -1142,26 +1142,26 @@ namespace FSM
             _dgCharges.Name = "dgCharges";
             _dgCharges.Size = new Size(940, 175);
             _dgCharges.TabIndex = 1;
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.Location = new Point(705, 508);
             _Label17.Name = "Label17";
             _Label17.Size = new Size(38, 20);
             _Label17.TabIndex = 70;
             _Label17.Text = "Dept";
-            // 
+            //
             // txtDepartment
-            // 
+            //
             _txtDepartment.Location = new Point(749, 511);
             _txtDepartment.MaxLength = 100;
             _txtDepartment.Name = "txtDepartment";
             _txtDepartment.Size = new Size(131, 21);
             _txtDepartment.TabIndex = 69;
             _txtDepartment.Tag = "";
-            // 
+            //
             // chkDoNotConsolidate
-            // 
+            //
             _chkDoNotConsolidate.AutoSize = true;
             _chkDoNotConsolidate.Location = new Point(91, 540);
             _chkDoNotConsolidate.Name = "chkDoNotConsolidate";
@@ -1169,9 +1169,9 @@ namespace FSM
             _chkDoNotConsolidate.TabIndex = 71;
             _chkDoNotConsolidate.Text = "Do Not Consolidate";
             _chkDoNotConsolidate.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMConvertToAnOrder
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(992, 566);
             ControlBox = false;
@@ -1219,6 +1219,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoadMe(object sender, EventArgs e)
         {
             chkAwaiting.Checked = true;
@@ -1499,7 +1500,7 @@ namespace FSM
                     {
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(partProductRow["Type"], "WAREHOUSE", false)))
                         {
-                            if (Conversions.ToBoolean(partProductRow["Quantity"] >= row["quantity"]))
+                            if (Conversions.ToBoolean(Helper.MakeDoubleValid(partProductRow["Quantity"]) >= Helper.MakeDoubleValid(row["quantity"])))
                             {
                                 warehouseID = Conversions.ToInteger(partProductRow["WarehouseID"]);
                                 locationID = Conversions.ToInteger(partProductRow["LocationID"]);
@@ -1640,6 +1641,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupVisitsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgEngineerVisits);
@@ -1921,8 +1923,6 @@ namespace FSM
             dgCharges.TableStyles.Add(tStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         public void ItemSelected()
         {
             if (!(((DataGridComboBoxColumn)dgPartsAndProducts.TableStyles[0].GridColumnStyles["GetFrom"]).ReturnID == 0))
@@ -1963,7 +1963,7 @@ namespace FSM
                                     SelectedPartProductDataRow["Quantity"] = 1;
                                 }
 
-                                SelectedPartProductDataRow["QuantityToOrder"] = Math.Ceiling(SelectedPartProductDataRow["Quantity"] / oProductSupplier.QuantityInPack);
+                                SelectedPartProductDataRow["QuantityToOrder"] = Math.Ceiling(Helper.MakeDoubleValid(SelectedPartProductDataRow["Quantity"]) / Helper.MakeDoubleValid(oProductSupplier.QuantityInPack));
                                 SelectedPartProductDataRow["GetFrom"] = 1;
                                 SelectedPartProductDataRow["Shelf"] = "";
                                 SelectedPartProductDataRow["Bin"] = "";
@@ -1998,7 +1998,7 @@ namespace FSM
                                     SelectedPartProductDataRow["Quantity"] = 1;
                                 }
 
-                                SelectedPartProductDataRow["QuantityToOrder"] = Math.Ceiling(SelectedPartProductDataRow["Quantity"] / oPartSupplier.QuantityInPack);
+                                SelectedPartProductDataRow["QuantityToOrder"] = Math.Ceiling(Helper.MakeDoubleValid(SelectedPartProductDataRow["Quantity"]) / Helper.MakeDoubleValid(oPartSupplier.QuantityInPack));
                                 SelectedPartProductDataRow["GetFrom"] = 1;
                                 SelectedPartProductDataRow["Shelf"] = "";
                                 SelectedPartProductDataRow["Bin"] = "";
@@ -2892,7 +2892,6 @@ namespace FSM
 
                     if (NeedsTransaction == true)
                     {
-
                         // CYCLE THROUGH ORDERS
 
                         foreach (DataRow row in PartsAndProducts.Table.Rows)
@@ -2904,7 +2903,6 @@ namespace FSM
                             }
 
                             App.DB.EngineerVisitPartProductAllocated.UpdateOne(Conversions.ToInteger(row["ID"]), EngineerVisitID, Conversions.ToString(row["Type"]), Conversions.ToInteger(row["Quantity"]), Conversions.ToInteger(row["OrderItemID"]), Conversions.ToInteger(row["PartProductID"]), Entity.Sys.Helper.MakeIntegerValid(row["OrderLocationTypeID"]), Trans);
-
                         }
 
                         Trans.Commit();
@@ -2912,7 +2910,7 @@ namespace FSM
                 }
                 else
                 {
-                    // CUSTOMER 
+                    // CUSTOMER
                     var SupplierList = new Hashtable();
                     foreach (DataRow supplierRow in PartsAndProducts.Table.Select("GetFrom = 1"))
                     {
@@ -3269,33 +3267,13 @@ namespace FSM
             {
                 if (orders.Count == 1)
                 {
-                    ;
-#error Cannot convert ExpressionStatementSyntax - see comment for details
-                    /* Cannot convert ExpressionStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                       at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitExpressionStatement>d__31.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                    Input:
-                                    Global.FSM.App.ShowForm(GetType(Global.FSM.FRMOrder), False, New Object() {orders(0)(0), orders(0)(1), 0, Me}, True)
-
-                     */
+                    App.ShowForm(typeof(FRMOrder), false, new object[] { ((object[])orders[0])[0], ((object[])orders[0])[1], 0, this }, true);
                 }
                 else if (orders.Count > 1)
                 {
                     var orderIDs = new ArrayList();
-                    foreach (object order in orders)
-                        orderIDs.Add(order(0));
+                    foreach (ArrayList order in orders)
+                        orderIDs.Add(order[0]);
                     App.ShowForm(typeof(FRMOrderManager), false, new object[] { null, orderIDs });
                 }
             }
@@ -3414,12 +3392,9 @@ namespace FSM
                 dt.Rows.Add(r);
             }
 
-            var oExport = new Entity.Sys.Exporting(dt, "Job Order Pick List");
-            oExport = null;
+            ExportHelper.Export(dt, "Job Order Pick List", Enums.ExportType.XLS);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         public void RefreshDatagrid()
         {
             ChargesDataView = App.DB.OrderCharge.OrderCharge_GetForOrder(0);
@@ -3510,6 +3485,11 @@ namespace FSM
             }
 
             ChargesDataView.Table.Rows.Remove(SelectedChargeDataRow);
+        }
+
+        void IForm.LoadMe(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

@@ -38,6 +38,8 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
     <PublishUrl>\\GW-DB01.gasway.co.uk\Gabriel\FSM_Beta\General\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
@@ -59,8 +61,6 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -758,9 +758,6 @@
     </Compile>
     <Compile Include="Application Framework\System\TransactionalDatabase.cs" />
     <Compile Include="Application Framework\Utilities\Emails.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Framework\Utilities\Exporting.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Framework\Utilities\Helper.cs">

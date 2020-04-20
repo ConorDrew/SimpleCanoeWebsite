@@ -21,8 +21,8 @@ namespace FSM.Entity
     {
         public class Helper
         {
-
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public static string MakeStringValid(object o)
             {
                 try
@@ -400,6 +400,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             // Set the format and data
             public static void SetUpDataGrid(DataGrid dg, bool captionIsVisible = false)
             {
@@ -472,6 +473,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public static void SetUpDataGridView(DataGridView dgv, bool captionIsVisible = false)
             {
                 dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
@@ -494,11 +496,11 @@ namespace FSM.Entity
                 dgv.RowHeadersVisible = false;
                 // AddHandler dgv.Click, AddressOf dGridView_Multievents
                 // AddHandler dgv.CurrentCellChanged, AddressOf dGrid_Multievents
-
             }
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public static void ClearGroupBox(GroupBox grp)
             {
                 foreach (Control cntr in grp.Controls)
@@ -617,6 +619,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public static string HashPassword(string password)
             {
                 using (var hasher = MD5.Create())
@@ -743,6 +746,21 @@ namespace FSM.Entity
             {
                 double luma = (0.299 * color.R + 0.587 * color.G + 0.114 * color.B) / 255;
                 return luma > 0.5 ? Color.Black : Color.White;
+            }
+
+            public static DataRow GetDataRowFromDataSource(object dataSource, int rowIndex)
+            {
+                var dv = dataSource as DataView;
+                if (dv != null)
+                {
+                    return dv.Table.Rows[rowIndex];
+                }
+                var dt = dataSource as DataTable;
+                if (dt != null)
+                {
+                    return dt.Rows[rowIndex];
+                }
+                throw new Exception("Unable to cast datasource");
             }
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

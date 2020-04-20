@@ -21,6 +21,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public frmEngineerSchedule(MouseEventHandler gridMouseDown, MouseEventHandler gridMouseMove, DragEventHandler gridDragOver, DragEventHandler gridDragDrop, MouseEventHandler gridMouseUp, DataRow Engineer, int textsizes) : base()
         {
             EngineerScheduleTimer = new Timer();
@@ -920,9 +921,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgDay).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_picPlanner).BeginInit();
             SuspendLayout();
-            // 
+            //
             // pnlHeader
-            // 
+            //
             _pnlHeader.BackColor = Color.SteelBlue;
             _pnlHeader.Controls.Add(_pbClose);
             _pnlHeader.Controls.Add(_pbGreen);
@@ -940,9 +941,9 @@ namespace FSM
             _pnlHeader.Name = "pnlHeader";
             _pnlHeader.Size = new Size(432, 18);
             _pnlHeader.TabIndex = 1;
-            // 
+            //
             // pbClose
-            // 
+            //
             _pbClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _pbClose.BackColor = Color.Transparent;
             _pbClose.Cursor = Cursors.Hand;
@@ -953,9 +954,9 @@ namespace FSM
             _pbClose.SizeMode = PictureBoxSizeMode.StretchImage;
             _pbClose.TabIndex = 9;
             _pbClose.TabStop = false;
-            // 
+            //
             // pbGreen
-            // 
+            //
             _pbGreen.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _pbGreen.BackColor = Color.Transparent;
             _pbGreen.Image = My.Resources.Resources.green_light;
@@ -966,9 +967,9 @@ namespace FSM
             _pbGreen.TabIndex = 8;
             _pbGreen.TabStop = false;
             _pbGreen.Visible = false;
-            // 
+            //
             // pbRed
-            // 
+            //
             _pbRed.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _pbRed.BackColor = Color.Transparent;
             _pbRed.Image = My.Resources.Resources.red_light;
@@ -979,9 +980,9 @@ namespace FSM
             _pbRed.TabIndex = 7;
             _pbRed.TabStop = false;
             _pbRed.Visible = false;
-            // 
+            //
             // picVan
-            // 
+            //
             _picVan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _picVan.BackColor = Color.Transparent;
             _picVan.Image = My.Resources.Resources.Van;
@@ -992,9 +993,9 @@ namespace FSM
             _picVan.TabIndex = 6;
             _picVan.TabStop = false;
             _picVan.Visible = false;
-            // 
+            //
             // picQuestion
-            // 
+            //
             _picQuestion.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _picQuestion.BackColor = Color.Transparent;
             _picQuestion.Image = My.Resources.Resources.Question_mark_icon;
@@ -1005,9 +1006,9 @@ namespace FSM
             _picQuestion.TabIndex = 5;
             _picQuestion.TabStop = false;
             _picQuestion.Visible = false;
-            // 
+            //
             // picSpanner
-            // 
+            //
             _picSpanner.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _picSpanner.BackColor = Color.Transparent;
             _picSpanner.Image = My.Resources.Resources.imagesWITCGZO5;
@@ -1018,9 +1019,9 @@ namespace FSM
             _picSpanner.TabIndex = 4;
             _picSpanner.TabStop = false;
             _picSpanner.Visible = false;
-            // 
+            //
             // picLevels
-            // 
+            //
             _picLevels.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _picLevels.BackColor = Color.Transparent;
             _picLevels.Image = (Image)resources.GetObject("picLevels.Image");
@@ -1031,9 +1032,9 @@ namespace FSM
             _picLevels.TabIndex = 3;
             _picLevels.TabStop = false;
             _picLevels.Visible = false;
-            // 
+            //
             // picPostalRegions
-            // 
+            //
             _picPostalRegions.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _picPostalRegions.BackColor = Color.Transparent;
             _picPostalRegions.Image = (Image)resources.GetObject("picPostalRegions.Image");
@@ -1044,9 +1045,9 @@ namespace FSM
             _picPostalRegions.TabIndex = 2;
             _picPostalRegions.TabStop = false;
             _picPostalRegions.Visible = false;
-            // 
+            //
             // picRegion
-            // 
+            //
             _picRegion.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _picRegion.BackColor = Color.Transparent;
             _picRegion.Image = (Image)resources.GetObject("picRegion.Image");
@@ -1057,9 +1058,9 @@ namespace FSM
             _picRegion.TabIndex = 1;
             _picRegion.TabStop = false;
             _picRegion.Visible = false;
-            // 
+            //
             // lblTitle
-            // 
+            //
             _lblTitle.AutoSize = true;
             _lblTitle.Dock = DockStyle.Left;
             _lblTitle.Font = new Font("Verdana", 9.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1070,9 +1071,9 @@ namespace FSM
             _lblTitle.TabIndex = 0;
             _lblTitle.Text = "Engineer Schedule";
             _lblTitle.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // pbInfomation
-            // 
+            //
             _pbInfomation.BackColor = Color.Transparent;
             _pbInfomation.Cursor = Cursors.Hand;
             _pbInfomation.Dock = DockStyle.Left;
@@ -1084,9 +1085,9 @@ namespace FSM
             _pbInfomation.TabIndex = 10;
             _pbInfomation.TabStop = false;
             _ttStatus.SetToolTip(_pbInfomation, "View Engineer Information");
-            // 
+            //
             // dgDaySummary
-            // 
+            //
             _dgDaySummary.AllowDrop = true;
             _dgDaySummary.ContextMenu = _mnuDayAction;
             _dgDaySummary.DataMember = "";
@@ -1096,91 +1097,91 @@ namespace FSM
             _dgDaySummary.Name = "dgDaySummary";
             _dgDaySummary.Size = new Size(63, 103);
             _dgDaySummary.TabIndex = 2;
-            // 
+            //
             // mnuDayAction
-            // 
+            //
             _mnuDayAction.MenuItems.AddRange(new MenuItem[] { _btnCreateJob, _btnExportJobs });
-            // 
+            //
             // btnCreateJob
-            // 
+            //
             _btnCreateJob.Index = 0;
             _btnCreateJob.Text = "Create Job";
-            // 
+            //
             // btnExportJobs
-            // 
+            //
             _btnExportJobs.Index = 1;
             _btnExportJobs.Text = "&Export Jobs";
             _btnExportJobs.Visible = false;
-            // 
+            //
             // splitEngineer
-            // 
+            //
             _splitEngineer.Location = new Point(63, 18);
             _splitEngineer.Name = "splitEngineer";
             _splitEngineer.Size = new Size(3, 103);
             _splitEngineer.TabIndex = 3;
             _splitEngineer.TabStop = false;
-            // 
+            //
             // mnuVisitAction
-            // 
+            //
             _mnuVisitAction.MenuItems.AddRange(new MenuItem[] { _btnSendText, _btnReschedule, _btnTextMessage, _MenuItem1 });
-            // 
+            //
             // btnSendText
-            // 
+            //
             _btnSendText.Index = 0;
             _btnSendText.Text = "&Send Text";
             _btnSendText.Visible = false;
-            // 
+            //
             // btnReschedule
-            // 
+            //
             _btnReschedule.Index = 1;
             _btnReschedule.Text = "Reschedule";
             _btnReschedule.Visible = false;
-            // 
+            //
             // btnTextMessage
-            // 
+            //
             _btnTextMessage.Index = 2;
             _btnTextMessage.Text = "Include In Message Run";
-            // 
+            //
             // MenuItem1
-            // 
+            //
             _MenuItem1.Index = 3;
             _MenuItem1.MenuItems.AddRange(new MenuItem[] { _btnSiteReport, _btnPrintLsr, _btnServiceLetter, _btnSolarInstallation, _btnElectricalAppointment });
             _MenuItem1.Text = "Print";
-            // 
+            //
             // btnSiteReport
-            // 
+            //
             _btnSiteReport.Index = 0;
             _btnSiteReport.Text = "Site Report";
-            // 
+            //
             // btnPrintLsr
-            // 
+            //
             _btnPrintLsr.Index = 1;
             _btnPrintLsr.Text = "LSR";
             _btnPrintLsr.Visible = false;
-            // 
+            //
             // btnServiceLetter
-            // 
+            //
             _btnServiceLetter.Index = 2;
             _btnServiceLetter.Text = "Service Letter";
-            // 
+            //
             // btnSolarInstallation
-            // 
+            //
             _btnSolarInstallation.Index = 3;
             _btnSolarInstallation.Text = "Solar Installation";
-            // 
+            //
             // btnElectricalAppointment
-            // 
+            //
             _btnElectricalAppointment.Index = 4;
             _btnElectricalAppointment.Text = "Electrical Appointment";
-            // 
+            //
             // imgLstIcons
-            // 
+            //
             _imgLstIcons.ColorDepth = ColorDepth.Depth24Bit;
             _imgLstIcons.ImageSize = new Size(16, 16);
             _imgLstIcons.TransparentColor = Color.Transparent;
-            // 
+            //
             // dgDay
-            // 
+            //
             _dgDay.CaptionFont = new Font("Verdana", 6.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _dgDay.ContextMenu = _mnuVisitAction;
             _dgDay.DataMember = "";
@@ -1193,9 +1194,9 @@ namespace FSM
             _dgDay.PreferredRowHeight = 12;
             _dgDay.Size = new Size(366, 79);
             _dgDay.TabIndex = 6;
-            // 
+            //
             // picPlanner
-            // 
+            //
             _picPlanner.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
             _picPlanner.BorderStyle = BorderStyle.Fixed3D;
             _picPlanner.Dock = DockStyle.Bottom;
@@ -1204,9 +1205,9 @@ namespace FSM
             _picPlanner.Size = new Size(366, 24);
             _picPlanner.TabIndex = 5;
             _picPlanner.TabStop = false;
-            // 
+            //
             // frmEngineerSchedule
-            // 
+            //
             ClientSize = new Size(432, 121);
             ControlBox = false;
             Controls.Add(_dgDay);
@@ -1239,6 +1240,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public class StatusDependentDataGridCell : DataGridLabelColumn
         {
             private bool _Selected = true;
@@ -1442,6 +1444,7 @@ namespace FSM
 
         // Dataset to display to user - Dates, snapshot work load
         private DataSet _dsEngineerSchedule = new DataSet();
+
         public DateTime CurrentDate;
         public DateTime LastHeartBeat;
         public int LockedVisitId;
@@ -1449,6 +1452,7 @@ namespace FSM
 
         // These are the tests to be carried out on a visit row
         private ScheduleTest[] _tests = new ScheduleTest[] { new RegionCheck(), new PostcodeRegionCheck(), new LevelsCheck(), new AbsenceOverlapCheck(), new SOROverloadCheck(), new DueDateCheck(), new PriorityCheck() };
+
         private DataTable _dtday = new DataTable();
 
         private DataTable CurrentDayDataTable
@@ -1470,27 +1474,7 @@ namespace FSM
             {
                 if (!(dgDay.CurrentRowIndex == -1))
                 {
-                    ;
-#error Cannot convert ReturnStatementSyntax - see comment for details
-                    /* Cannot convert ReturnStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                       at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitReturnStatement>d__44.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                    Input:
-                                    Return Me.dgDay.DataSource(Me.dgDay.CurrentRowIndex).row
-
-                     */
+                    return Helper.GetDataRowFromDataSource(dgDay.DataSource, dgDay.CurrentRowIndex);
                 }
                 else
                 {
@@ -1608,6 +1592,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void setUpDayDg()
         {
             ModScheduler.SetUpSchedulerDataGrid(dgDay, false);
@@ -1864,6 +1849,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void frmEngineerSchedule_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (_refreshAsyncResult is object)
@@ -1981,6 +1967,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Reset()
         {
             _dsEngineerSchedule = new DataSet();
@@ -1995,6 +1982,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public delegate Hashtable refreshAcceptanceDelegate();
 
         private DataRow _testRow;
@@ -2126,6 +2114,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         public bool TestAcceptance(DataRow testRow)
         {
             bool pass = true;
@@ -2301,6 +2290,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private delegate DataTable refreshSummaryDelegate();
 
         private IAsyncResult _refreshSummary;
@@ -2388,7 +2378,6 @@ namespace FSM
 
         public void RefreshDay()
         {
-
             // update the day schedules that are opened at 11:30 and 13:00
             var refreshTime1 = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 11, 30, 0);
             var refreshTime2 = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 13, 0, 0);
@@ -2461,6 +2450,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         public void ShowDay(string date)
         {
             dgDay.TableStyles[0].MappingName = date;
@@ -2599,6 +2589,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void SetupTimeSheetStatus()
         {
             int i = App.DB.Scheduler.getTimesheetStatus(Conversions.ToInteger(EngineerID));
