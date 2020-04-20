@@ -1,0 +1,15 @@
+Release Note - 06/04/2018
+
+New Features
+- Fleet: Ability to manager fleet vehicle in gabriel
+- Sites: On-stop user permission now required
+- Sites: Emails to be sent if anyone creates a job on an address that is due for service
+- User Regions: Ability to assign user regions to view in visit manager
+- I.P.T: Move multiple parts
+- Contracts: Option added for annual direct debits 
+
+Fixes
+- Pro-Forma: Site address shown in details of pro-forma rather than head office
+
+Improvements
+- Purchase Orders: Removal of irrelevant information

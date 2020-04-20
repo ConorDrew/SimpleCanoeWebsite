@@ -1,0 +1,9 @@
+Release Note - 01/04/2018
+
+Fixes
+- Properties: Converting to customer
+- Logout: All opened windows now close when logging out
+
+Improvements
+- Jobs: Relevant job priorites shown on dropdown selection 
+- Jobs: CHS to now recieve confirmation of job on our system

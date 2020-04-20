@@ -1,0 +1,18 @@
+Release Note - 19/07/2018
+
+New Features
+- Sites: Mulitple site fuels now possible
+- Servicing: Mot style service for required customers
+- Scheduler: Visits to turn orange if booked on a site with an overdue service
+- Engineer Visit QC: New questions and new layout
+- Site: Right click on job to move to different site
+- Assets: New security group for editing and deletion
+- Letter Manager: New MK3 version to handle multiple fuels on site
+
+Improvements
+- Engineer Visit Charges: Cost centre to default to engineer dept
+- Servicing Reminders: Speed improvements as well as functionality to email customers
+
+Fixes
+-LSR: Wording changed on template to read 'No of Appliance Tested'
+

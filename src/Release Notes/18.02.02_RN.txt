@@ -1,0 +1,14 @@
+Release Note - 2/02/2018
+
+New Features
+- Engineer Visit: Meter location and meter capped options have been added to the worksheet tab
+
+Fixes
+- Printing: Issue with wrong format fixed
+- Templates: Customer logo added
+- Reports: Servicing stats reports fixed and files saved onto network
+- Templates: Added missing tick on minor works cert
+
+Improvements
+- Letter Manager Engineer Notes: Additional note added for Tendering Visits
+- Contract Wizard:  2.5% Credit card removed correctly.

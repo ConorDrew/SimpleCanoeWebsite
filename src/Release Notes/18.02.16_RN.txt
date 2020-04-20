@@ -1,0 +1,18 @@
+Release Note - 16/02/2018
+
+New Features
+- FGA: Permission now needed to make certain amendments, asset number added to equipments and the ability to view history. 
+- Contracts: Upgrading and downgrading a contract
+- Invoicing: Ability to add notes
+
+Fixes
+- FGA: Adding and deleting equipments
+- Templates: Tendring serivce letter template updated and margins
+- Scheduler: Engineers times showing as busy when they have no job
+
+Improvements
+- Batch GSR: Date of service added to cover letters
+- Parts Import: CEF can now be imported
+- PDFs: Removal of old software like bullzip and pdf995
+
+Further information can be found at http://phocas.gasway.co.uk:8090/display/GS/Release+1.1.3

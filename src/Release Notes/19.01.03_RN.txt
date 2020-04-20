@@ -1,0 +1,15 @@
+Release Note - 04/01/2019
+
+Improvements
+- Contracts: New templates applied
+- GSR: HIU now have next service date
+- Security: new Qualification group added around engineer qualifications and user qualifications
+- Sales Credits: Facility to remove credits
+- Van stock: changes made to all van selects and update and insert
+- Service Reminders: Template update
+
+Fixes
+- Scheduler: Engineers time pop up, now click rather than mouse hover
+- Contracts: Update to TA now generates new service job
+- NCC Letters: NCC hand letter include extra line
+- User quals: Ability to update

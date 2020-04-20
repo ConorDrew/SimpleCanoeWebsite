@@ -1,0 +1,18 @@
+Release Note - 13/12/2018
+
+New Features
+- Skills Matrix: Ability to assign types to qualifications and skills
+- Users: Ability to assign qualifications and skills to users
+- Invoice Manager: Update PO from invoice screen
+
+Improvements
+- User Security: New Group for Coordinators
+- Fleet: Added additional columns to record more information
+- Visit Manager: Ability to filter visits on 'is it chargeable?' 
+- Visit: View Heat Alarms in worksheet tab
+
+Fixes
+- Parts: Refresh search after delete
+- GSR: Remove extra blank page
+- Scheduler: Hover over time slot 
+- GSR Batch: Waveney Template
