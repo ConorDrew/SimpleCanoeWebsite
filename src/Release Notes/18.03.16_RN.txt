@@ -1,0 +1,16 @@
+Release Note - 16/03/2018
+
+New Features
+- Scheduler: Ability to search for engineer
+- Sites: Direct Debit Ref now kept aganist site as well as contract
+- Visit Manager: Filter on estimated service date now available
+- Install Costs: New standalone window
+
+Fixes
+- Contracts: Spelling mistakes removed and wording changed in requested areas
+- Contracts: PMC now available
+- Commerical LSR: Fixed printing issues
+
+Improvements
+- Service Letters: New parent folder created
+- Jobs: Slight speed improvement when opening job

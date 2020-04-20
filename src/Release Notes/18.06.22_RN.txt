@@ -1,0 +1,21 @@
+Release Note - 22/06/2018
+
+New Features
+- Engineer Visit: Speed improvements
+- Quote Manager: New layout and addition of axa
+- Visit Manager: Find visits using start date and end date (Complex Visits)
+- Engineer Visit QC: New questions and new layout
+- Job Importer: The ability to upload a list of sites and create jobs
+- Engineer Visit: Apply job charge to visit
+
+Improvements
+- Engineer Visit: Speed improvements on invoicing
+- Engineer Visit: Time spent moved from qc tab to timesheets
+- Engineers: Only gasway engineers are visible in engineer tab. Subcontractors only visible in subcontractor tab
+- General Deletion: Only IT have access to delete information from gabriel. If you see access denied please raise IT request
+- Letter Manager: Use customer related service process
+
+Fixes:
+- Batch GSR: Wrong information on templates
+- Invoicing: Producing duplicate invoices
+- Contracts: Annual direct debits and documentation

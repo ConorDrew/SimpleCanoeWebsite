@@ -1,0 +1,11 @@
+Release Note - 21/05/2018
+
+New Features
+- Engineer Visit: Multiple select on parts for invoicing
+- Scheduler: Right click to send appointment confirmation
+- Quote Calc: New layout and addition of axa
+- Job Manager: First visit start date on export
+
+Improvements
+- Batch GSR: Speed improvements
+- Letters: Changes on Letter 3 dates - NCC from 366 to 365, Saffron from 365 to 359
