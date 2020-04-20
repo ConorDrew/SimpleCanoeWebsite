@@ -1264,7 +1264,7 @@ namespace FSM
                 int Status = 0;
                 string text = string.Empty;
                 {
-                    var withBlock = (DataRow)source.List[rowNum].row;
+                    var withBlock = (DataRow)source.List[rowNum];
                     Status = Conversions.ToInteger(withBlock["VisitStatusID"]);
                     text = Helper.MakeStringValid(withBlock[MappingName]);
                 }
@@ -1301,7 +1301,7 @@ namespace FSM
             {
                 base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
                 Brush brush;
-                if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(((DataRow)source.List[rowNum].row)["VisitStatusID"], Conversions.ToInteger(Enums.VisitStatus.Scheduled), false) & !Operators.ConditionalCompareObjectEqual(((DataRow)source.List[rowNum].row)["VisitStatusID"], Conversions.ToInteger(Enums.VisitStatus.Ready_For_Schedule), false)))
+                if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(((DataRow)source.List[rowNum])["VisitStatusID"], Conversions.ToInteger(Enums.VisitStatus.Scheduled), false) & !Operators.ConditionalCompareObjectEqual(((DataRow)source.List[rowNum])["VisitStatusID"], Conversions.ToInteger(Enums.VisitStatus.Ready_For_Schedule), false)))
                 {
                     brush = new SolidBrush(Color.LightGreen);
                 }
@@ -2497,6 +2497,10 @@ namespace FSM
             }
         }
 
+        public PictureBox PicPlanner => throw new NotImplementedException();
+
+        public DataTable TimeSlotDt { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         private Bitmap Scheduler_DayTimeSlots_Bitmap()
         {
             if (DtTimeSlot is object && picPlanner.Height > 0 && picPlanner.Width > 0)
@@ -3132,6 +3136,11 @@ namespace FSM
             }
 
             SendToPrint(@"\ServiceLetters\ElectricalTestingLetter.docx");
+        }
+
+        public string selectedDay()
+        {
+            throw new NotImplementedException();
         }
     }
 }
