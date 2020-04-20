@@ -1,666 +1,752 @@
-﻿// Decompiled with JetBrains decompiler
-// Type: FSM.App
-// Assembly: FSM, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
-// MVID: FAB6F0E2-B68A-47AB-AF95-A9E31DED7575
-// Assembly location: C:\github\gabriel.fieldservicemanager\src\bin\x86\Debug\FSM.exe
-
-using FSM.Entity.Management;
-using FSM.Entity.Sys;
-using FSM.Entity.Users;
+﻿using FSM;
 using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Diagnostics;
-using System.Drawing;
 using System.Runtime.CompilerServices;
-using System.Security;
-using System.Threading;
 using System.Windows.Forms;
 
-namespace FSM
+public static class App
 {
-  [StandardModule]
-  public sealed class App
-  {
-    public static SystemData TheSystem = new SystemData();
+    public static FSM.Entity.Sys.SystemData TheSystem = new FSM.Entity.Sys.SystemData();
     public static FRMLogin LoginForm;
     public static FRMMain MainForm;
-    public static Database DB;
-    public static User loggedInUser;
+    public static FSM.Entity.Sys.Database DB;
+    public static FSM.Entity.Users.User loggedInUser;
+    private static MouseHandler _MouseHanlderEvent;
+
+    public static MouseHandler MouseHanlderEvent
+    {
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        get
+        {
+            return _MouseHanlderEvent;
+        }
+
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        set
+        {
+            if (_MouseHanlderEvent != null)
+            {
+            }
+
+            _MouseHanlderEvent = value;
+            if (_MouseHanlderEvent != null)
+            {
+            }
+        }
+    }
+
     public static bool IsLowResolution;
     public static bool IsGasway;
     public static bool IsRFT;
     public static bool IsBlueflame;
-    private static int _CurrentCustomerID;
-    private static bool _ViewingAllSites;
-    private static int _CurrentPropertyID;
-    private static bool _ViewingAllAssets;
-    private static DataTable _dtVisit;
-    private static string _releaseNoteTextFile;
-    public static bool ControlLoading;
-    public static bool ControlChanged;
 
-    static App()
-    {
-      App.MouseHanlderEvent = new MouseHandler();
-      App._CurrentCustomerID = 0;
-      App._ViewingAllSites = true;
-      App._CurrentPropertyID = 0;
-      App._ViewingAllAssets = true;
-      App._dtVisit = new DataTable();
-      App.ControlLoading = false;
-      App.ControlChanged = false;
-    }
-
-    public static MouseHandler MouseHanlderEvent { get; [MethodImpl(MethodImplOptions.Synchronized)] set; }
+    private static int _CurrentCustomerID = 0;
 
     public static int CurrentCustomerID
     {
-      get
-      {
-        return App._CurrentCustomerID;
-      }
-      set
-      {
-        App._CurrentCustomerID = value;
-        if (App.MainForm.MenuBar.pnlSubMenu.Controls.Count == 0)
-          return;
-        if (App.CurrentCustomerID == 0)
+        get
         {
-          if (App.MainForm.SelectedMenu != Enums.MenuTypes.Customers)
-            return;
-          App.MainForm.MenuBar.pnlSubMenu.Controls[1].Text = "Show All Properties";
-          App.MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Show All Appliances";
-          App.ViewingAllSites = true;
+            return _CurrentCustomerID;
         }
-        else if (App.MainForm.SelectedMenu == Enums.MenuTypes.Customers)
+        set
         {
-          App.MainForm.MenuBar.pnlSubMenu.Controls[1].Text = "Properties For Customer";
-          App.MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Show All Appliances";
-          App.ViewingAllSites = false;
+            _CurrentCustomerID = value;
+
+            if (MainForm.MenuBar.pnlSubMenu.Controls.Count == 0)
+            {
+                return;
+            }
+
+            if (CurrentCustomerID == 0)
+            {
+                if (MainForm.SelectedMenu == FSM.Entity.Sys.Enums.MenuTypes.Customers)
+                {
+                    MainForm.MenuBar.pnlSubMenu.Controls[1].Text = "Show All Properties";
+                    MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Show All Appliances";
+                    ViewingAllSites = true;
+                }
+            }
+            else if (MainForm.SelectedMenu == FSM.Entity.Sys.Enums.MenuTypes.Customers)
+            {
+                MainForm.MenuBar.pnlSubMenu.Controls[1].Text = "Properties For Customer";
+                MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Show All Appliances";
+                ViewingAllSites = false;
+            }
         }
-      }
     }
+
+    private static bool _ViewingAllSites = true;
 
     public static bool ViewingAllSites
     {
-      get
-      {
-        return App._ViewingAllSites;
-      }
-      set
-      {
-        App._ViewingAllSites = value;
-      }
+        get
+        {
+            return _ViewingAllSites;
+        }
+        set
+        {
+            _ViewingAllSites = value;
+        }
     }
+
+    private static int _CurrentPropertyID = 0;
 
     public static int CurrentPropertyID
     {
-      get
-      {
-        return App._CurrentPropertyID;
-      }
-      set
-      {
-        App._CurrentPropertyID = value;
-        if (App.MainForm.MenuBar.pnlSubMenu.Controls.Count == 0)
-          return;
-        if (App.CurrentPropertyID == 0)
+        get
         {
-          if (App.MainForm.SelectedMenu != Enums.MenuTypes.Customers)
-            return;
-          App.MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Show All Appliances";
-          App.ViewingAllAssets = true;
+            return _CurrentPropertyID;
         }
-        else if (App.MainForm.SelectedMenu == Enums.MenuTypes.Customers)
+        set
         {
-          App.MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Appliances For Property";
-          App.ViewingAllAssets = false;
+            _CurrentPropertyID = value;
+
+            if (MainForm.MenuBar.pnlSubMenu.Controls.Count == 0)
+                return;
+
+            if (CurrentPropertyID == 0)
+            {
+                if (MainForm.SelectedMenu == FSM.Entity.Sys.Enums.MenuTypes.Customers)
+                {
+                    MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Show All Appliances";
+                    ViewingAllAssets = true;
+                }
+            }
+            else if (MainForm.SelectedMenu == FSM.Entity.Sys.Enums.MenuTypes.Customers)
+            {
+                MainForm.MenuBar.pnlSubMenu.Controls[2].Text = "Appliances For Property";
+                ViewingAllAssets = false;
+            }
         }
-      }
     }
+
+    private static bool _ViewingAllAssets = true;
 
     public static bool ViewingAllAssets
     {
-      get
-      {
-        return App._ViewingAllAssets;
-      }
-      set
-      {
-        App._ViewingAllAssets = value;
-      }
+        get
+        {
+            return _ViewingAllAssets;
+        }
+        set
+        {
+            _ViewingAllAssets = value;
+        }
     }
+
+    private static DataTable _dtVisit = new DataTable();
 
     public static DataTable dtVisitFilters
     {
-      get
-      {
-        if (App._dtVisit.Columns.Count == 0)
+        get
         {
-          App._dtVisit.Columns.Add("Field");
-          App._dtVisit.Columns.Add("Value");
-          App._dtVisit.Columns.Add("Type");
+            if (_dtVisit.Columns.Count == 0)
+            {
+                _dtVisit.Columns.Add("Field");
+                _dtVisit.Columns.Add("Value");
+                _dtVisit.Columns.Add("Type");
+            }
+            return _dtVisit;
         }
-        return App._dtVisit;
-      }
-      set
-      {
-        App._dtVisit = value;
-      }
+        set
+        {
+            _dtVisit = value;
+        }
     }
+
+    private static string _releaseNoteTextFile;
 
     public static string ReleaseNoteTextFile
     {
-      get
-      {
-        return App._releaseNoteTextFile;
-      }
+        get
+        {
+            return _releaseNoteTextFile;
+        }
     }
 
-    [STAThread]
+    // Starting point of the application
     public static void Main()
     {
-      try
-      {
-        Application.EnableVisualStyles();
-        Application.ThreadException += new ThreadExceptionEventHandler(App.AppErrorOccurred);
-        Cursor.Current = Cursors.AppStarting;
-        switch (App.TheSystem.Configuration.DBName)
+        try
         {
-          case Enums.DataBaseName.GaswayServicesFSM:
-          case Enums.DataBaseName.GaswayServicesFSM_Beta:
-            App.IsGasway = true;
-            break;
-          case Enums.DataBaseName.RftServicesFsm:
-          case Enums.DataBaseName.RftFsm_Beta:
-            App.IsRFT = true;
-            break;
-          case Enums.DataBaseName.BlueflameServicesFsm:
-          case Enums.DataBaseName.BlueflameServicesFsm_Beta:
-            App.IsBlueflame = true;
-            break;
+            Application.EnableVisualStyles();
+            Application.ThreadException += AppErrorOccurred;
+
+            Cursor.Current = Cursors.AppStarting;
+
+            switch (TheSystem.Configuration.DBName)
+            {
+                case FSM.Entity.Sys.Enums.DataBaseName.GaswayServicesFSM:
+                case FSM.Entity.Sys.Enums.DataBaseName.GaswayServicesFSM_Beta:
+                    {
+                        IsGasway = true;
+                        break;
+                    }
+
+                case FSM.Entity.Sys.Enums.DataBaseName.RftFsm_Beta:
+                case FSM.Entity.Sys.Enums.DataBaseName.RftServicesFsm:
+                    {
+                        IsRFT = true;
+                        break;
+                    }
+
+                case FSM.Entity.Sys.Enums.DataBaseName.BlueflameServicesFsm:
+                case FSM.Entity.Sys.Enums.DataBaseName.BlueflameServicesFsm_Beta:
+                    {
+                        IsBlueflame = true;
+                        break;
+                    }
+            }
+
+            if (ShowAppearanceMessage())
+            {
+                DB = new FSM.Entity.Sys.Database();
+
+                _releaseNoteTextFile = "18.09.25_RN.txt";
+                if (LoginForm == null)
+                    LoginForm = Activator.CreateInstance(typeof(FRMLogin));
+                LoginForm.ShowInTaskbar = true;
+                LoginForm.Show();
+                Application.Run(LoginForm);
+            }
+            else
+                Application.Exit();
         }
-        if (App.ShowAppearanceMessage())
+        catch (Exception ex)
         {
-          App.DB = new Database();
-          App._releaseNoteTextFile = "18.09.25_RN.txt";
-          if (App.LoginForm == null)
-            App.LoginForm = (FRMLogin) Activator.CreateInstance(typeof (FRMLogin));
-          App.LoginForm.ShowInTaskbar = true;
-          App.LoginForm.Show();
-          Application.Run((Form) App.LoginForm);
+            System.Diagnostics.EventLog eventLog = new System.Diagnostics.EventLog();
+            string errorMsg = ex.Message;
+
+            if (!ex.InnerException == null)
+                errorMsg += Constants.vbCrLf + "Inner Exception:" + Constants.vbCrLf + ex.InnerException.Message;
+
+            LogError(ex.GetType().Name, errorMsg, ex.StackTrace);
+
+            ShowMessage("Application error : " + Constants.vbCrLf + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        else
-          Application.Exit();
-      }
-      catch (Exception ex)
-      {
-        ProjectData.SetProjectError(ex);
-        Exception exception = ex;
-        EventLog eventLog = new EventLog();
-        string errorMsg = exception.Message;
-        if (exception.InnerException != null)
-          errorMsg = errorMsg + "\r\nInner Exception:\r\n" + exception.InnerException.Message;
-        App.LogError(exception.GetType().Name, errorMsg, exception.StackTrace);
-        int num = (int) App.ShowMessage("Application error : \r\n\r\n" + exception.Message, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-        ProjectData.ClearProjectError();
-      }
-      finally
-      {
-        Cursor.Current = Cursors.Default;
-      }
+        finally
+        {
+            Cursor.Current = Cursors.Default;
+        }
     }
 
-    private static void AppErrorOccurred(object sender, ThreadExceptionEventArgs t)
+    private static void AppErrorOccurred(object sender, System.Threading.ThreadExceptionEventArgs t)
     {
-      if (t.Exception is SecurityException)
-      {
-        int num1 = (int) App.ShowMessage(t.Exception.Message, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-      }
-      else
-      {
-        int num2 = (int) App.ShowMessage("An error has occured in the application. Please contact support with the following exception : \r\n" + t.Exception.Message, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-        App.LogError(t.GetType().Name, t.Exception.Message, t.Exception.StackTrace);
-      }
+        if ((t.Exception) is System.Security.SecurityException)
+            ShowMessage(t.Exception.Message, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        else
+        {
+            ShowMessage("An error has occured in the application. Please contact support with the following exception : " + Constants.vbCrLf + t.Exception.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            LogError(t.GetType().Name, t.Exception.Message, t.Exception.StackTrace);
+        }
     }
 
+    // Check the operating system and screen resolution to show message to user about the design
     private static bool ShowAppearanceMessage()
     {
-      string str = "Unknown_Width x Unknown_Height".Replace("Unknown_Height", Screen.PrimaryScreen.Bounds.Height.ToString()).Replace("Unknown_Width", Screen.PrimaryScreen.Bounds.Width.ToString());
-      Rectangle bounds1 = Screen.PrimaryScreen.Bounds;
-      int num1 = bounds1.Height <= 864 ? 1 : 0;
-      bounds1 = Screen.PrimaryScreen.Bounds;
-      int num2 = bounds1.Width <= 1536 ? 1 : 0;
-      if ((num1 | num2) != 0)
-        App.IsLowResolution = true;
-      Rectangle bounds2 = Screen.PrimaryScreen.Bounds;
-      int num3 = bounds2.Height < 720 ? 1 : 0;
-      bounds2 = Screen.PrimaryScreen.Bounds;
-      int num4 = bounds2.Width < 1024 ? 1 : 0;
-      if ((num3 | num4) != 0)
-      {
-        int num5 = (int) App.ShowMessage("It has been detected that your screen resolution is " + str + ".\r\n\r\n" + "This application has been designed to run with a minimum screen resolution of 1024 x 730.\r\n\r\n" + "Therefore the application will not function correctly.\r\n\r\n" + "Gabriel will now exit, please contact IT support to change device resolution?", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-        return false;
-      }
-      Rectangle bounds3 = Screen.PrimaryScreen.Bounds;
-      int num6 = bounds3.Height < 768 ? 1 : 0;
-      bounds3 = Screen.PrimaryScreen.Bounds;
-      int num7 = bounds3.Width < 1024 ? 1 : 0;
-      return (num6 | num7) == 0 || App.ShowMessage("It has been detected that your screen resolution is " + str + ".\r\n\r\n" + "This application has been designed to run with a screen resolution of at least 1024 x 768.\r\n\r\n" + "Therefore the application may not function correctly.\r\n\r\n" + "Would you like to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        string screenResolution = "Unknown_Width x Unknown_Height";
+
+        screenResolution = screenResolution.Replace("Unknown_Height", Screen.PrimaryScreen.Bounds.Height.ToString);
+        screenResolution = screenResolution.Replace("Unknown_Width", Screen.PrimaryScreen.Bounds.Width.ToString);
+
+        if ((Screen.PrimaryScreen.Bounds.Height <= Entity.Sys.Consts.ScreenBestResolutionHeight) | (Screen.PrimaryScreen.Bounds.Width <= Entity.Sys.Consts.ScreenBestResolutionWidth))
+            IsLowResolution = true;
+
+        if ((Screen.PrimaryScreen.Bounds.Height < Entity.Sys.Consts.ScreenMinResolutionHeight) | (Screen.PrimaryScreen.Bounds.Width < Entity.Sys.Consts.ScreenMinResolutionWidth))
+        {
+            string message = "It has been detected that your screen resolution is " + screenResolution + "." + Constants.vbCrLf + Constants.vbCrLf;
+            message += "This application has been designed to run with a minimum screen resolution of 1024 x 730." + Constants.vbCrLf + Constants.vbCrLf;
+            message += "Therefore the application will not function correctly." + Constants.vbCrLf + Constants.vbCrLf;
+            message += "Gabriel will now exit, please contact IT support to change device resolution?";
+
+            ShowMessage(message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            return false;
+        }
+        else if ((Screen.PrimaryScreen.Bounds.Height < Entity.Sys.Consts.ScreenWarningResolutionHeight) | (Screen.PrimaryScreen.Bounds.Width < Entity.Sys.Consts.ScreenWarningResolutionWidth))
+        {
+            string message = "It has been detected that your screen resolution is " + screenResolution + "." + Constants.vbCrLf + Constants.vbCrLf;
+            message += "This application has been designed to run with a screen resolution of at least 1024 x 768." + Constants.vbCrLf + Constants.vbCrLf;
+            message += "Therefore the application may not function correctly." + Constants.vbCrLf + Constants.vbCrLf;
+            message += "Would you like to continue?";
+
+            if (ShowMessage(message, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                return true;
+            else
+                return false;
+        }
+        else
+            return true;
     }
 
-    public static Form ShowForm(
-      System.Type frm,
-      bool asDialgue,
-      object[] parameters,
-      bool IgnoreIfOpen = false)
+    // This method is used for the opening of new form such as login, menu and any other top level forms
+    public static Form ShowForm(System.Type frm, bool asDialgue, object[] parameters, bool IgnoreIfOpen = false)
     {
-      Form form1;
-      try
-      {
-        Cursor.Current = Cursors.WaitCursor;
-        Form form2 = (Form) null;
-        if (!IgnoreIfOpen)
-          form2 = App.checkIfExists(frm.Name, true);
-        if (form2 == null)
+        try
         {
-          Form instance = (Form) Activator.CreateInstance(frm);
-          ((IBaseForm) instance).SetFormParameters = (Array) parameters;
-          instance.ShowInTaskbar = false;
-          instance.StartPosition = FormStartPosition.CenterScreen;
-          instance.SizeGripStyle = SizeGripStyle.Hide;
-          if (asDialgue)
-          {
-            if ((uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMAnswers".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMEngineerVisit".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMPostcodeManager".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMStockReplenishment".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMReceiveStock".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMPartsToOrders".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMAddToQuote".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMAddToOrder".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMOrderCharges".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMEnterEmailAddress".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChooseSupplierPacks".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMPickDespatchDetails".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMEngineerHistory".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMVanHistory".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMViewContractAlternativeChargeDetails".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMAvailableContractNos".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChooseAsset".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMJobAudit".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMRaiseInvoiceDetails".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMConvertToAnOrder".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FrmInvoicedPayment".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMContractRenewal".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMSiteCustomerAudit".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMSitePopup".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMConsolidation".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMConsolidation_Location".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMConvertToPDF".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMSiteVisitManager".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMSiteLetterList".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMSelectLocation".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMCreditReceived".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMEngineerTimesheet".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMLastServiceDate".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangeInvoicedTotal".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangePaymentTerms".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMAmendServiceDate".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangeSageDate".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMJobWizard".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMAddInvoiceAddress".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangeInvoiceLine".ToUpper(), false) > 0U & (uint) Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMViewEngineer".ToUpper(), false) > 0U)
+            Cursor.Current = Cursors.WaitCursor;
+
+            Form newForm = null/* TODO Change to default(_) if this is not a reference type */;
+
+            if (!IgnoreIfOpen)
+                newForm = checkIfExists(frm.Name, true);
+
+            if (newForm == null)
             {
-              ((IForm) instance).LoadedControl.RecordsChanged += new IUserControl.RecordsChangedEventHandler(App.MainForm.SetSearchResults);
-              ((IForm) instance).LoadedControl.StateChanged += new IUserControl.StateChangedEventHandler(((IForm) instance).ResetMe);
-            }
-            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMQuoteRejection".ToUpper(), false) == 0)
-            {
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(((Control) parameters[0]).Name, "UCQuoteContractAlternative", false) == 0)
-                ((FRMQuoteRejection) instance).ReasonEdited += new FRMQuoteRejection.ReasonEditedEventHandler(((UCQuoteContractAlternative) parameters[0]).RejectReasonChanged);
-              else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(((Control) parameters[0]).Name, "UCGenerateQuote", false) == 0)
-                ((FRMQuoteRejection) instance).ReasonEdited += new FRMQuoteRejection.ReasonEditedEventHandler(((UCGenerateQuote) parameters[0]).RejectReasonChanged);
-              else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(((Control) parameters[0]).Name, "UCQuoteContractOption3", false) == 0)
-                ((FRMQuoteRejection) instance).ReasonEdited += new FRMQuoteRejection.ReasonEditedEventHandler(((UCQuoteContractOption3) parameters[0]).RejectReasonChanged);
-              else
-                ((FRMQuoteRejection) instance).ReasonEdited += new FRMQuoteRejection.ReasonEditedEventHandler(((UCQuoteJob) parameters[0]).RejectReasonChanged);
-            }
-            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMOrderRejection".ToUpper(), false) == 0)
-              ((FRMOrderRejection) instance).ReasonEdited += new FRMOrderRejection.ReasonEditedEventHandler(((UCOrder) parameters[0]).ReasonChanged);
-            int num = (int) instance.ShowDialog();
-            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChooseSupplierPacks".ToUpper(), false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMSelectLocation".ToUpper(), false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMLastServiceDate".ToUpper(), false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangeInvoicedTotal".ToUpper(), false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangeInvoiceLine".ToUpper(), false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangePaymentTerms".ToUpper(), false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMChangeSageDate".ToUpper(), false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(frm.Name.ToUpper(), "FRMSiteLetterList".ToUpper(), false) == 0)
-            {
-              form1 = instance;
+                newForm = Activator.CreateInstance(frm);
+                // newForm.Icon = New Icon(newForm.GetType(), "Logo.ico")
+
+                (IBaseForm)newForm.SetFormParameters = parameters;
+
+                newForm.ShowInTaskbar = false;
+                newForm.StartPosition = FormStartPosition.CenterScreen;
+                newForm.SizeGripStyle = SizeGripStyle.Hide;
+
+                if (asDialgue)
+                {
+                    if (!frm.Name.ToUpper() == "FRMAnswers".ToUpper() & !frm.Name.ToUpper() == "FRMEngineerVisit".ToUpper() & !frm.Name.ToUpper() == "FRMPostcodeManager".ToUpper() & !frm.Name.ToUpper() == "FRMStockReplenishment".ToUpper() & !frm.Name.ToUpper() == "FRMReceiveStock".ToUpper() & !frm.Name.ToUpper() == "FRMPartsToOrders".ToUpper() & !frm.Name.ToUpper() == "FRMAddToQuote".ToUpper() & !frm.Name.ToUpper() == "FRMAddToOrder".ToUpper() & !frm.Name.ToUpper() == "FRMOrderCharges".ToUpper() & !frm.Name.ToUpper() == "FRMEnterEmailAddress".ToUpper() & !frm.Name.ToUpper() == "FRMChooseSupplierPacks".ToUpper() & !frm.Name.ToUpper() == "FRMPickDespatchDetails".ToUpper() & !frm.Name.ToUpper() == "FRMEngineerHistory".ToUpper() & !frm.Name.ToUpper() == "FRMVanHistory".ToUpper() & !frm.Name.ToUpper() == "FRMViewContractAlternativeChargeDetails".ToUpper() & !frm.Name.ToUpper() == "FRMAvailableContractNos".ToUpper() & !frm.Name.ToUpper() == "FRMChooseAsset".ToUpper() & !frm.Name.ToUpper() == "FRMJobAudit".ToUpper() & !frm.Name.ToUpper() == "FRMRaiseInvoiceDetails".ToUpper() & !frm.Name.ToUpper() == "FRMConvertToAnOrder".ToUpper() & !frm.Name.ToUpper() == "FrmInvoicedPayment".ToUpper() & !frm.Name.ToUpper() == "FRMContractRenewal".ToUpper() & !frm.Name.ToUpper() == "FRMSiteCustomerAudit".ToUpper() & !frm.Name.ToUpper() == "FRMSitePopup".ToUpper() & !frm.Name.ToUpper() == "FRMConsolidation".ToUpper() & !frm.Name.ToUpper() == "FRMConsolidation_Location".ToUpper() & !frm.Name.ToUpper() == "FRMConvertToPDF".ToUpper() & !frm.Name.ToUpper() == "FRMSiteVisitManager".ToUpper() & !frm.Name.ToUpper() == "FRMSiteLetterList".ToUpper() & !frm.Name.ToUpper() == "FRMSelectLocation".ToUpper() & !frm.Name.ToUpper() == "FRMCreditReceived".ToUpper() & !frm.Name.ToUpper() == "FRMEngineerTimesheet".ToUpper() & !frm.Name.ToUpper() == "FRMLastServiceDate".ToUpper() & !frm.Name.ToUpper() == "FRMChangeInvoicedTotal".ToUpper() & !frm.Name.ToUpper() == "FRMChangePaymentTerms".ToUpper() & !frm.Name.ToUpper() == "FRMAmendServiceDate".ToUpper() & !frm.Name.ToUpper() == "FRMChangeSageDate".ToUpper() & !frm.Name.ToUpper() == "FRMJobWizard".ToUpper() & !frm.Name.ToUpper() == "FRMAddInvoiceAddress".ToUpper() & !frm.Name.ToUpper() == "FRMChangeInvoiceLine".ToUpper() & !frm.Name.ToUpper() == "FRMViewEngineer".ToUpper())
+                    {
+                        (IForm)newForm.LoadedControl.RecordsChanged += MainForm.SetSearchResults;
+                        (IForm)newForm.LoadedControl.StateChanged += (IForm)newForm.ResetMe;
+                    }
+
+                    if (frm.Name.ToUpper() == "FRMQuoteRejection".ToUpper())
+                    {
+                        if ((UserControl)parameters[0].Name == "UCQuoteContractAlternative")
+                            (FRMQuoteRejection)newForm.ReasonEdited += (UCQuoteContractAlternative)parameters[0].RejectReasonChanged;
+                        else if ((UserControl)parameters[0].Name == "UCGenerateQuote")
+                            (FRMQuoteRejection)newForm.ReasonEdited += (UCGenerateQuote)parameters[0].RejectReasonChanged;
+                        else if ((UserControl)parameters[0].Name == "UCQuoteContractOption3")
+                            (FRMQuoteRejection)newForm.ReasonEdited += (UCQuoteContractOption3)parameters[0].RejectReasonChanged;
+                        else
+                            (FRMQuoteRejection)newForm.ReasonEdited += (UCQuoteJob)parameters[0].RejectReasonChanged;
+                    }
+
+                    if (frm.Name.ToUpper() == "FRMOrderRejection".ToUpper())
+                        (FRMOrderRejection)newForm.ReasonEdited += (UCOrder)parameters[0].ReasonChanged;
+
+                    newForm.ShowDialog();
+                    if (frm.Name.ToUpper() == "FRMChooseSupplierPacks".ToUpper() | frm.Name.ToUpper() == "FRMSelectLocation".ToUpper() | frm.Name.ToUpper() == "FRMLastServiceDate".ToUpper() | frm.Name.ToUpper() == "FRMChangeInvoicedTotal".ToUpper() | frm.Name.ToUpper() == "FRMChangeInvoiceLine".ToUpper() | frm.Name.ToUpper() == "FRMChangePaymentTerms".ToUpper() | frm.Name.ToUpper() == "FRMChangeSageDate".ToUpper() | frm.Name.ToUpper() == "FRMSiteLetterList".ToUpper())
+                        return newForm;
+                    else
+                    {
+                        newForm.Dispose();
+                        return null/* TODO Change to default(_) if this is not a reference type */;
+                    }
+                }
+                else
+                {
+                    (IBaseForm)newForm.SetFormParameters = parameters;
+
+                    newForm.MdiParent = MainForm;
+
+                    MainForm.pnlRight.Visible = false;
+                    MainForm.pnlContent.Controls.Clear();
+                    MainForm.pnlMiddle.Visible = false;
+
+                    newForm.Show();
+
+                    return newForm;
+                }
             }
             else
             {
-              instance.Dispose();
-              form1 = (Form) null;
+                (IBaseForm)newForm.SetFormParameters = parameters;
+
+                switch (frm.Name.ToUpper())
+                {
+                    case object _ when "FRMVisitManager".ToUpper():
+                        {
+                            (FRMVisitManager)newForm.PopulateDatagrid(true);
+                            break;
+                        }
+
+                    case object _ when "FRMOrderManager".ToUpper():
+                        {
+                            (FRMOrderManager)newForm.PopulateDatagrid();
+                            break;
+                        }
+
+                    case object _ when "FRMQuoteManager".ToUpper():
+                        {
+                            (FRMQuoteManager)newForm.PopulateDatagrid();
+                            break;
+                        }
+                }
+
+                return newForm;
             }
-          }
-          else
-          {
-            ((IBaseForm) instance).SetFormParameters = (Array) parameters;
-            instance.MdiParent = (Form) App.MainForm;
-            App.MainForm.pnlRight.Visible = false;
-            App.MainForm.pnlContent.Controls.Clear();
-            App.MainForm.pnlMiddle.Visible = false;
-            instance.Show();
-            form1 = instance;
-          }
         }
-        else
+        catch (Exception ex)
         {
-          ((IBaseForm) form2).SetFormParameters = (Array) parameters;
-          string upper = frm.Name.ToUpper();
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(upper, "FRMVisitManager".ToUpper(), false) == 0)
-            ((FRMVisitManager) form2).PopulateDatagrid(true);
-          else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(upper, "FRMOrderManager".ToUpper(), false) == 0)
-            ((FRMOrderManager) form2).PopulateDatagrid();
-          else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(upper, "FRMQuoteManager".ToUpper(), false) == 0)
-            ((FRMQuoteManager) form2).PopulateDatagrid();
-          form1 = form2;
+            ShowMessage("Cannot open form : " + Constants.vbCrLf + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string msg = ex.Message;
+            if (!ex.InnerException == null)
+                msg += Constants.vbCrLf + "Inner Exception:" + Constants.vbCrLf + ex.InnerException.Message;
+            LogError(ex.GetType().Name, msg, ex.StackTrace);
+            return null/* TODO Change to default(_) if this is not a reference type */;
         }
-      }
-      catch (Exception ex)
-      {
-        ProjectData.SetProjectError(ex);
-        Exception exception = ex;
-        int num = (int) App.ShowMessage("Cannot open form : \r\n\r\n" + exception.Message, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-        string errorMsg = exception.Message;
-        if (exception.InnerException != null)
-          errorMsg = errorMsg + "\r\nInner Exception:\r\n" + exception.InnerException.Message;
-        App.LogError(exception.GetType().Name, errorMsg, exception.StackTrace);
-        form1 = (Form) null;
-        ProjectData.ClearProjectError();
-      }
-      finally
-      {
-        Cursor.Current = Cursors.Default;
-      }
-      return form1;
+        finally
+        {
+            Cursor.Current = Cursors.Default;
+        }
     }
 
+    // This method is used to return a boolean value for if the override password was entered correctly
     public static bool EnterOverridePassword()
     {
-      return true;
+        /* TODO ERROR: Skipped IfDirectiveTrivia */
+        DLGPasswordOverride dialogue;
+        dialogue = checkIfExists(typeof(DLGPasswordOverride).Name, true);
+        if (dialogue == null)
+            dialogue = Activator.CreateInstance(typeof(DLGPasswordOverride));
+        // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
+        dialogue.ShowInTaskbar = false;
+        dialogue.ShowDialog();
+        if (dialogue.DialogResult == DialogResult.OK)
+            return true;
+        else
+        {
+            ShowMessage("Incorrect password or operation cancelled by user", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+        dialogue.Close();
     }
 
     public static bool EnterOverridePasswordINV()
     {
-      return true;
+        /* TODO ERROR: Skipped IfDirectiveTrivia */
+        DLGPasswordOverrideINV dialogue;
+        dialogue = checkIfExists(typeof(DLGPasswordOverrideINV).Name, true);
+        if (dialogue == null)
+            dialogue = Activator.CreateInstance(typeof(DLGPasswordOverrideINV));
+        // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
+        dialogue.ShowInTaskbar = false;
+        dialogue.ShowDialog();
+        if (dialogue.DialogResult == DialogResult.OK)
+            return true;
+        else
+        {
+            ShowMessage("Incorrect password or operation cancelled by user", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+        dialogue.Close();
     }
 
     public static bool EnterOverridePassword_Service()
     {
-      DLGPasswordOverride passwordOverride = (DLGPasswordOverride) App.checkIfExists(typeof (DLGPasswordOverride_Service).Name, true) ?? (DLGPasswordOverride) Activator.CreateInstance(typeof (DLGPasswordOverride_Service));
-      passwordOverride.ShowInTaskbar = false;
-      int num1 = (int) passwordOverride.ShowDialog();
-      if (passwordOverride.DialogResult == DialogResult.OK)
-        return true;
-      int num2 = (int) App.ShowMessage("Incorrect password or operation cancelled by user", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-      return false;
+        DLGPasswordOverride dialogue;
+        dialogue = checkIfExists(typeof(DLGPasswordOverride_Service).Name, true);
+        if (dialogue == null)
+            dialogue = Activator.CreateInstance(typeof(DLGPasswordOverride_Service));
+        // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
+        dialogue.ShowInTaskbar = false;
+        dialogue.ShowDialog();
+        if (dialogue.DialogResult == DialogResult.OK)
+            return true;
+        else
+        {
+            ShowMessage("Incorrect password or operation cancelled by user", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+        dialogue.Close();
     }
 
-    public static object FindRecord(
-      Enums.TableNames tableToSearchIn,
-      int ForeignKeyFilter = 0,
-      string PartNumber = "",
-      bool ForMassPartEntry = false)
+    public static object FindRecord(Entity.Sys.Enums.TableNames tableToSearchIn, int ForeignKeyFilter = 0, string PartNumber = "", bool ForMassPartEntry = false)
     {
-      DLGFindRecord dlgFindRecord = (DLGFindRecord) App.checkIfExists(typeof (DLGFindRecord).Name, true) ?? (DLGFindRecord) Activator.CreateInstance(typeof (DLGFindRecord));
-      dlgFindRecord.ShowInTaskbar = false;
-      dlgFindRecord.ForMassPartEntry = ForMassPartEntry;
-      dlgFindRecord.ForeignKeyFilter = ForeignKeyFilter;
-      dlgFindRecord.PartNumber = PartNumber;
-      dlgFindRecord.TableToSearch = tableToSearchIn;
-      int num = (int) dlgFindRecord.ShowDialog();
-      return dlgFindRecord.DialogResult == DialogResult.OK ? (ForMassPartEntry ? (object) dlgFindRecord.PartsToAdd : (object) dlgFindRecord.ID) : (ForMassPartEntry ? (object) null : (object) 0);
+        DLGFindRecord dialogue;
+        dialogue = checkIfExists(typeof(DLGFindRecord).Name, true);
+        if (dialogue == null)
+            dialogue = Activator.CreateInstance(typeof(DLGFindRecord));
+        // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
+        dialogue.ShowInTaskbar = false;
+        dialogue.ForMassPartEntry = ForMassPartEntry;
+        dialogue.ForeignKeyFilter = ForeignKeyFilter;
+        dialogue.PartNumber = PartNumber;
+        dialogue.TableToSearch = tableToSearchIn;
+        dialogue.ShowDialog();
+
+        if (dialogue.DialogResult == DialogResult.OK)
+        {
+            if (ForMassPartEntry)
+                return dialogue.PartsToAdd;
+            else
+                return dialogue.ID;
+        }
+        else if (ForMassPartEntry)
+            return null;
+        else
+            return 0;
+        dialogue.Close();
     }
 
-    public static int FindRecord(
-      Enums.TableNames tableToSearchIn,
-      SqlTransaction trans,
-      int ForeignKeyFilter = 0,
-      string PartNumber = "")
+    public static int FindRecord(Entity.Sys.Enums.TableNames tableToSearchIn, SqlClient.SqlTransaction trans, int ForeignKeyFilter = 0, string PartNumber = "")
     {
-      DLGFindRecord dlgFindRecord = (DLGFindRecord) App.checkIfExists(typeof (DLGFindRecord).Name, true) ?? new DLGFindRecord(trans);
-      dlgFindRecord.ShowInTaskbar = false;
-      dlgFindRecord.ForeignKeyFilter = ForeignKeyFilter;
-      dlgFindRecord.PartNumber = PartNumber;
-      dlgFindRecord.TableToSearch = tableToSearchIn;
-      int num = (int) dlgFindRecord.ShowDialog();
-      return dlgFindRecord.DialogResult == DialogResult.OK ? dlgFindRecord.ID : 0;
+        DLGFindRecord dialogue;
+        dialogue = checkIfExists(typeof(DLGFindRecord).Name, true);
+        if (dialogue == null)
+            // Carl said use constructor
+            // dialogue = Activator.CreateInstance(GetType(DLGFindRecord))
+            dialogue = new DLGFindRecord(trans);
+
+        // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
+        dialogue.ShowInTaskbar = false;
+        dialogue.ForeignKeyFilter = ForeignKeyFilter;
+        dialogue.PartNumber = PartNumber;
+        dialogue.TableToSearch = tableToSearchIn;
+        dialogue.ShowDialog();
+
+        if (dialogue.DialogResult == DialogResult.OK)
+            return dialogue.ID;
+        else
+            return 0;
+        dialogue.Close();
     }
 
-    public static int PickPartProductSupplier(Enums.TableNames tableToSearchIn, int PartOrProductID)
+    public static int PickPartProductSupplier(Entity.Sys.Enums.TableNames tableToSearchIn, int PartOrProductID)
     {
-      DLGPickPartProductSupplier partProductSupplier = (DLGPickPartProductSupplier) App.checkIfExists(typeof (DLGPickPartProductSupplier).Name, true) ?? (DLGPickPartProductSupplier) Activator.CreateInstance(typeof (DLGPickPartProductSupplier));
-      partProductSupplier.ShowInTaskbar = false;
-      partProductSupplier.ID = PartOrProductID;
-      partProductSupplier.TableToSearch = tableToSearchIn;
-      int num = (int) partProductSupplier.ShowDialog();
-      return partProductSupplier.DialogResult == DialogResult.OK ? partProductSupplier.ID : 0;
+        DLGPickPartProductSupplier dialogue;
+        dialogue = checkIfExists(typeof(DLGPickPartProductSupplier).Name, true);
+        if (dialogue == null)
+            dialogue = Activator.CreateInstance(typeof(DLGPickPartProductSupplier));
+        // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
+        dialogue.ShowInTaskbar = false;
+        dialogue.ID = PartOrProductID;
+        dialogue.TableToSearch = tableToSearchIn;
+        dialogue.ShowDialog();
+
+        if (dialogue.DialogResult == DialogResult.OK)
+            return dialogue.ID;
+        else
+            return 0;
+        dialogue.Close();
     }
 
-    public static int FindRecordMultiId(
-      Enums.TableNames tableToSearchIn,
-      List<int> foreignKeyFilter)
+    public static int FindRecordMultiId(Entity.Sys.Enums.TableNames tableToSearchIn, List<int> foreignKeyFilter)
     {
-      DLGFindRecord dlgFindRecord = (DLGFindRecord) App.checkIfExists(typeof (DLGFindRecord).Name, true) ?? (DLGFindRecord) Activator.CreateInstance(typeof (DLGFindRecord));
-      dlgFindRecord.ShowInTaskbar = false;
-      dlgFindRecord.ForeignKeyFilters = foreignKeyFilter;
-      dlgFindRecord.TableToSearch = tableToSearchIn;
-      int num = (int) dlgFindRecord.ShowDialog();
-      return dlgFindRecord.DialogResult == DialogResult.OK ? dlgFindRecord.ID : 0;
+        DLGFindRecord dialogue;
+        dialogue = checkIfExists(typeof(DLGFindRecord).Name, true);
+        if (dialogue == null)
+            dialogue = Activator.CreateInstance(typeof(DLGFindRecord));
+        // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
+        dialogue.ShowInTaskbar = false;
+        dialogue.ForeignKeyFilters = foreignKeyFilter;
+        dialogue.TableToSearch = tableToSearchIn;
+        dialogue.ShowDialog();
+
+        if (dialogue.DialogResult == DialogResult.OK)
+            return dialogue.ID;
+        else
+            return 0;
+        dialogue.Close();
     }
 
+    // If a form already exists, then use it so give focus
     public static Form checkIfExists(string formIn, bool giveFocus)
     {
-      Form[] mdiChildren = App.MainForm.MdiChildren;
-      int index = 0;
-      while (index < mdiChildren.Length)
-      {
-        Form form = mdiChildren[index];
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Strings.LCase(form.Name), Strings.LCase(formIn), false) == 0)
+        foreach (Form form in MainForm.MdiChildren)
         {
-          if (giveFocus)
-            form.Focus();
-          return form;
+            if (LCase(form.Name) == Strings.LCase(formIn))
+            {
+                if (giveFocus)
+                    form.Focus();
+                return form;
+            }
         }
-        checked { ++index; }
-      }
-      return (Form) null;
+        return null/* TODO Change to default(_) if this is not a reference type */;
     }
 
+    // Log the user in
     public static void Login()
     {
-      if (App.MainForm == null)
-        App.MainForm = (FRMMain) Activator.CreateInstance(typeof (FRMMain));
-      App.MainForm.ShowInTaskbar = true;
-      App.MainForm.Show();
-      App.LoginForm.Hide();
-      try
-      {
-        Settings settings = App.DB.Manager.Get();
-        DateTime now = DateAndTime.Now;
-        int year1 = now.Year;
-        now = DateAndTime.Now;
-        int month1 = now.Month;
-        now = DateAndTime.Now;
-        int day1 = now.Day;
-        int integer1 = Conversions.ToInteger(settings.WorkingHoursStart.Split(':')[0]);
-        int integer2 = Conversions.ToInteger(settings.WorkingHoursStart.Split(':')[1]);
-        DateTime t2_1 = new DateTime(year1, month1, day1, integer1, integer2, 0);
-        now = DateAndTime.Now;
-        int year2 = now.Year;
-        now = DateAndTime.Now;
-        int month2 = now.Month;
-        now = DateAndTime.Now;
-        int day2 = now.Day;
-        int integer3 = Conversions.ToInteger(settings.WorkingHoursEnd.Split(':')[0]);
-        int integer4 = Conversions.ToInteger(settings.WorkingHoursEnd.Split(':')[1]);
-        DateTime t2_2 = new DateTime(year2, month2, day2, integer3, integer4, 0);
-        string str = Conversions.ToString(Interaction.IIf(DateTime.Compare(DateAndTime.Now, t2_1) > 0 & DateTime.Compare(DateAndTime.Now, t2_2) < 0, (object) "0", (object) "1"));
-        switch (App.TheSystem.DataBaseServerType)
+        if (MainForm == null)
+            MainForm = Activator.CreateInstance(typeof(FRMMain));
+        MainForm.ShowInTaskbar = true;
+        MainForm.Show();
+        LoginForm.Hide();
+
+        try
         {
-          case Enums.DatabaseSystems.MySQL:
-            App.DB.ExecuteWithOutReturn("INSERT INTO tblhistory (AccessDate, UserID, AccessType, Statement, FormTitle, OutOfHours) VALUES (Now(), " + Conversions.ToString(App.loggedInUser.UserID) + ", 'LOGON', 'HIDDEN', 'Authenticate'," + str + ")", false);
-            break;
-          case Enums.DatabaseSystems.Microsoft_SQL_Server:
-            App.DB.ExecuteWithOutReturn("INSERT INTO tblhistory (AccessDate, UserID, AccessType, Statement, FormTitle, OutOfHours) VALUES (GETDATE(), " + Conversions.ToString(App.loggedInUser.UserID) + ", 'LOGON', 'HIDDEN', 'Authenticate'," + str + ")", false);
-            break;
+            Entity.Management.Settings settings = DB.Manager.Get();
+            DateTime WorkingHoursStart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, settings.WorkingHoursStart.Split(":")(0), settings.WorkingHoursStart.Split(":")(1), 0);
+            DateTime WorkingHoursEnd = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, settings.WorkingHoursEnd.Split(":")(0), settings.WorkingHoursEnd.Split(":")(1), 0);
+
+            string outOfHours = Interaction.IIf(DateTime.Now > WorkingHoursStart & DateTime.Now < WorkingHoursEnd, "0", "1");
+
+            switch (TheSystem.DataBaseServerType)
+            {
+                case object _ when Entity.Sys.Enums.DatabaseSystems.Microsoft_SQL_Server:
+                    {
+                        DB.ExecuteWithOutReturn("INSERT INTO tblhistory (AccessDate, UserID, AccessType, Statement, FormTitle, OutOfHours) " + "VALUES (GETDATE(), " + loggedInUser.UserID + ", 'LOGON', 'HIDDEN', 'Authenticate'," + outOfHours + ")", false);
+                        break;
+                    }
+
+                case object _ when Entity.Sys.Enums.DatabaseSystems.MySQL:
+                    {
+                        DB.ExecuteWithOutReturn("INSERT INTO tblhistory (AccessDate, UserID, AccessType, Statement, FormTitle, OutOfHours) " + "VALUES (Now(), " + loggedInUser.UserID + ", 'LOGON', 'HIDDEN', 'Authenticate'," + outOfHours + ")", false);
+                        break;
+                    }
+            }
         }
-      }
-      catch (Exception ex)
-      {
-        ProjectData.SetProjectError(ex);
-        ProjectData.ClearProjectError();
-      }
+        catch
+        {
+        }
     }
 
+    // Log the user out of the system
     public static void Logout()
     {
-      if (App.ShowMessage("Are you sure you want to logout?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-        return;
-      List<Form> formList = new List<Form>();
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = Application.OpenForms.GetEnumerator();
-        while (enumerator.MoveNext())
+        if (ShowMessage("Are you sure you want to logout?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
         {
-          Form current = (Form) enumerator.Current;
-          formList.Add(current);
+            List<Form> forms = new List<Form>();
+            foreach (Form form in Application.OpenForms)
+                forms.Add(form);
+
+            for (int i = 0; i <= forms.Count - 1; i++)
+            {
+                Form form = forms[i];
+                switch (form.Name)
+                {
+                    case object _ when MainForm.Name:
+                        {
+                            break;
+                        }
+
+                    case object _ when LoginForm.Name:
+                        {
+                            break;
+                        }
+
+                    default:
+                        {
+                            form.Dispose();
+                            break;
+                        }
+                }
+            }
+
+            if (DB != null)
+                DB.JobLock.DeleteAll();
+            loggedInUser = null;
+            MainForm.Hide();
+            MainForm = null;
+            LoginForm.Show();
         }
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
-      int num = checked (formList.Count - 1);
-      int index = 0;
-      while (index <= num)
-      {
-        Form form = formList[index];
-        string name = form.Name;
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, App.MainForm.Name, false) != 0 && Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, App.LoginForm.Name, false) != 0)
-          form.Dispose();
-        checked { ++index; }
-      }
-      if (App.DB != null)
-        App.DB.JobLock.DeleteAll();
-      App.loggedInUser = (User) null;
-      App.MainForm.Hide();
-      App.MainForm = (FRMMain) null;
-      App.LoginForm.Show();
     }
 
+    // Close the application
     public static void CloseApplication()
     {
-      if (App.ShowMessage("Are you sure you want to exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-        return;
-      Application.Exit();
+        if (ShowMessage("Are you sure you want to exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            Application.Exit();
     }
 
-    public static DialogResult ShowMessage(
-      string MessageText,
-      MessageBoxButtons MessageBoxButton,
-      MessageBoxIcon MessagesBoxIcon)
+    public static DialogResult ShowMessage(string MessageText, MessageBoxButtons MessageBoxButton, MessageBoxIcon MessagesBoxIcon)
     {
-      return MessageBox.Show(MessageText, App.TheSystem.Title, MessageBoxButton, MessagesBoxIcon);
+        return MessageBox.Show(MessageText, TheSystem.Title, MessageBoxButton, MessagesBoxIcon);
     }
 
-    public static DialogResult ShowMessageWithDetails(
-      string title,
-      string messageText,
-      List<string> details)
+    public static DialogResult ShowMessageWithDetails(string title, string messageText, List<string> details)
     {
-      string str = string.Join(Environment.NewLine, details.ToArray());
-      System.Type type = typeof (Form).Assembly.GetType("System.Windows.Forms.PropertyGridInternal.GridErrorDlg");
-      Form instance = (Form) Activator.CreateInstance(type, (object) new PropertyGrid());
-      instance.Text = title;
-      type.GetProperty("Message").SetValue((object) instance, (object) messageText, (object[]) null);
-      type.GetProperty("Details").SetValue((object) instance, (object) str, (object[]) null);
-      return instance.ShowDialog();
+        string detailsStr = string.Join(Environment.NewLine, details.ToArray());
+        string dialogTypeName = "System.Windows.Forms.PropertyGridInternal.GridErrorDlg";
+        Type dialogType = typeof(Form).Assembly.GetType(dialogTypeName);
+        Form dialog = (Form)Activator.CreateInstance(dialogType, new PropertyGrid());
+
+        dialog.Text = title;
+        dialogType.GetProperty("Message").SetValue(dialog, messageText, null/* TODO Change to default(_) if this is not a reference type */);
+        dialogType.GetProperty("Details").SetValue(dialog, detailsStr, null/* TODO Change to default(_) if this is not a reference type */);
+        DialogResult result = dialog.ShowDialog();
+        return result;
     }
 
     public static void ShowSecurityError()
     {
-      throw new SecurityException("You do not have the necessary security permissions.\r\n\r\nContact your administrator if you think this is wrong or you need the permissions changing.");
+        string msg = "You do not have the necessary security permissions." + Constants.vbCrLf + Constants.vbCrLf + "Contact your administrator if you think this is wrong or you need the permissions changing.";
+        throw new System.Security.SecurityException(msg);
     }
 
     public static void LogError(string errorType, string errorMsg, string stackTrace)
     {
-      if (App.loggedInUser != null && !App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.BetaFeatures))
-        ;
+        if (loggedInUser != null && !loggedInUser.HasAccessToModule(Entity.Sys.Enums.SecuritySystemModules.BetaFeatures))
+            return;
+        /* TODO ERROR: Skipped IfDirectiveTrivia */
+        Entity.Sys.Emails email = new Entity.Sys.Emails();
+        email.To = Entity.Sys.EmailAddress.AutomatedReports;
+        email.From = Entity.Sys.EmailAddress.Gabriel;
+        email.Subject = "Gabriel Error on " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss") + " caused by " + loggedInUser?.Fullname;
+        email.Body = "<p>Hi, <br/><br/>";
+        email.Body += "An " + errorType + " error occurred on Gabriel on " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss") + " caused by " + loggedInUser?.Fullname + "<br/><br/>";
+        email.Body += "Error Message: " + errorMsg + "<br/><br/>";
+        email.Body += "Stack Trace: " + stackTrace + "<br/><br/>";
+        email.Body += "Kind regards," + "<br/><br/>";
+        email.Body += "Gabriel";
+        email.SendMe = true;
+        email.Send();
     }
+
+    public static bool ControlLoading = false;
+    public static bool ControlChanged = false;
 
     public static void AddChangeHandlers(Control controlToLoop)
     {
-      IEnumerator enumerator;
-      try
-      {
-        enumerator = controlToLoop.Controls.GetEnumerator();
-        while (enumerator.MoveNext())
+        foreach (Control cntrl in controlToLoop.Controls)
         {
-          Control current = (Control) enumerator.Current;
-          string name = current.GetType().Name;
-          // ISSUE: reference to a compiler-generated method
-          switch (\u003CPrivateImplementationDetails\u003E.ComputeStringHash(name))
-          {
-            case 186607719:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "TabPage", false) == 0)
-                break;
-              goto default;
-            case 496722843:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "TextBox", false) == 0)
-              {
-                current.TextChanged += new EventHandler(App.AnythingChanges);
-                goto default;
-              }
-              else
-                goto default;
-            case 1225040048:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "RadioButton", false) == 0)
-              {
-                ((RadioButton) current).CheckedChanged += new EventHandler(App.AnythingChanges);
-                goto default;
-              }
-              else
-                goto default;
-            case 1301148785:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "TabControl", false) == 0)
-                break;
-              goto default;
-            case 1595554146:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "DateTimePicker", false) == 0)
-              {
-                ((DateTimePicker) current).ValueChanged += new EventHandler(App.AnythingChanges);
-                goto default;
-              }
-              else
-                goto default;
-            case 1933324558:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "ComboBox", false) == 0)
-              {
-                ((ComboBox) current).SelectedIndexChanged += new EventHandler(App.AnythingChanges);
-                goto default;
-              }
-              else
-                goto default;
-            case 2642369432:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "CheckBox", false) == 0)
-              {
-                ((CheckBox) current).CheckedChanged += new EventHandler(App.AnythingChanges);
-                goto default;
-              }
-              else
-                goto default;
-            case 2708682725:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "Panel", false) == 0)
-                break;
-              goto default;
-            case 2709102469:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "NumericUpDown", false) == 0)
-              {
-                current.Click += new EventHandler(App.AnythingChanges);
-                goto default;
-              }
-              else
-                goto default;
-            case 3409613989:
-              if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(name, "GroupBox", false) == 0)
-                break;
-              goto default;
-            default:
-label_20:
-              continue;
-          }
-          App.AddChangeHandlers(current);
-          goto label_20;
+            switch (cntrl.GetType.Name)
+            {
+                case "TabControl":
+                case "TabPage":
+                case "GroupBox":
+                case "Panel":
+                    {
+                        AddChangeHandlers(cntrl);
+                        break;
+                    }
+
+                case "ComboBox":
+                    {
+                        (ComboBox)cntrl.SelectedIndexChanged += AnythingChanges;
+                        break;
+                    }
+
+                case "CheckBox":
+                    {
+                        (CheckBox)cntrl.CheckedChanged += AnythingChanges;
+                        break;
+                    }
+
+                case "NumericUpDown":
+                    {
+                        (NumericUpDown)cntrl.Click += AnythingChanges;
+                        break;
+                    }
+
+                case "DateTimePicker":
+                    {
+                        (DateTimePicker)cntrl.ValueChanged += AnythingChanges;
+                        break;
+                    }
+
+                case "TextBox":
+                    {
+                        (TextBox)cntrl.TextChanged += AnythingChanges;
+                        break;
+                    }
+
+                case "RadioButton":
+                    {
+                        (RadioButton)cntrl.CheckedChanged += AnythingChanges;
+                        break;
+                    }
+            }
         }
-      }
-      finally
-      {
-        if (enumerator is IDisposable)
-          (enumerator as IDisposable).Dispose();
-      }
     }
 
-    public static void AnythingChanges(object sender, EventArgs e)
+    public static void AnythingChanges(object sender, System.EventArgs e)
     {
-      if (App.ControlLoading)
-        return;
-      App.ControlChanged = true;
+        if (ControlLoading == false)
+            ControlChanged = true;
     }
-  }
 }

@@ -31,8 +31,9 @@ namespace FSM.Entity.Sys
         private ArrayList pointsArray;
         private bool isReadOnlyVar;
         private Graphics gphDraw;
+        private PictureBox _Signature;
 
-        private virtual PictureBox Signature
+        public virtual PictureBox Signature
         {
             get
             {
@@ -77,63 +78,30 @@ namespace FSM.Entity.Sys
         {
             get
             {
-                int num1;
-                string str1;
-                int num2;
+                int num1 = 0;
+                string str1 = "";
+                int num2 = 0;
                 try
                 {
-                label_2:
                     ProjectData.ClearProjectError();
                     num1 = -2;
-                label_3:
-                    int num3 = 2;
                     int num4 = checked(this.SigMovesO - 1);
                     int index = 0;
                     goto label_6;
-                label_4:
-                    num3 = 3;
-                    string str2 = str2 + this.PadHex(this.SigArrayXO[index]) + this.PadHex(this.SigArrayYO[index]);
-                label_5:
-                    num3 = 4;
+                    label_4:
+                    string str2 = str1 + this.PadHex(this.SigArrayXO[index]) + this.PadHex(this.SigArrayYO[index]);
                     checked { ++index; }
-                label_6:
+                    label_6:
                     if (index <= num4)
                         goto label_4;
-                    label_7:
-                    str1 = str2;
                     goto label_13;
-                label_9:
-                    num2 = num3;
-                    switch (num1 > -2 ? num1 : 1)
-                    {
-                        case 1:
-                            int num5 = num2 + 1;
-                            num2 = 0;
-                            switch (num5)
-                            {
-                                case 1:
-                                    goto label_2;
-                                case 2:
-                                    goto label_3;
-                                case 3:
-                                    goto label_4;
-                                case 4:
-                                    goto label_5;
-                                case 5:
-                                    goto label_7;
-                                case 6:
-                                    goto label_13;
-                            }
-                            break;
-                    }
                 }
                 catch (Exception ex) when (ex is Exception & (uint)num1 > 0U & num2 == 0)
                 {
                     ProjectData.SetProjectError(ex);
-                    goto label_9;
                 }
                 throw ProjectData.CreateProjectError(-2146828237);
-            label_13:
+                label_13:
                 if (num2 != 0)
                     ProjectData.ClearProjectError();
                 return str1;
@@ -161,7 +129,6 @@ namespace FSM.Entity.Sys
 
         private int convertChar(char charIn)
         {
-            int num1 = new int();
             int num2;
             try
             {
@@ -208,7 +175,6 @@ namespace FSM.Entity.Sys
         private int unHex(string hexIn)
         {
             Stack stack = new Stack();
-            int num1 = new int();
             int num2 = 0;
             string str = hexIn;
             int index = 0;
@@ -219,22 +185,12 @@ namespace FSM.Entity.Sys
                 checked { ++index; }
             }
             int num3 = 0;
-            IEnumerator enumerator;
-            try
+            foreach (char charIn in stack)
             {
-                enumerator = stack.GetEnumerator();
-                while (enumerator.MoveNext())
-                {
-                    char charIn = Conversions.ToChar(enumerator.Current);
-                    checked { num2 += (int)Math.Round(unchecked((double)this.convertChar(charIn) * Math.Pow(16.0, (double)num3))); }
-                    checked { ++num3; }
-                }
+                checked { num2 += (int)Math.Round(unchecked((double)this.convertChar(charIn) * Math.Pow(16.0, (double)num3))); }
+                checked { ++num3; }
             }
-            finally
-            {
-                if (enumerator is IDisposable)
-                    (enumerator as IDisposable).Dispose();
-            }
+
             return num2;
         }
 
@@ -253,51 +209,43 @@ namespace FSM.Entity.Sys
         {
             try
             {
-                if (this.isReadOnlyVar)
-                    return;
-                this.oldX = e.X;
-                this.oldY = e.Y;
-                this.SigArrayXO[this.SigMovesO] = e.X;
-                this.SigArrayYO[this.SigMovesO] = checked(e.Y + 128);
-                // ISSUE: variable of a reference type
-                int&local;
-                // ISSUE: explicit reference operation
-                int num = checked(^(local = ref this.SigMovesO) + 1);
-                local = num;
-                this.startedSig = true;
-                this.isMouseDown = true;
+                if (!isReadOnlyVar)
+                {
+                    oldX = e.X;
+                    oldY = e.Y;
+                    this.SigArrayXO[SigMovesO] = e.X;
+                    this.SigArrayYO[SigMovesO] = e.Y + 128;
+                    SigMovesO += 1;
+                    startedSig = true;
+                    isMouseDown = true;
+                }
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException)
             {
-                ProjectData.SetProjectError((Exception)ex);
-                int num = (int)MessageBox.Show("Signature is too large!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                ProjectData.ClearProjectError();
+                MessageBox.Show("Signature is too large!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
         }
 
         private void Signature_MouseMove(object sender, MouseEventArgs e)
         {
-            if (!(this.isMouseDown & !this.isReadOnlyVar))
-                return;
-            try
+            if (isMouseDown & !isReadOnlyVar)
             {
-                this.gphDraw.DrawLine(new Pen(Color.Black), this.oldX, this.oldY, e.X, e.Y);
-                this.oldX = e.X;
-                this.oldY = e.Y;
-                this.SigArrayXO[this.SigMovesO] = this.oldX;
-                this.SigArrayYO[this.SigMovesO] = this.oldY;
-                // ISSUE: variable of a reference type
-                int&local;
-                // ISSUE: explicit reference operation
-                int num = checked(^(local = ref this.SigMovesO) + 1);
-                local = num;
-                this.Signature.Image = (Image)this.bmp;
-                this.startedSig = true;
-            }
-            catch (Exception ex)
-            {
-                ProjectData.SetProjectError(ex);
-                ProjectData.ClearProjectError();
+                try
+                {
+                    System.Drawing.Pen p = new System.Drawing.Pen(System.Drawing.Color.Black);
+                    gphDraw.DrawLine(p, oldX, oldY, e.X, e.Y);
+
+                    oldX = e.X;
+                    oldY = e.Y;
+                    this.SigArrayXO[SigMovesO] = oldX;
+                    this.SigArrayYO[SigMovesO] = oldY;
+                    SigMovesO += 1;
+                    Signature.Image = bmp;
+                    startedSig = true;
+                }
+                catch
+                {
+                }
             }
         }
 

@@ -69,6 +69,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsBase.4.6.1055.0\lib\WindowsBase.dll</HintPath>
+    </Reference>
     <Reference Include="Xceed.Words.NET">
       <HintPath>lib\Xceed.Words.NET.dll</HintPath>
     </Reference>
@@ -2043,6 +2046,9 @@
     <EmbeddedResource Include="FSM\Users_Update.sql" />
     <EmbeddedResource Include="FSM\Users_UpdatePassword.sql" />
     <EmbeddedResource Include="FSM\Versions.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

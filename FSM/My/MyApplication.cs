@@ -10,9 +10,9 @@ using System.ComponentModel;
 
 namespace FSM.My
 {
-  [GeneratedCode("MyTemplate", "11.0.0.0")]
-  [EditorBrowsable(EditorBrowsableState.Never)]
-  internal class MyApplication : ConsoleApplicationBase
-  {
-  }
+    [GeneratedCode("MyTemplate", "11.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    internal class MyApplication : ConsoleApplicationBase
+    {
+    }
 }
