@@ -1,5 +1,4 @@
-﻿
-namespace FSM
+﻿namespace FSM
 {
     public static class Interfaces
     {

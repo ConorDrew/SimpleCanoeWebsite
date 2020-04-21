@@ -405,7 +405,7 @@ namespace FSM.Entity
                                 var inv = new Invoiceds.Invoiced();
                                 var invNum = new JobNumber();
                                 invNum = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)5);
-                                inv.SetInvoiceNumber = invNum.Prefix + invNum.JobNumber;
+                                inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                 inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                 inv.RaisedDate = Conversions.ToDate(i["RaiseDate"]);
                                 inv.SetVATRateID = App.DB.VATRatesSQL.VATRates_Get_ByDate(DateAndTime.Now);

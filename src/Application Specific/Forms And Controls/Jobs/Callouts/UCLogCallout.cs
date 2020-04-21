@@ -2415,9 +2415,9 @@ namespace FSM
         {
             if (Job.JobID == 0)
             {
-                App.DB.Job.DeleteReservedOrderNumber(JobNumber.JobNumber, JobNumber.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(JobNumber.Number, JobNumber.Prefix);
                 JobNumber = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Job.JobDefinitionEnumID);
-                Job.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+                Job.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
                 txtJobNumber.Text = Job.JobNumber;
             }
         }

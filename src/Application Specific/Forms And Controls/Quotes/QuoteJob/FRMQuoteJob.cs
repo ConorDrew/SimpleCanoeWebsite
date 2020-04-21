@@ -486,7 +486,7 @@ namespace FSM
         {
             if (((UCQuoteJob)TheLoadedControl).QuoteNumberUsed == false)
             {
-                App.DB.QuoteJob.DeleteReservedQuoteNumber(((UCQuoteJob)TheLoadedControl).QuoteNumber.JobNumber);
+                App.DB.QuoteJob.DeleteReservedQuoteNumber(((UCQuoteJob)TheLoadedControl).QuoteNumber.Number);
             }
         }
 

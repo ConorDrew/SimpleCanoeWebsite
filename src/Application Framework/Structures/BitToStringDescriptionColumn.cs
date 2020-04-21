@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,13 +7,14 @@ namespace FSM
 {
     public class BitToStringDescriptionColumn : DataGridEditableTextBoxColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
             base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
             // set the color required dependant on the column value
             var brush = Brushes.White;
+            var dr = (DataRowView)source.List[rowNum];
             string str = "";
             try
             {
@@ -26,7 +28,7 @@ namespace FSM
             {
             }
 
-            if (Entity.Sys.Helper.MakeBooleanValid(source.List[rowNum].row.item(MappingName.ToString())))
+            if (Entity.Sys.Helper.MakeBooleanValid(dr[MappingName.ToString()]))
             {
                 str = "Yes";
             }

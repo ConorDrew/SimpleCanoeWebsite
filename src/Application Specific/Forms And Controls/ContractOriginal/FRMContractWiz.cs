@@ -388,7 +388,7 @@ namespace FSM
         {
             if (((UCContractWiz)LoadedControl).NumberUsed == false & ((UCContractWiz)LoadedControl).Number is object)
             {
-                App.DB.Job.DeleteReservedOrderNumber(((UCContractWiz)LoadedControl).Number.JobNumber, ((UCContractWiz)LoadedControl).Number.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(((UCContractWiz)LoadedControl).Number.Number, ((UCContractWiz)LoadedControl).Number.Prefix);
             }
 
             if (Modal)

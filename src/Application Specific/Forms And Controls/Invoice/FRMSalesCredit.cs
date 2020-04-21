@@ -1097,11 +1097,11 @@ namespace FSM
                     oCredit.SetAddedByUser = App.loggedInUser.UserID;
                     oCredit.SetRequestedBy = Combo.get_GetSelectedItemValue(cboUser);
                     oCredit.SetReasonForCredit = txtReason.Text;
-                    oCredit.SetCreditReference = jobnum.Prefix + jobnum.JobNumber;
+                    oCredit.SetCreditReference = jobnum.Prefix + jobnum.Number;
                     oCredit.SetAccountNumber = dr["AccountNumber"];
                     oCredit.DateCredited = DateTimePicker1.Value;
                     dr["SalesCreditID"] = App.DB.SalesCredit.Insert(oCredit);
-                    dr["CreditReference"] = jobnum.Prefix + jobnum.JobNumber;
+                    dr["CreditReference"] = jobnum.Prefix + jobnum.Number;
                 }
             }
 

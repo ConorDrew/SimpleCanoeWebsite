@@ -1,14 +1,13 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Xml.Serialization;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class XmlPersister
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private static string _defaultfolder = string.Empty;
 
@@ -34,6 +33,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public static bool DefaultListExits(Type objectType)
         {
             string myName;

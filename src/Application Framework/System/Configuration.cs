@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
 {
@@ -51,7 +51,7 @@ namespace FSM.Entity
                         // if we can connect to db then add it to selection
                         if (TestConnection(Conversions.ToString(config["DatabaseServer"]), Conversions.ToString(config["DatabaseName"]), Conversions.ToString(config["DatabaseUsername"]), Conversions.ToString(config["DatabasePassword"])))
                         {
-                            dbs.Rows.Add(new string[] { index, config["DatabaseFriendlyName"], "0" });
+                            dbs.Rows.Add(new string[] { index.ToString(), config["DatabaseFriendlyName"].ToString(), "0" });
                         }
 
                         index += 1;
@@ -110,7 +110,6 @@ namespace FSM.Entity
 
             private bool TestConnection(string dbServer, string dbName, string dbUsername, string dbPass)
             {
-
                 // set up connection string
                 string str = "";
                 if (dbServer.Contains(@".\"))
@@ -395,6 +394,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public string SystemVersion
             {
                 get

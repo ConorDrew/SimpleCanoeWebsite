@@ -1,5 +1,5 @@
-﻿using System.Data;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
+using System.Data;
 
 namespace FSM.Entity
 {

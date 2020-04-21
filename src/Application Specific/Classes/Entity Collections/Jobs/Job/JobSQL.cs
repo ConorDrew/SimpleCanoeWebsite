@@ -1296,7 +1296,7 @@ namespace FSM.Entity.Jobs
                 // get job number
                 var JobNumber = new JobNumber();
                 JobNumber = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Conversions.ToInteger(Enums.JobDefinition.Callout));
-                job.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+                job.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
                 job.SetPONumber = "";
                 job.SetQuoteID = 0;
                 job.SetContractID = 0;
@@ -1502,7 +1502,7 @@ namespace FSM.Entity.Jobs
                 _currentJob.SetStatusEnumID = Conversions.ToInteger(Enums.JobStatus.Open);
                 _currentJob.SetCreatedByUserID = App.loggedInUser.UserID;
                 _currentJob.SetFOC = true;
-                _currentJob.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+                _currentJob.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
                 _currentJob.SetPONumber = "";
                 _currentJob.SetQuoteID = 0;
                 _currentJob.SetContractID = 0;

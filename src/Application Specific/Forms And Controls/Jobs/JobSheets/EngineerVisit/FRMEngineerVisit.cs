@@ -16834,7 +16834,7 @@ namespace FSM
                     invoiceNumber = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)5);
                     {
                         var withBlock1 = invoice;
-                        withBlock1.SetInvoiceNumber = invoiceNumber.Prefix + invoiceNumber.JobNumber;
+                        withBlock1.SetInvoiceNumber = invoiceNumber.Prefix + invoiceNumber.Number;
                         withBlock1.SetRaisedByUserID = App.loggedInUser.UserID;
                         withBlock1.RaisedDate = InvoiceToBeRaised.RaiseDate;
                         withBlock1.SetVATRateID = InvoiceToBeRaised.TaxRateID;

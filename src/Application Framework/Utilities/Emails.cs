@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mail;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
 {
@@ -12,7 +12,6 @@ namespace FSM.Entity
     {
         public class Emails
         {
-
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             private string _From = "";
 
@@ -166,6 +165,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public bool Send()
             {
                 try

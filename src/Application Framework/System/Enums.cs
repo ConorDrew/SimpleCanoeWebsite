@@ -1,5 +1,4 @@
-﻿
-namespace FSM.Entity
+﻿namespace FSM.Entity
 {
     namespace Sys
     {

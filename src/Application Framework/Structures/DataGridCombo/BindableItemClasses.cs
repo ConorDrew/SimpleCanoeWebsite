@@ -10,10 +10,16 @@ namespace FSM
     {
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
-        // these hold and handle contained properties
-        protected readonly PersistedProperties PersistedProperties = new PersistedProperties(this);
+        public BindableItem()
+        {
+            PersistedProperties = new PersistedProperties(this);
+            CalculatedProperties = new CalculatedProperties(this);
+        }
 
-        protected readonly CalculatedProperties CalculatedProperties = new CalculatedProperties(this);
+        // these hold and handle contained properties
+        protected readonly PersistedProperties PersistedProperties;
+
+        protected readonly CalculatedProperties CalculatedProperties;
 
         // events
         internal event PropertyChangedEventHandler internalPropertyChanged;
@@ -186,7 +192,9 @@ namespace FSM
         private RootObject myRoot = new RootObject();
 
         // must overrides
-        public abstract string DefaultFileNameAndExt { get; }
+        public string DefaultFileNameAndExt => DefaultName;
+
+        public string DefaultName { get; }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */

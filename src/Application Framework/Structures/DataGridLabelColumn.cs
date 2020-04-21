@@ -5,8 +5,8 @@ namespace FSM
 {
     public class DataGridLabelColumn : DataGridTextBoxColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Edit(CurrencyManager source, int rowNum, Rectangle bounds, bool readOnly, string instantText)
         {
         }

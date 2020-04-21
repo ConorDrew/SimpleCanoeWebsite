@@ -1,21 +1,23 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class Contract3AssetsColourColumn : DataGridEditableTextBoxColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
             base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
             // set the color required dependant on the column value
             Brush brush;
             string str = "";
-            if (string.IsNullOrEmpty(Entity.Sys.Helper.MakeStringValid(source.List[rowNum].row.item(MappingName.ToString()))))
+            var dr = (DataRowView)source.List[rowNum];
+            if (string.IsNullOrEmpty(Entity.Sys.Helper.MakeStringValid(dr[MappingName.ToString()])))
             {
                 str = "-";
                 brush = Brushes.White;
@@ -24,7 +26,7 @@ namespace FSM
             else
             {
                 brush = Brushes.Yellow;
-                str = Entity.Sys.Helper.MakeStringValid(source.List[rowNum].row.item(MappingName.ToString()));
+                str = Entity.Sys.Helper.MakeStringValid(dr[MappingName.ToString()]);
                 ReadOnly = false;
                 TextBox.TextChanged += ValidateAssetDuration;
             }
@@ -41,6 +43,7 @@ namespace FSM
                 ((TextBox)sender).Text = 0.ToString();
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

@@ -3114,7 +3114,7 @@ namespace FSM
         {
             if (((UCLogCallout)TheLoadedControl).Job.JobID == 0)
             {
-                App.DB.Job.DeleteReservedOrderNumber(((UCLogCallout)TheLoadedControl).JobNumber.JobNumber, ((UCLogCallout)TheLoadedControl).JobNumber.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(((UCLogCallout)TheLoadedControl).JobNumber.Number, ((UCLogCallout)TheLoadedControl).JobNumber.Prefix);
             }
 
             if (JobLock is object)

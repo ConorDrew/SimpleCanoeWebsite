@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using DocumentFormat.OpenXml;
-using A = DocumentFormat.OpenXml.Drawing;
-using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
+﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 using OpenXmlPowerTools;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using A = DocumentFormat.OpenXml.Drawing;
+using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
+using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 using X = Xceed.Words.NET;
 
 namespace FSM.Entity
@@ -21,8 +21,8 @@ namespace FSM.Entity
     {
         public class PrintHelper
         {
-
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             private static Run ParseText(string textualData)
             {
                 var newLineArray = new[] { Constants.vbCrLf };
@@ -549,7 +549,7 @@ namespace FSM.Entity
                             {
                                 var rProps = run.Elements<RunProperties>().ToList();
                                 foreach (RunProperties rProp in rProps)
-                                    rProp.Spacing = new Spacing() { Val = (Int32Value)"0" };
+                                    rProp.Spacing = new Spacing() { Val = (Int32Value)Convert.ToInt32("0") };
                             }
                         }
 

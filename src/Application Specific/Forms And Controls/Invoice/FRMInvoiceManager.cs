@@ -1990,7 +1990,7 @@ namespace FSM
                                     // AMY IS CHEATING AND USING JOB NUMBER - 5 isn't a job definition!
                                     var invNum = new JobNumber();
                                     invNum = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)5);
-                                    inv.SetInvoiceNumber = invNum.Prefix + invNum.JobNumber;
+                                    inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                     inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                     inv.RaisedDate = Conversions.ToDate(i["RaiseDate"]);
                                     if (Conversions.ToBoolean(i["TAXRateID"] > 0))
@@ -2088,7 +2088,7 @@ namespace FSM
                                         var inv = new Entity.Invoiceds.Invoiced();
                                         var invNum = new JobNumber();
                                         invNum = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)5);
-                                        inv.SetInvoiceNumber = invNum.Prefix + invNum.JobNumber;
+                                        inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                         inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                         inv.RaisedDate = raiseDate;
                                         inv.SetVATRateID = lastVat;
@@ -2505,7 +2505,7 @@ namespace FSM
                                         var inv = new Entity.Invoiceds.Invoiced();
                                         var invNum = new JobNumber();
                                         invNum = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)5);
-                                        inv.SetInvoiceNumber = invNum.Prefix + invNum.JobNumber;
+                                        inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                         inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                         inv.RaisedDate = DateAndTime.Now;
                                         inv = App.DB.Invoiced.Insert(inv);
@@ -2704,7 +2704,7 @@ namespace FSM
                                     // AMY IS CHEATING AND USING JOB NUMBER - 5 isn't a job definition!
                                     var invNum = new JobNumber();
                                     invNum = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)5);
-                                    inv.SetInvoiceNumber = invNum.Prefix + invNum.JobNumber;
+                                    inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                     inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                     inv.RaisedDate = Conversions.ToDate(i["RaiseDate"]);
                                     if (Conversions.ToBoolean(i["TAXRateID"] > 0))
@@ -2781,7 +2781,7 @@ namespace FSM
                                     // AMY IS CHEATING AND USING JOB NUMBER - 5 isn't a job definition!
                                     var invNum = new JobNumber();
                                     invNum = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)5);
-                                    inv.SetInvoiceNumber = invNum.Prefix + invNum.JobNumber;
+                                    inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                     inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                     inv.RaisedDate = Conversions.ToDate(i["RaiseDate"]);
                                     if (Conversions.ToBoolean(i["TAXRateID"] > 0))

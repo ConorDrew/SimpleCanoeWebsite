@@ -1,22 +1,21 @@
-﻿using System.Data;
+﻿using FSM.Entity.Sys;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
 
 namespace FSM
 {
     public class DataGridSiteSafetyAuditColumn : DataGridLabelColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
-
             // Need to get row information from data
-            DataRow row = (DataRow)source.List[rowNum].row;
+            DataRowView row = (DataRowView)source.List[rowNum];
 
             // check for row before we call it
-            if (row.Table.Columns.Contains("Result"))
+            if (row.DataView.Table.Columns.Contains("Result"))
             {
                 double result = Helper.MakeDoubleValid(row["Result"]);
                 if (result >= 90)

@@ -1273,7 +1273,7 @@ namespace FSM
             oJob.SetJobDefinitionEnumID = Entity.Sys.Helper.MakeIntegerValid(Entity.Sys.Enums.JobDefinition.Contract);
             var JobNumber = new JobNumber();
             JobNumber = App.DB.Job.GetNextJobNumber(Entity.Sys.Enums.JobDefinition.Contract);
-            oJob.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+            oJob.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
             oJob.SetPONumber = "";
             oJob.SetQuoteID = 0;
             oJob.SetPropertyID = newSite.PropertyID;

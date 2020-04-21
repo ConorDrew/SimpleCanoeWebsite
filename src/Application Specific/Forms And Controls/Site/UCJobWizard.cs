@@ -9188,7 +9188,7 @@ namespace FSM
                 if (newJob)
                 {
                     jobnumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Callout);
-                    job.SetJobNumber = jobnumber.Prefix + jobnumber.JobNumber;
+                    job.SetJobNumber = jobnumber.Prefix + jobnumber.Number;
                     // job.SetJobNumber = Job_JobNumber
                 }
 

@@ -354,7 +354,7 @@ namespace FSM
         {
             if (((UCOrder)TheLoadedControl).OrderNumberUsed == false)
             {
-                App.DB.Job.DeleteReservedOrderNumber(((UCOrder)TheLoadedControl).OrderNumber.JobNumber, ((UCOrder)TheLoadedControl).OrderNumber.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(((UCOrder)TheLoadedControl).OrderNumber.Number, ((UCOrder)TheLoadedControl).OrderNumber.Prefix);
             }
         }
 

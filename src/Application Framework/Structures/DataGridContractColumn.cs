@@ -6,17 +6,16 @@ namespace FSM
 {
     public class DataGridContractColumn : DataGridLabelColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
-
             // Need to get row information from data
-            DataRow row = (DataRow)source.List[rowNum].row;
+            DataRowView row = (DataRowView)source.List[rowNum];
 
             // check for row before we call it
             bool renewed = false;
-            if (row.Table.Columns.Contains("Renewed"))
+            if (row.DataView.Table.Columns.Contains("Renewed"))
             {
                 var switchExpr = Entity.Sys.Helper.MakeStringValid(row["Renewed"]);
                 switch (switchExpr)
@@ -42,7 +41,7 @@ namespace FSM
             }
 
             bool contactMade = false;
-            if (row.Table.Columns.Contains("ContactMade"))
+            if (row.DataView.Table.Columns.Contains("ContactMade"))
             {
                 contactMade = Entity.Sys.Helper.MakeBooleanValid(row["ContactMade"]);
             }

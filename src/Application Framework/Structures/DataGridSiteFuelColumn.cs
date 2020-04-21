@@ -1,22 +1,21 @@
-﻿using System.Data;
+﻿using Microsoft.VisualBasic;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class DataGridSiteFuelColumn : DataGridLabelColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
-
             // Need to get row information from data
-            DataRow row = (DataRow)source.List[rowNum].row;
+            DataRowView row = (DataRowView)source.List[rowNum];
 
             // check for row before we call it
-            if (row.Table.Columns.Contains("LastServiceDate"))
+            if (row.DataView.Table.Columns.Contains("LastServiceDate"))
             {
                 var lsd = Entity.Sys.Helper.MakeDateTimeValid(row["LastServiceDate"]);
                 if (lsd != default && lsd > System.Data.SqlTypes.SqlDateTime.MinValue.Value.AddYears(1))

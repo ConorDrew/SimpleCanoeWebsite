@@ -3022,24 +3022,24 @@ namespace FSM
             {
                 if (Number is object)
                 {
-                    App.DB.Job.DeleteReservedOrderNumber(Number.JobNumber, Number.Prefix);
+                    App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
                 }
 
                 Number = App.DB.Job.GetNextJobNumber((Entity.Sys.Enums.JobDefinition)Combo.get_GetSelectedItemValue(cboContractType));
-                if (Number.JobNumber.ToString().Length < 3)
+                if (Number.Number.ToString().Length < 3)
                 {
-                    txtContractReference.Text = Number.Prefix + "00" + Number.JobNumber;
+                    txtContractReference.Text = Number.Prefix + "00" + Number.Number;
                 }
-                else if (Number.JobNumber.ToString().Length < 4)
+                else if (Number.Number.ToString().Length < 4)
                 {
-                    txtContractReference.Text = Number.Prefix + "0" + Number.JobNumber;
+                    txtContractReference.Text = Number.Prefix + "0" + Number.Number;
                 }
                 else
                 {
-                    txtContractReference.Text = Number.Prefix + Number.JobNumber;
+                    txtContractReference.Text = Number.Prefix + Number.Number;
                 }
 
-                txtContractReference.Text = Number.Prefix + Number.JobNumber;
+                txtContractReference.Text = Number.Prefix + Number.Number;
             }
         }
 
@@ -3047,7 +3047,7 @@ namespace FSM
         {
             if (Number is object & NumberUsed == false)
             {
-                App.DB.Job.DeleteReservedOrderNumber(Number.JobNumber, Number.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
             }
 
             Dispose();

@@ -2225,7 +2225,7 @@ namespace FSM
                     job.SetFOC = true;
                     var JobNumber = new JobNumber();
                     JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Contract);
-                    job.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+                    job.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
                     job.SetPONumber = "";
                     job.SetQuoteID = 0;
                     job.SetContractID = CurrentContract.ContractID;
@@ -2445,7 +2445,7 @@ namespace FSM
                 job.SetFOC = true;
                 var JobNumber = new JobNumber();
                 JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Contract);
-                job.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+                job.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
                 job.SetPONumber = "";
                 job.SetQuoteID = 0;
                 job.SetContractID = CurrentContract.ContractID;

@@ -1,15 +1,15 @@
-﻿
-namespace FSM
+﻿namespace FSM
 {
     public class FullyQualifiedFileName
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // This provides the fully qualified name of the file for persisting operations.
         public string Text = string.Empty;
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private static string extractExtension(string text)
         {
             var folder = default(string);
@@ -68,7 +68,6 @@ namespace FSM
 
         private static void splitText(string toSplit, ref string folder, ref string name, ref string ext)
 
-
         {
             folder = string.Empty;
             name = string.Empty;
@@ -107,6 +106,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // Provides a unique name of the object to the user with extension appended
         public string Extension
         {

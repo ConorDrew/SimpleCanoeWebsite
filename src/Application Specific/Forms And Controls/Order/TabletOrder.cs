@@ -1181,7 +1181,7 @@ namespace FSM
             set
             {
                 _OrderNumber = value;
-                _OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+                _OrderNumber.OrderNumber = OrderNumber.Number.ToString();
                 while (OrderNumber.OrderNumber.Length < 5)
                     _OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
                 string typePrefix = "";
@@ -1259,7 +1259,7 @@ namespace FSM
                 if (Job_VisitType == 519) // = service then create a new breakdown job
                 {
                     var oJobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Callout);
-                    string Job_JobNumber = oJobNumber.JobNumber.ToString();
+                    string Job_JobNumber = oJobNumber.Number.ToString();
                     string Job_JobPrefix = oJobNumber.Prefix;
                     Job_JobNumber = Job_JobPrefix + Job_JobNumber;
                     var oNewJob = new Entity.Jobs.Job();

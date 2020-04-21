@@ -4991,7 +4991,7 @@ namespace FSM
                     QuoteNumber = App.DB.QuoteJob.GetNextQuoteNumber();
                     if (!Information.IsNothing(QuoteNumber))
                     {
-                        txtReference.Text = QuoteNumber.Prefix + QuoteNumber.JobNumber;
+                        txtReference.Text = QuoteNumber.Prefix + QuoteNumber.Number;
                     }
                 }
 

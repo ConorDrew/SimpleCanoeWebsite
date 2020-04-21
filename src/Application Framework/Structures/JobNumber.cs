@@ -1,5 +1,4 @@
-﻿
-namespace FSM
+﻿namespace FSM
 {
     public class JobNumber
     {
@@ -7,7 +6,7 @@ namespace FSM
         private string _prefix = 0.ToString();
         private string _OrderNumber = "";
 
-        public int JobNumber
+        public int Number
         {
             get
             {
@@ -52,7 +51,7 @@ namespace FSM
 
         public JobNumber(int jobNumberIn, string PrefixIn)
         {
-            JobNumber = jobNumberIn;
+            Number = jobNumberIn;
             Prefix = PrefixIn;
         }
     }

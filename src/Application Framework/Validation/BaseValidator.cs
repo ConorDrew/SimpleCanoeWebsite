@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
+using System;
 
 namespace FSM
 {
     public class BaseValidator
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         protected ValidatorMessages _validatorMessages;
 
@@ -40,6 +39,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public BaseValidator()
         {
             _validatorMessages = new ValidatorMessages();
@@ -60,7 +60,6 @@ namespace FSM
 
     public class ValidationException : Exception
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private BaseValidator m_valid = new BaseValidator();
 
@@ -79,6 +78,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public ValidationException(BaseValidator inValidator)
         {
             m_valid = inValidator;

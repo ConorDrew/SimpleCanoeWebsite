@@ -204,7 +204,7 @@ namespace FSM.Entity
                             oOrderConsolidation.SetComments = "Automatically Created";
                             oOrderConsolidation.SetConsolidatedOrderStatusID = Conversions.ToInteger(Sys.Enums.OrderStatus.AwaitingConfirmation);
                             var OrderNumber = App.DB.Job.GetNextJobNumber(Sys.Enums.JobDefinition.CONSOLIDATION);
-                            OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+                            OrderNumber.OrderNumber = OrderNumber.Number.ToString();
                             while (OrderNumber.OrderNumber.Length < 5)
                                 OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
                             string typePrefix = "W";
@@ -267,7 +267,7 @@ namespace FSM.Entity
                             oOrderConsolidation.SetComments = "Automatically Created";
                             oOrderConsolidation.SetConsolidatedOrderStatusID = Conversions.ToInteger(Sys.Enums.OrderStatus.AwaitingConfirmation);
                             var OrderNumber = App.DB.Job.GetNextJobNumber(Sys.Enums.JobDefinition.CONSOLIDATION, trans);
-                            OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+                            OrderNumber.OrderNumber = OrderNumber.Number.ToString();
                             while (OrderNumber.OrderNumber.Length < 5)
                                 OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
                             string typePrefix = "W";
@@ -320,7 +320,7 @@ namespace FSM.Entity
                             oOrderConsolidation.SetComments = "Automatically Created";
                             oOrderConsolidation.SetConsolidatedOrderStatusID = Conversions.ToInteger(Sys.Enums.OrderStatus.AwaitingConfirmation);
                             var OrderNumber = App.DB.Job.GetNextJobNumber(Sys.Enums.JobDefinition.CONSOLIDATION, trans);
-                            OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+                            OrderNumber.OrderNumber = OrderNumber.Number.ToString();
                             while (OrderNumber.OrderNumber.Length < 6)
                                 OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
                             oOrderConsolidation.SetConsolidationRef = OrderNumber.Prefix + OrderNumber.OrderNumber;
@@ -363,7 +363,7 @@ namespace FSM.Entity
                             oOrderConsolidation.SetComments = "Automatically Created";
                             oOrderConsolidation.SetConsolidatedOrderStatusID = Conversions.ToInteger(Sys.Enums.OrderStatus.AwaitingConfirmation);
                             var OrderNumber = App.DB.Job.GetNextJobNumber(Sys.Enums.JobDefinition.CONSOLIDATION);
-                            OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+                            OrderNumber.OrderNumber = OrderNumber.Number.ToString();
                             while (OrderNumber.OrderNumber.Length < 6)
                                 OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
                             oOrderConsolidation.SetConsolidationRef = OrderNumber.Prefix + OrderNumber.OrderNumber;

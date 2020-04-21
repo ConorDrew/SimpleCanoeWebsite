@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity.Sys
 {
@@ -208,9 +208,9 @@ namespace FSM.Entity.Sys
             }
         }
 
-        private object _serverConnection = null;
+        private SqlConnection _serverConnection = null;
 
-        private object ServerConnection
+        private SqlConnection ServerConnection
         {
             get
             {
@@ -238,9 +238,9 @@ namespace FSM.Entity.Sys
             }
         }
 
-        private object _command = null;
+        private SqlCommand _command = null;
 
-        private object Command
+        private SqlCommand Command
         {
             get
             {
@@ -253,9 +253,9 @@ namespace FSM.Entity.Sys
             }
         }
 
-        private object _adapter = null;
+        private SqlDataAdapter _adapter = null;
 
-        private object Adapter
+        private SqlDataAdapter Adapter
         {
             get
             {
@@ -429,6 +429,7 @@ namespace FSM.Entity.Sys
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private bool OpenConnection()
         {
             try
@@ -730,7 +731,6 @@ namespace FSM.Entity.Sys
                     {
                         if (!(exception.Number == 1205))
                         {
-
                             // a sql exception that is not a deadlock
                             throw;
                         }
@@ -770,7 +770,7 @@ namespace FSM.Entity.Sys
                         ((SqlCommand)Command).CommandTimeout = 400;
                     }
 
-                    Command.Executenonquery();
+                    Command.ExecuteNonQuery();
                     if (RecordTheInteraction)
                     {
                         RecordInteraction(SPName);
@@ -1129,11 +1129,12 @@ namespace FSM.Entity.Sys
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public async Task<object> ExecuteAsync(string spName, params SqlParameter[] parameters)
         {
-            using (object newConnection = new SqlConnection(App.TheSystem.Configuration.ConnectionString))
+            using (var newConnection = new SqlConnection(App.TheSystem.Configuration.ConnectionString))
             {
-                using (object newCommand = new SqlCommand(spName, (SqlConnection)newConnection))
+                using (var newCommand = new SqlCommand(spName, (SqlConnection)newConnection))
                 {
                     newCommand.CommandType = CommandType.StoredProcedure;
                     if (parameters is object)
