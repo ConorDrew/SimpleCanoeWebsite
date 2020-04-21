@@ -16,7 +16,6 @@ namespace FSM
 
         public UCAbsences(Enums.UserType userType, int absenceID) : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             UserType = userType;
@@ -34,6 +33,32 @@ namespace FSM
             else if (UserType == Enums.UserType.User)
             {
                 LoadUser();
+            }
+        }
+
+        event IUserControl.RecordsChangedEventHandler IUserControl.RecordsChanged
+        {
+            add
+            {
+                throw new NotImplementedException();
+            }
+
+            remove
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        event IUserControl.StateChangedEventHandler IUserControl.StateChanged
+        {
+            add
+            {
+                throw new NotImplementedException();
+            }
+
+            remove
+            {
+                throw new NotImplementedException();
             }
         }
 
@@ -119,6 +144,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         public object LoadedItem
         {
             get

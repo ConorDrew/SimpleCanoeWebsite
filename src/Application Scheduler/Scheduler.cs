@@ -12,12 +12,10 @@ using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
-
     // Imports FSM.Entity.EngineerTimeSheets
 
     public class Scheduler
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private Form __mdiParent;
 
@@ -82,13 +80,14 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public class scheduleComparer : IComparer
         {
             public int Compare(object x, object y)
             {
                 frmEngineerSchedule scheduleX = (frmEngineerSchedule)x;
                 frmEngineerSchedule scheduleY = (frmEngineerSchedule)y;
-                if (scheduleX.EngineerID < scheduleY.EngineerID)
+                if (Conversions.ToInteger(scheduleX.EngineerID) < Conversions.ToInteger(scheduleY.EngineerID))
                 {
                     return -1;
                 }
@@ -96,7 +95,7 @@ namespace FSM
                 {
                     return 0;
                 }
-                else if (scheduleX.EngineerID > scheduleY.EngineerID)
+                else if (Conversions.ToInteger(scheduleX.EngineerID) > Conversions.ToInteger(scheduleY.EngineerID))
                 {
                     return 1;
                 }
@@ -106,6 +105,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         // 'This function gets called when a row is dragged and dropped, forEngineer = 0 when it is dragged onto
         // 'the unscheduled call grid
         // 'Returns true to continue Scheduling row, or false to cancel
@@ -122,7 +122,7 @@ namespace FSM
 
             if (forEngineer != 0)
             {
-                var visitDialog = new frmVisit(forEngineer, forDate, Entity.Sys.Helper.MakeIntegerValid(scheduleRow["SummedSOR"]), AMPMEngineerVisitID, copy);
+                var visitDialog = new FrmVisit(forEngineer, forDate, Entity.Sys.Helper.MakeIntegerValid(scheduleRow["SummedSOR"]), AMPMEngineerVisitID, copy);
                 if (visitDialog.ShowDialog() == DialogResult.OK)
                 {
                     @continue = true;
@@ -228,6 +228,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public Scheduler(Form mdiParent)
         {
             foreach (Control ctl in mdiParent.Controls)
@@ -303,16 +304,16 @@ namespace FSM
                 int index = 0;
                 foreach (DataRow engineer in Engineers.Select("Include"))
                 {
-                    double newWidth = Conversions.ToDouble(_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
+                    double newWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
                     if (newWidth != engineerScheduleWidth)
                     {
-                        engineerScheduleWidth = Conversions.ToDouble(_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
+                        engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
                         foreach (frmEngineerSchedule schedule in _engineerSchedules)
                             schedule.Width = Conversions.ToInteger(engineerScheduleWidth);
                     }
 
                     index += 1;
-                    int row = Conversions.ToInteger(Math.Ceiling(index / _engineerScheduleColumnCount));
+                    int row = Conversions.ToInteger(Math.Ceiling(index / (double)_engineerScheduleColumnCount));
                     int col = Conversions.ToInteger(Math.Floor(index / (double)row));
                     var engineerSchedule = new frmEngineerSchedule(gridMouseDown, gridMouseMove, gridDragOver, gridDragDrop, gridMouseUp, engineer, _ScheduleControl.textsize);
                     engineerSchedule.FormClosing += ScheduleClosing;
@@ -320,7 +321,7 @@ namespace FSM
                     engineerSchedule.MdiParent = _mdiParent;
                     engineerSchedule.Left = Conversions.ToInteger(engineerScheduleWidth * (col - 1));
                     engineerSchedule.Width = Conversions.ToInteger(engineerScheduleWidth);
-                    engineerSchedule.Top = Conversions.ToInteger(_engineerScheduleHeight * (row - 1));
+                    engineerSchedule.Top = Conversions.ToInteger((int)_engineerScheduleHeight * (row - 1));
                     engineerSchedule.Height = Conversions.ToInteger(_engineerScheduleHeight);
                     engineerSchedule.Show();
                     Application.DoEvents();
@@ -1073,7 +1074,6 @@ namespace FSM
 
                         if (!(dgTo == dgFrom))
                         {
-
                             // Physically Move Datarowview to Target datagrid
                             DataView dvTo = null;
                             frmEngineerSchedule engineerScheduleTo = null;
@@ -1219,7 +1219,6 @@ namespace FSM
                                                     int count = Conversions.ToInteger(App.DB.ExecuteScalar(Conversions.ToString("Select COUNT(*) from tblpartcreditparts cp INNER JOIN tblPartsToBeCredited tbc ON tbc.PartsToBeCreditedID = cp.PartsToBeCreditedID WHERE tbc.OrderPArtID = " + d["OrderPartID"])));
                                                     if (count > 0)
                                                     {
-
                                                         // Credits have been recieved
                                                         issue = true;
                                                         break;
@@ -1243,7 +1242,6 @@ namespace FSM
                                         // do nothing
                                         else
                                         {
-
                                             // Start the choice pick up from Location/ return to supplier and start new pickup *owch* /
 
                                             string s = "";
@@ -1487,6 +1485,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void resetHeaders()
         {
             foreach (frmEngineerSchedule engineerSchedule in _engineerSchedules.ToArray(typeof(frmEngineerSchedule)))
@@ -1495,7 +1494,12 @@ namespace FSM
 
         private delegate void setScheduleDropIconsDelegate(DataRow draggedRow);
 
-        private setScheduleDropIconsDelegate scheduleDropIcons = new setScheduleDropIconsDelegate(this.SetScheduleDropIconsBegin);
+        public Scheduler()
+        {
+            scheduleDropIcons = new setScheduleDropIconsDelegate(SetScheduleDropIconsBegin);
+        }
+
+        private setScheduleDropIconsDelegate scheduleDropIcons;
         private IAsyncResult ScheduleDropIconsAsyncResult;
         private bool endDropIconsRefresh;
 
@@ -1560,6 +1564,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ControlResize(object sender, EventArgs e)
         {
             orderScheduleWindows();
@@ -1570,23 +1575,23 @@ namespace FSM
             _mdiClient.Resize -= ControlResize;
             _unscheduledCalls.Resize -= ControlResize;
             double engineerScheduleWidth;
-            engineerScheduleWidth = Conversions.ToDouble(_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
+            engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
             for (int index = 1, loopTo = _engineerSchedules.Count; index <= loopTo; index++)
             {
-                double newWidth = Conversions.ToDouble(_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
+                double newWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
                 if (newWidth != engineerScheduleWidth)
                 {
-                    engineerScheduleWidth = Conversions.ToDouble(_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
+                    engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
                     foreach (frmEngineerSchedule schedule in _engineerSchedules)
                         schedule.Width = Conversions.ToInteger(engineerScheduleWidth);
                 }
 
-                int row = Conversions.ToInteger(Math.Ceiling(index / _engineerScheduleColumnCount));
+                int row = Conversions.ToInteger(Math.Ceiling(index / (double)_engineerScheduleColumnCount));
                 int col = Conversions.ToInteger(Math.Floor(index / (double)row));
                 frmEngineerSchedule peopleSchedule = (frmEngineerSchedule)_engineerSchedules[index - 1];
                 peopleSchedule.Left = Conversions.ToInteger(engineerScheduleWidth * (col - 1));
                 peopleSchedule.Width = Conversions.ToInteger(engineerScheduleWidth);
-                peopleSchedule.Top = Conversions.ToInteger(_engineerScheduleHeight * (row - 1));
+                peopleSchedule.Top = Conversions.ToInteger((int)_engineerScheduleHeight * (row - 1));
                 peopleSchedule.Height = Conversions.ToInteger(_engineerScheduleHeight);
             }
 

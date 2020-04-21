@@ -11,16 +11,17 @@ using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
-    public class frmVisit : FRMBaseForm, ISchedulerForm
+    public class FrmVisit : FRMBaseForm, ISchedulerForm
     {
-        public frmVisit()
+        public FrmVisit()
         {
             base.SizeChanged += frmVisit_SizeChanged;
             base.Load += frmVisit_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public frmVisit(int EngineerIDIn, DateTime Date, int SORTotal, int EngineerVisitID, bool isCopyIn) : base()
+
+        public FrmVisit(int EngineerIDIn, DateTime Date, int SORTotal, int EngineerVisitID, bool isCopyIn) : base()
         {
             base.SizeChanged += frmVisit_SizeChanged;
             base.Load += frmVisit_Load;
@@ -1270,9 +1271,9 @@ namespace FSM
             _GroupBox4.SuspendLayout();
             _Panel9.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // tabCtrlVisits
-            // 
+            //
             _tabCtrlVisits.Controls.Add(_tabStandardVisit);
             _tabCtrlVisits.Controls.Add(_tabComplexVisit);
             _tabCtrlVisits.Location = new Point(0, 33);
@@ -1280,9 +1281,9 @@ namespace FSM
             _tabCtrlVisits.SelectedIndex = 0;
             _tabCtrlVisits.Size = new Size(569, 450);
             _tabCtrlVisits.TabIndex = 2;
-            // 
+            //
             // tabStandardVisit
-            // 
+            //
             _tabStandardVisit.Controls.Add(_GroupBox2);
             _tabStandardVisit.Controls.Add(_GroupBox1);
             _tabStandardVisit.Location = new Point(4, 22);
@@ -1292,9 +1293,9 @@ namespace FSM
             _tabStandardVisit.TabIndex = 0;
             _tabStandardVisit.Text = "Standard Visit";
             _tabStandardVisit.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox2.Controls.Add(_cboAppointment);
             _GroupBox2.Controls.Add(_Label12);
@@ -1317,25 +1318,25 @@ namespace FSM
             _GroupBox2.TabIndex = 3;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Schedule Visit For";
-            // 
+            //
             // cboAppointment
-            // 
+            //
             _cboAppointment.FormattingEnabled = true;
             _cboAppointment.Location = new Point(150, 86);
             _cboAppointment.Name = "cboAppointment";
             _cboAppointment.Size = new Size(210, 21);
             _cboAppointment.TabIndex = 59;
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.Location = new Point(10, 89);
             _Label12.Name = "Label12";
             _Label12.Size = new Size(134, 18);
             _Label12.TabIndex = 58;
             _Label12.Text = "Appointment Type:";
-            // 
+            //
             // lblAMPM
-            // 
+            //
             _lblAMPM.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblAMPM.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAMPM.ForeColor = Color.Red;
@@ -1344,105 +1345,105 @@ namespace FSM
             _lblAMPM.Size = new Size(136, 17);
             _lblAMPM.TabIndex = 57;
             _lblAMPM.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(8, 48);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(176, 17);
             _Label11.TabIndex = 56;
             _Label11.Text = "Blank assumes \"start of day\"";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(200, 48);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(168, 17);
             _Label10.TabIndex = 55;
             _Label10.Text = "Blank assumes \"end of day\"";
-            // 
+            //
             // txtEndTimeMinutes
-            // 
+            //
             _txtEndTimeMinutes.Location = new Point(336, 21);
             _txtEndTimeMinutes.Name = "txtEndTimeMinutes";
             _txtEndTimeMinutes.Size = new Size(24, 21);
             _txtEndTimeMinutes.TabIndex = 3;
-            // 
+            //
             // txtEndTimeHours
-            // 
+            //
             _txtEndTimeHours.Location = new Point(288, 21);
             _txtEndTimeHours.Name = "txtEndTimeHours";
             _txtEndTimeHours.Size = new Size(24, 21);
             _txtEndTimeHours.TabIndex = 3;
-            // 
+            //
             // txtStartTimeMinutes
-            // 
+            //
             _txtStartTimeMinutes.Location = new Point(150, 21);
             _txtStartTimeMinutes.Name = "txtStartTimeMinutes";
             _txtStartTimeMinutes.Size = new Size(24, 21);
             _txtStartTimeMinutes.TabIndex = 2;
-            // 
+            //
             // txtStartTimeHours
-            // 
+            //
             _txtStartTimeHours.Location = new Point(104, 21);
             _txtStartTimeHours.Name = "txtStartTimeHours";
             _txtStartTimeHours.Size = new Size(24, 21);
             _txtStartTimeHours.TabIndex = 1;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label4.Location = new Point(320, 24);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(8, 17);
             _Label4.TabIndex = 4;
             _Label4.Text = ":";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label3.Location = new Point(136, 24);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(8, 17);
             _Label3.TabIndex = 54;
             _Label3.Text = ":";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(200, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(64, 17);
             _Label2.TabIndex = 1;
             _Label2.Text = "End Time";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 24);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(77, 17);
             _Label1.TabIndex = 0;
             _Label1.Text = "Start Time";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSave.Location = new Point(396, 86);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(64, 23);
             _btnSave.TabIndex = 4;
             _btnSave.Text = "Ok";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnCancel.Location = new Point(482, 86);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(64, 23);
             _btnCancel.TabIndex = 5;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_Label9);
@@ -1461,18 +1462,18 @@ namespace FSM
             _GroupBox1.TabIndex = 2;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Planner";
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _Label9.Location = new Point(8, 217);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(533, 16);
             _Label9.TabIndex = 16;
             _Label9.Text = "Hold Shift and LEFT click period for START time or RIGHT click period for END tim" + "e";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label6.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label6.Location = new Point(240, 265);
@@ -1480,9 +1481,9 @@ namespace FSM
             _Label6.Size = new Size(248, 16);
             _Label6.TabIndex = 15;
             _Label6.Text = "NOT OK - Job or Absence overlap";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label5.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label5.Location = new Point(32, 265);
@@ -1490,27 +1491,27 @@ namespace FSM
             _Label5.Size = new Size(184, 16);
             _Label5.TabIndex = 14;
             _Label5.Text = "OK - No overlap";
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel2.BackColor = Color.Salmon;
             _Panel2.Location = new Point(216, 265);
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(16, 16);
             _Panel2.TabIndex = 13;
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel1.BackColor = Color.LightGreen;
             _Panel1.Location = new Point(8, 265);
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(16, 16);
             _Panel1.TabIndex = 12;
-            // 
+            //
             // picPlanner
-            // 
+            //
             _picPlanner.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _picPlanner.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
@@ -1520,9 +1521,9 @@ namespace FSM
             _picPlanner.Size = new Size(541, 181);
             _picPlanner.TabIndex = 0;
             _picPlanner.TabStop = false;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label7.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label7.Location = new Point(32, 241);
@@ -1530,27 +1531,27 @@ namespace FSM
             _Label7.Size = new Size(168, 16);
             _Label7.TabIndex = 11;
             _Label7.Text = "Booked Schedule Period";
-            // 
+            //
             // Panel3
-            // 
+            //
             _Panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel3.BackColor = Color.LightSteelBlue;
             _Panel3.Location = new Point(8, 241);
             _Panel3.Name = "Panel3";
             _Panel3.Size = new Size(16, 16);
             _Panel3.TabIndex = 9;
-            // 
+            //
             // Panel4
-            // 
+            //
             _Panel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel4.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
             _Panel4.Location = new Point(216, 241);
             _Panel4.Name = "Panel4";
             _Panel4.Size = new Size(16, 16);
             _Panel4.TabIndex = 8;
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label8.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label8.Location = new Point(240, 241);
@@ -1558,9 +1559,9 @@ namespace FSM
             _Label8.Size = new Size(176, 16);
             _Label8.TabIndex = 10;
             _Label8.Text = "Free Schedule Period";
-            // 
+            //
             // tabComplexVisit
-            // 
+            //
             _tabComplexVisit.Controls.Add(_GroupBox3);
             _tabComplexVisit.Controls.Add(_btnSaveComplex);
             _tabComplexVisit.Controls.Add(_btnCancel2);
@@ -1572,9 +1573,9 @@ namespace FSM
             _tabComplexVisit.TabIndex = 1;
             _tabComplexVisit.Text = "Complex Visit";
             _tabComplexVisit.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox3
-            // 
+            //
             _GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox3.Controls.Add(_calComplexVisit);
@@ -1590,9 +1591,9 @@ namespace FSM
             _GroupBox3.TabIndex = 13;
             _GroupBox3.TabStop = false;
             _GroupBox3.Text = "Planner";
-            // 
+            //
             // calComplexVisit
-            // 
+            //
             _calComplexVisit.ActiveMonth.Month = 1;
             _calComplexVisit.ActiveMonth.Year = 2018;
             _calComplexVisit.BorderColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(197)), Conversions.ToInteger(Conversions.ToByte(198)), Conversions.ToInteger(Conversions.ToByte(214)));
@@ -1626,9 +1627,9 @@ namespace FSM
             _calComplexVisit.Weekdays.TextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(177)), Conversions.ToInteger(Conversions.ToByte(179)), Conversions.ToInteger(Conversions.ToByte(200)));
             _calComplexVisit.Weeknumbers.Font = new Font("Microsoft Sans Serif", 8.25F);
             _calComplexVisit.Weeknumbers.TextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(177)), Conversions.ToInteger(Conversions.ToByte(179)), Conversions.ToInteger(Conversions.ToByte(200)));
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label14.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label14.Location = new Point(288, 199);
@@ -1636,18 +1637,18 @@ namespace FSM
             _Label14.Size = new Size(248, 16);
             _Label14.TabIndex = 15;
             _Label14.Text = "NOT OK - Job or Absence overlap";
-            // 
+            //
             // Panel5
-            // 
+            //
             _Panel5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel5.BackColor = Color.Salmon;
             _Panel5.Location = new Point(264, 199);
             _Panel5.Name = "Panel5";
             _Panel5.Size = new Size(16, 16);
             _Panel5.TabIndex = 13;
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label16.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label16.Location = new Point(40, 199);
@@ -1655,27 +1656,27 @@ namespace FSM
             _Label16.Size = new Size(107, 14);
             _Label16.TabIndex = 11;
             _Label16.Text = "Selected Dates";
-            // 
+            //
             // Panel7
-            // 
+            //
             _Panel7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel7.BackColor = Color.LightSteelBlue;
             _Panel7.Location = new Point(17, 197);
             _Panel7.Name = "Panel7";
             _Panel7.Size = new Size(16, 16);
             _Panel7.TabIndex = 9;
-            // 
+            //
             // Panel8
-            // 
+            //
             _Panel8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel8.BackColor = Color.DarkOrange;
             _Panel8.Location = new Point(160, 199);
             _Panel8.Name = "Panel8";
             _Panel8.Size = new Size(16, 16);
             _Panel8.TabIndex = 8;
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label17.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label17.Location = new Point(184, 199);
@@ -1683,27 +1684,27 @@ namespace FSM
             _Label17.Size = new Size(71, 16);
             _Label17.TabIndex = 10;
             _Label17.Text = "Weekend";
-            // 
+            //
             // btnSaveComplex
-            // 
+            //
             _btnSaveComplex.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSaveComplex.Location = new Point(397, 389);
             _btnSaveComplex.Name = "btnSaveComplex";
             _btnSaveComplex.Size = new Size(64, 23);
             _btnSaveComplex.TabIndex = 4;
             _btnSaveComplex.Text = "Ok";
-            // 
+            //
             // btnCancel2
-            // 
+            //
             _btnCancel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnCancel2.Location = new Point(490, 389);
             _btnCancel2.Name = "btnCancel2";
             _btnCancel2.Size = new Size(64, 23);
             _btnCancel2.TabIndex = 5;
             _btnCancel2.Text = "Cancel";
-            // 
+            //
             // GroupBox4
-            // 
+            //
             _GroupBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox4.Controls.Add(_btnAdditionalVisit);
             _GroupBox4.Controls.Add(_Panel9);
@@ -1713,9 +1714,9 @@ namespace FSM
             _GroupBox4.TabIndex = 17;
             _GroupBox4.TabStop = false;
             _GroupBox4.Text = "Schedule Visit For";
-            // 
+            //
             // btnAdditionalVisit
-            // 
+            //
             _btnAdditionalVisit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAdditionalVisit.Location = new Point(505, 20);
             _btnAdditionalVisit.Name = "btnAdditionalVisit";
@@ -1724,9 +1725,9 @@ namespace FSM
             _btnAdditionalVisit.Tag = "";
             _btnAdditionalVisit.Text = "+";
             _ttComplexVisits.SetToolTip(_btnAdditionalVisit, "Add new visit");
-            // 
+            //
             // Panel9
-            // 
+            //
             _Panel9.AutoScroll = true;
             _Panel9.Controls.Add(_pnlLayout);
             _Panel9.Controls.Add(_Label13);
@@ -1735,9 +1736,9 @@ namespace FSM
             _Panel9.Name = "Panel9";
             _Panel9.Size = new Size(549, 118);
             _Panel9.TabIndex = 67;
-            // 
+            //
             // pnlLayout
-            // 
+            //
             _pnlLayout.AutoSize = true;
             _pnlLayout.ColumnCount = 6;
             _pnlLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 27.85714F));
@@ -1752,18 +1753,18 @@ namespace FSM
             _pnlLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50.0F));
             _pnlLayout.Size = new Size(371, 30);
             _pnlLayout.TabIndex = 3;
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _Label13.Location = new Point(11, 4);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(421, 21);
             _Label13.TabIndex = 17;
             _Label13.Text = "CLICK + TO ADD VISIT";
-            // 
+            //
             // frmVisit
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(570, 487);
             ControlBox = false;
@@ -1981,6 +1982,12 @@ namespace FSM
             }
         }
 
+        public string EngineerID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public PictureBox PicPlanner => throw new NotImplementedException();
+
+        public DataTable TimeSlotDt { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             DateTime startTime;
@@ -2090,7 +2097,6 @@ namespace FSM
                                 // ShowMessage("Override Password is required to continue, visit not scheduled.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                 // Return False
                                 // End If
-
                             }
                         }
                         else
@@ -2134,7 +2140,6 @@ namespace FSM
                                 // ShowMessage("Override Password is required to continue, visit not scheduled.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                 // Return False
                                 // End If
-
                             }
                         }
                         else
@@ -2358,8 +2363,8 @@ namespace FSM
         }
 
         /// <summary>
-    /// Initialises the mulitple visits tab
-    /// </summary>
+        /// Initialises the mulitple visits tab
+        /// </summary>
         private void InitComplexVisits()
         {
             // set the default properites for calendar
@@ -2372,8 +2377,8 @@ namespace FSM
         }
 
         /// <summary>
-    /// Gets the engineer's schedule for the selected month and highlights the days they are unavailable
-    /// </summary>
+        /// Gets the engineer's schedule for the selected month and highlights the days they are unavailable
+        /// </summary>
         private void UpdateEngineerSchedule()
         {
             // get the month shown and set start and end dates
@@ -2418,11 +2423,11 @@ namespace FSM
         }
 
         /// <summary>
-    /// Check to see if engineer is busy or absent
-    /// </summary>
-    /// <param name="startDate"></param>
-    /// <param name="endDate"></param>
-    /// <returns>Boolean</returns>
+        /// Check to see if engineer is busy or absent
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <returns>Boolean</returns>
         private bool IsEngineerWorkingOrAbsent(DateTime startDate, DateTime endDate)
         {
             // get the engineer's status
@@ -2509,11 +2514,11 @@ namespace FSM
         }
 
         /// <summary>
-    /// Validates the user's selection doesn't overlap with dates they have previously selected
-    /// </summary>
-    /// <param name="startDate"></param>
-    /// <param name="endDate"></param>
-    /// <returns>Boolean</returns>
+        /// Validates the user's selection doesn't overlap with dates they have previously selected
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <returns>Boolean</returns>
         private bool ValidateSelection(DateTime startDate, DateTime endDate)
         {
             bool overlap = false;
