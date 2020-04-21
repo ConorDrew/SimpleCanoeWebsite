@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -12,8 +14,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
 {
@@ -749,20 +749,10 @@ namespace FSM.Entity
 
             public static DataRow GetDataRowFromDataSource(object dataSource, int rowIndex)
             {
-                var dv = dataSource as DataView;
-                if (dv != null)
-                {
-                    return dv.Table.Rows[rowIndex];
-                }
-                var dt = dataSource as DataTable;
-                if (dt != null)
-                {
-                    return dt.Rows[rowIndex];
-                }
-                throw new Exception("Unable to cast datasource");
+                return (dataSource as DataView)?.Table?.Rows[rowIndex]
+                    ?? (dataSource as DataTable)?.Rows[rowIndex]
+                    ?? throw new Exception("Unable to cast datasource");
             }
-
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         }
     }
 }

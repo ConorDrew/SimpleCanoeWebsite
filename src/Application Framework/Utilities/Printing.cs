@@ -1,4 +1,9 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Packaging;
+using FSM.Entity.ContactAttempts;
+using iTextSharp.text.pdf;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -10,14 +15,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using DocumentFormat.OpenXml.Packaging;
-using WP = DocumentFormat.OpenXml.Wordprocessing;
-using FSM.Entity.ContactAttempts;
 using text = iTextSharp.text;
-using iTextSharp.text.pdf;
 using WD = Microsoft.Office.Interop.Word;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
+using WP = DocumentFormat.OpenXml.Wordprocessing;
 
 namespace FSM.Entity
 {
@@ -25,7 +25,6 @@ namespace FSM.Entity
     {
         public class Printing
         {
-
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             private string details1 = "";
             private string details2 = "";
@@ -173,8 +172,6 @@ namespace FSM.Entity
             private string wpFilePath = "";
             private string p = "Gasway100";
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
             public Printing(object detailsToPrintIn, string documentNameIn, Enums.SystemDocumentType printTypeIn, bool multipleDocs = false, int OrderID = 0, bool isEmail = false, int ApptsPerDay = 13, int CustomerID = default, DateTime LetterCreationDate = default, DataTable dt = null)
             {
                 ContractsDT = dt;
@@ -207,8 +204,6 @@ namespace FSM.Entity
                 {
                     case Enums.SystemDocumentType.ContractBatch:
                         {
-
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
                                 GenerateDDMS(ContractsDT.Select());
@@ -233,11 +228,8 @@ namespace FSM.Entity
                             return returnStuff;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ContractExpiry:
                         {
-
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
                                 filePath = GenerateAnnualExpiryLetters(ContractsDT.Select("InvoiceFrequencyID = 6" + " OR ContractTypeID = 69420"));
@@ -258,7 +250,6 @@ namespace FSM.Entity
                                 Cursor.Current = Cursors.Default;
                             }
 
-                            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                             return returnStuff;
                         }
 
@@ -335,8 +326,6 @@ namespace FSM.Entity
                 {
                     case Enums.SystemDocumentType.GSRBatch:
                         {
-
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
                                 LSRErrors.Clear();
@@ -397,11 +386,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ServiceLetters:
                         {
-
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             string folderName = @"C:\";
                             try
                             {
@@ -452,7 +438,7 @@ namespace FSM.Entity
                                 // AMsToDo = dr.Length / 2
 
                                 int servicePriority = 0;
-                                Array rows = App.DB.Picklists.GetAll(Enums.PickListTypes.JOWPriority).Table.Select("Name = 'Service'");
+                                DataRow[] rows = App.DB.Picklists.GetAll(Enums.PickListTypes.JOWPriority).Table.Select("Name = 'Service'");
                                 if (rows.Length == 0)
                                 {
                                     var oPickList = new PickLists.PickList();
@@ -462,7 +448,7 @@ namespace FSM.Entity
                                 }
                                 else
                                 {
-                                    servicePriority = Conversions.ToInteger(((DataRow)rows(0))["ManagerID"]);
+                                    servicePriority = Conversions.ToInteger(((DataRow)rows[0])["ManagerID"]);
                                 }
 
                                 StreamWriter oWriteSolidFuels;
@@ -530,7 +516,7 @@ namespace FSM.Entity
                                             {
                                                 var sorRow = sorRows[0];
                                                 var customerSors = App.DB.CustomerScheduleOfRate.Exists(Conversions.ToInteger(sorRow["ScheduleOfRatesCategoryID"]), Conversions.ToString(sorRow["Description"]), Conversions.ToString(sorRow["Code"]), CustomerID);
-                                                int customerSorId = Helper.MakeIntegerValid(customerSors.ElementAtOrDefault(0)[0]);
+                                                int customerSorId = Helper.MakeIntegerValid(customerSors.Rows[0][0]);
                                                 if (customerSorId > 0)
                                                 {
                                                     var customerSor = App.DB.CustomerScheduleOfRate.Get(customerSorId);
@@ -589,18 +575,18 @@ namespace FSM.Entity
                                                                 int ApptsMinsTally = Conversions.ToInteger(theRow[0]["ApptsMinsTally"]);
                                                                 if (ApptsMinsTally <= MinsPerDayIn / (double)2)
                                                                 {
-                                                                    theRow[0]["count"] += 1;
-                                                                    theRow[0]["AM"] += 1;
-                                                                    theRow[0]["ApptsMinsTally"] += TimeInMins;
+                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
+                                                                    theRow[0]["AM"] = (int)theRow[0]["AM"] + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), Conversions.ToInteger(theRow[0]["AM"]), default, Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                     break;
                                                                 }
                                                                 else if (ApptsMinsTally > MinsPerDayIn / (double)2 & ApptsMinsTally <= MinsPerDayIn)
                                                                 {
-                                                                    theRow[0]["count"] += 1;
-                                                                    theRow[0]["PM"] += 1;
-                                                                    theRow[0]["ApptsMinsTally"] += TimeInMins;
+                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
+                                                                    theRow[0]["PM"] = (int)theRow[0]["PM"] + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), default, Conversions.ToInteger(theRow[0]["PM"]), Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                     break;
@@ -636,17 +622,17 @@ namespace FSM.Entity
                                                                 int ApptsMinsTally = Conversions.ToInteger(theRow[0]["ApptsMinsTally"]);
                                                                 if (ApptsMinsTally <= MinsPerDayIn / (double)2)
                                                                 {
-                                                                    theRow[0]["count"] += 1;
-                                                                    theRow[0]["AM"] += 1;
-                                                                    theRow[0]["ApptsMinsTally"] += TimeInMins;
+                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
+                                                                    theRow[0]["AM"] = (int)theRow[0]["AM"] + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), Conversions.ToInteger(theRow[0]["AM"]), default, Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                 }
                                                                 else if (ApptsMinsTally > MinsPerDayIn / (double)2 & ApptsMinsTally <= MinsPerDayIn)
                                                                 {
-                                                                    theRow[0]["count"] += 1;
-                                                                    theRow[0]["PM"] += 1;
-                                                                    theRow[0]["ApptsMinsTally"] += TimeInMins;
+                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
+                                                                    theRow[0]["PM"] = (int)theRow[0]["PM"] + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), default, Conversions.ToInteger(theRow[0]["PM"]), Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                 }
@@ -677,7 +663,7 @@ namespace FSM.Entity
                                             }
                                             else
                                             {
-                                                theRow[0]["count"] += 1;
+                                                theRow[0]["count"] = (int)theRow[0]["count"] + 1;
                                             }
                                         }
                                         else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(d["Type"], "Letter 3", false)))
@@ -689,7 +675,7 @@ namespace FSM.Entity
                                             }
                                             else
                                             {
-                                                theRow[0]["count"] += 1;
+                                                theRow[0]["count"] = (int)theRow[0]["count"] + 1;
                                             }
                                         }
                                         else
@@ -776,17 +762,17 @@ namespace FSM.Entity
                                                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dDay["MondayDate"], DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), false) & !Operators.ConditionalCompareObjectEqual(dDay["Count"], 0, false)))
                                                         {
                                                             theVisitDate = Conversions.ToDate(dDay["TheDate"]);
-                                                            dDay["Count"] -= 1;
+                                                            dDay["Count"] = (int)dDay["Count"] - 1;
                                                             if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(dDay["AM"], 0, false)))
                                                             {
                                                                 AMPM = "AM";
-                                                                dDay["AM"] -= 1;
+                                                                dDay["AM"] = (int)dDay["AM"] - 1;
                                                                 App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), Conversions.ToInteger(dDay["AM"]), default, Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
                                                             }
                                                             else
                                                             {
                                                                 AMPM = "PM";
-                                                                dDay["PM"] -= 1;
+                                                                dDay["PM"] = (int)dDay["PM"] - 1;
                                                                 App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), default, Conversions.ToInteger(dDay["PM"]), Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
                                                             }
 
@@ -810,14 +796,14 @@ namespace FSM.Entity
                                                     var theRow = dtLetter2AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
                                                     if (theRow.Length > 0)
                                                     {
-                                                        if (Conversions.ToBoolean(theRow[0]["AMAssigned"] >= theRow[0]["Count"] / 2))
+                                                        if (Conversions.ToBoolean((double)theRow[0]["AMAssigned"] >= ((double)theRow[0]["Count"]) / 2))
                                                         {
                                                             AMPM = "PM";
                                                         }
                                                         else
                                                         {
                                                             AMPM = "AM";
-                                                            theRow[0]["AMAssigned"] += 1;
+                                                            theRow[0]["AMAssigned"] = (int)theRow[0]["AMAssigned"] + 1;
                                                         }
                                                     }
 
@@ -839,14 +825,14 @@ namespace FSM.Entity
                                                     var theRow = dtLetter3AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
                                                     if (theRow.Length > 0)
                                                     {
-                                                        if (Conversions.ToBoolean(theRow[0]["AMAssigned"] >= theRow[0]["Count"] / 2))
+                                                        if (Conversions.ToBoolean((double)theRow[0]["AMAssigned"] >= (double)theRow[0]["Count"] / 2))
                                                         {
                                                             AMPM = "PM";
                                                         }
                                                         else
                                                         {
                                                             AMPM = "AM";
-                                                            theRow[0]["AMAssigned"] += 1;
+                                                            theRow[0]["AMAssigned"] = (int)theRow[0]["AMAssigned"] + 1;
                                                         }
                                                     }
                                                 }
@@ -905,7 +891,6 @@ namespace FSM.Entity
 
                                                     if (success == true)
                                                     {
-
                                                         // CREATE JOB
                                                         _currentJob = new Jobs.Job();
                                                         _currentJob.SetPropertyID = r["SiteID"];
@@ -982,7 +967,7 @@ namespace FSM.Entity
                                                             var customerSors = App.DB.CustomerScheduleOfRate.Exists(Conversions.ToInteger(sorRow["ScheduleOfRatesCategoryID"]), Conversions.ToString(sorRow["Description"]), Conversions.ToString(sorRow["Code"]), CustomerID);
                                                             int customerSorId = 0;
                                                             if (customerSors.Rows.Count > 0)
-                                                                customerSorId = Helper.MakeIntegerValid(customerSors.ElementAtOrDefault(0)[0]);
+                                                                customerSorId = Helper.MakeIntegerValid(customerSors.Rows[0][0]);
                                                             if (!(customerSorId > 0))
                                                             {
                                                                 var customerSor = new CustomerScheduleOfRates.CustomerScheduleOfRate()
@@ -1250,8 +1235,7 @@ namespace FSM.Entity
                                 }
 
                                 var dt3rdVisitReport = App.DB.LetterManager.Letter3_TomorrowsVisit(tomorrow);
-                                var exporter = new Exporting(dt3rdVisitReport, "3rd Visits", folderName);
-                                exporter = null;
+                                ExportHelper.Export(dt3rdVisitReport, "3rd Visits", Enums.ExportType.XLS);
                             }
                             catch (Exception ex)
                             {
@@ -1275,17 +1259,14 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ServiceLettersMK2:
                         {
-
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             string folderName = @"C:\";
                             try
                             {
                                 folderName = App.TheSystem.Configuration.DocumentsLocation + @"ServiceLetters\ServiceLetters" + Strings.Format(DateAndTime.Now, "ddMMyyHHmm") + @"\";
                                 Directory.CreateDirectory(folderName);
-                                DataTable dt = (DataTable)((ArrayList)DetailsToPrint)[0].table;
+                                DataTable dt = (DataTable)((ArrayList)DetailsToPrint)[0];
                                 StreamWriter oWriteSolidFuels;
                                 oWriteSolidFuels = File.CreateText(folderName + "SolidFuels.txt");
                                 oWriteSolidFuels.WriteLine("Solid Fuels Properties : ");
@@ -1582,8 +1563,7 @@ namespace FSM.Entity
                                 }
 
                                 var dt3rdVisitReport = App.DB.LetterManager.Letter3_TomorrowsVisit(tomorrow);
-                                var exporter = new Exporting(dt3rdVisitReport, "3rd Visits", folderName);
-                                exporter = null;
+                                ExportHelper.Export(dt3rdVisitReport, "3rd Visits", Enums.ExportType.XLS);
                             }
                             catch (Exception ex)
                             {
@@ -1608,7 +1588,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ServiceLetterReport:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             string folderName = @"C:\";
                             try
@@ -1981,7 +1960,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.GSRDue:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
@@ -2112,7 +2090,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ContractExpiry:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
@@ -2181,7 +2158,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.Invoice:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
@@ -2261,7 +2237,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.SupplierPurchaseOrder:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             ArrayList details = (ArrayList)DetailsToPrint;
                             Sites.Site oSite = null;
@@ -2333,7 +2308,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ContractOption1:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
@@ -2379,7 +2353,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.PartCredit:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
@@ -2453,7 +2426,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ProForma:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
@@ -2519,7 +2491,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.ProFormaFromVisit:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
@@ -2573,7 +2544,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.AlphaPartCredit:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
@@ -2647,7 +2617,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.JobImportLetters:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
@@ -2660,7 +2629,7 @@ namespace FSM.Entity
 
                                 filePath = folderToSaveTo.SelectedPath + @"\" + DocumentName + Strings.Format(DateAndTime.Now, "ddMMMyyyyHHmmss") + ".docx";
                                 File.Copy(Application.StartupPath + @"\Templates\BlankNp.docx", filePath);
-                                DataTable dt = (DataTable)((ArrayList)DetailsToPrint)[0].table;
+                                DataTable dt = (DataTable)((ArrayList)DetailsToPrint)[0];
                                 bool scheduleJobs = Conversions.ToBoolean(((ArrayList)DetailsToPrint)[1]);
                                 var batch = WordprocessingDocument.Open(filePath, true);
                                 using (batch)
@@ -2726,7 +2695,6 @@ namespace FSM.Entity
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     case Enums.SystemDocumentType.SalesCredit:
                         {
-
                             /* TODO ERROR: Skipped RegionDirectiveTrivia */
                             try
                             {
@@ -2824,30 +2792,7 @@ namespace FSM.Entity
                         case Enums.SystemDocumentType.ComCat:
                         case Enums.SystemDocumentType.ComGSR:
                             {
-                                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-
-                                                            Dim engineerVisitId As Integer = If(Me.DetailsToPrint(0).[GetType]() Is GetType(Global.FSM.Entity.EngineerVisits.EngineerVisit), Me.DetailsToPrint(0).EngineerVisitID, Me.DetailsToPrint(0))
-
-                                 */
+                                int engineerVisitId = (((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit)?.EngineerVisitID ?? (int)((ArrayList)DetailsToPrint)[0];
                                 string savePath = string.Empty;
                                 var folderToSaveTo = new FolderBrowserDialog();
                                 folderToSaveTo.ShowDialog();
@@ -2876,78 +2821,16 @@ namespace FSM.Entity
 
                                 if (PrintType == Enums.SystemDocumentType.GSR)
                                 {
+                                    var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
                                     var MinorElectrical = App.DB.EngineerVisitAdditional.EngineerVisitAdditional_GetForEngineerVisit(engineerVisitId, (int)Enums.AdditionalChecksTypes.MinorWorksSingleCircuitElecCert);
                                     if (MinorElectrical is object)
                                     {
-                                        ;
-#error Cannot convert ExpressionStatementSyntax - see comment for details
-                                        /* Cannot convert ExpressionStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                           at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitExpressionStatement>d__31.MoveNext()
-                                        --- End of stack trace from previous location where exception was thrown ---
-                                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                        --- End of stack trace from previous location where exception was thrown ---
-                                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                        --- End of stack trace from previous location where exception was thrown ---
-                                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                           at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                        Input:
-                                                                            Me.ElecCertPDF(CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit), MinorElectrical, "Minor Works Cert")
-
-                                         */
+                                        this.ElecCertPDF(engineerVisit, MinorElectrical, "Minor Works Cert");
                                     };
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                                    /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                                       at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                                       at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                                       at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
 
-                                    Input:
-                                                                    Dim engineerVisit As Global.FSM.Entity.EngineerVisits.EngineerVisit = CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit)
-
-                                     */
-                                    if (engineerVisit is object)
+                                    if (engineerVisit != null)
                                     {
-                                        ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                                        /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                                           at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                                           at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                                           at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                                        --- End of stack trace from previous location where exception was thrown ---
-                                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                        --- End of stack trace from previous location where exception was thrown ---
-                                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                        --- End of stack trace from previous location where exception was thrown ---
-                                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                           at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                        Input:
-                                                                            Dim dvEngineerVisitDefects As Global.System.Data.DataView = CType(Me.DetailsToPrint(2), Global.System.Data.DataView)
-
-                                         */
+                                        var dvEngineerVisitDefects = ((ArrayList)DetailsToPrint)[2] as DataView;
                                         var drWarningNotices = (from x in dvEngineerVisitDefects.Table.AsEnumerable()
                                                                 where Helper.MakeBooleanValid(x["WarningNoticeIssued"]) == true
                                                                 select x).ToArray();
@@ -2962,29 +2845,7 @@ namespace FSM.Entity
 
                         case Enums.SystemDocumentType.ServiceLetters:
                             {
-                                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            Dim dr As Global.System.Data.DataRow = Me.DetailsToPrint(0)
-
-                                 */
+                                var dr = ((ArrayList)DetailsToPrint)[0] as DataRow;
                                 success = this.GenerateServiceLetterMK2(dr, Conversions.ToString(dr["AMPM"]), Conversions.ToDate(dr["StartDateTime"]), Conversions.ToString(dr["JobNUmber"]), DateAndTime.Today, null, Conversions.ToInteger(dr["jobid"]), true);
                                 success = false;
                                 break;
@@ -2992,29 +2853,7 @@ namespace FSM.Entity
 
                         case Enums.SystemDocumentType.ContractOption1:
                             {
-                                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            Dim dr As Global.System.Data.DataRow = CType(Me.DetailsToPrint(0), Global.System.Data.DataTable).Rows(0)
-
-                                 */
+                                var dr = (((ArrayList)DetailsToPrint)[0] as DataTable).Rows[0];
                                 success = this.GenerateContractLetter(dr);
                                 break;
                             }
@@ -3026,27 +2865,8 @@ namespace FSM.Entity
                                 MsWordApp.Visible = false;
                                 object argTemplate = (object)(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\WorkSheet.dot");
                                 WordDoc = MsWordApp.Documents.Add(ref argTemplate);
-                                ;
-#error Cannot convert AssignmentStatementSyntax - see comment for details
-                                /* Cannot convert AssignmentStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitAssignmentStatement>d__32.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            success = Me.GenerateJobSheet(CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit))
-
-                                 */
+                                var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
+                                success = this.GenerateJobSheet(engineerVisit);
                                 break;
                             }
 
@@ -3066,27 +2886,9 @@ namespace FSM.Entity
                                 MsWordApp.Visible = false;
                                 object argTemplate1 = (object)(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\Install.dot");
                                 WordDoc = MsWordApp.Documents.Add(ref argTemplate1);
-                                ;
-#error Cannot convert AssignmentStatementSyntax - see comment for details
-                                /* Cannot convert AssignmentStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitAssignmentStatement>d__32.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
 
-                                Input:
-                                                            success = Me.Install(CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit))
-
-                                 */
+                                var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
+                                success = this.Install(engineerVisit);
                                 break;
                             }
 
@@ -3098,28 +2900,9 @@ namespace FSM.Entity
                                 ;
                                 // new PDF method
                                 Cursor.Current = Cursors.WaitCursor;
-                                ;
-#error Cannot convert ExpressionStatementSyntax - see comment for details
-                                /* Cannot convert ExpressionStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitExpressionStatement>d__31.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            ' new PDF method
-                                                            Me.ElecCertPDF((CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit)), MinorElectrical, "Minor Works Cert")
-
-                                 */
+                                var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
+                                var MinorElectrical = App.DB.EngineerVisitAdditional.EngineerVisitAdditional_GetForEngineerVisit(engineerVisit.EngineerVisitID, (int)Enums.AdditionalChecksTypes.MinorWorksSingleCircuitElecCert);
+                                this.ElecCertPDF(engineerVisit, MinorElectrical, "Minor Works Cert");
                                 break;
                             }
 
@@ -3129,54 +2912,16 @@ namespace FSM.Entity
                                 MsWordApp.DisplayAlerts = WD.WdAlertLevel.wdAlertsNone;
                                 MsWordApp.Visible = false;
                                 Cursor.Current = Cursors.WaitCursor;
-                                ;
-#error Cannot convert AssignmentStatementSyntax - see comment for details
-                                /* Cannot convert AssignmentStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitAssignmentStatement>d__32.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            success = Me.ComChecklist(CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit))
-
-                                 */
+                                var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
+                                success = this.ComChecklist(engineerVisit);
                                 break;
                             }
 
                         case Enums.SystemDocumentType.HotWorksPermit:
                             {
                                 Cursor.Current = Cursors.WaitCursor;
-                                ;
-#error Cannot convert AssignmentStatementSyntax - see comment for details
-                                /* Cannot convert AssignmentStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitAssignmentStatement>d__32.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            success = Me.GenerateHotWorksPermit(CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit))
-
-                                 */
+                                var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
+                                success = this.GenerateHotWorksPermit(engineerVisit);
                                 break;
                             }
 
@@ -3195,27 +2940,8 @@ namespace FSM.Entity
                                 }
 
                                 Cursor.Current = Cursors.WaitCursor;
-                                ;
-#error Cannot convert AssignmentStatementSyntax - see comment for details
-                                /* Cannot convert AssignmentStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitAssignmentStatement>d__32.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            success = Me.SiteVisitReport(CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit), savePath)
-
-                                 */
+                                var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
+                                success = this.SiteVisitReport(engineerVisit, savePath);
                                 filePath = savePath;
                                 break;
                             }
@@ -3227,33 +2953,14 @@ namespace FSM.Entity
                                 MsWordApp.Visible = false;
                                 object argTemplate2 = (object)(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\JobContactLetter.dot");
                                 WordDoc = MsWordApp.Documents.Add(ref argTemplate2);
-                                ;
-#error Cannot convert AssignmentStatementSyntax - see comment for details
-                                /* Cannot convert AssignmentStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitAssignmentStatement>d__32.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            success = Me.JobContactLetter(CType(Me.DetailsToPrint(0), Global.FSM.Entity.Jobs.Job))
-
-                                 */
+                                var job = ((ArrayList)DetailsToPrint)[0] as Jobs.Job;
+                                success = this.JobContactLetter(job);
                                 break;
                             }
 
                         case Enums.SystemDocumentType.SiteLetter:
                             {
-                                SiteID = Conversions.ToInteger(DetailsToPrint.item(1));
+                                SiteID = Convert.ToInt32(((ArrayList)DetailsToPrint)[1]);
                                 FRMSiteLetterList fSelectTemplate = (FRMSiteLetterList)App.ShowForm(typeof(FRMSiteLetterList), true, null);
                                 if (fSelectTemplate.SelectedTemplate.Length > 0)
                                 {
@@ -3317,54 +3024,10 @@ namespace FSM.Entity
 
                         case Enums.SystemDocumentType.Warn:
                             {
-                                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                --- End of stack trace from previous location where exception was thrown ---
-                                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                Input:
-                                                            Dim engineerVisit As Global.FSM.Entity.EngineerVisits.EngineerVisit = CType(Me.DetailsToPrint(0), Global.FSM.Entity.EngineerVisits.EngineerVisit)
-
-                                 */
-                                if (engineerVisit is object)
+                                var engineerVisit = ((ArrayList)DetailsToPrint)[0] as EngineerVisits.EngineerVisit;
+                                if (engineerVisit != null)
                                 {
-                                    ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                                    /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                                       at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                                       at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                                       at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                    Input:
-                                                                    Dim dvEngineerVisitDefects As Global.System.Data.DataView = CType(Me.DetailsToPrint(1), Global.System.Data.DataView)
-
-                                     */
+                                    var dvEngineerVisitDefects = ((ArrayList)DetailsToPrint)[1] as DataView;
                                     var drWarningNotices = (from x in dvEngineerVisitDefects.Table.AsEnumerable()
                                                             where Helper.MakeBooleanValid(x["WarningNoticeIssued"]) == true
                                                             select x).ToArray();
@@ -3438,7 +3101,7 @@ namespace FSM.Entity
                     EngineerVisitAdditionals.EngineerVisitAdditional SaffUnv = null;
                     EngineerVisitAdditionals.EngineerVisitAdditional ComCatAdd = null;
                     DataView dvAdditionalWorksheet = null;
-                    var comLsrList = new List<int>() { Enums.AdditionalChecksTypes.CommercialStrengthTestCP16, Enums.AdditionalChecksTypes.CommercialPurgingTestCP16, Enums.AdditionalChecksTypes.CommercialSiteChecksCP17, Enums.AdditionalChecksTypes.CommercialTightnessTestCP16 };
+                    var comLsrList = new List<int>() { (int)Enums.AdditionalChecksTypes.CommercialStrengthTestCP16, (int)Enums.AdditionalChecksTypes.CommercialPurgingTestCP16, (int)Enums.AdditionalChecksTypes.CommercialSiteChecksCP17, (int)Enums.AdditionalChecksTypes.CommercialTightnessTestCP16 };
                     var dvFaults = App.DB.EngineerVisitDefects.EngineerVisitDefects_GetForEngineerVisit(engineerVisitId);
                     string template = "";
                     string saveDir = App.TheSystem.Configuration.DocumentsLocation + Conversions.ToInteger(Enums.TableNames.tblEngineerVisit) + @"\" + oEngineerVisit.EngineerVisitID;
@@ -3833,7 +3496,7 @@ namespace FSM.Entity
                         }
                     }
 
-                ProptMain:
+                    ProptMain:
                     ;
                     if (PM is object)
                     {
@@ -3872,7 +3535,7 @@ namespace FSM.Entity
                         }
                     }
 
-                SaffUnv:
+                    SaffUnv:
                     ;
                     if (SaffUnv is object)
                     {
@@ -3911,7 +3574,7 @@ namespace FSM.Entity
                         }
                     }
 
-                NextLSR:
+                    NextLSR:
                     ;
                     if (isBlank)
                     {
@@ -3936,7 +3599,7 @@ namespace FSM.Entity
             {
                 try
                 {
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -4691,8 +4354,8 @@ namespace FSM.Entity
                         var withBlock = WordDoc.Tables[2];
                         {
                             var withBlock1 = withBlock.Rows.Add();
-                            withBlock1.Font.Bold = Conversions.ToInteger(false);
-                            withBlock1.Font.Size = 9;
+                            withBlock1.Range.Font.Bold = Conversions.ToInteger(false);
+                            withBlock1.Range.Font.Size = 9;
                             withBlock1.Borders[WD.WdBorderType.wdBorderTop].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                             withBlock1.Borders[WD.WdBorderType.wdBorderBottom].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                         }
@@ -4702,19 +4365,19 @@ namespace FSM.Entity
                         // Job Number /  'Order Number / Contract
                         if (jow.PONumber.Length == 0)
                         {
-                            withBlock.Cell(rowIndex, 1) = job.JobNumber;
+                            withBlock.Cell(rowIndex, 1).Range.Text = job.JobNumber;
                         }
                         else
                         {
-                            withBlock.Cell(rowIndex, 1) = job.JobNumber + " / " + jow.PONumber;
+                            withBlock.Cell(rowIndex, 1).Range.Text = job.JobNumber + " / " + jow.PONumber;
                         }
 
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 1));
-                        withBlock.Cell(rowIndex, 3) = site.Address1 + ", " + site.Address2 + ", " + Helper.FormatPostcode(site.Postcode);
+                        withBlock.Cell(rowIndex, 3).Range.Text = site.Address1 + ", " + site.Address2 + ", " + Helper.FormatPostcode(site.Postcode);
                         int cou = 0;
-                        withBlock.Cell(rowIndex, 4) = EngineerVisit.NotesToEngineer;
-                        withBlock.Cell(rowIndex, 5) = EngineerVisit.OutcomeDetails;
-                        withBlock.Cell(rowIndex, 5).Font.Bold = Conversions.ToInteger(true);
+                        withBlock.Cell(rowIndex, 4).Range.Text = EngineerVisit.NotesToEngineer;
+                        withBlock.Cell(rowIndex, 5).Range.Text = EngineerVisit.OutcomeDetails;
+                        withBlock.Cell(rowIndex, 5).Range.Font.Bold = Conversions.ToInteger(true);
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 4));
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 5));
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 3));
@@ -4722,16 +4385,16 @@ namespace FSM.Entity
 
                     {
                         var withBlock2 = WordDoc.Tables[1];
-                        withBlock2.Cell(3, 1) = Helper.MakeStringValid(site.Name);
-                        withBlock2.Cell(4, 1) = Helper.MakeStringValid(site.Address1);
-                        withBlock2.Cell(5, 1) = Helper.MakeStringValid(site.Address2);
-                        withBlock2.Cell(6, 1) = Helper.MakeStringValid(site.Address3);
-                        withBlock2.Cell(7, 1) = Helper.MakeStringValid(site.Address4);
-                        withBlock2.Cell(8, 1) = Helper.MakeStringValid(site.Address5);
-                        withBlock2.Cell(9, 1) = Helper.MakeStringValid(Helper.FormatPostcode(site.Postcode));
-                        withBlock2.Cell(3, 5) = "";
-                        withBlock2.Cell(5, 5) = Strings.Format(EngineerVisit.StartDateTime, "dd/MM/yyyy");
-                        withBlock2.Cell(7, 5) = Helper.MakeStringValid("");
+                        withBlock2.Cell(3, 1).Range.Text = Helper.MakeStringValid(site.Name);
+                        withBlock2.Cell(4, 1).Range.Text = Helper.MakeStringValid(site.Address1);
+                        withBlock2.Cell(5, 1).Range.Text = Helper.MakeStringValid(site.Address2);
+                        withBlock2.Cell(6, 1).Range.Text = Helper.MakeStringValid(site.Address3);
+                        withBlock2.Cell(7, 1).Range.Text = Helper.MakeStringValid(site.Address4);
+                        withBlock2.Cell(8, 1).Range.Text = Helper.MakeStringValid(site.Address5);
+                        withBlock2.Cell(9, 1).Range.Text = Helper.MakeStringValid(Helper.FormatPostcode(site.Postcode));
+                        withBlock2.Cell(3, 5).Range.Text = "";
+                        withBlock2.Cell(5, 5).Range.Text = Strings.Format(EngineerVisit.StartDateTime, "dd/MM/yyyy");
+                        withBlock2.Cell(7, 5).Range.Text = Helper.MakeStringValid("");
                         Marshal.ReleaseComObject(withBlock2.Cell(3, 1));
                         Marshal.ReleaseComObject(withBlock2.Cell(4, 1));
                         Marshal.ReleaseComObject(withBlock2.Cell(5, 1));
@@ -4757,7 +4420,7 @@ namespace FSM.Entity
                 try
                 {
                     string jobnumber = "";
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DetailsToPrint.item(0), "JOB", false)))
+                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(((ArrayList)DetailsToPrint)[0], "JOB", false)))
                     {
                         jobnumber = job.JobNumber;
                     }
@@ -4775,8 +4438,8 @@ namespace FSM.Entity
                         var withBlock = WordDoc.Tables[2];
                         {
                             var withBlock1 = withBlock.Rows.Add();
-                            withBlock1.Font.Bold = Conversions.ToInteger(false);
-                            withBlock1.Font.Size = 9;
+                            withBlock1.Range.Font.Bold = Conversions.ToInteger(false);
+                            withBlock1.Range.Font.Size = 9;
                             withBlock1.Borders[WD.WdBorderType.wdBorderTop].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                             withBlock1.Borders[WD.WdBorderType.wdBorderBottom].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                         }
@@ -4784,18 +4447,18 @@ namespace FSM.Entity
                         rowIndex += 1;
 
                         // Job Number /  'Order Number / Contract
-                        withBlock.Cell(rowIndex, 1) = jobnumber;
+                        withBlock.Cell(rowIndex, 1).Range.Text = jobnumber;
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 1));
-                        var switchExpr = Helper.MakeStringValid(DetailsToPrint.item(0));
+                        var switchExpr = Helper.MakeStringValid(((ArrayList)DetailsToPrint)[0]);
                         switch (switchExpr)
                         {
                             case "JOB":
                                 {
                                     var site = App.DB.Sites.Get(job.PropertyID);
-                                    withBlock.Cell(rowIndex, 3) = site.Address1 + ", " + site.Address2 + ", " + Helper.FormatPostcode(site.Postcode);
-                                    withBlock.Cell(rowIndex, 4) = details1;
-                                    withBlock.Cell(rowIndex, 5) = Strings.Format(Conversions.ToDouble(details2), "C");
-                                    withBlock.Cell(rowIndex, 5).Font.Bold = Conversions.ToInteger(true);
+                                    withBlock.Cell(rowIndex, 3).Range.Text = site.Address1 + ", " + site.Address2 + ", " + Helper.FormatPostcode(site.Postcode);
+                                    withBlock.Cell(rowIndex, 4).Range.Text = details1;
+                                    withBlock.Cell(rowIndex, 5).Range.Text = Strings.Format(Conversions.ToDouble(details2), "C");
+                                    withBlock.Cell(rowIndex, 5).Range.Font.Bold = Conversions.ToInteger(true);
                                     subTotal += Conversions.ToDouble(details2);
                                     Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 3));
                                     Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 4));
@@ -4806,9 +4469,9 @@ namespace FSM.Entity
                             case "CONTRACT":
                                 {
                                     var site = App.DB.Sites.Get(cos.PropertyID);
-                                    withBlock.Cell(rowIndex, 3) = site.Address1 + ", " + site.Address2 + ", " + Helper.FormatPostcode(site.Postcode);
-                                    withBlock.Cell(rowIndex, 4) = details1;
-                                    withBlock.Cell(rowIndex, 5) = Strings.Format(Conversions.ToDouble(details2), "C");
+                                    withBlock.Cell(rowIndex, 3).Range.Text = site.Address1 + ", " + site.Address2 + ", " + Helper.FormatPostcode(site.Postcode);
+                                    withBlock.Cell(rowIndex, 4).Range.Text = details1;
+                                    withBlock.Cell(rowIndex, 5).Range.Text = Strings.Format(Conversions.ToDouble(details2), "C");
                                     subTotal += Helper.MakeDoubleValid(details2);
                                     Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 3));
                                     Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 4));
@@ -4818,7 +4481,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    decimal VATRate = Conversions.ToDecimal(Helper.MakeDoubleValid(DetailsToPrint.item(4)));
+                    decimal VATRate = Conversions.ToDecimal(Helper.MakeDoubleValid(((ArrayList)DetailsToPrint)[4]));
                     decimal VATRateDecimal = VATRate / 100;
 
                     // ***********************************************************************************
@@ -4826,11 +4489,11 @@ namespace FSM.Entity
 
                     {
                         var withBlock2 = WordDoc.Tables[1];
-                        withBlock2.Cell(1, 1) = Helper.MakeStringValid("PRO-FORMA");
+                        withBlock2.Cell(1, 1).Range.Text = Helper.MakeStringValid("PRO-FORMA");
                         {
                             var withBlock3 = WordDoc.Tables[3];
-                            withBlock3.Cell(2, 1) = "PRO-FORMA";
-                            withBlock3.Cell(3, 1) = "This is NOT a VAT Invoice";
+                            withBlock3.Cell(2, 1).Range.Text = "PRO-FORMA";
+                            withBlock3.Cell(3, 1).Range.Text = "This is NOT a VAT Invoice";
                             Marshal.ReleaseComObject(withBlock3.Cell(2, 1));
                             Marshal.ReleaseComObject(withBlock3.Cell(3, 1));
                         }
@@ -4838,19 +4501,19 @@ namespace FSM.Entity
                         Marshal.ReleaseComObject(withBlock2.Cell(1, 1));
                     }
 
-                    var dtinvoicedetails = App.DB.Invoiced.InvoiceDetails_Get_InvoiceToBeRaisedID(Conversions.ToInteger(DetailsToPrint.item(5))).Table;
+                    var dtinvoicedetails = App.DB.Invoiced.InvoiceDetails_Get_InvoiceToBeRaisedID(Conversions.ToInteger(((ArrayList)DetailsToPrint)[5])).Table;
                     {
                         var withBlock4 = WordDoc.Tables[1];
-                        withBlock4.Cell(3, 1) = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["SiteName"]);
-                        withBlock4.Cell(4, 1) = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address1"]);
-                        withBlock4.Cell(5, 1) = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address2"]);
-                        withBlock4.Cell(6, 1) = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address3"]);
-                        withBlock4.Cell(7, 1) = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address4"]);
-                        withBlock4.Cell(8, 1) = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address5"]);
-                        withBlock4.Cell(9, 1) = Helper.MakeStringValid(Helper.FormatPostcode(dtinvoicedetails.Rows[0]["postcode"]));
-                        withBlock4.Cell(3, 5) = "";
-                        withBlock4.Cell(5, 5) = Strings.Format(DateAndTime.Today, "dd/MM/yyyy");
-                        withBlock4.Cell(7, 5) = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["AccountNumber"]);
+                        withBlock4.Cell(3, 1).Range.Text = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["SiteName"]);
+                        withBlock4.Cell(4, 1).Range.Text = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address1"]);
+                        withBlock4.Cell(5, 1).Range.Text = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address2"]);
+                        withBlock4.Cell(6, 1).Range.Text = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address3"]);
+                        withBlock4.Cell(7, 1).Range.Text = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address4"]);
+                        withBlock4.Cell(8, 1).Range.Text = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["address5"]);
+                        withBlock4.Cell(9, 1).Range.Text = Helper.MakeStringValid(Helper.FormatPostcode(dtinvoicedetails.Rows[0]["postcode"]));
+                        withBlock4.Cell(3, 5).Range.Text = "";
+                        withBlock4.Cell(5, 5).Range.Text = Strings.Format(DateAndTime.Today, "dd/MM/yyyy");
+                        withBlock4.Cell(7, 5).Range.Text = Helper.MakeStringValid(dtinvoicedetails.Rows[0]["AccountNumber"]);
                         Marshal.ReleaseComObject(withBlock4.Cell(3, 1));
                         Marshal.ReleaseComObject(withBlock4.Cell(4, 1));
                         Marshal.ReleaseComObject(withBlock4.Cell(5, 1));
@@ -4864,9 +4527,9 @@ namespace FSM.Entity
 
                     {
                         var withBlock5 = WordDoc.Tables[3];
-                        withBlock5.Cell(2, 5) = Strings.Format(subTotal, "C");
-                        withBlock5.Cell(3, 5) = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal), "C");
-                        withBlock5.Cell(4, 5) = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal) + subTotal, "C");
+                        withBlock5.Cell(2, 5).Range.Text = Strings.Format(subTotal, "C");
+                        withBlock5.Cell(3, 5).Range.Text = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal), "C");
+                        withBlock5.Cell(4, 5).Range.Text = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal) + subTotal, "C");
                         {
                             var withBlock6 = withBlock5.Rows;
                             withBlock6.WrapAroundText = Conversions.ToInteger(true);
@@ -4900,7 +4563,7 @@ namespace FSM.Entity
                 try
                 {
                     string jobnumber = "";
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DetailsToPrint.item(0), "JOB", false)))
+                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(((ArrayList)DetailsToPrint)[0], "JOB", false)))
                     {
                         jobnumber = job.JobNumber;
                     }
@@ -4925,8 +4588,8 @@ namespace FSM.Entity
                         var withBlock = WordDoc.Tables[2];
                         {
                             var withBlock1 = withBlock.Rows.Add();
-                            withBlock1.Font.Bold = Conversions.ToInteger(false);
-                            withBlock1.Font.Size = 9;
+                            withBlock1.Range.Font.Bold = Conversions.ToInteger(false);
+                            withBlock1.Range.Font.Size = 9;
                             withBlock1.Borders[WD.WdBorderType.wdBorderTop].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                             withBlock1.Borders[WD.WdBorderType.wdBorderBottom].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                         }
@@ -4934,12 +4597,12 @@ namespace FSM.Entity
                         rowIndex += 1;
 
                         // Job Number /
-                        withBlock.Cell(rowIndex, 1) = jobnumber;
+                        withBlock.Cell(rowIndex, 1).Range.Text = jobnumber;
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 1));
-                        withBlock.Cell(rowIndex, 3) = sites.Address1 + ", " + sites.Address2 + ", " + Helper.FormatPostcode(sites.Postcode);
-                        withBlock.Cell(rowIndex, 4) = details1;
-                        withBlock.Cell(rowIndex, 5) = Strings.Format(Conversions.ToDouble(details2), "C");
-                        withBlock.Cell(rowIndex, 5).Font.Bold = Conversions.ToInteger(true);
+                        withBlock.Cell(rowIndex, 3).Range.Text = sites.Address1 + ", " + sites.Address2 + ", " + Helper.FormatPostcode(sites.Postcode);
+                        withBlock.Cell(rowIndex, 4).Range.Text = details1;
+                        withBlock.Cell(rowIndex, 5).Range.Text = Strings.Format(Conversions.ToDouble(details2), "C");
+                        withBlock.Cell(rowIndex, 5).Range.Font.Bold = Conversions.ToInteger(true);
                         subTotal += Conversions.ToDouble(details2);
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 3));
                         Marshal.ReleaseComObject(withBlock.Cell(rowIndex, 4));
@@ -4947,7 +4610,7 @@ namespace FSM.Entity
                     }
 
                     var customer = App.DB.Customer.Customer_Get(sites.CustomerID);
-                    decimal VATRate = Conversions.ToDecimal(Helper.MakeDoubleValid(DetailsToPrint.item(4)));
+                    decimal VATRate = Conversions.ToDecimal(Helper.MakeDoubleValid(((ArrayList)DetailsToPrint)[4]));
                     decimal VATRateDecimal = VATRate / 100;
 
                     // ***********************************************************************************
@@ -4955,11 +4618,11 @@ namespace FSM.Entity
 
                     {
                         var withBlock2 = WordDoc.Tables[1];
-                        withBlock2.Cell(1, 1) = Helper.MakeStringValid("PRO-FORMA");
+                        withBlock2.Cell(1, 1).Range.Text = Helper.MakeStringValid("PRO-FORMA");
                         {
                             var withBlock3 = WordDoc.Tables[3];
-                            withBlock3.Cell(2, 1) = "PRO-FORMA";
-                            withBlock3.Cell(3, 1) = "This is NOT a VAT Invoice";
+                            withBlock3.Cell(2, 1).Range.Text = "PRO-FORMA";
+                            withBlock3.Cell(3, 1).Range.Text = "This is NOT a VAT Invoice";
                             Marshal.ReleaseComObject(withBlock3.Cell(2, 1));
                             Marshal.ReleaseComObject(withBlock3.Cell(3, 1));
                         }
@@ -4969,16 +4632,16 @@ namespace FSM.Entity
 
                     {
                         var withBlock4 = WordDoc.Tables[1];
-                        withBlock4.Cell(3, 1) = Helper.MakeStringValid(siteHO.Name);
-                        withBlock4.Cell(4, 1) = Helper.MakeStringValid(siteHO.Address1);
-                        withBlock4.Cell(5, 1) = Helper.MakeStringValid(siteHO.Address2);
-                        withBlock4.Cell(6, 1) = Helper.MakeStringValid(siteHO.Address3);
-                        withBlock4.Cell(7, 1) = Helper.MakeStringValid(siteHO.Address4);
-                        withBlock4.Cell(8, 1) = Helper.MakeStringValid(siteHO.Address5);
-                        withBlock4.Cell(9, 1) = Helper.MakeStringValid(Helper.FormatPostcode(siteHO.Postcode));
-                        withBlock4.Cell(3, 5) = "";
-                        withBlock4.Cell(5, 5) = Strings.Format(DateAndTime.Today, "dd/MM/yyyy");
-                        withBlock4.Cell(7, 5) = Helper.MakeStringValid(customer.AccountNumber);
+                        withBlock4.Cell(3, 1).Range.Text = Helper.MakeStringValid(siteHO.Name);
+                        withBlock4.Cell(4, 1).Range.Text = Helper.MakeStringValid(siteHO.Address1);
+                        withBlock4.Cell(5, 1).Range.Text = Helper.MakeStringValid(siteHO.Address2);
+                        withBlock4.Cell(6, 1).Range.Text = Helper.MakeStringValid(siteHO.Address3);
+                        withBlock4.Cell(7, 1).Range.Text = Helper.MakeStringValid(siteHO.Address4);
+                        withBlock4.Cell(8, 1).Range.Text = Helper.MakeStringValid(siteHO.Address5);
+                        withBlock4.Cell(9, 1).Range.Text = Helper.MakeStringValid(Helper.FormatPostcode(siteHO.Postcode));
+                        withBlock4.Cell(3, 5).Range.Text = "";
+                        withBlock4.Cell(5, 5).Range.Text = Strings.Format(DateAndTime.Today, "dd/MM/yyyy");
+                        withBlock4.Cell(7, 5).Range.Text = Helper.MakeStringValid(customer.AccountNumber);
                         Marshal.ReleaseComObject(withBlock4.Cell(3, 1));
                         Marshal.ReleaseComObject(withBlock4.Cell(4, 1));
                         Marshal.ReleaseComObject(withBlock4.Cell(5, 1));
@@ -4992,9 +4655,9 @@ namespace FSM.Entity
 
                     {
                         var withBlock5 = WordDoc.Tables[3];
-                        withBlock5.Cell(2, 5) = Strings.Format(subTotal, "C");
-                        withBlock5.Cell(3, 5) = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal), "C");
-                        withBlock5.Cell(4, 5) = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal) + subTotal, "C");
+                        withBlock5.Cell(2, 5).Range.Text = Strings.Format(subTotal, "C");
+                        withBlock5.Cell(3, 5).Range.Text = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal), "C");
+                        withBlock5.Cell(4, 5).Range.Text = Strings.Format(subTotal * Conversions.ToDouble(VATRateDecimal) + subTotal, "C");
                         {
                             var withBlock6 = withBlock5.Rows;
                             withBlock6.WrapAroundText = Conversions.ToInteger(true);
@@ -5025,143 +4688,44 @@ namespace FSM.Entity
 
             private bool QCPrint()
             {
-                ;
-#error Cannot convert SelectBlockSyntax - see comment for details
-                /* Cannot convert SelectBlockSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<GetExpressionWithoutSideEffects>d__59.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitSelectBlock>d__58.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
+                var worksheet = Convert.ToInt32(((ArrayList)DetailsToPrint)[1]);
+                switch ((Enums.AdditionalChecksTypes)worksheet)
+                {
+                    case Enums.AdditionalChecksTypes.WorkInProgressAuditDomGASWork:
+                        WordDoc = MsWordApp.Documents.Add(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\WIP Audit Domestic Gas Work.dot");
+                        break;
 
-                Input:
-                                Select Case Global.FSM.Entity.Sys.Helper.MakeIntegerValid(Me.DetailsToPrint(1))
-                                    Case CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.WorkInProgressAuditDomGASWork)
-                                        Me.WordDoc = MsWordApp.Documents.Add(Global.System.Windows.Forms.Application.StartupPath & Global.FSM.App.TheSystem.Configuration.TemplateLocation & "\WIP Audit Domestic Gas Work.dot")
-                                    Case CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.PostCompleteAuditDomWork)
-                                        Me.WordDoc = MsWordApp.Documents.Add(Global.System.Windows.Forms.Application.StartupPath & Global.FSM.App.TheSystem.Configuration.TemplateLocation & "\Post Complete Audit Domestic Work.dot")
-                                    Case CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.WorkInProgressAuditDomesticOilWork)
-                                        Me.WordDoc = MsWordApp.Documents.Add(Global.System.Windows.Forms.Application.StartupPath & Global.FSM.App.TheSystem.Configuration.TemplateLocation & "\WIP Audit Domestic Oil Work.dot")
-                                    Case CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.WorkInProgressAuditCommercialGASWork)
-                                        Me.WordDoc = MsWordApp.Documents.Add(Global.System.Windows.Forms.Application.StartupPath & Global.FSM.App.TheSystem.Configuration.TemplateLocation & "\WIP Audit Commercial Gas Work.dot")
-                                    Case CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.ElectricalAudit)
-                                        Me.WordDoc = MsWordApp.Documents.Add(Global.System.Windows.Forms.Application.StartupPath & Global.FSM.App.TheSystem.Configuration.TemplateLocation & "\ElectricalQC.dot")
-                                End Select
+                    case Enums.AdditionalChecksTypes.PostCompleteAuditDomWork:
+                        WordDoc = MsWordApp.Documents.Add(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\Post Complete Audit Domestic Work.dot");
+                        break;
 
-                 */
-                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
+                    case Enums.AdditionalChecksTypes.WorkInProgressAuditDomesticOilWork:
+                        WordDoc = MsWordApp.Documents.Add(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\WIP Audit Domestic Oil Work.dot");
+                        break;
 
-                Input:
+                    case Enums.AdditionalChecksTypes.WorkInProgressAuditCommercialGASWork:
+                        WordDoc = MsWordApp.Documents.Add(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\WIP Audit Commercial Gas Work.dot");
+                        break;
 
-                                Dim add As Global.FSM.Entity.EngineerVisitAdditionals.EngineerVisitAdditional = Global.FSM.App.DB.EngineerVisitAdditional.EngineerVisitAdditional_GetForEngineerVisit(Me.DetailsToPrint(0), Me.DetailsToPrint(1))
+                    case Enums.AdditionalChecksTypes.ElectricalAudit:
+                        WordDoc = MsWordApp.Documents.Add(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\ElectricalQC.dot");
+                        break;
+                }
 
-                 */
+                var engineerVisitId = Convert.ToInt32(((ArrayList)DetailsToPrint)[0]);
+                var type = Convert.ToInt32(((ArrayList)DetailsToPrint)[1]);
+                var add = App.DB.EngineerVisitAdditional.EngineerVisitAdditional_GetForEngineerVisit(engineerVisitId, type);
                 if (add.Test125 == 0)
                     add.SetTest125 = 53;
                 var eng = App.DB.Engineer.Engineer_Get(Conversions.ToInteger(add.Test125));
-                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                Input:
-                                Dim engv As Global.System.Data.DataTable = Global.FSM.App.DB.EngineerVisits.EngineerVisits_Get(Me.DetailsToPrint(0)).Table
-
-                 */
-                var auitor = App.DB.Engineer.Engineer_Get(Conversions.ToInteger(engv.ElementAtOrDefault(0)["EngineerID"]));
-                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                Input:
-                                Dim address As Global.FSM.Entity.Sites.Site = Global.FSM.App.DB.Sites.[Get](Me.DetailsToPrint(0), Global.FSM.Entity.Sites.SiteSQL.GetBy.EngineerVisitId)
-
-                 */
-                ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                Input:
-                                Dim job As Global.FSM.Entity.Jobs.Job = Global.FSM.App.DB.Job.Job_Get_For_An_EngineerVisit_ID(Me.DetailsToPrint(0))
-
-                 */
+                var engv = App.DB.EngineerVisits.EngineerVisits_Get(engineerVisitId)?.Table;
+                var auitor = App.DB.Engineer.Engineer_Get(Conversions.ToInteger(engv.Rows[0]["EngineerID"]));
+                var address = App.DB.Sites.Get(engineerVisitId, Sites.SiteSQL.GetBy.EngineerVisitId);
+                var job = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(engineerVisitId);
                 var customer = App.DB.Customer.Customer_Get(address.CustomerID);
                 try
                 {
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -5239,7 +4803,7 @@ namespace FSM.Entity
                             case var case10 when case10 == "[sum]".ToLower():
                                 {
                                     var argmsWordDoc10 = WordDoc;
-                                    ReplaceText(ref argmsWordDoc10, wordField.Value, Helper.MakeStringValid(engv.ElementAtOrDefault(0)["OutcomeDetails"]));
+                                    ReplaceText(ref argmsWordDoc10, wordField.Value, Helper.MakeStringValid(engv.Rows[0]["OutcomeDetails"]));
                                     break;
                                 }
 
@@ -5252,45 +4816,31 @@ namespace FSM.Entity
 
                             case var case12 when case12 == "[gs]".ToLower():
                                 {
-                                    ;
-#error Cannot convert MultiLineIfBlockSyntax - see comment for details
-                                    /* Cannot convert MultiLineIfBlockSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                                       at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitMultiLineIfBlock>d__50.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                                    --- End of stack trace from previous location where exception was thrown ---
-                                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                                       at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                                    Input:
-                                                                    If Me.DetailsToPrint(1) = CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.WorkInProgressAuditDomesticOilWork) Or address.SiteFuel = "Oil" Then
-                                                                        Global.FSM.Entity.Sys.Printing.ReplaceText(Me.WordDoc, wordField.Value, Global.FSM.Entity.Sys.Helper.MakeStringValid(eng.OftecNo))
-                                                                    Else
-                                                                        Global.FSM.Entity.Sys.Printing.ReplaceText(Me.WordDoc, wordField.Value, Global.FSM.Entity.Sys.Helper.MakeStringValid(eng.GasSafeNo))
-                                                                    End If
-
-                                     */
+                                    var oilId = Convert.ToInt32(((ArrayList)DetailsToPrint)[1]);
+                                    if (oilId == (int)Enums.AdditionalChecksTypes.WorkInProgressAuditDomesticOilWork || address.SiteFuel == "Oil")
+                                    {
+                                        var argmsWordDoc12 = WordDoc;
+                                        ReplaceText(ref argmsWordDoc12, wordField.Value, Helper.MakeStringValid(eng.OftecNo));
+                                    }
+                                    else
+                                    {
+                                        var argmsWordDoc12 = WordDoc;
+                                        ReplaceText(ref argmsWordDoc12, wordField.Value, Helper.MakeStringValid(eng.GasSafeNo));
+                                    }
                                     break;
                                 }
 
                             case var case13 when case13 == "[date]".ToLower():
                                 {
                                     var argmsWordDoc12 = WordDoc;
-                                    ReplaceText(ref argmsWordDoc12, wordField.Value, Helper.MakeStringValid(Strings.Format(engv.ElementAtOrDefault(0)["StartDateTime"], "dd/MM/yyyy")));
+                                    ReplaceText(ref argmsWordDoc12, wordField.Value, Helper.MakeStringValid(Strings.Format(engv.Rows[0]["StartDateTime"], "dd/MM/yyyy")));
                                     break;
                                 }
 
                             case var case14 when case14 == "[date2]".ToLower():
                                 {
                                     var argmsWordDoc13 = WordDoc;
-                                    ReplaceText(ref argmsWordDoc13, wordField.Value, Helper.MakeStringValid(Strings.Format(engv.ElementAtOrDefault(0)["StartDateTime"], "dd/MM/yyyy")));
+                                    ReplaceText(ref argmsWordDoc13, wordField.Value, Helper.MakeStringValid(Strings.Format(engv.Rows[0]["StartDateTime"], "dd/MM/yyyy")));
                                     break;
                                 }
 
@@ -5717,64 +5267,29 @@ namespace FSM.Entity
                         }
                     }
 
-                    if (engv.ElementAtOrDefault(0)["EngineerSignature"] is object)
+                    if (engv.Rows[0]["EngineerSignature"] is object)
                     {
-                        byte[] es = (byte[])engv.ElementAtOrDefault(0)["EngineerSignature"];
+                        byte[] es = (byte[])engv.Rows[0]["EngineerSignature"];
                         var engSig = new Bitmap(new MemoryStream(es));
                         engSig.Save(Application.StartupPath + @"\TEMP\EngSig.bmp");
-                        ;
-#error Cannot convert MultiLineIfBlockSyntax - see comment for details
-                        /* Cannot convert MultiLineIfBlockSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                           at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitMultiLineIfBlock>d__50.MoveNext()
-                        --- End of stack trace from previous location where exception was thrown ---
-                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                        --- End of stack trace from previous location where exception was thrown ---
-                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                        --- End of stack trace from previous location where exception was thrown ---
-                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                           at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                        Input:
-                                                If Me.DetailsToPrint(1) <> CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.ElectricalAudit) Then
-                                                    WordDoc.Bookmarks.Item("asig").Range.InlineShapes.AddPicture(Global.System.Windows.Forms.Application.StartupPath & "\Temp\EngSig.bmp")
-                                                End If
-
-                         */
+                        var worksheetType = Convert.ToInt32(((ArrayList)DetailsToPrint)[1]);
+                        if (worksheetType != (int)Enums.AdditionalChecksTypes.ElectricalAudit)
+                        {
+                            WordDoc.Bookmarks["asig"].Range.InlineShapes.AddPicture(Application.StartupPath + @"\Temp\EngSig.bmp");
+                        }
                     }
 
-                    if (engv.ElementAtOrDefault(0)["CustomerSignature"] is object)
+                    if (engv.Rows[0]["CustomerSignature"] is object)
                     {
-                        byte[] cs = (byte[])engv.ElementAtOrDefault(0)["CustomerSignature"];
+                        byte[] cs = (byte[])engv.Rows[0]["CustomerSignature"];
                         var custSig = new Bitmap(new MemoryStream(cs));
                         custSig.Save(Application.StartupPath + @"\TEMP\CustSig.bmp");
-                        ;
-#error Cannot convert MultiLineIfBlockSyntax - see comment for details
-                        /* Cannot convert MultiLineIfBlockSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                           at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitMultiLineIfBlock>d__50.MoveNext()
-                        --- End of stack trace from previous location where exception was thrown ---
-                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                        --- End of stack trace from previous location where exception was thrown ---
-                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                           at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                        --- End of stack trace from previous location where exception was thrown ---
-                           at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                           at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                           at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
 
-                        Input:
-                                                If Me.DetailsToPrint(1) <> CInt(Global.FSM.Entity.Sys.Enums.AdditionalChecksTypes.ElectricalAudit) Then
-                                                    WordDoc.Bookmarks.Item("esig").Range.InlineShapes.AddPicture(Global.System.Windows.Forms.Application.StartupPath & "\Temp\CustSig.bmp")
-                                                End If
-
-                         */
+                        var worksheetType = Convert.ToInt32(((ArrayList)DetailsToPrint)[1]);
+                        if (worksheetType != (int)Enums.AdditionalChecksTypes.ElectricalAudit)
+                        {
+                            WordDoc.Bookmarks["esig"].Range.InlineShapes.AddPicture(Application.StartupPath + @"\Temp\CustSig.bmp");
+                        }
                     }
 
                     return true;
@@ -5790,7 +5305,7 @@ namespace FSM.Entity
             {
                 try
                 {
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -6877,7 +6392,7 @@ namespace FSM.Entity
                             }
                         }
 
-                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content))
+                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content.ToString()))
                         {
                             var switchExpr = wordField.Value;
                             switch (switchExpr)
@@ -7274,7 +6789,7 @@ namespace FSM.Entity
                     catch (Exception ex)
                     {
                         actualNo -= 1;
-                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content))
+                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content.ToString()))
                         {
                             var switchExpr = wordField.Value;
                             switch (switchExpr)
@@ -8222,7 +7737,7 @@ namespace FSM.Entity
                         var switchExpr = visitCharge.ChargeTypeID;
                         switch (switchExpr)
                         {
-                            case Conversions.ToInteger(Enums.JobChargingType.QuoteValue):
+                            case (int)Enums.JobChargingType.QuoteValue:
                                 {
                                     if (job.JobDefinitionEnumID == Conversions.ToInteger(Enums.JobDefinition.Quoted))
                                     {
@@ -8232,13 +7747,13 @@ namespace FSM.Entity
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.JobChargingType.JobValue):
+                            case (int)Enums.JobChargingType.JobValue:
                                 {
                                     total = visitCharge.JobValue;
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.JobChargingType.PercentageOfQuote):
+                            case (int)Enums.JobChargingType.PercentageOfQuote:
                                 {
                                     if (job.JobDefinitionEnumID == Conversions.ToInteger(Enums.JobDefinition.Quoted))
                                     {
@@ -8505,32 +8020,9 @@ namespace FSM.Entity
                 {
                     var oSite = App.DB.Sites.Get(job.PropertyID);
                     var oCustomer = App.DB.Customer.Customer_Get(oSite.CustomerID);
-                    ;
-#error Cannot convert LocalDeclarationStatementSyntax - see comment for details
-                    /* Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax'.
-                       at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
-                       at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
-                       at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitLocalDeclarationStatement>d__28.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                    --- End of stack trace from previous location where exception was thrown ---
-                       at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                       at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                       at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                    Input:
-
-                                        Dim visitDate As String = Me.DetailsToPrint(1)
-
-                     */
+                    var visitDate = ((ArrayList)DetailsToPrint)[1].ToString();
                     int currentPage = 1;
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -10768,7 +10260,7 @@ namespace FSM.Entity
                         ositeHQ = App.DB.Sites.Get(oSite.CustomerID, Sites.SiteSQL.GetBy.CustomerHq);
                     }
 
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -11121,8 +10613,8 @@ namespace FSM.Entity
             {
                 try
                 {
-                    var oContact = App.DB.Contact.Contact_Get(Conversions.ToInteger(DetailsToPrint.item(0)));
-                    var oSite = App.DB.Sites.Get(DetailsToPrint.item(1));
+                    var oContact = App.DB.Contact.Contact_Get(Conversions.ToInteger(((ArrayList)DetailsToPrint)[0]));
+                    var oSite = App.DB.Sites.Get(((ArrayList)DetailsToPrint)[1]);
                     var byteArray = File.ReadAllBytes(template);
                     var mm = new MemoryStream();
                     using (mm)
@@ -11194,24 +10686,24 @@ namespace FSM.Entity
                                 var withBlock = WordDoc.Tables[1];
                                 {
                                     var withBlock1 = withBlock.Rows.Add();
-                                    withBlock1.Font.Bold = Conversions.ToInteger(false);
-                                    withBlock1.Font.Size = 7;
+                                    withBlock1.Range.Font.Bold = Conversions.ToInteger(false);
+                                    withBlock1.Range.Font.Size = 7;
                                     withBlock1.Borders[WD.WdBorderType.wdBorderTop].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                                     withBlock1.Borders[WD.WdBorderType.wdBorderBottom].LineStyle = WD.WdLineStyle.wdLineStyleNone;
                                 }
 
                                 rowIndex += 1;
-                                withBlock.Cell(rowIndex, 1) = Helper.MakeStringValid(r["CreditReference"]);
-                                withBlock.Cell(rowIndex, 2) = Helper.MakeStringValid(r["OrderReference"]);
-                                withBlock.Cell(rowIndex, 3) = Helper.MakeStringValid(r["PartNumber"]);
-                                withBlock.Cell(rowIndex, 4) = Helper.MakeStringValid(r["PartName"]);
-                                withBlock.Cell(rowIndex, 5) = Helper.MakeIntegerValid(r["Qty"]).ToString();
-                                withBlock.Cell(rowIndex, 6) = Strings.Format(Helper.MakeDoubleValid(r["Price"]), "C");
-                                withBlock.Cell(rowIndex, 7) = Strings.Format(Helper.MakeDoubleValid(r["Total"]), "C");
-                                withBlock.Cell(rowIndex, 1).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
-                                withBlock.Cell(rowIndex, 2).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
-                                withBlock.Cell(rowIndex, 3).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
-                                withBlock.Cell(rowIndex, 4).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 1).Range.Text = Helper.MakeStringValid(r["CreditReference"]);
+                                withBlock.Cell(rowIndex, 2).Range.Text = Helper.MakeStringValid(r["OrderReference"]);
+                                withBlock.Cell(rowIndex, 3).Range.Text = Helper.MakeStringValid(r["PartNumber"]);
+                                withBlock.Cell(rowIndex, 4).Range.Text = Helper.MakeStringValid(r["PartName"]);
+                                withBlock.Cell(rowIndex, 5).Range.Text = Helper.MakeIntegerValid(r["Qty"]).ToString();
+                                withBlock.Cell(rowIndex, 6).Range.Text = Strings.Format(Helper.MakeDoubleValid(r["Price"]), "C");
+                                withBlock.Cell(rowIndex, 7).Range.Text = Strings.Format(Helper.MakeDoubleValid(r["Total"]), "C");
+                                withBlock.Cell(rowIndex, 1).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 2).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 3).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 4).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
                                 Supplier = Helper.MakeStringValid(r["Supplier"]);
                                 address1 = Helper.MakeStringValid(r["Address1"]);
                                 address2 = Helper.MakeStringValid(r["Address2"]);
@@ -11224,7 +10716,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -11311,7 +10803,7 @@ namespace FSM.Entity
                     WordDoc.Content.Font.Name = "Arial";
                     WordDoc.Tables[1].AllowAutoFit = true;
                     WordDoc.Tables[1].AutoFitBehavior(WD.WdAutoFitBehavior.wdAutoFitContent);
-                    WordDoc.Tables[1].Font.Size = 8;
+                    WordDoc.Tables[1].Range.Font.Size = 8;
                     return true;
                 }
                 catch (Exception ex)
@@ -11337,23 +10829,23 @@ namespace FSM.Entity
                                 {
                                     {
                                         var withBlock1 = withBlock.Rows.Add();
-                                        withBlock1.Font.Bold = Conversions.ToInteger(false);
-                                        withBlock1.Font.Size = 7;
+                                        withBlock1.Range.Font.Bold = Conversions.ToInteger(false);
+                                        withBlock1.Range.Font.Size = 7;
                                     }
                                 }
 
                                 rowIndex += 1;
-                                withBlock.Cell(rowIndex, 1) = "";
-                                withBlock.Cell(rowIndex, 2) = Helper.MakeStringValid(r["PartName"]);
+                                withBlock.Cell(rowIndex, 1).Range.Text = "";
+                                withBlock.Cell(rowIndex, 2).Range.Text = Helper.MakeStringValid(r["PartName"]);
                                 withBlock.Cell(rowIndex, 2).WordWrap = true;
-                                withBlock.Cell(rowIndex, 3) = Helper.MakeStringValid(r["PartNumber"]);
+                                withBlock.Cell(rowIndex, 3).Range.Text = Helper.MakeStringValid(r["PartNumber"]);
                                 withBlock.Cell(rowIndex, 3).WordWrap = true;
-                                withBlock.Cell(rowIndex, 4) = "";
-                                withBlock.Cell(rowIndex, 5) = "";
-                                withBlock.Cell(rowIndex, 1).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
-                                withBlock.Cell(rowIndex, 2).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
-                                withBlock.Cell(rowIndex, 3).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
-                                withBlock.Cell(rowIndex, 4).ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 4).Range.Text = "";
+                                withBlock.Cell(rowIndex, 5).Range.Text = "";
+                                withBlock.Cell(rowIndex, 1).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 2).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 3).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
+                                withBlock.Cell(rowIndex, 4).Range.ParagraphFormat.Alignment = WD.WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                         }
                     }
@@ -11361,8 +10853,8 @@ namespace FSM.Entity
                     WordDoc.Content.Font.Name = "Arial";
                     WordDoc.Tables[1].AllowAutoFit = true;
                     WordDoc.Tables[1].AutoFitBehavior(WD.WdAutoFitBehavior.wdAutoFitWindow);
-                    WordDoc.Tables[1].Font.Size = 8;
-                    WordDoc.Tables[1].Rows[1].Font.Size = 11;
+                    WordDoc.Tables[1].Range.Font.Size = 8;
+                    WordDoc.Tables[1].Rows[1].Range.Font.Size = 11;
                     return true;
                 }
                 catch (Exception ex)
@@ -12860,17 +12352,9 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             private string Finalise(string filepath, bool success, bool withSave = true, bool withKill = true, bool gsr = false)
             {
-                ;
-#error Cannot convert OnErrorResumeNextStatementSyntax - see comment for details
-                /* Cannot convert OnErrorResumeNextStatementSyntax, CONVERSION ERROR: Conversion for OnErrorResumeNextStatement not implemented, please report this issue in 'On Error Resume Next' at character 776159
-
-
-                Input:
-                                On Error Resume Next
-
-                 */
                 Documentss.Documents documentLine;
                 if (success)
                 {
@@ -13015,7 +12499,6 @@ namespace FSM.Entity
                             object argSaveChanges1 = (object)false;
                             doc.Close(SaveChanges: ref argSaveChanges1);
                             Marshal.ReleaseComObject(doc);
-                            doc = null;
                         }
 
                         object argSaveChanges2 = (object)false;
@@ -13025,29 +12508,26 @@ namespace FSM.Entity
                     }
 
                     var mp = Process.GetProcessesByName("WINWORD");
-                    Process p;
-                    foreach (var p in mp)
+                    foreach (Process p in mp)
                     {
-                        if (p.Responding)
+                        try
                         {
-                            if (string.IsNullOrEmpty(p.MainWindowTitle))
+                            if (p.Responding)
+                            {
+                                if (string.IsNullOrEmpty(p.MainWindowTitle))
+                                {
+                                    p.Kill();
+                                }
+                            }
+                            else
                             {
                                 p.Kill();
                             }
                         }
-                        else
+                        catch
                         {
-                            p.Kill();
                         }
                     };
-#error Cannot convert OnErrorGoToStatementSyntax - see comment for details
-                    /* Cannot convert OnErrorGoToStatementSyntax, CONVERSION ERROR: Conversion for OnErrorGoToMinusOneStatement not implemented, please report this issue in 'On Error GoTo - 1' at character 784370
-
-
-                    Input:
-                                        On Error GoTo - 1
-
-                     */
                 }
 
                 GC.Collect();
@@ -13477,7 +12957,6 @@ namespace FSM.Entity
 
             private void PdfSetFormFieldText(ref AcroFields acroFields, string fieldName, string replacementText, float textSize)
             {
-
                 // Dim bf As BaseFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED)
 
                 // Dim font As iTextSharp.text.Font = New iTextSharp.text.Font(bf, 8, iTextSharp.text.Font.NORMAL)  ' need to sus out regarding
