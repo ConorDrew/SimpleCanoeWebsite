@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMChangeOverridePassword : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMChangeOverridePassword() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMChangeOverridePassword_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -44,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Button _btnUpdate;
 
@@ -280,9 +278,9 @@ namespace FSM
             _grpNewDetails.SuspendLayout();
             _grpCurrentDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // btnUpdate
-            // 
+            //
             _btnUpdate.AccessibleDescription = "Update the override password";
             _btnUpdate.Cursor = Cursors.Hand;
             _btnUpdate.UseVisualStyleBackColor = true;
@@ -291,9 +289,9 @@ namespace FSM
             _btnUpdate.Size = new Size(56, 23);
             _btnUpdate.TabIndex = 37;
             _btnUpdate.Text = "Update";
-            // 
+            //
             // grpNewDetails
-            // 
+            //
             _grpNewDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpNewDetails.Controls.Add(_Label2);
@@ -307,27 +305,27 @@ namespace FSM
             _grpNewDetails.TabIndex = 39;
             _grpNewDetails.TabStop = false;
             _grpNewDetails.Text = "New Details";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(16, 32);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(64, 16);
             _Label2.TabIndex = 17;
             _Label2.Text = "Password ";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label3.Location = new Point(16, 64);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(64, 16);
             _Label3.TabIndex = 19;
             _Label3.Text = "Confirm ";
-            // 
+            //
             // txtNewPassword
-            // 
+            //
             _txtNewPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNewPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtNewPassword.Location = new Point(112, 32);
@@ -337,9 +335,9 @@ namespace FSM
             _txtNewPassword.Size = new Size(265, 21);
             _txtNewPassword.TabIndex = 2;
             _txtNewPassword.Text = "";
-            // 
+            //
             // txtConfirm
-            // 
+            //
             _txtConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtConfirm.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtConfirm.Location = new Point(112, 64);
@@ -349,9 +347,9 @@ namespace FSM
             _txtConfirm.Size = new Size(265, 21);
             _txtConfirm.TabIndex = 3;
             _txtConfirm.Text = "";
-            // 
+            //
             // grpCurrentDetails
-            // 
+            //
             _grpCurrentDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCurrentDetails.Controls.Add(_txtPassword);
@@ -363,9 +361,9 @@ namespace FSM
             _grpCurrentDetails.TabIndex = 38;
             _grpCurrentDetails.TabStop = false;
             _grpCurrentDetails.Text = "Current Details";
-            // 
+            //
             // txtPassword
-            // 
+            //
             _txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPassword.Location = new Point(112, 24);
@@ -375,18 +373,18 @@ namespace FSM
             _txtPassword.Size = new Size(264, 21);
             _txtPassword.TabIndex = 1;
             _txtPassword.Text = "";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(16, 24);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 16);
             _Label1.TabIndex = 20;
             _Label1.Text = "Password ";
-            // 
+            //
             // FRMChangeOverridePassword
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(400, 238);
             Controls.Add(_btnUpdate);
@@ -408,7 +406,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ActiveControl = txtPassword;
@@ -423,7 +422,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

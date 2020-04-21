@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMHistory : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMHistory() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMHistory_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private DataGrid _dgHistory;
 
@@ -233,9 +231,9 @@ namespace FSM
             _cboFilter.SelectedIndexChanged += new EventHandler(cboFilter_SelectedIndexChanged);
             ((System.ComponentModel.ISupportInitialize)_dgHistory).BeginInit();
             SuspendLayout();
-            // 
+            //
             // dgHistory
-            // 
+            //
             _dgHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgHistory.DataMember = "";
@@ -244,27 +242,27 @@ namespace FSM
             _dgHistory.Name = "dgHistory";
             _dgHistory.Size = new Size(752, 432);
             _dgHistory.TabIndex = 1;
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel1.BackColor = Color.Red;
             _Panel1.Location = new Point(8, 488);
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(16, 16);
             _Panel1.TabIndex = 19;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label1.Location = new Point(32, 488);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(168, 16);
             _Label1.TabIndex = 18;
             _Label1.Text = "Out of hours login recorded.";
-            // 
+            //
             // btnClear
-            // 
+            //
             _btnClear.AccessibleDescription = "Clear system interaction history";
             _btnClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnClear.Cursor = Cursors.Hand;
@@ -274,36 +272,36 @@ namespace FSM
             _btnClear.Size = new Size(48, 23);
             _btnClear.TabIndex = 3;
             _btnClear.Text = "Clear";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label2.Location = new Point(216, 488);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(64, 16);
             _Label2.TabIndex = 20;
             _Label2.Text = "Show last ";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label3.Location = new Point(360, 488);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(64, 16);
             _Label3.TabIndex = 21;
             _Label3.Text = "Records";
-            // 
+            //
             // cboFilter
-            // 
+            //
             _cboFilter.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _cboFilter.Location = new Point(280, 484);
             _cboFilter.Name = "cboFilter";
             _cboFilter.Size = new Size(80, 21);
             _cboFilter.TabIndex = 2;
             _cboFilter.Text = "ComboBox1";
-            // 
+            //
             // FRMHistory
-            // 
+            //
             AcceptButton = _btnClear;
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(768, 510);
@@ -331,7 +329,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupHistoryDataGrid();
@@ -360,7 +359,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -388,6 +387,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupHistoryDataGrid()
         {
             var tStyle = dgHistory.TableStyles[0];
@@ -474,6 +474,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulatePage()
         {
             try

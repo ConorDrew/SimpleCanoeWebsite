@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMLogin : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMLogin() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMLogin_Load;
@@ -25,7 +24,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -207,9 +205,9 @@ namespace FSM
             _txtPassword = new TextBox();
             _grpLoginDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpLoginDetails
-            // 
+            //
             _grpLoginDetails.Controls.Add(_btnLogin);
             _grpLoginDetails.Controls.Add(_Label2);
             _grpLoginDetails.Controls.Add(_Label3);
@@ -222,9 +220,9 @@ namespace FSM
             _grpLoginDetails.TabIndex = 12;
             _grpLoginDetails.TabStop = false;
             _grpLoginDetails.Text = "Enter Login Details";
-            // 
+            //
             // btnLogin
-            // 
+            //
             _btnLogin.AccessibleDescription = "Login to application";
             _btnLogin.Cursor = Cursors.Hand;
             _btnLogin.Location = new Point(96, 96);
@@ -233,36 +231,36 @@ namespace FSM
             _btnLogin.TabIndex = 3;
             _btnLogin.Text = "Login";
             _btnLogin.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(16, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(80, 16);
             _Label2.TabIndex = 1;
             _Label2.Text = "Username";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label3.Location = new Point(16, 64);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(80, 23);
             _Label3.TabIndex = 2;
             _Label3.Text = "Password";
-            // 
+            //
             // txtUserName
-            // 
+            //
             _txtUserName.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtUserName.Location = new Point(96, 22);
             _txtUserName.MaxLength = 50;
             _txtUserName.Name = "txtUserName";
             _txtUserName.Size = new Size(288, 21);
             _txtUserName.TabIndex = 1;
-            // 
+            //
             // txtPassword
-            // 
+            //
             _txtPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPassword.Location = new Point(96, 62);
             _txtPassword.MaxLength = 50;
@@ -270,9 +268,9 @@ namespace FSM
             _txtPassword.PasswordChar = (char)42;
             _txtPassword.Size = new Size(288, 21);
             _txtPassword.TabIndex = 2;
-            // 
+            //
             // FRMLogin
-            // 
+            //
             AcceptButton = _btnLogin;
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(400, 169);
@@ -291,7 +289,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
 
@@ -328,7 +327,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -365,6 +364,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LogMeIn()
         {
             if (txtUserName.Text.Trim().Length == 0 | txtPassword.Text.Trim().Length == 0)

@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using Microsoft.VisualBasic.CompilerServices;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System.Collections;
 
 namespace FSM.Entity
 {
@@ -11,8 +11,7 @@ namespace FSM.Entity
             {
                 if (userAndEngineer.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in userAndEngineer.Errors)
+                    foreach (DictionaryEntry de in userAndEngineer.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

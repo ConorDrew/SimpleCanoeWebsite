@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -6,22 +7,19 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class DLGFindRecord : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DLGFindRecord() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         public DLGFindRecord(System.Data.SqlClient.SqlTransaction trans) : base()
@@ -32,7 +30,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -389,25 +386,25 @@ namespace FSM
             _grpStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgStock).BeginInit();
             SuspendLayout();
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 40);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(100, 24);
             _Label1.TabIndex = 2;
             _Label1.Text = "Filter By Name";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFilter.Location = new Point(104, 40);
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(548, 21);
             _txtFilter.TabIndex = 1;
-            // 
+            //
             // grpResults
-            // 
+            //
             _grpResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpResults.Controls.Add(_dgResults);
@@ -417,9 +414,9 @@ namespace FSM
             _grpResults.TabIndex = 4;
             _grpResults.TabStop = false;
             _grpResults.Text = "Select record and click OK";
-            // 
+            //
             // dgResults
-            // 
+            //
             _dgResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgResults.DataMember = "";
@@ -428,27 +425,27 @@ namespace FSM
             _dgResults.Name = "dgResults";
             _dgResults.Size = new Size(779, 342);
             _dgResults.TabIndex = 2;
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(745, 451);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(56, 23);
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 451);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 4;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // grpStock
-            // 
+            //
             _grpStock.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpStock.Controls.Add(_dgStock);
             _grpStock.Location = new Point(8, 280);
@@ -458,9 +455,9 @@ namespace FSM
             _grpStock.TabStop = false;
             _grpStock.Text = "Stock Locations for : 'No Part Selected'";
             _grpStock.Visible = false;
-            // 
+            //
             // dgStock
-            // 
+            //
             _dgStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgStock.DataMember = "";
@@ -469,36 +466,36 @@ namespace FSM
             _dgStock.Name = "dgStock";
             _dgStock.Size = new Size(779, 137);
             _dgStock.TabIndex = 3;
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAdd.Location = new Point(672, 39);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(129, 23);
             _btnAdd.TabIndex = 6;
             _btnAdd.Text = "Add";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label2.Location = new Point(95, 456);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(175, 24);
             _Label2.TabIndex = 7;
             _Label2.Text = "Preferred Supplier";
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel1.BackColor = Color.LightGreen;
             _Panel1.Location = new Point(70, 454);
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(19, 20);
             _Panel1.TabIndex = 8;
-            // 
+            //
             // cbOffice
-            // 
+            //
             _cbOffice.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cbOffice.AutoSize = true;
             _cbOffice.Location = new Point(665, 42);
@@ -508,9 +505,9 @@ namespace FSM
             _cbOffice.Text = "Only Show Offices";
             _cbOffice.UseVisualStyleBackColor = true;
             _cbOffice.Visible = false;
-            // 
+            //
             // DLGFindRecord
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(809, 481);
             ControlBox = false;
@@ -549,7 +546,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ActiveControl = txtFilter;
@@ -566,7 +564,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1232,6 +1230,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDG()
         {
             var tStyle = dgResults.TableStyles[0];
@@ -2535,6 +2534,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void DLGFindRecord_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -2624,6 +2624,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SelectItem()
         {
             if (SelectedDataRow is null)
@@ -2690,7 +2691,7 @@ namespace FSM
                             PartsToAdd = new ArrayList();
                             foreach (DataRow row in Records.Table.Rows)
                             {
-                                if (Conversions.ToBoolean(row["QuantityToAdd"] > 0))
+                                if (Conversions.ToBoolean((int)row["QuantityToAdd"] > 0))
                                 {
                                     var newPart = new ArrayList();
                                     newPart.Add(row["PartID"]);
@@ -2937,6 +2938,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -2945,7 +2947,8 @@ namespace FSM
                 // set the color required dependant on the column value
                 Brush brush;
                 brush = Brushes.White;
-                if (Entity.Sys.Helper.MakeBooleanValid(source.List[rowNum].row.item("Preferred")))
+                var dr = (DataRowView)source.List[rowNum];
+                if (Entity.Sys.Helper.MakeBooleanValid(dr["Preferred"]))
                 {
                     brush = Brushes.LightGreen;
                 }
@@ -2959,6 +2962,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void btnFilter_Click(object sender, EventArgs e)
         {
             RunFilter();

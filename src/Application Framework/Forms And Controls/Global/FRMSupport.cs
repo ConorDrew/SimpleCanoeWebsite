@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMSupport : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSupport() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSupport_Load;
@@ -22,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,7 +41,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpContactUs;
 
@@ -225,9 +223,9 @@ namespace FSM
             _txtAddress = new TextBox();
             _grpContactUs.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpContactUs
-            // 
+            //
             _grpContactUs.Anchor = AnchorStyles.Left;
             _grpContactUs.Controls.Add(_Label1);
             _grpContactUs.Controls.Add(_Label8);
@@ -242,36 +240,36 @@ namespace FSM
             _grpContactUs.TabIndex = 8;
             _grpContactUs.TabStop = false;
             _grpContactUs.Text = "Contact Us";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(16, 200);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(72, 23);
             _Label1.TabIndex = 16;
             _Label1.Text = "Tel";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label8.Location = new Point(16, 232);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(72, 23);
             _Label8.TabIndex = 15;
             _Label8.Text = "Fax";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(16, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(72, 23);
             _Label2.TabIndex = 9;
             _Label2.Text = "Address";
-            // 
+            //
             // txtFax
-            // 
+            //
             _txtFax.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtFax.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -281,9 +279,9 @@ namespace FSM
             _txtFax.Size = new Size(184, 20);
             _txtFax.TabIndex = 3;
             _txtFax.Text = "";
-            // 
+            //
             // txtTel
-            // 
+            //
             _txtTel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtTel.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -293,9 +291,9 @@ namespace FSM
             _txtTel.Size = new Size(184, 20);
             _txtTel.TabIndex = 2;
             _txtTel.Text = "";
-            // 
+            //
             // txtAddress
-            // 
+            //
             _txtAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtAddress.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -307,9 +305,9 @@ namespace FSM
             _txtAddress.Size = new Size(184, 168);
             _txtAddress.TabIndex = 1;
             _txtAddress.Text = "";
-            // 
+            //
             // FRMSupport
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(312, 310);
             Controls.Add(_grpContactUs);
@@ -326,7 +324,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             txtAddress.Text = App.TheSystem.Address;
@@ -342,7 +341,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

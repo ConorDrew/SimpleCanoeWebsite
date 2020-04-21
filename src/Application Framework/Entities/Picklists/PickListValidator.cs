@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using Microsoft.VisualBasic.CompilerServices;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System.Collections;
 
 namespace FSM.Entity
 {
@@ -11,8 +11,7 @@ namespace FSM.Entity
             {
                 if (picklist.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in picklist.Errors)
+                    foreach (DictionaryEntry de in picklist.Errors)
                     {
                         if (picklist.EnumTypeID == Conversions.ToInteger(Sys.Enums.PickListTypes.VATCodes))
                         {

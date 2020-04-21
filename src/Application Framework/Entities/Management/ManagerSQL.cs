@@ -1,7 +1,7 @@
-﻿using System;
-using System.Data;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Data;
 
 namespace FSM.Entity
 {
@@ -17,6 +17,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView GetAll()
             {
                 _database.ClearParameter();
@@ -93,6 +94,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView GetHistory(int LimitNumber)
             {
                 string sql = Sys.Helper.GetTextResource("History_Get.sql");
@@ -117,6 +119,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView Get_Tables()
             {
                 var dt = new DataTable();
@@ -189,6 +192,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView Record_Summary(DateTime fromDate, DateTime toDate)
             {
                 _database.ClearParameter();

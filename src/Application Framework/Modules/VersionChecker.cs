@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public static class VersionChecker
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public static void Unlock()
         {
             try
@@ -30,8 +30,6 @@ namespace FSM
         private static void DifferentVersionsMessage(string AssemblyVesion, string LatestVersion, string LatestVersionReleased, string MessageIn)
         {
             string message = "WARNING!" + Constants.vbNewLine + Constants.vbNewLine + "Assembly version checking has discovered a version inconsistency." + Constants.vbNewLine + Constants.vbNewLine + "This program's assembly version is: " + AssemblyVesion + Constants.vbNewLine + "The database reports the latest version is: " + LatestVersion + " (Released: " + LatestVersionReleased + ")" + Constants.vbNewLine + Constants.vbNewLine + MessageIn;
-
-
 
             App.ShowMessage(message, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }

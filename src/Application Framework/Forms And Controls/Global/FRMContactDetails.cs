@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMContactDetails : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMContactDetails() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContactDetails_Load;
@@ -22,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -249,73 +247,73 @@ namespace FSM
             _lblAddress5 = new Label();
             _lblPostcode = new Label();
             SuspendLayout();
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblName.Location = new Point(8, 56);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(248, 16);
             _lblName.TabIndex = 2;
-            // 
+            //
             // lblTel
-            // 
+            //
             _lblTel.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblTel.Location = new Point(32, 80);
             _lblTel.Name = "lblTel";
             _lblTel.Size = new Size(144, 16);
             _lblTel.TabIndex = 7;
-            // 
+            //
             // lblAddress1
-            // 
+            //
             _lblAddress1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAddress1.Location = new Point(248, 80);
             _lblAddress1.Name = "lblAddress1";
             _lblAddress1.Size = new Size(184, 16);
             _lblAddress1.TabIndex = 12;
-            // 
+            //
             // lblAddress2
-            // 
+            //
             _lblAddress2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAddress2.Location = new Point(248, 104);
             _lblAddress2.Name = "lblAddress2";
             _lblAddress2.Size = new Size(184, 16);
             _lblAddress2.TabIndex = 13;
-            // 
+            //
             // lblAddress3
-            // 
+            //
             _lblAddress3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAddress3.Location = new Point(248, 128);
             _lblAddress3.Name = "lblAddress3";
             _lblAddress3.Size = new Size(184, 16);
             _lblAddress3.TabIndex = 14;
-            // 
+            //
             // lblAddress4
-            // 
+            //
             _lblAddress4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAddress4.Location = new Point(248, 152);
             _lblAddress4.Name = "lblAddress4";
             _lblAddress4.Size = new Size(184, 16);
             _lblAddress4.TabIndex = 15;
-            // 
+            //
             // lblAddress5
-            // 
+            //
             _lblAddress5.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAddress5.Location = new Point(248, 176);
             _lblAddress5.Name = "lblAddress5";
             _lblAddress5.Size = new Size(184, 16);
             _lblAddress5.TabIndex = 16;
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblPostcode.Location = new Point(248, 200);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(184, 16);
             _lblPostcode.TabIndex = 17;
-            // 
+            //
             // FRMContactDetails
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(448, 233);
             Controls.Add(_lblPostcode);
@@ -345,7 +343,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -358,7 +357,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

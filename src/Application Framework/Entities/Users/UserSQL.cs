@@ -1,9 +1,9 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
-using FSM.Entity.Sys;
+﻿using FSM.Entity.Sys;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace FSM.Entity
 {
@@ -19,6 +19,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public bool Authenticate(string UserName, string Password)
             {
                 _database.ClearParameter();
@@ -263,6 +264,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView GetSecurityUserModulesDefaults()
             {
                 _database.ClearParameter();

@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -176,6 +176,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // Starting point of the application
         public static void Main()
         {
@@ -424,7 +425,6 @@ namespace FSM
         // This method is used to return a boolean value for if the override password was entered correctly
         public static bool EnterOverridePassword()
         {
-
             /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped ElseDirectiveTrivia */
             return true;
             /* TODO ERROR: Skipped EndIfDirectiveTrivia */
@@ -432,7 +432,6 @@ namespace FSM
 
         public static bool EnterOverridePasswordINV()
         {
-
             /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped ElseDirectiveTrivia */
             return true;
             /* TODO ERROR: Skipped EndIfDirectiveTrivia */
@@ -689,6 +688,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public static DialogResult ShowMessage(string MessageText, MessageBoxButtons MessageBoxButton, MessageBoxIcon MessagesBoxIcon)
         {
             return MessageBox.Show(MessageText, TheSystem.Title, MessageBoxButton, MessagesBoxIcon);

@@ -14,6 +14,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -185,6 +186,7 @@ namespace FSM.Entity
                     _Mandatory = value;
                 }
             }
+
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         }
     }

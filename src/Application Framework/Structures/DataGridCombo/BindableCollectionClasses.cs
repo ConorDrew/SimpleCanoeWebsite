@@ -8,10 +8,11 @@ namespace FSM
 
     public abstract class BindableCollection : CollectionBase, IBindingList
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // primitives for IBindingList
         private bool _allowEdit = true;
+
         private bool _allowNew = true;
         private bool _allowRemove = true;
         private bool _isSorted = false;
@@ -26,8 +27,22 @@ namespace FSM
         // these hold contained properties
         protected readonly CollectionProperties Properties = new CollectionProperties(this);
 
+        event System.ComponentModel.ListChangedEventHandler IBindingList.ListChanged
+        {
+            add
+            {
+                throw new NotImplementedException();
+            }
+
+            remove
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Add(BindableChildItem item)
         {
             List.Add(item);
@@ -53,6 +68,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             Properties.onChildPropertyChanged(sender, e);
@@ -65,6 +81,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public bool AllowEdit
         {
             get
@@ -139,6 +156,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public abstract object AddNew();
 
         public void AddIndex(PropertyDescriptor property)
@@ -168,10 +186,10 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public event ListChangedEventHandler ListChanged;
 
         public delegate void ListChangedEventHandler(object sender, ListChangedEventArgs e);
-
 
         internal void onInternalListChanged(ListChangedType type, int index)
         {
@@ -186,6 +204,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void OnClearComplete()
         {
             onListChanged(ListChangedType.Reset, 0);
@@ -219,8 +238,8 @@ namespace FSM
 
     public abstract class BindableRootCollection : BindableCollection, Interfaces.IPersistable
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // native member declarations
         private RootObject myRoot = new RootObject();
 
@@ -230,6 +249,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         [System.Xml.Serialization.XmlIgnore()]
         public string CurrentLocation
         {
@@ -274,6 +294,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected static string defaultPersistFolder
         {
             get
@@ -287,6 +308,8 @@ namespace FSM
             }
         }
 
+        public string DefaultName => throw new NotImplementedException();
+
         protected static object Read(string fileName, Type itemType)
         {
             return RootObject.Read(fileName, itemType);
@@ -298,6 +321,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

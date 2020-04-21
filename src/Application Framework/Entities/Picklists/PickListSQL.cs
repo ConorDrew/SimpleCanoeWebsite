@@ -1,5 +1,5 @@
-﻿using System.Data;
-using Microsoft.VisualBasic.CompilerServices;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System.Data;
 
 namespace FSM.Entity
 {
@@ -15,6 +15,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView PickListTypes()
             {
                 var dt = new DataTable();

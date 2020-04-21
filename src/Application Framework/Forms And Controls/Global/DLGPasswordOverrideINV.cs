@@ -8,11 +8,10 @@ namespace FSM
 {
     public class DLGPasswordOverrideINV : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DLGPasswordOverrideINV() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += DLGPasswordOverride_Load;
@@ -21,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -155,9 +153,9 @@ namespace FSM
             _btnOk.Click += new EventHandler(btnOk_Click);
             _GroupBox1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Controls.Add(_btnCancel);
             _GroupBox1.Controls.Add(_txtPassword);
             _GroupBox1.Controls.Add(_btnOk);
@@ -167,9 +165,9 @@ namespace FSM
             _GroupBox1.TabIndex = 4;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Please enter override password to continue";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.AccessibleDescription = "Cancel entry";
             _btnCancel.Cursor = Cursors.Hand;
             _btnCancel.DialogResult = DialogResult.Cancel;
@@ -179,9 +177,9 @@ namespace FSM
             _btnCancel.Size = new Size(48, 23);
             _btnCancel.TabIndex = 3;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // txtPassword
-            // 
+            //
             _txtPassword.Location = new Point(8, 24);
             _txtPassword.MaxLength = 50;
             _txtPassword.Name = "txtPassword";
@@ -189,9 +187,9 @@ namespace FSM
             _txtPassword.Size = new Size(176, 21);
             _txtPassword.TabIndex = 1;
             _txtPassword.Text = "";
-            // 
+            //
             // btnOk
-            // 
+            //
             _btnOk.AccessibleDescription = "Try password";
             _btnOk.Cursor = Cursors.Hand;
             _btnOk.UseVisualStyleBackColor = true;
@@ -200,9 +198,9 @@ namespace FSM
             _btnOk.Size = new Size(48, 23);
             _btnOk.TabIndex = 2;
             _btnOk.Text = "OK";
-            // 
+            //
             // DLGPasswordOverride
-            // 
+            //
             AcceptButton = _btnOk;
             AutoScaleBaseSize = new Size(6, 14);
             CancelButton = _btnCancel;
@@ -220,7 +218,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -233,7 +232,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

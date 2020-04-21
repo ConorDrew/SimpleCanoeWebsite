@@ -1,22 +1,21 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMChangePassword : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMChangePassword() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMChangePassword_Load;
@@ -290,9 +289,9 @@ namespace FSM
             _grpNewDetails.SuspendLayout();
             _grpCurrentDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpNewDetails
-            // 
+            //
             _grpNewDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpNewDetails.Controls.Add(_Label2);
             _grpNewDetails.Controls.Add(_Label3);
@@ -306,27 +305,27 @@ namespace FSM
             _grpNewDetails.TabIndex = 36;
             _grpNewDetails.TabStop = false;
             _grpNewDetails.Text = "New Details";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(16, 32);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(64, 16);
             _Label2.TabIndex = 17;
             _Label2.Text = "Password ";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label3.Location = new Point(16, 64);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(64, 16);
             _Label3.TabIndex = 19;
             _Label3.Text = "Confirm ";
-            // 
+            //
             // txtNewPassword
-            // 
+            //
             _txtNewPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNewPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtNewPassword.Location = new Point(112, 32);
@@ -335,9 +334,9 @@ namespace FSM
             _txtNewPassword.PasswordChar = (char)42;
             _txtNewPassword.Size = new Size(272, 21);
             _txtNewPassword.TabIndex = 2;
-            // 
+            //
             // txtConfirm
-            // 
+            //
             _txtConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtConfirm.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtConfirm.Location = new Point(112, 64);
@@ -346,9 +345,9 @@ namespace FSM
             _txtConfirm.PasswordChar = (char)42;
             _txtConfirm.Size = new Size(272, 21);
             _txtConfirm.TabIndex = 3;
-            // 
+            //
             // btnUpdate
-            // 
+            //
             _btnUpdate.AccessibleDescription = "Update your password";
             _btnUpdate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUpdate.Cursor = Cursors.Hand;
@@ -358,9 +357,9 @@ namespace FSM
             _btnUpdate.TabIndex = 4;
             _btnUpdate.Text = "Update";
             _btnUpdate.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpCurrentDetails
-            // 
+            //
             _grpCurrentDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpCurrentDetails.Controls.Add(_txtPassword);
             _grpCurrentDetails.Controls.Add(_Label1);
@@ -371,9 +370,9 @@ namespace FSM
             _grpCurrentDetails.TabIndex = 35;
             _grpCurrentDetails.TabStop = false;
             _grpCurrentDetails.Text = "Current Details";
-            // 
+            //
             // txtPassword
-            // 
+            //
             _txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPassword.Location = new Point(112, 24);
@@ -382,18 +381,18 @@ namespace FSM
             _txtPassword.PasswordChar = (char)42;
             _txtPassword.Size = new Size(271, 21);
             _txtPassword.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(16, 24);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 16);
             _Label1.TabIndex = 20;
             _Label1.Text = "Password ";
-            // 
+            //
             // FRMChangePassword
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(412, 242);
             Controls.Add(_grpNewDetails);
@@ -415,7 +414,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ActiveControl = txtPassword;
@@ -430,7 +430,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

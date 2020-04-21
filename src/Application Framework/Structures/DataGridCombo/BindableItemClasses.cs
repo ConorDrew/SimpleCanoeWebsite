@@ -8,24 +8,28 @@ namespace FSM
 
     public abstract class BindableItem : IEditableObject, IDataErrorInfo
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // these hold and handle contained properties
         protected readonly PersistedProperties PersistedProperties = new PersistedProperties(this);
+
         protected readonly CalculatedProperties CalculatedProperties = new CalculatedProperties(this);
 
         // events
         internal event PropertyChangedEventHandler internalPropertyChanged;
+
         protected internal event PropertyChangedEventHandler propertyChanged;
 
         // for IEditableObject members
         private bool _editing = false;
+
         protected bool _isNew = true;
 
         // Public MustOverride ReadOnly Property IsRootObject()
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public object get_PropertyValue(string name)
         {
             if (PersistedProperties.get_Exists(name))
@@ -43,6 +47,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             CalculatedProperties.onChildPropertyChanged(sender, e);
@@ -78,6 +83,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void BeginEdit()
         {
             if (!_editing)
@@ -105,6 +111,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private string Error
         {
             get
@@ -113,9 +120,28 @@ namespace FSM
             }
         }
 
+        string IDataErrorInfo.Error => throw new NotImplementedException();
+
+        public string this[string columnName] => throw new NotImplementedException();
+
         private string get_ErrorInfoItem(string columnName)
         {
             return string.Empty;
+        }
+
+        void IEditableObject.BeginEdit()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IEditableObject.EndEdit()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IEditableObject.CancelEdit()
+        {
+            throw new NotImplementedException();
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -123,14 +149,15 @@ namespace FSM
 
     public abstract class BindableChildItem : BindableItem
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public event RemoveMeEventHandler RemoveMe;
 
         public delegate void RemoveMeEventHandler(BindableChildItem item);
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void onRemoveMe()
         {
             RemoveMe?.Invoke(this);
@@ -138,6 +165,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void CancelEdit()
         {
             base.CancelEdit();
@@ -152,8 +180,8 @@ namespace FSM
 
     public abstract class BindableRootItem : BindableItem, Interfaces.IPersistable
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // native member declarations
         private RootObject myRoot = new RootObject();
 
@@ -162,6 +190,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         [System.Xml.Serialization.XmlIgnore()]
         public string CurrentLocation
         {
@@ -206,6 +235,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public static object CreateDefaultList(object item)
         {
             return RootObject.CreateDefaultList((Interfaces.IPersistable)item);

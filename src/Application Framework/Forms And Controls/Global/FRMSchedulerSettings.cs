@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FSM.Entity.Settings.Scheduler;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
@@ -7,20 +11,15 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Settings.Scheduler;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMSchedulerSettings : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSchedulerSettings() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMUserSettings_Load;
@@ -289,9 +288,9 @@ namespace FSM
             _grpJobTypeColours.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgJobTypeColours).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpJobTypeColours
-            // 
+            //
             _grpJobTypeColours.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpJobTypeColours.Controls.Add(_btnSaveJobColour);
             _grpJobTypeColours.Controls.Add(_btnDeleteJobColour);
@@ -306,9 +305,9 @@ namespace FSM
             _grpJobTypeColours.TabIndex = 1;
             _grpJobTypeColours.TabStop = false;
             _grpJobTypeColours.Text = "Job Type Colours";
-            // 
+            //
             // btnSaveJobColour
-            // 
+            //
             _btnSaveJobColour.AccessibleDescription = "Save item";
             _btnSaveJobColour.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveJobColour.Cursor = Cursors.Hand;
@@ -319,9 +318,9 @@ namespace FSM
             _btnSaveJobColour.TabIndex = 9;
             _btnSaveJobColour.Text = "Save";
             _btnSaveJobColour.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnDeleteJobColour
-            // 
+            //
             _btnDeleteJobColour.AccessibleDescription = "Save item";
             _btnDeleteJobColour.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDeleteJobColour.Cursor = Cursors.Hand;
@@ -332,9 +331,9 @@ namespace FSM
             _btnDeleteJobColour.TabIndex = 8;
             _btnDeleteJobColour.Text = "Delete";
             _btnDeleteJobColour.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboColour
-            // 
+            //
             _cboColour.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboColour.DrawMode = DrawMode.OwnerDrawFixed;
             _cboColour.FormattingEnabled = true;
@@ -342,36 +341,36 @@ namespace FSM
             _cboColour.Name = "cboColour";
             _cboColour.Size = new Size(223, 22);
             _cboColour.TabIndex = 7;
-            // 
+            //
             // lblColour
-            // 
+            //
             _lblColour.AutoSize = true;
             _lblColour.Location = new Point(10, 54);
             _lblColour.Name = "lblColour";
             _lblColour.Size = new Size(45, 13);
             _lblColour.TabIndex = 6;
             _lblColour.Text = "Colour";
-            // 
+            //
             // cboJobType
-            // 
+            //
             _cboJobType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboJobType.FormattingEnabled = true;
             _cboJobType.Location = new Point(85, 20);
             _cboJobType.Name = "cboJobType";
             _cboJobType.Size = new Size(223, 21);
             _cboJobType.TabIndex = 5;
-            // 
+            //
             // lblJobType
-            // 
+            //
             _lblJobType.AutoSize = true;
             _lblJobType.Location = new Point(10, 25);
             _lblJobType.Name = "lblJobType";
             _lblJobType.Size = new Size(57, 13);
             _lblJobType.TabIndex = 4;
             _lblJobType.Text = "Job Type";
-            // 
+            //
             // dgJobTypeColours
-            // 
+            //
             _dgJobTypeColours.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgJobTypeColours.DataMember = "";
@@ -380,9 +379,9 @@ namespace FSM
             _dgJobTypeColours.Name = "dgJobTypeColours";
             _dgJobTypeColours.Size = new Size(301, 408);
             _dgJobTypeColours.TabIndex = 2;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.AccessibleDescription = "Save item";
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Cursor = Cursors.Hand;
@@ -393,9 +392,9 @@ namespace FSM
             _btnClose.TabIndex = 4;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMSchedulerSettings
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             BackColor = Color.White;
             ClientSize = new Size(690, 636);
@@ -415,7 +414,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -428,7 +428,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -514,6 +514,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateJobTypeColours()
         {
             SetupDgJobColours();
@@ -603,6 +604,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDgJobColours()
         {
             Helper.SetUpDataGrid(dgJobTypeColours);

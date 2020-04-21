@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMReleaseNotes : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMReleaseNotes() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMReleaseNotes_Load;
@@ -21,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -64,7 +62,6 @@ namespace FSM
             }
         }
 
-
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
 
@@ -74,18 +71,18 @@ namespace FSM
             _rtbReleaseNotes = new RichTextBox();
             _rtbReleaseNotes.LinkClicked += new LinkClickedEventHandler(rtbReleaseNotes_LinkClicked);
             SuspendLayout();
-            // 
+            //
             // rtbReleaseNotes
-            // 
+            //
             _rtbReleaseNotes.Dock = DockStyle.Fill;
             _rtbReleaseNotes.Location = new Point(0, 32);
             _rtbReleaseNotes.Name = "rtbReleaseNotes";
             _rtbReleaseNotes.Size = new Size(478, 300);
             _rtbReleaseNotes.TabIndex = 2;
             _rtbReleaseNotes.Text = "";
-            // 
+            //
             // FRMReleaseNotes
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(478, 332);
             Controls.Add(_rtbReleaseNotes);
@@ -101,7 +98,8 @@ namespace FSM
         public Process process = new Process();
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             FillReleaseNotes();
@@ -115,7 +113,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -123,8 +121,10 @@ namespace FSM
         {
             LoadMe(sender, e);
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FillReleaseNotes()
         {
             string releaseNote = Entity.Sys.Helper.GetTextResource(App.ReleaseNoteTextFile);
@@ -135,6 +135,7 @@ namespace FSM
         {
             process = Process.Start(e.LinkText);
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

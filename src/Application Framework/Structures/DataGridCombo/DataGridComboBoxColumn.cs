@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -28,9 +28,9 @@ namespace FSM
             this.trans = trans;
         }
 
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DataGridComboBoxColumn(bool isGetFrom = false)
         {
             base.WidthChanged += NewComboBoxColumn_WidthChanged;
@@ -42,9 +42,10 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // This internal combobox is the key component of all this.
         // It will be moved around to the cells that are to be edited
-        // set to the correct value and then shown.  When 
+        // set to the correct value and then shown.  When
         // the user navigates off the cell, then this combobox is
         // hidden.
         private ComboBox _myComboBox;
@@ -62,7 +63,6 @@ namespace FSM
             {
                 if (_myComboBox != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _myComboBox.SelectedIndexChanged -= myComboBox_SelectedIndexChanged;
@@ -204,8 +204,10 @@ namespace FSM
                 }
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public int ReturnID
         {
             get
@@ -280,6 +282,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Abort(int rowNum)
         {
             // when the user aborts the editing of a combobox cell, this method is called and
@@ -289,10 +292,9 @@ namespace FSM
 
         protected override bool Commit(CurrencyManager dataSource, int rowNum)
         {
-
             // when the user select's a new item, then the new value needs to be set
             // in the bound data.
-            // The call to "SetColumnValueAtRow" sets the correct value from 
+            // The call to "SetColumnValueAtRow" sets the correct value from
             // the("selectedValue")property in the bound data source.
 
             // We qualify this to only rows that we know from the 'Edit' method
@@ -317,15 +319,11 @@ namespace FSM
 
         protected override void Edit(CurrencyManager source, int rowNum, Rectangle bounds, bool readOnly, string instantText, bool cellIsVisible)
 
-
-
-
         {
             // Here is where the work takes place.  Whenever ever the user enters the cell
             // by any means, this override method is called.
 
             Debug.WriteLine(string.Format("ComboBox Edit; current Height: {0}", myComboBox.Height));
-
 
             // At this point, the cell is looking just like a text box, and displaying the
             // appropriate to the user.  But now that we have navigation into the cell, we
@@ -334,16 +332,16 @@ namespace FSM
             // for this cell.
 
             // First, use our method "GetColumnValueAtRow" to obtain the actual display
-            // value that corresponds to the value in this cell.  
-            // Typically, this is a classic "Lookup" situation, so its a guid, 
-            // or ID code of some sort.  In this demo, its a two letter code 
+            // value that corresponds to the value in this cell.
+            // Typically, this is a classic "Lookup" situation, so its a guid,
+            // or ID code of some sort.  In this demo, its a two letter code
             // (such as PA for Pennsylvania) for the state.  So what gets returned
-            // is the "DisplayValue" for the state code.  In other words, "Pennsylvania" 
+            // is the "DisplayValue" for the state code.  In other words, "Pennsylvania"
             // is returned, not "PA"
             var currentValue = GetColumnValueAtRow(source, rowNum);
             if (currentValue is null)
             {
-                // If its a new row, or if its never been set, then we tell the 
+                // If its a new row, or if its never been set, then we tell the
                 // combobox that there is NO selection.
                 myComboBox.SelectedItem = null;
             }
@@ -375,7 +373,7 @@ namespace FSM
             myComboBox.Visible = true;
 
             // This is a nice UI touch, not functionally necessary but I like it.
-            // It gives consistency to the look and feel the user is 
+            // It gives consistency to the look and feel the user is
             // navigating the grid.
             if (currentValue is object)
             {
@@ -405,11 +403,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override object GetColumnValueAtRow(CurrencyManager source, int rowNum)
         {
             // This is a key method.  Given the row number and the
-            // source CurrencyManager, (which contains a reference 
-            // to the bound DataSource list), we can obtain the 
+            // source CurrencyManager, (which contains a reference
+            // to the bound DataSource list), we can obtain the
             // *ValueMember* from the MyBase method, and then use that
             // to obtain the *DisplayMember* from the combobox
             // And that is what this method will return.
@@ -428,8 +427,8 @@ namespace FSM
 
         private object getItem(object findByValue, bool findByValueMember)
         {
-            // This method will find items in our ComboBox's datasource.  
-            // Given a valueMember it will find the corresponding 
+            // This method will find items in our ComboBox's datasource.
+            // Given a valueMember it will find the corresponding
             // displayMember, or given a displayMember
             // it will find the corresponding valueMember.
             // The "findByValueMember" tells us which way it is.
@@ -451,7 +450,7 @@ namespace FSM
                 compareProperty = myComboBox.DisplayMember;
             }
 
-            // Of course, we iterate datasource of combobox list 
+            // Of course, we iterate datasource of combobox list
             // NOT the datasource of the datagrid
 
             // We get the currency manager of the datasource here.
@@ -493,9 +492,9 @@ namespace FSM
                 bool isEqual = false;
 
                 // Now do the iteration
-                foreach (var myItem in myList)
+                foreach (var myItem1 in myList)
                 {
-                    if (findByValue.Equals(myItem.get_PropertyValue(compareProperty)))
+                    if (findByValue.Equals(myItem1.get_PropertyValue(compareProperty)))
                     {
                         isEqual = true;
                         break;
@@ -518,10 +517,11 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void NewComboBoxColumn_WidthChanged(object sender, EventArgs e)
 
         {
-            // This method is what adjusts the width of the combobox 
+            // This method is what adjusts the width of the combobox
             // if the user resizes the datagrid column.
             myComboBox.Width = base.Width;
             base.Invalidate();
@@ -529,6 +529,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override int GetMinimumHeight()
         {
             // When the datagrid is first being painted, it checks each column
@@ -536,13 +537,13 @@ namespace FSM
             // that is the value that the row height is set too.
 
             // By setting this property to some text value, we force the combobox to adjust
-            // it's height to its font size.  It apparently gets its default 
-            // font size from its container, which is the datagrid.  
+            // it's height to its font size.  It apparently gets its default
+            // font size from its container, which is the datagrid.
             // So if we change the font of the datagrid, this combobox
             // font default changes accordingly, and we want our combobox
             // to reflect that.  Hence setting the text to 'something'
             // Otherwise, the font size will not be reflected in the
-            // height of our combobox and our minimum height may not 
+            // height of our combobox and our minimum height may not
             // be adequate.
             myComboBox.SelectedText = "something";
             return GetPreferredHeight(null, null);
@@ -560,8 +561,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum)
 
+        protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum)
 
         {
             Paint(g, bounds, source, rowNum, false);
@@ -569,24 +570,18 @@ namespace FSM
 
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, bool alignToRight)
 
-
-
         {
             base.Paint(g, bounds, source, rowNum, Brushes.White, Brushes.Black, false);
         }
 
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
 
-
-
-
-
         {
             // This method is responsible for painting the cell
             // for all instances except when the combobox is visible.
             // This method usually gets called once for each
             // row in the column.  So the grid uses this method
-            // on each column style to paint itself cell by 
+            // on each column style to paint itself cell by
             // cell from left to right and top to bottom.
 
             // So first, we want to get the value of the text that needs to be shown.
@@ -615,13 +610,10 @@ namespace FSM
             // demo this line and then comment it out.
             // g.FillRectangle(New SolidBrush(Color.White), bounds)
 
-
-
-            // Next, we create slightly adjusted rectangle in which to 
+            // Next, we create slightly adjusted rectangle in which to
             // paint the text overtop of the background just painted.
             RectangleF textRect;
             textRect = new RectangleF(bounds.X + 1, bounds.Y + 2, bounds.Width - 3, FontHeight);
-
 
             // demo this line to show how an unadjusted text draw looks
             // then comment it out.
@@ -632,9 +624,9 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void SetDataGridInColumn(DataGrid value)
         {
-
             // This method probably sets a reference within
             // our base to the parent datagrid, so it may be
             // retrieved from the MyBase.Container property.

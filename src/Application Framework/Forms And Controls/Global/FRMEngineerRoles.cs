@@ -1,24 +1,23 @@
-﻿using System;
+﻿using FSM.Entity.EngineerRoles;
+using FSM.Entity.Engineers;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.EngineerRoles;
-using FSM.Entity.Engineers;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMEngineerRole : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMEngineerRole() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMEngineerRole_Load;
@@ -27,7 +26,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -46,6 +44,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private Button _btnClose;
 
         internal Button btnClose
@@ -867,18 +866,18 @@ namespace FSM
             _grpEngineersAssignedToRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgrdEngineerInRoleList).BeginInit();
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Location = new Point(8, 10);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(75, 28);
             _btnClose.TabIndex = 15;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.BackColor = Color.WhiteSmoke;
             _Panel1.Controls.Add(_btnClose);
             _Panel1.Dock = DockStyle.Bottom;
@@ -886,9 +885,9 @@ namespace FSM
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(1462, 50);
             _Panel1.TabIndex = 16;
-            // 
+            //
             // tabEngineerRole
-            // 
+            //
             _tabEngineerRole.Controls.Add(_tabPageNewRole);
             _tabEngineerRole.Controls.Add(_tabPageAssignRole);
             _tabEngineerRole.Dock = DockStyle.Fill;
@@ -897,9 +896,9 @@ namespace FSM
             _tabEngineerRole.SelectedIndex = 0;
             _tabEngineerRole.Size = new Size(1462, 565);
             _tabEngineerRole.TabIndex = 17;
-            // 
+            //
             // tabPageNewRole
-            // 
+            //
             _tabPageNewRole.Controls.Add(_grpEngineerRole);
             _tabPageNewRole.Location = new Point(4, 22);
             _tabPageNewRole.Name = "tabPageNewRole";
@@ -908,9 +907,9 @@ namespace FSM
             _tabPageNewRole.TabIndex = 0;
             _tabPageNewRole.Text = "New Engineer Role";
             _tabPageNewRole.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpEngineerRole
-            // 
+            //
             _grpEngineerRole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineerRole.Controls.Add(_txtHourlyCostToCompany);
@@ -930,16 +929,16 @@ namespace FSM
             _grpEngineerRole.TabIndex = 13;
             _grpEngineerRole.TabStop = false;
             _grpEngineerRole.Text = "Enter New Role Details";
-            // 
+            //
             // txtHourlyCostToCompany
-            // 
+            //
             _txtHourlyCostToCompany.Location = new Point(96, 56);
             _txtHourlyCostToCompany.Name = "txtHourlyCostToCompany";
             _txtHourlyCostToCompany.Size = new Size(100, 21);
             _txtHourlyCostToCompany.TabIndex = 20;
-            // 
+            //
             // grpEngRoles
-            // 
+            //
             _grpEngRoles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngRoles.Controls.Add(_btnDelete);
@@ -951,9 +950,9 @@ namespace FSM
             _grpEngRoles.TabIndex = 19;
             _grpEngRoles.TabStop = false;
             _grpEngRoles.Text = "Engineer Roles";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Location = new Point(1221, 280);
             _btnDelete.Name = "btnDelete";
@@ -961,9 +960,9 @@ namespace FSM
             _btnDelete.TabIndex = 21;
             _btnDelete.Text = "Delete";
             _btnDelete.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnAddNew.Location = new Point(1140, 280);
             _btnAddNew.Name = "btnAddNew";
@@ -971,9 +970,9 @@ namespace FSM
             _btnAddNew.TabIndex = 20;
             _btnAddNew.Text = "Add New";
             _btnAddNew.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgrdEngineerRoles
-            // 
+            //
             _dgrdEngineerRoles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgrdEngineerRoles.DataMember = "";
@@ -982,17 +981,17 @@ namespace FSM
             _dgrdEngineerRoles.Name = "dgrdEngineerRoles";
             _dgrdEngineerRoles.Size = new Size(1277, 254);
             _dgrdEngineerRoles.TabIndex = 19;
-            // 
+            //
             // txtRoleId
-            // 
+            //
             _txtRoleId.Location = new Point(96, 151);
             _txtRoleId.Name = "txtRoleId";
             _txtRoleId.Size = new Size(68, 21);
             _txtRoleId.TabIndex = 16;
             _txtRoleId.Visible = false;
-            // 
+            //
             // nudHourlyCostToCompany
-            // 
+            //
             _nudHourlyCostToCompany.DecimalPlaces = 2;
             _nudHourlyCostToCompany.Location = new Point(215, 56);
             _nudHourlyCostToCompany.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
@@ -1000,9 +999,9 @@ namespace FSM
             _nudHourlyCostToCompany.Size = new Size(120, 21);
             _nudHourlyCostToCompany.TabIndex = 6;
             _nudHourlyCostToCompany.Visible = false;
-            // 
+            //
             // txtDescription
-            // 
+            //
             _txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtDescription.Location = new Point(96, 83);
             _txtDescription.Multiline = true;
@@ -1010,18 +1009,18 @@ namespace FSM
             _txtDescription.ScrollBars = ScrollBars.Vertical;
             _txtDescription.Size = new Size(1316, 62);
             _txtDescription.TabIndex = 5;
-            // 
+            //
             // lblDescription
-            // 
+            //
             _lblDescription.AutoSize = true;
             _lblDescription.Location = new Point(13, 92);
             _lblDescription.Name = "lblDescription";
             _lblDescription.Size = new Size(71, 13);
             _lblDescription.TabIndex = 4;
             _lblDescription.Text = "Description";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.AccessibleDescription = "";
             _btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSave.Cursor = Cursors.Hand;
@@ -1031,27 +1030,27 @@ namespace FSM
             _btnSave.TabIndex = 3;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblName.Location = new Point(13, 32);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(80, 16);
             _lblName.TabIndex = 1;
             _lblName.Text = "Role Name";
-            // 
+            //
             // lblHourlyCostToCompany
-            // 
+            //
             _lblHourlyCostToCompany.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblHourlyCostToCompany.Location = new Point(13, 56);
             _lblHourlyCostToCompany.Name = "lblHourlyCostToCompany";
             _lblHourlyCostToCompany.Size = new Size(80, 29);
             _lblHourlyCostToCompany.TabIndex = 2;
             _lblHourlyCostToCompany.Text = "Hourly Cost To Company";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtName.Location = new Point(96, 29);
@@ -1059,9 +1058,9 @@ namespace FSM
             _txtName.Name = "txtName";
             _txtName.Size = new Size(1316, 21);
             _txtName.TabIndex = 1;
-            // 
+            //
             // tabPageAssignRole
-            // 
+            //
             _tabPageAssignRole.Controls.Add(_grpAssignEngineerRole);
             _tabPageAssignRole.Location = new Point(4, 22);
             _tabPageAssignRole.Name = "tabPageAssignRole";
@@ -1070,9 +1069,9 @@ namespace FSM
             _tabPageAssignRole.TabIndex = 1;
             _tabPageAssignRole.Text = "Assign Engineer Role";
             _tabPageAssignRole.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpAssignEngineerRole
-            // 
+            //
             _grpAssignEngineerRole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAssignEngineerRole.BackColor = Color.White;
@@ -1091,9 +1090,9 @@ namespace FSM
             _grpAssignEngineerRole.TabIndex = 15;
             _grpAssignEngineerRole.TabStop = false;
             _grpAssignEngineerRole.Text = "Assign Engineer Role";
-            // 
+            //
             // grpEngineersAssignedToRole
-            // 
+            //
             _grpEngineersAssignedToRole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineersAssignedToRole.Controls.Add(_btnUnassign);
@@ -1104,9 +1103,9 @@ namespace FSM
             _grpEngineersAssignedToRole.TabIndex = 78;
             _grpEngineersAssignedToRole.TabStop = false;
             _grpEngineersAssignedToRole.Text = "Engineers Assigned To Role";
-            // 
+            //
             // btnUnassign
-            // 
+            //
             _btnUnassign.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUnassign.Location = new Point(1200, 348);
             _btnUnassign.Name = "btnUnassign";
@@ -1114,9 +1113,9 @@ namespace FSM
             _btnUnassign.TabIndex = 76;
             _btnUnassign.Text = "Unassign";
             _btnUnassign.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgrdEngineerInRoleList
-            // 
+            //
             _dgrdEngineerInRoleList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgrdEngineerInRoleList.DataMember = "";
@@ -1125,17 +1124,17 @@ namespace FSM
             _dgrdEngineerInRoleList.Name = "dgrdEngineerInRoleList";
             _dgrdEngineerInRoleList.Size = new Size(1264, 313);
             _dgrdEngineerInRoleList.TabIndex = 75;
-            // 
+            //
             // txtEngineerId
-            // 
+            //
             _txtEngineerId.Location = new Point(113, 83);
             _txtEngineerId.Name = "txtEngineerId";
             _txtEngineerId.Size = new Size(100, 21);
             _txtEngineerId.TabIndex = 77;
             _txtEngineerId.Visible = false;
-            // 
+            //
             // txtEngineerName
-            // 
+            //
             _txtEngineerName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEngineerName.Location = new Point(228, 83);
             _txtEngineerName.Name = "txtEngineerName";
@@ -1143,9 +1142,9 @@ namespace FSM
             _txtEngineerName.TabIndex = 76;
             _txtEngineerName.Text = "--Please Select--";
             _txtEngineerName.Visible = false;
-            // 
+            //
             // btnAssign
-            // 
+            //
             _btnAssign.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAssign.Location = new Point(1319, 83);
             _btnAssign.Name = "btnAssign";
@@ -1153,9 +1152,9 @@ namespace FSM
             _btnAssign.TabIndex = 74;
             _btnAssign.Text = "Assign";
             _btnAssign.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboEngineerRole
-            // 
+            //
             _cboEngineerRole.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboEngineerRole.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboEngineerRole.FormattingEnabled = true;
@@ -1163,27 +1162,27 @@ namespace FSM
             _cboEngineerRole.Name = "cboEngineerRole";
             _cboEngineerRole.Size = new Size(1281, 21);
             _cboEngineerRole.TabIndex = 73;
-            // 
+            //
             // lblEngRole
-            // 
+            //
             _lblEngRole.AutoSize = true;
             _lblEngRole.Location = new Point(21, 58);
             _lblEngRole.Name = "lblEngRole";
             _lblEngRole.Size = new Size(86, 13);
             _lblEngRole.TabIndex = 72;
             _lblEngRole.Text = "Engineer Role";
-            // 
+            //
             // lblEngineer
-            // 
+            //
             _lblEngineer.AutoSize = true;
             _lblEngineer.Location = new Point(21, 35);
             _lblEngineer.Name = "lblEngineer";
             _lblEngineer.Size = new Size(57, 13);
             _lblEngineer.TabIndex = 71;
             _lblEngineer.Text = "Engineer";
-            // 
+            //
             // btnfindEngineer
-            // 
+            //
             _btnfindEngineer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnfindEngineer.BackColor = Color.White;
             _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1193,9 +1192,9 @@ namespace FSM
             _btnfindEngineer.TabIndex = 80;
             _btnfindEngineer.Text = "...";
             _btnfindEngineer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtEngineer
-            // 
+            //
             _txtEngineer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtEngineer.Location = new Point(113, 29);
@@ -1203,9 +1202,9 @@ namespace FSM
             _txtEngineer.ReadOnly = true;
             _txtEngineer.Size = new Size(1243, 21);
             _txtEngineer.TabIndex = 79;
-            // 
+            //
             // FRMEngineerRole
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1462, 615);
             Controls.Add(_tabEngineerRole);
@@ -1235,7 +1234,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -1248,7 +1248,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1586,6 +1586,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateEngineerRole()
         {
             var dt = Helper.ToDataTable(App.DB.EngineerRole.GetAll());
@@ -1659,6 +1660,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDgrdEngineerRoles()
         {
             Helper.SetUpDataGrid(dgrdEngineerRoles);

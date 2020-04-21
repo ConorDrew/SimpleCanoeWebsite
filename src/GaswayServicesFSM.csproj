@@ -468,10 +468,6 @@
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="Application Framework\Forms And Controls\Global\FRMEngineerRolesDeleteMe.Designer.cs">
-      <DependentUpon>FRMEngineerRolesDeleteMe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Application Framework\Forms And Controls\Global\FRMEngineerRolesDeleteMe.cs" />
     <Compile Include="Application Framework\Forms And Controls\Global\FRMReleaseNotes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2777,9 +2773,6 @@
     <None Include="Application Framework\Documents\DBV0.13.7.15\Gasway Stored Procedures.sql" />
     <None Include="Application Framework\Documents\DBV0.13.7.16\Gabriel Stored Proceedures.sql" />
     <None Include="Application Framework\Documents\NCCImportPlan.txt" />
-    <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMEngineerRolesDeleteMe.resx">
-      <DependentUpon>FRMEngineerRolesDeleteMe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMSchedulerSettings.resx">
       <DependentUpon>FRMSchedulerSettings.cs</DependentUpon>
     </EmbeddedResource>

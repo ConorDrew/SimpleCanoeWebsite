@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMUsers : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMUsers() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMUsers_Load;
@@ -32,7 +31,6 @@ namespace FSM
             }
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -770,9 +768,9 @@ namespace FSM
             _grpUserRegions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgUserRegions).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpUsers
-            // 
+            //
             _grpUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpUsers.Controls.Add(_dgUsers);
@@ -785,9 +783,9 @@ namespace FSM
             _grpUsers.TabIndex = 6;
             _grpUsers.TabStop = false;
             _grpUsers.Text = "Users";
-            // 
+            //
             // dgUsers
-            // 
+            //
             _dgUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgUsers.DataMember = "";
@@ -796,9 +794,9 @@ namespace FSM
             _dgUsers.Name = "dgUsers";
             _dgUsers.Size = new Size(296, 482);
             _dgUsers.TabIndex = 2;
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.AccessibleDescription = "Add new user";
             _btnAddNew.Cursor = Cursors.Hand;
             _btnAddNew.Location = new Point(8, 24);
@@ -807,9 +805,9 @@ namespace FSM
             _btnAddNew.TabIndex = 1;
             _btnAddNew.Text = "New";
             _btnAddNew.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.AccessibleDescription = "Delete user";
             _btnDelete.Cursor = Cursors.Hand;
             _btnDelete.Location = new Point(62, 24);
@@ -818,9 +816,9 @@ namespace FSM
             _btnDelete.TabIndex = 3;
             _btnDelete.Text = "Delete";
             _btnDelete.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpDetails
-            // 
+            //
             _grpDetails.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _grpDetails.Controls.Add(_cboDEG);
             _grpDetails.Controls.Add(_Label7);
@@ -845,60 +843,60 @@ namespace FSM
             _grpDetails.TabIndex = 8;
             _grpDetails.TabStop = false;
             _grpDetails.Text = "Details";
-            // 
+            //
             // cboDEG
-            // 
+            //
             _cboDEG.Cursor = Cursors.Hand;
             _cboDEG.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboDEG.Location = new Point(127, 208);
             _cboDEG.Name = "cboDEG";
             _cboDEG.Size = new Size(324, 21);
             _cboDEG.TabIndex = 20;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.AutoSize = true;
             _Label7.Location = new Point(9, 211);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(112, 13);
             _Label7.TabIndex = 19;
             _Label7.Text = "Default Eng Group";
-            // 
+            //
             // chkSDV
-            // 
+            //
             _chkSDV.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _chkSDV.Location = new Point(300, 150);
             _chkSDV.Name = "chkSDV";
             _chkSDV.Size = new Size(149, 24);
             _chkSDV.TabIndex = 17;
             _chkSDV.Text = "Scheduler Day View";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.AutoSize = true;
             _Label6.Location = new Point(9, 184);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(38, 13);
             _Label6.TabIndex = 16;
             _Label6.Text = "Email";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Location = new Point(127, 181);
             _txtEmailAddress.Name = "txtEmailAddress";
             _txtEmailAddress.Size = new Size(322, 21);
             _txtEmailAddress.TabIndex = 15;
-            // 
+            //
             // chkAdmin
-            // 
+            //
             _chkAdmin.Location = new Point(182, 151);
             _chkAdmin.Name = "chkAdmin";
             _chkAdmin.Size = new Size(63, 24);
             _chkAdmin.TabIndex = 14;
             _chkAdmin.Text = "Admin";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.AccessibleDescription = "Reset the users password";
             _btnReset.Cursor = Cursors.Hand;
             _btnReset.Location = new Point(399, 86);
@@ -907,35 +905,35 @@ namespace FSM
             _btnReset.TabIndex = 7;
             _btnReset.Text = "Reset";
             _btnReset.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtConfirm
-            // 
+            //
             _txtConfirm.Location = new Point(127, 120);
             _txtConfirm.MaxLength = 50;
             _txtConfirm.Name = "txtConfirm";
             _txtConfirm.PasswordChar = (char)42;
             _txtConfirm.Size = new Size(322, 21);
             _txtConfirm.TabIndex = 8;
-            // 
+            //
             // txtPassword
-            // 
+            //
             _txtPassword.Location = new Point(127, 88);
             _txtPassword.MaxLength = 50;
             _txtPassword.Name = "txtPassword";
             _txtPassword.PasswordChar = (char)42;
             _txtPassword.Size = new Size(266, 21);
             _txtPassword.TabIndex = 6;
-            // 
+            //
             // txtUserName
-            // 
+            //
             _txtUserName.Location = new Point(127, 56);
             _txtUserName.MaxLength = 50;
             _txtUserName.Name = "txtUserName";
             _txtUserName.Size = new Size(322, 21);
             _txtUserName.TabIndex = 5;
-            // 
+            //
             // chkEnabled
-            // 
+            //
             _chkEnabled.Checked = true;
             _chkEnabled.CheckState = CheckState.Checked;
             _chkEnabled.Location = new Point(12, 150);
@@ -943,49 +941,49 @@ namespace FSM
             _chkEnabled.Size = new Size(113, 24);
             _chkEnabled.TabIndex = 10;
             _chkEnabled.Text = "Logon Enabled";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 120);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(64, 16);
             _Label4.TabIndex = 10;
             _Label4.Text = "Confirm";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 88);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(64, 16);
             _Label3.TabIndex = 9;
             _Label3.Text = "Password";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 56);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(74, 16);
             _Label1.TabIndex = 8;
             _Label1.Text = "Username";
-            // 
+            //
             // txtFullName
-            // 
+            //
             _txtFullName.Location = new Point(127, 24);
             _txtFullName.MaxLength = 255;
             _txtFullName.Name = "txtFullName";
             _txtFullName.Size = new Size(322, 21);
             _txtFullName.TabIndex = 4;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(64, 16);
             _Label2.TabIndex = 5;
             _Label2.Text = "Full Name";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.AccessibleDescription = "Save user details";
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Cursor = Cursors.Hand;
@@ -995,9 +993,9 @@ namespace FSM
             _btnSave.TabIndex = 11;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_dgSecurityUserModules);
             _GroupBox1.FlatStyle = FlatStyle.System;
@@ -1007,9 +1005,9 @@ namespace FSM
             _GroupBox1.TabIndex = 12;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Module Access";
-            // 
+            //
             // dgSecurityUserModules
-            // 
+            //
             _dgSecurityUserModules.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSecurityUserModules.DataMember = "";
@@ -1018,9 +1016,9 @@ namespace FSM
             _dgSecurityUserModules.Name = "dgSecurityUserModules";
             _dgSecurityUserModules.Size = new Size(443, 26);
             _dgSecurityUserModules.TabIndex = 2;
-            // 
+            //
             // btnPopulateNewSecurityModules
-            // 
+            //
             _btnPopulateNewSecurityModules.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPopulateNewSecurityModules.Location = new Point(536, 564);
             _btnPopulateNewSecurityModules.Name = "btnPopulateNewSecurityModules";
@@ -1028,9 +1026,9 @@ namespace FSM
             _btnPopulateNewSecurityModules.TabIndex = 13;
             _btnPopulateNewSecurityModules.Text = "Populate New Security Modules";
             _btnPopulateNewSecurityModules.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpUserRegions
-            // 
+            //
             _grpUserRegions.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _grpUserRegions.Controls.Add(_dgUserRegions);
             _grpUserRegions.FlatStyle = FlatStyle.System;
@@ -1040,9 +1038,9 @@ namespace FSM
             _grpUserRegions.TabIndex = 13;
             _grpUserRegions.TabStop = false;
             _grpUserRegions.Text = "User Regions";
-            // 
+            //
             // dgUserRegions
-            // 
+            //
             _dgUserRegions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgUserRegions.DataMember = "";
@@ -1051,9 +1049,9 @@ namespace FSM
             _dgUserRegions.Name = "dgUserRegions";
             _dgUserRegions.Size = new Size(443, 180);
             _dgUserRegions.TabIndex = 2;
-            // 
+            //
             // FRMUsers
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(793, 593);
             Controls.Add(_grpUserRegions);
@@ -1085,7 +1083,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             if (Conversions.ToString(get_GetParameter(0)).Trim().Length > 0)
@@ -1112,7 +1111,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1173,6 +1172,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupUsersAndEngineersDataGrid()
         {
             var tStyle = dgUsers.TableStyles[0];
@@ -1294,6 +1294,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetUpPageState(Entity.Sys.Enums.FormState state)
         {
             Entity.Sys.Helper.ClearGroupBox(grpDetails);
@@ -1524,6 +1525,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupUserModulesDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSecurityUserModules);

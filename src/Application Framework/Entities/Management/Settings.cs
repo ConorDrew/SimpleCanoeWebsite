@@ -14,6 +14,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -365,6 +366,7 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_ServiceFromLetterPrefix", value);
                 }
             }
+
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         }
     }

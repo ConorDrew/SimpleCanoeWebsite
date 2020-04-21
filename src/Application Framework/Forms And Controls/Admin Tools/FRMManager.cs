@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMManager : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMManager() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMManager_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -1440,9 +1438,9 @@ namespace FSM
             _TabPage2.SuspendLayout();
             _GroupBox1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpItems
-            // 
+            //
             _grpItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpItems.Controls.Add(_dgManager);
@@ -1455,9 +1453,9 @@ namespace FSM
             _grpItems.TabIndex = 5;
             _grpItems.TabStop = false;
             _grpItems.Text = "Items";
-            // 
+            //
             // dgManager
-            // 
+            //
             _dgManager.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgManager.DataMember = "";
@@ -1466,9 +1464,9 @@ namespace FSM
             _dgManager.Name = "dgManager";
             _dgManager.Size = new Size(352, 355);
             _dgManager.TabIndex = 3;
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.AccessibleDescription = "Add new item";
             _btnAddNew.Cursor = Cursors.Hand;
             _btnAddNew.Location = new Point(8, 24);
@@ -1477,9 +1475,9 @@ namespace FSM
             _btnAddNew.TabIndex = 2;
             _btnAddNew.Text = "New";
             _btnAddNew.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.AccessibleDescription = "Delete item";
             _btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnDelete.Cursor = Cursors.Hand;
@@ -1489,17 +1487,17 @@ namespace FSM
             _btnDelete.TabIndex = 4;
             _btnDelete.Text = "Delete";
             _btnDelete.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 45);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(72, 23);
             _Label1.TabIndex = 4;
             _Label1.Text = "Select Type";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboType.Cursor = Cursors.Hand;
             _cboType.DisplayMember = "Description";
@@ -1509,9 +1507,9 @@ namespace FSM
             _cboType.Size = new Size(288, 21);
             _cboType.TabIndex = 1;
             _cboType.ValueMember = "Value";
-            // 
+            //
             // grpDetails
-            // 
+            //
             _grpDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _grpDetails.Controls.Add(_chkMandatory);
             _grpDetails.Controls.Add(_txtPercentageRate);
@@ -1528,9 +1526,9 @@ namespace FSM
             _grpDetails.TabIndex = 7;
             _grpDetails.TabStop = false;
             _grpDetails.Text = "Details";
-            // 
+            //
             // chkMandatory
-            // 
+            //
             _chkMandatory.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _chkMandatory.AutoSize = true;
             _chkMandatory.Location = new Point(208, 188);
@@ -1540,9 +1538,9 @@ namespace FSM
             _chkMandatory.Text = "Mandatory";
             _chkMandatory.TextAlign = ContentAlignment.MiddleRight;
             _chkMandatory.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtPercentageRate
-            // 
+            //
             _txtPercentageRate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtPercentageRate.Location = new Point(104, 184);
             _txtPercentageRate.MaxLength = 255;
@@ -1550,9 +1548,9 @@ namespace FSM
             _txtPercentageRate.Size = new Size(87, 21);
             _txtPercentageRate.TabIndex = 9;
             _txtPercentageRate.Visible = false;
-            // 
+            //
             // lblPercentageRate
-            // 
+            //
             _lblPercentageRate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPercentageRate.Location = new Point(6, 184);
             _lblPercentageRate.Name = "lblPercentageRate";
@@ -1560,25 +1558,25 @@ namespace FSM
             _lblPercentageRate.TabIndex = 8;
             _lblPercentageRate.Text = "Rate (%)";
             _lblPercentageRate.Visible = false;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 56);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(72, 23);
             _Label3.TabIndex = 6;
             _Label3.Text = "Description";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Location = new Point(104, 24);
             _txtName.MaxLength = 255;
             _txtName.Name = "txtName";
             _txtName.Size = new Size(280, 21);
             _txtName.TabIndex = 5;
-            // 
+            //
             // txtDescription
-            // 
+            //
             _txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _txtDescription.Location = new Point(104, 56);
             _txtDescription.Multiline = true;
@@ -1586,17 +1584,17 @@ namespace FSM
             _txtDescription.ScrollBars = ScrollBars.Vertical;
             _txtDescription.Size = new Size(280, 120);
             _txtDescription.TabIndex = 6;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(48, 23);
             _Label2.TabIndex = 5;
             _Label2.Text = "Name";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.AccessibleDescription = "Save item";
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Cursor = Cursors.Hand;
@@ -1607,9 +1605,9 @@ namespace FSM
             _btnSave.TabIndex = 7;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpSettings
-            // 
+            //
             _grpSettings.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _grpSettings.Controls.Add(_btnSaveSettings);
             _grpSettings.Controls.Add(_tabSystemSettings);
@@ -1620,9 +1618,9 @@ namespace FSM
             _grpSettings.TabIndex = 11;
             _grpSettings.TabStop = false;
             _grpSettings.Text = "System Settings";
-            // 
+            //
             // btnSaveSettings
-            // 
+            //
             _btnSaveSettings.AccessibleDescription = "Save system settings";
             _btnSaveSettings.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveSettings.Cursor = Cursors.Hand;
@@ -1633,9 +1631,9 @@ namespace FSM
             _btnSaveSettings.TabIndex = 20;
             _btnSaveSettings.Text = "Save";
             _btnSaveSettings.UseVisualStyleBackColor = true;
-            // 
+            //
             // tabSystemSettings
-            // 
+            //
             _tabSystemSettings.Controls.Add(_tabImportSettings);
             _tabSystemSettings.Controls.Add(_tabCharges);
             _tabSystemSettings.Controls.Add(_tabPrefix);
@@ -1647,9 +1645,9 @@ namespace FSM
             _tabSystemSettings.SelectedIndex = 0;
             _tabSystemSettings.Size = new Size(376, 170);
             _tabSystemSettings.TabIndex = 0;
-            // 
+            //
             // tabImportSettings
-            // 
+            //
             _tabImportSettings.Controls.Add(_GroupBox2);
             _tabImportSettings.Location = new Point(4, 22);
             _tabImportSettings.Name = "tabImportSettings";
@@ -1658,9 +1656,9 @@ namespace FSM
             _tabImportSettings.TabIndex = 5;
             _tabImportSettings.Text = "Import Settings";
             _tabImportSettings.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Controls.Add(_txtPartsImportMarkup);
             _GroupBox2.Location = new Point(5, -1);
             _GroupBox2.Name = "GroupBox2";
@@ -1668,16 +1666,16 @@ namespace FSM
             _GroupBox2.TabIndex = 0;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Part Import Markup";
-            // 
+            //
             // txtPartsImportMarkup
-            // 
+            //
             _txtPartsImportMarkup.Location = new Point(6, 20);
             _txtPartsImportMarkup.Name = "txtPartsImportMarkup";
             _txtPartsImportMarkup.Size = new Size(119, 21);
             _txtPartsImportMarkup.TabIndex = 0;
-            // 
+            //
             // tabCharges
-            // 
+            //
             _tabCharges.Controls.Add(_txtRatesMarkup);
             _tabCharges.Controls.Add(_Label13);
             _tabCharges.Controls.Add(_txtPartsMarkup);
@@ -1691,63 +1689,63 @@ namespace FSM
             _tabCharges.TabIndex = 0;
             _tabCharges.Text = "Charges";
             _tabCharges.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtRatesMarkup
-            // 
+            //
             _txtRatesMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtRatesMarkup.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtRatesMarkup.Location = new Point(152, 72);
             _txtRatesMarkup.Name = "txtRatesMarkup";
             _txtRatesMarkup.Size = new Size(208, 21);
             _txtRatesMarkup.TabIndex = 5;
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label13.Location = new Point(8, 72);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(144, 23);
             _Label13.TabIndex = 53;
             _Label13.Text = "Rates Markup";
-            // 
+            //
             // txtPartsMarkup
-            // 
+            //
             _txtPartsMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPartsMarkup.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPartsMarkup.Location = new Point(152, 40);
             _txtPartsMarkup.Name = "txtPartsMarkup";
             _txtPartsMarkup.Size = new Size(208, 21);
             _txtPartsMarkup.TabIndex = 4;
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label12.Location = new Point(8, 40);
             _Label12.Name = "Label12";
             _Label12.Size = new Size(144, 23);
             _Label12.TabIndex = 51;
             _Label12.Text = "Parts Markup";
-            // 
+            //
             // txtMileageRate
-            // 
+            //
             _txtMileageRate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtMileageRate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtMileageRate.Location = new Point(152, 8);
             _txtMileageRate.Name = "txtMileageRate";
             _txtMileageRate.Size = new Size(208, 21);
             _txtMileageRate.TabIndex = 0;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label4.Location = new Point(8, 8);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(88, 23);
             _Label4.TabIndex = 43;
             _Label4.Text = "Mileage Rate:";
-            // 
+            //
             // tabPrefix
-            // 
+            //
             _tabPrefix.Controls.Add(_txtServiceFromLetterPrefix);
             _tabPrefix.Controls.Add(_Label7);
             _tabPrefix.Controls.Add(_txtQuotePrefix);
@@ -1764,94 +1762,94 @@ namespace FSM
             _tabPrefix.TabIndex = 1;
             _tabPrefix.Text = "Job Prefixes";
             _tabPrefix.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtServiceFromLetterPrefix
-            // 
+            //
             _txtServiceFromLetterPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtServiceFromLetterPrefix.Location = new Point(174, 116);
             _txtServiceFromLetterPrefix.MaxLength = 4;
             _txtServiceFromLetterPrefix.Name = "txtServiceFromLetterPrefix";
             _txtServiceFromLetterPrefix.Size = new Size(186, 21);
             _txtServiceFromLetterPrefix.TabIndex = 18;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(8, 116);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(182, 23);
             _Label7.TabIndex = 17;
             _Label7.Text = "Service From Letter Prefix:";
-            // 
+            //
             // txtQuotePrefix
-            // 
+            //
             _txtQuotePrefix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtQuotePrefix.Location = new Point(174, 89);
             _txtQuotePrefix.MaxLength = 4;
             _txtQuotePrefix.Name = "txtQuotePrefix";
             _txtQuotePrefix.Size = new Size(186, 21);
             _txtQuotePrefix.TabIndex = 16;
-            // 
+            //
             // txtPPMPrefix
-            // 
+            //
             _txtPPMPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPPMPrefix.Location = new Point(174, 62);
             _txtPPMPrefix.MaxLength = 4;
             _txtPPMPrefix.Name = "txtPPMPrefix";
             _txtPPMPrefix.Size = new Size(186, 21);
             _txtPPMPrefix.TabIndex = 15;
-            // 
+            //
             // txtMiscPrefix
-            // 
+            //
             _txtMiscPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtMiscPrefix.Location = new Point(174, 35);
             _txtMiscPrefix.MaxLength = 4;
             _txtMiscPrefix.Name = "txtMiscPrefix";
             _txtMiscPrefix.Size = new Size(186, 21);
             _txtMiscPrefix.TabIndex = 14;
-            // 
+            //
             // txtCalloutPrefix
-            // 
+            //
             _txtCalloutPrefix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCalloutPrefix.Location = new Point(174, 8);
             _txtCalloutPrefix.MaxLength = 4;
             _txtCalloutPrefix.Name = "txtCalloutPrefix";
             _txtCalloutPrefix.Size = new Size(186, 21);
             _txtCalloutPrefix.TabIndex = 13;
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(8, 89);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(80, 23);
             _Label11.TabIndex = 3;
             _Label11.Text = "Quote Prefix:";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(8, 62);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(80, 23);
             _Label10.TabIndex = 2;
             _Label10.Text = "PPM Prefix:";
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(8, 35);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(136, 23);
             _Label9.TabIndex = 1;
             _Label9.Text = "Miscellaneous Prefix:";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(8, 8);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(96, 23);
             _Label8.TabIndex = 0;
             _Label8.Text = "Callout Prefix:";
-            // 
+            //
             // TabPage1
-            // 
+            //
             _TabPage1.Controls.Add(_cboTimeSlot);
             _TabPage1.Controls.Add(_Label14);
             _TabPage1.Controls.Add(_lblTimeSlot);
@@ -1865,67 +1863,67 @@ namespace FSM
             _TabPage1.TabIndex = 2;
             _TabPage1.Text = "Working Day";
             _TabPage1.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboTimeSlot
-            // 
+            //
             _cboTimeSlot.Items.AddRange(new object[] { "15", "30", "45", "60" });
             _cboTimeSlot.Location = new Point(152, 8);
             _cboTimeSlot.Name = "cboTimeSlot";
             _cboTimeSlot.Size = new Size(80, 21);
             _cboTimeSlot.TabIndex = 53;
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Location = new Point(240, 8);
             _Label14.Name = "Label14";
             _Label14.Size = new Size(48, 16);
             _Label14.TabIndex = 51;
             _Label14.Text = "Minutes";
-            // 
+            //
             // lblTimeSlot
-            // 
+            //
             _lblTimeSlot.Location = new Point(8, 8);
             _lblTimeSlot.Name = "lblTimeSlot";
             _lblTimeSlot.Size = new Size(128, 23);
             _lblTimeSlot.TabIndex = 47;
             _lblTimeSlot.Text = "Time Slot Duration";
-            // 
+            //
             // cboWorkingHoursEnd
-            // 
+            //
             _cboWorkingHoursEnd.Cursor = Cursors.Hand;
             _cboWorkingHoursEnd.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboWorkingHoursEnd.Location = new Point(152, 72);
             _cboWorkingHoursEnd.Name = "cboWorkingHoursEnd";
             _cboWorkingHoursEnd.Size = new Size(80, 21);
             _cboWorkingHoursEnd.TabIndex = 18;
-            // 
+            //
             // cboWorkingHoursStart
-            // 
+            //
             _cboWorkingHoursStart.Cursor = Cursors.Hand;
             _cboWorkingHoursStart.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboWorkingHoursStart.Location = new Point(152, 40);
             _cboWorkingHoursStart.Name = "cboWorkingHoursStart";
             _cboWorkingHoursStart.Size = new Size(80, 21);
             _cboWorkingHoursStart.TabIndex = 17;
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.Location = new Point(8, 72);
             _Label16.Name = "Label16";
             _Label16.Size = new Size(120, 16);
             _Label16.TabIndex = 46;
             _Label16.Text = "Working Hours End";
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.Location = new Point(8, 40);
             _Label15.Name = "Label15";
             _Label15.Size = new Size(128, 23);
             _Label15.TabIndex = 45;
             _Label15.Text = "Working Hours Start";
-            // 
+            //
             // tabInvoicePrefix
-            // 
+            //
             _tabInvoicePrefix.Controls.Add(_txtInvoicePrefix);
             _tabInvoicePrefix.Controls.Add(_Label5);
             _tabInvoicePrefix.Location = new Point(4, 22);
@@ -1934,26 +1932,26 @@ namespace FSM
             _tabInvoicePrefix.TabIndex = 3;
             _tabInvoicePrefix.Text = "Invoice Prefix";
             _tabInvoicePrefix.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtInvoicePrefix
-            // 
+            //
             _txtInvoicePrefix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtInvoicePrefix.Location = new Point(144, 16);
             _txtInvoicePrefix.MaxLength = 4;
             _txtInvoicePrefix.Name = "txtInvoicePrefix";
             _txtInvoicePrefix.Size = new Size(208, 21);
             _txtInvoicePrefix.TabIndex = 15;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 16);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(96, 23);
             _Label5.TabIndex = 14;
             _Label5.Text = "Invoice Prefix:";
-            // 
+            //
             // TabPage2
-            // 
+            //
             _TabPage2.Controls.Add(_GroupBox1);
             _TabPage2.Location = new Point(4, 22);
             _TabPage2.Name = "TabPage2";
@@ -1962,9 +1960,9 @@ namespace FSM
             _TabPage2.TabIndex = 4;
             _TabPage2.Text = "Engineers Performance";
             _TabPage2.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_txtRecallVariable);
@@ -1975,24 +1973,24 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Engineer Performance Report";
-            // 
+            //
             // txtRecallVariable
-            // 
+            //
             _txtRecallVariable.Location = new Point(9, 54);
             _txtRecallVariable.Name = "txtRecallVariable";
             _txtRecallVariable.Size = new Size(100, 21);
             _txtRecallVariable.TabIndex = 1;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(6, 17);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(288, 44);
             _Label6.TabIndex = 0;
             _Label6.Text = "Engineer Performance - No Of Days to see if a recall has been carried out at site" + ".";
-            // 
+            //
             // FRMManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(784, 494);
             Controls.Add(_grpSettings);
@@ -2033,7 +2031,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupManagerDataGrid();
@@ -2073,7 +2072,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -2146,6 +2145,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupManagerDataGrid()
         {
             var tbStyle = dgManager.TableStyles[0];
@@ -2313,6 +2313,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateDatagrid(Entity.Sys.Enums.FormState state)
         {
             try

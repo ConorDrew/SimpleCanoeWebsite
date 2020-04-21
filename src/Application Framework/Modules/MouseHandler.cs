@@ -15,9 +15,8 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public delegate int CallBack(int nCode, IntPtr wParam, IntPtr lParam);
-
-
 
         private int WH_MOUSE = 7;
         private static int hHook = 0;
@@ -27,18 +26,15 @@ namespace FSM
 
         // Import for the SetWindowsHookEx function.
         [DllImport("User32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-
         public static extern int SetWindowsHookEx(int idHook, CallBack HookProc, IntPtr hInstance, int wParam);
 
         // Import for the CallNextHookEx function.
         [DllImport("User32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-
         public static extern int CallNextHookEx(int idHook, int nCode, IntPtr wParam, IntPtr lParam);
+
         // Import for the UnhookWindowsHookEx function.
         [DllImport("User32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-
         public static extern bool UnhookWindowsHookEx(int idHook);
-
 
         // Point structure declaration.
         [StructLayout(LayoutKind.Sequential)]
@@ -62,12 +58,9 @@ namespace FSM
         {
             hookproc = MouseHookProc;
             hHook = SetWindowsHookEx(WH_MOUSE, hookproc, IntPtr.Zero, AppDomain.GetCurrentThreadId());
-
-
         }
 
         public int MouseHookProc(int nCode, IntPtr wParam, IntPtr lParam)
-
 
         {
             try
@@ -89,7 +82,6 @@ namespace FSM
 
             return default;
         }
-
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
 

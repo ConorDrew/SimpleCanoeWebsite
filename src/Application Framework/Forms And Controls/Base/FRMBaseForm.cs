@@ -1,25 +1,23 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMBaseForm : Form, IBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMBaseForm() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -57,7 +55,6 @@ namespace FSM
             {
                 if (_picHeader != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
@@ -106,9 +103,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_picHeader).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_picHeaderCont).BeginInit();
             SuspendLayout();
-            // 
+            //
             // picHeader
-            // 
+            //
             _picHeader.Location = new Point(0, 0);
             _picHeader.Margin = new Padding(0, 0, 3, 0);
             _picHeader.Name = "picHeader";
@@ -117,9 +114,9 @@ namespace FSM
             _picHeader.SizeMode = PictureBoxSizeMode.StretchImage;
             _picHeader.TabIndex = 0;
             _picHeader.TabStop = false;
-            // 
+            //
             // picHeaderCont
-            // 
+            //
             _picHeaderCont.Dock = DockStyle.Top;
             _picHeaderCont.Location = new Point(0, 0);
             _picHeaderCont.Margin = new Padding(3, 0, 3, 3);
@@ -128,9 +125,9 @@ namespace FSM
             _picHeaderCont.SizeMode = PictureBoxSizeMode.StretchImage;
             _picHeaderCont.TabIndex = 1;
             _picHeaderCont.TabStop = false;
-            // 
+            //
             // FRMBaseForm
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             AutoScroll = true;
             BackColor = Color.White;
@@ -209,7 +206,7 @@ namespace FSM
             SetupButtonMouseOvers();
         }
 
-        private void LoopControls(Control controlToLoop)
+        public void LoopControls(Control controlToLoop)
         {
             foreach (Control control in controlToLoop.Controls)
             {
@@ -297,7 +294,7 @@ namespace FSM
                 ((Button)btn).MouseHover += CreateHover;
         }
 
-        private void CreateHover(object sender, EventArgs e)
+        public void CreateHover(object sender, EventArgs e)
         {
             Button argbtn = (Button)sender;
             Entity.Sys.Helper.Setup_Button(ref argbtn, ((Button)sender).AccessibleDescription);
@@ -305,13 +302,21 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private Array _FormParameters = null;
+        private object[] _FormParameters = null;
 
-        public Array SetFormParameters
+        public object[] SetFormParameters
         {
             set
             {
                 _FormParameters = value;
+            }
+        }
+
+        public object GetParameter
+        {
+            get
+            {
+                return null;
             }
         }
 
@@ -332,7 +337,7 @@ namespace FSM
                 return null;
             }
 
-            return this._FormParameters(indexOfArrayToGet);
+            return this._FormParameters[indexOfArrayToGet];
         }
 
         public int GetParameterCount
@@ -343,7 +348,7 @@ namespace FSM
             }
         }
 
-        private void picHeader_MouseHover(object sender, EventArgs e)
+        public void picHeader_MouseHover(object sender, EventArgs e)
         {
             var hoverToolTip = new ToolTip();
             hoverToolTip.SetToolTip(picHeader, App.TheSystem.Description);

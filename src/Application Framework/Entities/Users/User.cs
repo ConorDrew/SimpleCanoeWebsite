@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
 {
@@ -18,6 +18,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public bool IgnoreExceptionsOnSetMethods
             {
                 get

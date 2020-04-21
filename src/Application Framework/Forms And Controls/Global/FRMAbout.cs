@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMAbout : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMAbout() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMAbout_Load;
@@ -21,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -42,7 +40,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpVersionInformation;
 
@@ -526,9 +524,9 @@ namespace FSM
             _grpAssemblyInformation.SuspendLayout();
             _grpVersion.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpVersionInformation
-            // 
+            //
             _grpVersionInformation.Controls.Add(_rtbLatestRelease);
             _grpVersionInformation.Location = new Point(8, 40);
             _grpVersionInformation.Name = "grpVersionInformation";
@@ -536,9 +534,9 @@ namespace FSM
             _grpVersionInformation.TabIndex = 2;
             _grpVersionInformation.TabStop = false;
             _grpVersionInformation.Text = "Latest Release Notes";
-            // 
+            //
             // grpAssemblyInformation
-            // 
+            //
             _grpAssemblyInformation.Controls.Add(_Label1);
             _grpAssemblyInformation.Controls.Add(_txtVersion);
             _grpAssemblyInformation.Controls.Add(_txttrademark);
@@ -559,121 +557,121 @@ namespace FSM
             _grpAssemblyInformation.TabIndex = 3;
             _grpAssemblyInformation.TabStop = false;
             _grpAssemblyInformation.Text = "Assembly Information";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 24);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 16);
             _Label1.TabIndex = 10;
             _Label1.Text = "Version:";
-            // 
+            //
             // txtVersion
-            // 
+            //
             _txtVersion.Location = new Point(104, 24);
             _txtVersion.Name = "txtVersion";
             _txtVersion.ReadOnly = true;
             _txtVersion.Size = new Size(280, 21);
             _txtVersion.TabIndex = 2;
-            // 
+            //
             // txttrademark
-            // 
+            //
             _txttrademark.Location = new Point(104, 168);
             _txttrademark.Name = "txttrademark";
             _txttrademark.ReadOnly = true;
             _txttrademark.Size = new Size(280, 21);
             _txttrademark.TabIndex = 8;
-            // 
+            //
             // txtCopyright
-            // 
+            //
             _txtCopyright.Location = new Point(104, 144);
             _txtCopyright.Name = "txtCopyright";
             _txtCopyright.ReadOnly = true;
             _txtCopyright.Size = new Size(280, 21);
             _txtCopyright.TabIndex = 7;
-            // 
+            //
             // txtproduct
-            // 
+            //
             _txtproduct.Location = new Point(104, 120);
             _txtproduct.Name = "txtproduct";
             _txtproduct.ReadOnly = true;
             _txtproduct.Size = new Size(280, 21);
             _txtproduct.TabIndex = 6;
-            // 
+            //
             // txtcompany
-            // 
+            //
             _txtcompany.Location = new Point(104, 96);
             _txtcompany.Name = "txtcompany";
             _txtcompany.ReadOnly = true;
             _txtcompany.Size = new Size(280, 21);
             _txtcompany.TabIndex = 5;
-            // 
+            //
             // txtdescription
-            // 
+            //
             _txtdescription.Location = new Point(104, 72);
             _txtdescription.Name = "txtdescription";
             _txtdescription.ReadOnly = true;
             _txtdescription.Size = new Size(280, 21);
             _txtdescription.TabIndex = 4;
-            // 
+            //
             // txtTitle
-            // 
+            //
             _txtTitle.Location = new Point(104, 48);
             _txtTitle.Name = "txtTitle";
             _txtTitle.ReadOnly = true;
             _txtTitle.Size = new Size(280, 21);
             _txtTitle.TabIndex = 3;
-            // 
+            //
             // lbltrademark
-            // 
+            //
             _lbltrademark.Location = new Point(8, 168);
             _lbltrademark.Name = "lbltrademark";
             _lbltrademark.Size = new Size(72, 16);
             _lbltrademark.TabIndex = 5;
             _lbltrademark.Text = "Trademark:";
-            // 
+            //
             // lblCopyright
-            // 
+            //
             _lblCopyright.Location = new Point(8, 144);
             _lblCopyright.Name = "lblCopyright";
             _lblCopyright.Size = new Size(64, 16);
             _lblCopyright.TabIndex = 4;
             _lblCopyright.Text = "Copyright:";
-            // 
+            //
             // lblproduct
-            // 
+            //
             _lblproduct.Location = new Point(8, 120);
             _lblproduct.Name = "lblproduct";
             _lblproduct.Size = new Size(56, 16);
             _lblproduct.TabIndex = 3;
             _lblproduct.Text = "Product:";
-            // 
+            //
             // lblcompany
-            // 
+            //
             _lblcompany.Location = new Point(8, 96);
             _lblcompany.Name = "lblcompany";
             _lblcompany.Size = new Size(64, 16);
             _lblcompany.TabIndex = 2;
             _lblcompany.Text = "Company:";
-            // 
+            //
             // lbldescription
-            // 
+            //
             _lbldescription.Location = new Point(8, 72);
             _lbldescription.Name = "lbldescription";
             _lbldescription.Size = new Size(80, 16);
             _lbldescription.TabIndex = 1;
             _lbldescription.Text = "Description:";
-            // 
+            //
             // lbltitle
-            // 
+            //
             _lbltitle.Location = new Point(8, 48);
             _lbltitle.Name = "lbltitle";
             _lbltitle.Size = new Size(40, 16);
             _lbltitle.TabIndex = 0;
             _lbltitle.Text = "Title:";
-            // 
+            //
             // grpVersion
-            // 
+            //
             _grpVersion.Controls.Add(_txtVersionHistory);
             _grpVersion.Font = new Font("Verdana", 8.25F);
             _grpVersion.Location = new Point(408, 40);
@@ -682,9 +680,9 @@ namespace FSM
             _grpVersion.TabIndex = 4;
             _grpVersion.TabStop = false;
             _grpVersion.Text = "Version History";
-            // 
+            //
             // txtVersionHistory
-            // 
+            //
             _txtVersionHistory.Location = new Point(8, 16);
             _txtVersionHistory.Multiline = true;
             _txtVersionHistory.Name = "txtVersionHistory";
@@ -692,18 +690,18 @@ namespace FSM
             _txtVersionHistory.ScrollBars = ScrollBars.Both;
             _txtVersionHistory.Size = new Size(392, 368);
             _txtVersionHistory.TabIndex = 9;
-            // 
+            //
             // rtbLatestRelease
-            // 
+            //
             _rtbLatestRelease.Dock = DockStyle.Fill;
             _rtbLatestRelease.Location = new Point(3, 17);
             _rtbLatestRelease.Name = "rtbLatestRelease";
             _rtbLatestRelease.Size = new Size(386, 164);
             _rtbLatestRelease.TabIndex = 0;
             _rtbLatestRelease.Text = "";
-            // 
+            //
             // FRMAbout
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(826, 433);
             Controls.Add(_grpVersion);
@@ -728,7 +726,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             Populate();
@@ -742,7 +741,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -753,6 +752,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate()
         {
             txtVersion.Text = App.TheSystem.Configuration.SystemVersion;

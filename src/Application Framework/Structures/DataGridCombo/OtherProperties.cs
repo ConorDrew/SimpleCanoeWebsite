@@ -5,14 +5,15 @@ namespace FSM
 {
     public class CalculatedProperties : Properties
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal CalculatedProperties(BindableItem parent) : base(parent)
         {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal new BindableItem Parent
         {
             get
@@ -28,6 +29,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public new CalculatedProperty AddNew(string name)
         {
             var newItem = new CalculatedProperty(this, name);
@@ -83,6 +85,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
@@ -94,7 +97,6 @@ namespace FSM
 
     public class CalculatedProperty : Property
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private BindableItem _Parent;
 
@@ -127,6 +129,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal CalculatedProperty(CalculatedProperties container, string name) : base(container, name)
         {
             Parent = container.Parent;
@@ -134,6 +137,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal new CalculatedProperties Container
         {
             get
@@ -149,6 +153,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public object Value
         {
             get
@@ -164,9 +169,9 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-
             // Whenever a child property is changed, we hear it here.  If its a trigger for an
             // property of the collection, thne raise the property changed event.  Happens to be the
             // exact code as 'triggerChangedHandler' method, so call it.
@@ -191,14 +196,15 @@ namespace FSM
 
     public class CollectionProperties : Properties
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal CollectionProperties(BindableCollection parent) : base(parent)
         {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal new BindableCollection Parent
         {
             get
@@ -214,6 +220,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public new CollectionProperty AddNew(string name)
         {
             var newItem = new CollectionProperty(this, name);
@@ -269,6 +276,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
@@ -286,10 +294,11 @@ namespace FSM
 
     public class CollectionProperty : Property
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // Indicates to raise the ListChanged event after the PropertyChanged event
         public bool DoListChangedOnPropertyChange = true;
+
         // Indicates to raise the PropertyChanged event after the ListChanged event
         public bool DoPropertyChangeOnListChanged = true;
 
@@ -299,12 +308,14 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal CollectionProperty(CollectionProperties container, string name) : base(container, name)
         {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal new CollectionProperties Container
         {
             get
@@ -320,6 +331,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             var myParent = Container.Parent;
