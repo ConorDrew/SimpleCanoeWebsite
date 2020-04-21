@@ -464,6 +464,9 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application Scheduler\frmVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
@@ -1144,9 +1147,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Scheduler\FrmUserAbsence.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Scheduler\frmVisit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Scheduler\ISchedulerForm.cs">
@@ -2797,6 +2797,9 @@
     <EmbeddedResource Include="Application Scheduler\FRMViewEngineer.resx">
       <DependentUpon>FRMViewEngineer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Application Scheduler\frmVisit.resx">
+      <DependentUpon>frmVisit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Customer\FRMEngineerRaiseJob.resx">
       <DependentUpon>FRMEngineerRaiseJob.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3586,10 +3589,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Scheduler\FrmUserAbsence.resx">
       <DependentUpon>FrmUserAbsence.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Scheduler\frmVisit.resx">
-      <DependentUpon>frmVisit.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Scheduler\Panels\pnlScheduleControl.resx">

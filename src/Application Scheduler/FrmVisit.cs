@@ -11,9 +11,9 @@ using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
-    public class FrmVisit : FRMBaseForm, ISchedulerForm
+    public class frmVisit : FRMBaseForm, ISchedulerForm
     {
-        public FrmVisit()
+        public frmVisit()
         {
             base.SizeChanged += frmVisit_SizeChanged;
             base.Load += frmVisit_Load;
@@ -21,7 +21,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
-        public FrmVisit(int EngineerIDIn, DateTime Date, int SORTotal, int EngineerVisitID, bool isCopyIn) : base()
+        public frmVisit(int EngineerIDIn, DateTime Date, int SORTotal, int EngineerVisitID, bool isCopyIn) : base()
         {
             base.SizeChanged += frmVisit_SizeChanged;
             base.Load += frmVisit_Load;
