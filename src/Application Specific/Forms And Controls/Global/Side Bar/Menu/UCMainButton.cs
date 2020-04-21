@@ -1,25 +1,23 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCMainButton : UCBase
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCMainButton() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -40,7 +38,7 @@ namespace FSM
         private IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private PictureBox _picIcon;
 
@@ -57,7 +55,6 @@ namespace FSM
             {
                 if (_picIcon != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _picIcon.MouseEnter -= CtrlMouseEnter;
@@ -118,9 +115,9 @@ namespace FSM
             _lblMenuCaption.MouseLeave += new EventHandler(CtrlMouseLeave);
             _lblMenuCaption.Click += new EventHandler(CtrlClick);
             SuspendLayout();
-            // 
+            //
             // picIcon
-            // 
+            //
             _picIcon.BackgroundImage = (Image)resources.GetObject("picIcon.BackgroundImage");
             _picIcon.Cursor = Cursors.Hand;
             _picIcon.Dock = DockStyle.Left;
@@ -130,9 +127,9 @@ namespace FSM
             _picIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             _picIcon.TabIndex = 0;
             _picIcon.TabStop = false;
-            // 
+            //
             // lblMenuCaption
-            // 
+            //
             _lblMenuCaption.BackColor = Color.Transparent;
             _lblMenuCaption.Cursor = Cursors.Hand;
             _lblMenuCaption.Dock = DockStyle.Fill;
@@ -144,9 +141,9 @@ namespace FSM
             _lblMenuCaption.TabIndex = 3;
             _lblMenuCaption.Text = "SET IN CODE";
             _lblMenuCaption.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // UCMainButton
-            // 
+            //
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             Controls.Add(_lblMenuCaption);
             Controls.Add(_picIcon);
@@ -156,11 +153,13 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         public event ButtonClickedEventHandler ButtonClicked;
 
         public delegate void ButtonClickedEventHandler(Entity.Sys.Enums.MenuTypes MenuType);
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         [Category("MenuItem")]
         [Description("Menu Caption Text")]
         public string Caption

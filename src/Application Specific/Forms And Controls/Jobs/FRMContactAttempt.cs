@@ -1,18 +1,18 @@
-﻿using System;
+﻿using FSM.Entity.ContactAttempts;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.ContactAttempts;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMContactAttempt : Form
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMContactAttempt(Enums.TableNames linkTable, int linkId) : base()
         {
             InitializeComponent();
@@ -51,7 +51,6 @@ namespace FSM
             {
                 if (_btnSave != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnSave.Click -= btnSave_Click;
@@ -274,9 +273,9 @@ namespace FSM
             _lblNote = new Label();
             _txtNote = new TextBox();
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(341, 242);
             _btnSave.Name = "btnSave";
@@ -284,69 +283,69 @@ namespace FSM
             _btnSave.TabIndex = 48;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblContactMethod
-            // 
+            //
             _lblContactMethod.AutoSize = true;
             _lblContactMethod.Location = new Point(12, 18);
             _lblContactMethod.Name = "lblContactMethod";
             _lblContactMethod.Size = new Size(46, 13);
             _lblContactMethod.TabIndex = 49;
             _lblContactMethod.Text = "Method:";
-            // 
+            //
             // cboMethod
-            // 
+            //
             _cboMethod.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboMethod.FormattingEnabled = true;
             _cboMethod.Location = new Point(74, 15);
             _cboMethod.Name = "cboMethod";
             _cboMethod.Size = new Size(344, 21);
             _cboMethod.TabIndex = 50;
-            // 
+            //
             // lblDate
-            // 
+            //
             _lblDate.AutoSize = true;
             _lblDate.Location = new Point(12, 61);
             _lblDate.Name = "lblDate";
             _lblDate.Size = new Size(33, 13);
             _lblDate.TabIndex = 51;
             _lblDate.Text = "Date:";
-            // 
+            //
             // dtpDate
-            // 
+            //
             _dtpDate.Location = new Point(74, 58);
             _dtpDate.Name = "dtpDate";
             _dtpDate.Size = new Size(156, 20);
             _dtpDate.TabIndex = 52;
-            // 
+            //
             // lblTime
-            // 
+            //
             _lblTime.AutoSize = true;
             _lblTime.Location = new Point(251, 61);
             _lblTime.Name = "lblTime";
             _lblTime.Size = new Size(33, 13);
             _lblTime.TabIndex = 53;
             _lblTime.Text = "Time:";
-            // 
+            //
             // dtpTime
-            // 
+            //
             _dtpTime.Format = DateTimePickerFormat.Time;
             _dtpTime.Location = new Point(290, 58);
             _dtpTime.Name = "dtpTime";
             _dtpTime.Size = new Size(69, 20);
             _dtpTime.TabIndex = 54;
-            // 
+            //
             // lblNote
-            // 
+            //
             _lblNote.AutoSize = true;
             _lblNote.Location = new Point(12, 105);
             _lblNote.Name = "lblNote";
             _lblNote.Size = new Size(33, 13);
             _lblNote.TabIndex = 55;
             _lblNote.Text = "Note:";
-            // 
+            //
             // txtNote
-            // 
+            //
             _txtNote.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtNote.Location = new Point(74, 105);
             _txtNote.Multiline = true;
@@ -354,9 +353,9 @@ namespace FSM
             _txtNote.ScrollBars = ScrollBars.Vertical;
             _txtNote.Size = new Size(344, 112);
             _txtNote.TabIndex = 56;
-            // 
+            //
             // FRMContactAttempt
-            // 
+            //
             AutoScaleBaseSize = new Size(5, 13);
             BackColor = Color.White;
             ClientSize = new Size(430, 277);
@@ -390,6 +389,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private bool IsFormValid()
         {
             if (Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboMethod)) == 0)

@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCNotes : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCNotes() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCNotes_Load;
@@ -66,7 +65,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
 
         private GroupBox _grpNotes;
@@ -710,9 +709,9 @@ namespace FSM
             _grpReminderDetails.SuspendLayout();
             _pnlReminderType.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpNotes
-            // 
+            //
             _grpNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpNotes.Controls.Add(_cboUserFor);
@@ -733,24 +732,24 @@ namespace FSM
             _grpNotes.TabIndex = 1;
             _grpNotes.TabStop = false;
             _grpNotes.Text = "Note Details";
-            // 
+            //
             // cboTimeMinutes
-            // 
+            //
             _cboTimeMinutes.Location = new Point(432, 24);
             _cboTimeMinutes.Name = "cboTimeMinutes";
             _cboTimeMinutes.Size = new Size(104, 21);
             _cboTimeMinutes.TabIndex = 3;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(288, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(40, 21);
             _Label2.TabIndex = 33;
             _Label2.Text = "Time";
-            // 
+            //
             // grpReminderDetails
-            // 
+            //
             _grpReminderDetails.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpReminderDetails.Controls.Add(_cboReminderFrequencyValue);
             _grpReminderDetails.Controls.Add(_Label4);
@@ -768,108 +767,108 @@ namespace FSM
             _grpReminderDetails.TabIndex = 32;
             _grpReminderDetails.TabStop = false;
             _grpReminderDetails.Text = "Reminder Details";
-            // 
+            //
             // cboReminderFrequencyValue
-            // 
+            //
             _cboReminderFrequencyValue.Location = new Point(176, 25);
             _cboReminderFrequencyValue.Name = "cboReminderFrequencyValue";
             _cboReminderFrequencyValue.Size = new Size(96, 21);
             _cboReminderFrequencyValue.TabIndex = 9;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label4.Location = new Point(456, 58);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(40, 20);
             _Label4.TabIndex = 36;
             _Label4.Text = "Time";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(176, 57);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(40, 20);
             _Label3.TabIndex = 34;
             _Label3.Text = "Date";
-            // 
+            //
             // pnlReminderType
-            // 
+            //
             _pnlReminderType.Controls.Add(_radOther);
             _pnlReminderType.Controls.Add(_radPeriod);
             _pnlReminderType.Location = new Point(96, 24);
             _pnlReminderType.Name = "pnlReminderType";
             _pnlReminderType.Size = new Size(72, 56);
             _pnlReminderType.TabIndex = 33;
-            // 
+            //
             // radOther
-            // 
+            //
             _radOther.Location = new Point(8, 27);
             _radOther.Name = "radOther";
             _radOther.Size = new Size(64, 24);
             _radOther.TabIndex = 8;
             _radOther.Text = "Other";
-            // 
+            //
             // radPeriod
-            // 
+            //
             _radPeriod.Location = new Point(8, 2);
             _radPeriod.Name = "radPeriod";
             _radPeriod.Size = new Size(64, 24);
             _radPeriod.TabIndex = 7;
             _radPeriod.Text = "Period";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label1.Location = new Point(456, 28);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(144, 16);
             _Label1.TabIndex = 32;
             _Label1.Text = "Prior to due date && time";
-            // 
+            //
             // cboReminderFrequency
-            // 
+            //
             _cboReminderFrequency.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboReminderFrequency.Location = new Point(272, 26);
             _cboReminderFrequency.Name = "cboReminderFrequency";
             _cboReminderFrequency.Size = new Size(176, 21);
             _cboReminderFrequency.TabIndex = 10;
-            // 
+            //
             // chkReminderRequired
-            // 
+            //
             _chkReminderRequired.Location = new Point(8, 24);
             _chkReminderRequired.Name = "chkReminderRequired";
             _chkReminderRequired.Size = new Size(88, 56);
             _chkReminderRequired.TabIndex = 6;
             _chkReminderRequired.Text = "Reminder Required";
-            // 
+            //
             // dtpReminderDate
-            // 
+            //
             _dtpReminderDate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dtpReminderDate.Location = new Point(216, 57);
             _dtpReminderDate.Name = "dtpReminderDate";
             _dtpReminderDate.Size = new Size(232, 21);
             _dtpReminderDate.TabIndex = 11;
             _dtpReminderDate.Tag = "Notes.NoteDate";
-            // 
+            //
             // cboReminderHours
-            // 
+            //
             _cboReminderHours.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboReminderHours.Location = new Point(496, 58);
             _cboReminderHours.Name = "cboReminderHours";
             _cboReminderHours.Size = new Size(104, 21);
             _cboReminderHours.TabIndex = 12;
-            // 
+            //
             // cboReminderMinutes
-            // 
+            //
             _cboReminderMinutes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboReminderMinutes.Location = new Point(600, 58);
             _cboReminderMinutes.Name = "cboReminderMinutes";
             _cboReminderMinutes.Size = new Size(104, 21);
             _cboReminderMinutes.TabIndex = 13;
-            // 
+            //
             // cboCategoryID
-            // 
+            //
             _cboCategoryID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboCategoryID.Cursor = Cursors.Hand;
             _cboCategoryID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -878,33 +877,33 @@ namespace FSM
             _cboCategoryID.Size = new Size(651, 21);
             _cboCategoryID.TabIndex = 4;
             _cboCategoryID.Tag = "Notes.CategoryID";
-            // 
+            //
             // lblCategoryID
-            // 
+            //
             _lblCategoryID.Location = new Point(8, 82);
             _lblCategoryID.Name = "lblCategoryID";
             _lblCategoryID.Size = new Size(64, 20);
             _lblCategoryID.TabIndex = 31;
             _lblCategoryID.Text = "Category";
-            // 
+            //
             // dtpNoteDate
-            // 
+            //
             _dtpNoteDate.Location = new Point(72, 24);
             _dtpNoteDate.Name = "dtpNoteDate";
             _dtpNoteDate.Size = new Size(208, 21);
             _dtpNoteDate.TabIndex = 1;
             _dtpNoteDate.Tag = "Notes.NoteDate";
-            // 
+            //
             // lblNoteDate
-            // 
+            //
             _lblNoteDate.Location = new Point(8, 24);
             _lblNoteDate.Name = "lblNoteDate";
             _lblNoteDate.Size = new Size(48, 21);
             _lblNoteDate.TabIndex = 31;
             _lblNoteDate.Text = "Date";
-            // 
+            //
             // txtNote
-            // 
+            //
             _txtNote.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNote.Location = new Point(72, 111);
@@ -915,39 +914,39 @@ namespace FSM
             _txtNote.TabIndex = 5;
             _txtNote.Tag = "Notes.Note";
             _txtNote.Text = "";
-            // 
+            //
             // lblNote
-            // 
+            //
             _lblNote.Location = new Point(8, 111);
             _lblNote.Name = "lblNote";
             _lblNote.Size = new Size(48, 20);
             _lblNote.TabIndex = 31;
             _lblNote.Text = "Note";
-            // 
+            //
             // cboTimeHours
-            // 
+            //
             _cboTimeHours.Location = new Point(328, 24);
             _cboTimeHours.Name = "cboTimeHours";
             _cboTimeHours.Size = new Size(104, 21);
             _cboTimeHours.TabIndex = 2;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 53);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(64, 20);
             _Label5.TabIndex = 34;
             _Label5.Text = "For User:";
-            // 
+            //
             // cboUserFor
-            // 
+            //
             _cboUserFor.Location = new Point(72, 53);
             _cboUserFor.Name = "cboUserFor";
             _cboUserFor.Size = new Size(208, 21);
             _cboUserFor.TabIndex = 35;
-            // 
+            //
             // UCNotes
-            // 
+            //
             Controls.Add(_grpNotes);
             Name = "UCNotes";
             Size = new Size(747, 325);
@@ -959,7 +958,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -974,11 +974,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1035,7 +1036,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {
@@ -1151,37 +1153,37 @@ namespace FSM
                         var switchExpr = Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboReminderFrequency));
                         switch (switchExpr)
                         {
-                            case Conversions.ToInteger(Entity.Sys.Enums.ReminderFrequencies.Minutes):
+                            case (int)(Entity.Sys.Enums.ReminderFrequencies.Minutes):
                                 {
                                     reminderDate = reminderDate.AddMinutes(0 - Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboReminderFrequencyValue)));
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Entity.Sys.Enums.ReminderFrequencies.Hours):
+                            case (int)(Entity.Sys.Enums.ReminderFrequencies.Hours):
                                 {
                                     reminderDate = reminderDate.AddHours(0 - Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboReminderFrequencyValue)));
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Entity.Sys.Enums.ReminderFrequencies.Days):
+                            case (int)(Entity.Sys.Enums.ReminderFrequencies.Days):
                                 {
                                     reminderDate = reminderDate.AddDays(0 - Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboReminderFrequencyValue)));
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Entity.Sys.Enums.ReminderFrequencies.Weeks):
+                            case (int)(Entity.Sys.Enums.ReminderFrequencies.Weeks):
                                 {
                                     reminderDate = reminderDate.AddDays(0 - Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboReminderFrequencyValue)) * 7);
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Entity.Sys.Enums.ReminderFrequencies.Months):
+                            case (int)(Entity.Sys.Enums.ReminderFrequencies.Months):
                                 {
                                     reminderDate = reminderDate.AddMonths(0 - Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboReminderFrequencyValue)));
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Entity.Sys.Enums.ReminderFrequencies.Years):
+                            case (int)(Entity.Sys.Enums.ReminderFrequencies.Years):
                                 {
                                     reminderDate = reminderDate.AddYears(0 - Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboReminderFrequencyValue)));
                                     break;
@@ -1225,6 +1227,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

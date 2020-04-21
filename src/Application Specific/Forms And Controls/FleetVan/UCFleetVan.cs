@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -6,18 +8,15 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCFleetVan : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCFleetVan() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCFleetVan_Load;
@@ -3521,9 +3520,9 @@ namespace FSM
             _gpServiceHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgServiceHistory).BeginInit();
             SuspendLayout();
-            // 
+            //
             // tabHistory
-            // 
+            //
             _tabHistory.Controls.Add(_grpHistoryDetails);
             _tabHistory.Controls.Add(_grpVanAudit);
             _tabHistory.Location = new Point(4, 22);
@@ -3532,9 +3531,9 @@ namespace FSM
             _tabHistory.TabIndex = 1;
             _tabHistory.Text = "History";
             _tabHistory.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpHistoryDetails
-            // 
+            //
             _grpHistoryDetails.Controls.Add(_txtUsername);
             _grpHistoryDetails.Controls.Add(_lblUser);
             _grpHistoryDetails.Controls.Add(_dtpHistoryDate);
@@ -3547,42 +3546,42 @@ namespace FSM
             _grpHistoryDetails.TabIndex = 17;
             _grpHistoryDetails.TabStop = false;
             _grpHistoryDetails.Text = "History Details";
-            // 
+            //
             // txtUsername
-            // 
+            //
             _txtUsername.Location = new Point(372, 24);
             _txtUsername.Name = "txtUsername";
             _txtUsername.ReadOnly = true;
             _txtUsername.Size = new Size(146, 21);
             _txtUsername.TabIndex = 68;
-            // 
+            //
             // lblUser
-            // 
+            //
             _lblUser.Location = new Point(312, 27);
             _lblUser.Name = "lblUser";
             _lblUser.Size = new Size(44, 20);
             _lblUser.TabIndex = 67;
             _lblUser.Text = "User";
-            // 
+            //
             // dtpHistoryDate
-            // 
+            //
             _dtpHistoryDate.Enabled = false;
             _dtpHistoryDate.Location = new Point(89, 21);
             _dtpHistoryDate.Name = "dtpHistoryDate";
             _dtpHistoryDate.Size = new Size(146, 21);
             _dtpHistoryDate.TabIndex = 2;
             _dtpHistoryDate.Tag = "";
-            // 
+            //
             // lblDate
-            // 
+            //
             _lblDate.Location = new Point(9, 27);
             _lblDate.Name = "lblDate";
             _lblDate.Size = new Size(85, 20);
             _lblDate.TabIndex = 65;
             _lblDate.Text = "Date";
-            // 
+            //
             // txtChange
-            // 
+            //
             _txtChange.Location = new Point(89, 64);
             _txtChange.Multiline = true;
             _txtChange.Name = "txtChange";
@@ -3590,17 +3589,17 @@ namespace FSM
             _txtChange.Size = new Size(569, 161);
             _txtChange.TabIndex = 6;
             _txtChange.Tag = "";
-            // 
+            //
             // lblChange
-            // 
+            //
             _lblChange.Location = new Point(10, 64);
             _lblChange.Name = "lblChange";
             _lblChange.Size = new Size(59, 20);
             _lblChange.TabIndex = 45;
             _lblChange.Text = "Change";
-            // 
+            //
             // grpVanAudit
-            // 
+            //
             _grpVanAudit.Controls.Add(_dgVanAudits);
             _grpVanAudit.Location = new Point(3, 254);
             _grpVanAudit.Name = "grpVanAudit";
@@ -3608,9 +3607,9 @@ namespace FSM
             _grpVanAudit.TabIndex = 4;
             _grpVanAudit.TabStop = false;
             _grpVanAudit.Text = "Van Audit";
-            // 
+            //
             // dgVanAudits
-            // 
+            //
             _dgVanAudits.DataMember = "";
             _dgVanAudits.Dock = DockStyle.Fill;
             _dgVanAudits.HeaderForeColor = SystemColors.ControlText;
@@ -3618,9 +3617,9 @@ namespace FSM
             _dgVanAudits.Name = "dgVanAudits";
             _dgVanAudits.Size = new Size(658, 533);
             _dgVanAudits.TabIndex = 15;
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_grpMaintenance);
             _tabDetails.Controls.Add(_grpEngineer);
             _tabDetails.Controls.Add(_grpVan);
@@ -3629,9 +3628,9 @@ namespace FSM
             _tabDetails.Size = new Size(675, 702);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Main Details";
-            // 
+            //
             // grpMaintenance
-            // 
+            //
             _grpMaintenance.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _grpMaintenance.Controls.Add(_dtpBreakdownExpiry);
             _grpMaintenance.Controls.Add(_lblBreakdownExpiry);
@@ -3656,146 +3655,146 @@ namespace FSM
             _grpMaintenance.TabIndex = 61;
             _grpMaintenance.TabStop = false;
             _grpMaintenance.Text = "Maintenance";
-            // 
+            //
             // dtpBreakdownExpiry
-            // 
+            //
             _dtpBreakdownExpiry.Location = new Point(457, 178);
             _dtpBreakdownExpiry.Name = "dtpBreakdownExpiry";
             _dtpBreakdownExpiry.Size = new Size(141, 21);
             _dtpBreakdownExpiry.TabIndex = 71;
             _dtpBreakdownExpiry.Tag = "";
-            // 
+            //
             // lblBreakdownExpiry
-            // 
+            //
             _lblBreakdownExpiry.Location = new Point(325, 184);
             _lblBreakdownExpiry.Name = "lblBreakdownExpiry";
             _lblBreakdownExpiry.Size = new Size(117, 20);
             _lblBreakdownExpiry.TabIndex = 72;
             _lblBreakdownExpiry.Text = "Breakdown Expiry";
-            // 
+            //
             // dtpWarrantyExpiry
-            // 
+            //
             _dtpWarrantyExpiry.Location = new Point(457, 138);
             _dtpWarrantyExpiry.Name = "dtpWarrantyExpiry";
             _dtpWarrantyExpiry.Size = new Size(141, 21);
             _dtpWarrantyExpiry.TabIndex = 69;
             _dtpWarrantyExpiry.Tag = "";
-            // 
+            //
             // lblWarrantyExpiry
-            // 
+            //
             _lblWarrantyExpiry.Location = new Point(325, 144);
             _lblWarrantyExpiry.Name = "lblWarrantyExpiry";
             _lblWarrantyExpiry.Size = new Size(105, 20);
             _lblWarrantyExpiry.TabIndex = 70;
             _lblWarrantyExpiry.Text = "Warranty Expiry";
-            // 
+            //
             // txtLastServiceMileage
-            // 
+            //
             _txtLastServiceMileage.Location = new Point(489, 18);
             _txtLastServiceMileage.Name = "txtLastServiceMileage";
             _txtLastServiceMileage.Size = new Size(109, 21);
             _txtLastServiceMileage.TabIndex = 10;
             _txtLastServiceMileage.Tag = " ";
-            // 
+            //
             // lblMileageLastService
-            // 
+            //
             _lblMileageLastService.Location = new Point(325, 21);
             _lblMileageLastService.Name = "lblMileageLastService";
             _lblMileageLastService.Size = new Size(142, 20);
             _lblMileageLastService.TabIndex = 68;
             _lblMileageLastService.Text = "Mileage at Last Service";
-            // 
+            //
             // btnNextService
-            // 
+            //
             _btnNextService.Location = new Point(328, 56);
             _btnNextService.Name = "btnNextService";
             _btnNextService.Size = new Size(270, 21);
             _btnNextService.TabIndex = 12;
             _btnNextService.Text = "Calculate Next Service";
             _btnNextService.UseVisualStyleBackColor = true;
-            // 
+            //
             // dtpTaxExpiry
-            // 
+            //
             _dtpTaxExpiry.Location = new Point(120, 138);
             _dtpTaxExpiry.Name = "dtpTaxExpiry";
             _dtpTaxExpiry.Size = new Size(138, 21);
             _dtpTaxExpiry.TabIndex = 15;
             _dtpTaxExpiry.Tag = "Van.InsuranceDue";
-            // 
+            //
             // lblRoadTax
-            // 
+            //
             _lblRoadTax.Location = new Point(9, 144);
             _lblRoadTax.Name = "lblRoadTax";
             _lblRoadTax.Size = new Size(84, 20);
             _lblRoadTax.TabIndex = 65;
             _lblRoadTax.Text = "Tax Expiry";
-            // 
+            //
             // dtpNextServiceDate
-            // 
+            //
             _dtpNextServiceDate.Location = new Point(120, 54);
             _dtpNextServiceDate.Name = "dtpNextServiceDate";
             _dtpNextServiceDate.Size = new Size(138, 21);
             _dtpNextServiceDate.TabIndex = 11;
             _dtpNextServiceDate.Tag = "Van.InsuranceDue";
-            // 
+            //
             // lblNextServiceDate
-            // 
+            //
             _lblNextServiceDate.Location = new Point(9, 60);
             _lblNextServiceDate.Name = "lblNextServiceDate";
             _lblNextServiceDate.Size = new Size(85, 20);
             _lblNextServiceDate.TabIndex = 62;
             _lblNextServiceDate.Text = "Next Service";
-            // 
+            //
             // dtpLastServiceDate
-            // 
+            //
             _dtpLastServiceDate.Location = new Point(120, 18);
             _dtpLastServiceDate.Name = "dtpLastServiceDate";
             _dtpLastServiceDate.Size = new Size(138, 21);
             _dtpLastServiceDate.TabIndex = 9;
             _dtpLastServiceDate.Tag = "Van.InsuranceDue";
-            // 
+            //
             // dtpMOTExpiry
-            // 
+            //
             _dtpMOTExpiry.Location = new Point(120, 99);
             _dtpMOTExpiry.Name = "dtpMOTExpiry";
             _dtpMOTExpiry.Size = new Size(138, 21);
             _dtpMOTExpiry.TabIndex = 13;
             _dtpMOTExpiry.Tag = "Van.InsuranceDue";
-            // 
+            //
             // lblMOT
-            // 
+            //
             _lblMOT.Location = new Point(9, 105);
             _lblMOT.Name = "lblMOT";
             _lblMOT.Size = new Size(84, 20);
             _lblMOT.TabIndex = 58;
             _lblMOT.Text = "MOT Expiry";
-            // 
+            //
             // txtBreakdown
-            // 
+            //
             _txtBreakdown.Location = new Point(457, 97);
             _txtBreakdown.Name = "txtBreakdown";
             _txtBreakdown.Size = new Size(141, 21);
             _txtBreakdown.TabIndex = 16;
             _txtBreakdown.Tag = " ";
-            // 
+            //
             // lblBreakdownCompany
-            // 
+            //
             _lblBreakdownCompany.Location = new Point(325, 100);
             _lblBreakdownCompany.Name = "lblBreakdownCompany";
             _lblBreakdownCompany.Size = new Size(105, 20);
             _lblBreakdownCompany.TabIndex = 53;
             _lblBreakdownCompany.Text = "Breakdown";
-            // 
+            //
             // lblLastService
-            // 
+            //
             _lblLastService.Location = new Point(8, 24);
             _lblLastService.Name = "lblLastService";
             _lblLastService.Size = new Size(85, 20);
             _lblLastService.TabIndex = 31;
             _lblLastService.Text = "Last Service";
-            // 
+            //
             // grpEngineer
-            // 
+            //
             _grpEngineer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _grpEngineer.Controls.Add(_cboDepartment);
             _grpEngineer.Controls.Add(_chkEndDate);
@@ -3813,9 +3812,9 @@ namespace FSM
             _grpEngineer.TabIndex = 45;
             _grpEngineer.TabStop = false;
             _grpEngineer.Text = "Engineer";
-            // 
+            //
             // cboDepartment
-            // 
+            //
             _cboDepartment.Cursor = Cursors.Hand;
             _cboDepartment.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboDepartment.Location = new Point(120, 52);
@@ -3823,9 +3822,9 @@ namespace FSM
             _cboDepartment.Size = new Size(146, 21);
             _cboDepartment.TabIndex = 50;
             _cboDepartment.Tag = "";
-            // 
+            //
             // chkEndDate
-            // 
+            //
             _chkEndDate.AutoSize = true;
             _chkEndDate.BackColor = SystemColors.Control;
             _chkEndDate.Location = new Point(328, 89);
@@ -3834,49 +3833,49 @@ namespace FSM
             _chkEndDate.TabIndex = 65;
             _chkEndDate.Text = "End Date";
             _chkEndDate.UseVisualStyleBackColor = false;
-            // 
+            //
             // dtpEndDate
-            // 
+            //
             _dtpEndDate.Enabled = false;
             _dtpEndDate.Location = new Point(421, 85);
             _dtpEndDate.Name = "dtpEndDate";
             _dtpEndDate.Size = new Size(138, 21);
             _dtpEndDate.TabIndex = 63;
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Location = new Point(489, 17);
             _btnRemove.Name = "btnRemove";
             _btnRemove.Size = new Size(75, 23);
             _btnRemove.TabIndex = 62;
             _btnRemove.Text = "Remove";
             _btnRemove.UseVisualStyleBackColor = true;
-            // 
+            //
             // dtpStartDate
-            // 
+            //
             _dtpStartDate.Location = new Point(120, 84);
             _dtpStartDate.Name = "dtpStartDate";
             _dtpStartDate.Size = new Size(138, 21);
             _dtpStartDate.TabIndex = 21;
-            // 
+            //
             // lblStartDate
-            // 
+            //
             _lblStartDate.Location = new Point(9, 90);
             _lblStartDate.Name = "lblStartDate";
             _lblStartDate.Size = new Size(84, 20);
             _lblStartDate.TabIndex = 58;
             _lblStartDate.Text = "Start Date";
-            // 
+            //
             // lblDepartment
-            // 
+            //
             _lblDepartment.Location = new Point(9, 55);
             _lblDepartment.Name = "lblDepartment";
             _lblDepartment.Size = new Size(104, 20);
             _lblDepartment.TabIndex = 55;
             _lblDepartment.Text = "Department";
-            // 
+            //
             // btnfindEngineer
-            // 
+            //
             _btnfindEngineer.BackColor = Color.White;
             _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnfindEngineer.Location = new Point(337, 19);
@@ -3885,26 +3884,26 @@ namespace FSM
             _btnfindEngineer.TabIndex = 18;
             _btnfindEngineer.Text = "...";
             _btnfindEngineer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtEngineer
-            // 
+            //
             _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtEngineer.Location = new Point(120, 19);
             _txtEngineer.Name = "txtEngineer";
             _txtEngineer.ReadOnly = true;
             _txtEngineer.Size = new Size(201, 21);
             _txtEngineer.TabIndex = 17;
-            // 
+            //
             // lblEngineer
-            // 
+            //
             _lblEngineer.Location = new Point(8, 24);
             _lblEngineer.Name = "lblEngineer";
             _lblEngineer.Size = new Size(85, 20);
             _lblEngineer.TabIndex = 31;
             _lblEngineer.Text = "Engineer";
-            // 
+            //
             // grpVan
-            // 
+            //
             _grpVan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpVan.Controls.Add(_txtTyreSize);
             _grpVan.Controls.Add(_lblTyresSize);
@@ -3933,52 +3932,52 @@ namespace FSM
             _grpVan.TabIndex = 2;
             _grpVan.TabStop = false;
             _grpVan.Text = "Details";
-            // 
+            //
             // txtTyreSize
-            // 
+            //
             _txtTyreSize.Location = new Point(477, 160);
             _txtTyreSize.MaxLength = 10;
             _txtTyreSize.Name = "txtTyreSize";
             _txtTyreSize.Size = new Size(161, 21);
             _txtTyreSize.TabIndex = 48;
-            // 
+            //
             // lblTyresSize
-            // 
+            //
             _lblTyresSize.Location = new Point(363, 163);
             _lblTyresSize.Name = "lblTyresSize";
             _lblTyresSize.Size = new Size(81, 20);
             _lblTyresSize.TabIndex = 49;
             _lblTyresSize.Text = "Tyre Size";
-            // 
+            //
             // btnRemoveEquipment
-            // 
+            //
             _btnRemoveEquipment.Location = new Point(367, 121);
             _btnRemoveEquipment.Name = "btnRemoveEquipment";
             _btnRemoveEquipment.Size = new Size(75, 23);
             _btnRemoveEquipment.TabIndex = 46;
             _btnRemoveEquipment.Text = "Remove";
             _btnRemoveEquipment.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAddEquipment
-            // 
+            //
             _btnAddEquipment.Location = new Point(563, 121);
             _btnAddEquipment.Name = "btnAddEquipment";
             _btnAddEquipment.Size = new Size(75, 23);
             _btnAddEquipment.TabIndex = 47;
             _btnAddEquipment.Text = "Add";
             _btnAddEquipment.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgEquipment
-            // 
+            //
             _dgEquipment.DataMember = "";
             _dgEquipment.HeaderForeColor = SystemColors.ControlText;
             _dgEquipment.Location = new Point(367, 10);
             _dgEquipment.Name = "dgEquipment";
             _dgEquipment.Size = new Size(271, 103);
             _dgEquipment.TabIndex = 44;
-            // 
+            //
             // chkReturned
-            // 
+            //
             _chkReturned.AutoSize = true;
             _chkReturned.BackColor = SystemColors.Control;
             _chkReturned.Location = new Point(478, 194);
@@ -3987,67 +3986,67 @@ namespace FSM
             _chkReturned.TabIndex = 7;
             _chkReturned.Text = "  ";
             _chkReturned.UseVisualStyleBackColor = false;
-            // 
+            //
             // lblReturned
-            // 
+            //
             _lblReturned.Location = new Point(364, 195);
             _lblReturned.Name = "lblReturned";
             _lblReturned.Size = new Size(81, 20);
             _lblReturned.TabIndex = 43;
             _lblReturned.Text = "Returned";
-            // 
+            //
             // txtAverageMileage
-            // 
+            //
             _txtAverageMileage.Enabled = false;
             _txtAverageMileage.Location = new Point(120, 195);
             _txtAverageMileage.MaxLength = 10;
             _txtAverageMileage.Name = "txtAverageMileage";
             _txtAverageMileage.Size = new Size(146, 21);
             _txtAverageMileage.TabIndex = 6;
-            // 
+            //
             // lblAverageMileage
-            // 
+            //
             _lblAverageMileage.Location = new Point(6, 198);
             _lblAverageMileage.Name = "lblAverageMileage";
             _lblAverageMileage.Size = new Size(112, 20);
             _lblAverageMileage.TabIndex = 42;
             _lblAverageMileage.Text = "Average Mileage";
-            // 
+            //
             // txtMileage
-            // 
+            //
             _txtMileage.Location = new Point(120, 160);
             _txtMileage.MaxLength = 10;
             _txtMileage.Name = "txtMileage";
             _txtMileage.Size = new Size(146, 21);
             _txtMileage.TabIndex = 5;
-            // 
+            //
             // lblMileage
-            // 
+            //
             _lblMileage.Location = new Point(6, 163);
             _lblMileage.Name = "lblMileage";
             _lblMileage.Size = new Size(81, 20);
             _lblMileage.TabIndex = 40;
             _lblMileage.Text = "Mileage";
-            // 
+            //
             // txtModel
-            // 
+            //
             _txtModel.Enabled = false;
             _txtModel.Location = new Point(120, 125);
             _txtModel.MaxLength = 10;
             _txtModel.Name = "txtModel";
             _txtModel.Size = new Size(146, 21);
             _txtModel.TabIndex = 4;
-            // 
+            //
             // lblMdoel
-            // 
+            //
             _lblMdoel.Location = new Point(6, 128);
             _lblMdoel.Name = "lblMdoel";
             _lblMdoel.Size = new Size(81, 20);
             _lblMdoel.TabIndex = 38;
             _lblMdoel.Text = "Model";
-            // 
+            //
             // cboVanType
-            // 
+            //
             _cboVanType.Cursor = Cursors.Hand;
             _cboVanType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboVanType.Location = new Point(120, 55);
@@ -4055,34 +4054,34 @@ namespace FSM
             _cboVanType.Size = new Size(146, 21);
             _cboVanType.TabIndex = 2;
             _cboVanType.Tag = "";
-            // 
+            //
             // txtMake
-            // 
+            //
             _txtMake.Enabled = false;
             _txtMake.Location = new Point(120, 90);
             _txtMake.MaxLength = 10;
             _txtMake.Name = "txtMake";
             _txtMake.Size = new Size(146, 21);
             _txtMake.TabIndex = 3;
-            // 
+            //
             // txtRegistration
-            // 
+            //
             _txtRegistration.Location = new Point(120, 20);
             _txtRegistration.MaxLength = 20;
             _txtRegistration.Name = "txtRegistration";
             _txtRegistration.Size = new Size(146, 21);
             _txtRegistration.TabIndex = 1;
-            // 
+            //
             // lblRegistration
-            // 
+            //
             _lblRegistration.Location = new Point(6, 23);
             _lblRegistration.Name = "lblRegistration";
             _lblRegistration.Size = new Size(85, 20);
             _lblRegistration.TabIndex = 31;
             _lblRegistration.Text = "Registration";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(120, 231);
@@ -4092,33 +4091,33 @@ namespace FSM
             _txtNotes.Size = new Size(518, 37);
             _txtNotes.TabIndex = 8;
             _txtNotes.Tag = "Van.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(6, 234);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(53, 20);
             _lblNotes.TabIndex = 31;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // lblInsuranceDue
-            // 
+            //
             _lblInsuranceDue.Location = new Point(6, 58);
             _lblInsuranceDue.Name = "lblInsuranceDue";
             _lblInsuranceDue.Size = new Size(96, 20);
             _lblInsuranceDue.TabIndex = 31;
             _lblInsuranceDue.Text = "Van Type";
-            // 
+            //
             // lblMake
-            // 
+            //
             _lblMake.Location = new Point(6, 93);
             _lblMake.Name = "lblMake";
             _lblMake.Size = new Size(81, 20);
             _lblMake.TabIndex = 31;
             _lblMake.Text = "Make";
-            // 
+            //
             // tcVans
-            // 
+            //
             _tcVans.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcVans.Controls.Add(_tabDetails);
@@ -4133,9 +4132,9 @@ namespace FSM
             _tcVans.SelectedIndex = 0;
             _tcVans.Size = new Size(683, 728);
             _tcVans.TabIndex = 0;
-            // 
+            //
             // tabFaults
-            // 
+            //
             _tabFaults.BackColor = SystemColors.Control;
             _tabFaults.Controls.Add(_chkHideArchive);
             _tabFaults.Controls.Add(_grpFaultDetails);
@@ -4145,9 +4144,9 @@ namespace FSM
             _tabFaults.Size = new Size(675, 702);
             _tabFaults.TabIndex = 2;
             _tabFaults.Text = "Faults";
-            // 
+            //
             // chkHideArchive
-            // 
+            //
             _chkHideArchive.AutoSize = true;
             _chkHideArchive.Checked = true;
             _chkHideArchive.CheckState = CheckState.Checked;
@@ -4157,9 +4156,9 @@ namespace FSM
             _chkHideArchive.TabIndex = 78;
             _chkHideArchive.Text = "Hide Archive";
             _chkHideArchive.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpFaultDetails
-            // 
+            //
             _grpFaultDetails.Controls.Add(_chkArchive);
             _grpFaultDetails.Controls.Add(_txtAdditionalNotes);
             _grpFaultDetails.Controls.Add(_lblAddNotes);
@@ -4190,9 +4189,9 @@ namespace FSM
             _grpFaultDetails.TabIndex = 16;
             _grpFaultDetails.TabStop = false;
             _grpFaultDetails.Text = "Fault Details";
-            // 
+            //
             // chkArchive
-            // 
+            //
             _chkArchive.AutoSize = true;
             _chkArchive.Location = new Point(589, 137);
             _chkArchive.Name = "chkArchive";
@@ -4200,9 +4199,9 @@ namespace FSM
             _chkArchive.TabIndex = 77;
             _chkArchive.Text = "Archive";
             _chkArchive.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtAdditionalNotes
-            // 
+            //
             _txtAdditionalNotes.Location = new Point(112, 267);
             _txtAdditionalNotes.Multiline = true;
             _txtAdditionalNotes.Name = "txtAdditionalNotes";
@@ -4210,90 +4209,90 @@ namespace FSM
             _txtAdditionalNotes.Size = new Size(546, 62);
             _txtAdditionalNotes.TabIndex = 75;
             _txtAdditionalNotes.Tag = "";
-            // 
+            //
             // lblAddNotes
-            // 
+            //
             _lblAddNotes.Location = new Point(9, 270);
             _lblAddNotes.Name = "lblAddNotes";
             _lblAddNotes.Size = new Size(103, 20);
             _lblAddNotes.TabIndex = 76;
             _lblAddNotes.Text = "Additional Notes";
-            // 
+            //
             // txtOutcome
-            // 
+            //
             _txtOutcome.Location = new Point(401, 168);
             _txtOutcome.Name = "txtOutcome";
             _txtOutcome.ReadOnly = true;
             _txtOutcome.Size = new Size(146, 21);
             _txtOutcome.TabIndex = 74;
-            // 
+            //
             // lblOutcome
-            // 
+            //
             _lblOutcome.Location = new Point(298, 171);
             _lblOutcome.Name = "lblOutcome";
             _lblOutcome.Size = new Size(95, 20);
             _lblOutcome.TabIndex = 73;
             _lblOutcome.Text = "Outcome";
-            // 
+            //
             // txtStatus
-            // 
+            //
             _txtStatus.Location = new Point(112, 168);
             _txtStatus.Name = "txtStatus";
             _txtStatus.ReadOnly = true;
             _txtStatus.Size = new Size(146, 21);
             _txtStatus.TabIndex = 72;
-            // 
+            //
             // lblVisitStatus
-            // 
+            //
             _lblVisitStatus.Location = new Point(9, 171);
             _lblVisitStatus.Name = "lblVisitStatus";
             _lblVisitStatus.Size = new Size(95, 20);
             _lblVisitStatus.TabIndex = 71;
             _lblVisitStatus.Text = "Visit Status";
-            // 
+            //
             // txtScheduled
-            // 
+            //
             _txtScheduled.Location = new Point(401, 135);
             _txtScheduled.Name = "txtScheduled";
             _txtScheduled.ReadOnly = true;
             _txtScheduled.Size = new Size(146, 21);
             _txtScheduled.TabIndex = 70;
-            // 
+            //
             // lblScheduled
-            // 
+            //
             _lblScheduled.Location = new Point(298, 138);
             _lblScheduled.Name = "lblScheduled";
             _lblScheduled.Size = new Size(95, 20);
             _lblScheduled.TabIndex = 69;
             _lblScheduled.Text = "Scheduled";
-            // 
+            //
             // txtJobRef
-            // 
+            //
             _txtJobRef.Location = new Point(112, 135);
             _txtJobRef.Name = "txtJobRef";
             _txtJobRef.ReadOnly = true;
             _txtJobRef.Size = new Size(146, 21);
             _txtJobRef.TabIndex = 68;
-            // 
+            //
             // lblJobRef
-            // 
+            //
             _lblJobRef.Location = new Point(9, 138);
             _lblJobRef.Name = "lblJobRef";
             _lblJobRef.Size = new Size(95, 20);
             _lblJobRef.TabIndex = 67;
             _lblJobRef.Text = "Job Reference";
-            // 
+            //
             // btnNewFault
-            // 
+            //
             _btnNewFault.Location = new Point(13, 338);
             _btnNewFault.Name = "btnNewFault";
             _btnNewFault.Size = new Size(75, 23);
             _btnNewFault.TabIndex = 7;
             _btnNewFault.Text = "New";
             _btnNewFault.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkResolved
-            // 
+            //
             _chkResolved.AutoSize = true;
             _chkResolved.Location = new Point(300, 99);
             _chkResolved.Name = "chkResolved";
@@ -4301,42 +4300,42 @@ namespace FSM
             _chkResolved.TabIndex = 4;
             _chkResolved.Text = "Resolved";
             _chkResolved.UseVisualStyleBackColor = true;
-            // 
+            //
             // dtpResolvedDate
-            // 
+            //
             _dtpResolvedDate.Enabled = false;
             _dtpResolvedDate.Location = new Point(112, 96);
             _dtpResolvedDate.Name = "dtpResolvedDate";
             _dtpResolvedDate.Size = new Size(146, 21);
             _dtpResolvedDate.TabIndex = 3;
             _dtpResolvedDate.Tag = "";
-            // 
+            //
             // lblResolvedDate
-            // 
+            //
             _lblResolvedDate.Location = new Point(9, 102);
             _lblResolvedDate.Name = "lblResolvedDate";
             _lblResolvedDate.Size = new Size(95, 20);
             _lblResolvedDate.TabIndex = 66;
             _lblResolvedDate.Text = "Resolved Date";
-            // 
+            //
             // dtpFaultDate
-            // 
+            //
             _dtpFaultDate.Location = new Point(112, 60);
             _dtpFaultDate.Name = "dtpFaultDate";
             _dtpFaultDate.Size = new Size(146, 21);
             _dtpFaultDate.TabIndex = 2;
             _dtpFaultDate.Tag = "";
-            // 
+            //
             // lblFaultDate
-            // 
+            //
             _lblFaultDate.Location = new Point(8, 66);
             _lblFaultDate.Name = "lblFaultDate";
             _lblFaultDate.Size = new Size(85, 20);
             _lblFaultDate.TabIndex = 65;
             _lblFaultDate.Text = "Fault Date";
-            // 
+            //
             // txtFaultNotes
-            // 
+            //
             _txtFaultNotes.Location = new Point(112, 202);
             _txtFaultNotes.Multiline = true;
             _txtFaultNotes.Name = "txtFaultNotes";
@@ -4345,17 +4344,17 @@ namespace FSM
             _txtFaultNotes.Size = new Size(546, 52);
             _txtFaultNotes.TabIndex = 6;
             _txtFaultNotes.Tag = "";
-            // 
+            //
             // lblFaultNotes
-            // 
+            //
             _lblFaultNotes.Location = new Point(10, 205);
             _lblFaultNotes.Name = "lblFaultNotes";
             _lblFaultNotes.Size = new Size(96, 20);
             _lblFaultNotes.TabIndex = 45;
             _lblFaultNotes.Text = "Notes";
-            // 
+            //
             // cboFaultType
-            // 
+            //
             _cboFaultType.Cursor = Cursors.Hand;
             _cboFaultType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboFaultType.Location = new Point(112, 27);
@@ -4363,9 +4362,9 @@ namespace FSM
             _cboFaultType.Size = new Size(146, 21);
             _cboFaultType.TabIndex = 1;
             _cboFaultType.Tag = "";
-            // 
+            //
             // txtEngineerFaultNotes
-            // 
+            //
             _txtEngineerFaultNotes.Location = new Point(401, 27);
             _txtEngineerFaultNotes.Multiline = true;
             _txtEngineerFaultNotes.Name = "txtEngineerFaultNotes";
@@ -4373,25 +4372,25 @@ namespace FSM
             _txtEngineerFaultNotes.Size = new Size(257, 95);
             _txtEngineerFaultNotes.TabIndex = 5;
             _txtEngineerFaultNotes.Tag = "";
-            // 
+            //
             // lblEngineerNotes
-            // 
+            //
             _lblEngineerNotes.Location = new Point(297, 30);
             _lblEngineerNotes.Name = "lblEngineerNotes";
             _lblEngineerNotes.Size = new Size(98, 20);
             _lblEngineerNotes.TabIndex = 31;
             _lblEngineerNotes.Text = "Engineer Notes";
-            // 
+            //
             // lblFaultType
-            // 
+            //
             _lblFaultType.Location = new Point(8, 30);
             _lblFaultType.Name = "lblFaultType";
             _lblFaultType.Size = new Size(96, 20);
             _lblFaultType.TabIndex = 31;
             _lblFaultType.Text = "Fault Type";
-            // 
+            //
             // grpVanFaultDg
-            // 
+            //
             _grpVanFaultDg.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpVanFaultDg.Controls.Add(_dgVanFaults);
             _grpVanFaultDg.Location = new Point(11, 413);
@@ -4400,9 +4399,9 @@ namespace FSM
             _grpVanFaultDg.TabIndex = 5;
             _grpVanFaultDg.TabStop = false;
             _grpVanFaultDg.Text = "Van Fault History (Double click to view)";
-            // 
+            //
             // dgVanFaults
-            // 
+            //
             _dgVanFaults.DataMember = "";
             _dgVanFaults.Dock = DockStyle.Fill;
             _dgVanFaults.HeaderForeColor = SystemColors.ControlText;
@@ -4410,9 +4409,9 @@ namespace FSM
             _dgVanFaults.Name = "dgVanFaults";
             _dgVanFaults.Size = new Size(658, 267);
             _dgVanFaults.TabIndex = 15;
-            // 
+            //
             // tabContract
-            // 
+            //
             _tabContract.BackColor = SystemColors.Control;
             _tabContract.Controls.Add(_grpFinances);
             _tabContract.Controls.Add(_grpContractDetails);
@@ -4421,9 +4420,9 @@ namespace FSM
             _tabContract.Size = new Size(675, 702);
             _tabContract.TabIndex = 3;
             _tabContract.Text = "Contract";
-            // 
+            //
             // grpFinances
-            // 
+            //
             _grpFinances.Controls.Add(_txtForecastExcessCost);
             _grpFinances.Controls.Add(_lblForcastedExcessCost);
             _grpFinances.Controls.Add(_txtExcessMileageCost);
@@ -4442,107 +4441,107 @@ namespace FSM
             _grpFinances.TabIndex = 75;
             _grpFinances.TabStop = false;
             _grpFinances.Text = "Finances";
-            // 
+            //
             // txtForecastExcessCost
-            // 
+            //
             _txtForecastExcessCost.Enabled = false;
             _txtForecastExcessCost.Location = new Point(498, 99);
             _txtForecastExcessCost.MaxLength = 10;
             _txtForecastExcessCost.Name = "txtForecastExcessCost";
             _txtForecastExcessCost.Size = new Size(146, 21);
             _txtForecastExcessCost.TabIndex = 75;
-            // 
+            //
             // lblForcastedExcessCost
-            // 
+            //
             _lblForcastedExcessCost.Location = new Point(347, 102);
             _lblForcastedExcessCost.Name = "lblForcastedExcessCost";
             _lblForcastedExcessCost.Size = new Size(145, 20);
             _lblForcastedExcessCost.TabIndex = 76;
             _lblForcastedExcessCost.Text = "Forecast Excess Cost";
-            // 
+            //
             // txtExcessMileageCost
-            // 
+            //
             _txtExcessMileageCost.Enabled = false;
             _txtExcessMileageCost.Location = new Point(159, 99);
             _txtExcessMileageCost.MaxLength = 10;
             _txtExcessMileageCost.Name = "txtExcessMileageCost";
             _txtExcessMileageCost.Size = new Size(146, 21);
             _txtExcessMileageCost.TabIndex = 73;
-            // 
+            //
             // lblExcessCost
-            // 
+            //
             _lblExcessCost.Location = new Point(8, 102);
             _lblExcessCost.Name = "lblExcessCost";
             _lblExcessCost.Size = new Size(126, 20);
             _lblExcessCost.TabIndex = 74;
             _lblExcessCost.Text = "Excess Mileage Cost";
-            // 
+            //
             // txtAnnualRental
-            // 
+            //
             _txtAnnualRental.Location = new Point(498, 60);
             _txtAnnualRental.MaxLength = 10;
             _txtAnnualRental.Name = "txtAnnualRental";
             _txtAnnualRental.Size = new Size(146, 21);
             _txtAnnualRental.TabIndex = 12;
-            // 
+            //
             // txtMonthlyRental
-            // 
+            //
             _txtMonthlyRental.Location = new Point(159, 60);
             _txtMonthlyRental.MaxLength = 10;
             _txtMonthlyRental.Name = "txtMonthlyRental";
             _txtMonthlyRental.Size = new Size(146, 21);
             _txtMonthlyRental.TabIndex = 11;
-            // 
+            //
             // lblMonthlyRental
-            // 
+            //
             _lblMonthlyRental.Location = new Point(8, 63);
             _lblMonthlyRental.Name = "lblMonthlyRental";
             _lblMonthlyRental.Size = new Size(126, 20);
             _lblMonthlyRental.TabIndex = 72;
             _lblMonthlyRental.Text = "Monthly Rental";
-            // 
+            //
             // lblAnnualRental
-            // 
+            //
             _lblAnnualRental.Location = new Point(347, 63);
             _lblAnnualRental.Name = "lblAnnualRental";
             _lblAnnualRental.Size = new Size(126, 20);
             _lblAnnualRental.TabIndex = 69;
             _lblAnnualRental.Text = "Annual Rental";
-            // 
+            //
             // txtWeeklyRental
-            // 
+            //
             _txtWeeklyRental.Location = new Point(498, 20);
             _txtWeeklyRental.MaxLength = 10;
             _txtWeeklyRental.Name = "txtWeeklyRental";
             _txtWeeklyRental.Size = new Size(146, 21);
             _txtWeeklyRental.TabIndex = 10;
-            // 
+            //
             // txtExcessMileageRate
-            // 
+            //
             _txtExcessMileageRate.Location = new Point(159, 20);
             _txtExcessMileageRate.MaxLength = 20;
             _txtExcessMileageRate.Name = "txtExcessMileageRate";
             _txtExcessMileageRate.Size = new Size(146, 21);
             _txtExcessMileageRate.TabIndex = 9;
-            // 
+            //
             // lblExcessMileageRate
-            // 
+            //
             _lblExcessMileageRate.Location = new Point(8, 24);
             _lblExcessMileageRate.Name = "lblExcessMileageRate";
             _lblExcessMileageRate.Size = new Size(126, 20);
             _lblExcessMileageRate.TabIndex = 31;
             _lblExcessMileageRate.Text = "Excess Mileage Rate";
-            // 
+            //
             // lblWeeklyRental
-            // 
+            //
             _lblWeeklyRental.Location = new Point(347, 23);
             _lblWeeklyRental.Name = "lblWeeklyRental";
             _lblWeeklyRental.Size = new Size(100, 20);
             _lblWeeklyRental.TabIndex = 31;
             _lblWeeklyRental.Text = "Weekly Rental";
-            // 
+            //
             // grpContractDetails
-            // 
+            //
             _grpContractDetails.Controls.Add(_btnRemoveContractEndDate);
             _grpContractDetails.Controls.Add(_txtStartingMileage);
             _grpContractDetails.Controls.Add(_lblStartingMileage);
@@ -4569,9 +4568,9 @@ namespace FSM
             _grpContractDetails.TabIndex = 3;
             _grpContractDetails.TabStop = false;
             _grpContractDetails.Text = "Details";
-            // 
+            //
             // btnRemoveContractEndDate
-            // 
+            //
             _btnRemoveContractEndDate.Location = new Point(433, 100);
             _btnRemoveContractEndDate.Name = "btnRemoveContractEndDate";
             _btnRemoveContractEndDate.Size = new Size(24, 23);
@@ -4579,25 +4578,25 @@ namespace FSM
             _btnRemoveContractEndDate.Text = "X";
             _btnRemoveContractEndDate.UseVisualStyleBackColor = true;
             _btnRemoveContractEndDate.Visible = false;
-            // 
+            //
             // txtStartingMileage
-            // 
+            //
             _txtStartingMileage.Location = new Point(498, 142);
             _txtStartingMileage.MaxLength = 10;
             _txtStartingMileage.Name = "txtStartingMileage";
             _txtStartingMileage.Size = new Size(146, 21);
             _txtStartingMileage.TabIndex = 78;
-            // 
+            //
             // lblStartingMileage
-            // 
+            //
             _lblStartingMileage.Location = new Point(347, 145);
             _lblStartingMileage.Name = "lblStartingMileage";
             _lblStartingMileage.Size = new Size(126, 20);
             _lblStartingMileage.TabIndex = 79;
             _lblStartingMileage.Text = "Starting Mileage";
-            // 
+            //
             // btnEndContract
-            // 
+            //
             _btnEndContract.Location = new Point(498, 99);
             _btnEndContract.Name = "btnEndContract";
             _btnEndContract.Size = new Size(146, 23);
@@ -4605,9 +4604,9 @@ namespace FSM
             _btnEndContract.Text = "End Contract";
             _btnEndContract.UseVisualStyleBackColor = true;
             _btnEndContract.Visible = false;
-            // 
+            //
             // txtContractNotes
-            // 
+            //
             _txtContractNotes.Location = new Point(159, 185);
             _txtContractNotes.Multiline = true;
             _txtContractNotes.Name = "txtContractNotes";
@@ -4615,49 +4614,49 @@ namespace FSM
             _txtContractNotes.Size = new Size(485, 75);
             _txtContractNotes.TabIndex = 8;
             _txtContractNotes.Tag = "Van.Notes";
-            // 
+            //
             // lblContractNotes
-            // 
+            //
             _lblContractNotes.Location = new Point(6, 188);
             _lblContractNotes.Name = "lblContractNotes";
             _lblContractNotes.Size = new Size(53, 20);
             _lblContractNotes.TabIndex = 76;
             _lblContractNotes.Text = "Notes";
-            // 
+            //
             // txtAgreementRef
-            // 
+            //
             _txtAgreementRef.Location = new Point(159, 142);
             _txtAgreementRef.MaxLength = 10;
             _txtAgreementRef.Name = "txtAgreementRef";
             _txtAgreementRef.Size = new Size(146, 21);
             _txtAgreementRef.TabIndex = 7;
-            // 
+            //
             // lblAgreementRef
-            // 
+            //
             _lblAgreementRef.Location = new Point(8, 145);
             _lblAgreementRef.Name = "lblAgreementRef";
             _lblAgreementRef.Size = new Size(100, 20);
             _lblAgreementRef.TabIndex = 74;
             _lblAgreementRef.Text = "Agreement Ref";
-            // 
+            //
             // txtContractMileage
-            // 
+            //
             _txtContractMileage.Location = new Point(498, 62);
             _txtContractMileage.MaxLength = 10;
             _txtContractMileage.Name = "txtContractMileage";
             _txtContractMileage.Size = new Size(146, 21);
             _txtContractMileage.TabIndex = 4;
-            // 
+            //
             // lblContractMileage
-            // 
+            //
             _lblContractMileage.Location = new Point(347, 65);
             _lblContractMileage.Name = "lblContractMileage";
             _lblContractMileage.Size = new Size(126, 20);
             _lblContractMileage.TabIndex = 72;
             _lblContractMileage.Text = "Contract Mileage";
-            // 
+            //
             // dtpContractEnd
-            // 
+            //
             _dtpContractEnd.Enabled = false;
             _dtpContractEnd.Location = new Point(498, 99);
             _dtpContractEnd.Name = "dtpContractEnd";
@@ -4665,34 +4664,34 @@ namespace FSM
             _dtpContractEnd.TabIndex = 6;
             _dtpContractEnd.Tag = "";
             _dtpContractEnd.Visible = false;
-            // 
+            //
             // lblContractEnd
-            // 
+            //
             _lblContractEnd.Location = new Point(347, 105);
             _lblContractEnd.Name = "lblContractEnd";
             _lblContractEnd.Size = new Size(95, 20);
             _lblContractEnd.TabIndex = 70;
             _lblContractEnd.Text = "Contract End";
             _lblContractEnd.UseCompatibleTextRendering = true;
-            // 
+            //
             // dtpContractStart
-            // 
+            //
             _dtpContractStart.Location = new Point(159, 99);
             _dtpContractStart.Name = "dtpContractStart";
             _dtpContractStart.Size = new Size(146, 21);
             _dtpContractStart.TabIndex = 5;
             _dtpContractStart.Tag = "";
-            // 
+            //
             // lblContractStart
-            // 
+            //
             _lblContractStart.Location = new Point(8, 105);
             _lblContractStart.Name = "lblContractStart";
             _lblContractStart.Size = new Size(126, 20);
             _lblContractStart.TabIndex = 69;
             _lblContractStart.Text = "Contract Start";
-            // 
+            //
             // cboProcurementMethod
-            // 
+            //
             _cboProcurementMethod.Cursor = Cursors.Hand;
             _cboProcurementMethod.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboProcurementMethod.Location = new Point(498, 20);
@@ -4700,49 +4699,49 @@ namespace FSM
             _cboProcurementMethod.Size = new Size(146, 21);
             _cboProcurementMethod.TabIndex = 2;
             _cboProcurementMethod.Tag = "";
-            // 
+            //
             // txtContractLength
-            // 
+            //
             _txtContractLength.Location = new Point(159, 59);
             _txtContractLength.MaxLength = 10;
             _txtContractLength.Name = "txtContractLength";
             _txtContractLength.Size = new Size(146, 21);
             _txtContractLength.TabIndex = 3;
-            // 
+            //
             // txtLessor
-            // 
+            //
             _txtLessor.Location = new Point(159, 20);
             _txtLessor.MaxLength = 20;
             _txtLessor.Name = "txtLessor";
             _txtLessor.Size = new Size(146, 21);
             _txtLessor.TabIndex = 1;
-            // 
+            //
             // lblLessor
-            // 
+            //
             _lblLessor.Location = new Point(8, 24);
             _lblLessor.Name = "lblLessor";
             _lblLessor.Size = new Size(85, 20);
             _lblLessor.TabIndex = 31;
             _lblLessor.Text = "Lessor";
-            // 
+            //
             // lblProcurementMethod
-            // 
+            //
             _lblProcurementMethod.Location = new Point(347, 23);
             _lblProcurementMethod.Name = "lblProcurementMethod";
             _lblProcurementMethod.Size = new Size(126, 20);
             _lblProcurementMethod.TabIndex = 31;
             _lblProcurementMethod.Text = "Procurement Method";
-            // 
+            //
             // lblContractLength
-            // 
+            //
             _lblContractLength.Location = new Point(8, 62);
             _lblContractLength.Name = "lblContractLength";
             _lblContractLength.Size = new Size(100, 20);
             _lblContractLength.TabIndex = 31;
             _lblContractLength.Text = "Contract Length";
-            // 
+            //
             // tabEngineerHistory
-            // 
+            //
             _tabEngineerHistory.Controls.Add(_grpEngineerHistory);
             _tabEngineerHistory.Location = new Point(4, 22);
             _tabEngineerHistory.Name = "tabEngineerHistory";
@@ -4750,9 +4749,9 @@ namespace FSM
             _tabEngineerHistory.TabIndex = 4;
             _tabEngineerHistory.Text = "Engineer History";
             _tabEngineerHistory.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpEngineerHistory
-            // 
+            //
             _grpEngineerHistory.Controls.Add(_dgEngineerHistory);
             _grpEngineerHistory.Location = new Point(5, 6);
             _grpEngineerHistory.Name = "grpEngineerHistory";
@@ -4760,9 +4759,9 @@ namespace FSM
             _grpEngineerHistory.TabIndex = 5;
             _grpEngineerHistory.TabStop = false;
             _grpEngineerHistory.Text = "Engineer History";
-            // 
+            //
             // dgEngineerHistory
-            // 
+            //
             _dgEngineerHistory.DataMember = "";
             _dgEngineerHistory.Dock = DockStyle.Fill;
             _dgEngineerHistory.HeaderForeColor = SystemColors.ControlText;
@@ -4770,9 +4769,9 @@ namespace FSM
             _dgEngineerHistory.Name = "dgEngineerHistory";
             _dgEngineerHistory.Size = new Size(658, 781);
             _dgEngineerHistory.TabIndex = 15;
-            // 
+            //
             // tabServiceHistory
-            // 
+            //
             _tabServiceHistory.Controls.Add(_gpServiceHistory);
             _tabServiceHistory.Location = new Point(4, 22);
             _tabServiceHistory.Name = "tabServiceHistory";
@@ -4780,9 +4779,9 @@ namespace FSM
             _tabServiceHistory.TabIndex = 5;
             _tabServiceHistory.Text = "Service History";
             _tabServiceHistory.UseVisualStyleBackColor = true;
-            // 
+            //
             // gpServiceHistory
-            // 
+            //
             _gpServiceHistory.Controls.Add(_dgServiceHistory);
             _gpServiceHistory.Location = new Point(5, 6);
             _gpServiceHistory.Name = "gpServiceHistory";
@@ -4790,9 +4789,9 @@ namespace FSM
             _gpServiceHistory.TabIndex = 6;
             _gpServiceHistory.TabStop = false;
             _gpServiceHistory.Text = "Service History";
-            // 
+            //
             // dgServiceHistory
-            // 
+            //
             _dgServiceHistory.DataMember = "";
             _dgServiceHistory.Dock = DockStyle.Fill;
             _dgServiceHistory.HeaderForeColor = SystemColors.ControlText;
@@ -4800,27 +4799,27 @@ namespace FSM
             _dgServiceHistory.Name = "dgServiceHistory";
             _dgServiceHistory.Size = new Size(658, 781);
             _dgServiceHistory.TabIndex = 15;
-            // 
+            //
             // tabDocuments
-            // 
+            //
             _tabDocuments.Location = new Point(4, 22);
             _tabDocuments.Name = "tabDocuments";
             _tabDocuments.Size = new Size(675, 702);
             _tabDocuments.TabIndex = 6;
             _tabDocuments.Text = "Documents";
             _tabDocuments.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSaveFault
-            // 
+            //
             _btnSaveFault.Location = new Point(583, 338);
             _btnSaveFault.Name = "btnSaveFault";
             _btnSaveFault.Size = new Size(75, 23);
             _btnSaveFault.TabIndex = 8;
             _btnSaveFault.Text = "Save";
             _btnSaveFault.UseVisualStyleBackColor = true;
-            // 
+            //
             // UCFleetVan
-            // 
+            //
             Controls.Add(_tcVans);
             Name = "UCFleetVan";
             Size = new Size(693, 748);
@@ -4860,7 +4859,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupDGEquipment();
@@ -4880,11 +4880,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -5208,6 +5209,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupDGEquipment()
         {
             var tStyle = dgEquipment.TableStyles[0];
@@ -5445,7 +5447,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))
@@ -5642,7 +5645,7 @@ namespace FSM
             return default;
         }
 
-        private object btnSave_Click(object sender, EventArgs e)
+        private bool btnSave_Click(object sender, EventArgs e)
         {
             var detailsSaved = default(bool);
             try
@@ -6060,7 +6063,7 @@ namespace FSM
             }
         }
 
-        private object btnContractSave_Click(object sender, EventArgs e)
+        private bool btnContractSave_Click(object sender, EventArgs e)
         {
             string emsg = "Please ensure the main details are saved first!";
             if (CurrentVan is null)
@@ -6301,7 +6304,6 @@ namespace FSM
 
         private void RunEstimateUpdates()
         {
-
             // First we need to calculate the average mileage
             // Get the weeks between now and the last service date
             if (!CurrentVanMaintenance.Exists)

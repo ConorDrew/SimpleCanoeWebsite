@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMChangeVAT : Form
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMChangeVAT(int CurrentRateID, int InvoicedIDin, string InvNumber) : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
@@ -84,7 +83,6 @@ namespace FSM
             {
                 if (_btnSetRate != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnSetRate.Click -= btnSetRate_Click;
@@ -132,9 +130,9 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgRates).BeginInit();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_dgRates);
@@ -144,9 +142,9 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Select A VAT Rate for {0}";
-            // 
+            //
             // dgRates
-            // 
+            //
             _dgRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgRates.DataMember = "";
@@ -155,17 +153,17 @@ namespace FSM
             _dgRates.Name = "dgRates";
             _dgRates.Size = new Size(256, 192);
             _dgRates.TabIndex = 0;
-            // 
+            //
             // btnSetRate
-            // 
+            //
             _btnSetRate.UseVisualStyleBackColor = true;
             _btnSetRate.Location = new Point(112, 240);
             _btnSetRate.Name = "btnSetRate";
             _btnSetRate.TabIndex = 1;
             _btnSetRate.Text = "Set Rate";
-            // 
+            //
             // FRMChangeVAT
-            // 
+            //
             AutoScaleBaseSize = new Size(5, 13);
             BackColor = Color.White;
             ClientSize = new Size(288, 266);
@@ -251,6 +249,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupRatesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgRates);
@@ -280,6 +279,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate(int CurrentRateID)
         {
             RatesDataview = App.DB.VATRatesSQL.VATRates_GetAll();

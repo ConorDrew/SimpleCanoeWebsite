@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCContractOriginal : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCContractOriginal() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCContract_Load;
@@ -297,7 +296,6 @@ namespace FSM
             {
                 if (_cboInvoiceFrequencyID != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _cboInvoiceFrequencyID.SelectedIndexChanged -= cboInvoiceFrequencyID_SelectedIndexChanged;
                 }
@@ -1562,9 +1560,9 @@ namespace FSM
             _gpbInvoiceAddress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddress).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpContract
-            // 
+            //
             _grpContract.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpContract.Controls.Add(_txtSearchFilter);
@@ -1612,35 +1610,35 @@ namespace FSM
             _grpContract.TabIndex = 0;
             _grpContract.TabStop = false;
             _grpContract.Text = "Main Details";
-            // 
+            //
             // txtSearchFilter
-            // 
+            //
             _txtSearchFilter.Location = new Point(496, 133);
             _txtSearchFilter.MaxLength = 100;
             _txtSearchFilter.Name = "txtSearchFilter";
             _txtSearchFilter.Size = new Size(248, 21);
             _txtSearchFilter.TabIndex = 44;
             _txtSearchFilter.Tag = "";
-            // 
+            //
             // lblSearchFilter
-            // 
+            //
             _lblSearchFilter.Location = new Point(360, 137);
             _lblSearchFilter.Name = "lblSearchFilter";
             _lblSearchFilter.Size = new Size(132, 20);
             _lblSearchFilter.TabIndex = 43;
             _lblSearchFilter.Text = "Search Filter";
-            // 
+            //
             // cboPaidBy
-            // 
+            //
             _cboPaidBy.FormattingEnabled = true;
             _cboPaidBy.Location = new Point(496, 105);
             _cboPaidBy.Name = "cboPaidBy";
             _cboPaidBy.Size = new Size(248, 21);
             _cboPaidBy.TabIndex = 41;
             _cboPaidBy.Visible = false;
-            // 
+            //
             // lblPaidBy
-            // 
+            //
             _lblPaidBy.Location = new Point(360, 106);
             _lblPaidBy.Name = "lblPaidBy";
             _lblPaidBy.Size = new Size(130, 17);
@@ -1648,9 +1646,9 @@ namespace FSM
             _lblPaidBy.Text = "Paid By";
             _lblPaidBy.TextAlign = ContentAlignment.MiddleLeft;
             _lblPaidBy.Visible = false;
-            // 
+            //
             // lblMsg
-            // 
+            //
             _lblMsg.BackColor = Color.LightGoldenrodYellow;
             _lblMsg.BorderStyle = BorderStyle.FixedSingle;
             _lblMsg.Location = new Point(366, 366);
@@ -1659,26 +1657,26 @@ namespace FSM
             _lblMsg.TabIndex = 25;
             _lblMsg.Text = "Please save before adding properties";
             _lblMsg.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // lblInvType
-            // 
+            //
             _lblInvType.Location = new Point(360, 79);
             _lblInvType.Name = "lblInvType";
             _lblInvType.Size = new Size(130, 17);
             _lblInvType.TabIndex = 40;
             _lblInvType.Text = "Invoice Type";
             _lblInvType.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // cboInvType
-            // 
+            //
             _cboInvType.FormattingEnabled = true;
             _cboInvType.Location = new Point(496, 78);
             _cboInvType.Name = "cboInvType";
             _cboInvType.Size = new Size(248, 21);
             _cboInvType.TabIndex = 39;
-            // 
+            //
             // cboReasonID
-            // 
+            //
             _cboReasonID.Cursor = Cursors.Hand;
             _cboReasonID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboReasonID.Location = new Point(144, 242);
@@ -1686,25 +1684,25 @@ namespace FSM
             _cboReasonID.Size = new Size(195, 21);
             _cboReasonID.TabIndex = 38;
             _cboReasonID.Tag = "Contract.ContractStatusID";
-            // 
+            //
             // lblReason
-            // 
+            //
             _lblReason.Location = new Point(17, 245);
             _lblReason.Name = "lblReason";
             _lblReason.Size = new Size(132, 20);
             _lblReason.TabIndex = 37;
             _lblReason.Text = "Reason";
-            // 
+            //
             // lblDiscount
-            // 
+            //
             _lblDiscount.Location = new Point(17, 321);
             _lblDiscount.Name = "lblDiscount";
             _lblDiscount.Size = new Size(121, 20);
             _lblDiscount.TabIndex = 36;
             _lblDiscount.Text = "Discount";
-            // 
+            //
             // cboDiscount
-            // 
+            //
             _cboDiscount.Cursor = Cursors.Hand;
             _cboDiscount.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboDiscount.Location = new Point(144, 318);
@@ -1712,26 +1710,26 @@ namespace FSM
             _cboDiscount.Size = new Size(195, 21);
             _cboDiscount.TabIndex = 35;
             _cboDiscount.Tag = "";
-            // 
+            //
             // txtDDMSRef
-            // 
+            //
             _txtDDMSRef.Location = new Point(494, 310);
             _txtDDMSRef.MaxLength = 100;
             _txtDDMSRef.Name = "txtDDMSRef";
             _txtDDMSRef.Size = new Size(248, 21);
             _txtDDMSRef.TabIndex = 34;
             _txtDDMSRef.Tag = "";
-            // 
+            //
             // lblDDMSRef
-            // 
+            //
             _lblDDMSRef.Location = new Point(367, 313);
             _lblDDMSRef.Name = "lblDDMSRef";
             _lblDDMSRef.Size = new Size(132, 20);
             _lblDDMSRef.TabIndex = 33;
             _lblDDMSRef.Text = "DDMS Ref";
-            // 
+            //
             // cboDoNotRenew
-            // 
+            //
             _cboDoNotRenew.AutoSize = true;
             _cboDoNotRenew.Location = new Point(20, 296);
             _cboDoNotRenew.Name = "cboDoNotRenew";
@@ -1739,43 +1737,43 @@ namespace FSM
             _cboDoNotRenew.TabIndex = 32;
             _cboDoNotRenew.Text = "Do Not Renew";
             _cboDoNotRenew.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtContractReference
-            // 
+            //
             _txtContractReference.Location = new Point(144, 45);
             _txtContractReference.MaxLength = 100;
             _txtContractReference.Name = "txtContractReference";
             _txtContractReference.Size = new Size(195, 21);
             _txtContractReference.TabIndex = 31;
             _txtContractReference.Tag = "Contract.ContractReference";
-            // 
+            //
             // lblContractReference
-            // 
+            //
             _lblContractReference.Location = new Point(16, 47);
             _lblContractReference.Name = "lblContractReference";
             _lblContractReference.Size = new Size(132, 20);
             _lblContractReference.TabIndex = 30;
             _lblContractReference.Text = "Contract Reference";
-            // 
+            //
             // txtPONumber
-            // 
+            //
             _txtPONumber.Location = new Point(494, 337);
             _txtPONumber.MaxLength = 100;
             _txtPONumber.Name = "txtPONumber";
             _txtPONumber.Size = new Size(248, 21);
             _txtPONumber.TabIndex = 29;
             _txtPONumber.Tag = "";
-            // 
+            //
             // lblPONumber
-            // 
+            //
             _lblPONumber.Location = new Point(367, 340);
             _lblPONumber.Name = "lblPONumber";
             _lblPONumber.Size = new Size(132, 20);
             _lblPONumber.TabIndex = 28;
             _lblPONumber.Text = "PO Number";
-            // 
+            //
             // chkPlumbingDrainage
-            // 
+            //
             _chkPlumbingDrainage.AutoSize = true;
             _chkPlumbingDrainage.Location = new Point(20, 201);
             _chkPlumbingDrainage.Name = "chkPlumbingDrainage";
@@ -1783,9 +1781,9 @@ namespace FSM
             _chkPlumbingDrainage.TabIndex = 27;
             _chkPlumbingDrainage.Text = "Plumbing, drainage and electrical cover";
             _chkPlumbingDrainage.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkWindowLockPest
-            // 
+            //
             _chkWindowLockPest.AutoSize = true;
             _chkWindowLockPest.Location = new Point(20, 221);
             _chkWindowLockPest.Name = "chkWindowLockPest";
@@ -1793,24 +1791,24 @@ namespace FSM
             _chkWindowLockPest.TabIndex = 26;
             _chkWindowLockPest.Text = "Window, lock and pest cover";
             _chkWindowLockPest.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblCancelledDate
-            // 
+            //
             _lblCancelledDate.Location = new Point(17, 275);
             _lblCancelledDate.Name = "lblCancelledDate";
             _lblCancelledDate.Size = new Size(121, 20);
             _lblCancelledDate.TabIndex = 15;
             _lblCancelledDate.Text = "Cancelled Date";
-            // 
+            //
             // dtpCancelledDate
-            // 
+            //
             _dtpCancelledDate.Location = new Point(144, 271);
             _dtpCancelledDate.Name = "dtpCancelledDate";
             _dtpCancelledDate.Size = new Size(195, 21);
             _dtpCancelledDate.TabIndex = 16;
-            // 
+            //
             // chkGasSupplyPipework
-            // 
+            //
             _chkGasSupplyPipework.AutoSize = true;
             _chkGasSupplyPipework.Location = new Point(20, 180);
             _chkGasSupplyPipework.Name = "chkGasSupplyPipework";
@@ -1818,9 +1816,9 @@ namespace FSM
             _chkGasSupplyPipework.TabIndex = 14;
             _chkGasSupplyPipework.Text = "Gas Supply Pipework";
             _chkGasSupplyPipework.UseVisualStyleBackColor = true;
-            // 
+            //
             // tcBottomSection
-            // 
+            //
             _tcBottomSection.Controls.Add(_tabProperties);
             _tcBottomSection.Controls.Add(_tabChargeDetails);
             _tcBottomSection.Controls.Add(_tabAdditionalNotes);
@@ -1829,18 +1827,18 @@ namespace FSM
             _tcBottomSection.SelectedIndex = 0;
             _tcBottomSection.Size = new Size(736, 249);
             _tcBottomSection.TabIndex = 24;
-            // 
+            //
             // tabProperties
-            // 
+            //
             _tabProperties.Controls.Add(_grpSites);
             _tabProperties.Location = new Point(4, 22);
             _tabProperties.Name = "tabProperties";
             _tabProperties.Size = new Size(728, 223);
             _tabProperties.TabIndex = 0;
             _tabProperties.Text = "Properties";
-            // 
+            //
             // grpSites
-            // 
+            //
             _grpSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSites.Controls.Add(_dgSites);
@@ -1851,9 +1849,9 @@ namespace FSM
             _grpSites.TabIndex = 0;
             _grpSites.TabStop = false;
             _grpSites.Text = "Properties - Double click to view/edit";
-            // 
+            //
             // dgSites
-            // 
+            //
             _dgSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSites.DataMember = "";
@@ -1862,18 +1860,18 @@ namespace FSM
             _dgSites.Name = "dgSites";
             _dgSites.Size = new Size(700, 185);
             _dgSites.TabIndex = 0;
-            // 
+            //
             // tabChargeDetails
-            // 
+            //
             _tabChargeDetails.Controls.Add(_gpbChargeDetails);
             _tabChargeDetails.Location = new Point(4, 22);
             _tabChargeDetails.Name = "tabChargeDetails";
             _tabChargeDetails.Size = new Size(728, 223);
             _tabChargeDetails.TabIndex = 1;
             _tabChargeDetails.Text = "Charge Details";
-            // 
+            //
             // gpbChargeDetails
-            // 
+            //
             _gpbChargeDetails.Controls.Add(_lblSortCode);
             _gpbChargeDetails.Controls.Add(_lblAccount);
             _gpbChargeDetails.Controls.Add(_lblBankName);
@@ -1889,78 +1887,78 @@ namespace FSM
             _gpbChargeDetails.TabIndex = 0;
             _gpbChargeDetails.TabStop = false;
             _gpbChargeDetails.Text = "Charge Details";
-            // 
+            //
             // lblSortCode
-            // 
+            //
             _lblSortCode.Location = new Point(128, 152);
             _lblSortCode.Name = "lblSortCode";
             _lblSortCode.Size = new Size(100, 23);
             _lblSortCode.TabIndex = 8;
             _lblSortCode.Text = "Sort Code";
-            // 
+            //
             // lblAccount
-            // 
+            //
             _lblAccount.Location = new Point(128, 120);
             _lblAccount.Name = "lblAccount";
             _lblAccount.Size = new Size(100, 23);
             _lblAccount.TabIndex = 7;
             _lblAccount.Text = "Account Number";
-            // 
+            //
             // lblBankName
-            // 
+            //
             _lblBankName.Location = new Point(128, 88);
             _lblBankName.Name = "lblBankName";
             _lblBankName.Size = new Size(100, 23);
             _lblBankName.TabIndex = 6;
             _lblBankName.Text = "Bank Name";
-            // 
+            //
             // txtSortCode
-            // 
+            //
             _txtSortCode.Location = new Point(232, 152);
             _txtSortCode.Name = "txtSortCode";
             _txtSortCode.Size = new Size(360, 21);
             _txtSortCode.TabIndex = 5;
-            // 
+            //
             // txtAccountNumber
-            // 
+            //
             _txtAccountNumber.Location = new Point(232, 120);
             _txtAccountNumber.Name = "txtAccountNumber";
             _txtAccountNumber.Size = new Size(360, 21);
             _txtAccountNumber.TabIndex = 4;
-            // 
+            //
             // txtBankName
-            // 
+            //
             _txtBankName.Location = new Point(232, 88);
             _txtBankName.Name = "txtBankName";
             _txtBankName.Size = new Size(360, 21);
             _txtBankName.TabIndex = 3;
-            // 
+            //
             // rdoDirectDebit
-            // 
+            //
             _rdoDirectDebit.Location = new Point(16, 88);
             _rdoDirectDebit.Name = "rdoDirectDebit";
             _rdoDirectDebit.Size = new Size(104, 24);
             _rdoDirectDebit.TabIndex = 2;
             _rdoDirectDebit.Text = "Direct Debit";
-            // 
+            //
             // rdoCreditCard
-            // 
+            //
             _rdoCreditCard.Location = new Point(16, 56);
             _rdoCreditCard.Name = "rdoCreditCard";
             _rdoCreditCard.Size = new Size(104, 24);
             _rdoCreditCard.TabIndex = 1;
             _rdoCreditCard.Text = "Credit Card";
-            // 
+            //
             // rdoCheque
-            // 
+            //
             _rdoCheque.Location = new Point(16, 24);
             _rdoCheque.Name = "rdoCheque";
             _rdoCheque.Size = new Size(104, 24);
             _rdoCheque.TabIndex = 0;
             _rdoCheque.Text = "Cheque";
-            // 
+            //
             // tabAdditionalNotes
-            // 
+            //
             _tabAdditionalNotes.Controls.Add(_gpbInvoiceInformation);
             _tabAdditionalNotes.Location = new Point(4, 22);
             _tabAdditionalNotes.Name = "tabAdditionalNotes";
@@ -1968,9 +1966,9 @@ namespace FSM
             _tabAdditionalNotes.TabIndex = 2;
             _tabAdditionalNotes.Text = "Additional Notes";
             _tabAdditionalNotes.UseVisualStyleBackColor = true;
-            // 
+            //
             // gpbInvoiceInformation
-            // 
+            //
             _gpbInvoiceInformation.BackColor = SystemColors.Control;
             _gpbInvoiceInformation.Controls.Add(_txtAdditionalInvoiceNotes);
             _gpbInvoiceInformation.Dock = DockStyle.Fill;
@@ -1980,17 +1978,17 @@ namespace FSM
             _gpbInvoiceInformation.TabIndex = 3;
             _gpbInvoiceInformation.TabStop = false;
             _gpbInvoiceInformation.Text = "Additional Notes";
-            // 
+            //
             // txtAdditionalInvoiceNotes
-            // 
+            //
             _txtAdditionalInvoiceNotes.Location = new Point(6, 20);
             _txtAdditionalInvoiceNotes.Name = "txtAdditionalInvoiceNotes";
             _txtAdditionalInvoiceNotes.Size = new Size(499, 130);
             _txtAdditionalInvoiceNotes.TabIndex = 13;
             _txtAdditionalInvoiceNotes.Text = "";
-            // 
+            //
             // cboContractType
-            // 
+            //
             _cboContractType.Cursor = Cursors.Hand;
             _cboContractType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboContractType.Location = new Point(144, 20);
@@ -1998,17 +1996,17 @@ namespace FSM
             _cboContractType.Size = new Size(195, 21);
             _cboContractType.TabIndex = 4;
             _cboContractType.Tag = "";
-            // 
+            //
             // lblContractType
-            // 
+            //
             _lblContractType.Location = new Point(16, 22);
             _lblContractType.Name = "lblContractType";
             _lblContractType.Size = new Size(132, 20);
             _lblContractType.TabIndex = 3;
             _lblContractType.Text = "Contract Type";
-            // 
+            //
             // gpbInvoiceAddress
-            // 
+            //
             _gpbInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _gpbInvoiceAddress.Controls.Add(_dgInvoiceAddress);
             _gpbInvoiceAddress.Location = new Point(363, 160);
@@ -2017,9 +2015,9 @@ namespace FSM
             _gpbInvoiceAddress.TabIndex = 23;
             _gpbInvoiceAddress.TabStop = false;
             _gpbInvoiceAddress.Text = "Invoice Address";
-            // 
+            //
             // dgInvoiceAddress
-            // 
+            //
             _dgInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgInvoiceAddress.DataMember = "";
@@ -2028,57 +2026,57 @@ namespace FSM
             _dgInvoiceAddress.Name = "dgInvoiceAddress";
             _dgInvoiceAddress.Size = new Size(376, 112);
             _dgInvoiceAddress.TabIndex = 0;
-            // 
+            //
             // dtpFirstInvoiceDate
-            // 
+            //
             _dtpFirstInvoiceDate.Location = new Point(496, 51);
             _dtpFirstInvoiceDate.Name = "dtpFirstInvoiceDate";
             _dtpFirstInvoiceDate.Size = new Size(248, 21);
             _dtpFirstInvoiceDate.TabIndex = 22;
             _dtpFirstInvoiceDate.Tag = "";
-            // 
+            //
             // lblFirstInvoiceDate
-            // 
+            //
             _lblFirstInvoiceDate.Location = new Point(360, 57);
             _lblFirstInvoiceDate.Name = "lblFirstInvoiceDate";
             _lblFirstInvoiceDate.Size = new Size(132, 20);
             _lblFirstInvoiceDate.TabIndex = 21;
             _lblFirstInvoiceDate.Text = "First Invoice Date";
-            // 
+            //
             // dtpContractStartDate
-            // 
+            //
             _dtpContractStartDate.Location = new Point(144, 96);
             _dtpContractStartDate.Name = "dtpContractStartDate";
             _dtpContractStartDate.Size = new Size(195, 21);
             _dtpContractStartDate.TabIndex = 8;
             _dtpContractStartDate.Tag = "Contract.ContractStartDate";
-            // 
+            //
             // lblContractStartDate
-            // 
+            //
             _lblContractStartDate.Location = new Point(17, 96);
             _lblContractStartDate.Name = "lblContractStartDate";
             _lblContractStartDate.Size = new Size(132, 20);
             _lblContractStartDate.TabIndex = 7;
             _lblContractStartDate.Text = "Contract Start Date";
-            // 
+            //
             // dtpContractEndDate
-            // 
+            //
             _dtpContractEndDate.Location = new Point(144, 120);
             _dtpContractEndDate.Name = "dtpContractEndDate";
             _dtpContractEndDate.Size = new Size(195, 21);
             _dtpContractEndDate.TabIndex = 10;
             _dtpContractEndDate.Tag = "Contract.ContractEndDate";
-            // 
+            //
             // lblContractEndDate
-            // 
+            //
             _lblContractEndDate.Location = new Point(17, 120);
             _lblContractEndDate.Name = "lblContractEndDate";
             _lblContractEndDate.Size = new Size(132, 20);
             _lblContractEndDate.TabIndex = 9;
             _lblContractEndDate.Text = "Contract End Date";
-            // 
+            //
             // cboContractStatusID
-            // 
+            //
             _cboContractStatusID.Cursor = Cursors.Hand;
             _cboContractStatusID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboContractStatusID.Location = new Point(144, 72);
@@ -2086,35 +2084,35 @@ namespace FSM
             _cboContractStatusID.Size = new Size(195, 21);
             _cboContractStatusID.TabIndex = 6;
             _cboContractStatusID.Tag = "Contract.ContractStatusID";
-            // 
+            //
             // lblContractStatusID
-            // 
+            //
             _lblContractStatusID.Location = new Point(17, 72);
             _lblContractStatusID.Name = "lblContractStatusID";
             _lblContractStatusID.Size = new Size(132, 20);
             _lblContractStatusID.TabIndex = 5;
             _lblContractStatusID.Text = "Contract Status";
             _lblContractStatusID.Visible = false;
-            // 
+            //
             // txtContractPrice
-            // 
+            //
             _txtContractPrice.Location = new Point(144, 144);
             _txtContractPrice.MaxLength = 9;
             _txtContractPrice.Name = "txtContractPrice";
             _txtContractPrice.Size = new Size(195, 21);
             _txtContractPrice.TabIndex = 12;
             _txtContractPrice.Tag = "Contract.ContractPrice";
-            // 
+            //
             // lblContractPrice
-            // 
+            //
             _lblContractPrice.Location = new Point(16, 144);
             _lblContractPrice.Name = "lblContractPrice";
             _lblContractPrice.Size = new Size(132, 20);
             _lblContractPrice.TabIndex = 11;
             _lblContractPrice.Text = "Total Contract Price";
-            // 
+            //
             // cboInvoiceFrequencyID
-            // 
+            //
             _cboInvoiceFrequencyID.Cursor = Cursors.Hand;
             _cboInvoiceFrequencyID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboInvoiceFrequencyID.Location = new Point(496, 24);
@@ -2122,17 +2120,17 @@ namespace FSM
             _cboInvoiceFrequencyID.Size = new Size(248, 21);
             _cboInvoiceFrequencyID.TabIndex = 20;
             _cboInvoiceFrequencyID.Tag = "Contract.InvoiceFrequencyID";
-            // 
+            //
             // lblInvoiceFrequencyID
-            // 
+            //
             _lblInvoiceFrequencyID.Location = new Point(360, 27);
             _lblInvoiceFrequencyID.Name = "lblInvoiceFrequencyID";
             _lblInvoiceFrequencyID.Size = new Size(132, 20);
             _lblInvoiceFrequencyID.TabIndex = 19;
             _lblInvoiceFrequencyID.Text = "Invoice Frequency";
-            // 
+            //
             // UCContractOriginal
-            // 
+            //
             Controls.Add(_grpContract);
             Name = "UCContractOriginal";
             Size = new Size(784, 638);
@@ -2154,7 +2152,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -2169,11 +2168,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -2408,6 +2408,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSitesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSites);
@@ -2696,7 +2697,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (CurrentContract.Exists)
             {
@@ -2864,11 +2866,9 @@ namespace FSM
                 // IF UPDATING
                 if (CurrentContract.Exists == true)
                 {
-
                     // IF CHANGING TO INACTIVE
                     if (CurrentContract.ContractStatusID != Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboContractStatusID)) & (Entity.Sys.Enums.ContractStatus)Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboContractStatusID)) == Entity.Sys.Enums.ContractStatus.Inactive)
                     {
-
                         // Or CType(Combo.GetSelectedItemValue(cboContractStatusID), Entity.Sys.Enums.ContractStatus) = Entity.Sys.Enums.ContractStatus.Cancelled
 
                         // ARE YOU SURE - YES NO OR CANCEL
@@ -2885,7 +2885,7 @@ namespace FSM
                         {
                             foreach (DataRow site in Sites.Table.Rows)
                             {
-                                if (Conversions.ToBoolean(site["ContractSiteID"] > 0))
+                                if (Conversions.ToBoolean((int)site["ContractSiteID"] > 0))
                                 {
                                     App.DB.ContractOriginalSite.ActiveInactive(Conversions.ToInteger(site["ContractSiteID"]), true);
                                 }
@@ -2899,7 +2899,7 @@ namespace FSM
                         // REACTIVE ANY SITE JOBS PREVIOUSLY DEACTIVATED
                         foreach (DataRow site in Sites.Table.Rows)
                         {
-                            if (Conversions.ToBoolean(site["ContractSiteID"] > 0))
+                            if (Conversions.ToBoolean((int)site["ContractSiteID"] > 0))
                             {
                                 App.DB.ContractOriginalSite.ActiveInactive(Conversions.ToInteger(site["ContractSiteID"]), false);
                             }
@@ -3025,7 +3025,7 @@ namespace FSM
                     App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
                 }
 
-                Number = App.DB.Job.GetNextJobNumber((Entity.Sys.Enums.JobDefinition)Combo.get_GetSelectedItemValue(cboContractType));
+                Number = App.DB.Job.GetNextJobNumber((Entity.Sys.Enums.JobDefinition)Convert.ToInt32(Combo.get_GetSelectedItemValue(cboContractType)));
                 if (Number.Number.ToString().Length < 3)
                 {
                     txtContractReference.Text = Number.Prefix + "00" + Number.Number;

@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -13,13 +13,13 @@ namespace FSM
     {
         public FRMSiteScheduleOfRateList()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSystemScheduleOfRate_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSiteScheduleOfRateList(int IDToLinkToIn, ref DataView DataviewToLinkToIn, bool FromQuoteJobIn = false, bool FromJobIn = false) : base()
         {
             base.Load += FRMSystemScheduleOfRate_Load;
@@ -221,7 +221,6 @@ namespace FSM
             {
                 if (_txtSearch != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _txtSearch.KeyUp -= txtSearch_TextChanged;
                 }
@@ -333,9 +332,9 @@ namespace FSM
             _grpSystemScheduleOfRate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgRates).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpSystemScheduleOfRate
-            // 
+            //
             _grpSystemScheduleOfRate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSystemScheduleOfRate.Controls.Add(_cboCategory);
@@ -353,9 +352,9 @@ namespace FSM
             _grpSystemScheduleOfRate.TabIndex = 2;
             _grpSystemScheduleOfRate.TabStop = false;
             _grpSystemScheduleOfRate.Text = "Main Details";
-            // 
+            //
             // cboCategory
-            // 
+            //
             _cboCategory.Cursor = Cursors.Hand;
             _cboCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboCategory.Location = new Point(102, 24);
@@ -363,71 +362,71 @@ namespace FSM
             _cboCategory.Size = new Size(1039, 21);
             _cboCategory.TabIndex = 40;
             _cboCategory.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblCategory
-            // 
+            //
             _lblCategory.AutoSize = true;
             _lblCategory.Location = new Point(11, 27);
             _lblCategory.Name = "lblCategory";
             _lblCategory.Size = new Size(60, 13);
             _lblCategory.TabIndex = 39;
             _lblCategory.Text = "Category";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Location = new Point(11, 56);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(47, 13);
             _Label1.TabIndex = 38;
             _Label1.Text = "Search";
-            // 
+            //
             // txtSearch
-            // 
+            //
             _txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSearch.Location = new Point(102, 53);
             _txtSearch.Name = "txtSearch";
             _txtSearch.Size = new Size(1039, 21);
             _txtSearch.TabIndex = 37;
-            // 
+            //
             // btnDeselectAll
-            // 
+            //
             _btnDeselectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnDeselectAll.Location = new Point(112, 497);
             _btnDeselectAll.Name = "btnDeselectAll";
             _btnDeselectAll.Size = new Size(96, 23);
             _btnDeselectAll.TabIndex = 36;
             _btnDeselectAll.Text = "Deselect All";
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSelectAll.Location = new Point(8, 497);
             _btnSelectAll.Name = "btnSelectAll";
             _btnSelectAll.Size = new Size(96, 23);
             _btnSelectAll.TabIndex = 35;
             _btnSelectAll.Text = "Select All";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 537);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(75, 23);
             _btnCancel.TabIndex = 34;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnAdd.Location = new Point(1059, 537);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(75, 23);
             _btnAdd.TabIndex = 33;
             _btnAdd.Text = "Add";
-            // 
+            //
             // dgRates
-            // 
+            //
             _dgRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgRates.DataMember = "";
@@ -436,9 +435,9 @@ namespace FSM
             _dgRates.Name = "dgRates";
             _dgRates.Size = new Size(1133, 405);
             _dgRates.TabIndex = 32;
-            // 
+            //
             // FRMSiteScheduleOfRateList
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1163, 607);
             Controls.Add(_grpSystemScheduleOfRate);
@@ -454,7 +453,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var argc = cboCategory;
@@ -574,6 +574,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupRatesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgRates);
@@ -708,6 +709,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             RatesDataview = App.DB.CustomerScheduleOfRate.GetAll_For_SiteID(IDToLinkTo);

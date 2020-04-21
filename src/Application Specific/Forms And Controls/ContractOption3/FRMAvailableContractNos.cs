@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class FRMAvailableContractNos : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMAvailableContractNos() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMAvailableContractNos_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -270,9 +268,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgAvailableContractNos).BeginInit();
             _gpbContractNumbers.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // dgAvailableContractNos
-            // 
+            //
             _dgAvailableContractNos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAvailableContractNos.DataMember = "";
@@ -281,43 +279,43 @@ namespace FSM
             _dgAvailableContractNos.Name = "dgAvailableContractNos";
             _dgAvailableContractNos.Size = new Size(293, 301);
             _dgAvailableContractNos.TabIndex = 0;
-            // 
+            //
             // txtPrefix
-            // 
+            //
             _txtPrefix.Location = new Point(12, 45);
             _txtPrefix.Name = "txtPrefix";
             _txtPrefix.Size = new Size(120, 21);
             _txtPrefix.TabIndex = 1;
             _txtPrefix.Text = "";
-            // 
+            //
             // txtPostfix
-            // 
+            //
             _txtPostfix.Location = new Point(184, 45);
             _txtPostfix.Name = "txtPostfix";
             _txtPostfix.Size = new Size(120, 21);
             _txtPostfix.TabIndex = 2;
             _txtPostfix.Text = "";
-            // 
+            //
             // lblPrefix
-            // 
+            //
 
             _lblPrefix.Location = new Point(11, 23);
             _lblPrefix.Name = "lblPrefix";
             _lblPrefix.Size = new Size(120, 17);
             _lblPrefix.TabIndex = 3;
             _lblPrefix.Text = "Prefix:";
-            // 
+            //
             // lblPostfix
-            // 
+            //
 
             _lblPostfix.Location = new Point(180, 23);
             _lblPostfix.Name = "lblPostfix";
             _lblPostfix.Size = new Size(120, 17);
             _lblPostfix.TabIndex = 4;
             _lblPostfix.Text = "Postfix";
-            // 
+            //
             // gpbContractNumbers
-            // 
+            //
             _gpbContractNumbers.Controls.Add(_lblResult);
             _gpbContractNumbers.Controls.Add(_btnSelect);
             _gpbContractNumbers.Controls.Add(_lblPrefix);
@@ -331,7 +329,7 @@ namespace FSM
             _gpbContractNumbers.TabIndex = 5;
             _gpbContractNumbers.TabStop = false;
             _gpbContractNumbers.Text = "Contract Numbers";
-            // 
+            //
             // lblResult
 
             _lblResult.Location = new Point(12, 380);
@@ -339,9 +337,9 @@ namespace FSM
             _lblResult.Size = new Size(197, 25);
             _lblResult.TabIndex = 6;
             _lblResult.Text = "Label3";
-            // 
+            //
             // btnSelect
-            // 
+            //
             _btnSelect.Cursor = Cursors.Hand;
             _btnSelect.UseVisualStyleBackColor = true;
             _btnSelect.Location = new Point(217, 381);
@@ -349,9 +347,9 @@ namespace FSM
             _btnSelect.Size = new Size(90, 25);
             _btnSelect.TabIndex = 5;
             _btnSelect.Text = "&Select";
-            // 
+            //
             // FRMAvailableContractNos
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             BackColor = Color.White;
             ClientSize = new Size(340, 458);
@@ -372,7 +370,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             txtRef = (TextBox)get_GetParameter(0);
             LoadForm(sender, e, this);
@@ -416,6 +415,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupContractsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgAvailableContractNos);
@@ -436,6 +436,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulatePage()
         {
             try

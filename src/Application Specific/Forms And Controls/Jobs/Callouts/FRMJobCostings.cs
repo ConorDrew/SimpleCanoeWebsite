@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -14,7 +14,6 @@ namespace FSM
     {
         public FRMJobCostings()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += LoadMe;
@@ -22,6 +21,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMJobCostings(Entity.Jobs.Job oJob) : base()
         {
             base.Load += LoadMe;
@@ -143,7 +143,6 @@ namespace FSM
             {
                 if (_btnPrintJobCosting != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnPrintJobCosting.Click -= btnPrintJobCosting_Click;
@@ -726,7 +725,6 @@ namespace FSM
             {
                 if (_txtEstLabour != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _txtEstLabour.TextChanged -= txtEstLabour_TextChanged;
@@ -2510,27 +2508,27 @@ namespace FSM
             _tpInstall.SuspendLayout();
             _GroupBox1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(70, 664);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 23);
             _btnClose.TabIndex = 16;
             _btnClose.Text = "Close";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 664);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 23);
             _btnSave.TabIndex = 15;
             _btnSave.Text = "Save";
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tpJobCostings);
@@ -2540,9 +2538,9 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(942, 627);
             _TabControl1.TabIndex = 23;
-            // 
+            //
             // tpJobCostings
-            // 
+            //
             _tpJobCostings.Controls.Add(_grpTotalCostings);
             _tpJobCostings.Controls.Add(_grpPartCostings);
             _tpJobCostings.Location = new Point(4, 22);
@@ -2552,9 +2550,9 @@ namespace FSM
             _tpJobCostings.TabIndex = 5;
             _tpJobCostings.Text = "Job Costings";
             _tpJobCostings.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpTotalCostings
-            // 
+            //
             _grpTotalCostings.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpTotalCostings.Controls.Add(_Label41);
             _grpTotalCostings.Controls.Add(_txtSorTotal);
@@ -2571,9 +2569,9 @@ namespace FSM
             _grpTotalCostings.Size = new Size(928, 80);
             _grpTotalCostings.TabIndex = 7;
             _grpTotalCostings.TabStop = false;
-            // 
+            //
             // Label41
-            // 
+            //
             _Label41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label41.AutoSize = true;
             _Label41.Location = new Point(510, 11);
@@ -2581,17 +2579,17 @@ namespace FSM
             _Label41.Size = new Size(67, 13);
             _Label41.TabIndex = 13;
             _Label41.Text = "SOR Sales";
-            // 
+            //
             // txtSorTotal
-            // 
+            //
             _txtSorTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtSorTotal.Location = new Point(500, 30);
             _txtSorTotal.Name = "txtSorTotal";
             _txtSorTotal.Size = new Size(100, 21);
             _txtSorTotal.TabIndex = 14;
-            // 
+            //
             // Label32
-            // 
+            //
             _Label32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label32.AutoSize = true;
             _Label32.Location = new Point(748, 47);
@@ -2599,9 +2597,9 @@ namespace FSM
             _Label32.Size = new Size(53, 13);
             _Label32.TabIndex = 11;
             _Label32.Text = "Profit %";
-            // 
+            //
             // Label33
-            // 
+            //
             _Label33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label33.AutoSize = true;
             _Label33.Location = new Point(748, 20);
@@ -2609,25 +2607,25 @@ namespace FSM
             _Label33.Size = new Size(48, 13);
             _Label33.TabIndex = 9;
             _Label33.Text = "Profit £";
-            // 
+            //
             // txtProfitPerc
-            // 
+            //
             _txtProfitPerc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtProfitPerc.Location = new Point(806, 41);
             _txtProfitPerc.Name = "txtProfitPerc";
             _txtProfitPerc.Size = new Size(100, 21);
             _txtProfitPerc.TabIndex = 12;
-            // 
+            //
             // TxtProfitPounds
-            // 
+            //
             _TxtProfitPounds.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _TxtProfitPounds.Location = new Point(806, 14);
             _TxtProfitPounds.Name = "TxtProfitPounds";
             _TxtProfitPounds.Size = new Size(100, 21);
             _TxtProfitPounds.TabIndex = 10;
-            // 
+            //
             // lbl5
-            // 
+            //
             _lbl5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbl5.AutoSize = true;
             _lbl5.Location = new Point(632, 11);
@@ -2635,33 +2633,33 @@ namespace FSM
             _lbl5.Size = new Size(74, 13);
             _lbl5.TabIndex = 7;
             _lbl5.Text = "Other Sales";
-            // 
+            //
             // Label34
-            // 
+            //
             _Label34.AutoSize = true;
             _Label34.Location = new Point(36, 11);
             _Label34.Name = "Label34";
             _Label34.Size = new Size(39, 13);
             _Label34.TabIndex = 3;
             _Label34.Text = "Costs";
-            // 
+            //
             // txtSales
-            // 
+            //
             _txtSales.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtSales.Location = new Point(622, 30);
             _txtSales.Name = "txtSales";
             _txtSales.Size = new Size(100, 21);
             _txtSales.TabIndex = 8;
-            // 
+            //
             // txtCosts
-            // 
+            //
             _txtCosts.Location = new Point(9, 30);
             _txtCosts.Name = "txtCosts";
             _txtCosts.Size = new Size(100, 21);
             _txtCosts.TabIndex = 6;
-            // 
+            //
             // grpPartCostings
-            // 
+            //
             _grpPartCostings.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpPartCostings.BackColor = Color.White;
             _grpPartCostings.Controls.Add(_Label43);
@@ -2688,9 +2686,9 @@ namespace FSM
             _grpPartCostings.TabIndex = 6;
             _grpPartCostings.TabStop = false;
             _grpPartCostings.Text = "Job Profit/Loss";
-            // 
+            //
             // Label43
-            // 
+            //
             _Label43.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label43.AutoSize = true;
             _Label43.Location = new Point(824, 408);
@@ -2698,17 +2696,17 @@ namespace FSM
             _Label43.Size = new Size(46, 13);
             _Label43.TabIndex = 24;
             _Label43.Text = "Part %";
-            // 
+            //
             // txtPartPerc
-            // 
+            //
             _txtPartPerc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPartPerc.Location = new Point(806, 427);
             _txtPartPerc.Name = "txtPartPerc";
             _txtPartPerc.Size = new Size(100, 21);
             _txtPartPerc.TabIndex = 23;
-            // 
+            //
             // Label42
-            // 
+            //
             _Label42.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label42.AutoSize = true;
             _Label42.Location = new Point(817, 255);
@@ -2716,35 +2714,35 @@ namespace FSM
             _Label42.Size = new Size(62, 13);
             _Label42.TabIndex = 22;
             _Label42.Text = "Labour %";
-            // 
+            //
             // txtLabourPerc
-            // 
+            //
             _txtLabourPerc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtLabourPerc.Location = new Point(806, 276);
             _txtLabourPerc.Name = "txtLabourPerc";
             _txtLabourPerc.Size = new Size(100, 21);
             _txtLabourPerc.TabIndex = 21;
-            // 
+            //
             // dgScheduleOfRateCharges
-            // 
+            //
             _dgScheduleOfRateCharges.DataMember = "";
             _dgScheduleOfRateCharges.HeaderForeColor = SystemColors.ControlText;
             _dgScheduleOfRateCharges.Location = new Point(9, 35);
             _dgScheduleOfRateCharges.Name = "dgScheduleOfRateCharges";
             _dgScheduleOfRateCharges.Size = new Size(779, 118);
             _dgScheduleOfRateCharges.TabIndex = 20;
-            // 
+            //
             // dgPartsProductCharging
-            // 
+            //
             _dgPartsProductCharging.DataMember = "";
             _dgPartsProductCharging.HeaderForeColor = SystemColors.ControlText;
             _dgPartsProductCharging.Location = new Point(9, 348);
             _dgPartsProductCharging.Name = "dgPartsProductCharging";
             _dgPartsProductCharging.Size = new Size(779, 100);
             _dgPartsProductCharging.TabIndex = 19;
-            // 
+            //
             // Label40
-            // 
+            //
             _Label40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label40.AutoSize = true;
             _Label40.Location = new Point(817, 33);
@@ -2753,18 +2751,18 @@ namespace FSM
             _Label40.TabIndex = 18;
             _Label40.Text = "SOR Est";
             _Label40.Visible = false;
-            // 
+            //
             // TextBox2
-            // 
+            //
             _TextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _TextBox2.Location = new Point(806, 54);
             _TextBox2.Name = "TextBox2";
             _TextBox2.Size = new Size(100, 21);
             _TextBox2.TabIndex = 17;
             _TextBox2.Visible = false;
-            // 
+            //
             // Label39
-            // 
+            //
             _Label39.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label39.AutoSize = true;
             _Label39.Location = new Point(817, 111);
@@ -2772,53 +2770,53 @@ namespace FSM
             _Label39.Size = new Size(67, 13);
             _Label39.TabIndex = 16;
             _Label39.Text = "SOR Sales";
-            // 
+            //
             // txtSORSales
-            // 
+            //
             _txtSORSales.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtSORSales.Location = new Point(806, 132);
             _txtSORSales.Name = "txtSORSales";
             _txtSORSales.Size = new Size(100, 21);
             _txtSORSales.TabIndex = 15;
-            // 
+            //
             // dgTimesheetCharges
-            // 
+            //
             _dgTimesheetCharges.DataMember = "";
             _dgTimesheetCharges.HeaderForeColor = SystemColors.ControlText;
             _dgTimesheetCharges.Location = new Point(9, 205);
             _dgTimesheetCharges.Name = "dgTimesheetCharges";
             _dgTimesheetCharges.Size = new Size(779, 92);
             _dgTimesheetCharges.TabIndex = 14;
-            // 
+            //
             // Label35
-            // 
+            //
             _Label35.AutoSize = true;
             _Label35.Location = new Point(6, 19);
             _Label35.Name = "Label35";
             _Label35.Size = new Size(87, 13);
             _Label35.TabIndex = 13;
             _Label35.Text = "SOR's Applied";
-            // 
+            //
             // Label36
-            // 
+            //
             _Label36.AutoSize = true;
             _Label36.Location = new Point(6, 332);
             _Label36.Name = "Label36";
             _Label36.Size = new Size(72, 13);
             _Label36.TabIndex = 11;
             _Label36.Text = "Parts Costs";
-            // 
+            //
             // Label37
-            // 
+            //
             _Label37.AutoSize = true;
             _Label37.Location = new Point(6, 189);
             _Label37.Name = "Label37";
             _Label37.Size = new Size(82, 13);
             _Label37.TabIndex = 9;
             _Label37.Text = "Labour Costs";
-            // 
+            //
             // Label38
-            // 
+            //
             _Label38.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label38.AutoSize = true;
             _Label38.Location = new Point(824, 353);
@@ -2826,9 +2824,9 @@ namespace FSM
             _Label38.Size = new Size(66, 13);
             _Label38.TabIndex = 2;
             _Label38.Text = "Part Costs";
-            // 
+            //
             // lbl1
-            // 
+            //
             _lbl1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbl1.AutoSize = true;
             _lbl1.Location = new Point(817, 205);
@@ -2836,25 +2834,25 @@ namespace FSM
             _lbl1.Size = new Size(82, 13);
             _lbl1.TabIndex = 1;
             _lbl1.Text = "Labour Costs";
-            // 
+            //
             // txtPartCost
-            // 
+            //
             _txtPartCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPartCost.Location = new Point(806, 372);
             _txtPartCost.Name = "txtPartCost";
             _txtPartCost.Size = new Size(100, 21);
             _txtPartCost.TabIndex = 1;
-            // 
+            //
             // txtLabourCost
-            // 
+            //
             _txtLabourCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtLabourCost.Location = new Point(806, 226);
             _txtLabourCost.Name = "txtLabourCost";
             _txtLabourCost.Size = new Size(100, 21);
             _txtLabourCost.TabIndex = 0;
-            // 
+            //
             // tpInstall
-            // 
+            //
             _tpInstall.Controls.Add(_GroupBox1);
             _tpInstall.Location = new Point(4, 22);
             _tpInstall.Name = "tpInstall";
@@ -2862,9 +2860,9 @@ namespace FSM
             _tpInstall.TabIndex = 6;
             _tpInstall.Text = "Installation Data";
             _tpInstall.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_txtManual);
             _GroupBox1.Controls.Add(_Label31);
@@ -2931,9 +2929,9 @@ namespace FSM
             _GroupBox1.TabIndex = 34;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Details";
-            // 
+            //
             // txtManual
-            // 
+            //
             _txtManual.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtManual.Location = new Point(668, 353);
             _txtManual.Name = "txtManual";
@@ -2942,18 +2940,18 @@ namespace FSM
             _txtManual.TabStop = false;
             _txtManual.Text = "0";
             _txtManual.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label31
-            // 
+            //
             _Label31.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label31.Location = new Point(500, 356);
             _Label31.Name = "Label31";
             _Label31.Size = new Size(147, 23);
             _Label31.TabIndex = 111;
             _Label31.Text = "Manual Adjustment";
-            // 
+            //
             // txtEstSub
-            // 
+            //
             _txtEstSub.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtEstSub.Location = new Point(668, 276);
             _txtEstSub.Name = "txtEstSub";
@@ -2962,9 +2960,9 @@ namespace FSM
             _txtEstSub.TabStop = false;
             _txtEstSub.Text = "0";
             _txtEstSub.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // txtActSub
-            // 
+            //
             _txtActSub.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtActSub.Location = new Point(668, 306);
             _txtActSub.Name = "txtActSub";
@@ -2974,43 +2972,43 @@ namespace FSM
             _txtActSub.TabStop = false;
             _txtActSub.Text = "0";
             _txtActSub.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label29
-            // 
+            //
             _Label29.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label29.Location = new Point(500, 279);
             _Label29.Name = "Label29";
             _Label29.Size = new Size(147, 23);
             _Label29.TabIndex = 108;
             _Label29.Text = "Est SubContractor Cost";
-            // 
+            //
             // Label30
-            // 
+            //
             _Label30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label30.Location = new Point(500, 309);
             _Label30.Name = "Label30";
             _Label30.Size = new Size(147, 23);
             _Label30.TabIndex = 107;
             _Label30.Text = "Act SubContractor Cost";
-            // 
+            //
             // Label28
-            // 
+            //
             _Label28.Location = new Point(683, 65);
             _Label28.Name = "Label28";
             _Label28.Size = new Size(86, 19);
             _Label28.TabIndex = 106;
             _Label28.Text = "PO Value";
-            // 
+            //
             // Label27
-            // 
+            //
             _Label27.Location = new Point(796, 62);
             _Label27.Name = "Label27";
             _Label27.Size = new Size(86, 19);
             _Label27.TabIndex = 105;
             _Label27.Text = "Supplier Inv";
-            // 
+            //
             // txtSupplierInv
-            // 
+            //
             _txtSupplierInv.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtSupplierInv.Location = new Point(781, 84);
             _txtSupplierInv.Name = "txtSupplierInv";
@@ -3020,41 +3018,41 @@ namespace FSM
             _txtSupplierInv.TabStop = false;
             _txtSupplierInv.Text = "0";
             _txtSupplierInv.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label26
-            // 
+            //
             _Label26.Location = new Point(223, 122);
             _Label26.Name = "Label26";
             _Label26.Size = new Size(61, 18);
             _Label26.TabIndex = 103;
             _Label26.Text = "Nett";
-            // 
+            //
             // Label25
-            // 
+            //
             _Label25.Location = new Point(223, 63);
             _Label25.Name = "Label25";
             _Label25.Size = new Size(61, 14);
             _Label25.TabIndex = 102;
             _Label25.Text = "Nett";
-            // 
+            //
             // Label24
-            // 
+            //
             _Label24.Location = new Point(323, 62);
             _Label24.Name = "Label24";
             _Label24.Size = new Size(61, 19);
             _Label24.TabIndex = 101;
             _Label24.Text = "Gross";
-            // 
+            //
             // Label23
-            // 
+            //
             _Label23.Location = new Point(323, 122);
             _Label23.Name = "Label23";
             _Label23.Size = new Size(61, 18);
             _Label23.TabIndex = 100;
             _Label23.Text = "Gross";
-            // 
+            //
             // txtEstElec
-            // 
+            //
             _txtEstElec.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtEstElec.Location = new Point(668, 127);
             _txtEstElec.Name = "txtEstElec";
@@ -3063,9 +3061,9 @@ namespace FSM
             _txtEstElec.TabStop = false;
             _txtEstElec.Text = "0";
             _txtEstElec.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // txtActElec
-            // 
+            //
             _txtActElec.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtActElec.Location = new Point(668, 157);
             _txtActElec.Name = "txtActElec";
@@ -3075,27 +3073,27 @@ namespace FSM
             _txtActElec.TabStop = false;
             _txtActElec.Text = "0";
             _txtActElec.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label21
-            // 
+            //
             _Label21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label21.Location = new Point(500, 133);
             _Label21.Name = "Label21";
             _Label21.Size = new Size(116, 23);
             _Label21.TabIndex = 97;
             _Label21.Text = "Est Electrical Cost";
-            // 
+            //
             // Label22
-            // 
+            //
             _Label22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label22.Location = new Point(500, 163);
             _Label22.Name = "Label22";
             _Label22.Size = new Size(131, 23);
             _Label22.TabIndex = 96;
             _Label22.Text = "Act Electrical Cost";
-            // 
+            //
             // txtQuotedGross
-            // 
+            //
             _txtQuotedGross.Location = new Point(304, 84);
             _txtQuotedGross.Name = "txtQuotedGross";
             _txtQuotedGross.Size = new Size(97, 21);
@@ -3103,9 +3101,9 @@ namespace FSM
             _txtQuotedGross.TabStop = false;
             _txtQuotedGross.Text = "0";
             _txtQuotedGross.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // txtDepositGross
-            // 
+            //
             _txtDepositGross.Location = new Point(304, 141);
             _txtDepositGross.Name = "txtDepositGross";
             _txtDepositGross.Size = new Size(97, 21);
@@ -3113,9 +3111,9 @@ namespace FSM
             _txtDepositGross.TabStop = false;
             _txtDepositGross.Text = "0";
             _txtDepositGross.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // txtQuoted
-            // 
+            //
             _txtQuoted.Location = new Point(187, 84);
             _txtQuoted.Name = "txtQuoted";
             _txtQuoted.Size = new Size(97, 21);
@@ -3123,17 +3121,17 @@ namespace FSM
             _txtQuoted.TabStop = false;
             _txtQuoted.Text = "0";
             _txtQuoted.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // lblQuoted
-            // 
+            //
             _lblQuoted.Location = new Point(17, 90);
             _lblQuoted.Name = "lblQuoted";
             _lblQuoted.Size = new Size(121, 23);
             _lblQuoted.TabIndex = 92;
             _lblQuoted.Text = "Amount Quoted";
-            // 
+            //
             // txtProfitActPerc
-            // 
+            //
             _txtProfitActPerc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtProfitActPerc.Location = new Point(670, 551);
             _txtProfitActPerc.Name = "txtProfitActPerc";
@@ -3143,18 +3141,18 @@ namespace FSM
             _txtProfitActPerc.TabStop = false;
             _txtProfitActPerc.Text = "0";
             _txtProfitActPerc.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label18
-            // 
+            //
             _Label18.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label18.Location = new Point(500, 554);
             _Label18.Name = "Label18";
             _Label18.Size = new Size(116, 23);
             _Label18.TabIndex = 90;
             _Label18.Text = "Act Profit %";
-            // 
+            //
             // txtProfitEstPerc
-            // 
+            //
             _txtProfitEstPerc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtProfitEstPerc.Location = new Point(670, 524);
             _txtProfitEstPerc.Name = "txtProfitEstPerc";
@@ -3164,18 +3162,18 @@ namespace FSM
             _txtProfitEstPerc.TabStop = false;
             _txtProfitEstPerc.Text = "0";
             _txtProfitEstPerc.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label16.Location = new Point(500, 527);
             _Label16.Name = "Label16";
             _Label16.Size = new Size(116, 23);
             _Label16.TabIndex = 88;
             _Label16.Text = "Est Profit %";
-            // 
+            //
             // txtProfitActMoney
-            // 
+            //
             _txtProfitActMoney.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtProfitActMoney.Location = new Point(670, 485);
             _txtProfitActMoney.Name = "txtProfitActMoney";
@@ -3185,18 +3183,18 @@ namespace FSM
             _txtProfitActMoney.TabStop = false;
             _txtProfitActMoney.Text = "0";
             _txtProfitActMoney.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label15.Location = new Point(500, 488);
             _Label15.Name = "Label15";
             _Label15.Size = new Size(116, 23);
             _Label15.TabIndex = 86;
             _Label15.Text = "Act Profit £";
-            // 
+            //
             // txtProfitEstMoney
-            // 
+            //
             _txtProfitEstMoney.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtProfitEstMoney.Location = new Point(670, 458);
             _txtProfitEstMoney.Name = "txtProfitEstMoney";
@@ -3206,18 +3204,18 @@ namespace FSM
             _txtProfitEstMoney.TabStop = false;
             _txtProfitEstMoney.Text = "0";
             _txtProfitEstMoney.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label14.Location = new Point(500, 461);
             _Label14.Name = "Label14";
             _Label14.Size = new Size(116, 23);
             _Label14.TabIndex = 84;
             _Label14.Text = "Est Profit £";
-            // 
+            //
             // txtTotalEst
-            // 
+            //
             _txtTotalEst.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtTotalEst.Location = new Point(670, 396);
             _txtTotalEst.Name = "txtTotalEst";
@@ -3227,9 +3225,9 @@ namespace FSM
             _txtTotalEst.TabStop = false;
             _txtTotalEst.Text = "0";
             _txtTotalEst.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // txtTotalAct
-            // 
+            //
             _txtTotalAct.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtTotalAct.Location = new Point(670, 426);
             _txtTotalAct.Name = "txtTotalAct";
@@ -3239,27 +3237,27 @@ namespace FSM
             _txtTotalAct.TabStop = false;
             _txtTotalAct.Text = "0";
             _txtTotalAct.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label12.Location = new Point(502, 397);
             _Label12.Name = "Label12";
             _Label12.Size = new Size(116, 23);
             _Label12.TabIndex = 81;
             _Label12.Text = "Est Total Cost";
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label13.Location = new Point(502, 427);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(116, 23);
             _Label13.TabIndex = 80;
             _Label13.Text = "Act total Cost";
-            // 
+            //
             // txtEstLabour
-            // 
+            //
             _txtEstLabour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtEstLabour.Location = new Point(668, 201);
             _txtEstLabour.Name = "txtEstLabour";
@@ -3268,9 +3266,9 @@ namespace FSM
             _txtEstLabour.TabStop = false;
             _txtEstLabour.Text = "0";
             _txtEstLabour.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // txtActLabour
-            // 
+            //
             _txtActLabour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtActLabour.Location = new Point(668, 231);
             _txtActLabour.Name = "txtActLabour";
@@ -3280,27 +3278,27 @@ namespace FSM
             _txtActLabour.TabStop = false;
             _txtActLabour.Text = "0";
             _txtActLabour.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label5.Location = new Point(500, 204);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(116, 23);
             _Label5.TabIndex = 77;
             _Label5.Text = "Est Labour Cost";
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label17.Location = new Point(500, 234);
             _Label17.Name = "Label17";
             _Label17.Size = new Size(116, 23);
             _Label17.TabIndex = 76;
             _Label17.Text = "Act Labour Cost";
-            // 
+            //
             // txtPartEst
-            // 
+            //
             _txtPartEst.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPartEst.Location = new Point(670, 37);
             _txtPartEst.Name = "txtPartEst";
@@ -3309,9 +3307,9 @@ namespace FSM
             _txtPartEst.TabStop = false;
             _txtPartEst.Text = "0";
             _txtPartEst.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // txtPartAct
-            // 
+            //
             _txtPartAct.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPartAct.Location = new Point(670, 84);
             _txtPartAct.Name = "txtPartAct";
@@ -3321,59 +3319,59 @@ namespace FSM
             _txtPartAct.TabStop = false;
             _txtPartAct.Text = "0";
             _txtPartAct.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label19
-            // 
+            //
             _Label19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label19.Location = new Point(500, 40);
             _Label19.Name = "Label19";
             _Label19.Size = new Size(88, 23);
             _Label19.TabIndex = 60;
             _Label19.Text = "Est Part Cost";
-            // 
+            //
             // Label20
-            // 
+            //
             _Label20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label20.Location = new Point(498, 87);
             _Label20.Name = "Label20";
             _Label20.Size = new Size(88, 23);
             _Label20.TabIndex = 57;
             _Label20.Text = "Act Part Cost";
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(17, 342);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(134, 23);
             _Label11.TabIndex = 56;
             _Label11.Text = "Paperwork Returned";
-            // 
+            //
             // cboPaperwork
-            // 
+            //
             _cboPaperwork.FormattingEnabled = true;
             _cboPaperwork.Location = new Point(187, 336);
             _cboPaperwork.Name = "cboPaperwork";
             _cboPaperwork.Size = new Size(214, 21);
             _cboPaperwork.TabIndex = 55;
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(17, 307);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(134, 23);
             _Label10.TabIndex = 54;
             _Label10.Text = "QC Carried Out";
-            // 
+            //
             // cboQC
-            // 
+            //
             _cboQC.FormattingEnabled = true;
             _cboQC.Location = new Point(187, 304);
             _cboQC.Name = "cboQC";
             _cboQC.Size = new Size(214, 21);
             _cboQC.TabIndex = 53;
-            // 
+            //
             // txtPayment
-            // 
+            //
             _txtPayment.ImeMode = ImeMode.NoControl;
             _txtPayment.Location = new Point(187, 276);
             _txtPayment.Name = "txtPayment";
@@ -3383,49 +3381,49 @@ namespace FSM
             _txtPayment.TabStop = false;
             _txtPayment.Text = "0";
             _txtPayment.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(17, 282);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(134, 23);
             _Label9.TabIndex = 50;
             _Label9.Text = "Payment Taken";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(17, 255);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(134, 23);
             _Label8.TabIndex = 48;
             _Label8.Text = "Further Works Noted";
-            // 
+            //
             // cboFurtherWorks
-            // 
+            //
             _cboFurtherWorks.FormattingEnabled = true;
             _cboFurtherWorks.Location = new Point(187, 249);
             _cboFurtherWorks.Name = "cboFurtherWorks";
             _cboFurtherWorks.Size = new Size(214, 21);
             _cboFurtherWorks.TabIndex = 47;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(17, 228);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(134, 23);
             _Label7.TabIndex = 46;
             _Label7.Text = "Extra Labour Noted";
-            // 
+            //
             // cboExtraLabour
-            // 
+            //
             _cboExtraLabour.FormattingEnabled = true;
             _cboExtraLabour.Location = new Point(187, 222);
             _cboExtraLabour.Name = "cboExtraLabour";
             _cboExtraLabour.Size = new Size(214, 21);
             _cboExtraLabour.TabIndex = 45;
-            // 
+            //
             // txtPO
-            // 
+            //
             _txtPO.Location = new Point(187, 168);
             _txtPO.Name = "txtPO";
             _txtPO.ReadOnly = true;
@@ -3434,49 +3432,49 @@ namespace FSM
             _txtPO.TabStop = false;
             _txtPO.Text = "0";
             _txtPO.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(17, 174);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(88, 23);
             _Label6.TabIndex = 43;
             _Label6.Text = "PO Status";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(17, 201);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(134, 23);
             _Label4.TabIndex = 40;
             _Label4.Text = "Eng Called Supervisor";
-            // 
+            //
             // cboCalledSuper
-            // 
+            //
             _cboCalledSuper.FormattingEnabled = true;
             _cboCalledSuper.Location = new Point(187, 195);
             _cboCalledSuper.Name = "cboCalledSuper";
             _cboCalledSuper.Size = new Size(214, 21);
             _cboCalledSuper.TabIndex = 39;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(20, 35);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(88, 23);
             _Label3.TabIndex = 38;
             _Label3.Text = "Surveyed by";
-            // 
+            //
             // cboSurveyed
-            // 
+            //
             _cboSurveyed.FormattingEnabled = true;
             _cboSurveyed.Location = new Point(187, 32);
             _cboSurveyed.Name = "cboSurveyed";
             _cboSurveyed.Size = new Size(214, 21);
             _cboSurveyed.TabIndex = 37;
-            // 
+            //
             // txtDeposit
-            // 
+            //
             _txtDeposit.Location = new Point(187, 141);
             _txtDeposit.Name = "txtDeposit";
             _txtDeposit.Size = new Size(97, 21);
@@ -3484,17 +3482,17 @@ namespace FSM
             _txtDeposit.TabStop = false;
             _txtDeposit.Text = "0";
             _txtDeposit.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(17, 147);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(88, 23);
             _Label2.TabIndex = 34;
             _Label2.Text = "Deposit Taken";
-            // 
+            //
             // btnPrintJobCosting
-            // 
+            //
             _btnPrintJobCosting.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPrintJobCosting.Location = new Point(822, 664);
             _btnPrintJobCosting.Name = "btnPrintJobCosting";
@@ -3502,9 +3500,9 @@ namespace FSM
             _btnPrintJobCosting.TabIndex = 25;
             _btnPrintJobCosting.Text = "Print Job Costing";
             _btnPrintJobCosting.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMJobCostings
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(942, 690);
             ControlBox = false;
@@ -3660,6 +3658,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupTimeSheetChargeDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgTimesheetCharges);
@@ -3904,6 +3903,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SaveJI()
         {
             try
@@ -3942,6 +3942,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupJobInstall()
         {
             if (CurrentJob.JobTypeID == 521)

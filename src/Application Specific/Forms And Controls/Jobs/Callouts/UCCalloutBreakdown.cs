@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
@@ -6,17 +7,15 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCCalloutBreakdown : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCCalloutBreakdown() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCCalloutBreakdown_Load;
@@ -476,9 +475,9 @@ namespace FSM
             _grpJobItemsAdded.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgJobItemsAdded).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpJobItemsAdded
-            // 
+            //
             _grpJobItemsAdded.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJobItemsAdded.Controls.Add(_lblQualification);
@@ -502,9 +501,9 @@ namespace FSM
             _grpJobItemsAdded.TabIndex = 0;
             _grpJobItemsAdded.TabStop = false;
             _grpJobItemsAdded.Text = "Job Items";
-            // 
+            //
             // lblQualification
-            // 
+            //
             _lblQualification.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblQualification.AutoSize = true;
             _lblQualification.Location = new Point(277, 22);
@@ -512,18 +511,18 @@ namespace FSM
             _lblQualification.Size = new Size(77, 13);
             _lblQualification.TabIndex = 26;
             _lblQualification.Text = "Qualification";
-            // 
+            //
             // cboQualification
-            // 
+            //
             _cboQualification.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboQualification.FormattingEnabled = true;
             _cboQualification.Location = new Point(369, 18);
             _cboQualification.Name = "cboQualification";
             _cboQualification.Size = new Size(223, 21);
             _cboQualification.TabIndex = 25;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label4.AutoSize = true;
             _Label4.Location = new Point(598, 20);
@@ -531,52 +530,52 @@ namespace FSM
             _Label4.Size = new Size(48, 13);
             _Label4.TabIndex = 24;
             _Label4.Text = "Priority";
-            // 
+            //
             // cboPriority
-            // 
+            //
             _cboPriority.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboPriority.FormattingEnabled = true;
             _cboPriority.Location = new Point(652, 18);
             _cboPriority.Name = "cboPriority";
             _cboPriority.Size = new Size(142, 21);
             _cboPriority.TabIndex = 23;
-            // 
+            //
             // txtPONumber
-            // 
+            //
             _txtPONumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPONumber.Location = new Point(84, 20);
             _txtPONumber.Name = "txtPONumber";
             _txtPONumber.Size = new Size(185, 21);
             _txtPONumber.TabIndex = 22;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 21);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(81, 20);
             _Label3.TabIndex = 21;
             _Label3.Text = "PO Number";
-            // 
+            //
             // btnAddRate
-            // 
+            //
             _btnAddRate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddRate.Location = new Point(6, 248);
             _btnAddRate.Name = "btnAddRate";
             _btnAddRate.Size = new Size(354, 23);
             _btnAddRate.TabIndex = 20;
             _btnAddRate.Text = "Add Description From A Property Schedule Of Rates List";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label1.Location = new Point(6, 172);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(104, 16);
             _Label1.TabIndex = 18;
             _Label1.Text = "Enter Summary";
-            // 
+            //
             // txtJobItemSummary
-            // 
+            //
             _txtJobItemSummary.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtJobItemSummary.Location = new Point(8, 191);
             _txtJobItemSummary.Multiline = true;
@@ -584,27 +583,27 @@ namespace FSM
             _txtJobItemSummary.ScrollBars = ScrollBars.Both;
             _txtJobItemSummary.Size = new Size(261, 49);
             _txtJobItemSummary.TabIndex = 15;
-            // 
+            //
             // btnSaveItem
-            // 
+            //
             _btnSaveItem.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveItem.Location = new Point(296, 220);
             _btnSaveItem.Name = "btnSaveItem";
             _btnSaveItem.Size = new Size(64, 23);
             _btnSaveItem.TabIndex = 16;
             _btnSaveItem.Text = "Save";
-            // 
+            //
             // btnRemoveItem
-            // 
+            //
             _btnRemoveItem.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemoveItem.Location = new Point(296, 191);
             _btnRemoveItem.Name = "btnRemoveItem";
             _btnRemoveItem.Size = new Size(62, 23);
             _btnRemoveItem.TabIndex = 17;
             _btnRemoveItem.Text = "Remove";
-            // 
+            //
             // btnRemoveEngineerVisit
-            // 
+            //
             _btnRemoveEngineerVisit.AccessibleDescription = "Remove Engineer Visit";
             _btnRemoveEngineerVisit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnRemoveEngineerVisit.Location = new Point(832, 25);
@@ -612,9 +611,9 @@ namespace FSM
             _btnRemoveEngineerVisit.Size = new Size(24, 23);
             _btnRemoveEngineerVisit.TabIndex = 4;
             _btnRemoveEngineerVisit.Text = "_";
-            // 
+            //
             // btnAddEngineerVisit
-            // 
+            //
             _btnAddEngineerVisit.AccessibleDescription = "Add Engineer Visit";
             _btnAddEngineerVisit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddEngineerVisit.Location = new Point(800, 25);
@@ -622,18 +621,18 @@ namespace FSM
             _btnAddEngineerVisit.Size = new Size(24, 23);
             _btnAddEngineerVisit.TabIndex = 3;
             _btnAddEngineerVisit.Text = "+";
-            // 
+            //
             // tcEngineerVisits
-            // 
+            //
             _tcEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _tcEngineerVisits.Location = new Point(369, 48);
             _tcEngineerVisits.Name = "tcEngineerVisits";
             _tcEngineerVisits.SelectedIndex = 0;
             _tcEngineerVisits.Size = new Size(487, 224);
             _tcEngineerVisits.TabIndex = 5;
-            // 
+            //
             // dgJobItemsAdded
-            // 
+            //
             _dgJobItemsAdded.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgJobItemsAdded.DataMember = "";
@@ -642,9 +641,9 @@ namespace FSM
             _dgJobItemsAdded.Name = "dgJobItemsAdded";
             _dgJobItemsAdded.Size = new Size(352, 121);
             _dgJobItemsAdded.TabIndex = 1;
-            // 
+            //
             // UCCalloutBreakdown
-            // 
+            //
             Controls.Add(_grpJobItemsAdded);
             Name = "UCCalloutBreakdown";
             Size = new Size(880, 296);
@@ -656,7 +655,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupJobItemsAddedDataGrid();
@@ -674,11 +674,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -892,6 +893,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupJobItemsAddedDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgJobItemsAdded);
@@ -922,6 +924,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate(int ID = 0)
         {
             var argc = cboQualification;

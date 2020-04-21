@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMNotes : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMNotes() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMNotes_Load;
@@ -133,36 +132,36 @@ namespace FSM
             _btnClose.Click += new EventHandler(btnClose_Click);
             _pnlMain = new Panel();
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 328);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 25);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(72, 328);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(803, 288);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // FRMNotes
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(811, 366);
             Controls.Add(_btnClose);
@@ -181,7 +180,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             ((UCNotes)LoadedControl).CurrentNote = App.DB.Notes.Notes_Get(ID);
@@ -200,7 +200,8 @@ namespace FSM
         public void ResetMe(int newID)
         {
             ID = newID;
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(get_GetParameter(2).Name, "UCContact", false)))
+            var form = get_GetParameter(2) as Form;
+            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(form.Name, "UCContact", false)))
             {
                 ((UCContact)get_GetParameter(2)).NotesDataView = App.DB.Notes.NotesForContact(Conversions.ToInteger(get_GetParameter(1)));
             }

@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FrmInvoicedPayment : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FrmInvoicedPayment() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMInvoiceManager_Load;
@@ -46,6 +45,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private GroupBox _gpbPayment;
 
         internal GroupBox gpbPayment
@@ -580,9 +580,9 @@ namespace FSM
             _gpbPayment.SuspendLayout();
             _gpbInvoiceInformation.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // gpbPayment
-            // 
+            //
             _gpbPayment.Controls.Add(_lblAccountNumber);
             _gpbPayment.Controls.Add(_txtAccountNumber);
             _gpbPayment.Controls.Add(_cboPaidBy);
@@ -596,66 +596,66 @@ namespace FSM
             _gpbPayment.TabIndex = 1;
             _gpbPayment.TabStop = false;
             _gpbPayment.Text = "Payment";
-            // 
+            //
             // lblAccountNumber
-            // 
+            //
             _lblAccountNumber.Location = new Point(8, 84);
             _lblAccountNumber.Name = "lblAccountNumber";
             _lblAccountNumber.Size = new Size(136, 23);
             _lblAccountNumber.TabIndex = 16;
             _lblAccountNumber.Text = "Account Number";
-            // 
+            //
             // txtAccountNumber
-            // 
+            //
             _txtAccountNumber.Location = new Point(145, 81);
             _txtAccountNumber.Name = "txtAccountNumber";
             _txtAccountNumber.Size = new Size(279, 21);
             _txtAccountNumber.TabIndex = 15;
-            // 
+            //
             // cboPaidBy
-            // 
+            //
             _cboPaidBy.FormattingEnabled = true;
             _cboPaidBy.Location = new Point(145, 54);
             _cboPaidBy.Name = "cboPaidBy";
             _cboPaidBy.Size = new Size(279, 21);
             _cboPaidBy.TabIndex = 14;
-            // 
+            //
             // lblPaidBy
-            // 
+            //
             _lblPaidBy.AutoSize = true;
             _lblPaidBy.Location = new Point(9, 54);
             _lblPaidBy.Name = "lblPaidBy";
             _lblPaidBy.Size = new Size(50, 13);
             _lblPaidBy.TabIndex = 13;
             _lblPaidBy.Text = "Paid By";
-            // 
+            //
             // cboPaymentTerm
-            // 
+            //
             _cboPaymentTerm.FormattingEnabled = true;
             _cboPaymentTerm.Location = new Point(145, 24);
             _cboPaymentTerm.Name = "cboPaymentTerm";
             _cboPaymentTerm.Size = new Size(279, 21);
             _cboPaymentTerm.TabIndex = 12;
-            // 
+            //
             // lblPaymentTerm
-            // 
+            //
             _lblPaymentTerm.AutoSize = true;
             _lblPaymentTerm.Location = new Point(8, 24);
             _lblPaymentTerm.Name = "lblPaymentTerm";
             _lblPaymentTerm.Size = new Size(90, 13);
             _lblPaymentTerm.TabIndex = 11;
             _lblPaymentTerm.Text = "Payment Term";
-            // 
+            //
             // btnPay
-            // 
+            //
             _btnPay.Location = new Point(349, 114);
             _btnPay.Name = "btnPay";
             _btnPay.Size = new Size(75, 23);
             _btnPay.TabIndex = 6;
             _btnPay.Text = "Pay";
-            // 
+            //
             // gpbInvoiceInformation
-            // 
+            //
             _gpbInvoiceInformation.Controls.Add(_txtRaisedBy);
             _gpbInvoiceInformation.Controls.Add(_txtRaisedDate);
             _gpbInvoiceInformation.Controls.Add(_lblRaisedBy);
@@ -674,105 +674,105 @@ namespace FSM
             _gpbInvoiceInformation.TabIndex = 2;
             _gpbInvoiceInformation.TabStop = false;
             _gpbInvoiceInformation.Text = "Invoice Information";
-            // 
+            //
             // txtRaisedBy
-            // 
+            //
             _txtRaisedBy.Location = new Point(312, 94);
             _txtRaisedBy.Name = "txtRaisedBy";
             _txtRaisedBy.ReadOnly = true;
             _txtRaisedBy.Size = new Size(112, 21);
             _txtRaisedBy.TabIndex = 11;
-            // 
+            //
             // txtRaisedDate
-            // 
+            //
             _txtRaisedDate.Location = new Point(312, 70);
             _txtRaisedDate.Name = "txtRaisedDate";
             _txtRaisedDate.ReadOnly = true;
             _txtRaisedDate.Size = new Size(112, 21);
             _txtRaisedDate.TabIndex = 10;
-            // 
+            //
             // lblRaisedBy
-            // 
+            //
             _lblRaisedBy.Location = new Point(232, 94);
             _lblRaisedBy.Name = "lblRaisedBy";
             _lblRaisedBy.Size = new Size(80, 23);
             _lblRaisedBy.TabIndex = 9;
             _lblRaisedBy.Text = "Raised By";
-            // 
+            //
             // lblRaisedDate
-            // 
+            //
             _lblRaisedDate.Location = new Point(232, 70);
             _lblRaisedDate.Name = "lblRaisedDate";
             _lblRaisedDate.Size = new Size(80, 23);
             _lblRaisedDate.TabIndex = 8;
             _lblRaisedDate.Text = "Raised Date";
-            // 
+            //
             // txtInvAmount
-            // 
+            //
             _txtInvAmount.Location = new Point(112, 94);
             _txtInvAmount.Name = "txtInvAmount";
             _txtInvAmount.ReadOnly = true;
             _txtInvAmount.Size = new Size(112, 21);
             _txtInvAmount.TabIndex = 7;
-            // 
+            //
             // txtInvNumber
-            // 
+            //
             _txtInvNumber.Location = new Point(112, 70);
             _txtInvNumber.Name = "txtInvNumber";
             _txtInvNumber.ReadOnly = true;
             _txtInvNumber.Size = new Size(112, 21);
             _txtInvNumber.TabIndex = 6;
-            // 
+            //
             // lblInvoiceTotal
-            // 
+            //
             _lblInvoiceTotal.Location = new Point(8, 94);
             _lblInvoiceTotal.Name = "lblInvoiceTotal";
             _lblInvoiceTotal.Size = new Size(96, 23);
             _lblInvoiceTotal.TabIndex = 5;
             _lblInvoiceTotal.Text = "Invoice Total";
-            // 
+            //
             // lblInvoice
-            // 
+            //
             _lblInvoice.Location = new Point(8, 70);
             _lblInvoice.Name = "lblInvoice";
             _lblInvoice.Size = new Size(101, 23);
             _lblInvoice.TabIndex = 4;
             _lblInvoice.Text = "Invoice Number";
-            // 
+            //
             // txtInvoiceAddress
-            // 
+            //
             _txtInvoiceAddress.Location = new Point(112, 40);
             _txtInvoiceAddress.Name = "txtInvoiceAddress";
             _txtInvoiceAddress.ReadOnly = true;
             _txtInvoiceAddress.Size = new Size(312, 21);
             _txtInvoiceAddress.TabIndex = 3;
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Location = new Point(112, 16);
             _txtCustomer.Name = "txtCustomer";
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(312, 21);
             _txtCustomer.TabIndex = 2;
-            // 
+            //
             // lblInvoiceAddress
-            // 
+            //
             _lblInvoiceAddress.Location = new Point(8, 40);
             _lblInvoiceAddress.Name = "lblInvoiceAddress";
             _lblInvoiceAddress.Size = new Size(100, 23);
             _lblInvoiceAddress.TabIndex = 1;
             _lblInvoiceAddress.Text = "Invoice Address";
-            // 
+            //
             // lblCustomer
-            // 
+            //
             _lblCustomer.Location = new Point(8, 16);
             _lblCustomer.Name = "lblCustomer";
             _lblCustomer.Size = new Size(100, 23);
             _lblCustomer.TabIndex = 0;
             _lblCustomer.Text = "Customer";
-            // 
+            //
             // FrmInvoicedPayment
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(451, 334);
             Controls.Add(_gpbInvoiceInformation);
@@ -790,7 +790,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             InvoicedID = Conversions.ToInteger(get_GetParameter(0));
@@ -805,7 +806,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -876,6 +877,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             txtCustomer.Text = Conversions.ToString(get_GetParameter(1));

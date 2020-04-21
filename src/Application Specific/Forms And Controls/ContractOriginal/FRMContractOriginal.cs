@@ -9,11 +9,10 @@ namespace FSM
 {
     public class FRMContractOriginal : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMContractOriginal() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContract_Load;
@@ -162,45 +161,45 @@ namespace FSM
             _btnPrint = new Button();
             _btnPrint.Click += new EventHandler(btnPrint_Click);
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 656);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 25);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(72, 656);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(784, 616);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // btnPrint
-            // 
+            //
             _btnPrint.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPrint.Location = new Point(728, 656);
             _btnPrint.Name = "btnPrint";
             _btnPrint.Size = new Size(56, 25);
             _btnPrint.TabIndex = 4;
             _btnPrint.Text = "Print";
-            // 
+            //
             // FRMContractOriginal
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(792, 694);
             Controls.Add(_btnPrint);
@@ -221,7 +220,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));

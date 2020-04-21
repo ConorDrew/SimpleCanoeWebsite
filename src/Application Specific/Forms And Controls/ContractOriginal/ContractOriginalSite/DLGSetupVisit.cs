@@ -1,23 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class DLGSetupVisit : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
 
         public DLGSetupVisit() : base()
         {
             base.Load += DLGFindRecord_Load;
-
 
             // This call is required by the Windows Form Designer.
             InitializeComponent();
@@ -33,7 +30,6 @@ namespace FSM
             // Combo.SetUpCombo(Me.cboType, DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.CoverPlanDiscounts).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Please_Select)
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -54,7 +50,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Button _btnCancel;
 
@@ -219,11 +215,7 @@ namespace FSM
             {
                 if (_cboFrequency != null)
                 {
-
-
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
 
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
@@ -423,11 +415,8 @@ namespace FSM
             {
                 if (_TextBox1 != null)
                 {
-
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
 
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
 
@@ -566,106 +555,106 @@ namespace FSM
             _txtAdditional = new TextBox();
             _Label8 = new Label();
             SuspendLayout();
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 451);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 4;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 144);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(95, 24);
             _Label4.TabIndex = 12;
             _Label4.Text = "Target Date";
-            // 
+            //
             // dtpTargetDate
-            // 
+            //
             _dtpTargetDate.Location = new Point(122, 140);
             _dtpTargetDate.Name = "dtpTargetDate";
             _dtpTargetDate.Size = new Size(298, 21);
             _dtpTargetDate.TabIndex = 3;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(10, 76);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(93, 15);
             _Label3.TabIndex = 10;
             _Label3.Text = "Visit Type";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.FormattingEnabled = true;
             _cboType.Location = new Point(122, 73);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(298, 21);
             _cboType.TabIndex = 1;
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(364, 454);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(56, 23);
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(10, 109);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(93, 15);
             _Label2.TabIndex = 14;
             _Label2.Text = "Frequency";
-            // 
+            //
             // cboFrequency
-            // 
+            //
             _cboFrequency.FormattingEnabled = true;
             _cboFrequency.Location = new Point(122, 106);
             _cboFrequency.Name = "cboFrequency";
             _cboFrequency.Size = new Size(298, 21);
             _cboFrequency.TabIndex = 2;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 177);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(112, 18);
             _Label5.TabIndex = 16;
             _Label5.Text = "Prefered Engineer";
-            // 
+            //
             // cboPreferredEngineer
-            // 
+            //
             _cboPreferredEngineer.FormattingEnabled = true;
             _cboPreferredEngineer.Location = new Point(122, 173);
             _cboPreferredEngineer.Name = "cboPreferredEngineer";
             _cboPreferredEngineer.Size = new Size(298, 21);
             _cboPreferredEngineer.TabIndex = 5;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(10, 214);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(106, 15);
             _Label6.TabIndex = 18;
             _Label6.Text = "Sub Contractor";
-            // 
+            //
             // cboSubContractor
-            // 
+            //
             _cboSubContractor.FormattingEnabled = true;
             _cboSubContractor.Location = new Point(122, 211);
             _cboSubContractor.Name = "cboSubContractor";
             _cboSubContractor.Size = new Size(298, 21);
             _cboSubContractor.TabIndex = 6;
-            // 
+            //
             // CheckBox1
-            // 
+            //
             _CheckBox1.AutoSize = true;
             _CheckBox1.Location = new Point(13, 369);
             _CheckBox1.Name = "CheckBox1";
@@ -674,55 +663,55 @@ namespace FSM
             _CheckBox1.Text = "System Generated";
             _CheckBox1.UseVisualStyleBackColor = true;
             _CheckBox1.Visible = false;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 283);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(100, 24);
             _Label1.TabIndex = 2;
             _Label1.Text = "Expected Cost";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Location = new Point(122, 281);
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(298, 21);
             _txtFilter.TabIndex = 25;
-            // 
+            //
             // TextBox1
-            // 
+            //
             _TextBox1.Location = new Point(122, 246);
             _TextBox1.Name = "TextBox1";
             _TextBox1.Size = new Size(298, 21);
             _TextBox1.TabIndex = 20;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(8, 248);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(100, 24);
             _Label7.TabIndex = 21;
             _Label7.Text = "Hours Required";
-            // 
+            //
             // txtAdditional
-            // 
+            //
             _txtAdditional.Location = new Point(122, 314);
             _txtAdditional.Multiline = true;
             _txtAdditional.Name = "txtAdditional";
             _txtAdditional.Size = new Size(298, 125);
             _txtAdditional.TabIndex = 30;
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(8, 316);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(100, 24);
             _Label8.TabIndex = 23;
             _Label8.Text = "Additional Notes";
-            // 
+            //
             // DLGSetupVisit
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(432, 481);
             ControlBox = false;
@@ -775,7 +764,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ActiveControl = txtFilter;
@@ -790,7 +780,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

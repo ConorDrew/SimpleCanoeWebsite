@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMEngineerRaiseJob : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMEngineerRaiseJob() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMEngineer_Load;
@@ -24,7 +23,6 @@ namespace FSM
             var argc = cboEngineer;
             Combo.SetUpCombo(ref argc, App.DB.Engineer.Engineer_GetAll().Table, "EngineerID", "Name", Entity.Sys.Enums.ComboValues.Please_Select);
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -208,27 +206,27 @@ namespace FSM
             _Label1 = new Label();
             _pnlMain.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 95);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 25);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(72, 95);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Controls.Add(_chkSuper);
@@ -238,9 +236,9 @@ namespace FSM
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(613, 57);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // chkSuper
-            // 
+            //
             _chkSuper.AutoSize = true;
             _chkSuper.Location = new Point(417, 20);
             _chkSuper.Name = "chkSuper";
@@ -248,26 +246,26 @@ namespace FSM
             _chkSuper.TabIndex = 2;
             _chkSuper.Text = "Supervisor";
             _chkSuper.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboEngineer
-            // 
+            //
             _cboEngineer.FormattingEnabled = true;
             _cboEngineer.Location = new Point(116, 18);
             _cboEngineer.Name = "cboEngineer";
             _cboEngineer.Size = new Size(284, 21);
             _cboEngineer.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Location = new Point(48, 21);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(62, 13);
             _Label1.TabIndex = 0;
             _Label1.Text = "Engineer:";
-            // 
+            //
             // FRMEngineerRaiseJob
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(621, 133);
             Controls.Add(_btnClose);

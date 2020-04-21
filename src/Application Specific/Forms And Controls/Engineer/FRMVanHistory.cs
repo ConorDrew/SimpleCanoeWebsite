@@ -9,11 +9,10 @@ namespace FSM
 {
     public class FRMVanHistory : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMVanHistory() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMVanHistory_Load;
@@ -22,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,7 +41,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpHistory;
 
@@ -101,9 +99,9 @@ namespace FSM
             _grpHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgHistory).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpHistory
-            // 
+            //
             _grpHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpHistory.Controls.Add(_dgHistory);
@@ -113,9 +111,9 @@ namespace FSM
             _grpHistory.TabIndex = 1;
             _grpHistory.TabStop = false;
             _grpHistory.Text = "History";
-            // 
+            //
             // dgHistory
-            // 
+            //
             _dgHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgHistory.DataMember = "";
@@ -124,9 +122,9 @@ namespace FSM
             _dgHistory.Name = "dgHistory";
             _dgHistory.Size = new Size(840, 405);
             _dgHistory.TabIndex = 1;
-            // 
+            //
             // FRMVanHistory
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(872, 486);
             Controls.Add(_grpHistory);
@@ -141,7 +139,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             LoadForm(sender, e, this);
@@ -232,6 +231,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgHistory);

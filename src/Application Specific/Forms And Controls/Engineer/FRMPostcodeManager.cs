@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMPostcodeManager : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPostcodeManager() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMPostcodeManager_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -139,9 +137,9 @@ namespace FSM
             _grpEngineers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgEngineers).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpEngineers
-            // 
+            //
             _grpEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineers.Controls.Add(_dgEngineers);
@@ -151,9 +149,9 @@ namespace FSM
             _grpEngineers.TabIndex = 1;
             _grpEngineers.TabStop = false;
             _grpEngineers.Text = "Tick those engineers associated to this new postcode";
-            // 
+            //
             // dgEngineers
-            // 
+            //
             _dgEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgEngineers.DataMember = "";
@@ -162,18 +160,18 @@ namespace FSM
             _dgEngineers.Name = "dgEngineers";
             _dgEngineers.Size = new Size(328, 375);
             _dgEngineers.TabIndex = 0;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 456);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 23);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // FRMPostcodeManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(360, 486);
             Controls.Add(_btnSave);
@@ -193,7 +191,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupEngineersDataGrid();
@@ -208,7 +207,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -295,6 +294,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupEngineersDataGrid()
         {
             var tStyle = dgEngineers.TableStyles[0];

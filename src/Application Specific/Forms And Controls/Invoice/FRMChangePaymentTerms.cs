@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -12,6 +12,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
@@ -55,6 +56,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMChangeInvoicedTotal_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -94,6 +96,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void cboPaymentTerm_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboPaymentTerm)) == (double)Entity.Sys.Enums.QuoteJobOfWorkTypes.Reciept)

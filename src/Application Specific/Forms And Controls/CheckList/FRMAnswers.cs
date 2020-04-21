@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMAnswers : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMAnswers() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMAnswers_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -184,9 +182,9 @@ namespace FSM
             _grpAnswers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgChecklist).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpAnswers
-            // 
+            //
             _grpAnswers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAnswers.Controls.Add(_dgChecklist);
@@ -196,9 +194,9 @@ namespace FSM
             _grpAnswers.TabIndex = 1;
             _grpAnswers.TabStop = false;
             _grpAnswers.Text = "Answers relate to the closest question (All preceeding information are headings)";
-            // 
+            //
             // dgChecklist
-            // 
+            //
             _dgChecklist.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgChecklist.DataMember = "";
@@ -207,27 +205,27 @@ namespace FSM
             _dgChecklist.Name = "dgChecklist";
             _dgChecklist.Size = new Size(840, 447);
             _dgChecklist.TabIndex = 1;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(8, 528);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(48, 23);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(816, 528);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(48, 23);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label1.BackColor = Color.FromArgb(Conversions.ToByte(255), Conversions.ToByte(255), Conversions.ToByte(192));
             _Label1.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -237,9 +235,9 @@ namespace FSM
             _Label1.TabIndex = 4;
             _Label1.Text = "Pick a result and enter any comments for each question and then click save";
             _Label1.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // FRMAnswers
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(872, 558);
             Controls.Add(_Label1);
@@ -260,7 +258,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDataGrid();
@@ -277,7 +276,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -357,6 +356,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             var tbStyle = dgChecklist.TableStyles[0];
@@ -446,12 +446,13 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate()
+
+        public void Populate()
         {
             ChecklistDataview = App.DB.Checklists.Get_Questions_And_Answers_For_Section(SectionID, Checklist.CheckListID);
         }
 
-        private void Save()
+        public void Save()
         {
             try
             {

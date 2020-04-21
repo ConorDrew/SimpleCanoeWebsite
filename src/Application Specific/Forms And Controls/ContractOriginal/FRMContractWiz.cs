@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMContractWiz : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMContractWiz() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContract_Load;
@@ -142,7 +141,6 @@ namespace FSM
             {
                 if (_btnReprintExpiry != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnReprintExpiry.Click -= btnReprintExpiry_Click;
                 }
@@ -192,9 +190,9 @@ namespace FSM
             _btnReprintExpiry = new Button();
             _btnReprintExpiry.Click += new EventHandler(btnReprintExpiry_Click);
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnSave.Location = new Point(905, 734);
@@ -202,9 +200,9 @@ namespace FSM
             _btnSave.Size = new Size(171, 25);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Create Contract";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnClose.Location = new Point(12, 734);
@@ -212,18 +210,18 @@ namespace FSM
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(1076, 693);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // Button1
-            // 
+            //
             _Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Button1.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Button1.Location = new Point(714, 734);
@@ -231,9 +229,9 @@ namespace FSM
             _Button1.Size = new Size(171, 25);
             _Button1.TabIndex = 4;
             _Button1.Text = "Print Documentation";
-            // 
+            //
             // btnReprintExpiry
-            // 
+            //
             _btnReprintExpiry.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReprintExpiry.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnReprintExpiry.Location = new Point(522, 731);
@@ -241,9 +239,9 @@ namespace FSM
             _btnReprintExpiry.Size = new Size(171, 25);
             _btnReprintExpiry.TabIndex = 5;
             _btnReprintExpiry.Text = "Print Expiry";
-            // 
+            //
             // FRMContractWiz
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1084, 771);
             Controls.Add(_btnReprintExpiry);
@@ -267,7 +265,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));

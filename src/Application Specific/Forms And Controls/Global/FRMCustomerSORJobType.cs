@@ -1,4 +1,11 @@
-﻿using System;
+﻿using FSM.Entity.CostCentres;
+using FSM.Entity.CostCentres.Enums;
+using FSM.Entity.CostCentres.LinkTypes.Enums;
+using FSM.Entity.Customers;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -6,23 +13,15 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.CostCentres;
-using FSM.Entity.CostCentres.Enums;
-using FSM.Entity.CostCentres.LinkTypes.Enums;
-using FSM.Entity.Customers;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMCustomerSORJobType : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMCustomerSORJobType() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMJobLocks_Load;
@@ -30,7 +29,6 @@ namespace FSM
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -866,9 +864,9 @@ namespace FSM
             _grpCostCentreMatrix.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgCostCentreMatrix).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpLocks
-            // 
+            //
             _grpLocks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpLocks.Controls.Add(_btnSave);
             _grpLocks.Controls.Add(_lbSorCustomer);
@@ -886,9 +884,9 @@ namespace FSM
             _grpLocks.Size = new Size(683, 743);
             _grpLocks.TabIndex = 1;
             _grpLocks.TabStop = false;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.AccessibleDescription = "Save item";
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Cursor = Cursors.Hand;
@@ -899,26 +897,26 @@ namespace FSM
             _btnSave.TabIndex = 4;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // lbSorCustomer
-            // 
+            //
             _lbSorCustomer.Location = new Point(6, 23);
             _lbSorCustomer.Name = "lbSorCustomer";
             _lbSorCustomer.Size = new Size(64, 16);
             _lbSorCustomer.TabIndex = 36;
             _lbSorCustomer.Text = "Customer";
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCustomer.Location = new Point(76, 20);
             _txtCustomer.Name = "txtCustomer";
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(131, 21);
             _txtCustomer.TabIndex = 34;
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.BackColor = Color.White;
             _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnFindCustomer.Location = new Point(213, 18);
@@ -927,9 +925,9 @@ namespace FSM
             _btnFindCustomer.TabIndex = 35;
             _btnFindCustomer.Text = "...";
             _btnFindCustomer.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.AccessibleDescription = "Save item";
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnDelete.Cursor = Cursors.Hand;
@@ -940,9 +938,9 @@ namespace FSM
             _btnDelete.TabIndex = 2;
             _btnDelete.Text = "Delete";
             _btnDelete.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.AccessibleDescription = "Save item";
             _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _btnAdd.Cursor = Cursors.Hand;
@@ -953,18 +951,18 @@ namespace FSM
             _btnAdd.TabIndex = 33;
             _btnAdd.Text = "Add";
             _btnAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // CboSOR
-            // 
+            //
             _CboSOR.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _CboSOR.FormattingEnabled = true;
             _CboSOR.Location = new Point(451, 21);
             _CboSOR.Name = "CboSOR";
             _CboSOR.Size = new Size(222, 21);
             _CboSOR.TabIndex = 32;
-            // 
+            //
             // lblSor
-            // 
+            //
             _lblSor.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblSor.AutoSize = true;
             _lblSor.Location = new Point(413, 23);
@@ -972,27 +970,27 @@ namespace FSM
             _lblSor.Size = new Size(32, 13);
             _lblSor.TabIndex = 31;
             _lblSor.Text = "SOR";
-            // 
+            //
             // cboJobType
-            // 
+            //
             _cboJobType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboJobType.FormattingEnabled = true;
             _cboJobType.Location = new Point(307, 20);
             _cboJobType.Name = "cboJobType";
             _cboJobType.Size = new Size(100, 21);
             _cboJobType.TabIndex = 3;
-            // 
+            //
             // lblCustomerSorJobType
-            // 
+            //
             _lblCustomerSorJobType.AutoSize = true;
             _lblCustomerSorJobType.Location = new Point(244, 24);
             _lblCustomerSorJobType.Name = "lblCustomerSorJobType";
             _lblCustomerSorJobType.Size = new Size(57, 13);
             _lblCustomerSorJobType.TabIndex = 2;
             _lblCustomerSorJobType.Text = "Job Type";
-            // 
+            //
             // dgSOR
-            // 
+            //
             _dgSOR.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSOR.DataMember = "";
@@ -1001,9 +999,9 @@ namespace FSM
             _dgSOR.Name = "dgSOR";
             _dgSOR.Size = new Size(667, 623);
             _dgSOR.TabIndex = 1;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.AccessibleDescription = "Save item";
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Cursor = Cursors.Hand;
@@ -1014,9 +1012,9 @@ namespace FSM
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpCostCentreMatrix
-            // 
+            //
             _grpCostCentreMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCostCentreMatrix.Controls.Add(_btnReset);
@@ -1042,9 +1040,9 @@ namespace FSM
             _grpCostCentreMatrix.TabIndex = 35;
             _grpCostCentreMatrix.TabStop = false;
             _grpCostCentreMatrix.Text = "Cost Centre Matrix";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnReset.Location = new Point(810, 50);
             _btnReset.Name = "btnReset";
@@ -1052,42 +1050,42 @@ namespace FSM
             _btnReset.TabIndex = 77;
             _btnReset.Tag = "";
             _btnReset.Text = "Reset";
-            // 
+            //
             // txtJobSpendLimit
-            // 
+            //
             _txtJobSpendLimit.Location = new Point(336, 49);
             _txtJobSpendLimit.Name = "txtJobSpendLimit";
             _txtJobSpendLimit.Size = new Size(117, 21);
             _txtJobSpendLimit.TabIndex = 76;
-            // 
+            //
             // lblJobSpendLimit
-            // 
+            //
             _lblJobSpendLimit.AutoSize = true;
             _lblJobSpendLimit.Location = new Point(222, 52);
             _lblJobSpendLimit.Name = "lblJobSpendLimit";
             _lblJobSpendLimit.Size = new Size(108, 13);
             _lblJobSpendLimit.TabIndex = 75;
             _lblJobSpendLimit.Text = "Job Spend Limit £";
-            // 
+            //
             // cboLinkType
-            // 
+            //
             _cboLinkType.FormattingEnabled = true;
             _cboLinkType.Location = new Point(90, 49);
             _cboLinkType.Name = "cboLinkType";
             _cboLinkType.Size = new Size(119, 21);
             _cboLinkType.TabIndex = 74;
-            // 
+            //
             // lblLinkType
-            // 
+            //
             _lblLinkType.AutoSize = true;
             _lblLinkType.Location = new Point(8, 52);
             _lblLinkType.Name = "lblLinkType";
             _lblLinkType.Size = new Size(61, 13);
             _lblLinkType.TabIndex = 73;
             _lblLinkType.Text = "Link Type";
-            // 
+            //
             // lblCcCustomer
-            // 
+            //
             _lblCcCustomer.AutoSize = true;
             _lblCcCustomer.Location = new Point(471, 25);
             _lblCcCustomer.Name = "lblCcCustomer";
@@ -1095,9 +1093,9 @@ namespace FSM
             _lblCcCustomer.TabIndex = 72;
             _lblCcCustomer.Text = "Customer";
             _lblCcCustomer.Visible = false;
-            // 
+            //
             // btnCcFindCustomer
-            // 
+            //
             _btnCcFindCustomer.BackColor = Color.White;
             _btnCcFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnCcFindCustomer.Location = new Point(712, 18);
@@ -1107,9 +1105,9 @@ namespace FSM
             _btnCcFindCustomer.Text = "...";
             _btnCcFindCustomer.UseVisualStyleBackColor = false;
             _btnCcFindCustomer.Visible = false;
-            // 
+            //
             // txtCcCustomer
-            // 
+            //
             _txtCcCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCcCustomer.Location = new Point(540, 19);
             _txtCcCustomer.Name = "txtCcCustomer";
@@ -1117,26 +1115,26 @@ namespace FSM
             _txtCcCustomer.Size = new Size(166, 21);
             _txtCcCustomer.TabIndex = 70;
             _txtCcCustomer.Visible = false;
-            // 
+            //
             // cboCostCentre
-            // 
+            //
             _cboCostCentre.FormattingEnabled = true;
             _cboCostCentre.Location = new Point(90, 19);
             _cboCostCentre.Name = "cboCostCentre";
             _cboCostCentre.Size = new Size(73, 21);
             _cboCostCentre.TabIndex = 69;
-            // 
+            //
             // lblCostCentre
-            // 
+            //
             _lblCostCentre.AutoSize = true;
             _lblCostCentre.Location = new Point(8, 23);
             _lblCostCentre.Name = "lblCostCentre";
             _lblCostCentre.Size = new Size(76, 13);
             _lblCostCentre.TabIndex = 68;
             _lblCostCentre.Text = "Cost Centre";
-            // 
+            //
             // btnAddCCM
-            // 
+            //
             _btnAddCCM.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddCCM.Location = new Point(810, 20);
             _btnAddCCM.Name = "btnAddCCM";
@@ -1144,34 +1142,34 @@ namespace FSM
             _btnAddCCM.TabIndex = 67;
             _btnAddCCM.Tag = "";
             _btnAddCCM.Text = "Save";
-            // 
+            //
             // cboRegion
-            // 
+            //
             _cboRegion.FormattingEnabled = true;
             _cboRegion.Location = new Point(523, 19);
             _cboRegion.Name = "cboRegion";
             _cboRegion.Size = new Size(159, 21);
             _cboRegion.TabIndex = 32;
-            // 
+            //
             // lblRegion
-            // 
+            //
             _lblRegion.AutoSize = true;
             _lblRegion.Location = new Point(471, 23);
             _lblRegion.Name = "lblRegion";
             _lblRegion.Size = new Size(46, 13);
             _lblRegion.TabIndex = 31;
             _lblRegion.Text = "Region";
-            // 
+            //
             // cboCCJobType
-            // 
+            //
             _cboCCJobType.FormattingEnabled = true;
             _cboCCJobType.Location = new Point(300, 19);
             _cboCCJobType.Name = "cboCCJobType";
             _cboCCJobType.Size = new Size(153, 21);
             _cboCCJobType.TabIndex = 3;
-            // 
+            //
             // btnDeleteCCM
-            // 
+            //
             _btnDeleteCCM.AccessibleDescription = "Save item";
             _btnDeleteCCM.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDeleteCCM.Cursor = Cursors.Hand;
@@ -1182,18 +1180,18 @@ namespace FSM
             _btnDeleteCCM.TabIndex = 2;
             _btnDeleteCCM.Text = "Delete";
             _btnDeleteCCM.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblJobType
-            // 
+            //
             _lblJobType.AutoSize = true;
             _lblJobType.Location = new Point(222, 23);
             _lblJobType.Name = "lblJobType";
             _lblJobType.Size = new Size(57, 13);
             _lblJobType.TabIndex = 2;
             _lblJobType.Text = "Job Type";
-            // 
+            //
             // dgCostCentreMatrix
-            // 
+            //
             _dgCostCentreMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgCostCentreMatrix.DataMember = "";
@@ -1202,9 +1200,9 @@ namespace FSM
             _dgCostCentreMatrix.Name = "dgCostCentreMatrix";
             _dgCostCentreMatrix.Size = new Size(880, 623);
             _dgCostCentreMatrix.TabIndex = 1;
-            // 
+            //
             // FRMCustomerSORJobType
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1604, 852);
             Controls.Add(_grpCostCentreMatrix);
@@ -1228,7 +1226,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDataGrid();
@@ -1275,7 +1274,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1401,6 +1400,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             Helper.SetUpDataGrid(dgSOR);
@@ -1632,7 +1632,7 @@ namespace FSM
             int linkTypeId = Helper.MakeIntegerValid(Combo.get_GetSelectedItemValue(cboLinkType));
             switch (linkTypeId)
             {
-                case Conversions.ToInteger(LinkType.RegionId):
+                case (int)LinkType.RegionId:
                     {
                         linkId = Helper.MakeIntegerValid(Combo.get_GetSelectedItemValue(cboRegion));
                         if (linkId == 0)
@@ -1644,7 +1644,7 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(LinkType.CustomerId):
+                case (int)LinkType.CustomerId:
                     {
                         linkId = Helper.MakeIntegerValid(Customer?.CustomerID);
                         if (linkId == 0)
@@ -1738,7 +1738,7 @@ namespace FSM
             int linkTypeId = Helper.MakeIntegerValid(Combo.get_GetSelectedItemValue(cboLinkType));
             switch (linkTypeId)
             {
-                case Conversions.ToInteger(LinkType.RegionId):
+                case (int)(LinkType.RegionId):
                     {
                         lblRegion.Visible = true;
                         cboRegion.Visible = true;
@@ -1748,7 +1748,7 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(LinkType.CustomerId):
+                case (int)(LinkType.CustomerId):
                     {
                         lblCcCustomer.Visible = true;
                         txtCcCustomer.Visible = true;

@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMJobManager : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMJobManager() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMJobManager_Load;
@@ -928,9 +927,9 @@ namespace FSM
             _grpMiscSearch.SuspendLayout();
             _grpDateCriteria.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpJobs
-            // 
+            //
             _grpJobs.Controls.Add(_dgJobs);
             _grpJobs.Dock = DockStyle.Fill;
             _grpJobs.Location = new Point(0, 247);
@@ -939,9 +938,9 @@ namespace FSM
             _grpJobs.TabIndex = 44;
             _grpJobs.TabStop = false;
             _grpJobs.Text = "Results (awaiting search) - Double Click To View / Edit";
-            // 
+            //
             // dgJobs
-            // 
+            //
             _dgJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgJobs.DataMember = "";
@@ -950,9 +949,9 @@ namespace FSM
             _dgJobs.Name = "dgJobs";
             _dgJobs.Size = new Size(1326, 298);
             _dgJobs.TabIndex = 15;
-            // 
+            //
             // pnlFilters
-            // 
+            //
             _pnlFilters.Controls.Add(_btnExport);
             _pnlFilters.Controls.Add(_grpCustomerSearch);
             _pnlFilters.Controls.Add(_btnReset);
@@ -964,9 +963,9 @@ namespace FSM
             _pnlFilters.Name = "pnlFilters";
             _pnlFilters.Size = new Size(1338, 247);
             _pnlFilters.TabIndex = 43;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnExport.Location = new Point(964, 218);
             _btnExport.Name = "btnExport";
@@ -974,9 +973,9 @@ namespace FSM
             _btnExport.TabIndex = 40;
             _btnExport.Text = "Export";
             _btnExport.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpCustomerSearch
-            // 
+            //
             _grpCustomerSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpCustomerSearch.Controls.Add(_btnFindSite);
             _grpCustomerSearch.Controls.Add(_txtSite);
@@ -992,9 +991,9 @@ namespace FSM
             _grpCustomerSearch.TabIndex = 37;
             _grpCustomerSearch.TabStop = false;
             _grpCustomerSearch.Text = "Customer";
-            // 
+            //
             // btnFindSite
-            // 
+            //
             _btnFindSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindSite.BackColor = Color.White;
             _btnFindSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1004,9 +1003,9 @@ namespace FSM
             _btnFindSite.TabIndex = 35;
             _btnFindSite.Text = "...";
             _btnFindSite.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtSite.Location = new Point(107, 45);
@@ -1014,42 +1013,42 @@ namespace FSM
             _txtSite.ReadOnly = true;
             _txtSite.Size = new Size(800, 21);
             _txtSite.TabIndex = 34;
-            // 
+            //
             // lblProperty
-            // 
+            //
             _lblProperty.Location = new Point(11, 44);
             _lblProperty.Name = "lblProperty";
             _lblProperty.Size = new Size(65, 22);
             _lblProperty.TabIndex = 33;
             _lblProperty.Text = "Property";
-            // 
+            //
             // lblCustomer
-            // 
+            //
             _lblCustomer.Location = new Point(11, 17);
             _lblCustomer.Name = "lblCustomer";
             _lblCustomer.Size = new Size(64, 16);
             _lblCustomer.TabIndex = 27;
             _lblCustomer.Text = "Customer";
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Location = new Point(11, 75);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(64, 16);
             _lblPostcode.TabIndex = 20;
             _lblPostcode.Text = "Postcode";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcode.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPostcode.Location = new Point(107, 72);
             _txtPostcode.Name = "txtPostcode";
             _txtPostcode.Size = new Size(830, 21);
             _txtPostcode.TabIndex = 5;
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCustomer.Location = new Point(107, 18);
@@ -1057,9 +1056,9 @@ namespace FSM
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(800, 21);
             _txtCustomer.TabIndex = 1;
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindCustomer.BackColor = Color.White;
             _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1069,9 +1068,9 @@ namespace FSM
             _btnFindCustomer.TabIndex = 2;
             _btnFindCustomer.Text = "...";
             _btnFindCustomer.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnReset.Location = new Point(1088, 218);
             _btnReset.Name = "btnReset";
@@ -1079,9 +1078,9 @@ namespace FSM
             _btnReset.TabIndex = 16;
             _btnReset.Text = "Reset All Filters";
             _btnReset.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSearch
-            // 
+            //
             _btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSearch.Location = new Point(1212, 218);
             _btnSearch.Name = "btnSearch";
@@ -1089,9 +1088,9 @@ namespace FSM
             _btnSearch.TabIndex = 39;
             _btnSearch.Text = "Search";
             _btnSearch.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpMiscSearch
-            // 
+            //
             _grpMiscSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _grpMiscSearch.Controls.Add(_lblRegion);
             _grpMiscSearch.Controls.Add(_cboRegion);
@@ -1110,26 +1109,26 @@ namespace FSM
             _grpMiscSearch.TabIndex = 38;
             _grpMiscSearch.TabStop = false;
             _grpMiscSearch.Text = "Misc";
-            // 
+            //
             // lblRegion
-            // 
+            //
             _lblRegion.Location = new Point(8, 77);
             _lblRegion.Name = "lblRegion";
             _lblRegion.Size = new Size(88, 16);
             _lblRegion.TabIndex = 28;
             _lblRegion.Text = "Region";
-            // 
+            //
             // cboRegion
-            // 
+            //
             _cboRegion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboRegion.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboRegion.Location = new Point(102, 74);
             _cboRegion.Name = "cboRegion";
             _cboRegion.Size = new Size(259, 21);
             _cboRegion.TabIndex = 27;
-            // 
+            //
             // chkNotShut
-            // 
+            //
             _chkNotShut.CheckAlign = ContentAlignment.MiddleRight;
             _chkNotShut.Location = new Point(102, 155);
             _chkNotShut.Name = "chkNotShut";
@@ -1137,75 +1136,75 @@ namespace FSM
             _chkNotShut.TabIndex = 26;
             _chkNotShut.Text = "Only Show Jobs which are not completely shutdown";
             _chkNotShut.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtPONumber
-            // 
+            //
             _txtPONumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPONumber.Location = new Point(102, 128);
             _txtPONumber.Name = "txtPONumber";
             _txtPONumber.Size = new Size(259, 21);
             _txtPONumber.TabIndex = 12;
-            // 
+            //
             // lbPoNumber
-            // 
+            //
             _lbPoNumber.Location = new Point(8, 128);
             _lbPoNumber.Name = "lbPoNumber";
             _lbPoNumber.Size = new Size(88, 16);
             _lbPoNumber.TabIndex = 11;
             _lbPoNumber.Text = "PO Number";
-            // 
+            //
             // cboStatus
-            // 
+            //
             _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboStatus.Location = new Point(102, 47);
             _cboStatus.Name = "cboStatus";
             _cboStatus.Size = new Size(259, 21);
             _cboStatus.TabIndex = 8;
-            // 
+            //
             // lblVisitStatus
-            // 
+            //
             _lblVisitStatus.Location = new Point(8, 50);
             _lblVisitStatus.Name = "lblVisitStatus";
             _lblVisitStatus.Size = new Size(88, 16);
             _lblVisitStatus.TabIndex = 5;
             _lblVisitStatus.Text = "Visit Status";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Location = new Point(102, 20);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(259, 21);
             _cboType.TabIndex = 7;
-            // 
+            //
             // lblType
-            // 
+            //
             _lblType.Location = new Point(8, 20);
             _lblType.Name = "lblType";
             _lblType.Size = new Size(48, 16);
             _lblType.TabIndex = 4;
             _lblType.Text = "Type";
-            // 
+            //
             // txtJobNumber
-            // 
+            //
             _txtJobNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtJobNumber.Location = new Point(102, 101);
             _txtJobNumber.Name = "txtJobNumber";
             _txtJobNumber.Size = new Size(259, 21);
             _txtJobNumber.TabIndex = 9;
-            // 
+            //
             // lblJobNumber
-            // 
+            //
             _lblJobNumber.Location = new Point(8, 101);
             _lblJobNumber.Name = "lblJobNumber";
             _lblJobNumber.Size = new Size(79, 16);
             _lblJobNumber.TabIndex = 6;
             _lblJobNumber.Text = "Job Number";
-            // 
+            //
             // grpDateCriteria
-            // 
+            //
             _grpDateCriteria.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpDateCriteria.Controls.Add(_rdoNoDate);
             _grpDateCriteria.Controls.Add(_rdoDateCreated);
@@ -1219,9 +1218,9 @@ namespace FSM
             _grpDateCriteria.TabIndex = 36;
             _grpDateCriteria.TabStop = false;
             _grpDateCriteria.Text = "Date Criteria";
-            // 
+            //
             // rdoNoDate
-            // 
+            //
             _rdoNoDate.AutoSize = true;
             _rdoNoDate.Checked = true;
             _rdoNoDate.Location = new Point(8, 28);
@@ -1231,9 +1230,9 @@ namespace FSM
             _rdoNoDate.TabStop = true;
             _rdoNoDate.Text = "None";
             _rdoNoDate.UseVisualStyleBackColor = true;
-            // 
+            //
             // rdoDateCreated
-            // 
+            //
             _rdoDateCreated.AutoSize = true;
             _rdoDateCreated.Location = new Point(8, 48);
             _rdoDateCreated.Name = "rdoDateCreated";
@@ -1241,39 +1240,39 @@ namespace FSM
             _rdoDateCreated.TabIndex = 12;
             _rdoDateCreated.Text = "Date Created";
             _rdoDateCreated.UseVisualStyleBackColor = true;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(230, 30);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(169, 21);
             _dtpFrom.TabIndex = 14;
-            // 
+            //
             // lblDateFrom
-            // 
+            //
             _lblDateFrom.Location = new Point(176, 32);
             _lblDateFrom.Name = "lblDateFrom";
             _lblDateFrom.Size = new Size(48, 16);
             _lblDateFrom.TabIndex = 9;
             _lblDateFrom.Text = "From";
-            // 
+            //
             // lblDateTo
-            // 
+            //
             _lblDateTo.Location = new Point(176, 57);
             _lblDateTo.Name = "lblDateTo";
             _lblDateTo.Size = new Size(48, 16);
             _lblDateTo.TabIndex = 10;
             _lblDateTo.Text = "To";
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Location = new Point(230, 57);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(169, 21);
             _dtpTo.TabIndex = 15;
-            // 
+            //
             // FRMJobManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1338, 601);
             Controls.Add(_grpJobs);
@@ -1298,7 +1297,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupJobsDataGrid();
@@ -1320,7 +1320,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1427,6 +1427,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupJobsDataGrid()
         {
             var tbStyle = dgJobs.TableStyles[0];
@@ -1656,6 +1657,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid(bool withRun)
         {
             try

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
@@ -12,6 +12,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoadMe(object sender, EventArgs e)
         {
             dtpTaxDate.Value = Entity.Sys.Helper.MakeDateTimeValid(App.DB.ExecuteScalar("Select Name from tblpicklists where enumtypeid = 69", false, true));
@@ -52,6 +53,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMChangeInvoicedTotal_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);

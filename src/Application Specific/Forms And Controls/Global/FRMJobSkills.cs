@@ -1,22 +1,21 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMJobSkills : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMJobSkills() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMJobLocks_Load;
@@ -25,7 +24,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -653,9 +651,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgSkillMatrix).BeginInit();
             _grpJobImportType.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpJobSkills
-            // 
+            //
             _grpJobSkills.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpJobSkills.Controls.Add(_btnAdd);
             _grpJobSkills.Controls.Add(_cboJobSkill);
@@ -670,9 +668,9 @@ namespace FSM
             _grpJobSkills.TabIndex = 1;
             _grpJobSkills.TabStop = false;
             _grpJobSkills.Text = "Job Skills";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.AccessibleDescription = "Save item";
             _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAdd.Cursor = Cursors.Hand;
@@ -683,35 +681,35 @@ namespace FSM
             _btnAdd.TabIndex = 33;
             _btnAdd.Text = "Add";
             _btnAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboJobSkill
-            // 
+            //
             _cboJobSkill.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboJobSkill.FormattingEnabled = true;
             _cboJobSkill.Location = new Point(333, 20);
             _cboJobSkill.Name = "cboJobSkill";
             _cboJobSkill.Size = new Size(541, 21);
             _cboJobSkill.TabIndex = 32;
-            // 
+            //
             // lblJobSkill
-            // 
+            //
             _lblJobSkill.AutoSize = true;
             _lblJobSkill.Location = new Point(296, 23);
             _lblJobSkill.Name = "lblJobSkill";
             _lblJobSkill.Size = new Size(31, 13);
             _lblJobSkill.TabIndex = 31;
             _lblJobSkill.Text = "Skill";
-            // 
+            //
             // cboJobType
-            // 
+            //
             _cboJobType.FormattingEnabled = true;
             _cboJobType.Location = new Point(73, 20);
             _cboJobType.Name = "cboJobType";
             _cboJobType.Size = new Size(204, 21);
             _cboJobType.TabIndex = 3;
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.AccessibleDescription = "Save item";
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Cursor = Cursors.Hand;
@@ -722,18 +720,18 @@ namespace FSM
             _btnDelete.TabIndex = 2;
             _btnDelete.Text = "Delete";
             _btnDelete.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblJobType
-            // 
+            //
             _lblJobType.AutoSize = true;
             _lblJobType.Location = new Point(12, 23);
             _lblJobType.Name = "lblJobType";
             _lblJobType.Size = new Size(57, 13);
             _lblJobType.TabIndex = 2;
             _lblJobType.Text = "Job Type";
-            // 
+            //
             // dgSkills
-            // 
+            //
             _dgSkills.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSkills.DataMember = "";
@@ -742,9 +740,9 @@ namespace FSM
             _dgSkills.Name = "dgSkills";
             _dgSkills.Size = new Size(1026, 239);
             _dgSkills.TabIndex = 1;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.AccessibleDescription = "Save item";
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Cursor = Cursors.Hand;
@@ -755,9 +753,9 @@ namespace FSM
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpSkillMatrix
-            // 
+            //
             _grpSkillMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSkillMatrix.Controls.Add(_btnAddTypeSkill);
@@ -773,9 +771,9 @@ namespace FSM
             _grpSkillMatrix.TabIndex = 34;
             _grpSkillMatrix.TabStop = false;
             _grpSkillMatrix.Text = "Skills Matrix";
-            // 
+            //
             // btnAddTypeSkill
-            // 
+            //
             _btnAddTypeSkill.AccessibleDescription = "Save item";
             _btnAddTypeSkill.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddTypeSkill.Cursor = Cursors.Hand;
@@ -786,35 +784,35 @@ namespace FSM
             _btnAddTypeSkill.TabIndex = 33;
             _btnAddTypeSkill.Text = "Add";
             _btnAddTypeSkill.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboTypeSkill
-            // 
+            //
             _cboTypeSkill.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboTypeSkill.FormattingEnabled = true;
             _cboTypeSkill.Location = new Point(333, 20);
             _cboTypeSkill.Name = "cboTypeSkill";
             _cboTypeSkill.Size = new Size(240, 21);
             _cboTypeSkill.TabIndex = 32;
-            // 
+            //
             // lblTypeSkill
-            // 
+            //
             _lblTypeSkill.AutoSize = true;
             _lblTypeSkill.Location = new Point(296, 23);
             _lblTypeSkill.Name = "lblTypeSkill";
             _lblTypeSkill.Size = new Size(31, 13);
             _lblTypeSkill.TabIndex = 31;
             _lblTypeSkill.Text = "Skill";
-            // 
+            //
             // cboSkillType
-            // 
+            //
             _cboSkillType.FormattingEnabled = true;
             _cboSkillType.Location = new Point(73, 20);
             _cboSkillType.Name = "cboSkillType";
             _cboSkillType.Size = new Size(204, 21);
             _cboSkillType.TabIndex = 3;
-            // 
+            //
             // btnDeleteTypeSkill
-            // 
+            //
             _btnDeleteTypeSkill.AccessibleDescription = "Save item";
             _btnDeleteTypeSkill.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDeleteTypeSkill.Cursor = Cursors.Hand;
@@ -825,18 +823,18 @@ namespace FSM
             _btnDeleteTypeSkill.TabIndex = 2;
             _btnDeleteTypeSkill.Text = "Delete";
             _btnDeleteTypeSkill.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblSkillType
-            // 
+            //
             _lblSkillType.AutoSize = true;
             _lblSkillType.Location = new Point(7, 23);
             _lblSkillType.Name = "lblSkillType";
             _lblSkillType.Size = new Size(62, 13);
             _lblSkillType.TabIndex = 2;
             _lblSkillType.Text = "Skill Type";
-            // 
+            //
             // dgSkillMatrix
-            // 
+            //
             _dgSkillMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSkillMatrix.DataMember = "";
@@ -845,9 +843,9 @@ namespace FSM
             _dgSkillMatrix.Name = "dgSkillMatrix";
             _dgSkillMatrix.Size = new Size(725, 142);
             _dgSkillMatrix.TabIndex = 1;
-            // 
+            //
             // grpJobImportType
-            // 
+            //
             _grpJobImportType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _grpJobImportType.Controls.Add(_txtSkillTypeName);
             _grpJobImportType.Controls.Add(_lblSkillTypeName);
@@ -860,9 +858,9 @@ namespace FSM
             _grpJobImportType.TabIndex = 35;
             _grpJobImportType.TabStop = false;
             _grpJobImportType.Text = "Skill Types";
-            // 
+            //
             // txtSkillTypeName
-            // 
+            //
             _txtSkillTypeName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSkillTypeName.Location = new Point(138, 60);
             _txtSkillTypeName.MaxLength = 50;
@@ -870,17 +868,17 @@ namespace FSM
             _txtSkillTypeName.Size = new Size(142, 21);
             _txtSkillTypeName.TabIndex = 18;
             _txtSkillTypeName.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblSkillTypeName
-            // 
+            //
             _lblSkillTypeName.Location = new Point(11, 63);
             _lblSkillTypeName.Name = "lblSkillTypeName";
             _lblSkillTypeName.Size = new Size(100, 20);
             _lblSkillTypeName.TabIndex = 17;
             _lblSkillTypeName.Text = "Skill Type Name";
-            // 
+            //
             // cboSkillType1
-            // 
+            //
             _cboSkillType1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboSkillType1.Cursor = Cursors.Hand;
             _cboSkillType1.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -889,26 +887,26 @@ namespace FSM
             _cboSkillType1.Size = new Size(142, 21);
             _cboSkillType1.TabIndex = 16;
             _cboSkillType1.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblSkillType1
-            // 
+            //
             _lblSkillType1.Location = new Point(11, 29);
             _lblSkillType1.Name = "lblSkillType1";
             _lblSkillType1.Size = new Size(118, 20);
             _lblSkillType1.TabIndex = 15;
             _lblSkillType1.Text = "Skill Type";
-            // 
+            //
             // btnSaveSkillType
-            // 
+            //
             _btnSaveSkillType.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveSkillType.Location = new Point(179, 97);
             _btnSaveSkillType.Name = "btnSaveSkillType";
             _btnSaveSkillType.Size = new Size(101, 23);
             _btnSaveSkillType.TabIndex = 11;
             _btnSaveSkillType.Text = "Save";
-            // 
+            //
             // FRMJobSkills
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1058, 656);
             Controls.Add(_grpJobImportType);
@@ -936,7 +934,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDataGrid();
@@ -962,7 +961,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1060,6 +1059,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSkills);

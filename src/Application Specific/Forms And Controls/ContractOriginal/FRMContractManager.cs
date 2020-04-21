@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FSM.Entity.ContactAttempts;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -6,20 +10,15 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.ContactAttempts;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMContractManager : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMContractManager() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContractManager_Load;
@@ -28,7 +27,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -1031,9 +1029,9 @@ namespace FSM
             _grpContracts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgContracts).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_cbxDoNotRenew);
             _grpFilter.Controls.Add(_Label2);
@@ -1066,9 +1064,9 @@ namespace FSM
             _grpFilter.TabIndex = 17;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // cbxDoNotRenew
-            // 
+            //
             _cbxDoNotRenew.BackColor = Color.White;
             _cbxDoNotRenew.Cursor = Cursors.Hand;
             _cbxDoNotRenew.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1078,43 +1076,43 @@ namespace FSM
             _cbxDoNotRenew.TabIndex = 40;
             _cbxDoNotRenew.Text = "Also Show Do Not renew ";
             _cbxDoNotRenew.UseVisualStyleBackColor = false;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(532, 148);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(74, 16);
             _Label2.TabIndex = 39;
             _Label2.Text = "Renewed";
-            // 
+            //
             // CboRenewal
-            // 
+            //
             _CboRenewal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _CboRenewal.DropDownStyle = ComboBoxStyle.DropDownList;
             _CboRenewal.Location = new Point(659, 145);
             _CboRenewal.Name = "CboRenewal";
             _CboRenewal.Size = new Size(167, 21);
             _CboRenewal.TabIndex = 38;
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Location = new Point(532, 121);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(49, 16);
             _Label13.TabIndex = 37;
             _Label13.Text = "Region";
-            // 
+            //
             // cboRegion
-            // 
+            //
             _cboRegion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboRegion.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboRegion.Location = new Point(659, 118);
             _cboRegion.Name = "cboRegion";
             _cboRegion.Size = new Size(167, 21);
             _cboRegion.TabIndex = 36;
-            // 
+            //
             // btnResetFilters
-            // 
+            //
             _btnResetFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnResetFilters.Location = new Point(651, 171);
             _btnResetFilters.Name = "btnResetFilters";
@@ -1122,9 +1120,9 @@ namespace FSM
             _btnResetFilters.TabIndex = 31;
             _btnResetFilters.Text = "Reset Filters";
             _btnResetFilters.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSearch
-            // 
+            //
             _btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSearch.Location = new Point(753, 171);
             _btnSearch.Name = "btnSearch";
@@ -1132,26 +1130,26 @@ namespace FSM
             _btnSearch.TabIndex = 30;
             _btnSearch.Text = "Search";
             _btnSearch.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(532, 94);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(120, 19);
             _Label1.TabIndex = 29;
             _Label1.Text = "Invoice Frequency";
-            // 
+            //
             // cboInvoiceFrequency
-            // 
+            //
             _cboInvoiceFrequency.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboInvoiceFrequency.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboInvoiceFrequency.Location = new Point(659, 91);
             _cboInvoiceFrequency.Name = "cboInvoiceFrequency";
             _cboInvoiceFrequency.Size = new Size(167, 21);
             _cboInvoiceFrequency.TabIndex = 28;
-            // 
+            //
             // chxStartedBetween
-            // 
+            //
             _chxStartedBetween.BackColor = Color.White;
             _chxStartedBetween.Cursor = Cursors.Hand;
             _chxStartedBetween.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1161,9 +1159,9 @@ namespace FSM
             _chxStartedBetween.TabIndex = 27;
             _chxStartedBetween.Text = "Contract Started between";
             _chxStartedBetween.UseVisualStyleBackColor = false;
-            // 
+            //
             // cbxCancelledDate
-            // 
+            //
             _cbxCancelledDate.BackColor = Color.White;
             _cbxCancelledDate.Cursor = Cursors.Hand;
             _cbxCancelledDate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1173,17 +1171,17 @@ namespace FSM
             _cbxCancelledDate.TabIndex = 26;
             _cbxCancelledDate.Text = "Contract Cancelled between";
             _cbxCancelledDate.UseVisualStyleBackColor = false;
-            // 
+            //
             // cbxAllVisitsComplete
-            // 
+            //
             _cbxAllVisitsComplete.Location = new Point(104, 111);
             _cbxAllVisitsComplete.Name = "cbxAllVisitsComplete";
             _cbxAllVisitsComplete.Size = new Size(192, 16);
             _cbxAllVisitsComplete.TabIndex = 25;
             _cbxAllVisitsComplete.Text = "All Visits Complete";
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindCustomer.BackColor = Color.White;
             _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1193,9 +1191,9 @@ namespace FSM
             _btnFindCustomer.TabIndex = 2;
             _btnFindCustomer.Text = "...";
             _btnFindCustomer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCustomer.Location = new Point(104, 16);
@@ -1203,47 +1201,47 @@ namespace FSM
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(722, 21);
             _txtCustomer.TabIndex = 1;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 19);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(64, 16);
             _Label4.TabIndex = 24;
             _Label4.Text = "Customer";
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dtpTo.Location = new Point(576, 64);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(250, 21);
             _dtpTo.TabIndex = 13;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(328, 64);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(184, 21);
             _dtpFrom.TabIndex = 12;
-            // 
+            //
             // txtContractReference
-            // 
+            //
             _txtContractReference.Location = new Point(104, 40);
             _txtContractReference.Name = "txtContractReference";
             _txtContractReference.Size = new Size(184, 21);
             _txtContractReference.TabIndex = 9;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(520, 64);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(48, 16);
             _Label9.TabIndex = 10;
             _Label9.Text = "And";
-            // 
+            //
             // cbxContractExpiryDate
-            // 
+            //
             _cbxContractExpiryDate.BackColor = Color.White;
             _cbxContractExpiryDate.Cursor = Cursors.Hand;
             _cbxContractExpiryDate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1253,42 +1251,42 @@ namespace FSM
             _cbxContractExpiryDate.TabIndex = 11;
             _cbxContractExpiryDate.Text = "Contract Expiries between";
             _cbxContractExpiryDate.UseVisualStyleBackColor = false;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(8, 40);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(88, 16);
             _Label6.TabIndex = 6;
             _Label6.Text = "Contract Ref.";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Location = new Point(328, 40);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(184, 21);
             _cboType.TabIndex = 7;
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(520, 40);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(48, 16);
             _Label11.TabIndex = 5;
             _Label11.Text = "Status";
-            // 
+            //
             // cboStatus
-            // 
+            //
             _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboStatus.Location = new Point(576, 40);
             _cboStatus.Name = "cboStatus";
             _cboStatus.Size = new Size(250, 21);
             _cboStatus.TabIndex = 8;
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.BackColor = Color.White;
             _Label10.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label10.Location = new Point(292, 40);
@@ -1296,9 +1294,9 @@ namespace FSM
             _Label10.Size = new Size(48, 16);
             _Label10.TabIndex = 4;
             _Label10.Text = "Type";
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 544);
@@ -1306,9 +1304,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 19;
             _btnExport.Text = "Export";
-            // 
+            //
             // grpContracts
-            // 
+            //
             _grpContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpContracts.Controls.Add(_btnSelectAll);
@@ -1320,26 +1318,26 @@ namespace FSM
             _grpContracts.TabIndex = 18;
             _grpContracts.TabStop = false;
             _grpContracts.Text = "Double Click To View / Edit";
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.AccessibleDescription = "Export Job List To Excel";
             _btnSelectAll.Location = new Point(8, 13);
             _btnSelectAll.Name = "btnSelectAll";
             _btnSelectAll.Size = new Size(88, 23);
             _btnSelectAll.TabIndex = 21;
             _btnSelectAll.Text = "Select All";
-            // 
+            //
             // btnDeselectAll
-            // 
+            //
             _btnDeselectAll.Location = new Point(104, 13);
             _btnDeselectAll.Name = "btnDeselectAll";
             _btnDeselectAll.Size = new Size(88, 23);
             _btnDeselectAll.TabIndex = 22;
             _btnDeselectAll.Text = "Deselect All";
-            // 
+            //
             // dgContracts
-            // 
+            //
             _dgContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgContracts.DataMember = "";
@@ -1348,62 +1346,62 @@ namespace FSM
             _dgContracts.Name = "dgContracts";
             _dgContracts.Size = new Size(866, 244);
             _dgContracts.TabIndex = 14;
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(72, 544);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 20;
             _btnReset.Text = "Reset";
-            // 
+            //
             // btnRenew
-            // 
+            //
             _btnRenew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRenew.Location = new Point(136, 544);
             _btnRenew.Name = "btnRenew";
             _btnRenew.Size = new Size(56, 23);
             _btnRenew.TabIndex = 21;
             _btnRenew.Text = "Renew";
-            // 
+            //
             // btnPrintExpiryLetter
-            // 
+            //
             _btnPrintExpiryLetter.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPrintExpiryLetter.Location = new Point(746, 544);
             _btnPrintExpiryLetter.Name = "btnPrintExpiryLetter";
             _btnPrintExpiryLetter.Size = new Size(136, 23);
             _btnPrintExpiryLetter.TabIndex = 22;
             _btnPrintExpiryLetter.Text = "Print Expiry Letters";
-            // 
+            //
             // pbStatus
-            // 
+            //
             _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _pbStatus.Location = new Point(373, 544);
             _pbStatus.Name = "pbStatus";
             _pbStatus.Size = new Size(365, 23);
             _pbStatus.TabIndex = 23;
-            // 
+            //
             // btnActivate
-            // 
+            //
             _btnActivate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnActivate.Location = new Point(198, 544);
             _btnActivate.Name = "btnActivate";
             _btnActivate.Size = new Size(74, 23);
             _btnActivate.TabIndex = 24;
             _btnActivate.Text = "Activate";
-            // 
+            //
             // btnDeActive
-            // 
+            //
             _btnDeActive.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnDeActive.Location = new Point(278, 544);
             _btnDeActive.Name = "btnDeActive";
             _btnDeActive.Size = new Size(89, 23);
             _btnDeActive.TabIndex = 25;
             _btnDeActive.Text = "Deactivate";
-            // 
+            //
             // FRMContractManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(898, 574);
             Controls.Add(_btnDeActive);
@@ -1437,7 +1435,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             Loading = true;
             LoadForm(sender, e, this);
@@ -1465,7 +1464,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1546,6 +1545,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupContractsDataGrid()
         {
             var tbStyle = dgContracts.TableStyles[0];
@@ -1937,7 +1937,7 @@ namespace FSM
                     dt.Columns.Add(new DataColumn("DisplayMember"));
                     dt.Columns.Add(new DataColumn("Deleted"));
                     foreach (DataRow dr in contactMethod.Rows)
-                        dt.Rows.Add(new string[] { dr["ContactMethodID"], dr["Name"], "0" });
+                        dt.Rows.Add(new string[] { dr["ContactMethodID"].ToString(), dr["Name"].ToString(), "0" });
                     var argc = f.cbo2;
                     Combo.SetUpCombo(ref argc, dt, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
                     f.cbo1.Visible = false;
@@ -2012,7 +2012,7 @@ namespace FSM
                                 // REACTIVE ANY SITE JOBS PREVIOUSLY DEACTIVATED
                                 foreach (DataRow site in Sites.Table.Rows)
                                 {
-                                    if (Conversions.ToBoolean(site["ContractSiteID"] > 0))
+                                    if (Conversions.ToBoolean((int)site["ContractSiteID"] > 0))
                                     {
                                         App.DB.ContractOriginalSite.ActiveInactive(Conversions.ToInteger(site["ContractSiteID"]), false);
                                     }
@@ -2056,7 +2056,7 @@ namespace FSM
                                 // REACTIVE ANY SITE JOBS PREVIOUSLY DEACTIVATED
                                 foreach (DataRow site in Sites.Table.Rows)
                                 {
-                                    if (Conversions.ToBoolean(site["ContractSiteID"] > 0))
+                                    if (Conversions.ToBoolean((int)site["ContractSiteID"] > 0))
                                     {
                                         App.DB.ContractOriginalSite.ActiveInactive(Conversions.ToInteger(site["ContractSiteID"]), true);
                                     }
@@ -2076,6 +2076,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try

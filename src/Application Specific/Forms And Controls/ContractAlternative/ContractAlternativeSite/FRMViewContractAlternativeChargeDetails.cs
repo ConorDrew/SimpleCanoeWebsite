@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMViewContractAlternativeChargeDetails : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMViewContractAlternativeChargeDetails() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMViewContractAlternativeChargeDetails_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -406,9 +404,9 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgScheduleOfRates).BeginInit();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Controls.Add(_Label1);
             _GroupBox1.Controls.Add(_dgScheduleOfRates);
             _GroupBox1.Controls.Add(_Label5);
@@ -427,18 +425,18 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Charge Information";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(6, 17);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(144, 24);
             _Label1.TabIndex = 80;
             _Label1.Text = "Schedule Of Rates";
             _Label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // dgScheduleOfRates
-            // 
+            //
             _dgScheduleOfRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgScheduleOfRates.DataMember = "";
@@ -447,9 +445,9 @@ namespace FSM
             _dgScheduleOfRates.Name = "dgScheduleOfRates";
             _dgScheduleOfRates.Size = new Size(672, 113);
             _dgScheduleOfRates.TabIndex = 79;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Enabled = false;
             _Label5.Location = new Point(112, 208);
             _Label5.Name = "Label5";
@@ -457,9 +455,9 @@ namespace FSM
             _Label5.TabIndex = 78;
             _Label5.Text = "Mileage Per Visit";
             _Label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Enabled = false;
             _Label4.Location = new Point(296, 208);
             _Label4.Name = "Label4";
@@ -467,9 +465,9 @@ namespace FSM
             _Label4.TabIndex = 77;
             _Label4.Text = "Price Per Mile";
             _Label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Enabled = false;
             _Label3.Location = new Point(464, 208);
             _Label3.Name = "Label3";
@@ -477,35 +475,35 @@ namespace FSM
             _Label3.TabIndex = 76;
             _Label3.Text = "= Mileage Price Per Visit";
             _Label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtMileageCostPerVisit
-            // 
+            //
             _txtMileageCostPerVisit.Enabled = false;
             _txtMileageCostPerVisit.Location = new Point(608, 208);
             _txtMileageCostPerVisit.Name = "txtMileageCostPerVisit";
             _txtMileageCostPerVisit.Size = new Size(72, 21);
             _txtMileageCostPerVisit.TabIndex = 74;
-            // 
+            //
             // txtAverageMileage
-            // 
+            //
             _txtAverageMileage.Enabled = false;
             _txtAverageMileage.Location = new Point(232, 208);
             _txtAverageMileage.Name = "txtAverageMileage";
             _txtAverageMileage.Size = new Size(58, 21);
             _txtAverageMileage.TabIndex = 73;
             _txtAverageMileage.Text = "0";
-            // 
+            //
             // txtCostPerMile
-            // 
+            //
             _txtCostPerMile.Enabled = false;
             _txtCostPerMile.Location = new Point(400, 208);
             _txtCostPerMile.Name = "txtCostPerMile";
             _txtCostPerMile.Size = new Size(58, 21);
             _txtCostPerMile.TabIndex = 72;
             _txtCostPerMile.Text = "£0.00";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Enabled = false;
             _Label8.Location = new Point(520, 160);
             _Label8.Name = "Label8";
@@ -513,9 +511,9 @@ namespace FSM
             _Label8.TabIndex = 71;
             _Label8.Text = "Rate Total:";
             _Label8.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtRatesTotal
-            // 
+            //
             _txtRatesTotal.Enabled = false;
             _txtRatesTotal.Location = new Point(608, 162);
             _txtRatesTotal.MaxLength = 50;
@@ -523,36 +521,36 @@ namespace FSM
             _txtRatesTotal.Size = new Size(72, 21);
             _txtRatesTotal.TabIndex = 70;
             _txtRatesTotal.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // chkRates
-            // 
+            //
             _chkRates.Enabled = false;
             _chkRates.Location = new Point(8, 158);
             _chkRates.Name = "chkRates";
             _chkRates.Size = new Size(176, 25);
             _chkRates.TabIndex = 69;
             _chkRates.Text = "Include Rates in Visit Total";
-            // 
+            //
             // chkIncludeMileage
-            // 
+            //
             _chkIncludeMileage.Enabled = false;
             _chkIncludeMileage.Location = new Point(8, 184);
             _chkIncludeMileage.Name = "chkIncludeMileage";
             _chkIncludeMileage.Size = new Size(192, 23);
             _chkIncludeMileage.TabIndex = 75;
             _chkIncludeMileage.Text = "Include Mileage in Visit Total";
-            // 
+            //
             // btnDone
-            // 
+            //
             _btnDone.UseVisualStyleBackColor = true;
             _btnDone.Location = new Point(600, 288);
             _btnDone.Name = "btnDone";
             _btnDone.Size = new Size(90, 25);
             _btnDone.TabIndex = 1;
             _btnDone.Text = "Done";
-            // 
+            //
             // FRMViewContractAlternativeChargeDetails
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(704, 318);
             Controls.Add(_GroupBox1);
@@ -569,7 +567,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupScheduleOfRatesDataGrid();
@@ -618,6 +617,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupScheduleOfRatesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgScheduleOfRates);
@@ -692,11 +692,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void CalculateRates()
         {
             decimal runningTotal = 0.0M;
             foreach (DataRow rate in ScheduleOfRatesDataview.Table.Rows)
-                runningTotal += rate["Price"] * rate["QtyPerVisit"];
+                runningTotal += (decimal)rate["Price"] * (decimal)rate["QtyPerVisit"];
             txtRatesTotal.Text = Strings.Format(runningTotal, "C");
         }
 

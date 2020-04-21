@@ -1,22 +1,21 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMLogCallout : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMLogCallout() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMLogCallout_Load;
@@ -363,7 +362,6 @@ namespace FSM
             {
                 if (_dgNotes != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _dgNotes.Click -= dgNotes_Click;
@@ -1885,27 +1883,27 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgContactAttempts).BeginInit();
             _cmsView.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(70, 664);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 23);
             _btnClose.TabIndex = 16;
             _btnClose.Text = "Close";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 664);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 23);
             _btnSave.TabIndex = 15;
             _btnSave.Text = "Save";
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tpMain);
@@ -1919,9 +1917,9 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(1184, 627);
             _TabControl1.TabIndex = 23;
-            // 
+            //
             // tpMain
-            // 
+            //
             _tpMain.Location = new Point(4, 22);
             _tpMain.Name = "tpMain";
             _tpMain.Padding = new Padding(3);
@@ -1929,9 +1927,9 @@ namespace FSM
             _tpMain.TabIndex = 0;
             _tpMain.Text = "Main Details";
             _tpMain.UseVisualStyleBackColor = true;
-            // 
+            //
             // tpAssets
-            // 
+            //
             _tpAssets.Controls.Add(_grpAssets);
             _tpAssets.Location = new Point(4, 22);
             _tpAssets.Name = "tpAssets";
@@ -1940,9 +1938,9 @@ namespace FSM
             _tpAssets.TabIndex = 2;
             _tpAssets.Text = "Appliances";
             _tpAssets.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpAssets
-            // 
+            //
             _grpAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAssets.Controls.Add(_dgAssets);
@@ -1953,9 +1951,9 @@ namespace FSM
             _grpAssets.TabIndex = 29;
             _grpAssets.TabStop = false;
             _grpAssets.Text = "Select those related to the job";
-            // 
+            //
             // dgAssets
-            // 
+            //
             _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAssets.DataMember = "";
@@ -1964,9 +1962,9 @@ namespace FSM
             _dgAssets.Name = "dgAssets";
             _dgAssets.Size = new Size(1150, 541);
             _dgAssets.TabIndex = 1;
-            // 
+            //
             // btnAddAppliance
-            // 
+            //
             _btnAddAppliance.AccessibleDescription = "Add Job Of Work";
             _btnAddAppliance.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddAppliance.Location = new Point(6, 567);
@@ -1974,9 +1972,9 @@ namespace FSM
             _btnAddAppliance.Size = new Size(155, 23);
             _btnAddAppliance.TabIndex = 28;
             _btnAddAppliance.Text = "New Appliance";
-            // 
+            //
             // tpDocuments
-            // 
+            //
             _tpDocuments.Location = new Point(4, 22);
             _tpDocuments.Name = "tpDocuments";
             _tpDocuments.Padding = new Padding(3);
@@ -1984,9 +1982,9 @@ namespace FSM
             _tpDocuments.TabIndex = 1;
             _tpDocuments.Text = "Documents";
             _tpDocuments.UseVisualStyleBackColor = true;
-            // 
+            //
             // tbquote
-            // 
+            //
             _tbquote.Controls.Add(_GroupBox2);
             _tbquote.Location = new Point(4, 22);
             _tbquote.Name = "tbquote";
@@ -1995,9 +1993,9 @@ namespace FSM
             _tbquote.TabIndex = 7;
             _tbquote.Text = "Quote Calc";
             _tbquote.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Controls.Add(_GroupBox1);
             _GroupBox2.Controls.Add(_Panel1);
             _GroupBox2.Dock = DockStyle.Fill;
@@ -2007,9 +2005,9 @@ namespace FSM
             _GroupBox2.TabIndex = 0;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Quote Calculator";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Controls.Add(_rdoAXA);
             _GroupBox1.Controls.Add(_rdoPOC);
             _GroupBox1.Location = new Point(55, 26);
@@ -2017,9 +2015,9 @@ namespace FSM
             _GroupBox1.Size = new Size(121, 45);
             _GroupBox1.TabIndex = 82;
             _GroupBox1.TabStop = false;
-            // 
+            //
             // rdoAXA
-            // 
+            //
             _rdoAXA.AutoSize = true;
             _rdoAXA.Location = new Point(65, 17);
             _rdoAXA.Name = "rdoAXA";
@@ -2027,9 +2025,9 @@ namespace FSM
             _rdoAXA.TabIndex = 1;
             _rdoAXA.Text = "AXA";
             _rdoAXA.UseVisualStyleBackColor = true;
-            // 
+            //
             // rdoPOC
-            // 
+            //
             _rdoPOC.AutoSize = true;
             _rdoPOC.Checked = true;
             _rdoPOC.Location = new Point(6, 17);
@@ -2039,9 +2037,9 @@ namespace FSM
             _rdoPOC.TabStop = true;
             _rdoPOC.Text = "POC";
             _rdoPOC.UseVisualStyleBackColor = true;
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Controls.Add(_txtClaimLimit);
             _Panel1.Controls.Add(_lblClaimLimit);
             _Panel1.Controls.Add(_chkExcludeVat);
@@ -2072,17 +2070,17 @@ namespace FSM
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(1164, 575);
             _Panel1.TabIndex = 1;
-            // 
+            //
             // txtClaimLimit
-            // 
+            //
             _txtClaimLimit.Location = new Point(585, 62);
             _txtClaimLimit.Name = "txtClaimLimit";
             _txtClaimLimit.Size = new Size(121, 21);
             _txtClaimLimit.TabIndex = 83;
             _txtClaimLimit.Visible = false;
-            // 
+            //
             // lblClaimLimit
-            // 
+            //
             _lblClaimLimit.AutoSize = true;
             _lblClaimLimit.Location = new Point(505, 65);
             _lblClaimLimit.Name = "lblClaimLimit";
@@ -2090,9 +2088,9 @@ namespace FSM
             _lblClaimLimit.TabIndex = 82;
             _lblClaimLimit.Text = "Claim Limit";
             _lblClaimLimit.Visible = false;
-            // 
+            //
             // chkExcludeVat
-            // 
+            //
             _chkExcludeVat.AutoSize = true;
             _chkExcludeVat.Location = new Point(425, 505);
             _chkExcludeVat.Name = "chkExcludeVat";
@@ -2100,26 +2098,26 @@ namespace FSM
             _chkExcludeVat.TabIndex = 81;
             _chkExcludeVat.Text = "Exclude V.A.T";
             _chkExcludeVat.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboVATRate
-            // 
+            //
             _cboVATRate.FormattingEnabled = true;
             _cboVATRate.Location = new Point(499, 528);
             _cboVATRate.Name = "cboVATRate";
             _cboVATRate.Size = new Size(109, 21);
             _cboVATRate.TabIndex = 79;
-            // 
+            //
             // lblVAT
-            // 
+            //
             _lblVAT.Location = new Point(422, 529);
             _lblVAT.Name = "lblVAT";
             _lblVAT.Size = new Size(68, 17);
             _lblVAT.TabIndex = 80;
             _lblVAT.Text = "VAT Rate";
             _lblVAT.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // GroupBox3
-            // 
+            //
             _GroupBox3.Controls.Add(_rbStandard);
             _GroupBox3.Controls.Add(_rbSite);
             _GroupBox3.Location = new Point(48, 491);
@@ -2127,9 +2125,9 @@ namespace FSM
             _GroupBox3.Size = new Size(343, 45);
             _GroupBox3.TabIndex = 77;
             _GroupBox3.TabStop = false;
-            // 
+            //
             // rbStandard
-            // 
+            //
             _rbStandard.AutoSize = true;
             _rbStandard.Checked = true;
             _rbStandard.Location = new Point(207, 16);
@@ -2139,9 +2137,9 @@ namespace FSM
             _rbStandard.TabStop = true;
             _rbStandard.Text = "Markup standard";
             _rbStandard.UseVisualStyleBackColor = true;
-            // 
+            //
             // rbSite
-            // 
+            //
             _rbSite.AutoSize = true;
             _rbSite.Location = new Point(6, 17);
             _rbSite.Name = "rbSite";
@@ -2149,26 +2147,26 @@ namespace FSM
             _rbSite.TabIndex = 0;
             _rbSite.Text = "Markup parts using site rate";
             _rbSite.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtPartQty
-            // 
+            //
             _txtPartQty.Location = new Point(659, 89);
             _txtPartQty.Name = "txtPartQty";
             _txtPartQty.Size = new Size(48, 21);
             _txtPartQty.TabIndex = 76;
             _txtPartQty.Text = "0";
-            // 
+            //
             // Label46
-            // 
+            //
             _Label46.AutoSize = true;
             _Label46.Location = new Point(629, 92);
             _Label46.Name = "Label46";
             _Label46.Size = new Size(27, 13);
             _Label46.TabIndex = 75;
             _Label46.Text = "Qty";
-            // 
+            //
             // dgvQuote
-            // 
+            //
             _dgvQuote.AllowUserToAddRows = false;
             _dgvQuote.AllowUserToResizeColumns = false;
             _dgvQuote.AllowUserToResizeRows = false;
@@ -2177,61 +2175,61 @@ namespace FSM
             _dgvQuote.Name = "dgvQuote";
             _dgvQuote.Size = new Size(811, 210);
             _dgvQuote.TabIndex = 74;
-            // 
+            //
             // cboLabour
-            // 
+            //
             _cboLabour.FormattingEnabled = true;
             _cboLabour.Location = new Point(125, 62);
             _cboLabour.Name = "cboLabour";
             _cboLabour.Size = new Size(294, 21);
             _cboLabour.TabIndex = 73;
-            // 
+            //
             // btnQuoteAdd
-            // 
+            //
             _btnQuoteAdd.Location = new Point(820, 65);
             _btnQuoteAdd.Name = "btnQuoteAdd";
             _btnQuoteAdd.Size = new Size(39, 47);
             _btnQuoteAdd.TabIndex = 72;
             _btnQuoteAdd.Text = "Add";
             _btnQuoteAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label45
-            // 
+            //
             _Label45.AutoSize = true;
             _Label45.Location = new Point(45, 65);
             _Label45.Name = "Label45";
             _Label45.Size = new Size(77, 13);
             _Label45.TabIndex = 71;
             _Label45.Text = "Labour Type";
-            // 
+            //
             // txtLabourQty
-            // 
+            //
             _txtLabourQty.Location = new Point(449, 62);
             _txtLabourQty.Name = "txtLabourQty";
             _txtLabourQty.Size = new Size(29, 21);
             _txtLabourQty.TabIndex = 70;
             _txtLabourQty.Text = "0";
-            // 
+            //
             // Label44
-            // 
+            //
             _Label44.AutoSize = true;
             _Label44.Location = new Point(427, 65);
             _Label44.Name = "Label44";
             _Label44.Size = new Size(15, 13);
             _Label44.TabIndex = 69;
             _Label44.Text = "X";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Location = new Point(614, 526);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(110, 23);
             _btnReset.TabIndex = 68;
             _btnReset.Text = "Reset";
             _btnReset.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnaddtonotes
-            // 
+            //
             _btnaddtonotes.Enabled = false;
             _btnaddtonotes.Location = new Point(730, 499);
             _btnaddtonotes.Name = "btnaddtonotes";
@@ -2239,9 +2237,9 @@ namespace FSM
             _btnaddtonotes.TabIndex = 67;
             _btnaddtonotes.Text = "Add Quote to Notes";
             _btnaddtonotes.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnEmail
-            // 
+            //
             _btnEmail.Enabled = false;
             _btnEmail.Location = new Point(730, 526);
             _btnEmail.Name = "btnEmail";
@@ -2249,18 +2247,18 @@ namespace FSM
             _btnEmail.TabIndex = 66;
             _btnEmail.Text = "Email Quote";
             _btnEmail.UseVisualStyleBackColor = true;
-            // 
+            //
             // btncalc
-            // 
+            //
             _btncalc.Location = new Point(614, 499);
             _btncalc.Name = "btncalc";
             _btncalc.Size = new Size(110, 23);
             _btncalc.TabIndex = 65;
             _btncalc.Text = "Generate Quote";
             _btncalc.UseVisualStyleBackColor = true;
-            // 
+            //
             // tbresult
-            // 
+            //
             _tbresult.Location = new Point(48, 357);
             _tbresult.Multiline = true;
             _tbresult.Name = "tbresult";
@@ -2269,57 +2267,57 @@ namespace FSM
             _tbresult.Size = new Size(812, 128);
             _tbresult.TabIndex = 64;
             _tbresult.Text = "Please enter details above. Quote will appear here";
-            // 
+            //
             // txtPartRate
-            // 
+            //
             _txtPartRate.Location = new Point(558, 89);
             _txtPartRate.Name = "txtPartRate";
             _txtPartRate.Size = new Size(55, 21);
             _txtPartRate.TabIndex = 5;
-            // 
+            //
             // lbltc1
-            // 
+            //
             _lbltc1.AutoSize = true;
             _lbltc1.Location = new Point(456, 92);
             _lbltc1.Name = "lbltc1";
             _lbltc1.Size = new Size(96, 13);
             _lbltc1.TabIndex = 4;
             _lbltc1.Text = "Part Trade Cost";
-            // 
+            //
             // txtPartNumber
-            // 
+            //
             _txtPartNumber.Location = new Point(349, 89);
             _txtPartNumber.Name = "txtPartNumber";
             _txtPartNumber.Size = new Size(89, 21);
             _txtPartNumber.TabIndex = 3;
-            // 
+            //
             // lblnumber1
-            // 
+            //
             _lblnumber1.AutoSize = true;
             _lblnumber1.Location = new Point(264, 92);
             _lblnumber1.Name = "lblnumber1";
             _lblnumber1.Size = new Size(79, 13);
             _lblnumber1.TabIndex = 2;
             _lblnumber1.Text = "Part Number";
-            // 
+            //
             // txtPartName
-            // 
+            //
             _txtPartName.Location = new Point(125, 89);
             _txtPartName.Name = "txtPartName";
             _txtPartName.Size = new Size(121, 21);
             _txtPartName.TabIndex = 1;
-            // 
+            //
             // lblpart1
-            // 
+            //
             _lblpart1.AutoSize = true;
             _lblpart1.Location = new Point(45, 92);
             _lblpart1.Name = "lblpart1";
             _lblpart1.Size = new Size(67, 13);
             _lblpart1.TabIndex = 0;
             _lblpart1.Text = "Part Name";
-            // 
+            //
             // tpNotes
-            // 
+            //
             _tpNotes.Controls.Add(_gpbNotesDetails);
             _tpNotes.Controls.Add(_gpbNotes);
             _tpNotes.Location = new Point(4, 22);
@@ -2328,9 +2326,9 @@ namespace FSM
             _tpNotes.TabIndex = 4;
             _tpNotes.Text = "Notes";
             _tpNotes.UseVisualStyleBackColor = true;
-            // 
+            //
             // gpbNotesDetails
-            // 
+            //
             _gpbNotesDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _gpbNotesDetails.Controls.Add(_txtNoteID);
             _gpbNotesDetails.Controls.Add(_btnSaveNote);
@@ -2342,18 +2340,18 @@ namespace FSM
             _gpbNotesDetails.TabIndex = 33;
             _gpbNotesDetails.TabStop = false;
             _gpbNotesDetails.Text = "Details";
-            // 
+            //
             // txtNoteID
-            // 
+            //
             _txtNoteID.Location = new Point(66, 14);
             _txtNoteID.Name = "txtNoteID";
             _txtNoteID.Size = new Size(100, 21);
             _txtNoteID.TabIndex = 36;
             _txtNoteID.TabStop = false;
             _txtNoteID.Visible = false;
-            // 
+            //
             // btnSaveNote
-            // 
+            //
             _btnSaveNote.AccessibleDescription = "";
             _btnSaveNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveNote.Location = new Point(292, 567);
@@ -2361,9 +2359,9 @@ namespace FSM
             _btnSaveNote.Size = new Size(79, 23);
             _btnSaveNote.TabIndex = 1;
             _btnSaveNote.Text = "Save";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(6, 37);
@@ -2371,17 +2369,17 @@ namespace FSM
             _txtNotes.Name = "txtNotes";
             _txtNotes.Size = new Size(365, 524);
             _txtNotes.TabIndex = 0;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(3, 20);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(88, 23);
             _Label1.TabIndex = 34;
             _Label1.Text = "Notes:";
-            // 
+            //
             // gpbNotes
-            // 
+            //
             _gpbNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbNotes.Controls.Add(_btnDeleteNote);
@@ -2393,9 +2391,9 @@ namespace FSM
             _gpbNotes.TabIndex = 30;
             _gpbNotes.TabStop = false;
             _gpbNotes.Text = "Notes";
-            // 
+            //
             // btnDeleteNote
-            // 
+            //
             _btnDeleteNote.AccessibleDescription = "";
             _btnDeleteNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnDeleteNote.Location = new Point(95, 567);
@@ -2404,9 +2402,9 @@ namespace FSM
             _btnDeleteNote.TabIndex = 3;
             _btnDeleteNote.Text = "Delete";
             _btnDeleteNote.Visible = false;
-            // 
+            //
             // dgNotes
-            // 
+            //
             _dgNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgNotes.DataMember = "";
@@ -2415,9 +2413,9 @@ namespace FSM
             _dgNotes.Name = "dgNotes";
             _dgNotes.Size = new Size(761, 541);
             _dgNotes.TabIndex = 1;
-            // 
+            //
             // btnAddNote
-            // 
+            //
             _btnAddNote.AccessibleDescription = "";
             _btnAddNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddNote.Location = new Point(6, 567);
@@ -2425,9 +2423,9 @@ namespace FSM
             _btnAddNote.Size = new Size(85, 23);
             _btnAddNote.TabIndex = 2;
             _btnAddNote.Text = "Add";
-            // 
+            //
             // tpContactAttempts
-            // 
+            //
             _tpContactAttempts.Controls.Add(_grpContactAttemptDetails);
             _tpContactAttempts.Controls.Add(_grpContactAttempts);
             _tpContactAttempts.Location = new Point(4, 22);
@@ -2436,9 +2434,9 @@ namespace FSM
             _tpContactAttempts.TabIndex = 8;
             _tpContactAttempts.Text = "Contact Attempts";
             _tpContactAttempts.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpContactAttemptDetails
-            // 
+            //
             _grpContactAttemptDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _grpContactAttemptDetails.Controls.Add(_txtContactAttemptDetails);
             _grpContactAttemptDetails.Controls.Add(_lblContactNotes);
@@ -2448,9 +2446,9 @@ namespace FSM
             _grpContactAttemptDetails.TabIndex = 35;
             _grpContactAttemptDetails.TabStop = false;
             _grpContactAttemptDetails.Text = "Details";
-            // 
+            //
             // txtContactAttemptDetails
-            // 
+            //
             _txtContactAttemptDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtContactAttemptDetails.Location = new Point(6, 37);
@@ -2459,17 +2457,17 @@ namespace FSM
             _txtContactAttemptDetails.ReadOnly = true;
             _txtContactAttemptDetails.Size = new Size(365, 553);
             _txtContactAttemptDetails.TabIndex = 0;
-            // 
+            //
             // lblContactNotes
-            // 
+            //
             _lblContactNotes.Location = new Point(3, 20);
             _lblContactNotes.Name = "lblContactNotes";
             _lblContactNotes.Size = new Size(88, 23);
             _lblContactNotes.TabIndex = 34;
             _lblContactNotes.Text = "Notes:";
-            // 
+            //
             // grpContactAttempts
-            // 
+            //
             _grpContactAttempts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpContactAttempts.Controls.Add(_dgContactAttempts);
@@ -2480,9 +2478,9 @@ namespace FSM
             _grpContactAttempts.TabIndex = 34;
             _grpContactAttempts.TabStop = false;
             _grpContactAttempts.Text = "Attempts";
-            // 
+            //
             // dgContactAttempts
-            // 
+            //
             _dgContactAttempts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgContactAttempts.DataMember = "";
@@ -2491,9 +2489,9 @@ namespace FSM
             _dgContactAttempts.Name = "dgContactAttempts";
             _dgContactAttempts.Size = new Size(761, 541);
             _dgContactAttempts.TabIndex = 1;
-            // 
+            //
             // btnAddAttempt
-            // 
+            //
             _btnAddAttempt.AccessibleDescription = "";
             _btnAddAttempt.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddAttempt.Location = new Point(6, 567);
@@ -2501,72 +2499,72 @@ namespace FSM
             _btnAddAttempt.Size = new Size(85, 23);
             _btnAddAttempt.TabIndex = 2;
             _btnAddAttempt.Text = "Add";
-            // 
+            //
             // btnView
-            // 
+            //
             _btnView.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnView.Location = new Point(132, 664);
             _btnView.Name = "btnView";
             _btnView.Size = new Size(99, 23);
             _btnView.TabIndex = 24;
             _btnView.Text = "View...";
-            // 
+            //
             // cmsView
-            // 
+            //
             _cmsView.Items.AddRange(new ToolStripItem[] { _PropertyToolStripMenuItem, _CustomerToolStripMenuItem, _AuditTrailToolStripMenuItem, _OrdersToolStripMenuItem, _InvoiceToolStripMenuItem, _QuoteToolStripMenuItem, _CostingsToolStripMenuItem, _HistoryToolStripMenuItem });
             _cmsView.Name = "cmsView";
             _cmsView.Size = new Size(128, 180);
-            // 
+            //
             // PropertyToolStripMenuItem
-            // 
+            //
             _PropertyToolStripMenuItem.Name = "PropertyToolStripMenuItem";
             _PropertyToolStripMenuItem.Size = new Size(127, 22);
             _PropertyToolStripMenuItem.Text = "Property";
-            // 
+            //
             // CustomerToolStripMenuItem
-            // 
+            //
             _CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem";
             _CustomerToolStripMenuItem.Size = new Size(127, 22);
             _CustomerToolStripMenuItem.Text = "Customer";
-            // 
+            //
             // AuditTrailToolStripMenuItem
-            // 
+            //
             _AuditTrailToolStripMenuItem.Name = "AuditTrailToolStripMenuItem";
             _AuditTrailToolStripMenuItem.Size = new Size(127, 22);
             _AuditTrailToolStripMenuItem.Text = "Audit Trail";
-            // 
+            //
             // OrdersToolStripMenuItem
-            // 
+            //
             _OrdersToolStripMenuItem.Name = "OrdersToolStripMenuItem";
             _OrdersToolStripMenuItem.Size = new Size(127, 22);
             _OrdersToolStripMenuItem.Text = "Orders";
-            // 
+            //
             // InvoiceToolStripMenuItem
-            // 
+            //
             _InvoiceToolStripMenuItem.Name = "InvoiceToolStripMenuItem";
             _InvoiceToolStripMenuItem.Size = new Size(127, 22);
             _InvoiceToolStripMenuItem.Text = "Invoice";
-            // 
+            //
             // QuoteToolStripMenuItem
-            // 
+            //
             _QuoteToolStripMenuItem.Name = "QuoteToolStripMenuItem";
             _QuoteToolStripMenuItem.Size = new Size(127, 22);
             _QuoteToolStripMenuItem.Text = "Quote";
-            // 
+            //
             // CostingsToolStripMenuItem
-            // 
+            //
             _CostingsToolStripMenuItem.Name = "CostingsToolStripMenuItem";
             _CostingsToolStripMenuItem.Size = new Size(127, 22);
             _CostingsToolStripMenuItem.Text = "Costings";
-            // 
+            //
             // HistoryToolStripMenuItem
-            // 
+            //
             _HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem";
             _HistoryToolStripMenuItem.Size = new Size(127, 22);
             _HistoryToolStripMenuItem.Text = "History";
-            // 
+            //
             // FRMLogCallout
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1184, 690);
             ControlBox = false;
@@ -2612,7 +2610,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             if (App.IsRFT)
@@ -2695,19 +2694,20 @@ namespace FSM
         public void ResetMe(int newID)
         {
             ID = newID;
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(get_GetParameter(2).Name.ToLower, typeof(UCSite).Name.ToLower(), false)))
+            Form form = (Form)get_GetParameter(2);
+            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(form.Name.ToLower(), typeof(UCSite).Name.ToLower(), false)))
             {
                 ((UCSite)get_GetParameter(2)).PopulateJobs();
                 App.MainForm.RefreshEntity(Helper.MakeIntegerValid(get_GetParameter(1)));
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(get_GetParameter(2).Name.ToLower, typeof(UCAsset).Name.ToLower(), false)))
+            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(form.Name.ToLower(), typeof(UCAsset).Name.ToLower(), false)))
             {
                 ((UCAsset)get_GetParameter(2)).PopulateJobs();
                 App.MainForm.RefreshEntity(Helper.MakeIntegerValid(get_GetParameter(1)));
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(get_GetParameter(2).Name.ToLower, typeof(UCQuoteJob).Name.ToLower(), false)))
+            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(form.Name.ToLower(), typeof(UCQuoteJob).Name.ToLower(), false)))
             {
                 // CType(LoadedControl, UCLogCallout).CurrentJob = DB.Job.Job_Get(ID)
             }
@@ -2719,6 +2719,7 @@ namespace FSM
 
         // Private CostingsControl As UCJobCostings
         private IUserControl TheLoadedControl;
+
         private DataView _Data;
 
         public DataView Data
@@ -2871,6 +2872,7 @@ namespace FSM
         public int LastViewedEngineerVisitID { get; set; }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupQuoteDGV()
         {
             Data = new DataView();
@@ -3110,6 +3112,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void CloseForm()
         {
             if (((UCLogCallout)TheLoadedControl).Job.JobID == 0)
@@ -3175,6 +3178,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupNotesDataGrid()
         {
             Helper.SetUpDataGrid(dgNotes);
@@ -3280,6 +3284,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ClearNotesFields()
         {
             txtNoteID.Text = "";
@@ -3342,19 +3347,19 @@ namespace FSM
                 result = "Quote for Works:" + Constants.vbCrLf;
                 foreach (DataRow dr in Data.Table.Rows)
                 {
-                    if (Conversions.ToBoolean(rbStandard.Checked & dr["PartQty"] > 0))
+                    if (Conversions.ToBoolean(rbStandard.Checked & (int)dr["PartQty"] > 0))
                     {
                         rCount += 1;
                         partMup = Conversions.ToDouble(Markup(Math.Round(decimal.Parse(Conversions.ToString(dr["PartCost"])), 2, MidpointRounding.AwayFromZero)));
-                        partResult += Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString("Materials " + rCount + ": Code: " + dr["PartNumber"] + " / Name: ") + dr["PartName"] + " / Cost: £") + partMup + " X ") + dr["PartQty"] + " = £") + Math.Round(partMup * dr["PartQty"], 2, MidpointRounding.AwayFromZero) + Constants.vbCrLf;
-                        partTotal += Math.Round(partMup * dr["PartQty"], 2, MidpointRounding.AwayFromZero);
+                        partResult += Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString("Materials " + rCount + ": Code: " + dr["PartNumber"] + " / Name: ") + dr["PartName"] + " / Cost: £") + partMup + " X ") + dr["PartQty"] + " = £") + Math.Round(partMup * (int)dr["PartQty"], 2, MidpointRounding.AwayFromZero) + Constants.vbCrLf;
+                        partTotal += Math.Round(partMup * (int)dr["PartQty"], 2, MidpointRounding.AwayFromZero);
                     }
-                    else if (Conversions.ToBoolean(dr["PartQty"] > 0))
+                    else if (Conversions.ToBoolean((int)dr["PartQty"] > 0))
                     {
                         rCount += 1;
-                        partMup = Conversions.ToDouble(dr["Partcost"] * markup2);
-                        partResult += Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString("Materials " + rCount + ": Code: " + dr["PartNumber"] + " / Name: ") + dr["PartName"] + " / Cost: £") + partMup + " X ") + dr["PartQty"] + " = £") + Math.Round(partMup * dr["PartQty"], 2, MidpointRounding.AwayFromZero) + Constants.vbCrLf;
-                        partTotal += Math.Round(partMup * dr["PartQty"], 2, MidpointRounding.AwayFromZero);
+                        partMup = Conversions.ToDouble((int)dr["Partcost"] * markup2);
+                        partResult += Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString("Materials " + rCount + ": Code: " + dr["PartNumber"] + " / Name: ") + dr["PartName"] + " / Cost: £") + partMup + " X ") + dr["PartQty"] + " = £") + Math.Round(partMup * (int)dr["PartQty"], 2, MidpointRounding.AwayFromZero) + Constants.vbCrLf;
+                        partTotal += Math.Round(partMup * (int)dr["PartQty"], 2, MidpointRounding.AwayFromZero);
                     }
                 }
 
@@ -3394,10 +3399,10 @@ namespace FSM
                     {
                         result += " + VAT (£" + total + " inc VAT) ";
                         result += " Plus AXA admin fee: £" + axaAdmin;
-                        total += axaAdmin;
+                        total += (decimal)axaAdmin;
                         result += " Grand total: £" + total + Constants.vbCrLf;
                         result += "Total Price for work: £" + total + " minus claim limit £" + claimLimit;
-                        double grandtotal = total - claimLimit;
+                        double grandtotal = (double)total - (double)claimLimit;
                         if (grandtotal <= 0)
                         {
                             result += " = Underlimit - Please proceed";

@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCDocuments : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCDocuments() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCDocuments_Load;
@@ -46,7 +45,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
 
         private GroupBox _grpDocuments;
@@ -435,9 +434,9 @@ namespace FSM
             _lblLocation = new Label();
             _grpDocuments.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpDocuments
-            // 
+            //
             _grpDocuments.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpDocuments.Controls.Add(_btnOpen);
@@ -460,9 +459,9 @@ namespace FSM
             _grpDocuments.TabIndex = 1;
             _grpDocuments.TabStop = false;
             _grpDocuments.Text = "Main Details";
-            // 
+            //
             // btnOpen
-            // 
+            //
             _btnOpen.AccessibleDescription = "Open Document";
             _btnOpen.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOpen.Location = new Point(539, 417);
@@ -470,27 +469,27 @@ namespace FSM
             _btnOpen.Size = new Size(88, 23);
             _btnOpen.TabIndex = 8;
             _btnOpen.Text = "Open";
-            // 
+            //
             // lblLastUpdated
-            // 
+            //
             _lblLastUpdated.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _lblLastUpdated.ForeColor = Color.Blue;
             _lblLastUpdated.Location = new Point(128, 499);
             _lblLastUpdated.Name = "lblLastUpdated";
             _lblLastUpdated.Size = new Size(499, 24);
             _lblLastUpdated.TabIndex = 33;
-            // 
+            //
             // lblAddedBy
-            // 
+            //
             _lblAddedBy.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _lblAddedBy.ForeColor = Color.Blue;
             _lblAddedBy.Location = new Point(128, 459);
             _lblAddedBy.Name = "lblAddedBy";
             _lblAddedBy.Size = new Size(499, 24);
             _lblAddedBy.TabIndex = 32;
-            // 
+            //
             // txtDocumentName
-            // 
+            //
             _txtDocumentName.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtDocumentName.Location = new Point(128, 418);
             _txtDocumentName.Name = "txtDocumentName";
@@ -498,9 +497,9 @@ namespace FSM
             _txtDocumentName.Size = new Size(403, 21);
             _txtDocumentName.TabIndex = 7;
             _txtDocumentName.Tag = "";
-            // 
+            //
             // btnBrowse
-            // 
+            //
             _btnBrowse.AccessibleDescription = "Find Document To Upload";
             _btnBrowse.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnBrowse.Location = new Point(539, 386);
@@ -508,18 +507,18 @@ namespace FSM
             _btnBrowse.Size = new Size(88, 23);
             _btnBrowse.TabIndex = 6;
             _btnBrowse.Text = "Browse";
-            // 
+            //
             // lblTableEnumID
-            // 
+            //
             _lblTableEnumID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _lblTableEnumID.ForeColor = Color.Blue;
             _lblTableEnumID.Location = new Point(8, 28);
             _lblTableEnumID.Name = "lblTableEnumID";
             _lblTableEnumID.Size = new Size(616, 20);
             _lblTableEnumID.TabIndex = 31;
-            // 
+            //
             // cboDocumentTypeID
-            // 
+            //
             _cboDocumentTypeID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboDocumentTypeID.Cursor = Cursors.Hand;
             _cboDocumentTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -528,17 +527,17 @@ namespace FSM
             _cboDocumentTypeID.Size = new Size(499, 21);
             _cboDocumentTypeID.TabIndex = 2;
             _cboDocumentTypeID.Tag = "Documents.DocumentTypeID";
-            // 
+            //
             // lblDocumentTypeID
-            // 
+            //
             _lblDocumentTypeID.Location = new Point(8, 59);
             _lblDocumentTypeID.Name = "lblDocumentTypeID";
             _lblDocumentTypeID.Size = new Size(112, 20);
             _lblDocumentTypeID.TabIndex = 31;
             _lblDocumentTypeID.Text = "Document Type";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(128, 90);
             _txtName.MaxLength = 50;
@@ -546,17 +545,17 @@ namespace FSM
             _txtName.Size = new Size(499, 21);
             _txtName.TabIndex = 3;
             _txtName.Tag = "Documents.Name";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(8, 90);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(96, 20);
             _lblName.TabIndex = 31;
             _lblName.Text = "Reference";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(128, 121);
@@ -566,17 +565,17 @@ namespace FSM
             _txtNotes.Size = new Size(499, 256);
             _txtNotes.TabIndex = 4;
             _txtNotes.Tag = "Documents.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 121);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(112, 20);
             _lblNotes.TabIndex = 31;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // txtLocation
-            // 
+            //
             _txtLocation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtLocation.Location = new Point(128, 387);
             _txtLocation.MaxLength = 16;
@@ -585,18 +584,18 @@ namespace FSM
             _txtLocation.Size = new Size(403, 21);
             _txtLocation.TabIndex = 5;
             _txtLocation.Tag = "Documents.Location";
-            // 
+            //
             // lblLocation
-            // 
+            //
             _lblLocation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblLocation.Location = new Point(8, 387);
             _lblLocation.Name = "lblLocation";
             _lblLocation.Size = new Size(104, 20);
             _lblLocation.TabIndex = 31;
             _lblLocation.Text = "Document";
-            // 
+            //
             // UCDocuments
-            // 
+            //
             Controls.Add(_grpDocuments);
             Name = "UCDocuments";
             Size = new Size(651, 555);
@@ -607,7 +606,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -622,11 +622,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -721,7 +722,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMJobAudit : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMJobAudit() : base()
         {
             base.Load += FRMJobAudit_Load;
@@ -21,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -83,7 +82,6 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnClose.Click -= btnClose_Click;
@@ -131,9 +129,9 @@ namespace FSM
             _grpJobAudit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgJobAudits).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpJobAudit
-            // 
+            //
             _grpJobAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJobAudit.Controls.Add(_dgJobAudits);
@@ -143,9 +141,9 @@ namespace FSM
             _grpJobAudit.TabIndex = 3;
             _grpJobAudit.TabStop = false;
             _grpJobAudit.Text = "Job Audit Trail";
-            // 
+            //
             // dgJobAudits
-            // 
+            //
             _dgJobAudits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgJobAudits.DataMember = "";
@@ -154,9 +152,9 @@ namespace FSM
             _dgJobAudits.Name = "dgJobAudits";
             _dgJobAudits.Size = new Size(817, 374);
             _dgJobAudits.TabIndex = 14;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.AccessibleDescription = "Export Job List To Excel";
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.UseVisualStyleBackColor = true;
@@ -165,9 +163,9 @@ namespace FSM
             _btnClose.Size = new Size(67, 25);
             _btnClose.TabIndex = 16;
             _btnClose.Text = "Close";
-            // 
+            //
             // FRMJobAudit
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(856, 486);
             Controls.Add(_btnClose);
@@ -185,7 +183,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupJobAuditDataGrid();
@@ -200,7 +199,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -243,6 +242,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupJobAuditDataGrid()
         {
             var tbStyle = dgJobAudits.TableStyles[0];
@@ -297,6 +297,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try

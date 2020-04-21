@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
@@ -6,9 +9,6 @@ using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -53,6 +53,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private Button _btnAmend;
 
         internal Button btnAmend
@@ -2473,9 +2474,9 @@ namespace FSM
             _Panel1.SuspendLayout();
             _grpAdditionalDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpContract
-            // 
+            //
             _grpContract.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpContract.Controls.Add(_btnTransfer);
@@ -2504,9 +2505,9 @@ namespace FSM
             _grpContract.TabIndex = 0;
             _grpContract.TabStop = false;
             _grpContract.Text = "Contract Wizard";
-            // 
+            //
             // btnTransfer
-            // 
+            //
             _btnTransfer.Location = new Point(593, 28);
             _btnTransfer.Name = "btnTransfer";
             _btnTransfer.Size = new Size(146, 23);
@@ -2514,18 +2515,18 @@ namespace FSM
             _btnTransfer.Text = "TRANSFER CONTRACT";
             _btnTransfer.UseVisualStyleBackColor = true;
             _btnTransfer.Visible = false;
-            // 
+            //
             // lblsold
-            // 
+            //
             _lblsold.Location = new Point(667, 33);
             _lblsold.Name = "lblsold";
             _lblsold.Size = new Size(79, 20);
             _lblsold.TabIndex = 154;
             _lblsold.Text = "Sold By";
             _lblsold.Visible = false;
-            // 
+            //
             // btnRenew
-            // 
+            //
             _btnRenew.Location = new Point(748, 28);
             _btnRenew.Name = "btnRenew";
             _btnRenew.Size = new Size(146, 23);
@@ -2533,59 +2534,59 @@ namespace FSM
             _btnRenew.Text = "RENEW CONTRACT";
             _btnRenew.UseVisualStyleBackColor = true;
             _btnRenew.Visible = false;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(346, 625);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(191, 25);
             _Label2.TabIndex = 90;
             _Label2.Text = "Annual Amount: ";
-            // 
+            //
             // lblFollowedBy
-            // 
+            //
             _lblFollowedBy.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblFollowedBy.Location = new Point(242, 658);
             _lblFollowedBy.Name = "lblFollowedBy";
             _lblFollowedBy.Size = new Size(97, 25);
             _lblFollowedBy.TabIndex = 150;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(5, 658);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(230, 25);
             _Label1.TabIndex = 149;
             _Label1.Text = "Followed By:";
-            // 
+            //
             // lblMonthlyEst
-            // 
+            //
             _lblMonthlyEst.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblMonthlyEst.Location = new Point(238, 625);
             _lblMonthlyEst.Name = "lblMonthlyEst";
             _lblMonthlyEst.Size = new Size(108, 25);
             _lblMonthlyEst.TabIndex = 148;
-            // 
+            //
             // lblContractRef
-            // 
+            //
             _lblContractRef.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblContractRef.Location = new Point(898, 625);
             _lblContractRef.Name = "lblContractRef";
             _lblContractRef.Size = new Size(137, 25);
             _lblContractRef.TabIndex = 148;
-            // 
+            //
             // lblTotalEst
-            // 
+            //
             _lblTotalEst.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblTotalEst.Location = new Point(538, 625);
             _lblTotalEst.Name = "lblTotalEst";
             _lblTotalEst.Size = new Size(118, 25);
             _lblTotalEst.TabIndex = 147;
-            // 
+            //
             // grpPromo
-            // 
+            //
             _grpPromo.Controls.Add(_btnPromoOK);
             _grpPromo.Controls.Add(_cboPromotion);
             _grpPromo.Controls.Add(_lblPromotionalOffer);
@@ -2593,18 +2594,18 @@ namespace FSM
             _grpPromo.Name = "grpPromo";
             _grpPromo.Size = new Size(1040, 36);
             _grpPromo.TabIndex = 95;
-            // 
+            //
             // btnPromoOK
-            // 
+            //
             _btnPromoOK.Location = new Point(998, 7);
             _btnPromoOK.Name = "btnPromoOK";
             _btnPromoOK.Size = new Size(36, 23);
             _btnPromoOK.TabIndex = 79;
             _btnPromoOK.Text = "OK";
             _btnPromoOK.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboPromotion
-            // 
+            //
             _cboPromotion.Cursor = Cursors.Hand;
             _cboPromotion.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboPromotion.Location = new Point(409, 8);
@@ -2612,18 +2613,18 @@ namespace FSM
             _cboPromotion.Size = new Size(581, 21);
             _cboPromotion.TabIndex = 78;
             _cboPromotion.Tag = "Contract.ContractStatusID";
-            // 
+            //
             // lblPromotionalOffer
-            // 
+            //
             _lblPromotionalOffer.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblPromotionalOffer.Location = new Point(9, 4);
             _lblPromotionalOffer.Name = "lblPromotionalOffer";
             _lblPromotionalOffer.Size = new Size(345, 25);
             _lblPromotionalOffer.TabIndex = 77;
             _lblPromotionalOffer.Text = "Promotional Offer / Discounts";
-            // 
+            //
             // grpContractType
-            // 
+            //
             _grpContractType.Controls.Add(_cboContract);
             _grpContractType.Controls.Add(_lblcancel);
             _grpContractType.Controls.Add(_lblCancelReason);
@@ -2637,9 +2638,9 @@ namespace FSM
             _grpContractType.Name = "grpContractType";
             _grpContractType.Size = new Size(1039, 51);
             _grpContractType.TabIndex = 94;
-            // 
+            //
             // cboContract
-            // 
+            //
             _cboContract.Cursor = Cursors.Hand;
             _cboContract.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboContract.Location = new Point(257, 14);
@@ -2647,43 +2648,43 @@ namespace FSM
             _cboContract.Size = new Size(379, 21);
             _cboContract.TabIndex = 69;
             _cboContract.Tag = "";
-            // 
+            //
             // lblcancel
-            // 
+            //
             _lblcancel.Location = new Point(254, 17);
             _lblcancel.Name = "lblcancel";
             _lblcancel.Size = new Size(79, 20);
             _lblcancel.TabIndex = 74;
             _lblcancel.Text = "Cancel Date";
-            // 
+            //
             // lblCancelReason
-            // 
+            //
             _lblCancelReason.Location = new Point(665, 20);
             _lblCancelReason.Name = "lblCancelReason";
             _lblCancelReason.Size = new Size(50, 20);
             _lblCancelReason.TabIndex = 73;
             _lblCancelReason.Text = "Reason";
-            // 
+            //
             // btnTypeOk
-            // 
+            //
             _btnTypeOk.Location = new Point(996, 15);
             _btnTypeOk.Name = "btnTypeOk";
             _btnTypeOk.Size = new Size(36, 23);
             _btnTypeOk.TabIndex = 72;
             _btnTypeOk.Text = "OK";
             _btnTypeOk.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblConType
-            // 
+            //
             _lblConType.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblConType.Location = new Point(6, 12);
             _lblConType.Name = "lblConType";
             _lblConType.Size = new Size(207, 25);
             _lblConType.TabIndex = 71;
             _lblConType.Text = "Contract Type";
-            // 
+            //
             // cboReasonID
-            // 
+            //
             _cboReasonID.Cursor = Cursors.Hand;
             _cboReasonID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboReasonID.Location = new Point(775, 15);
@@ -2691,16 +2692,16 @@ namespace FSM
             _cboReasonID.Size = new Size(215, 21);
             _cboReasonID.TabIndex = 70;
             _cboReasonID.Tag = "Contract.ContractStatusID";
-            // 
+            //
             // dtpCancelledDate
-            // 
+            //
             _dtpCancelledDate.Location = new Point(408, 14);
             _dtpCancelledDate.Name = "dtpCancelledDate";
             _dtpCancelledDate.Size = new Size(229, 21);
             _dtpCancelledDate.TabIndex = 69;
-            // 
+            //
             // cboContractType
-            // 
+            //
             _cboContractType.Cursor = Cursors.Hand;
             _cboContractType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboContractType.Location = new Point(644, 15);
@@ -2708,18 +2709,18 @@ namespace FSM
             _cboContractType.Size = new Size(346, 21);
             _cboContractType.TabIndex = 68;
             _cboContractType.Tag = "";
-            // 
+            //
             // lblIsLandlord
-            // 
+            //
             _lblIsLandlord.Location = new Point(254, 8);
             _lblIsLandlord.Name = "lblIsLandlord";
             _lblIsLandlord.Size = new Size(384, 36);
             _lblIsLandlord.TabIndex = 75;
             _lblIsLandlord.Text = "Reason";
             _lblIsLandlord.Visible = false;
-            // 
+            //
             // grpAppliancesCovered
-            // 
+            //
             _grpAppliancesCovered.Controls.Add(_dgSecondAssets);
             _grpAppliancesCovered.Controls.Add(_DgMain);
             _grpAppliancesCovered.Controls.Add(_btnMinusSecond);
@@ -2742,9 +2743,9 @@ namespace FSM
             _grpAppliancesCovered.Name = "grpAppliancesCovered";
             _grpAppliancesCovered.Size = new Size(1040, 183);
             _grpAppliancesCovered.TabIndex = 93;
-            // 
+            //
             // dgSecondAssets
-            // 
+            //
             _dgSecondAssets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             _dgSecondAssets.Location = new Point(645, 99);
             _dgSecondAssets.MultiSelect = false;
@@ -2756,9 +2757,9 @@ namespace FSM
             _dgSecondAssets.ShowRowErrors = false;
             _dgSecondAssets.Size = new Size(293, 70);
             _dgSecondAssets.TabIndex = 146;
-            // 
+            //
             // DgMain
-            // 
+            //
             _DgMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             _DgMain.Location = new Point(645, 13);
             _DgMain.MultiSelect = false;
@@ -2770,62 +2771,62 @@ namespace FSM
             _DgMain.ShowRowErrors = false;
             _DgMain.Size = new Size(293, 70);
             _DgMain.TabIndex = 145;
-            // 
+            //
             // btnMinusSecond
-            // 
+            //
             _btnMinusSecond.Location = new Point(599, 146);
             _btnMinusSecond.Name = "btnMinusSecond";
             _btnMinusSecond.Size = new Size(39, 23);
             _btnMinusSecond.TabIndex = 144;
             _btnMinusSecond.Text = "-";
             _btnMinusSecond.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnMinusMain
-            // 
+            //
             _btnMinusMain.Location = new Point(599, 60);
             _btnMinusMain.Name = "btnMinusMain";
             _btnMinusMain.Size = new Size(39, 23);
             _btnMinusMain.TabIndex = 143;
             _btnMinusMain.Text = "-";
             _btnMinusMain.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAddSecond
-            // 
+            //
             _btnAddSecond.Location = new Point(599, 122);
             _btnAddSecond.Name = "btnAddSecond";
             _btnAddSecond.Size = new Size(39, 23);
             _btnAddSecond.TabIndex = 142;
             _btnAddSecond.Text = "+";
             _btnAddSecond.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAddMain
-            // 
+            //
             _btnAddMain.Location = new Point(599, 36);
             _btnAddMain.Name = "btnAddMain";
             _btnAddMain.Size = new Size(39, 23);
             _btnAddMain.TabIndex = 141;
             _btnAddMain.Text = "+";
             _btnAddMain.UseVisualStyleBackColor = true;
-            // 
+            //
             // LblSecondApps2
-            // 
+            //
             _LblSecondApps2.Location = new Point(940, 123);
             _LblSecondApps2.Name = "LblSecondApps2";
             _LblSecondApps2.Size = new Size(87, 20);
             _LblSecondApps2.TabIndex = 140;
             _LblSecondApps2.Text = "APPLIANCES";
-            // 
+            //
             // txtSecondryCount
-            // 
+            //
             _txtSecondryCount.Location = new Point(973, 96);
             _txtSecondryCount.MaxLength = 100;
             _txtSecondryCount.Name = "txtSecondryCount";
             _txtSecondryCount.Size = new Size(36, 21);
             _txtSecondryCount.TabIndex = 139;
             _txtSecondryCount.Tag = "";
-            // 
+            //
             // cboSecondryApps
-            // 
+            //
             _cboSecondryApps.Cursor = Cursors.Hand;
             _cboSecondryApps.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSecondryApps.Location = new Point(409, 99);
@@ -2833,51 +2834,51 @@ namespace FSM
             _cboSecondryApps.Size = new Size(229, 21);
             _cboSecondryApps.TabIndex = 138;
             _cboSecondryApps.Tag = "";
-            // 
+            //
             // lblSecondOR
-            // 
+            //
             _lblSecondOR.Location = new Point(942, 99);
             _lblSecondOR.Name = "lblSecondOR";
             _lblSecondOR.Size = new Size(25, 20);
             _lblSecondOR.TabIndex = 137;
             _lblSecondOR.Text = "OR";
-            // 
+            //
             // btnAppsOK
-            // 
+            //
             _btnAppsOK.Location = new Point(995, 146);
             _btnAppsOK.Name = "btnAppsOK";
             _btnAppsOK.Size = new Size(39, 23);
             _btnAppsOK.TabIndex = 136;
             _btnAppsOK.Text = "OK";
             _btnAppsOK.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblAdditionalApps
-            // 
+            //
             _lblAdditionalApps.Location = new Point(254, 104);
             _lblAdditionalApps.Name = "lblAdditionalApps";
             _lblAdditionalApps.Size = new Size(144, 20);
             _lblAdditionalApps.TabIndex = 134;
             _lblAdditionalApps.Text = "Additional Appliance(s)";
-            // 
+            //
             // lblMainApps2
-            // 
+            //
             _lblMainApps2.Location = new Point(940, 54);
             _lblMainApps2.Name = "lblMainApps2";
             _lblMainApps2.Size = new Size(87, 20);
             _lblMainApps2.TabIndex = 133;
             _lblMainApps2.Text = "APPLIANCES";
-            // 
+            //
             // txtMainAppCount
-            // 
+            //
             _txtMainAppCount.Location = new Point(973, 27);
             _txtMainAppCount.MaxLength = 100;
             _txtMainAppCount.Name = "txtMainAppCount";
             _txtMainAppCount.Size = new Size(36, 21);
             _txtMainAppCount.TabIndex = 132;
             _txtMainAppCount.Tag = "";
-            // 
+            //
             // cboMainApps
-            // 
+            //
             _cboMainApps.Cursor = Cursors.Hand;
             _cboMainApps.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboMainApps.Location = new Point(409, 13);
@@ -2885,52 +2886,52 @@ namespace FSM
             _cboMainApps.Size = new Size(229, 21);
             _cboMainApps.TabIndex = 131;
             _cboMainApps.Tag = "";
-            // 
+            //
             // lblMainOR
-            // 
+            //
             _lblMainOR.Location = new Point(942, 30);
             _lblMainOR.Name = "lblMainOR";
             _lblMainOR.Size = new Size(25, 20);
             _lblMainOR.TabIndex = 130;
             _lblMainOR.Text = "OR";
-            // 
+            //
             // lblMainApps
-            // 
+            //
             _lblMainApps.Location = new Point(254, 18);
             _lblMainApps.Name = "lblMainApps";
             _lblMainApps.Size = new Size(125, 20);
             _lblMainApps.TabIndex = 128;
             _lblMainApps.Text = "Main Appliance(s)";
-            // 
+            //
             // lblAppsCovered
-            // 
+            //
             _lblAppsCovered.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAppsCovered.Location = new Point(5, 13);
             _lblAppsCovered.Name = "lblAppsCovered";
             _lblAppsCovered.Size = new Size(230, 25);
             _lblAppsCovered.TabIndex = 127;
             _lblAppsCovered.Text = "Appliances Covered";
-            // 
+            //
             // lblReference
-            // 
+            //
             _lblReference.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblReference.Location = new Point(666, 625);
             _lblReference.Name = "lblReference";
             _lblReference.Size = new Size(228, 25);
             _lblReference.TabIndex = 79;
             _lblReference.Text = "Contract Reference: ";
-            // 
+            //
             // lblMonthly
-            // 
+            //
             _lblMonthly.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblMonthly.Location = new Point(5, 625);
             _lblMonthly.Name = "lblMonthly";
             _lblMonthly.Size = new Size(230, 25);
             _lblMonthly.TabIndex = 77;
             _lblMonthly.Text = "First Month Amount";
-            // 
+            //
             // BtnCancel
-            // 
+            //
             _BtnCancel.Enabled = false;
             _BtnCancel.Location = new Point(902, 28);
             _BtnCancel.Name = "BtnCancel";
@@ -2939,36 +2940,36 @@ namespace FSM
             _BtnCancel.Text = "CANCEL CURRENT";
             _BtnCancel.UseVisualStyleBackColor = true;
             _BtnCancel.Visible = false;
-            // 
+            //
             // btnAmend
-            // 
+            //
             _btnAmend.Location = new Point(427, 28);
             _btnAmend.Name = "btnAmend";
             _btnAmend.Size = new Size(146, 23);
             _btnAmend.TabIndex = 33;
             _btnAmend.Text = "AMEND CURRENT";
             _btnAmend.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnNew
-            // 
+            //
             _btnNew.Location = new Point(271, 28);
             _btnNew.Name = "btnNew";
             _btnNew.Size = new Size(150, 23);
             _btnNew.TabIndex = 32;
             _btnNew.Text = "ADD NEW";
             _btnNew.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label7.Location = new Point(2, 28);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(263, 25);
             _Label7.TabIndex = 30;
             _Label7.Text = "Add, Amend or Cancel?";
-            // 
+            //
             // cboSoldBy
-            // 
+            //
             _cboSoldBy.Cursor = Cursors.Hand;
             _cboSoldBy.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSoldBy.Location = new Point(776, 30);
@@ -2977,9 +2978,9 @@ namespace FSM
             _cboSoldBy.TabIndex = 153;
             _cboSoldBy.Tag = "";
             _cboSoldBy.Visible = false;
-            // 
+            //
             // lblRenewed
-            // 
+            //
             _lblRenewed.AutoSize = true;
             _lblRenewed.ForeColor = Color.DarkRed;
             _lblRenewed.Location = new Point(700, 33);
@@ -2988,9 +2989,9 @@ namespace FSM
             _lblRenewed.TabIndex = 152;
             _lblRenewed.Text = "This Contract Has been Renewed";
             _lblRenewed.Visible = false;
-            // 
+            //
             // grpContractPeriod
-            // 
+            //
             _grpContractPeriod.Controls.Add(_btnPeriodOK);
             _grpContractPeriod.Controls.Add(_lblPeriod);
             _grpContractPeriod.Controls.Add(_cboPeriod);
@@ -3001,26 +3002,26 @@ namespace FSM
             _grpContractPeriod.Name = "grpContractPeriod";
             _grpContractPeriod.Size = new Size(1040, 48);
             _grpContractPeriod.TabIndex = 94;
-            // 
+            //
             // btnPeriodOK
-            // 
+            //
             _btnPeriodOK.Location = new Point(997, 11);
             _btnPeriodOK.Name = "btnPeriodOK";
             _btnPeriodOK.Size = new Size(36, 23);
             _btnPeriodOK.TabIndex = 53;
             _btnPeriodOK.Text = "OK";
             _btnPeriodOK.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblPeriod
-            // 
+            //
             _lblPeriod.Location = new Point(667, 16);
             _lblPeriod.Name = "lblPeriod";
             _lblPeriod.Size = new Size(50, 20);
             _lblPeriod.TabIndex = 52;
             _lblPeriod.Text = "Period";
-            // 
+            //
             // cboPeriod
-            // 
+            //
             _cboPeriod.Cursor = Cursors.Hand;
             _cboPeriod.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboPeriod.Location = new Point(776, 12);
@@ -3028,34 +3029,34 @@ namespace FSM
             _cboPeriod.Size = new Size(214, 21);
             _cboPeriod.TabIndex = 51;
             _cboPeriod.Tag = "Contract.ContractStatusID";
-            // 
+            //
             // lblConPeriod
-            // 
+            //
             _lblConPeriod.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblConPeriod.Location = new Point(5, 13);
             _lblConPeriod.Name = "lblConPeriod";
             _lblConPeriod.Size = new Size(207, 25);
             _lblConPeriod.TabIndex = 50;
             _lblConPeriod.Text = "Contract Period";
-            // 
+            //
             // dtpContractStartDate
-            // 
+            //
             _dtpContractStartDate.Location = new Point(406, 10);
             _dtpContractStartDate.Name = "dtpContractStartDate";
             _dtpContractStartDate.Size = new Size(230, 21);
             _dtpContractStartDate.TabIndex = 49;
             _dtpContractStartDate.Tag = "Contract.ContractStartDate";
-            // 
+            //
             // lblContractStartDate
-            // 
+            //
             _lblContractStartDate.Location = new Point(252, 13);
             _lblContractStartDate.Name = "lblContractStartDate";
             _lblContractStartDate.Size = new Size(148, 20);
             _lblContractStartDate.TabIndex = 48;
             _lblContractStartDate.Text = "Starting From";
-            // 
+            //
             // grpAdditionalOptions
-            // 
+            //
             _grpAdditionalOptions.Controls.Add(_btnAdditionalOK);
             _grpAdditionalOptions.Controls.Add(_lblAdditionalOptions);
             _grpAdditionalOptions.Controls.Add(_chkPlumbingDrainage);
@@ -3065,27 +3066,27 @@ namespace FSM
             _grpAdditionalOptions.Name = "grpAdditionalOptions";
             _grpAdditionalOptions.Size = new Size(1040, 31);
             _grpAdditionalOptions.TabIndex = 95;
-            // 
+            //
             // btnAdditionalOK
-            // 
+            //
             _btnAdditionalOK.Location = new Point(996, 4);
             _btnAdditionalOK.Name = "btnAdditionalOK";
             _btnAdditionalOK.Size = new Size(39, 23);
             _btnAdditionalOK.TabIndex = 68;
             _btnAdditionalOK.Text = "OK";
             _btnAdditionalOK.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblAdditionalOptions
-            // 
+            //
             _lblAdditionalOptions.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAdditionalOptions.Location = new Point(8, 2);
             _lblAdditionalOptions.Name = "lblAdditionalOptions";
             _lblAdditionalOptions.Size = new Size(230, 25);
             _lblAdditionalOptions.TabIndex = 67;
             _lblAdditionalOptions.Text = "Additional Options";
-            // 
+            //
             // chkPlumbingDrainage
-            // 
+            //
             _chkPlumbingDrainage.AutoSize = true;
             _chkPlumbingDrainage.Location = new Point(487, 9);
             _chkPlumbingDrainage.Name = "chkPlumbingDrainage";
@@ -3093,9 +3094,9 @@ namespace FSM
             _chkPlumbingDrainage.TabIndex = 66;
             _chkPlumbingDrainage.Text = "Plumbing, drainage and electrical cover";
             _chkPlumbingDrainage.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkWindowLockPest
-            // 
+            //
             _chkWindowLockPest.AutoSize = true;
             _chkWindowLockPest.Location = new Point(257, 9);
             _chkWindowLockPest.Name = "chkWindowLockPest";
@@ -3103,9 +3104,9 @@ namespace FSM
             _chkWindowLockPest.TabIndex = 65;
             _chkWindowLockPest.Text = "Window, lock and pest cover";
             _chkWindowLockPest.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkGasSupplyPipework
-            // 
+            //
             _chkGasSupplyPipework.AutoSize = true;
             _chkGasSupplyPipework.Location = new Point(775, 9);
             _chkGasSupplyPipework.Name = "chkGasSupplyPipework";
@@ -3113,9 +3114,9 @@ namespace FSM
             _chkGasSupplyPipework.TabIndex = 64;
             _chkGasSupplyPipework.Text = "Gas Supply Pipework";
             _chkGasSupplyPipework.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpPayers
-            // 
+            //
             _grpPayers.Controls.Add(_grpDD);
             _grpPayers.Controls.Add(_Panel2);
             _grpPayers.Controls.Add(_Panel1);
@@ -3130,9 +3131,9 @@ namespace FSM
             _grpPayers.Name = "grpPayers";
             _grpPayers.Size = new Size(1040, 69);
             _grpPayers.TabIndex = 96;
-            // 
+            //
             // grpDD
-            // 
+            //
             _grpDD.Controls.Add(_lblchanging);
             _grpDD.Controls.Add(_txtAccName);
             _grpDD.Controls.Add(_lbl3);
@@ -3147,9 +3148,9 @@ namespace FSM
             _grpDD.Size = new Size(991, 38);
             _grpDD.TabIndex = 117;
             _grpDD.Visible = false;
-            // 
+            //
             // lblchanging
-            // 
+            //
             _lblchanging.ForeColor = Color.Red;
             _lblchanging.Location = new Point(7, 5);
             _lblchanging.Name = "lblchanging";
@@ -3157,92 +3158,92 @@ namespace FSM
             _lblchanging.TabIndex = 129;
             _lblchanging.Text = "Changing D/D details will create a new D/D (even if original details are blank)";
             _lblchanging.Visible = false;
-            // 
+            //
             // txtAccName
-            // 
+            //
             _txtAccName.Location = new Point(340, 8);
             _txtAccName.Name = "txtAccName";
             _txtAccName.Size = new Size(137, 21);
             _txtAccName.TabIndex = 1;
-            // 
+            //
             // lbl3
-            // 
+            //
             _lbl3.Location = new Point(249, 12);
             _lbl3.Name = "lbl3";
             _lbl3.Size = new Size(89, 20);
             _lbl3.TabIndex = 110;
             _lbl3.Text = "Account Name";
-            // 
+            //
             // txtBankName
-            // 
+            //
             _txtBankName.Location = new Point(883, 8);
             _txtBankName.Name = "txtBankName";
             _txtBankName.Size = new Size(104, 21);
             _txtBankName.TabIndex = 4;
-            // 
+            //
             // txtAccNumber
-            // 
+            //
             _txtAccNumber.Location = new Point(726, 8);
             _txtAccNumber.Name = "txtAccNumber";
             _txtAccNumber.Size = new Size(84, 21);
             _txtAccNumber.TabIndex = 3;
-            // 
+            //
             // lblBankName
-            // 
+            //
             _lblBankName.Location = new Point(811, 11);
             _lblBankName.Name = "lblBankName";
             _lblBankName.Size = new Size(78, 20);
             _lblBankName.TabIndex = 107;
             _lblBankName.Text = "Bank Name";
-            // 
+            //
             // lblAccNumber
-            // 
+            //
             _lblAccNumber.Location = new Point(625, 11);
             _lblAccNumber.Name = "lblAccNumber";
             _lblAccNumber.Size = new Size(108, 20);
             _lblAccNumber.TabIndex = 106;
             _lblAccNumber.Text = "Account Number";
-            // 
+            //
             // txtSortCode
-            // 
+            //
             _txtSortCode.Location = new Point(544, 8);
             _txtSortCode.Name = "txtSortCode";
             _txtSortCode.Size = new Size(77, 21);
             _txtSortCode.TabIndex = 2;
-            // 
+            //
             // lblSortCode
-            // 
+            //
             _lblSortCode.Location = new Point(480, 12);
             _lblSortCode.Name = "lblSortCode";
             _lblSortCode.Size = new Size(73, 20);
             _lblSortCode.TabIndex = 104;
             _lblSortCode.Text = "Sort Code";
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.Location = new Point(634, 33);
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(357, 33);
             _Panel2.TabIndex = 117;
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Controls.Add(_lblPaidBy);
             _Panel1.Location = new Point(645, 38);
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(110, 22);
             _Panel1.TabIndex = 116;
-            // 
+            //
             // lblPaidBy
-            // 
+            //
             _lblPaidBy.Location = new Point(6, 1);
             _lblPaidBy.Name = "lblPaidBy";
             _lblPaidBy.Size = new Size(106, 20);
             _lblPaidBy.TabIndex = 115;
             _lblPaidBy.Text = "Paid By:";
-            // 
+            //
             // cboInitialPaymentType
-            // 
+            //
             _cboInitialPaymentType.Cursor = Cursors.Hand;
             _cboInitialPaymentType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboInitialPaymentType.Location = new Point(773, 38);
@@ -3250,26 +3251,26 @@ namespace FSM
             _cboInitialPaymentType.Size = new Size(216, 21);
             _cboInitialPaymentType.TabIndex = 113;
             _cboInitialPaymentType.Tag = "Contract.ContractStatusID";
-            // 
+            //
             // btnPaymentOK
-            // 
+            //
             _btnPaymentOK.Location = new Point(998, 37);
             _btnPaymentOK.Name = "btnPaymentOK";
             _btnPaymentOK.Size = new Size(36, 23);
             _btnPaymentOK.TabIndex = 98;
             _btnPaymentOK.Text = "OK";
             _btnPaymentOK.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblPaymentMethod
-            // 
+            //
             _lblPaymentMethod.Location = new Point(722, 10);
             _lblPaymentMethod.Name = "lblPaymentMethod";
             _lblPaymentMethod.Size = new Size(106, 20);
             _lblPaymentMethod.TabIndex = 93;
             _lblPaymentMethod.Text = "Payment Method";
-            // 
+            //
             // cboPaymentType
-            // 
+            //
             _cboPaymentType.Cursor = Cursors.Hand;
             _cboPaymentType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboPaymentType.Location = new Point(834, 6);
@@ -3277,9 +3278,9 @@ namespace FSM
             _cboPaymentType.Size = new Size(154, 21);
             _cboPaymentType.TabIndex = 92;
             _cboPaymentType.Tag = "Contract.ContractStatusID";
-            // 
+            //
             // cboPAyer
-            // 
+            //
             _cboPAyer.Cursor = Cursors.Hand;
             _cboPAyer.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboPAyer.Location = new Point(407, 5);
@@ -3287,26 +3288,26 @@ namespace FSM
             _cboPAyer.Size = new Size(309, 21);
             _cboPAyer.TabIndex = 91;
             _cboPAyer.Tag = "";
-            // 
+            //
             // lblPayer
-            // 
+            //
             _lblPayer.Location = new Point(252, 10);
             _lblPayer.Name = "lblPayer";
             _lblPayer.Size = new Size(59, 20);
             _lblPayer.TabIndex = 90;
             _lblPayer.Text = "Payer";
-            // 
+            //
             // lblPayersDetail
-            // 
+            //
             _lblPayersDetail.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblPayersDetail.Location = new Point(9, 5);
             _lblPayersDetail.Name = "lblPayersDetail";
             _lblPayersDetail.Size = new Size(230, 25);
             _lblPayersDetail.TabIndex = 89;
             _lblPayersDetail.Text = "Payers Detail";
-            // 
+            //
             // grpAdditionalDetails
-            // 
+            //
             _grpAdditionalDetails.Controls.Add(_chkCommercial);
             _grpAdditionalDetails.Controls.Add(_chkLandlord);
             _grpAdditionalDetails.Controls.Add(_txtNotesToEngineer);
@@ -3318,9 +3319,9 @@ namespace FSM
             _grpAdditionalDetails.Name = "grpAdditionalDetails";
             _grpAdditionalDetails.Size = new Size(1040, 87);
             _grpAdditionalDetails.TabIndex = 96;
-            // 
+            //
             // chkCommercial
-            // 
+            //
             _chkCommercial.AutoSize = true;
             _chkCommercial.Location = new Point(487, 55);
             _chkCommercial.Name = "chkCommercial";
@@ -3328,9 +3329,9 @@ namespace FSM
             _chkCommercial.TabIndex = 8;
             _chkCommercial.Text = "Commercial Plan";
             _chkCommercial.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkLandlord
-            // 
+            //
             _chkLandlord.AutoSize = true;
             _chkLandlord.Location = new Point(256, 55);
             _chkLandlord.Name = "chkLandlord";
@@ -3338,49 +3339,49 @@ namespace FSM
             _chkLandlord.TabIndex = 7;
             _chkLandlord.Text = "Landlord Cert Required";
             _chkLandlord.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtNotesToEngineer
-            // 
+            //
             _txtNotesToEngineer.Location = new Point(773, 8);
             _txtNotesToEngineer.Multiline = true;
             _txtNotesToEngineer.Name = "txtNotesToEngineer";
             _txtNotesToEngineer.Size = new Size(216, 71);
             _txtNotesToEngineer.TabIndex = 6;
-            // 
+            //
             // lblServiceNotes
-            // 
+            //
             _lblServiceNotes.Location = new Point(650, 8);
             _lblServiceNotes.Name = "lblServiceNotes";
             _lblServiceNotes.Size = new Size(114, 20);
             _lblServiceNotes.TabIndex = 89;
             _lblServiceNotes.Text = "Service Visit Notes";
-            // 
+            //
             // txtPONumber
-            // 
+            //
             _txtPONumber.Location = new Point(408, 8);
             _txtPONumber.Name = "txtPONumber";
             _txtPONumber.Size = new Size(229, 21);
             _txtPONumber.TabIndex = 5;
-            // 
+            //
             // lblPO
-            // 
+            //
             _lblPO.Location = new Point(254, 11);
             _lblPO.Name = "lblPO";
             _lblPO.Size = new Size(159, 20);
             _lblPO.TabIndex = 86;
             _lblPO.Text = "PO Number";
-            // 
+            //
             // lblAddDetails
-            // 
+            //
             _lblAddDetails.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblAddDetails.Location = new Point(6, 8);
             _lblAddDetails.Name = "lblAddDetails";
             _lblAddDetails.Size = new Size(230, 25);
             _lblAddDetails.TabIndex = 85;
             _lblAddDetails.Text = "Additional Details";
-            // 
+            //
             // UCContractWiz
-            // 
+            //
             Controls.Add(_grpAdditionalDetails);
             Controls.Add(_grpPayers);
             Controls.Add(_grpAdditionalOptions);
@@ -3408,7 +3409,7 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        private void LoadForm(object sender, EventArgs e)
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -3421,11 +3422,11 @@ namespace FSM
             }
         }
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -3729,7 +3730,7 @@ namespace FSM
                             App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
                         }
 
-                        Number = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Combo.get_GetSelectedItemValue(cboContractType));
+                        Number = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Convert.ToInt32(Combo.get_GetSelectedItemValue(cboContractType)));
                         if (Number.Number.ToString().Length < 3)
                         {
                             lblContractRef.Text = Number.Prefix + "00" + Number.Number;
@@ -3751,7 +3752,7 @@ namespace FSM
                         App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
                     }
 
-                    Number = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Combo.get_GetSelectedItemValue(cboContractType));
+                    Number = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Convert.ToInt32(Combo.get_GetSelectedItemValue(cboContractType)));
                     if (Number.Number.ToString().Length < 3)
                     {
                         lblContractRef.Text = Number.Prefix + "00" + Number.Number;
@@ -4383,7 +4384,7 @@ namespace FSM
             }
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             MainDataView = App.DB.ContractOriginal.GetAssetsForContract(CurrentContractSite.ContractSiteID, true);
             SecondAppliances = App.DB.ContractOriginal.GetAssetsForContract(CurrentContractSite.ContractSiteID, false);
@@ -4722,7 +4723,6 @@ namespace FSM
                     string cipherAccount = wrapper.EncryptData(txtAccNumber.Text);
                     if ((b.Text ?? "") == "Create Contract")  // new contract
                     {
-
                         /* TODO ERROR: Skipped RegionDirectiveTrivia */
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
@@ -4772,7 +4772,6 @@ namespace FSM
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     else if ((b.Text ?? "") == "Amend Contract") // amending old
                     {
-
                         /* TODO ERROR: Skipped RegionDirectiveTrivia */
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
@@ -4821,7 +4820,7 @@ namespace FSM
                         }
 
                         var ContractsDT = App.DB.ContractOriginal.Get_NotProcessed(CurrentContract.ContractID).Table;
-                        if (ContractsDT.Rows.Count > 0 && Conversions.ToBoolean(ContractsDT.Rows[0]["InvoiceToBeRaisedID"] > 0))
+                        if (ContractsDT.Rows.Count > 0 && Conversions.ToBoolean((int)ContractsDT.Rows[0]["InvoiceToBeRaisedID"] > 0))
                             installments -= 1;
                         string type = "AMEND";
                         if ((txtAccNumber.Text ?? "") != (ddAcc ?? "") | hasContractChanged & contractTypeId == (int)Enums.ContractTypes.TotallyAssured)
@@ -4988,7 +4987,6 @@ namespace FSM
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     else if ((b.Text ?? "") == "Transfer Contract")
                     {
-
                         /* TODO ERROR: Skipped RegionDirectiveTrivia */
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
@@ -5123,7 +5121,6 @@ namespace FSM
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     else if ((b.Text ?? "") == "Renew Contract")
                     {
-
                         /* TODO ERROR: Skipped RegionDirectiveTrivia */
                         // INSERT
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -5324,7 +5321,7 @@ namespace FSM
         private void NextVisit()
         {
             var RandomClass = new Random();
-            var d = App.DB.ExecuteScalar("select MAX(Startdatetime) from tblEngineerVisit ev inner join tblJobOfWork jow on jow.JobOfWorkID = ev.JobOfWorkID inner join tblJob j on j.JobID = jow.JobID where j.JobTypeID in (4702,519) and OutcomeEnumID in (1) and SiteID = " + SiteID);
+            DateTime d = Helper.MakeDateTimeValid(App.DB.ExecuteScalar("select MAX(Startdatetime) from tblEngineerVisit ev inner join tblJobOfWork jow on jow.JobOfWorkID = ev.JobOfWorkID inner join tblJob j on j.JobID = jow.JobID where j.JobTypeID in (4702,519) and OutcomeEnumID in (1) and SiteID = " + SiteID));
             DateTime enddate;
             if (DateAndTime.DateDiff(DateInterval.Day, CurrentContract.ContractStartDate, CurrentContract.ContractEndDate) > 366)
             {
@@ -5595,7 +5592,6 @@ namespace FSM
                 {
                     if (DateHelper.GetDateZeroTime(estVisitDate) >= DateHelper.GetDateZeroTime(CurrentContract.ContractStartDate) & DateHelper.GetDateZeroTime(estVisitDate) <= DateHelper.GetDateZeroTime(CurrentContract.ContractEndDate))
                     {
-
                         // MAKE SURE WE DON'T BOOK A SATURADY OR SUNDAY
                         if (estVisitDate.DayOfWeek == DayOfWeek.Saturday)
                         {
@@ -6204,7 +6200,7 @@ namespace FSM
                     var details = new ArrayList();
                     var oPrint = new Printing(details, "ContractBatch", Enums.SystemDocumentType.ContractBatch, true, 0, true, dt: dtContracts);
                     var ar = oPrint.MultiEmail();
-                    Process.Start(ar[0]);
+                    Process.Start(ar[0].ToString());
                 }
                 catch (Exception ex)
                 {
@@ -6224,7 +6220,6 @@ namespace FSM
                     ContractsDT.Columns.Add("RenewalPrice");
                     if (ContractsDT.Select("InvoiceFrequencyID = 6").Length > 0)
                     {
-
                         // calculate and if sucsessfull add it as new to database the next main function will raise the renewal details
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(ContractsDT.Rows[0]["ContractTypeID"], Enums.ContractTypes.PreventativeMaintenance, false)))
                         {
@@ -6250,7 +6245,7 @@ namespace FSM
                         var details = new ArrayList();
                         var oPrint = new Printing(details, "ContractExpiry", Enums.SystemDocumentType.ContractExpiry, true, 0, true, dt: ContractsDT);
                         var ar = oPrint.MultiEmail();
-                        Process.Start(ar[0]);
+                        Process.Start(ar[0].ToString());
                     }
                 }
                 catch (Exception ex)
@@ -6265,7 +6260,7 @@ namespace FSM
             decimal divider = DateAndTime.DateDiff(DateInterval.Year, Conversions.ToDate(dr["ContractStartDate"]), Conversions.ToDate(dr["ContractEndDate"]).AddDays(+10));
             if (divider == 0)
                 divider = 1;
-            double OldPrice = Conversions.ToDouble(dr["ContractPrice"] / divider * 1.2); // inc vat
+            double OldPrice = Conversions.ToDouble((double)((decimal)dr["ContractPrice"] / divider) * 1.2); // inc vat
             int MainApps = 0;
             int SecondryApps = 0;
             var dt = App.DB.ContractOriginalSiteAsset.GetAll_ContractSiteID(Conversions.ToInteger(dr["ContractSiteID"]), Conversions.ToInteger(dr["siteid"])).Table;
@@ -6573,7 +6568,6 @@ namespace FSM
 
         public string EncryptData(string plaintext)
         {
-
             // Convert the plaintext string to a byte array.
             var plaintextBytes = System.Text.Encoding.Unicode.GetBytes(plaintext);
 
@@ -6592,7 +6586,6 @@ namespace FSM
 
         public string DecryptData(string encryptedtext)
         {
-
             // Convert the encrypted text string to a byte array.
             var encryptedBytes = Convert.FromBase64String(encryptedtext);
 

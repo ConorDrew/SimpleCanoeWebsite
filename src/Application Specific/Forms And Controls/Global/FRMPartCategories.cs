@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMPartCategories : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPartCategories() : base()
         {
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -45,7 +45,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _GroupBox1;
 
@@ -316,9 +316,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgManager).BeginInit();
             _grpDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_btnAddNew);
@@ -330,9 +330,9 @@ namespace FSM
             _GroupBox1.TabIndex = 2;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Part Categories Mapping";
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.AccessibleDescription = "Add new item";
             _btnAddNew.Cursor = Cursors.Hand;
             _btnAddNew.UseVisualStyleBackColor = true;
@@ -341,9 +341,9 @@ namespace FSM
             _btnAddNew.Size = new Size(48, 24);
             _btnAddNew.TabIndex = 5;
             _btnAddNew.Text = "New";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.AccessibleDescription = "Delete item";
             _btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnDelete.Cursor = Cursors.Hand;
@@ -353,9 +353,9 @@ namespace FSM
             _btnDelete.Size = new Size(48, 24);
             _btnDelete.TabIndex = 6;
             _btnDelete.Text = "Delete";
-            // 
+            //
             // dgManager
-            // 
+            //
             _dgManager.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgManager.DataMember = "";
@@ -364,9 +364,9 @@ namespace FSM
             _dgManager.Name = "dgManager";
             _dgManager.Size = new Size(764, 287);
             _dgManager.TabIndex = 0;
-            // 
+            //
             // grpDetails
-            // 
+            //
             _grpDetails.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpDetails.Controls.Add(_cboCategory);
             _grpDetails.Controls.Add(_Label1);
@@ -379,40 +379,40 @@ namespace FSM
             _grpDetails.TabIndex = 8;
             _grpDetails.TabStop = false;
             _grpDetails.Text = "Details";
-            // 
+            //
             // cboCategory
-            // 
+            //
             _cboCategory.Location = new Point(409, 21);
             _cboCategory.Name = "cboCategory";
             _cboCategory.Size = new Size(306, 21);
             _cboCategory.TabIndex = 9;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(357, 24);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(80, 23);
             _Label1.TabIndex = 8;
             _Label1.Text = "Map To";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Location = new Point(79, 21);
             _txtName.MaxLength = 255;
             _txtName.Name = "txtName";
             _txtName.Size = new Size(265, 21);
             _txtName.TabIndex = 5;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(80, 23);
             _Label2.TabIndex = 5;
             _Label2.Text = "Map From";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.AccessibleDescription = "Save item";
             _btnSave.Cursor = Cursors.Hand;
             _btnSave.UseVisualStyleBackColor = true;
@@ -422,9 +422,9 @@ namespace FSM
             _btnSave.Size = new Size(48, 23);
             _btnSave.TabIndex = 7;
             _btnSave.Text = "Save";
-            // 
+            //
             // FRMPartCategories
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(796, 454);
             Controls.Add(_GroupBox1);
@@ -444,7 +444,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupManagerDataGrid();
@@ -459,7 +460,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -514,8 +515,10 @@ namespace FSM
                 }
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupManagerDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgManager);
@@ -625,8 +628,10 @@ namespace FSM
         {
             Delete();
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateDatagrid(Entity.Sys.Enums.FormState state)
         {
             ManagerDataview = App.DB.Picklists.GetAllPartMappings(Entity.Sys.Enums.PickListTypes.PartCategories);

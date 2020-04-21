@@ -1,18 +1,17 @@
-﻿using System.Diagnostics;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCSideBar : UCBase
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCSideBar() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
@@ -45,7 +44,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Panel _pnlButtons;
 
@@ -343,9 +342,9 @@ namespace FSM
             _pnlMenu.SuspendLayout();
             _pnlHeader.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // pnlButtons
-            // 
+            //
             _pnlButtons.Controls.Add(_btnVan);
             _pnlButtons.Controls.Add(_btnReports);
             _pnlButtons.Controls.Add(_btnInvoicing);
@@ -358,9 +357,9 @@ namespace FSM
             _pnlButtons.Name = "pnlButtons";
             _pnlButtons.Size = new Size(160, 224);
             _pnlButtons.TabIndex = 1;
-            // 
+            //
             // btnVan
-            // 
+            //
             _btnVan.AutoScroll = true;
             _btnVan.BackColor = Color.White;
             _btnVan.BackgroundImage = (Image)resources.GetObject("btnVan.BackgroundImage");
@@ -375,9 +374,9 @@ namespace FSM
             _btnVan.Name = "btnVan";
             _btnVan.Size = new Size(160, 32);
             _btnVan.TabIndex = 8;
-            // 
+            //
             // btnReports
-            // 
+            //
             _btnReports.AutoScroll = true;
             _btnReports.BackColor = Color.White;
             _btnReports.BackgroundImage = (Image)resources.GetObject("btnReports.BackgroundImage");
@@ -392,9 +391,9 @@ namespace FSM
             _btnReports.Name = "btnReports";
             _btnReports.Size = new Size(160, 32);
             _btnReports.TabIndex = 7;
-            // 
+            //
             // btnInvoicing
-            // 
+            //
             _btnInvoicing.AutoScroll = true;
             _btnInvoicing.BackColor = Color.White;
             _btnInvoicing.BackgroundImage = (Image)resources.GetObject("btnInvoicing.BackgroundImage");
@@ -409,9 +408,9 @@ namespace FSM
             _btnInvoicing.Name = "btnInvoicing";
             _btnInvoicing.Size = new Size(160, 32);
             _btnInvoicing.TabIndex = 6;
-            // 
+            //
             // btnJobs
-            // 
+            //
             _btnJobs.AutoScroll = true;
             _btnJobs.BackColor = Color.White;
             _btnJobs.BackgroundImage = (Image)resources.GetObject("btnJobs.BackgroundImage");
@@ -426,9 +425,9 @@ namespace FSM
             _btnJobs.Name = "btnJobs";
             _btnJobs.Size = new Size(160, 32);
             _btnJobs.TabIndex = 5;
-            // 
+            //
             // btnStaff
-            // 
+            //
             _btnStaff.AutoScroll = true;
             _btnStaff.BackColor = Color.White;
             _btnStaff.BackgroundImage = (Image)resources.GetObject("btnStaff.BackgroundImage");
@@ -443,9 +442,9 @@ namespace FSM
             _btnStaff.Name = "btnStaff";
             _btnStaff.Size = new Size(160, 32);
             _btnStaff.TabIndex = 4;
-            // 
+            //
             // btnSpares
-            // 
+            //
             _btnSpares.AutoScroll = true;
             _btnSpares.BackColor = Color.White;
             _btnSpares.BackgroundImage = (Image)resources.GetObject("btnSpares.BackgroundImage");
@@ -460,9 +459,9 @@ namespace FSM
             _btnSpares.Name = "btnSpares";
             _btnSpares.Size = new Size(160, 32);
             _btnSpares.TabIndex = 3;
-            // 
+            //
             // btnCustomer
-            // 
+            //
             _btnCustomer.AutoScroll = true;
             _btnCustomer.BackColor = Color.White;
             _btnCustomer.BackgroundImage = (Image)resources.GetObject("btnCustomer.BackgroundImage");
@@ -477,9 +476,9 @@ namespace FSM
             _btnCustomer.Name = "btnCustomer";
             _btnCustomer.Size = new Size(160, 32);
             _btnCustomer.TabIndex = 0;
-            // 
+            //
             // Splitter1
-            // 
+            //
             _Splitter1.BackColor = Color.Silver;
             _Splitter1.Dock = DockStyle.Bottom;
             _Splitter1.Enabled = false;
@@ -488,17 +487,17 @@ namespace FSM
             _Splitter1.Size = new Size(160, 5);
             _Splitter1.TabIndex = 2;
             _Splitter1.TabStop = false;
-            // 
+            //
             // pnlSearch
-            // 
+            //
             _pnlSearch.Dock = DockStyle.Bottom;
             _pnlSearch.Location = new Point(0, 273);
             _pnlSearch.Name = "pnlSearch";
             _pnlSearch.Size = new Size(160, 152);
             _pnlSearch.TabIndex = 3;
-            // 
+            //
             // pnlMenu
-            // 
+            //
             _pnlMenu.Controls.Add(_pnlSubMenu);
             _pnlMenu.Controls.Add(_Label1);
             _pnlMenu.Controls.Add(_pnlHeader);
@@ -507,18 +506,18 @@ namespace FSM
             _pnlMenu.Name = "pnlMenu";
             _pnlMenu.Size = new Size(160, 273);
             _pnlMenu.TabIndex = 4;
-            // 
+            //
             // pnlSubMenu
-            // 
+            //
             _pnlSubMenu.AutoScroll = true;
             _pnlSubMenu.Dock = DockStyle.Fill;
             _pnlSubMenu.Location = new Point(0, 50);
             _pnlSubMenu.Name = "pnlSubMenu";
             _pnlSubMenu.Size = new Size(160, 223);
             _pnlSubMenu.TabIndex = 6;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
             _Label1.Dock = DockStyle.Top;
             _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -528,9 +527,9 @@ namespace FSM
             _Label1.Size = new Size(160, 16);
             _Label1.TabIndex = 5;
             _Label1.Text = "Please select option";
-            // 
+            //
             // pnlHeader
-            // 
+            //
             _pnlHeader.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
             _pnlHeader.BackgroundImage = (Image)resources.GetObject("pnlHeader.BackgroundImage");
             _pnlHeader.Controls.Add(_Label2);
@@ -540,9 +539,9 @@ namespace FSM
             _pnlHeader.Name = "pnlHeader";
             _pnlHeader.Size = new Size(160, 34);
             _pnlHeader.TabIndex = 4;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.BackColor = Color.Transparent;
             _Label2.Font = new Font("Verdana", 11.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.ForeColor = Color.White;
@@ -552,9 +551,9 @@ namespace FSM
             _Label2.TabIndex = 29;
             _Label2.Text = ">>";
             _Label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // lblTitle
-            // 
+            //
             _lblTitle.BackColor = Color.Transparent;
             _lblTitle.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblTitle.ForeColor = Color.White;
@@ -564,9 +563,9 @@ namespace FSM
             _lblTitle.TabIndex = 28;
             _lblTitle.Text = "HOME";
             _lblTitle.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // UCSideBar
-            // 
+            //
             Controls.Add(_pnlMenu);
             Controls.Add(_pnlSearch);
             Controls.Add(_Splitter1);
@@ -581,12 +580,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void MenuSelectionChanged(Entity.Sys.Enums.MenuTypes MenuType)
         {
             Navigation.Navigate(MenuType);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

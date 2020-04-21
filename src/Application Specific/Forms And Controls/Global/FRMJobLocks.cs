@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMJobLocks : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMJobLocks() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMJobLocks_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -159,9 +157,9 @@ namespace FSM
             _grpLocks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgLocks).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpLocks
-            // 
+            //
             _grpLocks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpLocks.Controls.Add(_dgLocks);
@@ -171,9 +169,9 @@ namespace FSM
             _grpLocks.TabIndex = 1;
             _grpLocks.TabStop = false;
             _grpLocks.Text = "Highlight job to release and click 'Unlock'";
-            // 
+            //
             // dgLocks
-            // 
+            //
             _dgLocks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgLocks.DataMember = "";
@@ -182,9 +180,9 @@ namespace FSM
             _dgLocks.Name = "dgLocks";
             _dgLocks.Size = new Size(753, 377);
             _dgLocks.TabIndex = 1;
-            // 
+            //
             // btnUnlock
-            // 
+            //
             _btnUnlock.AccessibleDescription = "Save item";
             _btnUnlock.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUnlock.Cursor = Cursors.Hand;
@@ -195,9 +193,9 @@ namespace FSM
             _btnUnlock.Size = new Size(56, 23);
             _btnUnlock.TabIndex = 2;
             _btnUnlock.Text = "Unlock";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.AccessibleDescription = "Save item";
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Cursor = Cursors.Hand;
@@ -208,9 +206,9 @@ namespace FSM
             _btnClose.Size = new Size(56, 23);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // FRMJobLocks
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(785, 486);
             Controls.Add(_btnClose);
@@ -230,7 +228,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDataGrid();
@@ -245,7 +244,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -288,6 +287,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgLocks);

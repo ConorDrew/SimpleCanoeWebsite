@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMDocuments : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMDocuments() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMDocuments_Load;
@@ -132,36 +131,36 @@ namespace FSM
             _btnClose.Click += new EventHandler(btnClose_Click);
             _pnlMain = new Panel();
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 533);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 25);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(72, 533);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(640, 493);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // FRMDocuments
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(648, 571);
             Controls.Add(_btnClose);
@@ -180,7 +179,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ((UCDocuments)LoadedControl).EntityToLinkTo = (Entity.Sys.Enums.TableNames)get_GetParameter(0);
             ((UCDocuments)LoadedControl).IDToLinkTo = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(1));

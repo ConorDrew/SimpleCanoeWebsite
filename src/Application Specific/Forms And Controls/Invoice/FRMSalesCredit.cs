@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -13,13 +13,13 @@ namespace FSM
     {
         public FRMSalesCredit()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSystemScheduleOfRate_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // ("InvoicedID")
         public FRMSalesCredit(DataRow[] IDToLinkToIn, bool FromQuoteJobIn = false, bool FromJobIn = false) : base()
         {
@@ -71,7 +71,6 @@ namespace FSM
             {
                 if (_grpSystemScheduleOfRate != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _grpSystemScheduleOfRate.Enter -= grpSystemScheduleOfRate_Enter;
                 }
@@ -626,9 +625,9 @@ namespace FSM
             _grpSystemScheduleOfRate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgRates).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpSystemScheduleOfRate
-            // 
+            //
             _grpSystemScheduleOfRate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSystemScheduleOfRate.Controls.Add(_txtDept);
@@ -658,182 +657,182 @@ namespace FSM
             _grpSystemScheduleOfRate.TabIndex = 2;
             _grpSystemScheduleOfRate.TabStop = false;
             _grpSystemScheduleOfRate.Text = "Credit Details";
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.AutoSize = true;
             _Label7.Location = new Point(6, 287);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(88, 13);
             _Label7.TabIndex = 49;
             _Label7.Text = "Date of Credit";
-            // 
+            //
             // DateTimePicker1
-            // 
+            //
             _DateTimePicker1.Location = new Point(9, 303);
             _DateTimePicker1.Name = "DateTimePicker1";
             _DateTimePicker1.Size = new Size(324, 21);
             _DateTimePicker1.TabIndex = 48;
-            // 
+            //
             // dgRates
-            // 
+            //
             _dgRates.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             _dgRates.Location = new Point(6, 20);
             _dgRates.Name = "dgRates";
             _dgRates.Size = new Size(620, 170);
             _dgRates.TabIndex = 47;
-            // 
+            //
             // txtAfter
-            // 
+            //
             _txtAfter.Location = new Point(495, 306);
             _txtAfter.Name = "txtAfter";
             _txtAfter.ReadOnly = true;
             _txtAfter.Size = new Size(112, 21);
             _txtAfter.TabIndex = 45;
-            // 
+            //
             // txtCredit
-            // 
+            //
             _txtCredit.Location = new Point(495, 262);
             _txtCredit.Name = "txtCredit";
             _txtCredit.ReadOnly = true;
             _txtCredit.Size = new Size(112, 21);
             _txtCredit.TabIndex = 43;
-            // 
+            //
             // txtInvoiced
-            // 
+            //
             _txtInvoiced.Location = new Point(495, 221);
             _txtInvoiced.Name = "txtInvoiced";
             _txtInvoiced.ReadOnly = true;
             _txtInvoiced.Size = new Size(112, 21);
             _txtInvoiced.TabIndex = 41;
-            // 
+            //
             // txtExRef
-            // 
+            //
             _txtExRef.Location = new Point(233, 262);
             _txtExRef.Name = "txtExRef";
             _txtExRef.Size = new Size(100, 21);
             _txtExRef.TabIndex = 39;
-            // 
+            //
             // cboUser
-            // 
+            //
             _cboUser.FormattingEnabled = true;
             _cboUser.Location = new Point(9, 221);
             _cboUser.Name = "cboUser";
             _cboUser.Size = new Size(324, 21);
             _cboUser.TabIndex = 37;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Location = new Point(6, 332);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(110, 13);
             _Label1.TabIndex = 36;
             _Label1.Text = "Reason For Credit";
-            // 
+            //
             // txtReason
-            // 
+            //
             _txtReason.Location = new Point(8, 350);
             _txtReason.Multiline = true;
             _txtReason.Name = "txtReason";
             _txtReason.Size = new Size(611, 40);
             _txtReason.TabIndex = 35;
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Location = new Point(8, 400);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(75, 23);
             _btnCancel.TabIndex = 34;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Location = new Point(518, 400);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(101, 23);
             _btnAdd.TabIndex = 33;
             _btnAdd.Text = "Create Credit";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.AutoSize = true;
             _Label3.Location = new Point(231, 246);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(44, 13);
             _Label3.TabIndex = 40;
             _Label3.Text = "Ex Ref";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.AutoSize = true;
             _Label2.Location = new Point(6, 203);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(86, 13);
             _Label2.TabIndex = 38;
             _Label2.Text = "Requested By";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.AutoSize = true;
             _Label5.Location = new Point(505, 247);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(87, 13);
             _Label5.TabIndex = 44;
             _Label5.Text = "Total Credited";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.AutoSize = true;
             _Label4.Location = new Point(479, 203);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(145, 13);
             _Label4.TabIndex = 42;
             _Label4.Text = "Total Originally Invoiced";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.AutoSize = true;
             _Label6.Location = new Point(474, 287);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(150, 13);
             _Label6.TabIndex = 46;
             _Label6.Text = "Total Invoice after Credit";
-            // 
+            //
             // txtNominal
-            // 
+            //
             _txtNominal.Location = new Point(9, 263);
             _txtNominal.Name = "txtNominal";
             _txtNominal.Size = new Size(100, 21);
             _txtNominal.TabIndex = 50;
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.AutoSize = true;
             _Label8.Location = new Point(7, 247);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(53, 13);
             _Label8.TabIndex = 51;
             _Label8.Text = "Nominal";
-            // 
+            //
             // txtDept
-            // 
+            //
             _txtDept.Location = new Point(121, 263);
             _txtDept.Name = "txtDept";
             _txtDept.Size = new Size(100, 21);
             _txtDept.TabIndex = 52;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.AutoSize = true;
             _Label9.Location = new Point(119, 247);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(34, 13);
             _Label9.TabIndex = 53;
             _Label9.Text = "Dept";
-            // 
+            //
             // FRMSalesCredit
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(648, 470);
             Controls.Add(_grpSystemScheduleOfRate);
@@ -849,7 +848,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupRatesDataGrid();
@@ -967,6 +967,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupRatesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGridView(dgRates);
@@ -1050,7 +1051,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate()
+
+        public void Populate()
         {
             RatesDataview = App.DB.SalesCredit.InvoicedLines_GetAll_ByInvoicedIDRows(IDToLinkTo);
             RatesDataview.Table.Columns.Add("SalesCreditID");
@@ -1069,7 +1071,7 @@ namespace FSM
             double totalAfterCredit = Entity.Sys.Helper.MakeDoubleValid(txtAfter.Text.Trim());
             foreach (DataRow dr in RatesDataview.Table.Rows)
             {
-                if (Conversions.ToBoolean(dr["Credit"] > 0) && totalAfterCredit >= 0)
+                if (Conversions.ToBoolean((int)dr["Credit"] > 0) && totalAfterCredit >= 0)
                 {
                     raise = true; // yup
                     var oSalesCredit = new Entity.SalesCredits.SalesCredit();

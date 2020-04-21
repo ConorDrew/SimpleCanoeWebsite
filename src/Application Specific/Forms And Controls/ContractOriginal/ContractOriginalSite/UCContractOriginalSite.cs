@@ -1,23 +1,22 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCContractOriginalSite : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCContractOriginalSite() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCContractSite_Load;
@@ -608,7 +607,6 @@ namespace FSM
             {
                 if (_btnAddVisit != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnAddVisit.Click -= btnAddVisit_Click;
                 }
@@ -745,9 +743,9 @@ namespace FSM
             _grpVisits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgVisits).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpContractSite
-            // 
+            //
             _grpContractSite.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpContractSite.Controls.Add(_GroupBox1);
@@ -772,9 +770,9 @@ namespace FSM
             _grpContractSite.TabIndex = 0;
             _grpContractSite.TabStop = false;
             _grpContractSite.Text = "Main Details";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _GroupBox1.Controls.Add(_btnAddVisit);
             _GroupBox1.Controls.Add(_btRemoveVisit);
@@ -785,27 +783,27 @@ namespace FSM
             _GroupBox1.TabIndex = 15;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Commercial Contract Visits Setup";
-            // 
+            //
             // btnAddVisit
-            // 
+            //
             _btnAddVisit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddVisit.Location = new Point(10, 129);
             _btnAddVisit.Name = "btnAddVisit";
             _btnAddVisit.Size = new Size(89, 23);
             _btnAddVisit.TabIndex = 4;
             _btnAddVisit.Text = "Add";
-            // 
+            //
             // btRemoveVisit
-            // 
+            //
             _btRemoveVisit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btRemoveVisit.Location = new Point(802, 129);
             _btRemoveVisit.Name = "btRemoveVisit";
             _btRemoveVisit.Size = new Size(101, 23);
             _btRemoveVisit.TabIndex = 5;
             _btRemoveVisit.Text = "Remove";
-            // 
+            //
             // dgVisitsSetup
-            // 
+            //
             _dgVisitsSetup.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgVisitsSetup.DataMember = "";
@@ -814,9 +812,9 @@ namespace FSM
             _dgVisitsSetup.Name = "dgVisitsSetup";
             _dgVisitsSetup.Size = new Size(892, 102);
             _dgVisitsSetup.TabIndex = 0;
-            // 
+            //
             // chkCommercial
-            // 
+            //
             _chkCommercial.AutoSize = true;
             _chkCommercial.Location = new Point(161, 86);
             _chkCommercial.Name = "chkCommercial";
@@ -825,16 +823,16 @@ namespace FSM
             _chkCommercial.TabIndex = 7;
             _chkCommercial.Text = "Commercial";
             _chkCommercial.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtVisitDuration
-            // 
+            //
             _txtVisitDuration.Location = new Point(407, 88);
             _txtVisitDuration.Name = "txtVisitDuration";
             _txtVisitDuration.Size = new Size(136, 21);
             _txtVisitDuration.TabIndex = 9;
-            // 
+            //
             // txtAdditionalNotes
-            // 
+            //
             _txtAdditionalNotes.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAdditionalNotes.Location = new Point(656, 56);
             _txtAdditionalNotes.Multiline = true;
@@ -842,17 +840,17 @@ namespace FSM
             _txtAdditionalNotes.ScrollBars = ScrollBars.Vertical;
             _txtAdditionalNotes.Size = new Size(265, 53);
             _txtAdditionalNotes.TabIndex = 11;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(549, 72);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(112, 20);
             _Label2.TabIndex = 10;
             _Label2.Text = "Additional Notes";
-            // 
+            //
             // chkLLCertificateReqd
-            // 
+            //
             _chkLLCertificateReqd.AutoSize = true;
             _chkLLCertificateReqd.CheckAlign = ContentAlignment.MiddleRight;
             _chkLLCertificateReqd.Location = new Point(16, 86);
@@ -861,9 +859,9 @@ namespace FSM
             _chkLLCertificateReqd.TabIndex = 6;
             _chkLLCertificateReqd.Text = "L/L Certificate Reqd";
             _chkLLCertificateReqd.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpScheduleOfRates
-            // 
+            //
             _grpScheduleOfRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpScheduleOfRates.Controls.Add(_dgSystemRates);
@@ -876,9 +874,9 @@ namespace FSM
             _grpScheduleOfRates.TabIndex = 12;
             _grpScheduleOfRates.TabStop = false;
             _grpScheduleOfRates.Text = "Contract Schedule Of Rates";
-            // 
+            //
             // dgSystemRates
-            // 
+            //
             _dgSystemRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSystemRates.DataMember = "";
@@ -887,27 +885,27 @@ namespace FSM
             _dgSystemRates.Name = "dgSystemRates";
             _dgSystemRates.Size = new Size(432, 106);
             _dgSystemRates.TabIndex = 0;
-            // 
+            //
             // btnSiteScheduleOfRates
-            // 
+            //
             _btnSiteScheduleOfRates.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSiteScheduleOfRates.Location = new Point(449, 126);
             _btnSiteScheduleOfRates.Name = "btnSiteScheduleOfRates";
             _btnSiteScheduleOfRates.Size = new Size(89, 23);
             _btnSiteScheduleOfRates.TabIndex = 2;
             _btnSiteScheduleOfRates.Text = "Add";
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemove.Location = new Point(802, 126);
             _btnRemove.Name = "btnRemove";
             _btnRemove.Size = new Size(101, 23);
             _btnRemove.TabIndex = 3;
             _btnRemove.Text = "Remove";
-            // 
+            //
             // dgScheduleOfRates
-            // 
+            //
             _dgScheduleOfRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _dgScheduleOfRates.DataMember = "";
             _dgScheduleOfRates.HeaderForeColor = SystemColors.ControlText;
@@ -915,17 +913,17 @@ namespace FSM
             _dgScheduleOfRates.Name = "dgScheduleOfRates";
             _dgScheduleOfRates.Size = new Size(454, 106);
             _dgScheduleOfRates.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(307, 88);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(89, 20);
             _Label1.TabIndex = 8;
             _Label1.Text = "Visit Duration";
-            // 
+            //
             // grpAssets
-            // 
+            //
             _grpAssets.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _grpAssets.Controls.Add(_dgAssets);
             _grpAssets.Location = new Point(14, 434);
@@ -934,9 +932,9 @@ namespace FSM
             _grpAssets.TabIndex = 13;
             _grpAssets.TabStop = false;
             _grpAssets.Text = "Appliances";
-            // 
+            //
             // dgAssets
-            // 
+            //
             _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAssets.DataMember = "";
@@ -945,9 +943,9 @@ namespace FSM
             _dgAssets.Name = "dgAssets";
             _dgAssets.Size = new Size(423, 130);
             _dgAssets.TabIndex = 0;
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Location = new Point(78, 19);
             _txtSite.Multiline = true;
             _txtSite.Name = "txtSite";
@@ -955,25 +953,25 @@ namespace FSM
             _txtSite.ScrollBars = ScrollBars.Vertical;
             _txtSite.Size = new Size(843, 31);
             _txtSite.TabIndex = 1;
-            // 
+            //
             // dtpFirstVisitDate
-            // 
+            //
             _dtpFirstVisitDate.Location = new Point(139, 57);
             _dtpFirstVisitDate.Name = "dtpFirstVisitDate";
             _dtpFirstVisitDate.Size = new Size(162, 21);
             _dtpFirstVisitDate.TabIndex = 3;
             _dtpFirstVisitDate.Tag = "ContractSite.FirstVisitDate";
-            // 
+            //
             // lblFirstVisitDate
-            // 
+            //
             _lblFirstVisitDate.Location = new Point(18, 58);
             _lblFirstVisitDate.Name = "lblFirstVisitDate";
             _lblFirstVisitDate.Size = new Size(89, 20);
             _lblFirstVisitDate.TabIndex = 2;
             _lblFirstVisitDate.Text = "First Visit Date";
-            // 
+            //
             // cboVisitFrequencyID
-            // 
+            //
             _cboVisitFrequencyID.Cursor = Cursors.Hand;
             _cboVisitFrequencyID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboVisitFrequencyID.Location = new Point(407, 58);
@@ -981,25 +979,25 @@ namespace FSM
             _cboVisitFrequencyID.Size = new Size(136, 21);
             _cboVisitFrequencyID.TabIndex = 5;
             _cboVisitFrequencyID.Tag = "ContractSite.VisitFrequencyID";
-            // 
+            //
             // lblVisitFrequencyID
-            // 
+            //
             _lblVisitFrequencyID.Location = new Point(307, 57);
             _lblVisitFrequencyID.Name = "lblVisitFrequencyID";
             _lblVisitFrequencyID.Size = new Size(94, 20);
             _lblVisitFrequencyID.TabIndex = 4;
             _lblVisitFrequencyID.Text = "Visit Frequency";
-            // 
+            //
             // lblSite
-            // 
+            //
             _lblSite.Location = new Point(13, 19);
             _lblSite.Name = "lblSite";
             _lblSite.Size = new Size(64, 20);
             _lblSite.TabIndex = 0;
             _lblSite.Text = "Property";
-            // 
+            //
             // grpVisits
-            // 
+            //
             _grpVisits.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpVisits.Controls.Add(_dgVisits);
             _grpVisits.Location = new Point(462, 434);
@@ -1008,9 +1006,9 @@ namespace FSM
             _grpVisits.TabIndex = 14;
             _grpVisits.TabStop = false;
             _grpVisits.Text = "Visits Created";
-            // 
+            //
             // dgVisits
-            // 
+            //
             _dgVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgVisits.DataMember = "";
@@ -1019,9 +1017,9 @@ namespace FSM
             _dgVisits.Name = "dgVisits";
             _dgVisits.Size = new Size(446, 131);
             _dgVisits.TabIndex = 0;
-            // 
+            //
             // UCContractOriginalSite
-            // 
+            //
             Controls.Add(_grpContractSite);
             Name = "UCContractOriginalSite";
             Size = new Size(941, 616);
@@ -1041,7 +1039,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -1056,11 +1055,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraTest);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1118,7 +1118,7 @@ namespace FSM
                     _currentContractSite.ContractSiteScheduleOfRates = OldContractSite.ContractSiteScheduleOfRates;
                     int visitDuration = 0;
                     foreach (DataRow drSOR in CurrentContractSite.ContractSiteScheduleOfRates.Table.Rows)
-                        visitDuration += drSOR["Qty"] * drSOR["TimeInMins"];
+                        visitDuration += (int)drSOR["Qty"] * (int)drSOR["TimeInMins"];
                     _currentContractSite.SetVisitDuration = visitDuration;
                     _currentContractSite.SetAdditionalNotes = OldContractSite.AdditionalNotes;
                     _currentContractSite.SetIncludeAssetPrice = OldContractSite.IncludeAssetPrice;
@@ -1341,6 +1341,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupAssetsDataGrid()
         {
             Helper.SetUpDataGrid(dgAssets);
@@ -1687,9 +1688,9 @@ namespace FSM
                     {
                         // REMOVE SOR TIME
                         int visitDuration = Helper.MakeIntegerValid(txtVisitDuration.Text);
-                        visitDuration -= SelectedRatesDataRow["Qty"] * SelectedRatesDataRow["TimeInMins"];
+                        visitDuration -= (int)SelectedRatesDataRow["Qty"] * (int)SelectedRatesDataRow["TimeInMins"];
                         txtVisitDuration.Text = visitDuration.ToString();
-                        if (Conversions.ToBoolean(SelectedRatesDataRow["ContractOriginalSiteRateID"] > 0))
+                        if (Conversions.ToBoolean((int)SelectedRatesDataRow["ContractOriginalSiteRateID"] > 0))
                         {
                             App.DB.ContractOriginalSiteRates.Delete(Conversions.ToInteger(SelectedRatesDataRow["ContractOriginalSiteRateID"]));
                             CurrentContractSite.ContractSiteScheduleOfRates = App.DB.ContractOriginalSiteRates.ContractOriginalSiteRates_GetForContractSite(CurrentContractSite.ContractSiteID);
@@ -1713,7 +1714,7 @@ namespace FSM
                 if (CurrentContractSite.ContractSiteScheduleOfRates.Table.Select(Conversions.ToString("RateID = " + tickedRow["SystemScheduleOfRateID"])).Length > 0)
                 {
                     var updateRow = CurrentContractSite.ContractSiteScheduleOfRates.Table.Select(Conversions.ToString("RateID = " + tickedRow["SystemScheduleOfRateID"]))[0];
-                    updateRow["Qty"] += tickedRow["Qty"];
+                    updateRow["Qty"] = (int)updateRow["Qty"] + (int)tickedRow["Qty"];
                     updateRow["Updated"] = true;
                     updateRow.AcceptChanges();
                     CurrentContractSite.ContractSiteScheduleOfRates.Table.AcceptChanges();
@@ -1736,7 +1737,7 @@ namespace FSM
                 }
 
                 int visitDuration = Helper.MakeIntegerValid(txtVisitDuration.Text);
-                visitDuration += tickedRow["Qty"] * tickedRow["TimeInMins"];
+                visitDuration += (int)tickedRow["Qty"] * (int)tickedRow["TimeInMins"];
                 txtVisitDuration.Text = visitDuration.ToString();
             }
 
@@ -1762,6 +1763,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private DataView BuildUpScheduleOfRatesDataview()
         {
             var newTable = new DataTable();
@@ -1819,7 +1821,7 @@ namespace FSM
             return numberOfVisit * SORPrice;
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             if (Visits2 is null)
             {
@@ -1919,7 +1921,6 @@ namespace FSM
                     {
                         if (Helper.MakeBooleanValid(drAsset["Tick"]) == true)
                         {
-
                             // NOW ADD TO CONTRACT SITE AS NORMAL
                             var ContractSiteAsset = new Entity.ContractOriginalSiteAssets.ContractOriginalSiteAsset();
                             ContractSiteAsset.SetAssetID = drAsset["AssetID"];
@@ -1980,7 +1981,7 @@ namespace FSM
                         ii += 1;
                         App.DB.ContractVisits.Delete(Conversions.ToInteger(dr["ContractVisitID"]));
                         int r = Conversions.ToInteger(App.DB.ExecuteScalar(Conversions.ToString("SELECT COUNT(*) FROM tblContractVisits WHERE ContractVisitID = " + dr["ContractVisitID"])));
-                        if (r > 0) // 
+                        if (r > 0) //
                         {
                             // it has been moved on too far
                             st += "row " + ii + "couldn't be ammended as its gone past scheduled " + Constants.vbNewLine;
@@ -2160,7 +2161,7 @@ namespace FSM
                         jobSummary += " And ";
                     }
 
-                    if (Conversions.ToBoolean(rateRow["Qty"] > 1))
+                    if (Conversions.ToBoolean((int)rateRow["Qty"] > 1))
                     {
                         jobSummary += Conversions.ToString(rateRow["Qty"] + " x ") + rateRow["Description"];
                     }
@@ -2190,9 +2191,7 @@ namespace FSM
                 jobSummary += CurrentContractSite.AdditionalNotes;
                 if (Conversions.ToDate(Strings.Format(estVisitDate, "dd/MM/yyyy") + " 00:00:00") >= Conversions.ToDate(Strings.Format(CurrentContract.ContractStartDate, "dd/MM/yyyy") + " 00:00:00") & Conversions.ToDate(Strings.Format(estVisitDate, "dd/MM/yyyy") + " 00:00:00") <= Conversions.ToDate(Strings.Format(CurrentContract.ContractEndDate, "dd/MM/yyyy") + " 00:00:00"))
 
-
                 {
-
                     // MAKE SURE WE DON'T BOOK A SATURADY OR SUNDAY
                     if (estVisitDate.DayOfWeek == DayOfWeek.Saturday)
                     {
@@ -2337,7 +2336,6 @@ namespace FSM
         {
             try
             {
-
                 // Duration OF Contract In Days
                 int contractDuration;
                 // contractDuration = CurrentContract.ContractEndDate.Subtract(CurrentContract.ContractStartDate).Days
@@ -2361,7 +2359,7 @@ namespace FSM
                     case Enums.VisitFrequency.Annually:
                         {
                             visitFreqInMonths = 12;
-                            estVisitDate = Conversions.ToDate(dr["VisitDate"].Date + " 9:00:00");
+                            estVisitDate = Conversions.ToDate(Helper.MakeDateTimeValid(dr["VisitDate"]).Date + " 9:00:00");
                             break;
                         }
 
@@ -2463,7 +2461,6 @@ namespace FSM
 
                 while (time > 0)
                 {
-
                     // INSERT JOB ITEM
                     var jobOfWork = new Entity.JobOfWorks.JobOfWork();
                     jobOfWork.SetPONumber = "";
@@ -2723,7 +2720,6 @@ namespace FSM
                 {
                     if (Conversions.ToBoolean(numOfSlotsAvailable.Count == numOfSlotsNeeded | Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
                     {
-
                         // IF THERE ARE ENOUGH AVAILABLE CONSECTUTIVE SLOTS ADD THE START TIME ONTO THE DATE
 
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
@@ -2798,7 +2794,7 @@ namespace FSM
                     {
                         // REMOVE
 
-                        if (Information.IsDBNull(SelectedVisitDataRow2["ContractVisitID"]) || Conversions.ToBoolean(SelectedVisitDataRow2["ContractVisitID"] < 1))
+                        if (Information.IsDBNull(SelectedVisitDataRow2["ContractVisitID"]) || Conversions.ToBoolean((int)SelectedVisitDataRow2["ContractVisitID"] < 1))
                         {
                             // not in DB
                             Visits2.Table.Rows.Remove(SelectedVisitDataRow2);

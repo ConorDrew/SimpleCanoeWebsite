@@ -1,20 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCEquipment : UCBase, IUserControl
     {
-
-
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCEquipment() : base()
         {
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -30,7 +28,6 @@ namespace FSM
             var argc1 = cboStatus;
             Combo.SetUpCombo(ref argc1, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.EquipmentStatus).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Please_Select);
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -51,7 +48,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private TabControl _tcVans;
 
@@ -480,7 +477,6 @@ namespace FSM
             {
                 if (_btnfindEngineer != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnfindEngineer.Click -= btnfindEngineer_Click_1;
                 }
@@ -1110,9 +1106,9 @@ namespace FSM
             _tabGenerateWO.SuspendLayout();
             _grpWorkOrder.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // tcVans
-            // 
+            //
             _tcVans.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcVans.Controls.Add(_tabDetails);
@@ -1124,18 +1120,18 @@ namespace FSM
             _tcVans.SelectedIndex = 0;
             _tcVans.Size = new Size(683, 670);
             _tcVans.TabIndex = 14;
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_grpVan);
             _tabDetails.Location = new Point(4, 22);
             _tabDetails.Name = "tabDetails";
             _tabDetails.Size = new Size(675, 644);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Main Details";
-            // 
+            //
             // grpVan
-            // 
+            //
             _grpVan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVan.Controls.Add(_btnUnassign);
@@ -1170,9 +1166,9 @@ namespace FSM
             _grpVan.TabIndex = 200;
             _grpVan.TabStop = false;
             _grpVan.Text = "Details";
-            // 
+            //
             // btnUnassign
-            // 
+            //
             _btnUnassign.BackColor = Color.White;
             _btnUnassign.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnUnassign.Location = new Point(447, 278);
@@ -1181,25 +1177,25 @@ namespace FSM
             _btnUnassign.TabIndex = 472;
             _btnUnassign.Text = "Un-assign";
             _btnUnassign.UseVisualStyleBackColor = false;
-            // 
+            //
             // lblCalibrationStatus
-            // 
+            //
             _lblCalibrationStatus.Location = new Point(382, 118);
             _lblCalibrationStatus.Name = "lblCalibrationStatus";
             _lblCalibrationStatus.Size = new Size(136, 20);
             _lblCalibrationStatus.TabIndex = 471;
             _lblCalibrationStatus.Text = "[Calibration Status]";
-            // 
+            //
             // txtAssetNumber
-            // 
+            //
             _txtAssetNumber.Location = new Point(175, 252);
             _txtAssetNumber.MaxLength = 9;
             _txtAssetNumber.Name = "txtAssetNumber";
             _txtAssetNumber.Size = new Size(201, 21);
             _txtAssetNumber.TabIndex = 9;
-            // 
+            //
             // txtSerialNo
-            // 
+            //
             _txtSerialNo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtSerialNo.Location = new Point(175, 88);
@@ -1208,17 +1204,17 @@ namespace FSM
             _txtSerialNo.Size = new Size(373, 21);
             _txtSerialNo.TabIndex = 3;
             _txtSerialNo.Tag = "Van.Registration";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(8, 90);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(144, 20);
             _Label6.TabIndex = 470;
             _Label6.Text = "Serial No.";
-            // 
+            //
             // cboEquipmentType
-            // 
+            //
             _cboEquipmentType.Cursor = Cursors.Hand;
             _cboEquipmentType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboEquipmentType.FormattingEnabled = true;
@@ -1226,17 +1222,17 @@ namespace FSM
             _cboEquipmentType.Name = "cboEquipmentType";
             _cboEquipmentType.Size = new Size(201, 21);
             _cboEquipmentType.TabIndex = 1;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 35);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(136, 20);
             _Label4.TabIndex = 440;
             _Label4.Text = "Type of Equipment";
-            // 
+            //
             // txtCalibrationCert
-            // 
+            //
             _txtCalibrationCert.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtCalibrationCert.Location = new Point(175, 170);
@@ -1245,17 +1241,17 @@ namespace FSM
             _txtCalibrationCert.Size = new Size(373, 21);
             _txtCalibrationCert.TabIndex = 6;
             _txtCalibrationCert.Tag = "Van.Registration";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 173);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(161, 20);
             _Label3.TabIndex = 43;
             _Label3.Text = "Calibration Certificate";
-            // 
+            //
             // btnfindEngineer
-            // 
+            //
             _btnfindEngineer.BackColor = Color.White;
             _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnfindEngineer.Location = new Point(409, 278);
@@ -1264,26 +1260,26 @@ namespace FSM
             _btnfindEngineer.TabIndex = 11;
             _btnfindEngineer.Text = "...";
             _btnfindEngineer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtEngineer
-            // 
+            //
             _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtEngineer.Location = new Point(175, 279);
             _txtEngineer.Name = "txtEngineer";
             _txtEngineer.ReadOnly = true;
             _txtEngineer.Size = new Size(228, 21);
             _txtEngineer.TabIndex = 10;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 282);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(70, 16);
             _Label5.TabIndex = 410;
             _Label5.Text = "Engineer";
-            // 
+            //
             // cboStatus
-            // 
+            //
             _cboStatus.Cursor = Cursors.Hand;
             _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboStatus.FormattingEnabled = true;
@@ -1291,33 +1287,33 @@ namespace FSM
             _cboStatus.Name = "cboStatus";
             _cboStatus.Size = new Size(201, 21);
             _cboStatus.TabIndex = 8;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 146);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(163, 20);
             _Label1.TabIndex = 370;
             _Label1.Text = "Calibration Period (Months)";
-            // 
+            //
             // txtCallibrationPeriod
-            // 
+            //
             _txtCallibrationPeriod.Location = new Point(175, 142);
             _txtCallibrationPeriod.MaxLength = 9;
             _txtCallibrationPeriod.Name = "txtCallibrationPeriod";
             _txtCallibrationPeriod.Size = new Size(43, 21);
             _txtCallibrationPeriod.TabIndex = 5;
             _txtCallibrationPeriod.Text = "12";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 278);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(136, 20);
             _Label2.TabIndex = 340;
-            // 
+            //
             // txtDecription
-            // 
+            //
             _txtDecription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtDecription.Location = new Point(175, 61);
@@ -1326,17 +1322,17 @@ namespace FSM
             _txtDecription.Size = new Size(373, 21);
             _txtDecription.TabIndex = 2;
             _txtDecription.Tag = "Van.Registration";
-            // 
+            //
             // lblRegistration
-            // 
+            //
             _lblRegistration.Location = new Point(8, 64);
             _lblRegistration.Name = "lblRegistration";
             _lblRegistration.Size = new Size(144, 20);
             _lblRegistration.TabIndex = 310;
             _lblRegistration.Text = "Description";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(175, 321);
@@ -1346,67 +1342,67 @@ namespace FSM
             _txtNotes.Size = new Size(467, 259);
             _txtNotes.TabIndex = 12;
             _txtNotes.Tag = "Van.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 324);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(53, 20);
             _lblNotes.TabIndex = 310;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // dtpCalibrationDate
-            // 
+            //
             _dtpCalibrationDate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _dtpCalibrationDate.Location = new Point(175, 115);
             _dtpCalibrationDate.Name = "dtpCalibrationDate";
             _dtpCalibrationDate.Size = new Size(201, 21);
             _dtpCalibrationDate.TabIndex = 4;
             _dtpCalibrationDate.Tag = "Van.InsuranceDue";
-            // 
+            //
             // lblInsuranceDue
-            // 
+            //
             _lblInsuranceDue.Location = new Point(8, 121);
             _lblInsuranceDue.Name = "lblInsuranceDue";
             _lblInsuranceDue.Size = new Size(136, 20);
             _lblInsuranceDue.TabIndex = 31;
             _lblInsuranceDue.Text = "Calibration Date";
-            // 
+            //
             // dtpWarrantyExpires
-            // 
+            //
             _dtpWarrantyExpires.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _dtpWarrantyExpires.Location = new Point(175, 200);
             _dtpWarrantyExpires.Name = "dtpWarrantyExpires";
             _dtpWarrantyExpires.Size = new Size(201, 21);
             _dtpWarrantyExpires.TabIndex = 7;
             _dtpWarrantyExpires.Tag = "Van.MOTDue";
-            // 
+            //
             // lblMOTDue
-            // 
+            //
             _lblMOTDue.Location = new Point(8, 201);
             _lblMOTDue.Name = "lblMOTDue";
             _lblMOTDue.Size = new Size(114, 20);
             _lblMOTDue.TabIndex = 310;
             _lblMOTDue.Text = "Warranty Expires";
-            // 
+            //
             // lblTaxDue
-            // 
+            //
             _lblTaxDue.Location = new Point(8, 228);
             _lblTaxDue.Name = "lblTaxDue";
             _lblTaxDue.Size = new Size(64, 20);
             _lblTaxDue.TabIndex = 31;
             _lblTaxDue.Text = "Status";
-            // 
+            //
             // lblAssetId
-            // 
+            //
             _lblAssetId.Location = new Point(8, 255);
             _lblAssetId.Name = "lblAssetId";
             _lblAssetId.Size = new Size(123, 20);
             _lblAssetId.TabIndex = 310;
             _lblAssetId.Text = "Asset Number";
-            // 
+            //
             // tabHistory
-            // 
+            //
             _tabHistory.BackColor = SystemColors.Control;
             _tabHistory.Controls.Add(_GroupBox1);
             _tabHistory.Location = new Point(4, 22);
@@ -1414,9 +1410,9 @@ namespace FSM
             _tabHistory.Size = new Size(675, 644);
             _tabHistory.TabIndex = 10;
             _tabHistory.Text = "History";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_dgEquipmentAudits);
@@ -1426,9 +1422,9 @@ namespace FSM
             _GroupBox1.TabIndex = 3;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Equipment Audit";
-            // 
+            //
             // dgEquipmentAudits
-            // 
+            //
             _dgEquipmentAudits.DataMember = "";
             _dgEquipmentAudits.Dock = DockStyle.Fill;
             _dgEquipmentAudits.HeaderForeColor = SystemColors.ControlText;
@@ -1436,18 +1432,18 @@ namespace FSM
             _dgEquipmentAudits.Name = "dgEquipmentAudits";
             _dgEquipmentAudits.Size = new Size(658, 611);
             _dgEquipmentAudits.TabIndex = 15;
-            // 
+            //
             // tabDocuments
-            // 
+            //
             _tabDocuments.Location = new Point(4, 22);
             _tabDocuments.Name = "tabDocuments";
             _tabDocuments.Size = new Size(675, 644);
             _tabDocuments.TabIndex = 11;
             _tabDocuments.Text = "Documents";
             _tabDocuments.UseVisualStyleBackColor = true;
-            // 
+            //
             // tabGenerateWO
-            // 
+            //
             _tabGenerateWO.Controls.Add(_grpWorkOrder);
             _tabGenerateWO.Location = new Point(4, 22);
             _tabGenerateWO.Name = "tabGenerateWO";
@@ -1455,9 +1451,9 @@ namespace FSM
             _tabGenerateWO.TabIndex = 12;
             _tabGenerateWO.Text = "Generate WO";
             _tabGenerateWO.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpWorkOrder
-            // 
+            //
             _grpWorkOrder.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpWorkOrder.BackColor = SystemColors.Control;
@@ -1473,9 +1469,9 @@ namespace FSM
             _grpWorkOrder.TabIndex = 4;
             _grpWorkOrder.TabStop = false;
             _grpWorkOrder.Text = "Equipment Work Order";
-            // 
+            //
             // txtEmail
-            // 
+            //
             _txtEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmail.Location = new Point(105, 164);
             _txtEmail.MaxLength = 256;
@@ -1483,18 +1479,18 @@ namespace FSM
             _txtEmail.Size = new Size(542, 21);
             _txtEmail.TabIndex = 475;
             _txtEmail.Tag = "Van.Registration";
-            // 
+            //
             // lblEmail
-            // 
+            //
             _lblEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblEmail.Location = new Point(6, 167);
             _lblEmail.Name = "lblEmail";
             _lblEmail.Size = new Size(85, 20);
             _lblEmail.TabIndex = 476;
             _lblEmail.Text = "Email";
-            // 
+            //
             // btnGenerateAndEmail
-            // 
+            //
             _btnGenerateAndEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnGenerateAndEmail.BackColor = Color.White;
             _btnGenerateAndEmail.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1504,9 +1500,9 @@ namespace FSM
             _btnGenerateAndEmail.TabIndex = 474;
             _btnGenerateAndEmail.Text = "Generate And Email";
             _btnGenerateAndEmail.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnGenerate
-            // 
+            //
             _btnGenerate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnGenerate.BackColor = Color.White;
             _btnGenerate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1516,9 +1512,9 @@ namespace FSM
             _btnGenerate.TabIndex = 473;
             _btnGenerate.Text = "Generate";
             _btnGenerate.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtFaults
-            // 
+            //
             _txtFaults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtFaults.Location = new Point(105, 25);
@@ -1528,17 +1524,17 @@ namespace FSM
             _txtFaults.Size = new Size(542, 105);
             _txtFaults.TabIndex = 311;
             _txtFaults.Tag = "";
-            // 
+            //
             // lblFaults
-            // 
+            //
             _lblFaults.Location = new Point(6, 28);
             _lblFaults.Name = "lblFaults";
             _lblFaults.Size = new Size(53, 20);
             _lblFaults.TabIndex = 312;
             _lblFaults.Text = "Faults";
-            // 
+            //
             // UCEquipment
-            // 
+            //
             Controls.Add(_tcVans);
             Name = "UCEquipment";
             Size = new Size(693, 680);
@@ -1559,7 +1555,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupDataGrid();
@@ -1580,11 +1577,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1688,6 +1686,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             var tStyle = dgEquipmentAudits.TableStyles[0];
@@ -1729,8 +1728,6 @@ namespace FSM
             LoadForm(sender, e);
         }
 
-
-
         // Private Sub dgParts_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgParts.CurrentCellChanged
         // If SelectedPartDataRow Is Nothing Then
         // Exit Sub
@@ -1751,12 +1748,10 @@ namespace FSM
         // PartsDataGridView = DB.PartTransaction.GetByVan2(CurrentVan.VanID, True, False, Combo.GetSelectedItemValue(cboPreferredSupplierID))
         // End Sub
 
-
-
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))
@@ -1929,9 +1924,9 @@ namespace FSM
         }
 
         /// <summary>
-    /// Check what has been changed and add it to log
-    /// </summary>
-    /// <returns></returns>
+        /// Check what has been changed and add it to log
+        /// </summary>
+        /// <returns></returns>
         private string UpdateAudit()
         {
             // we need to see whats different
@@ -2102,11 +2097,11 @@ namespace FSM
         }
 
         /// <summary>
-    /// Check to see if equipment calibration is still vali
-    /// </summary>
-    /// <param name="caliDate"></param>
-    /// <param name="caliPeriod"></param>
-    /// <returns>True if valid</returns>
+        /// Check to see if equipment calibration is still vali
+        /// </summary>
+        /// <param name="caliDate"></param>
+        /// <param name="caliPeriod"></param>
+        /// <returns>True if valid</returns>
         public bool IsEquipmentCalibrationValid(DateTime caliDate, int caliMonths)
         {
             if (caliMonths == 0)
@@ -2116,7 +2111,6 @@ namespace FSM
 
         private void dtpCalibrationDate_ValueChanged(object sender, EventArgs e)
         {
-
             // check if unit is out of calibration
             if (IsEquipmentCalibrationValid(dtpCalibrationDate.Value, Conversions.ToInteger(CurrentEquipment.CalibrationMonths)))
             {

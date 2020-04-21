@@ -1,17 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMFindCustomers : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMFindCustomers() : base()
         {
             base.Load += FrmDisplayEngineers_Load;
@@ -40,7 +40,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpCustomers;
 
@@ -81,7 +81,6 @@ namespace FSM
             {
                 if (_dgCustomers != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _dgCustomers.Click -= DgCustomers_Click;
@@ -246,9 +245,9 @@ namespace FSM
             _grpCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgCustomers).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpCustomers
-            // 
+            //
             _grpCustomers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCustomers.Controls.Add(_txtFilter);
@@ -264,25 +263,25 @@ namespace FSM
             _grpCustomers.TabIndex = 10;
             _grpCustomers.TabStop = false;
             _grpCustomers.Text = "Customer to Add";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFilter.Location = new Point(118, 31);
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(219, 20);
             _txtFilter.TabIndex = 49;
-            // 
+            //
             // lblCustomerName
-            // 
+            //
             _lblCustomerName.Location = new Point(7, 34);
             _lblCustomerName.Name = "lblCustomerName";
             _lblCustomerName.Size = new Size(105, 20);
             _lblCustomerName.TabIndex = 48;
             _lblCustomerName.Text = "Customer Name";
-            // 
+            //
             // btnOk
-            // 
+            //
             _btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOk.Font = new Font("Verdana", 8.0F);
             _btnOk.Location = new Point(588, 394);
@@ -291,9 +290,9 @@ namespace FSM
             _btnOk.TabIndex = 4;
             _btnOk.Text = "Ok";
             _btnOk.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnClearAll
-            // 
+            //
             _btnClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClearAll.Font = new Font("Verdana", 8.0F);
             _btnClearAll.Location = new Point(80, 394);
@@ -302,9 +301,9 @@ namespace FSM
             _btnClearAll.TabIndex = 3;
             _btnClearAll.Text = "Clear All";
             _btnClearAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSelectAll.Font = new Font("Verdana", 8.0F);
             _btnSelectAll.Location = new Point(10, 394);
@@ -313,9 +312,9 @@ namespace FSM
             _btnSelectAll.TabIndex = 2;
             _btnSelectAll.Text = "Select All";
             _btnSelectAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgCustomers
-            // 
+            //
             _dgCustomers.AllowNavigation = false;
             _dgCustomers.AlternatingBackColor = Color.GhostWhite;
             _dgCustomers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -344,9 +343,9 @@ namespace FSM
             _dgCustomers.SelectionForeColor = Color.PaleGreen;
             _dgCustomers.Size = new Size(642, 313);
             _dgCustomers.TabIndex = 1;
-            // 
+            //
             // FRMFindCustomers
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(672, 461);
             Controls.Add(_grpCustomers);
@@ -392,13 +391,14 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetUpDataGrid()
         {
             SuspendLayout();
             Entity.Sys.Helper.SetUpDataGrid(dgCustomers);
             var tStyle = dgCustomers.TableStyles[0];
 
-            // Set up columns 
+            // Set up columns
             tStyle.ReadOnly = false;
             dgCustomers.ReadOnly = false;
             var include = new DataGridBoolColumn();

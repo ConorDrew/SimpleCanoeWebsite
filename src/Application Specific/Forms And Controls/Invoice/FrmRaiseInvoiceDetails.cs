@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FrmRaiseInvoiceDetails : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FrmRaiseInvoiceDetails() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FrmRaiseInvoiceDetails_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -209,9 +207,9 @@ namespace FSM
             _gpbRaiseInvoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).BeginInit();
             SuspendLayout();
-            // 
+            //
             // gpbRaiseInvoice
-            // 
+            //
             _gpbRaiseInvoice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbRaiseInvoice.Controls.Add(_dgInvoiceAddresses);
@@ -225,50 +223,50 @@ namespace FSM
             _gpbRaiseInvoice.TabIndex = 2;
             _gpbRaiseInvoice.TabStop = false;
             _gpbRaiseInvoice.Text = "Raise Invoice";
-            // 
+            //
             // dgInvoiceAddresses
-            // 
+            //
             _dgInvoiceAddresses.DataMember = "";
             _dgInvoiceAddresses.HeaderForeColor = SystemColors.ControlText;
             _dgInvoiceAddresses.Location = new Point(16, 64);
             _dgInvoiceAddresses.Name = "dgInvoiceAddresses";
             _dgInvoiceAddresses.Size = new Size(488, 136);
             _dgInvoiceAddresses.TabIndex = 7;
-            // 
+            //
             // dtpRaiseInvoiceOn
-            // 
+            //
             _dtpRaiseInvoiceOn.Format = DateTimePickerFormat.Short;
             _dtpRaiseInvoiceOn.Location = new Point(136, 24);
             _dtpRaiseInvoiceOn.Name = "dtpRaiseInvoiceOn";
             _dtpRaiseInvoiceOn.Size = new Size(120, 21);
             _dtpRaiseInvoiceOn.TabIndex = 6;
-            // 
+            //
             // lblRaiseInvoiceOn
-            // 
+            //
             _lblRaiseInvoiceOn.Location = new Point(16, 24);
             _lblRaiseInvoiceOn.Name = "lblRaiseInvoiceOn";
             _lblRaiseInvoiceOn.Size = new Size(112, 23);
             _lblRaiseInvoiceOn.TabIndex = 5;
             _lblRaiseInvoiceOn.Text = "Raise Invoice On:";
             _lblRaiseInvoiceOn.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // lblInvoiceAddress
-            // 
+            //
             _lblInvoiceAddress.Location = new Point(16, 48);
             _lblInvoiceAddress.Name = "lblInvoiceAddress";
             _lblInvoiceAddress.TabIndex = 8;
             _lblInvoiceAddress.Text = "Invoice Address";
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.UseVisualStyleBackColor = true;
             _btnOK.Location = new Point(216, 208);
             _btnOK.Name = "btnOK";
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // FrmRaiseInvoiceDetails
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(528, 278);
             ControlBox = false;
@@ -283,7 +281,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             OrderID = Conversions.ToInteger(get_GetParameter(0));
             LoadForm(sender, e, this);
@@ -347,6 +346,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupInvoiceAddressDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgInvoiceAddresses);

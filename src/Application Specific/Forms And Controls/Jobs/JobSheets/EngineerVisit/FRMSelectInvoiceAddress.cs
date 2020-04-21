@@ -1,12 +1,12 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -18,6 +18,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSelectInvoiceAddress(int SiteIDIn) : base()
         {
             base.Load += FRMSelectInvoiceAddress_Load;
@@ -81,7 +82,6 @@ namespace FSM
             {
                 if (_btnOK != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnOK.Click -= btnOK_Click;
@@ -462,27 +462,27 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).BeginInit();
             _grpDept.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(1185, 515);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(75, 23);
             _btnOK.TabIndex = 4;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 515);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(75, 23);
             _btnCancel.TabIndex = 6;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // grpHO
-            // 
+            //
             _grpHO.Controls.Add(_chkHO);
             _grpHO.Controls.Add(_txtHO);
             _grpHO.Location = new Point(8, 38);
@@ -491,9 +491,9 @@ namespace FSM
             _grpHO.TabIndex = 7;
             _grpHO.TabStop = false;
             _grpHO.Text = "Head Office";
-            // 
+            //
             // chkHO
-            // 
+            //
             _chkHO.AutoSize = true;
             _chkHO.Location = new Point(6, 20);
             _chkHO.Name = "chkHO";
@@ -501,9 +501,9 @@ namespace FSM
             _chkHO.TabIndex = 1;
             _chkHO.Text = "Select";
             _chkHO.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtHO
-            // 
+            //
             _txtHO.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtHO.Location = new Point(6, 43);
@@ -513,9 +513,9 @@ namespace FSM
             _txtHO.ScrollBars = ScrollBars.Both;
             _txtHO.Size = new Size(399, 183);
             _txtHO.TabIndex = 0;
-            // 
+            //
             // grpProperty
-            // 
+            //
             _grpProperty.Controls.Add(_chkProperty);
             _grpProperty.Controls.Add(_txtProperty);
             _grpProperty.Location = new Point(425, 38);
@@ -524,9 +524,9 @@ namespace FSM
             _grpProperty.TabIndex = 8;
             _grpProperty.TabStop = false;
             _grpProperty.Text = "Property";
-            // 
+            //
             // chkProperty
-            // 
+            //
             _chkProperty.AutoSize = true;
             _chkProperty.Location = new Point(6, 20);
             _chkProperty.Name = "chkProperty";
@@ -534,9 +534,9 @@ namespace FSM
             _chkProperty.TabIndex = 1;
             _chkProperty.Text = "Select";
             _chkProperty.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtProperty
-            // 
+            //
             _txtProperty.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtProperty.Location = new Point(6, 43);
@@ -546,9 +546,9 @@ namespace FSM
             _txtProperty.ScrollBars = ScrollBars.Both;
             _txtProperty.Size = new Size(399, 183);
             _txtProperty.TabIndex = 0;
-            // 
+            //
             // grpInvoiceAddress
-            // 
+            //
             _grpInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpInvoiceAddress.Controls.Add(_btnAdd);
@@ -560,9 +560,9 @@ namespace FSM
             _grpInvoiceAddress.TabIndex = 9;
             _grpInvoiceAddress.TabStop = false;
             _grpInvoiceAddress.Text = "Invoice Address";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAdd.Location = new Point(1167, 16);
             _btnAdd.Name = "btnAdd";
@@ -570,9 +570,9 @@ namespace FSM
             _btnAdd.TabIndex = 11;
             _btnAdd.Text = "Add";
             _btnAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgInvoiceAddresses
-            // 
+            //
             _dgInvoiceAddresses.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgInvoiceAddresses.DataMember = "";
@@ -581,9 +581,9 @@ namespace FSM
             _dgInvoiceAddresses.Name = "dgInvoiceAddresses";
             _dgInvoiceAddresses.Size = new Size(1236, 184);
             _dgInvoiceAddresses.TabIndex = 10;
-            // 
+            //
             // chkInvoiceAddress
-            // 
+            //
             _chkInvoiceAddress.AutoSize = true;
             _chkInvoiceAddress.Location = new Point(6, 20);
             _chkInvoiceAddress.Name = "chkInvoiceAddress";
@@ -591,9 +591,9 @@ namespace FSM
             _chkInvoiceAddress.TabIndex = 1;
             _chkInvoiceAddress.Text = "Select";
             _chkInvoiceAddress.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpDept
-            // 
+            //
             _grpDept.Controls.Add(_cboDept);
             _grpDept.Controls.Add(_chkDept);
             _grpDept.Location = new Point(842, 38);
@@ -602,9 +602,9 @@ namespace FSM
             _grpDept.TabIndex = 9;
             _grpDept.TabStop = false;
             _grpDept.Text = "Department";
-            // 
+            //
             // chkDept
-            // 
+            //
             _chkDept.AutoSize = true;
             _chkDept.Location = new Point(6, 20);
             _chkDept.Name = "chkDept";
@@ -612,18 +612,18 @@ namespace FSM
             _chkDept.TabIndex = 1;
             _chkDept.Text = "Select";
             _chkDept.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboDept
-            // 
+            //
             _cboDept.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboDept.FormattingEnabled = true;
             _cboDept.Location = new Point(93, 18);
             _cboDept.Name = "cboDept";
             _cboDept.Size = new Size(309, 21);
             _cboDept.TabIndex = 33;
-            // 
+            //
             // FRMSelectInvoiceAddress
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1265, 545);
             ControlBox = false;
@@ -656,7 +656,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDG();
@@ -670,7 +671,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -874,6 +875,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDG()
         {
             Helper.SetUpDataGrid(dgInvoiceAddresses);

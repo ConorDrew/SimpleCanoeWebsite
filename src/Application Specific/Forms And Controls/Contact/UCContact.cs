@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class UCContact : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCContact() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCContact_Load;
@@ -24,7 +23,6 @@ namespace FSM
             var argc = cboSalutation;
             Combo.SetUpCombo(ref argc, DynamicDataTables.Salutation, "ValueMember", "DisplayMember", Entity.Sys.Enums.ComboValues.Please_Select);
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -764,9 +762,9 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgNotes).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpContact
-            // 
+            //
             _grpContact.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpContact.Controls.Add(_txtEID);
             _grpContact.Controls.Add(_Label7);
@@ -795,9 +793,9 @@ namespace FSM
             _grpContact.TabIndex = 1;
             _grpContact.TabStop = false;
             _grpContact.Text = "Main Details";
-            // 
+            //
             // cboSalutation
-            // 
+            //
             _cboSalutation.Cursor = Cursors.Hand;
             _cboSalutation.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSalutation.Location = new Point(112, 29);
@@ -805,17 +803,17 @@ namespace FSM
             _cboSalutation.Size = new Size(83, 21);
             _cboSalutation.TabIndex = 55;
             _cboSalutation.Tag = "Site.RegionID";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(8, 32);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(100, 20);
             _Label6.TabIndex = 38;
             _Label6.Text = "Salutation";
-            // 
+            //
             // chkPortalGSRPrint
-            // 
+            //
             _chkPortalGSRPrint.AutoSize = true;
             _chkPortalGSRPrint.CheckAlign = ContentAlignment.MiddleRight;
             _chkPortalGSRPrint.Location = new Point(9, 337);
@@ -824,9 +822,9 @@ namespace FSM
             _chkPortalGSRPrint.TabIndex = 37;
             _chkPortalGSRPrint.Text = "Portal GSR Print";
             _chkPortalGSRPrint.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtPortalPassword
-            // 
+            //
             _txtPortalPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPortalPassword.Location = new Point(112, 279);
             _txtPortalPassword.MaxLength = 20;
@@ -834,9 +832,9 @@ namespace FSM
             _txtPortalPassword.Size = new Size(529, 21);
             _txtPortalPassword.TabIndex = 8;
             _txtPortalPassword.Tag = "";
-            // 
+            //
             // txtPortalUsername
-            // 
+            //
             _txtPortalUsername.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPortalUsername.Location = new Point(112, 250);
             _txtPortalUsername.MaxLength = 20;
@@ -844,25 +842,25 @@ namespace FSM
             _txtPortalUsername.Size = new Size(529, 21);
             _txtPortalUsername.TabIndex = 7;
             _txtPortalUsername.Tag = "";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 278);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(100, 23);
             _Label3.TabIndex = 35;
             _Label3.Text = "Portal Password";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 247);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(104, 23);
             _Label2.TabIndex = 34;
             _Label2.Text = "Portal Username";
-            // 
+            //
             // txtMobileNo
-            // 
+            //
             _txtMobileNo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtMobileNo.Location = new Point(112, 157);
             _txtMobileNo.MaxLength = 20;
@@ -870,17 +868,17 @@ namespace FSM
             _txtMobileNo.Size = new Size(529, 21);
             _txtMobileNo.TabIndex = 4;
             _txtMobileNo.Tag = "Contact.MobileNo";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 155);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(109, 20);
             _Label1.TabIndex = 33;
             _Label1.Text = "Mobile No";
-            // 
+            //
             // txtFirstName
-            // 
+            //
             _txtFirstName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFirstName.Location = new Point(112, 64);
             _txtFirstName.MaxLength = 255;
@@ -888,17 +886,17 @@ namespace FSM
             _txtFirstName.Size = new Size(529, 21);
             _txtFirstName.TabIndex = 1;
             _txtFirstName.Tag = "Contact.FirstName";
-            // 
+            //
             // lblFirstName
-            // 
+            //
             _lblFirstName.Location = new Point(8, 62);
             _lblFirstName.Name = "lblFirstName";
             _lblFirstName.Size = new Size(109, 20);
             _lblFirstName.TabIndex = 31;
             _lblFirstName.Text = "First Name";
-            // 
+            //
             // txtSurname
-            // 
+            //
             _txtSurname.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSurname.Location = new Point(112, 95);
             _txtSurname.MaxLength = 255;
@@ -906,17 +904,17 @@ namespace FSM
             _txtSurname.Size = new Size(529, 21);
             _txtSurname.TabIndex = 2;
             _txtSurname.Tag = "Contact.Surname";
-            // 
+            //
             // lblSurname
-            // 
+            //
             _lblSurname.Location = new Point(8, 93);
             _lblSurname.Name = "lblSurname";
             _lblSurname.Size = new Size(109, 20);
             _lblSurname.TabIndex = 31;
             _lblSurname.Text = "Surname";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTelephoneNum.Location = new Point(112, 126);
             _txtTelephoneNum.MaxLength = 20;
@@ -924,17 +922,17 @@ namespace FSM
             _txtTelephoneNum.Size = new Size(529, 21);
             _txtTelephoneNum.TabIndex = 3;
             _txtTelephoneNum.Tag = "Contact.TelephoneNum";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(8, 124);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(109, 20);
             _lblTelephoneNum.TabIndex = 31;
             _lblTelephoneNum.Text = "Tel";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmailAddress.Location = new Point(112, 188);
             _txtEmailAddress.MaxLength = 50;
@@ -942,17 +940,17 @@ namespace FSM
             _txtEmailAddress.Size = new Size(529, 21);
             _txtEmailAddress.TabIndex = 5;
             _txtEmailAddress.Tag = "Contact.EmailAddress";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(8, 186);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(109, 20);
             _lblEmailAddress.TabIndex = 31;
             _lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFaxNum.Location = new Point(112, 219);
             _txtFaxNum.MaxLength = 20;
@@ -960,17 +958,17 @@ namespace FSM
             _txtFaxNum.Size = new Size(529, 21);
             _txtFaxNum.TabIndex = 6;
             _txtFaxNum.Tag = "Contact.FaxNum";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(8, 217);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(109, 20);
             _lblFaxNum.TabIndex = 31;
             _lblFaxNum.Text = "Fax";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_Label5);
@@ -984,44 +982,44 @@ namespace FSM
             _GroupBox1.TabIndex = 38;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Notes";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(32, 16);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(160, 16);
             _Label5.TabIndex = 13;
             _Label5.Text = "=Active Reminder Set";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.BackColor = Color.LightGreen;
             _Label4.BorderStyle = BorderStyle.FixedSingle;
             _Label4.Location = new Point(8, 16);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(20, 17);
             _Label4.TabIndex = 12;
-            // 
+            //
             // btnDeleteNote
-            // 
+            //
             _btnDeleteNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDeleteNote.Location = new Point(584, 196);
             _btnDeleteNote.Name = "btnDeleteNote";
             _btnDeleteNote.Size = new Size(56, 23);
             _btnDeleteNote.TabIndex = 11;
             _btnDeleteNote.Text = "Delete";
-            // 
+            //
             // btnAddNote
-            // 
+            //
             _btnAddNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddNote.Location = new Point(10, 196);
             _btnAddNote.Name = "btnAddNote";
             _btnAddNote.Size = new Size(54, 23);
             _btnAddNote.TabIndex = 10;
             _btnAddNote.Text = "Add";
-            // 
+            //
             // dgNotes
-            // 
+            //
             _dgNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgNotes.DataMember = "";
@@ -1030,9 +1028,9 @@ namespace FSM
             _dgNotes.Name = "dgNotes";
             _dgNotes.Size = new Size(637, 164);
             _dgNotes.TabIndex = 9;
-            // 
+            //
             // txtEID
-            // 
+            //
             _txtEID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEID.Location = new Point(112, 308);
             _txtEID.MaxLength = 20;
@@ -1040,17 +1038,17 @@ namespace FSM
             _txtEID.Size = new Size(529, 21);
             _txtEID.TabIndex = 56;
             _txtEID.Tag = "";
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(8, 312);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(100, 23);
             _Label7.TabIndex = 57;
             _Label7.Text = "Portal EID ";
-            // 
+            //
             // UCContact
-            // 
+            //
             Controls.Add(_GroupBox1);
             Controls.Add(_grpContact);
             Name = "UCContact";
@@ -1064,7 +1062,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupNotesDataGrid();
@@ -1095,11 +1094,11 @@ namespace FSM
             }
         }
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1172,6 +1171,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupNotesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgNotes);
@@ -1282,7 +1282,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

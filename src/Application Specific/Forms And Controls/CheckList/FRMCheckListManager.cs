@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMCheckListManager : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMCheckListManager() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMCheckListManager_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpSections;
 
@@ -763,9 +761,9 @@ namespace FSM
             _grpSubTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgSubTask).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpSections
-            // 
+            //
             _grpSections.Controls.Add(_txtSection);
             _grpSections.Controls.Add(_btnUpdateSection);
             _grpSections.Controls.Add(_btnRemoveSection);
@@ -776,36 +774,36 @@ namespace FSM
             _grpSections.TabIndex = 2;
             _grpSections.TabStop = false;
             _grpSections.Text = "Sections";
-            // 
+            //
             // txtSection
-            // 
+            //
             _txtSection.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSection.Location = new Point(8, 240);
             _txtSection.Name = "txtSection";
             _txtSection.Size = new Size(240, 21);
             _txtSection.TabIndex = 2;
             _txtSection.Text = "";
-            // 
+            //
             // btnUpdateSection
-            // 
+            //
             _btnUpdateSection.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUpdateSection.Location = new Point(256, 240);
             _btnUpdateSection.Name = "btnUpdateSection";
             _btnUpdateSection.Size = new Size(64, 24);
             _btnUpdateSection.TabIndex = 3;
             _btnUpdateSection.Text = "Add";
-            // 
+            //
             // btnRemoveSection
-            // 
+            //
             _btnRemoveSection.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemoveSection.Location = new Point(328, 240);
             _btnRemoveSection.Name = "btnRemoveSection";
             _btnRemoveSection.Size = new Size(64, 24);
             _btnRemoveSection.TabIndex = 4;
             _btnRemoveSection.Text = "Remove";
-            // 
+            //
             // dgSection
-            // 
+            //
             _dgSection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSection.DataMember = "";
@@ -814,9 +812,9 @@ namespace FSM
             _dgSection.Name = "dgSection";
             _dgSection.Size = new Size(384, 212);
             _dgSection.TabIndex = 1;
-            // 
+            //
             // grpAreas
-            // 
+            //
             _grpAreas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpAreas.Controls.Add(_btnMoveDownArea);
             _grpAreas.Controls.Add(_btnMoveUpArea);
@@ -830,54 +828,54 @@ namespace FSM
             _grpAreas.TabIndex = 3;
             _grpAreas.TabStop = false;
             _grpAreas.Text = "Areas For Section ";
-            // 
+            //
             // btnMoveDownArea
-            // 
+            //
             _btnMoveDownArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnMoveDownArea.Location = new Point(368, 128);
             _btnMoveDownArea.Name = "btnMoveDownArea";
             _btnMoveDownArea.Size = new Size(24, 23);
             _btnMoveDownArea.TabIndex = 9;
             _btnMoveDownArea.Text = @"/\";
-            // 
+            //
             // btnMoveUpArea
-            // 
+            //
             _btnMoveUpArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnMoveUpArea.Location = new Point(368, 160);
             _btnMoveUpArea.Name = "btnMoveUpArea";
             _btnMoveUpArea.Size = new Size(24, 23);
             _btnMoveUpArea.TabIndex = 10;
             _btnMoveUpArea.Text = @"\/";
-            // 
+            //
             // txtArea
-            // 
+            //
             _txtArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtArea.Location = new Point(8, 192);
             _txtArea.Name = "txtArea";
             _txtArea.Size = new Size(240, 21);
             _txtArea.TabIndex = 6;
             _txtArea.Text = "";
-            // 
+            //
             // btnUpdateArea
-            // 
+            //
             _btnUpdateArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUpdateArea.Location = new Point(256, 192);
             _btnUpdateArea.Name = "btnUpdateArea";
             _btnUpdateArea.Size = new Size(64, 24);
             _btnUpdateArea.TabIndex = 7;
             _btnUpdateArea.Text = "Add";
-            // 
+            //
             // btnRemoveArea
-            // 
+            //
             _btnRemoveArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemoveArea.Location = new Point(328, 193);
             _btnRemoveArea.Name = "btnRemoveArea";
             _btnRemoveArea.Size = new Size(64, 24);
             _btnRemoveArea.TabIndex = 8;
             _btnRemoveArea.Text = "Remove";
-            // 
+            //
             // dgArea
-            // 
+            //
             _dgArea.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgArea.DataMember = "";
@@ -886,9 +884,9 @@ namespace FSM
             _dgArea.Name = "dgArea";
             _dgArea.Size = new Size(352, 158);
             _dgArea.TabIndex = 5;
-            // 
+            //
             // grpTasks
-            // 
+            //
             _grpTasks.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpTasks.Controls.Add(_btnMoveDownTask);
             _grpTasks.Controls.Add(_btnMoveUpTask);
@@ -902,54 +900,54 @@ namespace FSM
             _grpTasks.TabIndex = 4;
             _grpTasks.TabStop = false;
             _grpTasks.Text = "Tasks For Area";
-            // 
+            //
             // btnMoveDownTask
-            // 
+            //
             _btnMoveDownTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnMoveDownTask.Location = new Point(336, 176);
             _btnMoveDownTask.Name = "btnMoveDownTask";
             _btnMoveDownTask.Size = new Size(24, 23);
             _btnMoveDownTask.TabIndex = 15;
             _btnMoveDownTask.Text = @"/\";
-            // 
+            //
             // btnMoveUpTask
-            // 
+            //
             _btnMoveUpTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnMoveUpTask.Location = new Point(336, 208);
             _btnMoveUpTask.Name = "btnMoveUpTask";
             _btnMoveUpTask.Size = new Size(24, 23);
             _btnMoveUpTask.TabIndex = 16;
             _btnMoveUpTask.Text = @"\/";
-            // 
+            //
             // txtTasks
-            // 
+            //
             _txtTasks.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtTasks.Location = new Point(8, 240);
             _txtTasks.Name = "txtTasks";
             _txtTasks.Size = new Size(208, 21);
             _txtTasks.TabIndex = 12;
             _txtTasks.Text = "";
-            // 
+            //
             // btnUpdateTask
-            // 
+            //
             _btnUpdateTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUpdateTask.Location = new Point(224, 240);
             _btnUpdateTask.Name = "btnUpdateTask";
             _btnUpdateTask.Size = new Size(64, 24);
             _btnUpdateTask.TabIndex = 13;
             _btnUpdateTask.Text = "Add";
-            // 
+            //
             // btnRemoveTask
-            // 
+            //
             _btnRemoveTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemoveTask.Location = new Point(296, 241);
             _btnRemoveTask.Name = "btnRemoveTask";
             _btnRemoveTask.Size = new Size(64, 24);
             _btnRemoveTask.TabIndex = 14;
             _btnRemoveTask.Text = "Remove";
-            // 
+            //
             // dgTask
-            // 
+            //
             _dgTask.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgTask.DataMember = "";
@@ -958,9 +956,9 @@ namespace FSM
             _dgTask.Name = "dgTask";
             _dgTask.Size = new Size(320, 212);
             _dgTask.TabIndex = 11;
-            // 
+            //
             // grpSubTask
-            // 
+            //
             _grpSubTask.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSubTask.Controls.Add(_btnMoveDownSubTask);
@@ -975,54 +973,54 @@ namespace FSM
             _grpSubTask.TabIndex = 5;
             _grpSubTask.TabStop = false;
             _grpSubTask.Text = "Sub Tasks For Task";
-            // 
+            //
             // btnMoveDownSubTask
-            // 
+            //
             _btnMoveDownSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnMoveDownSubTask.Location = new Point(336, 128);
             _btnMoveDownSubTask.Name = "btnMoveDownSubTask";
             _btnMoveDownSubTask.Size = new Size(24, 23);
             _btnMoveDownSubTask.TabIndex = 21;
             _btnMoveDownSubTask.Text = @"/\";
-            // 
+            //
             // btnMoveUpSubTask
-            // 
+            //
             _btnMoveUpSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnMoveUpSubTask.Location = new Point(336, 160);
             _btnMoveUpSubTask.Name = "btnMoveUpSubTask";
             _btnMoveUpSubTask.Size = new Size(24, 23);
             _btnMoveUpSubTask.TabIndex = 22;
             _btnMoveUpSubTask.Text = @"\/";
-            // 
+            //
             // txtSubTasks
-            // 
+            //
             _txtSubTasks.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtSubTasks.Location = new Point(8, 192);
             _txtSubTasks.Name = "txtSubTasks";
             _txtSubTasks.Size = new Size(208, 21);
             _txtSubTasks.TabIndex = 18;
             _txtSubTasks.Text = "";
-            // 
+            //
             // btnUpdateSubTask
-            // 
+            //
             _btnUpdateSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUpdateSubTask.Location = new Point(224, 192);
             _btnUpdateSubTask.Name = "btnUpdateSubTask";
             _btnUpdateSubTask.Size = new Size(64, 24);
             _btnUpdateSubTask.TabIndex = 19;
             _btnUpdateSubTask.Text = "Add";
-            // 
+            //
             // btnRemoveSubTask
-            // 
+            //
             _btnRemoveSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemoveSubTask.Location = new Point(296, 192);
             _btnRemoveSubTask.Name = "btnRemoveSubTask";
             _btnRemoveSubTask.Size = new Size(64, 24);
             _btnRemoveSubTask.TabIndex = 20;
             _btnRemoveSubTask.Text = "Remove";
-            // 
+            //
             // dgSubTask
-            // 
+            //
             _dgSubTask.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSubTask.DataMember = "";
@@ -1031,9 +1029,9 @@ namespace FSM
             _dgSubTask.Name = "dgSubTask";
             _dgSubTask.Size = new Size(320, 158);
             _dgSubTask.TabIndex = 17;
-            // 
+            //
             // FRMCheckListManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(800, 558);
             Controls.Add(_grpSubTask);
@@ -1061,7 +1059,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupSectionsDataGrid();
@@ -1079,7 +1078,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
             // DO NOTHING
         }
@@ -1232,6 +1231,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSectionsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSection);
@@ -1831,6 +1831,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private bool AddSection()
         {
             try

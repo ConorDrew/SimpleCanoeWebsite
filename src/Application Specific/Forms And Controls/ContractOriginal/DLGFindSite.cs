@@ -1,26 +1,24 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class DLGFindSite : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DLGFindSite() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         public DLGFindSite(System.Data.SqlClient.SqlTransaction trans) : base()
@@ -31,7 +29,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -52,7 +49,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Label _Label1;
 
@@ -637,25 +634,25 @@ namespace FSM
             _grpDD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgResults).BeginInit();
             SuspendLayout();
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 40);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(100, 24);
             _Label1.TabIndex = 2;
             _Label1.Text = "Filter By Name";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFilter.Location = new Point(109, 40);
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(547, 21);
             _txtFilter.TabIndex = 1;
-            // 
+            //
             // grpResults
-            // 
+            //
             _grpResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpResults.Controls.Add(_Label4);
@@ -670,9 +667,9 @@ namespace FSM
             _grpResults.TabIndex = 4;
             _grpResults.TabStop = false;
             _grpResults.Text = "Select record and click OK";
-            // 
+            //
             // grpDD
-            // 
+            //
             _grpDD.Controls.Add(_txtAccName);
             _grpDD.Controls.Add(_lbl3);
             _grpDD.Controls.Add(_txtBankName);
@@ -686,85 +683,85 @@ namespace FSM
             _grpDD.Size = new Size(782, 63);
             _grpDD.TabIndex = 5;
             _grpDD.Visible = false;
-            // 
+            //
             // txtAccName
-            // 
+            //
             _txtAccName.Location = new Point(111, 19);
             _txtAccName.Name = "txtAccName";
             _txtAccName.Size = new Size(137, 21);
             _txtAccName.TabIndex = 120;
-            // 
+            //
             // lbl3
-            // 
+            //
             _lbl3.Location = new Point(20, 23);
             _lbl3.Name = "lbl3";
             _lbl3.Size = new Size(89, 20);
             _lbl3.TabIndex = 128;
             _lbl3.Text = "Account Name";
-            // 
+            //
             // txtBankName
-            // 
+            //
             _txtBankName.Location = new Point(654, 19);
             _txtBankName.Name = "txtBankName";
             _txtBankName.Size = new Size(104, 21);
             _txtBankName.TabIndex = 123;
-            // 
+            //
             // txtAccNumber
-            // 
+            //
             _txtAccNumber.Location = new Point(497, 19);
             _txtAccNumber.Name = "txtAccNumber";
             _txtAccNumber.Size = new Size(84, 21);
             _txtAccNumber.TabIndex = 122;
-            // 
+            //
             // lblBankName
-            // 
+            //
             _lblBankName.Location = new Point(582, 22);
             _lblBankName.Name = "lblBankName";
             _lblBankName.Size = new Size(78, 20);
             _lblBankName.TabIndex = 127;
             _lblBankName.Text = "Bank Name";
-            // 
+            //
             // lblAccNumber
-            // 
+            //
             _lblAccNumber.Location = new Point(396, 22);
             _lblAccNumber.Name = "lblAccNumber";
             _lblAccNumber.Size = new Size(108, 20);
             _lblAccNumber.TabIndex = 126;
             _lblAccNumber.Text = "Account Number";
-            // 
+            //
             // txtSortCode
-            // 
+            //
             _txtSortCode.Location = new Point(315, 19);
             _txtSortCode.Name = "txtSortCode";
             _txtSortCode.Size = new Size(77, 21);
             _txtSortCode.TabIndex = 121;
-            // 
+            //
             // lblSortCode
-            // 
+            //
             _lblSortCode.Location = new Point(251, 23);
             _lblSortCode.Name = "lblSortCode";
             _lblSortCode.Size = new Size(73, 20);
             _lblSortCode.TabIndex = 125;
             _lblSortCode.Text = "Sort Code";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(6, 205);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(100, 24);
             _Label3.TabIndex = 4;
             _Label3.Text = "Payer";
-            // 
+            //
             // cboPayer
-            // 
+            //
             _cboPayer.FormattingEnabled = true;
             _cboPayer.Location = new Point(8, 231);
             _cboPayer.Name = "cboPayer";
             _cboPayer.Size = new Size(271, 21);
             _cboPayer.TabIndex = 3;
-            // 
+            //
             // dgResults
-            // 
+            //
             _dgResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgResults.DataMember = "";
@@ -773,69 +770,69 @@ namespace FSM
             _dgResults.Name = "dgResults";
             _dgResults.Size = new Size(777, 150);
             _dgResults.TabIndex = 2;
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(745, 451);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(56, 23);
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 451);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 4;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAdd.Location = new Point(664, 35);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(129, 23);
             _btnAdd.TabIndex = 6;
             _btnAdd.Text = "Add";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label2.Location = new Point(95, 456);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(175, 24);
             _Label2.TabIndex = 7;
             _Label2.Text = "Preferred Supplier";
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel1.BackColor = Color.LightGreen;
             _Panel1.Location = new Point(70, 454);
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(19, 20);
             _Panel1.TabIndex = 8;
-            // 
+            //
             // dtpEffDate
-            // 
+            //
             _dtpEffDate.Location = new Point(585, 228);
             _dtpEffDate.Name = "dtpEffDate";
             _dtpEffDate.Size = new Size(200, 21);
             _dtpEffDate.TabIndex = 6;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(582, 201);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(100, 24);
             _Label4.TabIndex = 7;
             _Label4.Text = "Effective From";
-            // 
+            //
             // DLGFindSite
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(809, 481);
             ControlBox = false;
@@ -870,7 +867,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ActiveControl = txtFilter;
@@ -886,7 +884,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1514,10 +1512,9 @@ namespace FSM
             }
         }
 
-
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDG()
         {
             var tStyle = dgResults.TableStyles[0];
@@ -2572,10 +2569,9 @@ namespace FSM
             dgResults.TableStyles.Add(tStyle);
         }
 
-
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void DLGFindRecord_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -2675,6 +2671,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SelectItem()
         {
             if (SelectedDataRow is null)
@@ -2735,7 +2732,7 @@ namespace FSM
                             PartsToAdd = new ArrayList();
                             foreach (DataRow row in Records.Table.Rows)
                             {
-                                if (Conversions.ToBoolean(row["QuantityToAdd"] > 0))
+                                if (Conversions.ToBoolean((int)row["QuantityToAdd"] > 0))
                                 {
                                     var newPart = new ArrayList();
                                     newPart.Add(row["PartID"]);
@@ -2918,6 +2915,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -2926,7 +2924,8 @@ namespace FSM
                 // set the color required dependant on the column value
                 Brush brush;
                 brush = Brushes.White;
-                if (Entity.Sys.Helper.MakeBooleanValid(source.List[rowNum].row.item("Preferred")))
+                DataRowView dr = (DataRowView)source.List[rowNum];
+                if (Entity.Sys.Helper.MakeBooleanValid(dr["Preferred"]))
                 {
                     brush = Brushes.LightGreen;
                 }
@@ -2940,6 +2939,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void btnFilter_Click(object sender, EventArgs e)
         {
             RunFilter();
@@ -2955,9 +2955,7 @@ namespace FSM
 
                 // grpDD.Visible = True
 
-
                 // End If
-
             }
         }
     }

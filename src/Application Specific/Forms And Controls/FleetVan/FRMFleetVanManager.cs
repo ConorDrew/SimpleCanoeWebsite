@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMFleetVanManager : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMFleetVanManager() : base()
         {
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -45,7 +45,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpFaultsFilter;
 
@@ -876,9 +876,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgEngineerHistory).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpFaultsFilter
-            // 
+            //
             _grpFaultsFilter.Controls.Add(_btnSearchFault);
             _grpFaultsFilter.Controls.Add(_dtpResolvedTo);
             _grpFaultsFilter.Controls.Add(_dtpResolvedFrom);
@@ -899,52 +899,52 @@ namespace FSM
             _grpFaultsFilter.TabIndex = 3;
             _grpFaultsFilter.TabStop = false;
             _grpFaultsFilter.Text = "Filter Faults";
-            // 
+            //
             // btnSearchFault
-            // 
+            //
             _btnSearchFault.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSearchFault.Location = new Point(766, 140);
             _btnSearchFault.Name = "btnSearchFault";
             _btnSearchFault.Size = new Size(70, 23);
             _btnSearchFault.TabIndex = 78;
             _btnSearchFault.Text = "Run Filter";
-            // 
+            //
             // dtpResolvedTo
-            // 
+            //
             _dtpResolvedTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpResolvedTo.Location = new Point(325, 103);
             _dtpResolvedTo.Name = "dtpResolvedTo";
             _dtpResolvedTo.Size = new Size(156, 21);
             _dtpResolvedTo.TabIndex = 77;
-            // 
+            //
             // dtpResolvedFrom
-            // 
+            //
             _dtpResolvedFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpResolvedFrom.Location = new Point(325, 72);
             _dtpResolvedFrom.Name = "dtpResolvedFrom";
             _dtpResolvedFrom.Size = new Size(156, 21);
             _dtpResolvedFrom.TabIndex = 76;
-            // 
+            //
             // lblResolvedTo
-            // 
+            //
             _lblResolvedTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblResolvedTo.Location = new Point(271, 108);
             _lblResolvedTo.Name = "lblResolvedTo";
             _lblResolvedTo.Size = new Size(48, 16);
             _lblResolvedTo.TabIndex = 74;
             _lblResolvedTo.Text = "To";
-            // 
+            //
             // lblResolvedFrom
-            // 
+            //
             _lblResolvedFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblResolvedFrom.Location = new Point(271, 77);
             _lblResolvedFrom.Name = "lblResolvedFrom";
             _lblResolvedFrom.Size = new Size(48, 16);
             _lblResolvedFrom.TabIndex = 73;
             _lblResolvedFrom.Text = "From";
-            // 
+            //
             // chkResolved
-            // 
+            //
             _chkResolved.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _chkResolved.Cursor = Cursors.Hand;
             _chkResolved.FlatStyle = FlatStyle.System;
@@ -953,43 +953,43 @@ namespace FSM
             _chkResolved.Size = new Size(112, 24);
             _chkResolved.TabIndex = 75;
             _chkResolved.Text = "Resolved Date";
-            // 
+            //
             // dtpFaultTo
-            // 
+            //
             _dtpFaultTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpFaultTo.Location = new Point(61, 104);
             _dtpFaultTo.Name = "dtpFaultTo";
             _dtpFaultTo.Size = new Size(156, 21);
             _dtpFaultTo.TabIndex = 72;
-            // 
+            //
             // dtpFaultFrom
-            // 
+            //
             _dtpFaultFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpFaultFrom.Location = new Point(61, 73);
             _dtpFaultFrom.Name = "dtpFaultFrom";
             _dtpFaultFrom.Size = new Size(156, 21);
             _dtpFaultFrom.TabIndex = 71;
-            // 
+            //
             // lblFaultTo
-            // 
+            //
             _lblFaultTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblFaultTo.Location = new Point(7, 109);
             _lblFaultTo.Name = "lblFaultTo";
             _lblFaultTo.Size = new Size(48, 16);
             _lblFaultTo.TabIndex = 69;
             _lblFaultTo.Text = "To";
-            // 
+            //
             // lblFaultFrom
-            // 
+            //
             _lblFaultFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblFaultFrom.Location = new Point(7, 78);
             _lblFaultFrom.Name = "lblFaultFrom";
             _lblFaultFrom.Size = new Size(48, 16);
             _lblFaultFrom.TabIndex = 68;
             _lblFaultFrom.Text = "From";
-            // 
+            //
             // chkFaultDate
-            // 
+            //
             _chkFaultDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _chkFaultDate.Cursor = Cursors.Hand;
             _chkFaultDate.FlatStyle = FlatStyle.System;
@@ -998,9 +998,9 @@ namespace FSM
             _chkFaultDate.Size = new Size(80, 24);
             _chkFaultDate.TabIndex = 70;
             _chkFaultDate.Text = "Fault Date";
-            // 
+            //
             // cboFaultType
-            // 
+            //
             _cboFaultType.Cursor = Cursors.Hand;
             _cboFaultType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboFaultType.Location = new Point(108, 20);
@@ -1008,17 +1008,17 @@ namespace FSM
             _cboFaultType.Size = new Size(171, 21);
             _cboFaultType.TabIndex = 32;
             _cboFaultType.Tag = "";
-            // 
+            //
             // lblFaultType
-            // 
+            //
             _lblFaultType.Location = new Point(6, 23);
             _lblFaultType.Name = "lblFaultType";
             _lblFaultType.Size = new Size(96, 20);
             _lblFaultType.TabIndex = 33;
             _lblFaultType.Text = "Fault Type";
-            // 
+            //
             // grpFaultDG
-            // 
+            //
             _grpFaultDG.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpFaultDG.Controls.Add(_dgFaults);
             _grpFaultDG.FlatStyle = FlatStyle.System;
@@ -1028,9 +1028,9 @@ namespace FSM
             _grpFaultDG.TabIndex = 14;
             _grpFaultDG.TabStop = false;
             _grpFaultDG.Text = "Faults";
-            // 
+            //
             // dgFaults
-            // 
+            //
             _dgFaults.DataMember = "";
             _dgFaults.Dock = DockStyle.Fill;
             _dgFaults.HeaderForeColor = SystemColors.ControlText;
@@ -1038,9 +1038,9 @@ namespace FSM
             _dgFaults.Name = "dgFaults";
             _dgFaults.Size = new Size(836, 400);
             _dgFaults.TabIndex = 45;
-            // 
+            //
             // grpEngineerFilter
-            // 
+            //
             _grpEngineerFilter.Controls.Add(_btnfindEngineer);
             _grpEngineerFilter.Controls.Add(_txtEngineer);
             _grpEngineerFilter.Controls.Add(_lblEngineer);
@@ -1056,9 +1056,9 @@ namespace FSM
             _grpEngineerFilter.TabIndex = 14;
             _grpEngineerFilter.TabStop = false;
             _grpEngineerFilter.Text = "Filter Engineer";
-            // 
+            //
             // btnfindEngineer
-            // 
+            //
             _btnfindEngineer.BackColor = Color.White;
             _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnfindEngineer.Location = new Point(316, 18);
@@ -1067,69 +1067,69 @@ namespace FSM
             _btnfindEngineer.TabIndex = 84;
             _btnfindEngineer.Text = "...";
             _btnfindEngineer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtEngineer
-            // 
+            //
             _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtEngineer.Location = new Point(100, 20);
             _txtEngineer.Name = "txtEngineer";
             _txtEngineer.ReadOnly = true;
             _txtEngineer.Size = new Size(201, 21);
             _txtEngineer.TabIndex = 83;
-            // 
+            //
             // lblEngineer
-            // 
+            //
             _lblEngineer.Location = new Point(6, 23);
             _lblEngineer.Name = "lblEngineer";
             _lblEngineer.Size = new Size(85, 20);
             _lblEngineer.TabIndex = 85;
             _lblEngineer.Text = "Engineer";
-            // 
+            //
             // btnSearchEngineer
-            // 
+            //
             _btnSearchEngineer.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSearchEngineer.Location = new Point(563, 140);
             _btnSearchEngineer.Name = "btnSearchEngineer";
             _btnSearchEngineer.Size = new Size(70, 23);
             _btnSearchEngineer.TabIndex = 79;
             _btnSearchEngineer.Text = "Run Filter";
-            // 
+            //
             // dtpEngineerTo
-            // 
+            //
             _dtpEngineerTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpEngineerTo.Location = new Point(66, 99);
             _dtpEngineerTo.Name = "dtpEngineerTo";
             _dtpEngineerTo.Size = new Size(156, 21);
             _dtpEngineerTo.TabIndex = 82;
-            // 
+            //
             // dtpEngineerFrom
-            // 
+            //
             _dtpEngineerFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpEngineerFrom.Location = new Point(66, 63);
             _dtpEngineerFrom.Name = "dtpEngineerFrom";
             _dtpEngineerFrom.Size = new Size(156, 21);
             _dtpEngineerFrom.TabIndex = 81;
-            // 
+            //
             // lblEngineerTo
-            // 
+            //
             _lblEngineerTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblEngineerTo.Location = new Point(12, 104);
             _lblEngineerTo.Name = "lblEngineerTo";
             _lblEngineerTo.Size = new Size(48, 16);
             _lblEngineerTo.TabIndex = 79;
             _lblEngineerTo.Text = "To";
-            // 
+            //
             // lblEngineerFrom
-            // 
+            //
             _lblEngineerFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblEngineerFrom.Location = new Point(12, 68);
             _lblEngineerFrom.Name = "lblEngineerFrom";
             _lblEngineerFrom.Size = new Size(48, 16);
             _lblEngineerFrom.TabIndex = 78;
             _lblEngineerFrom.Text = "From";
-            // 
+            //
             // grpEngineerHistory
-            // 
+            //
             _grpEngineerHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpEngineerHistory.Controls.Add(_dgEngineerHistory);
             _grpEngineerHistory.FlatStyle = FlatStyle.System;
@@ -1139,9 +1139,9 @@ namespace FSM
             _grpEngineerHistory.TabIndex = 46;
             _grpEngineerHistory.TabStop = false;
             _grpEngineerHistory.Text = "Engineers";
-            // 
+            //
             // dgEngineerHistory
-            // 
+            //
             _dgEngineerHistory.DataMember = "";
             _dgEngineerHistory.Dock = DockStyle.Fill;
             _dgEngineerHistory.HeaderForeColor = SystemColors.ControlText;
@@ -1149,9 +1149,9 @@ namespace FSM
             _dgEngineerHistory.Name = "dgEngineerHistory";
             _dgEngineerHistory.Size = new Size(633, 400);
             _dgEngineerHistory.TabIndex = 45;
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Controls.Add(_btnClear);
             _grpFilter.Controls.Add(_lblRegistration);
             _grpFilter.Controls.Add(_btnfindVan);
@@ -1163,18 +1163,18 @@ namespace FSM
             _grpFilter.TabIndex = 40;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // lblRegistration
-            // 
+            //
             _lblRegistration.AutoSize = true;
             _lblRegistration.Location = new Point(6, 22);
             _lblRegistration.Name = "lblRegistration";
             _lblRegistration.Size = new Size(80, 13);
             _lblRegistration.TabIndex = 42;
             _lblRegistration.Text = "Registration:";
-            // 
+            //
             // btnfindVan
-            // 
+            //
             _btnfindVan.BackColor = Color.White;
             _btnfindVan.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnfindVan.Location = new Point(324, 17);
@@ -1183,27 +1183,27 @@ namespace FSM
             _btnfindVan.TabIndex = 41;
             _btnfindVan.Text = "...";
             _btnfindVan.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtVanReg
-            // 
+            //
             _txtVanReg.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtVanReg.Location = new Point(108, 19);
             _txtVanReg.Name = "txtVanReg";
             _txtVanReg.ReadOnly = true;
             _txtVanReg.Size = new Size(201, 21);
             _txtVanReg.TabIndex = 40;
-            // 
+            //
             // btnClear
-            // 
+            //
             _btnClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnClear.Location = new Point(1408, 17);
             _btnClear.Name = "btnClear";
             _btnClear.Size = new Size(70, 23);
             _btnClear.TabIndex = 79;
             _btnClear.Text = "Clear";
-            // 
+            //
             // FRMFleetVanManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1502, 714);
             Controls.Add(_grpFilter);
@@ -1233,6 +1233,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -1370,8 +1371,10 @@ namespace FSM
                 }
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupDGFault()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgFaults);
@@ -1542,8 +1545,10 @@ namespace FSM
             CurrentVan = null;
             Engineer = null;
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateFaultsDatagrid()
         {
             try
@@ -1608,6 +1613,7 @@ namespace FSM
                 App.ShowMessage("Form cannot setup : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

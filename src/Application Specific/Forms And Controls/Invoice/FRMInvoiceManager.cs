@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FSM.Entity.Customers;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -7,17 +11,13 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Customers;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMInvoiceManager : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMInvoiceManager() : base()
         {
             base.Load += FRMInvoiceManager_Load;
@@ -26,7 +26,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -88,7 +87,6 @@ namespace FSM
             {
                 if (_dgInvoices != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _dgInvoices.DoubleClick -= dgInvoices_DoubleClick;
@@ -217,7 +215,6 @@ namespace FSM
             {
                 if (_txtPostcode != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _txtPostcode.KeyDown -= txtJobNumber_TextChanged;
                 }
@@ -1151,9 +1148,9 @@ namespace FSM
             _grpFilter.SuspendLayout();
             _ContextMenuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpInvoices
-            // 
+            //
             _grpInvoices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpInvoices.Controls.Add(_btnChangeLine);
@@ -1167,27 +1164,27 @@ namespace FSM
             _grpInvoices.TabIndex = 3;
             _grpInvoices.TabStop = false;
             _grpInvoices.Text = "Items Ready To Be Invoiced";
-            // 
+            //
             // btnChangeLine
-            // 
+            //
             _btnChangeLine.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnChangeLine.Location = new Point(848, 20);
             _btnChangeLine.Name = "btnChangeLine";
             _btnChangeLine.Size = new Size(160, 23);
             _btnChangeLine.TabIndex = 22;
             _btnChangeLine.Text = "Change Line";
-            // 
+            //
             // btnBackToVisitManager
-            // 
+            //
             _btnBackToVisitManager.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnBackToVisitManager.Location = new Point(1014, 20);
             _btnBackToVisitManager.Name = "btnBackToVisitManager";
             _btnBackToVisitManager.Size = new Size(160, 23);
             _btnBackToVisitManager.TabIndex = 21;
             _btnBackToVisitManager.Text = "Back To Visit Manager";
-            // 
+            //
             // dgInvoices
-            // 
+            //
             _dgInvoices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgInvoices.DataMember = "";
@@ -1196,26 +1193,26 @@ namespace FSM
             _dgInvoices.Name = "dgInvoices";
             _dgInvoices.Size = new Size(1166, 267);
             _dgInvoices.TabIndex = 14;
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.AccessibleDescription = "Export Job List To Excel";
             _btnSelectAll.Location = new Point(7, 20);
             _btnSelectAll.Name = "btnSelectAll";
             _btnSelectAll.Size = new Size(88, 23);
             _btnSelectAll.TabIndex = 19;
             _btnSelectAll.Text = "Select All";
-            // 
+            //
             // btnDeselectAll
-            // 
+            //
             _btnDeselectAll.Location = new Point(103, 20);
             _btnDeselectAll.Name = "btnDeselectAll";
             _btnDeselectAll.Size = new Size(88, 23);
             _btnDeselectAll.TabIndex = 20;
             _btnDeselectAll.Text = "Deselect All";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_txtAccNo);
             _grpFilter.Controls.Add(_lblAccNo);
@@ -1246,56 +1243,56 @@ namespace FSM
             _grpFilter.TabIndex = 4;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // txtAccNo
-            // 
+            //
             _txtAccNo.Location = new Point(742, 123);
             _txtAccNo.Name = "txtAccNo";
             _txtAccNo.Size = new Size(160, 21);
             _txtAccNo.TabIndex = 41;
-            // 
+            //
             // lblAccNo
-            // 
+            //
             _lblAccNo.Location = new Point(606, 126);
             _lblAccNo.Name = "lblAccNo";
             _lblAccNo.Size = new Size(84, 16);
             _lblAccNo.TabIndex = 40;
             _lblAccNo.Text = "Acc No";
-            // 
+            //
             // lblDept
-            // 
+            //
             _lblDept.Location = new Point(328, 123);
             _lblDept.Name = "lblDept";
             _lblDept.Size = new Size(84, 16);
             _lblDept.TabIndex = 38;
             _lblDept.Text = "Cost Centre";
-            // 
+            //
             // cboDept
-            // 
+            //
             _cboDept.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboDept.Location = new Point(418, 123);
             _cboDept.Name = "cboDept";
             _cboDept.Size = new Size(160, 21);
             _cboDept.TabIndex = 39;
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Location = new Point(8, 123);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(72, 16);
             _Label13.TabIndex = 37;
             _Label13.Text = "Region";
-            // 
+            //
             // cboRegion
-            // 
+            //
             _cboRegion.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboRegion.Location = new Point(160, 120);
             _cboRegion.Name = "cboRegion";
             _cboRegion.Size = new Size(160, 21);
             _cboRegion.TabIndex = 36;
-            // 
+            //
             // btnSearch
-            // 
+            //
             _btnSearch.AccessibleDescription = "Export Job List To Excel";
             _btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSearch.Location = new Point(1014, 123);
@@ -1303,9 +1300,9 @@ namespace FSM
             _btnSearch.Size = new Size(120, 23);
             _btnSearch.TabIndex = 28;
             _btnSearch.Text = "Run Filter";
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindCustomer.BackColor = Color.White;
             _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1315,9 +1312,9 @@ namespace FSM
             _btnFindCustomer.TabIndex = 2;
             _btnFindCustomer.Text = "...";
             _btnFindCustomer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCustomer.Location = new Point(160, 48);
@@ -1325,33 +1322,33 @@ namespace FSM
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(974, 21);
             _txtCustomer.TabIndex = 1;
-            // 
+            //
             // lblCustomers
-            // 
+            //
             _lblCustomers.Location = new Point(8, 48);
             _lblCustomers.Name = "lblCustomers";
             _lblCustomers.Size = new Size(72, 21);
             _lblCustomers.TabIndex = 27;
             _lblCustomers.Text = "Customers";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPostcode.Location = new Point(160, 96);
             _txtPostcode.Name = "txtPostcode";
             _txtPostcode.Size = new Size(160, 21);
             _txtPostcode.TabIndex = 5;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 96);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 16);
             _Label1.TabIndex = 20;
             _Label1.Text = "Postcode";
-            // 
+            //
             // btnFindSite
-            // 
+            //
             _btnFindSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindSite.BackColor = Color.White;
             _btnFindSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1361,9 +1358,9 @@ namespace FSM
             _btnFindSite.TabIndex = 4;
             _btnFindSite.Text = "...";
             _btnFindSite.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtSite.Location = new Point(160, 72);
@@ -1371,79 +1368,79 @@ namespace FSM
             _txtSite.ReadOnly = true;
             _txtSite.Size = new Size(974, 21);
             _txtSite.TabIndex = 3;
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Location = new Point(376, 24);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(160, 21);
             _dtpTo.TabIndex = 13;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(160, 24);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(160, 21);
             _dtpFrom.TabIndex = 12;
-            // 
+            //
             // txtJobNumber
-            // 
+            //
             _txtJobNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtJobNumber.Location = new Point(742, 96);
             _txtJobNumber.Name = "txtJobNumber";
             _txtJobNumber.Size = new Size(392, 21);
             _txtJobNumber.TabIndex = 9;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(336, 24);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(48, 16);
             _Label9.TabIndex = 10;
             _Label9.Text = "and";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(8, 24);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(144, 16);
             _Label8.TabIndex = 9;
             _Label8.Text = "To Raise Date Between : ";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(606, 99);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(136, 16);
             _Label6.TabIndex = 6;
             _Label6.Text = "Job/Order/Contract No";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 72);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(64, 16);
             _Label2.TabIndex = 2;
             _Label2.Text = "Property";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(328, 96);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(48, 16);
             _Label10.TabIndex = 4;
             _Label10.Text = "Type";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Location = new Point(418, 96);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(160, 21);
             _cboType.TabIndex = 7;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 518);
@@ -1451,18 +1448,18 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 17;
             _btnExport.Text = "Export";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(72, 518);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 18;
             _btnReset.Text = "Reset";
-            // 
+            //
             // btnPrintOneItemOneInvoice
-            // 
+            //
             _btnPrintOneItemOneInvoice.AccessibleDescription = "Export Job List To Excel";
             _btnPrintOneItemOneInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnPrintOneItemOneInvoice.Location = new Point(136, 518);
@@ -1470,36 +1467,36 @@ namespace FSM
             _btnPrintOneItemOneInvoice.Size = new Size(216, 23);
             _btnPrintOneItemOneInvoice.TabIndex = 21;
             _btnPrintOneItemOneInvoice.Text = "Print One Item One Invoice";
-            // 
+            //
             // btnPrintManyItemsOnOneInvoice
-            // 
+            //
             _btnPrintManyItemsOnOneInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnPrintManyItemsOnOneInvoice.Location = new Point(360, 518);
             _btnPrintManyItemsOnOneInvoice.Name = "btnPrintManyItemsOnOneInvoice";
             _btnPrintManyItemsOnOneInvoice.Size = new Size(216, 23);
             _btnPrintManyItemsOnOneInvoice.TabIndex = 22;
             _btnPrintManyItemsOnOneInvoice.Text = "Print Many Items on One Invoice";
-            // 
+            //
             // btnAddInvoiceAddress
-            // 
+            //
             _btnAddInvoiceAddress.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddInvoiceAddress.Location = new Point(584, 518);
             _btnAddInvoiceAddress.Name = "btnAddInvoiceAddress";
             _btnAddInvoiceAddress.Size = new Size(160, 23);
             _btnAddInvoiceAddress.TabIndex = 23;
             _btnAddInvoiceAddress.Text = "Add Invoice Address";
-            // 
+            //
             // btnView
-            // 
+            //
             _btnView.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnView.Location = new Point(1060, 518);
             _btnView.Name = "btnView";
             _btnView.Size = new Size(130, 23);
             _btnView.TabIndex = 24;
             _btnView.Text = "View";
-            // 
+            //
             // Button1
-            // 
+            //
             _Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Button1.ContextMenuStrip = _ContextMenuStrip1;
             _Button1.Location = new Point(750, 518);
@@ -1507,33 +1504,33 @@ namespace FSM
             _Button1.Size = new Size(169, 23);
             _Button1.TabIndex = 26;
             _Button1.Text = "Raise Alternative Doc";
-            // 
+            //
             // ContextMenuStrip1
-            // 
+            //
             _ContextMenuStrip1.Items.AddRange(new ToolStripItem[] { _ts1, _ts2, _RaiseProFormaToolStripMenuItem });
             _ContextMenuStrip1.Name = "ContextMenuStrip1";
             _ContextMenuStrip1.Size = new Size(173, 70);
-            // 
+            //
             // ts1
-            // 
+            //
             _ts1.Name = "ts1";
             _ts1.Size = new Size(172, 22);
             _ts1.Text = "Missed DD Invoice";
-            // 
+            //
             // ts2
-            // 
+            //
             _ts2.Name = "ts2";
             _ts2.Size = new Size(172, 22);
             _ts2.Text = "Missed DD Receipt";
-            // 
+            //
             // RaiseProFormaToolStripMenuItem
-            // 
+            //
             _RaiseProFormaToolStripMenuItem.Name = "RaiseProFormaToolStripMenuItem";
             _RaiseProFormaToolStripMenuItem.Size = new Size(172, 22);
             _RaiseProFormaToolStripMenuItem.Text = "Raise Pro-Forma";
-            // 
+            //
             // FRMInvoiceManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1198, 548);
             Controls.Add(_Button1);
@@ -1567,7 +1564,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupInvoiceDataGrid();
@@ -1578,16 +1576,16 @@ namespace FSM
                 {
                     dtVisitFilters = (DataTable)get_GetParameter(2);
                 }
-
-                if (get_GetParameter(0) is object)
+                DataView dv = (DataView)get_GetParameter(0);
+                if (dv != null)
                 {
-                    if (Conversions.ToBoolean(get_GetParameter(0).Table.rows.count > 0))
+                    if (Conversions.ToBoolean(dv.Table.Rows.Count > 0))
                     {
-                        dtpFrom.Value = Conversions.ToDate(get_GetParameter(0).Table.Select("RaiseDate = MIN(RaiseDate)")(0).Item("RaiseDate"));
-                        dtpTo.Value = Conversions.ToDate(get_GetParameter(0).Table.Select("RaiseDate = MAX(RaiseDate)")(0).Item("RaiseDate"));
+                        dtpFrom.Value = Conversions.ToDate(dv.Table.Select("RaiseDate = MIN(RaiseDate)")[0]["RaiseDate"]);
+                        dtpTo.Value = Conversions.ToDate(dv.Table.Select("RaiseDate = MAX(RaiseDate)")[0]["RaiseDate"]);
                     }
 
-                    InvoicesDataview = (DataView)get_GetParameter(0);
+                    InvoicesDataview = dv;
                     ((IBaseForm)this).SetFormParameters = null;
                 }
             }
@@ -1605,7 +1603,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1759,6 +1757,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupInvoiceDataGrid()
         {
             Helper.SetUpDataGrid(dgInvoices);
@@ -1981,7 +1980,6 @@ namespace FSM
                         {
                             if (Helper.MakeDoubleValid(i["Amount"]) > 0)
                             {
-
                                 // CHECK THAT ANOTHER USERS HASN'T GENERATED SINCE WE LAST REFRESHED OUR SCREEN
 
                                 if (App.DB.InvoicedLines.InvoicedLines_GetAll_ByInvoiceToBeRaisedID(Conversions.ToInteger(i["InvoiceToBeRaisedID"])).Count == 0)
@@ -1993,7 +1991,7 @@ namespace FSM
                                     inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                     inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                     inv.RaisedDate = Conversions.ToDate(i["RaiseDate"]);
-                                    if (Conversions.ToBoolean(i["TAXRateID"] > 0))
+                                    if (Conversions.ToBoolean((int)i["TAXRateID"] > 0))
                                     {
                                         inv.SetVATRateID = i["TAXRateID"];
                                     }
@@ -2165,6 +2163,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void view()
         {
             if (SelectedInvoiceDataRow is object)
@@ -2471,12 +2470,10 @@ namespace FSM
                                 // IS IT INVOICED?
                                 if (Helper.MakeIntegerValid(dr["invoicedID"]) == 0) // Invoiced =NO
                                 {
-
                                     // IS THERE AN Invoice for any other visits on this job?
                                     var dt = App.DB.InvoiceToBeRaised.InvoicesToBeRaised_GetAllVisitsInvoice_ByJobID(Conversions.ToInteger(dr["JobID"])).Table;
                                     if (dt.Rows.Count > 0) // Exisiting Invoice =YES
                                     {
-
                                         // Add to Exisiting Invoice
                                         InsertInvoiceLines(Helper.MakeDoubleValid(dr["Amount"]), Conversions.ToInteger(dt.Rows[0]["InvoicedID"]), Conversions.ToInteger(dr["InvoiceToBeRaisedID"]));
 
@@ -2588,7 +2585,6 @@ namespace FSM
                 var drInv = InvoicesDataview.Table.Select(Conversions.ToString(Conversions.ToString("AddressTypeID=" + dr["AddressTypeID"] + " AND AddressID=") + dr["AddressID"]));
                 for (int i = 0, loopTo = drInv.Length - 1; i <= loopTo; i++)
                 {
-
                     // IS IT INVOICED ALREADY?
                     // If Entity.Sys.Helper.MakeIntegerValid(drInv(i).Item("invoicedID")) = 0 Then 'NO
 
@@ -2695,7 +2691,6 @@ namespace FSM
                         {
                             if (Helper.MakeDoubleValid(i["Amount"]) > 0)
                             {
-
                                 // CHECK THAT ANOTHER USERS HASN'T GENERATED SINCE WE LAST REFRESHED OUR SCREEN
 
                                 if (App.DB.InvoicedLines.InvoicedLines_GetAll_ByInvoiceToBeRaisedID(Conversions.ToInteger(i["InvoiceToBeRaisedID"])).Count == 0)
@@ -2707,7 +2702,7 @@ namespace FSM
                                     inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                     inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                     inv.RaisedDate = Conversions.ToDate(i["RaiseDate"]);
-                                    if (Conversions.ToBoolean(i["TAXRateID"] > 0))
+                                    if (Conversions.ToBoolean((int)i["TAXRateID"] > 0))
                                     {
                                         inv.SetVATRateID = i["TAXRateID"];
                                     }
@@ -2772,7 +2767,6 @@ namespace FSM
                         {
                             if (Helper.MakeDoubleValid(i["Amount"]) > 0)
                             {
-
                                 // CHECK THAT ANOTHER USERS HASN'T GENERATED SINCE WE LAST REFRESHED OUR SCREEN
 
                                 if (App.DB.InvoicedLines.InvoicedLines_GetAll_ByInvoiceToBeRaisedID(Conversions.ToInteger(i["InvoiceToBeRaisedID"])).Count == 0)
@@ -2784,7 +2778,7 @@ namespace FSM
                                     inv.SetInvoiceNumber = invNum.Prefix + invNum.Number;
                                     inv.SetRaisedByUserID = App.loggedInUser.UserID;
                                     inv.RaisedDate = Conversions.ToDate(i["RaiseDate"]);
-                                    if (Conversions.ToBoolean(i["TAXRateID"] > 0))
+                                    if (Conversions.ToBoolean((int)i["TAXRateID"] > 0))
                                     {
                                         inv.SetVATRateID = i["TAXRateID"];
                                     }

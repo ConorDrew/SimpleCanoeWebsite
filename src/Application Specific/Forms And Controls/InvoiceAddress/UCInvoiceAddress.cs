@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class UCInvoiceAddress : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCInvoiceAddress() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCInvoiceAddress_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -44,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
 
         private GroupBox _grpInvoiceAddress;
@@ -527,9 +525,9 @@ namespace FSM
             _lblEmailAddress = new Label();
             _grpInvoiceAddress.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpInvoiceAddress
-            // 
+            //
             _grpInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpInvoiceAddress.Controls.Add(_txtAddress1);
@@ -556,9 +554,9 @@ namespace FSM
             _grpInvoiceAddress.TabIndex = 1;
             _grpInvoiceAddress.TabStop = false;
             _grpInvoiceAddress.Text = "Main Details";
-            // 
+            //
             // txtAddress1
-            // 
+            //
             _txtAddress1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress1.Location = new Point(141, 24);
             _txtAddress1.MaxLength = 255;
@@ -567,17 +565,17 @@ namespace FSM
             _txtAddress1.TabIndex = 2;
             _txtAddress1.Tag = "InvoiceAddress.Address1";
             _txtAddress1.Text = "";
-            // 
+            //
             // lblAddress1
-            // 
+            //
             _lblAddress1.Location = new Point(14, 24);
             _lblAddress1.Name = "lblAddress1";
             _lblAddress1.Size = new Size(73, 20);
             _lblAddress1.TabIndex = 31;
             _lblAddress1.Text = "Address 1";
-            // 
+            //
             // txtAddress2
-            // 
+            //
             _txtAddress2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress2.Location = new Point(141, 56);
             _txtAddress2.MaxLength = 255;
@@ -586,17 +584,17 @@ namespace FSM
             _txtAddress2.TabIndex = 3;
             _txtAddress2.Tag = "InvoiceAddress.Address2";
             _txtAddress2.Text = "";
-            // 
+            //
             // lblAddress2
-            // 
+            //
             _lblAddress2.Location = new Point(14, 56);
             _lblAddress2.Name = "lblAddress2";
             _lblAddress2.Size = new Size(71, 20);
             _lblAddress2.TabIndex = 31;
             _lblAddress2.Text = "Address 2";
-            // 
+            //
             // txtAddress3
-            // 
+            //
             _txtAddress3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress3.Location = new Point(141, 88);
             _txtAddress3.MaxLength = 255;
@@ -605,17 +603,17 @@ namespace FSM
             _txtAddress3.TabIndex = 4;
             _txtAddress3.Tag = "InvoiceAddress.Address3";
             _txtAddress3.Text = "";
-            // 
+            //
             // lblAddress3
-            // 
+            //
             _lblAddress3.Location = new Point(14, 88);
             _lblAddress3.Name = "lblAddress3";
             _lblAddress3.Size = new Size(73, 20);
             _lblAddress3.TabIndex = 31;
             _lblAddress3.Text = "Address 3";
-            // 
+            //
             // txtAddress4
-            // 
+            //
             _txtAddress4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress4.Location = new Point(141, 120);
             _txtAddress4.MaxLength = 255;
@@ -624,17 +622,17 @@ namespace FSM
             _txtAddress4.TabIndex = 5;
             _txtAddress4.Tag = "InvoiceAddress.Town";
             _txtAddress4.Text = "";
-            // 
+            //
             // lblTown
-            // 
+            //
             _lblTown.Location = new Point(14, 120);
             _lblTown.Name = "lblTown";
             _lblTown.Size = new Size(64, 20);
             _lblTown.TabIndex = 31;
             _lblTown.Text = "Address 4";
-            // 
+            //
             // txtAddress5
-            // 
+            //
             _txtAddress5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress5.Location = new Point(141, 152);
             _txtAddress5.MaxLength = 255;
@@ -643,17 +641,17 @@ namespace FSM
             _txtAddress5.TabIndex = 6;
             _txtAddress5.Tag = "InvoiceAddress.County";
             _txtAddress5.Text = "";
-            // 
+            //
             // lblCounty
-            // 
+            //
             _lblCounty.Location = new Point(14, 152);
             _lblCounty.Name = "lblCounty";
             _lblCounty.Size = new Size(61, 20);
             _lblCounty.TabIndex = 31;
             _lblCounty.Text = "Address 5";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcode.Location = new Point(141, 184);
             _txtPostcode.MaxLength = 255;
@@ -662,17 +660,17 @@ namespace FSM
             _txtPostcode.TabIndex = 7;
             _txtPostcode.Tag = "InvoiceAddress.Postcode";
             _txtPostcode.Text = "";
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Location = new Point(14, 184);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(66, 20);
             _lblPostcode.TabIndex = 31;
             _lblPostcode.Text = "Postcode";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTelephoneNum.Location = new Point(141, 216);
             _txtTelephoneNum.MaxLength = 255;
@@ -681,17 +679,17 @@ namespace FSM
             _txtTelephoneNum.TabIndex = 8;
             _txtTelephoneNum.Tag = "InvoiceAddress.TelephoneNum";
             _txtTelephoneNum.Text = "";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(14, 216);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(108, 20);
             _lblTelephoneNum.TabIndex = 31;
             _lblTelephoneNum.Text = "Telephone";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFaxNum.Location = new Point(141, 248);
             _txtFaxNum.MaxLength = 255;
@@ -700,17 +698,17 @@ namespace FSM
             _txtFaxNum.TabIndex = 9;
             _txtFaxNum.Tag = "InvoiceAddress.FaxNum";
             _txtFaxNum.Text = "";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(14, 248);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(70, 20);
             _lblFaxNum.TabIndex = 31;
             _lblFaxNum.Text = "Fax";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmailAddress.Location = new Point(141, 280);
             _txtEmailAddress.MaxLength = 255;
@@ -719,17 +717,17 @@ namespace FSM
             _txtEmailAddress.TabIndex = 10;
             _txtEmailAddress.Tag = "InvoiceAddress.EmailAddress";
             _txtEmailAddress.Text = "";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(14, 280);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(97, 20);
             _lblEmailAddress.TabIndex = 31;
             _lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // UCInvoiceAddress
-            // 
+            //
             Controls.Add(_grpInvoiceAddress);
             Name = "UCInvoiceAddress";
             Size = new Size(640, 329);
@@ -739,7 +737,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -769,11 +768,11 @@ namespace FSM
             }
         }
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -809,7 +808,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

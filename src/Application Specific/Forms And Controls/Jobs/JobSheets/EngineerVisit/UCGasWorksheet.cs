@@ -1,13 +1,13 @@
-﻿using System;
+﻿using FSM.Entity.EngineerVisitAssetWorkSheets;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.EngineerVisitAssetWorkSheets;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -15,7 +15,6 @@ namespace FSM
     {
         public UCGasWorksheet(EngineerVisitAssetWorkSheet worksheet, int jobID, Entity.EngineerVisits.EngineerVisit EngineerVisit) : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             DtPassFailNa = App.DB.Picklists.GetAll(Enums.PickListTypes.PassFailNA).Table;
@@ -43,6 +42,7 @@ namespace FSM
 
             base.Dispose(disposing);
         }
+
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private TextBox _txtDHWFlow;
 
@@ -1629,403 +1629,403 @@ namespace FSM
             _lblNotTested14 = new Label();
             _lblNotTested13 = new Label();
             SuspendLayout();
-            // 
+            //
             // txtDHWFlow
-            // 
+            //
             _txtDHWFlow.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtDHWFlow.Location = new Point(601, 278);
             _txtDHWFlow.Name = "txtDHWFlow";
             _txtDHWFlow.Size = new Size(188, 21);
             _txtDHWFlow.TabIndex = 10;
-            // 
+            //
             // txtColdTemp
-            // 
+            //
             _txtColdTemp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtColdTemp.Location = new Point(601, 309);
             _txtColdTemp.Name = "txtColdTemp";
             _txtColdTemp.Size = new Size(188, 21);
             _txtColdTemp.TabIndex = 11;
-            // 
+            //
             // txtDHWTemp
-            // 
+            //
             _txtDHWTemp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtDHWTemp.Location = new Point(601, 339);
             _txtDHWTemp.Name = "txtDHWTemp";
             _txtDHWTemp.Size = new Size(188, 21);
             _txtDHWTemp.TabIndex = 12;
-            // 
+            //
             // txtHeadInput
-            // 
+            //
             _txtHeadInput.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtHeadInput.Location = new Point(601, 368);
             _txtHeadInput.Name = "txtHeadInput";
             _txtHeadInput.Size = new Size(188, 21);
             _txtHeadInput.TabIndex = 13;
-            // 
+            //
             // txtInletPressure
-            // 
+            //
             _txtInletPressure.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtInletPressure.Location = new Point(601, 399);
             _txtInletPressure.Name = "txtInletPressure";
             _txtInletPressure.Size = new Size(188, 21);
             _txtInletPressure.TabIndex = 14;
-            // 
+            //
             // txtMinBurnerPressure
-            // 
+            //
             _txtMinBurnerPressure.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtMinBurnerPressure.Location = new Point(601, 429);
             _txtMinBurnerPressure.Name = "txtMinBurnerPressure";
             _txtMinBurnerPressure.Size = new Size(188, 21);
             _txtMinBurnerPressure.TabIndex = 15;
-            // 
+            //
             // txtMaxBurnerPressure
-            // 
+            //
             _txtMaxBurnerPressure.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtMaxBurnerPressure.Location = new Point(601, 458);
             _txtMaxBurnerPressure.Name = "txtMaxBurnerPressure";
             _txtMaxBurnerPressure.Size = new Size(188, 21);
             _txtMaxBurnerPressure.TabIndex = 16;
-            // 
+            //
             // txtCO2
-            // 
+            //
             _txtCO2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtCO2.Location = new Point(601, 488);
             _txtCO2.Name = "txtCO2";
             _txtCO2.Size = new Size(188, 21);
             _txtCO2.TabIndex = 17;
-            // 
+            //
             // txtCO2Ration
-            // 
+            //
             _txtCO2Ration.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtCO2Ration.Location = new Point(601, 519);
             _txtCO2Ration.Name = "txtCO2Ration";
             _txtCO2Ration.Size = new Size(188, 21);
             _txtCO2Ration.TabIndex = 18;
-            // 
+            //
             // txtCO2Min
-            // 
+            //
             _txtCO2Min.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtCO2Min.Location = new Point(601, 549);
             _txtCO2Min.Name = "txtCO2Min";
             _txtCO2Min.Size = new Size(188, 21);
             _txtCO2Min.TabIndex = 19;
-            // 
+            //
             // txtCO2Max
-            // 
+            //
             _txtCO2Max.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtCO2Max.Location = new Point(601, 578);
             _txtCO2Max.Name = "txtCO2Max";
             _txtCO2Max.Size = new Size(188, 21);
             _txtCO2Max.TabIndex = 20;
-            // 
+            //
             // cboSafety
-            // 
+            //
             _cboSafety.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboSafety.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSafety.Location = new Point(601, 638);
             _cboSafety.Name = "cboSafety";
             _cboSafety.Size = new Size(188, 21);
             _cboSafety.TabIndex = 22;
-            // 
+            //
             // Label18
-            // 
+            //
             _Label18.AutoSize = true;
             _Label18.Location = new Point(3, 641);
             _Label18.Name = "Label18";
             _Label18.Size = new Size(101, 13);
             _Label18.TabIndex = 365;
             _Label18.Text = "Appliance safety";
-            // 
+            //
             // cboServiced
-            // 
+            //
             _cboServiced.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboServiced.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboServiced.Location = new Point(601, 608);
             _cboServiced.Name = "cboServiced";
             _cboServiced.Size = new Size(188, 21);
             _cboServiced.TabIndex = 21;
-            // 
+            //
             // Label19
-            // 
+            //
             _Label19.AutoSize = true;
             _Label19.Location = new Point(3, 611);
             _Label19.Name = "Label19";
             _Label19.Size = new Size(181, 13);
             _Label19.TabIndex = 363;
             _Label19.Text = "Appliance service or inspected";
-            // 
+            //
             // Label20
-            // 
+            //
             _Label20.AutoSize = true;
             _Label20.Location = new Point(3, 581);
             _Label20.Name = "Label20";
             _Label20.Size = new Size(61, 13);
             _Label20.TabIndex = 361;
             _Label20.Text = "CO2 max";
-            // 
+            //
             // Label21
-            // 
+            //
             _Label21.AutoSize = true;
             _Label21.Location = new Point(3, 552);
             _Label21.Name = "Label21";
             _Label21.Size = new Size(57, 13);
             _Label21.TabIndex = 360;
             _Label21.Text = "CO2 min";
-            // 
+            //
             // Label22
-            // 
+            //
             _Label22.AutoSize = true;
             _Label22.Location = new Point(3, 522);
             _Label22.Name = "Label22";
             _Label22.Size = new Size(123, 13);
             _Label22.TabIndex = 359;
             _Label22.Text = "CO2 / co ration high";
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.AutoSize = true;
             _Label11.Location = new Point(30, 608);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(32, 13);
             _Label11.TabIndex = 358;
             _Label11.Text = "CO2";
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.AutoSize = true;
             _Label12.Location = new Point(3, 461);
             _Label12.Name = "Label12";
             _Label12.Size = new Size(126, 13);
             _Label12.TabIndex = 357;
             _Label12.Text = "Max burner pressure";
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.AutoSize = true;
             _Label13.Location = new Point(3, 431);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(122, 13);
             _Label13.TabIndex = 356;
             _Label13.Text = "Min burner pressure";
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.AutoSize = true;
             _Label14.Location = new Point(3, 402);
             _Label14.Name = "Label14";
             _Label14.Size = new Size(136, 13);
             _Label14.TabIndex = 355;
             _Label14.Text = "Inlet working pressure";
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.AutoSize = true;
             _Label15.Location = new Point(3, 372);
             _Label15.Name = "Label15";
             _Label15.Size = new Size(68, 13);
             _Label15.TabIndex = 354;
             _Label15.Text = "Head input";
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.AutoSize = true;
             _Label16.Location = new Point(3, 342);
             _Label16.Name = "Label16";
             _Label16.Size = new Size(68, 13);
             _Label16.TabIndex = 353;
             _Label16.Text = "DHW temp";
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.AutoSize = true;
             _Label17.Location = new Point(3, 312);
             _Label17.Name = "Label17";
             _Label17.Size = new Size(102, 13);
             _Label17.TabIndex = 352;
             _Label17.Text = "Cold water temp";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.AutoSize = true;
             _Label6.Location = new Point(3, 281);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(89, 13);
             _Label6.TabIndex = 351;
             _Label6.Text = "DHW flow rate";
-            // 
+            //
             // cboDevice
-            // 
+            //
             _cboDevice.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboDevice.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboDevice.Location = new Point(601, 248);
             _cboDevice.Name = "cboDevice";
             _cboDevice.Size = new Size(188, 21);
             _cboDevice.TabIndex = 9;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.AutoSize = true;
             _Label7.Location = new Point(3, 251);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(143, 13);
             _Label7.TabIndex = 350;
             _Label7.Text = "Safety device operation";
-            // 
+            //
             // cboProvisions
-            // 
+            //
             _cboProvisions.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboProvisions.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboProvisions.Location = new Point(601, 218);
             _cboProvisions.Name = "cboProvisions";
             _cboProvisions.Size = new Size(188, 21);
             _cboProvisions.TabIndex = 8;
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.AutoSize = true;
             _Label8.Location = new Point(3, 221);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(192, 13);
             _Label8.TabIndex = 348;
             _Label8.Text = "Ventilation provision satisfactory";
-            // 
+            //
             // cboVisualCondition
-            // 
+            //
             _cboVisualCondition.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboVisualCondition.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboVisualCondition.Location = new Point(601, 189);
             _cboVisualCondition.Name = "cboVisualCondition";
             _cboVisualCondition.Size = new Size(188, 21);
             _cboVisualCondition.TabIndex = 7;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.AutoSize = true;
             _Label9.Location = new Point(3, 192);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(141, 13);
             _Label9.TabIndex = 346;
             _Label9.Text = "Visual Condition of Flue";
-            // 
+            //
             // cboFlueTermination
-            // 
+            //
             _cboFlueTermination.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboFlueTermination.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboFlueTermination.Location = new Point(601, 159);
             _cboFlueTermination.Name = "cboFlueTermination";
             _cboFlueTermination.Size = new Size(188, 21);
             _cboFlueTermination.TabIndex = 6;
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.AutoSize = true;
             _Label10.Location = new Point(3, 162);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(171, 13);
             _Label10.TabIndex = 344;
             _Label10.Text = "Flue Termination satisfactory";
-            // 
+            //
             // cboFlueSpil
-            // 
+            //
             _cboFlueSpil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboFlueSpil.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboFlueSpil.Location = new Point(601, 129);
             _cboFlueSpil.Name = "cboFlueSpil";
             _cboFlueSpil.Size = new Size(188, 21);
             _cboFlueSpil.TabIndex = 5;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.AutoSize = true;
             _Label3.Location = new Point(3, 132);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(99, 13);
             _Label3.TabIndex = 342;
             _Label3.Text = "Flue spilage test";
-            // 
+            //
             // cboFlueFlow
-            // 
+            //
             _cboFlueFlow.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboFlueFlow.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboFlueFlow.Location = new Point(601, 99);
             _cboFlueFlow.Name = "cboFlueFlow";
             _cboFlueFlow.Size = new Size(188, 21);
             _cboFlueFlow.TabIndex = 4;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.AutoSize = true;
             _Label4.Location = new Point(3, 102);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(84, 13);
             _Label4.TabIndex = 340;
             _Label4.Text = "Flue Flow test";
-            // 
+            //
             // cboTested
-            // 
+            //
             _cboTested.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboTested.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboTested.Location = new Point(601, 69);
             _cboTested.Name = "cboTested";
             _cboTested.Size = new Size(188, 21);
             _cboTested.TabIndex = 3;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.AutoSize = true;
             _Label5.Location = new Point(3, 72);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(101, 13);
             _Label5.TabIndex = 338;
             _Label5.Text = "Appliance tested";
-            // 
+            //
             // cboLLAppliance
-            // 
+            //
             _cboLLAppliance.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboLLAppliance.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboLLAppliance.Location = new Point(601, 40);
             _cboLLAppliance.Name = "cboLLAppliance";
             _cboLLAppliance.Size = new Size(188, 21);
             _cboLLAppliance.TabIndex = 2;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.AutoSize = true;
             _Label2.Location = new Point(3, 43);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(125, 13);
             _Label2.TabIndex = 336;
             _Label2.Text = "Landlords Appliance ";
-            // 
+            //
             // cboAppliance
-            // 
+            //
             _cboAppliance.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboAppliance.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboAppliance.Location = new Point(601, 10);
             _cboAppliance.Name = "cboAppliance";
             _cboAppliance.Size = new Size(188, 21);
             _cboAppliance.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Location = new Point(3, 13);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(62, 13);
             _Label1.TabIndex = 334;
             _Label1.Text = "Appliance";
-            // 
+            //
             // Label23
-            // 
+            //
             _Label23.AutoSize = true;
             _Label23.Location = new Point(3, 491);
             _Label23.Name = "Label23";
             _Label23.Size = new Size(32, 13);
             _Label23.TabIndex = 378;
             _Label23.Text = "CO2";
-            // 
+            //
             // lblNotTested1
-            // 
+            //
             _lblNotTested1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested1.AutoSize = true;
             _lblNotTested1.Location = new Point(661, 102);
@@ -2033,9 +2033,9 @@ namespace FSM
             _lblNotTested1.Size = new Size(67, 13);
             _lblNotTested1.TabIndex = 379;
             _lblNotTested1.Text = "Not Tested";
-            // 
+            //
             // lblNotTested2
-            // 
+            //
             _lblNotTested2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested2.AutoSize = true;
             _lblNotTested2.Location = new Point(661, 132);
@@ -2043,9 +2043,9 @@ namespace FSM
             _lblNotTested2.Size = new Size(67, 13);
             _lblNotTested2.TabIndex = 380;
             _lblNotTested2.Text = "Not Tested";
-            // 
+            //
             // lblNotTested3
-            // 
+            //
             _lblNotTested3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested3.AutoSize = true;
             _lblNotTested3.Location = new Point(661, 162);
@@ -2053,9 +2053,9 @@ namespace FSM
             _lblNotTested3.Size = new Size(67, 13);
             _lblNotTested3.TabIndex = 381;
             _lblNotTested3.Text = "Not Tested";
-            // 
+            //
             // lblNotTested6
-            // 
+            //
             _lblNotTested6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested6.AutoSize = true;
             _lblNotTested6.Location = new Point(661, 252);
@@ -2063,9 +2063,9 @@ namespace FSM
             _lblNotTested6.Size = new Size(67, 13);
             _lblNotTested6.TabIndex = 384;
             _lblNotTested6.Text = "Not Tested";
-            // 
+            //
             // lblNotTested5
-            // 
+            //
             _lblNotTested5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested5.AutoSize = true;
             _lblNotTested5.Location = new Point(661, 222);
@@ -2073,9 +2073,9 @@ namespace FSM
             _lblNotTested5.Size = new Size(67, 13);
             _lblNotTested5.TabIndex = 383;
             _lblNotTested5.Text = "Not Tested";
-            // 
+            //
             // lblNotTested4
-            // 
+            //
             _lblNotTested4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested4.AutoSize = true;
             _lblNotTested4.Location = new Point(661, 192);
@@ -2083,9 +2083,9 @@ namespace FSM
             _lblNotTested4.Size = new Size(67, 13);
             _lblNotTested4.TabIndex = 382;
             _lblNotTested4.Text = "Not Tested";
-            // 
+            //
             // lblNotTested12
-            // 
+            //
             _lblNotTested12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested12.AutoSize = true;
             _lblNotTested12.Location = new Point(661, 431);
@@ -2093,9 +2093,9 @@ namespace FSM
             _lblNotTested12.Size = new Size(67, 13);
             _lblNotTested12.TabIndex = 390;
             _lblNotTested12.Text = "Not Tested";
-            // 
+            //
             // lblNotTested11
-            // 
+            //
             _lblNotTested11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested11.AutoSize = true;
             _lblNotTested11.Location = new Point(661, 401);
@@ -2103,9 +2103,9 @@ namespace FSM
             _lblNotTested11.Size = new Size(67, 13);
             _lblNotTested11.TabIndex = 389;
             _lblNotTested11.Text = "Not Tested";
-            // 
+            //
             // lblNotTested10
-            // 
+            //
             _lblNotTested10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested10.AutoSize = true;
             _lblNotTested10.Location = new Point(661, 371);
@@ -2113,9 +2113,9 @@ namespace FSM
             _lblNotTested10.Size = new Size(67, 13);
             _lblNotTested10.TabIndex = 388;
             _lblNotTested10.Text = "Not Tested";
-            // 
+            //
             // lblNotTested9
-            // 
+            //
             _lblNotTested9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested9.AutoSize = true;
             _lblNotTested9.Location = new Point(661, 341);
@@ -2123,9 +2123,9 @@ namespace FSM
             _lblNotTested9.Size = new Size(67, 13);
             _lblNotTested9.TabIndex = 387;
             _lblNotTested9.Text = "Not Tested";
-            // 
+            //
             // lblNotTested8
-            // 
+            //
             _lblNotTested8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested8.AutoSize = true;
             _lblNotTested8.Location = new Point(661, 311);
@@ -2133,9 +2133,9 @@ namespace FSM
             _lblNotTested8.Size = new Size(67, 13);
             _lblNotTested8.TabIndex = 386;
             _lblNotTested8.Text = "Not Tested";
-            // 
+            //
             // lblNotTested7
-            // 
+            //
             _lblNotTested7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested7.AutoSize = true;
             _lblNotTested7.Location = new Point(661, 281);
@@ -2143,9 +2143,9 @@ namespace FSM
             _lblNotTested7.Size = new Size(67, 13);
             _lblNotTested7.TabIndex = 385;
             _lblNotTested7.Text = "Not Tested";
-            // 
+            //
             // lblNotTested18
-            // 
+            //
             _lblNotTested18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested18.AutoSize = true;
             _lblNotTested18.Location = new Point(661, 611);
@@ -2153,9 +2153,9 @@ namespace FSM
             _lblNotTested18.Size = new Size(67, 13);
             _lblNotTested18.TabIndex = 396;
             _lblNotTested18.Text = "Not Tested";
-            // 
+            //
             // lblNotTested17
-            // 
+            //
             _lblNotTested17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested17.AutoSize = true;
             _lblNotTested17.Location = new Point(661, 581);
@@ -2163,9 +2163,9 @@ namespace FSM
             _lblNotTested17.Size = new Size(67, 13);
             _lblNotTested17.TabIndex = 395;
             _lblNotTested17.Text = "Not Tested";
-            // 
+            //
             // lblNotTested16
-            // 
+            //
             _lblNotTested16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested16.AutoSize = true;
             _lblNotTested16.Location = new Point(661, 551);
@@ -2173,9 +2173,9 @@ namespace FSM
             _lblNotTested16.Size = new Size(67, 13);
             _lblNotTested16.TabIndex = 394;
             _lblNotTested16.Text = "Not Tested";
-            // 
+            //
             // lblNotTested15
-            // 
+            //
             _lblNotTested15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested15.AutoSize = true;
             _lblNotTested15.Location = new Point(661, 521);
@@ -2183,9 +2183,9 @@ namespace FSM
             _lblNotTested15.Size = new Size(67, 13);
             _lblNotTested15.TabIndex = 393;
             _lblNotTested15.Text = "Not Tested";
-            // 
+            //
             // lblNotTested14
-            // 
+            //
             _lblNotTested14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested14.AutoSize = true;
             _lblNotTested14.Location = new Point(661, 491);
@@ -2193,9 +2193,9 @@ namespace FSM
             _lblNotTested14.Size = new Size(67, 13);
             _lblNotTested14.TabIndex = 392;
             _lblNotTested14.Text = "Not Tested";
-            // 
+            //
             // lblNotTested13
-            // 
+            //
             _lblNotTested13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblNotTested13.AutoSize = true;
             _lblNotTested13.Location = new Point(661, 461);
@@ -2203,9 +2203,9 @@ namespace FSM
             _lblNotTested13.Size = new Size(67, 13);
             _lblNotTested13.TabIndex = 391;
             _lblNotTested13.Text = "Not Tested";
-            // 
+            //
             // UCGasWorksheet
-            // 
+            //
             Controls.Add(_Label23);
             Controls.Add(_txtDHWFlow);
             Controls.Add(_txtColdTemp);
@@ -2314,11 +2314,11 @@ namespace FSM
 
         private int _jobID;
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 

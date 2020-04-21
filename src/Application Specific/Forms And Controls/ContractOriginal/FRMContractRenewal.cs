@@ -1,22 +1,22 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMContractRenewal : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMContractRenewal() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContractManager_Load;
@@ -25,7 +25,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -477,7 +476,6 @@ namespace FSM
             {
                 if (_cboInvoiceFrequencyID != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _cboInvoiceFrequencyID.SelectedIndexChanged -= cboInvoiceFrequencyID_SelectedIndexChanged;
                 }
@@ -574,9 +572,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgFirstVisitDates).BeginInit();
             _gpbSites.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // gpbContract
-            // 
+            //
             _gpbContract.Controls.Add(_gpbInvoiceAddress);
             _gpbContract.Controls.Add(_cboInvoiceFrequencyID);
             _gpbContract.Controls.Add(_lblInvoiceFrequencyID);
@@ -597,9 +595,9 @@ namespace FSM
             _gpbContract.TabIndex = 2;
             _gpbContract.TabStop = false;
             _gpbContract.Text = "Contract";
-            // 
+            //
             // gpbInvoiceAddress
-            // 
+            //
             _gpbInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _gpbInvoiceAddress.Controls.Add(_dgInvoiceAddress);
             _gpbInvoiceAddress.Location = new Point(350, 15);
@@ -608,9 +606,9 @@ namespace FSM
             _gpbInvoiceAddress.TabIndex = 16;
             _gpbInvoiceAddress.TabStop = false;
             _gpbInvoiceAddress.Text = "Invoice Address";
-            // 
+            //
             // dgInvoiceAddress
-            // 
+            //
             _dgInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgInvoiceAddress.DataMember = "";
@@ -619,9 +617,9 @@ namespace FSM
             _dgInvoiceAddress.Name = "dgInvoiceAddress";
             _dgInvoiceAddress.Size = new Size(523, 134);
             _dgInvoiceAddress.TabIndex = 0;
-            // 
+            //
             // cboInvoiceFrequencyID
-            // 
+            //
             _cboInvoiceFrequencyID.Cursor = Cursors.Hand;
             _cboInvoiceFrequencyID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboInvoiceFrequencyID.Location = new Point(123, 154);
@@ -629,115 +627,115 @@ namespace FSM
             _cboInvoiceFrequencyID.Size = new Size(195, 21);
             _cboInvoiceFrequencyID.TabIndex = 15;
             _cboInvoiceFrequencyID.Tag = "Contract.InvoiceFrequencyID";
-            // 
+            //
             // lblInvoiceFrequencyID
-            // 
+            //
             _lblInvoiceFrequencyID.Location = new Point(8, 157);
             _lblInvoiceFrequencyID.Name = "lblInvoiceFrequencyID";
             _lblInvoiceFrequencyID.Size = new Size(132, 20);
             _lblInvoiceFrequencyID.TabIndex = 14;
             _lblInvoiceFrequencyID.Text = "Invoice Frequency";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(8, 43);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(80, 23);
             _Label6.TabIndex = 12;
             _Label6.Text = "New Price";
             _Label6.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 125);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(93, 23);
             _Label5.TabIndex = 11;
             _Label5.Text = "Invoice Date";
             _Label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // dtpInvoiceDate
-            // 
+            //
             _dtpInvoiceDate.Location = new Point(123, 126);
             _dtpInvoiceDate.Name = "dtpInvoiceDate";
             _dtpInvoiceDate.Size = new Size(195, 21);
             _dtpInvoiceDate.TabIndex = 10;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 98);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(64, 23);
             _Label4.TabIndex = 9;
             _Label4.Text = "End Date";
             _Label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 71);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(100, 23);
             _Label3.TabIndex = 8;
             _Label3.Text = "Start Date";
             _Label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(324, 15);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(30, 23);
             _Label2.TabIndex = 7;
             _Label2.Text = "%";
             _Label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 15);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(100, 23);
             _Label1.TabIndex = 6;
             _Label1.Text = "Markup Amount";
             _Label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtNewPrice
-            // 
+            //
             _txtNewPrice.Location = new Point(123, 45);
             _txtNewPrice.Name = "txtNewPrice";
             _txtNewPrice.Size = new Size(195, 21);
             _txtNewPrice.TabIndex = 5;
-            // 
+            //
             // dtpStartDate
-            // 
+            //
             _dtpStartDate.Location = new Point(123, 72);
             _dtpStartDate.Name = "dtpStartDate";
             _dtpStartDate.Size = new Size(195, 21);
             _dtpStartDate.TabIndex = 2;
-            // 
+            //
             // dtpEndDate
-            // 
+            //
             _dtpEndDate.Location = new Point(123, 99);
             _dtpEndDate.Name = "dtpEndDate";
             _dtpEndDate.Size = new Size(195, 21);
             _dtpEndDate.TabIndex = 1;
-            // 
+            //
             // txtPercentMarkup
-            // 
+            //
             _txtPercentMarkup.Location = new Point(123, 17);
             _txtPercentMarkup.Name = "txtPercentMarkup";
             _txtPercentMarkup.Size = new Size(195, 21);
             _txtPercentMarkup.TabIndex = 0;
-            // 
+            //
             // btnCreateContract
-            // 
+            //
             _btnCreateContract.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnCreateContract.Location = new Point(790, 251);
             _btnCreateContract.Name = "btnCreateContract";
             _btnCreateContract.Size = new Size(112, 23);
             _btnCreateContract.TabIndex = 4;
             _btnCreateContract.Text = "Create Contract";
-            // 
+            //
             // dgFirstVisitDates
-            // 
+            //
             _dgFirstVisitDates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgFirstVisitDates.DataMember = "";
@@ -746,9 +744,9 @@ namespace FSM
             _dgFirstVisitDates.Name = "dgFirstVisitDates";
             _dgFirstVisitDates.Size = new Size(894, 221);
             _dgFirstVisitDates.TabIndex = 3;
-            // 
+            //
             // gpbSites
-            // 
+            //
             _gpbSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbSites.Controls.Add(_btnCancel);
@@ -760,18 +758,18 @@ namespace FSM
             _gpbSites.TabIndex = 3;
             _gpbSites.TabStop = false;
             _gpbSites.Text = "Properties - Enter Dates";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 251);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(75, 23);
             _btnCancel.TabIndex = 5;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // FRMContractRenewal
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(928, 509);
             ControlBox = false;
@@ -793,7 +791,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var switchExpr = get_GetParameter(0);
@@ -833,7 +832,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -971,6 +970,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FormSetUp()
         {
             SetupInvoiceAddressDataGrid();
@@ -1297,6 +1297,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             try
@@ -1505,7 +1506,7 @@ namespace FSM
 
                 foreach (DataRow dr in OldSites.Table.Rows)
                 {
-                    if (Conversions.ToBoolean(!(dr["FirstVisitDate"] > dtpStartDate.Value & dr["FirstVisitDate"] < dtpEndDate.Value)))
+                    if (Conversions.ToBoolean(!(Helper.MakeDateTimeValid(dr["FirstVisitDate"]) > dtpStartDate.Value & Helper.MakeDateTimeValid(dr["FirstVisitDate"]) < dtpEndDate.Value)))
                     {
                         err += "* First Visit Dates must be between contract start and end dates." + Constants.vbCrLf;
                     }
@@ -1550,11 +1551,11 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ScheduleJobContractOne(Entity.ContractsOriginal.ContractOriginal Contract, Entity.ContractOriginalSites.ContractOriginalSite CurrentContractSite)
         {
             try
             {
-
                 // Duration OF Contract In Days
                 int contractDuration;
                 contractDuration = Contract.ContractEndDate.Subtract(Contract.ContractStartDate).Days;
@@ -1607,9 +1608,7 @@ namespace FSM
                 {
                     if (Conversions.ToDate(Strings.Format(estVisitDate, "dd/MM/yyyy") + " 00:00:00") >= Conversions.ToDate(Strings.Format(Contract.ContractStartDate, "dd/MM/yyyy") + " 00:00:00") & Conversions.ToDate(Strings.Format(estVisitDate, "dd/MM/yyyy") + " 00:00:00") <= Conversions.ToDate(Strings.Format(Contract.ContractEndDate, "dd/MM/yyyy") + " 00:00:00"))
 
-
                     {
-
                         // MAKE SURE WE DON'T BOOK A SATURADY OR SUNDAY
                         if (estVisitDate.DayOfWeek == DayOfWeek.Saturday)
                         {
@@ -1849,7 +1848,6 @@ namespace FSM
                 {
                     if (Conversions.ToBoolean(numOfSlotsAvailable.Count == numOfSlotsNeeded | Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
                     {
-
                         // IF THERE ARE ENOUGH AVAILABLE CONSECTUTIVE SLOTS ADD THE START TIME ONTO THE DATE
 
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
@@ -1874,11 +1872,11 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ScheduleJobContractTwo(DataView JobItemDV, DateTime FirstVisitDate, int ContractSiteJobOfWorkID, Entity.ContractsAlternative.ContractAlternative CurrentContract, Entity.ContractAlternativeSites.ContractAlternativeSite CurrentContractSite)
         {
             try
             {
-
                 // Duration OF Contract In Days
                 int ContractDuration;
                 ContractDuration = CurrentContract.ContractEndDate.Subtract(CurrentContract.ContractStartDate).Days;
@@ -1931,7 +1929,6 @@ namespace FSM
                 {
                     if (EstVisitDate >= CurrentContract.ContractStartDate & EstVisitDate <= CurrentContract.ContractEndDate)
                     {
-
                         // MAKE SURE WE DON'T BOOK A SATURADY OR SUNDAY
                         if (EstVisitDate.DayOfWeek == DayOfWeek.Saturday)
                         {
@@ -1976,7 +1973,7 @@ namespace FSM
                             var JobItem = new Entity.JobItems.JobItem();
                             JobItem.IgnoreExceptionsOnSetMethods = true;
                             JobItem.SetSummary = Entity.Sys.Helper.MakeStringValid("PPM Contract Visit: ") + rw["Description"];
-                            JobDuration += rw["VisitDuration"];
+                            JobDuration += (int)rw["VisitDuration"];
 
                             // INSERT ANY ASSETS
                             var AssetsDV = App.DB.ContractAlternativeSiteAsset.GetAll_JobItemID(Conversions.ToInteger(rw["ContractSiteJobItemID"]));
@@ -2180,7 +2177,6 @@ namespace FSM
                 {
                     if (Conversions.ToBoolean(numOfSlotsAvailable.Count == numOfSlotsNeeded | Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
                     {
-
                         // IF THERE ARE ENOUGH AVAILABLE CONSECTUTIVE SLOTS ADD THE START TIME ONTO THE DATE
 
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
@@ -2204,6 +2200,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void InsertInvoiceToBeRaiseLines(int InvoiceFrequencyID, DateTime StartDate, DateTime EndDate, DateTime FirstInvoiceDate, int InvoiceAddressID, int InvoiceAddressTypeID, int LinkID, int InvoiceType)
         {
             StartDate = Conversions.ToDate(Strings.Format(StartDate, "dd/MM/yyyy") + " 00:00:00");

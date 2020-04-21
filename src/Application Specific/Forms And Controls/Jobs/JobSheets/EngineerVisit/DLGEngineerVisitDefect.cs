@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class DLGEngineerVisitDefect : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DLGEngineerVisitDefect() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += DLGEngineerVisitDefect_Load;
@@ -40,7 +39,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Button _btnSave;
 
@@ -428,9 +427,9 @@ namespace FSM
             _Label1 = new Label();
             _GroupBox1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.UseVisualStyleBackColor = true;
             _btnSave.Location = new Point(448, 384);
@@ -438,9 +437,9 @@ namespace FSM
             _btnSave.Size = new Size(75, 23);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.UseVisualStyleBackColor = true;
             _btnCancel.Location = new Point(8, 384);
@@ -448,9 +447,9 @@ namespace FSM
             _btnCancel.Size = new Size(75, 23);
             _btnCancel.TabIndex = 3;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_txtActionTaken);
@@ -471,9 +470,9 @@ namespace FSM
             _GroupBox1.TabIndex = 4;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Defect Details";
-            // 
+            //
             // txtActionTaken
-            // 
+            //
             _txtActionTaken.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtActionTaken.Location = new Point(120, 226);
             _txtActionTaken.Multiline = true;
@@ -481,17 +480,17 @@ namespace FSM
             _txtActionTaken.ScrollBars = ScrollBars.Vertical;
             _txtActionTaken.Size = new Size(384, 48);
             _txtActionTaken.TabIndex = 11;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(16, 224);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(80, 23);
             _Label5.TabIndex = 10;
             _Label5.Text = "Action Taken";
-            // 
+            //
             // txtComments
-            // 
+            //
             _txtComments.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtComments.Location = new Point(120, 282);
@@ -500,17 +499,17 @@ namespace FSM
             _txtComments.ScrollBars = ScrollBars.Vertical;
             _txtComments.Size = new Size(384, 46);
             _txtComments.TabIndex = 9;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(16, 280);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(80, 23);
             _Label4.TabIndex = 8;
             _Label4.Text = "Comments";
-            // 
+            //
             // txtReason
-            // 
+            //
             _txtReason.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtReason.Location = new Point(120, 170);
             _txtReason.Multiline = true;
@@ -518,69 +517,69 @@ namespace FSM
             _txtReason.ScrollBars = ScrollBars.Vertical;
             _txtReason.Size = new Size(384, 48);
             _txtReason.TabIndex = 7;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(16, 168);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(80, 23);
             _Label3.TabIndex = 6;
             _Label3.Text = "Reason";
-            // 
+            //
             // chkDisconnected
-            // 
+            //
             _chkDisconnected.CheckAlign = ContentAlignment.MiddleRight;
             _chkDisconnected.Location = new Point(16, 136);
             _chkDisconnected.Name = "chkDisconnected";
             _chkDisconnected.Size = new Size(120, 24);
             _chkDisconnected.TabIndex = 5;
             _chkDisconnected.Text = "Disconnected";
-            // 
+            //
             // chkWarningNoticeIssued
-            // 
+            //
             _chkWarningNoticeIssued.CheckAlign = ContentAlignment.MiddleRight;
             _chkWarningNoticeIssued.Location = new Point(16, 88);
             _chkWarningNoticeIssued.Name = "chkWarningNoticeIssued";
             _chkWarningNoticeIssued.Size = new Size(120, 40);
             _chkWarningNoticeIssued.TabIndex = 4;
             _chkWarningNoticeIssued.Text = "Warning Notice Issued";
-            // 
+            //
             // cboAsset
-            // 
+            //
             _cboAsset.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboAsset.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboAsset.Location = new Point(120, 27);
             _cboAsset.Name = "cboAsset";
             _cboAsset.Size = new Size(384, 21);
             _cboAsset.TabIndex = 3;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(16, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(72, 23);
             _Label2.TabIndex = 2;
             _Label2.Text = "Appliance";
-            // 
+            //
             // cboCategory
-            // 
+            //
             _cboCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboCategory.Location = new Point(120, 59);
             _cboCategory.Name = "cboCategory";
             _cboCategory.Size = new Size(384, 21);
             _cboCategory.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(16, 56);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(72, 23);
             _Label1.TabIndex = 0;
             _Label1.Text = "Category";
-            // 
+            //
             // DLGEngineerVisitDefect
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(528, 414);
             ControlBox = false;
@@ -662,6 +661,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void populateDefect()
         {
             var argcombo = cboAsset;

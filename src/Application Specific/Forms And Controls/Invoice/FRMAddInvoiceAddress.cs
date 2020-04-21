@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMAddInvoiceAddress : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMAddInvoiceAddress() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMAddInvoiceAddress_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -183,9 +181,9 @@ namespace FSM
             _gpbSelectInvoiceAddress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).BeginInit();
             SuspendLayout();
-            // 
+            //
             // gpbSelectInvoiceAddress
-            // 
+            //
             _gpbSelectInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbSelectInvoiceAddress.Controls.Add(_btnCancel);
@@ -198,41 +196,41 @@ namespace FSM
             _gpbSelectInvoiceAddress.TabIndex = 3;
             _gpbSelectInvoiceAddress.TabStop = false;
             _gpbSelectInvoiceAddress.Text = "Select Invoice Address";
-            // 
+            //
             // dgInvoiceAddresses
-            // 
+            //
             _dgInvoiceAddresses.DataMember = "";
             _dgInvoiceAddresses.HeaderForeColor = SystemColors.ControlText;
             _dgInvoiceAddresses.Location = new Point(16, 48);
             _dgInvoiceAddresses.Name = "dgInvoiceAddresses";
             _dgInvoiceAddresses.Size = new Size(488, 240);
             _dgInvoiceAddresses.TabIndex = 7;
-            // 
+            //
             // lblInvoiceAddress
-            // 
+            //
             _lblInvoiceAddress.Location = new Point(16, 24);
             _lblInvoiceAddress.Name = "lblInvoiceAddress";
             _lblInvoiceAddress.TabIndex = 8;
             _lblInvoiceAddress.Text = "Invoice Address";
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.UseVisualStyleBackColor = true;
             _btnOK.Location = new Point(424, 296);
             _btnOK.Name = "btnOK";
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.UseVisualStyleBackColor = true;
             _btnCancel.Location = new Point(16, 296);
             _btnCancel.Name = "btnCancel";
             _btnCancel.TabIndex = 9;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // FRMAddInvoiceAddress
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(528, 382);
             ControlBox = false;
@@ -249,7 +247,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             OrderID = Conversions.ToInteger(get_GetParameter(0));
@@ -274,12 +273,13 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupInvoiceAddressDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgInvoiceAddresses);

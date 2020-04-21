@@ -1,23 +1,22 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCVisitBreakdown : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCVisitBreakdown() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCVisitBreakdown_Load;
@@ -26,7 +25,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -502,7 +500,6 @@ namespace FSM
             {
                 if (_BtnEstSave != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _BtnEstSave.Click -= btnEstSave_Click;
                 }
@@ -1035,9 +1032,9 @@ namespace FSM
             _EstVisitDate.SuspendLayout();
             _cmsPrint.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // txtNotesToEngineer
-            // 
+            //
             _txtNotesToEngineer.AcceptsReturn = true;
             _txtNotesToEngineer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
@@ -1047,80 +1044,80 @@ namespace FSM
             _txtNotesToEngineer.ScrollBars = ScrollBars.Vertical;
             _txtNotesToEngineer.Size = new Size(406, 89);
             _txtNotesToEngineer.TabIndex = 0;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 8);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 51);
             _Label1.TabIndex = 1;
             _Label1.Text = "Notes To Engineer";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label2.Location = new Point(8, 103);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(56, 16);
             _Label2.TabIndex = 2;
             _Label2.Text = "Status";
-            // 
+            //
             // lblDate
-            // 
+            //
             _lblDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblDate.Location = new Point(8, 128);
             _lblDate.Name = "lblDate";
             _lblDate.Size = new Size(56, 16);
             _lblDate.TabIndex = 3;
             _lblDate.Text = "Date";
-            // 
+            //
             // lblOutcome
-            // 
+            //
             _lblOutcome.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblOutcome.Location = new Point(8, 157);
             _lblOutcome.Name = "lblOutcome";
             _lblOutcome.Size = new Size(64, 16);
             _lblOutcome.TabIndex = 4;
             _lblOutcome.Text = "Outcome";
-            // 
+            //
             // txtDate
-            // 
+            //
             _txtDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtDate.Location = new Point(78, 128);
             _txtDate.Name = "txtDate";
             _txtDate.ReadOnly = true;
             _txtDate.Size = new Size(283, 21);
             _txtDate.TabIndex = 4;
-            // 
+            //
             // txtOutcome
-            // 
+            //
             _txtOutcome.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtOutcome.Location = new Point(78, 152);
             _txtOutcome.Name = "txtOutcome";
             _txtOutcome.ReadOnly = true;
             _txtOutcome.Size = new Size(207, 21);
             _txtOutcome.TabIndex = 5;
-            // 
+            //
             // cboStatus
-            // 
+            //
             _cboStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboStatus.Location = new Point(78, 101);
             _cboStatus.Name = "cboStatus";
             _cboStatus.Size = new Size(283, 21);
             _cboStatus.TabIndex = 1;
-            // 
+            //
             // btnView
-            // 
+            //
             _btnView.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnView.Location = new Point(388, 184);
             _btnView.Name = "btnView";
             _btnView.Size = new Size(96, 23);
             _btnView.TabIndex = 8;
             _btnView.Text = "View Results";
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Controls.Add(_tpVisitDetails);
             _TabControl1.Controls.Add(_tpParts);
             _TabControl1.Controls.Add(_EstVisitDate);
@@ -1130,9 +1127,9 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(500, 240);
             _TabControl1.TabIndex = 7;
-            // 
+            //
             // tpVisitDetails
-            // 
+            //
             _tpVisitDetails.Controls.Add(_btnUploadVisit);
             _tpVisitDetails.Controls.Add(_chkSendText);
             _tpVisitDetails.Controls.Add(_chkRecharge);
@@ -1153,18 +1150,18 @@ namespace FSM
             _tpVisitDetails.Size = new Size(492, 214);
             _tpVisitDetails.TabIndex = 0;
             _tpVisitDetails.Text = "Visit Details";
-            // 
+            //
             // btnUploadVisit
-            // 
+            //
             _btnUploadVisit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnUploadVisit.Location = new Point(11, 184);
             _btnUploadVisit.Name = "btnUploadVisit";
             _btnUploadVisit.Size = new Size(104, 23);
             _btnUploadVisit.TabIndex = 13;
             _btnUploadVisit.Text = "Upload Visit";
-            // 
+            //
             // chkSendText
-            // 
+            //
             _chkSendText.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _chkSendText.AutoSize = true;
             _chkSendText.Location = new Point(297, 156);
@@ -1173,9 +1170,9 @@ namespace FSM
             _chkSendText.TabIndex = 12;
             _chkSendText.Text = "Exclude From Auto-Message";
             _chkSendText.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkRecharge
-            // 
+            //
             _chkRecharge.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _chkRecharge.AutoSize = true;
             _chkRecharge.Location = new Point(395, 130);
@@ -1184,18 +1181,18 @@ namespace FSM
             _chkRecharge.TabIndex = 11;
             _chkRecharge.Text = "Recharge";
             _chkRecharge.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnPrint
-            // 
+            //
             _btnPrint.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPrint.Location = new Point(288, 184);
             _btnPrint.Name = "btnPrint";
             _btnPrint.Size = new Size(96, 23);
             _btnPrint.TabIndex = 7;
             _btnPrint.Text = "Print...";
-            // 
+            //
             // cbxPartsToFit
-            // 
+            //
             _cbxPartsToFit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _cbxPartsToFit.AutoSize = true;
             _cbxPartsToFit.Location = new Point(395, 105);
@@ -1204,9 +1201,9 @@ namespace FSM
             _cbxPartsToFit.TabIndex = 2;
             _cbxPartsToFit.Text = "Parts To Fit";
             _cbxPartsToFit.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboExpected
-            // 
+            //
             _cboExpected.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _cboExpected.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboExpected.Location = new Point(78, 64);
@@ -1214,9 +1211,9 @@ namespace FSM
             _cboExpected.Size = new Size(364, 21);
             _cboExpected.TabIndex = 3;
             _cboExpected.Visible = false;
-            // 
+            //
             // tpParts
-            // 
+            //
             _tpParts.Controls.Add(_lblAuthCode);
             _tpParts.Controls.Add(_btnGenerateAuthCode);
             _tpParts.Controls.Add(_btnMoveParts);
@@ -1227,18 +1224,18 @@ namespace FSM
             _tpParts.Size = new Size(492, 214);
             _tpParts.TabIndex = 1;
             _tpParts.Text = "Parts && Products Allocated";
-            // 
+            //
             // lblAuthCode
-            // 
+            //
             _lblAuthCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblAuthCode.AutoSize = true;
             _lblAuthCode.Location = new Point(111, 187);
             _lblAuthCode.Name = "lblAuthCode";
             _lblAuthCode.Size = new Size(0, 13);
             _lblAuthCode.TabIndex = 28;
-            // 
+            //
             // btnGenerateAuthCode
-            // 
+            //
             _btnGenerateAuthCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnGenerateAuthCode.Location = new Point(12, 182);
             _btnGenerateAuthCode.Name = "btnGenerateAuthCode";
@@ -1246,9 +1243,9 @@ namespace FSM
             _btnGenerateAuthCode.TabIndex = 27;
             _btnGenerateAuthCode.Text = "Auth Code";
             _btnGenerateAuthCode.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnMoveParts
-            // 
+            //
             _btnMoveParts.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnMoveParts.Location = new Point(340, 6);
             _btnMoveParts.Name = "btnMoveParts";
@@ -1256,18 +1253,18 @@ namespace FSM
             _btnMoveParts.TabIndex = 26;
             _btnMoveParts.Text = "Reallocate Parts";
             _btnMoveParts.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnGetOrderRef
-            // 
+            //
             _btnGetOrderRef.Location = new Point(9, 6);
             _btnGetOrderRef.Name = "btnGetOrderRef";
             _btnGetOrderRef.Size = new Size(145, 23);
             _btnGetOrderRef.TabIndex = 25;
             _btnGetOrderRef.Text = "Create Quick PO";
             _btnGetOrderRef.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgPartsAndProducts
-            // 
+            //
             _dgPartsAndProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgPartsAndProducts.DataMember = "";
@@ -1277,9 +1274,9 @@ namespace FSM
             _dgPartsAndProducts.Name = "dgPartsAndProducts";
             _dgPartsAndProducts.Size = new Size(476, 143);
             _dgPartsAndProducts.TabIndex = 1;
-            // 
+            //
             // EstVisitDate
-            // 
+            //
             _EstVisitDate.Controls.Add(_Label6);
             _EstVisitDate.Controls.Add(_dtpEstimateVisitDate);
             _EstVisitDate.Controls.Add(_txtPassword);
@@ -1291,104 +1288,104 @@ namespace FSM
             _EstVisitDate.TabIndex = 2;
             _EstVisitDate.Text = "Est Visit Date";
             _EstVisitDate.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.AutoSize = true;
             _Label6.Location = new Point(11, 56);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(122, 13);
             _Label6.TabIndex = 12;
             _Label6.Text = "Estimated Visit Date";
-            // 
+            //
             // dtpEstimateVisitDate
-            // 
+            //
             _dtpEstimateVisitDate.Enabled = false;
             _dtpEstimateVisitDate.Location = new Point(199, 50);
             _dtpEstimateVisitDate.Name = "dtpEstimateVisitDate";
             _dtpEstimateVisitDate.Size = new Size(176, 21);
             _dtpEstimateVisitDate.TabIndex = 11;
-            // 
+            //
             // txtPassword
-            // 
+            //
             _txtPassword.Location = new Point(199, 22);
             _txtPassword.Name = "txtPassword";
             _txtPassword.PasswordChar = (char)42;
             _txtPassword.Size = new Size(176, 21);
             _txtPassword.TabIndex = 10;
             _txtPassword.UseSystemPasswordChar = true;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.AutoSize = true;
             _Label7.Location = new Point(11, 25);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(169, 13);
             _Label7.TabIndex = 9;
             _Label7.Text = "Enter the override password";
-            // 
+            //
             // BtnEstSave
-            // 
+            //
             _BtnEstSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _BtnEstSave.Location = new Point(98, 84);
             _BtnEstSave.Name = "BtnEstSave";
             _BtnEstSave.Size = new Size(96, 23);
             _BtnEstSave.TabIndex = 8;
             _BtnEstSave.Text = "Save";
-            // 
+            //
             // cmsPrint
-            // 
+            //
             _cmsPrint.Items.AddRange(new ToolStripItem[] { _EngineerJobSheetToolStripMenuItem, _ProForrmaToolStripMenuItem, _btnPrintInstall, _BtnPrintServiceLetter, _btnPrintJobLetter, _PrintSolarInstall, _PrintElectricalAppointment });
             _cmsPrint.Name = "cmsPrint";
             _cmsPrint.Size = new Size(224, 158);
-            // 
+            //
             // EngineerJobSheetToolStripMenuItem
-            // 
+            //
             _EngineerJobSheetToolStripMenuItem.Name = "EngineerJobSheetToolStripMenuItem";
             _EngineerJobSheetToolStripMenuItem.Size = new Size(223, 22);
             _EngineerJobSheetToolStripMenuItem.Text = "Engineer Job Sheet";
-            // 
+            //
             // ProForrmaToolStripMenuItem
-            // 
+            //
             _ProForrmaToolStripMenuItem.Name = "ProForrmaToolStripMenuItem";
             _ProForrmaToolStripMenuItem.Size = new Size(223, 22);
             _ProForrmaToolStripMenuItem.Text = "Pro-Forma";
-            // 
+            //
             // btnPrintInstall
-            // 
+            //
             _btnPrintInstall.Name = "btnPrintInstall";
             _btnPrintInstall.Size = new Size(223, 22);
             _btnPrintInstall.Text = "Print Install Sheet";
-            // 
+            //
             // BtnPrintServiceLetter
-            // 
+            //
             _BtnPrintServiceLetter.Name = "BtnPrintServiceLetter";
             _BtnPrintServiceLetter.Size = new Size(223, 22);
             _BtnPrintServiceLetter.Text = "Print Service Letter";
             _BtnPrintServiceLetter.Visible = false;
-            // 
+            //
             // btnPrintJobLetter
-            // 
+            //
             _btnPrintJobLetter.Name = "btnPrintJobLetter";
             _btnPrintJobLetter.Size = new Size(223, 22);
             _btnPrintJobLetter.Text = "Print Appointment Letter";
-            // 
+            //
             // PrintSolarInstall
-            // 
+            //
             _PrintSolarInstall.Name = "PrintSolarInstall";
             _PrintSolarInstall.Size = new Size(223, 22);
             _PrintSolarInstall.Text = "Print Solar Installation ";
             _PrintSolarInstall.Visible = false;
-            // 
+            //
             // PrintElectricalAppointment
-            // 
+            //
             _PrintElectricalAppointment.Name = "PrintElectricalAppointment";
             _PrintElectricalAppointment.Size = new Size(223, 22);
             _PrintElectricalAppointment.Text = "Print Electrical Appointment";
             _PrintElectricalAppointment.Visible = false;
-            // 
+            //
             // UCVisitBreakdown
-            // 
+            //
             AutoScroll = false;
             Controls.Add(_TabControl1);
             Name = "UCVisitBreakdown";
@@ -1407,7 +1404,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupDG();
@@ -1423,11 +1421,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1611,31 +1610,31 @@ namespace FSM
             var switchExpr = EngineerVisit.StatusEnumID;
             switch (switchExpr)
             {
-                case Conversions.ToInteger(Enums.VisitStatus.NOT_SET):
+                case (int)(Enums.VisitStatus.NOT_SET):
                     {
                         App.ShowMessage("This visit has not entered a visit life span yet.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Parts_Need_Ordering):
+                case (int)(Enums.VisitStatus.Parts_Need_Ordering):
                     {
                         App.ShowMessage("Parts Need Ordering for this visit, once ordered and received you may proceed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Waiting_For_Parts):
+                case (int)(Enums.VisitStatus.Waiting_For_Parts):
                     {
                         App.ShowMessage("This visit is waiting for parts, once received you may proceed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Parts_Despatched):
+                case (int)(Enums.VisitStatus.Parts_Despatched):
                     {
                         App.ShowMessage("This visit is waiting for parts to be received by engineer, once received you may proceed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Ready_For_Schedule):
+                case (int)(Enums.VisitStatus.Ready_For_Schedule):
                     {
                         if (App.ShowMessage("This visit is ready for schedule, would you like to manually complete the visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
@@ -1645,7 +1644,7 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Scheduled):
+                case (int)(Enums.VisitStatus.Scheduled):
                     {
                         if (App.ShowMessage("This visit is scheduled, would you like to manually complete the visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
@@ -1655,7 +1654,7 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Downloaded):
+                case (int)(Enums.VisitStatus.Downloaded):
                     {
                         App.ShowMessage("This visit is currently with an engineer, once returned you may view the details.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
@@ -1699,6 +1698,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupDG()
         {
             Helper.SetUpDataGrid(dgPartsAndProducts);
@@ -1810,6 +1810,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate(int ID = 0)
         {
             var argc = cboExpected;
@@ -1837,10 +1838,10 @@ namespace FSM
             var switchExpr = EngineerVisit.StatusEnumID;
             switch (switchExpr)
             {
-                case Conversions.ToInteger(Enums.VisitStatus.NOT_SET):
-                case Conversions.ToInteger(Enums.VisitStatus.Parts_Need_Ordering):
-                case Conversions.ToInteger(Enums.VisitStatus.Waiting_For_Parts):
-                case Conversions.ToInteger(Enums.VisitStatus.Parts_Despatched):
+                case (int)(Enums.VisitStatus.NOT_SET):
+                case (int)(Enums.VisitStatus.Parts_Need_Ordering):
+                case (int)(Enums.VisitStatus.Waiting_For_Parts):
+                case (int)(Enums.VisitStatus.Parts_Despatched):
                     {
                         var argc1 = cboStatus;
                         Combo.SetUpCombo(ref argc1, DynamicDataTables.VisitStatus_For_Selection, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
@@ -1864,7 +1865,7 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Ready_For_Schedule):
+                case (int)(Enums.VisitStatus.Ready_For_Schedule):
                     {
                         var argc2 = cboStatus;
                         Combo.SetUpCombo(ref argc2, DynamicDataTables.VisitStatus_For_Selection, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
@@ -1888,8 +1889,8 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Scheduled):
-                case Conversions.ToInteger(Enums.VisitStatus.Downloaded):
+                case (int)(Enums.VisitStatus.Scheduled):
+                case (int)(Enums.VisitStatus.Downloaded):
                     {
                         var argc3 = cboStatus;
                         Combo.SetUpCombo(ref argc3, DynamicDataTables.VisitStatus_For_Viewing, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
@@ -1931,10 +1932,10 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Uploaded):
-                case Conversions.ToInteger(Enums.VisitStatus.Not_To_Be_Invoiced):
-                case Conversions.ToInteger(Enums.VisitStatus.Ready_To_Be_Invoiced):
-                case Conversions.ToInteger(Enums.VisitStatus.Invoiced):
+                case (int)(Enums.VisitStatus.Uploaded):
+                case (int)(Enums.VisitStatus.Not_To_Be_Invoiced):
+                case (int)(Enums.VisitStatus.Ready_To_Be_Invoiced):
+                case (int)(Enums.VisitStatus.Invoiced):
                     {
                         var argc4 = cboStatus;
                         Combo.SetUpCombo(ref argc4, DynamicDataTables.VisitStatus_For_Viewing, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
@@ -1996,43 +1997,43 @@ namespace FSM
                         var switchExpr1 = EngineerVisit.OutcomeEnumID;
                         switch (switchExpr1)
                         {
-                            case Conversions.ToInteger(Enums.EngineerVisitOutcomes.NOT_SET):
+                            case (int)(Enums.EngineerVisitOutcomes.NOT_SET):
                                 {
                                     txtOutcome.Text = "Not Set";
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.EngineerVisitOutcomes.Complete):
+                            case (int)(Enums.EngineerVisitOutcomes.Complete):
                                 {
                                     txtOutcome.Text = "Complete";
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.EngineerVisitOutcomes.Carded):
+                            case (int)(Enums.EngineerVisitOutcomes.Carded):
                                 {
                                     txtOutcome.Text = "Carded";
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.EngineerVisitOutcomes.Could_Not_Start):
+                            case (int)(Enums.EngineerVisitOutcomes.Could_Not_Start):
                                 {
                                     txtOutcome.Text = "Could Not Start";
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.EngineerVisitOutcomes.Declined):
+                            case (int)(Enums.EngineerVisitOutcomes.Declined):
                                 {
                                     txtOutcome.Text = "Declined";
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.EngineerVisitOutcomes.Further_Works):
+                            case (int)(Enums.EngineerVisitOutcomes.Further_Works):
                                 {
                                     txtOutcome.Text = "Further Works";
                                     break;
                                 }
 
-                            case Conversions.ToInteger(Enums.EngineerVisitOutcomes.Visit_Not_Required):
+                            case (int)(Enums.EngineerVisitOutcomes.Visit_Not_Required):
                                 {
                                     txtOutcome.Text = "Visit Not Required";
                                     break;

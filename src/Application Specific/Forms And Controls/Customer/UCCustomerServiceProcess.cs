@@ -1,12 +1,12 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
@@ -14,7 +14,6 @@ namespace FSM
     {
         public UCCustomerServiceProcess(int _customerId) : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             CustomerId = _customerId;
@@ -834,6 +833,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
 
@@ -893,9 +893,9 @@ namespace FSM
             _grpTemplate2.SuspendLayout();
             _grpTemplate1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpBxServiceDate
-            // 
+            //
             _grpBxServiceDate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpBxServiceDate.Controls.Add(_grpPatchCheck);
             _grpBxServiceDate.Controls.Add(_lnkDownloadExampleTemplate);
@@ -923,9 +923,9 @@ namespace FSM
             _grpBxServiceDate.TabIndex = 3;
             _grpBxServiceDate.TabStop = false;
             _grpBxServiceDate.Text = "Service Process";
-            // 
+            //
             // grpPatchCheck
-            // 
+            //
             _grpPatchCheck.Controls.Add(_btnDownloadPatchCheckTemplate);
             _grpPatchCheck.Controls.Add(_btnAddPatchCheckTemplate);
             _grpPatchCheck.Controls.Add(_btnTestPatchCheckTemplate);
@@ -935,35 +935,35 @@ namespace FSM
             _grpPatchCheck.TabIndex = 165;
             _grpPatchCheck.TabStop = false;
             _grpPatchCheck.Text = "Patch Check";
-            // 
+            //
             // btnDownloadPatchCheckTemplate
-            // 
+            //
             _btnDownloadPatchCheckTemplate.Location = new Point(127, 22);
             _btnDownloadPatchCheckTemplate.Name = "btnDownloadPatchCheckTemplate";
             _btnDownloadPatchCheckTemplate.Size = new Size(86, 25);
             _btnDownloadPatchCheckTemplate.TabIndex = 157;
             _btnDownloadPatchCheckTemplate.Text = "Download";
             _btnDownloadPatchCheckTemplate.Visible = false;
-            // 
+            //
             // btnAddPatchCheckTemplate
-            // 
+            //
             _btnAddPatchCheckTemplate.Location = new Point(10, 22);
             _btnAddPatchCheckTemplate.Name = "btnAddPatchCheckTemplate";
             _btnAddPatchCheckTemplate.Size = new Size(70, 25);
             _btnAddPatchCheckTemplate.TabIndex = 148;
             _btnAddPatchCheckTemplate.Text = "Add";
-            // 
+            //
             // btnTestPatchCheckTemplate
-            // 
+            //
             _btnTestPatchCheckTemplate.Location = new Point(260, 22);
             _btnTestPatchCheckTemplate.Name = "btnTestPatchCheckTemplate";
             _btnTestPatchCheckTemplate.Size = new Size(70, 25);
             _btnTestPatchCheckTemplate.TabIndex = 156;
             _btnTestPatchCheckTemplate.Text = "Test";
             _btnTestPatchCheckTemplate.Visible = false;
-            // 
+            //
             // lnkDownloadExampleTemplate
-            // 
+            //
             _lnkDownloadExampleTemplate.AutoSize = true;
             _lnkDownloadExampleTemplate.Location = new Point(433, 28);
             _lnkDownloadExampleTemplate.Name = "lnkDownloadExampleTemplate";
@@ -971,9 +971,9 @@ namespace FSM
             _lnkDownloadExampleTemplate.TabIndex = 164;
             _lnkDownloadExampleTemplate.TabStop = true;
             _lnkDownloadExampleTemplate.Text = "Download Example Template";
-            // 
+            //
             // grpTemplate3
-            // 
+            //
             _grpTemplate3.Controls.Add(_btnDownloadTemplate3);
             _grpTemplate3.Controls.Add(_btnAddTemplate3);
             _grpTemplate3.Controls.Add(_btnTestTemplate3);
@@ -983,35 +983,35 @@ namespace FSM
             _grpTemplate3.TabIndex = 163;
             _grpTemplate3.TabStop = false;
             _grpTemplate3.Text = "Template";
-            // 
+            //
             // btnDownloadTemplate3
-            // 
+            //
             _btnDownloadTemplate3.Location = new Point(127, 22);
             _btnDownloadTemplate3.Name = "btnDownloadTemplate3";
             _btnDownloadTemplate3.Size = new Size(86, 25);
             _btnDownloadTemplate3.TabIndex = 157;
             _btnDownloadTemplate3.Text = "Download";
             _btnDownloadTemplate3.Visible = false;
-            // 
+            //
             // btnAddTemplate3
-            // 
+            //
             _btnAddTemplate3.Location = new Point(10, 22);
             _btnAddTemplate3.Name = "btnAddTemplate3";
             _btnAddTemplate3.Size = new Size(70, 25);
             _btnAddTemplate3.TabIndex = 148;
             _btnAddTemplate3.Text = "Add";
-            // 
+            //
             // btnTestTemplate3
-            // 
+            //
             _btnTestTemplate3.Location = new Point(260, 22);
             _btnTestTemplate3.Name = "btnTestTemplate3";
             _btnTestTemplate3.Size = new Size(70, 25);
             _btnTestTemplate3.TabIndex = 156;
             _btnTestTemplate3.Text = "Test";
             _btnTestTemplate3.Visible = false;
-            // 
+            //
             // grpTemplate2
-            // 
+            //
             _grpTemplate2.Controls.Add(_btnDownloadTemplate2);
             _grpTemplate2.Controls.Add(_btnAddTemplate2);
             _grpTemplate2.Controls.Add(_btnTestTemplate2);
@@ -1021,35 +1021,35 @@ namespace FSM
             _grpTemplate2.TabIndex = 162;
             _grpTemplate2.TabStop = false;
             _grpTemplate2.Text = "Template";
-            // 
+            //
             // btnDownloadTemplate2
-            // 
+            //
             _btnDownloadTemplate2.Location = new Point(127, 22);
             _btnDownloadTemplate2.Name = "btnDownloadTemplate2";
             _btnDownloadTemplate2.Size = new Size(86, 25);
             _btnDownloadTemplate2.TabIndex = 157;
             _btnDownloadTemplate2.Text = "Download";
             _btnDownloadTemplate2.Visible = false;
-            // 
+            //
             // btnAddTemplate2
-            // 
+            //
             _btnAddTemplate2.Location = new Point(10, 22);
             _btnAddTemplate2.Name = "btnAddTemplate2";
             _btnAddTemplate2.Size = new Size(70, 25);
             _btnAddTemplate2.TabIndex = 148;
             _btnAddTemplate2.Text = "Add";
-            // 
+            //
             // btnTestTemplate2
-            // 
+            //
             _btnTestTemplate2.Location = new Point(260, 22);
             _btnTestTemplate2.Name = "btnTestTemplate2";
             _btnTestTemplate2.Size = new Size(70, 25);
             _btnTestTemplate2.TabIndex = 156;
             _btnTestTemplate2.Text = "Test";
             _btnTestTemplate2.Visible = false;
-            // 
+            //
             // grpTemplate1
-            // 
+            //
             _grpTemplate1.Controls.Add(_btnDownloadTemplate1);
             _grpTemplate1.Controls.Add(_btnAddTemplate1);
             _grpTemplate1.Controls.Add(_btnTestTemplate1);
@@ -1059,147 +1059,147 @@ namespace FSM
             _grpTemplate1.TabIndex = 161;
             _grpTemplate1.TabStop = false;
             _grpTemplate1.Text = "Template";
-            // 
+            //
             // btnDownloadTemplate1
-            // 
+            //
             _btnDownloadTemplate1.Location = new Point(127, 22);
             _btnDownloadTemplate1.Name = "btnDownloadTemplate1";
             _btnDownloadTemplate1.Size = new Size(86, 25);
             _btnDownloadTemplate1.TabIndex = 157;
             _btnDownloadTemplate1.Text = "Download";
             _btnDownloadTemplate1.Visible = false;
-            // 
+            //
             // btnAddTemplate1
-            // 
+            //
             _btnAddTemplate1.Location = new Point(10, 22);
             _btnAddTemplate1.Name = "btnAddTemplate1";
             _btnAddTemplate1.Size = new Size(70, 25);
             _btnAddTemplate1.TabIndex = 148;
             _btnAddTemplate1.Text = "Add";
-            // 
+            //
             // btnTestTemplate1
-            // 
+            //
             _btnTestTemplate1.Location = new Point(260, 22);
             _btnTestTemplate1.Name = "btnTestTemplate1";
             _btnTestTemplate1.Size = new Size(70, 25);
             _btnTestTemplate1.TabIndex = 156;
             _btnTestTemplate1.Text = "Test";
             _btnTestTemplate1.Visible = false;
-            // 
+            //
             // btnDeleteProcess
-            // 
+            //
             _btnDeleteProcess.Location = new Point(13, 508);
             _btnDeleteProcess.Name = "btnDeleteProcess";
             _btnDeleteProcess.Size = new Size(90, 23);
             _btnDeleteProcess.TabIndex = 146;
             _btnDeleteProcess.Text = "Delete";
-            // 
+            //
             // txtAppointment3
-            // 
+            //
             _txtAppointment3.Location = new Point(274, 256);
             _txtAppointment3.Name = "txtAppointment3";
             _txtAppointment3.Size = new Size(57, 21);
             _txtAppointment3.TabIndex = 145;
-            // 
+            //
             // lblAppointment3
-            // 
+            //
             _lblAppointment3.AutoSize = true;
             _lblAppointment3.Location = new Point(169, 259);
             _lblAppointment3.Name = "lblAppointment3";
             _lblAppointment3.Size = new Size(90, 13);
             _lblAppointment3.TabIndex = 144;
             _lblAppointment3.Text = "Appointment 3";
-            // 
+            //
             // txtAppointment2
-            // 
+            //
             _txtAppointment2.Location = new Point(274, 143);
             _txtAppointment2.Name = "txtAppointment2";
             _txtAppointment2.Size = new Size(57, 21);
             _txtAppointment2.TabIndex = 143;
-            // 
+            //
             // lblAppointment2
-            // 
+            //
             _lblAppointment2.AutoSize = true;
             _lblAppointment2.Location = new Point(169, 146);
             _lblAppointment2.Name = "lblAppointment2";
             _lblAppointment2.Size = new Size(90, 13);
             _lblAppointment2.TabIndex = 142;
             _lblAppointment2.Text = "Appointment 2";
-            // 
+            //
             // txtAppointment1
-            // 
+            //
             _txtAppointment1.Location = new Point(274, 28);
             _txtAppointment1.Name = "txtAppointment1";
             _txtAppointment1.Size = new Size(57, 21);
             _txtAppointment1.TabIndex = 141;
-            // 
+            //
             // lblAppointment1
-            // 
+            //
             _lblAppointment1.AutoSize = true;
             _lblAppointment1.Location = new Point(169, 31);
             _lblAppointment1.Name = "lblAppointment1";
             _lblAppointment1.Size = new Size(90, 13);
             _lblAppointment1.TabIndex = 140;
             _lblAppointment1.Text = "Appointment 1";
-            // 
+            //
             // txtLetter3
-            // 
+            //
             _txtLetter3.Location = new Point(88, 256);
             _txtLetter3.Name = "txtLetter3";
             _txtLetter3.Size = new Size(57, 21);
             _txtLetter3.TabIndex = 139;
-            // 
+            //
             // lblLetter3
-            // 
+            //
             _lblLetter3.AutoSize = true;
             _lblLetter3.Location = new Point(20, 259);
             _lblLetter3.Name = "lblLetter3";
             _lblLetter3.Size = new Size(51, 13);
             _lblLetter3.TabIndex = 138;
             _lblLetter3.Text = "Letter 3";
-            // 
+            //
             // txtLetter2
-            // 
+            //
             _txtLetter2.Location = new Point(88, 143);
             _txtLetter2.Name = "txtLetter2";
             _txtLetter2.Size = new Size(57, 21);
             _txtLetter2.TabIndex = 137;
-            // 
+            //
             // lblLetter2
-            // 
+            //
             _lblLetter2.AutoSize = true;
             _lblLetter2.Location = new Point(20, 146);
             _lblLetter2.Name = "lblLetter2";
             _lblLetter2.Size = new Size(51, 13);
             _lblLetter2.TabIndex = 136;
             _lblLetter2.Text = "Letter 2";
-            // 
+            //
             // txtLetter1
-            // 
+            //
             _txtLetter1.Location = new Point(88, 28);
             _txtLetter1.Name = "txtLetter1";
             _txtLetter1.Size = new Size(57, 21);
             _txtLetter1.TabIndex = 135;
-            // 
+            //
             // lblLetter1
-            // 
+            //
             _lblLetter1.AutoSize = true;
             _lblLetter1.Location = new Point(20, 31);
             _lblLetter1.Name = "lblLetter1";
             _lblLetter1.Size = new Size(51, 13);
             _lblLetter1.TabIndex = 134;
             _lblLetter1.Text = "Letter 1";
-            // 
+            //
             // btnSaveServiceProcess
-            // 
+            //
             _btnSaveServiceProcess.Location = new Point(515, 508);
             _btnSaveServiceProcess.Name = "btnSaveServiceProcess";
             _btnSaveServiceProcess.Size = new Size(90, 23);
             _btnSaveServiceProcess.TabIndex = 61;
             _btnSaveServiceProcess.Text = "Save";
-            // 
+            //
             // UCCustomerServiceProcess
-            // 
+            //
             Controls.Add(_grpBxServiceDate);
             Name = "UCCustomerServiceProcess";
             Size = new Size(640, 569);
@@ -1248,11 +1248,11 @@ namespace FSM
             }
         }
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 

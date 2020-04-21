@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCSearchStaff : UCBase, ISearchControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCSearchStaff() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCSearchPerformanceSetup_Load;
@@ -22,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,7 +41,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Label _Label1;
 
@@ -180,18 +178,18 @@ namespace FSM
             _btnFind = new Button();
             _btnFind.Click += new EventHandler(btnFind_Click);
             SuspendLayout();
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label1.Location = new Point(8, 8);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(72, 16);
             _Label1.TabIndex = 0;
             _Label1.Text = "Search For";
-            // 
+            //
             // cboSearchFor
-            // 
+            //
             _cboSearchFor.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _cboSearchFor.Cursor = Cursors.Hand;
             _cboSearchFor.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -199,27 +197,27 @@ namespace FSM
             _cboSearchFor.Name = "cboSearchFor";
             _cboSearchFor.Size = new Size(152, 21);
             _cboSearchFor.TabIndex = 1;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label2.Location = new Point(8, 48);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(152, 16);
             _Label2.TabIndex = 2;
             _Label2.Text = "Enter Search Criteria";
-            // 
+            //
             // txtCriteria
-            // 
+            //
             _txtCriteria.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtCriteria.Location = new Point(8, 64);
             _txtCriteria.MaxLength = 25;
             _txtCriteria.Name = "txtCriteria";
             _txtCriteria.Size = new Size(105, 21);
             _txtCriteria.TabIndex = 2;
-            // 
+            //
             // btnFind
-            // 
+            //
             _btnFind.AccessibleDescription = "Search for records by comparing multiple columns";
             _btnFind.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnFind.Cursor = Cursors.Hand;
@@ -229,9 +227,9 @@ namespace FSM
             _btnFind.TabIndex = 3;
             _btnFind.Text = "Find";
             _btnFind.UseVisualStyleBackColor = true;
-            // 
+            //
             // UCSearchStaff
-            // 
+            //
             Controls.Add(_btnFind);
             Controls.Add(_txtCriteria);
             Controls.Add(_Label2);
@@ -245,14 +243,15 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             var argc = cboSearchFor;
             Combo.SetUpCombo(ref argc, DynamicDataTables.Setup_Search_Options(Entity.Sys.Enums.MenuTypes.Staff), "ValueMember", "DisplayMember", Entity.Sys.Enums.ComboValues.Please_Select);
         }
 
-        private void Search()
+        public void Search()
         {
             if ((Combo.get_GetSelectedItemValue(cboSearchFor) ?? "") == "0")
             {

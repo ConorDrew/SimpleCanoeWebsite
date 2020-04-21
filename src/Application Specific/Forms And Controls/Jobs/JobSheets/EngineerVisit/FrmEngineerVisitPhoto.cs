@@ -13,7 +13,6 @@ namespace FSM
 
         public FrmEngineerVisitPhoto(Image image)
         {
-
             // This call is required by the designer.
             InitializeComponent();
 

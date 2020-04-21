@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMEngineerTimesheets : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMEngineerTimesheets() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMOrderManager_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpFilter;
 
@@ -600,9 +598,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgTimesheets).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpJobs
-            // 
+            //
             _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJobs.Controls.Add(_dgTimesheets);
@@ -612,9 +610,9 @@ namespace FSM
             _grpJobs.TabIndex = 2;
             _grpJobs.TabStop = false;
             _grpJobs.Text = "Double Click To View / Edit";
-            // 
+            //
             // dgTimesheets
-            // 
+            //
             _dgTimesheets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgTimesheets.DataMember = "";
@@ -623,9 +621,9 @@ namespace FSM
             _dgTimesheets.Name = "dgTimesheets";
             _dgTimesheets.Size = new Size(812, 265);
             _dgTimesheets.TabIndex = 11;
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_Label2);
             _grpFilter.Controls.Add(_txtaddress);
@@ -648,27 +646,27 @@ namespace FSM
             _grpFilter.TabIndex = 1;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label1.Location = new Point(518, 111);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(112, 20);
             _Label1.TabIndex = 20;
             _Label1.Text = "Job Number";
-            // 
+            //
             // txtJobNumber
-            // 
+            //
             _txtJobNumber.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtJobNumber.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtJobNumber.Location = new Point(636, 110);
             _txtJobNumber.Name = "txtJobNumber";
             _txtJobNumber.Size = new Size(184, 21);
             _txtJobNumber.TabIndex = 19;
-            // 
+            //
             // btnFind
-            // 
+            //
             _btnFind.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFind.BackColor = Color.White;
             _btnFind.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -678,9 +676,9 @@ namespace FSM
             _btnFind.TabIndex = 18;
             _btnFind.Text = "Find";
             _btnFind.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnFindRecord
-            // 
+            //
             _btnFindRecord.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindRecord.BackColor = Color.White;
             _btnFindRecord.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -690,9 +688,9 @@ namespace FSM
             _btnFindRecord.TabIndex = 17;
             _btnFindRecord.Text = "...";
             _btnFindRecord.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtSearch
-            // 
+            //
             _txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSearch.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtSearch.Location = new Point(136, 53);
@@ -700,39 +698,39 @@ namespace FSM
             _txtSearch.ReadOnly = true;
             _txtSearch.Size = new Size(644, 21);
             _txtSearch.TabIndex = 16;
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Location = new Point(184, 118);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(224, 21);
             _dtpTo.TabIndex = 10;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(184, 86);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(224, 21);
             _dtpFrom.TabIndex = 9;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(136, 115);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(48, 16);
             _Label9.TabIndex = 10;
             _Label9.Text = "To";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(136, 83);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(48, 16);
             _Label8.TabIndex = 9;
             _Label8.Text = "From";
-            // 
+            //
             // chkDateCreated
-            // 
+            //
             _chkDateCreated.Cursor = Cursors.Hand;
             _chkDateCreated.UseVisualStyleBackColor = true;
             _chkDateCreated.Location = new Point(17, 86);
@@ -740,79 +738,79 @@ namespace FSM
             _chkDateCreated.Size = new Size(104, 24);
             _chkDateCreated.TabIndex = 8;
             _chkDateCreated.Text = "Date Between";
-            // 
+            //
             // lblSearch
-            // 
+            //
             _lblSearch.Location = new Point(16, 53);
             _lblSearch.Name = "lblSearch";
             _lblSearch.Size = new Size(112, 20);
             _lblSearch.TabIndex = 2;
             _lblSearch.Text = "Engineer";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(16, 25);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(48, 20);
             _Label10.TabIndex = 4;
             _Label10.Text = "Type";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Location = new Point(136, 22);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(684, 21);
             _cboType.TabIndex = 1;
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(8, 526);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 13;
             _btnReset.Text = "Reset";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnAdd.Location = new Point(772, 526);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(56, 23);
             _btnAdd.TabIndex = 14;
             _btnAdd.Text = "Add";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnDelete.Location = new Point(70, 526);
             _btnDelete.Name = "btnDelete";
             _btnDelete.Size = new Size(56, 23);
             _btnDelete.TabIndex = 15;
             _btnDelete.Text = "Delete";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label2.Location = new Point(518, 84);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(112, 20);
             _Label2.TabIndex = 22;
             _Label2.Text = "Address";
-            // 
+            //
             // txtaddress
-            // 
+            //
             _txtaddress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtaddress.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtaddress.Location = new Point(636, 83);
             _txtaddress.Name = "txtaddress";
             _txtaddress.Size = new Size(184, 21);
             _txtaddress.TabIndex = 21;
-            // 
+            //
             // FRMEngineerTimesheets
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(844, 558);
             Controls.Add(_btnDelete);
@@ -838,7 +836,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupTimesheetsDataGrid();
@@ -855,7 +854,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -919,9 +918,9 @@ namespace FSM
             }
         }
 
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupTimesheetsDataGrid()
         {
             var tbStyle = dgTimesheets.TableStyles[0];
@@ -1067,6 +1066,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ResetFilters()
         {
             var argcombo = cboType;

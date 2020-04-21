@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -7,19 +10,15 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCCustomer : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCCustomer() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCCustomer_Load;
@@ -1546,7 +1545,6 @@ namespace FSM
             {
                 if (_btnAdd != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnAdd.Click -= btnAdd_Click;
                 }
@@ -2616,9 +2614,9 @@ namespace FSM
             _grpSite.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgCustomerAlerts).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpCustomer
-            // 
+            //
             _grpCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCustomer.Controls.Add(_chkIsPFH);
@@ -2660,9 +2658,9 @@ namespace FSM
             _grpCustomer.TabIndex = 0;
             _grpCustomer.TabStop = false;
             _grpCustomer.Text = "Details";
-            // 
+            //
             // chkIsPFH
-            // 
+            //
             _chkIsPFH.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _chkIsPFH.AutoSize = true;
             _chkIsPFH.Location = new Point(555, 353);
@@ -2672,9 +2670,9 @@ namespace FSM
             _chkIsPFH.TabIndex = 58;
             _chkIsPFH.Text = "Is PFH";
             _chkIsPFH.UseVisualStyleBackColor = true;
-            // 
+            //
             // cbIsOutOfScope
-            // 
+            //
             _cbIsOutOfScope.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _cbIsOutOfScope.AutoSize = true;
             _cbIsOutOfScope.Location = new Point(516, 376);
@@ -2684,18 +2682,18 @@ namespace FSM
             _cbIsOutOfScope.TabIndex = 57;
             _cbIsOutOfScope.Text = "Out Of Scope";
             _cbIsOutOfScope.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnExportSites
-            // 
+            //
             _btnExportSites.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExportSites.Location = new Point(6, 527);
             _btnExportSites.Name = "btnExportSites";
             _btnExportSites.Size = new Size(103, 25);
             _btnExportSites.TabIndex = 56;
             _btnExportSites.Text = "Export Sites";
-            // 
+            //
             // chkMOTService
-            // 
+            //
             _chkMOTService.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _chkMOTService.AutoSize = true;
             _chkMOTService.Location = new Point(479, 398);
@@ -2705,9 +2703,9 @@ namespace FSM
             _chkMOTService.TabIndex = 55;
             _chkMOTService.Text = "M.O.T Style Service";
             _chkMOTService.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtAlertEmail
-            // 
+            //
             _txtAlertEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAlertEmail.Location = new Point(120, 261);
             _txtAlertEmail.MaxLength = 255;
@@ -2715,17 +2713,17 @@ namespace FSM
             _txtAlertEmail.Size = new Size(498, 21);
             _txtAlertEmail.TabIndex = 54;
             _txtAlertEmail.Tag = "Customer.Name";
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Location = new Point(8, 264);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(89, 20);
             _Label13.TabIndex = 53;
             _Label13.Text = "Alert Email";
-            // 
+            //
             // txtServWinter
-            // 
+            //
             _txtServWinter.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtServWinter.Location = new Point(540, 520);
             _txtServWinter.MaxLength = 50;
@@ -2733,9 +2731,9 @@ namespace FSM
             _txtServWinter.Size = new Size(77, 21);
             _txtServWinter.TabIndex = 52;
             _txtServWinter.Tag = " ";
-            // 
+            //
             // txtServSummer
-            // 
+            //
             _txtServSummer.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtServSummer.Location = new Point(415, 520);
             _txtServSummer.MaxLength = 50;
@@ -2743,18 +2741,18 @@ namespace FSM
             _txtServSummer.Size = new Size(77, 21);
             _txtServSummer.TabIndex = 51;
             _txtServSummer.Tag = " ";
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label12.Location = new Point(270, 514);
             _Label12.Name = "Label12";
             _Label12.Size = new Size(113, 27);
             _Label12.TabIndex = 50;
             _Label12.Text = "Summer/Winter Servicing P/Month";
-            // 
+            //
             // chkSuperBooking
-            // 
+            //
             _chkSuperBooking.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _chkSuperBooking.AutoSize = true;
             _chkSuperBooking.Location = new Point(444, 464);
@@ -2764,9 +2762,9 @@ namespace FSM
             _chkSuperBooking.TabIndex = 49;
             _chkSuperBooking.Text = "Coordinator Booking Only";
             _chkSuperBooking.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboTerms
-            // 
+            //
             _cboTerms.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboTerms.Cursor = Cursors.Hand;
             _cboTerms.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -2775,17 +2773,17 @@ namespace FSM
             _cboTerms.Size = new Size(498, 21);
             _cboTerms.TabIndex = 48;
             _cboTerms.Tag = "Customer.Status";
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(8, 226);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(103, 20);
             _Label9.TabIndex = 47;
             _Label9.Text = "Terms";
-            // 
+            //
             // cboDepartment
-            // 
+            //
             _cboDepartment.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _cboDepartment.Cursor = Cursors.Hand;
             _cboDepartment.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -2794,18 +2792,18 @@ namespace FSM
             _cboDepartment.Size = new Size(203, 21);
             _cboDepartment.TabIndex = 46;
             _cboDepartment.Tag = "Customer.TypeID";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label8.Location = new Point(270, 491);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(139, 23);
             _Label8.TabIndex = 45;
             _Label8.Text = "Override Department";
-            // 
+            //
             // txtNominal
-            // 
+            //
             _txtNominal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNominal.Location = new Point(120, 193);
             _txtNominal.MaxLength = 50;
@@ -2813,17 +2811,17 @@ namespace FSM
             _txtNominal.Size = new Size(498, 21);
             _txtNominal.TabIndex = 11;
             _txtNominal.Tag = " ";
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(8, 196);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(103, 20);
             _Label7.TabIndex = 10;
             _Label7.Text = "Nominal Code";
-            // 
+            //
             // chkJobPriorityRequired
-            // 
+            //
             _chkJobPriorityRequired.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _chkJobPriorityRequired.AutoSize = true;
             _chkJobPriorityRequired.Location = new Point(473, 442);
@@ -2833,9 +2831,9 @@ namespace FSM
             _chkJobPriorityRequired.TabIndex = 17;
             _chkJobPriorityRequired.Text = "Job Priority Required";
             _chkJobPriorityRequired.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkPONumReq
-            // 
+            //
             _chkPONumReq.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _chkPONumReq.AutoSize = true;
             _chkPONumReq.Location = new Point(472, 420);
@@ -2845,9 +2843,9 @@ namespace FSM
             _chkPONumReq.TabIndex = 16;
             _chkPONumReq.Text = "PO Number Required";
             _chkPONumReq.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSelectLogoImage
-            // 
+            //
             _btnSelectLogoImage.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSelectLogoImage.Location = new Point(263, 416);
             _btnSelectLogoImage.Name = "btnSelectLogoImage";
@@ -2855,9 +2853,9 @@ namespace FSM
             _btnSelectLogoImage.TabIndex = 15;
             _btnSelectLogoImage.Text = "...";
             _btnSelectLogoImage.UseVisualStyleBackColor = true;
-            // 
+            //
             // picLogo
-            // 
+            //
             _picLogo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _picLogo.BackColor = Color.White;
             _picLogo.BorderStyle = BorderStyle.FixedSingle;
@@ -2867,18 +2865,18 @@ namespace FSM
             _picLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             _picLogo.TabIndex = 44;
             _picLogo.TabStop = false;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label6.Location = new Point(8, 423);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(62, 20);
             _Label6.TabIndex = 14;
             _Label6.Text = "Logo";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboType.Cursor = Cursors.Hand;
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -2887,17 +2885,17 @@ namespace FSM
             _cboType.Size = new Size(498, 21);
             _cboType.TabIndex = 3;
             _cboType.Tag = "Customer.TypeID";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 60);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(66, 23);
             _Label2.TabIndex = 2;
             _Label2.Text = "Type";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(120, 23);
             _txtName.MaxLength = 255;
@@ -2905,17 +2903,17 @@ namespace FSM
             _txtName.Size = new Size(498, 21);
             _txtName.TabIndex = 1;
             _txtName.Tag = "Customer.Name";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(8, 26);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(53, 20);
             _lblName.TabIndex = 0;
             _lblName.Text = "Name";
-            // 
+            //
             // cboRegionID
-            // 
+            //
             _cboRegionID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboRegionID.Cursor = Cursors.Hand;
             _cboRegionID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -2924,17 +2922,17 @@ namespace FSM
             _cboRegionID.Size = new Size(498, 21);
             _cboRegionID.TabIndex = 5;
             _cboRegionID.Tag = "Customer.RegionID";
-            // 
+            //
             // lblRegionID
-            // 
+            //
             _lblRegionID.Location = new Point(8, 94);
             _lblRegionID.Name = "lblRegionID";
             _lblRegionID.Size = new Size(55, 20);
             _lblRegionID.TabIndex = 4;
             _lblRegionID.Text = "Region ";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(120, 295);
@@ -2944,17 +2942,17 @@ namespace FSM
             _txtNotes.Size = new Size(497, 50);
             _txtNotes.TabIndex = 13;
             _txtNotes.Tag = "Customer.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 298);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(62, 20);
             _lblNotes.TabIndex = 12;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // txtAccountNumber
-            // 
+            //
             _txtAccountNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAccountNumber.Location = new Point(120, 125);
             _txtAccountNumber.MaxLength = 50;
@@ -2962,17 +2960,17 @@ namespace FSM
             _txtAccountNumber.Size = new Size(498, 21);
             _txtAccountNumber.TabIndex = 7;
             _txtAccountNumber.Tag = "Customer.AccountNumber";
-            // 
+            //
             // lblAccountNumber
-            // 
+            //
             _lblAccountNumber.Location = new Point(8, 128);
             _lblAccountNumber.Name = "lblAccountNumber";
             _lblAccountNumber.Size = new Size(103, 20);
             _lblAccountNumber.TabIndex = 6;
             _lblAccountNumber.Text = "Account Number";
-            // 
+            //
             // cboStatus
-            // 
+            //
             _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboStatus.Cursor = Cursors.Hand;
             _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -2981,17 +2979,17 @@ namespace FSM
             _cboStatus.Size = new Size(498, 21);
             _cboStatus.TabIndex = 9;
             _cboStatus.Tag = "Customer.Status";
-            // 
+            //
             // lblStatus
-            // 
+            //
             _lblStatus.Location = new Point(8, 162);
             _lblStatus.Name = "lblStatus";
             _lblStatus.Size = new Size(65, 20);
             _lblStatus.TabIndex = 8;
             _lblStatus.Text = "Status";
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Controls.Add(_tabMainDetails);
             _TabControl1.Controls.Add(_tabContracts);
             _TabControl1.Controls.Add(_tabCharges);
@@ -3009,36 +3007,36 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(653, 600);
             _TabControl1.TabIndex = 0;
-            // 
+            //
             // tabMainDetails
-            // 
+            //
             _tabMainDetails.Controls.Add(_grpCustomer);
             _tabMainDetails.Location = new Point(4, 22);
             _tabMainDetails.Name = "tabMainDetails";
             _tabMainDetails.Size = new Size(645, 574);
             _tabMainDetails.TabIndex = 0;
             _tabMainDetails.Text = "Main Details";
-            // 
+            //
             // tabContracts
-            // 
+            //
             _tabContracts.Controls.Add(_pnlContracts);
             _tabContracts.Location = new Point(4, 22);
             _tabContracts.Name = "tabContracts";
             _tabContracts.Size = new Size(645, 574);
             _tabContracts.TabIndex = 4;
             _tabContracts.Text = "Contracts";
-            // 
+            //
             // pnlContracts
-            // 
+            //
             _pnlContracts.Controls.Add(_gpbContracts);
             _pnlContracts.Dock = DockStyle.Fill;
             _pnlContracts.Location = new Point(0, 0);
             _pnlContracts.Name = "pnlContracts";
             _pnlContracts.Size = new Size(645, 574);
             _pnlContracts.TabIndex = 1;
-            // 
+            //
             // gpbContracts
-            // 
+            //
             _gpbContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbContracts.Controls.Add(_btnDeleteContract);
@@ -3050,18 +3048,18 @@ namespace FSM
             _gpbContracts.TabIndex = 0;
             _gpbContracts.TabStop = false;
             _gpbContracts.Text = "Contract - Double click to view";
-            // 
+            //
             // btnDeleteContract
-            // 
+            //
             _btnDeleteContract.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDeleteContract.Location = new Point(549, 523);
             _btnDeleteContract.Name = "btnDeleteContract";
             _btnDeleteContract.Size = new Size(75, 23);
             _btnDeleteContract.TabIndex = 2;
             _btnDeleteContract.Text = "Delete";
-            // 
+            //
             // dgContracts
-            // 
+            //
             _dgContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgContracts.DataMember = "";
@@ -3070,9 +3068,9 @@ namespace FSM
             _dgContracts.Name = "dgContracts";
             _dgContracts.Size = new Size(616, 499);
             _dgContracts.TabIndex = 1;
-            // 
+            //
             // btnAddContract
-            // 
+            //
             _btnAddContract.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddContract.Location = new Point(8, 523);
             _btnAddContract.Name = "btnAddContract";
@@ -3080,18 +3078,18 @@ namespace FSM
             _btnAddContract.TabIndex = 0;
             _btnAddContract.Text = "Add";
             _btnAddContract.UseVisualStyleBackColor = true;
-            // 
+            //
             // tabCharges
-            // 
+            //
             _tabCharges.Controls.Add(_grbCharges);
             _tabCharges.Location = new Point(4, 22);
             _tabCharges.Name = "tabCharges";
             _tabCharges.Size = new Size(645, 574);
             _tabCharges.TabIndex = 7;
             _tabCharges.Text = "Charges";
-            // 
+            //
             // grbCharges
-            // 
+            //
             _grbCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grbCharges.Controls.Add(_txtSpendLimit);
@@ -3112,40 +3110,40 @@ namespace FSM
             _grbCharges.TabIndex = 0;
             _grbCharges.TabStop = false;
             _grbCharges.Text = "Charges";
-            // 
+            //
             // txtSpendLimit
-            // 
+            //
             _txtSpendLimit.Location = new Point(122, 70);
             _txtSpendLimit.Name = "txtSpendLimit";
             _txtSpendLimit.Size = new Size(64, 21);
             _txtSpendLimit.TabIndex = 78;
-            // 
+            //
             // lblJobSpendLimit
-            // 
+            //
             _lblJobSpendLimit.AutoSize = true;
             _lblJobSpendLimit.Location = new Point(8, 73);
             _lblJobSpendLimit.Name = "lblJobSpendLimit";
             _lblJobSpendLimit.Size = new Size(108, 13);
             _lblJobSpendLimit.TabIndex = 77;
             _lblJobSpendLimit.Text = "Job Spend Limit £";
-            // 
+            //
             // txtMainContractorDiscount
-            // 
+            //
             _txtMainContractorDiscount.Location = new Point(461, 72);
             _txtMainContractorDiscount.Name = "txtMainContractorDiscount";
             _txtMainContractorDiscount.Size = new Size(64, 21);
             _txtMainContractorDiscount.TabIndex = 8;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(278, 73);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(176, 21);
             _Label5.TabIndex = 7;
             _Label5.Text = "Main Contractor Discount %";
-            // 
+            //
             // chbAcceptChargeChanges
-            // 
+            //
             _chbAcceptChargeChanges.BackColor = SystemColors.Info;
             _chbAcceptChargeChanges.Location = new Point(8, 16);
             _chbAcceptChargeChanges.Name = "chbAcceptChargeChanges";
@@ -3153,97 +3151,97 @@ namespace FSM
             _chbAcceptChargeChanges.TabIndex = 0;
             _chbAcceptChargeChanges.Text = "Always accept changes to default charges made at system level";
             _chbAcceptChargeChanges.UseVisualStyleBackColor = false;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(368, 48);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(93, 21);
             _Label3.TabIndex = 5;
             _Label3.Text = "Rates Markup";
-            // 
+            //
             // txtRatesMarkup
-            // 
+            //
             _txtRatesMarkup.Location = new Point(461, 48);
             _txtRatesMarkup.Name = "txtRatesMarkup";
             _txtRatesMarkup.Size = new Size(64, 21);
             _txtRatesMarkup.TabIndex = 6;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 48);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(97, 21);
             _Label4.TabIndex = 1;
             _Label4.Text = "Labour Markup";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(210, 48);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(90, 21);
             _Label1.TabIndex = 3;
             _Label1.Text = "Parts Markup";
-            // 
+            //
             // txtMileageRate
-            // 
+            //
             _txtMileageRate.Location = new Point(122, 48);
             _txtMileageRate.Name = "txtMileageRate";
             _txtMileageRate.Size = new Size(64, 21);
             _txtMileageRate.TabIndex = 2;
-            // 
+            //
             // txtPartsMarkup
-            // 
+            //
             _txtPartsMarkup.Location = new Point(301, 48);
             _txtPartsMarkup.Name = "txtPartsMarkup";
             _txtPartsMarkup.Size = new Size(62, 21);
             _txtPartsMarkup.TabIndex = 4;
-            // 
+            //
             // pnlCharges
-            // 
+            //
             _pnlCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlCharges.Location = new Point(8, 97);
             _pnlCharges.Name = "pnlCharges";
             _pnlCharges.Size = new Size(617, 466);
             _pnlCharges.TabIndex = 9;
-            // 
+            //
             // tabDocuments
-            // 
+            //
             _tabDocuments.Controls.Add(_pnlDocuments);
             _tabDocuments.Location = new Point(4, 22);
             _tabDocuments.Name = "tabDocuments";
             _tabDocuments.Size = new Size(645, 574);
             _tabDocuments.TabIndex = 2;
             _tabDocuments.Text = "Documents";
-            // 
+            //
             // pnlDocuments
-            // 
+            //
             _pnlDocuments.Dock = DockStyle.Fill;
             _pnlDocuments.Location = new Point(0, 0);
             _pnlDocuments.Name = "pnlDocuments";
             _pnlDocuments.Size = new Size(645, 574);
             _pnlDocuments.TabIndex = 1;
-            // 
+            //
             // tabQuotes
-            // 
+            //
             _tabQuotes.Controls.Add(_pnlQuotes);
             _tabQuotes.Location = new Point(4, 22);
             _tabQuotes.Name = "tabQuotes";
             _tabQuotes.Size = new Size(645, 574);
             _tabQuotes.TabIndex = 5;
             _tabQuotes.Text = "Quotes";
-            // 
+            //
             // pnlQuotes
-            // 
+            //
             _pnlQuotes.Dock = DockStyle.Fill;
             _pnlQuotes.Location = new Point(0, 0);
             _pnlQuotes.Name = "pnlQuotes";
             _pnlQuotes.Size = new Size(645, 574);
             _pnlQuotes.TabIndex = 1;
-            // 
+            //
             // tabPriority
-            // 
+            //
             _tabPriority.Controls.Add(_dgvPriority);
             _tabPriority.Controls.Add(_Label11);
             _tabPriority.Controls.Add(_dgRequirements);
@@ -3254,9 +3252,9 @@ namespace FSM
             _tabPriority.TabIndex = 8;
             _tabPriority.Text = "Priorities / Requirements";
             _tabPriority.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgvPriority
-            // 
+            //
             _dgvPriority.AllowUserToAddRows = false;
             _dgvPriority.AllowUserToDeleteRows = false;
             _dgvPriority.AllowUserToResizeColumns = false;
@@ -3268,17 +3266,17 @@ namespace FSM
             _dgvPriority.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _dgvPriority.Size = new Size(456, 170);
             _dgvPriority.TabIndex = 10;
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(34, 294);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(103, 20);
             _Label11.TabIndex = 9;
             _Label11.Text = "Requirements";
-            // 
+            //
             // dgRequirements
-            // 
+            //
             _dgRequirements.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgRequirements.DataMember = "";
@@ -3287,17 +3285,17 @@ namespace FSM
             _dgRequirements.Name = "dgRequirements";
             _dgRequirements.Size = new Size(592, 196);
             _dgRequirements.TabIndex = 8;
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(34, 47);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(103, 20);
             _Label10.TabIndex = 7;
             _Label10.Text = "Priorities";
-            // 
+            //
             // tabParts
-            // 
+            //
             _tabParts.Controls.Add(_Label14);
             _tabParts.Controls.Add(_txtPartSearch);
             _tabParts.Controls.Add(_btnDelete);
@@ -3309,43 +3307,43 @@ namespace FSM
             _tabParts.TabIndex = 9;
             _tabParts.Text = "Associated Supplier Parts";
             _tabParts.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.AutoSize = true;
             _Label14.Location = new Point(3, 34);
             _Label14.Name = "Label14";
             _Label14.Size = new Size(47, 13);
             _Label14.TabIndex = 4;
             _Label14.Text = "Search";
-            // 
+            //
             // txtPartSearch
-            // 
+            //
             _txtPartSearch.Location = new Point(82, 31);
             _txtPartSearch.Name = "txtPartSearch";
             _txtPartSearch.Size = new Size(560, 21);
             _txtPartSearch.TabIndex = 3;
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Location = new Point(58, 408);
             _btnDelete.Name = "btnDelete";
             _btnDelete.Size = new Size(61, 23);
             _btnDelete.TabIndex = 2;
             _btnDelete.Text = "Delete";
             _btnDelete.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Location = new Point(532, 406);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(65, 25);
             _btnAdd.TabIndex = 1;
             _btnAdd.Text = "Add";
             _btnAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgvParts
-            // 
+            //
             _dgvParts.AllowUserToAddRows = false;
             _dgvParts.AllowUserToDeleteRows = false;
             _dgvParts.AllowUserToOrderColumns = true;
@@ -3357,9 +3355,9 @@ namespace FSM
             _dgvParts.ShowCellErrors = false;
             _dgvParts.Size = new Size(639, 340);
             _dgvParts.TabIndex = 0;
-            // 
+            //
             // tabServiceDates
-            // 
+            //
             _tabServiceDates.BackColor = SystemColors.Control;
             _tabServiceDates.Controls.Add(_pnlServiceProcess);
             _tabServiceDates.Location = new Point(4, 22);
@@ -3367,9 +3365,9 @@ namespace FSM
             _tabServiceDates.Size = new Size(645, 574);
             _tabServiceDates.TabIndex = 10;
             _tabServiceDates.Text = "Service Dates";
-            // 
+            //
             // tabCreation
-            // 
+            //
             _tabCreation.Controls.Add(_btnEngDelete);
             _tabCreation.Controls.Add(_btnEngAdd);
             _tabCreation.Controls.Add(_dgRaiseEng);
@@ -3379,27 +3377,27 @@ namespace FSM
             _tabCreation.TabIndex = 10;
             _tabCreation.Text = "Engineer Job Creation";
             _tabCreation.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnEngDelete
-            // 
+            //
             _btnEngDelete.Location = new Point(58, 429);
             _btnEngDelete.Name = "btnEngDelete";
             _btnEngDelete.Size = new Size(61, 23);
             _btnEngDelete.TabIndex = 5;
             _btnEngDelete.Text = "Delete";
             _btnEngDelete.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnEngAdd
-            // 
+            //
             _btnEngAdd.Location = new Point(384, 429);
             _btnEngAdd.Name = "btnEngAdd";
             _btnEngAdd.Size = new Size(65, 25);
             _btnEngAdd.TabIndex = 4;
             _btnEngAdd.Text = "Add";
             _btnEngAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgRaiseEng
-            // 
+            //
             _dgRaiseEng.AllowUserToAddRows = false;
             _dgRaiseEng.AllowUserToDeleteRows = false;
             _dgRaiseEng.AllowUserToOrderColumns = true;
@@ -3411,9 +3409,9 @@ namespace FSM
             _dgRaiseEng.ShowCellErrors = false;
             _dgRaiseEng.Size = new Size(503, 340);
             _dgRaiseEng.TabIndex = 3;
-            // 
+            //
             // tabAuthority
-            // 
+            //
             _tabAuthority.Controls.Add(_grpAudit);
             _tabAuthority.Controls.Add(_gpCustAuth);
             _tabAuthority.Location = new Point(4, 22);
@@ -3422,9 +3420,9 @@ namespace FSM
             _tabAuthority.TabIndex = 11;
             _tabAuthority.Text = "Authority";
             _tabAuthority.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpAudit
-            // 
+            //
             _grpAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAudit.Controls.Add(_dgAuthorityAudit);
@@ -3434,9 +3432,9 @@ namespace FSM
             _grpAudit.TabIndex = 38;
             _grpAudit.TabStop = false;
             _grpAudit.Text = "Audit";
-            // 
+            //
             // dgAuthorityAudit
-            // 
+            //
             _dgAuthorityAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAuthorityAudit.DataMember = "";
@@ -3445,9 +3443,9 @@ namespace FSM
             _dgAuthorityAudit.Name = "dgAuthorityAudit";
             _dgAuthorityAudit.Size = new Size(627, 309);
             _dgAuthorityAudit.TabIndex = 1;
-            // 
+            //
             // gpCustAuth
-            // 
+            //
             _gpCustAuth.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _gpCustAuth.Controls.Add(_btnSaveAuth);
             _gpCustAuth.Controls.Add(_txtCustAuthority);
@@ -3457,9 +3455,9 @@ namespace FSM
             _gpCustAuth.TabIndex = 37;
             _gpCustAuth.TabStop = false;
             _gpCustAuth.Text = "Customer";
-            // 
+            //
             // btnSaveAuth
-            // 
+            //
             _btnSaveAuth.AccessibleDescription = "";
             _btnSaveAuth.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveAuth.Location = new Point(548, 191);
@@ -3467,9 +3465,9 @@ namespace FSM
             _btnSaveAuth.Size = new Size(85, 23);
             _btnSaveAuth.TabIndex = 4;
             _btnSaveAuth.Text = "Save";
-            // 
+            //
             // txtCustAuthority
-            // 
+            //
             _txtCustAuthority.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtCustAuthority.Location = new Point(6, 20);
@@ -3478,9 +3476,9 @@ namespace FSM
             _txtCustAuthority.ScrollBars = ScrollBars.Both;
             _txtCustAuthority.Size = new Size(627, 156);
             _txtCustAuthority.TabIndex = 0;
-            // 
+            //
             // tabAlerts
-            // 
+            //
             _tabAlerts.Controls.Add(_grpCustomerAlerts);
             _tabAlerts.Location = new Point(4, 22);
             _tabAlerts.Name = "tabAlerts";
@@ -3488,9 +3486,9 @@ namespace FSM
             _tabAlerts.TabIndex = 12;
             _tabAlerts.Text = "Alerts";
             _tabAlerts.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpCustomerAlerts
-            // 
+            //
             _grpCustomerAlerts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCustomerAlerts.Controls.Add(_grpSite);
@@ -3503,9 +3501,9 @@ namespace FSM
             _grpCustomerAlerts.TabIndex = 15;
             _grpCustomerAlerts.TabStop = false;
             _grpCustomerAlerts.Text = "Alerts";
-            // 
+            //
             // grpSite
-            // 
+            //
             _grpSite.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpSite.Controls.Add(_btnAddCustomerAlert);
             _grpSite.Controls.Add(_btnDeleteCustomerAlert);
@@ -3521,9 +3519,9 @@ namespace FSM
             _grpSite.TabIndex = 115;
             _grpSite.TabStop = false;
             _grpSite.Text = "Alert";
-            // 
+            //
             // btnAddCustomerAlert
-            // 
+            //
             _btnAddCustomerAlert.AccessibleDescription = "";
             _btnAddCustomerAlert.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddCustomerAlert.Location = new Point(555, 18);
@@ -3532,9 +3530,9 @@ namespace FSM
             _btnAddCustomerAlert.TabIndex = 131;
             _btnAddCustomerAlert.Text = "+";
             _tt.SetToolTip(_btnAddCustomerAlert, "Add new alert");
-            // 
+            //
             // btnDeleteCustomerAlert
-            // 
+            //
             _btnDeleteCustomerAlert.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnDeleteCustomerAlert.Location = new Point(9, 210);
             _btnDeleteCustomerAlert.Name = "btnDeleteCustomerAlert";
@@ -3542,9 +3540,9 @@ namespace FSM
             _btnDeleteCustomerAlert.TabIndex = 130;
             _btnDeleteCustomerAlert.Text = "Delete";
             _btnDeleteCustomerAlert.Visible = false;
-            // 
+            //
             // txtCustomerAlertEmailAddress
-            // 
+            //
             _txtCustomerAlertEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtCustomerAlertEmailAddress.Location = new Point(9, 131);
@@ -3554,27 +3552,27 @@ namespace FSM
             _txtCustomerAlertEmailAddress.Size = new Size(577, 62);
             _txtCustomerAlertEmailAddress.TabIndex = 129;
             _txtCustomerAlertEmailAddress.Tag = "Customer.Notes";
-            // 
+            //
             // lblEmailAddressMsg
-            // 
+            //
             _lblEmailAddressMsg.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblEmailAddressMsg.Location = new Point(6, 63);
             _lblEmailAddressMsg.Name = "lblEmailAddressMsg";
             _lblEmailAddressMsg.Size = new Size(566, 29);
             _lblEmailAddressMsg.TabIndex = 128;
             _lblEmailAddressMsg.Text = "Please seperate each email address with a semi-colon;";
-            // 
+            //
             // btnSaveCustomerAlert
-            // 
+            //
             _btnSaveCustomerAlert.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveCustomerAlert.Location = new Point(505, 210);
             _btnSaveCustomerAlert.Name = "btnSaveCustomerAlert";
             _btnSaveCustomerAlert.Size = new Size(81, 23);
             _btnSaveCustomerAlert.TabIndex = 127;
             _btnSaveCustomerAlert.Text = "Save";
-            // 
+            //
             // cboAlertType
-            // 
+            //
             _cboAlertType.Cursor = Cursors.Hand;
             _cboAlertType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboAlertType.Location = new Point(117, 20);
@@ -3582,25 +3580,25 @@ namespace FSM
             _cboAlertType.Size = new Size(161, 21);
             _cboAlertType.TabIndex = 126;
             _cboAlertType.Tag = "";
-            // 
+            //
             // lblCustomerAlertEmailAddress
-            // 
+            //
             _lblCustomerAlertEmailAddress.Location = new Point(6, 105);
             _lblCustomerAlertEmailAddress.Name = "lblCustomerAlertEmailAddress";
             _lblCustomerAlertEmailAddress.Size = new Size(112, 23);
             _lblCustomerAlertEmailAddress.TabIndex = 125;
             _lblCustomerAlertEmailAddress.Text = "Email Address(s):";
-            // 
+            //
             // lblAlertType
-            // 
+            //
             _lblAlertType.Location = new Point(6, 23);
             _lblAlertType.Name = "lblAlertType";
             _lblAlertType.Size = new Size(80, 23);
             _lblAlertType.TabIndex = 123;
             _lblAlertType.Text = "Alert Type:";
-            // 
+            //
             // dgCustomerAlerts
-            // 
+            //
             _dgCustomerAlerts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgCustomerAlerts.DataMember = "";
@@ -3609,26 +3607,26 @@ namespace FSM
             _dgCustomerAlerts.Name = "dgCustomerAlerts";
             _dgCustomerAlerts.Size = new Size(592, 262);
             _dgCustomerAlerts.TabIndex = 11;
-            // 
+            //
             // cmnuContractOptions
-            // 
+            //
             _cmnuContractOptions.MenuItems.AddRange(new MenuItem[] { _mnuContractOpt1 });
-            // 
+            //
             // mnuContractOpt1
-            // 
+            //
             _mnuContractOpt1.Index = 0;
             _mnuContractOpt1.Text = "Contract Opt. 1";
-            // 
+            //
             // pnlServiceProcess
-            // 
+            //
             _pnlServiceProcess.Dock = DockStyle.Fill;
             _pnlServiceProcess.Location = new Point(0, 0);
             _pnlServiceProcess.Name = "pnlServiceProcess";
             _pnlServiceProcess.Size = new Size(645, 574);
             _pnlServiceProcess.TabIndex = 2;
-            // 
+            //
             // UCCustomer
-            // 
+            //
             Controls.Add(_TabControl1);
             Name = "UCCustomer";
             Size = new Size(653, 600);
@@ -3670,7 +3668,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -3690,11 +3689,11 @@ namespace FSM
         private UCCustomerScheduleOfRate CustomerScheduleOfRateControl;
         private UCCustomerServiceProcess UcServiceProcess;
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -3900,6 +3899,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDG()
         {
             Helper.SetUpDataGridView(dgvParts);
@@ -4224,6 +4224,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private bool DeleteOption1()
         {
             // DELETE Visit, Jobs - not sync, Job Assets, PPM Visits, Contract Site Assets, Contract Sites
@@ -4314,7 +4315,7 @@ namespace FSM
             }
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))

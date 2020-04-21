@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class UCFleetVanType : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCFleetVanType() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCVan_Load;
@@ -370,9 +369,9 @@ namespace FSM
             _lblGrossVehicleWeight = new Label();
             _grpVan.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpVan
-            // 
+            //
             _grpVan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVan.Controls.Add(_txtPayload);
@@ -393,105 +392,105 @@ namespace FSM
             _grpVan.TabIndex = 3;
             _grpVan.TabStop = false;
             _grpVan.Text = "Details";
-            // 
+            //
             // txtDateIntervals
-            // 
+            //
             _txtDateIntervals.Location = new Point(457, 68);
             _txtDateIntervals.MaxLength = 10;
             _txtDateIntervals.Name = "txtDateIntervals";
             _txtDateIntervals.Size = new Size(77, 21);
             _txtDateIntervals.TabIndex = 4;
-            // 
+            //
             // lblDateIntervals
-            // 
+            //
             _lblDateIntervals.Location = new Point(260, 68);
             _lblDateIntervals.Name = "lblDateIntervals";
             _lblDateIntervals.Size = new Size(191, 20);
             _lblDateIntervals.TabIndex = 51;
             _lblDateIntervals.Text = "Date Service Intervals (Months)";
-            // 
+            //
             // txtModel
-            // 
+            //
             _txtModel.Location = new Point(76, 68);
             _txtModel.MaxLength = 20;
             _txtModel.Name = "txtModel";
             _txtModel.Size = new Size(167, 21);
             _txtModel.TabIndex = 2;
-            // 
+            //
             // lblModel
-            // 
+            //
             _lblModel.Location = new Point(12, 71);
             _lblModel.Name = "lblModel";
             _lblModel.Size = new Size(58, 20);
             _lblModel.TabIndex = 49;
             _lblModel.Text = "Model";
-            // 
+            //
             // txtMake
-            // 
+            //
             _txtMake.Location = new Point(76, 30);
             _txtMake.MaxLength = 20;
             _txtMake.Name = "txtMake";
             _txtMake.Size = new Size(167, 21);
             _txtMake.TabIndex = 1;
-            // 
+            //
             // lblMake
-            // 
+            //
             _lblMake.Location = new Point(12, 33);
             _lblMake.Name = "lblMake";
             _lblMake.Size = new Size(58, 20);
             _lblMake.TabIndex = 47;
             _lblMake.Text = "Make";
-            // 
+            //
             // txtMileageIntervals
-            // 
+            //
             _txtMileageIntervals.Location = new Point(457, 30);
             _txtMileageIntervals.MaxLength = 10;
             _txtMileageIntervals.Name = "txtMileageIntervals";
             _txtMileageIntervals.Size = new Size(77, 21);
             _txtMileageIntervals.TabIndex = 3;
-            // 
+            //
             // lblMileageService
-            // 
+            //
             _lblMileageService.Location = new Point(260, 33);
             _lblMileageService.Name = "lblMileageService";
             _lblMileageService.Size = new Size(160, 20);
             _lblMileageService.TabIndex = 45;
             _lblMileageService.Text = "Mileage Service Intervals";
-            // 
+            //
             // txtPayload
-            // 
+            //
             _txtPayload.Location = new Point(457, 106);
             _txtPayload.MaxLength = 10;
             _txtPayload.Name = "txtPayload";
             _txtPayload.Size = new Size(77, 21);
             _txtPayload.TabIndex = 53;
-            // 
+            //
             // lblPayLoad
-            // 
+            //
             _lblPayLoad.Location = new Point(387, 106);
             _lblPayLoad.Name = "lblPayLoad";
             _lblPayLoad.Size = new Size(55, 20);
             _lblPayLoad.TabIndex = 55;
             _lblPayLoad.Text = "Payload";
-            // 
+            //
             // txtGrossVehicleWeight
-            // 
+            //
             _txtGrossVehicleWeight.Location = new Point(158, 106);
             _txtGrossVehicleWeight.MaxLength = 20;
             _txtGrossVehicleWeight.Name = "txtGrossVehicleWeight";
             _txtGrossVehicleWeight.Size = new Size(85, 21);
             _txtGrossVehicleWeight.TabIndex = 52;
-            // 
+            //
             // lblGrossVehicleWeight
-            // 
+            //
             _lblGrossVehicleWeight.Location = new Point(12, 109);
             _lblGrossVehicleWeight.Name = "lblGrossVehicleWeight";
             _lblGrossVehicleWeight.Size = new Size(140, 20);
             _lblGrossVehicleWeight.TabIndex = 54;
             _lblGrossVehicleWeight.Text = "Gross Vehicle Weight";
-            // 
+            //
             // UCFleetVanType
-            // 
+            //
             BackColor = Color.White;
             Controls.Add(_grpVan);
             Name = "UCFleetVanType";
@@ -503,7 +502,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -518,11 +518,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -558,7 +559,7 @@ namespace FSM
         // PartQuantitiesDataview = DB.Part.PartLocations_GetForVanHM(VanID)
         // End Sub
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))

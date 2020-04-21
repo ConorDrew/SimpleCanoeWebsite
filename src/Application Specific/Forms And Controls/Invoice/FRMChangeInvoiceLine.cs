@@ -8,13 +8,11 @@ namespace FSM
 {
     public class FRMChangeInvoiceLine : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMChangeInvoiceLine() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMChangeInvoiceLine_Load;
@@ -24,7 +22,6 @@ namespace FSM
             var argc = cboInvoiceTaxCodeNew;
             Combo.SetUpCombo(ref argc, App.DB.VATRatesSQL.VATRates_GetAll_InputOrOutput('O').Table, "VATRateID", "Friendly", Entity.Sys.Enums.ComboValues.Please_Select);
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -204,60 +201,60 @@ namespace FSM
             _btnCancel = new Button();
             _btnCancel.Click += new EventHandler(btnCancel_Click_1);
             SuspendLayout();
-            // 
+            //
             // lblAmount
-            // 
+            //
             _lblAmount.AutoSize = true;
             _lblAmount.Location = new Point(12, 66);
             _lblAmount.Name = "lblAmount";
             _lblAmount.Size = new Size(51, 13);
             _lblAmount.TabIndex = 1;
             _lblAmount.Text = "Amount";
-            // 
+            //
             // txtAmount
-            // 
+            //
             _txtAmount.Location = new Point(89, 63);
             _txtAmount.Name = "txtAmount";
             _txtAmount.Size = new Size(192, 21);
             _txtAmount.TabIndex = 2;
-            // 
+            //
             // lblVatRate
-            // 
+            //
             _lblVatRate.AutoSize = true;
             _lblVatRate.Location = new Point(12, 108);
             _lblVatRate.Name = "lblVatRate";
             _lblVatRate.Size = new Size(55, 13);
             _lblVatRate.TabIndex = 3;
             _lblVatRate.Text = "Vat Rate";
-            // 
+            //
             // cboInvoiceTaxCodeNew
-            // 
+            //
             _cboInvoiceTaxCodeNew.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboInvoiceTaxCodeNew.Location = new Point(89, 105);
             _cboInvoiceTaxCodeNew.Name = "cboInvoiceTaxCodeNew";
             _cboInvoiceTaxCodeNew.Size = new Size(83, 21);
             _cboInvoiceTaxCodeNew.TabIndex = 108;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Location = new Point(206, 145);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(75, 23);
             _btnSave.TabIndex = 109;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Location = new Point(15, 145);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(75, 23);
             _btnCancel.TabIndex = 110;
             _btnCancel.Text = "Cancel";
             _btnCancel.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMChangeInvoiceLine
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(304, 180);
             ControlBox = false;
@@ -282,7 +279,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -295,7 +293,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

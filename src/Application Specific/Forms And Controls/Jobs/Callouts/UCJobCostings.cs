@@ -10,20 +10,13 @@ namespace FSM
     {
         public UCJobCostings()
         {
-
-
-
-
-
-
-
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCJobCost_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCJobCostings(int IDToLinkToIn) : base()
         {
             base.Load += UCJobCost_Load;
@@ -32,7 +25,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
 
             IDToLinkTo = IDToLinkToIn;
             Dock = DockStyle.Fill;
@@ -56,15 +48,15 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
             SuspendLayout();
-            // 
+            //
             // UCJobCostings
-            // 
+            //
             Name = "UCJobCostings";
             Size = new Size(504, 560);
             ResumeLayout(false);
@@ -72,8 +64,6 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
-
 
         private Entity.JobInstalls.JobInstall _JI;
 
@@ -138,6 +128,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDocumentsDataGrid()
         {
         }
@@ -146,8 +137,6 @@ namespace FSM
         {
             LoadBaseControl(this);
             // UCLogCallout.OnCostings = Me
-
-
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -182,9 +171,11 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate()
         {
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

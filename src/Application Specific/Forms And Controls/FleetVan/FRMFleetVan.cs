@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMFleetVan : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMFleetVan() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMVan_Load;
@@ -43,6 +42,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private Button _btnClose;
 
         internal Button btnClose
@@ -128,27 +128,27 @@ namespace FSM
             _btnSave = new Button();
             _btnSave.Click += new EventHandler(btnSave_Click);
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(625, 888);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(693, 847);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(12, 888);
             _btnSave.Name = "btnSave";
@@ -156,9 +156,9 @@ namespace FSM
             _btnSave.TabIndex = 4;
             _btnSave.Text = "Save";
             _btnSave.Visible = false;
-            // 
+            //
             // FRMFleetVan
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(693, 925);
             Controls.Add(_btnSave);
@@ -177,7 +177,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             ((UCFleetVan)LoadedControl).CurrentVan = App.DB.FleetVan.Get(ID);

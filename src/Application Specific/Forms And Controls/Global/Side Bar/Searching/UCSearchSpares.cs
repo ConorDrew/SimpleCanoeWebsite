@@ -1,16 +1,16 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCSearchSpares : UCBase, ISearchControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCSearchSpares() : base()
         {
             base.Load += UCSearchSetup_Load;
@@ -19,7 +19,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -40,7 +39,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Label _Label1;
 
@@ -105,7 +104,6 @@ namespace FSM
             {
                 if (_cboSearchFor != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _cboSearchFor.SelectedIndexChanged -= cboSearchFor_SelectedIndexChanged;
@@ -258,42 +256,42 @@ namespace FSM
             _Label3 = new Label();
             _Label4 = new Label();
             SuspendLayout();
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 3);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(72, 16);
             _Label1.TabIndex = 0;
             _Label1.Text = "Search";
-            // 
+            //
             // cboSearchFor
-            // 
+            //
             _cboSearchFor.Cursor = Cursors.Hand;
             _cboSearchFor.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSearchFor.Location = new Point(34, 18);
             _cboSearchFor.Name = "cboSearchFor";
             _cboSearchFor.Size = new Size(123, 21);
             _cboSearchFor.TabIndex = 1;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(7, 65);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(152, 16);
             _Label2.TabIndex = 2;
             _Label2.Text = "Enter Search Criteria";
-            // 
+            //
             // txtCriteria
-            // 
+            //
             _txtCriteria.Location = new Point(10, 84);
             _txtCriteria.MaxLength = 25;
             _txtCriteria.Name = "txtCriteria";
             _txtCriteria.Size = new Size(96, 21);
             _txtCriteria.TabIndex = 2;
-            // 
+            //
             // btnFind
-            // 
+            //
             _btnFind.AccessibleDescription = "Search for records by comparing multiple columns";
             _btnFind.Cursor = Cursors.Hand;
             _btnFind.Location = new Point(112, 84);
@@ -302,35 +300,35 @@ namespace FSM
             _btnFind.TabIndex = 3;
             _btnFind.Text = "Find";
             _btnFind.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboSearchOn
-            // 
+            //
             _cboSearchOn.Cursor = Cursors.Hand;
             _cboSearchOn.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSearchOn.Location = new Point(34, 41);
             _cboSearchOn.Name = "cboSearchOn";
             _cboSearchOn.Size = new Size(123, 21);
             _cboSearchOn.TabIndex = 4;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 44);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(72, 16);
             _Label3.TabIndex = 5;
             _Label3.Text = "On";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.AutoSize = true;
             _Label4.Location = new Point(8, 21);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(25, 13);
             _Label4.TabIndex = 6;
             _Label4.Text = "For";
-            // 
+            //
             // UCSearchSpares
-            // 
+            //
             Controls.Add(_Label4);
             Controls.Add(_cboSearchOn);
             Controls.Add(_btnFind);
@@ -347,7 +345,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             var argc = cboSearchFor;
@@ -356,7 +355,7 @@ namespace FSM
             Combo.SetSelectedComboItem_By_Value(ref argcombo, Conversions.ToString(Entity.Sys.Enums.TableNames.tblPart));
         }
 
-        private void Search()
+        public void Search()
         {
             if ((Combo.get_GetSelectedItemValue(cboSearchFor) ?? "") == "0")
             {
@@ -400,7 +399,7 @@ namespace FSM
         private void cboSearchFor_SelectedIndexChanged(object sender, EventArgs e)
         {
             var argc = cboSearchOn;
-            Combo.SetUpCombo(ref argc, DynamicDataTables.Setup_Search_On_Options(Entity.Sys.Enums.MenuTypes.Spares, (Entity.Sys.Enums.TableNames)Combo.get_GetSelectedItemValue(cboSearchFor)), "ValueMember", "DisplayMember", Entity.Sys.Enums.ComboValues.Please_Select);
+            Combo.SetUpCombo(ref argc, DynamicDataTables.Setup_Search_On_Options(Entity.Sys.Enums.MenuTypes.Spares, (Entity.Sys.Enums.TableNames)Convert.ToInt32(Combo.get_GetSelectedItemValue(cboSearchFor))), "ValueMember", "DisplayMember", Entity.Sys.Enums.ComboValues.Please_Select);
             var argcombo = cboSearchOn;
             Combo.SetSelectedComboItem_By_Value(ref argcombo, "");
         }
@@ -422,6 +421,7 @@ namespace FSM
                 Search();
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

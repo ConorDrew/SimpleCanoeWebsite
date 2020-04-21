@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCAsset : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCAsset() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCAsset_Load;
@@ -47,7 +46,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private TabControl _TabControl1;
 
@@ -1284,9 +1283,9 @@ namespace FSM
             _grpJobs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgJobs).BeginInit();
             SuspendLayout();
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tabDetails);
@@ -1297,18 +1296,18 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(788, 582);
             _TabControl1.TabIndex = 0;
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_grpAsset);
             _tabDetails.Location = new Point(4, 22);
             _tabDetails.Name = "tabDetails";
             _tabDetails.Size = new Size(780, 556);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Main Details";
-            // 
+            //
             // grpAsset
-            // 
+            //
             _grpAsset.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAsset.Controls.Add(_chkTenantsAppliance);
@@ -1356,17 +1355,17 @@ namespace FSM
             _grpAsset.TabIndex = 0;
             _grpAsset.TabStop = false;
             _grpAsset.Text = "Details";
-            // 
+            //
             // chkTenantsAppliance
-            // 
+            //
             _chkTenantsAppliance.Location = new Point(217, 426);
             _chkTenantsAppliance.Name = "chkTenantsAppliance";
             _chkTenantsAppliance.Size = new Size(140, 24);
             _chkTenantsAppliance.TabIndex = 39;
             _chkTenantsAppliance.Text = "Tenants Appliance";
-            // 
+            //
             // chkActive
-            // 
+            //
             _chkActive.Checked = true;
             _chkActive.CheckState = CheckState.Checked;
             _chkActive.Location = new Point(152, 426);
@@ -1374,9 +1373,9 @@ namespace FSM
             _chkActive.Size = new Size(88, 24);
             _chkActive.TabIndex = 38;
             _chkActive.Text = "Active";
-            // 
+            //
             // btnFindProduct
-            // 
+            //
             _btnFindProduct.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindProduct.Location = new Point(727, 18);
             _btnFindProduct.Name = "btnFindProduct";
@@ -1384,18 +1383,18 @@ namespace FSM
             _btnFindProduct.TabIndex = 37;
             _btnFindProduct.Text = "...";
             _btnFindProduct.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtProduct
-            // 
+            //
             _txtProduct.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtProduct.Location = new Point(152, 20);
             _txtProduct.Name = "txtProduct";
             _txtProduct.ReadOnly = true;
             _txtProduct.Size = new Size(569, 21);
             _txtProduct.TabIndex = 36;
-            // 
+            //
             // cboFlueType
-            // 
+            //
             _cboFlueType.Cursor = Cursors.Hand;
             _cboFlueType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboFlueType.Location = new Point(152, 128);
@@ -1403,17 +1402,17 @@ namespace FSM
             _cboFlueType.Size = new Size(174, 21);
             _cboFlueType.TabIndex = 9;
             _cboFlueType.Tag = "";
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(9, 129);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(128, 20);
             _Label11.TabIndex = 8;
             _Label11.Text = "Flue Type";
-            // 
+            //
             // cboGasType
-            // 
+            //
             _cboGasType.Cursor = Cursors.Hand;
             _cboGasType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboGasType.Location = new Point(152, 155);
@@ -1421,250 +1420,250 @@ namespace FSM
             _cboGasType.Size = new Size(174, 21);
             _cboGasType.TabIndex = 11;
             _cboGasType.Tag = "";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(9, 158);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(128, 20);
             _Label10.TabIndex = 10;
             _Label10.Text = "Fuel Type";
-            // 
+            //
             // txtApproximateValue
-            // 
+            //
             _txtApproximateValue.Location = new Point(152, 399);
             _txtApproximateValue.MaxLength = 100;
             _txtApproximateValue.Name = "txtApproximateValue";
             _txtApproximateValue.Size = new Size(174, 21);
             _txtApproximateValue.TabIndex = 33;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(9, 402);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(128, 20);
             _Label9.TabIndex = 32;
             _Label9.Text = "Approximate Value";
-            // 
+            //
             // txtYearOfManufacture
-            // 
+            //
             _txtYearOfManufacture.Location = new Point(152, 372);
             _txtYearOfManufacture.MaxLength = 100;
             _txtYearOfManufacture.Name = "txtYearOfManufacture";
             _txtYearOfManufacture.Size = new Size(174, 21);
             _txtYearOfManufacture.TabIndex = 31;
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(9, 375);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(133, 20);
             _Label8.TabIndex = 30;
             _Label8.Text = "Year Of Manufacture";
-            // 
+            //
             // txtGCNumber
-            // 
+            //
             _txtGCNumber.Location = new Point(152, 74);
             _txtGCNumber.MaxLength = 100;
             _txtGCNumber.Name = "txtGCNumber";
             _txtGCNumber.ReadOnly = true;
             _txtGCNumber.Size = new Size(174, 21);
             _txtGCNumber.TabIndex = 5;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(9, 77);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(117, 20);
             _Label7.TabIndex = 4;
             _Label7.Text = "GC Number";
-            // 
+            //
             // dtpWarrantyEndDate
-            // 
+            //
             _dtpWarrantyEndDate.Location = new Point(152, 291);
             _dtpWarrantyEndDate.Name = "dtpWarrantyEndDate";
             _dtpWarrantyEndDate.Size = new Size(174, 21);
             _dtpWarrantyEndDate.TabIndex = 25;
             _dtpWarrantyEndDate.Tag = "Asset.WarrantyEndDate";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(9, 295);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(125, 20);
             _Label5.TabIndex = 24;
             _Label5.Text = "Warranty End Date";
-            // 
+            //
             // chkWarrantyStartDateUnknown
-            // 
+            //
             _chkWarrantyStartDateUnknown.Location = new Point(343, 268);
             _chkWarrantyStartDateUnknown.Name = "chkWarrantyStartDateUnknown";
             _chkWarrantyStartDateUnknown.Size = new Size(88, 24);
             _chkWarrantyStartDateUnknown.TabIndex = 23;
             _chkWarrantyStartDateUnknown.Text = "Unknown";
-            // 
+            //
             // dtpWarrantyStartDate
-            // 
+            //
             _dtpWarrantyStartDate.Location = new Point(152, 264);
             _dtpWarrantyStartDate.Name = "dtpWarrantyStartDate";
             _dtpWarrantyStartDate.Size = new Size(174, 21);
             _dtpWarrantyStartDate.TabIndex = 22;
             _dtpWarrantyStartDate.Tag = "Asset.WarrantyStartDate";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(9, 268);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(141, 20);
             _Label6.TabIndex = 21;
             _Label6.Text = "Warranty Start Date";
-            // 
+            //
             // chkLastServicedDateUnknown
-            // 
+            //
             _chkLastServicedDateUnknown.Location = new Point(343, 209);
             _chkLastServicedDateUnknown.Name = "chkLastServicedDateUnknown";
             _chkLastServicedDateUnknown.Size = new Size(88, 24);
             _chkLastServicedDateUnknown.TabIndex = 17;
             _chkLastServicedDateUnknown.Text = "Unknown";
-            // 
+            //
             // dtpLastServicedDate
-            // 
+            //
             _dtpLastServicedDate.Location = new Point(152, 210);
             _dtpLastServicedDate.Name = "dtpLastServicedDate";
             _dtpLastServicedDate.Size = new Size(174, 21);
             _dtpLastServicedDate.TabIndex = 16;
             _dtpLastServicedDate.Tag = "Asset.LastServicedDate";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(9, 214);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(125, 20);
             _Label4.TabIndex = 15;
             _Label4.Text = "Last Serviced Date";
-            // 
+            //
             // chkCertificateLastIssuedUnknown
-            // 
+            //
             _chkCertificateLastIssuedUnknown.Location = new Point(343, 182);
             _chkCertificateLastIssuedUnknown.Name = "chkCertificateLastIssuedUnknown";
             _chkCertificateLastIssuedUnknown.Size = new Size(88, 24);
             _chkCertificateLastIssuedUnknown.TabIndex = 14;
             _chkCertificateLastIssuedUnknown.Text = "Unknown";
-            // 
+            //
             // dtpCertificateLastIssued
-            // 
+            //
             _dtpCertificateLastIssued.Location = new Point(152, 183);
             _dtpCertificateLastIssued.Name = "dtpCertificateLastIssued";
             _dtpCertificateLastIssued.Size = new Size(174, 21);
             _dtpCertificateLastIssued.TabIndex = 13;
             _dtpCertificateLastIssued.Tag = "Asset.CertificateLastIssued";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(9, 187);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(141, 20);
             _Label3.TabIndex = 12;
             _Label3.Text = "Certificate Last Issued";
-            // 
+            //
             // txtBoughtFrom
-            // 
+            //
             _txtBoughtFrom.Location = new Point(152, 318);
             _txtBoughtFrom.MaxLength = 100;
             _txtBoughtFrom.Name = "txtBoughtFrom";
             _txtBoughtFrom.Size = new Size(174, 21);
             _txtBoughtFrom.TabIndex = 27;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(9, 321);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(117, 20);
             _Label2.TabIndex = 26;
             _Label2.Text = "Gasway Ref";
-            // 
+            //
             // txtSupplierBy
-            // 
+            //
             _txtSupplierBy.Location = new Point(152, 345);
             _txtSupplierBy.MaxLength = 100;
             _txtSupplierBy.Name = "txtSupplierBy";
             _txtSupplierBy.Size = new Size(174, 21);
             _txtSupplierBy.TabIndex = 29;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(9, 348);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(117, 20);
             _Label1.TabIndex = 28;
             _Label1.Text = "Supplied By";
-            // 
+            //
             // txtLocation
-            // 
+            //
             _txtLocation.Location = new Point(152, 47);
             _txtLocation.Name = "txtLocation";
             _txtLocation.Size = new Size(174, 21);
             _txtLocation.TabIndex = 3;
-            // 
+            //
             // chkDateUnknown
-            // 
+            //
             _chkDateUnknown.Location = new Point(343, 235);
             _chkDateUnknown.Name = "chkDateUnknown";
             _chkDateUnknown.Size = new Size(88, 24);
             _chkDateUnknown.TabIndex = 20;
             _chkDateUnknown.Text = "Unknown";
-            // 
+            //
             // lblProductID
-            // 
+            //
             _lblProductID.Location = new Point(9, 23);
             _lblProductID.Name = "lblProductID";
             _lblProductID.Size = new Size(109, 20);
             _lblProductID.TabIndex = 0;
             _lblProductID.Text = "Product";
-            // 
+            //
             // txtSerialNum
-            // 
+            //
             _txtSerialNum.Location = new Point(152, 101);
             _txtSerialNum.MaxLength = 50;
             _txtSerialNum.Name = "txtSerialNum";
             _txtSerialNum.Size = new Size(174, 21);
             _txtSerialNum.TabIndex = 7;
             _txtSerialNum.Tag = "Asset.SerialNum";
-            // 
+            //
             // lblSerialNum
-            // 
+            //
             _lblSerialNum.Location = new Point(9, 101);
             _lblSerialNum.Name = "lblSerialNum";
             _lblSerialNum.Size = new Size(133, 20);
             _lblSerialNum.TabIndex = 6;
             _lblSerialNum.Text = "Serial";
-            // 
+            //
             // dtpDateFitted
-            // 
+            //
             _dtpDateFitted.Location = new Point(152, 237);
             _dtpDateFitted.Name = "dtpDateFitted";
             _dtpDateFitted.Size = new Size(174, 21);
             _dtpDateFitted.TabIndex = 19;
             _dtpDateFitted.Tag = "Asset.DateFitted";
-            // 
+            //
             // lblDateFitted
-            // 
+            //
             _lblDateFitted.Location = new Point(9, 239);
             _lblDateFitted.Name = "lblDateFitted";
             _lblDateFitted.Size = new Size(125, 20);
             _lblDateFitted.TabIndex = 18;
             _lblDateFitted.Text = "Date Fitted";
-            // 
+            //
             // lblLocationID
-            // 
+            //
             _lblLocationID.Location = new Point(9, 50);
             _lblLocationID.Name = "lblLocationID";
             _lblLocationID.Size = new Size(117, 20);
             _lblLocationID.TabIndex = 2;
             _lblLocationID.Text = "Location";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(152, 456);
@@ -1674,43 +1673,43 @@ namespace FSM
             _txtNotes.Size = new Size(600, 77);
             _txtNotes.TabIndex = 35;
             _txtNotes.Tag = "Asset.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(9, 456);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(101, 20);
             _lblNotes.TabIndex = 34;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // tabDocuments
-            // 
+            //
             _tabDocuments.Controls.Add(_pnlDocuments);
             _tabDocuments.Location = new Point(4, 22);
             _tabDocuments.Name = "tabDocuments";
             _tabDocuments.Size = new Size(780, 556);
             _tabDocuments.TabIndex = 1;
             _tabDocuments.Text = "Documents";
-            // 
+            //
             // pnlDocuments
-            // 
+            //
             _pnlDocuments.Dock = DockStyle.Fill;
             _pnlDocuments.Location = new Point(0, 0);
             _pnlDocuments.Name = "pnlDocuments";
             _pnlDocuments.Size = new Size(780, 556);
             _pnlDocuments.TabIndex = 0;
-            // 
+            //
             // tabJobs
-            // 
+            //
             _tabJobs.Controls.Add(_grpJobs);
             _tabJobs.Location = new Point(4, 22);
             _tabJobs.Name = "tabJobs";
             _tabJobs.Size = new Size(780, 556);
             _tabJobs.TabIndex = 2;
             _tabJobs.Text = "Jobs";
-            // 
+            //
             // grpJobs
-            // 
+            //
             _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJobs.Controls.Add(_btnAddJob);
@@ -1721,18 +1720,18 @@ namespace FSM
             _grpJobs.TabIndex = 1;
             _grpJobs.TabStop = false;
             _grpJobs.Text = "Jobs";
-            // 
+            //
             // btnAddJob
-            // 
+            //
             _btnAddJob.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddJob.Location = new Point(8, 514);
             _btnAddJob.Name = "btnAddJob";
             _btnAddJob.Size = new Size(75, 23);
             _btnAddJob.TabIndex = 2;
             _btnAddJob.Text = "Add Job";
-            // 
+            //
             // dgJobs
-            // 
+            //
             _dgJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgJobs.DataMember = "";
@@ -1741,9 +1740,9 @@ namespace FSM
             _dgJobs.Name = "dgJobs";
             _dgJobs.Size = new Size(752, 488);
             _dgJobs.TabIndex = 1;
-            // 
+            //
             // UCAsset
-            // 
+            //
             Controls.Add(_TabControl1);
             Name = "UCAsset";
             Size = new Size(795, 594);
@@ -1760,7 +1759,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupJobsDataGrid();
@@ -1778,11 +1778,11 @@ namespace FSM
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private UCDocumentsList DocumentsControl;
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1822,6 +1822,7 @@ namespace FSM
         }
 
         private int _LoadProductID;
+
         // This is used to allow pre-selection of the product on load of the form
         public int LoadProductID
         {
@@ -1842,6 +1843,7 @@ namespace FSM
         }
 
         private int _LoadSiteID;
+
         // This is used to allow pre-selection of a Site that isnt set by CurrentSiteID
         public int LoadSiteID
         {
@@ -1942,6 +1944,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupJobsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgJobs);
@@ -2153,6 +2156,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateJobs()
         {
             JobsDataView = App.DB.Job.Job_GetAll_For_Asset(CurrentAsset.AssetID);
@@ -2177,7 +2181,7 @@ namespace FSM
             }
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             if (App.ControlLoading == false)
             {
@@ -2382,6 +2386,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Windows.Forms;
 
 namespace FSM
 {
@@ -12,9 +12,9 @@ namespace FSM
             InitializeComponent();
         }
 
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var argc = cboType;
@@ -35,7 +35,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -98,9 +98,9 @@ namespace FSM
             }
         }
 
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMEngineerTimesheet_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -122,6 +122,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             var argcombo = cboType;

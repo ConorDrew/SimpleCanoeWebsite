@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class UCFleetEquipment : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCFleetEquipment() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCVan_Load;
@@ -220,9 +219,9 @@ namespace FSM
             _txtDescription = new RichTextBox();
             _grpVan.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpVan
-            // 
+            //
             _grpVan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVan.Controls.Add(_txtDescription);
@@ -237,57 +236,57 @@ namespace FSM
             _grpVan.TabIndex = 3;
             _grpVan.TabStop = false;
             _grpVan.Text = "Details";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(12, 33);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(58, 20);
             _lblName.TabIndex = 47;
             _lblName.Text = "Name";
-            // 
+            //
             // txtCost
-            // 
+            //
             _txtCost.Location = new Point(299, 30);
             _txtCost.MaxLength = 10;
             _txtCost.Name = "txtCost";
             _txtCost.Size = new Size(77, 21);
             _txtCost.TabIndex = 3;
-            // 
+            //
             // lblCost
-            // 
+            //
             _lblCost.Location = new Point(241, 33);
             _lblCost.Name = "lblCost";
             _lblCost.Size = new Size(73, 20);
             _lblCost.TabIndex = 45;
             _lblCost.Text = "Cost";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Location = new Point(95, 30);
             _txtName.MaxLength = 20;
             _txtName.Name = "txtName";
             _txtName.Size = new Size(131, 21);
             _txtName.TabIndex = 1;
-            // 
+            //
             // lblDescription
-            // 
+            //
             _lblDescription.Location = new Point(12, 69);
             _lblDescription.Name = "lblDescription";
             _lblDescription.Size = new Size(84, 20);
             _lblDescription.TabIndex = 49;
             _lblDescription.Text = "Description";
-            // 
+            //
             // txtDescription
-            // 
+            //
             _txtDescription.Location = new Point(95, 69);
             _txtDescription.Name = "txtDescription";
             _txtDescription.Size = new Size(281, 62);
             _txtDescription.TabIndex = 50;
             _txtDescription.Text = "";
-            // 
+            //
             // UCFleetEquipment
-            // 
+            //
             BackColor = Color.White;
             Controls.Add(_grpVan);
             Name = "UCFleetEquipment";
@@ -299,7 +298,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -314,11 +314,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -353,7 +354,7 @@ namespace FSM
         // PartQuantitiesDataview = DB.Part.PartLocations_GetForVanHM(VanID)
         // End Sub
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))

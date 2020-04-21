@@ -1,11 +1,11 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -17,6 +17,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -87,6 +88,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupJobDataGrid()
         {
             var tbStyle = dgJobs.TableStyles[0];
@@ -221,6 +223,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMJobManager_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -424,6 +427,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try
@@ -551,7 +555,7 @@ namespace FSM
                             }
 
                             var maxAmPmAmounts = GetMaxAmPmAmount(Helper.MakeIntegerValid(appointment["MaxSOR"]), visitTime);
-                            if (Conversions.ToBoolean(Helper.MakeIntegerValid(appointment["AM"]) < maxAmPmAmounts.amAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & appointment["RemainingSOR"] > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0))
+                            if (Conversions.ToBoolean(Helper.MakeIntegerValid(appointment["AM"]) < maxAmPmAmounts.amAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & (double)appointment["RemainingSOR"] > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0))
                             {
                                 job["EngName"] = appointment["Name"];
                                 job["EngineerID"] = appointment["EngineerID"];
@@ -560,11 +564,11 @@ namespace FSM
                                 appointment["AM"] = Helper.MakeIntegerValid(appointment["AM"]) + 1;
                                 job["LetterDate"] = dtpLetterCreateDate.Value;
                                 job["ETA"] = true;
-                                appointment["RemainingSOR"] -= visitTime;
+                                appointment["RemainingSOR"] = (double)appointment["RemainingSOR"] - visitTime;
                                 continue;
                             }
 
-                            if (Conversions.ToBoolean(Helper.MakeIntegerValid(appointment["PM"]) < maxAmPmAmounts.pmAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & appointment["RemainingSOR"] > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0))
+                            if (Conversions.ToBoolean(Helper.MakeIntegerValid(appointment["PM"]) < maxAmPmAmounts.pmAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & (double)appointment["RemainingSOR"] > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0))
                             {
                                 job["EngName"] = appointment["Name"];
                                 job["EngineerID"] = appointment["EngineerID"];
@@ -573,7 +577,7 @@ namespace FSM
                                 appointment["PM"] = Helper.MakeIntegerValid(appointment["PM"]) + 1;
                                 job["LetterDate"] = dtpLetterCreateDate.Value;
                                 job["ETA"] = true;
-                                appointment["RemainingSOR"] -= visitTime;
+                                appointment["RemainingSOR"] = (double)appointment["RemainingSOR"] - visitTime;
                             } // end of main if
                         }
                     }

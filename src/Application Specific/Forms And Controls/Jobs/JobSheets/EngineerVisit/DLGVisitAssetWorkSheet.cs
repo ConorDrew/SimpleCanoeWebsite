@@ -1,10 +1,10 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -12,7 +12,6 @@ namespace FSM
     {
         public DLGVisitAssetWorkSheet() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += DLGVisitAssetWorkSheet_Load;
@@ -21,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -37,6 +35,7 @@ namespace FSM
 
             base.Dispose(disposing);
         }
+
         /* TODO ERROR: Skipped RegionDirectiveTrivia */    // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
         private Button _btnCancel;
@@ -202,9 +201,9 @@ namespace FSM
             _lblReading = new Label();
             _pnlUCView = new Panel();
             SuspendLayout();
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom;
             _btnCancel.Location = new Point(193, 922);
             _btnCancel.Name = "btnCancel";
@@ -212,9 +211,9 @@ namespace FSM
             _btnCancel.TabIndex = 38;
             _btnCancel.Text = "Cancel";
             _btnCancel.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom;
             _btnSave.Location = new Point(546, 922);
             _btnSave.Name = "btnSave";
@@ -222,39 +221,39 @@ namespace FSM
             _btnSave.TabIndex = 39;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // Customer_Get_ForSiteIDTableAdapter1
-            // 
+            //
             _Customer_Get_ForSiteIDTableAdapter1.ClearBeforeFill = true;
-            // 
+            //
             // ddReading
-            // 
+            //
             _ddReading.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _ddReading.DropDownStyle = ComboBoxStyle.DropDownList;
             _ddReading.Location = new Point(613, 47);
             _ddReading.Name = "ddReading";
             _ddReading.Size = new Size(188, 21);
             _ddReading.TabIndex = 47;
-            // 
+            //
             // lblReading
-            // 
+            //
             _lblReading.AutoSize = true;
             _lblReading.Location = new Point(16, 50);
             _lblReading.Name = "lblReading";
             _lblReading.Size = new Size(30, 13);
             _lblReading.TabIndex = 48;
             _lblReading.Text = "Fuel";
-            // 
+            //
             // pnlUCView
-            // 
+            //
             _pnlUCView.AutoSize = true;
             _pnlUCView.Location = new Point(12, 77);
             _pnlUCView.Name = "pnlUCView";
             _pnlUCView.Size = new Size(789, 100);
             _pnlUCView.TabIndex = 256;
-            // 
+            //
             // DLGVisitAssetWorkSheet
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -452,6 +451,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ShowForm()
         {
             var switchExpr = Conversions.ToInteger(Combo.get_GetSelectedItemValue(ddReading));

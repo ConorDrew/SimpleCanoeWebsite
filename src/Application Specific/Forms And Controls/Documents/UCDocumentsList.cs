@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -12,13 +12,13 @@ namespace FSM
     {
         public UCDocumentsList()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCDocumentsList_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCDocumentsList(Entity.Sys.Enums.TableNames EntityToLinkToIn, int IDToLinkToIn) : base()
         {
             base.Load += UCDocumentsList_Load;
@@ -51,7 +51,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpDocuments;
 
@@ -168,9 +168,9 @@ namespace FSM
             _grpDocuments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgDocuments).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpDocuments
-            // 
+            //
             _grpDocuments.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpDocuments.Controls.Add(_dgDocuments);
@@ -180,9 +180,9 @@ namespace FSM
             _grpDocuments.TabIndex = 0;
             _grpDocuments.TabStop = false;
             _grpDocuments.Text = "Double Click To View / Edit";
-            // 
+            //
             // dgDocuments
-            // 
+            //
             _dgDocuments.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgDocuments.DataMember = "";
@@ -191,9 +191,9 @@ namespace FSM
             _dgDocuments.Name = "dgDocuments";
             _dgDocuments.Size = new Size(472, 478);
             _dgDocuments.TabIndex = 1;
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.AccessibleDescription = "";
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Location = new Point(440, 528);
@@ -201,9 +201,9 @@ namespace FSM
             _btnDelete.Size = new Size(56, 25);
             _btnDelete.TabIndex = 3;
             _btnDelete.Text = "Delete";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.AccessibleDescription = "";
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAdd.Location = new Point(8, 528);
@@ -211,9 +211,9 @@ namespace FSM
             _btnAdd.Size = new Size(56, 25);
             _btnAdd.TabIndex = 2;
             _btnAdd.Text = "Add";
-            // 
+            //
             // UCDocumentsList
-            // 
+            //
             Controls.Add(_btnDelete);
             Controls.Add(_btnAdd);
             Controls.Add(_grpDocuments);
@@ -317,6 +317,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDocumentsDataGrid()
         {
             var tStyle = dgDocuments.TableStyles[0];
@@ -413,6 +414,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate()
         {
             if (EntityToLinkTo == Entity.Sys.Enums.TableNames.tblCustomer)
@@ -429,6 +431,7 @@ namespace FSM
                 Documents = App.DB.Documents.Documents_GetAll_For_Entity_ID(EntityToLinkTo, IDToLinkTo);
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

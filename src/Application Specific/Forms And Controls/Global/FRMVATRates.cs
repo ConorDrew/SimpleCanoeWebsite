@@ -1,17 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class FRMVATRates : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMVATRates() : base()
         {
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -22,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _GroupBox1;
 
@@ -336,9 +335,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgVATRates).BeginInit();
             _grpDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_btnAddNew);
@@ -349,9 +348,9 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "VAT Rates";
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.AccessibleDescription = "Add new item";
             _btnAddNew.Cursor = Cursors.Hand;
             _btnAddNew.UseVisualStyleBackColor = true;
@@ -360,9 +359,9 @@ namespace FSM
             _btnAddNew.Size = new Size(48, 24);
             _btnAddNew.TabIndex = 0;
             _btnAddNew.Text = "New";
-            // 
+            //
             // dgVATRates
-            // 
+            //
             _dgVATRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgVATRates.DataMember = "";
@@ -371,9 +370,9 @@ namespace FSM
             _dgVATRates.Name = "dgVATRates";
             _dgVATRates.Size = new Size(496, 268);
             _dgVATRates.TabIndex = 1;
-            // 
+            //
             // grpDetails
-            // 
+            //
             _grpDetails.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpDetails.Controls.Add(_txtCode);
             _grpDetails.Controls.Add(_Label3);
@@ -388,40 +387,40 @@ namespace FSM
             _grpDetails.TabIndex = 1;
             _grpDetails.TabStop = false;
             _grpDetails.Text = "Details";
-            // 
+            //
             // dtpVATDate
-            // 
+            //
             _dtpVATDate.Location = new Point(120, 48);
             _dtpVATDate.Name = "dtpVATDate";
             _dtpVATDate.Size = new Size(328, 21);
             _dtpVATDate.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 48);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(120, 23);
             _Label1.TabIndex = 8;
             _Label1.Text = "From Date";
-            // 
+            //
             // txtVATRate
-            // 
+            //
             _txtVATRate.Location = new Point(120, 24);
             _txtVATRate.MaxLength = 255;
             _txtVATRate.Name = "txtVATRate";
             _txtVATRate.Size = new Size(328, 21);
             _txtVATRate.TabIndex = 0;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(120, 23);
             _Label2.TabIndex = 5;
             _Label2.Text = "Rate Amount (%)";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.AccessibleDescription = "Save item";
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Cursor = Cursors.Hand;
@@ -432,25 +431,25 @@ namespace FSM
             _btnSave.Size = new Size(48, 23);
             _btnSave.TabIndex = 3;
             _btnSave.Text = "Save";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 72);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(120, 23);
             _Label3.TabIndex = 10;
             _Label3.Text = "Code";
-            // 
+            //
             // txtCode
-            // 
+            //
             _txtCode.Location = new Point(120, 75);
             _txtCode.MaxLength = 5;
             _txtCode.Name = "txtCode";
             _txtCode.Size = new Size(328, 21);
             _txtCode.TabIndex = 2;
-            // 
+            //
             // FRMVATRates
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(528, 486);
             Controls.Add(_GroupBox1);
@@ -469,7 +468,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupRatesDataGrid();
@@ -484,7 +484,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -539,8 +539,10 @@ namespace FSM
                 }
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupRatesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgVATRates);
@@ -649,6 +651,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateDatagrid(Entity.Sys.Enums.FormState state)
         {
             RatesDataview = App.DB.VATRatesSQL.VATRates_GetAll();

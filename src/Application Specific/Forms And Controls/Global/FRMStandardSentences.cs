@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMStandardSentences : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMStandardSentences() : base()
         {
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -23,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -44,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _gpbStandardSentences;
 
@@ -265,9 +264,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgStandardSentences).BeginInit();
             _gpbEditAdd.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // gpbStandardSentences
-            // 
+            //
             _gpbStandardSentences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _gpbStandardSentences.Controls.Add(_btnDelete);
             _gpbStandardSentences.Controls.Add(_btnAddNew);
@@ -278,24 +277,24 @@ namespace FSM
             _gpbStandardSentences.TabIndex = 2;
             _gpbStandardSentences.TabStop = false;
             _gpbStandardSentences.Text = "Standard Sentences";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Location = new Point(520, 16);
             _btnDelete.Name = "btnDelete";
             _btnDelete.TabIndex = 2;
             _btnDelete.Text = "Delete";
             _btnDelete.Visible = false;
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.Location = new Point(8, 16);
             _btnAddNew.Name = "btnAddNew";
             _btnAddNew.TabIndex = 1;
             _btnAddNew.Text = "Add New";
-            // 
+            //
             // dgStandardSentences
-            // 
+            //
             _dgStandardSentences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgStandardSentences.DataMember = "";
@@ -304,9 +303,9 @@ namespace FSM
             _dgStandardSentences.Name = "dgStandardSentences";
             _dgStandardSentences.Size = new Size(592, 398);
             _dgStandardSentences.TabIndex = 0;
-            // 
+            //
             // gpbEditAdd
-            // 
+            //
             _gpbEditAdd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbEditAdd.Controls.Add(_txtSentence);
@@ -318,9 +317,9 @@ namespace FSM
             _gpbEditAdd.TabIndex = 3;
             _gpbEditAdd.TabStop = false;
             _gpbEditAdd.Text = "Add/Edit";
-            // 
+            //
             // txtSentence
-            // 
+            //
             _txtSentence.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSentence.Location = new Point(8, 42);
             _txtSentence.Multiline = true;
@@ -329,24 +328,24 @@ namespace FSM
             _txtSentence.Size = new Size(208, 256);
             _txtSentence.TabIndex = 0;
             _txtSentence.Text = "";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 24);
             _Label1.Name = "Label1";
             _Label1.TabIndex = 1;
             _Label1.Text = "Sentence";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSave.Location = new Point(136, 306);
             _btnSave.Name = "btnSave";
             _btnSave.TabIndex = 3;
             _btnSave.Text = "Save";
-            // 
+            //
             // FRMStandardSentences
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(856, 494);
             Controls.Add(_gpbEditAdd);
@@ -364,7 +363,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupManagerDataGrid();
@@ -379,7 +379,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -434,8 +434,10 @@ namespace FSM
                 }
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupManagerDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgStandardSentences);
@@ -529,8 +531,10 @@ namespace FSM
         {
             Delete();
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateDatagrid(Entity.Sys.Enums.FormState state)
         {
             DvStandardSentences = App.DB.StandardSentence.GetAll();
