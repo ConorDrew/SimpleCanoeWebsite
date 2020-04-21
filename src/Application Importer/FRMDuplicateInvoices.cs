@@ -18,6 +18,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMDuplicateInvoices(List<Importer.DuplicateInvoice> duplicateInvoices) : base()
         {
             base.Load += FRMDuplicateInovoices_Load;
@@ -46,6 +47,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private TabControl _tcData;
 
         internal TabControl tcData
@@ -75,18 +77,18 @@ namespace FSM
         {
             _tcData = new TabControl();
             SuspendLayout();
-            // 
+            //
             // tcData
-            // 
+            //
             _tcData.Dock = DockStyle.Fill;
             _tcData.Location = new Point(0, 32);
             _tcData.Name = "tcData";
             _tcData.SelectedIndex = 0;
             _tcData.Size = new Size(1008, 430);
             _tcData.TabIndex = 9;
-            // 
+            //
             // FRMDuplicateInvoices
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1008, 462);
             Controls.Add(_tcData);
@@ -111,6 +113,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -121,6 +124,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             if (Modal)

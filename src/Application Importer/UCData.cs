@@ -10,12 +10,10 @@ namespace FSM
 {
     public class UCData : UCBase
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCData() : base()
         {
-
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCData_Load;
@@ -24,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,6 +40,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private DataGridView _dgvData;
 
         internal DataGridView dgvData
@@ -94,9 +92,9 @@ namespace FSM
             _dgvData.RowLeave += new DataGridViewCellEventHandler(dgvData_RowLeave1);
             ((System.ComponentModel.ISupportInitialize)_dgvData).BeginInit();
             SuspendLayout();
-            // 
+            //
             // dgvData
-            // 
+            //
             _dgvData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -104,9 +102,9 @@ namespace FSM
             _dgvData.Name = "dgvData";
             _dgvData.Size = new Size(512, 344);
             _dgvData.TabIndex = 3;
-            // 
+            //
             // UCData
-            // 
+            //
             Controls.Add(_dgvData);
             Name = "UCData";
             Size = new Size(512, 344);
@@ -116,6 +114,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public object LoadedItem
         {
             get

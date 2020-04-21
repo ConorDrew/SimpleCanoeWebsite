@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMErrors : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMErrors(string errorString) : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
@@ -56,7 +55,6 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnClose.Click -= btnClose_Click;
@@ -101,9 +99,9 @@ namespace FSM
             _btnClose.Click += new EventHandler(btnClose_Click);
             _txtErrors = new TextBox();
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnClose.UseVisualStyleBackColor = true;
             _btnClose.Location = new Point(776, 432);
@@ -111,9 +109,9 @@ namespace FSM
             _btnClose.Size = new Size(56, 23);
             _btnClose.TabIndex = 2;
             _btnClose.Text = "Close";
-            // 
+            //
             // txtErrors
-            // 
+            //
             _txtErrors.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtErrors.Location = new Point(8, 40);
@@ -124,9 +122,9 @@ namespace FSM
             _txtErrors.Size = new Size(824, 384);
             _txtErrors.TabIndex = 1;
             _txtErrors.Text = "";
-            // 
+            //
             // FRMErrors
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(840, 462);
             ControlBox = false;
@@ -144,6 +142,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get

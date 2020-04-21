@@ -10,11 +10,10 @@ namespace FSM
 {
     public class UCDataPartsOrderedImport : UCBase
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCDataPartsOrderedImport() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCData_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -42,6 +40,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private DataGridView _dgvData;
 
         internal DataGridView dgvData
@@ -75,7 +74,7 @@ namespace FSM
         }
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -87,9 +86,9 @@ namespace FSM
             _dgvData.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(dgvData_ColumnHeaderMouseClick);
             ((System.ComponentModel.ISupportInitialize)_dgvData).BeginInit();
             SuspendLayout();
-            // 
+            //
             // dgvData
-            // 
+            //
             _dgvData.AllowUserToAddRows = false;
             _dgvData.AllowUserToDeleteRows = false;
             _dgvData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -99,9 +98,9 @@ namespace FSM
             _dgvData.Name = "dgvData";
             _dgvData.Size = new Size(512, 344);
             _dgvData.TabIndex = 3;
-            // 
+            //
             // UCDataPartsInvoiceImport
-            // 
+            //
             Controls.Add(_dgvData);
             Name = "UCDataPartsInvoiceImport";
             Size = new Size(512, 344);
@@ -111,6 +110,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public object LoadedItem
         {
             get
@@ -316,10 +316,10 @@ namespace FSM
             var oldColumn = dgvData.SortedColumn;
             System.ComponentModel.ListSortDirection direction;
 
-            // If oldColumn is null, then the DataGridView is not currently sorted. 
+            // If oldColumn is null, then the DataGridView is not currently sorted.
             if (oldColumn is object)
             {
-                // Sort the same column again, reversing the SortOrder. 
+                // Sort the same column again, reversing the SortOrder.
                 if (oldColumn == newColumn && dgvData.SortOrder == SortOrder.Ascending)
                 {
                     direction = System.ComponentModel.ListSortDirection.Descending;
@@ -374,7 +374,6 @@ namespace FSM
         // If Not dgvData.Item(17, dgvData.CurrentCell.RowIndex).Value Is DBNull.Value Then
         // ShowForm(GetType(FRMOrder), True, New Object() {dgvData.Item(17, dgvData.CurrentCell.RowIndex).Value, dgvData.Item(20, dgvData.CurrentCell.RowIndex).Value, 0, Me, True})
         // End If
-
 
         // End If
 
