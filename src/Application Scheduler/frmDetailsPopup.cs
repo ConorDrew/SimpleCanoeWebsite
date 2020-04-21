@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -16,7 +16,7 @@ namespace FSM
             _timer = new Timer();
         }
 
-        public frmDetailsPopup(FrmVisit scheduleOwner) : base()
+        public frmDetailsPopup(frmVisit scheduleOwner) : base()
         {
             _timer = new Timer();
 

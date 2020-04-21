@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -14,9 +14,9 @@ namespace FSM
             InitializeComponent();
         }
 
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             CreatePartsAndProductsDistribution();
@@ -35,7 +35,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -93,6 +93,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupCreditDataGrid()
         {
             var tbStyle = dgCredits.TableStyles[0];
@@ -184,6 +185,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMOrderManager_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -256,7 +258,7 @@ namespace FSM
                                 oPartTransaction.SetOrderPartID = distRow["OrderPartProductID"];
                                 if (Conversions.ToInteger(distRow["StockTransactionType"]) == Conversions.ToInteger(Entity.Sys.Enums.Transaction.StockOut))
                                 {
-                                    oPartTransaction.SetAmount = distRow["Quantity"] * -1;
+                                    oPartTransaction.SetAmount = (int)distRow["Quantity"] * -1;
                                 }
                                 else
                                 {
@@ -529,13 +531,8 @@ namespace FSM
                     }
                     else
                     {
-                        // OPEN CREDIT 
+                        // OPEN CREDIT
                         App.ShowForm(typeof(FRMCreditReceived), true, new object[] { SelectedCreditDataRow["PartCreditsID"], Entity.Sys.Helper.MakeStringValid(SelectedCreditDataRow["NominalCode"]), Entity.Sys.Helper.MakeStringValid(SelectedCreditDataRow["DepartmentRef"]), Entity.Sys.Helper.MakeIntegerValid(SelectedCreditDataRow["TaxCodeID"]), Entity.Sys.Helper.MakeStringValid(SelectedCreditDataRow["ExtraRef"]), Entity.Sys.Helper.MakeDateTimeValid(SelectedCreditDataRow["DateReceived"]), Entity.Sys.Helper.MakeStringValid(SelectedCreditDataRow["SupplierCreditRef"]) });
-
-
-
-
-
                     }
                 }
 
@@ -563,7 +560,7 @@ namespace FSM
             {
                 if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedCreditDataRow["ManuallyAdded"], true, false)))
                 {
-                    if (Conversions.ToBoolean(SelectedCreditDataRow["StatusID"] < Conversions.ToInteger(Entity.Sys.Enums.PartsToBeCreditedStatus.Part_Returned_To_Supplier)))
+                    if (Conversions.ToBoolean((int)SelectedCreditDataRow["StatusID"] < Conversions.ToInteger(Entity.Sys.Enums.PartsToBeCreditedStatus.Part_Returned_To_Supplier)))
                     {
                         App.ShowForm(typeof(FRMPartsToBeCredited), true, new object[] { SelectedCreditDataRow["PartsToBeCreditedID"] });
                     }
@@ -617,8 +614,10 @@ namespace FSM
         {
             RunFilter();
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try
@@ -706,7 +705,7 @@ namespace FSM
             {
                 foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                 {
-                    if (Conversions.ToBoolean(row["Quantity"] > 0))
+                    if (Conversions.ToBoolean((int)row["Quantity"] > 0))
                     {
                         var r = PartsDistribution.Table.NewRow();
                         r["Type"] = "Part";
@@ -738,9 +737,6 @@ namespace FSM
             }
         }
 
-
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

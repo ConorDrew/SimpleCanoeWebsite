@@ -10,16 +10,14 @@ namespace FSM
 {
     public class FRMFindPart : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMFindPart() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         public FRMFindPart(System.Data.SqlClient.SqlTransaction trans) : base()
@@ -30,7 +28,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -296,25 +293,25 @@ namespace FSM
             _grpResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgvParts).BeginInit();
             SuspendLayout();
-            // 
+            //
             // lblFilter
-            // 
+            //
             _lblFilter.Location = new Point(8, 40);
             _lblFilter.Name = "lblFilter";
             _lblFilter.Size = new Size(100, 24);
             _lblFilter.TabIndex = 2;
             _lblFilter.Text = "Filter By Name";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFilter.Location = new Point(104, 40);
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(562, 21);
             _txtFilter.TabIndex = 1;
-            // 
+            //
             // grpResults
-            // 
+            //
             _grpResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpResults.Controls.Add(_dgvParts);
@@ -324,9 +321,9 @@ namespace FSM
             _grpResults.TabIndex = 4;
             _grpResults.TabStop = false;
             _grpResults.Text = "Select record and click OK";
-            // 
+            //
             // dgvParts
-            // 
+            //
             _dgvParts.AllowUserToAddRows = false;
             _dgvParts.AllowUserToDeleteRows = false;
             _dgvParts.AllowUserToOrderColumns = true;
@@ -339,54 +336,54 @@ namespace FSM
             _dgvParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _dgvParts.Size = new Size(777, 351);
             _dgvParts.TabIndex = 0;
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(745, 451);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(56, 23);
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 451);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 4;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // lblPreferredSupplier
-            // 
+            //
             _lblPreferredSupplier.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPreferredSupplier.Location = new Point(95, 456);
             _lblPreferredSupplier.Name = "lblPreferredSupplier";
             _lblPreferredSupplier.Size = new Size(175, 24);
             _lblPreferredSupplier.TabIndex = 7;
             _lblPreferredSupplier.Text = "Preferred Supplier";
-            // 
+            //
             // pnlGreen
-            // 
+            //
             _pnlGreen.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _pnlGreen.BackColor = Color.LightGreen;
             _pnlGreen.Location = new Point(70, 454);
             _pnlGreen.Name = "pnlGreen";
             _pnlGreen.Size = new Size(19, 20);
             _pnlGreen.TabIndex = 8;
-            // 
+            //
             // btnSearch
-            // 
+            //
             _btnSearch.Location = new Point(673, 39);
             _btnSearch.Name = "btnSearch";
             _btnSearch.Size = new Size(128, 23);
             _btnSearch.TabIndex = 9;
             _btnSearch.Text = "Search";
             _btnSearch.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMFindPart
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(809, 481);
             ControlBox = false;
@@ -419,7 +416,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ActiveControl = txtFilter;
@@ -434,7 +432,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -759,6 +757,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void DLGFindRecord_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -786,6 +785,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SelectItem()
         {
             if (dgvParts.SelectedRows is null)
@@ -869,6 +869,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -877,7 +878,8 @@ namespace FSM
                 // set the color required dependant on the column value
                 Brush brush;
                 brush = Brushes.White;
-                if (Entity.Sys.Helper.MakeBooleanValid(source.List[rowNum].row.item("Preferred")))
+                DataRowView dr = (DataRowView)source.List[rowNum];
+                if (Entity.Sys.Helper.MakeBooleanValid(dr["Preferred"]))
                 {
                     brush = Brushes.LightGreen;
                 }
@@ -891,6 +893,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void btnFilter_Click(object sender, EventArgs e)
         {
             RunFilter();

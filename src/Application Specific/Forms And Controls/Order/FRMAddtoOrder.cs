@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMAddtoOrder : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMAddtoOrder() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMAddtoOrder_Load;
@@ -557,65 +556,65 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             _GroupBox2.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(8, 24);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(120, 23);
             _lblName.TabIndex = 2;
             _lblName.Text = "Name:";
-            // 
+            //
             // lblNumber
-            // 
+            //
             _lblNumber.Location = new Point(8, 56);
             _lblNumber.Name = "lblNumber";
             _lblNumber.Size = new Size(120, 23);
             _lblNumber.TabIndex = 3;
             _lblNumber.Text = "Number:";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 24);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(104, 23);
             _Label3.TabIndex = 4;
             _Label3.Text = "Supplier Code:";
-            // 
+            //
             // lblSupplier
-            // 
+            //
             _lblSupplier.Location = new Point(8, 88);
             _lblSupplier.Name = "lblSupplier";
             _lblSupplier.Size = new Size(80, 24);
             _lblSupplier.TabIndex = 5;
             _lblSupplier.Text = "Supplier:";
-            // 
+            //
             // lblQty
-            // 
+            //
             _lblQty.Location = new Point(8, 120);
             _lblQty.Name = "lblQty";
             _lblQty.Size = new Size(120, 23);
             _lblQty.TabIndex = 6;
             _lblQty.Text = "Quantity In Pack:";
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(8, 88);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(88, 23);
             _Label7.TabIndex = 8;
             _Label7.Text = "Sell Price:";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(8, 120);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(104, 24);
             _Label8.TabIndex = 9;
             _Label8.Text = "Amount to add:";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Enabled = false;
             _txtName.Location = new Point(128, 24);
@@ -624,9 +623,9 @@ namespace FSM
             _txtName.Size = new Size(296, 21);
             _txtName.TabIndex = 1;
             _txtName.Text = "";
-            // 
+            //
             // txtNumber
-            // 
+            //
             _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNumber.Enabled = false;
             _txtNumber.Location = new Point(128, 58);
@@ -635,9 +634,9 @@ namespace FSM
             _txtNumber.Size = new Size(296, 21);
             _txtNumber.TabIndex = 2;
             _txtNumber.Text = "";
-            // 
+            //
             // txtQtyInPack
-            // 
+            //
             _txtQtyInPack.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtQtyInPack.Enabled = false;
             _txtQtyInPack.Location = new Point(128, 122);
@@ -646,54 +645,54 @@ namespace FSM
             _txtQtyInPack.Size = new Size(296, 21);
             _txtQtyInPack.TabIndex = 4;
             _txtQtyInPack.Text = "";
-            // 
+            //
             // txtSupplierCode
-            // 
+            //
             _txtSupplierCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSupplierCode.Location = new Point(128, 24);
             _txtSupplierCode.Name = "txtSupplierCode";
             _txtSupplierCode.Size = new Size(296, 21);
             _txtSupplierCode.TabIndex = 5;
             _txtSupplierCode.Text = "";
-            // 
+            //
             // txtSellPrice
-            // 
+            //
             _txtSellPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSellPrice.Location = new Point(128, 90);
             _txtSellPrice.Name = "txtSellPrice";
             _txtSellPrice.Size = new Size(296, 21);
             _txtSellPrice.TabIndex = 7;
             _txtSellPrice.Text = "";
-            // 
+            //
             // txtAmount
-            // 
+            //
             _txtAmount.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAmount.Location = new Point(128, 122);
             _txtAmount.Name = "txtAmount";
             _txtAmount.Size = new Size(168, 21);
             _txtAmount.TabIndex = 8;
             _txtAmount.Text = "";
-            // 
+            //
             // btnAddToOrder
-            // 
+            //
             _btnAddToOrder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddToOrder.Location = new Point(304, 122);
             _btnAddToOrder.Name = "btnAddToOrder";
             _btnAddToOrder.Size = new Size(56, 23);
             _btnAddToOrder.TabIndex = 9;
             _btnAddToOrder.Text = "Add";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnCancel.Location = new Point(368, 122);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 10;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // txtBuyPrice
-            // 
+            //
             _txtBuyPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtBuyPrice.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtBuyPrice.Location = new Point(128, 58);
@@ -701,9 +700,9 @@ namespace FSM
             _txtBuyPrice.Size = new Size(296, 21);
             _txtBuyPrice.TabIndex = 6;
             _txtBuyPrice.Text = "";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.BackColor = Color.White;
             _Label6.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label6.Location = new Point(8, 56);
@@ -711,9 +710,9 @@ namespace FSM
             _Label6.Size = new Size(88, 23);
             _Label6.TabIndex = 7;
             _Label6.Text = "Buy Price:";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_lblName);
             _GroupBox1.Controls.Add(_lblNumber);
@@ -729,9 +728,9 @@ namespace FSM
             _GroupBox1.TabIndex = 20;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Request Details";
-            // 
+            //
             // txtSupplier
-            // 
+            //
             _txtSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSupplier.Enabled = false;
             _txtSupplier.Location = new Point(128, 90);
@@ -740,9 +739,9 @@ namespace FSM
             _txtSupplier.Size = new Size(296, 21);
             _txtSupplier.TabIndex = 3;
             _txtSupplier.Text = "";
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox2.Controls.Add(_Label3);
             _GroupBox2.Controls.Add(_txtSupplierCode);
@@ -760,9 +759,9 @@ namespace FSM
             _GroupBox2.TabIndex = 21;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Order Details";
-            // 
+            //
             // FRMAddtoOrder
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(448, 358);
             Controls.Add(_GroupBox2);
@@ -782,7 +781,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             oOrder = (Entity.Orders.Order)get_GetParameter(0);
             PartSupplier = (Entity.PartSuppliers.PartSupplier)get_GetParameter(1);
@@ -820,7 +820,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
             // DO NOTHING
         }

@@ -1,4 +1,10 @@
-﻿using System;
+﻿using FSM.Business.Orders;
+using FSM.Entity.Jobs;
+using FSM.Entity.Sites;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -7,22 +13,15 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Business.Orders;
-using FSM.Entity.Jobs;
-using FSM.Entity.Sites;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCOrder : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCOrder() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             var argc = cboOrderTypeID;
@@ -56,7 +55,6 @@ namespace FSM
 
             chkDoNotConsolidate.Checked = true;
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -712,7 +710,6 @@ namespace FSM
             {
                 if (_cboPartLocation != null)
                 {
-
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _cboPartLocation.SelectedIndexChanged -= cboPartLocation_SelectedIndexChanged;
                 }
@@ -740,7 +737,6 @@ namespace FSM
             {
                 if (_cboProductLocation != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _cboProductLocation.SelectedIndexChanged -= cboProductLocation_SelectedIndexChanged;
@@ -1241,7 +1237,6 @@ namespace FSM
             {
                 if (_btnItemQtyUpdate != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnItemQtyUpdate.Click -= btnItemRemove_Click;
@@ -2164,7 +2159,6 @@ namespace FSM
             {
                 if (_txtGoodsAmount != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _txtGoodsAmount.LostFocus -= txtGoodsAmount_TextChanged;
@@ -3512,9 +3506,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_FSMDataSet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_dgParts).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpOrder
-            // 
+            //
             _grpOrder.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpOrder.Controls.Add(_btnApproveOrder);
@@ -3545,9 +3539,9 @@ namespace FSM
             _grpOrder.TabIndex = 1;
             _grpOrder.TabStop = false;
             _grpOrder.Text = "Main Details";
-            // 
+            //
             // btnApproveOrder
-            // 
+            //
             _btnApproveOrder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnApproveOrder.Location = new Point(1421, 17);
             _btnApproveOrder.Name = "btnApproveOrder";
@@ -3555,9 +3549,9 @@ namespace FSM
             _btnApproveOrder.TabIndex = 126;
             _btnApproveOrder.Text = "Approve Order";
             _btnApproveOrder.Visible = false;
-            // 
+            //
             // btnUpdateOrderRef
-            // 
+            //
             _btnUpdateOrderRef.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnUpdateOrderRef.Location = new Point(1230, 17);
             _btnUpdateOrderRef.Name = "btnUpdateOrderRef";
@@ -3565,17 +3559,17 @@ namespace FSM
             _btnUpdateOrderRef.TabIndex = 125;
             _btnUpdateOrderRef.Text = "Change Order Ref";
             _btnUpdateOrderRef.Visible = false;
-            // 
+            //
             // cboDept
-            // 
+            //
             _cboDept.FormattingEnabled = true;
             _cboDept.Location = new Point(80, 94);
             _cboDept.Name = "cboDept";
             _cboDept.Size = new Size(170, 21);
             _cboDept.TabIndex = 124;
-            // 
+            //
             // lblOrderBalance
-            // 
+            //
             _lblOrderBalance.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblOrderBalance.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblOrderBalance.Location = new Point(1685, 107);
@@ -3584,9 +3578,9 @@ namespace FSM
             _lblOrderBalance.TabIndex = 84;
             _lblOrderBalance.Text = "£0.00";
             _lblOrderBalance.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // lblOrderBalanceLabel
-            // 
+            //
             _lblOrderBalanceLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblOrderBalanceLabel.AutoSize = true;
             _lblOrderBalanceLabel.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -3596,9 +3590,9 @@ namespace FSM
             _lblOrderBalanceLabel.TabIndex = 85;
             _lblOrderBalanceLabel.Text = "Unallocated : ";
             _lblOrderBalanceLabel.TextAlign = ContentAlignment.TopRight;
-            // 
+            //
             // chkRevertStatus
-            // 
+            //
             _chkRevertStatus.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _chkRevertStatus.AutoSize = true;
             _chkRevertStatus.Location = new Point(1230, 97);
@@ -3608,9 +3602,9 @@ namespace FSM
             _chkRevertStatus.Text = "Revert to Awaiting Confirmation";
             _chkRevertStatus.UseVisualStyleBackColor = true;
             _chkRevertStatus.Visible = false;
-            // 
+            //
             // lblOrderTotalLabel
-            // 
+            //
             _lblOrderTotalLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblOrderTotalLabel.AutoSize = true;
             _lblOrderTotalLabel.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -3620,9 +3614,9 @@ namespace FSM
             _lblOrderTotalLabel.TabIndex = 77;
             _lblOrderTotalLabel.Text = "Purchase Order Total : ";
             _lblOrderTotalLabel.TextAlign = ContentAlignment.TopRight;
-            // 
+            //
             // lblOrderTotal
-            // 
+            //
             _lblOrderTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblOrderTotal.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblOrderTotal.Location = new Point(1731, 12);
@@ -3631,9 +3625,9 @@ namespace FSM
             _lblOrderTotal.TabIndex = 76;
             _lblOrderTotal.Text = "£0.00";
             _lblOrderTotal.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // chkDoNotConsolidate
-            // 
+            //
             _chkDoNotConsolidate.AutoSize = true;
             _chkDoNotConsolidate.Location = new Point(256, 97);
             _chkDoNotConsolidate.Name = "chkDoNotConsolidate";
@@ -3642,69 +3636,69 @@ namespace FSM
             _chkDoNotConsolidate.Text = "Do Not Consolidate";
             _chkDoNotConsolidate.UseVisualStyleBackColor = true;
             _chkDoNotConsolidate.Visible = false;
-            // 
+            //
             // chkDeadlineNA
-            // 
+            //
             _chkDeadlineNA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _chkDeadlineNA.Location = new Point(1347, 66);
             _chkDeadlineNA.Name = "chkDeadlineNA";
             _chkDeadlineNA.Size = new Size(48, 24);
             _chkDeadlineNA.TabIndex = 4;
             _chkDeadlineNA.Text = "N/A";
-            // 
+            //
             // dtpDeliveryDeadline
-            // 
+            //
             _dtpDeliveryDeadline.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpDeliveryDeadline.Location = new Point(1398, 66);
             _dtpDeliveryDeadline.Name = "dtpDeliveryDeadline";
             _dtpDeliveryDeadline.Size = new Size(144, 21);
             _dtpDeliveryDeadline.TabIndex = 5;
             _dtpDeliveryDeadline.Tag = "Order.DatePlaced";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label6.Location = new Point(1225, 70);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(114, 23);
             _Label6.TabIndex = 42;
             _Label6.Text = "Delivery Deadline";
-            // 
+            //
             // cboOrderStatus
-            // 
+            //
             _cboOrderStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboOrderStatus.Location = new Point(80, 43);
             _cboOrderStatus.Name = "cboOrderStatus";
             _cboOrderStatus.Size = new Size(1142, 21);
             _cboOrderStatus.TabIndex = 2;
-            // 
+            //
             // Label19
-            // 
+            //
             _Label19.Location = new Point(6, 43);
             _Label19.Name = "Label19";
             _Label19.Size = new Size(48, 23);
             _Label19.TabIndex = 33;
             _Label19.Text = "Status";
-            // 
+            //
             // dtpDatePlaced
-            // 
+            //
             _dtpDatePlaced.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dtpDatePlaced.Location = new Point(80, 67);
             _dtpDatePlaced.Name = "dtpDatePlaced";
             _dtpDatePlaced.Size = new Size(1142, 21);
             _dtpDatePlaced.TabIndex = 3;
             _dtpDatePlaced.Tag = "Order.DatePlaced";
-            // 
+            //
             // lblDatePlaced
-            // 
+            //
             _lblDatePlaced.Location = new Point(6, 67);
             _lblDatePlaced.Name = "lblDatePlaced";
             _lblDatePlaced.Size = new Size(79, 20);
             _lblDatePlaced.TabIndex = 31;
             _lblDatePlaced.Text = "Date Placed";
-            // 
+            //
             // txtOrderReference
-            // 
+            //
             _txtOrderReference.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtOrderReference.Location = new Point(80, 19);
             _txtOrderReference.MaxLength = 100;
@@ -3714,17 +3708,17 @@ namespace FSM
             _txtOrderReference.TabIndex = 1;
             _txtOrderReference.Tag = "Order.OrderReference";
             _txtOrderReference.Visible = false;
-            // 
+            //
             // lblOrderReference
-            // 
+            //
             _lblOrderReference.Location = new Point(6, 19);
             _lblOrderReference.Name = "lblOrderReference";
             _lblOrderReference.Size = new Size(66, 20);
             _lblOrderReference.TabIndex = 31;
             _lblOrderReference.Text = "Order Ref";
-            // 
+            //
             // tcOrderDetails
-            // 
+            //
             _tcOrderDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcOrderDetails.Controls.Add(_tabDetails);
@@ -3740,9 +3734,9 @@ namespace FSM
             _tcOrderDetails.SelectedIndex = 0;
             _tcOrderDetails.Size = new Size(1804, 399);
             _tcOrderDetails.TabIndex = 6;
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_btnRelatedJob);
             _tabDetails.Controls.Add(_pnlDetails);
             _tabDetails.Controls.Add(_lblOrderTypeID);
@@ -3753,9 +3747,9 @@ namespace FSM
             _tabDetails.Size = new Size(1796, 373);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Order Details";
-            // 
+            //
             // btnRelatedJob
-            // 
+            //
             _btnRelatedJob.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnRelatedJob.Enabled = false;
             _btnRelatedJob.Location = new Point(1491, 7);
@@ -3763,26 +3757,26 @@ namespace FSM
             _btnRelatedJob.Size = new Size(120, 23);
             _btnRelatedJob.TabIndex = 32;
             _btnRelatedJob.Text = "View Related Job";
-            // 
+            //
             // pnlDetails
-            // 
+            //
             _pnlDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlDetails.Location = new Point(0, 40);
             _pnlDetails.Name = "pnlDetails";
             _pnlDetails.Size = new Size(1793, 324);
             _pnlDetails.TabIndex = 9;
-            // 
+            //
             // lblOrderTypeID
-            // 
+            //
             _lblOrderTypeID.Location = new Point(8, 8);
             _lblOrderTypeID.Name = "lblOrderTypeID";
             _lblOrderTypeID.Size = new Size(64, 20);
             _lblOrderTypeID.TabIndex = 31;
             _lblOrderTypeID.Text = "Order For";
-            // 
+            //
             // cboOrderTypeID
-            // 
+            //
             _cboOrderTypeID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboOrderTypeID.Cursor = Cursors.Hand;
             _cboOrderTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -3791,18 +3785,18 @@ namespace FSM
             _cboOrderTypeID.Size = new Size(1387, 21);
             _cboOrderTypeID.TabIndex = 7;
             _cboOrderTypeID.Tag = "Order.OrderTypeID";
-            // 
+            //
             // btnCharges
-            // 
+            //
             _btnCharges.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnCharges.Location = new Point(1617, 7);
             _btnCharges.Name = "btnCharges";
             _btnCharges.Size = new Size(168, 23);
             _btnCharges.TabIndex = 8;
             _btnCharges.Text = "Manage Additional Charges";
-            // 
+            //
             // tabParts
-            // 
+            //
             _tabParts.Controls.Add(_grpPartSearch);
             _tabParts.Controls.Add(_grpAvailableParts);
             _tabParts.Location = new Point(4, 22);
@@ -3810,9 +3804,9 @@ namespace FSM
             _tabParts.Size = new Size(1796, 373);
             _tabParts.TabIndex = 2;
             _tabParts.Text = "Parts Available";
-            // 
+            //
             // grpPartSearch
-            // 
+            //
             _grpPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpPartSearch.Controls.Add(_btnAddNewPart);
             _grpPartSearch.Controls.Add(_cboPartLocation);
@@ -3824,9 +3818,9 @@ namespace FSM
             _grpPartSearch.TabIndex = 13;
             _grpPartSearch.TabStop = false;
             _grpPartSearch.Text = "Part Search From";
-            // 
+            //
             // btnAddNewPart
-            // 
+            //
             _btnAddNewPart.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddNewPart.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnAddNewPart.Location = new Point(1708, 24);
@@ -3834,16 +3828,16 @@ namespace FSM
             _btnAddNewPart.Size = new Size(64, 22);
             _btnAddNewPart.TabIndex = 4;
             _btnAddNewPart.Text = "New Part";
-            // 
+            //
             // cboPartLocation
-            // 
+            //
             _cboPartLocation.Location = new Point(8, 24);
             _cboPartLocation.Name = "cboPartLocation";
             _cboPartLocation.Size = new Size(152, 21);
             _cboPartLocation.TabIndex = 1;
-            // 
+            //
             // btnPartSearch
-            // 
+            //
             _btnPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnPartSearch.Enabled = false;
             _btnPartSearch.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -3852,17 +3846,17 @@ namespace FSM
             _btnPartSearch.Size = new Size(64, 22);
             _btnPartSearch.TabIndex = 3;
             _btnPartSearch.Text = "Find";
-            // 
+            //
             // txtPartSearch
-            // 
+            //
             _txtPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPartSearch.Location = new Point(168, 24);
             _txtPartSearch.Name = "txtPartSearch";
             _txtPartSearch.Size = new Size(1460, 21);
             _txtPartSearch.TabIndex = 2;
-            // 
+            //
             // grpAvailableParts
-            // 
+            //
             _grpAvailableParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAvailableParts.Controls.Add(_btnCreatePartRequest);
@@ -3878,61 +3872,61 @@ namespace FSM
             _grpAvailableParts.TabIndex = 14;
             _grpAvailableParts.TabStop = false;
             _grpAvailableParts.Text = "Available Parts && Packs";
-            // 
+            //
             // btnCreatePartRequest
-            // 
+            //
             _btnCreatePartRequest.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _btnCreatePartRequest.Location = new Point(935, 263);
             _btnCreatePartRequest.Name = "btnCreatePartRequest";
             _btnCreatePartRequest.Size = new Size(837, 24);
             _btnCreatePartRequest.TabIndex = 10;
             _btnCreatePartRequest.Text = "Part Price Request";
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label7.Location = new Point(8, 269);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(40, 13);
             _Label7.TabIndex = 23;
             _Label7.Text = "Qty";
-            // 
+            //
             // txtPartBuyPrice
-            // 
+            //
             _txtPartBuyPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtPartBuyPrice.Location = new Point(248, 265);
             _txtPartBuyPrice.Name = "txtPartBuyPrice";
             _txtPartBuyPrice.Size = new Size(112, 21);
             _txtPartBuyPrice.TabIndex = 7;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label3.Location = new Point(176, 269);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(64, 13);
             _Label3.TabIndex = 14;
             _Label3.Text = "Buy Price";
-            // 
+            //
             // txtPartQuantity
-            // 
+            //
             _txtPartQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtPartQuantity.Location = new Point(56, 265);
             _txtPartQuantity.Name = "txtPartQuantity";
             _txtPartQuantity.Size = new Size(112, 21);
             _txtPartQuantity.TabIndex = 6;
-            // 
+            //
             // btnAddPart
-            // 
+            //
             _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddPart.Location = new Point(378, 263);
             _btnAddPart.Name = "btnAddPart";
             _btnAddPart.Size = new Size(56, 24);
             _btnAddPart.TabIndex = 9;
             _btnAddPart.Text = "Add";
-            // 
+            //
             // tabProducts
-            // 
+            //
             _tabProducts.Controls.Add(_grpProductsAvailable);
             _tabProducts.Controls.Add(_grpProductSearch);
             _tabProducts.Location = new Point(4, 22);
@@ -3940,9 +3934,9 @@ namespace FSM
             _tabProducts.Size = new Size(1796, 373);
             _tabProducts.TabIndex = 1;
             _tabProducts.Text = "Products Available";
-            // 
+            //
             // grpProductsAvailable
-            // 
+            //
             _grpProductsAvailable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpProductsAvailable.Controls.Add(_btnCreateProductPriceRequest);
@@ -3960,69 +3954,69 @@ namespace FSM
             _grpProductsAvailable.TabIndex = 10;
             _grpProductsAvailable.TabStop = false;
             _grpProductsAvailable.Text = "Available Products ";
-            // 
+            //
             // btnCreateProductPriceRequest
-            // 
+            //
             _btnCreateProductPriceRequest.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _btnCreateProductPriceRequest.Location = new Point(616, 263);
             _btnCreateProductPriceRequest.Name = "btnCreateProductPriceRequest";
             _btnCreateProductPriceRequest.Size = new Size(1161, 24);
             _btnCreateProductPriceRequest.TabIndex = 10;
             _btnCreateProductPriceRequest.Text = "Product Price Request";
-            // 
+            //
             // txtProductSellPrice
-            // 
+            //
             _txtProductSellPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtProductSellPrice.Location = new Point(432, 265);
             _txtProductSellPrice.Name = "txtProductSellPrice";
             _txtProductSellPrice.Size = new Size(112, 21);
             _txtProductSellPrice.TabIndex = 8;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label5.Location = new Point(368, 269);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(64, 13);
             _Label5.TabIndex = 18;
             _Label5.Text = "Sell Price";
-            // 
+            //
             // txtProductBuyPrice
-            // 
+            //
             _txtProductBuyPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtProductBuyPrice.Location = new Point(232, 265);
             _txtProductBuyPrice.Name = "txtProductBuyPrice";
             _txtProductBuyPrice.Size = new Size(112, 21);
             _txtProductBuyPrice.TabIndex = 7;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label4.Location = new Point(168, 269);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(64, 13);
             _Label4.TabIndex = 16;
             _Label4.Text = "Buy Price";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label1.Location = new Point(8, 269);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(40, 13);
             _Label1.TabIndex = 15;
             _Label1.Text = "Qty";
-            // 
+            //
             // txtProductQuantity
-            // 
+            //
             _txtProductQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtProductQuantity.Location = new Point(48, 265);
             _txtProductQuantity.Name = "txtProductQuantity";
             _txtProductQuantity.Size = new Size(112, 21);
             _txtProductQuantity.TabIndex = 6;
-            // 
+            //
             // dgProduct
-            // 
+            //
             _dgProduct.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgProduct.DataMember = "";
@@ -4031,18 +4025,18 @@ namespace FSM
             _dgProduct.Name = "dgProduct";
             _dgProduct.Size = new Size(1769, 235);
             _dgProduct.TabIndex = 5;
-            // 
+            //
             // btnAddProduct
-            // 
+            //
             _btnAddProduct.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddProduct.Location = new Point(552, 263);
             _btnAddProduct.Name = "btnAddProduct";
             _btnAddProduct.Size = new Size(56, 24);
             _btnAddProduct.TabIndex = 9;
             _btnAddProduct.Text = "Add ";
-            // 
+            //
             // grpProductSearch
-            // 
+            //
             _grpProductSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpProductSearch.Controls.Add(_btnAddNewProduct);
             _grpProductSearch.Controls.Add(_cboProductLocation);
@@ -4054,9 +4048,9 @@ namespace FSM
             _grpProductSearch.TabIndex = 9;
             _grpProductSearch.TabStop = false;
             _grpProductSearch.Text = "Product Search From";
-            // 
+            //
             // btnAddNewProduct
-            // 
+            //
             _btnAddNewProduct.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddNewProduct.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnAddNewProduct.Location = new Point(1680, 24);
@@ -4064,16 +4058,16 @@ namespace FSM
             _btnAddNewProduct.Size = new Size(88, 22);
             _btnAddNewProduct.TabIndex = 4;
             _btnAddNewProduct.Text = "New Product";
-            // 
+            //
             // cboProductLocation
-            // 
+            //
             _cboProductLocation.Location = new Point(8, 24);
             _cboProductLocation.Name = "cboProductLocation";
             _cboProductLocation.Size = new Size(152, 21);
             _cboProductLocation.TabIndex = 1;
-            // 
+            //
             // btnProductSearch
-            // 
+            //
             _btnProductSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnProductSearch.Enabled = false;
             _btnProductSearch.Location = new Point(1618, 24);
@@ -4081,26 +4075,26 @@ namespace FSM
             _btnProductSearch.Size = new Size(56, 22);
             _btnProductSearch.TabIndex = 3;
             _btnProductSearch.Text = "Find";
-            // 
+            //
             // txtProductSearch
-            // 
+            //
             _txtProductSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtProductSearch.Location = new Point(168, 24);
             _txtProductSearch.Name = "txtProductSearch";
             _txtProductSearch.Size = new Size(1444, 21);
             _txtProductSearch.TabIndex = 2;
-            // 
+            //
             // tabItemsIncluded
-            // 
+            //
             _tabItemsIncluded.Controls.Add(_GroupBox3);
             _tabItemsIncluded.Location = new Point(4, 22);
             _tabItemsIncluded.Name = "tabItemsIncluded";
             _tabItemsIncluded.Size = new Size(1796, 373);
             _tabItemsIncluded.TabIndex = 8;
             _tabItemsIncluded.Text = "Items Included";
-            // 
+            //
             // GroupBox3
-            // 
+            //
             _GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox3.Controls.Add(_nudItemQty);
@@ -4115,9 +4109,9 @@ namespace FSM
             _GroupBox3.TabIndex = 0;
             _GroupBox3.TabStop = false;
             _GroupBox3.Text = "Double click to mark as received";
-            // 
+            //
             // nudItemQty
-            // 
+            //
             _nudItemQty.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _nudItemQty.Location = new Point(70, 327);
             _nudItemQty.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
@@ -4125,9 +4119,9 @@ namespace FSM
             _nudItemQty.Size = new Size(64, 21);
             _nudItemQty.TabIndex = 30;
             _nudItemQty.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
+            //
             // btnEngineerReceived
-            // 
+            //
             _btnEngineerReceived.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnEngineerReceived.Location = new Point(1536, 328);
             _btnEngineerReceived.Name = "btnEngineerReceived";
@@ -4135,9 +4129,9 @@ namespace FSM
             _btnEngineerReceived.TabIndex = 12;
             _btnEngineerReceived.Text = "Engineer Received";
             _btnEngineerReceived.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnReceiveAll
-            // 
+            //
             _btnReceiveAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnReceiveAll.Location = new Point(1676, 328);
             _btnReceiveAll.Name = "btnReceiveAll";
@@ -4145,18 +4139,18 @@ namespace FSM
             _btnReceiveAll.TabIndex = 11;
             _btnReceiveAll.Text = "Receive All";
             _btnReceiveAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblItemQty
-            // 
+            //
             _lblItemQty.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblItemQty.Location = new Point(8, 329);
             _lblItemQty.Name = "lblItemQty";
             _lblItemQty.Size = new Size(56, 21);
             _lblItemQty.TabIndex = 10;
             _lblItemQty.Text = "Quantity";
-            // 
+            //
             // btnItemQtyUpdate
-            // 
+            //
             _btnItemQtyUpdate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnItemQtyUpdate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnItemQtyUpdate.Location = new Point(149, 325);
@@ -4164,9 +4158,9 @@ namespace FSM
             _btnItemQtyUpdate.Size = new Size(64, 23);
             _btnItemQtyUpdate.TabIndex = 3;
             _btnItemQtyUpdate.Text = "Update";
-            // 
+            //
             // dgItemsIncluded
-            // 
+            //
             _dgItemsIncluded.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgItemsIncluded.DataMember = "";
@@ -4175,18 +4169,18 @@ namespace FSM
             _dgItemsIncluded.Name = "dgItemsIncluded";
             _dgItemsIncluded.Size = new Size(1769, 302);
             _dgItemsIncluded.TabIndex = 1;
-            // 
+            //
             // tabPartPriceReq
-            // 
+            //
             _tabPartPriceReq.Controls.Add(_GroupBox2);
             _tabPartPriceReq.Location = new Point(4, 22);
             _tabPartPriceReq.Name = "tabPartPriceReq";
             _tabPartPriceReq.Size = new Size(1796, 373);
             _tabPartPriceReq.TabIndex = 7;
             _tabPartPriceReq.Text = "Price Requests";
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox2.Controls.Add(_btnUpdatePartPriceRequest);
@@ -4197,18 +4191,18 @@ namespace FSM
             _GroupBox2.TabIndex = 1;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Price requests for parts and products";
-            // 
+            //
             // btnUpdatePartPriceRequest
-            // 
+            //
             _btnUpdatePartPriceRequest.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnUpdatePartPriceRequest.Location = new Point(8, 329);
             _btnUpdatePartPriceRequest.Name = "btnUpdatePartPriceRequest";
             _btnUpdatePartPriceRequest.Size = new Size(75, 24);
             _btnUpdatePartPriceRequest.TabIndex = 2;
             _btnUpdatePartPriceRequest.Text = "Update";
-            // 
+            //
             // dgPriceRequests
-            // 
+            //
             _dgPriceRequests.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgPriceRequests.DataMember = "";
@@ -4217,9 +4211,9 @@ namespace FSM
             _dgPriceRequests.Name = "dgPriceRequests";
             _dgPriceRequests.Size = new Size(1769, 287);
             _dgPriceRequests.TabIndex = 1;
-            // 
+            //
             // tabDocuments
-            // 
+            //
             _tabDocuments.Controls.Add(_pnlDocuments);
             _tabDocuments.Controls.Add(_btnEmail);
             _tabDocuments.Controls.Add(_cboPrintType);
@@ -4230,18 +4224,18 @@ namespace FSM
             _tabDocuments.Size = new Size(1796, 373);
             _tabDocuments.TabIndex = 9;
             _tabDocuments.Text = "Documents";
-            // 
+            //
             // pnlDocuments
-            // 
+            //
             _pnlDocuments.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlDocuments.Location = new Point(8, 40);
             _pnlDocuments.Name = "pnlDocuments";
             _pnlDocuments.Size = new Size(1785, 324);
             _pnlDocuments.TabIndex = 4;
-            // 
+            //
             // btnEmail
-            // 
+            //
             _btnEmail.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnEmail.Location = new Point(1329, 8);
             _btnEmail.Name = "btnEmail";
@@ -4249,26 +4243,26 @@ namespace FSM
             _btnEmail.TabIndex = 3;
             _btnEmail.Text = "Send Via Email";
             _btnEmail.Visible = false;
-            // 
+            //
             // cboPrintType
-            // 
+            //
             _cboPrintType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboPrintType.Location = new Point(8, 8);
             _cboPrintType.Name = "cboPrintType";
             _cboPrintType.Size = new Size(1225, 21);
             _cboPrintType.TabIndex = 1;
-            // 
+            //
             // btnPrint
-            // 
+            //
             _btnPrint.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnPrint.Location = new Point(1241, 8);
             _btnPrint.Name = "btnPrint";
             _btnPrint.Size = new Size(56, 23);
             _btnPrint.TabIndex = 2;
             _btnPrint.Text = "Print";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label8.Location = new Point(1305, 12);
             _Label8.Name = "Label8";
@@ -4276,18 +4270,18 @@ namespace FSM
             _Label8.TabIndex = 45;
             _Label8.Text = "or";
             _Label8.Visible = false;
-            // 
+            //
             // tabInvoices
-            // 
+            //
             _tabInvoices.Controls.Add(_grpReceivedInvoices);
             _tabInvoices.Location = new Point(4, 22);
             _tabInvoices.Name = "tabInvoices";
             _tabInvoices.Size = new Size(1796, 373);
             _tabInvoices.TabIndex = 10;
             _tabInvoices.Text = "Supplier Invoices";
-            // 
+            //
             // grpReceivedInvoices
-            // 
+            //
             _grpReceivedInvoices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpReceivedInvoices.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -4318,9 +4312,9 @@ namespace FSM
             _grpReceivedInvoices.TabIndex = 0;
             _grpReceivedInvoices.TabStop = false;
             _grpReceivedInvoices.Text = "Received Invoices";
-            // 
+            //
             // btnDeleteSupplierInvoice
-            // 
+            //
             _btnDeleteSupplierInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDeleteSupplierInvoice.Location = new Point(1603, 339);
             _btnDeleteSupplierInvoice.Name = "btnDeleteSupplierInvoice";
@@ -4328,9 +4322,9 @@ namespace FSM
             _btnDeleteSupplierInvoice.TabIndex = 121;
             _btnDeleteSupplierInvoice.Text = "Delete";
             _btnDeleteSupplierInvoice.Visible = false;
-            // 
+            //
             // btnUpdateSupplierInvoice
-            // 
+            //
             _btnUpdateSupplierInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnUpdateSupplierInvoice.Location = new Point(1665, 339);
             _btnUpdateSupplierInvoice.Name = "btnUpdateSupplierInvoice";
@@ -4338,17 +4332,17 @@ namespace FSM
             _btnUpdateSupplierInvoice.TabIndex = 122;
             _btnUpdateSupplierInvoice.Text = "Update";
             _btnUpdateSupplierInvoice.Visible = false;
-            // 
+            //
             // txtTotalAmount
-            // 
+            //
             _txtTotalAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtTotalAmount.Location = new Point(547, 340);
             _txtTotalAmount.Name = "txtTotalAmount";
             _txtTotalAmount.Size = new Size(100, 21);
             _txtTotalAmount.TabIndex = 109;
-            // 
+            //
             // lblTotalValue
-            // 
+            //
             _lblTotalValue.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblTotalValue.AutoSize = true;
             _lblTotalValue.Location = new Point(485, 343);
@@ -4356,17 +4350,17 @@ namespace FSM
             _lblTotalValue.Size = new Size(55, 13);
             _lblTotalValue.TabIndex = 28;
             _lblTotalValue.Text = "Total (£)";
-            // 
+            //
             // txtVATAmount
-            // 
+            //
             _txtVATAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtVATAmount.Location = new Point(379, 340);
             _txtVATAmount.Name = "txtVATAmount";
             _txtVATAmount.Size = new Size(100, 21);
             _txtVATAmount.TabIndex = 108;
-            // 
+            //
             // txtNominalCodeNew
-            // 
+            //
             _txtNominalCodeNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtNominalCodeNew.Location = new Point(633, 311);
             _txtNominalCodeNew.MaxLength = 100;
@@ -4374,18 +4368,18 @@ namespace FSM
             _txtNominalCodeNew.Size = new Size(70, 21);
             _txtNominalCodeNew.TabIndex = 105;
             _txtNominalCodeNew.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label16.Location = new Point(568, 314);
             _Label16.Name = "Label16";
             _Label16.Size = new Size(70, 20);
             _Label16.TabIndex = 65;
             _Label16.Text = "Nominal";
-            // 
+            //
             // lblVatValue
-            // 
+            //
             _lblVatValue.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblVatValue.AutoSize = true;
             _lblVatValue.Location = new Point(322, 343);
@@ -4393,26 +4387,26 @@ namespace FSM
             _lblVatValue.Size = new Size(50, 13);
             _lblVatValue.TabIndex = 26;
             _lblVatValue.Text = "VAT (£)";
-            // 
+            //
             // txtGoodsAmount
-            // 
+            //
             _txtGoodsAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtGoodsAmount.Location = new Point(76, 340);
             _txtGoodsAmount.Name = "txtGoodsAmount";
             _txtGoodsAmount.Size = new Size(100, 21);
             _txtGoodsAmount.TabIndex = 106;
-            // 
+            //
             // cboInvoiceTaxCodeNew
-            // 
+            //
             _cboInvoiceTaxCodeNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _cboInvoiceTaxCodeNew.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboInvoiceTaxCodeNew.Location = new Point(258, 340);
             _cboInvoiceTaxCodeNew.Name = "cboInvoiceTaxCodeNew";
             _cboInvoiceTaxCodeNew.Size = new Size(58, 21);
             _cboInvoiceTaxCodeNew.TabIndex = 107;
-            // 
+            //
             // txtExtraReferenceNew
-            // 
+            //
             _txtExtraReferenceNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtExtraReferenceNew.Location = new Point(493, 311);
             _txtExtraReferenceNew.MaxLength = 100;
@@ -4420,18 +4414,18 @@ namespace FSM
             _txtExtraReferenceNew.Size = new Size(70, 21);
             _txtExtraReferenceNew.TabIndex = 104;
             _txtExtraReferenceNew.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label13.Location = new Point(182, 343);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(70, 20);
             _Label13.TabIndex = 59;
             _Label13.Text = "Tax Code";
-            // 
+            //
             // lblGoodsValue
-            // 
+            //
             _lblGoodsValue.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblGoodsValue.AutoSize = true;
             _lblGoodsValue.Location = new Point(6, 343);
@@ -4439,18 +4433,18 @@ namespace FSM
             _lblGoodsValue.Size = new Size(64, 13);
             _lblGoodsValue.TabIndex = 24;
             _lblGoodsValue.Text = "Goods (£)";
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label15.Location = new Point(435, 314);
             _Label15.Name = "Label15";
             _Label15.Size = new Size(56, 20);
             _Label15.TabIndex = 63;
             _Label15.Text = "Ex Ref.";
-            // 
+            //
             // lblInvoiceDate
-            // 
+            //
             _lblInvoiceDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblInvoiceDate.AutoSize = true;
             _lblInvoiceDate.Location = new Point(6, 314);
@@ -4458,17 +4452,17 @@ namespace FSM
             _lblInvoiceDate.Size = new Size(80, 13);
             _lblInvoiceDate.TabIndex = 1;
             _lblInvoiceDate.Text = "Invoice Date";
-            // 
+            //
             // txtSupplierInvoiceRefNew
-            // 
+            //
             _txtSupplierInvoiceRefNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtSupplierInvoiceRefNew.Location = new Point(329, 311);
             _txtSupplierInvoiceRefNew.Name = "txtSupplierInvoiceRefNew";
             _txtSupplierInvoiceRefNew.Size = new Size(100, 21);
             _txtSupplierInvoiceRefNew.TabIndex = 103;
-            // 
+            //
             // lblSupplierRef
-            // 
+            //
             _lblSupplierRef.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblSupplierRef.AutoSize = true;
             _lblSupplierRef.Location = new Point(242, 314);
@@ -4476,18 +4470,18 @@ namespace FSM
             _lblSupplierRef.Size = new Size(75, 13);
             _lblSupplierRef.TabIndex = 1;
             _lblSupplierRef.Text = "Invoice Ref.";
-            // 
+            //
             // btnAddSupplierInvoice
-            // 
+            //
             _btnAddSupplierInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnAddSupplierInvoice.Location = new Point(1727, 339);
             _btnAddSupplierInvoice.Name = "btnAddSupplierInvoice";
             _btnAddSupplierInvoice.Size = new Size(56, 24);
             _btnAddSupplierInvoice.TabIndex = 123;
             _btnAddSupplierInvoice.Text = "Add ";
-            // 
+            //
             // dgvReceivedInvoices
-            // 
+            //
             _dgvReceivedInvoices.AllowUserToAddRows = false;
             DataGridViewCellStyle1.BackColor = Color.White;
             DataGridViewCellStyle1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4529,18 +4523,18 @@ namespace FSM
             _dgvReceivedInvoices.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _dgvReceivedInvoices.Size = new Size(1780, 288);
             _dgvReceivedInvoices.TabIndex = 0;
-            // 
+            //
             // dtpSupplierInvoiceDateNew
-            // 
+            //
             _dtpSupplierInvoiceDateNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _dtpSupplierInvoiceDateNew.Location = new Point(92, 311);
             _dtpSupplierInvoiceDateNew.Name = "dtpSupplierInvoiceDateNew";
             _dtpSupplierInvoiceDateNew.Size = new Size(144, 21);
             _dtpSupplierInvoiceDateNew.TabIndex = 101;
             _dtpSupplierInvoiceDateNew.Tag = "Order.SupplierInvoiceDate";
-            // 
+            //
             // cboReadySageNew
-            // 
+            //
             _cboReadySageNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _cboReadySageNew.Location = new Point(653, 338);
             _cboReadySageNew.Name = "cboReadySageNew";
@@ -4548,9 +4542,9 @@ namespace FSM
             _cboReadySageNew.Size = new Size(247, 24);
             _cboReadySageNew.TabIndex = 110;
             _cboReadySageNew.Text = "Ready to send to Accounts Package";
-            // 
+            //
             // TabPage1
-            // 
+            //
             _TabPage1.Controls.Add(_GroupBox4);
             _TabPage1.Location = new Point(4, 22);
             _TabPage1.Name = "TabPage1";
@@ -4558,9 +4552,9 @@ namespace FSM
             _TabPage1.TabIndex = 11;
             _TabPage1.Text = "Credits";
             _TabPage1.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox4
-            // 
+            //
             _GroupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -4590,18 +4584,18 @@ namespace FSM
             _GroupBox4.TabIndex = 1;
             _GroupBox4.TabStop = false;
             _GroupBox4.Text = "Part Credits";
-            // 
+            //
             // Button1
-            // 
+            //
             _Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Button1.Location = new Point(1495, 339);
             _Button1.Name = "Button1";
             _Button1.Size = new Size(142, 24);
             _Button1.TabIndex = 127;
             _Button1.Text = "Convert to Van stock";
-            // 
+            //
             // CheckBox1
-            // 
+            //
             _CheckBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _CheckBox1.Location = new Point(-20, 312);
             _CheckBox1.Name = "CheckBox1";
@@ -4609,9 +4603,9 @@ namespace FSM
             _CheckBox1.Size = new Size(141, 24);
             _CheckBox1.TabIndex = 126;
             _CheckBox1.Text = "Credit Recieved";
-            // 
+            //
             // txtCreditExRef
-            // 
+            //
             _txtCreditExRef.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtCreditExRef.Location = new Point(1118, 339);
             _txtCreditExRef.MaxLength = 100;
@@ -4619,18 +4613,18 @@ namespace FSM
             _txtCreditExRef.Size = new Size(70, 21);
             _txtCreditExRef.TabIndex = 125;
             _txtCreditExRef.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // Label21
-            // 
+            //
             _Label21.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label21.Location = new Point(1073, 342);
             _Label21.Name = "Label21";
             _Label21.Size = new Size(56, 20);
             _Label21.TabIndex = 124;
             _Label21.Text = "Ex Ref.";
-            // 
+            //
             // btnCreditDelete
-            // 
+            //
             _btnCreditDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnCreditDelete.Location = new Point(1656, 339);
             _btnCreditDelete.Name = "btnCreditDelete";
@@ -4638,17 +4632,17 @@ namespace FSM
             _btnCreditDelete.TabIndex = 121;
             _btnCreditDelete.Text = "Delete";
             _btnCreditDelete.Visible = false;
-            // 
+            //
             // txtCreditTotal
-            // 
+            //
             _txtCreditTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtCreditTotal.Location = new Point(539, 342);
             _txtCreditTotal.Name = "txtCreditTotal";
             _txtCreditTotal.Size = new Size(68, 21);
             _txtCreditTotal.TabIndex = 109;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label9.AutoSize = true;
             _Label9.Location = new Point(467, 345);
@@ -4656,17 +4650,17 @@ namespace FSM
             _Label9.Size = new Size(55, 13);
             _Label9.TabIndex = 28;
             _Label9.Text = "Total (£)";
-            // 
+            //
             // txtCreditVAT
-            // 
+            //
             _txtCreditVAT.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtCreditVAT.Location = new Point(372, 341);
             _txtCreditVAT.Name = "txtCreditVAT";
             _txtCreditVAT.Size = new Size(68, 21);
             _txtCreditVAT.TabIndex = 108;
-            // 
+            //
             // txtCreditNominal
-            // 
+            //
             _txtCreditNominal.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtCreditNominal.Location = new Point(1000, 339);
             _txtCreditNominal.MaxLength = 100;
@@ -4674,18 +4668,18 @@ namespace FSM
             _txtCreditNominal.Size = new Size(70, 21);
             _txtCreditNominal.TabIndex = 105;
             _txtCreditNominal.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label10.Location = new Point(947, 342);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(70, 20);
             _Label10.TabIndex = 65;
             _Label10.Text = "Nominal";
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label14.AutoSize = true;
             _Label14.Location = new Point(309, 344);
@@ -4693,35 +4687,35 @@ namespace FSM
             _Label14.Size = new Size(50, 13);
             _Label14.TabIndex = 26;
             _Label14.Text = "VAT (£)";
-            // 
+            //
             // txtCreditGoods
-            // 
+            //
             _txtCreditGoods.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtCreditGoods.Location = new Point(95, 340);
             _txtCreditGoods.Name = "txtCreditGoods";
             _txtCreditGoods.Size = new Size(54, 21);
             _txtCreditGoods.TabIndex = 106;
-            // 
+            //
             // cboCreditTax
-            // 
+            //
             _cboCreditTax.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _cboCreditTax.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboCreditTax.Location = new Point(238, 340);
             _cboCreditTax.Name = "cboCreditTax";
             _cboCreditTax.Size = new Size(46, 21);
             _cboCreditTax.TabIndex = 107;
-            // 
+            //
             // Label18
-            // 
+            //
             _Label18.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label18.Location = new Point(168, 342);
             _Label18.Name = "Label18";
             _Label18.Size = new Size(70, 20);
             _Label18.TabIndex = 59;
             _Label18.Text = "Tax Code";
-            // 
+            //
             // Label20
-            // 
+            //
             _Label20.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label20.AutoSize = true;
             _Label20.Location = new Point(6, 343);
@@ -4729,17 +4723,17 @@ namespace FSM
             _Label20.Size = new Size(86, 13);
             _Label20.TabIndex = 24;
             _Label20.Text = "Credit Net (£)";
-            // 
+            //
             // txtCreditRef
-            // 
+            //
             _txtCreditRef.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtCreditRef.Location = new Point(871, 339);
             _txtCreditRef.Name = "txtCreditRef";
             _txtCreditRef.Size = new Size(70, 21);
             _txtCreditRef.TabIndex = 103;
-            // 
+            //
             // Label23
-            // 
+            //
             _Label23.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label23.AutoSize = true;
             _Label23.Location = new Point(801, 344);
@@ -4747,18 +4741,18 @@ namespace FSM
             _Label23.Size = new Size(68, 13);
             _Label23.TabIndex = 1;
             _Label23.Text = "Credit Ref.";
-            // 
+            //
             // btnCreditAdd
-            // 
+            //
             _btnCreditAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnCreditAdd.Location = new Point(1727, 339);
             _btnCreditAdd.Name = "btnCreditAdd";
             _btnCreditAdd.Size = new Size(56, 24);
             _btnCreditAdd.TabIndex = 123;
             _btnCreditAdd.Text = "Add ";
-            // 
+            //
             // dgCredits
-            // 
+            //
             _dgCredits.AllowUserToAddRows = false;
             DataGridViewCellStyle4.BackColor = Color.White;
             DataGridViewCellStyle4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4800,18 +4794,18 @@ namespace FSM
             _dgCredits.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _dgCredits.Size = new Size(1780, 288);
             _dgCredits.TabIndex = 0;
-            // 
+            //
             // dtpCreditDate
-            // 
+            //
             _dtpCreditDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _dtpCreditDate.Location = new Point(128, 313);
             _dtpCreditDate.Name = "dtpCreditDate";
             _dtpCreditDate.Size = new Size(142, 21);
             _dtpCreditDate.TabIndex = 101;
             _dtpCreditDate.Tag = "Order.SupplierInvoiceDate";
-            // 
+            //
             // lblOrderStatus
-            // 
+            //
             _lblOrderStatus.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _lblOrderStatus.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
@@ -4820,9 +4814,9 @@ namespace FSM
             _lblOrderStatus.Name = "lblOrderStatus";
             _lblOrderStatus.Size = new Size(1645, 24);
             _lblOrderStatus.TabIndex = 0;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_lblCredits);
             _GroupBox1.Controls.Add(_Label25);
@@ -4834,9 +4828,9 @@ namespace FSM
             _GroupBox1.TabIndex = 76;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Supplier Invoice Totals";
-            // 
+            //
             // lblCredits
-            // 
+            //
             _lblCredits.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblCredits.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblCredits.Location = new Point(138, 37);
@@ -4845,9 +4839,9 @@ namespace FSM
             _lblCredits.TabIndex = 80;
             _lblCredits.Text = "£0.00";
             _lblCredits.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // Label25
-            // 
+            //
             _Label25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label25.AutoSize = true;
             _Label25.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4857,9 +4851,9 @@ namespace FSM
             _Label25.TabIndex = 81;
             _Label25.Text = "Supplier Credits : ";
             _Label25.TextAlign = ContentAlignment.TopRight;
-            // 
+            //
             // lblSupplierGoods
-            // 
+            //
             _lblSupplierGoods.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblSupplierGoods.AutoSize = true;
             _lblSupplierGoods.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4869,9 +4863,9 @@ namespace FSM
             _lblSupplierGoods.TabIndex = 73;
             _lblSupplierGoods.Text = "Supplier Invoices : ";
             _lblSupplierGoods.TextAlign = ContentAlignment.TopRight;
-            // 
+            //
             // lblGoodsTotal
-            // 
+            //
             _lblGoodsTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblGoodsTotal.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblGoodsTotal.Location = new Point(138, 17);
@@ -4880,27 +4874,27 @@ namespace FSM
             _lblGoodsTotal.TabIndex = 70;
             _lblGoodsTotal.Text = "£0.00";
             _lblGoodsTotal.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.Location = new Point(6, 97);
             _Label17.Name = "Label17";
             _Label17.Size = new Size(79, 20);
             _Label17.TabIndex = 68;
             _Label17.Text = "Cost Centre";
-            // 
+            //
             // FSMDataSetBindingSource
-            // 
+            //
             _FSMDataSetBindingSource.DataSource = _FSMDataSet;
             _FSMDataSetBindingSource.Position = 0;
-            // 
+            //
             // FSMDataSet
-            // 
+            //
             _FSMDataSet.DataSetName = "FSMDataSet";
             _FSMDataSet.SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
-            // 
+            //
             // dgParts
-            // 
+            //
             _dgParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgParts.DataMember = "";
@@ -4909,9 +4903,9 @@ namespace FSM
             _dgParts.Name = "dgParts";
             _dgParts.Size = new Size(1769, 237);
             _dgParts.TabIndex = 5;
-            // 
+            //
             // UCOrder
-            // 
+            //
             Controls.Add(_grpOrder);
             Name = "UCOrder";
             Size = new Size(1835, 571);
@@ -4956,7 +4950,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupProductsDatagrid();
@@ -4994,11 +4989,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -5086,7 +5082,7 @@ namespace FSM
             bool orderComplete = true;
             foreach (DataRow row in ItemsIncludedDataView.Table.Rows)
             {
-                if (Conversions.ToBoolean(row["QuantityOnOrder"] > row["QuantityReceived"]))
+                if (Conversions.ToBoolean((int)row["QuantityOnOrder"] > (int)row["QuantityReceived"]))
                 {
                     orderComplete = false;
                 }
@@ -5405,6 +5401,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -5412,8 +5409,9 @@ namespace FSM
                 base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
                 // set the color required dependant on the column value
                 Brush brush;
+                DataRowView dr = (DataRowView)source.List[rowNum];
                 brush = Brushes.White;
-                if (Helper.MakeBooleanValid(source.List[rowNum].row.item("Preferred")))
+                if (Helper.MakeBooleanValid(dr["Preferred"]))
                 {
                     brush = Brushes.LightGreen;
                 }
@@ -5428,6 +5426,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupCredits()
         {
             dgCredits.AutoGenerateColumns = false;
@@ -6175,22 +6174,22 @@ namespace FSM
                                 var switchExpr1 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr1)
                                 {
-                                    case Conversions.ToInteger(Enums.OrderType.Customer):
+                                    case (int)(Enums.OrderType.Customer):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.Job):
+                                    case (int)(Enums.OrderType.Job):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.StockProfile):
+                                    case (int)(Enums.OrderType.StockProfile):
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case Conversions.ToInteger(Enums.OrderType.Warehouse):
+                                    case (int)(Enums.OrderType.Warehouse):
                                         {
                                             var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderProduct.OrderID);
                                             var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
@@ -6216,22 +6215,22 @@ namespace FSM
                                 var switchExpr2 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr2)
                                 {
-                                    case Conversions.ToInteger(Enums.OrderType.Customer):
+                                    case (int)(Enums.OrderType.Customer):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.Job):
+                                    case (int)(Enums.OrderType.Job):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.StockProfile):
+                                    case (int)(Enums.OrderType.StockProfile):
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case Conversions.ToInteger(Enums.OrderType.Warehouse):
+                                    case (int)(Enums.OrderType.Warehouse):
                                         {
                                             var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderPart.OrderID);
                                             var oPartSupplier = App.DB.PartSupplier.PartSupplier_Get(OrderPart.PartSupplierID);
@@ -6266,22 +6265,22 @@ namespace FSM
                                 var switchExpr3 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr3)
                                 {
-                                    case Conversions.ToInteger(Enums.OrderType.Customer):
+                                    case (int)(Enums.OrderType.Customer):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.Job):
+                                    case (int)(Enums.OrderType.Job):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.StockProfile):
+                                    case (int)(Enums.OrderType.StockProfile):
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case Conversions.ToInteger(Enums.OrderType.Warehouse):
+                                    case (int)(Enums.OrderType.Warehouse):
                                         {
                                             Entity.OrderLocations.OrderLocation oOrderLocation;
                                             oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationProduct.OrderID);
@@ -6315,22 +6314,22 @@ namespace FSM
                                 var switchExpr4 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr4)
                                 {
-                                    case Conversions.ToInteger(Enums.OrderType.Customer):
+                                    case (int)(Enums.OrderType.Customer):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.Job):
+                                    case (int)(Enums.OrderType.Job):
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case Conversions.ToInteger(Enums.OrderType.StockProfile):
+                                    case (int)(Enums.OrderType.StockProfile):
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case Conversions.ToInteger(Enums.OrderType.Warehouse):
+                                    case (int)(Enums.OrderType.Warehouse):
                                         {
                                             Entity.OrderLocations.OrderLocation oOrderLocation;
                                             oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationPart.OrderID);
@@ -6363,7 +6362,6 @@ namespace FSM
                     var oEngineerVisit = App.DB.EngineerVisits.EngineerVisits_Get_As_Object(Conversions.ToInteger(ucJobOrder.SelectedEngineerVisitDataRow["EngineerVisitID"]));
                     if (oEngineerVisit.StatusEnumID == Conversions.ToInteger(Enums.VisitStatus.Waiting_For_Parts))
                     {
-
                         // LETS SEE FIRST IF ALL THE ORDERS RELATING TO THIS VISIT ARE COMPLETE? - ALP 22/01/08
                         var dv = App.DB.EngineerVisitPartProductAllocated.EngineerVisitPartAndProductsAllocated_GetAll_For_Engineer_Visit(oEngineerVisit.EngineerVisitID);
                         bool allComplete = true;
@@ -6736,7 +6734,6 @@ namespace FSM
                                     }
                                     else
                                     {
-
                                         // remove parts allocated
                                         if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.Job)
                                         {
@@ -7291,7 +7288,6 @@ namespace FSM
                         }
 
                         // insert the credit?
-
                     }
 
                     if (dtc.Rows.Count == 0 || !Information.IsDBNull(dtc.Rows[0]["CreditReceived"]))  // if there are no credits against this order for this part or there is but already has a credit allocated - add a new line
@@ -7566,7 +7562,7 @@ namespace FSM
             {
                 if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["Type"], "WAREHOUSE", false)))
                 {
-                    if (Conversions.ToBoolean(row["Quantity"] >= oOrderPart.Quantity))
+                    if (Conversions.ToBoolean((int)row["Quantity"] >= oOrderPart.Quantity))
                     {
                         warehouseID = Conversions.ToInteger(row["WarehouseID"]);
                         break;
@@ -7926,7 +7922,7 @@ namespace FSM
                                 {
                                     if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["Type"], "WAREHOUSE", false)))
                                     {
-                                        if (Conversions.ToBoolean(row["Quantity"] >= oOrderProduct.Quantity))
+                                        if (Conversions.ToBoolean((int)row["Quantity"] >= oOrderProduct.Quantity))
                                         {
                                             warehouseID = Conversions.ToInteger(row["WarehouseID"]);
                                             break;
@@ -8125,7 +8121,7 @@ namespace FSM
                         }
                     }
 
-                    if (Conversions.ToBoolean(SelectedItemIncludedDataRow["QuantityReceived"] > 0))
+                    if (Conversions.ToBoolean((int)SelectedItemIncludedDataRow["QuantityReceived"] > 0))
                     {
                         // ShowMessage("Items have been recieved. Quantity cannot be ammended!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         // Exit Sub
@@ -8283,7 +8279,7 @@ namespace FSM
                                 // CHECK AND COMPLETE Consolidated order if nessary
                                 foreach (DataRow drOrd in App.DB.OrderConsolidations.Order_GetForConsolidationByID(CurrentOrder.OrderConsolidationID, 0, 0).Table.Rows)
                                 {
-                                    if (Conversions.ToBoolean(drOrd["OrderStatusID"] < Conversions.ToInteger(Enums.OrderStatus.Complete)))
+                                    if (Conversions.ToBoolean((int)drOrd["OrderStatusID"] < Conversions.ToInteger(Enums.OrderStatus.Complete)))
                                     {
                                         allComplete = false;
                                         break;
@@ -8308,7 +8304,6 @@ namespace FSM
                             var oEngineerVisit = App.DB.EngineerVisits.EngineerVisits_Get_As_Object(Conversions.ToInteger(ucJobOrder.SelectedEngineerVisitDataRow["EngineerVisitID"]));
                             if (oEngineerVisit.StatusEnumID == Conversions.ToInteger(Enums.VisitStatus.Waiting_For_Parts))
                             {
-
                                 // LETS SEE FIRST IF ALL THE ORDERS RELATING TO THIS VISIT ARE COMPLETE? - ALP 22/01/08
                                 var dv = App.DB.EngineerVisitPartProductAllocated.EngineerVisitPartAndProductsAllocated_GetAll_For_Engineer_Visit(oEngineerVisit.EngineerVisitID);
                                 bool allComplete = true;
@@ -8410,7 +8405,6 @@ namespace FSM
                     var oEngineerVisit = App.DB.EngineerVisits.EngineerVisits_Get_As_Object(Conversions.ToInteger(ucJobOrder.SelectedEngineerVisitDataRow["EngineerVisitID"]));
                     if (oEngineerVisit.StatusEnumID == Conversions.ToInteger(Enums.VisitStatus.Waiting_For_Parts))
                     {
-
                         // LETS SEE FIRST IF ALL THE ORDERS RELATING TO THIS VISIT ARE COMPLETE? - ALP 22/01/08
                         var dv = App.DB.EngineerVisitPartProductAllocated.EngineerVisitPartAndProductsAllocated_GetAll_For_Engineer_Visit(oEngineerVisit.EngineerVisitID);
                         bool allComplete = true;
@@ -8453,6 +8447,7 @@ namespace FSM
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public bool ValidateSupplierInvoice(bool Update = false)
         {
             string Errors = "Please correct the following error(s):" + Constants.vbNewLine;
@@ -8497,14 +8492,14 @@ namespace FSM
                 double itemAmount = 0.0;
                 double invoiceTotal = 0.0;
                 foreach (DataRow row in ItemsIncludedDataView.Table.Rows)
-                    itemAmount += row["BuyPrice"] * row["QuantityOnOrder"];
+                    itemAmount += (double)row["BuyPrice"] * (int)row["QuantityOnOrder"];
                 // PLUS ADDITIONAL
                 foreach (DataRow row in App.DB.OrderCharge.OrderCharge_GetForOrder(CurrentOrder.OrderID).Table.Rows)
-                    itemAmount += row["Amount"];
+                    itemAmount += (double)row["Amount"];
 
                 // GET EXISTING SUPPLIER INVOICES
                 foreach (DataRow row in App.DB.SupplierInvoices.Order_GetSupplierInvoices(CurrentOrder.OrderID).Table.Rows)
-                    invoiceTotal += row["SupplierInvoiceAmount"];
+                    invoiceTotal += (double)row["SupplierInvoiceAmount"];
                 double CurrentTotal = 0;
                 if (Update)
                 {
@@ -8572,7 +8567,7 @@ namespace FSM
             return NoError;
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             btnEngineerReceived.Visible = false;
             if (!(ID == 0))
@@ -8760,18 +8755,18 @@ namespace FSM
         {
             double total = 0.0;
             foreach (DataRow row in ItemsIncludedDataView.Table.Rows)
-                total += row["BuyPrice"] * row["QuantityOnOrder"];
+                total += (double)row["BuyPrice"] * (int)row["QuantityOnOrder"];
             foreach (DataRow row in App.DB.OrderCharge.OrderCharge_GetForOrder(CurrentOrder.OrderID).Table.Rows)
-                total += row["Amount"];
+                total += (double)row["Amount"];
             lblOrderTotal.Text = Strings.Format(total, "C");
             double GoodsTotal = 0.0;
             double VATTotal = 0.0;
             double GrandTotal = 0.0;
             foreach (DataRow row in App.DB.SupplierInvoices.Order_GetSupplierInvoices(CurrentOrder.OrderID).Table.Rows)
             {
-                GoodsTotal += row["SupplierInvoiceAmount"];
-                VATTotal += row["SupplierVATAmount"];
-                GrandTotal += row["SupplierGoodsAmount"];
+                GoodsTotal += (double)row["SupplierInvoiceAmount"];
+                VATTotal += (double)row["SupplierVATAmount"];
+                GrandTotal += (double)row["SupplierGoodsAmount"];
             }
 
             lblGoodsTotal.Text = Strings.Format(GoodsTotal, "C");
@@ -8790,13 +8785,13 @@ namespace FSM
                         break;
                     }
 
-                case object _ when switchExpr < 0:
+                case object _ when Helper.MakeDoubleValid(switchExpr) < 0:
                     {
                         lblOrderBalance.ForeColor = Color.Red;
                         break;
                     }
 
-                case object _ when switchExpr > 0:
+                case object _ when Helper.MakeDoubleValid(switchExpr) > 0:
                     {
                         lblOrderBalance.ForeColor = Color.DarkOrange;
                         break;
@@ -8900,7 +8895,7 @@ namespace FSM
             var switchExpr = CurrentOrder.OrderStatusID;
             switch (switchExpr)
             {
-                case Conversions.ToInteger(Enums.OrderStatus.Complete):
+                case (int)(Enums.OrderStatus.Complete):
                     {
                         if (CurrentOrder.OrderTypeID == Conversions.ToInteger(Enums.OrderType.StockProfile))
                         {
@@ -9546,7 +9541,7 @@ namespace FSM
                     {
                         foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                         {
-                            if (Conversions.ToBoolean(row["Quantity"] > 0))
+                            if (Conversions.ToBoolean((int)row["Quantity"] > 0))
                             {
                                 var r = PartsAndProductsDistribution.NewRow();
                                 int allocated = Conversions.ToInteger(App.DB.ExecuteScalar(Conversions.ToString("Select EngineerVisitPartAllocatedID From tblEngineervisitPartAllocated Where OrderPartID = " + dgCredits["OrderPartID", dgCredits.CurrentRow.Index].Value)));
@@ -9703,6 +9698,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Email()
         {
             if (CurrentOrder.Exists == true)
@@ -9730,6 +9726,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Print()
         {
             if (CurrentOrder.Exists == true)

@@ -1,13 +1,13 @@
-﻿using System;
+﻿using FSM.Business.Orders;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Business.Orders;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -34,10 +34,10 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public TabletOrder() : base()
         {
             base.Load += TabletOrder_Load;
@@ -62,7 +62,6 @@ namespace FSM
                     }
             }
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -170,7 +169,6 @@ namespace FSM
             {
                 if (_btnCreate != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnCreate.Click -= btnCreate_Click;
@@ -642,9 +640,9 @@ namespace FSM
             _pnlFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgvSearch).BeginInit();
             SuspendLayout();
-            // 
+            //
             // btnFindPart
-            // 
+            //
             _btnFindPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnFindPart.Location = new Point(856, 105);
             _btnFindPart.Name = "btnFindPart";
@@ -652,18 +650,18 @@ namespace FSM
             _btnFindPart.TabIndex = 13;
             _btnFindPart.Text = "Find";
             _btnFindPart.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtPartSearch
-            // 
+            //
             _txtPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPartSearch.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPartSearch.Location = new Point(321, 62);
             _txtPartSearch.Name = "txtPartSearch";
             _txtPartSearch.Size = new Size(680, 29);
             _txtPartSearch.TabIndex = 2;
-            // 
+            //
             // lblQty
-            // 
+            //
             _lblQty.Font = new Font("Verdana", 9.0F);
             _lblQty.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblQty.Location = new Point(4, 67);
@@ -671,9 +669,9 @@ namespace FSM
             _lblQty.Size = new Size(120, 21);
             _lblQty.TabIndex = 19;
             _lblQty.Text = "Qty";
-            // 
+            //
             // btnCreate
-            // 
+            //
             _btnCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnCreate.Font = new Font("Verdana", 9.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnCreate.Location = new Point(857, 552);
@@ -682,9 +680,9 @@ namespace FSM
             _btnCreate.TabIndex = 130;
             _btnCreate.Text = "Create Order";
             _btnCreate.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblSearch
-            // 
+            //
             _lblSearch.Font = new Font("Verdana", 9.0F);
             _lblSearch.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblSearch.Location = new Point(249, 67);
@@ -692,9 +690,9 @@ namespace FSM
             _lblSearch.Size = new Size(67, 21);
             _lblSearch.TabIndex = 20;
             _lblSearch.Text = "Search";
-            // 
+            //
             // lblSupplier
-            // 
+            //
             _lblSupplier.Font = new Font("Verdana", 9.0F);
             _lblSupplier.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblSupplier.Location = new Point(4, 22);
@@ -702,9 +700,9 @@ namespace FSM
             _lblSupplier.Size = new Size(120, 21);
             _lblSupplier.TabIndex = 18;
             _lblSupplier.Text = "Supplier";
-            // 
+            //
             // nudQty
-            // 
+            //
             _nudQty.BackColor = Color.White;
             _nudQty.Font = new Font("Verdana", 16.0F);
             _nudQty.Location = new Point(130, 61);
@@ -713,9 +711,9 @@ namespace FSM
             _nudQty.Size = new Size(112, 33);
             _nudQty.TabIndex = 9;
             _nudQty.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
+            //
             // dgParts
-            // 
+            //
             _dgParts.AllowUserToAddRows = false;
             _dgParts.AllowUserToDeleteRows = false;
             _dgParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -723,9 +721,9 @@ namespace FSM
             _dgParts.Name = "dgParts";
             _dgParts.Size = new Size(990, 133);
             _dgParts.TabIndex = 133;
-            // 
+            //
             // lblTopLabel
-            // 
+            //
             _lblTopLabel.AutoSize = true;
             _lblTopLabel.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblTopLabel.Location = new Point(17, 50);
@@ -733,9 +731,9 @@ namespace FSM
             _lblTopLabel.Size = new Size(539, 24);
             _lblTopLabel.TabIndex = 132;
             _lblTopLabel.Text = "Are these parts to be fitted on this visit?  (NO creates a new visit)";
-            // 
+            //
             // btnAddPart
-            // 
+            //
             _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnAddPart.Enabled = false;
             _btnAddPart.Location = new Point(857, 372);
@@ -744,9 +742,9 @@ namespace FSM
             _btnAddPart.TabIndex = 124;
             _btnAddPart.Text = "Add";
             _btnAddPart.UseVisualStyleBackColor = true;
-            // 
+            //
             // rbNo
-            // 
+            //
             _rbNo.AutoSize = true;
             _rbNo.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _rbNo.Location = new Point(949, 49);
@@ -756,9 +754,9 @@ namespace FSM
             _rbNo.TabStop = true;
             _rbNo.Text = "No";
             _rbNo.UseVisualStyleBackColor = true;
-            // 
+            //
             // rbYes
-            // 
+            //
             _rbYes.AutoSize = true;
             _rbYes.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _rbYes.Location = new Point(836, 50);
@@ -768,9 +766,9 @@ namespace FSM
             _rbYes.TabStop = true;
             _rbYes.Text = "Yes";
             _rbYes.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnBack
-            // 
+            //
             _btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnBack.Font = new Font("Verdana", 9.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnBack.Location = new Point(12, 552);
@@ -779,9 +777,9 @@ namespace FSM
             _btnBack.TabIndex = 125;
             _btnBack.Text = "Close";
             _btnBack.UseVisualStyleBackColor = true;
-            // 
+            //
             // pnlFilters
-            // 
+            //
             _pnlFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _pnlFilters.BackColor = SystemColors.Info;
             _pnlFilters.Controls.Add(_dtpDatePlaced);
@@ -799,16 +797,16 @@ namespace FSM
             _pnlFilters.Name = "pnlFilters";
             _pnlFilters.Size = new Size(1013, 145);
             _pnlFilters.TabIndex = 123;
-            // 
+            //
             // dtpDatePlaced
-            // 
+            //
             _dtpDatePlaced.Location = new Point(130, 105);
             _dtpDatePlaced.Name = "dtpDatePlaced";
             _dtpDatePlaced.Size = new Size(702, 21);
             _dtpDatePlaced.TabIndex = 25;
-            // 
+            //
             // lblDate
-            // 
+            //
             _lblDate.Font = new Font("Verdana", 9.0F);
             _lblDate.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblDate.Location = new Point(4, 110);
@@ -816,17 +814,17 @@ namespace FSM
             _lblDate.Size = new Size(120, 21);
             _lblDate.TabIndex = 24;
             _lblDate.Text = "Date Placed";
-            // 
+            //
             // cboCostCentre
-            // 
+            //
             _cboCostCentre.FormattingEnabled = true;
             _cboCostCentre.Location = new Point(764, 29);
             _cboCostCentre.Name = "cboCostCentre";
             _cboCostCentre.Size = new Size(237, 21);
             _cboCostCentre.TabIndex = 23;
-            // 
+            //
             // lblCostCentre
-            // 
+            //
             _lblCostCentre.Font = new Font("Verdana", 9.0F);
             _lblCostCentre.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblCostCentre.Location = new Point(761, 12);
@@ -834,9 +832,9 @@ namespace FSM
             _lblCostCentre.Size = new Size(89, 21);
             _lblCostCentre.TabIndex = 22;
             _lblCostCentre.Text = "Cost Centre:";
-            // 
+            //
             // txtSupplier
-            // 
+            //
             _txtSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSupplier.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtSupplier.Location = new Point(130, 21);
@@ -844,9 +842,9 @@ namespace FSM
             _txtSupplier.ReadOnly = true;
             _txtSupplier.Size = new Size(625, 29);
             _txtSupplier.TabIndex = 21;
-            // 
+            //
             // dgvSearch
-            // 
+            //
             _dgvSearch.AllowUserToAddRows = false;
             _dgvSearch.AllowUserToDeleteRows = false;
             _dgvSearch.AllowUserToResizeRows = false;
@@ -864,9 +862,9 @@ namespace FSM
             _dgvSearch.ShowRowErrors = false;
             _dgvSearch.Size = new Size(839, 165);
             _dgvSearch.TabIndex = 134;
-            // 
+            //
             // txtNewOrderNumber
-            // 
+            //
             _txtNewOrderNumber.BackColor = Color.White;
             _txtNewOrderNumber.BorderStyle = BorderStyle.None;
             _txtNewOrderNumber.Font = new Font("Verdana", 12.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -878,9 +876,9 @@ namespace FSM
             _txtNewOrderNumber.TabIndex = 135;
             _txtNewOrderNumber.Text = "Your order number will be displayed here once created.";
             _txtNewOrderNumber.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // TabletOrder
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1014, 608);
             ControlBox = false;
@@ -921,7 +919,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -934,12 +933,13 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataTable()
         {
             PartsList.Columns.Add("PartSupplierID");

@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMAddToQuote : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMAddToQuote() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMAddToQuote_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -458,9 +456,9 @@ namespace FSM
             _GroupBox2.SuspendLayout();
             _GroupBox1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox2.Controls.Add(_Label3);
             _GroupBox2.Controls.Add(_txtSupplierCode);
@@ -474,26 +472,26 @@ namespace FSM
             _GroupBox2.TabIndex = 23;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Quote Details";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 24);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(104, 23);
             _Label3.TabIndex = 4;
             _Label3.Text = "Supplier Code:";
-            // 
+            //
             // txtSupplierCode
-            // 
+            //
             _txtSupplierCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSupplierCode.Location = new Point(128, 24);
             _txtSupplierCode.Name = "txtSupplierCode";
             _txtSupplierCode.Size = new Size(376, 21);
             _txtSupplierCode.TabIndex = 5;
             _txtSupplierCode.Text = "";
-            // 
+            //
             // txtBuyPrice
-            // 
+            //
             _txtBuyPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtBuyPrice.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtBuyPrice.Location = new Point(128, 63);
@@ -501,9 +499,9 @@ namespace FSM
             _txtBuyPrice.Size = new Size(376, 21);
             _txtBuyPrice.TabIndex = 6;
             _txtBuyPrice.Text = "";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.BackColor = Color.White;
             _Label6.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label6.Location = new Point(8, 56);
@@ -511,27 +509,27 @@ namespace FSM
             _Label6.Size = new Size(88, 23);
             _Label6.TabIndex = 7;
             _Label6.Text = "Buy Price:";
-            // 
+            //
             // btnConfirm
-            // 
+            //
             _btnConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnConfirm.Location = new Point(352, 96);
             _btnConfirm.Name = "btnConfirm";
             _btnConfirm.Size = new Size(88, 23);
             _btnConfirm.TabIndex = 9;
             _btnConfirm.Text = "Confirm";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnCancel.Location = new Point(448, 96);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 10;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_lblName);
             _GroupBox1.Controls.Add(_lblNumber);
@@ -547,25 +545,25 @@ namespace FSM
             _GroupBox1.TabIndex = 22;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Request Details";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(8, 24);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(120, 23);
             _lblName.TabIndex = 2;
             _lblName.Text = "Name:";
-            // 
+            //
             // lblNumber
-            // 
+            //
             _lblNumber.Location = new Point(8, 56);
             _lblNumber.Name = "lblNumber";
             _lblNumber.Size = new Size(120, 23);
             _lblNumber.TabIndex = 3;
             _lblNumber.Text = "Number:";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Enabled = false;
             _txtName.Location = new Point(128, 24);
@@ -574,9 +572,9 @@ namespace FSM
             _txtName.Size = new Size(376, 21);
             _txtName.TabIndex = 1;
             _txtName.Text = "";
-            // 
+            //
             // txtNumber
-            // 
+            //
             _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNumber.Enabled = false;
             _txtNumber.Location = new Point(128, 63);
@@ -585,17 +583,17 @@ namespace FSM
             _txtNumber.Size = new Size(376, 21);
             _txtNumber.TabIndex = 2;
             _txtNumber.Text = "";
-            // 
+            //
             // lblSupplier
-            // 
+            //
             _lblSupplier.Location = new Point(8, 88);
             _lblSupplier.Name = "lblSupplier";
             _lblSupplier.Size = new Size(80, 24);
             _lblSupplier.TabIndex = 5;
             _lblSupplier.Text = "Supplier:";
-            // 
+            //
             // txtSupplier
-            // 
+            //
             _txtSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSupplier.Enabled = false;
             _txtSupplier.Location = new Point(128, 95);
@@ -604,17 +602,17 @@ namespace FSM
             _txtSupplier.Size = new Size(376, 21);
             _txtSupplier.TabIndex = 3;
             _txtSupplier.Text = "";
-            // 
+            //
             // lblQty
-            // 
+            //
             _lblQty.Location = new Point(8, 120);
             _lblQty.Name = "lblQty";
             _lblQty.Size = new Size(120, 23);
             _lblQty.TabIndex = 6;
             _lblQty.Text = "Quantity In Pack:";
-            // 
+            //
             // txtQtyInPack
-            // 
+            //
             _txtQtyInPack.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtQtyInPack.Enabled = false;
             _txtQtyInPack.Location = new Point(128, 127);
@@ -623,9 +621,9 @@ namespace FSM
             _txtQtyInPack.Size = new Size(376, 21);
             _txtQtyInPack.TabIndex = 4;
             _txtQtyInPack.Text = "";
-            // 
+            //
             // FRMAddToQuote
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(528, 326);
             Controls.Add(_GroupBox2);
@@ -643,7 +641,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             QuoteID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             PartSupplier = (Entity.PartSuppliers.PartSupplier)get_GetParameter(1);
@@ -681,7 +680,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
             // DO NOTHING
         }

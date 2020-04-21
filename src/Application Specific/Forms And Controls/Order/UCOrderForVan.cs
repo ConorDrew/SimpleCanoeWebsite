@@ -1,17 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCOrderForVan : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCOrderForVan() : base()
         {
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -22,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -43,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpVanDetails;
 
@@ -206,9 +205,9 @@ namespace FSM
             _txtVan = new TextBox();
             _grpVanDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpVanDetails
-            // 
+            //
             _grpVanDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVanDetails.Controls.Add(_btnDeliveryAddress);
@@ -223,9 +222,9 @@ namespace FSM
             _grpVanDetails.TabIndex = 2;
             _grpVanDetails.TabStop = false;
             _grpVanDetails.Text = "Stock Profile Details";
-            // 
+            //
             // btnDeliveryAddress
-            // 
+            //
             _btnDeliveryAddress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnDeliveryAddress.BackColor = Color.White;
             _btnDeliveryAddress.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -235,9 +234,9 @@ namespace FSM
             _btnDeliveryAddress.TabIndex = 5;
             _btnDeliveryAddress.Text = "...";
             _btnDeliveryAddress.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtDeliveryAddress
-            // 
+            //
             _txtDeliveryAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtDeliveryAddress.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtDeliveryAddress.Location = new Point(8, 105);
@@ -245,17 +244,17 @@ namespace FSM
             _txtDeliveryAddress.ReadOnly = true;
             _txtDeliveryAddress.Size = new Size(520, 21);
             _txtDeliveryAddress.TabIndex = 4;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 88);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(216, 23);
             _Label1.TabIndex = 3;
             _Label1.Text = "Delivery Address for Supplier";
-            // 
+            //
             // btnFindVan
-            // 
+            //
             _btnFindVan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindVan.BackColor = Color.White;
             _btnFindVan.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -265,9 +264,9 @@ namespace FSM
             _btnFindVan.TabIndex = 2;
             _btnFindVan.Text = "...";
             _btnFindVan.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtVan
-            // 
+            //
             _txtVan.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtVan.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtVan.Location = new Point(8, 28);
@@ -275,9 +274,9 @@ namespace FSM
             _txtVan.ReadOnly = true;
             _txtVan.Size = new Size(520, 21);
             _txtVan.TabIndex = 1;
-            // 
+            //
             // UCOrderForVan
-            // 
+            //
             Controls.Add(_grpVanDetails);
             Name = "UCOrderForVan";
             Size = new Size(592, 288);
@@ -288,7 +287,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -303,11 +303,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -384,7 +385,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             // DO NOTHING
         }

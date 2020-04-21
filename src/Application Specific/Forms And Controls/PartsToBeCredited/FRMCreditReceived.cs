@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -14,6 +14,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -90,6 +91,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupCreditDataGrid()
         {
             var tbStyle = dgCredits.TableStyles[0];
@@ -165,6 +167,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMCreditReceived_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -192,6 +195,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             string creditReference = "";
@@ -334,11 +338,6 @@ namespace FSM
 
                 App.DB.PartsToBeCredited.PartCredits_Update(PartCreditsID, Entity.Sys.Helper.MakeDoubleValid(txtTotalAmount.Text.Replace("£", "")), txtnotes.Text, dtpDateReceived.Value, DateTime.MinValue, Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboTaxCode)), txtNominalCode.Text, txtDepartment.Text, txtExtraRef.Text, txtSupplierCreditRef.Text);
 
-
-
-
-
-
                 foreach (DataRow dr in CreditsDataview.Table.Rows)
                 {
                     var oPartToCredit = App.DB.PartsToBeCredited.PartsToBeCredited_Get(Conversions.ToInteger(dr["PartsToBeCreditedID"]));
@@ -354,7 +353,6 @@ namespace FSM
                 App.ShowMessage(ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }

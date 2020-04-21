@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMReceiveStock : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMReceiveStock() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMReceiveStock_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -430,119 +428,119 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             _GroupBox2.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // lblItemName
-            // 
+            //
             _lblItemName.Location = new Point(16, 24);
             _lblItemName.Name = "lblItemName";
             _lblItemName.Size = new Size(96, 23);
             _lblItemName.TabIndex = 2;
             _lblItemName.Text = "Item Name:";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(136, 26);
             _txtName.Name = "txtName";
             _txtName.ReadOnly = true;
             _txtName.Size = new Size(288, 21);
             _txtName.TabIndex = 1;
-            // 
+            //
             // txtNumber
-            // 
+            //
             _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNumber.Location = new Point(136, 56);
             _txtNumber.Name = "txtNumber";
             _txtNumber.ReadOnly = true;
             _txtNumber.Size = new Size(288, 21);
             _txtNumber.TabIndex = 2;
-            // 
+            //
             // lblItemNumber
-            // 
+            //
             _lblItemNumber.Location = new Point(16, 56);
             _lblItemNumber.Name = "lblItemNumber";
             _lblItemNumber.Size = new Size(96, 23);
             _lblItemNumber.TabIndex = 4;
             _lblItemNumber.Text = "Item Number:";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(16, 120);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(100, 23);
             _Label3.TabIndex = 6;
             _Label3.Text = "Total Ordered:";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(16, 152);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(104, 23);
             _Label4.TabIndex = 7;
             _Label4.Text = "Total Received :";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(15, 24);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(124, 23);
             _Label5.TabIndex = 8;
             _Label5.Text = "Quantity Received:";
-            // 
+            //
             // txtQuantityPreviouslyReceived
-            // 
+            //
             _txtQuantityPreviouslyReceived.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtQuantityPreviouslyReceived.Location = new Point(136, 154);
             _txtQuantityPreviouslyReceived.Name = "txtQuantityPreviouslyReceived";
             _txtQuantityPreviouslyReceived.ReadOnly = true;
             _txtQuantityPreviouslyReceived.Size = new Size(288, 21);
             _txtQuantityPreviouslyReceived.TabIndex = 5;
-            // 
+            //
             // txtTotalquantity
-            // 
+            //
             _txtTotalquantity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTotalquantity.Location = new Point(136, 122);
             _txtTotalquantity.Name = "txtTotalquantity";
             _txtTotalquantity.ReadOnly = true;
             _txtTotalquantity.Size = new Size(288, 21);
             _txtTotalquantity.TabIndex = 4;
-            // 
+            //
             // txtQuantityInput
-            // 
+            //
             _txtQuantityInput.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtQuantityInput.Location = new Point(136, 24);
             _txtQuantityInput.Name = "txtQuantityInput";
             _txtQuantityInput.Size = new Size(224, 21);
             _txtQuantityInput.TabIndex = 6;
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(368, 24);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(56, 23);
             _btnOK.TabIndex = 7;
             _btnOK.Text = "OK";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(16, 88);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(72, 23);
             _Label6.TabIndex = 14;
             _Label6.Text = "Order For:";
-            // 
+            //
             // txtLocation
-            // 
+            //
             _txtLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtLocation.Location = new Point(136, 90);
             _txtLocation.Name = "txtLocation";
             _txtLocation.ReadOnly = true;
             _txtLocation.Size = new Size(288, 21);
             _txtLocation.TabIndex = 3;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_lblItemNumber);
             _GroupBox1.Controls.Add(_lblItemName);
@@ -560,9 +558,9 @@ namespace FSM
             _GroupBox1.TabIndex = 16;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Stock Details";
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox2.Controls.Add(_txtQuantityInput);
             _GroupBox2.Controls.Add(_btnOK);
@@ -573,9 +571,9 @@ namespace FSM
             _GroupBox2.TabIndex = 17;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Stock Received";
-            // 
+            //
             // FRMReceiveStock
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(448, 302);
             Controls.Add(_GroupBox2);
@@ -597,7 +595,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             Order = App.DB.Order.Order_Get(Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0)));
             OrderType = Entity.Sys.Helper.MakeStringValid(get_GetParameter(1));
@@ -613,7 +612,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
             // DO NOTHING
         }
@@ -748,7 +747,7 @@ namespace FSM
                 var switchExpr1 = Order.OrderTypeID;
                 switch (switchExpr1)
                 {
-                    case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Customer):
+                    case (int)(Entity.Sys.Enums.OrderType.Customer):
                         {
                             var oSiteOrder = App.DB.SiteOrder.SiteOrder_GetForOrder(Order.OrderID);
                             if (oSiteOrder is object)
@@ -766,7 +765,7 @@ namespace FSM
                             break;
                         }
 
-                    case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Job):
+                    case (int)(Entity.Sys.Enums.OrderType.Job):
                         {
                             txtLocation.Text = "Engineer Visit";
                             break;
@@ -874,6 +873,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void UpdateOrderItems(int QuantityInput)
         {
             try
@@ -889,22 +889,22 @@ namespace FSM
                             var switchExpr1 = Order.OrderTypeID;
                             switch (switchExpr1)
                             {
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Customer):
+                                case (int)(Entity.Sys.Enums.OrderType.Customer):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Job):
+                                case (int)(Entity.Sys.Enums.OrderType.Job):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.StockProfile):
+                                case (int)(Entity.Sys.Enums.OrderType.StockProfile):
                                     {
                                         break;
                                     }
                                 // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Warehouse):
+                                case (int)(Entity.Sys.Enums.OrderType.Warehouse):
                                     {
                                         var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderProduct.OrderID);
                                         var oProductSupplier = App.DB.ProductSupplier.ProductSupplier_Get(OrderProduct.ProductSupplierID);
@@ -929,22 +929,22 @@ namespace FSM
                             var switchExpr2 = Order.OrderTypeID;
                             switch (switchExpr2)
                             {
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Customer):
+                                case (int)(Entity.Sys.Enums.OrderType.Customer):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Job):
+                                case (int)(Entity.Sys.Enums.OrderType.Job):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.StockProfile):
+                                case (int)(Entity.Sys.Enums.OrderType.StockProfile):
                                     {
                                         break;
                                     }
                                 // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Warehouse):
+                                case (int)(Entity.Sys.Enums.OrderType.Warehouse):
                                     {
                                         var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderPart.OrderID);
                                         var oPartSupplier = App.DB.PartSupplier.PartSupplier_Get(OrderPart.PartSupplierID);
@@ -978,22 +978,22 @@ namespace FSM
                             var switchExpr3 = Order.OrderTypeID;
                             switch (switchExpr3)
                             {
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Customer):
+                                case (int)(Entity.Sys.Enums.OrderType.Customer):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Job):
+                                case (int)(Entity.Sys.Enums.OrderType.Job):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.StockProfile):
+                                case (int)(Entity.Sys.Enums.OrderType.StockProfile):
                                     {
                                         break;
                                     }
                                 // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Warehouse):
+                                case (int)(Entity.Sys.Enums.OrderType.Warehouse):
                                     {
                                         Entity.OrderLocations.OrderLocation oOrderLocation;
                                         oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationProduct.OrderID);
@@ -1026,22 +1026,22 @@ namespace FSM
                             var switchExpr4 = Order.OrderTypeID;
                             switch (switchExpr4)
                             {
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Customer):
+                                case (int)(Entity.Sys.Enums.OrderType.Customer):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Job):
+                                case (int)(Entity.Sys.Enums.OrderType.Job):
                                     {
                                         break;
                                     }
                                 // DO NOTHING
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.StockProfile):
+                                case (int)(Entity.Sys.Enums.OrderType.StockProfile):
                                     {
                                         break;
                                     }
                                 // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                case Conversions.ToInteger(Entity.Sys.Enums.OrderType.Warehouse):
+                                case (int)(Entity.Sys.Enums.OrderType.Warehouse):
                                     {
                                         Entity.OrderLocations.OrderLocation oOrderLocation;
                                         oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationPart.OrderID);

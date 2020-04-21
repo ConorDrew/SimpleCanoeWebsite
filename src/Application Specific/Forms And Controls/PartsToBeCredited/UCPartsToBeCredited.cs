@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCPartsToBeCredited : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCPartsToBeCredited() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCPartsToBeCredited_Load;
@@ -23,7 +22,6 @@ namespace FSM
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -338,10 +336,8 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
-
-
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -363,9 +359,9 @@ namespace FSM
             _Label1 = new Label();
             _PartToBeCredited.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // PartToBeCredited
-            // 
+            //
             _PartToBeCredited.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _PartToBeCredited.Controls.Add(_btnFindPart);
@@ -385,102 +381,102 @@ namespace FSM
             _PartToBeCredited.TabIndex = 0;
             _PartToBeCredited.TabStop = false;
             _PartToBeCredited.Text = "Part To Be Credited";
-            // 
+            //
             // btnFindPart
-            // 
+            //
             _btnFindPart.Location = new Point(465, 82);
             _btnFindPart.Name = "btnFindPart";
             _btnFindPart.Size = new Size(34, 23);
             _btnFindPart.TabIndex = 8;
             _btnFindPart.Text = "...";
             _btnFindPart.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtPart
-            // 
+            //
             _txtPart.Location = new Point(106, 84);
             _txtPart.Name = "txtPart";
             _txtPart.ReadOnly = true;
             _txtPart.Size = new Size(353, 21);
             _txtPart.TabIndex = 7;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.AutoSize = true;
             _Label4.Location = new Point(18, 87);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(30, 13);
             _Label4.TabIndex = 6;
             _Label4.Text = "Part";
-            // 
+            //
             // btnFindSupplier
-            // 
+            //
             _btnFindSupplier.Location = new Point(465, 55);
             _btnFindSupplier.Name = "btnFindSupplier";
             _btnFindSupplier.Size = new Size(34, 23);
             _btnFindSupplier.TabIndex = 5;
             _btnFindSupplier.Text = "...";
             _btnFindSupplier.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtSupplier
-            // 
+            //
             _txtSupplier.Location = new Point(106, 57);
             _txtSupplier.Name = "txtSupplier";
             _txtSupplier.ReadOnly = true;
             _txtSupplier.Size = new Size(353, 21);
             _txtSupplier.TabIndex = 4;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.AutoSize = true;
             _Label3.Location = new Point(18, 60);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(54, 13);
             _Label3.TabIndex = 3;
             _Label3.Text = "Supplier";
-            // 
+            //
             // btnFindOrder
-            // 
+            //
             _btnFindOrder.Location = new Point(465, 28);
             _btnFindOrder.Name = "btnFindOrder";
             _btnFindOrder.Size = new Size(34, 23);
             _btnFindOrder.TabIndex = 2;
             _btnFindOrder.Text = "...";
             _btnFindOrder.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtQty
-            // 
+            //
             _txtQty.Location = new Point(106, 111);
             _txtQty.Name = "txtQty";
             _txtQty.Size = new Size(100, 21);
             _txtQty.TabIndex = 10;
-            // 
+            //
             // txtOrder
-            // 
+            //
             _txtOrder.Location = new Point(106, 30);
             _txtOrder.Name = "txtOrder";
             _txtOrder.Size = new Size(353, 21);
             _txtOrder.TabIndex = 1;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.AutoSize = true;
             _Label2.Location = new Point(18, 114);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(55, 13);
             _Label2.TabIndex = 9;
             _Label2.Text = "Quantity";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Location = new Point(18, 33);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(40, 13);
             _Label1.TabIndex = 0;
             _Label1.Text = "Order";
-            // 
+            //
             // UCPartsToBeCredited
-            // 
+            //
             Controls.Add(_PartToBeCredited);
             Name = "UCPartsToBeCredited";
             Size = new Size(565, 163);
@@ -491,7 +487,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -506,11 +503,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -657,6 +655,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FindPart(string PartNumber = "")
         {
             PartID = Conversions.ToInteger(App.FindRecord(Entity.Sys.Enums.TableNames.tblPart, OrderID, PartNumber));
@@ -675,7 +674,7 @@ namespace FSM
             }
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

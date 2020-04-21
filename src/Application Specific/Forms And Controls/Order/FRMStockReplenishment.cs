@@ -1,22 +1,21 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMStockReplenishment : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMStockReplenishment() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMStockReplenishment_Load;
@@ -572,7 +571,6 @@ namespace FSM
             {
                 if (_btnRunFilter != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnRunFilter.Click -= btnRunFilter_Click;
@@ -673,9 +671,9 @@ namespace FSM
             _GroupBox2.SuspendLayout();
             _GroupBox3.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_dgStockReplenishment);
@@ -685,9 +683,9 @@ namespace FSM
             _GroupBox1.TabIndex = 2;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Tick those combinations you wish to update";
-            // 
+            //
             // dgStockReplenishment
-            // 
+            //
             _dgStockReplenishment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgStockReplenishment.DataMember = "";
@@ -696,35 +694,35 @@ namespace FSM
             _dgStockReplenishment.Name = "dgStockReplenishment";
             _dgStockReplenishment.Size = new Size(976, 455);
             _dgStockReplenishment.TabIndex = 7;
-            // 
+            //
             // btnToMinimum
-            // 
+            //
             _btnToMinimum.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnToMinimum.Location = new Point(432, 700);
             _btnToMinimum.Name = "btnToMinimum";
             _btnToMinimum.Size = new Size(280, 23);
             _btnToMinimum.TabIndex = 3;
             _btnToMinimum.Text = "Bring amounts up to minimum quantities";
-            // 
+            //
             // btnToRecommended
-            // 
+            //
             _btnToRecommended.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnToRecommended.Location = new Point(720, 700);
             _btnToRecommended.Name = "btnToRecommended";
             _btnToRecommended.Size = new Size(280, 23);
             _btnToRecommended.TabIndex = 4;
             _btnToRecommended.Text = "Bring amounts up to maximum quantities";
-            // 
+            //
             // chkRecommended
-            // 
+            //
             _chkRecommended.Location = new Point(10, 76);
             _chkRecommended.Name = "chkRecommended";
             _chkRecommended.Size = new Size(271, 24);
             _chkRecommended.TabIndex = 2;
             _chkRecommended.Text = "Items where amount is below maximum";
-            // 
+            //
             // chkMinimum
-            // 
+            //
             _chkMinimum.Checked = true;
             _chkMinimum.CheckState = CheckState.Checked;
             _chkMinimum.Location = new Point(10, 103);
@@ -732,9 +730,9 @@ namespace FSM
             _chkMinimum.Size = new Size(256, 24);
             _chkMinimum.TabIndex = 3;
             _chkMinimum.Text = "Items where amount is below minimum";
-            // 
+            //
             // lblNumberOfItems
-            // 
+            //
             _lblNumberOfItems.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblNumberOfItems.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblNumberOfItems.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -743,77 +741,77 @@ namespace FSM
             _lblNumberOfItems.Size = new Size(341, 24);
             _lblNumberOfItems.TabIndex = 7;
             _lblNumberOfItems.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(32, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(425, 16);
             _Label2.TabIndex = 9;
             _Label2.Text = "Amount ABOVE or EQUAL to both minimum and the maximum quantities";
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.BackColor = Color.Yellow;
             _Panel1.Location = new Point(8, 54);
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(16, 16);
             _Panel1.TabIndex = 10;
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.BackColor = Color.Salmon;
             _Panel2.Location = new Point(8, 82);
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(16, 16);
             _Panel2.TabIndex = 11;
-            // 
+            //
             // Panel3
-            // 
+            //
             _Panel3.BackColor = Color.LightGreen;
             _Panel3.Location = new Point(8, 24);
             _Panel3.Name = "Panel3";
             _Panel3.Size = new Size(16, 16);
             _Panel3.TabIndex = 12;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label3.Location = new Point(32, 54);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(425, 16);
             _Label3.TabIndex = 13;
             _Label3.Text = "Amount ABOVE or EQUAL to minimum but BELOW maximum quantities";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label4.Location = new Point(32, 82);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(376, 16);
             _Label4.TabIndex = 14;
             _Label4.Text = "Amount BELOW both minimum and the maximum quantities";
-            // 
+            //
             // Panel4
-            // 
+            //
             _Panel4.BackColor = Color.LightBlue;
             _Panel4.Location = new Point(8, 109);
             _Panel4.Name = "Panel4";
             _Panel4.Size = new Size(16, 16);
             _Panel4.TabIndex = 15;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label5.Location = new Point(32, 109);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(376, 16);
             _Label5.TabIndex = 16;
             _Label5.Text = "A quantity is on order to replenish stock";
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox2.Controls.Add(_btnRunFilter);
             _GroupBox2.Controls.Add(_chkIncludeVans);
@@ -829,9 +827,9 @@ namespace FSM
             _GroupBox2.TabIndex = 0;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Filters";
-            // 
+            //
             // btnRunFilter
-            // 
+            //
             _btnRunFilter.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRunFilter.Location = new Point(388, 128);
             _btnRunFilter.Name = "btnRunFilter";
@@ -839,51 +837,51 @@ namespace FSM
             _btnRunFilter.TabIndex = 12;
             _btnRunFilter.Text = "Filter";
             _btnRunFilter.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkIncludeVans
-            // 
+            //
             _chkIncludeVans.Location = new Point(10, 128);
             _chkIncludeVans.Name = "chkIncludeVans";
             _chkIncludeVans.Size = new Size(256, 24);
             _chkIncludeVans.TabIndex = 11;
             _chkIncludeVans.Text = "Include Vans";
-            // 
+            //
             // txtItem
-            // 
+            //
             _txtItem.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtItem.Location = new Point(80, 49);
             _txtItem.Name = "txtItem";
             _txtItem.Size = new Size(393, 21);
             _txtItem.TabIndex = 1;
-            // 
+            //
             // txtLocation
-            // 
+            //
             _txtLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtLocation.Location = new Point(80, 21);
             _txtLocation.Name = "txtLocation";
             _txtLocation.Size = new Size(393, 21);
             _txtLocation.TabIndex = 0;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label6.Location = new Point(10, 49);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(88, 23);
             _Label6.TabIndex = 10;
             _Label6.Text = "Item";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label8.Location = new Point(10, 23);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(88, 23);
             _Label8.TabIndex = 7;
             _Label8.Text = "Location";
-            // 
+            //
             // GroupBox3
-            // 
+            //
             _GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _GroupBox3.Controls.Add(_Panel1);
             _GroupBox3.Controls.Add(_Panel3);
@@ -900,18 +898,18 @@ namespace FSM
             _GroupBox3.TabIndex = 1;
             _GroupBox3.TabStop = false;
             _GroupBox3.Text = "KEY";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(8, 700);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(64, 23);
             _btnClose.TabIndex = 5;
             _btnClose.Text = "Close";
-            // 
+            //
             // FRMStockReplenishment
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1008, 730);
             Controls.Add(_btnClose);
@@ -941,7 +939,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             if (Conversions.ToBoolean(get_GetParameter(0)))
@@ -960,7 +959,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
             // DO NOTHING
         }
@@ -1008,6 +1007,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupStockDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgStockReplenishment);
@@ -1302,11 +1302,11 @@ namespace FSM
             int quantityFromLocation = 0;
             if ((MinimumOrRecommended ?? "") == "MinimumQuantity")
             {
-                quantityFromLocation = Conversions.ToInteger(row["MinimumQuantity"] - row["Amount"] - row["PacksOnOrder"]);
+                quantityFromLocation = Conversions.ToInteger((int)row["MinimumQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]);
             }
             else if ((MinimumOrRecommended ?? "") == "RecommendedQuantity")
             {
-                quantityFromLocation = Conversions.ToInteger(row["RecommendedQuantity"] - row["Amount"] - row["PacksOnOrder"]);
+                quantityFromLocation = Conversions.ToInteger((int)row["RecommendedQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]);
             }
 
             if (quantityFromLocation <= 0)
@@ -1349,11 +1349,11 @@ namespace FSM
                 int quantityNeeded = 0;
                 if ((MinimumOrRecommended ?? "") == "MinimumQuantity")
                 {
-                    quantityNeeded = Conversions.ToInteger(Math.Ceiling((row["MinimumQuantity"] - row["Amount"] - row["PacksOnOrder"]) / QuantityInPack));
+                    quantityNeeded = Conversions.ToInteger(Math.Ceiling(((int)row["MinimumQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]) / QuantityInPack));
                 }
                 else if ((MinimumOrRecommended ?? "") == "RecommendedQuantity")
                 {
-                    quantityNeeded = Conversions.ToInteger(Math.Ceiling((row["RecommendedQuantity"] - row["Amount"] - row["PacksOnOrder"]) / QuantityInPack));
+                    quantityNeeded = Conversions.ToInteger(Math.Ceiling(((int)row["RecommendedQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]) / QuantityInPack));
                 }
 
                 if (quantityNeeded <= 0)

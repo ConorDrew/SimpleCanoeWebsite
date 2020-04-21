@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMPickDespatchDetails : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPickDespatchDetails() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMPickDespatchDetails_Load;
@@ -22,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,7 +41,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Label _lblHeading;
 
@@ -208,35 +206,35 @@ namespace FSM
             _cboEngineer = new ComboBox();
             _radReadyToSchedule = new RadioButton();
             SuspendLayout();
-            // 
+            //
             // lblHeading
-            // 
+            //
             _lblHeading.Location = new Point(8, 40);
             _lblHeading.Name = "lblHeading";
             _lblHeading.Size = new Size(410, 36);
             _lblHeading.TabIndex = 2;
             _lblHeading.Text = "This order related to the visit '{0}' is waiting for parts. Please select the sta" + "tus and engineer you would be despatching the parts to:";
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(343, 145);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(75, 23);
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(11, 145);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(101, 23);
             _btnCancel.TabIndex = 4;
             _btnCancel.Text = "Do Not Update";
-            // 
+            //
             // radPartsDespatched
-            // 
+            //
             _radPartsDespatched.AutoSize = true;
             _radPartsDespatched.Location = new Point(11, 79);
             _radPartsDespatched.Name = "radPartsDespatched";
@@ -244,17 +242,17 @@ namespace FSM
             _radPartsDespatched.TabIndex = 0;
             _radPartsDespatched.Text = "Parts Depatched";
             _radPartsDespatched.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboEngineer
-            // 
+            //
             _cboEngineer.FormattingEnabled = true;
             _cboEngineer.Location = new Point(154, 78);
             _cboEngineer.Name = "cboEngineer";
             _cboEngineer.Size = new Size(264, 21);
             _cboEngineer.TabIndex = 1;
-            // 
+            //
             // radReadyToSchedule
-            // 
+            //
             _radReadyToSchedule.AutoSize = true;
             _radReadyToSchedule.Checked = true;
             _radReadyToSchedule.Location = new Point(11, 112);
@@ -264,9 +262,9 @@ namespace FSM
             _radReadyToSchedule.TabStop = true;
             _radReadyToSchedule.Text = "Ready To Schedule";
             _radReadyToSchedule.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMPickDespatchDetails
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(422, 174);
             ControlBox = false;
@@ -292,7 +290,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var argc = cboEngineer;

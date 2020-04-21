@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -48,7 +48,7 @@ namespace FSM
             dtpDate.SelectDate(DateAndTime.Today);
             dtpDate.ActiveMonth.Month = Min.Month;
             dtpDate.ActiveMonth.Year = Min.Year;
-            var d = new Pabo.Calendar.DateItem[dt.Rows.Count / (double)2 + 1];
+            var d = new Pabo.Calendar.DateItem[dt.Rows.Count / 2 + 1];
             int i = 0;
             int inarea = 0;
             int col = 0;
@@ -58,8 +58,8 @@ namespace FSM
                 {
                     d[i] = new Pabo.Calendar.DateItem();
                     inarea = 0;
-                    col = Conversions.ToInteger(col + row["Avail"]);
-                    if (Conversions.ToBoolean(row["Avail"] > 0))
+                    col = Conversions.ToInteger(col + (int)row["Avail"]);
+                    if (Conversions.ToBoolean((int)row["Avail"] > 0))
                     {
                         // d(i).Text = d(i).Text & "AM"
                     }
@@ -72,13 +72,12 @@ namespace FSM
                 else
                 {
                     d[i].Date = Conversions.ToDate(row["Date"]);
-                    if (Conversions.ToBoolean(row["Avail"] > 0))
+                    if (Conversions.ToBoolean((int)row["Avail"] > 0))
                     {
                         // d(i).Text = d(i).Text & " PM"
-
                     }
 
-                    col = Conversions.ToInteger(col + row["Avail"]);
+                    col = Conversions.ToInteger(col + (int)row["Avail"]);
                     var switchExpr = col;
                     switch (switchExpr)
                     {

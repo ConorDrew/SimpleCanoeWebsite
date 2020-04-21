@@ -9,11 +9,10 @@ namespace FSM
 {
     public class DLGPickPartProductSupplier : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DLGPickPartProductSupplier() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += DLGPickPartProductSupplier_Load;
@@ -22,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,7 +41,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Label _Label1;
 
@@ -238,26 +236,26 @@ namespace FSM
             _grpResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgResults).BeginInit();
             SuspendLayout();
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 72);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(100, 24);
             _Label1.TabIndex = 2;
             _Label1.Text = "Filter By Name";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFilter.Location = new Point(104, 72);
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(584, 21);
             _txtFilter.TabIndex = 1;
             _txtFilter.Text = "";
-            // 
+            //
             // grpResults
-            // 
+            //
             _grpResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpResults.Controls.Add(_dgResults);
@@ -267,9 +265,9 @@ namespace FSM
             _grpResults.TabIndex = 4;
             _grpResults.TabStop = false;
             _grpResults.Text = "Select record and click OK";
-            // 
+            //
             // dgResults
-            // 
+            //
             _dgResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgResults.DataMember = "";
@@ -278,35 +276,35 @@ namespace FSM
             _dgResults.Name = "dgResults";
             _dgResults.Size = new Size(664, 183);
             _dgResults.TabIndex = 2;
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(632, 328);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(56, 23);
             _btnOK.TabIndex = 3;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 328);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 4;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // lblDetails
-            // 
+            //
             _lblDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _lblDetails.Location = new Point(8, 40);
             _lblDetails.Name = "lblDetails";
             _lblDetails.Size = new Size(680, 24);
             _lblDetails.TabIndex = 7;
-            // 
+            //
             // DLGPickPartProductSupplier
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(696, 358);
             ControlBox = false;
@@ -334,7 +332,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ActiveControl = txtFilter;
@@ -350,7 +349,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -443,6 +442,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDG()
         {
             var tStyle = dgResults.TableStyles[0];
@@ -600,6 +600,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SelectItem()
         {
             if (SelectedDataRow is null)

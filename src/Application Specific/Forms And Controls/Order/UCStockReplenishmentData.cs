@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCStockReplenishmentData : UCBase
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCStockReplenishmentData() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCData_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -42,6 +40,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private DataGridView _dgvData;
 
         internal DataGridView dgvData
@@ -79,7 +78,7 @@ namespace FSM
         }
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -93,9 +92,9 @@ namespace FSM
             _dgvData.RowLeave += new DataGridViewCellEventHandler(dgvData_RowLeave1);
             ((System.ComponentModel.ISupportInitialize)_dgvData).BeginInit();
             SuspendLayout();
-            // 
+            //
             // dgvData
-            // 
+            //
             _dgvData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -103,9 +102,9 @@ namespace FSM
             _dgvData.Name = "dgvData";
             _dgvData.Size = new Size(512, 344);
             _dgvData.TabIndex = 3;
-            // 
+            //
             // UCData
-            // 
+            //
             Controls.Add(_dgvData);
             Name = "UCData";
             Size = new Size(512, 344);
@@ -115,6 +114,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public object LoadedItem
         {
             get
@@ -325,10 +325,10 @@ namespace FSM
             var oldColumn = dgvData.SortedColumn;
             System.ComponentModel.ListSortDirection direction;
 
-            // If oldColumn is null, then the DataGridView is not currently sorted. 
+            // If oldColumn is null, then the DataGridView is not currently sorted.
             if (oldColumn is object)
             {
-                // Sort the same column again, reversing the SortOrder. 
+                // Sort the same column again, reversing the SortOrder.
                 if (oldColumn == newColumn && dgvData.SortOrder == SortOrder.Ascending)
                 {
                     direction = System.ComponentModel.ListSortDirection.Descending;
@@ -366,6 +366,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

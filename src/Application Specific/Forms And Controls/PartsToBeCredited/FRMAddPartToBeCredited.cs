@@ -17,7 +17,8 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -30,11 +31,12 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (Entity.Sys.Helper.MakeIntegerValid(txtQtyAvailable.Text) < Entity.Sys.Helper.MakeIntegerValid(txtQtyToReturn.Text))

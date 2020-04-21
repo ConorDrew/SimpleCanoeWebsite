@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -13,13 +13,13 @@ namespace FSM
     {
         public FRMPartsForCreditList()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSystemScheduleOfRate_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPartsForCreditList(int IDToLinkToIn, bool FromQuoteJobIn = false, bool FromJobIn = false) : base()
         {
             base.Load += FRMSystemScheduleOfRate_Load;
@@ -224,9 +224,9 @@ namespace FSM
             _grpSystemScheduleOfRate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgRates).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpSystemScheduleOfRate
-            // 
+            //
             _grpSystemScheduleOfRate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSystemScheduleOfRate.Controls.Add(_btnDeselectAll);
@@ -240,39 +240,39 @@ namespace FSM
             _grpSystemScheduleOfRate.TabIndex = 2;
             _grpSystemScheduleOfRate.TabStop = false;
             _grpSystemScheduleOfRate.Text = "Main Details";
-            // 
+            //
             // btnDeselectAll
-            // 
+            //
             _btnDeselectAll.Location = new Point(112, 360);
             _btnDeselectAll.Name = "btnDeselectAll";
             _btnDeselectAll.Size = new Size(96, 23);
             _btnDeselectAll.TabIndex = 36;
             _btnDeselectAll.Text = "Deselect All";
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Location = new Point(8, 360);
             _btnSelectAll.Name = "btnSelectAll";
             _btnSelectAll.Size = new Size(96, 23);
             _btnSelectAll.TabIndex = 35;
             _btnSelectAll.Text = "Select All";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Location = new Point(8, 400);
             _btnCancel.Name = "btnCancel";
             _btnCancel.TabIndex = 34;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Location = new Point(544, 400);
             _btnAdd.Name = "btnAdd";
             _btnAdd.TabIndex = 33;
             _btnAdd.Text = "Add";
-            // 
+            //
             // dgRates
-            // 
+            //
             _dgRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgRates.DataMember = "";
@@ -281,9 +281,9 @@ namespace FSM
             _dgRates.Name = "dgRates";
             _dgRates.Size = new Size(618, 333);
             _dgRates.TabIndex = 32;
-            // 
+            //
             // FRMSiteScheduleOfRateList
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(648, 470);
             Controls.Add(_grpSystemScheduleOfRate);
@@ -298,7 +298,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupRatesDataGrid();
@@ -416,6 +417,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupRatesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgRates);
@@ -541,6 +543,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             RatesDataview = App.DB.Order.Order_ItemsGetAll(IDToLinkTo);
@@ -551,7 +554,7 @@ namespace FSM
             bool sucsess = false;
             foreach (DataRow dr in RatesDataview.Table.Rows)
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["tick"], true, false) & dr["QtyToCredit"] > 0))
+                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["tick"], true, false) & (int)dr["QtyToCredit"] > 0))
                 {
                     sucsess = true;
                     break;

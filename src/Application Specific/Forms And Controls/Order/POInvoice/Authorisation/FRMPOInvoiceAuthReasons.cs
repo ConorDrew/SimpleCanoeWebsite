@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
@@ -27,6 +27,7 @@ namespace FSM
         public void ResetMe(int newID)
         {
         }
+
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         public string _AuthReason;
 
@@ -40,7 +41,6 @@ namespace FSM
 
             set
             {
-
                 // Me.MinimumSize = New Size(New Point(704, 392))
 
                 _AuthReason = value;
@@ -63,7 +63,6 @@ namespace FSM
 
             set
             {
-
                 // Me.MinimumSize = New Size(New Point(704, 392))
 
                 _AuthReasonDetail = value;
@@ -73,7 +72,9 @@ namespace FSM
                 // Me.MinimumSize = Me.Size
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia *//* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (AuthReasonOption3.Checked == true & string.IsNullOrEmpty(txtAuthReasonOther.Text))
@@ -93,6 +94,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void AuthReasonOption1_CheckedChanged(object sender, EventArgs e)
         {
             _AuthReason = AuthReasonOption1.Text;

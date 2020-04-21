@@ -14,6 +14,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSpecialOrder(int supplierCode, double price, int quantity) : base()
         {
             base.Load += FRMSpecialOrder_Load;
@@ -154,7 +155,6 @@ namespace FSM
             {
                 if (_btnAddPart != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnAddPart.Click -= btnAddPart_Click;
@@ -383,9 +383,9 @@ namespace FSM
             _lblPartName = new Label();
             _gpbSpecialOrder.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // gpbSpecialOrder
-            // 
+            //
             _gpbSpecialOrder.Controls.Add(_txtQuantity);
             _gpbSpecialOrder.Controls.Add(_lblQuantity);
             _gpbSpecialOrder.Controls.Add(_btnCancel);
@@ -404,113 +404,113 @@ namespace FSM
             _gpbSpecialOrder.TabIndex = 17;
             _gpbSpecialOrder.TabStop = false;
             _gpbSpecialOrder.Text = "Special Order";
-            // 
+            //
             // txtQuantity
-            // 
+            //
             _txtQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtQuantity.Location = new Point(95, 103);
             _txtQuantity.Name = "txtQuantity";
             _txtQuantity.Size = new Size(112, 21);
             _txtQuantity.TabIndex = 45;
-            // 
+            //
             // lblQuantity
-            // 
+            //
             _lblQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblQuantity.Location = new Point(11, 106);
             _lblQuantity.Name = "lblQuantity";
             _lblQuantity.Size = new Size(78, 18);
             _lblQuantity.TabIndex = 52;
             _lblQuantity.Text = "Quantity";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(14, 148);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(88, 24);
             _btnCancel.TabIndex = 47;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // btnAddPart
-            // 
+            //
             _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddPart.Location = new Point(367, 148);
             _btnAddPart.Name = "btnAddPart";
             _btnAddPart.Size = new Size(71, 24);
             _btnAddPart.TabIndex = 46;
             _btnAddPart.Text = "Add";
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtPrice.Location = new Point(326, 62);
             _txtPrice.Name = "txtPrice";
             _txtPrice.Size = new Size(112, 21);
             _txtPrice.TabIndex = 44;
-            // 
+            //
             // lblPrice
-            // 
+            //
             _lblPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPrice.Location = new Point(242, 65);
             _lblPrice.Name = "lblPrice";
             _lblPrice.Size = new Size(78, 18);
             _lblPrice.TabIndex = 51;
             _lblPrice.Text = "Price";
-            // 
+            //
             // txtSupplier
-            // 
+            //
             _txtSupplier.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtSupplier.Enabled = false;
             _txtSupplier.Location = new Point(95, 62);
             _txtSupplier.Name = "txtSupplier";
             _txtSupplier.Size = new Size(112, 21);
             _txtSupplier.TabIndex = 43;
-            // 
+            //
             // lblSupplier
-            // 
+            //
             _lblSupplier.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblSupplier.Location = new Point(11, 65);
             _lblSupplier.Name = "lblSupplier";
             _lblSupplier.Size = new Size(78, 18);
             _lblSupplier.TabIndex = 50;
             _lblSupplier.Text = "Supplier";
-            // 
+            //
             // txtSPN
-            // 
+            //
             _txtSPN.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtSPN.Location = new Point(326, 18);
             _txtSPN.Name = "txtSPN";
             _txtSPN.Size = new Size(112, 21);
             _txtSPN.TabIndex = 42;
-            // 
+            //
             // lblPartCode
-            // 
+            //
             _lblPartCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPartCode.Location = new Point(242, 21);
             _lblPartCode.Name = "lblPartCode";
             _lblPartCode.Size = new Size(78, 18);
             _lblPartCode.TabIndex = 49;
             _lblPartCode.Text = "Part Code";
-            // 
+            //
             // txtPartName
-            // 
+            //
             _txtPartName.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtPartName.Location = new Point(95, 18);
             _txtPartName.Name = "txtPartName";
             _txtPartName.Size = new Size(112, 21);
             _txtPartName.TabIndex = 41;
-            // 
+            //
             // lblPartName
-            // 
+            //
             _lblPartName.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPartName.Location = new Point(11, 21);
             _lblPartName.Name = "lblPartName";
             _lblPartName.Size = new Size(78, 18);
             _lblPartName.TabIndex = 48;
             _lblPartName.Text = "Part Name";
-            // 
+            //
             // FRMSpecialOrder
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             BackColor = SystemColors.Window;
             ClientSize = new Size(471, 228);
@@ -526,7 +526,7 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        private int _supplierCode = 0.0;
+        private int _supplierCode = 0;
 
         public int SupplierCode
         {
@@ -578,6 +578,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get

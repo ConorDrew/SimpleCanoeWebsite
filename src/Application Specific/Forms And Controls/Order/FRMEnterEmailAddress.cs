@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMEnterEmailAddress : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMEnterEmailAddress() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMEnterEmailAddress_Load;
@@ -21,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -155,36 +153,36 @@ namespace FSM
             _GroupBox1 = new GroupBox();
             _GroupBox1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // txtAddress
-            // 
+            //
             _txtAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress.Location = new Point(8, 24);
             _txtAddress.Name = "txtAddress";
             _txtAddress.Size = new Size(288, 21);
             _txtAddress.TabIndex = 1;
             _txtAddress.Text = "";
-            // 
+            //
             // btnEmail
-            // 
+            //
             _btnEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnEmail.Location = new Point(256, 104);
             _btnEmail.Name = "btnEmail";
             _btnEmail.Size = new Size(56, 23);
             _btnEmail.TabIndex = 2;
             _btnEmail.Text = "Send";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 104);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 23);
             _btnCancel.TabIndex = 3;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_txtAddress);
             _GroupBox1.Location = new Point(8, 40);
@@ -193,9 +191,9 @@ namespace FSM
             _GroupBox1.TabIndex = 6;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Email Address";
-            // 
+            //
             // FRMEnterEmailAddress
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(320, 134);
             Controls.Add(_GroupBox1);
@@ -234,7 +232,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             Email = (Entity.Sys.Emails)get_GetParameter(0);

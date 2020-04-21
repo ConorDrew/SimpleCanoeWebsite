@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class UCOrderRejection : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCOrderRejection() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCQuoteContractSite_Load;
@@ -45,7 +44,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpMain;
 
@@ -205,9 +204,9 @@ namespace FSM
             _cboPossibleReasons = new ComboBox();
             _grpMain.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpMain
-            // 
+            //
             _grpMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpMain.Controls.Add(_btnAdd);
@@ -221,35 +220,35 @@ namespace FSM
             _grpMain.TabIndex = 1;
             _grpMain.TabStop = false;
             _grpMain.Text = "Order Rejection Reason";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAdd.Location = new Point(568, 33);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(56, 23);
             _btnAdd.TabIndex = 2;
             _btnAdd.Text = "Add";
-            // 
+            //
             // Label2
-            // 
+            //
 
             _Label2.Location = new Point(16, 32);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(112, 23);
             _Label2.TabIndex = 3;
             _Label2.Text = "Possible Reasons:";
-            // 
+            //
             // Label1
-            // 
+            //
 
             _Label1.Location = new Point(16, 64);
             _Label1.Name = "Label1";
             _Label1.TabIndex = 2;
             _Label1.Text = "Reason:";
-            // 
+            //
             // txtReason
-            // 
+            //
             _txtReason.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtReason.Location = new Point(128, 65);
@@ -259,17 +258,17 @@ namespace FSM
             _txtReason.Size = new Size(496, 239);
             _txtReason.TabIndex = 3;
             _txtReason.Text = "";
-            // 
+            //
             // cboPossibleReasons
-            // 
+            //
             _cboPossibleReasons.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboPossibleReasons.Location = new Point(128, 33);
             _cboPossibleReasons.Name = "cboPossibleReasons";
             _cboPossibleReasons.Size = new Size(432, 21);
             _cboPossibleReasons.TabIndex = 1;
-            // 
+            //
             // UCOrderRejection
-            // 
+            //
             Controls.Add(_grpMain);
             Name = "UCOrderRejection";
             Size = new Size(648, 336);
@@ -279,7 +278,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -294,11 +294,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string ExtraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -325,7 +326,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
         }
 
@@ -356,6 +358,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

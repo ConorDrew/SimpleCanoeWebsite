@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCProduct : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCProduct() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCProduct_Load;
@@ -30,7 +29,6 @@ namespace FSM
             Combo.SetUpCombo(ref argc2, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.Types).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Please_Select);
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -51,7 +49,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private TabControl _TabControl1;
 
@@ -806,9 +804,9 @@ namespace FSM
             _grpAssociatedParts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgAssociatedParts).BeginInit();
             SuspendLayout();
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tabMainDetails);
@@ -819,18 +817,18 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(633, 617);
             _TabControl1.TabIndex = 0;
-            // 
+            //
             // tabMainDetails
-            // 
+            //
             _tabMainDetails.Controls.Add(_grpProduct);
             _tabMainDetails.Location = new Point(4, 22);
             _tabMainDetails.Name = "tabMainDetails";
             _tabMainDetails.Size = new Size(625, 591);
             _tabMainDetails.TabIndex = 0;
             _tabMainDetails.Text = "Main Details";
-            // 
+            //
             // grpProduct
-            // 
+            //
             _grpProduct.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpProduct.Controls.Add(_txtReference);
@@ -857,9 +855,9 @@ namespace FSM
             _grpProduct.TabIndex = 0;
             _grpProduct.TabStop = false;
             _grpProduct.Text = "Details";
-            // 
+            //
             // txtReference
-            // 
+            //
             _txtReference.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtReference.Location = new Point(160, 56);
             _txtReference.MaxLength = 100;
@@ -867,65 +865,65 @@ namespace FSM
             _txtReference.Size = new Size(433, 21);
             _txtReference.TabIndex = 1;
             _txtReference.Tag = "Product.Reference";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 56);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(97, 20);
             _Label2.TabIndex = 46;
             _Label2.Text = "Reference";
-            // 
+            //
             // txtRecommendedQuantity
-            // 
+            //
             _txtRecommendedQuantity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtRecommendedQuantity.Location = new Point(160, 248);
             _txtRecommendedQuantity.Name = "txtRecommendedQuantity";
             _txtRecommendedQuantity.Size = new Size(433, 21);
             _txtRecommendedQuantity.TabIndex = 7;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(8, 246);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(152, 24);
             _Label6.TabIndex = 44;
             _Label6.Text = "Maximum Quantity";
-            // 
+            //
             // txtMinimumQuantity
-            // 
+            //
             _txtMinimumQuantity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtMinimumQuantity.Location = new Point(160, 216);
             _txtMinimumQuantity.Name = "txtMinimumQuantity";
             _txtMinimumQuantity.Size = new Size(433, 21);
             _txtMinimumQuantity.TabIndex = 6;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 218);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(120, 16);
             _Label5.TabIndex = 42;
             _Label5.Text = "Minimum Quantity";
-            // 
+            //
             // txtSellPrice
-            // 
+            //
             _txtSellPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSellPrice.Location = new Point(160, 184);
             _txtSellPrice.Name = "txtSellPrice";
             _txtSellPrice.Size = new Size(433, 21);
             _txtSellPrice.TabIndex = 5;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 183);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 23);
             _Label1.TabIndex = 32;
             _Label1.Text = "Sell Price";
-            // 
+            //
             // txtNumber
-            // 
+            //
             _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNumber.Location = new Point(160, 24);
             _txtNumber.MaxLength = 100;
@@ -933,17 +931,17 @@ namespace FSM
             _txtNumber.Size = new Size(433, 21);
             _txtNumber.TabIndex = 0;
             _txtNumber.Tag = "Product.Number";
-            // 
+            //
             // lblNumber
-            // 
+            //
             _lblNumber.Location = new Point(8, 24);
             _lblNumber.Name = "lblNumber";
             _lblNumber.Size = new Size(120, 20);
             _lblNumber.TabIndex = 31;
             _lblNumber.Text = "GC Number";
-            // 
+            //
             // cboTypeID
-            // 
+            //
             _cboTypeID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboTypeID.Cursor = Cursors.Hand;
             _cboTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -952,17 +950,17 @@ namespace FSM
             _cboTypeID.Size = new Size(433, 21);
             _cboTypeID.TabIndex = 2;
             _cboTypeID.Tag = "Product.TypeID";
-            // 
+            //
             // lblTypeID
-            // 
+            //
             _lblTypeID.Location = new Point(8, 88);
             _lblTypeID.Name = "lblTypeID";
             _lblTypeID.Size = new Size(46, 20);
             _lblTypeID.TabIndex = 31;
             _lblTypeID.Text = "Type ";
-            // 
+            //
             // cboMakeID
-            // 
+            //
             _cboMakeID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboMakeID.Cursor = Cursors.Hand;
             _cboMakeID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -971,17 +969,17 @@ namespace FSM
             _cboMakeID.Size = new Size(433, 21);
             _cboMakeID.TabIndex = 3;
             _cboMakeID.Tag = "Product.MakeID";
-            // 
+            //
             // lblMakeID
-            // 
+            //
             _lblMakeID.Location = new Point(8, 120);
             _lblMakeID.Name = "lblMakeID";
             _lblMakeID.Size = new Size(47, 20);
             _lblMakeID.TabIndex = 31;
             _lblMakeID.Text = "Make ";
-            // 
+            //
             // cboModelID
-            // 
+            //
             _cboModelID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboModelID.Cursor = Cursors.Hand;
             _cboModelID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -990,17 +988,17 @@ namespace FSM
             _cboModelID.Size = new Size(433, 21);
             _cboModelID.TabIndex = 4;
             _cboModelID.Tag = "Product.ModelID";
-            // 
+            //
             // lblModelID
-            // 
+            //
             _lblModelID.Location = new Point(8, 152);
             _lblModelID.Name = "lblModelID";
             _lblModelID.Size = new Size(48, 20);
             _lblModelID.TabIndex = 31;
             _lblModelID.Text = "Model ";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(160, 280);
@@ -1010,26 +1008,26 @@ namespace FSM
             _txtNotes.Size = new Size(433, 283);
             _txtNotes.TabIndex = 8;
             _txtNotes.Tag = "Product.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 280);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(48, 20);
             _lblNotes.TabIndex = 31;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // tabSuppliers
-            // 
+            //
             _tabSuppliers.Controls.Add(_grpSupplier);
             _tabSuppliers.Location = new Point(4, 22);
             _tabSuppliers.Name = "tabSuppliers";
             _tabSuppliers.Size = new Size(625, 591);
             _tabSuppliers.TabIndex = 1;
             _tabSuppliers.Text = "Suppliers";
-            // 
+            //
             // grpSupplier
-            // 
+            //
             _grpSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSupplier.Controls.Add(_btnDelete);
@@ -1041,27 +1039,27 @@ namespace FSM
             _grpSupplier.TabIndex = 0;
             _grpSupplier.TabStop = false;
             _grpSupplier.Text = "Suppliers of this product";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Location = new Point(537, 544);
             _btnDelete.Name = "btnDelete";
             _btnDelete.Size = new Size(64, 23);
             _btnDelete.TabIndex = 3;
             _btnDelete.Text = "Remove";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAdd.Location = new Point(8, 543);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(64, 23);
             _btnAdd.TabIndex = 2;
             _btnAdd.Text = "Add";
-            // 
+            //
             // dgProductSuppliers
-            // 
+            //
             _dgProductSuppliers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dgProductSuppliers.DataMember = "";
             _dgProductSuppliers.HeaderForeColor = SystemColors.ControlText;
@@ -1069,18 +1067,18 @@ namespace FSM
             _dgProductSuppliers.Name = "dgProductSuppliers";
             _dgProductSuppliers.Size = new Size(593, 469);
             _dgProductSuppliers.TabIndex = 1;
-            // 
+            //
             // tabAssociatedParts
-            // 
+            //
             _tabAssociatedParts.Controls.Add(_grpAssociatedParts);
             _tabAssociatedParts.Location = new Point(4, 22);
             _tabAssociatedParts.Name = "tabAssociatedParts";
             _tabAssociatedParts.Size = new Size(625, 591);
             _tabAssociatedParts.TabIndex = 2;
             _tabAssociatedParts.Text = "Associated Parts";
-            // 
+            //
             // grpAssociatedParts
-            // 
+            //
             _grpAssociatedParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAssociatedParts.Controls.Add(_dgAssociatedParts);
@@ -1090,9 +1088,9 @@ namespace FSM
             _grpAssociatedParts.TabIndex = 1;
             _grpAssociatedParts.TabStop = false;
             _grpAssociatedParts.Text = "Associated parts of this product";
-            // 
+            //
             // dgAssociatedParts
-            // 
+            //
             _dgAssociatedParts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dgAssociatedParts.DataMember = "";
             _dgAssociatedParts.HeaderForeColor = SystemColors.ControlText;
@@ -1100,9 +1098,9 @@ namespace FSM
             _dgAssociatedParts.Name = "dgAssociatedParts";
             _dgAssociatedParts.Size = new Size(593, 542);
             _dgAssociatedParts.TabIndex = 1;
-            // 
+            //
             // UCProduct
-            // 
+            //
             Controls.Add(_TabControl1);
             Name = "UCProduct";
             Size = new Size(640, 628);
@@ -1121,7 +1119,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupSuppliersDatagrid();
@@ -1138,11 +1137,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1268,6 +1268,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSuppliersDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgProductSuppliers);
@@ -1425,14 +1426,16 @@ namespace FSM
                 App.ShowMessage("Cannot change tick state : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateSuppliers()
         {
             ProductSuppliersDataView = App.DB.ProductSupplier.Get_ByProductID(CurrentProduct.ProductID);
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))
@@ -1513,6 +1516,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

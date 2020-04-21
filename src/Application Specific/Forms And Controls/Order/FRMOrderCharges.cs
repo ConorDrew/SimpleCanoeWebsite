@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMOrderCharges : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMOrderCharges() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMOrderCharges_Load;
@@ -25,7 +24,6 @@ namespace FSM
             var argc = cboChargeType;
             Combo.SetUpCombo(ref argc, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.OrderChargeTypes).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Please_Select);
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -46,7 +44,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpCharges;
 
@@ -268,9 +266,9 @@ namespace FSM
             _grpCharges.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgCharges).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpCharges
-            // 
+            //
             _grpCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCharges.Controls.Add(_btnDelete);
@@ -286,62 +284,62 @@ namespace FSM
             _grpCharges.TabIndex = 2;
             _grpCharges.TabStop = false;
             _grpCharges.Text = "Charges";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Location = new Point(480, 208);
             _btnDelete.Name = "btnDelete";
             _btnDelete.Size = new Size(64, 23);
             _btnDelete.TabIndex = 5;
             _btnDelete.Text = "Remove";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(480, 240);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(64, 23);
             _btnSave.TabIndex = 4;
             _btnSave.Text = "Add";
-            // 
+            //
             // txtAmount
-            // 
+            //
             _txtAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _txtAmount.Location = new Point(400, 240);
             _txtAmount.Name = "txtAmount";
             _txtAmount.Size = new Size(72, 21);
             _txtAmount.TabIndex = 3;
             _txtAmount.Text = "";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label2.Location = new Point(336, 240);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(56, 23);
             _Label2.TabIndex = 3;
             _Label2.Text = "Amount:";
-            // 
+            //
             // cboChargeType
-            // 
+            //
             _cboChargeType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _cboChargeType.Location = new Point(96, 240);
             _cboChargeType.Name = "cboChargeType";
             _cboChargeType.Size = new Size(232, 21);
             _cboChargeType.TabIndex = 2;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label1.Location = new Point(8, 240);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(88, 23);
             _Label1.TabIndex = 1;
             _Label1.Text = "Charge Type:";
-            // 
+            //
             // dgCharges
-            // 
+            //
             _dgCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgCharges.DataMember = "";
@@ -350,9 +348,9 @@ namespace FSM
             _dgCharges.Name = "dgCharges";
             _dgCharges.Size = new Size(536, 175);
             _dgCharges.TabIndex = 1;
-            // 
+            //
             // FRMOrderCharges
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(568, 318);
             Controls.Add(_grpCharges);
@@ -369,7 +367,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             OrderID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             LoadForm(sender, e, this);
@@ -478,6 +477,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupChargesDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgCharges);
@@ -592,6 +592,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void RefreshDatagrid()
         {
             ChargesDataView = App.DB.OrderCharge.OrderCharge_GetForOrder(OrderID);

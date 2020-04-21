@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCPartSupplier : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCPartSupplier() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCPartSupplier_Load;
@@ -26,7 +25,6 @@ namespace FSM
             Combo.SetUpCombo(ref argc, App.DB.Supplier.Supplier_GetAll().Table, "SupplierID", "Name", Entity.Sys.Enums.ComboValues.Please_Select);
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -47,7 +45,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
 
         private GroupBox _grpPartSupplier;
@@ -339,9 +337,9 @@ namespace FSM
             _lblQuantityInPack = new Label();
             _grpPartSupplier.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpPartSupplier
-            // 
+            //
             _grpPartSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpPartSupplier.Controls.Add(_txtSecondaryPrice);
@@ -360,43 +358,43 @@ namespace FSM
             _grpPartSupplier.TabIndex = 1;
             _grpPartSupplier.TabStop = false;
             _grpPartSupplier.Text = "Main Details";
-            // 
+            //
             // txtSecondaryPrice
-            // 
+            //
             _txtSecondaryPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSecondaryPrice.Location = new Point(376, 107);
             _txtSecondaryPrice.Name = "txtSecondaryPrice";
             _txtSecondaryPrice.Size = new Size(192, 21);
             _txtSecondaryPrice.TabIndex = 33;
             _txtSecondaryPrice.Visible = false;
-            // 
+            //
             // lblSecondaryPrice
-            // 
+            //
             _lblSecondaryPrice.Location = new Point(263, 107);
             _lblSecondaryPrice.Name = "lblSecondaryPrice";
             _lblSecondaryPrice.Size = new Size(105, 23);
             _lblSecondaryPrice.TabIndex = 34;
             _lblSecondaryPrice.Text = "Secondary Price";
             _lblSecondaryPrice.Visible = false;
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPrice.Location = new Point(376, 80);
             _txtPrice.Name = "txtPrice";
             _txtPrice.Size = new Size(192, 21);
             _txtPrice.TabIndex = 4;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(328, 80);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(40, 23);
             _Label1.TabIndex = 32;
             _Label1.Text = "Price";
-            // 
+            //
             // txtPartCode
-            // 
+            //
             _txtPartCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPartCode.Location = new Point(128, 52);
             _txtPartCode.MaxLength = 100;
@@ -404,17 +402,17 @@ namespace FSM
             _txtPartCode.Size = new Size(440, 21);
             _txtPartCode.TabIndex = 2;
             _txtPartCode.Tag = "PartSupplier.PartCode";
-            // 
+            //
             // lblPartCode
-            // 
+            //
             _lblPartCode.Location = new Point(8, 53);
             _lblPartCode.Name = "lblPartCode";
             _lblPartCode.Size = new Size(111, 20);
             _lblPartCode.TabIndex = 31;
             _lblPartCode.Text = "Part Code (SPN)";
-            // 
+            //
             // cboSupplierID
-            // 
+            //
             _cboSupplierID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboSupplierID.Cursor = Cursors.Hand;
             _cboSupplierID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -423,17 +421,17 @@ namespace FSM
             _cboSupplierID.Size = new Size(440, 21);
             _cboSupplierID.TabIndex = 1;
             _cboSupplierID.Tag = "PartSupplier.SupplierID";
-            // 
+            //
             // lblSupplierID
-            // 
+            //
             _lblSupplierID.Location = new Point(8, 24);
             _lblSupplierID.Name = "lblSupplierID";
             _lblSupplierID.Size = new Size(69, 20);
             _lblSupplierID.TabIndex = 31;
             _lblSupplierID.Text = "Supplier ";
-            // 
+            //
             // txtQuantityInPack
-            // 
+            //
             _txtQuantityInPack.Location = new Point(128, 80);
             _txtQuantityInPack.MaxLength = 8;
             _txtQuantityInPack.Name = "txtQuantityInPack";
@@ -441,17 +439,17 @@ namespace FSM
             _txtQuantityInPack.TabIndex = 3;
             _txtQuantityInPack.Tag = "PartSupplier.QuantityInPack";
             _txtQuantityInPack.Text = "1";
-            // 
+            //
             // lblQuantityInPack
-            // 
+            //
             _lblQuantityInPack.Location = new Point(8, 82);
             _lblQuantityInPack.Name = "lblQuantityInPack";
             _lblQuantityInPack.Size = new Size(111, 20);
             _lblQuantityInPack.TabIndex = 31;
             _lblQuantityInPack.Text = "Quantity In Pack";
-            // 
+            //
             // UCPartSupplier
-            // 
+            //
             Controls.Add(_grpPartSupplier);
             Name = "UCPartSupplier";
             Size = new Size(592, 150);
@@ -462,7 +460,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -494,11 +493,11 @@ namespace FSM
             }
         }
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -540,7 +539,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

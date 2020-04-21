@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -7,19 +10,15 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMMain : Form, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMMain() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMMenu_Load;
@@ -30,7 +29,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -116,7 +114,6 @@ namespace FSM
             {
                 if (_mnuChangeLogin != null)
                 {
-
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _mnuChangeLogin.Click -= mnuChangeLogin_Click;
                 }
@@ -218,7 +215,6 @@ namespace FSM
             {
                 if (_mnuAbout != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _mnuAbout.Click -= mnuAbout_Click;
@@ -447,7 +443,6 @@ namespace FSM
             {
                 if (_btnCloseMiddle != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnCloseMiddle.Click -= btnCloseMiddle_Click;
                 }
@@ -897,7 +892,6 @@ namespace FSM
             {
                 if (_mnuCustomers != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _mnuCustomers.Click -= mnuCustomers_Click;
@@ -1360,135 +1354,135 @@ namespace FSM
             _pnleHeaderRight.SuspendLayout();
             _pnlButtonsRight.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // MnuMainNav
-            // 
+            //
             _MnuMainNav.MenuItems.AddRange(new MenuItem[] { _mnuFile, _mnuCustomers, _mnuSpares, _mnuStaff, _mnuJobs, _mnuScheduler, _mnuInvoicing, _mnuReports, _mnuVan, _mnuSetup, _mnuSystemHelp, _mnuNpPrint });
-            // 
+            //
             // mnuFile
-            // 
+            //
             _mnuFile.Index = 0;
             _mnuFile.MenuItems.AddRange(new MenuItem[] { _mnuChangeLogin, _MenuItem3, _mnuLogout });
             resources.ApplyResources(_mnuFile, "mnuFile");
-            // 
+            //
             // mnuChangeLogin
-            // 
+            //
             _mnuChangeLogin.Index = 0;
             resources.ApplyResources(_mnuChangeLogin, "mnuChangeLogin");
-            // 
+            //
             // MenuItem3
-            // 
+            //
             _MenuItem3.Index = 1;
             resources.ApplyResources(_MenuItem3, "MenuItem3");
-            // 
+            //
             // mnuLogout
-            // 
+            //
             _mnuLogout.Index = 2;
             resources.ApplyResources(_mnuLogout, "mnuLogout");
-            // 
+            //
             // mnuCustomers
-            // 
+            //
             _mnuCustomers.Index = 1;
             resources.ApplyResources(_mnuCustomers, "mnuCustomers");
-            // 
+            //
             // mnuSpares
-            // 
+            //
             _mnuSpares.Index = 2;
             resources.ApplyResources(_mnuSpares, "mnuSpares");
-            // 
+            //
             // mnuStaff
-            // 
+            //
             _mnuStaff.Index = 3;
             resources.ApplyResources(_mnuStaff, "mnuStaff");
-            // 
+            //
             // mnuJobs
-            // 
+            //
             _mnuJobs.Index = 4;
             resources.ApplyResources(_mnuJobs, "mnuJobs");
-            // 
+            //
             // mnuScheduler
-            // 
+            //
             _mnuScheduler.Index = 5;
             resources.ApplyResources(_mnuScheduler, "mnuScheduler");
-            // 
+            //
             // mnuInvoicing
-            // 
+            //
             _mnuInvoicing.Index = 6;
             resources.ApplyResources(_mnuInvoicing, "mnuInvoicing");
-            // 
+            //
             // mnuReports
-            // 
+            //
             _mnuReports.Index = 7;
             resources.ApplyResources(_mnuReports, "mnuReports");
-            // 
+            //
             // mnuVan
-            // 
+            //
             _mnuVan.Index = 8;
             resources.ApplyResources(_mnuVan, "mnuVan");
-            // 
+            //
             // mnuSetup
-            // 
+            //
             _mnuSetup.Index = 9;
             resources.ApplyResources(_mnuSetup, "mnuSetup");
-            // 
+            //
             // mnuSystemHelp
-            // 
+            //
             _mnuSystemHelp.Index = 10;
             _mnuSystemHelp.MenuItems.AddRange(new MenuItem[] { _mnuContactSheet, _MenuItem15, _mnuAbout });
             resources.ApplyResources(_mnuSystemHelp, "mnuSystemHelp");
-            // 
+            //
             // mnuContactSheet
-            // 
+            //
             _mnuContactSheet.Index = 0;
             resources.ApplyResources(_mnuContactSheet, "mnuContactSheet");
-            // 
+            //
             // MenuItem15
-            // 
+            //
             _MenuItem15.Index = 1;
             resources.ApplyResources(_MenuItem15, "MenuItem15");
-            // 
+            //
             // mnuAbout
-            // 
+            //
             _mnuAbout.Index = 2;
             resources.ApplyResources(_mnuAbout, "mnuAbout");
-            // 
+            //
             // mnuNpPrint
-            // 
+            //
             _mnuNpPrint.Index = 11;
             _mnuNpPrint.MenuItems.AddRange(new MenuItem[] { _mnuUpstairs, _mnuDownstairs });
             resources.ApplyResources(_mnuNpPrint, "mnuNpPrint");
-            // 
+            //
             // mnuUpstairs
-            // 
+            //
             _mnuUpstairs.Index = 0;
             resources.ApplyResources(_mnuUpstairs, "mnuUpstairs");
-            // 
+            //
             // mnuDownstairs
-            // 
+            //
             _mnuDownstairs.Index = 1;
             resources.ApplyResources(_mnuDownstairs, "mnuDownstairs");
-            // 
+            //
             // infoBar
-            // 
+            //
             resources.ApplyResources(_infoBar, "infoBar");
             _infoBar.Name = "infoBar";
             _infoBar.SizingGrip = false;
-            // 
+            //
             // pnlLeft
-            // 
+            //
             _pnlLeft.BackColor = Color.White;
             resources.ApplyResources(_pnlLeft, "pnlLeft");
             _pnlLeft.Name = "pnlLeft";
-            // 
+            //
             // splitLeftAndMiddle
-            // 
+            //
             _splitLeftAndMiddle.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(244)), Conversions.ToInteger(Conversions.ToByte(244)), Conversions.ToInteger(Conversions.ToByte(244)));
             resources.ApplyResources(_splitLeftAndMiddle, "splitLeftAndMiddle");
             _splitLeftAndMiddle.Name = "splitLeftAndMiddle";
             _splitLeftAndMiddle.TabStop = false;
-            // 
+            //
             // pnlMiddle
-            // 
+            //
             _pnlMiddle.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
             _pnlMiddle.Controls.Add(_dgSearchResults);
             _pnlMiddle.Controls.Add(_splitMiddleTop);
@@ -1497,89 +1491,89 @@ namespace FSM
             _pnlMiddle.Controls.Add(_pnlButtons);
             resources.ApplyResources(_pnlMiddle, "pnlMiddle");
             _pnlMiddle.Name = "pnlMiddle";
-            // 
+            //
             // dgSearchResults
-            // 
+            //
             _dgSearchResults.DataMember = "";
             resources.ApplyResources(_dgSearchResults, "dgSearchResults");
             _dgSearchResults.HeaderForeColor = SystemColors.ControlText;
             _dgSearchResults.Name = "dgSearchResults";
-            // 
+            //
             // splitMiddleTop
-            // 
+            //
             _splitMiddleTop.BackColor = Color.Silver;
             resources.ApplyResources(_splitMiddleTop, "splitMiddleTop");
             _splitMiddleTop.Name = "splitMiddleTop";
             _splitMiddleTop.TabStop = false;
-            // 
+            //
             // pnlMiddleTitle
-            // 
+            //
             resources.ApplyResources(_pnlMiddleTitle, "pnlMiddleTitle");
             _pnlMiddleTitle.Controls.Add(_btnCloseMiddle);
             _pnlMiddleTitle.Controls.Add(_lblMiddleTitle);
             _pnlMiddleTitle.Name = "pnlMiddleTitle";
-            // 
+            //
             // btnCloseMiddle
-            // 
+            //
             resources.ApplyResources(_btnCloseMiddle, "btnCloseMiddle");
             _btnCloseMiddle.Cursor = Cursors.Hand;
             _btnCloseMiddle.Name = "btnCloseMiddle";
-            // 
+            //
             // lblMiddleTitle
-            // 
+            //
             _lblMiddleTitle.BackColor = Color.Transparent;
             resources.ApplyResources(_lblMiddleTitle, "lblMiddleTitle");
             _lblMiddleTitle.ForeColor = Color.White;
             _lblMiddleTitle.Name = "lblMiddleTitle";
-            // 
+            //
             // splitMiddleBottom
-            // 
+            //
             _splitMiddleBottom.BackColor = Color.Silver;
             resources.ApplyResources(_splitMiddleBottom, "splitMiddleBottom");
             _splitMiddleBottom.Name = "splitMiddleBottom";
             _splitMiddleBottom.TabStop = false;
-            // 
+            //
             // pnlButtons
-            // 
+            //
             _pnlButtons.BackColor = Color.White;
             _pnlButtons.Controls.Add(_ContainerMiddlePanelBtns);
             resources.ApplyResources(_pnlButtons, "pnlButtons");
             _pnlButtons.Name = "pnlButtons";
-            // 
+            //
             // ContainerMiddlePanelBtns
-            // 
+            //
             resources.ApplyResources(_ContainerMiddlePanelBtns, "ContainerMiddlePanelBtns");
             _ContainerMiddlePanelBtns.Controls.Add(_btnExport, 2, 0);
             _ContainerMiddlePanelBtns.Controls.Add(_btnAddNew, 0, 0);
             _ContainerMiddlePanelBtns.Controls.Add(_btnDelete, 1, 0);
             _ContainerMiddlePanelBtns.Name = "ContainerMiddlePanelBtns";
-            // 
+            //
             // btnExport
-            // 
+            //
             resources.ApplyResources(_btnExport, "btnExport");
             _btnExport.BackColor = SystemColors.Control;
             _btnExport.Cursor = Cursors.Hand;
             _btnExport.Name = "btnExport";
             _btnExport.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnAddNew
-            // 
+            //
             resources.ApplyResources(_btnAddNew, "btnAddNew");
             _btnAddNew.BackColor = SystemColors.Control;
             _btnAddNew.Cursor = Cursors.Hand;
             _btnAddNew.Name = "btnAddNew";
             _btnAddNew.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnDelete
-            // 
+            //
             resources.ApplyResources(_btnDelete, "btnDelete");
             _btnDelete.BackColor = SystemColors.Control;
             _btnDelete.Cursor = Cursors.Hand;
             _btnDelete.Name = "btnDelete";
             _btnDelete.UseVisualStyleBackColor = false;
-            // 
+            //
             // pnlRight
-            // 
+            //
             resources.ApplyResources(_pnlRight, "pnlRight");
             _pnlRight.BackColor = Color.White;
             _pnlRight.Controls.Add(_Splitter2);
@@ -1588,85 +1582,85 @@ namespace FSM
             _pnlRight.Controls.Add(_pnleHeaderRight);
             _pnlRight.Controls.Add(_pnlButtonsRight);
             _pnlRight.Name = "pnlRight";
-            // 
+            //
             // Splitter2
-            // 
+            //
             _Splitter2.BackColor = Color.Silver;
             resources.ApplyResources(_Splitter2, "Splitter2");
             _Splitter2.Name = "Splitter2";
             _Splitter2.TabStop = false;
-            // 
+            //
             // pnlContent
-            // 
+            //
             _pnlContent.BackColor = Color.Transparent;
             resources.ApplyResources(_pnlContent, "pnlContent");
             _pnlContent.Name = "pnlContent";
-            // 
+            //
             // Splitter1
-            // 
+            //
             _Splitter1.BackColor = Color.Silver;
             resources.ApplyResources(_Splitter1, "Splitter1");
             _Splitter1.Name = "Splitter1";
             _Splitter1.TabStop = false;
-            // 
+            //
             // pnleHeaderRight
-            // 
+            //
             resources.ApplyResources(_pnleHeaderRight, "pnleHeaderRight");
             _pnleHeaderRight.Controls.Add(_btnHQ);
             _pnleHeaderRight.Controls.Add(_btnCloseRight);
             _pnleHeaderRight.Controls.Add(_lblRightTitle);
             _pnleHeaderRight.Name = "pnleHeaderRight";
-            // 
+            //
             // btnHQ
-            // 
+            //
             resources.ApplyResources(_btnHQ, "btnHQ");
             _btnHQ.Cursor = Cursors.Hand;
             _btnHQ.Name = "btnHQ";
-            // 
+            //
             // btnCloseRight
-            // 
+            //
             resources.ApplyResources(_btnCloseRight, "btnCloseRight");
             _btnCloseRight.Cursor = Cursors.Hand;
             _btnCloseRight.Name = "btnCloseRight";
-            // 
+            //
             // lblRightTitle
-            // 
+            //
             _lblRightTitle.BackColor = Color.Transparent;
             resources.ApplyResources(_lblRightTitle, "lblRightTitle");
             _lblRightTitle.ForeColor = Color.White;
             _lblRightTitle.Name = "lblRightTitle";
-            // 
+            //
             // pnlButtonsRight
-            // 
+            //
             _pnlButtonsRight.BackColor = Color.White;
             _pnlButtonsRight.Controls.Add(_btnGoBack);
             _pnlButtonsRight.Controls.Add(_btnSave);
             resources.ApplyResources(_pnlButtonsRight, "pnlButtonsRight");
             _pnlButtonsRight.Name = "pnlButtonsRight";
-            // 
+            //
             // btnGoBack
-            // 
+            //
             _btnGoBack.BackColor = SystemColors.Control;
             resources.ApplyResources(_btnGoBack, "btnGoBack");
             _btnGoBack.Name = "btnGoBack";
             _btnGoBack.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnSave
-            // 
+            //
             resources.ApplyResources(_btnSave, "btnSave");
             _btnSave.BackColor = SystemColors.Control;
             _btnSave.Cursor = Cursors.Hand;
             _btnSave.Name = "btnSave";
             _btnSave.UseVisualStyleBackColor = false;
-            // 
+            //
             // splitMiddleAndRight
-            // 
+            //
             resources.ApplyResources(_splitMiddleAndRight, "splitMiddleAndRight");
             _splitMiddleAndRight.Name = "splitMiddleAndRight";
             _splitMiddleAndRight.TabStop = false;
-            // 
+            //
             // FRMMain
-            // 
+            //
             resources.ApplyResources(this, "$this");
             BackColor = Color.Gainsboro;
             Controls.Add(_splitMiddleAndRight);
@@ -1693,7 +1687,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             var menu = new UCSideBar();
             menu.Dock = DockStyle.Fill;
@@ -1713,7 +1708,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -2082,6 +2077,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoopControls(Control controlToLoop)
         {
             foreach (Control control in controlToLoop.Controls)

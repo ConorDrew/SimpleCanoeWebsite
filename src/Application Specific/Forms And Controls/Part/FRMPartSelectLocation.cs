@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMPartSelectLocation : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPartSelectLocation() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSelectLocation_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -44,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Button _btnOK;
 
@@ -61,7 +59,6 @@ namespace FSM
             {
                 if (_btnOK != null)
                 {
-
                     // Private Sub btnSave_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnOK.Click
                     // If Not Locations.Table.Select("Tick=1").Length = 1 Then
                     // ShowMessage("Please ensure only one location has been selected", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -163,7 +160,6 @@ namespace FSM
             {
                 if (_btnCancel != null)
                 {
-
                     // Private Sub dgLocations_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
                     // Try
                     // Try
@@ -213,27 +209,27 @@ namespace FSM
             _grpLocations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgvLocations).BeginInit();
             SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(856, 444);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(60, 25);
             _btnOK.TabIndex = 4;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(12, 444);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 25);
             _btnCancel.TabIndex = 7;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // grpLocations
-            // 
+            //
             _grpLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpLocations.Controls.Add(_dgvLocations);
@@ -243,9 +239,9 @@ namespace FSM
             _grpLocations.TabIndex = 3;
             _grpLocations.TabStop = false;
             _grpLocations.Text = "Select location to add to : {0}";
-            // 
+            //
             // dgvLocations
-            // 
+            //
             _dgvLocations.AllowUserToAddRows = false;
             _dgvLocations.AllowUserToDeleteRows = false;
             _dgvLocations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -254,9 +250,9 @@ namespace FSM
             _dgvLocations.ReadOnly = true;
             _dgvLocations.Size = new Size(891, 373);
             _dgvLocations.TabIndex = 0;
-            // 
+            //
             // FRMPartSelectLocation
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(928, 481);
             ControlBox = false;
@@ -276,7 +272,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupLocationsDataGridView();
@@ -286,7 +283,6 @@ namespace FSM
             // Else
             // dt = DB.Part.Part_Locations_Get_For_Replenishment(GetParameter(0))
             // End If
-
 
             // For Each warehouse As ArrayList In CType(GetParameter(4), ArrayList)
             // For Each row As DataRow In CType(warehouse.Item(1), DataTable).Rows
@@ -361,6 +357,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupLocationsDataGridView()
         {
             Entity.Sys.Helper.SetUpDataGridView(dgvLocations);
@@ -557,7 +554,6 @@ namespace FSM
                 {
                     return null;
                 }
-
 
                 // If Not Me.dgvParts.CurrentRowIndex = -1 Then
                 // Return PartsDataGridView(Me.dgvParts.CurrentRowIndex).Row

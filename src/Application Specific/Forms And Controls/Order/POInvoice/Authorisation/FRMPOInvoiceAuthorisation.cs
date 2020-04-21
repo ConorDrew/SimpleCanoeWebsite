@@ -1,21 +1,21 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMPOInvoiceAuthorisation : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPOInvoiceAuthorisation() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             var argc = cboValidateType;
@@ -123,7 +123,6 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnClose.Click -= btnClose_Click;
@@ -356,9 +355,9 @@ namespace FSM
             _grpExcelFile.SuspendLayout();
             _grpCatImport.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpExcelFile
-            // 
+            //
             _grpExcelFile.Controls.Add(_btnExportResults);
             _grpExcelFile.Location = new Point(8, 40);
             _grpExcelFile.Name = "grpExcelFile";
@@ -366,18 +365,18 @@ namespace FSM
             _grpExcelFile.TabIndex = 3;
             _grpExcelFile.TabStop = false;
             _grpExcelFile.Text = "Initial Import";
-            // 
+            //
             // btnExportResults
-            // 
+            //
             _btnExportResults.Location = new Point(6, 19);
             _btnExportResults.Name = "btnExportResults";
             _btnExportResults.Size = new Size(106, 23);
             _btnExportResults.TabIndex = 5;
             _btnExportResults.Text = "Export Results";
             _btnExportResults.UseVisualStyleBackColor = true;
-            // 
+            //
             // tcData
-            // 
+            //
             _tcData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcData.Location = new Point(8, 103);
@@ -385,9 +384,9 @@ namespace FSM
             _tcData.SelectedIndex = 0;
             _tcData.Size = new Size(1053, 483);
             _tcData.TabIndex = 8;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnClose.Location = new Point(1005, 621);
             _btnClose.Name = "btnClose";
@@ -395,18 +394,18 @@ namespace FSM
             _btnClose.TabIndex = 9;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // pbStatus
-            // 
+            //
             _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _pbStatus.Location = new Point(8, 621);
             _pbStatus.Name = "pbStatus";
             _pbStatus.Size = new Size(941, 23);
             _pbStatus.Step = 1;
             _pbStatus.TabIndex = 10;
-            // 
+            //
             // lblProgress
-            // 
+            //
             _lblProgress.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _lblProgress.Location = new Point(957, 624);
             _lblProgress.Name = "lblProgress";
@@ -414,9 +413,9 @@ namespace FSM
             _lblProgress.TabIndex = 11;
             _lblProgress.Text = "0%";
             _lblProgress.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // lblMessages
-            // 
+            //
             _lblMessages.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _lblMessages.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblMessages.ForeColor = Color.Red;
@@ -426,17 +425,17 @@ namespace FSM
             _lblMessages.TabIndex = 12;
             _lblMessages.TextAlign = ContentAlignment.MiddleLeft;
             _lblMessages.Visible = false;
-            // 
+            //
             // cboValidateType
-            // 
+            //
             _cboValidateType.FormattingEnabled = true;
             _cboValidateType.Location = new Point(6, 21);
             _cboValidateType.Name = "cboValidateType";
             _cboValidateType.Size = new Size(365, 21);
             _cboValidateType.TabIndex = 1;
-            // 
+            //
             // grpCatImport
-            // 
+            //
             _grpCatImport.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpCatImport.Controls.Add(_Label1);
             _grpCatImport.Controls.Add(_cboDepartment);
@@ -447,9 +446,9 @@ namespace FSM
             _grpCatImport.TabIndex = 6;
             _grpCatImport.TabStop = false;
             _grpCatImport.Text = "Category Processing";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Location = new Point(377, 24);
             _Label1.Name = "Label1";
@@ -457,18 +456,18 @@ namespace FSM
             _Label1.TabIndex = 3;
             _Label1.Text = "Cost Centre :";
             _Label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // cboDepartment
-            // 
+            //
             _cboDepartment.FormattingEnabled = true;
             _cboDepartment.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             _cboDepartment.Location = new Point(467, 21);
             _cboDepartment.Name = "cboDepartment";
             _cboDepartment.Size = new Size(199, 21);
             _cboDepartment.TabIndex = 2;
-            // 
+            //
             // FRMPOInvoiceAuthorisation
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1101, 654);
             Controls.Add(_grpCatImport);
@@ -497,6 +496,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -552,7 +552,7 @@ namespace FSM
                 }
 
                 sheetName = "POInvoiceAuthExport" + Conversions.ToString(DateAndTime.Today).Replace("/", "");
-                var exporter = new Entity.Sys.Exporting(data.Table, sheetName);
+                ExportHelper.Export(data.Table, sheetName, Enums.ExportType.XLS);
             }
             catch (Exception ex)
             {
@@ -586,6 +586,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void ShowData(int ValidateType = 0, string Department = null)
         {
             tcData.TabPages.Clear();

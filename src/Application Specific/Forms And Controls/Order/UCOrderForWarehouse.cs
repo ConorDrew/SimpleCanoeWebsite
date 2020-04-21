@@ -1,17 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCOrderForWarehouse : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCOrderForWarehouse() : base()
         {
             base.Load += UCOrderForWarehouse_Load;
@@ -20,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -41,7 +40,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpWarehouseDetails;
 
@@ -82,7 +81,6 @@ namespace FSM
             {
                 if (_btnFindWarehouse != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnFindWarehouse.Click -= btnFindWarehouse_Click;
@@ -129,9 +127,9 @@ namespace FSM
             _txtWarehouse = new TextBox();
             _grpWarehouseDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpWarehouseDetails
-            // 
+            //
             _grpWarehouseDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpWarehouseDetails.Controls.Add(_btnFindWarehouse);
@@ -143,9 +141,9 @@ namespace FSM
             _grpWarehouseDetails.TabIndex = 1;
             _grpWarehouseDetails.TabStop = false;
             _grpWarehouseDetails.Text = "Warehouse Details";
-            // 
+            //
             // btnFindWarehouse
-            // 
+            //
             _btnFindWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindWarehouse.BackColor = Color.White;
             _btnFindWarehouse.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -154,9 +152,9 @@ namespace FSM
             _btnFindWarehouse.Size = new Size(32, 23);
             _btnFindWarehouse.TabIndex = 2;
             _btnFindWarehouse.Text = "...";
-            // 
+            //
             // txtWarehouse
-            // 
+            //
             _txtWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtWarehouse.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtWarehouse.Location = new Point(8, 31);
@@ -165,9 +163,9 @@ namespace FSM
             _txtWarehouse.Size = new Size(496, 21);
             _txtWarehouse.TabIndex = 1;
             _txtWarehouse.Text = "";
-            // 
+            //
             // UCOrderForWarehouse
-            // 
+            //
             Controls.Add(_grpWarehouseDetails);
             Name = "UCOrderForWarehouse";
             Size = new Size(568, 88);
@@ -177,7 +175,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -192,11 +191,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -232,7 +232,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             // DO NOTHING
         }

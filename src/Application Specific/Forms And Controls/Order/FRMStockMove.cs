@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMStockMove : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMStockMove() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMStockMove_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -622,9 +620,9 @@ namespace FSM
             _grpItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgItems).BeginInit();
             SuspendLayout();
-            // 
+            //
             // radWarehouseCurrent
-            // 
+            //
             _radWarehouseCurrent.Checked = true;
             _radWarehouseCurrent.Location = new Point(8, 20);
             _radWarehouseCurrent.Name = "radWarehouseCurrent";
@@ -632,33 +630,33 @@ namespace FSM
             _radWarehouseCurrent.TabIndex = 1;
             _radWarehouseCurrent.TabStop = true;
             _radWarehouseCurrent.Text = "Warehouse";
-            // 
+            //
             // radVanCurrent
-            // 
+            //
             _radVanCurrent.Location = new Point(110, 20);
             _radVanCurrent.Name = "radVanCurrent";
             _radVanCurrent.Size = new Size(99, 26);
             _radVanCurrent.TabIndex = 2;
             _radVanCurrent.Text = "Stock Profile";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(214, 25);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(24, 23);
             _Label5.TabIndex = 7;
             _Label5.Text = ">";
-            // 
+            //
             // cboLocationCurrent
-            // 
+            //
             _cboLocationCurrent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboLocationCurrent.Location = new Point(247, 25);
             _cboLocationCurrent.Name = "cboLocationCurrent";
             _cboLocationCurrent.Size = new Size(337, 21);
             _cboLocationCurrent.TabIndex = 3;
-            // 
+            //
             // grpCurrent
-            // 
+            //
             _grpCurrent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpCurrent.Controls.Add(_radWarehouseCurrent);
             _grpCurrent.Controls.Add(_Label5);
@@ -670,9 +668,9 @@ namespace FSM
             _grpCurrent.TabIndex = 1;
             _grpCurrent.TabStop = false;
             _grpCurrent.Text = "Select current stock location";
-            // 
+            //
             // grpNew
-            // 
+            //
             _grpNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpNew.Controls.Add(_radWarehouseNew);
             _grpNew.Controls.Add(_Label1);
@@ -684,9 +682,9 @@ namespace FSM
             _grpNew.TabIndex = 3;
             _grpNew.TabStop = false;
             _grpNew.Text = "Select new stock location";
-            // 
+            //
             // radWarehouseNew
-            // 
+            //
             _radWarehouseNew.Checked = true;
             _radWarehouseNew.Location = new Point(8, 20);
             _radWarehouseNew.Name = "radWarehouseNew";
@@ -694,33 +692,33 @@ namespace FSM
             _radWarehouseNew.TabIndex = 1;
             _radWarehouseNew.TabStop = true;
             _radWarehouseNew.Text = "Warehouse";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(214, 23);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(24, 23);
             _Label1.TabIndex = 7;
             _Label1.Text = ">";
-            // 
+            //
             // radVanNew
-            // 
+            //
             _radVanNew.Location = new Point(110, 20);
             _radVanNew.Name = "radVanNew";
             _radVanNew.Size = new Size(98, 26);
             _radVanNew.TabIndex = 2;
             _radVanNew.Text = "Stock Profile";
-            // 
+            //
             // cboLocationNew
-            // 
+            //
             _cboLocationNew.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboLocationNew.Location = new Point(247, 25);
             _cboLocationNew.Name = "cboLocationNew";
             _cboLocationNew.Size = new Size(337, 21);
             _cboLocationNew.TabIndex = 3;
-            // 
+            //
             // grpItems
-            // 
+            //
             _grpItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpItems.Controls.Add(_Label4);
@@ -737,9 +735,9 @@ namespace FSM
             _grpItems.TabIndex = 2;
             _grpItems.TabStop = false;
             _grpItems.Text = "Select item to move";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label4.Location = new Point(295, 201);
             _Label4.Name = "Label4";
@@ -747,9 +745,9 @@ namespace FSM
             _Label4.TabIndex = 23;
             _Label4.Text = "The current quantity will be moved across";
             _Label4.Visible = false;
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.AccessibleDescription = "Export Job List To Excel";
             _btnSelectAll.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSelectAll.Location = new Point(400, 18);
@@ -757,52 +755,52 @@ namespace FSM
             _btnSelectAll.Size = new Size(88, 23);
             _btnSelectAll.TabIndex = 21;
             _btnSelectAll.Text = "Select All";
-            // 
+            //
             // btnDeselectAll
-            // 
+            //
             _btnDeselectAll.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnDeselectAll.Location = new Point(496, 18);
             _btnDeselectAll.Name = "btnDeselectAll";
             _btnDeselectAll.Size = new Size(88, 23);
             _btnDeselectAll.TabIndex = 22;
             _btnDeselectAll.Text = "Deselect All";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFilter.Location = new Point(48, 20);
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(335, 21);
             _txtFilter.TabIndex = 1;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(4, 23);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(51, 18);
             _Label3.TabIndex = 3;
             _Label3.Text = "Filter";
-            // 
+            //
             // txtQuantity
-            // 
+            //
             _txtQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtQuantity.Location = new Point(189, 198);
             _txtQuantity.Name = "txtQuantity";
             _txtQuantity.Size = new Size(100, 21);
             _txtQuantity.TabIndex = 3;
             _txtQuantity.Text = "1";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label2.Location = new Point(6, 201);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(177, 16);
             _Label2.TabIndex = 1;
             _Label2.Text = "Enter quantity being moved";
-            // 
+            //
             // dgItems
-            // 
+            //
             _dgItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgItems.DataMember = "";
@@ -811,9 +809,9 @@ namespace FSM
             _dgItems.Name = "dgItems";
             _dgItems.Size = new Size(580, 145);
             _dgItems.TabIndex = 2;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(4, 401);
             _btnClose.Name = "btnClose";
@@ -821,9 +819,9 @@ namespace FSM
             _btnClose.TabIndex = 5;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnMove
-            // 
+            //
             _btnMove.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnMove.Location = new Point(537, 401);
             _btnMove.Name = "btnMove";
@@ -831,9 +829,9 @@ namespace FSM
             _btnMove.TabIndex = 4;
             _btnMove.Text = "Move";
             _btnMove.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMStockMove
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(601, 435);
             Controls.Add(_btnMove);
@@ -860,7 +858,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var argc = cboLocationCurrent;
@@ -883,7 +882,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -927,6 +926,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgItems);
@@ -1154,7 +1154,7 @@ namespace FSM
                 }
             }
 
-            if (Conversions.ToBoolean(!mulitple & CurrentQty > SelectedStockDataRow["Amount"]))
+            if (Conversions.ToBoolean(!mulitple & CurrentQty > (int)SelectedStockDataRow["Amount"]))
             {
                 if (App.ShowMessage("You are attempting to move more than there is available" + Constants.vbCrLf + "This will result in negative stock" + Constants.vbCrLf + "Are you sure you wish to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
@@ -1195,7 +1195,7 @@ namespace FSM
 
                 foreach (DataRow dr in StockDataView.Table.Rows)
                 {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Select"], true, false) & dr["Amount"] > 0))
+                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Select"], true, false) & (int)dr["Amount"] > 0))
                     {
                         MovePart(dr, Conversions.ToInteger(dr["Amount"]), LocationID);
                     }
@@ -1256,6 +1256,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ShowStock(int WarehouseID, int VanID)
         {
             var dt = new DataTable();

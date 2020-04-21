@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
     public class UCProductSupplier : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCProductSupplier() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCProductSupplier_Load;
@@ -24,7 +23,6 @@ namespace FSM
             var argc = cboSupplierID;
             Combo.SetUpCombo(ref argc, App.DB.Supplier.Supplier_GetAll().Table, "SupplierID", "Name", Entity.Sys.Enums.ComboValues.Please_Select);
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
 
         private GroupBox _grpProductSupplier;
@@ -278,9 +276,9 @@ namespace FSM
             _lblQuantityInPack = new Label();
             _grpProductSupplier.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpProductSupplier
-            // 
+            //
             _grpProductSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpProductSupplier.Controls.Add(_txtPrice);
@@ -297,9 +295,9 @@ namespace FSM
             _grpProductSupplier.TabIndex = 1;
             _grpProductSupplier.TabStop = false;
             _grpProductSupplier.Text = "Main Details";
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPrice.Location = new Point(384, 80);
             _txtPrice.MaxLength = 8;
@@ -307,17 +305,17 @@ namespace FSM
             _txtPrice.Size = new Size(191, 21);
             _txtPrice.TabIndex = 33;
             _txtPrice.Tag = "ProductSupplier.Price";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(336, 80);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(37, 18);
             _Label1.TabIndex = 32;
             _Label1.Text = "Price";
-            // 
+            //
             // cboSupplierID
-            // 
+            //
             _cboSupplierID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboSupplierID.Cursor = Cursors.Hand;
             _cboSupplierID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -326,17 +324,17 @@ namespace FSM
             _cboSupplierID.Size = new Size(439, 21);
             _cboSupplierID.TabIndex = 3;
             _cboSupplierID.Tag = "ProductSupplier.SupplierID";
-            // 
+            //
             // lblSupplierID
-            // 
+            //
             _lblSupplierID.Location = new Point(8, 24);
             _lblSupplierID.Name = "lblSupplierID";
             _lblSupplierID.Size = new Size(67, 20);
             _lblSupplierID.TabIndex = 31;
             _lblSupplierID.Text = "Supplier";
-            // 
+            //
             // txtProductCode
-            // 
+            //
             _txtProductCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtProductCode.Location = new Point(136, 51);
             _txtProductCode.MaxLength = 100;
@@ -344,17 +342,17 @@ namespace FSM
             _txtProductCode.Size = new Size(439, 21);
             _txtProductCode.TabIndex = 4;
             _txtProductCode.Tag = "ProductSupplier.ProductCode";
-            // 
+            //
             // lblProductCode
-            // 
+            //
             _lblProductCode.Location = new Point(8, 51);
             _lblProductCode.Name = "lblProductCode";
             _lblProductCode.Size = new Size(94, 20);
             _lblProductCode.TabIndex = 31;
             _lblProductCode.Text = "Product Code";
-            // 
+            //
             // txtQuantityInPack
-            // 
+            //
             _txtQuantityInPack.Location = new Point(136, 79);
             _txtQuantityInPack.MaxLength = 8;
             _txtQuantityInPack.Name = "txtQuantityInPack";
@@ -362,17 +360,17 @@ namespace FSM
             _txtQuantityInPack.TabIndex = 6;
             _txtQuantityInPack.Tag = "ProductSupplier.QuantityInPack";
             _txtQuantityInPack.Text = "1";
-            // 
+            //
             // lblQuantityInPack
-            // 
+            //
             _lblQuantityInPack.Location = new Point(8, 79);
             _lblQuantityInPack.Name = "lblQuantityInPack";
             _lblQuantityInPack.Size = new Size(114, 20);
             _lblQuantityInPack.TabIndex = 31;
             _lblQuantityInPack.Text = "Quantity In Pack";
-            // 
+            //
             // UCProductSupplier
-            // 
+            //
             Controls.Add(_grpProductSupplier);
             Name = "UCProductSupplier";
             Size = new Size(592, 120);
@@ -383,7 +381,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -413,11 +412,11 @@ namespace FSM
             }
         }
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -459,7 +458,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

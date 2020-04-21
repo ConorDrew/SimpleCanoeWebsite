@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class DLGAdvancedItemSearch : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DLGAdvancedItemSearch() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
@@ -282,7 +281,6 @@ namespace FSM
             {
                 if (_btnFindSupplier != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnFindSupplier.Click -= btnFindSupplier_Click;
@@ -419,9 +417,9 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgResults).BeginInit();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Controls.Add(_btnFindSupplier);
             _GroupBox1.Controls.Add(_txtSupplier);
             _GroupBox1.Controls.Add(_Label7);
@@ -439,9 +437,9 @@ namespace FSM
             _GroupBox1.TabIndex = 2;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Search";
-            // 
+            //
             // btnFindSupplier
-            // 
+            //
             _btnFindSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindSupplier.BackColor = Color.White;
             _btnFindSupplier.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -450,9 +448,9 @@ namespace FSM
             _btnFindSupplier.Size = new Size(32, 24);
             _btnFindSupplier.TabIndex = 95;
             _btnFindSupplier.Text = "...";
-            // 
+            //
             // txtSupplier
-            // 
+            //
             _txtSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSupplier.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtSupplier.Location = new Point(88, 379);
@@ -461,98 +459,98 @@ namespace FSM
             _txtSupplier.Size = new Size(464, 21);
             _txtSupplier.TabIndex = 94;
             _txtSupplier.Text = "";
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label7.Location = new Point(16, 376);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(64, 24);
             _Label7.TabIndex = 96;
             _Label7.Text = "Supplier";
-            // 
+            //
             // dgResults
-            // 
+            //
             _dgResults.DataMember = "";
             _dgResults.HeaderForeColor = SystemColors.ControlText;
             _dgResults.Location = new Point(8, 88);
             _dgResults.Name = "dgResults";
             _dgResults.Size = new Size(592, 280);
             _dgResults.TabIndex = 8;
-            // 
+            //
             // btnSearch
-            // 
+            //
             _btnSearch.Location = new Point(520, 56);
             _btnSearch.Name = "btnSearch";
             _btnSearch.TabIndex = 6;
             _btnSearch.Text = "Search";
-            // 
+            //
             // txtCriteria
-            // 
+            //
             _txtCriteria.Location = new Point(104, 56);
             _txtCriteria.Name = "txtCriteria";
             _txtCriteria.Size = new Size(400, 21);
             _txtCriteria.TabIndex = 5;
             _txtCriteria.Text = "";
-            // 
+            //
             // Label18
-            // 
+            //
             _Label18.Location = new Point(8, 56);
             _Label18.Name = "Label18";
             _Label18.Size = new Size(80, 23);
             _Label18.TabIndex = 4;
             _Label18.Text = "Criteria:";
-            // 
+            //
             // cboSearchOn
-            // 
+            //
             _cboSearchOn.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSearchOn.Location = new Point(400, 24);
             _cboSearchOn.Name = "cboSearchOn";
             _cboSearchOn.Size = new Size(200, 21);
             _cboSearchOn.TabIndex = 3;
-            // 
+            //
             // label17
-            // 
+            //
             _label17.Location = new Point(312, 24);
             _label17.Name = "label17";
             _label17.Size = new Size(80, 23);
             _label17.TabIndex = 2;
             _label17.Text = "Search On:";
-            // 
+            //
             // cboSearchFor
-            // 
+            //
             _cboSearchFor.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSearchFor.Items.AddRange(new object[] { "Products", "Parts" });
             _cboSearchFor.Location = new Point(104, 24);
             _cboSearchFor.Name = "cboSearchFor";
             _cboSearchFor.Size = new Size(200, 21);
             _cboSearchFor.TabIndex = 1;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 24);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(88, 23);
             _Label5.TabIndex = 0;
             _Label5.Text = "Search For:";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Location = new Point(120, 464);
             _btnCancel.Name = "btnCancel";
             _btnCancel.TabIndex = 7;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // btnRequest
-            // 
+            //
             _btnRequest.Location = new Point(8, 464);
             _btnRequest.Name = "btnRequest";
             _btnRequest.Size = new Size(104, 23);
             _btnRequest.TabIndex = 8;
             _btnRequest.Text = "Request Prices";
-            // 
+            //
             // DLGAdvancedItemSearch
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(624, 494);
             ControlBox = false;
@@ -666,7 +664,7 @@ namespace FSM
         private void cboSearchFor_SelectedIndexChanged(object sender, EventArgs e)
         {
             var argc = cboSearchOn;
-            Combo.SetUpCombo(ref argc, DynamicDataTables.Setup_Search_On_Options(Entity.Sys.Enums.MenuTypes.Spares, (Entity.Sys.Enums.TableNames)Combo.get_GetSelectedItemValue(cboSearchFor)), "ValueMember", "DisplayMember", Entity.Sys.Enums.ComboValues.Please_Select);
+            Combo.SetUpCombo(ref argc, DynamicDataTables.Setup_Search_On_Options(Entity.Sys.Enums.MenuTypes.Spares, (Entity.Sys.Enums.TableNames)Convert.ToInt32(Combo.get_GetSelectedItemValue(cboSearchFor))), "ValueMember", "DisplayMember", Entity.Sys.Enums.ComboValues.Please_Select);
             if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboSearchFor)) == (double)Entity.Sys.Enums.TableNames.tblPart)
             {
                 SetupPartsResultsDataGrid();
@@ -696,6 +694,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public object SetupPartsResultsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgResults);
@@ -808,6 +807,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private object SaveRequests()
         {
             if (Supplier is null)

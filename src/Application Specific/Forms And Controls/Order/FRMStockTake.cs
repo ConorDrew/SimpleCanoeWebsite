@@ -1,23 +1,22 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMStockTake : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMStockTake() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMStockTake_Load;
@@ -711,9 +710,9 @@ namespace FSM
             _grpFilterArea.SuspendLayout();
             _Panel2.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // dgStock
-            // 
+            //
             _dgStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgStock.DataMember = "";
@@ -722,9 +721,9 @@ namespace FSM
             _dgStock.Name = "dgStock";
             _dgStock.Size = new Size(884, 296);
             _dgStock.TabIndex = 8;
-            // 
+            //
             // grpStockLevels
-            // 
+            //
             _grpStockLevels.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpStockLevels.Controls.Add(_txtPrice);
@@ -738,18 +737,18 @@ namespace FSM
             _grpStockLevels.TabIndex = 1;
             _grpStockLevels.TabStop = false;
             _grpStockLevels.Text = "Current Stock Levels";
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPrice.Location = new Point(764, 13);
             _txtPrice.Name = "txtPrice";
             _txtPrice.ReadOnly = true;
             _txtPrice.Size = new Size(130, 21);
             _txtPrice.TabIndex = 16;
-            // 
+            //
             // lblStockValuation
-            // 
+            //
             _lblStockValuation.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblStockValuation.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblStockValuation.Location = new Point(652, 16);
@@ -757,25 +756,25 @@ namespace FSM
             _lblStockValuation.Size = new Size(118, 22);
             _lblStockValuation.TabIndex = 14;
             _lblStockValuation.Text = "Stock Valuation";
-            // 
+            //
             // txtLocationFilter
-            // 
+            //
             _txtLocationFilter.Location = new Point(100, 17);
             _txtLocationFilter.Name = "txtLocationFilter";
             _txtLocationFilter.Size = new Size(214, 21);
             _txtLocationFilter.TabIndex = 11;
-            // 
+            //
             // lblLocationFilter
-            // 
+            //
             _lblLocationFilter.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblLocationFilter.Location = new Point(7, 20);
             _lblLocationFilter.Name = "lblLocationFilter";
             _lblLocationFilter.Size = new Size(105, 22);
             _lblLocationFilter.TabIndex = 9;
             _lblLocationFilter.Text = "Location filter";
-            // 
+            //
             // grpFilterArea
-            // 
+            //
             _grpFilterArea.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilterArea.Controls.Add(_txtMPN);
             _grpFilterArea.Controls.Add(_lblPartMpn);
@@ -792,25 +791,25 @@ namespace FSM
             _grpFilterArea.TabIndex = 2;
             _grpFilterArea.TabStop = false;
             _grpFilterArea.Text = "Filters";
-            // 
+            //
             // txtMPN
-            // 
+            //
             _txtMPN.Location = new Point(72, 79);
             _txtMPN.Name = "txtMPN";
             _txtMPN.Size = new Size(244, 21);
             _txtMPN.TabIndex = 14;
-            // 
+            //
             // lblPartMpn
-            // 
+            //
             _lblPartMpn.AutoSize = true;
             _lblPartMpn.Location = new Point(9, 82);
             _lblPartMpn.Name = "lblPartMpn";
             _lblPartMpn.Size = new Size(58, 13);
             _lblPartMpn.TabIndex = 13;
             _lblPartMpn.Text = "Part MPN";
-            // 
+            //
             // chkExpectedNotZero
-            // 
+            //
             _chkExpectedNotZero.AutoSize = true;
             _chkExpectedNotZero.Location = new Point(334, 77);
             _chkExpectedNotZero.Name = "chkExpectedNotZero";
@@ -818,9 +817,9 @@ namespace FSM
             _chkExpectedNotZero.TabIndex = 12;
             _chkExpectedNotZero.Text = "Only show parts where expected is not 0";
             _chkExpectedNotZero.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkLocations
-            // 
+            //
             _chkLocations.AutoSize = true;
             _chkLocations.Checked = true;
             _chkLocations.CheckState = CheckState.Checked;
@@ -830,34 +829,34 @@ namespace FSM
             _chkLocations.TabIndex = 11;
             _chkLocations.Text = "Only show parts with a location set";
             _chkLocations.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnRun
-            // 
+            //
             _btnRun.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRun.Location = new Point(840, 78);
             _btnRun.Name = "btnRun";
             _btnRun.Size = new Size(56, 25);
             _btnRun.TabIndex = 10;
             _btnRun.Text = "Run";
-            // 
+            //
             // cboCategory
-            // 
+            //
             _cboCategory.Location = new Point(72, 53);
             _cboCategory.Name = "cboCategory";
             _cboCategory.Size = new Size(244, 21);
             _cboCategory.TabIndex = 9;
-            // 
+            //
             // lblCategory
-            // 
+            //
             _lblCategory.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblCategory.Location = new Point(9, 51);
             _lblCategory.Name = "lblCategory";
             _lblCategory.Size = new Size(64, 22);
             _lblCategory.TabIndex = 8;
             _lblCategory.Text = "Category";
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _Panel2.Controls.Add(_radBothLocations);
             _Panel2.Controls.Add(_radWarehouses);
@@ -868,9 +867,9 @@ namespace FSM
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(835, 32);
             _Panel2.TabIndex = 6;
-            // 
+            //
             // radBothLocations
-            // 
+            //
             _radBothLocations.Checked = true;
             _radBothLocations.Location = new Point(216, 6);
             _radBothLocations.Name = "radBothLocations";
@@ -878,68 +877,68 @@ namespace FSM
             _radBothLocations.TabIndex = 6;
             _radBothLocations.TabStop = true;
             _radBothLocations.Text = "Both";
-            // 
+            //
             // radWarehouses
-            // 
+            //
             _radWarehouses.Location = new Point(8, 6);
             _radWarehouses.Name = "radWarehouses";
             _radWarehouses.Size = new Size(96, 26);
             _radWarehouses.TabIndex = 4;
             _radWarehouses.Text = "Warehouses";
-            // 
+            //
             // radVans
-            // 
+            //
             _radVans.Location = new Point(110, 6);
             _radVans.Name = "radVans";
             _radVans.Size = new Size(97, 26);
             _radVans.TabIndex = 5;
             _radVans.Text = "Stock Profile";
-            // 
+            //
             // lblArrow
-            // 
+            //
             _lblArrow.Location = new Point(267, 10);
             _lblArrow.Name = "lblArrow";
             _lblArrow.Size = new Size(24, 23);
             _lblArrow.TabIndex = 7;
             _lblArrow.Text = ">";
-            // 
+            //
             // cboFilter
-            // 
+            //
             _cboFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboFilter.Location = new Point(293, 8);
             _cboFilter.Name = "cboFilter";
             _cboFilter.Size = new Size(534, 21);
             _cboFilter.TabIndex = 7;
-            // 
+            //
             // lblShow
-            // 
+            //
             _lblShow.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblShow.Location = new Point(8, 24);
             _lblShow.Name = "lblShow";
             _lblShow.Size = new Size(48, 22);
             _lblShow.TabIndex = 7;
             _lblShow.Text = "Show";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(855, 520);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 25);
             _btnSave.TabIndex = 3;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 520);
             _btnExport.Name = "btnExport";
             _btnExport.Size = new Size(56, 25);
             _btnExport.TabIndex = 9;
             _btnExport.Text = "Export";
-            // 
+            //
             // lblBottomInfo
-            // 
+            //
             _lblBottomInfo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _lblBottomInfo.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
             _lblBottomInfo.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -949,18 +948,18 @@ namespace FSM
             _lblBottomInfo.TabIndex = 5;
             _lblBottomInfo.Text = "Use last columns to enter ACTUAL STOCK AMOUNT AND REASON then click save";
             _lblBottomInfo.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // btnStockReplenishment
-            // 
+            //
             _btnStockReplenishment.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnStockReplenishment.Location = new Point(72, 520);
             _btnStockReplenishment.Name = "btnStockReplenishment";
             _btnStockReplenishment.Size = new Size(184, 25);
             _btnStockReplenishment.TabIndex = 10;
             _btnStockReplenishment.Text = "Manage Stock Replenishment";
-            // 
+            //
             // FRMStockTake
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(919, 550);
             Controls.Add(_btnStockReplenishment);
@@ -990,7 +989,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             if (App.IsRFT)
@@ -1013,7 +1013,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
             // DO NOTHING
         }
@@ -1057,6 +1057,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void StockDgSetup()
         {
             var tbStyle = dgStock.TableStyles[0];
@@ -1219,6 +1220,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Filter()
         {
             if (StockDataView is null)
@@ -1331,7 +1333,7 @@ namespace FSM
                             App.DB.PartTransaction.PartTransaction_Consolidate_All(Conversions.ToInteger(row["LocationID"]), Conversions.ToInteger(row["PartID"]));
                             var oPartTransaction = new Entity.PartTransactions.PartTransaction();
                             oPartTransaction.SetLocationID = row["LocationID"];
-                            oPartTransaction.SetAmount = row["actualAmount"] - row["Amount"];
+                            oPartTransaction.SetAmount = (double)row["actualAmount"] - (double)row["Amount"];
                             oPartTransaction.SetPartID = row["PartID"];
                             oPartTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockAdjustment);
                             App.DB.PartTransaction.Insert(oPartTransaction);
@@ -1341,7 +1343,7 @@ namespace FSM
                             App.DB.ProductTransaction.ProductTransaction_Consolidate_All(Conversions.ToInteger(row["LocationID"]), Conversions.ToInteger(row["ProductID"]));
                             var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
                             oProductTransaction.SetLocationID = row["LocationID"];
-                            oProductTransaction.SetAmount = row["actualAmount"] - row["Amount"];
+                            oProductTransaction.SetAmount = (double)row["actualAmount"] - (double)row["Amount"];
                             oProductTransaction.SetProductID = row["ProductID"];
                             oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockAdjustment);
                             App.DB.ProductTransaction.Insert(oProductTransaction);
@@ -1407,8 +1409,7 @@ namespace FSM
                 exportData.Rows.Add(newRw);
             }
 
-            var exporter = new Exporting(exportData, "Stock Take");
-            exporter = null;
+            ExportHelper.Export(exportData, "Stock Take", Enums.ExportType.XLS);
         }
 
         public void CalcValuation()

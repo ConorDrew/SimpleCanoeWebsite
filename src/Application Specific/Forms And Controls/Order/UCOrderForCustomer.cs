@@ -1,17 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCOrderForCustomer : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCOrderForCustomer() : base()
         {
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -44,7 +44,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _GroupBox1;
 
@@ -566,9 +566,9 @@ namespace FSM
             _Label15 = new Label();
             _GroupBox1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_lblSpecial);
@@ -596,9 +596,9 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Customer Details";
-            // 
+            //
             // btnFindWarehouse
-            // 
+            //
             _btnFindWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindWarehouse.BackColor = Color.White;
             _btnFindWarehouse.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -607,9 +607,9 @@ namespace FSM
             _btnFindWarehouse.Size = new Size(32, 23);
             _btnFindWarehouse.TabIndex = 6;
             _btnFindWarehouse.Text = "...";
-            // 
+            //
             // txtWarehouse
-            // 
+            //
             _txtWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtWarehouse.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtWarehouse.Location = new Point(128, 133);
@@ -618,9 +618,9 @@ namespace FSM
             _txtWarehouse.Size = new Size(392, 21);
             _txtWarehouse.TabIndex = 5;
             _txtWarehouse.Text = "";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.BackColor = Color.White;
             _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label4.Location = new Point(8, 128);
@@ -628,9 +628,9 @@ namespace FSM
             _Label4.Size = new Size(72, 20);
             _Label4.TabIndex = 51;
             _Label4.Text = "Warehouse";
-            // 
+            //
             // btnFindSite
-            // 
+            //
             _btnFindSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindSite.BackColor = Color.White;
             _btnFindSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -639,9 +639,9 @@ namespace FSM
             _btnFindSite.Size = new Size(32, 23);
             _btnFindSite.TabIndex = 4;
             _btnFindSite.Text = "...";
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtSite.Location = new Point(128, 97);
@@ -650,9 +650,9 @@ namespace FSM
             _txtSite.Size = new Size(392, 21);
             _txtSite.TabIndex = 3;
             _txtSite.Text = "";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.BackColor = Color.White;
             _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(8, 96);
@@ -660,9 +660,9 @@ namespace FSM
             _Label1.Size = new Size(72, 20);
             _Label1.TabIndex = 47;
             _Label1.Text = "Property";
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindCustomer.BackColor = Color.White;
             _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -671,9 +671,9 @@ namespace FSM
             _btnFindCustomer.Size = new Size(32, 23);
             _btnFindCustomer.TabIndex = 2;
             _btnFindCustomer.Text = "...";
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCustomer.Location = new Point(8, 25);
@@ -682,26 +682,26 @@ namespace FSM
             _txtCustomer.Size = new Size(512, 21);
             _txtCustomer.TabIndex = 1;
             _txtCustomer.Text = "";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.ForeColor = SystemColors.ControlText;
             _Label3.Location = new Point(8, 56);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(560, 23);
             _Label3.TabIndex = 41;
             _Label3.Text = "Please select a property to deliver to.  If property is currently unknown, select a wareh" + "ouse to deliver to.";
-            // 
+            //
             // lblSpecial
-            // 
+            //
             _lblSpecial.Location = new Point(8, 280);
             _lblSpecial.Name = "lblSpecial";
             _lblSpecial.Size = new Size(120, 40);
             _lblSpecial.TabIndex = 119;
             _lblSpecial.Text = "Special Instructions";
-            // 
+            //
             // txtSpecialInstructions
-            // 
+            //
             _txtSpecialInstructions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtSpecialInstructions.Location = new Point(128, 280);
@@ -711,25 +711,25 @@ namespace FSM
             _txtSpecialInstructions.Size = new Size(392, 66);
             _txtSpecialInstructions.TabIndex = 118;
             _txtSpecialInstructions.Text = "";
-            // 
+            //
             // cboUsers
-            // 
+            //
             _cboUsers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboUsers.Location = new Point(128, 232);
             _cboUsers.Name = "cboUsers";
             _cboUsers.Size = new Size(392, 21);
             _cboUsers.TabIndex = 114;
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Location = new Point(8, 230);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(112, 24);
             _Label13.TabIndex = 117;
             _Label13.Text = "Co-ordinator";
-            // 
+            //
             // btnFindContact
-            // 
+            //
             _btnFindContact.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindContact.BackColor = Color.White;
             _btnFindContact.Enabled = false;
@@ -739,9 +739,9 @@ namespace FSM
             _btnFindContact.Size = new Size(32, 24);
             _btnFindContact.TabIndex = 113;
             _btnFindContact.Text = "...";
-            // 
+            //
             // txtContact
-            // 
+            //
             _txtContact.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtContact.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtContact.Location = new Point(128, 208);
@@ -750,18 +750,18 @@ namespace FSM
             _txtContact.Size = new Size(392, 21);
             _txtContact.TabIndex = 112;
             _txtContact.Text = "";
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label14.Location = new Point(8, 206);
             _Label14.Name = "Label14";
             _Label14.Size = new Size(64, 24);
             _Label14.TabIndex = 116;
             _Label14.Text = "Contact";
-            // 
+            //
             // btnFindInvoiceAddress
-            // 
+            //
             _btnFindInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindInvoiceAddress.BackColor = Color.White;
             _btnFindInvoiceAddress.Enabled = false;
@@ -771,9 +771,9 @@ namespace FSM
             _btnFindInvoiceAddress.Size = new Size(32, 24);
             _btnFindInvoiceAddress.TabIndex = 111;
             _btnFindInvoiceAddress.Text = "...";
-            // 
+            //
             // txtInvoiceAddress
-            // 
+            //
             _txtInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtInvoiceAddress.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtInvoiceAddress.Location = new Point(128, 256);
@@ -782,18 +782,18 @@ namespace FSM
             _txtInvoiceAddress.Size = new Size(392, 21);
             _txtInvoiceAddress.TabIndex = 110;
             _txtInvoiceAddress.Text = "";
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label15.Location = new Point(8, 254);
             _Label15.Name = "Label15";
             _Label15.Size = new Size(104, 24);
             _Label15.TabIndex = 115;
             _Label15.Text = "Invoice Address";
-            // 
+            //
             // UCOrderForCustomer
-            // 
+            //
             Controls.Add(_GroupBox1);
             Name = "UCOrderForCustomer";
             Size = new Size(592, 408);
@@ -803,7 +803,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             btnFindSite.Enabled = false;
@@ -820,11 +821,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1009,9 +1011,11 @@ namespace FSM
                 InvoiceAddress = App.DB.InvoiceAddress.InvoiceAddress_Get(ID);
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             // DO NOTHING
         }

@@ -1,17 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCOrderForJob : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCOrderForJob() : base()
         {
             base.Load += UCOrderForJob_Load;
@@ -20,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -41,7 +40,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpJob;
 
@@ -206,7 +205,6 @@ namespace FSM
             {
                 if (_btnFindWarehouse != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnFindWarehouse.Click -= btnFindWarehouse_Click;
@@ -263,9 +261,9 @@ namespace FSM
             _grpCustomerSearch.SuspendLayout();
             _grpWarehouse.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpJob
-            // 
+            //
             _grpJob.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJob.Controls.Add(_dgEngineerVisits);
@@ -275,9 +273,9 @@ namespace FSM
             _grpJob.TabIndex = 10;
             _grpJob.TabStop = false;
             _grpJob.Text = "Select a Visit to assign this Order to:";
-            // 
+            //
             // dgEngineerVisits
-            // 
+            //
             _dgEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgEngineerVisits.DataMember = "";
@@ -286,9 +284,9 @@ namespace FSM
             _dgEngineerVisits.Name = "dgEngineerVisits";
             _dgEngineerVisits.Size = new Size(680, 214);
             _dgEngineerVisits.TabIndex = 3;
-            // 
+            //
             // btnSearch
-            // 
+            //
             _btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSearch.ForeColor = SystemColors.ControlText;
             _btnSearch.Location = new Point(640, 25);
@@ -296,18 +294,18 @@ namespace FSM
             _btnSearch.Size = new Size(48, 23);
             _btnSearch.TabIndex = 2;
             _btnSearch.Text = "Find";
-            // 
+            //
             // txtJobSearch
-            // 
+            //
             _txtJobSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtJobSearch.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtJobSearch.Location = new Point(8, 24);
             _txtJobSearch.Name = "txtJobSearch";
             _txtJobSearch.Size = new Size(624, 21);
             _txtJobSearch.TabIndex = 1;
-            // 
+            //
             // grpCustomerSearch
-            // 
+            //
             _grpCustomerSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpCustomerSearch.BackColor = Color.White;
             _grpCustomerSearch.Controls.Add(_btnSearch);
@@ -320,9 +318,9 @@ namespace FSM
             _grpCustomerSearch.TabIndex = 9;
             _grpCustomerSearch.TabStop = false;
             _grpCustomerSearch.Text = "Job Number / Address";
-            // 
+            //
             // grpWarehouse
-            // 
+            //
             _grpWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpWarehouse.Controls.Add(_btnFindWarehouse);
             _grpWarehouse.Controls.Add(_txtWarehouse);
@@ -332,9 +330,9 @@ namespace FSM
             _grpWarehouse.TabIndex = 11;
             _grpWarehouse.TabStop = false;
             _grpWarehouse.Text = "Warehouse";
-            // 
+            //
             // btnFindWarehouse
-            // 
+            //
             _btnFindWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindWarehouse.ForeColor = SystemColors.ControlText;
             _btnFindWarehouse.Location = new Point(640, 18);
@@ -342,18 +340,18 @@ namespace FSM
             _btnFindWarehouse.Size = new Size(48, 23);
             _btnFindWarehouse.TabIndex = 3;
             _btnFindWarehouse.Text = "...";
-            // 
+            //
             // txtWarehouse
-            // 
+            //
             _txtWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtWarehouse.Location = new Point(8, 20);
             _txtWarehouse.Name = "txtWarehouse";
             _txtWarehouse.ReadOnly = true;
             _txtWarehouse.Size = new Size(624, 21);
             _txtWarehouse.TabIndex = 0;
-            // 
+            //
             // UCOrderForJob
-            // 
+            //
             Controls.Add(_grpWarehouse);
             Controls.Add(_grpCustomerSearch);
             Controls.Add(_grpJob);
@@ -370,7 +368,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupVisitsDataGrid();
@@ -386,11 +385,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -454,6 +454,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupVisitsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgEngineerVisits);
@@ -595,7 +596,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
         }
 
@@ -605,7 +607,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
-
     }
 }

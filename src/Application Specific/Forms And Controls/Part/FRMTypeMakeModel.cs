@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMTypeMakeModel : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMTypeMakeModel() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMManager_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpItems;
 
@@ -421,9 +419,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgManager).BeginInit();
             _grpDetails.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpItems
-            // 
+            //
             _grpItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpItems.Controls.Add(_dgManager);
@@ -434,9 +432,9 @@ namespace FSM
             _grpItems.TabIndex = 5;
             _grpItems.TabStop = false;
             _grpItems.Text = "Items";
-            // 
+            //
             // dgManager
-            // 
+            //
             _dgManager.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgManager.DataMember = "";
@@ -445,9 +443,9 @@ namespace FSM
             _dgManager.Name = "dgManager";
             _dgManager.Size = new Size(352, 355);
             _dgManager.TabIndex = 3;
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.AccessibleDescription = "Add new item";
             _btnAddNew.Cursor = Cursors.Hand;
             _btnAddNew.UseVisualStyleBackColor = true;
@@ -456,17 +454,17 @@ namespace FSM
             _btnAddNew.Size = new Size(48, 23);
             _btnAddNew.TabIndex = 2;
             _btnAddNew.Text = "New";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 45);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(72, 23);
             _Label1.TabIndex = 4;
             _Label1.Text = "Select Type";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboType.Cursor = Cursors.Hand;
             _cboType.DisplayMember = "Description";
@@ -476,9 +474,9 @@ namespace FSM
             _cboType.Size = new Size(288, 21);
             _cboType.TabIndex = 1;
             _cboType.ValueMember = "Value";
-            // 
+            //
             // grpDetails
-            // 
+            //
             _grpDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _grpDetails.Controls.Add(_cbxShowOnJob);
             _grpDetails.Controls.Add(_txtPercentageRate);
@@ -494,9 +492,9 @@ namespace FSM
             _grpDetails.TabIndex = 7;
             _grpDetails.TabStop = false;
             _grpDetails.Text = "Details";
-            // 
+            //
             // cbxShowOnJob
-            // 
+            //
             _cbxShowOnJob.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _cbxShowOnJob.AutoSize = true;
             _cbxShowOnJob.Location = new Point(208, 188);
@@ -506,9 +504,9 @@ namespace FSM
             _cbxShowOnJob.Text = "Show on Job";
             _cbxShowOnJob.TextAlign = ContentAlignment.MiddleRight;
             _cbxShowOnJob.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtPercentageRate
-            // 
+            //
             _txtPercentageRate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtPercentageRate.Location = new Point(104, 184);
             _txtPercentageRate.MaxLength = 255;
@@ -516,9 +514,9 @@ namespace FSM
             _txtPercentageRate.Size = new Size(87, 21);
             _txtPercentageRate.TabIndex = 9;
             _txtPercentageRate.Visible = false;
-            // 
+            //
             // lblPercentageRate
-            // 
+            //
             _lblPercentageRate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPercentageRate.Location = new Point(6, 184);
             _lblPercentageRate.Name = "lblPercentageRate";
@@ -526,25 +524,25 @@ namespace FSM
             _lblPercentageRate.TabIndex = 8;
             _lblPercentageRate.Text = "Rate (%)";
             _lblPercentageRate.Visible = false;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 56);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(72, 23);
             _Label3.TabIndex = 6;
             _Label3.Text = "Description";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Location = new Point(104, 24);
             _txtName.MaxLength = 255;
             _txtName.Name = "txtName";
             _txtName.Size = new Size(280, 21);
             _txtName.TabIndex = 5;
-            // 
+            //
             // txtDescription
-            // 
+            //
             _txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _txtDescription.Location = new Point(104, 56);
             _txtDescription.Multiline = true;
@@ -552,17 +550,17 @@ namespace FSM
             _txtDescription.ScrollBars = ScrollBars.Vertical;
             _txtDescription.Size = new Size(280, 120);
             _txtDescription.TabIndex = 6;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(48, 23);
             _Label2.TabIndex = 5;
             _Label2.Text = "Name";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.AccessibleDescription = "Save item";
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Cursor = Cursors.Hand;
@@ -573,9 +571,9 @@ namespace FSM
             _btnSave.Size = new Size(48, 23);
             _btnSave.TabIndex = 7;
             _btnSave.Text = "Save";
-            // 
+            //
             // FRMTypeMakeModel
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(784, 494);
             Controls.Add(_grpDetails);
@@ -599,7 +597,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupManagerDataGrid();
@@ -619,7 +618,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -692,6 +691,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupManagerDataGrid()
         {
             var tbStyle = dgManager.TableStyles[0];
@@ -832,10 +832,9 @@ namespace FSM
             Delete();
         }
 
-
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateDatagrid(Entity.Sys.Enums.FormState state)
         {
             try
@@ -854,8 +853,8 @@ namespace FSM
                     var switchExpr = Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboType));
                     switch (switchExpr)
                     {
-                        case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.VATCodes):
-                        case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.PartCategories):
+                        case (int)(Entity.Sys.Enums.PickListTypes.VATCodes):
+                        case (int)(Entity.Sys.Enums.PickListTypes.PartCategories):
                             {
                                 lblPercentageRate.Visible = true;
                                 txtPercentageRate.Visible = true;
@@ -921,8 +920,8 @@ namespace FSM
             var switchExpr = Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboType));
             switch (switchExpr)
             {
-                case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.VATCodes):
-                case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.PartCategories):
+                case (int)(Entity.Sys.Enums.PickListTypes.VATCodes):
+                case (int)(Entity.Sys.Enums.PickListTypes.PartCategories):
                     {
                         picklist.SetPercentageRate = txtPercentageRate.Text.Trim();
                         break;
@@ -1016,6 +1015,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

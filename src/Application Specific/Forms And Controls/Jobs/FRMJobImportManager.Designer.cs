@@ -324,6 +324,16 @@ namespace FSM
             PerformLayout();
         }
 
+        void IForm.LoadMe(object sender, EventArgs e)
+        {
+            
+        }
+
+        void IForm.ResetMe(int newID)
+        {
+            
+        }
+
         private GroupBox _grpJobs;
 
         internal GroupBox grpJobs

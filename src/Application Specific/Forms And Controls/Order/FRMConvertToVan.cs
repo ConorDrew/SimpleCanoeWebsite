@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -14,13 +14,13 @@ namespace FSM
     {
         public FRMConvertToVan()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMDistributeAllocated_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMConvertToVan(bool UsedIn, int QuantityIn, string PartProductNameIn, string TypeIn, int IDIn, ArrayList AllocatedIn) : base()
         {
             base.Load += FRMDistributeAllocated_Load;
@@ -55,7 +55,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Button _btnOK;
 
@@ -194,25 +194,25 @@ namespace FSM
             _grpOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgLocations).BeginInit();
             SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(480, 512);
             _btnOK.Name = "btnOK";
             _btnOK.TabIndex = 4;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(8, 512);
             _btnCancel.Name = "btnCancel";
             _btnCancel.TabIndex = 6;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // grpOptions
-            // 
+            //
             _grpOptions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpOptions.Controls.Add(_dgLocations);
@@ -222,18 +222,18 @@ namespace FSM
             _grpOptions.TabIndex = 7;
             _grpOptions.TabStop = false;
             _grpOptions.Text = "Enter amount to distribute to each location";
-            // 
+            //
             // lblDetails
-            // 
+            //
             _lblDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _lblDetails.Location = new Point(8, 40);
             _lblDetails.Name = "lblDetails";
             _lblDetails.Size = new Size(544, 23);
             _lblDetails.TabIndex = 8;
             _lblDetails.Text = "PARTPRODUCTDETAILS";
-            // 
+            //
             // dgLocations
-            // 
+            //
             _dgLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgLocations.DataMember = "";
@@ -242,9 +242,9 @@ namespace FSM
             _dgLocations.Name = "dgLocations";
             _dgLocations.Size = new Size(528, 408);
             _dgLocations.TabIndex = 2;
-            // 
+            //
             // FRMDistributeAllocated
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(560, 542);
             ControlBox = false;
@@ -266,7 +266,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDG();
@@ -291,7 +292,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -487,6 +488,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDG()
         {
             var tStyle = dgLocations.TableStyles[0];
@@ -561,9 +563,9 @@ namespace FSM
             int totalDistributed = 0;
             foreach (DataRow row in Locations.Table.Rows)
             {
-                if (Conversions.ToBoolean(row["Quantity"] > 0))
+                if (Conversions.ToBoolean((int)row["Quantity"] > 0))
                 {
-                    totalDistributed += row["Quantity"];
+                    totalDistributed += (int)row["Quantity"];
                 }
             }
 
@@ -578,7 +580,7 @@ namespace FSM
                     var errors = new ArrayList();
                     foreach (DataRow row in Locations.Table.Rows)
                     {
-                        if (Conversions.ToBoolean(row["Quantity"] > 0))
+                        if (Conversions.ToBoolean((int)row["Quantity"] > 0))
                         {
                             var switchExpr = row["Available"];
                             switch (switchExpr)

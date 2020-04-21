@@ -1,22 +1,21 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class FRMSelectLocation : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSelectLocation() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSelectLocation_Load;
@@ -25,7 +24,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -46,7 +44,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Button _btnOK;
 
@@ -163,27 +161,27 @@ namespace FSM
             _grpLocations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgLocations).BeginInit();
             SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(856, 444);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(60, 25);
             _btnOK.TabIndex = 4;
             _btnOK.Text = "OK";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(12, 444);
             _btnCancel.Name = "btnCancel";
             _btnCancel.Size = new Size(56, 25);
             _btnCancel.TabIndex = 7;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // grpLocations
-            // 
+            //
             _grpLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpLocations.Controls.Add(_dgLocations);
@@ -193,9 +191,9 @@ namespace FSM
             _grpLocations.TabIndex = 3;
             _grpLocations.TabStop = false;
             _grpLocations.Text = "Select location to replenish from : {0}";
-            // 
+            //
             // dgLocations
-            // 
+            //
             _dgLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgLocations.DataMember = "";
@@ -204,9 +202,9 @@ namespace FSM
             _dgLocations.Name = "dgLocations";
             _dgLocations.Size = new Size(889, 374);
             _dgLocations.TabIndex = 1;
-            // 
+            //
             // FRMSelectLocation
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(928, 481);
             ControlBox = false;
@@ -226,7 +224,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDG();
@@ -331,6 +330,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDG()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgLocations);

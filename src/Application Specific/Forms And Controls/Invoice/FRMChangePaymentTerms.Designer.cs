@@ -149,6 +149,11 @@ namespace FSM
             ResumeLayout(false);
         }
 
+        void IForm.LoadMe(object sender, EventArgs e)
+        {
+            
+        }
+
         private GroupBox _GroupBox1;
 
         internal GroupBox GroupBox1

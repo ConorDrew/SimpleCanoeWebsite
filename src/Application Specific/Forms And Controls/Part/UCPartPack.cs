@@ -1,22 +1,22 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCPartPack : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCPartPack() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCPart_Load;
@@ -25,7 +25,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -131,7 +130,6 @@ namespace FSM
             {
                 if (_btnAdd != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnAdd.Click -= btnAdd_Click;
                 }
@@ -316,18 +314,18 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgvPartPack).BeginInit();
             _TabControl1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_grpPart);
             _tabDetails.Location = new Point(4, 22);
             _tabDetails.Name = "tabDetails";
             _tabDetails.Size = new Size(624, 612);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Main Details";
-            // 
+            //
             // grpPart
-            // 
+            //
             _grpPart.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpPart.Controls.Add(_lblPackSuppliers);
@@ -343,18 +341,18 @@ namespace FSM
             _grpPart.TabIndex = 0;
             _grpPart.TabStop = false;
             _grpPart.Text = "Main Details";
-            // 
+            //
             // lblPackSuppliers
-            // 
+            //
             _lblPackSuppliers.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPackSuppliers.Location = new Point(8, 400);
             _lblPackSuppliers.Name = "lblPackSuppliers";
             _lblPackSuppliers.Size = new Size(117, 21);
             _lblPackSuppliers.TabIndex = 63;
             _lblPackSuppliers.Text = "Pack Suppliers";
-            // 
+            //
             // dgPackSuppliers
-            // 
+            //
             _dgPackSuppliers.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _dgPackSuppliers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             _dgPackSuppliers.Location = new Point(11, 424);
@@ -362,9 +360,9 @@ namespace FSM
             _dgPackSuppliers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _dgPackSuppliers.Size = new Size(585, 160);
             _dgPackSuppliers.TabIndex = 62;
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRemove.Location = new Point(11, 358);
             _btnRemove.Name = "btnRemove";
@@ -372,9 +370,9 @@ namespace FSM
             _btnRemove.TabIndex = 61;
             _btnRemove.Text = "Remove";
             _btnRemove.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAdd.Location = new Point(521, 358);
             _btnAdd.Name = "btnAdd";
@@ -382,9 +380,9 @@ namespace FSM
             _btnAdd.TabIndex = 60;
             _btnAdd.Text = "Add";
             _btnAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgvPartPack
-            // 
+            //
             _dgvPartPack.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _dgvPartPack.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             _dgvPartPack.Location = new Point(11, 64);
@@ -392,17 +390,17 @@ namespace FSM
             _dgvPartPack.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _dgvPartPack.Size = new Size(585, 279);
             _dgvPartPack.TabIndex = 59;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(57, 21);
             _Label2.TabIndex = 33;
             _Label2.Text = "Name";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(160, 26);
             _txtName.MaxLength = 255;
@@ -410,9 +408,9 @@ namespace FSM
             _txtName.Size = new Size(436, 21);
             _txtName.TabIndex = 0;
             _txtName.Tag = "Part.Name";
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tabDetails);
@@ -421,9 +419,9 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(632, 638);
             _TabControl1.TabIndex = 0;
-            // 
+            //
             // UCPartPack
-            // 
+            //
             Controls.Add(_TabControl1);
             Name = "UCPartPack";
             Size = new Size(640, 648);
@@ -438,7 +436,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupPartPackDatagrid();
@@ -455,11 +454,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -523,6 +523,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupPartPackDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGridView(dgvPartPack);
@@ -595,6 +596,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate(int ID = 0)
         {
             PackID = ID;
@@ -649,7 +651,7 @@ namespace FSM
                     {
                         if (PackID == 0)
                         {
-                            PackID = Conversions.ToInteger(App.DB.ExecuteScalar("Select ISNULL(MAX(PackID),0) From tblPartPack") + 1);
+                            PackID = Conversions.ToInteger(Helper.MakeIntegerValid(App.DB.ExecuteScalar("Select ISNULL(MAX(PackID),0) From tblPartPack")) + 1);
                             isNewPack = true;
                         }
 
@@ -699,7 +701,7 @@ namespace FSM
                     if (PackID == 0)
                     {
                         PartPackName = txtName.Text;
-                        PackID = Conversions.ToInteger(App.DB.ExecuteScalar("Select ISNULL(MAX(PackID),0) From tblPartPack") + 1);
+                        PackID = Conversions.ToInteger(Helper.MakeIntegerValid(App.DB.ExecuteScalar("Select ISNULL(MAX(PackID),0) From tblPartPack")) + 1);
                     }
 
                     foreach (DataRow dr in datarows)

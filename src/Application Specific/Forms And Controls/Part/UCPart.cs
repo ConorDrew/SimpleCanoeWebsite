@@ -1,21 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class UCPart : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCPart() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCPart_Load;
@@ -38,7 +37,6 @@ namespace FSM
             // Combo.SetUpCombo(Me.cboBinAlternatuve, DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.PartBinReferences).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable)
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -939,9 +937,9 @@ namespace FSM
             _grpStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgStock).BeginInit();
             SuspendLayout();
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tabDetails);
@@ -953,18 +951,18 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(632, 638);
             _TabControl1.TabIndex = 0;
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_grpPart);
             _tabDetails.Location = new Point(4, 22);
             _tabDetails.Name = "tabDetails";
             _tabDetails.Size = new Size(624, 612);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Main Details";
-            // 
+            //
             // grpPart
-            // 
+            //
             _grpPart.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpPart.Controls.Add(_cboManufacturer);
@@ -993,65 +991,65 @@ namespace FSM
             _grpPart.TabIndex = 0;
             _grpPart.TabStop = false;
             _grpPart.Text = "Main Details";
-            // 
+            //
             // cboFuel
-            // 
+            //
             _cboFuel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboFuel.Location = new Point(160, 213);
             _cboFuel.Name = "cboFuel";
             _cboFuel.Size = new Size(436, 21);
             _cboFuel.TabIndex = 57;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 212);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(62, 23);
             _Label5.TabIndex = 58;
             _Label5.Text = "Fuel";
-            // 
+            //
             // chkEndFlagged
-            // 
+            //
             _chkEndFlagged.Location = new Point(160, 356);
             _chkEndFlagged.Name = "chkEndFlagged";
             _chkEndFlagged.Size = new Size(92, 24);
             _chkEndFlagged.TabIndex = 17;
             _chkEndFlagged.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Location = new Point(8, 356);
             _Label14.Name = "Label14";
             _Label14.Size = new Size(152, 24);
             _Label14.TabIndex = 56;
             _Label14.Text = "End Flagged";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(8, 56);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(64, 21);
             _Label8.TabIndex = 44;
             _Label8.Text = "Category";
-            // 
+            //
             // cboCategory
-            // 
+            //
             _cboCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboCategory.Location = new Point(160, 57);
             _cboCategory.Name = "cboCategory";
             _cboCategory.Size = new Size(436, 21);
             _cboCategory.TabIndex = 1;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(8, 120);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(109, 21);
             _Label7.TabIndex = 42;
             _Label7.Text = "Reference (GPN)";
-            // 
+            //
             // txtReference
-            // 
+            //
             _txtReference.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtReference.Location = new Point(160, 120);
             _txtReference.MaxLength = 100;
@@ -1059,56 +1057,56 @@ namespace FSM
             _txtReference.Size = new Size(436, 21);
             _txtReference.TabIndex = 3;
             _txtReference.Tag = "Part.Reference";
-            // 
+            //
             // txtSellPrice
-            // 
+            //
             _txtSellPrice.Location = new Point(160, 324);
             _txtSellPrice.Name = "txtSellPrice";
             _txtSellPrice.Size = new Size(104, 21);
             _txtSellPrice.TabIndex = 13;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 323);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(63, 23);
             _Label4.TabIndex = 36;
             _Label4.Text = "Sell Price";
-            // 
+            //
             // cboUnitType
-            // 
+            //
             _cboUnitType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboUnitType.Location = new Point(160, 153);
             _cboUnitType.Name = "cboUnitType";
             _cboUnitType.Size = new Size(436, 21);
             _cboUnitType.TabIndex = 4;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 152);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(62, 23);
             _Label3.TabIndex = 34;
             _Label3.Text = "Unit Type";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 24);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(57, 21);
             _Label2.TabIndex = 33;
             _Label2.Text = "Name";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 88);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(100, 21);
             _Label1.TabIndex = 32;
             _Label1.Text = "Number (MPN)";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(160, 26);
             _txtName.MaxLength = 255;
@@ -1116,9 +1114,9 @@ namespace FSM
             _txtName.Size = new Size(436, 21);
             _txtName.TabIndex = 0;
             _txtName.Tag = "Part.Name";
-            // 
+            //
             // txtNumber
-            // 
+            //
             _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNumber.Location = new Point(160, 89);
             _txtNumber.MaxLength = 100;
@@ -1126,9 +1124,9 @@ namespace FSM
             _txtNumber.Size = new Size(436, 21);
             _txtNumber.TabIndex = 2;
             _txtNumber.Tag = "Part.Number";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(160, 413);
@@ -1138,26 +1136,26 @@ namespace FSM
             _txtNotes.Size = new Size(436, 176);
             _txtNotes.TabIndex = 19;
             _txtNotes.Tag = "Part.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 413);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(57, 21);
             _lblNotes.TabIndex = 31;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // tabSuppliers
-            // 
+            //
             _tabSuppliers.Controls.Add(_GroupBox1);
             _tabSuppliers.Location = new Point(4, 22);
             _tabSuppliers.Name = "tabSuppliers";
             _tabSuppliers.Size = new Size(624, 612);
             _tabSuppliers.TabIndex = 1;
             _tabSuppliers.Text = "Suppliers";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_btnDelete);
@@ -1169,27 +1167,27 @@ namespace FSM
             _GroupBox1.TabIndex = 1;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Suppliers of this part";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Location = new Point(537, 563);
             _btnDelete.Name = "btnDelete";
             _btnDelete.Size = new Size(64, 23);
             _btnDelete.TabIndex = 3;
             _btnDelete.Text = "Remove";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAdd.Location = new Point(8, 563);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(64, 23);
             _btnAdd.TabIndex = 2;
             _btnAdd.Text = "Add";
-            // 
+            //
             // dgPartSuppliers
-            // 
+            //
             _dgPartSuppliers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dgPartSuppliers.DataMember = "";
             _dgPartSuppliers.HeaderForeColor = SystemColors.ControlText;
@@ -1197,9 +1195,9 @@ namespace FSM
             _dgPartSuppliers.Name = "dgPartSuppliers";
             _dgPartSuppliers.Size = new Size(593, 530);
             _dgPartSuppliers.TabIndex = 1;
-            // 
+            //
             // tpQuantities
-            // 
+            //
             _tpQuantities.Controls.Add(_GroupBox2);
             _tpQuantities.Location = new Point(4, 22);
             _tpQuantities.Name = "tpQuantities";
@@ -1208,9 +1206,9 @@ namespace FSM
             _tpQuantities.TabIndex = 3;
             _tpQuantities.Text = "Min / Max Quantities";
             _tpQuantities.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox2.Controls.Add(_dgQuantities);
@@ -1220,9 +1218,9 @@ namespace FSM
             _GroupBox2.TabIndex = 3;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Min /Max quantities held per location";
-            // 
+            //
             // dgQuantities
-            // 
+            //
             _dgQuantities.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgQuantities.DataMember = "";
@@ -1231,9 +1229,9 @@ namespace FSM
             _dgQuantities.Name = "dgQuantities";
             _dgQuantities.Size = new Size(593, 569);
             _dgQuantities.TabIndex = 1;
-            // 
+            //
             // tpStock
-            // 
+            //
             _tpStock.Controls.Add(_grpStock);
             _tpStock.Location = new Point(4, 22);
             _tpStock.Name = "tpStock";
@@ -1242,9 +1240,9 @@ namespace FSM
             _tpStock.TabIndex = 2;
             _tpStock.Text = "Stock Locations";
             _tpStock.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpStock
-            // 
+            //
             _grpStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpStock.Controls.Add(_dgStock);
@@ -1254,9 +1252,9 @@ namespace FSM
             _grpStock.TabIndex = 2;
             _grpStock.TabStop = false;
             _grpStock.Text = "Locations of this part";
-            // 
+            //
             // dgStock
-            // 
+            //
             _dgStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgStock.DataMember = "";
@@ -1265,25 +1263,25 @@ namespace FSM
             _dgStock.Name = "dgStock";
             _dgStock.Size = new Size(593, 569);
             _dgStock.TabIndex = 1;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(8, 181);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(121, 21);
             _Label6.TabIndex = 60;
             _Label6.Text = "Manufacturer";
-            // 
+            //
             // cboManufacturer
-            // 
+            //
             _cboManufacturer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboManufacturer.Location = new Point(160, 183);
             _cboManufacturer.Name = "cboManufacturer";
             _cboManufacturer.Size = new Size(436, 21);
             _cboManufacturer.TabIndex = 61;
-            // 
+            //
             // UCPart
-            // 
+            //
             Controls.Add(_TabControl1);
             Name = "UCPart";
             Size = new Size(640, 648);
@@ -1305,7 +1303,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupSuppliersDatagrid();
@@ -1323,11 +1322,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1510,6 +1510,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSuppliersDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgPartSuppliers);
@@ -1750,7 +1751,6 @@ namespace FSM
             ssm2 = Entity.Sys.Enums.SecuritySystemModules.CreateParts;
             if (App.loggedInUser.HasAccessToModule(ssm) == true | App.loggedInUser.HasAccessToModule(ssm2) == true)
             {
-
                 // If EnterOverridePassword() = True Then
                 // Check if part is on an order i.e in tblOrderPart
                 int OrderedCount = Conversions.ToInteger(App.DB.ExecuteScalar(Conversions.ToString("SELECT COUNT(*) AS Expr1 FROM tblOrderPart WHERE (PartSupplierID = " + SelectedPartSupplierDataRow["PartSupplierID"] + ") AND (EngineerReceivedOn IS NULL) AND (Deleted = 0)")));
@@ -1799,6 +1799,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateSuppliers()
         {
             PartSuppliersDataView = App.DB.PartSupplier.Get_ByPartID(CurrentPart.PartID);
@@ -1814,7 +1815,7 @@ namespace FSM
             PartQuantitiesDataview = App.DB.Part.Part_Locations_Get(CurrentPart.PartID);
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))
