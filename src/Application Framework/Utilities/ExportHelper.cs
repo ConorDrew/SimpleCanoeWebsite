@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using OfficeOpenXml;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -7,9 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
-using OfficeOpenXml;
 
 namespace FSM.Entity
 {
@@ -97,7 +97,10 @@ namespace FSM.Entity
                         var allCells = ws.Cells[1, 1, totalRows, totalColumns];
                         allCells.AutoFitColumns();
                         var border = allCells.Style.Border;
-                        border.Top.Style = (OfficeOpenXml.Style.ExcelBorderStyle)(Conversions.ToInteger(Conversions.ToInteger(border.Left.Style == border.Bottom.Style) == (int)border.Right.Style) == (int)OfficeOpenXml.Style.ExcelBorderStyle.Thin);
+                        border.Top.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
                         int dtLength = dtData.Columns.Count;
                         for (int i = 1, loopTo = ws.Dimension.End.Column; i <= loopTo; i++)
                         {

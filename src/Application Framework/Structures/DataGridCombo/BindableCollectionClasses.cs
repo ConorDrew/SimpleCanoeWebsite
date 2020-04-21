@@ -21,11 +21,16 @@ namespace FSM
         private bool _supportsSearching = false;
         private bool _supportsSorting = false;
 
+        public BindableCollection()
+        {
+            Properties = new CollectionProperties(this);
+        }
+
         // for calculated events
         protected internal event PropertyChangedEventHandler propertyChanged;
 
         // these hold contained properties
-        protected readonly CollectionProperties Properties = new CollectionProperties(this);
+        protected readonly CollectionProperties Properties;
 
         event System.ComponentModel.ListChangedEventHandler IBindingList.ListChanged
         {

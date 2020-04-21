@@ -3726,21 +3726,21 @@ namespace FSM
                         OverridePrice = false;
                         if (Number is object)
                         {
-                            App.DB.Job.DeleteReservedOrderNumber(Number.JobNumber, Number.Prefix);
+                            App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
                         }
 
                         Number = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Combo.get_GetSelectedItemValue(cboContractType));
-                        if (Number.JobNumber.ToString().Length < 3)
+                        if (Number.Number.ToString().Length < 3)
                         {
-                            lblContractRef.Text = Number.Prefix + "00" + Number.JobNumber;
+                            lblContractRef.Text = Number.Prefix + "00" + Number.Number;
                         }
-                        else if (Number.JobNumber.ToString().Length < 4)
+                        else if (Number.Number.ToString().Length < 4)
                         {
-                            lblContractRef.Text = Number.Prefix + "0" + Number.JobNumber;
+                            lblContractRef.Text = Number.Prefix + "0" + Number.Number;
                         }
                         else
                         {
-                            lblContractRef.Text = Number.Prefix + Number.JobNumber;
+                            lblContractRef.Text = Number.Prefix + Number.Number;
                         }
                     }
                 }
@@ -3748,21 +3748,21 @@ namespace FSM
                 {
                     if (Number is object)
                     {
-                        App.DB.Job.DeleteReservedOrderNumber(Number.JobNumber, Number.Prefix);
+                        App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
                     }
 
                     Number = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Combo.get_GetSelectedItemValue(cboContractType));
-                    if (Number.JobNumber.ToString().Length < 3)
+                    if (Number.Number.ToString().Length < 3)
                     {
-                        lblContractRef.Text = Number.Prefix + "00" + Number.JobNumber;
+                        lblContractRef.Text = Number.Prefix + "00" + Number.Number;
                     }
-                    else if (Number.JobNumber.ToString().Length < 4)
+                    else if (Number.Number.ToString().Length < 4)
                     {
-                        lblContractRef.Text = Number.Prefix + "0" + Number.JobNumber;
+                        lblContractRef.Text = Number.Prefix + "0" + Number.Number;
                     }
                     else
                     {
-                        lblContractRef.Text = Number.Prefix + Number.JobNumber;
+                        lblContractRef.Text = Number.Prefix + Number.Number;
                     }
                 }
 
@@ -4307,21 +4307,21 @@ namespace FSM
                 Combo.SetSelectedComboItem_By_Value(ref argcombo, Conversions.ToString(Enums.ContractTypes.PlatinumStar));
                 if (Number is object)
                 {
-                    App.DB.Job.DeleteReservedOrderNumber(Number.JobNumber, Number.Prefix);
+                    App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
                 }
 
                 Number = App.DB.Job.GetNextJobNumber((Enums.JobDefinition)Enums.ContractTypes.PlatinumStar);
-                if (Number.JobNumber.ToString().Length < 3)
+                if (Number.Number.ToString().Length < 3)
                 {
-                    lblContractRef.Text = Number.Prefix + "00" + Number.JobNumber;
+                    lblContractRef.Text = Number.Prefix + "00" + Number.Number;
                 }
-                else if (Number.JobNumber.ToString().Length < 4)
+                else if (Number.Number.ToString().Length < 4)
                 {
-                    lblContractRef.Text = Number.Prefix + "0" + Number.JobNumber;
+                    lblContractRef.Text = Number.Prefix + "0" + Number.Number;
                 }
                 else
                 {
-                    lblContractRef.Text = Number.Prefix + Number.JobNumber;
+                    lblContractRef.Text = Number.Prefix + Number.Number;
                 }
 
                 CurrentContract.SetContractReference = lblContractRef.Text;
@@ -5628,7 +5628,7 @@ namespace FSM
                         job.SetFOC = true;
                         var JobNumber = new JobNumber();
                         JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Contract);
-                        job.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+                        job.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
                         job.SetPONumber = "";
                         job.SetQuoteID = 0;
                         job.SetContractID = CurrentContract.ContractID;
@@ -6173,7 +6173,7 @@ namespace FSM
         {
             if (Number is object & NumberUsed == false)
             {
-                App.DB.Job.DeleteReservedOrderNumber(Number.JobNumber, Number.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(Number.Number, Number.Prefix);
             }
 
             Dispose();

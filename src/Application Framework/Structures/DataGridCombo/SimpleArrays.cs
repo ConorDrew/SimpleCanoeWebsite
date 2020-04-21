@@ -1,7 +1,7 @@
-﻿using System;
-using System.Diagnostics;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Diagnostics;
 
 namespace FSM
 {
@@ -92,6 +92,7 @@ namespace FSM
             }
         }
     }
+
     // An array of objects.  You can retrieve an item by either index or key
     // It also automatically expands as you add items.
     public class SimpleObjectArrayByKey : SimpleObjectArray

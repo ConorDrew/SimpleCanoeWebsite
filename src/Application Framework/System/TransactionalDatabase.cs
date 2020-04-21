@@ -6,8 +6,8 @@ namespace FSM.Entity.Sys
 {
     public class TransactionalDatabase
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public SqlTransaction Transaction_Get()
         {
             var c = new SqlConnection(App.TheSystem.Configuration.ConnectionString);

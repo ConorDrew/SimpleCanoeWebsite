@@ -1834,7 +1834,7 @@ namespace FSM
             {
                 _OrderNumber = value;
                 OrderNumberUsed = false;
-                OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+                OrderNumber.OrderNumber = OrderNumber.Number.ToString();
                 while (OrderNumber.OrderNumber.Length < 6)
                     OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
                 txtReference.Text = OrderNumber.Prefix + OrderNumber.OrderNumber;
@@ -1981,7 +1981,7 @@ namespace FSM
         {
             if (!OrderNumberUsed)
             {
-                App.DB.Job.DeleteReservedOrderNumber(OrderNumber.JobNumber, OrderNumber.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(OrderNumber.Number, OrderNumber.Prefix);
             }
 
             if (Modal)

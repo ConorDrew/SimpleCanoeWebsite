@@ -1544,7 +1544,7 @@ namespace FSM
                 SetCreatedByUserID = App.loggedInUser.UserID,
                 SetFOC = true,
                 SetJobCreationType = Conversions.ToInteger(Enums.JobCreationType.JobManager),
-                SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber,
+                SetJobNumber = JobNumber.Prefix + JobNumber.Number,
                 SetPONumber = "",
                 SetQuoteID = 0,
                 SetContractID = 0

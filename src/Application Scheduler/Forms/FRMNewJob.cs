@@ -1746,7 +1746,7 @@ namespace FSM
                             withBlock.SetOTI = rbtnOti.Checked;
                             withBlock.SetJobCreationType = Conversions.ToInteger(Enums.JobCreationType.Manual);
                             var JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Callout);
-                            withBlock.SetJobNumber = JobNumber?.Prefix + JobNumber?.JobNumber;
+                            withBlock.SetJobNumber = JobNumber?.Prefix + JobNumber?.Number;
                             withBlock.SetSalesRepUserID = SalesRep?.UserID;
                             withBlock.SetPONumber = "";
                         }

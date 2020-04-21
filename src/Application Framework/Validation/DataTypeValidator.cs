@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class DataTypeValidator
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private bool _ignoreExceptionsOnSetMethods = false;
 
@@ -35,6 +34,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DataTypeValidator()
         {
             _errorTable = new Hashtable();
@@ -56,7 +56,6 @@ namespace FSM
 
             try
             {
-
                 // ################################## Begin changes by Henry ####################################
                 // f = sender.GetType().GetField(variableName, _
                 // System.Reflection.BindingFlags.Instance Or System.Reflection.BindingFlags.NonPublic Or _
@@ -80,7 +79,6 @@ namespace FSM
                     }
                 }
                 // ####################################### End replaced #########################################
-
 
                 string strValue = "";
                 propertyName = GetAssociatedSetPropertyName(variableName);
@@ -116,7 +114,7 @@ namespace FSM
                 }
 
                 // for a list of types:
-                // ms-help://MS.VSCC.2003/MS.MSDNQTR.2003APR.1033/vblr7/html/vagrpDataType.htm        
+                // ms-help://MS.VSCC.2003/MS.MSDNQTR.2003APR.1033/vblr7/html/vagrpDataType.htm
 
                 if (setProperty)
                 {

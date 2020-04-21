@@ -492,7 +492,7 @@ namespace FSM
                 bool isEqual = false;
 
                 // Now do the iteration
-                foreach (var myItem1 in myList)
+                foreach (BindableItem myItem1 in myList)
                 {
                     if (findByValue.Equals(myItem1.get_PropertyValue(compareProperty)))
                     {

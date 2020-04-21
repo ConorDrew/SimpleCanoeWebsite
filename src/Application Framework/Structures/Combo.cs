@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
     public class Combo
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private string _description = "";
 
@@ -56,6 +55,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public Combo(string descriptionIn, string valueIn, object additionalItemIn = null)
         {
             Description = descriptionIn;

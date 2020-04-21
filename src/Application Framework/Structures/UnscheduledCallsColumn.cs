@@ -1,20 +1,22 @@
-﻿using System.Drawing;
+﻿using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FSM
 {
     public class UnscheduledCallsColumn : DataGridLabelColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
-
             // set the color required dependant on the column value
             Brush brush;
             string str = "";
             brush = Brushes.White;
-            if (Entity.Sys.Helper.MakeBooleanValid(source.List[rowNum].row.item("FollowUpDeclined")) == true)
+            DataRowView row = (DataRowView)source.List[rowNum];
+
+            if (Entity.Sys.Helper.MakeBooleanValid(row["FollowUpDeclined"]) == true)
             {
                 brush = Brushes.Salmon;
             }
@@ -27,8 +29,6 @@ namespace FSM
             // brush = Brushes.Purple
             // Else : brush = backBrush
             // End If
-
-
 
             TextBox.Text = "";
 

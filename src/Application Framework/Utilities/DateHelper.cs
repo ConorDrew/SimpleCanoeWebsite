@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Collections.Generic;
 
 namespace FSM.Entity.Sys
 {
     public class DateHelper
     {
-
         /// <summary>
         /// Calculates the number of full days between two dates
         /// </summary>

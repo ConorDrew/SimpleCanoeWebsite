@@ -837,7 +837,7 @@ namespace FSM.Entity
                                                     }
                                                 }
 
-                                                success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.JobNumber, DateAndTime.Now);
+                                                success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
                                                 if (success == true)
                                                 {
                                                     var oSite = App.DB.Sites.Get(r["SiteID"]);
@@ -860,7 +860,7 @@ namespace FSM.Entity
                                                         object argUnit4 = WD.WdUnits.wdStory;
                                                         MsWordApp.Selection.EndKey(Unit: ref argUnit4);
                                                         MsWordApp.Selection.Paste();
-                                                        success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.JobNumber, DateAndTime.Now);
+                                                        success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
                                                         Letter2HandLetters = WordDoc;
                                                     }
                                                     else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
@@ -885,7 +885,7 @@ namespace FSM.Entity
                                                         object argUnit3 = WD.WdUnits.wdStory;
                                                         MsWordApp.Selection.EndKey(Unit: ref argUnit3);
                                                         MsWordApp.Selection.Paste();
-                                                        success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.JobNumber, DateAndTime.Now);
+                                                        success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
                                                         Letter3HandLetters = WordDoc;
                                                     }
 
@@ -899,7 +899,7 @@ namespace FSM.Entity
                                                         _currentJob.SetStatusEnumID = Conversions.ToInteger(Enums.JobStatus.Open);
                                                         _currentJob.SetCreatedByUserID = App.loggedInUser.UserID;
                                                         _currentJob.SetFOC = true;
-                                                        _currentJob.SetJobNumber = JobNumber.Prefix + JobNumber.JobNumber;
+                                                        _currentJob.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
                                                         _currentJob.SetPONumber = "";
                                                         _currentJob.SetQuoteID = 0;
                                                         _currentJob.SetContractID = 0;

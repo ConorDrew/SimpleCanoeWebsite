@@ -6,14 +6,13 @@ namespace FSM
 {
     public class DataGridSchedulerJobColumn : DataGridLabelColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
-
             // Need to get row information from data
-            DataRow row = (DataRow)source.List[rowNum].row;
-            if (row.Table.Columns.Contains("IsJobLate"))
+            DataRowView row = (DataRowView)source.List[rowNum];
+            if (row.DataView.Table.Columns.Contains("IsJobLate"))
             {
                 if (Entity.Sys.Helper.MakeBooleanValid(row["IsJobLate"]))
                 {
@@ -21,7 +20,7 @@ namespace FSM
                 }
             }
 
-            if (row.Table.Columns.Contains("IsServiceOverDue"))
+            if (row.DataView.Table.Columns.Contains("IsServiceOverDue"))
             {
                 if (Entity.Sys.Helper.MakeBooleanValid(row["IsServiceOverDue"]))
                 {
@@ -29,7 +28,7 @@ namespace FSM
                 }
             }
 
-            if (row.Table.Columns.Contains("Declined"))
+            if (row.DataView.Table.Columns.Contains("Declined"))
             {
                 if (Entity.Sys.Helper.MakeBooleanValid(row["Declined"]))
                 {

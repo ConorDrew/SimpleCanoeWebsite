@@ -1532,7 +1532,7 @@ namespace FSM
         {
             var OrderNumber = new JobNumber();
             OrderNumber = App.DB.Job.GetNextJobNumber(Entity.Sys.Enums.JobDefinition.ORDER);
-            OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+            OrderNumber.OrderNumber = OrderNumber.Number.ToString();
             while (OrderNumber.OrderNumber.Length < 5)
                 OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
             string typePrefix = "";

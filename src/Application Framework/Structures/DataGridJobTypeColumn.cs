@@ -1,25 +1,25 @@
-﻿using System.Data;
+﻿using FSM.Entity.Sys;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
 
 namespace FSM
 {
     public class DataGridJobTypeColumn : DataGridLabelColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
             // Need to get row information from data
-            DataRow row = (DataRow)source.List[rowNum].row;
+            DataRowView row = (DataRowView)source.List[rowNum];
 
             // check for row before we call it
-            if (row.Table.Columns.Contains("JobTypeID"))
+            if (row.DataView.Table.Columns.Contains("JobTypeID"))
             {
                 int jobTypeId = Helper.MakeIntegerValid(row["JobTypeID"]);
                 var color = Color.Transparent;
-                if (row.Table.Columns.Contains("Colour"))
+                if (row.DataView.Table.Columns.Contains("Colour"))
                 {
                     string colour = Helper.MakeStringValid(row["Colour"]);
                     if (!string.IsNullOrWhiteSpace(colour))

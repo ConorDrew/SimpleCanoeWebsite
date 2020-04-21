@@ -4,7 +4,6 @@ namespace FSM
 {
     public class ValidatorMessages
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private ArrayList _criticalMessages;
 
@@ -28,6 +27,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public ValidatorMessages()
         {
             _criticalMessages = new ArrayList();

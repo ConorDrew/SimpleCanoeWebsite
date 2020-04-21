@@ -3,14 +3,12 @@ using System.Runtime.InteropServices;
 
 namespace FSM
 {
-
     /// <summary>
-/// Class containing the IOleMessageFilter
-/// thread error-handling functions.
-/// </summary>
+    /// Class containing the IOleMessageFilter
+    /// thread error-handling functions.
+    /// </summary>
     internal class MessageFilter : IOleMessageFilter
     {
-
         /// <summary>Start the filter.</summary>
         public static void Register()
         {
@@ -26,22 +24,21 @@ namespace FSM
             CoRegisterMessageFilter(null, ref oldFilter);
         }
 
-
         // IOleMessageFilter functions.
         /// <summary>Handle incoming thread requests.</summary>
-        private int HandleInComingCall(int dwCallType, IntPtr hTaskCaller, int dwTickCount, IntPtr lpInterfaceInfo)
+        public int HandleInComingCall(int dwCallType, IntPtr hTaskCaller, int dwTickCount, IntPtr lpInterfaceInfo)
         {
             // Return the flag SERVERCALL_ISHANDLED.
             return 0;
         }
 
         /// <summary>Thread call was rejected, so try again.</summary>
-        private int RetryRejectedCall(IntPtr hTaskCallee, int dwTickCount, int dwRejectType)
+        public int RetryRejectedCall(IntPtr hTaskCallee, int dwTickCount, int dwRejectType)
         {
             if (dwRejectType == 2)
             {
                 // flag = SERVERCALL_RETRYLATER.
-                // Retry the thread call immediately if return >=0 & 
+                // Retry the thread call immediately if return >=0 &
                 // <100.
                 return 99;
             }
@@ -49,7 +46,7 @@ namespace FSM
             return -1;
         }
 
-        private int MessagePending(IntPtr hTaskCallee, int dwTickCount, int dwPendingType)
+        public int MessagePending(IntPtr hTaskCallee, int dwTickCount, int dwPendingType)
         {
             // Return the flag PENDINGMSG_WAITDEFPROCESS.
             return 2;
@@ -63,12 +60,14 @@ namespace FSM
     [ComImport()]
     [Guid("00000016-0000-0000-C000-000000000046")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    interface IOleMessageFilter
+    internal interface IOleMessageFilter
     {
         [PreserveSig()]
         int HandleInComingCall(int dwCallType, IntPtr hTaskCaller, int dwTickCount, IntPtr lpInterfaceInfo);
+
         [PreserveSig()]
         int RetryRejectedCall(IntPtr hTaskCallee, int dwTickCount, int dwRejectType);
+
         [PreserveSig()]
         int MessagePending(IntPtr hTaskCallee, int dwTickCount, int dwPendingType);
     }

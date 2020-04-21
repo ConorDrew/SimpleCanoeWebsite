@@ -343,7 +343,7 @@ namespace FSM
         {
             if (((UCContractOriginal)LoadedControl).NumberUsed == false & ((UCContractOriginal)LoadedControl).Number is object)
             {
-                App.DB.Job.DeleteReservedOrderNumber(((UCContractOriginal)LoadedControl).Number.JobNumber, ((UCContractOriginal)LoadedControl).Number.Prefix);
+                App.DB.Job.DeleteReservedOrderNumber(((UCContractOriginal)LoadedControl).Number.Number, ((UCContractOriginal)LoadedControl).Number.Prefix);
             }
 
             if (Modal)

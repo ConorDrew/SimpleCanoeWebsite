@@ -1,5 +1,4 @@
-﻿
-namespace FSM.Entity.Sys
+﻿namespace FSM.Entity.Sys
 {
     public class EmailAddress
     {

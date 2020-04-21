@@ -5346,7 +5346,7 @@ namespace FSM
                 if (CurrentOrder.Exists == false)
                 {
                     OrderNumberUsed = false;
-                    _OrderNumber.OrderNumber = OrderNumber.JobNumber.ToString();
+                    _OrderNumber.OrderNumber = OrderNumber.Number.ToString();
                     while (OrderNumber.OrderNumber.Length < 5)
                         _OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
                     string typePrefix = "";

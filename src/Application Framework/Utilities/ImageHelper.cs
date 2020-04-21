@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
 {
@@ -109,7 +109,7 @@ namespace FSM.Entity
                     set
                     {
                         _imageFileName = value;
-                        using (object fs = new FileStream(value, FileMode.Open, FileAccess.Read, FileShare.Read))
+                        using (var fs = new FileStream(value, FileMode.Open, FileAccess.Read, FileShare.Read))
                         {
                             _image = Image.FromStream((Stream)fs);
                         }

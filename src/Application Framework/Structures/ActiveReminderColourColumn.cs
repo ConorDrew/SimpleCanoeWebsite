@@ -1,18 +1,20 @@
-﻿using System.Drawing;
+﻿using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FSM
 {
     public class ActiveReminderColourColumn : DataGridLabelColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
             base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
             // set the color required dependant on the column value
             Brush brush;
-            if (Entity.Sys.Helper.MakeIntegerValid(source.List[rowNum].row.item("ReminderStatusID")) == 1)
+            var dr = (DataRowView)source.List[rowNum];
+            if (Entity.Sys.Helper.MakeIntegerValid(dr["ReminderStatusID"]) == 1)
             {
                 brush = Brushes.LightGreen;
             }

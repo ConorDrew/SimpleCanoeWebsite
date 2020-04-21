@@ -6,16 +6,18 @@ namespace FSM
 
     internal class RootObject
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         // native member declarations
         [System.Xml.Serialization.XmlIgnore()]
         internal FullyQualifiedFileName Filename = new FullyQualifiedFileName();
+
         [System.Xml.Serialization.XmlIgnore()]
         internal bool HasBeenPersisted = false;
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public RootObject()
         {
             CurrentLocation = DefaultPersistFolder;
@@ -23,6 +25,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         [System.Xml.Serialization.XmlIgnore()]
         internal string CurrentLocation
         {
@@ -53,6 +56,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         internal static Interfaces.IPersistable CreateDefaultList(Interfaces.IPersistable item)
         {
             XmlPersister.Write(item);
