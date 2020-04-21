@@ -11,12 +11,10 @@ namespace FSM.Entity
         {
             public void Validate(SalesCredit oPartsToBeCredited)
             {
-
                 // make sure that contact object is valid
                 if (oPartsToBeCredited.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oPartsToBeCredited.Errors)
+                    foreach (DictionaryEntry de in oPartsToBeCredited.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -40,7 +38,6 @@ namespace FSM.Entity
                 // If oPartsToBeCredited.OrderReference.Length = 0 Then
                 // Me.AddCriticalMessage("Select an order or enter a reference ")
                 // End If
-
 
                 if (ValidatorMessages.CriticalMessages.Count > 0)
                 {

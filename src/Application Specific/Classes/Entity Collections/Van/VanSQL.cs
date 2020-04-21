@@ -16,6 +16,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public void Delete(int VanID, bool DeleteFromWarehouses = false)
             {
                 if (DeleteFromWarehouses)
@@ -248,7 +249,7 @@ namespace FSM.Entity
                                     {
                                         rowToAdd = rowForRegistration;
                                     }
-                                    else if (Conversions.ToBoolean(rowForRegistration["VanID"] < rowToAdd["VanID"]))
+                                    else if (Conversions.ToBoolean((int)rowForRegistration["VanID"] < (int)rowToAdd["VanID"]))
                                     {
                                         rowToAdd = rowForRegistration;
                                     }
@@ -324,7 +325,7 @@ namespace FSM.Entity
                                     {
                                         rowToAdd = rowForRegistration;
                                     }
-                                    else if (Conversions.ToBoolean(rowForRegistration["VanID"] < rowToAdd["VanID"]))
+                                    else if (Conversions.ToBoolean((int)rowForRegistration["VanID"] < (int)rowToAdd["VanID"]))
                                     {
                                         rowToAdd = rowForRegistration;
                                     }
@@ -401,7 +402,7 @@ namespace FSM.Entity
                                     {
                                         rowToAdd = rowForRegistration;
                                     }
-                                    else if (Conversions.ToBoolean(rowForRegistration["VanID"] < rowToAdd["VanID"]))
+                                    else if (Conversions.ToBoolean((int)rowForRegistration["VanID"] < (int)rowToAdd["VanID"]))
                                     {
                                         rowToAdd = rowForRegistration;
                                     }
@@ -470,7 +471,7 @@ namespace FSM.Entity
                                 {
                                     rowToAdd = rowForRegistration;
                                 }
-                                else if (Conversions.ToBoolean(rowForRegistration["VanID"] < rowToAdd["VanID"]))
+                                else if (Conversions.ToBoolean((int)rowForRegistration["VanID"] < (int)rowToAdd["VanID"]))
                                 {
                                     rowToAdd = rowForRegistration;
                                 }
@@ -542,7 +543,7 @@ namespace FSM.Entity
                         {
                             if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(warehouseRow["WarehouseID"], row["WarehouseID"], false)))
                             {
-                                if (Conversions.ToBoolean(!warehouseRow["Tick"]))
+                                if (Conversions.ToBoolean(!(bool)warehouseRow["Tick"]))
                                 {
                                     App.DB.Location.Delete(oLocation.LocationID);
                                 }
@@ -598,7 +599,7 @@ namespace FSM.Entity
                     {
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(oVan.VanID, locationRow["VanID"], false)))
                         {
-                            App.DB.Location.Update(Conversions.ToInteger(locationRow["LocationID"]), Conversions.ToBoolean(!locationRow["Tick"]));
+                            App.DB.Location.Update(Conversions.ToInteger(locationRow["LocationID"]), Conversions.ToBoolean(!(bool)locationRow["Tick"]));
                         }
                     }
                 }
@@ -619,7 +620,7 @@ namespace FSM.Entity
                     }
 
                     foreach (DataRow row in LocationsDataView.Table.Rows)
-                        App.DB.Location.Update(Conversions.ToInteger(row["LocationID"]), Conversions.ToBoolean(!row["Tick"]));
+                        App.DB.Location.Update(Conversions.ToInteger(row["LocationID"]), Conversions.ToBoolean(!(bool)row["Tick"]));
                 }
             }
 
@@ -750,7 +751,7 @@ namespace FSM.Entity
                         {
                             if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(warehouseRow["WarehouseID"], row["WarehouseID"], false)))
                             {
-                                if (Conversions.ToBoolean(!warehouseRow["Tick"]))
+                                if (Conversions.ToBoolean(!(bool)warehouseRow["Tick"]))
                                 {
                                     App.DB.Location.Delete(oLocation.LocationID);
                                 }
@@ -811,15 +812,14 @@ namespace FSM.Entity
                 DataTable copiedVanLocations;
                 foreach (DataRow row in App.DB.Warehouse.Warehouse_GetAll().Table.Rows)
                 {
-
                     // Dim oLocation As New Entity.Locationss.Locations
                     // oLocation.SetDeleted = False
                     // oLocation.SetVanID = CurrentVan.VanID
                     // oLocation.SetWarehouseID = Nothing
                     // DB.Location.Insert(oLocation)
 
-                    object LocationsFromDonorVan = App.DB.Location.Locations_Get_ForVanReg(oVanToMergeFrom.Registration).Table;
-                    object LocationsFromCurrentVan = App.DB.Location.Locations_Get_ForVanReg(CurrentVan.Registration).Table;
+                    DataTable LocationsFromDonorVan = App.DB.Location.Locations_Get_ForVanReg(oVanToMergeFrom.Registration).Table;
+                    DataTable LocationsFromCurrentVan = App.DB.Location.Locations_Get_ForVanReg(CurrentVan.Registration).Table;
                     int i = 0;
                     DataRow[] drLoc = (DataRow[])LocationsFromDonorVan.Select("Registration='" + oVanToMergeFrom.Registration.Split('*')[0].Trim() + " * " + Sys.Helper.MakeStringValid(row["Name"]).Trim() + "'"); // ' from van
                     DataRow[] drLocto = (DataRow[])LocationsFromCurrentVan.Select("Registration='" + CurrentVan.Registration.Split('*')[0].Trim() + " * " + Sys.Helper.MakeStringValid(row["Name"]).Trim() + "'"); // ' to van

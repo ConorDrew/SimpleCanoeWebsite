@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(Part oPart)
             {
-
                 // make sure that contact object is valid
                 if (oPart.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oPart.Errors)
+                    foreach (DictionaryEntry de in oPart.Errors)
                     {
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(de.Key, "RecommendedQuantity", false)))
                         {
