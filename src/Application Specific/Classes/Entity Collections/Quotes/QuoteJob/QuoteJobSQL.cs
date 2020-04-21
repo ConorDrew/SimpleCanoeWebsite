@@ -16,6 +16,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public void DeleteReservedQuoteNumber(int JobNumber)
             {
                 string sql;
@@ -34,7 +35,7 @@ namespace FSM.Entity
                 {
                     if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dt.Rows[dt.Rows.Count - 1]["QuoteNumber"], dt.Rows.Count, false)))
                     {
-                        nextQuoteNumber = Conversions.ToInteger(dt.Rows[dt.Rows.Count - 1]["QuoteNumber"] + 1);
+                        nextQuoteNumber = Conversions.ToInteger((int)dt.Rows[dt.Rows.Count - 1]["QuoteNumber"] + 1);
                     }
                     else
                     {
@@ -256,23 +257,23 @@ namespace FSM.Entity
                 foreach (QuoteJobAssets.QuoteJobAsset qasset in qJob.QuoteAssets)
                 {
                     qasset.SetQuoteJobID = qJob.QuoteJobID;
-                    qasset = _database.QuoteJobAsset.Insert(qasset);
+                    _database.QuoteJobAsset.Insert(qasset);
                 }
 
                 foreach (QuoteJobOfWorks.QuoteJobOfWork qjobOfWork in qJob.QuoteJobOfWorks)
                 {
                     qjobOfWork.SetQuoteJobID = qJob.QuoteJobID;
-                    qjobOfWork = _database.QuoteJobOfWorks.Insert(qjobOfWork);
+                    _database.QuoteJobOfWorks.Insert(qjobOfWork);
                     foreach (QuoteJobItems.QuoteJobItem qjobItem in qjobOfWork.QuoteJobItems)
                     {
                         qjobItem.SetQuoteJobOfWorkID = qjobOfWork.QuoteJobOfWorkID;
-                        qjobItem = _database.QuoteJobItems.Insert(qjobItem);
+                        _database.QuoteJobItems.Insert(qjobItem);
                     }
 
                     foreach (QuoteEngineerVisits.QuoteEngineerVisit qengineerVisit in qjobOfWork.QuoteEngineerVisits)
                     {
                         qengineerVisit.SetQuoteJobOfWorkID = qjobOfWork.QuoteJobOfWorkID;
-                        qengineerVisit = _database.QuoteEngineerVisits.Insert(qengineerVisit);
+                        _database.QuoteEngineerVisits.Insert(qengineerVisit);
                     }
                 }
 
@@ -393,7 +394,7 @@ namespace FSM.Entity
                 foreach (QuoteJobAssets.QuoteJobAsset qAsset in qJob.QuoteAssets)
                 {
                     qAsset.SetQuoteJobID = qJob.QuoteJobID;
-                    qAsset = _database.QuoteJobAsset.Insert(qAsset);
+                    _database.QuoteJobAsset.Insert(qAsset);
                 }
 
                 foreach (QuoteJobOfWorks.QuoteJobOfWork qJobOfWork in qJob.QuoteJobOfWorks)
@@ -401,11 +402,11 @@ namespace FSM.Entity
                     qJobOfWork.SetQuoteJobID = qJob.QuoteJobID;
                     if (!qJobOfWork.Exists)
                     {
-                        qJobOfWork = _database.QuoteJobOfWorks.Insert(qJobOfWork);
+                        _database.QuoteJobOfWorks.Insert(qJobOfWork);
                         foreach (QuoteJobItems.QuoteJobItem qJobItem in qJobOfWork.QuoteJobItems)
                         {
                             qJobItem.SetQuoteJobOfWorkID = qJobOfWork.QuoteJobOfWorkID;
-                            qJobItem = _database.QuoteJobItems.Insert(qJobItem);
+                            _database.QuoteJobItems.Insert(qJobItem);
                         }
                     }
                     else
@@ -414,7 +415,7 @@ namespace FSM.Entity
                         foreach (QuoteJobItems.QuoteJobItem qJobItem in qJobOfWork.QuoteJobItems)
                         {
                             qJobItem.SetQuoteJobOfWorkID = qJobOfWork.QuoteJobOfWorkID;
-                            qJobItem = _database.QuoteJobItems.Insert(qJobItem);
+                            _database.QuoteJobItems.Insert(qJobItem);
                         }
                     }
                 }

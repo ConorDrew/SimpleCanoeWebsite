@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(Warehouse oWarehouse)
             {
-
                 // make sure that contact object is valid
                 if (oWarehouse.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oWarehouse.Errors)
+                    foreach (DictionaryEntry de in oWarehouse.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

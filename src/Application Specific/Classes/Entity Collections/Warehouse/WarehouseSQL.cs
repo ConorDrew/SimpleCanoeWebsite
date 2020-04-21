@@ -16,6 +16,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public void Delete(int WarehouseID)
             {
                 string WarehouseName = Warehouse_Get(WarehouseID).Name.Trim();
@@ -301,7 +302,7 @@ namespace FSM.Entity
                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["Registration"], locationRow["Registration"], false)))
                         {
                             int locID = Conversions.ToInteger(App.DB.Van.Van_GetAll_For_Warehouse(oWarehouse.WarehouseID).Table.Select(Conversions.ToString("Registration = '" + row["Registration"] + "'"))[0]["LocationID"]);
-                            App.DB.Location.Update(locID, Conversions.ToBoolean(!locationRow["Tick"]));
+                            App.DB.Location.Update(locID, Conversions.ToBoolean((!(bool)locationRow["Tick"])));
                         }
                     }
                 }
