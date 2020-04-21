@@ -19,6 +19,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public SignatureBox(ref PictureBox pic)
             {
                 Signature = new PictureBox();
@@ -56,7 +57,6 @@ namespace FSM.Entity
                 {
                     if (_Signature != null)
                     {
-
                         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                         /* TODO ERROR: Skipped RegionDirectiveTrivia */
                         _Signature.MouseDown -= Signature_MouseDown;
@@ -76,6 +76,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public bool isReadOnly
             {
                 get
@@ -93,21 +94,19 @@ namespace FSM.Entity
             {
                 get
                 {
-                    ;
-#error Cannot convert OnErrorResumeNextStatementSyntax - see comment for details
-                    /* Cannot convert OnErrorResumeNextStatementSyntax, CONVERSION ERROR: Conversion for OnErrorResumeNextStatement not implemented, please report this issue in 'On Error Resume Next' at character 1359
-
-
-                    Input:
-                                        On Error Resume Next
-
-                     */
-                    int j;
-                    var sigData = default(string);
-                    var loopTo = SigMovesO - 1;
-                    for (j = 0; j <= loopTo; j++)
-                        sigData = sigData + PadHex(SigArrayXO[j]) + PadHex(SigArrayYO[j]);
-                    return sigData;
+                    try
+                    {
+                        int j;
+                        var sigData = default(string);
+                        var loopTo = SigMovesO - 1;
+                        for (j = 0; j <= loopTo; j++)
+                            sigData = sigData + PadHex(SigArrayXO[j]) + PadHex(SigArrayYO[j]);
+                        return sigData;
+                    }
+                    catch
+                    {
+                    }
+                    return null;
                 }
             }
 
@@ -121,6 +120,7 @@ namespace FSM.Entity
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             private string PadHex(int inNum)
             {
                 string tempNum;
@@ -215,7 +215,6 @@ namespace FSM.Entity
                 gphDraw.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, Signature.Width, Signature.Height));
 
                 gphDraw.DrawRectangle(new Pen(Color.Black), new Rectangle(0, 0, Signature.Width - 1, Signature.Height - 1));
-
 
                 Signature.Image = bmp;
                 Signature.Refresh();
