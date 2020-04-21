@@ -1277,13 +1277,13 @@ namespace FSM
                              select a;
                 object columnNames = excel.GetColumnNames("Upload Template");
                 var data = new DataTable();
-                foreach (object columnName in (IEnumerable)columnNames)
+                foreach (DataColumn columnName in (IEnumerable)columnNames)
                     data.Columns.Add(columnName);
                 foreach (Row rr in (IEnumerable)obj)
                 {
                     var dr = data.NewRow();
-                    foreach (object columnName in (IEnumerable)columnNames)
-                        dr(columnName) = rr(columnName);
+                    foreach (int columnName in (IEnumerable)columnNames)
+                        dr[columnName] = rr[columnName];
                     data.Rows.Add(dr);
                 }
 
@@ -1341,7 +1341,7 @@ namespace FSM
                     category = Helper.MakeStringValid(row["Category"]);
                     lblMessages.Text = "Adding part " + (i + 1) + " of " + data.Rows.Count + " from file.";
                     lblMessages.Visible = true;
-                    dt.Rows.Add(new[] { supplierId, mpn, description, spn, netPrice, pfhPrice, category });
+                    dt.Rows.Add(new object[] { supplierId, mpn, description, spn, netPrice, pfhPrice, category });
                 nextrow:
                     ;
                     MoveProgressOn();
