@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.CompilerServices;
 
@@ -6,8 +7,8 @@ namespace FSM
 {
     public class ImporterLabelColumn : DataGridTextBoxColumn
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         protected override void Edit(CurrencyManager source, int rowNum, Rectangle bounds, bool readOnly, string instantText)
         {
         }
@@ -44,9 +45,11 @@ namespace FSM
         {
             base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
             var rect = bounds;
+            DataRowView dr = (DataRowView)source.List[rowNum];
+
             try
             {
-                if (Conversions.ToBoolean(source.List[rowNum].row.item(ColumnName + "COLOURBOOLEANCOLUMN")))
+                if (Conversions.ToBoolean(dr[ColumnName + "COLOURBOOLEANCOLUMN"]))
                 {
                     g.FillRectangle(Brushes.Red, rect);
                 }
@@ -60,7 +63,7 @@ namespace FSM
                 g.FillRectangle(Brushes.White, rect);
             }
 
-            g.DrawString(Entity.Sys.Helper.MakeStringValid(source.List[rowNum].row.item(ColumnName)), DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
+            g.DrawString(Entity.Sys.Helper.MakeStringValid(dr[ColumnName]), DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
