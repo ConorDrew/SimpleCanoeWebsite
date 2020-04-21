@@ -8,7 +8,6 @@ namespace FSM.Importer
 {
     public class Validator
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private ArrayList _DataToValidate;
         private ArrayList _arrayList;
@@ -66,6 +65,7 @@ namespace FSM.Importer
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public Validator(ArrayList DataToValidateIn, ref FRMImport ImportFormIn)
         {
             DataToValidate = DataToValidateIn;
@@ -83,7 +83,6 @@ namespace FSM.Importer
                 DataView dv = (DataView)DataToValidate[dvIndex];
                 if (dvIndex == 0 & (dv.Table.TableName ?? "") == "Parts")
                 {
-
                     // Check Columns
                     var ExpectedColumns = new string[] { "Part Code", "Name/Description", "Category", "Notes", "Sell Price", "Supplier Part Code", "Supplier Qty", "Supplier Price" };
                     for (int ExpectedColumnIndex = 0, loopTo1 = ExpectedColumns.Length - 1; ExpectedColumnIndex <= loopTo1; ExpectedColumnIndex++)
@@ -103,7 +102,6 @@ namespace FSM.Importer
                 }
                 else if (dvIndex == 0 & (dv.Table.TableName ?? "") == "Sites")
                 {
-
                     // Check Data
                     returnArr = ValidateSites(dv);
                 }
@@ -140,6 +138,7 @@ namespace FSM.Importer
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private ArrayList ValidateParts(DataView dvParts, int SupplierID)
         {
             int insertCount = 0;
@@ -307,7 +306,6 @@ namespace FSM.Importer
                         // If Entity.Sys.Helper.MakeStringValid(site("Postcode")).Trim.Length = 0 Then
                         // ErrorInCell(0, siteIndex, "Postcode", "Required field for an insert")
                         // End If
-
                     }
 
                     cnt += 1;

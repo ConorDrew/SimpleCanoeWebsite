@@ -377,7 +377,7 @@ namespace FSM.Importer.Validation
             _database.ExecuteSP_NO_Return("POInvoiceImport_UpdateOrderTotalsAfterPartChange");
         }
 
-        // 
+        //
         public int POInvoiceImport_CheckImportHasBeenSent(string InvoiceNo, DateTime InvoiceDate, string SupplierPartCode)
         {
             _database.ClearParameter();

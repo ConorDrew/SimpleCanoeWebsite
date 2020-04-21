@@ -10,11 +10,10 @@ namespace FSM
 {
     public class UCDataPartsInvoiceImport : UCBase
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCDataPartsInvoiceImport() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCData_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -42,6 +40,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private DataGridView _dgvData;
 
         internal DataGridView dgvData
@@ -92,9 +91,9 @@ namespace FSM
             _dgvData.Click += new EventHandler(dgvData_Click);
             ((System.ComponentModel.ISupportInitialize)_dgvData).BeginInit();
             SuspendLayout();
-            // 
+            //
             // dgvData
-            // 
+            //
             _dgvData.AllowUserToAddRows = false;
             _dgvData.AllowUserToDeleteRows = false;
             _dgvData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -104,9 +103,9 @@ namespace FSM
             _dgvData.Name = "dgvData";
             _dgvData.Size = new Size(512, 344);
             _dgvData.TabIndex = 3;
-            // 
+            //
             // UCDataPartsInvoiceImport
-            // 
+            //
             Controls.Add(_dgvData);
             Name = "UCDataPartsInvoiceImport";
             Size = new Size(512, 344);
@@ -116,6 +115,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public object LoadedItem
         {
             get
@@ -425,8 +425,10 @@ namespace FSM
             }
         }
 
-        private void dgvData_Click(object sender, MouseEventArgs e)
+        private void dgvData_Click(object sender, EventArgs ev)
         {
+            MouseEventArgs e = (MouseEventArgs)ev;
+
             if (e.Button == MouseButtons.Left)
             {
                 if (dgvData.CurrentCell is object)

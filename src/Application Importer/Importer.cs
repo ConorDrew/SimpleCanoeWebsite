@@ -8,7 +8,6 @@ namespace FSM.Importer
 {
     public class Importer
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private Entity.Sys.Database _database;
 
@@ -88,6 +87,7 @@ namespace FSM.Importer
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public Importer(ArrayList DataToImportIn, ref FRMImport ImportFormIn)
         {
             DataToImport = DataToImportIn;
@@ -132,6 +132,7 @@ namespace FSM.Importer
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ImportSites(DataView dvSites, int CustomerID, string SourceOfCustomer, string ReasonForContact)
         {
             var oCustomer = App.DB.Customer.Customer_Get(CustomerID);
@@ -387,7 +388,6 @@ namespace FSM.Importer
                     }
                     else
                     {
-
                         // CONTACTS
                         var oContact = new Entity.Contacts.Contact();
                         var namestring = Strings.Split(Conversions.ToString(site["Tenant"]), " ");
@@ -424,7 +424,6 @@ namespace FSM.Importer
                 // End If
                 ImportForm.MoveProgressOn();
                 // FRMImport.Label3.Text = CStr(siteIndex)
-
             }
         }
 
@@ -528,14 +527,14 @@ namespace FSM.Importer
                         Update_Part(oPart);
                     }
 
-                    Array suppliersFound = App.DB.PartSupplier.Get_ByPartID(oPart.PartID, Trans).Table.Select("SupplierID = " + SupplierID);
+                    DataRow[] suppliersFound = App.DB.PartSupplier.Get_ByPartID(oPart.PartID, Trans).Table.Select("SupplierID = " + SupplierID);
                     if (suppliersFound.Length == 0)
                     {
                         Insert_Part_Supplier(oPart.PartID, SupplierPartCode, SupplierID, Entity.Sys.Helper.MakeDoubleValid(Strings.Format(Entity.Sys.Helper.MakeDoubleValid(row["Supplier Price"]), "F")), Entity.Sys.Helper.MakeIntegerValid(Strings.Format(Entity.Sys.Helper.MakeDoubleValid(row["Supplier Qty"]), "F")));
                     }
                     else
                     {
-                        var oPartSupplier = App.DB.PartSupplier.PartSupplier_Get(Conversions.ToInteger(((DataRow)suppliersFound(0))["PartSupplierID"]), Trans);
+                        var oPartSupplier = App.DB.PartSupplier.PartSupplier_Get(Conversions.ToInteger((suppliersFound[0])["PartSupplierID"]), Trans);
                         bool doSupplierUpdate = false;
                         if (SupplierPartCode != default)
                         {

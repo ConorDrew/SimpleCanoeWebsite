@@ -52,7 +52,6 @@ namespace FSM
 
             set
             {
-
                 // Me.MinimumSize = New Size(New Point(704, 392))
 
                 _POToShow = value;
@@ -75,7 +74,6 @@ namespace FSM
 
             set
             {
-
                 // Me.MinimumSize = New Size(New Point(704, 392))
 
                 _InvoiceNo = value;
@@ -125,8 +123,10 @@ namespace FSM
                 dgvPOData.DataSource = PORecords;
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupDG()
         {
             dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -226,8 +226,6 @@ namespace FSM
             // dgvData.Columns.Add(ValidateResult)
 
             // dgvData.Columns(5).ReadOnly = False
-
-
         }
 
         public void SetupDGPOParts()
@@ -325,11 +323,10 @@ namespace FSM
             // dgvPOData.Columns.Add(ValidateResult)
 
             // dgvPOData.Columns(5).ReadOnly = False
-
-
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void dgvData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             var switchExpr = e.ColumnIndex;
