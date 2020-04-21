@@ -1322,6 +1322,7 @@ namespace FSM
                 var brush = Brushes.White;
                 var strBrush = Brushes.MidnightBlue;
                 string str = "";
+
                 var switchExpr = source.List[rowNum].row.item("AbsenceColumn");
                 switch (switchExpr)
                 {

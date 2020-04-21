@@ -235,7 +235,7 @@ namespace FSM.Entity
                 }
                 else
                 {
-                    return (DateTime?)FormatDateTime_Load(Conversions.ToDate(o));
+                    return DateTime.Parse(FormatDateTime_Load(Conversions.ToDate(0)));
                 }
             }
 
@@ -309,8 +309,7 @@ namespace FSM.Entity
                     var row = dt.NewRow();
                     foreach (PropertyInfo field in fields)
                     {
-                        object p = item.GetType().GetProperty(field.Name);
-                        row[field.Name] = p.GetValue(item, null);
+                        row[field.Name] = item.GetType().GetProperty(field.Name);
                     }
 
                     dt.Rows.Add(row);
@@ -370,7 +369,7 @@ namespace FSM.Entity
             {
                 value = MakeStringValid(value);
                 string number = string.Empty;
-                char[] myChars = (char[])value.ToCharArray();
+                char[] myChars = (char[])value;
                 foreach (char ch in myChars)
                 {
                     if (char.IsDigit(ch))

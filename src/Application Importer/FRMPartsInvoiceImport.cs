@@ -12,11 +12,10 @@ namespace FSM
 {
     public class FRMPartsInvoiceImport : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMPartsInvoiceImport() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             var argc = cboValidateType;
@@ -287,7 +286,6 @@ namespace FSM
             {
                 if (_cboValidateType != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _cboValidateType.SelectedIndexChanged -= cboValidateType_SelectedIndexChanged;
@@ -392,7 +390,6 @@ namespace FSM
             {
                 if (_Button1 != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _Button1.Click -= Button1_Click;
                 }
@@ -458,9 +455,9 @@ namespace FSM
             _grpExcelFile.SuspendLayout();
             _grpCatImport.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpExcelFile
-            // 
+            //
             _grpExcelFile.Controls.Add(_btnExportResults);
             _grpExcelFile.Controls.Add(_btnCheckFiles);
             _grpExcelFile.Location = new Point(8, 40);
@@ -469,27 +466,27 @@ namespace FSM
             _grpExcelFile.TabIndex = 3;
             _grpExcelFile.TabStop = false;
             _grpExcelFile.Text = "Initial Import";
-            // 
+            //
             // btnExportResults
-            // 
+            //
             _btnExportResults.Location = new Point(118, 19);
             _btnExportResults.Name = "btnExportResults";
             _btnExportResults.Size = new Size(106, 23);
             _btnExportResults.TabIndex = 5;
             _btnExportResults.Text = "Export Results";
             _btnExportResults.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnCheckFiles
-            // 
+            //
             _btnCheckFiles.Location = new Point(6, 20);
             _btnCheckFiles.Name = "btnCheckFiles";
             _btnCheckFiles.Size = new Size(106, 23);
             _btnCheckFiles.TabIndex = 0;
             _btnCheckFiles.Text = "Check Files";
             _btnCheckFiles.UseVisualStyleBackColor = true;
-            // 
+            //
             // tcData
-            // 
+            //
             _tcData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcData.Location = new Point(8, 103);
@@ -497,9 +494,9 @@ namespace FSM
             _tcData.SelectedIndex = 0;
             _tcData.Size = new Size(864, 483);
             _tcData.TabIndex = 8;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnClose.UseVisualStyleBackColor = true;
             _btnClose.Location = new Point(816, 621);
@@ -507,18 +504,18 @@ namespace FSM
             _btnClose.Size = new Size(56, 23);
             _btnClose.TabIndex = 9;
             _btnClose.Text = "Close";
-            // 
+            //
             // pbStatus
-            // 
+            //
             _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _pbStatus.Location = new Point(8, 621);
             _pbStatus.Name = "pbStatus";
             _pbStatus.Size = new Size(752, 23);
             _pbStatus.Step = 1;
             _pbStatus.TabIndex = 10;
-            // 
+            //
             // lblProgress
-            // 
+            //
             _lblProgress.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _lblProgress.Location = new Point(768, 624);
             _lblProgress.Name = "lblProgress";
@@ -526,9 +523,9 @@ namespace FSM
             _lblProgress.TabIndex = 11;
             _lblProgress.Text = "0%";
             _lblProgress.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // lblMessages
-            // 
+            //
             _lblMessages.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _lblMessages.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblMessages.ForeColor = Color.Red;
@@ -538,9 +535,9 @@ namespace FSM
             _lblMessages.TabIndex = 12;
             _lblMessages.TextAlign = ContentAlignment.MiddleLeft;
             _lblMessages.Visible = false;
-            // 
+            //
             // btnExportParts
-            // 
+            //
             _btnExportParts.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnExportParts.Location = new Point(690, 8);
             _btnExportParts.Name = "btnExportParts";
@@ -548,9 +545,9 @@ namespace FSM
             _btnExportParts.TabIndex = 13;
             _btnExportParts.TabStop = true;
             _btnExportParts.Text = "Export Parts";
-            // 
+            //
             // llOpenFolder
-            // 
+            //
             _llOpenFolder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _llOpenFolder.Location = new Point(575, 8);
             _llOpenFolder.Name = "llOpenFolder";
@@ -558,17 +555,17 @@ namespace FSM
             _llOpenFolder.TabIndex = 14;
             _llOpenFolder.TabStop = true;
             _llOpenFolder.Text = "Open Folders";
-            // 
+            //
             // cboValidateType
-            // 
+            //
             _cboValidateType.FormattingEnabled = true;
             _cboValidateType.Location = new Point(6, 21);
             _cboValidateType.Name = "cboValidateType";
             _cboValidateType.Size = new Size(365, 21);
             _cboValidateType.TabIndex = 1;
-            // 
+            //
             // btnProcessIndiv
-            // 
+            //
             _btnProcessIndiv.Location = new Point(377, 19);
             _btnProcessIndiv.Name = "btnProcessIndiv";
             _btnProcessIndiv.Size = new Size(345, 23);
@@ -576,9 +573,9 @@ namespace FSM
             _btnProcessIndiv.Text = "Process -->";
             _btnProcessIndiv.TextAlign = ContentAlignment.MiddleLeft;
             _btnProcessIndiv.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpCatImport
-            // 
+            //
             _grpCatImport.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpCatImport.Controls.Add(_btnValidateResults);
             _grpCatImport.Controls.Add(_btnProcessIndiv);
@@ -589,9 +586,9 @@ namespace FSM
             _grpCatImport.TabIndex = 6;
             _grpCatImport.TabStop = false;
             _grpCatImport.Text = "Category Processing";
-            // 
+            //
             // btnValidateResults
-            // 
+            //
             _btnValidateResults.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnValidateResults.Location = new Point(499, 19);
             _btnValidateResults.Name = "btnValidateResults";
@@ -599,18 +596,18 @@ namespace FSM
             _btnValidateResults.TabIndex = 6;
             _btnValidateResults.Text = "Revalidate Results";
             _btnValidateResults.UseVisualStyleBackColor = true;
-            // 
+            //
             // Button1
-            // 
+            //
             _Button1.Location = new Point(403, 3);
             _Button1.Name = "Button1";
             _Button1.Size = new Size(152, 23);
             _Button1.TabIndex = 15;
             _Button1.Text = "ValidateOrdersNoParts";
             _Button1.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMPartsInvoiceImport
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(912, 654);
             Controls.Add(_Button1);
@@ -644,6 +641,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -1530,16 +1528,14 @@ namespace FSM
 
             // Cycle through table looking for files.
             int FileCount = 0;
-            DataRow dr_Folders;
-            foreach (var dr_Folders in dt_Folders.Rows)
+            foreach (DataRow dr_Folders in dt_Folders.Rows)
             {
                 // make a reference to a directory
                 var di = new System.IO.DirectoryInfo(Conversions.ToString(dr_Folders["FolderPath"]));
                 var diar1 = di.GetFiles();
 
                 // list the names of all files in the specified directory
-                System.IO.FileInfo CurrentFile;
-                foreach (var CurrentFile in diar1)
+                foreach (System.IO.FileInfo CurrentFile in diar1)
                 {
                     // Is it an excel file?
                     if ((CurrentFile.Extension ?? "") == ".xls" | (CurrentFile.Extension ?? "") == ".xlsx")
@@ -1580,15 +1576,14 @@ namespace FSM
 
             int FileLoops = 0;
             int PartLoops = 0;
-            foreach (var dr_Folders in dt_Folders.Rows)
+            foreach (DataRow dr_Folders in dt_Folders.Rows)
             {
                 // make a reference to a directory
                 var di = new System.IO.DirectoryInfo(Conversions.ToString(dr_Folders["FolderPath"]));
                 var diar1 = di.GetFiles();
 
                 // list the names of all files in the specified directory
-                System.IO.FileInfo CurrentFile;
-                foreach (var CurrentFile in diar1)
+                foreach (System.IO.FileInfo CurrentFile in diar1)
                 {
                     // Is it an excel file?
                     if ((CurrentFile.Extension ?? "") == ".xls" | (CurrentFile.Extension ?? "") == ".xlsx")
@@ -2628,7 +2623,7 @@ namespace FSM
                 }
 
                 sheetName = sheetName + Conversions.ToString(DateAndTime.Today).Replace("/", "");
-                var exporter = new Entity.Sys.Exporting(data.Table, sheetName);
+                Entity.Sys.ExportHelper.Export(data.Table, sheetName, Entity.Sys.Enums.ExportType.CSV);
             }
             catch (Exception ex)
             {
@@ -2653,6 +2648,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public bool checkArray(string[] var, string Text)
         {
             if (Array.IndexOf(var, Text) > -1)
@@ -2682,44 +2678,31 @@ namespace FSM
 
         private void KillInstances(Microsoft.Office.Interop.Excel.Application app)
         {
-            ;
-#error Cannot convert OnErrorResumeNextStatementSyntax - see comment for details
-            /* Cannot convert OnErrorResumeNextStatementSyntax, CONVERSION ERROR: Conversion for OnErrorResumeNextStatement not implemented, please report this issue in 'On Error Resume Next' at character 117487
-
-
-            Input:
-                    On Error Resume Next
-
-             */
             app.Quit();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
             app = null;
             GC.Collect();
             var mp = Process.GetProcessesByName("EXCEL");
-            Process p;
             foreach (var p in mp)
             {
-                if (p.Responding)
+                try
                 {
-                    if (string.IsNullOrEmpty(p.MainWindowTitle))
+                    if (p.Responding)
+                    {
+                        if (string.IsNullOrEmpty(p.MainWindowTitle))
+                        {
+                            p.Kill();
+                        }
+                    }
+                    else
                     {
                         p.Kill();
                     }
                 }
-                else
+                catch
                 {
-                    p.Kill();
                 }
             };
-#error Cannot convert OnErrorGoToStatementSyntax - see comment for details
-            /* Cannot convert OnErrorGoToStatementSyntax, CONVERSION ERROR: Conversion for OnErrorGoToMinusOneStatement not implemented, please report this issue in 'On Error GoTo - 1' at character 118092
-
-
-            Input:
-
-                    On Error GoTo - 1
-
-             */
         }
 
         public void MoveProgressOn(bool toMaximum = false)
@@ -2750,10 +2733,10 @@ namespace FSM
         }
 
         /// <summary>
-    /// Get nominal code for order
-    /// </summary>
-    /// <param name="orderId">Integer</param>
-    /// <returns>Integer</returns>
+        /// Get nominal code for order
+        /// </summary>
+        /// <param name="orderId">Integer</param>
+        /// <returns>Integer</returns>
         public int GetNominalCode(int orderId)
         {
             // give nominal code a default value incase db can't find anything

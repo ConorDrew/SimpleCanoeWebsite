@@ -14,11 +14,10 @@ namespace FSM
 {
     public class FRMImport : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMImport() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             this.Load += FRMImport_Load;
@@ -444,9 +443,9 @@ namespace FSM
             _grpErrors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgErrors).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpImporter
-            // 
+            //
             _grpImporter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpImporter.Controls.Add(_lblFile);
             _grpImporter.Controls.Add(_txtCustomer);
@@ -461,27 +460,27 @@ namespace FSM
             _grpImporter.TabIndex = 3;
             _grpImporter.TabStop = false;
             _grpImporter.Text = "Import";
-            // 
+            //
             // lblFile
-            // 
+            //
             _lblFile.AutoSize = true;
             _lblFile.Location = new Point(6, 52);
             _lblFile.Name = "lblFile";
             _lblFile.Size = new Size(31, 13);
             _lblFile.TabIndex = 13;
             _lblFile.Text = "File:";
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCustomer.Location = new Point(86, 20);
             _txtCustomer.Name = "txtCustomer";
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(766, 21);
             _txtCustomer.TabIndex = 12;
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindCustomer.Location = new Point(858, 20);
             _btnFindCustomer.Name = "btnFindCustomer";
@@ -489,18 +488,18 @@ namespace FSM
             _btnFindCustomer.TabIndex = 11;
             _btnFindCustomer.Text = "...";
             _btnFindCustomer.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblCustomer
-            // 
+            //
             _lblCustomer.AutoSize = true;
             _lblCustomer.Location = new Point(6, 23);
             _lblCustomer.Name = "lblCustomer";
             _lblCustomer.Size = new Size(68, 13);
             _lblCustomer.TabIndex = 9;
             _lblCustomer.Text = "Customer:";
-            // 
+            //
             // btnImport
-            // 
+            //
             _btnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnImport.Enabled = false;
             _btnImport.Location = new Point(826, 84);
@@ -509,9 +508,9 @@ namespace FSM
             _btnImport.TabIndex = 7;
             _btnImport.Text = "Import";
             _btnImport.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnFindFile
-            // 
+            //
             _btnFindFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindFile.Location = new Point(858, 49);
             _btnFindFile.Name = "btnFindFile";
@@ -519,18 +518,18 @@ namespace FSM
             _btnFindFile.TabIndex = 5;
             _btnFindFile.Text = "...";
             _btnFindFile.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtFileLocation
-            // 
+            //
             _txtFileLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFileLocation.Location = new Point(86, 49);
             _txtFileLocation.Name = "txtFileLocation";
             _txtFileLocation.ReadOnly = true;
             _txtFileLocation.Size = new Size(766, 21);
             _txtFileLocation.TabIndex = 4;
-            // 
+            //
             // btnTemplateFile
-            // 
+            //
             _btnTemplateFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnTemplateFile.Location = new Point(816, 8);
             _btnTemplateFile.Name = "btnTemplateFile";
@@ -538,9 +537,9 @@ namespace FSM
             _btnTemplateFile.TabIndex = 1;
             _btnTemplateFile.TabStop = true;
             _btnTemplateFile.Text = "Template File";
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnExport.Location = new Point(848, 624);
             _btnExport.Name = "btnExport";
@@ -548,18 +547,18 @@ namespace FSM
             _btnExport.TabIndex = 9;
             _btnExport.Text = "Export";
             _btnExport.UseVisualStyleBackColor = true;
-            // 
+            //
             // pbStatus
-            // 
+            //
             _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _pbStatus.Location = new Point(8, 624);
             _pbStatus.Name = "pbStatus";
             _pbStatus.Size = new Size(784, 23);
             _pbStatus.Step = 1;
             _pbStatus.TabIndex = 10;
-            // 
+            //
             // lblProgress
-            // 
+            //
             _lblProgress.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _lblProgress.Location = new Point(800, 627);
             _lblProgress.Name = "lblProgress";
@@ -567,9 +566,9 @@ namespace FSM
             _lblProgress.TabIndex = 11;
             _lblProgress.Text = "0%";
             _lblProgress.TextAlign = ContentAlignment.MiddleRight;
-            // 
+            //
             // lblMessages
-            // 
+            //
             _lblMessages.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _lblMessages.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblMessages.ForeColor = Color.Red;
@@ -579,9 +578,9 @@ namespace FSM
             _lblMessages.TabIndex = 12;
             _lblMessages.TextAlign = ContentAlignment.MiddleLeft;
             _lblMessages.Visible = false;
-            // 
+            //
             // grpErrors
-            // 
+            //
             _grpErrors.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpErrors.Controls.Add(_dgErrors);
@@ -591,9 +590,9 @@ namespace FSM
             _grpErrors.TabIndex = 14;
             _grpErrors.TabStop = false;
             _grpErrors.Text = "Errors";
-            // 
+            //
             // dgErrors
-            // 
+            //
             _dgErrors.DataMember = "";
             _dgErrors.Dock = DockStyle.Fill;
             _dgErrors.HeaderForeColor = SystemColors.ControlText;
@@ -601,9 +600,9 @@ namespace FSM
             _dgErrors.Name = "dgErrors";
             _dgErrors.Size = new Size(890, 433);
             _dgErrors.TabIndex = 2;
-            // 
+            //
             // FRMImport
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(912, 654);
             Controls.Add(_grpErrors);
@@ -633,6 +632,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -755,6 +755,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoadData()
         {
             var dlg = default(OpenFileDialog);
@@ -1047,46 +1048,31 @@ namespace FSM
 
         private void KillInstances(Microsoft.Office.Interop.Excel.Application app)
         {
-            ;
-#error Cannot convert OnErrorResumeNextStatementSyntax - see comment for details
-            /* Cannot convert OnErrorResumeNextStatementSyntax, CONVERSION ERROR: Conversion for OnErrorResumeNextStatement not implemented, please report this issue in 'On Error Resume Next' at character 30053
-
-
-            Input:
-                    On Error Resume Next
-
-             */
             app.Quit();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
             app = null;
             GC.Collect();
             var mp = Process.GetProcessesByName("EXCEL");
-            Process p;
             foreach (var p in mp)
             {
-                if (p.Responding)
+                try
                 {
-                    if (string.IsNullOrEmpty(p.MainWindowTitle))
+                    if (p.Responding)
+                    {
+                        if (string.IsNullOrEmpty(p.MainWindowTitle))
+                        {
+                            p.Kill();
+                        }
+                    }
+                    else
                     {
                         p.Kill();
                     }
                 }
-                else
+                catch
                 {
-                    p.Kill();
                 }
             };
-#error Cannot convert OnErrorGoToStatementSyntax - see comment for details
-            /* Cannot convert OnErrorGoToStatementSyntax, CONVERSION ERROR: Conversion for OnErrorGoToMinusOneStatement not implemented, please report this issue in 'On Error GoTo - 1' at character 30658
-
-
-            Input:
-
-                    On Error GoTo - 1
-
-             */
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

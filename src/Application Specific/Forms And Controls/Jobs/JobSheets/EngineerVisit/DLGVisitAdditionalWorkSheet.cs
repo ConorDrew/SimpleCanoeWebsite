@@ -11,11 +11,10 @@ namespace FSM
 {
     public class DLGVisitAdditionalWorkSheet : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DLGVisitAdditionalWorkSheet() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += DLGVisitAssetWorkSheet_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -1528,7 +1526,6 @@ namespace FSM
             {
                 if (_cboType != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _cboType.SelectedIndexChanged -= cboType_SelectedIndexChanged;
                 }
@@ -1762,9 +1759,9 @@ namespace FSM
             _lbltxt12 = new Label();
             _txt12 = new TextBox();
             SuspendLayout();
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.Location = new Point(12, 526);
             _btnCancel.Name = "btnCancel";
@@ -1772,9 +1769,9 @@ namespace FSM
             _btnCancel.TabIndex = 38;
             _btnCancel.Text = "Cancel";
             _btnCancel.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(902, 526);
             _btnSave.Name = "btnSave";
@@ -1782,18 +1779,18 @@ namespace FSM
             _btnSave.TabIndex = 39;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblcbo1
-            // 
+            //
             _lblcbo1.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo1.Location = new Point(8, 82);
             _lblcbo1.Name = "lblcbo1";
             _lblcbo1.Size = new Size(285, 23);
             _lblcbo1.TabIndex = 22;
             _lblcbo1.Text = "Heat Input KW/h";
-            // 
+            //
             // lbltxt1
-            // 
+            //
             _lbltxt1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt1.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt1.Location = new Point(508, 81);
@@ -1801,25 +1798,25 @@ namespace FSM
             _lbltxt1.Size = new Size(272, 23);
             _lbltxt1.TabIndex = 48;
             _lbltxt1.Text = "Fuel";
-            // 
+            //
             // txt1
-            // 
+            //
             _txt1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt1.Location = new Point(786, 78);
             _txt1.Name = "txt1";
             _txt1.Size = new Size(178, 21);
             _txt1.TabIndex = 23;
-            // 
+            //
             // cbo1
-            // 
+            //
             _cbo1.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo1.Location = new Point(310, 79);
             _cbo1.Name = "cbo1";
             _cbo1.Size = new Size(178, 21);
             _cbo1.TabIndex = 47;
-            // 
+            //
             // lbltxt2
-            // 
+            //
             _lbltxt2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt2.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt2.Location = new Point(508, 108);
@@ -1827,264 +1824,264 @@ namespace FSM
             _lbltxt2.Size = new Size(272, 23);
             _lbltxt2.TabIndex = 50;
             _lbltxt2.Text = "Fuel";
-            // 
+            //
             // txt2
-            // 
+            //
             _txt2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt2.Location = new Point(786, 105);
             _txt2.Name = "txt2";
             _txt2.Size = new Size(178, 21);
             _txt2.TabIndex = 49;
-            // 
+            //
             // cbo2
-            // 
+            //
             _cbo2.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo2.Location = new Point(310, 106);
             _cbo2.Name = "cbo2";
             _cbo2.Size = new Size(178, 21);
             _cbo2.TabIndex = 52;
-            // 
+            //
             // lblcbo2
-            // 
+            //
             _lblcbo2.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo2.Location = new Point(8, 109);
             _lblcbo2.Name = "lblcbo2";
             _lblcbo2.Size = new Size(285, 23);
             _lblcbo2.TabIndex = 51;
             _lblcbo2.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo3
-            // 
+            //
             _cbo3.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo3.Location = new Point(310, 133);
             _cbo3.Name = "cbo3";
             _cbo3.Size = new Size(178, 21);
             _cbo3.TabIndex = 54;
-            // 
+            //
             // lblcbo3
-            // 
+            //
             _lblcbo3.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo3.Location = new Point(8, 136);
             _lblcbo3.Name = "lblcbo3";
             _lblcbo3.Size = new Size(285, 23);
             _lblcbo3.TabIndex = 53;
             _lblcbo3.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo4
-            // 
+            //
             _cbo4.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo4.Location = new Point(310, 160);
             _cbo4.Name = "cbo4";
             _cbo4.Size = new Size(178, 21);
             _cbo4.TabIndex = 56;
-            // 
+            //
             // lblcbo4
-            // 
+            //
             _lblcbo4.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo4.Location = new Point(8, 163);
             _lblcbo4.Name = "lblcbo4";
             _lblcbo4.Size = new Size(285, 23);
             _lblcbo4.TabIndex = 55;
             _lblcbo4.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo5
-            // 
+            //
             _cbo5.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo5.Location = new Point(310, 187);
             _cbo5.Name = "cbo5";
             _cbo5.Size = new Size(178, 21);
             _cbo5.TabIndex = 58;
-            // 
+            //
             // lblcbo5
-            // 
+            //
             _lblcbo5.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo5.Location = new Point(8, 190);
             _lblcbo5.Name = "lblcbo5";
             _lblcbo5.Size = new Size(285, 23);
             _lblcbo5.TabIndex = 57;
             _lblcbo5.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo6
-            // 
+            //
             _cbo6.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo6.Location = new Point(310, 214);
             _cbo6.Name = "cbo6";
             _cbo6.Size = new Size(178, 21);
             _cbo6.TabIndex = 60;
-            // 
+            //
             // lblcbo6
-            // 
+            //
             _lblcbo6.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo6.Location = new Point(8, 217);
             _lblcbo6.Name = "lblcbo6";
             _lblcbo6.Size = new Size(285, 23);
             _lblcbo6.TabIndex = 59;
             _lblcbo6.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo7
-            // 
+            //
             _cbo7.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo7.Location = new Point(310, 241);
             _cbo7.Name = "cbo7";
             _cbo7.Size = new Size(178, 21);
             _cbo7.TabIndex = 62;
-            // 
+            //
             // lblcbo7
-            // 
+            //
             _lblcbo7.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo7.Location = new Point(8, 244);
             _lblcbo7.Name = "lblcbo7";
             _lblcbo7.Size = new Size(285, 23);
             _lblcbo7.TabIndex = 61;
             _lblcbo7.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo8
-            // 
+            //
             _cbo8.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo8.Location = new Point(310, 268);
             _cbo8.Name = "cbo8";
             _cbo8.Size = new Size(178, 21);
             _cbo8.TabIndex = 64;
-            // 
+            //
             // lblcbo8
-            // 
+            //
             _lblcbo8.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo8.Location = new Point(8, 271);
             _lblcbo8.Name = "lblcbo8";
             _lblcbo8.Size = new Size(285, 23);
             _lblcbo8.TabIndex = 63;
             _lblcbo8.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo9
-            // 
+            //
             _cbo9.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo9.Location = new Point(310, 295);
             _cbo9.Name = "cbo9";
             _cbo9.Size = new Size(178, 21);
             _cbo9.TabIndex = 66;
-            // 
+            //
             // lblcbo9
-            // 
+            //
             _lblcbo9.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo9.Location = new Point(8, 298);
             _lblcbo9.Name = "lblcbo9";
             _lblcbo9.Size = new Size(285, 23);
             _lblcbo9.TabIndex = 65;
             _lblcbo9.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo10
-            // 
+            //
             _cbo10.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo10.Location = new Point(310, 322);
             _cbo10.Name = "cbo10";
             _cbo10.Size = new Size(178, 21);
             _cbo10.TabIndex = 68;
-            // 
+            //
             // lblcbo10
-            // 
+            //
             _lblcbo10.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo10.Location = new Point(8, 325);
             _lblcbo10.Name = "lblcbo10";
             _lblcbo10.Size = new Size(285, 23);
             _lblcbo10.TabIndex = 67;
             _lblcbo10.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo11
-            // 
+            //
             _cbo11.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo11.Location = new Point(310, 349);
             _cbo11.Name = "cbo11";
             _cbo11.Size = new Size(178, 21);
             _cbo11.TabIndex = 70;
-            // 
+            //
             // lblcbo11
-            // 
+            //
             _lblcbo11.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo11.Location = new Point(8, 352);
             _lblcbo11.Name = "lblcbo11";
             _lblcbo11.Size = new Size(285, 23);
             _lblcbo11.TabIndex = 69;
             _lblcbo11.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo12
-            // 
+            //
             _cbo12.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo12.Location = new Point(310, 376);
             _cbo12.Name = "cbo12";
             _cbo12.Size = new Size(178, 21);
             _cbo12.TabIndex = 72;
-            // 
+            //
             // lblcbo12
-            // 
+            //
             _lblcbo12.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo12.Location = new Point(8, 379);
             _lblcbo12.Name = "lblcbo12";
             _lblcbo12.Size = new Size(285, 23);
             _lblcbo12.TabIndex = 71;
             _lblcbo12.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo13
-            // 
+            //
             _cbo13.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo13.Location = new Point(310, 403);
             _cbo13.Name = "cbo13";
             _cbo13.Size = new Size(178, 21);
             _cbo13.TabIndex = 74;
-            // 
+            //
             // lblcbo13
-            // 
+            //
             _lblcbo13.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo13.Location = new Point(8, 406);
             _lblcbo13.Name = "lblcbo13";
             _lblcbo13.Size = new Size(285, 23);
             _lblcbo13.TabIndex = 73;
             _lblcbo13.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo14
-            // 
+            //
             _cbo14.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo14.Location = new Point(310, 430);
             _cbo14.Name = "cbo14";
             _cbo14.Size = new Size(178, 21);
             _cbo14.TabIndex = 76;
-            // 
+            //
             // lblcbo14
-            // 
+            //
             _lblcbo14.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo14.Location = new Point(8, 433);
             _lblcbo14.Name = "lblcbo14";
             _lblcbo14.Size = new Size(285, 23);
             _lblcbo14.TabIndex = 75;
             _lblcbo14.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo15
-            // 
+            //
             _cbo15.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo15.Location = new Point(310, 460);
             _cbo15.Name = "cbo15";
             _cbo15.Size = new Size(178, 21);
             _cbo15.TabIndex = 78;
-            // 
+            //
             // lblcbo15
-            // 
+            //
             _lblcbo15.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo15.Location = new Point(8, 463);
             _lblcbo15.Name = "lblcbo15";
             _lblcbo15.Size = new Size(285, 23);
             _lblcbo15.TabIndex = 77;
             _lblcbo15.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo16
-            // 
+            //
             _cbo16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cbo16.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo16.Location = new Point(310, 487);
             _cbo16.Name = "cbo16";
             _cbo16.Size = new Size(178, 21);
             _cbo16.TabIndex = 80;
-            // 
+            //
             // lblcbo16
-            // 
+            //
             _lblcbo16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblcbo16.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo16.Location = new Point(8, 491);
@@ -2092,18 +2089,18 @@ namespace FSM
             _lblcbo16.Size = new Size(272, 23);
             _lblcbo16.TabIndex = 79;
             _lblcbo16.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo17
-            // 
+            //
             _cbo17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cbo17.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo17.Location = new Point(786, 402);
             _cbo17.Name = "cbo17";
             _cbo17.Size = new Size(178, 21);
             _cbo17.TabIndex = 82;
-            // 
+            //
             // lblcbo17
-            // 
+            //
             _lblcbo17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblcbo17.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo17.Location = new Point(508, 406);
@@ -2111,18 +2108,18 @@ namespace FSM
             _lblcbo17.Size = new Size(272, 23);
             _lblcbo17.TabIndex = 81;
             _lblcbo17.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo18
-            // 
+            //
             _cbo18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cbo18.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo18.Location = new Point(786, 429);
             _cbo18.Name = "cbo18";
             _cbo18.Size = new Size(178, 21);
             _cbo18.TabIndex = 84;
-            // 
+            //
             // lblcbo18
-            // 
+            //
             _lblcbo18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblcbo18.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo18.Location = new Point(508, 433);
@@ -2130,9 +2127,9 @@ namespace FSM
             _lblcbo18.Size = new Size(272, 23);
             _lblcbo18.TabIndex = 83;
             _lblcbo18.Text = "Heat Input KW/h";
-            // 
+            //
             // lbltxt3
-            // 
+            //
             _lbltxt3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt3.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt3.Location = new Point(508, 135);
@@ -2140,17 +2137,17 @@ namespace FSM
             _lbltxt3.Size = new Size(272, 23);
             _lbltxt3.TabIndex = 86;
             _lbltxt3.Text = "Fuel";
-            // 
+            //
             // txt3
-            // 
+            //
             _txt3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt3.Location = new Point(786, 132);
             _txt3.Name = "txt3";
             _txt3.Size = new Size(178, 21);
             _txt3.TabIndex = 85;
-            // 
+            //
             // lbltxt4
-            // 
+            //
             _lbltxt4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt4.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt4.Location = new Point(508, 162);
@@ -2158,17 +2155,17 @@ namespace FSM
             _lbltxt4.Size = new Size(272, 23);
             _lbltxt4.TabIndex = 88;
             _lbltxt4.Text = "Fuel";
-            // 
+            //
             // txt4
-            // 
+            //
             _txt4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt4.Location = new Point(786, 159);
             _txt4.Name = "txt4";
             _txt4.Size = new Size(178, 21);
             _txt4.TabIndex = 87;
-            // 
+            //
             // lbltxt5
-            // 
+            //
             _lbltxt5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt5.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt5.Location = new Point(508, 189);
@@ -2176,17 +2173,17 @@ namespace FSM
             _lbltxt5.Size = new Size(272, 23);
             _lbltxt5.TabIndex = 90;
             _lbltxt5.Text = "Fuel";
-            // 
+            //
             // txt5
-            // 
+            //
             _txt5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt5.Location = new Point(786, 186);
             _txt5.Name = "txt5";
             _txt5.Size = new Size(178, 21);
             _txt5.TabIndex = 89;
-            // 
+            //
             // lbltxt6
-            // 
+            //
             _lbltxt6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt6.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt6.Location = new Point(508, 216);
@@ -2194,17 +2191,17 @@ namespace FSM
             _lbltxt6.Size = new Size(272, 23);
             _lbltxt6.TabIndex = 92;
             _lbltxt6.Text = "Fuel";
-            // 
+            //
             // txt6
-            // 
+            //
             _txt6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt6.Location = new Point(786, 213);
             _txt6.Name = "txt6";
             _txt6.Size = new Size(178, 21);
             _txt6.TabIndex = 91;
-            // 
+            //
             // lbltxt7
-            // 
+            //
             _lbltxt7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt7.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt7.Location = new Point(508, 243);
@@ -2212,17 +2209,17 @@ namespace FSM
             _lbltxt7.Size = new Size(272, 23);
             _lbltxt7.TabIndex = 94;
             _lbltxt7.Text = "Fuel";
-            // 
+            //
             // txt7
-            // 
+            //
             _txt7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt7.Location = new Point(786, 240);
             _txt7.Name = "txt7";
             _txt7.Size = new Size(178, 21);
             _txt7.TabIndex = 93;
-            // 
+            //
             // lbltxt8
-            // 
+            //
             _lbltxt8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt8.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt8.Location = new Point(508, 270);
@@ -2230,17 +2227,17 @@ namespace FSM
             _lbltxt8.Size = new Size(272, 23);
             _lbltxt8.TabIndex = 96;
             _lbltxt8.Text = "Fuel";
-            // 
+            //
             // txt8
-            // 
+            //
             _txt8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt8.Location = new Point(786, 267);
             _txt8.Name = "txt8";
             _txt8.Size = new Size(178, 21);
             _txt8.TabIndex = 95;
-            // 
+            //
             // lbltxt9
-            // 
+            //
             _lbltxt9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt9.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt9.Location = new Point(508, 297);
@@ -2248,17 +2245,17 @@ namespace FSM
             _lbltxt9.Size = new Size(272, 23);
             _lbltxt9.TabIndex = 98;
             _lbltxt9.Text = "Fuel";
-            // 
+            //
             // txt9
-            // 
+            //
             _txt9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt9.Location = new Point(786, 294);
             _txt9.Name = "txt9";
             _txt9.Size = new Size(178, 21);
             _txt9.TabIndex = 97;
-            // 
+            //
             // lbltxt10
-            // 
+            //
             _lbltxt10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt10.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt10.Location = new Point(508, 324);
@@ -2266,26 +2263,26 @@ namespace FSM
             _lbltxt10.Size = new Size(272, 23);
             _lbltxt10.TabIndex = 100;
             _lbltxt10.Text = "Fuel";
-            // 
+            //
             // txt10
-            // 
+            //
             _txt10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt10.Location = new Point(786, 321);
             _txt10.Name = "txt10";
             _txt10.Size = new Size(178, 21);
             _txt10.TabIndex = 99;
-            // 
+            //
             // cbo19
-            // 
+            //
             _cbo19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cbo19.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo19.Location = new Point(786, 456);
             _cbo19.Name = "cbo19";
             _cbo19.Size = new Size(178, 21);
             _cbo19.TabIndex = 102;
-            // 
+            //
             // lblcbo19
-            // 
+            //
             _lblcbo19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblcbo19.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo19.Location = new Point(508, 459);
@@ -2293,18 +2290,18 @@ namespace FSM
             _lblcbo19.Size = new Size(272, 23);
             _lblcbo19.TabIndex = 101;
             _lblcbo19.Text = "Heat Input KW/h";
-            // 
+            //
             // cbo20
-            // 
+            //
             _cbo20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cbo20.DropDownStyle = ComboBoxStyle.DropDownList;
             _cbo20.Location = new Point(786, 483);
             _cbo20.Name = "cbo20";
             _cbo20.Size = new Size(178, 21);
             _cbo20.TabIndex = 104;
-            // 
+            //
             // lblcbo20
-            // 
+            //
             _lblcbo20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblcbo20.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblcbo20.Location = new Point(508, 486);
@@ -2312,25 +2309,25 @@ namespace FSM
             _lblcbo20.Size = new Size(272, 23);
             _lblcbo20.TabIndex = 103;
             _lblcbo20.Text = "Heat Input KW/h";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Location = new Point(310, 38);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(654, 21);
             _cboType.TabIndex = 106;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(7, 41);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(136, 23);
             _Label1.TabIndex = 105;
             _Label1.Text = "Worsheet type";
-            // 
+            //
             // lbltxt11
-            // 
+            //
             _lbltxt11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt11.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt11.Location = new Point(508, 352);
@@ -2338,17 +2335,17 @@ namespace FSM
             _lbltxt11.Size = new Size(272, 23);
             _lbltxt11.TabIndex = 109;
             _lbltxt11.Text = "Fuel";
-            // 
+            //
             // txt11
-            // 
+            //
             _txt11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt11.Location = new Point(786, 349);
             _txt11.Name = "txt11";
             _txt11.Size = new Size(178, 21);
             _txt11.TabIndex = 108;
-            // 
+            //
             // lbltxt12
-            // 
+            //
             _lbltxt12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lbltxt12.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lbltxt12.Location = new Point(508, 379);
@@ -2356,17 +2353,17 @@ namespace FSM
             _lbltxt12.Size = new Size(272, 23);
             _lbltxt12.TabIndex = 111;
             _lbltxt12.Text = "Fuel";
-            // 
+            //
             // txt12
-            // 
+            //
             _txt12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txt12.Location = new Point(786, 376);
             _txt12.Name = "txt12";
             _txt12.Size = new Size(178, 21);
             _txt12.TabIndex = 110;
-            // 
+            //
             // DLGVisitAdditionalWorkSheet
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(989, 561);
             ControlBox = false;
@@ -2643,28 +2640,7 @@ namespace FSM
             try
             {
                 Cursor = Cursors.WaitCursor;
-                ;
-#error Cannot convert AssignmentStatementSyntax - see comment for details
-                /* Cannot convert AssignmentStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax'.
-                   at ICSharpCode.CodeConverter.CSharp.MethodBodyExecutableStatementVisitor.<VisitAssignmentStatement>d__32.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<CreateLocals>d__7.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.ByRefParameterVisitor.<AddLocalVariables>d__6.MoveNext()
-                --- End of stack trace from previous location where exception was thrown ---
-                   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-                   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-                   at ICSharpCode.CodeConverter.CSharp.CommentConvertingMethodBodyVisitor.<DefaultVisitInnerAsync>d__3.MoveNext()
-
-                Input:
-
-                            Me.Worksheet.SetTestTypeID = Me.cboType.SelectedItem("value")
-
-                 */
+                this.Worksheet.SetTestTypeID = Combo.get_GetSelectedItemValue(cboType);
                 Worksheet.SetEngineerVisitID = EngineerVisit.EngineerVisitID;
                 Worksheet.SetTest1 = Combo.get_GetSelectedItemValue(cbo1);
                 Worksheet.SetTest2 = Combo.get_GetSelectedItemValue(cbo2);
@@ -2768,7 +2744,6 @@ namespace FSM
 
         public void Loadin()
         {
-
             // _worksheetData = EngineerVisitAdditionalChecks.Get(_worksheetID);
 
             // '
@@ -3194,7 +3169,7 @@ namespace FSM
             cbo1.DisplayMember = "Description";
             cbo1.ValueMember = "Value";
             cbo1.SelectedIndex = 0;
-            // 
+            //
 
             lblcbo1.Text = "State test method - ";
             dt = new DataTable();

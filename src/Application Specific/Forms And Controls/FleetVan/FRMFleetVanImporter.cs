@@ -14,11 +14,10 @@ namespace FSM
 {
     public class FRMFleetVanImporter : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMFleetVanImporter() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
@@ -43,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
 
@@ -233,9 +232,9 @@ namespace FSM
             _grpFailedImports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgFailedImports).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpExcelFile
-            // 
+            //
             _grpExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpExcelFile.Controls.Add(_Label2);
             _grpExcelFile.Controls.Add(_btnImport);
@@ -248,18 +247,18 @@ namespace FSM
             _grpExcelFile.TabIndex = 3;
             _grpExcelFile.TabStop = false;
             _grpExcelFile.Text = "Select file to import";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.AutoSize = true;
             _Label2.Location = new Point(6, 22);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(31, 13);
             _Label2.TabIndex = 13;
             _Label2.Text = "File:";
-            // 
+            //
             // btnImport
-            // 
+            //
             _btnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnImport.Enabled = false;
             _btnImport.FlatStyle = FlatStyle.System;
@@ -268,9 +267,9 @@ namespace FSM
             _btnImport.Size = new Size(64, 23);
             _btnImport.TabIndex = 7;
             _btnImport.Text = "Import";
-            // 
+            //
             // btnFindExcelFile
-            // 
+            //
             _btnFindExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindExcelFile.FlatStyle = FlatStyle.System;
             _btnFindExcelFile.Location = new Point(536, 17);
@@ -278,18 +277,18 @@ namespace FSM
             _btnFindExcelFile.Size = new Size(32, 23);
             _btnFindExcelFile.TabIndex = 5;
             _btnFindExcelFile.Text = "...";
-            // 
+            //
             // txtExcelFile
-            // 
+            //
             _txtExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtExcelFile.Location = new Point(50, 19);
             _txtExcelFile.Name = "txtExcelFile";
             _txtExcelFile.ReadOnly = true;
             _txtExcelFile.Size = new Size(480, 21);
             _txtExcelFile.TabIndex = 4;
-            // 
+            //
             // grpFailedImports
-            // 
+            //
             _grpFailedImports.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFailedImports.Controls.Add(_dgFailedImports);
             _grpFailedImports.FlatStyle = FlatStyle.System;
@@ -299,9 +298,9 @@ namespace FSM
             _grpFailedImports.TabIndex = 14;
             _grpFailedImports.TabStop = false;
             _grpFailedImports.Text = "Failed Imports";
-            // 
+            //
             // dgFailedImports
-            // 
+            //
             _dgFailedImports.DataMember = "";
             _dgFailedImports.Dock = DockStyle.Fill;
             _dgFailedImports.HeaderForeColor = SystemColors.ControlText;
@@ -309,9 +308,9 @@ namespace FSM
             _dgFailedImports.Name = "dgFailedImports";
             _dgFailedImports.Size = new Size(649, 457);
             _dgFailedImports.TabIndex = 45;
-            // 
+            //
             // FRMFleetVanImporter
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(671, 599);
             Controls.Add(_grpFailedImports);
@@ -330,6 +329,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public IUserControl LoadedControl
         {
             get
@@ -438,8 +438,10 @@ namespace FSM
             public string Model { get; set; }
             public int Mileage { get; set; }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMImport_Load(object sender, EventArgs e)
         {
         }
@@ -456,6 +458,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoadData()
         {
             var dlg = default(OpenFileDialog);
@@ -501,44 +504,31 @@ namespace FSM
 
         private void KillInstances(Microsoft.Office.Interop.Excel.Application app)
         {
-            ;
-#error Cannot convert OnErrorResumeNextStatementSyntax - see comment for details
-            /* Cannot convert OnErrorResumeNextStatementSyntax, CONVERSION ERROR: Conversion for OnErrorResumeNextStatement not implemented, please report this issue in 'On Error Resume Next' at character 13096
-
-
-            Input:
-                    On Error Resume Next
-
-             */
             app.Quit();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
             app = null;
             GC.Collect();
             var mp = Process.GetProcessesByName("EXCEL");
-            Process p;
             foreach (var p in mp)
             {
-                if (p.Responding)
+                try
                 {
-                    if (string.IsNullOrEmpty(p.MainWindowTitle))
+                    if (p.Responding)
+                    {
+                        if (string.IsNullOrEmpty(p.MainWindowTitle))
+                        {
+                            p.Kill();
+                        }
+                    }
+                    else
                     {
                         p.Kill();
                     }
                 }
-                else
+                catch
                 {
-                    p.Kill();
                 }
             };
-#error Cannot convert OnErrorGoToStatementSyntax - see comment for details
-            /* Cannot convert OnErrorGoToStatementSyntax, CONVERSION ERROR: Conversion for OnErrorGoToMinusOneStatement not implemented, please report this issue in 'On Error GoTo - 1' at character 13701
-
-
-            Input:
-
-                    On Error GoTo - 1
-
-             */
         }
 
         private void Import()
@@ -673,7 +663,6 @@ namespace FSM
 
         private void RunEstimateUpdates()
         {
-
             // First we need to calculate the average mileage
             // Get the weeks between now and the last service date
             if (!CurrentVanMaintenance.Exists)
@@ -727,7 +716,7 @@ namespace FSM
 
             // lets see how many months it will take to get to next service mileage
             int avg = (int)(vanType.MileageServiceInterval / (double)CurrentVan.AverageMileage);
-            // next service based on mileage 
+            // next service based on mileage
             var nsMileage = CurrentVanMaintenance.LastService.AddMonths(avg);
             if (nsDate < nsMileage)
             {
@@ -762,7 +751,7 @@ namespace FSM
                 return;
             }
 
-            // get contract length 
+            // get contract length
             CurrentContract.SetContractLength = DateAndTime.DateDiff(DateInterval.Month, CurrentContract.ContractStart, CurrentContract.ContractEnd) + 1;
             int remainingLength = Conversions.ToInteger(Math.Round(CurrentContract.ContractLength - currentContractLength / 4.3));
             double estMileageOverRemainingLength = lastServiceAverageMileage * remainingLength;
@@ -791,11 +780,11 @@ namespace FSM
         }
 
         /// <summary>
-    /// Converts a list of a class to a datatable
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="list"></param>
-    /// <returns></returns>
+        /// Converts a list of a class to a datatable
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns></returns>
         public static DataTable ConvertToDataTable<T>(IList<T> list)
         {
             // declare new datatable
@@ -806,7 +795,7 @@ namespace FSM
             {
                 return dt;
             }
-            // get all the class properties 
+            // get all the class properties
             var fields = list.First().GetType().GetProperties();
             // use the class properties as column name
             foreach (PropertyInfo field in fields)
@@ -817,8 +806,7 @@ namespace FSM
                 var row = dt.NewRow();
                 foreach (PropertyInfo field in fields)
                 {
-                    object p = item.GetType().GetProperty(field.Name);
-                    row[field.Name] = p.GetValue(item, null);
+                    row[field.Name] = item.GetType().GetProperty(field.Name);
                 }
 
                 dt.Rows.Add(row);
@@ -826,6 +814,7 @@ namespace FSM
 
             return dt;
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }
