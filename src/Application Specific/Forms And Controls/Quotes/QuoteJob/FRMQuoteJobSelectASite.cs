@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMQuoteJobSelectASite : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMQuoteJobSelectASite() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMQuoteJob_Load;
@@ -131,36 +130,36 @@ namespace FSM
             _btnClose = new Button();
             _btnClose.Click += new EventHandler(btnClose_Click);
             SuspendLayout();
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(624, 296);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 336);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 23);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(72, 336);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 23);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // FRMQuoteJobSelectASite
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(624, 366);
             Controls.Add(_btnClose);
@@ -179,7 +178,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             ((UCQuoteJobSelectASite)LoadedControl).SiteSelected += SiteSelected;

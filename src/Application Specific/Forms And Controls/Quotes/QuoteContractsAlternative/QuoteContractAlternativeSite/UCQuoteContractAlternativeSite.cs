@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCQuoteContractAlternativeSite : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCQuoteContractAlternativeSite() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCQuoteContractSite_Load;
@@ -663,9 +662,9 @@ namespace FSM
             _grpJobItemAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgAssets).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpJobItems
-            // 
+            //
             _grpJobItems.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpJobItems.Location = new Point(10, 88);
             _grpJobItems.Name = "grpJobItems";
@@ -673,9 +672,9 @@ namespace FSM
             _grpJobItems.TabIndex = 35;
             _grpJobItems.TabStop = false;
             _grpJobItems.Text = "Job Items";
-            // 
+            //
             // grpContractSite
-            // 
+            //
             _grpContractSite.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpContractSite.Controls.Add(_gpJobItems);
@@ -689,9 +688,9 @@ namespace FSM
             _grpContractSite.TabIndex = 0;
             _grpContractSite.TabStop = false;
             _grpContractSite.Text = "Main Details";
-            // 
+            //
             // gpJobItems
-            // 
+            //
             _gpJobItems.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _gpJobItems.Controls.Add(_dgJobItems);
             _gpJobItems.Controls.Add(_btnAddToJobOfWork);
@@ -702,9 +701,9 @@ namespace FSM
             _gpJobItems.TabIndex = 2;
             _gpJobItems.TabStop = false;
             _gpJobItems.Text = "Job Items ";
-            // 
+            //
             // dgJobItems
-            // 
+            //
             _dgJobItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _dgJobItems.DataMember = "";
             _dgJobItems.HeaderForeColor = SystemColors.ControlText;
@@ -712,9 +711,9 @@ namespace FSM
             _dgJobItems.Name = "dgJobItems";
             _dgJobItems.Size = new Size(809, 81);
             _dgJobItems.TabIndex = 2;
-            // 
+            //
             // btnAddToJobOfWork
-            // 
+            //
             _btnAddToJobOfWork.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddToJobOfWork.UseVisualStyleBackColor = true;
             _btnAddToJobOfWork.Location = new Point(820, 81);
@@ -722,9 +721,9 @@ namespace FSM
             _btnAddToJobOfWork.Size = new Size(124, 23);
             _btnAddToJobOfWork.TabIndex = 1;
             _btnAddToJobOfWork.Text = "Add To Job Of Work";
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnRemove.UseVisualStyleBackColor = true;
             _btnRemove.Location = new Point(820, 21);
@@ -732,9 +731,9 @@ namespace FSM
             _btnRemove.Size = new Size(124, 23);
             _btnRemove.TabIndex = 0;
             _btnRemove.Text = "Remove";
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSite.Location = new Point(70, 18);
             _txtSite.Multiline = true;
@@ -744,17 +743,17 @@ namespace FSM
             _txtSite.Size = new Size(887, 21);
             _txtSite.TabIndex = 0;
             _txtSite.Text = "";
-            // 
+            //
             // lblSite
-            // 
+            //
             _lblSite.Location = new Point(15, 21);
             _lblSite.Name = "lblSite";
             _lblSite.Size = new Size(52, 19);
             _lblSite.TabIndex = 33;
             _lblSite.Text = "Property";
-            // 
+            //
             // grpVisits
-            // 
+            //
             _grpVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVisits.Controls.Add(_btnRemoveJobOfWork);
@@ -766,9 +765,9 @@ namespace FSM
             _grpVisits.TabIndex = 3;
             _grpVisits.TabStop = false;
             _grpVisits.Text = "Jobs Of Work";
-            // 
+            //
             // btnRemoveJobOfWork
-            // 
+            //
             _btnRemoveJobOfWork.AccessibleDescription = "Remove Selected Job Of Work";
             _btnRemoveJobOfWork.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnRemoveJobOfWork.UseVisualStyleBackColor = true;
@@ -777,9 +776,9 @@ namespace FSM
             _btnRemoveJobOfWork.Size = new Size(24, 23);
             _btnRemoveJobOfWork.TabIndex = 1;
             _btnRemoveJobOfWork.Text = "-";
-            // 
+            //
             // btnAddJobOfWork
-            // 
+            //
             _btnAddJobOfWork.AccessibleDescription = "Add Job Of Work";
             _btnAddJobOfWork.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddJobOfWork.UseVisualStyleBackColor = true;
@@ -788,9 +787,9 @@ namespace FSM
             _btnAddJobOfWork.Size = new Size(24, 23);
             _btnAddJobOfWork.TabIndex = 0;
             _btnAddJobOfWork.Text = "+";
-            // 
+            //
             // TCJobsOfWork
-            // 
+            //
             _TCJobsOfWork.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TCJobsOfWork.Location = new Point(8, 17);
@@ -798,9 +797,9 @@ namespace FSM
             _TCJobsOfWork.SelectedIndex = 0;
             _TCJobsOfWork.Size = new Size(933, 377);
             _TCJobsOfWork.TabIndex = 44;
-            // 
+            //
             // grpJobItemAdd
-            // 
+            //
             _grpJobItemAdd.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpJobItemAdd.Controls.Add(_cboVisitDuration);
             _grpJobItemAdd.Controls.Add(_cboVisitFrequencyID);
@@ -818,9 +817,9 @@ namespace FSM
             _grpJobItemAdd.TabIndex = 1;
             _grpJobItemAdd.TabStop = false;
             _grpJobItemAdd.Text = "Add Job Items";
-            // 
+            //
             // cboVisitDuration
-            // 
+            //
             _cboVisitDuration.Cursor = Cursors.Hand;
             _cboVisitDuration.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboVisitDuration.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -830,9 +829,9 @@ namespace FSM
             _cboVisitDuration.Size = new Size(95, 21);
             _cboVisitDuration.TabIndex = 3;
             _cboVisitDuration.Tag = "ContractSite.VisitDuration";
-            // 
+            //
             // cboVisitFrequencyID
-            // 
+            //
             _cboVisitFrequencyID.Cursor = Cursors.Hand;
             _cboVisitFrequencyID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboVisitFrequencyID.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -842,9 +841,9 @@ namespace FSM
             _cboVisitFrequencyID.Size = new Size(136, 21);
             _cboVisitFrequencyID.TabIndex = 1;
             _cboVisitFrequencyID.Tag = "ContractSite.VisitFrequencyID";
-            // 
+            //
             // lblPricePerVisit
-            // 
+            //
             _lblPricePerVisit.BackColor = Color.White;
             _lblPricePerVisit.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblPricePerVisit.Location = new Point(9, 82);
@@ -853,9 +852,9 @@ namespace FSM
             _lblPricePerVisit.TabIndex = 31;
             _lblPricePerVisit.Text = "Item Price Per Visit";
             _lblPricePerVisit.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.BackColor = Color.White;
             _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(9, 19);
@@ -864,9 +863,9 @@ namespace FSM
             _Label2.TabIndex = 39;
             _Label2.Text = "Description";
             _Label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtDescriptionItem
-            // 
+            //
             _txtDescriptionItem.Location = new Point(127, 19);
             _txtDescriptionItem.Multiline = true;
             _txtDescriptionItem.Name = "txtDescriptionItem";
@@ -874,9 +873,9 @@ namespace FSM
             _txtDescriptionItem.Size = new Size(328, 25);
             _txtDescriptionItem.TabIndex = 0;
             _txtDescriptionItem.Text = "";
-            // 
+            //
             // lblVisitFrequencyID
-            // 
+            //
             _lblVisitFrequencyID.BackColor = Color.White;
             _lblVisitFrequencyID.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblVisitFrequencyID.Location = new Point(9, 52);
@@ -885,18 +884,18 @@ namespace FSM
             _lblVisitFrequencyID.TabIndex = 31;
             _lblVisitFrequencyID.Text = "Visit Frequency";
             _lblVisitFrequencyID.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.UseVisualStyleBackColor = true;
             _btnAdd.Location = new Point(887, 76);
             _btnAdd.Name = "btnAdd";
             _btnAdd.Size = new Size(53, 23);
             _btnAdd.TabIndex = 5;
             _btnAdd.Text = "Add";
-            // 
+            //
             // txtPricePerVisit
-            // 
+            //
             _txtPricePerVisit.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPricePerVisit.Location = new Point(127, 82);
             _txtPricePerVisit.MaxLength = 9;
@@ -905,9 +904,9 @@ namespace FSM
             _txtPricePerVisit.TabIndex = 2;
             _txtPricePerVisit.Tag = "ContractSite.PricePerVisit";
             _txtPricePerVisit.Text = "";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.BackColor = Color.White;
             _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(273, 52);
@@ -916,9 +915,9 @@ namespace FSM
             _Label1.TabIndex = 37;
             _Label1.Text = "Visit Duration";
             _Label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // dgAssets
-            // 
+            //
             _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAssets.DataMember = "";
@@ -927,9 +926,9 @@ namespace FSM
             _dgAssets.Name = "dgAssets";
             _dgAssets.Size = new Size(427, 82);
             _dgAssets.TabIndex = 4;
-            // 
+            //
             // UCQuoteContractAlternativeSite
-            // 
+            //
             Controls.Add(_grpContractSite);
             Name = "UCQuoteContractAlternativeSite";
             Size = new Size(983, 675);
@@ -944,7 +943,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -959,11 +959,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraTest);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1103,6 +1104,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupAssetsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgAssets);
@@ -1372,7 +1374,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {
@@ -1406,7 +1409,6 @@ namespace FSM
             {
                 if (TCJobsOfWork.TabPages.Count > 0)
                 {
-
                     // DOES ANYTHING NEED SCHEDULING?
                     bool show = false;
                     foreach (TabPage tab in TCJobsOfWork.TabPages)
@@ -1473,7 +1475,6 @@ namespace FSM
         {
             try
             {
-
                 // Duration OF Contract In Days
                 int ContractDuration;
                 ContractDuration = CurrentQuoteContract.ContractEnd.Subtract(CurrentQuoteContract.ContractStart).Days;
@@ -1526,7 +1527,6 @@ namespace FSM
                 {
                     if (EstVisitDate >= CurrentQuoteContract.ContractStart & EstVisitDate <= CurrentQuoteContract.ContractEnd)
                     {
-
                         // MAKE SURE WE DON'T BOOK A SATURADY OR SUNDAY
                         if (EstVisitDate.DayOfWeek == DayOfWeek.Saturday)
                         {

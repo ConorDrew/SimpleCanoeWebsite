@@ -180,7 +180,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));

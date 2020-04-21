@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCConvertJobOfWork : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCConvertJobOfWork() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCJobOfWork_Load;
@@ -962,18 +961,18 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgScheduleOfRates).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_dgJobItemsAdded).BeginInit();
             SuspendLayout();
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(224, 272);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(128, 23);
             _Label8.TabIndex = 126;
             _Label8.Text = "Rate Total Per Visit";
             _Label8.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // grpScheduleOfRates
-            // 
+            //
             _grpScheduleOfRates.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpScheduleOfRates.Controls.Add(_btnSiteScheduleOfRates);
             _grpScheduleOfRates.Controls.Add(_txtQuantityPerVisit);
@@ -995,17 +994,17 @@ namespace FSM
             _grpScheduleOfRates.TabIndex = 2;
             _grpScheduleOfRates.TabStop = false;
             _grpScheduleOfRates.Text = "Property Contract Schedule Of Rates";
-            // 
+            //
             // btnSiteScheduleOfRates
-            // 
+            //
             _btnSiteScheduleOfRates.Location = new Point(96, 280);
             _btnSiteScheduleOfRates.Name = "btnSiteScheduleOfRates";
             _btnSiteScheduleOfRates.Size = new Size(240, 23);
             _btnSiteScheduleOfRates.TabIndex = 7;
             _btnSiteScheduleOfRates.Text = "Add Property Schedule Of Rates";
-            // 
+            //
             // txtQuantityPerVisit
-            // 
+            //
             _txtQuantityPerVisit.Location = new Point(344, 40);
             _txtQuantityPerVisit.MaxLength = 9;
             _txtQuantityPerVisit.Name = "txtQuantityPerVisit";
@@ -1013,34 +1012,34 @@ namespace FSM
             _txtQuantityPerVisit.TabIndex = 4;
             _txtQuantityPerVisit.Tag = "SystemScheduleOfRate.Price";
             _txtQuantityPerVisit.Text = "";
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Location = new Point(264, 40);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(80, 20);
             _Label7.TabIndex = 48;
             _Label7.Text = "Qty Per Visit";
-            // 
+            //
             // btnAddRates
-            // 
+            //
             _btnAddRates.Location = new Point(8, 280);
             _btnAddRates.Name = "btnAddRates";
             _btnAddRates.Size = new Size(72, 23);
             _btnAddRates.TabIndex = 6;
             _btnAddRates.Text = "Add";
-            // 
+            //
             // btnRemoveRates
-            // 
+            //
             _btnRemoveRates.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnRemoveRates.Location = new Point(352, 282);
             _btnRemoveRates.Name = "btnRemoveRates";
             _btnRemoveRates.Size = new Size(72, 23);
             _btnRemoveRates.TabIndex = 8;
             _btnRemoveRates.Text = "Remove";
-            // 
+            //
             // cboScheduleOfRatesCategoryID
-            // 
+            //
             _cboScheduleOfRatesCategoryID.Cursor = Cursors.Hand;
             _cboScheduleOfRatesCategoryID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboScheduleOfRatesCategoryID.Location = new Point(88, 16);
@@ -1048,17 +1047,17 @@ namespace FSM
             _cboScheduleOfRatesCategoryID.Size = new Size(171, 21);
             _cboScheduleOfRatesCategoryID.TabIndex = 0;
             _cboScheduleOfRatesCategoryID.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblScheduleOfRatesCategoryID
-            // 
+            //
             _lblScheduleOfRatesCategoryID.Location = new Point(8, 16);
             _lblScheduleOfRatesCategoryID.Name = "lblScheduleOfRatesCategoryID";
             _lblScheduleOfRatesCategoryID.Size = new Size(80, 20);
             _lblScheduleOfRatesCategoryID.TabIndex = 43;
             _lblScheduleOfRatesCategoryID.Text = "Category";
-            // 
+            //
             // txtCode
-            // 
+            //
             _txtCode.Location = new Point(88, 40);
             _txtCode.MaxLength = 50;
             _txtCode.Name = "txtCode";
@@ -1066,17 +1065,17 @@ namespace FSM
             _txtCode.TabIndex = 1;
             _txtCode.Tag = "SystemScheduleOfRate.Code";
             _txtCode.Text = "";
-            // 
+            //
             // lblCode
-            // 
+            //
             _lblCode.Location = new Point(8, 40);
             _lblCode.Name = "lblCode";
             _lblCode.Size = new Size(80, 20);
             _lblCode.TabIndex = 42;
             _lblCode.Text = "Code";
-            // 
+            //
             // txtDescriptionRate
-            // 
+            //
             _txtDescriptionRate.Location = new Point(88, 64);
             _txtDescriptionRate.MaxLength = 0;
             _txtDescriptionRate.Multiline = true;
@@ -1086,17 +1085,17 @@ namespace FSM
             _txtDescriptionRate.TabIndex = 2;
             _txtDescriptionRate.Tag = "SystemScheduleOfRate.Description";
             _txtDescriptionRate.Text = "";
-            // 
+            //
             // lblDescription
-            // 
+            //
             _lblDescription.Location = new Point(8, 64);
             _lblDescription.Name = "lblDescription";
             _lblDescription.Size = new Size(80, 20);
             _lblDescription.TabIndex = 41;
             _lblDescription.Text = "Description";
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Location = new Point(344, 16);
             _txtPrice.MaxLength = 9;
             _txtPrice.Name = "txtPrice";
@@ -1104,17 +1103,17 @@ namespace FSM
             _txtPrice.TabIndex = 3;
             _txtPrice.Tag = "SystemScheduleOfRate.Price";
             _txtPrice.Text = "";
-            // 
+            //
             // lblPrice
-            // 
+            //
             _lblPrice.Location = new Point(264, 16);
             _lblPrice.Name = "lblPrice";
             _lblPrice.Size = new Size(80, 20);
             _lblPrice.TabIndex = 40;
             _lblPrice.Text = "Price";
-            // 
+            //
             // dgScheduleOfRates
-            // 
+            //
             _dgScheduleOfRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgScheduleOfRates.DataMember = "";
@@ -1123,9 +1122,9 @@ namespace FSM
             _dgScheduleOfRates.Name = "dgScheduleOfRates";
             _dgScheduleOfRates.Size = new Size(416, 184);
             _dgScheduleOfRates.TabIndex = 5;
-            // 
+            //
             // txtRatesTotal
-            // 
+            //
             _txtRatesTotal.Enabled = false;
             _txtRatesTotal.Location = new Point(360, 272);
             _txtRatesTotal.MaxLength = 50;
@@ -1134,43 +1133,43 @@ namespace FSM
             _txtRatesTotal.TabIndex = 10;
             _txtRatesTotal.Tag = "SystemScheduleOfRate.Code";
             _txtRatesTotal.Text = "";
-            // 
+            //
             // txtTotalSitePrice
-            // 
+            //
             _txtTotalSitePrice.Location = new Point(360, 296);
             _txtTotalSitePrice.Name = "txtTotalSitePrice";
             _txtTotalSitePrice.Size = new Size(88, 21);
             _txtTotalSitePrice.TabIndex = 12;
             _txtTotalSitePrice.Text = "";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(224, 296);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(104, 23);
             _Label6.TabIndex = 130;
             _Label6.Text = "Total Work Price";
             _Label6.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // chkRates
-            // 
+            //
             _chkRates.Location = new Point(8, 272);
             _chkRates.Name = "chkRates";
             _chkRates.Size = new Size(176, 23);
             _chkRates.TabIndex = 9;
             _chkRates.Text = "Include Rates in Visit Total";
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(224, 200);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(96, 16);
             _Label9.TabIndex = 133;
             _Label9.Text = "Item Total";
             _Label9.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtItemTotal
-            // 
+            //
             _txtItemTotal.Enabled = false;
             _txtItemTotal.Location = new Point(360, 200);
             _txtItemTotal.MaxLength = 50;
@@ -1179,9 +1178,9 @@ namespace FSM
             _txtItemTotal.TabIndex = 4;
             _txtItemTotal.Tag = "SystemScheduleOfRate.Code";
             _txtItemTotal.Text = "";
-            // 
+            //
             // txtPricePerVisit
-            // 
+            //
             _txtPricePerVisit.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPricePerVisit.Location = new Point(128, 296);
             _txtPricePerVisit.MaxLength = 9;
@@ -1190,9 +1189,9 @@ namespace FSM
             _txtPricePerVisit.TabIndex = 11;
             _txtPricePerVisit.Tag = "ContractSite.PricePerVisit";
             _txtPricePerVisit.Text = "";
-            // 
+            //
             // lblPricePerVisit
-            // 
+            //
             _lblPricePerVisit.BackColor = Color.White;
             _lblPricePerVisit.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblPricePerVisit.Location = new Point(8, 296);
@@ -1201,69 +1200,69 @@ namespace FSM
             _lblPricePerVisit.TabIndex = 132;
             _lblPricePerVisit.Text = "Total Price Per Visit";
             _lblPricePerVisit.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(8, 224);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(102, 21);
             _Label5.TabIndex = 129;
             _Label5.Text = "Mileage Per Visit";
             _Label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(224, 224);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(82, 21);
             _Label4.TabIndex = 128;
             _Label4.Text = "Price Per Mile";
             _Label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(224, 248);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(136, 21);
             _Label2.TabIndex = 127;
             _Label2.Text = "Mileage Total Per Visit";
             _Label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtMileageCostPerVisit
-            // 
+            //
             _txtMileageCostPerVisit.Enabled = false;
             _txtMileageCostPerVisit.Location = new Point(360, 248);
             _txtMileageCostPerVisit.Name = "txtMileageCostPerVisit";
             _txtMileageCostPerVisit.Size = new Size(88, 21);
             _txtMileageCostPerVisit.TabIndex = 8;
             _txtMileageCostPerVisit.Text = "";
-            // 
+            //
             // txtAverageMileage
-            // 
+            //
             _txtAverageMileage.Location = new Point(128, 224);
             _txtAverageMileage.Name = "txtAverageMileage";
             _txtAverageMileage.Size = new Size(88, 21);
             _txtAverageMileage.TabIndex = 5;
             _txtAverageMileage.Text = "0";
-            // 
+            //
             // txtCostPerMile
-            // 
+            //
             _txtCostPerMile.Location = new Point(360, 224);
             _txtCostPerMile.Name = "txtCostPerMile";
             _txtCostPerMile.Size = new Size(88, 21);
             _txtCostPerMile.TabIndex = 6;
             _txtCostPerMile.Text = "£0.00";
-            // 
+            //
             // chkIncludeMileage
-            // 
+            //
             _chkIncludeMileage.Location = new Point(8, 248);
             _chkIncludeMileage.Name = "chkIncludeMileage";
             _chkIncludeMileage.Size = new Size(208, 21);
             _chkIncludeMileage.TabIndex = 7;
             _chkIncludeMileage.Text = "Include Mileage in Visit Total";
-            // 
+            //
             // dtpFirstVisitDate
-            // 
+            //
             _dtpFirstVisitDate.CalendarFont = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _dtpFirstVisitDate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _dtpFirstVisitDate.Format = DateTimePickerFormat.Short;
@@ -1273,9 +1272,9 @@ namespace FSM
             _dtpFirstVisitDate.TabIndex = 3;
             _dtpFirstVisitDate.Tag = "ContractSite.FirstVisitDate";
             _dtpFirstVisitDate.Value = new DateTime(2007, 6, 18, 15, 21, 39, 569);
-            // 
+            //
             // lblFirstVisitDate
-            // 
+            //
             _lblFirstVisitDate.BackColor = Color.White;
             _lblFirstVisitDate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblFirstVisitDate.Location = new Point(8, 200);
@@ -1283,25 +1282,25 @@ namespace FSM
             _lblFirstVisitDate.Size = new Size(96, 16);
             _lblFirstVisitDate.TabIndex = 122;
             _lblFirstVisitDate.Text = "First Visit Date";
-            // 
+            //
             // dgJobItemsAdded
-            // 
+            //
             _dgJobItemsAdded.DataMember = "";
             _dgJobItemsAdded.HeaderForeColor = SystemColors.ControlText;
             _dgJobItemsAdded.Location = new Point(8, 32);
             _dgJobItemsAdded.Name = "dgJobItemsAdded";
             _dgJobItemsAdded.Size = new Size(440, 160);
             _dgJobItemsAdded.TabIndex = 1;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 8);
             _Label3.Name = "Label3";
             _Label3.TabIndex = 0;
             _Label3.Text = "Job Items Added";
-            // 
+            //
             // UCConvertJobOfWork
-            // 
+            //
             Controls.Add(_Label8);
             Controls.Add(_grpScheduleOfRates);
             Controls.Add(_txtRatesTotal);
@@ -1333,7 +1332,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupJobItemsDataGrid();
@@ -1350,11 +1350,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1494,6 +1495,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupJobItemsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgJobItemsAdded);
@@ -1857,6 +1859,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private DataView BuildUpScheduleOfRatesDataview()
         {
             var newTable = new DataTable();
@@ -1893,7 +1896,7 @@ namespace FSM
         private void CalculateRates()
         {
             decimal oldTotal = 0.0M;
-            decimal runningTotal = 0.0M;
+            double runningTotal = 0.0;
             if (txtRatesTotal.Text.Trim().Length == 0)
             {
                 txtRatesTotal.Text = "£0.00";
@@ -1904,7 +1907,7 @@ namespace FSM
             }
 
             foreach (DataRow rate in ScheduleOfRatesDataview.Table.Rows)
-                runningTotal += rate["Price"] * rate["QtyPerVisit"];
+                runningTotal += (double)rate["Price"] * (int)rate["QtyPerVisit"];
             txtRatesTotal.Text = Strings.Format(runningTotal, "C");
             if (chkRates.Checked)
             {
@@ -1936,7 +1939,7 @@ namespace FSM
         public void CalculateItemTotal()
         {
             decimal oldTotal = 0.0M;
-            decimal runningTotal = 0.0M;
+            double runningTotal = 0.0;
             if (txtItemTotal.Text.Trim().Length == 0)
             {
                 txtItemTotal.Text = "£0.00";
@@ -1947,7 +1950,7 @@ namespace FSM
             }
 
             foreach (DataRow ji in JobItemsAddedDataView.Table.Rows)
-                runningTotal += ji["ItemPricePerVisit"];
+                runningTotal += (double)ji["ItemPricePerVisit"];
             txtItemTotal.Text = Strings.Format(runningTotal, "C");
             txtPricePerVisit.Text = (Entity.Sys.Helper.MakeDoubleValid(txtPricePerVisit.Text.Replace("£", "")) - Conversions.ToDouble(oldTotal)).ToString();
             txtPricePerVisit.Text = Strings.Format(Entity.Sys.Helper.MakeDoubleValid(txtPricePerVisit.Text.Replace("£", "")) + Conversions.ToDouble(runningTotal), "C");
@@ -2025,7 +2028,7 @@ namespace FSM
             }
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             IsLoading = true;
             dtpFirstVisitDate.Value = CurrentJobOfWork.FirstVisitDate;

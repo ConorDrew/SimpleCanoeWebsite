@@ -12,11 +12,10 @@ namespace FSM
 {
     public class FRMLastGSRReport : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMLastGSRReport() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMEngineerTimesheetReport_Load;
@@ -25,7 +24,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -46,7 +44,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpFilter;
 
@@ -710,9 +708,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgProductsLastGSR).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpJobs
-            // 
+            //
             _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJobs.Controls.Add(_dgProductsLastGSR);
@@ -722,9 +720,9 @@ namespace FSM
             _grpJobs.TabIndex = 1;
             _grpJobs.TabStop = false;
             _grpJobs.Text = "Service Reminders";
-            // 
+            //
             // dgProductsLastGSR
-            // 
+            //
             _dgProductsLastGSR.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgProductsLastGSR.DataMember = "";
@@ -733,9 +731,9 @@ namespace FSM
             _dgProductsLastGSR.Name = "dgProductsLastGSR";
             _dgProductsLastGSR.Size = new Size(1156, 244);
             _dgProductsLastGSR.TabIndex = 0;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 464);
@@ -743,9 +741,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 2;
             _btnExport.Text = "Export";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_btnFilter);
             _grpFilter.Controls.Add(_cboRegion);
@@ -767,9 +765,9 @@ namespace FSM
             _grpFilter.TabIndex = 0;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // btnFilter
-            // 
+            //
             _btnFilter.AccessibleDescription = "";
             _btnFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFilter.Location = new Point(1031, 75);
@@ -777,41 +775,41 @@ namespace FSM
             _btnFilter.Size = new Size(126, 23);
             _btnFilter.TabIndex = 15;
             _btnFilter.Text = "Run Filter";
-            // 
+            //
             // cboRegion
-            // 
+            //
             _cboRegion.FormattingEnabled = true;
             _cboRegion.Location = new Point(310, 73);
             _cboRegion.Name = "cboRegion";
             _cboRegion.Size = new Size(144, 21);
             _cboRegion.TabIndex = 14;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(248, 75);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(57, 17);
             _Label2.TabIndex = 13;
             _Label2.Text = "Region";
-            // 
+            //
             // cboContract
-            // 
+            //
             _cboContract.FormattingEnabled = true;
             _cboContract.Location = new Point(85, 71);
             _cboContract.Name = "cboContract";
             _cboContract.Size = new Size(144, 21);
             _cboContract.TabIndex = 9;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 73);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 16);
             _Label1.TabIndex = 8;
             _Label1.Text = "Contract";
-            // 
+            //
             // chkIncludeTenantsAssets
-            // 
+            //
             _chkIncludeTenantsAssets.AutoSize = true;
             _chkIncludeTenantsAssets.Location = new Point(487, 21);
             _chkIncludeTenantsAssets.Name = "chkIncludeTenantsAssets";
@@ -819,9 +817,9 @@ namespace FSM
             _chkIncludeTenantsAssets.TabIndex = 11;
             _chkIncludeTenantsAssets.Text = "Include Tenants Assets";
             _chkIncludeTenantsAssets.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkNotPrinted
-            // 
+            //
             _chkNotPrinted.AutoSize = true;
             _chkNotPrinted.Location = new Point(664, 23);
             _chkNotPrinted.Name = "chkNotPrinted";
@@ -829,9 +827,9 @@ namespace FSM
             _chkNotPrinted.TabIndex = 12;
             _chkNotPrinted.Text = "Printed";
             _chkNotPrinted.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindCustomer.BackColor = Color.White;
             _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -841,9 +839,9 @@ namespace FSM
             _btnFindCustomer.TabIndex = 7;
             _btnFindCustomer.Text = "...";
             _btnFindCustomer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCustomer.Location = new Point(85, 46);
@@ -851,56 +849,56 @@ namespace FSM
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(1034, 21);
             _txtCustomer.TabIndex = 6;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 49);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(64, 16);
             _Label4.TabIndex = 5;
             _Label4.Text = "Customer";
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Location = new Point(310, 20);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(144, 21);
             _dtpTo.TabIndex = 3;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(85, 20);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(144, 21);
             _dtpFrom.TabIndex = 1;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(273, 21);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(24, 16);
             _Label9.TabIndex = 2;
             _Label9.Text = "To";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(8, 22);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(88, 16);
             _Label8.TabIndex = 0;
             _Label8.Text = "Date From";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(72, 464);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 3;
             _btnReset.Text = "Reset";
-            // 
+            //
             // btnPrintGSRReminders
-            // 
+            //
             _btnPrintGSRReminders.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPrintGSRReminders.Location = new Point(1039, 464);
             _btnPrintGSRReminders.Name = "btnPrintGSRReminders";
@@ -908,53 +906,53 @@ namespace FSM
             _btnPrintGSRReminders.TabIndex = 5;
             _btnPrintGSRReminders.Text = "Print GSR Reminders";
             _btnPrintGSRReminders.UseVisualStyleBackColor = true;
-            // 
+            //
             // pbStatus
-            // 
+            //
             _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _pbStatus.Location = new Point(134, 464);
             _pbStatus.Name = "pbStatus";
             _pbStatus.Size = new Size(899, 23);
             _pbStatus.TabIndex = 4;
-            // 
+            //
             // btnUnselect
-            // 
+            //
             _btnUnselect.Location = new Point(137, 156);
             _btnUnselect.Name = "btnUnselect";
             _btnUnselect.Size = new Size(96, 23);
             _btnUnselect.TabIndex = 9;
             _btnUnselect.Text = "Unselect All";
             _btnUnselect.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Location = new Point(12, 156);
             _btnSelectAll.Name = "btnSelectAll";
             _btnSelectAll.Size = new Size(119, 23);
             _btnSelectAll.TabIndex = 8;
             _btnSelectAll.Text = "Select All";
             _btnSelectAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnEmailNone
-            // 
+            //
             _btnEmailNone.Location = new Point(373, 156);
             _btnEmailNone.Name = "btnEmailNone";
             _btnEmailNone.Size = new Size(96, 23);
             _btnEmailNone.TabIndex = 11;
             _btnEmailNone.Text = "Email None";
             _btnEmailNone.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnEmailAll
-            // 
+            //
             _btnEmailAll.Location = new Point(248, 156);
             _btnEmailAll.Name = "btnEmailAll";
             _btnEmailAll.Size = new Size(119, 23);
             _btnEmailAll.TabIndex = 10;
             _btnEmailAll.Text = "Email All";
             _btnEmailAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMLastGSRReport
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1188, 494);
             Controls.Add(_btnEmailNone);
@@ -990,7 +988,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var argc = cboContract;
@@ -1010,7 +1009,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1073,8 +1072,10 @@ namespace FSM
                 }
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupTimesheetsDataGrid()
         {
             var tbStyle = dgProductsLastGSR.TableStyles[0];
@@ -1398,6 +1399,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try
@@ -1492,8 +1494,7 @@ namespace FSM
                 dgProductsLastGSR.UnSelect(itm);
             }
 
-            var exporter = new Entity.Sys.Exporting(dt, "Appliance GSR Report");
-            exporter = null;
+            Entity.Sys.ExportHelper.Export(dt, "Appliance GSR Report", Entity.Sys.Enums.ExportType.CSV);
         }
 
         public void MoveProgressOn(bool toMaximum = false)

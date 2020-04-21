@@ -10,11 +10,10 @@ namespace FSM
 {
     public class FRMQuoteContractOption3 : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMQuoteContractOption3() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMQuoteContractOption3_Load;
@@ -190,36 +189,36 @@ namespace FSM
             _btnPrint = new Button();
             _btnPrint.Click += new EventHandler(btnPrint_Click);
             SuspendLayout();
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 656);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 25);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(72, 656);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(640, 616);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // btnViewContract
-            // 
+            //
             _btnViewContract.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnViewContract.Location = new Point(472, 656);
             _btnViewContract.Name = "btnViewContract";
@@ -227,9 +226,9 @@ namespace FSM
             _btnViewContract.TabIndex = 5;
             _btnViewContract.Text = "View Contract";
             _btnViewContract.Visible = false;
-            // 
+            //
             // btnPrint
-            // 
+            //
             _btnPrint.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPrint.Location = new Point(584, 656);
             _btnPrint.Name = "btnPrint";
@@ -237,9 +236,9 @@ namespace FSM
             _btnPrint.TabIndex = 6;
             _btnPrint.Text = "Print";
             _btnPrint.Visible = false;
-            // 
+            //
             // FRMQuoteContractOption3
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(648, 694);
             Controls.Add(_btnPrint);
@@ -262,7 +261,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             ((UCQuoteContractOption3)LoadedControl).CurrentQuoteContractOption3 = App.DB.QuoteContractOption3.QuoteContractOption3_Get(ID);

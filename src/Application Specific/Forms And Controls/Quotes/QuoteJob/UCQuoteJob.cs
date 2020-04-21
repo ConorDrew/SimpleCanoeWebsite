@@ -15,11 +15,10 @@ namespace FSM
 {
     public class UCQuoteJob : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCQuoteJob() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCQuoteJob_Load;
@@ -3411,9 +3410,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgPartsAndProducts).BeginInit();
             _gpOtherLabour.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpRates
-            // 
+            //
             _grpRates.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _grpRates.Controls.Add(_btnEmailSOR);
             _grpRates.Controls.Add(_txtTimeInMins);
@@ -3439,9 +3438,9 @@ namespace FSM
             _grpRates.TabIndex = 6;
             _grpRates.TabStop = false;
             _grpRates.Text = "Schedule Of  Rates";
-            // 
+            //
             // btnEmailSOR
-            // 
+            //
             _btnEmailSOR.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnEmailSOR.Font = new Font("Verdana", 8.25F);
             _btnEmailSOR.Location = new Point(6, 164);
@@ -3449,9 +3448,9 @@ namespace FSM
             _btnEmailSOR.Size = new Size(111, 23);
             _btnEmailSOR.TabIndex = 17;
             _btnEmailSOR.Text = "Email SOR List";
-            // 
+            //
             // txtTimeInMins
-            // 
+            //
             _txtTimeInMins.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtTimeInMins.Font = new Font("Verdana", 8.25F);
             _txtTimeInMins.Location = new Point(176, 270);
@@ -3460,9 +3459,9 @@ namespace FSM
             _txtTimeInMins.Size = new Size(355, 21);
             _txtTimeInMins.TabIndex = 10;
             _txtTimeInMins.Tag = "SystemScheduleOfRate.Price";
-            // 
+            //
             // lblTime
-            // 
+            //
             _lblTime.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblTime.Font = new Font("Verdana", 8.25F);
             _lblTime.Location = new Point(8, 271);
@@ -3470,9 +3469,9 @@ namespace FSM
             _lblTime.Size = new Size(136, 20);
             _lblTime.TabIndex = 9;
             _lblTime.Text = "Time (in Minutes)";
-            // 
+            //
             // btnSiteScheduleOfRates
-            // 
+            //
             _btnSiteScheduleOfRates.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSiteScheduleOfRates.Font = new Font("Verdana", 8.25F);
             _btnSiteScheduleOfRates.Location = new Point(307, 326);
@@ -3480,9 +3479,9 @@ namespace FSM
             _btnSiteScheduleOfRates.Size = new Size(224, 23);
             _btnSiteScheduleOfRates.TabIndex = 16;
             _btnSiteScheduleOfRates.Text = "Add Site Schedule Of Rates";
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRemove.Font = new Font("Verdana", 8.25F);
             _btnRemove.Location = new Point(451, 164);
@@ -3490,9 +3489,9 @@ namespace FSM
             _btnRemove.Size = new Size(80, 23);
             _btnRemove.TabIndex = 2;
             _btnRemove.Text = "Remove";
-            // 
+            //
             // cboScheduleOfRatesCategoryID
-            // 
+            //
             _cboScheduleOfRatesCategoryID.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _cboScheduleOfRatesCategoryID.Cursor = Cursors.Hand;
             _cboScheduleOfRatesCategoryID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -3502,9 +3501,9 @@ namespace FSM
             _cboScheduleOfRatesCategoryID.Size = new Size(355, 21);
             _cboScheduleOfRatesCategoryID.TabIndex = 4;
             _cboScheduleOfRatesCategoryID.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblScheduleOfRatesCategoryID
-            // 
+            //
             _lblScheduleOfRatesCategoryID.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblScheduleOfRatesCategoryID.Font = new Font("Verdana", 8.25F);
             _lblScheduleOfRatesCategoryID.Location = new Point(8, 198);
@@ -3512,9 +3511,9 @@ namespace FSM
             _lblScheduleOfRatesCategoryID.Size = new Size(179, 20);
             _lblScheduleOfRatesCategoryID.TabIndex = 3;
             _lblScheduleOfRatesCategoryID.Text = "Schedule Of Rates Category";
-            // 
+            //
             // txtCode
-            // 
+            //
             _txtCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtCode.Font = new Font("Verdana", 8.25F);
             _txtCode.Location = new Point(176, 222);
@@ -3523,9 +3522,9 @@ namespace FSM
             _txtCode.Size = new Size(355, 21);
             _txtCode.TabIndex = 6;
             _txtCode.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblCode
-            // 
+            //
             _lblCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblCode.Font = new Font("Verdana", 8.25F);
             _lblCode.Location = new Point(8, 222);
@@ -3533,9 +3532,9 @@ namespace FSM
             _lblCode.Size = new Size(72, 20);
             _lblCode.TabIndex = 5;
             _lblCode.Text = "Code";
-            // 
+            //
             // txtDescription
-            // 
+            //
             _txtDescription.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtDescription.Font = new Font("Verdana", 8.25F);
             _txtDescription.Location = new Point(176, 246);
@@ -3546,9 +3545,9 @@ namespace FSM
             _txtDescription.Size = new Size(355, 20);
             _txtDescription.TabIndex = 8;
             _txtDescription.Tag = "SystemScheduleOfRate.Description";
-            // 
+            //
             // lblDescription
-            // 
+            //
             _lblDescription.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblDescription.Font = new Font("Verdana", 8.25F);
             _lblDescription.Location = new Point(8, 246);
@@ -3556,9 +3555,9 @@ namespace FSM
             _lblDescription.Size = new Size(112, 20);
             _lblDescription.TabIndex = 7;
             _lblDescription.Text = "Description";
-            // 
+            //
             // dgScheduleOfRates
-            // 
+            //
             _dgScheduleOfRates.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _dgScheduleOfRates.DataMember = "";
             _dgScheduleOfRates.Font = new Font("Verdana", 8.25F);
@@ -3567,9 +3566,9 @@ namespace FSM
             _dgScheduleOfRates.Name = "dgScheduleOfRates";
             _dgScheduleOfRates.Size = new Size(523, 138);
             _dgScheduleOfRates.TabIndex = 0;
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _txtPrice.Font = new Font("Verdana", 8.25F);
             _txtPrice.Location = new Point(48, 294);
@@ -3578,9 +3577,9 @@ namespace FSM
             _txtPrice.Size = new Size(122, 21);
             _txtPrice.TabIndex = 12;
             _txtPrice.Tag = "SystemScheduleOfRate.Price";
-            // 
+            //
             // lblPrice
-            // 
+            //
             _lblPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblPrice.Font = new Font("Verdana", 8.25F);
             _lblPrice.Location = new Point(8, 294);
@@ -3588,9 +3587,9 @@ namespace FSM
             _lblPrice.Size = new Size(40, 20);
             _lblPrice.TabIndex = 11;
             _lblPrice.Text = "Price";
-            // 
+            //
             // lblQuantity
-            // 
+            //
             _lblQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblQuantity.Font = new Font("Verdana", 8.25F);
             _lblQuantity.Location = new Point(176, 294);
@@ -3598,9 +3597,9 @@ namespace FSM
             _lblQuantity.Size = new Size(56, 20);
             _lblQuantity.TabIndex = 13;
             _lblQuantity.Text = "Quantity";
-            // 
+            //
             // txtQuantity
-            // 
+            //
             _txtQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _txtQuantity.Font = new Font("Verdana", 8.25F);
             _txtQuantity.Location = new Point(256, 294);
@@ -3609,9 +3608,9 @@ namespace FSM
             _txtQuantity.Size = new Size(275, 21);
             _txtQuantity.TabIndex = 14;
             _txtQuantity.Tag = "";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAdd.Font = new Font("Verdana", 8.25F);
             _btnAdd.Location = new Point(8, 326);
@@ -3619,36 +3618,36 @@ namespace FSM
             _btnAdd.Size = new Size(80, 23);
             _btnAdd.TabIndex = 15;
             _btnAdd.Text = "Add";
-            // 
+            //
             // lblQuoteStatus
-            // 
+            //
             _lblQuoteStatus.Font = new Font("Verdana", 8.25F);
             _lblQuoteStatus.Location = new Point(474, 38);
             _lblQuoteStatus.Name = "lblQuoteStatus";
             _lblQuoteStatus.Size = new Size(88, 23);
             _lblQuoteStatus.TabIndex = 61;
             _lblQuoteStatus.Text = "Quote Status:";
-            // 
+            //
             // lblQuoteDate
-            // 
+            //
             _lblQuoteDate.Font = new Font("Verdana", 8.25F);
             _lblQuoteDate.Location = new Point(475, 3);
             _lblQuoteDate.Name = "lblQuoteDate";
             _lblQuoteDate.Size = new Size(80, 23);
             _lblQuoteDate.TabIndex = 60;
             _lblQuoteDate.Text = "Quote Date:";
-            // 
+            //
             // cboQuoteStatus
-            // 
+            //
             _cboQuoteStatus.Font = new Font("Verdana", 8.25F);
             _cboQuoteStatus.ItemHeight = 13;
             _cboQuoteStatus.Location = new Point(560, 37);
             _cboQuoteStatus.Name = "cboQuoteStatus";
             _cboQuoteStatus.Size = new Size(151, 21);
             _cboQuoteStatus.TabIndex = 4;
-            // 
+            //
             // grpJobItems
-            // 
+            //
             _grpJobItems.Controls.Add(_lblNA);
             _grpJobItems.Controls.Add(_lblEstStartDAte);
             _grpJobItems.Controls.Add(_txtInstallerLabourDays);
@@ -3671,9 +3670,9 @@ namespace FSM
             _grpJobItems.TabIndex = 5;
             _grpJobItems.TabStop = false;
             _grpJobItems.Text = "Job Details";
-            // 
+            //
             // lblNA
-            // 
+            //
             _lblNA.Font = new Font("Verdana", 8.25F);
             _lblNA.Location = new Point(120, 245);
             _lblNA.Name = "lblNA";
@@ -3681,18 +3680,18 @@ namespace FSM
             _lblNA.TabIndex = 72;
             _lblNA.Text = "N/A";
             _lblNA.Visible = false;
-            // 
+            //
             // lblEstStartDAte
-            // 
+            //
             _lblEstStartDAte.Font = new Font("Verdana", 8.25F);
             _lblEstStartDAte.Location = new Point(8, 246);
             _lblEstStartDAte.Name = "lblEstStartDAte";
             _lblEstStartDAte.Size = new Size(109, 17);
             _lblEstStartDAte.TabIndex = 73;
             _lblEstStartDAte.Text = "Est Start Date";
-            // 
+            //
             // txtInstallerLabourDays
-            // 
+            //
             _txtInstallerLabourDays.Font = new Font("Verdana", 8.25F);
             _txtInstallerLabourDays.Location = new Point(123, 147);
             _txtInstallerLabourDays.MaxLength = 50;
@@ -3700,9 +3699,9 @@ namespace FSM
             _txtInstallerLabourDays.Size = new Size(143, 21);
             _txtInstallerLabourDays.TabIndex = 20;
             _txtInstallerLabourDays.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // dtpestStartDate
-            // 
+            //
             _dtpestStartDate.CalendarFont = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _dtpestStartDate.Font = new Font("Verdana", 8.25F);
             _dtpestStartDate.Location = new Point(123, 242);
@@ -3710,18 +3709,18 @@ namespace FSM
             _dtpestStartDate.Size = new Size(167, 21);
             _dtpestStartDate.TabIndex = 72;
             _dtpestStartDate.Value = new DateTime(2007, 8, 13, 15, 56, 20, 616);
-            // 
+            //
             // lblInstallerDays
-            // 
+            //
             _lblInstallerDays.Font = new Font("Verdana", 8.25F);
             _lblInstallerDays.Location = new Point(8, 150);
             _lblInstallerDays.Name = "lblInstallerDays";
             _lblInstallerDays.Size = new Size(98, 20);
             _lblInstallerDays.TabIndex = 19;
             _lblInstallerDays.Text = "Installer Days";
-            // 
+            //
             // txtAccess
-            // 
+            //
             _txtAccess.AcceptsReturn = true;
             _txtAccess.Font = new Font("Verdana", 8.25F);
             _txtAccess.Location = new Point(460, 216);
@@ -3730,18 +3729,18 @@ namespace FSM
             _txtAccess.Size = new Size(71, 21);
             _txtAccess.TabIndex = 18;
             _txtAccess.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblAddCharges
-            // 
+            //
             _lblAddCharges.Font = new Font("Verdana", 8.25F);
             _lblAddCharges.Location = new Point(328, 219);
             _lblAddCharges.Name = "lblAddCharges";
             _lblAddCharges.Size = new Size(134, 20);
             _lblAddCharges.TabIndex = 17;
             _lblAddCharges.Text = "Access / Add Charges";
-            // 
+            //
             // cboAccess
-            // 
+            //
             _cboAccess.Cursor = Cursors.Hand;
             _cboAccess.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboAccess.Font = new Font("Verdana", 8.25F);
@@ -3750,27 +3749,27 @@ namespace FSM
             _cboAccess.Size = new Size(201, 21);
             _cboAccess.TabIndex = 14;
             _cboAccess.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblAccessEquipment
-            // 
+            //
             _lblAccessEquipment.Font = new Font("Verdana", 8.25F);
             _lblAccessEquipment.Location = new Point(6, 216);
             _lblAccessEquipment.Name = "lblAccessEquipment";
             _lblAccessEquipment.Size = new Size(114, 20);
             _lblAccessEquipment.TabIndex = 13;
             _lblAccessEquipment.Text = "Access Equipment";
-            // 
+            //
             // lblAsbestosNotes
-            // 
+            //
             _lblAsbestosNotes.Font = new Font("Verdana", 8.25F);
             _lblAsbestosNotes.Location = new Point(8, 174);
             _lblAsbestosNotes.Name = "lblAsbestosNotes";
             _lblAsbestosNotes.Size = new Size(112, 20);
             _lblAsbestosNotes.TabIndex = 12;
             _lblAsbestosNotes.Text = "Asbestos Notes";
-            // 
+            //
             // txtAsbestos
-            // 
+            //
             _txtAsbestos.Font = new Font("Verdana", 8.25F);
             _txtAsbestos.Location = new Point(123, 174);
             _txtAsbestos.MaxLength = 50;
@@ -3779,9 +3778,9 @@ namespace FSM
             _txtAsbestos.Size = new Size(410, 36);
             _txtAsbestos.TabIndex = 11;
             _txtAsbestos.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // cboAsbestos
-            // 
+            //
             _cboAsbestos.Cursor = Cursors.Hand;
             _cboAsbestos.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboAsbestos.Font = new Font("Verdana", 8.25F);
@@ -3790,27 +3789,27 @@ namespace FSM
             _cboAsbestos.Size = new Size(136, 21);
             _cboAsbestos.TabIndex = 10;
             _cboAsbestos.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblAsbestosStatus
-            // 
+            //
             _lblAsbestosStatus.Font = new Font("Verdana", 8.25F);
             _lblAsbestosStatus.Location = new Point(272, 150);
             _lblAsbestosStatus.Name = "lblAsbestosStatus";
             _lblAsbestosStatus.Size = new Size(114, 20);
             _lblAsbestosStatus.TabIndex = 9;
             _lblAsbestosStatus.Text = "Asbestos Status";
-            // 
+            //
             // lblInstallerNotes
-            // 
+            //
             _lblInstallerNotes.Font = new Font("Verdana", 8.25F);
             _lblInstallerNotes.Location = new Point(8, 23);
             _lblInstallerNotes.Name = "lblInstallerNotes";
             _lblInstallerNotes.Size = new Size(98, 20);
             _lblInstallerNotes.TabIndex = 8;
             _lblInstallerNotes.Text = "Installer Notes";
-            // 
+            //
             // txtInstallerNotes
-            // 
+            //
             _txtInstallerNotes.Font = new Font("Verdana", 8.25F);
             _txtInstallerNotes.Location = new Point(123, 23);
             _txtInstallerNotes.MaxLength = 50;
@@ -3819,45 +3818,45 @@ namespace FSM
             _txtInstallerNotes.Size = new Size(410, 118);
             _txtInstallerNotes.TabIndex = 7;
             _txtInstallerNotes.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // txtReference
-            // 
+            //
             _txtReference.Font = new Font("Verdana", 8.25F);
             _txtReference.Location = new Point(316, 37);
             _txtReference.MaxLength = 50;
             _txtReference.Name = "txtReference";
             _txtReference.Size = new Size(154, 21);
             _txtReference.TabIndex = 3;
-            // 
+            //
             // cboJobType
-            // 
+            //
             _cboJobType.Font = new Font("Verdana", 8.25F);
             _cboJobType.ItemHeight = 13;
             _cboJobType.Location = new Point(316, 1);
             _cboJobType.Name = "cboJobType";
             _cboJobType.Size = new Size(154, 21);
             _cboJobType.TabIndex = 1;
-            // 
+            //
             // lblJobType
-            // 
+            //
             _lblJobType.Font = new Font("Verdana", 8.25F);
             _lblJobType.Location = new Point(252, 3);
             _lblJobType.Name = "lblJobType";
             _lblJobType.Size = new Size(72, 23);
             _lblJobType.TabIndex = 56;
             _lblJobType.Text = "Job Type:";
-            // 
+            //
             // lblCustomer
-            // 
+            //
             _lblCustomer.Font = new Font("Verdana", 8.25F);
             _lblCustomer.Location = new Point(8, 4);
             _lblCustomer.Name = "lblCustomer";
             _lblCustomer.Size = new Size(80, 23);
             _lblCustomer.TabIndex = 54;
             _lblCustomer.Text = "Customer:";
-            // 
+            //
             // grpTotals
-            // 
+            //
             _grpTotals.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _grpTotals.Controls.Add(_txtOriginalQuote);
             _grpTotals.Controls.Add(_lblOriginalQuote);
@@ -3915,9 +3914,9 @@ namespace FSM
             _grpTotals.TabIndex = 64;
             _grpTotals.TabStop = false;
             _grpTotals.Text = "Summary Of Quote";
-            // 
+            //
             // txtOriginalQuote
-            // 
+            //
             _txtOriginalQuote.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtOriginalQuote.Enabled = false;
             _txtOriginalQuote.Font = new Font("Verdana", 8.25F);
@@ -3927,9 +3926,9 @@ namespace FSM
             _txtOriginalQuote.ReadOnly = true;
             _txtOriginalQuote.Size = new Size(99, 21);
             _txtOriginalQuote.TabIndex = 94;
-            // 
+            //
             // lblOriginalQuote
-            // 
+            //
             _lblOriginalQuote.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblOriginalQuote.Font = new Font("Verdana", 8.25F);
             _lblOriginalQuote.Location = new Point(136, 9);
@@ -3938,9 +3937,9 @@ namespace FSM
             _lblOriginalQuote.TabIndex = 95;
             _lblOriginalQuote.Text = "Original Quote (ex VAT)";
             _lblOriginalQuote.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtGrandTotal
-            // 
+            //
             _txtGrandTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtGrandTotal.Enabled = false;
             _txtGrandTotal.Font = new Font("Verdana", 8.25F);
@@ -3949,9 +3948,9 @@ namespace FSM
             _txtGrandTotal.Name = "txtGrandTotal";
             _txtGrandTotal.Size = new Size(70, 21);
             _txtGrandTotal.TabIndex = 87;
-            // 
+            //
             // chkSORCharge
-            // 
+            //
             _chkSORCharge.AutoSize = true;
             _chkSORCharge.Location = new Point(9, 17);
             _chkSORCharge.Name = "chkSORCharge";
@@ -3959,9 +3958,9 @@ namespace FSM
             _chkSORCharge.TabIndex = 93;
             _chkSORCharge.Text = "SOR Charge";
             _chkSORCharge.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblBOC
-            // 
+            //
             _lblBOC.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblBOC.Font = new Font("Verdana", 8.25F);
             _lblBOC.Location = new Point(461, 183);
@@ -3970,9 +3969,9 @@ namespace FSM
             _lblBOC.TabIndex = 92;
             _lblBOC.Text = "B.O.C";
             _lblBOC.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtDeposit
-            // 
+            //
             _txtDeposit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtDeposit.Enabled = false;
             _txtDeposit.Font = new Font("Verdana", 8.25F);
@@ -3981,9 +3980,9 @@ namespace FSM
             _txtDeposit.Name = "txtDeposit";
             _txtDeposit.Size = new Size(64, 21);
             _txtDeposit.TabIndex = 91;
-            // 
+            //
             // lblDeposit
-            // 
+            //
             _lblDeposit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblDeposit.Font = new Font("Verdana", 8.25F);
             _lblDeposit.Location = new Point(346, 184);
@@ -3992,9 +3991,9 @@ namespace FSM
             _lblDeposit.TabIndex = 90;
             _lblDeposit.Text = "Deposit";
             _lblDeposit.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtincVAT
-            // 
+            //
             _txtincVAT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtincVAT.Enabled = false;
             _txtincVAT.Font = new Font("Verdana", 8.25F);
@@ -4004,9 +4003,9 @@ namespace FSM
             _txtincVAT.ReadOnly = true;
             _txtincVAT.Size = new Size(65, 21);
             _txtincVAT.TabIndex = 89;
-            // 
+            //
             // lblIncVAT
-            // 
+            //
             _lblIncVAT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblIncVAT.Font = new Font("Verdana", 8.25F);
             _lblIncVAT.Location = new Point(218, 184);
@@ -4015,9 +4014,9 @@ namespace FSM
             _lblIncVAT.TabIndex = 88;
             _lblIncVAT.Text = "inc VAT:";
             _lblIncVAT.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // cboVAT
-            // 
+            //
             _cboVAT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboVAT.Cursor = Cursors.Hand;
             _cboVAT.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -4027,9 +4026,9 @@ namespace FSM
             _cboVAT.Size = new Size(78, 21);
             _cboVAT.TabIndex = 22;
             _cboVAT.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblVAT
-            // 
+            //
             _lblVAT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblVAT.Font = new Font("Verdana", 8.25F);
             _lblVAT.Location = new Point(111, 185);
@@ -4037,9 +4036,9 @@ namespace FSM
             _lblVAT.Size = new Size(37, 15);
             _lblVAT.TabIndex = 21;
             _lblVAT.Text = "VAT";
-            // 
+            //
             // txtTotalCosts
-            // 
+            //
             _txtTotalCosts.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtTotalCosts.Enabled = false;
             _txtTotalCosts.Font = new Font("Verdana", 8.25F);
@@ -4049,9 +4048,9 @@ namespace FSM
             _txtTotalCosts.ReadOnly = true;
             _txtTotalCosts.Size = new Size(78, 21);
             _txtTotalCosts.TabIndex = 81;
-            // 
+            //
             // lblSale
-            // 
+            //
             _lblSale.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblSale.Font = new Font("Verdana", 8.25F);
             _lblSale.Location = new Point(9, 183);
@@ -4060,9 +4059,9 @@ namespace FSM
             _lblSale.TabIndex = 86;
             _lblSale.Text = "Sale";
             _lblSale.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtProfitPound
-            // 
+            //
             _txtProfitPound.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtProfitPound.Enabled = false;
             _txtProfitPound.Font = new Font("Verdana", 8.25F);
@@ -4072,9 +4071,9 @@ namespace FSM
             _txtProfitPound.ReadOnly = true;
             _txtProfitPound.Size = new Size(64, 21);
             _txtProfitPound.TabIndex = 85;
-            // 
+            //
             // lblProfitSlash
-            // 
+            //
             _lblProfitSlash.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblProfitSlash.Font = new Font("Verdana", 8.25F);
             _lblProfitSlash.Location = new Point(347, 157);
@@ -4083,9 +4082,9 @@ namespace FSM
             _lblProfitSlash.TabIndex = 84;
             _lblProfitSlash.Text = "/";
             _lblProfitSlash.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtProfitPerc
-            // 
+            //
             _txtProfitPerc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtProfitPerc.Enabled = false;
             _txtProfitPerc.Font = new Font("Verdana", 8.25F);
@@ -4095,9 +4094,9 @@ namespace FSM
             _txtProfitPerc.ReadOnly = true;
             _txtProfitPerc.Size = new Size(48, 21);
             _txtProfitPerc.TabIndex = 83;
-            // 
+            //
             // lblProfit
-            // 
+            //
             _lblProfit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblProfit.Font = new Font("Verdana", 8.25F);
             _lblProfit.Location = new Point(218, 156);
@@ -4106,9 +4105,9 @@ namespace FSM
             _lblProfit.TabIndex = 82;
             _lblProfit.Text = "Profit";
             _lblProfit.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // lblTotalCosts
-            // 
+            //
             _lblTotalCosts.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblTotalCosts.Font = new Font("Verdana", 8.25F);
             _lblTotalCosts.Location = new Point(9, 156);
@@ -4117,9 +4116,9 @@ namespace FSM
             _lblTotalCosts.TabIndex = 80;
             _lblTotalCosts.Text = "Total Costs";
             _lblTotalCosts.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtPartsCostTotal
-            // 
+            //
             _txtPartsCostTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPartsCostTotal.Enabled = false;
             _txtPartsCostTotal.Font = new Font("Verdana", 8.25F);
@@ -4128,9 +4127,9 @@ namespace FSM
             _txtPartsCostTotal.ReadOnly = true;
             _txtPartsCostTotal.Size = new Size(72, 21);
             _txtPartsCostTotal.TabIndex = 9;
-            // 
+            //
             // txtBuilderCharge
-            // 
+            //
             _txtBuilderCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBuilderCharge.Enabled = false;
             _txtBuilderCharge.Font = new Font("Verdana", 8.25F);
@@ -4139,9 +4138,9 @@ namespace FSM
             _txtBuilderCharge.ReadOnly = true;
             _txtBuilderCharge.Size = new Size(72, 21);
             _txtBuilderCharge.TabIndex = 76;
-            // 
+            //
             // lblTotalBuilderCharge
-            // 
+            //
             _lblTotalBuilderCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblTotalBuilderCharge.Font = new Font("Verdana", 8.25F);
             _lblTotalBuilderCharge.Location = new Point(344, 133);
@@ -4150,18 +4149,18 @@ namespace FSM
             _lblTotalBuilderCharge.TabIndex = 79;
             _lblTotalBuilderCharge.Text = "Total Builder Charge";
             _lblTotalBuilderCharge.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtBuilderMarkup
-            // 
+            //
             _txtBuilderMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBuilderMarkup.Font = new Font("Verdana", 8.25F);
             _txtBuilderMarkup.Location = new Point(292, 135);
             _txtBuilderMarkup.Name = "txtBuilderMarkup";
             _txtBuilderMarkup.Size = new Size(48, 21);
             _txtBuilderMarkup.TabIndex = 75;
-            // 
+            //
             // lblBuilderMarkup
-            // 
+            //
             _lblBuilderMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblBuilderMarkup.Font = new Font("Verdana", 8.25F);
             _lblBuilderMarkup.Location = new Point(219, 135);
@@ -4170,9 +4169,9 @@ namespace FSM
             _lblBuilderMarkup.TabIndex = 78;
             _lblBuilderMarkup.Text = "Markup (%)";
             _lblBuilderMarkup.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtBuilderCost
-            // 
+            //
             _txtBuilderCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBuilderCost.Enabled = false;
             _txtBuilderCost.Font = new Font("Verdana", 8.25F);
@@ -4181,9 +4180,9 @@ namespace FSM
             _txtBuilderCost.Name = "txtBuilderCost";
             _txtBuilderCost.Size = new Size(78, 21);
             _txtBuilderCost.TabIndex = 74;
-            // 
+            //
             // lblBuilderCost
-            // 
+            //
             _lblBuilderCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblBuilderCost.Font = new Font("Verdana", 8.25F);
             _lblBuilderCost.Location = new Point(9, 133);
@@ -4192,9 +4191,9 @@ namespace FSM
             _lblBuilderCost.TabIndex = 77;
             _lblBuilderCost.Text = "Builder Cost";
             _lblBuilderCost.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtElectricianCharge
-            // 
+            //
             _txtElectricianCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtElectricianCharge.Enabled = false;
             _txtElectricianCharge.Font = new Font("Verdana", 8.25F);
@@ -4203,9 +4202,9 @@ namespace FSM
             _txtElectricianCharge.ReadOnly = true;
             _txtElectricianCharge.Size = new Size(72, 21);
             _txtElectricianCharge.TabIndex = 67;
-            // 
+            //
             // lblTotalElectricianCharge
-            // 
+            //
             _lblTotalElectricianCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblTotalElectricianCharge.Font = new Font("Verdana", 8.25F);
             _lblTotalElectricianCharge.Location = new Point(344, 109);
@@ -4214,18 +4213,18 @@ namespace FSM
             _lblTotalElectricianCharge.TabIndex = 73;
             _lblTotalElectricianCharge.Text = "Total Electrician Charge";
             _lblTotalElectricianCharge.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtElectricianMarkup
-            // 
+            //
             _txtElectricianMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtElectricianMarkup.Font = new Font("Verdana", 8.25F);
             _txtElectricianMarkup.Location = new Point(292, 112);
             _txtElectricianMarkup.Name = "txtElectricianMarkup";
             _txtElectricianMarkup.Size = new Size(48, 21);
             _txtElectricianMarkup.TabIndex = 66;
-            // 
+            //
             // lblElectricianMarkup
-            // 
+            //
             _lblElectricianMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectricianMarkup.Font = new Font("Verdana", 8.25F);
             _lblElectricianMarkup.Location = new Point(219, 109);
@@ -4234,9 +4233,9 @@ namespace FSM
             _lblElectricianMarkup.TabIndex = 72;
             _lblElectricianMarkup.Text = "Markup (%)";
             _lblElectricianMarkup.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtElectricianCost
-            // 
+            //
             _txtElectricianCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtElectricianCost.Enabled = false;
             _txtElectricianCost.Font = new Font("Verdana", 8.25F);
@@ -4245,9 +4244,9 @@ namespace FSM
             _txtElectricianCost.Name = "txtElectricianCost";
             _txtElectricianCost.Size = new Size(78, 21);
             _txtElectricianCost.TabIndex = 65;
-            // 
+            //
             // lblElectricianCost
-            // 
+            //
             _lblElectricianCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectricianCost.Font = new Font("Verdana", 8.25F);
             _lblElectricianCost.Location = new Point(9, 110);
@@ -4256,9 +4255,9 @@ namespace FSM
             _lblElectricianCost.TabIndex = 71;
             _lblElectricianCost.Text = "Electrician Cost";
             _lblElectricianCost.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtInstallerCharge
-            // 
+            //
             _txtInstallerCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtInstallerCharge.Enabled = false;
             _txtInstallerCharge.Font = new Font("Verdana", 8.25F);
@@ -4267,9 +4266,9 @@ namespace FSM
             _txtInstallerCharge.ReadOnly = true;
             _txtInstallerCharge.Size = new Size(72, 21);
             _txtInstallerCharge.TabIndex = 64;
-            // 
+            //
             // lblTotalInstallerCharge
-            // 
+            //
             _lblTotalInstallerCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblTotalInstallerCharge.Font = new Font("Verdana", 8.25F);
             _lblTotalInstallerCharge.Location = new Point(344, 86);
@@ -4278,18 +4277,18 @@ namespace FSM
             _lblTotalInstallerCharge.TabIndex = 70;
             _lblTotalInstallerCharge.Text = "Total Installer Charge";
             _lblTotalInstallerCharge.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtInstallerMarkup
-            // 
+            //
             _txtInstallerMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtInstallerMarkup.Font = new Font("Verdana", 8.25F);
             _txtInstallerMarkup.Location = new Point(292, 88);
             _txtInstallerMarkup.Name = "txtInstallerMarkup";
             _txtInstallerMarkup.Size = new Size(48, 21);
             _txtInstallerMarkup.TabIndex = 63;
-            // 
+            //
             // lblInstallerMarkup
-            // 
+            //
             _lblInstallerMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblInstallerMarkup.Font = new Font("Verdana", 8.25F);
             _lblInstallerMarkup.Location = new Point(219, 86);
@@ -4298,9 +4297,9 @@ namespace FSM
             _lblInstallerMarkup.TabIndex = 69;
             _lblInstallerMarkup.Text = "Markup (%)";
             _lblInstallerMarkup.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtInstallerCost
-            // 
+            //
             _txtInstallerCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtInstallerCost.Enabled = false;
             _txtInstallerCost.Font = new Font("Verdana", 8.25F);
@@ -4309,9 +4308,9 @@ namespace FSM
             _txtInstallerCost.Name = "txtInstallerCost";
             _txtInstallerCost.Size = new Size(78, 21);
             _txtInstallerCost.TabIndex = 62;
-            // 
+            //
             // lblInstallerCost
-            // 
+            //
             _lblInstallerCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblInstallerCost.Font = new Font("Verdana", 8.25F);
             _lblInstallerCost.Location = new Point(9, 86);
@@ -4320,9 +4319,9 @@ namespace FSM
             _lblInstallerCost.TabIndex = 68;
             _lblInstallerCost.Text = "Installer Cost";
             _lblInstallerCost.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtScheduleRatesCostTotal
-            // 
+            //
             _txtScheduleRatesCostTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtScheduleRatesCostTotal.Enabled = false;
             _txtScheduleRatesCostTotal.Font = new Font("Verdana", 8.25F);
@@ -4331,9 +4330,9 @@ namespace FSM
             _txtScheduleRatesCostTotal.ReadOnly = true;
             _txtScheduleRatesCostTotal.Size = new Size(72, 21);
             _txtScheduleRatesCostTotal.TabIndex = 12;
-            // 
+            //
             // lblTotalSORCharge
-            // 
+            //
             _lblTotalSORCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblTotalSORCharge.Font = new Font("Verdana", 8.25F);
             _lblTotalSORCharge.Location = new Point(344, 62);
@@ -4342,18 +4341,18 @@ namespace FSM
             _lblTotalSORCharge.TabIndex = 61;
             _lblTotalSORCharge.Text = "Total SOR Charge";
             _lblTotalSORCharge.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtScheduleRateMarkup
-            // 
+            //
             _txtScheduleRateMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtScheduleRateMarkup.Font = new Font("Verdana", 8.25F);
             _txtScheduleRateMarkup.Location = new Point(292, 63);
             _txtScheduleRateMarkup.Name = "txtScheduleRateMarkup";
             _txtScheduleRateMarkup.Size = new Size(48, 21);
             _txtScheduleRateMarkup.TabIndex = 11;
-            // 
+            //
             // lblSORMarkup
-            // 
+            //
             _lblSORMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblSORMarkup.Font = new Font("Verdana", 8.25F);
             _lblSORMarkup.Location = new Point(219, 60);
@@ -4362,9 +4361,9 @@ namespace FSM
             _lblSORMarkup.TabIndex = 59;
             _lblSORMarkup.Text = "Markup (%)";
             _lblSORMarkup.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtScheduleRatesCost
-            // 
+            //
             _txtScheduleRatesCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtScheduleRatesCost.Enabled = false;
             _txtScheduleRatesCost.Font = new Font("Verdana", 8.25F);
@@ -4373,9 +4372,9 @@ namespace FSM
             _txtScheduleRatesCost.Name = "txtScheduleRatesCost";
             _txtScheduleRatesCost.Size = new Size(78, 21);
             _txtScheduleRatesCost.TabIndex = 10;
-            // 
+            //
             // lblSORCost
-            // 
+            //
             _lblSORCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblSORCost.Font = new Font("Verdana", 8.25F);
             _lblSORCost.Location = new Point(9, 60);
@@ -4384,9 +4383,9 @@ namespace FSM
             _lblSORCost.TabIndex = 57;
             _lblSORCost.Text = "SOR Cost";
             _lblSORCost.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // lblTotalPartsCharge
-            // 
+            //
             _lblTotalPartsCharge.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblTotalPartsCharge.Font = new Font("Verdana", 8.25F);
             _lblTotalPartsCharge.Location = new Point(344, 39);
@@ -4395,18 +4394,18 @@ namespace FSM
             _lblTotalPartsCharge.TabIndex = 54;
             _lblTotalPartsCharge.Text = "Total Parts Charge";
             _lblTotalPartsCharge.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtPartsProductsMarkup
-            // 
+            //
             _txtPartsProductsMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPartsProductsMarkup.Font = new Font("Verdana", 8.25F);
             _txtPartsProductsMarkup.Location = new Point(292, 39);
             _txtPartsProductsMarkup.Name = "txtPartsProductsMarkup";
             _txtPartsProductsMarkup.Size = new Size(48, 21);
             _txtPartsProductsMarkup.TabIndex = 8;
-            // 
+            //
             // lblPartsMarkup
-            // 
+            //
             _lblPartsMarkup.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblPartsMarkup.Font = new Font("Verdana", 8.25F);
             _lblPartsMarkup.Location = new Point(219, 37);
@@ -4415,9 +4414,9 @@ namespace FSM
             _lblPartsMarkup.TabIndex = 52;
             _lblPartsMarkup.Text = "Markup (%)";
             _lblPartsMarkup.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // txtBOC
-            // 
+            //
             _txtBOC.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBOC.Font = new Font("Verdana", 8.25F);
             _txtBOC.Location = new Point(512, 183);
@@ -4426,9 +4425,9 @@ namespace FSM
             _txtBOC.ReadOnly = true;
             _txtBOC.Size = new Size(72, 21);
             _txtBOC.TabIndex = 16;
-            // 
+            //
             // txtPartsCost
-            // 
+            //
             _txtPartsCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtPartsCost.Enabled = false;
             _txtPartsCost.Font = new Font("Verdana", 8.25F);
@@ -4437,9 +4436,9 @@ namespace FSM
             _txtPartsCost.Name = "txtPartsCost";
             _txtPartsCost.Size = new Size(78, 21);
             _txtPartsCost.TabIndex = 7;
-            // 
+            //
             // lblPartsCost
-            // 
+            //
             _lblPartsCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblPartsCost.Font = new Font("Verdana", 8.25F);
             _lblPartsCost.Location = new Point(9, 37);
@@ -4448,9 +4447,9 @@ namespace FSM
             _lblPartsCost.TabIndex = 50;
             _lblPartsCost.Text = "Parts Cost";
             _lblPartsCost.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // grpParts
-            // 
+            //
             _grpParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             _grpParts.Controls.Add(_btnRemovePartProduct);
             _grpParts.Controls.Add(_btnFindPart);
@@ -4462,9 +4461,9 @@ namespace FSM
             _grpParts.TabIndex = 8;
             _grpParts.TabStop = false;
             _grpParts.Text = "Parts && Products Required";
-            // 
+            //
             // btnRemovePartProduct
-            // 
+            //
             _btnRemovePartProduct.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemovePartProduct.Font = new Font("Verdana", 8.25F);
             _btnRemovePartProduct.Location = new Point(481, 226);
@@ -4472,9 +4471,9 @@ namespace FSM
             _btnRemovePartProduct.Size = new Size(96, 22);
             _btnRemovePartProduct.TabIndex = 3;
             _btnRemovePartProduct.Text = "Remove";
-            // 
+            //
             // btnFindPart
-            // 
+            //
             _btnFindPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnFindPart.Font = new Font("Verdana", 8.25F);
             _btnFindPart.Location = new Point(9, 226);
@@ -4482,9 +4481,9 @@ namespace FSM
             _btnFindPart.Size = new Size(88, 22);
             _btnFindPart.TabIndex = 1;
             _btnFindPart.Text = "Add Part";
-            // 
+            //
             // dgPartsAndProducts
-            // 
+            //
             _dgPartsAndProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgPartsAndProducts.DataMember = "";
@@ -4494,9 +4493,9 @@ namespace FSM
             _dgPartsAndProducts.Name = "dgPartsAndProducts";
             _dgPartsAndProducts.Size = new Size(564, 195);
             _dgPartsAndProducts.TabIndex = 10;
-            // 
+            //
             // dtpQuoteDate
-            // 
+            //
             _dtpQuoteDate.CalendarFont = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _dtpQuoteDate.Font = new Font("Verdana", 8.25F);
             _dtpQuoteDate.Location = new Point(560, 2);
@@ -4504,9 +4503,9 @@ namespace FSM
             _dtpQuoteDate.Size = new Size(151, 21);
             _dtpQuoteDate.TabIndex = 2;
             _dtpQuoteDate.Value = new DateTime(2007, 8, 13, 15, 56, 20, 616);
-            // 
+            //
             // txtSiteName
-            // 
+            //
             _txtSiteName.Font = new Font("Verdana", 8.25F);
             _txtSiteName.Location = new Point(77, 38);
             _txtSiteName.Name = "txtSiteName";
@@ -4514,27 +4513,27 @@ namespace FSM
             _txtSiteName.Size = new Size(172, 21);
             _txtSiteName.TabIndex = 49;
             _txtSiteName.TabStop = false;
-            // 
+            //
             // lblProperty
-            // 
+            //
             _lblProperty.Font = new Font("Verdana", 8.25F);
             _lblProperty.Location = new Point(8, 37);
             _lblProperty.Name = "lblProperty";
             _lblProperty.Size = new Size(80, 23);
             _lblProperty.TabIndex = 55;
             _lblProperty.Text = "Property:";
-            // 
+            //
             // lblQuoteRef
-            // 
+            //
             _lblQuoteRef.Font = new Font("Verdana", 8.25F);
             _lblQuoteRef.Location = new Point(251, 37);
             _lblQuoteRef.Name = "lblQuoteRef";
             _lblQuoteRef.Size = new Size(73, 23);
             _lblQuoteRef.TabIndex = 57;
             _lblQuoteRef.Text = "Quote Ref:";
-            // 
+            //
             // txtCustomerName
-            // 
+            //
             _txtCustomerName.Font = new Font("Verdana", 8.25F);
             _txtCustomerName.Location = new Point(77, 3);
             _txtCustomerName.Name = "txtCustomerName";
@@ -4542,9 +4541,9 @@ namespace FSM
             _txtCustomerName.Size = new Size(172, 21);
             _txtCustomerName.TabIndex = 48;
             _txtCustomerName.TabStop = false;
-            // 
+            //
             // gpOtherLabour
-            // 
+            //
             _gpOtherLabour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _gpOtherLabour.Controls.Add(_txtBuilderArrivalHour);
             _gpOtherLabour.Controls.Add(_lblBuilderHour);
@@ -4573,9 +4572,9 @@ namespace FSM
             _gpOtherLabour.TabIndex = 65;
             _gpOtherLabour.TabStop = false;
             _gpOtherLabour.Text = "Other Labour";
-            // 
+            //
             // txtBuilderArrivalHour
-            // 
+            //
             _txtBuilderArrivalHour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBuilderArrivalHour.Font = new Font("Verdana", 8.25F);
             _txtBuilderArrivalHour.Location = new Point(543, 83);
@@ -4584,9 +4583,9 @@ namespace FSM
             _txtBuilderArrivalHour.Size = new Size(33, 21);
             _txtBuilderArrivalHour.TabIndex = 40;
             _txtBuilderArrivalHour.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblBuilderHour
-            // 
+            //
             _lblBuilderHour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblBuilderHour.Font = new Font("Verdana", 8.25F);
             _lblBuilderHour.Location = new Point(503, 86);
@@ -4594,9 +4593,9 @@ namespace FSM
             _lblBuilderHour.Size = new Size(40, 20);
             _lblBuilderHour.TabIndex = 39;
             _lblBuilderHour.Text = "Hour";
-            // 
+            //
             // txtBuilderArrivalDay
-            // 
+            //
             _txtBuilderArrivalDay.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBuilderArrivalDay.Font = new Font("Verdana", 8.25F);
             _txtBuilderArrivalDay.Location = new Point(467, 83);
@@ -4605,9 +4604,9 @@ namespace FSM
             _txtBuilderArrivalDay.Size = new Size(33, 21);
             _txtBuilderArrivalDay.TabIndex = 38;
             _txtBuilderArrivalDay.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblArrivalDay
-            // 
+            //
             _lblArrivalDay.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblArrivalDay.Font = new Font("Verdana", 8.25F);
             _lblArrivalDay.Location = new Point(394, 86);
@@ -4615,9 +4614,9 @@ namespace FSM
             _lblArrivalDay.Size = new Size(77, 20);
             _lblArrivalDay.TabIndex = 37;
             _lblArrivalDay.Text = "Arrival Day";
-            // 
+            //
             // txtBuilderHours
-            // 
+            //
             _txtBuilderHours.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBuilderHours.Font = new Font("Verdana", 8.25F);
             _txtBuilderHours.Location = new Point(123, 82);
@@ -4626,9 +4625,9 @@ namespace FSM
             _txtBuilderHours.Size = new Size(58, 21);
             _txtBuilderHours.TabIndex = 33;
             _txtBuilderHours.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // txtBuilderNotes
-            // 
+            //
             _txtBuilderNotes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtBuilderNotes.Font = new Font("Verdana", 8.25F);
             _txtBuilderNotes.Location = new Point(123, 109);
@@ -4638,9 +4637,9 @@ namespace FSM
             _txtBuilderNotes.Size = new Size(453, 30);
             _txtBuilderNotes.TabIndex = 30;
             _txtBuilderNotes.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblBuilderNotes
-            // 
+            //
             _lblBuilderNotes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblBuilderNotes.Font = new Font("Verdana", 8.25F);
             _lblBuilderNotes.Location = new Point(8, 110);
@@ -4648,9 +4647,9 @@ namespace FSM
             _lblBuilderNotes.Size = new Size(109, 20);
             _lblBuilderNotes.TabIndex = 36;
             _lblBuilderNotes.Text = "Builder Notes";
-            // 
+            //
             // lblBuilderLabourHours
-            // 
+            //
             _lblBuilderLabourHours.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblBuilderLabourHours.Font = new Font("Verdana", 8.25F);
             _lblBuilderLabourHours.Location = new Point(184, 85);
@@ -4658,9 +4657,9 @@ namespace FSM
             _lblBuilderLabourHours.Size = new Size(32, 20);
             _lblBuilderLabourHours.TabIndex = 35;
             _lblBuilderLabourHours.Text = "Hrs";
-            // 
+            //
             // lblBuilderLabour
-            // 
+            //
             _lblBuilderLabour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblBuilderLabour.Font = new Font("Verdana", 8.25F);
             _lblBuilderLabour.Location = new Point(8, 85);
@@ -4668,9 +4667,9 @@ namespace FSM
             _lblBuilderLabour.Size = new Size(109, 20);
             _lblBuilderLabour.TabIndex = 32;
             _lblBuilderLabour.Text = "Builder Labour";
-            // 
+            //
             // txtElectricianArrivalHour
-            // 
+            //
             _txtElectricianArrivalHour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtElectricianArrivalHour.Font = new Font("Verdana", 8.25F);
             _txtElectricianArrivalHour.Location = new Point(543, 15);
@@ -4679,9 +4678,9 @@ namespace FSM
             _txtElectricianArrivalHour.Size = new Size(33, 21);
             _txtElectricianArrivalHour.TabIndex = 29;
             _txtElectricianArrivalHour.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblElectricianHour
-            // 
+            //
             _lblElectricianHour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectricianHour.Font = new Font("Verdana", 8.25F);
             _lblElectricianHour.Location = new Point(503, 18);
@@ -4689,9 +4688,9 @@ namespace FSM
             _lblElectricianHour.Size = new Size(40, 20);
             _lblElectricianHour.TabIndex = 28;
             _lblElectricianHour.Text = "Hour";
-            // 
+            //
             // txtElectricianArrivalDay
-            // 
+            //
             _txtElectricianArrivalDay.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtElectricianArrivalDay.Font = new Font("Verdana", 8.25F);
             _txtElectricianArrivalDay.Location = new Point(467, 15);
@@ -4700,9 +4699,9 @@ namespace FSM
             _txtElectricianArrivalDay.Size = new Size(33, 21);
             _txtElectricianArrivalDay.TabIndex = 27;
             _txtElectricianArrivalDay.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblElectricianArrivalDay
-            // 
+            //
             _lblElectricianArrivalDay.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectricianArrivalDay.Font = new Font("Verdana", 8.25F);
             _lblElectricianArrivalDay.Location = new Point(394, 18);
@@ -4710,9 +4709,9 @@ namespace FSM
             _lblElectricianArrivalDay.Size = new Size(77, 20);
             _lblElectricianArrivalDay.TabIndex = 26;
             _lblElectricianArrivalDay.Text = "Arrival Day";
-            // 
+            //
             // txtElectricianHours
-            // 
+            //
             _txtElectricianHours.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtElectricianHours.Font = new Font("Verdana", 8.25F);
             _txtElectricianHours.Location = new Point(265, 15);
@@ -4721,9 +4720,9 @@ namespace FSM
             _txtElectricianHours.Size = new Size(58, 21);
             _txtElectricianHours.TabIndex = 22;
             _txtElectricianHours.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // txtElectricianNotes
-            // 
+            //
             _txtElectricianNotes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtElectricianNotes.Font = new Font("Verdana", 8.25F);
             _txtElectricianNotes.Location = new Point(123, 41);
@@ -4733,9 +4732,9 @@ namespace FSM
             _txtElectricianNotes.Size = new Size(453, 36);
             _txtElectricianNotes.TabIndex = 21;
             _txtElectricianNotes.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblElectricianNotes
-            // 
+            //
             _lblElectricianNotes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectricianNotes.Font = new Font("Verdana", 8.25F);
             _lblElectricianNotes.Location = new Point(8, 42);
@@ -4743,9 +4742,9 @@ namespace FSM
             _lblElectricianNotes.Size = new Size(109, 20);
             _lblElectricianNotes.TabIndex = 25;
             _lblElectricianNotes.Text = "Electrician Notes";
-            // 
+            //
             // lblElectricianPackHours
-            // 
+            //
             _lblElectricianPackHours.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectricianPackHours.Font = new Font("Verdana", 8.25F);
             _lblElectricianPackHours.Location = new Point(326, 18);
@@ -4753,9 +4752,9 @@ namespace FSM
             _lblElectricianPackHours.Size = new Size(32, 20);
             _lblElectricianPackHours.TabIndex = 24;
             _lblElectricianPackHours.Text = "Hrs";
-            // 
+            //
             // lblElectOr
-            // 
+            //
             _lblElectOr.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectOr.Font = new Font("Verdana", 8.25F);
             _lblElectOr.Location = new Point(241, 18);
@@ -4763,9 +4762,9 @@ namespace FSM
             _lblElectOr.Size = new Size(31, 20);
             _lblElectOr.TabIndex = 23;
             _lblElectOr.Text = "Or";
-            // 
+            //
             // cboElectricalPack
-            // 
+            //
             _cboElectricalPack.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboElectricalPack.Cursor = Cursors.Hand;
             _cboElectricalPack.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -4775,9 +4774,9 @@ namespace FSM
             _cboElectricalPack.Size = new Size(116, 21);
             _cboElectricalPack.TabIndex = 21;
             _cboElectricalPack.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblElectricianPack
-            // 
+            //
             _lblElectricianPack.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblElectricianPack.Font = new Font("Verdana", 8.25F);
             _lblElectricianPack.Location = new Point(8, 17);
@@ -4785,9 +4784,9 @@ namespace FSM
             _lblElectricianPack.Size = new Size(109, 20);
             _lblElectricianPack.TabIndex = 21;
             _lblElectricianPack.Text = "Electrician Pack";
-            // 
+            //
             // txtSurveyor
-            // 
+            //
             _txtSurveyor.Font = new Font("Verdana", 8.25F);
             _txtSurveyor.Location = new Point(821, 2);
             _txtSurveyor.MaxLength = 50;
@@ -4795,27 +4794,27 @@ namespace FSM
             _txtSurveyor.ReadOnly = true;
             _txtSurveyor.Size = new Size(204, 21);
             _txtSurveyor.TabIndex = 66;
-            // 
+            //
             // lblSurveyor
-            // 
+            //
             _lblSurveyor.Font = new Font("Verdana", 8.25F);
             _lblSurveyor.Location = new Point(715, 6);
             _lblSurveyor.Name = "lblSurveyor";
             _lblSurveyor.Size = new Size(76, 23);
             _lblSurveyor.TabIndex = 67;
             _lblSurveyor.Text = "Surveyor";
-            // 
+            //
             // lblLastChangedOn
-            // 
+            //
             _lblLastChangedOn.Font = new Font("Verdana", 8.25F);
             _lblLastChangedOn.Location = new Point(714, 40);
             _lblLastChangedOn.Name = "lblLastChangedOn";
             _lblLastChangedOn.Size = new Size(106, 23);
             _lblLastChangedOn.TabIndex = 68;
             _lblLastChangedOn.Text = "Last Changed On";
-            // 
+            //
             // txtChangedDate
-            // 
+            //
             _txtChangedDate.Font = new Font("Verdana", 8.25F);
             _txtChangedDate.Location = new Point(821, 38);
             _txtChangedDate.MaxLength = 50;
@@ -4823,18 +4822,18 @@ namespace FSM
             _txtChangedDate.ReadOnly = true;
             _txtChangedDate.Size = new Size(66, 21);
             _txtChangedDate.TabIndex = 69;
-            // 
+            //
             // lblChangedBy
-            // 
+            //
             _lblChangedBy.Font = new Font("Verdana", 8.25F);
             _lblChangedBy.Location = new Point(890, 39);
             _lblChangedBy.Name = "lblChangedBy";
             _lblChangedBy.Size = new Size(29, 23);
             _lblChangedBy.TabIndex = 70;
             _lblChangedBy.Text = "by";
-            // 
+            //
             // txtChangedBy
-            // 
+            //
             _txtChangedBy.Font = new Font("Verdana", 8.25F);
             _txtChangedBy.Location = new Point(914, 38);
             _txtChangedBy.MaxLength = 50;
@@ -4842,9 +4841,9 @@ namespace FSM
             _txtChangedBy.ReadOnly = true;
             _txtChangedBy.Size = new Size(111, 21);
             _txtChangedBy.TabIndex = 71;
-            // 
+            //
             // lblPurchaseDept
-            // 
+            //
             _lblPurchaseDept.Font = new Font("Verdana", 8.25F);
             _lblPurchaseDept.Location = new Point(1031, 26);
             _lblPurchaseDept.Name = "lblPurchaseDept";
@@ -4852,9 +4851,9 @@ namespace FSM
             _lblPurchaseDept.TabIndex = 72;
             _lblPurchaseDept.Text = "Purchase Dept";
             _lblPurchaseDept.TextAlign = ContentAlignment.TopCenter;
-            // 
+            //
             // cboDept
-            // 
+            //
             _cboDept.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboDept.Cursor = Cursors.Hand;
             _cboDept.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -4864,9 +4863,9 @@ namespace FSM
             _cboDept.Size = new Size(116, 21);
             _cboDept.TabIndex = 41;
             _cboDept.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // chkService
-            // 
+            //
             _chkService.AutoSize = true;
             _chkService.Checked = true;
             _chkService.CheckState = CheckState.Checked;
@@ -4876,9 +4875,9 @@ namespace FSM
             _chkService.TabIndex = 73;
             _chkService.Text = "Serv";
             _chkService.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkHOver
-            // 
+            //
             _chkHOver.AutoSize = true;
             _chkHOver.Checked = true;
             _chkHOver.CheckState = CheckState.Checked;
@@ -4888,9 +4887,9 @@ namespace FSM
             _chkHOver.TabIndex = 74;
             _chkHOver.Text = "H.Over";
             _chkHOver.UseVisualStyleBackColor = true;
-            // 
+            //
             // UCQuoteJob
-            // 
+            //
             Controls.Add(_chkHOver);
             Controls.Add(_chkService);
             Controls.Add(_cboDept);
@@ -4937,7 +4936,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupPartsAndProductsDataGrid();
@@ -4954,11 +4954,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -5322,12 +5323,12 @@ namespace FSM
                 {
                     if (supList.Contains(Helper.MakeIntegerValid(dr["SupplierID"])))
                     {
-                        dt.Rows.Add(new string[] { dr["SupplierID"], dr["Name"], "0" });
+                        dt.Rows.Add(new string[] { (string)dr["SupplierID"], (string)dr["Name"], "0" });
                     }
                 }
 
                 var argc = f.cbo2;
-                Combo.SetUpCombo(ref argc, dt, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select); // 
+                Combo.SetUpCombo(ref argc, dt, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select); //
                 f.cbo1.Visible = false;
                 f.cbo2.Visible = true;
                 f.lblTop.Text = "Please select the Supplier for specials";
@@ -5477,9 +5478,9 @@ namespace FSM
                         newRow["Number"] = drPart["PartNumber"];
                         newRow["PartSupplierID"] = dvPartSupplier[0]["PartSupplierID"];
                         newRow["Name"] = drPart["PartName"];
-                        newRow["Quantity"] = drPart["Qty"] * qty;
+                        newRow["Quantity"] = (int)drPart["Qty"] * qty;
                         newRow["BuyPrice"] = dvPartSupplier[0]["Price"];
-                        newRow["Total"] = newRow["Quantity"] * newRow["BuyPrice"];
+                        newRow["Total"] = (int)newRow["Quantity"] * (double)newRow["BuyPrice"];
                         newRow["Type"] = "Part";
                         newRow["Supplier"] = dvPartSupplier[0]["SupplierName"];
                         CurrentQuoteJob.QuoteJobPartsAndProducts.Table.Rows.Add(newRow);
@@ -5496,7 +5497,7 @@ namespace FSM
                     newRow["Name"] = dr["PartName"];
                     newRow["Quantity"] = dr["Qty"];
                     newRow["BuyPrice"] = dr["Price"];
-                    newRow["Total"] = newRow["Quantity"] * newRow["BuyPrice"];
+                    newRow["Total"] = (int)newRow["Quantity"] * (double)newRow["BuyPrice"];
                     newRow["Type"] = "Part";
                     newRow["Supplier"] = dr["SupplierName"];
                     if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["IsSpecialPart"], 1, false)))
@@ -5512,7 +5513,7 @@ namespace FSM
                             newRow["SpecialDescription"] = f.PartName;
                             newRow["Number"] = f.SPN;
                             newRow["Extra"] = f.SPN;
-                            newRow["Total"] = newRow["Quantity"] * newRow["BuyPrice"];
+                            newRow["Total"] = (int)newRow["Quantity"] * (double)newRow["BuyPrice"];
                         }
                         else
                         {
@@ -5664,6 +5665,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupPartsAndProductsDataGrid()
         {
             Helper.SetUpDataGrid(dgPartsAndProducts);
@@ -5803,6 +5805,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void WorkOutGrandTotal()
         {
             if (string.IsNullOrEmpty(txtPartsCost.Text))
@@ -5992,7 +5995,7 @@ namespace FSM
             }
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             var dt = new DataTable();
             dt.Columns.Add(new DataColumn("Summary"));
@@ -6150,7 +6153,7 @@ namespace FSM
         {
             double parts = 0.0;
             foreach (DataRow row in CurrentQuoteJob.QuoteJobPartsAndProducts.Table.Rows)
-                parts += row["Quantity"] * row["BuyPrice"];
+                parts += (int)row["Quantity"] * (double)row["BuyPrice"];
             CurrentQuoteJob.SetPartsAndProductsTotal = parts;
             txtPartsCost.Text = Strings.Format(parts, "C");
             WorkOutGrandTotal();
@@ -6160,7 +6163,7 @@ namespace FSM
         {
             double rates = 0.0;
             foreach (DataRow row in CurrentQuoteJob.ScheduleOfRates.Table.Rows)
-                rates += row["Total"];
+                rates += (double)row["Total"];
             CurrentQuoteJob.SetScheduleOfRatesTotal = rates;
             txtScheduleRatesCost.Text = Strings.Format(rates, "C");
             WorkOutGrandTotal();

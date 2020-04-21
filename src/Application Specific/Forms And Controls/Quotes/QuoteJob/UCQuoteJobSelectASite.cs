@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCQuoteJobSelectASite : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCQuoteJobSelectASite() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCQuoteJob_Load;
@@ -44,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpSites;
 
@@ -102,9 +101,9 @@ namespace FSM
             _grpSites.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgSites).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpSites
-            // 
+            //
             _grpSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSites.Controls.Add(_dgSites);
@@ -114,9 +113,9 @@ namespace FSM
             _grpSites.TabIndex = 28;
             _grpSites.TabStop = false;
             _grpSites.Text = "Select A Property For The Quote:";
-            // 
+            //
             // dgSites
-            // 
+            //
             _dgSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSites.DataMember = "";
@@ -125,9 +124,9 @@ namespace FSM
             _dgSites.Name = "dgSites";
             _dgSites.Size = new Size(592, 254);
             _dgSites.TabIndex = 1;
-            // 
+            //
             // UCQuoteJobSelectASite
-            // 
+            //
             Controls.Add(_grpSites);
             Name = "UCQuoteJobSelectASite";
             Size = new Size(624, 296);
@@ -138,7 +137,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupSiteDataGrid();
@@ -154,11 +154,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -208,6 +209,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSiteDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSites);
@@ -265,6 +267,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate(int ID = 0)
         {
             Sites = App.DB.Sites.GetForCustomer_Light(ID, App.loggedInUser.UserID);
@@ -305,6 +308,5 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
     }
 }

@@ -12,11 +12,10 @@ namespace FSM
 {
     public class FRMBatchGSRPrint : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMBatchGSRPrint() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMVisitManager_Load;
@@ -907,9 +906,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgVisits).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpEngineerVisits
-            // 
+            //
             _grpEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineerVisits.Controls.Add(_dgVisits);
@@ -919,9 +918,9 @@ namespace FSM
             _grpEngineerVisits.TabIndex = 2;
             _grpEngineerVisits.TabStop = false;
             _grpEngineerVisits.Text = "Double Click To View / Edit";
-            // 
+            //
             // dgVisits
-            // 
+            //
             _dgVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgVisits.DataMember = "";
@@ -930,9 +929,9 @@ namespace FSM
             _dgVisits.Name = "dgVisits";
             _dgVisits.Size = new Size(768, 179);
             _dgVisits.TabIndex = 14;
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_chkExceptionsOnly);
             _grpFilter.Controls.Add(_chkPrintHdr);
@@ -968,9 +967,9 @@ namespace FSM
             _grpFilter.TabIndex = 1;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // chkExceptionsOnly
-            // 
+            //
             _chkExceptionsOnly.AutoSize = true;
             _chkExceptionsOnly.Location = new Point(361, 197);
             _chkExceptionsOnly.Name = "chkExceptionsOnly";
@@ -978,9 +977,9 @@ namespace FSM
             _chkExceptionsOnly.TabIndex = 39;
             _chkExceptionsOnly.Text = "Only Print Exceptions";
             _chkExceptionsOnly.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkPrintHdr
-            // 
+            //
             _chkPrintHdr.AutoSize = true;
             _chkPrintHdr.Location = new Point(216, 197);
             _chkPrintHdr.Name = "chkPrintHdr";
@@ -988,45 +987,45 @@ namespace FSM
             _chkPrintHdr.TabIndex = 38;
             _chkPrintHdr.Text = "Print Header Page";
             _chkPrintHdr.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnUnselect
-            // 
+            //
             _btnUnselect.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnUnselect.Location = new Point(113, 192);
             _btnUnselect.Name = "btnUnselect";
             _btnUnselect.Size = new Size(96, 23);
             _btnUnselect.TabIndex = 37;
             _btnUnselect.Text = "Unselect All";
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSelectAll.Location = new Point(11, 192);
             _btnSelectAll.Name = "btnSelectAll";
             _btnSelectAll.Size = new Size(96, 23);
             _btnSelectAll.TabIndex = 36;
             _btnSelectAll.Text = "Select All";
-            // 
+            //
             // btnShowdata
-            // 
+            //
             _btnShowdata.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnShowdata.Location = new Point(679, 192);
             _btnShowdata.Name = "btnShowdata";
             _btnShowdata.Size = new Size(96, 23);
             _btnShowdata.TabIndex = 35;
             _btnShowdata.Text = "Show Data";
-            // 
+            //
             // cboOutcome
-            // 
+            //
             _cboOutcome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboOutcome.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboOutcome.Location = new Point(600, 115);
             _cboOutcome.Name = "cboOutcome";
             _cboOutcome.Size = new Size(176, 21);
             _cboOutcome.TabIndex = 34;
-            // 
+            //
             // btnFindCustomer
-            // 
+            //
             _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindCustomer.BackColor = Color.White;
             _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1036,9 +1035,9 @@ namespace FSM
             _btnFindCustomer.TabIndex = 2;
             _btnFindCustomer.Text = "...";
             _btnFindCustomer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtCustomer.Location = new Point(104, 19);
@@ -1046,34 +1045,34 @@ namespace FSM
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(624, 21);
             _txtCustomer.TabIndex = 1;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(8, 16);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(64, 16);
             _Label4.TabIndex = 27;
             _Label4.Text = "Customer";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcode.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtPostcode.Location = new Point(104, 67);
             _txtPostcode.Name = "txtPostcode";
             _txtPostcode.Size = new Size(184, 21);
             _txtPostcode.TabIndex = 5;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 64);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(64, 16);
             _Label1.TabIndex = 20;
             _Label1.Text = "Postcode";
-            // 
+            //
             // btnFindSite
-            // 
+            //
             _btnFindSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindSite.BackColor = Color.White;
             _btnFindSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1083,9 +1082,9 @@ namespace FSM
             _btnFindSite.TabIndex = 4;
             _btnFindSite.Text = "...";
             _btnFindSite.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtSite.Location = new Point(104, 43);
@@ -1093,47 +1092,47 @@ namespace FSM
             _txtSite.ReadOnly = true;
             _txtSite.Size = new Size(624, 21);
             _txtSite.TabIndex = 3;
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Location = new Point(144, 163);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(144, 21);
             _dtpTo.TabIndex = 13;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(144, 139);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(144, 21);
             _dtpFrom.TabIndex = 12;
-            // 
+            //
             // txtJobNumber
-            // 
+            //
             _txtJobNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtJobNumber.Location = new Point(104, 115);
             _txtJobNumber.Name = "txtJobNumber";
             _txtJobNumber.Size = new Size(184, 21);
             _txtJobNumber.TabIndex = 9;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(104, 160);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(48, 16);
             _Label9.TabIndex = 10;
             _Label9.Text = "To";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(104, 136);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(48, 16);
             _Label8.TabIndex = 9;
             _Label8.Text = "From";
-            // 
+            //
             // chkVisitDate
-            // 
+            //
             _chkVisitDate.Cursor = Cursors.Hand;
             _chkVisitDate.Location = new Point(8, 136);
             _chkVisitDate.Name = "chkVisitDate";
@@ -1141,105 +1140,105 @@ namespace FSM
             _chkVisitDate.TabIndex = 11;
             _chkVisitDate.Text = "Visit Date";
             _chkVisitDate.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(8, 112);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(88, 16);
             _Label6.TabIndex = 6;
             _Label6.Text = "Job Number";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 88);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(72, 16);
             _Label3.TabIndex = 3;
             _Label3.Text = "Definition";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(8, 40);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(64, 16);
             _Label2.TabIndex = 2;
             _Label2.Text = "Site";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label10.Location = new Point(296, 92);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(48, 16);
             _Label10.TabIndex = 4;
             _Label10.Text = "Type";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Location = new Point(344, 91);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(184, 21);
             _cboType.TabIndex = 7;
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label11.Location = new Point(536, 95);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(48, 16);
             _Label11.TabIndex = 5;
             _Label11.Text = "Status";
-            // 
+            //
             // cboDefinition
-            // 
+            //
             _cboDefinition.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboDefinition.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboDefinition.Location = new Point(104, 92);
             _cboDefinition.Name = "cboDefinition";
             _cboDefinition.Size = new Size(184, 21);
             _cboDefinition.TabIndex = 6;
-            // 
+            //
             // cboStatus
-            // 
+            //
             _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboStatus.Location = new Point(600, 91);
             _cboStatus.Name = "cboStatus";
             _cboStatus.Size = new Size(176, 21);
             _cboStatus.TabIndex = 8;
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label13.Location = new Point(536, 118);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(64, 16);
             _Label13.TabIndex = 33;
             _Label13.Text = "Outcome";
-            // 
+            //
             // btnPrint
-            // 
+            //
             _btnPrint.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnPrint.Location = new Point(692, 467);
             _btnPrint.Name = "btnPrint";
             _btnPrint.Size = new Size(96, 23);
             _btnPrint.TabIndex = 36;
             _btnPrint.Text = "Print GSRs";
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(16, 467);
             _btnExport.Name = "btnExport";
             _btnExport.Size = new Size(96, 23);
             _btnExport.TabIndex = 37;
             _btnExport.Text = "Export";
-            // 
+            //
             // FRMBatchGSRPrint
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(800, 494);
             Controls.Add(_btnExport);
@@ -1263,7 +1262,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var argc = cboDefinition;
@@ -1286,7 +1286,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1378,6 +1378,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupVisitDataGrid()
         {
             var tbStyle = dgVisits.TableStyles[0];
@@ -1705,6 +1706,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try

@@ -10,11 +10,10 @@ namespace FSM
 {
     public class FRMBatchVisitCosts : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMBatchVisitCosts() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMVisitManager_Load;
@@ -41,7 +40,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpEngineerVisits;
 
@@ -365,9 +364,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgVisits).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpEngineerVisits
-            // 
+            //
             _grpEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineerVisits.Controls.Add(_dgVisits);
@@ -377,9 +376,9 @@ namespace FSM
             _grpEngineerVisits.TabIndex = 2;
             _grpEngineerVisits.TabStop = false;
             _grpEngineerVisits.Text = "Double Click To View / Edit";
-            // 
+            //
             // dgVisits
-            // 
+            //
             _dgVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgVisits.DataMember = "";
@@ -388,75 +387,75 @@ namespace FSM
             _dgVisits.Name = "dgVisits";
             _dgVisits.Size = new Size(768, 314);
             _dgVisits.TabIndex = 14;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(16, 467);
             _btnExport.Name = "btnExport";
             _btnExport.Size = new Size(96, 23);
             _btnExport.TabIndex = 37;
             _btnExport.Text = "Export";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(76, 24);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(48, 16);
             _Label8.TabIndex = 9;
             _Label8.Text = "From";
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(279, 24);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(48, 16);
             _Label9.TabIndex = 10;
             _Label9.Text = "To";
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(116, 21);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(144, 21);
             _dtpFrom.TabIndex = 12;
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Location = new Point(319, 21);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(144, 21);
             _dtpTo.TabIndex = 13;
-            // 
+            //
             // btnShowdata
-            // 
+            //
             _btnShowdata.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnShowdata.Location = new Point(679, 51);
             _btnShowdata.Name = "btnShowdata";
             _btnShowdata.Size = new Size(96, 23);
             _btnShowdata.TabIndex = 35;
             _btnShowdata.Text = "Show Data";
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSelectAll.Location = new Point(11, 51);
             _btnSelectAll.Name = "btnSelectAll";
             _btnSelectAll.Size = new Size(96, 23);
             _btnSelectAll.TabIndex = 36;
             _btnSelectAll.Text = "Select All";
-            // 
+            //
             // btnUnselect
-            // 
+            //
             _btnUnselect.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnUnselect.Location = new Point(113, 51);
             _btnUnselect.Name = "btnUnselect";
             _btnUnselect.Size = new Size(96, 23);
             _btnUnselect.TabIndex = 37;
             _btnUnselect.Text = "Unselect All";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_Label1);
             _grpFilter.Controls.Add(_btnUnselect);
@@ -472,18 +471,18 @@ namespace FSM
             _grpFilter.TabIndex = 1;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Location = new Point(8, 24);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(62, 13);
             _Label1.TabIndex = 38;
             _Label1.Text = "Visit Date";
-            // 
+            //
             // FRMBatchVisitCosts
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(800, 494);
             Controls.Add(_btnExport);
@@ -505,7 +504,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupVisitDataGrid();
@@ -520,7 +520,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -563,6 +563,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupVisitDataGrid()
         {
             var tbStyle = dgVisits.TableStyles[0];
@@ -954,6 +955,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try
@@ -1094,8 +1096,7 @@ namespace FSM
                 dgVisits.UnSelect(itm);
             }
 
-            var exporter = new Entity.Sys.Exporting(exportData, "Batch Visit Costs Report");
-            exporter = null;
+            Entity.Sys.ExportHelper.Export(exportData, "Batch Visit Costs Report", Entity.Sys.Enums.ExportType.CSV);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

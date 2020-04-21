@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMQuoteContractAlternativeConvert : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMQuoteContractAlternativeConvert() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContract_Load;
@@ -131,36 +130,36 @@ namespace FSM
             _btnSave = new Button();
             _btnSave.Click += new EventHandler(btnSave_Click);
             SuspendLayout();
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(982, 616);
             _pnlMain.TabIndex = 2;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(8, 664);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 5;
             _btnClose.Text = "Close";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(136, 664);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(488, 25);
             _btnSave.TabIndex = 4;
             _btnSave.Text = "Convert Quote to Contract";
-            // 
+            //
             // FRMQuoteContractAlternativeConvert
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(982, 702);
             Controls.Add(_btnClose);
@@ -177,7 +176,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));

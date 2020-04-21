@@ -180,7 +180,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             ((UCQuoteContractOption3Site)LoadedControl).CurrentQuoteContractOption3Site = App.DB.QuoteContractOption3Site.QuoteContractOption3Site_Get(ID);
