@@ -7,12 +7,10 @@ namespace FSM.Entity.JobImport
     {
         public void Validate(JobImportType oJobImportType)
         {
-
             // make sure that contact object is valid
             if (oJobImportType.Errors.Count > 0)
             {
-                DictionaryEntry de;
-                foreach (var de in oJobImportType.Errors)
+                foreach (DictionaryEntry de in oJobImportType.Errors)
                     AddCriticalMessage(Conversions.ToString(de.Value));
             }
 

@@ -11,12 +11,10 @@ namespace FSM.Entity
         {
             public void Validate(EngineerTimeSheet oEngineerTimeSheet)
             {
-
                 // make sure that contact object is valid
                 if (oEngineerTimeSheet.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oEngineerTimeSheet.Errors)
+                    foreach (DictionaryEntry de in oEngineerTimeSheet.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

@@ -1,5 +1,4 @@
-﻿
-namespace FSM.Entity.CostCentres
+﻿namespace FSM.Entity.CostCentres
 {
     public class CostCentre
     {
@@ -8,7 +7,7 @@ namespace FSM.Entity.CostCentres
         }
 
         public int Id { get; set; }
-        public int CostCentre { get; set; }
+        public int CostCentreId { get; set; }
         public int JobTypeId { get; set; }
         public int LinkId { get; set; }
         public int LinkTypeId { get; set; }

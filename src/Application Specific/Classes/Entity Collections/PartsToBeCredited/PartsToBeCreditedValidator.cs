@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(PartsToBeCredited oPartsToBeCredited)
             {
-
                 // make sure that contact object is valid
                 if (oPartsToBeCredited.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oPartsToBeCredited.Errors)
+                    foreach (DictionaryEntry de in oPartsToBeCredited.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -29,7 +27,7 @@ namespace FSM.Entity
                     var r = dvItems.Table.Select("PartID=" + oPartsToBeCredited.PartID);
                     if (r.Length > 0)
                     {
-                        if (Conversions.ToBoolean(oPartsToBeCredited.Qty > r[0]["Qty"]))
+                        if (Conversions.ToBoolean((int)oPartsToBeCredited.Qty > (int)r[0]["Qty"]))
                         {
                             AddCriticalMessage("Qty cannot be higher than quantity ordered.");
                         }

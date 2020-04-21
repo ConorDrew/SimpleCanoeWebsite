@@ -11,12 +11,10 @@ namespace FSM.Entity
         {
             public void Validate(OrderLocationPart oOrderLocationPart)
             {
-
                 // make sure that contact object is valid
                 if (oOrderLocationPart.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oOrderLocationPart.Errors)
+                    foreach (DictionaryEntry de in oOrderLocationPart.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -44,12 +42,10 @@ namespace FSM.Entity
 
             public void Validate(OrderLocationPart oOrderLocationPart, System.Data.SqlClient.SqlTransaction trans)
             {
-
                 // make sure that contact object is valid
                 if (oOrderLocationPart.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oOrderLocationPart.Errors)
+                    foreach (DictionaryEntry de in oOrderLocationPart.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

@@ -88,7 +88,7 @@ namespace FSM.Entity.CostCentres
         private void AddParameters(CostCentre ccm)
         {
             _database.ClearParameter();
-            _database.AddParameter("@CostCentre", ccm.CostCentre);
+            _database.AddParameter("@CostCentre", ccm.CostCentreId);
             _database.AddParameter("@JobTypeId", ccm.JobTypeId);
             _database.AddParameter("@LinkId", ccm.LinkId);
             _database.AddParameter("@LinkTypeId", ccm.LinkTypeId);

@@ -71,7 +71,7 @@ namespace FSM.Business.Orders
             {
                 if (!Helper.MakeStringValid(row["Part"]).Contains("IBC"))
                 {
-                    total += Helper.MakeDoubleValid(row["Cost"]);
+                    total += (decimal)Helper.MakeDoubleValid(row["Cost"]);
                 }
             }
 

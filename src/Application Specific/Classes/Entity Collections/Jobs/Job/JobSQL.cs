@@ -19,6 +19,7 @@ namespace FSM.Entity.Jobs
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void DeleteReservedOrderNumber(int JobNumber, string Prefix)
         {
             string sql;
@@ -81,13 +82,13 @@ namespace FSM.Entity.Jobs
             foreach (JobAssets.JobAsset asset in oJob.Assets)
             {
                 asset.SetJobID = oJob.JobID;
-                asset = _database.JobAsset.Insert(asset, trans);
+                _database.JobAsset.Insert(asset, trans);
             }
 
             foreach (JobOfWorks.JobOfWork jobOfWork in oJob.JobOfWorks)
             {
                 jobOfWork.SetJobID = oJob.JobID;
-                jobOfWork = _database.JobOfWorks.Insert(jobOfWork, trans);
+                _database.JobOfWorks.Insert(jobOfWork, trans);
             }
 
             JobQualificationsLevels_Insert(oJob, trans);
@@ -126,13 +127,13 @@ namespace FSM.Entity.Jobs
             foreach (JobAssets.JobAsset asset in oJob.Assets)
             {
                 asset.SetJobID = oJob.JobID;
-                asset = _database.JobAsset.Insert(asset);
+                _database.JobAsset.Insert(asset);
             }
 
             foreach (JobOfWorks.JobOfWork jobOfWork in oJob.JobOfWorks)
             {
                 jobOfWork.SetJobID = oJob.JobID;
-                jobOfWork = _database.JobOfWorks.Insert(jobOfWork);
+                _database.JobOfWorks.Insert(jobOfWork);
             }
 
             JobQualificationsLevels_Insert(oJob);
@@ -172,7 +173,7 @@ namespace FSM.Entity.Jobs
             foreach (JobAssets.JobAsset asset in oJob.Assets)
             {
                 asset.SetJobID = oJob.JobID;
-                asset = _database.JobAsset.Insert(asset, trans);
+                _database.JobAsset.Insert(asset, trans);
             }
 
             foreach (JobOfWorks.JobOfWork jobOfWork in oJob.JobOfWorks)
@@ -180,7 +181,7 @@ namespace FSM.Entity.Jobs
                 jobOfWork.SetJobID = oJob.JobID;
                 if (!jobOfWork.Exists)
                 {
-                    jobOfWork = _database.JobOfWorks.Insert(jobOfWork, trans);
+                    _database.JobOfWorks.Insert(jobOfWork, trans);
                 }
                 else
                 {
@@ -189,7 +190,7 @@ namespace FSM.Entity.Jobs
                     foreach (JobItems.JobItem jobItem in jobOfWork.JobItems)
                     {
                         jobItem.SetJobOfWorkID = jobOfWork.JobOfWorkID;
-                        jobItem = _database.JobItems.Insert(jobItem, trans);
+                        _database.JobItems.Insert(jobItem, trans);
                         IDs += jobItem.JobItemID + ",";
                     }
                     // DELETE ANY JOB ITEMS  NOT JUST UPDATED OR INSERTED
@@ -205,7 +206,7 @@ namespace FSM.Entity.Jobs
                         engineerVisit.SetJobOfWorkID = jobOfWork.JobOfWorkID;
                         if (!engineerVisit.Exists)
                         {
-                            engineerVisit = _database.EngineerVisits.Insert(engineerVisit, jobOfWork.JobID, trans);
+                            _database.EngineerVisits.Insert(engineerVisit, jobOfWork.JobID, trans);
                         }
                         else
                         {
@@ -242,7 +243,7 @@ namespace FSM.Entity.Jobs
             foreach (JobAssets.JobAsset asset in oJob.Assets)
             {
                 asset.SetJobID = oJob.JobID;
-                asset = _database.JobAsset.Insert(asset);
+                _database.JobAsset.Insert(asset);
             }
 
             foreach (JobOfWorks.JobOfWork jobOfWork in oJob.JobOfWorks)
@@ -250,7 +251,7 @@ namespace FSM.Entity.Jobs
                 jobOfWork.SetJobID = oJob.JobID;
                 if (!jobOfWork.Exists)
                 {
-                    jobOfWork = _database.JobOfWorks.Insert(jobOfWork);
+                    _database.JobOfWorks.Insert(jobOfWork);
                 }
                 else
                 {
@@ -259,7 +260,7 @@ namespace FSM.Entity.Jobs
                     foreach (JobItems.JobItem jobItem in jobOfWork.JobItems)
                     {
                         jobItem.SetJobOfWorkID = jobOfWork.JobOfWorkID;
-                        jobItem = _database.JobItems.Insert(jobItem);
+                        _database.JobItems.Insert(jobItem);
                         IDs += jobItem.JobItemID + ",";
                     }
                     // DELETE ANY JOB ITEMS  NOT JUST UPDATED OR INSERTED
@@ -275,7 +276,7 @@ namespace FSM.Entity.Jobs
                         engineerVisit.SetJobOfWorkID = jobOfWork.JobOfWorkID;
                         if (!engineerVisit.Exists)
                         {
-                            engineerVisit = _database.EngineerVisits.Insert(engineerVisit, jobOfWork.JobID);
+                            _database.EngineerVisits.Insert(engineerVisit, jobOfWork.JobID);
                         }
                         else
                         {
@@ -307,7 +308,7 @@ namespace FSM.Entity.Jobs
             foreach (JobAssets.JobAsset asset in oJob.Assets)
             {
                 asset.SetJobID = oJob.JobID;
-                asset = _database.JobAsset.Insert(asset);
+                _database.JobAsset.Insert(asset);
             }
 
             foreach (JobOfWorks.JobOfWork jobOfWork in oJob.JobOfWorks)
@@ -315,7 +316,7 @@ namespace FSM.Entity.Jobs
                 jobOfWork.SetJobID = oJob.JobID;
                 if (!jobOfWork.Exists)
                 {
-                    jobOfWork = _database.JobOfWorks.Insert(jobOfWork);
+                    _database.JobOfWorks.Insert(jobOfWork);
                 }
                 else
                 {
@@ -324,7 +325,7 @@ namespace FSM.Entity.Jobs
                     foreach (JobItems.JobItem jobItem in jobOfWork.JobItems)
                     {
                         jobItem.SetJobOfWorkID = jobOfWork.JobOfWorkID;
-                        jobItem = _database.JobItems.Insert(jobItem);
+                        _database.JobItems.Insert(jobItem);
                         IDs += jobItem.JobItemID + ",";
                     }
                     // DELETE ANY JOB ITEMS  NOT JUST UPDATED OR INSERTED
@@ -341,7 +342,7 @@ namespace FSM.Entity.Jobs
                         engineerVisit.SetJobOfWorkID = jobOfWork.JobOfWorkID;
                         if (!engineerVisit.Exists)
                         {
-                            engineerVisit = _database.EngineerVisits.Insert(engineerVisit, jobOfWork.JobID);
+                            _database.EngineerVisits.Insert(engineerVisit, jobOfWork.JobID);
                         }
                         else
                         {
@@ -1302,7 +1303,7 @@ namespace FSM.Entity.Jobs
 
                 // Get service priority
                 int servicePriority;
-                Array rows = App.DB.Picklists.GetAll((Enums.PickListTypes)Conversions.ToInteger(Enums.PickListTypes.JOWPriority)).Table.Select("Name = 'Dayworks'");
+                DataRow[] rows = App.DB.Picklists.GetAll((Enums.PickListTypes)Conversions.ToInteger(Enums.PickListTypes.JOWPriority)).Table.Select("Name = 'Dayworks'");
                 if (rows.Length == 0)
                 {
                     var oPickList = new PickLists.PickList();
@@ -1312,7 +1313,7 @@ namespace FSM.Entity.Jobs
                 }
                 else
                 {
-                    servicePriority = Conversions.ToInteger(((DataRow)rows(0))["ManagerID"]);
+                    servicePriority = Conversions.ToInteger(rows[0]["ManagerID"]);
                 }
 
                 // INSERT JOB ITEM
@@ -1480,7 +1481,7 @@ namespace FSM.Entity.Jobs
                 }
 
                 int servicePriority = 0;
-                Array rows = App.DB.Picklists.GetAll(Enums.PickListTypes.JOWPriority).Table.Select("Name = 'Service'");
+                DataRow[] rows = App.DB.Picklists.GetAll(Enums.PickListTypes.JOWPriority).Table.Select("Name = 'Service'");
                 if (rows.Length == 0)
                 {
                     var oPickList = new PickLists.PickList();
@@ -1490,7 +1491,7 @@ namespace FSM.Entity.Jobs
                 }
                 else
                 {
-                    servicePriority = Conversions.ToInteger(((DataRow)rows(0))["ManagerID"]);
+                    servicePriority = Conversions.ToInteger(rows[0]["ManagerID"]);
                 }
 
                 _currentJob = new Job();
@@ -1851,6 +1852,7 @@ namespace FSM.Entity.Jobs
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DataView GetJobNotes(int jobID)
         {
             _database.ClearParameter();

@@ -17,6 +17,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView EngineerVisitPartAndProductsAllocated_GetAll_For_Engineer_Visit(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -160,7 +161,6 @@ namespace FSM.Entity
             {
                 if (PartsAndProducts.Table is object)
                 {
-
                     // 'DELETE EVERYTHING
 
                     // Dim Command As SqlClient.SqlCommand = New SqlClient.SqlCommand
@@ -523,7 +523,7 @@ namespace FSM.Entity
                         App.DB.PartsToBeCredited.Insert(CurrentPartsToBeCredited);
                     }
 
-                    if (Conversions.ToBoolean(row["LocationID"] > 0 & row["StockTransactionType"] > 0))
+                    if (Conversions.ToBoolean((int)row["LocationID"] > 0 & (int)row["StockTransactionType"] > 0))
                     {
                         var switchExpr = row["Type"];
                         switch (switchExpr)
@@ -536,7 +536,7 @@ namespace FSM.Entity
                                     oPartTransaction.SetOrderPartID = row["OrderPartProductID"];
                                     if (Conversions.ToInteger(row["StockTransactionType"]) == Conversions.ToInteger(Sys.Enums.Transaction.StockOut))
                                     {
-                                        oPartTransaction.SetAmount = row["Quantity"] * -1;
+                                        oPartTransaction.SetAmount = (int)row["Quantity"] * -1;
                                     }
                                     else
                                     {
@@ -556,7 +556,7 @@ namespace FSM.Entity
                                     oProductTransaction.SetOrderProductID = row["OrderPartProductID"];
                                     if (Conversions.ToInteger(row["StockTransactionType"]) == Conversions.ToInteger(Sys.Enums.Transaction.StockOut))
                                     {
-                                        oProductTransaction.SetAmount = row["Quantity"] * -1;
+                                        oProductTransaction.SetAmount = (int)row["Quantity"] * -1;
                                     }
                                     else
                                     {

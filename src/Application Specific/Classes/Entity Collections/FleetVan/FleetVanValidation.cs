@@ -11,12 +11,10 @@ namespace FSM.Entity
         {
             public void Validate(FleetVan oFleetVan)
             {
-
                 // make sure that contact object is valid
                 if (oFleetVan.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oFleetVan.Errors)
+                    foreach (DictionaryEntry de in oFleetVan.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -41,17 +39,16 @@ namespace FSM.Entity
                 }
             }
         }
+
         // make sure that contact object is valid
         public class FleetVanTypeValidator : BaseValidator
         {
             public void Validate(FleetVanType oFleetVanType)
             {
-
                 // make sure that contact object is valid
                 if (oFleetVanType.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oFleetVanType.Errors)
+                    foreach (DictionaryEntry de in oFleetVanType.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -81,17 +78,16 @@ namespace FSM.Entity
                 }
             }
         }
+
         // make sure that contact object is valid
         public class FleetVanEngineerValidator : BaseValidator
         {
             public void Validate(FleetVanEngineer oFleetVan)
             {
-
                 // make sure that contact object is valid
                 if (oFleetVan.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oFleetVan.Errors)
+                    foreach (DictionaryEntry de in oFleetVan.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -111,17 +107,16 @@ namespace FSM.Entity
                 }
             }
         }
+
         // make sure that contact object is valid
         public class FleetVanMaintenanceValidator : BaseValidator
         {
             public void Validate(FleetVanMaintenance oFleetVan)
             {
-
                 // make sure that contact object is valid
                 if (oFleetVan.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oFleetVan.Errors)
+                    foreach (DictionaryEntry de in oFleetVan.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -151,17 +146,16 @@ namespace FSM.Entity
                 }
             }
         }
+
         // make sure that contact object is valid
         public class FleetVanFaultValidator : BaseValidator
         {
             public void Validate(FleetVanFault oFleetVan)
             {
-
                 // make sure that contact object is valid
                 if (oFleetVan.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oFleetVan.Errors)
+                    foreach (DictionaryEntry de in oFleetVan.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -181,17 +175,16 @@ namespace FSM.Entity
                 }
             }
         }
+
         // make sure that contact object is valid
         public class FleetVanContractValidator : BaseValidator
         {
             public void Validate(FleetVanContract oFleetVan)
             {
-
                 // make sure that contact object is valid
                 if (oFleetVan.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oFleetVan.Errors)
+                    foreach (DictionaryEntry de in oFleetVan.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -216,17 +209,16 @@ namespace FSM.Entity
                 }
             }
         }
+
         // make sure that contact object is valid
         public class FleetEquipmentValidator : BaseValidator
         {
             public void Validate(FleetEquipment oFleetEquipment)
             {
-
                 // make sure that contact object is valid
                 if (oFleetEquipment.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oFleetEquipment.Errors)
+                    foreach (DictionaryEntry de in oFleetEquipment.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

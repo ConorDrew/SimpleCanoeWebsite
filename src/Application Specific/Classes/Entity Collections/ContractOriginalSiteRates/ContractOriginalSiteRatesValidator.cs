@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(ContractOriginalSiteRates oContractOriginalSiteRates)
             {
-
                 // make sure that contact object is valid
                 if (oContractOriginalSiteRates.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oContractOriginalSiteRates.Errors)
+                    foreach (DictionaryEntry de in oContractOriginalSiteRates.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

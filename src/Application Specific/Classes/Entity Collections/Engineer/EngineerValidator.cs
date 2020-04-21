@@ -11,12 +11,10 @@ namespace FSM.Entity
         {
             public void Validate(Engineer oEngineer)
             {
-
                 // make sure that contact object is valid
                 if (oEngineer.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oEngineer.Errors)
+                    foreach (DictionaryEntry de in oEngineer.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -64,8 +62,9 @@ namespace FSM.Entity
                     throw new ValidationException(this);
                 }
             }
+
             // This function checks if a string is in a particular format 'dd/mm'.
-            // Note: If the string has a length equal to zero then the string is considered 
+            // Note: If the string has a length equal to zero then the string is considered
             // valid.
             private bool CheckShortDateIsValid(string strDate)
             {

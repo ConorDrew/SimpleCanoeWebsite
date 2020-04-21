@@ -17160,7 +17160,7 @@ namespace FSM
         public int GetCostCentre()
         {
             var cc = App.DB.CostCentre.Get((int)Job?.JobTypeID, theSite.CustomerID, Entity.CostCentres.Enums.GetBy.JobTypeIdAndCutomerId)?.FirstOrDefault();
-            return cc is object ? cc.CostCentre : -1;
+            return cc is object ? cc.CostCentreId : -1;
         }
 
         private void ShutdownNonChargableVisits(FormClosingEventArgs e)

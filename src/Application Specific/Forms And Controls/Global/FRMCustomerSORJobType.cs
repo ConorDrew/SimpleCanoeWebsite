@@ -1661,7 +1661,7 @@ namespace FSM
                 ccs = ccs.Where(x => x.JobTypeId == jobTypeId & x.LinkId == linkId & x.LinkTypeId == linkTypeId).ToList();
             if (ccs is object && ccs.Count > 0)
             {
-                ccs.FirstOrDefault().CostCentre = Conversions.ToInteger(costCentre);
+                ccs.FirstOrDefault().CostCentreId = Conversions.ToInteger(costCentre);
                 ccs.FirstOrDefault().JobTypeId = jobTypeId;
                 ccs.FirstOrDefault().LinkId = linkId;
                 ccs.FirstOrDefault().LinkTypeId = linkTypeId;
@@ -1671,7 +1671,7 @@ namespace FSM
             }
             else
             {
-                var cc = new CostCentre() { CostCentre = Conversions.ToInteger(costCentre), JobTypeId = jobTypeId, LinkId = linkId, LinkTypeId = linkTypeId, JobSpendLimit = costCap };
+                var cc = new CostCentre() { CostCentreId = Conversions.ToInteger(costCentre), JobTypeId = jobTypeId, LinkId = linkId, LinkTypeId = linkTypeId, JobSpendLimit = costCap };
                 cc = App.DB.CostCentre.Insert(cc);
                 if (cc.Id > 0)
                     UpdateCostCentreMatrixDg();
@@ -1766,7 +1766,7 @@ namespace FSM
                 return;
             var costCentre = App.DB.CostCentre.Get(Conversions.ToInteger(SelectedDataRowCCM["Id"]), default, GetBy.Id).FirstOrDefault();
             var argcombo = cboCostCentre;
-            Combo.SetSelectedComboItem_By_Value(ref argcombo, costCentre.CostCentre.ToString());
+            Combo.SetSelectedComboItem_By_Value(ref argcombo, costCentre.CostCentreId.ToString());
             var argcombo1 = cboCCJobType;
             Combo.SetSelectedComboItem_By_Value(ref argcombo1, costCentre.JobTypeId.ToString());
             var argcombo2 = cboLinkType;

@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(EngineerPostalRegion oEngineerPostalRegion)
             {
-
                 // make sure that contact object is valid
                 if (oEngineerPostalRegion.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oEngineerPostalRegion.Errors)
+                    foreach (DictionaryEntry de in oEngineerPostalRegion.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

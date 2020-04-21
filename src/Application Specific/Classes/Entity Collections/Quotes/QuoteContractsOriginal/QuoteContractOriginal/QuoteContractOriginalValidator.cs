@@ -13,8 +13,7 @@ namespace FSM.Entity
                 // make sure that contact object is valid
                 if (oQuoteContract.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oQuoteContract.Errors)
+                    foreach (DictionaryEntry de in oQuoteContract.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

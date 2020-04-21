@@ -6136,13 +6136,13 @@ namespace FSM
             {
                 var cc = App.DB.CostCentre.Get((int)CurrentQuoteJob?.JobTypeID, (int)CurrentSite?.CustomerID, GetBy.JobTypeIdAndCutomerId)?.FirstOrDefault();
                 var argcombo = cboDept;
-                Combo.SetSelectedComboItem_By_Value(ref argcombo, Conversions.ToString(cc?.CostCentre));
+                Combo.SetSelectedComboItem_By_Value(ref argcombo, Conversions.ToString(cc?.CostCentreId));
             }
             else if (!Information.IsNumeric(department))
             {
                 var cc = App.DB.CostCentre.Get((int)CurrentQuoteJob?.JobTypeID, (int)CurrentSite?.CustomerID, GetBy.JobTypeIdAndCutomerId)?.FirstOrDefault();
                 var argcombo1 = cboDept;
-                Combo.SetSelectedComboItem_By_Value(ref argcombo1, Helper.MakeStringValid(cc?.CostCentre));
+                Combo.SetSelectedComboItem_By_Value(ref argcombo1, Helper.MakeStringValid(cc?.CostCentreId));
             }
         }
 

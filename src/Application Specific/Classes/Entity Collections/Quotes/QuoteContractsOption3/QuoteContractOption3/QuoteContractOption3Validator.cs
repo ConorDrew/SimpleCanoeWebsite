@@ -11,12 +11,10 @@ namespace FSM.Entity
         {
             public void Validate(QuoteContractOption3 oQuoteContractOption3)
             {
-
                 // make sure that contact object is valid
                 if (oQuoteContractOption3.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oQuoteContractOption3.Errors)
+                    foreach (DictionaryEntry de in oQuoteContractOption3.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

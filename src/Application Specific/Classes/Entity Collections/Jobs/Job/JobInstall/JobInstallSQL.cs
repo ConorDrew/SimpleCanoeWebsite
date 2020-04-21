@@ -70,7 +70,7 @@ namespace FSM.Entity
                     oJobInstall.SetSubConPO = dt.Rows[0]["SubPO"];
                     oJobInstall.SetSubConSI = dt.Rows[0]["SubSI"];
                     oJobInstall.SetPaymentTaken = dt.Rows[0]["Charge"];
-                    if (!Information.IsDBNull(dt.Rows[0]["SupplierInvoice"]) && Conversions.ToBoolean(dt.Rows[0]["SupplierInvoice"] > 0))
+                    if (!Information.IsDBNull(dt.Rows[0]["SupplierInvoice"]) && Conversions.ToBoolean((int)dt.Rows[0]["SupplierInvoice"] > 0))
                     {
                         oJobInstall.SIExists = true;
                     }
@@ -85,7 +85,6 @@ namespace FSM.Entity
                         Subby = oJobInstall.SubConPO;
                     }
 
-
                     // Actual Calcs
                     if (oJobInstall.SIExists == true)
                     {
@@ -98,7 +97,6 @@ namespace FSM.Entity
 
                     oJobInstall.SetActProfitMoney = oJobInstall.PaymentTaken - oJobInstall.actTotalCost;
                     oJobInstall.SetActProfitPerc = Math.Round(Conversions.ToDouble(oJobInstall.ActProfitMoney) / Conversions.ToDouble(Conversions.ToDouble(oJobInstall.PaymentTaken)), 4) * 100;
-
 
                     // Estimate calcs
                     oJobInstall.SetEstTotalCost = oJobInstall.EstPartCost + oJobInstall.EstLabourCost + oJobInstall.EstElecCost;
@@ -161,7 +159,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@EstSubCon", oJobInstall.SubConEst, true);
                 }
             }
-
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         }

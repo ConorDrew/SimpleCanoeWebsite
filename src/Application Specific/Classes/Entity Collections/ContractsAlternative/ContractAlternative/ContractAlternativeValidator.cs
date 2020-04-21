@@ -12,12 +12,10 @@ namespace FSM.Entity
         {
             public void Validate(ContractAlternative oContract)
             {
-
                 // make sure that contact object is valid
                 if (oContract.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oContract.Errors)
+                    foreach (DictionaryEntry de in oContract.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -29,9 +27,6 @@ namespace FSM.Entity
                 {
                     // DEAL WITH FORMATTING
                     string fmtStr = "* Contract Reference must be of the format :" + Constants.vbCrLf + " ALPHA/NUMERIC " + Constants.vbCrLf + " NUMERIC/ALPHA " + Constants.vbCrLf + " ALPHA/NUMERIC/ALPHA " + Constants.vbCrLf + " or a standard alphanumeric with no /( forward slash)";
-
-
-
 
                     if ((Strings.Left(oContract.ContractReference, 1) ?? "") == "/" | (Strings.Right(oContract.ContractReference, 1) ?? "") == "/")
                     {
@@ -47,7 +42,7 @@ namespace FSM.Entity
                         // do nothing
                         else if (spArr.Length == 2)
                         {
-                            // MUST BE NUMBER / CHAR 
+                            // MUST BE NUMBER / CHAR
                             if (Information.IsNumeric(spArr(0)))
                             {
                                 if (Information.IsNumeric(spArr(1)))
@@ -55,7 +50,7 @@ namespace FSM.Entity
                                     AddCriticalMessage(fmtStr);
                                 }
                             }
-                            // OR 
+                            // OR
                             // MUST BE CHAR / NUMBER
                             else if (!Information.IsNumeric(spArr(1)))
                             {

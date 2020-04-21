@@ -18,6 +18,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public ContractOriginal Get(int ContractID)
             {
                 _database.ClearParameter();
@@ -388,7 +389,7 @@ namespace FSM.Entity
                                 i["InvoiceNumber"] = dt.Rows[0]["InvoiceNumber"];
                             }
                         }
-                        else if (Conversions.ToBoolean((PayType ?? "") == "TRANS" | (PayType ?? "") == "AMEND" | (PayType ?? "") == "RENEWAL" & (Operators.ConditionalCompareObjectEqual(i["InvoiceFrequencyID"], Enums.InvoiceFrequency.AnnuallyDD, false) | Operators.ConditionalCompareObjectEqual(i["InvoiceFrequencyID"], Enums.InvoiceFrequency.Monthly, false)) | Operators.ConditionalCompareObjectEqual(i["installments"] % 12, 0, false) & !Operators.ConditionalCompareObjectEqual(i["installments"], 0, false)))
+                        else if (Conversions.ToBoolean((PayType ?? "") == "TRANS" | (PayType ?? "") == "AMEND" | (PayType ?? "") == "RENEWAL" & (Operators.ConditionalCompareObjectEqual(i["InvoiceFrequencyID"], Enums.InvoiceFrequency.AnnuallyDD, false) | Operators.ConditionalCompareObjectEqual(i["InvoiceFrequencyID"], Enums.InvoiceFrequency.Monthly, false)) | Operators.ConditionalCompareObjectEqual((Double)i["installments"] % 12, 0, false) & !Operators.ConditionalCompareObjectEqual(i["installments"], 0, false)))
                         {
                         }
                         // DONT RAISE A FUCKING INVOICE
@@ -412,7 +413,7 @@ namespace FSM.Entity
                                 var invLines = new InvoicedLiness.InvoicedLines();
                                 if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(i["InvoiceFrequencyID"], Enums.InvoiceFrequency.Monthly, false)))
                                 {
-                                    invLines.SetAmount = i["FirstAmount"] / 1.2;
+                                    invLines.SetAmount = (Double)i["FirstAmount"] / 1.2;
                                 }
                                 else
                                 {

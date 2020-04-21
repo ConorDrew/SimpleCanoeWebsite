@@ -22,6 +22,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public void Delete(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -264,7 +265,6 @@ namespace FSM.Entity
                     foreach (DataRow rowallocated in dtOrder.Select("ID IS NULL OR ID = 0"))
                         App.DB.EngineerVisitPartProductAllocated.InsertOne(oEngineerVisit.EngineerVisitID, Conversions.ToString(rowallocated["Type"]), Conversions.ToInteger(rowallocated["Quantity"]), Conversions.ToInteger(rowallocated["OrderItemID"]), Conversions.ToInteger(rowallocated["PartProductID"]), Helper.MakeIntegerValid(rowallocated["OrderLocationTypeID"]));
                     // Next
-
                 }
 
                 return oEngineerVisit;
@@ -313,7 +313,6 @@ namespace FSM.Entity
                 oEngineerVisit.PartsAndProductsAllocated = App.DB.EngineerVisitPartProductAllocated.EngineerVisitPartAndProductsAllocated_GetAll_For_Engineer_Visit(oEngineerVisit.EngineerVisitID, trans);
                 if (oEngineerVisit.Change == true)
                 {
-
                     // add audit
                     var jA = new JobAudits.JobAudit();
                     jA.SetJobID = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(oEngineerVisit.EngineerVisitID, trans).JobID;
@@ -1163,7 +1162,7 @@ namespace FSM.Entity
                                     bool visitsComplete = true;
                                     foreach (DataRow rowVisit in dvVisits.Table.Rows)
                                     {
-                                        if (Conversions.ToBoolean(rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
+                                        if (Conversions.ToBoolean((int)rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
                                         {
                                             visitsComplete = false;
                                         }
@@ -1215,7 +1214,7 @@ namespace FSM.Entity
                                     bool visitsComplete = true;
                                     foreach (DataRow rowVisit in dvVisits.Table.Rows)
                                     {
-                                        if (Conversions.ToBoolean(rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
+                                        if (Conversions.ToBoolean((int)rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
                                         {
                                             visitsComplete = false;
                                         }
@@ -1256,7 +1255,7 @@ namespace FSM.Entity
                         bool visitsComplete = true;
                         foreach (DataRow rowVisit in dvVisits.Table.Rows)
                         {
-                            if (Conversions.ToBoolean(rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
+                            if (Conversions.ToBoolean((int)rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
                             {
                                 visitsComplete = false;
                             }
@@ -1273,7 +1272,7 @@ namespace FSM.Entity
                         bool visitsComplete = true;
                         foreach (DataRow rowVisit in dvVisits.Table.Rows)
                         {
-                            if (Conversions.ToBoolean(rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
+                            if (Conversions.ToBoolean((int)rowVisit["StatusEnumID"] < Conversions.ToInteger(Enums.VisitStatus.Uploaded)))
                             {
                                 visitsComplete = false;
                             }
@@ -1459,7 +1458,7 @@ namespace FSM.Entity
                             App.DB.PartsToBeCredited.Insert(CurrentPartsToBeCredited);
                         }
 
-                        if (Conversions.ToBoolean(row["LocationID"] > 0 & row["StockTransactionType"] > 0))
+                        if (Conversions.ToBoolean((int)row["LocationID"] > 0 & (int)row["StockTransactionType"] > 0))
                         {
                             var switchExpr1 = Helper.MakeStringValid(row["Type"]);
                             switch (switchExpr1)
@@ -1472,7 +1471,7 @@ namespace FSM.Entity
                                         oPartTransaction.SetOrderPartID = row["OrderPartProductID"];
                                         if (Conversions.ToInteger(row["StockTransactionType"]) == Conversions.ToInteger(Enums.Transaction.StockOut))
                                         {
-                                            oPartTransaction.SetAmount = row["Quantity"] * -1;
+                                            oPartTransaction.SetAmount = (int)row["Quantity"] * -1;
                                         }
                                         else
                                         {
@@ -1492,7 +1491,7 @@ namespace FSM.Entity
                                         oProductTransaction.SetOrderProductID = row["OrderPartProductID"];
                                         if (Conversions.ToInteger(row["StockTransactionType"]) == Conversions.ToInteger(Enums.Transaction.StockOut))
                                         {
-                                            oProductTransaction.SetAmount = row["Quantity"] * -1;
+                                            oProductTransaction.SetAmount = (int)row["Quantity"] * -1;
                                         }
                                         else
                                         {
@@ -1793,6 +1792,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
             public List<EngineerVisit> Get_ByJobId(int jobId)
             {
                 _database.ClearParameter();

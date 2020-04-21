@@ -18,6 +18,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public DataView Order_CheckReference(string OrderRef)
             {
                 _database.ClearParameter();
@@ -593,6 +594,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
             public void ReallocateReceivedStock(int LocationID, int StockTransactionType, string Type, int PartProductID, int Quantity, int OrderPartProductID)
             {
                 if (LocationID > 0 & StockTransactionType > 0)
@@ -671,7 +673,7 @@ namespace FSM.Entity
                         App.DB.PartsToBeCredited.Insert(CurrentPartsToBeCredited);
                     }
 
-                    if (Conversions.ToBoolean(row["LocationID"] > 0 & row["StockTransactionType"] > 0))
+                    if (Conversions.ToBoolean((int)row["LocationID"] > 0 & (int)row["StockTransactionType"] > 0))
                     {
                         var oPartTransaction = new PartTransactions.PartTransaction();
                         oPartTransaction.SetLocationID = row["LocationID"];
@@ -679,7 +681,7 @@ namespace FSM.Entity
                         oPartTransaction.SetOrderPartID = row["OrderPartProductID"];
                         if (Conversions.ToInteger(row["StockTransactionType"]) == Conversions.ToInteger(Sys.Enums.Transaction.StockOut))
                         {
-                            oPartTransaction.SetAmount = row["Quantity"] * -1;
+                            oPartTransaction.SetAmount = (int)row["Quantity"] * -1;
                         }
                         else
                         {

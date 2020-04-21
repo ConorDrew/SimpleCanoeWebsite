@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(QuoteContractAlternativeSiteJobItems oQuoteContractAlternativeSiteJobItems)
             {
-
                 // make sure that contact object is valid
                 if (oQuoteContractAlternativeSiteJobItems.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oQuoteContractAlternativeSiteJobItems.Errors)
+                    foreach (DictionaryEntry de in oQuoteContractAlternativeSiteJobItems.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

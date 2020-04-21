@@ -66,7 +66,7 @@ namespace FSM.Entity
             public string EntryDate { get; set; } = null;
             public string JournalType { get; set; } = null;
             public double TransactionAmount { get; set; } = default;
-            public int TransactionAmountDecimalPlaces { get; set; } = "2";
+            public int TransactionAmountDecimalPlaces { get; set; } = default;
             public string TransactionDate { get; set; } = null;
             public string TransactionReference { get; set; } = null;
 

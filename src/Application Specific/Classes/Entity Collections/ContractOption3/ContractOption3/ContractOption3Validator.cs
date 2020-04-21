@@ -12,12 +12,10 @@ namespace FSM.Entity
         {
             public void Validate(ContractOption3 oContractOption3)
             {
-
                 // make sure that contact object is valid
                 if (oContractOption3.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oContractOption3.Errors)
+                    foreach (DictionaryEntry de in oContractOption3.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
@@ -30,34 +28,30 @@ namespace FSM.Entity
                     // DEAL WITH FORMATTING
                     string fmtStr = "* Contract Reference must be of the format :" + Constants.vbCrLf + " ALPHA/NUMERIC " + Constants.vbCrLf + " NUMERIC/ALPHA " + Constants.vbCrLf + " ALPHA/NUMERIC/ALPHA " + Constants.vbCrLf + " or a standard alphanumeric with no /( forward slash)";
 
-
-
-
                     if ((Strings.Left(oContractOption3.ContractReference, 1) ?? "") == "/" | (Strings.Right(oContractOption3.ContractReference, 1) ?? "") == "/")
                     {
                         AddCriticalMessage(fmtStr);
                     }
                     else
                     {
-                        Array spArr;
-                        spArr = oContractOption3.ContractReference.Split('/');
+                        String[] spArr = oContractOption3.ContractReference.Split('/');
                         if (spArr.Length == 1)
                         {
                         }
                         // do nothing
                         else if (spArr.Length == 2)
                         {
-                            // MUST BE NUMBER / CHAR 
-                            if (Information.IsNumeric(spArr(0)))
+                            // MUST BE NUMBER / CHAR
+                            if (Information.IsNumeric(spArr[0]))
                             {
-                                if (Information.IsNumeric(spArr(1)))
+                                if (Information.IsNumeric(spArr[1]))
                                 {
                                     AddCriticalMessage(fmtStr);
                                 }
                             }
-                            // OR 
+                            // OR
                             // MUST BE CHAR / NUMBER
-                            else if (!Information.IsNumeric(spArr(1)))
+                            else if (!Information.IsNumeric(spArr[1]))
                             {
                                 AddCriticalMessage(fmtStr);
                             }
@@ -65,11 +59,11 @@ namespace FSM.Entity
                         else if (spArr.Length == 3)
                         {
                             // MUST BE CHAR / NUMBER /CHAR
-                            if (!Information.IsNumeric(spArr(0)))
+                            if (!Information.IsNumeric(spArr[0]))
                             {
-                                if (Information.IsNumeric(spArr(1)))
+                                if (Information.IsNumeric(spArr[1]))
                                 {
-                                    if (Information.IsNumeric(spArr(2)))
+                                    if (Information.IsNumeric(spArr[2]))
                                     {
                                         AddCriticalMessage(fmtStr);
                                     }

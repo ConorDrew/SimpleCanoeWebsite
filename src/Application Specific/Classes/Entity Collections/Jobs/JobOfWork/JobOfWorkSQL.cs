@@ -21,6 +21,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public void Delete(int JobOfWorkID)
             {
                 _database.ClearParameter();
@@ -66,13 +67,13 @@ namespace FSM.Entity
                 foreach (JobItems.JobItem jobItem in oJobOfWork.JobItems)
                 {
                     jobItem.SetJobOfWorkID = oJobOfWork.JobOfWorkID;
-                    jobItem = _database.JobItems.Insert(jobItem, trans);
+                    _database.JobItems.Insert(jobItem, trans);
                 }
 
                 foreach (EngineerVisits.EngineerVisit engineerVisit in oJobOfWork.EngineerVisits)
                 {
                     engineerVisit.SetJobOfWorkID = oJobOfWork.JobOfWorkID;
-                    engineerVisit = _database.EngineerVisits.Insert(engineerVisit, oJobOfWork.JobID, trans);
+                    _database.EngineerVisits.Insert(engineerVisit, oJobOfWork.JobID, trans);
                 }
 
                 return oJobOfWork;
@@ -101,13 +102,13 @@ namespace FSM.Entity
                 foreach (JobItems.JobItem jobItem in oJobOfWork.JobItems)
                 {
                     jobItem.SetJobOfWorkID = oJobOfWork.JobOfWorkID;
-                    jobItem = _database.JobItems.Insert(jobItem);
+                    _database.JobItems.Insert(jobItem);
                 }
 
                 foreach (EngineerVisits.EngineerVisit engineerVisit in oJobOfWork.EngineerVisits)
                 {
                     engineerVisit.SetJobOfWorkID = oJobOfWork.JobOfWorkID;
-                    engineerVisit = _database.EngineerVisits.Insert(engineerVisit, oJobOfWork.JobID);
+                    _database.EngineerVisits.Insert(engineerVisit, oJobOfWork.JobID);
                 }
 
                 return oJobOfWork;

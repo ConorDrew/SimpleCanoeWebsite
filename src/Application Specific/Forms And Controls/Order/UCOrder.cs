@@ -9698,7 +9698,7 @@ namespace FSM
         public int GetCostCentre(Job job, Site site)
         {
             var cc = App.DB.CostCentre.Get((int)job?.JobTypeID, (int)site?.CustomerID, Entity.CostCentres.Enums.GetBy.JobTypeIdAndCutomerId)?.FirstOrDefault();
-            return cc is object ? cc.CostCentre : -1;
+            return cc is object ? cc.CostCentreId : -1;
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

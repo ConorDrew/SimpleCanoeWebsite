@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(PartSupplierPriceRequest oPartSupplierPriceRequest)
             {
-
                 // make sure that contact object is valid
                 if (oPartSupplierPriceRequest.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oPartSupplierPriceRequest.Errors)
+                    foreach (DictionaryEntry de in oPartSupplierPriceRequest.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 
