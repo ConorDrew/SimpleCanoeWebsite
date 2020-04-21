@@ -1523,36 +1523,36 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_picPostalRegions).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_picRegion).BeginInit();
             SuspendLayout();
-            // 
+            //
             // splitForm
-            // 
+            //
             _splitForm.Dock = DockStyle.Right;
             _splitForm.Location = new Point(545, 0);
             _splitForm.Name = "splitForm";
             _splitForm.Size = new Size(3, 536);
             _splitForm.TabIndex = 1;
             _splitForm.TabStop = false;
-            // 
+            //
             // mnuVisitAction
-            // 
+            //
             _mnuVisitAction.MenuItems.AddRange(new MenuItem[] { _mnuView });
-            // 
+            //
             // mnuView
-            // 
+            //
             _mnuView.Index = 0;
             _mnuView.Text = "&View";
-            // 
+            //
             // pnlHeader
-            // 
+            //
             _pnlHeader.BackColor = Color.SteelBlue;
             _pnlHeader.Controls.Add(_lblTitle);
             _pnlHeader.Location = new Point(0, 0);
             _pnlHeader.Name = "pnlHeader";
             _pnlHeader.Size = new Size(205, 20);
             _pnlHeader.TabIndex = 6;
-            // 
+            //
             // lblTitle
-            // 
+            //
             _lblTitle.Dock = DockStyle.Fill;
             _lblTitle.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblTitle.ForeColor = Color.White;
@@ -1562,9 +1562,9 @@ namespace FSM
             _lblTitle.TabIndex = 0;
             _lblTitle.Text = "Unscheduled Calls";
             _lblTitle.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // pnlControls
-            // 
+            //
             _pnlControls.Controls.Add(_pnlTop);
             _pnlControls.Controls.Add(_pnlHeader);
             _pnlControls.Dock = DockStyle.Fill;
@@ -1572,9 +1572,9 @@ namespace FSM
             _pnlControls.Name = "pnlControls";
             _pnlControls.Size = new Size(545, 536);
             _pnlControls.TabIndex = 0;
-            // 
+            //
             // pnlTop
-            // 
+            //
             _pnlTop.Controls.Add(_dgCalls);
             _pnlTop.Controls.Add(_GroupBox1);
             _pnlTop.Controls.Add(_pnlLegend);
@@ -1584,9 +1584,9 @@ namespace FSM
             _pnlTop.Padding = new Padding(0, 0, 0, 5);
             _pnlTop.Size = new Size(545, 536);
             _pnlTop.TabIndex = 12;
-            // 
+            //
             // dgCalls
-            // 
+            //
             _dgCalls.AllowDrop = true;
             _dgCalls.CaptionText = "Holding Area";
             _dgCalls.ContextMenu = _mnuVisitAction;
@@ -1597,9 +1597,9 @@ namespace FSM
             _dgCalls.Name = "dgCalls";
             _dgCalls.Size = new Size(545, 175);
             _dgCalls.TabIndex = 1;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.BackColor = Color.White;
             _GroupBox1.Controls.Add(_chkViewAll);
             _GroupBox1.Controls.Add(_lblQualification);
@@ -1636,27 +1636,27 @@ namespace FSM
             _GroupBox1.TabIndex = 25;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Filters";
-            // 
+            //
             // lblQualification
-            // 
+            //
             _lblQualification.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblQualification.Location = new Point(216, 140);
             _lblQualification.Name = "lblQualification";
             _lblQualification.Size = new Size(81, 18);
             _lblQualification.TabIndex = 42;
             _lblQualification.Text = "Qualification";
-            // 
+            //
             // cboQualification
-            // 
+            //
             _cboQualification.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboQualification.FormattingEnabled = true;
             _cboQualification.Location = new Point(321, 137);
             _cboQualification.Name = "cboQualification";
             _cboQualification.Size = new Size(214, 21);
             _cboQualification.TabIndex = 41;
-            // 
+            //
             // chkWaitingParts
-            // 
+            //
             _chkWaitingParts.Location = new Point(280, 202);
             _chkWaitingParts.Name = "chkWaitingParts";
             _chkWaitingParts.RightToLeft = RightToLeft.No;
@@ -1664,9 +1664,9 @@ namespace FSM
             _chkWaitingParts.TabIndex = 40;
             _chkWaitingParts.Text = "Include Waiting For Parts";
             _chkWaitingParts.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkPNO
-            // 
+            //
             _chkPNO.Location = new Point(280, 180);
             _chkPNO.Name = "chkPNO";
             _chkPNO.RightToLeft = RightToLeft.No;
@@ -1674,60 +1674,60 @@ namespace FSM
             _chkPNO.TabIndex = 39;
             _chkPNO.Text = "Include Parts Need Ordering";
             _chkPNO.UseVisualStyleBackColor = true;
-            // 
+            //
             // TextBox1
-            // 
+            //
             _TextBox1.Location = new Point(321, 110);
             _TextBox1.Name = "TextBox1";
             _TextBox1.Size = new Size(214, 21);
             _TextBox1.TabIndex = 37;
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label10.Location = new Point(217, 114);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(80, 16);
             _Label10.TabIndex = 38;
             _Label10.Text = "Summary";
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label9.Location = new Point(216, 88);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(58, 16);
             _Label9.TabIndex = 36;
             _Label9.Text = "Region";
-            // 
+            //
             // cboRegion
-            // 
+            //
             _cboRegion.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboRegion.FormattingEnabled = true;
             _cboRegion.Location = new Point(321, 85);
             _cboRegion.Name = "cboRegion";
             _cboRegion.Size = new Size(214, 21);
             _cboRegion.TabIndex = 35;
-            // 
+            //
             // Label18
-            // 
+            //
             _Label18.AutoSize = true;
             _Label18.Location = new Point(218, 63);
             _Label18.Name = "Label18";
             _Label18.Size = new Size(56, 13);
             _Label18.TabIndex = 34;
             _Label18.Text = "Site Fuel";
-            // 
+            //
             // cboSiteFuel
-            // 
+            //
             _cboSiteFuel.FormattingEnabled = true;
             _cboSiteFuel.Location = new Point(321, 60);
             _cboSiteFuel.Name = "cboSiteFuel";
             _cboSiteFuel.Size = new Size(214, 21);
             _cboSiteFuel.TabIndex = 33;
-            // 
+            //
             // chkDeclined
-            // 
+            //
             _chkDeclined.Location = new Point(6, 201);
             _chkDeclined.Name = "chkDeclined";
             _chkDeclined.RightToLeft = RightToLeft.No;
@@ -1735,9 +1735,9 @@ namespace FSM
             _chkDeclined.TabIndex = 31;
             _chkDeclined.Text = "Only Declined jobs - Red Highlight";
             _chkDeclined.UseVisualStyleBackColor = true;
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dtpTo.CustomFormat = "dd/MM/yyyy";
             _dtpTo.Format = DateTimePickerFormat.Custom;
@@ -1745,9 +1745,9 @@ namespace FSM
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(136, 21);
             _dtpTo.TabIndex = 30;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dtpFrom.CustomFormat = "dd/MM/yyyy";
             _dtpFrom.Format = DateTimePickerFormat.Custom;
@@ -1755,27 +1755,27 @@ namespace FSM
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(136, 21);
             _dtpFrom.TabIndex = 29;
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.AutoSize = true;
             _Label17.Location = new Point(357, 38);
             _Label17.Name = "Label17";
             _Label17.Size = new Size(20, 13);
             _Label17.TabIndex = 28;
             _Label17.Text = "To";
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.AutoSize = true;
             _Label16.Location = new Point(357, 14);
             _Label16.Name = "Label16";
             _Label16.Size = new Size(36, 13);
             _Label16.TabIndex = 27;
             _Label16.Text = "From";
-            // 
+            //
             // chkEstimatedVisitDate
-            // 
+            //
             _chkEstimatedVisitDate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _chkEstimatedVisitDate.Location = new Point(221, 16);
             _chkEstimatedVisitDate.Name = "chkEstimatedVisitDate";
@@ -1783,9 +1783,9 @@ namespace FSM
             _chkEstimatedVisitDate.TabIndex = 26;
             _chkEstimatedVisitDate.Text = "Estimated Visit Date";
             _chkEstimatedVisitDate.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkHasPartsToFit
-            // 
+            //
             _chkHasPartsToFit.Location = new Point(6, 180);
             _chkHasPartsToFit.Name = "chkHasPartsToFit";
             _chkHasPartsToFit.RightToLeft = RightToLeft.No;
@@ -1793,91 +1793,91 @@ namespace FSM
             _chkHasPartsToFit.TabIndex = 6;
             _chkHasPartsToFit.Text = "Only parts to fit jobs - Orange Highlight";
             _chkHasPartsToFit.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.FormattingEnabled = true;
             _cboType.Location = new Point(111, 110);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(94, 21);
             _cboType.TabIndex = 5;
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label15.Location = new Point(7, 114);
             _Label15.Name = "Label15";
             _Label15.Size = new Size(80, 16);
             _Label15.TabIndex = 25;
             _Label15.Text = "Job Type";
-            // 
+            //
             // txtSearchAddress1
-            // 
+            //
             _txtSearchAddress1.Location = new Point(111, 86);
             _txtSearchAddress1.Name = "txtSearchAddress1";
             _txtSearchAddress1.Size = new Size(94, 21);
             _txtSearchAddress1.TabIndex = 4;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label4.Location = new Point(7, 90);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(80, 16);
             _Label4.TabIndex = 24;
             _Label4.Text = "Address 1";
-            // 
+            //
             // txtSearchPostcode
-            // 
+            //
             _txtSearchPostcode.Location = new Point(111, 62);
             _txtSearchPostcode.Name = "txtSearchPostcode";
             _txtSearchPostcode.Size = new Size(94, 21);
             _txtSearchPostcode.TabIndex = 3;
-            // 
+            //
             // txtSearchCustomerName
-            // 
+            //
             _txtSearchCustomerName.Location = new Point(111, 38);
             _txtSearchCustomerName.Name = "txtSearchCustomerName";
             _txtSearchCustomerName.Size = new Size(94, 21);
             _txtSearchCustomerName.TabIndex = 2;
-            // 
+            //
             // txtSearchJobNo
-            // 
+            //
             _txtSearchJobNo.Location = new Point(111, 15);
             _txtSearchJobNo.Name = "txtSearchJobNo";
             _txtSearchJobNo.Size = new Size(94, 21);
             _txtSearchJobNo.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(7, 66);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(72, 21);
             _Label1.TabIndex = 22;
             _Label1.Text = "Postcode";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label3.Location = new Point(7, 17);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(64, 16);
             _Label3.TabIndex = 20;
             _Label3.Text = "Job No";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label2.Location = new Point(7, 40);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(104, 21);
             _Label2.TabIndex = 19;
             _Label2.Text = "Customer Name";
-            // 
+            //
             // pnlLegend
-            // 
+            //
             _pnlLegend.BackColor = Color.White;
             _pnlLegend.Controls.Add(_Label20);
             _pnlLegend.Controls.Add(_Panel7);
@@ -1903,9 +1903,9 @@ namespace FSM
             _pnlLegend.Name = "pnlLegend";
             _pnlLegend.Size = new Size(545, 127);
             _pnlLegend.TabIndex = 24;
-            // 
+            //
             // Label20
-            // 
+            //
             _Label20.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label20.Font = new Font("Verdana", 8.0F);
             _Label20.Location = new Point(328, 103);
@@ -1913,27 +1913,27 @@ namespace FSM
             _Label20.Size = new Size(192, 16);
             _Label20.TabIndex = 23;
             _Label20.Text = "Service overdue on site";
-            // 
+            //
             // Panel7
-            // 
+            //
             _Panel7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel7.BackColor = Color.Orange;
             _Panel7.Location = new Point(304, 101);
             _Panel7.Name = "Panel7";
             _Panel7.Size = new Size(16, 16);
             _Panel7.TabIndex = 22;
-            // 
+            //
             // Panel6
-            // 
+            //
             _Panel6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel6.BackColor = Color.Red;
             _Panel6.Location = new Point(8, 101);
             _Panel6.Name = "Panel6";
             _Panel6.Size = new Size(16, 16);
             _Panel6.TabIndex = 21;
-            // 
+            //
             // Label19
-            // 
+            //
             _Label19.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label19.Font = new Font("Verdana", 8.0F);
             _Label19.Location = new Point(32, 101);
@@ -1941,9 +1941,9 @@ namespace FSM
             _Label19.Size = new Size(192, 16);
             _Label19.TabIndex = 22;
             _Label19.Text = "Visit is extremely late";
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label14.Font = new Font("Verdana", 8.0F);
             _Label14.Location = new Point(328, 85);
@@ -1951,9 +1951,9 @@ namespace FSM
             _Label14.Size = new Size(192, 16);
             _Label14.TabIndex = 18;
             _Label14.Text = "Qualification check passed";
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label13.Font = new Font("Verdana", 8.0F);
             _Label13.Location = new Point(328, 69);
@@ -1961,9 +1961,9 @@ namespace FSM
             _Label13.Size = new Size(216, 16);
             _Label13.TabIndex = 17;
             _Label13.Text = "Postal region check passed";
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _Label12.Font = new Font("Verdana", 8.0F);
             _Label12.Location = new Point(328, 53);
@@ -1971,9 +1971,9 @@ namespace FSM
             _Label12.Size = new Size(192, 16);
             _Label12.TabIndex = 16;
             _Label12.Text = "Region check passed";
-            // 
+            //
             // picLevels
-            // 
+            //
             _picLevels.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _picLevels.BackColor = Color.Transparent;
             _picLevels.Image = (Image)resources.GetObject("picLevels.Image");
@@ -1983,9 +1983,9 @@ namespace FSM
             _picLevels.SizeMode = PictureBoxSizeMode.StretchImage;
             _picLevels.TabIndex = 14;
             _picLevels.TabStop = false;
-            // 
+            //
             // picPostalRegions
-            // 
+            //
             _picPostalRegions.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _picPostalRegions.BackColor = Color.Transparent;
             _picPostalRegions.Image = (Image)resources.GetObject("picPostalRegions.Image");
@@ -1995,9 +1995,9 @@ namespace FSM
             _picPostalRegions.SizeMode = PictureBoxSizeMode.StretchImage;
             _picPostalRegions.TabIndex = 13;
             _picPostalRegions.TabStop = false;
-            // 
+            //
             // picRegion
-            // 
+            //
             _picRegion.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _picRegion.BackColor = Color.Transparent;
             _picRegion.Image = (Image)resources.GetObject("picRegion.Image");
@@ -2007,9 +2007,9 @@ namespace FSM
             _picRegion.SizeMode = PictureBoxSizeMode.StretchImage;
             _picRegion.TabIndex = 12;
             _picRegion.TabStop = false;
-            // 
+            //
             // lblOverdue
-            // 
+            //
             _lblOverdue.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _lblOverdue.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblOverdue.ForeColor = Color.Black;
@@ -2019,9 +2019,9 @@ namespace FSM
             _lblOverdue.TabIndex = 11;
             _lblOverdue.Text = "There are no contract jobs overdue.";
             _lblOverdue.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label7.Font = new Font("Verdana", 8.0F);
             _Label7.Location = new Point(32, 85);
@@ -2029,9 +2029,9 @@ namespace FSM
             _Label7.Size = new Size(192, 16);
             _Label7.TabIndex = 7;
             _Label7.Text = "Booked Schedule Period";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label8.Font = new Font("Verdana", 8.0F);
             _Label8.Location = new Point(32, 69);
@@ -2039,27 +2039,27 @@ namespace FSM
             _Label8.Size = new Size(192, 16);
             _Label8.TabIndex = 6;
             _Label8.Text = "Free Schedule Period";
-            // 
+            //
             // Panel3
-            // 
+            //
             _Panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel3.BackColor = Color.LightSteelBlue;
             _Panel3.Location = new Point(8, 85);
             _Panel3.Name = "Panel3";
             _Panel3.Size = new Size(16, 16);
             _Panel3.TabIndex = 5;
-            // 
+            //
             // Panel4
-            // 
+            //
             _Panel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel4.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
             _Panel4.Location = new Point(8, 69);
             _Panel4.Name = "Panel4";
             _Panel4.Size = new Size(16, 16);
             _Panel4.TabIndex = 4;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label6.Font = new Font("Verdana", 8.0F);
             _Label6.Location = new Point(32, 53);
@@ -2067,9 +2067,9 @@ namespace FSM
             _Label6.Size = new Size(192, 16);
             _Label6.TabIndex = 3;
             _Label6.Text = "Some job tests failed";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Label5.Font = new Font("Verdana", 8.0F);
             _Label5.Location = new Point(32, 37);
@@ -2077,27 +2077,27 @@ namespace FSM
             _Label5.Size = new Size(192, 16);
             _Label5.TabIndex = 2;
             _Label5.Text = "All job tests passed";
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel2.BackColor = Color.Coral;
             _Panel2.Location = new Point(8, 53);
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(16, 16);
             _Panel2.TabIndex = 1;
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _Panel1.BackColor = Color.LightGreen;
             _Panel1.Location = new Point(8, 37);
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(16, 16);
             _Panel1.TabIndex = 0;
-            // 
+            //
             // chkViewAll
-            // 
+            //
             _chkViewAll.AutoCheck = false;
             _chkViewAll.Location = new Point(10, 140);
             _chkViewAll.Name = "chkViewAll";
@@ -2106,9 +2106,9 @@ namespace FSM
             _chkViewAll.TabIndex = 43;
             _chkViewAll.Text = "View All Visits";
             _chkViewAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // pnlUnscheduledCalls
-            // 
+            //
             BackColor = Color.WhiteSmoke;
             Controls.Add(_pnlControls);
             Controls.Add(_splitForm);

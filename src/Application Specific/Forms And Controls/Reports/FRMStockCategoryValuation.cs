@@ -11,11 +11,10 @@ namespace FSM
 {
     public class FRMStockCategoryValuation : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMStockCategoryValuation() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMStockCategoryValuation_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpParts;
 
@@ -137,9 +135,9 @@ namespace FSM
             _grpParts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgParts).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpParts
-            // 
+            //
             _grpParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpParts.Controls.Add(_dgParts);
@@ -149,9 +147,9 @@ namespace FSM
             _grpParts.TabIndex = 2;
             _grpParts.TabStop = false;
             _grpParts.Text = "Category replacement costs based on supplier (Click to drill down to parts)";
-            // 
+            //
             // dgParts
-            // 
+            //
             _dgParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgParts.DataMember = "";
@@ -160,9 +158,9 @@ namespace FSM
             _dgParts.Name = "dgParts";
             _dgParts.Size = new Size(494, 233);
             _dgParts.TabIndex = 14;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 306);
@@ -170,9 +168,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 3;
             _btnExport.Text = "Export";
-            // 
+            //
             // FRMStockCategoryValuation
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(526, 336);
             Controls.Add(_btnExport);
@@ -190,7 +188,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             Type = Entity.Sys.Enums.TableNames.tblPickLists;
@@ -204,7 +203,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -297,6 +296,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             var tbStyle = dgParts.TableStyles[0];
@@ -505,6 +505,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Export()
         {
             var exportData = new DataTable();

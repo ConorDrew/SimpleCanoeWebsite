@@ -13,8 +13,8 @@ namespace FSM
 {
     public class FrmDisplayEngineers : FRMBaseForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FrmDisplayEngineers() : base()
         {
             base.Load += FrmDisplayEngineers_Load;
@@ -97,7 +97,6 @@ namespace FSM
             {
                 if (_dgEngineers != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _dgEngineers.Click -= dgEngineers_Click;
@@ -500,9 +499,9 @@ namespace FSM
             _grpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgEngineers).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpMain
-            // 
+            //
             _grpMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpMain.Controls.Add(_txtQualificationFilter);
@@ -527,34 +526,34 @@ namespace FSM
             _grpMain.TabIndex = 10;
             _grpMain.TabStop = false;
             _grpMain.Text = "Engineers to Display";
-            // 
+            //
             // txtQualificationFilter
-            // 
+            //
             _txtQualificationFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtQualificationFilter.Location = new Point(121, 93);
             _txtQualificationFilter.Name = "txtQualificationFilter";
             _txtQualificationFilter.Size = new Size(426, 20);
             _txtQualificationFilter.TabIndex = 5;
-            // 
+            //
             // lblQualification
-            // 
+            //
             _lblQualification.Location = new Point(9, 93);
             _lblQualification.Name = "lblQualification";
             _lblQualification.Size = new Size(93, 20);
             _lblQualification.TabIndex = 57;
             _lblQualification.Text = "Qualification";
-            // 
+            //
             // btnClearFilters
-            // 
+            //
             _btnClearFilters.Location = new Point(553, 93);
             _btnClearFilters.Name = "btnClearFilters";
             _btnClearFilters.Size = new Size(99, 23);
             _btnClearFilters.TabIndex = 6;
             _btnClearFilters.Text = "Clear Filters";
             _btnClearFilters.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboRegionID
-            // 
+            //
             _cboRegionID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboRegionID.Cursor = Cursors.Hand;
             _cboRegionID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -563,49 +562,49 @@ namespace FSM
             _cboRegionID.Size = new Size(188, 21);
             _cboRegionID.TabIndex = 3;
             _cboRegionID.Tag = "";
-            // 
+            //
             // lblRegion
-            // 
+            //
             _lblRegion.Location = new Point(9, 64);
             _lblRegion.Name = "lblRegion";
             _lblRegion.Size = new Size(105, 20);
             _lblRegion.TabIndex = 54;
             _lblRegion.Text = "Region";
-            // 
+            //
             // txtPostcodeFilter
-            // 
+            //
             _txtPostcodeFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcodeFilter.Location = new Point(433, 62);
             _txtPostcodeFilter.Name = "txtPostcodeFilter";
             _txtPostcodeFilter.Size = new Size(219, 20);
             _txtPostcodeFilter.TabIndex = 4;
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Location = new Point(327, 62);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(93, 20);
             _lblPostcode.TabIndex = 52;
             _lblPostcode.Text = "Postcode";
-            // 
+            //
             // txtNameFilter
-            // 
+            //
             _txtNameFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNameFilter.Location = new Point(433, 34);
             _txtNameFilter.Name = "txtNameFilter";
             _txtNameFilter.Size = new Size(219, 20);
             _txtNameFilter.TabIndex = 2;
-            // 
+            //
             // lblEngineerName
-            // 
+            //
             _lblEngineerName.Location = new Point(327, 34);
             _lblEngineerName.Name = "lblEngineerName";
             _lblEngineerName.Size = new Size(105, 20);
             _lblEngineerName.TabIndex = 48;
             _lblEngineerName.Text = "Engineer Name";
-            // 
+            //
             // cboEngineerGroup
-            // 
+            //
             _cboEngineerGroup.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboEngineerGroup.Cursor = Cursors.Hand;
             _cboEngineerGroup.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -614,17 +613,17 @@ namespace FSM
             _cboEngineerGroup.Size = new Size(188, 21);
             _cboEngineerGroup.TabIndex = 1;
             _cboEngineerGroup.Tag = "";
-            // 
+            //
             // Label24
-            // 
+            //
             _Label24.Location = new Point(9, 34);
             _Label24.Name = "Label24";
             _Label24.Size = new Size(105, 20);
             _Label24.TabIndex = 47;
             _Label24.Text = "Engineer Group";
-            // 
+            //
             // btnOk
-            // 
+            //
             _btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOk.Font = new Font("Verdana", 8.0F);
             _btnOk.Location = new Point(588, 495);
@@ -633,9 +632,9 @@ namespace FSM
             _btnOk.TabIndex = 9;
             _btnOk.Text = "Ok";
             _btnOk.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnClearAll
-            // 
+            //
             _btnClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClearAll.Font = new Font("Verdana", 8.0F);
             _btnClearAll.Location = new Point(80, 495);
@@ -644,9 +643,9 @@ namespace FSM
             _btnClearAll.TabIndex = 8;
             _btnClearAll.Text = "Clear All";
             _btnClearAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSelectAll.Font = new Font("Verdana", 8.0F);
             _btnSelectAll.Location = new Point(10, 495);
@@ -655,9 +654,9 @@ namespace FSM
             _btnSelectAll.TabIndex = 7;
             _btnSelectAll.Text = "Select All";
             _btnSelectAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgEngineers
-            // 
+            //
             _dgEngineers.DataMember = "";
             _dgEngineers.HeaderForeColor = SystemColors.ControlText;
             _dgEngineers.Location = new Point(10, 128);
@@ -665,9 +664,9 @@ namespace FSM
             _dgEngineers.Size = new Size(645, 353);
             _dgEngineers.TabIndex = 50;
             _dgEngineers.TabStop = false;
-            // 
+            //
             // FrmDisplayEngineers
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(672, 562);
             Controls.Add(_grpMain);
@@ -736,6 +735,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetUpDataGrid()
         {
             SuspendLayout();
@@ -892,6 +892,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Reset_filters()
         {
             txtPostcodeFilter.Text = "";

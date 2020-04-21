@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMSitePopup : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSitePopup() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             this.Load += FRMSitePopup_Load;
@@ -21,7 +20,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -40,6 +38,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private Button _btnSendEmailToSite;
 
         internal Button btnSendEmailToSite
@@ -603,27 +602,27 @@ namespace FSM
             _txtEmailAddress = new TextBox();
             _lblEmailAddress = new Label();
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(10, 290);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 25);
             _btnClose.TabIndex = 12;
             _btnClose.Text = "Close";
-            // 
+            //
             // btnSendEmailToSite
-            // 
+            //
             _btnSendEmailToSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSendEmailToSite.Location = new Point(541, 264);
             _btnSendEmailToSite.Name = "btnSendEmailToSite";
             _btnSendEmailToSite.Size = new Size(75, 23);
             _btnSendEmailToSite.TabIndex = 11;
             _btnSendEmailToSite.Text = "Email";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(105, 45);
             _txtName.MaxLength = 255;
@@ -632,17 +631,17 @@ namespace FSM
             _txtName.Size = new Size(511, 21);
             _txtName.TabIndex = 1;
             _txtName.Tag = "";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(7, 45);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(64, 20);
             _Label3.TabIndex = 23;
             _Label3.Text = "Name";
-            // 
+            //
             // txtAddress1
-            // 
+            //
             _txtAddress1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress1.Location = new Point(105, 69);
             _txtAddress1.MaxLength = 255;
@@ -651,17 +650,17 @@ namespace FSM
             _txtAddress1.Size = new Size(511, 21);
             _txtAddress1.TabIndex = 2;
             _txtAddress1.Tag = "Site.Address1";
-            // 
+            //
             // lblAddress1
-            // 
+            //
             _lblAddress1.Location = new Point(7, 69);
             _lblAddress1.Name = "lblAddress1";
             _lblAddress1.Size = new Size(67, 20);
             _lblAddress1.TabIndex = 26;
             _lblAddress1.Text = "Address 1";
-            // 
+            //
             // txtAddress2
-            // 
+            //
             _txtAddress2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress2.Location = new Point(105, 93);
             _txtAddress2.MaxLength = 255;
@@ -670,17 +669,17 @@ namespace FSM
             _txtAddress2.Size = new Size(511, 21);
             _txtAddress2.TabIndex = 3;
             _txtAddress2.Tag = "Site.Address2";
-            // 
+            //
             // lblAddress2
-            // 
+            //
             _lblAddress2.Location = new Point(7, 93);
             _lblAddress2.Name = "lblAddress2";
             _lblAddress2.Size = new Size(72, 20);
             _lblAddress2.TabIndex = 28;
             _lblAddress2.Text = "Address 2";
-            // 
+            //
             // txtAddress3
-            // 
+            //
             _txtAddress3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress3.Location = new Point(105, 117);
             _txtAddress3.MaxLength = 255;
@@ -689,17 +688,17 @@ namespace FSM
             _txtAddress3.Size = new Size(511, 21);
             _txtAddress3.TabIndex = 4;
             _txtAddress3.Tag = "Site.Address3";
-            // 
+            //
             // lblAddress3
-            // 
+            //
             _lblAddress3.Location = new Point(7, 117);
             _lblAddress3.Name = "lblAddress3";
             _lblAddress3.Size = new Size(64, 20);
             _lblAddress3.TabIndex = 32;
             _lblAddress3.Text = "Address 3";
-            // 
+            //
             // txtAddress4
-            // 
+            //
             _txtAddress4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress4.Location = new Point(105, 141);
             _txtAddress4.MaxLength = 100;
@@ -708,17 +707,17 @@ namespace FSM
             _txtAddress4.Size = new Size(511, 21);
             _txtAddress4.TabIndex = 5;
             _txtAddress4.Tag = "Site.Town";
-            // 
+            //
             // lblTown
-            // 
+            //
             _lblTown.Location = new Point(7, 141);
             _lblTown.Name = "lblTown";
             _lblTown.Size = new Size(67, 20);
             _lblTown.TabIndex = 35;
             _lblTown.Text = "Address 4";
-            // 
+            //
             // txtAddress5
-            // 
+            //
             _txtAddress5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress5.Location = new Point(105, 165);
             _txtAddress5.MaxLength = 100;
@@ -727,17 +726,17 @@ namespace FSM
             _txtAddress5.Size = new Size(511, 21);
             _txtAddress5.TabIndex = 6;
             _txtAddress5.Tag = "Site.County";
-            // 
+            //
             // lblCounty
-            // 
+            //
             _lblCounty.Location = new Point(7, 165);
             _lblCounty.Name = "lblCounty";
             _lblCounty.Size = new Size(64, 20);
             _lblCounty.TabIndex = 37;
             _lblCounty.Text = "Address 5";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcode.Location = new Point(105, 189);
             _txtPostcode.MaxLength = 10;
@@ -746,17 +745,17 @@ namespace FSM
             _txtPostcode.Size = new Size(511, 21);
             _txtPostcode.TabIndex = 7;
             _txtPostcode.Tag = "Site.Postcode";
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Location = new Point(7, 189);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(67, 20);
             _lblPostcode.TabIndex = 40;
             _lblPostcode.Text = "Postcode";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTelephoneNum.Location = new Point(105, 213);
             _txtTelephoneNum.MaxLength = 50;
@@ -765,17 +764,17 @@ namespace FSM
             _txtTelephoneNum.Size = new Size(511, 21);
             _txtTelephoneNum.TabIndex = 8;
             _txtTelephoneNum.Tag = "Site.TelephoneNum";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(7, 213);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(107, 20);
             _lblTelephoneNum.TabIndex = 41;
             _lblTelephoneNum.Text = "Tel";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFaxNum.Location = new Point(105, 237);
             _txtFaxNum.MaxLength = 50;
@@ -784,17 +783,17 @@ namespace FSM
             _txtFaxNum.Size = new Size(511, 21);
             _txtFaxNum.TabIndex = 9;
             _txtFaxNum.Tag = "Site.FaxNum";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(7, 237);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(72, 20);
             _lblFaxNum.TabIndex = 42;
             _lblFaxNum.Text = "Fax";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmailAddress.Location = new Point(105, 263);
             _txtEmailAddress.MaxLength = 100;
@@ -803,17 +802,17 @@ namespace FSM
             _txtEmailAddress.Size = new Size(430, 21);
             _txtEmailAddress.TabIndex = 10;
             _txtEmailAddress.Tag = "Site.EmailAddress";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(7, 261);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(99, 20);
             _lblEmailAddress.TabIndex = 43;
             _lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // frmCandidateAssessment
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(628, 327);
             Controls.Add(_btnSendEmailToSite);
@@ -871,7 +870,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             CurrentSite = App.DB.Sites.Get(Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0)));
         }
@@ -936,6 +936,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             Text = "Property : ID " + CurrentSite.SiteID;

@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCQuoteContractAlternative : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCQuoteContractAlternative() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCQuoteContract_Load;
@@ -496,9 +495,9 @@ namespace FSM
             _grpSites.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgSites).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpQuoteContract
-            // 
+            //
             _grpQuoteContract.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpQuoteContract.Controls.Add(_btnCalculatePrice);
@@ -522,18 +521,18 @@ namespace FSM
             _grpQuoteContract.TabIndex = 1;
             _grpQuoteContract.TabStop = false;
             _grpQuoteContract.Text = "Main Details";
-            // 
+            //
             // btnCalculatePrice
-            // 
+            //
             _btnCalculatePrice.UseVisualStyleBackColor = true;
             _btnCalculatePrice.Location = new Point(476, 104);
             _btnCalculatePrice.Name = "btnCalculatePrice";
             _btnCalculatePrice.Size = new Size(195, 23);
             _btnCalculatePrice.TabIndex = 7;
             _btnCalculatePrice.Text = "Calculate Price From Property Price";
-            // 
+            //
             // txtQuoteContractPrice
-            // 
+            //
             _txtQuoteContractPrice.Location = new Point(476, 76);
             _txtQuoteContractPrice.MaxLength = 9;
             _txtQuoteContractPrice.Name = "txtQuoteContractPrice";
@@ -541,17 +540,17 @@ namespace FSM
             _txtQuoteContractPrice.TabIndex = 6;
             _txtQuoteContractPrice.Tag = "Contract.ContractPrice";
             _txtQuoteContractPrice.Text = "";
-            // 
+            //
             // lblContractPrice
-            // 
+            //
             _lblContractPrice.Location = new Point(344, 76);
             _lblContractPrice.Name = "lblContractPrice";
             _lblContractPrice.Size = new Size(122, 21);
             _lblContractPrice.TabIndex = 51;
             _lblContractPrice.Text = "Total Contract Price";
-            // 
+            //
             // lblMsg
-            // 
+            //
             _lblMsg.BackColor = Color.LightGoldenrodYellow;
             _lblMsg.BorderStyle = BorderStyle.FixedSingle;
             _lblMsg.Location = new Point(16, 104);
@@ -560,9 +559,9 @@ namespace FSM
             _lblMsg.TabIndex = 35;
             _lblMsg.Text = "Please save before adding properties";
             _lblMsg.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+            //
             // grpSites
-            // 
+            //
             _grpSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSites.Controls.Add(_dgSites);
@@ -572,9 +571,9 @@ namespace FSM
             _grpSites.TabIndex = 34;
             _grpSites.TabStop = false;
             _grpSites.Text = "Properties";
-            // 
+            //
             // dgSites
-            // 
+            //
             _dgSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSites.DataMember = "";
@@ -583,9 +582,9 @@ namespace FSM
             _dgSites.Name = "dgSites";
             _dgSites.Size = new Size(692, 404);
             _dgSites.TabIndex = 2;
-            // 
+            //
             // txtQuoteContractReference
-            // 
+            //
             _txtQuoteContractReference.Location = new Point(144, 25);
             _txtQuoteContractReference.MaxLength = 100;
             _txtQuoteContractReference.Name = "txtQuoteContractReference";
@@ -593,65 +592,65 @@ namespace FSM
             _txtQuoteContractReference.TabIndex = 0;
             _txtQuoteContractReference.Tag = "QuoteContract.QuoteContractReference";
             _txtQuoteContractReference.Text = "";
-            // 
+            //
             // lblQuoteContractReference
-            // 
+            //
             _lblQuoteContractReference.Location = new Point(14, 25);
             _lblQuoteContractReference.Name = "lblQuoteContractReference";
             _lblQuoteContractReference.Size = new Size(134, 21);
             _lblQuoteContractReference.TabIndex = 31;
             _lblQuoteContractReference.Text = "Quote Contract Ref.";
-            // 
+            //
             // dtpQuoteContractDate
-            // 
+            //
             _dtpQuoteContractDate.Location = new Point(144, 49);
             _dtpQuoteContractDate.Name = "dtpQuoteContractDate";
             _dtpQuoteContractDate.Size = new Size(177, 21);
             _dtpQuoteContractDate.TabIndex = 2;
             _dtpQuoteContractDate.Tag = "QuoteContract.QuoteContractDate";
-            // 
+            //
             // lblQuoteContractDate
-            // 
+            //
             _lblQuoteContractDate.Location = new Point(14, 49);
             _lblQuoteContractDate.Name = "lblQuoteContractDate";
             _lblQuoteContractDate.Size = new Size(134, 21);
             _lblQuoteContractDate.TabIndex = 31;
             _lblQuoteContractDate.Text = "Quote Contract Date";
-            // 
+            //
             // dtpContractStart
-            // 
+            //
             _dtpContractStart.Location = new Point(476, 25);
             _dtpContractStart.Name = "dtpContractStart";
             _dtpContractStart.Size = new Size(195, 21);
             _dtpContractStart.TabIndex = 4;
             _dtpContractStart.Tag = "QuoteContract.ContractStart";
-            // 
+            //
             // lblContractStart
-            // 
+            //
             _lblContractStart.Location = new Point(344, 25);
             _lblContractStart.Name = "lblContractStart";
             _lblContractStart.Size = new Size(103, 21);
             _lblContractStart.TabIndex = 31;
             _lblContractStart.Text = "Contract Start";
-            // 
+            //
             // dtpContractEnd
-            // 
+            //
             _dtpContractEnd.Location = new Point(476, 49);
             _dtpContractEnd.Name = "dtpContractEnd";
             _dtpContractEnd.Size = new Size(195, 21);
             _dtpContractEnd.TabIndex = 5;
             _dtpContractEnd.Tag = "QuoteContract.ContractEnd";
-            // 
+            //
             // lblContractEnd
-            // 
+            //
             _lblContractEnd.Location = new Point(344, 49);
             _lblContractEnd.Name = "lblContractEnd";
             _lblContractEnd.Size = new Size(103, 21);
             _lblContractEnd.TabIndex = 31;
             _lblContractEnd.Text = "Contract End";
-            // 
+            //
             // cboQuoteContractStatusID
-            // 
+            //
             _cboQuoteContractStatusID.Cursor = Cursors.Hand;
             _cboQuoteContractStatusID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboQuoteContractStatusID.Location = new Point(144, 76);
@@ -659,17 +658,17 @@ namespace FSM
             _cboQuoteContractStatusID.Size = new Size(177, 21);
             _cboQuoteContractStatusID.TabIndex = 3;
             _cboQuoteContractStatusID.Tag = "QuoteContract.QuoteContractStatusID";
-            // 
+            //
             // lblQuoteContractStatusID
-            // 
+            //
             _lblQuoteContractStatusID.Location = new Point(14, 76);
             _lblQuoteContractStatusID.Name = "lblQuoteContractStatusID";
             _lblQuoteContractStatusID.Size = new Size(134, 21);
             _lblQuoteContractStatusID.TabIndex = 31;
             _lblQuoteContractStatusID.Text = "Quote Contract Status";
-            // 
+            //
             // UCQuoteContractAlternative
-            // 
+            //
             Controls.Add(_grpQuoteContract);
             Name = "UCQuoteContractAlternative";
             Size = new Size(754, 616);
@@ -681,7 +680,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -696,11 +696,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -809,6 +810,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSitesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSites);
@@ -1026,7 +1028,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

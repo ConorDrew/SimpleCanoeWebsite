@@ -25,6 +25,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FrmOverride() : base()
         {
             base.Load += FrmOverride_Load;
@@ -189,9 +190,9 @@ namespace FSM
             _btnCancel.Click += new EventHandler(btnNo_Click);
             _GroupBox2.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // TreeView1
-            // 
+            //
             _TreeView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TreeView1.Font = new Font("Verdana", 8.0F);
@@ -201,9 +202,9 @@ namespace FSM
             _TreeView1.SelectedImageIndex = -1;
             _TreeView1.Size = new Size(518, 392);
             _TreeView1.TabIndex = 1;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _Label1.Font = new Font("Verdana", 8.0F);
             _Label1.Location = new Point(8, 24);
@@ -211,9 +212,9 @@ namespace FSM
             _Label1.Size = new Size(501, 30);
             _Label1.TabIndex = 1;
             _Label1.Text = "The test you are trying to assign does not satisfy all the conditions of the engi" + "neer scheduler due to the reasons below.";
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox2.Controls.Add(_Label1);
@@ -225,9 +226,9 @@ namespace FSM
             _GroupBox2.TabIndex = 5;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Result";
-            // 
+            //
             // btnOk
-            // 
+            //
             _btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOk.UseVisualStyleBackColor = true;
             _btnOk.Font = new Font("Verdana", 8.0F);
@@ -236,9 +237,9 @@ namespace FSM
             _btnOk.Size = new Size(72, 23);
             _btnOk.TabIndex = 3;
             _btnOk.Text = "Continue";
-            // 
+            //
             // btnCancel
-            // 
+            //
             _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCancel.DialogResult = DialogResult.Cancel;
             _btnCancel.UseVisualStyleBackColor = true;
@@ -248,9 +249,9 @@ namespace FSM
             _btnCancel.Size = new Size(72, 23);
             _btnCancel.TabIndex = 4;
             _btnCancel.Text = "Cancel";
-            // 
+            //
             // FrmOverride
-            // 
+            //
             AcceptButton = _btnOk;
             AutoScaleBaseSize = new Size(6, 14);
             CancelButton = _btnCancel;

@@ -10,7 +10,6 @@ namespace FSM
     {
         public FrmBlockAbsence()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
@@ -50,6 +49,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void setUpDataGrid()
         {
             SuspendLayout();
@@ -178,6 +178,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FrmBlockAbsence_Load(object sender, EventArgs e)
         {
             LoadForm(this);

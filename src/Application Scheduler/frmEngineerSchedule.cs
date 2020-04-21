@@ -1323,7 +1323,9 @@ namespace FSM
                 var strBrush = Brushes.MidnightBlue;
                 string str = "";
 
-                var switchExpr = source.List[rowNum].row.item("AbsenceColumn");
+                DataRowView dr = (DataRowView)source.List[rowNum];
+
+                int switchExpr = (int)dr["AbsenceColumn"];
                 switch (switchExpr)
                 {
                     case var @case when @case == 0:

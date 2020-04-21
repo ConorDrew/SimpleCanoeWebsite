@@ -11,8 +11,8 @@ namespace FSM
 {
     public class FRMEngineerTimesheetReport : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMEngineerTimesheetReport() : base()
         {
             base.Load += FRMEngineerTimesheetReport_Load;
@@ -37,7 +37,6 @@ namespace FSM
             }
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -499,7 +498,6 @@ namespace FSM
             {
                 if (_cboDept != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _cboDept.SelectedIndexChanged -= cboDept_Changed;
@@ -575,9 +573,9 @@ namespace FSM
             _grpFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgEngineers).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpJobs
-            // 
+            //
             _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJobs.Controls.Add(_dgTimesheets);
@@ -587,9 +585,9 @@ namespace FSM
             _grpJobs.TabIndex = 2;
             _grpJobs.TabStop = false;
             _grpJobs.Text = "Double Click To View / Edit";
-            // 
+            //
             // dgTimesheets
-            // 
+            //
             _dgTimesheets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgTimesheets.DataMember = "";
@@ -598,9 +596,9 @@ namespace FSM
             _dgTimesheets.Name = "dgTimesheets";
             _dgTimesheets.Size = new Size(828, 382);
             _dgTimesheets.TabIndex = 14;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 656);
@@ -608,9 +606,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 15;
             _btnExport.Text = "Export";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_cboDept);
             _grpFilter.Controls.Add(_lblDept);
@@ -631,16 +629,16 @@ namespace FSM
             _grpFilter.TabIndex = 1;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // cboDept
-            // 
+            //
             _cboDept.Location = new Point(367, 35);
             _cboDept.Name = "cboDept";
             _cboDept.Size = new Size(126, 21);
             _cboDept.TabIndex = 30;
-            // 
+            //
             // lblDept
-            // 
+            //
             _lblDept.BackColor = Color.White;
             _lblDept.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblDept.Location = new Point(364, 16);
@@ -648,9 +646,9 @@ namespace FSM
             _lblDept.Size = new Size(103, 16);
             _lblDept.TabIndex = 29;
             _lblDept.Text = "Department";
-            // 
+            //
             // btnClearAll
-            // 
+            //
             _btnClearAll.Font = new Font("Verdana", 8.0F);
             _btnClearAll.Location = new Point(148, 11);
             _btnClearAll.Name = "btnClearAll";
@@ -658,9 +656,9 @@ namespace FSM
             _btnClearAll.TabIndex = 28;
             _btnClearAll.Text = "Clear All";
             _btnClearAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSelectAll
-            // 
+            //
             _btnSelectAll.Font = new Font("Verdana", 8.0F);
             _btnSelectAll.Location = new Point(78, 11);
             _btnSelectAll.Name = "btnSelectAll";
@@ -668,9 +666,9 @@ namespace FSM
             _btnSelectAll.TabIndex = 27;
             _btnSelectAll.Text = "Select All";
             _btnSelectAll.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgEngineers
-            // 
+            //
             _dgEngineers.AllowNavigation = false;
             _dgEngineers.AlternatingBackColor = Color.GhostWhite;
             _dgEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
@@ -698,18 +696,18 @@ namespace FSM
             _dgEngineers.SelectionForeColor = Color.PaleGreen;
             _dgEngineers.Size = new Size(350, 141);
             _dgEngineers.TabIndex = 26;
-            // 
+            //
             // btnRunReport
-            // 
+            //
             _btnRunReport.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRunReport.Location = new Point(747, 172);
             _btnRunReport.Name = "btnRunReport";
             _btnRunReport.Size = new Size(91, 23);
             _btnRunReport.TabIndex = 25;
             _btnRunReport.Text = "Run Report";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.BackColor = Color.White;
             _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label4.Location = new Point(8, 16);
@@ -717,33 +715,33 @@ namespace FSM
             _Label4.Size = new Size(64, 16);
             _Label4.TabIndex = 24;
             _Label4.Text = "Engineers";
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpTo.Location = new Point(686, 47);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(144, 21);
             _dtpTo.TabIndex = 13;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpFrom.Location = new Point(686, 20);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(144, 21);
             _dtpFrom.TabIndex = 12;
-            // 
+            //
             // txtJobNumber
-            // 
+            //
             _txtJobNumber.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtJobNumber.Location = new Point(686, 74);
             _txtJobNumber.Name = "txtJobNumber";
             _txtJobNumber.Size = new Size(144, 21);
             _txtJobNumber.TabIndex = 9;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label9.Location = new Point(654, 52);
             _Label9.Name = "Label9";
@@ -751,9 +749,9 @@ namespace FSM
             _Label9.TabIndex = 10;
             _Label9.Text = "To";
             _Label9.TextAlign = ContentAlignment.TopRight;
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label8.Location = new Point(592, 25);
             _Label8.Name = "Label8";
@@ -761,9 +759,9 @@ namespace FSM
             _Label8.TabIndex = 9;
             _Label8.Text = "Date From";
             _Label8.TextAlign = ContentAlignment.TopRight;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label6.Location = new Point(592, 79);
             _Label6.Name = "Label6";
@@ -771,18 +769,18 @@ namespace FSM
             _Label6.TabIndex = 6;
             _Label6.Text = "Job Number";
             _Label6.TextAlign = ContentAlignment.TopRight;
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(72, 656);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 16;
             _btnReset.Text = "Reset";
-            // 
+            //
             // btnSummary
-            // 
+            //
             _btnSummary.AccessibleDescription = "Export Job List To Excel";
             _btnSummary.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSummary.Location = new Point(755, 656);
@@ -790,9 +788,9 @@ namespace FSM
             _btnSummary.Size = new Size(89, 23);
             _btnSummary.TabIndex = 17;
             _btnSummary.Text = "Summary";
-            // 
+            //
             // FRMEngineerTimesheetReport
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(860, 686);
             Controls.Add(_btnSummary);
@@ -819,7 +817,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupComboBoxes();
@@ -843,7 +842,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -911,6 +910,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupComboBoxes()
         {
             var Departments = new DataTable();
@@ -1160,6 +1160,7 @@ dgEngineers.DataMember];
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try
@@ -1331,7 +1332,7 @@ dgEngineers.DataMember];
                 nwExtra["Day"] = Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy");
                 nwExtra["Type"] = "Total Hours > 17:00";
                 int dateDifference = 0;
-                if (Conversions.ToBoolean(Conversions.ToDate(Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + " 17:00:00") < SelectedJobDataRow["StartDateTime"]))
+                if (Conversions.ToBoolean(Conversions.ToDate(Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + " 17:00:00") < (DateTime)SelectedJobDataRow["StartDateTime"]))
                 {
                     dateDifference = Conversions.ToInteger(DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(SelectedJobDataRow["StartDateTime"]), Conversions.ToDate(SelectedJobDataRow["EndDateTime"])));
                 }
@@ -1363,12 +1364,12 @@ dgEngineers.DataMember];
                 }
                 else
                 {
-                    if (Conversions.ToBoolean(drStartEnd[0]["StartDay"] > SelectedJobDataRow["StartDateTime"]))
+                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["StartDay"] > (DateTime)SelectedJobDataRow["StartDateTime"]))
                     {
                         drStartEnd[0]["StartDay"] = SelectedJobDataRow["StartDateTime"];
                     }
 
-                    if (Conversions.ToBoolean(drStartEnd[0]["EndDay"] < SelectedJobDataRow["EndDateTime"]))
+                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["EndDay"] < (DateTime)SelectedJobDataRow["EndDateTime"]))
                     {
                         drStartEnd[0]["EndDay"] = SelectedJobDataRow["EndDateTime"];
                     }
@@ -1472,7 +1473,7 @@ dgEngineers.DataMember];
                                 {
                                     if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                                     {
-                                        allTotal += al["Time"];
+                                        allTotal += (int)al["Time"];
                                     }
                                 }
 
@@ -1507,7 +1508,7 @@ dgEngineers.DataMember];
                         {
                             int total = 0;
                             for (int l = 0, loopTo2 = rSel.Length - 1; l <= loopTo2; l++)
-                                total += rSel[l]["Time"];
+                                total += (int)rSel[l]["Time"];
                             extraRw[cnt] += formatTime(total);
                         }
                         else
@@ -1613,7 +1614,7 @@ dgEngineers.DataMember];
                         {
                             if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                             {
-                                allTotal += al["Time"];
+                                allTotal += (int)al["Time"];
                             }
                         }
 
@@ -1648,7 +1649,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo3 = rSel.Length - 1; l <= loopTo3; l++)
-                        total += rSel[l]["Time"];
+                        total += (int)rSel[l]["Time"];
                     extraRw[cnt] += formatTime(total);
                 }
                 else
@@ -1693,7 +1694,7 @@ dgEngineers.DataMember];
                     {
                         int total = 0;
                         for (int l = 0, loopTo4 = rSel.Length - 1; l <= loopTo4; l++)
-                            total += rSel[l]["Time"];
+                            total += (int)rSel[l]["Time"];
                         extraRw[cnt] = formatTime(total);
                     }
                     else
@@ -1716,7 +1717,7 @@ dgEngineers.DataMember];
                 int totalUnallocated = 0;
                 var drDayUnallocated = dtUnallocated.Select("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "'");
                 for (int b = 0, loopTo5 = drDayUnallocated.Length - 1; b <= loopTo5; b++)
-                    totalUnallocated += drDayUnallocated[b]["Time"];
+                    totalUnallocated += (int)drDayUnallocated[b]["Time"];
                 extraRw[cnt] = formatTime(totalUnallocated);
                 cnt += 1;
             }
@@ -1733,7 +1734,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo6 = rSel.Length - 1; l <= loopTo6; l++)
-                        total += rSel[l]["Time"];
+                        total += (int)rSel[l]["Time"];
                     extraRw[cnt] = formatTime(total);
                 }
                 else
@@ -1752,8 +1753,7 @@ dgEngineers.DataMember];
             extraRw = exportData.NewRow();
             exportData.Rows.Add(extraRw);
             i += 1;
-            var exporter = new Entity.Sys.Exporting(exportData, "Timesheet " + Strings.Format(dtpFrom.Value, "dd-MM-yy") + " - " + Strings.Format(dtpTo.Value, "dd-MM-yy"));
-            exporter = null;
+            Entity.Sys.ExportHelper.Export(exportData, "Timesheet " + Strings.Format(dtpFrom.Value, "dd-MM-yy") + " - " + Strings.Format(dtpTo.Value, "dd-MM-yy"), Entity.Sys.Enums.ExportType.CSV);
         }
 
         public void ExportSummary(string Department = null)
@@ -1857,7 +1857,7 @@ dgEngineers.DataMember];
                 nwExtra["Day"] = Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy");
                 nwExtra["Type"] = "Total Hours > 17:00";
                 int dateDifference = 0;
-                if (Conversions.ToBoolean(Conversions.ToDate(Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + " 17:00:00") < SelectedJobDataRow["StartDateTime"]))
+                if (Conversions.ToBoolean(Conversions.ToDate(Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + " 17:00:00") < (DateTime)SelectedJobDataRow["StartDateTime"]))
                 {
                     dateDifference = Conversions.ToInteger(DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(SelectedJobDataRow["StartDateTime"]), Conversions.ToDate(SelectedJobDataRow["EndDateTime"])));
                 }
@@ -1889,12 +1889,12 @@ dgEngineers.DataMember];
                 }
                 else
                 {
-                    if (Conversions.ToBoolean(drStartEnd[0]["StartDay"] > SelectedJobDataRow["StartDateTime"]))
+                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["StartDay"] > (DateTime)SelectedJobDataRow["StartDateTime"]))
                     {
                         drStartEnd[0]["StartDay"] = SelectedJobDataRow["StartDateTime"];
                     }
 
-                    if (Conversions.ToBoolean(drStartEnd[0]["EndDay"] < SelectedJobDataRow["EndDateTime"]))
+                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["EndDay"] < (DateTime)SelectedJobDataRow["EndDateTime"]))
                     {
                         drStartEnd[0]["EndDay"] = SelectedJobDataRow["EndDateTime"];
                     }
@@ -1921,7 +1921,7 @@ dgEngineers.DataMember];
                             rSel = dtTimes.Select("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "' AND Engineer='" + lastEngineer + "' AND Type='" + dr["Name"].ToString() + "'");
                             if (rSel.Length > 0)
                             {
-                                MinsTally += rSel[0]["Time"];
+                                MinsTally += (int)rSel[0]["Time"];
                             }
                         }
 
@@ -1943,7 +1943,7 @@ dgEngineers.DataMember];
                                 {
                                     if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                                     {
-                                        allTotal += al["Time"];
+                                        allTotal += (int)al["Time"];
                                     }
                                 }
 
@@ -1970,7 +1970,7 @@ dgEngineers.DataMember];
                         {
                             int total = 0;
                             for (int l = 0, loopTo2 = rSel.Length - 1; l <= loopTo2; l++)
-                                total += rSel[l]["Time"];
+                                total += (int)rSel[l]["Time"];
                             MinsTally += total;
                         }
                     }
@@ -1999,7 +1999,7 @@ dgEngineers.DataMember];
                     rSel = dtTimes.Select(Conversions.ToString("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "' AND Engineer='" + SelectedJobDataRow["Engineer"] + "' AND Type='" + dr["Name"].ToString() + "'"));
                     if (rSel.Length > 0)
                     {
-                        MinsTally += rSel[0]["Time"];
+                        MinsTally += (int)rSel[0]["Time"];
                     }
                 }
 
@@ -2021,7 +2021,7 @@ dgEngineers.DataMember];
                         {
                             if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                             {
-                                allTotal += al["Time"];
+                                allTotal += (int)al["Time"];
                             }
                         }
 
@@ -2048,7 +2048,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo3 = rSel.Length - 1; l <= loopTo3; l++)
-                        total += rSel[l]["Time"];
+                        total += (int)rSel[l]["Time"];
                     MinsTally += total;
                 }
             }
@@ -2070,7 +2070,7 @@ dgEngineers.DataMember];
                     {
                         int total = 0;
                         for (int l = 0, loopTo4 = rSel.Length - 1; l <= loopTo4; l++)
-                            total += rSel[l]["Time"];
+                            total += (int)rSel[l]["Time"];
                         MinsTally += total;
                     }
                 }
@@ -2085,7 +2085,7 @@ dgEngineers.DataMember];
                 int totalUnallocated = 0;
                 var drDayUnallocated = dtUnallocated.Select("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "'");
                 for (int b = 0, loopTo5 = drDayUnallocated.Length - 1; b <= loopTo5; b++)
-                    totalUnallocated += drDayUnallocated[b]["Time"];
+                    totalUnallocated += (int)drDayUnallocated[b]["Time"];
                 MinsTally += totalUnallocated;
             }
 
@@ -2099,7 +2099,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo6 = rSel.Length - 1; l <= loopTo6; l++)
-                        total += rSel[l]["Time"];
+                        total += (int)rSel[l]["Time"];
                     MinsTally += total;
                 }
             }
@@ -2114,8 +2114,7 @@ dgEngineers.DataMember];
             extraRw = exportData.NewRow();
             exportData.Rows.Add(extraRw);
             i += 1;
-            var exporter = new Entity.Sys.Exporting(exportData, "TS Summary " + Strings.Format(dtpFrom.Value, "dd-MM-yy") + " - " + Strings.Format(dtpTo.Value, "dd-MM-yy"));
-            exporter = null;
+            Entity.Sys.ExportHelper.Export(exportData, Strings.Format(dtpFrom.Value, "dd-MM-yy") + " - " + Strings.Format(dtpTo.Value, "dd-MM-yy"), Entity.Sys.Enums.ExportType.CSV);
         }
 
         private string formatTime(int Minutes)

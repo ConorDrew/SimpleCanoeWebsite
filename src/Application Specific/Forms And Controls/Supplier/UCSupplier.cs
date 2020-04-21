@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCSupplier : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCSupplier() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCSupplier_Load;
@@ -27,7 +26,6 @@ namespace FSM
             cboMainSupplier.Visible = false;
             Label4.Visible = false;
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -48,7 +46,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
 
         private GroupBox _grpSupplier;
@@ -690,7 +688,6 @@ namespace FSM
             {
                 if (_chkSupplierBranch != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _chkSupplierBranch.CheckedChanged -= chkSupplierBranch_CheckedChanged;
@@ -990,9 +987,9 @@ namespace FSM
             _Label1 = new Label();
             _grpSupplier.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpSupplier
-            // 
+            //
             _grpSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSupplier.Controls.Add(_txtNominal);
@@ -1037,9 +1034,9 @@ namespace FSM
             _grpSupplier.TabIndex = 1;
             _grpSupplier.TabStop = false;
             _grpSupplier.Text = "Main Details";
-            // 
+            //
             // txtNominal
-            // 
+            //
             _txtNominal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNominal.Location = new Point(235, 125);
             _txtNominal.MaxLength = 25;
@@ -1047,17 +1044,17 @@ namespace FSM
             _txtNominal.Size = new Size(317, 21);
             _txtNominal.TabIndex = 43;
             _txtNominal.Tag = "Supplier.AccountNumber";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(10, 129);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(112, 20);
             _Label3.TabIndex = 44;
             _Label3.Text = "Default Nominal";
-            // 
+            //
             // txtSecondAccountNumber
-            // 
+            //
             _txtSecondAccountNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSecondAccountNumber.Location = new Point(235, 537);
             _txtSecondAccountNumber.MaxLength = 25;
@@ -1066,18 +1063,18 @@ namespace FSM
             _txtSecondAccountNumber.TabIndex = 43;
             _txtSecondAccountNumber.Tag = "Supplier.AccountNumber";
             _txtSecondAccountNumber.Visible = false;
-            // 
+            //
             // lblSecondAccount
-            // 
+            //
             _lblSecondAccount.Location = new Point(10, 541);
             _lblSecondAccount.Name = "lblSecondAccount";
             _lblSecondAccount.Size = new Size(190, 20);
             _lblSecondAccount.TabIndex = 44;
             _lblSecondAccount.Text = "Second Account Number";
             _lblSecondAccount.Visible = false;
-            // 
+            //
             // chkSecondaryPrice
-            // 
+            //
             _chkSecondaryPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkSecondaryPrice.AutoSize = true;
             _chkSecondaryPrice.Location = new Point(13, 573);
@@ -1086,9 +1083,9 @@ namespace FSM
             _chkSecondaryPrice.TabIndex = 42;
             _chkSecondaryPrice.Text = "Secondary Price";
             _chkSecondaryPrice.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkSubContractor
-            // 
+            //
             _chkSubContractor.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkSubContractor.AutoSize = true;
             _chkSubContractor.Location = new Point(13, 606);
@@ -1097,9 +1094,9 @@ namespace FSM
             _chkSubContractor.TabIndex = 41;
             _chkSubContractor.Text = "Sub Contractor?";
             _chkSubContractor.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkReleaseToTablets
-            // 
+            //
             _chkReleaseToTablets.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkReleaseToTablets.AutoSize = true;
             _chkReleaseToTablets.Location = new Point(13, 640);
@@ -1108,9 +1105,9 @@ namespace FSM
             _chkReleaseToTablets.TabIndex = 40;
             _chkReleaseToTablets.Text = "Release Supplier to Tablets?";
             _chkReleaseToTablets.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkSupplierBranch
-            // 
+            //
             _chkSupplierBranch.AutoSize = true;
             _chkSupplierBranch.Location = new Point(13, 22);
             _chkSupplierBranch.Name = "chkSupplierBranch";
@@ -1118,26 +1115,26 @@ namespace FSM
             _chkSupplierBranch.TabIndex = 39;
             _chkSupplierBranch.Text = "Is this a Supplier Branch?";
             _chkSupplierBranch.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.AutoSize = true;
             _Label4.Location = new Point(10, 50);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(84, 13);
             _Label4.TabIndex = 38;
             _Label4.Text = "Main Supplier";
-            // 
+            //
             // cboMainSupplier
-            // 
+            //
             _cboMainSupplier.FormattingEnabled = true;
             _cboMainSupplier.Location = new Point(235, 45);
             _cboMainSupplier.Name = "cboMainSupplier";
             _cboMainSupplier.Size = new Size(317, 21);
             _cboMainSupplier.TabIndex = 37;
-            // 
+            //
             // txtGaswayAccount
-            // 
+            //
             _txtGaswayAccount.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtGaswayAccount.Location = new Point(235, 395);
             _txtGaswayAccount.MaxLength = 25;
@@ -1145,9 +1142,9 @@ namespace FSM
             _txtGaswayAccount.Size = new Size(317, 21);
             _txtGaswayAccount.TabIndex = 34;
             _txtGaswayAccount.Tag = "";
-            // 
+            //
             // txtAccountNumber
-            // 
+            //
             _txtAccountNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAccountNumber.Location = new Point(235, 99);
             _txtAccountNumber.MaxLength = 25;
@@ -1155,9 +1152,9 @@ namespace FSM
             _txtAccountNumber.Size = new Size(317, 21);
             _txtAccountNumber.TabIndex = 3;
             _txtAccountNumber.Tag = "Supplier.AccountNumber";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(235, 72);
             _txtName.MaxLength = 255;
@@ -1165,17 +1162,17 @@ namespace FSM
             _txtName.Size = new Size(317, 21);
             _txtName.TabIndex = 2;
             _txtName.Tag = "Supplier.Name";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(10, 75);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(96, 20);
             _lblName.TabIndex = 31;
             _lblName.Text = "Name";
-            // 
+            //
             // txtAddress1
-            // 
+            //
             _txtAddress1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress1.Location = new Point(235, 152);
             _txtAddress1.MaxLength = 255;
@@ -1183,17 +1180,17 @@ namespace FSM
             _txtAddress1.Size = new Size(317, 21);
             _txtAddress1.TabIndex = 4;
             _txtAddress1.Tag = "Supplier.Address1";
-            // 
+            //
             // lblAddress1
-            // 
+            //
             _lblAddress1.Location = new Point(10, 155);
             _lblAddress1.Name = "lblAddress1";
             _lblAddress1.Size = new Size(96, 20);
             _lblAddress1.TabIndex = 31;
             _lblAddress1.Text = "Address 1";
-            // 
+            //
             // txtAddress2
-            // 
+            //
             _txtAddress2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress2.Location = new Point(235, 179);
             _txtAddress2.MaxLength = 255;
@@ -1201,17 +1198,17 @@ namespace FSM
             _txtAddress2.Size = new Size(317, 21);
             _txtAddress2.TabIndex = 5;
             _txtAddress2.Tag = "Supplier.Address2";
-            // 
+            //
             // lblAddress2
-            // 
+            //
             _lblAddress2.Location = new Point(10, 182);
             _lblAddress2.Name = "lblAddress2";
             _lblAddress2.Size = new Size(96, 20);
             _lblAddress2.TabIndex = 31;
             _lblAddress2.Text = "Address 2";
-            // 
+            //
             // txtAddress3
-            // 
+            //
             _txtAddress3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress3.Location = new Point(235, 206);
             _txtAddress3.MaxLength = 255;
@@ -1219,17 +1216,17 @@ namespace FSM
             _txtAddress3.Size = new Size(317, 21);
             _txtAddress3.TabIndex = 6;
             _txtAddress3.Tag = "Supplier.Address3";
-            // 
+            //
             // lblAddress3
-            // 
+            //
             _lblAddress3.Location = new Point(10, 209);
             _lblAddress3.Name = "lblAddress3";
             _lblAddress3.Size = new Size(96, 20);
             _lblAddress3.TabIndex = 31;
             _lblAddress3.Text = "Address 3";
-            // 
+            //
             // txtAddress4
-            // 
+            //
             _txtAddress4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress4.Location = new Point(235, 233);
             _txtAddress4.MaxLength = 255;
@@ -1237,17 +1234,17 @@ namespace FSM
             _txtAddress4.Size = new Size(317, 21);
             _txtAddress4.TabIndex = 7;
             _txtAddress4.Tag = "Supplier.Town";
-            // 
+            //
             // lblTown
-            // 
+            //
             _lblTown.Location = new Point(10, 236);
             _lblTown.Name = "lblTown";
             _lblTown.Size = new Size(96, 20);
             _lblTown.TabIndex = 31;
             _lblTown.Text = "Address 4";
-            // 
+            //
             // txtAddress5
-            // 
+            //
             _txtAddress5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress5.Location = new Point(235, 260);
             _txtAddress5.MaxLength = 255;
@@ -1255,17 +1252,17 @@ namespace FSM
             _txtAddress5.Size = new Size(317, 21);
             _txtAddress5.TabIndex = 8;
             _txtAddress5.Tag = "Supplier.County";
-            // 
+            //
             // lblCounty
-            // 
+            //
             _lblCounty.Location = new Point(10, 263);
             _lblCounty.Name = "lblCounty";
             _lblCounty.Size = new Size(96, 20);
             _lblCounty.TabIndex = 31;
             _lblCounty.Text = "Address 5";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcode.Location = new Point(235, 287);
             _txtPostcode.MaxLength = 20;
@@ -1273,17 +1270,17 @@ namespace FSM
             _txtPostcode.Size = new Size(317, 21);
             _txtPostcode.TabIndex = 9;
             _txtPostcode.Tag = "Supplier.Postcode";
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Location = new Point(10, 290);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(96, 20);
             _lblPostcode.TabIndex = 31;
             _lblPostcode.Text = "Postcode";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTelephoneNum.Location = new Point(235, 314);
             _txtTelephoneNum.MaxLength = 50;
@@ -1291,17 +1288,17 @@ namespace FSM
             _txtTelephoneNum.Size = new Size(317, 21);
             _txtTelephoneNum.TabIndex = 10;
             _txtTelephoneNum.Tag = "Supplier.TelephoneNum";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(10, 317);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(96, 20);
             _lblTelephoneNum.TabIndex = 31;
             _lblTelephoneNum.Text = "Tel";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFaxNum.Location = new Point(235, 341);
             _txtFaxNum.MaxLength = 50;
@@ -1309,17 +1306,17 @@ namespace FSM
             _txtFaxNum.Size = new Size(317, 21);
             _txtFaxNum.TabIndex = 11;
             _txtFaxNum.Tag = "Supplier.FaxNum";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(10, 344);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(96, 20);
             _lblFaxNum.TabIndex = 31;
             _lblFaxNum.Text = "Fax";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmailAddress.Location = new Point(235, 368);
             _txtEmailAddress.MaxLength = 500;
@@ -1327,17 +1324,17 @@ namespace FSM
             _txtEmailAddress.Size = new Size(317, 21);
             _txtEmailAddress.TabIndex = 12;
             _txtEmailAddress.Tag = "Supplier.EmailAddress";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(10, 371);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(210, 20);
             _lblEmailAddress.TabIndex = 31;
             _lblEmailAddress.Text = "Email Address (comma seperated)";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNotes.Location = new Point(235, 422);
             _txtNotes.Multiline = true;
@@ -1346,33 +1343,33 @@ namespace FSM
             _txtNotes.Size = new Size(317, 109);
             _txtNotes.TabIndex = 13;
             _txtNotes.Tag = "Supplier.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(10, 425);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(96, 20);
             _lblNotes.TabIndex = 31;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(10, 398);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(112, 20);
             _Label2.TabIndex = 35;
             _Label2.Text = "Gasway Account";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(10, 103);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(112, 20);
             _Label1.TabIndex = 33;
             _Label1.Text = "Account Number";
-            // 
+            //
             // UCSupplier
-            // 
+            //
             Controls.Add(_grpSupplier);
             Name = "UCSupplier";
             Size = new Size(582, 676);
@@ -1383,7 +1380,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -1398,11 +1396,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1438,7 +1437,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))
@@ -1589,6 +1589,7 @@ namespace FSM
             txtSecondAccountNumber.Visible = chkSecondaryPrice.Checked;
             lblSecondAccount.Visible = chkSecondaryPrice.Checked;
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

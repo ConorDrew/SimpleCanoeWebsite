@@ -15,7 +15,8 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             var argc = cboEngineer;
@@ -50,7 +51,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -140,6 +141,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupPartsUsedDataGrid()
         {
             var tbStyle = dgPartsUsed.TableStyles[0];
@@ -249,6 +251,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void FRMEngineerTimesheetReport_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -312,6 +315,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try
@@ -424,11 +428,11 @@ namespace FSM
                 dgPartsUsed.UnSelect(itm);
             }
 
-            var exporter = new Exporting(dt, "Parts Used Report");
-            exporter = null;
+            Entity.Sys.ExportHelper.Export(dt, "Parts Used Report", Enums.ExportType.CSV);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private void Button1_Click(object sender, EventArgs e)
         {
             PopulateDatagrid();

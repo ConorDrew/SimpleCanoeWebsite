@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCWarehouse : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCWarehouse() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCWarehouse_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private TabControl _tcWarehouse;
 
@@ -968,9 +966,9 @@ namespace FSM
             _grpVans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgVans).BeginInit();
             SuspendLayout();
-            // 
+            //
             // tcWarehouse
-            // 
+            //
             _tcWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcWarehouse.Controls.Add(_tabDetails);
@@ -981,18 +979,18 @@ namespace FSM
             _tcWarehouse.SelectedIndex = 0;
             _tcWarehouse.Size = new Size(710, 591);
             _tcWarehouse.TabIndex = 0;
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_grpWarehouse);
             _tabDetails.Location = new Point(4, 22);
             _tabDetails.Name = "tabDetails";
             _tabDetails.Size = new Size(702, 565);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Main Details";
-            // 
+            //
             // grpWarehouse
-            // 
+            //
             _grpWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpWarehouse.Controls.Add(_txtName);
@@ -1026,9 +1024,9 @@ namespace FSM
             _grpWarehouse.TabIndex = 2;
             _grpWarehouse.TabStop = false;
             _grpWarehouse.Text = "Main Details";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(120, 24);
             _txtName.MaxLength = 255;
@@ -1036,17 +1034,17 @@ namespace FSM
             _txtName.Size = new Size(482, 21);
             _txtName.TabIndex = 1;
             _txtName.Tag = "Warehouse.Name";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(8, 24);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(104, 20);
             _lblName.TabIndex = 31;
             _lblName.Text = "Name";
-            // 
+            //
             // txtSize
-            // 
+            //
             _txtSize.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSize.Location = new Point(120, 58);
             _txtSize.MaxLength = 255;
@@ -1054,17 +1052,17 @@ namespace FSM
             _txtSize.Size = new Size(554, 21);
             _txtSize.TabIndex = 3;
             _txtSize.Tag = "Warehouse.Size";
-            // 
+            //
             // lblSize
-            // 
+            //
             _lblSize.Location = new Point(8, 56);
             _lblSize.Name = "lblSize";
             _lblSize.Size = new Size(104, 20);
             _lblSize.TabIndex = 31;
             _lblSize.Text = "Size";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(120, 378);
@@ -1075,17 +1073,17 @@ namespace FSM
             _txtNotes.Size = new Size(554, 168);
             _txtNotes.TabIndex = 13;
             _txtNotes.Tag = "Warehouse.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 376);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(104, 20);
             _lblNotes.TabIndex = 31;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // txtAddress1
-            // 
+            //
             _txtAddress1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress1.Location = new Point(120, 90);
             _txtAddress1.MaxLength = 255;
@@ -1093,17 +1091,17 @@ namespace FSM
             _txtAddress1.Size = new Size(554, 21);
             _txtAddress1.TabIndex = 4;
             _txtAddress1.Tag = "Warehouse.Address1";
-            // 
+            //
             // lblAddress1
-            // 
+            //
             _lblAddress1.Location = new Point(8, 88);
             _lblAddress1.Name = "lblAddress1";
             _lblAddress1.Size = new Size(104, 20);
             _lblAddress1.TabIndex = 31;
             _lblAddress1.Text = "Address 1";
-            // 
+            //
             // txtAddress2
-            // 
+            //
             _txtAddress2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress2.Location = new Point(120, 122);
             _txtAddress2.MaxLength = 255;
@@ -1111,17 +1109,17 @@ namespace FSM
             _txtAddress2.Size = new Size(554, 21);
             _txtAddress2.TabIndex = 5;
             _txtAddress2.Tag = "Warehouse.Address2";
-            // 
+            //
             // lblAddress2
-            // 
+            //
             _lblAddress2.Location = new Point(8, 120);
             _lblAddress2.Name = "lblAddress2";
             _lblAddress2.Size = new Size(104, 20);
             _lblAddress2.TabIndex = 31;
             _lblAddress2.Text = "Address 2";
-            // 
+            //
             // txtAddress3
-            // 
+            //
             _txtAddress3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress3.Location = new Point(120, 154);
             _txtAddress3.MaxLength = 255;
@@ -1129,17 +1127,17 @@ namespace FSM
             _txtAddress3.Size = new Size(554, 21);
             _txtAddress3.TabIndex = 6;
             _txtAddress3.Tag = "Warehouse.Address3";
-            // 
+            //
             // lblAddress3
-            // 
+            //
             _lblAddress3.Location = new Point(8, 152);
             _lblAddress3.Name = "lblAddress3";
             _lblAddress3.Size = new Size(104, 20);
             _lblAddress3.TabIndex = 31;
             _lblAddress3.Text = "Address 3";
-            // 
+            //
             // txtAddress4
-            // 
+            //
             _txtAddress4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress4.Location = new Point(120, 186);
             _txtAddress4.MaxLength = 255;
@@ -1147,17 +1145,17 @@ namespace FSM
             _txtAddress4.Size = new Size(554, 21);
             _txtAddress4.TabIndex = 7;
             _txtAddress4.Tag = "Warehouse.Address4";
-            // 
+            //
             // lblAddress4
-            // 
+            //
             _lblAddress4.Location = new Point(8, 184);
             _lblAddress4.Name = "lblAddress4";
             _lblAddress4.Size = new Size(104, 20);
             _lblAddress4.TabIndex = 31;
             _lblAddress4.Text = "Address 4";
-            // 
+            //
             // txtAddress5
-            // 
+            //
             _txtAddress5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress5.Location = new Point(120, 218);
             _txtAddress5.MaxLength = 255;
@@ -1165,17 +1163,17 @@ namespace FSM
             _txtAddress5.Size = new Size(554, 21);
             _txtAddress5.TabIndex = 8;
             _txtAddress5.Tag = "Warehouse.Address5";
-            // 
+            //
             // lblAddress5
-            // 
+            //
             _lblAddress5.Location = new Point(8, 216);
             _lblAddress5.Name = "lblAddress5";
             _lblAddress5.Size = new Size(104, 20);
             _lblAddress5.TabIndex = 31;
             _lblAddress5.Text = "Address 5";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcode.Location = new Point(120, 250);
             _txtPostcode.MaxLength = 10;
@@ -1183,17 +1181,17 @@ namespace FSM
             _txtPostcode.Size = new Size(554, 21);
             _txtPostcode.TabIndex = 9;
             _txtPostcode.Tag = "Warehouse.Postcode";
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Location = new Point(8, 248);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(104, 20);
             _lblPostcode.TabIndex = 31;
             _lblPostcode.Text = "Postcode";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTelephoneNum.Location = new Point(120, 282);
             _txtTelephoneNum.MaxLength = 20;
@@ -1201,17 +1199,17 @@ namespace FSM
             _txtTelephoneNum.Size = new Size(554, 21);
             _txtTelephoneNum.TabIndex = 10;
             _txtTelephoneNum.Tag = "Warehouse.TelephoneNum";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(8, 280);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(104, 20);
             _lblTelephoneNum.TabIndex = 31;
             _lblTelephoneNum.Text = "Telephone";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFaxNum.Location = new Point(120, 314);
             _txtFaxNum.MaxLength = 20;
@@ -1219,17 +1217,17 @@ namespace FSM
             _txtFaxNum.Size = new Size(554, 21);
             _txtFaxNum.TabIndex = 11;
             _txtFaxNum.Tag = "Warehouse.FaxNum";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(8, 312);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(104, 20);
             _lblFaxNum.TabIndex = 31;
             _lblFaxNum.Text = "Fax";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmailAddress.Location = new Point(120, 346);
             _txtEmailAddress.MaxLength = 255;
@@ -1237,17 +1235,17 @@ namespace FSM
             _txtEmailAddress.Size = new Size(554, 21);
             _txtEmailAddress.TabIndex = 12;
             _txtEmailAddress.Tag = "Warehouse.EmailAddress";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(8, 344);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(104, 20);
             _lblEmailAddress.TabIndex = 31;
             _lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // chkActive
-            // 
+            //
             _chkActive.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _chkActive.Font = new Font("Verdana", 8.0F);
             _chkActive.Location = new Point(610, 26);
@@ -1256,9 +1254,9 @@ namespace FSM
             _chkActive.TabIndex = 2;
             _chkActive.Tag = "Warehouse.Active";
             _chkActive.Text = "Active";
-            // 
+            //
             // tabStock
-            // 
+            //
             _tabStock.Controls.Add(_GroupBox2);
             _tabStock.Controls.Add(_GroupBox1);
             _tabStock.Location = new Point(4, 22);
@@ -1266,9 +1264,9 @@ namespace FSM
             _tabStock.Size = new Size(702, 565);
             _tabStock.TabIndex = 1;
             _tabStock.Text = "Stock";
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox2.Controls.Add(_dgParts);
@@ -1278,9 +1276,9 @@ namespace FSM
             _GroupBox2.TabIndex = 1;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Parts held in warehouse";
-            // 
+            //
             // dgParts
-            // 
+            //
             _dgParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgParts.DataMember = "";
@@ -1289,9 +1287,9 @@ namespace FSM
             _dgParts.Name = "dgParts";
             _dgParts.Size = new Size(667, 304);
             _dgParts.TabIndex = 2;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_dgProducts);
             _GroupBox1.Location = new Point(8, 8);
@@ -1300,9 +1298,9 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Products held in warehouse";
-            // 
+            //
             // dgProducts
-            // 
+            //
             _dgProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgProducts.DataMember = "";
@@ -1311,9 +1309,9 @@ namespace FSM
             _dgProducts.Name = "dgProducts";
             _dgProducts.Size = new Size(667, 166);
             _dgProducts.TabIndex = 1;
-            // 
+            //
             // tpVans
-            // 
+            //
             _tpVans.Controls.Add(_grpVans);
             _tpVans.Location = new Point(4, 22);
             _tpVans.Name = "tpVans";
@@ -1322,9 +1320,9 @@ namespace FSM
             _tpVans.TabIndex = 2;
             _tpVans.Text = "Vans";
             _tpVans.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpVans
-            // 
+            //
             _grpVans.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVans.Controls.Add(_dgVans);
@@ -1334,9 +1332,9 @@ namespace FSM
             _grpVans.TabIndex = 4;
             _grpVans.TabStop = false;
             _grpVans.Text = "Tick those vans for this warehouse";
-            // 
+            //
             // dgVans
-            // 
+            //
             _dgVans.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgVans.DataMember = "";
@@ -1345,9 +1343,9 @@ namespace FSM
             _dgVans.Name = "dgVans";
             _dgVans.Size = new Size(678, 523);
             _dgVans.TabIndex = 2;
-            // 
+            //
             // UCWarehouse
-            // 
+            //
             Controls.Add(_tcWarehouse);
             Name = "UCWarehouse";
             Size = new Size(723, 604);
@@ -1368,7 +1366,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupPartsDatagrid();
@@ -1456,11 +1455,11 @@ namespace FSM
             }
         }
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1530,6 +1529,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupProductsDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgProducts);
@@ -1708,7 +1708,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))

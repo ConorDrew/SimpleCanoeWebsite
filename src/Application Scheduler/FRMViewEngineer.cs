@@ -14,13 +14,13 @@ namespace FSM
     {
         public FRMViewEngineer()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMEngineer_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMViewEngineer(DataTable dtEngineer) : base()
         {
             base.Load += FRMEngineer_Load;
@@ -477,7 +477,6 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnClose.Click -= btnClose_Click;
@@ -521,9 +520,9 @@ namespace FSM
             _grpPostcodes.SuspendLayout();
             _grpQualifications.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpEngineerInfo
-            // 
+            //
             _grpEngineerInfo.Controls.Add(_txtManager);
             _grpEngineerInfo.Controls.Add(_txtDepartment);
             _grpEngineerInfo.Controls.Add(_txtEngineerGroup);
@@ -543,115 +542,115 @@ namespace FSM
             _grpEngineerInfo.TabIndex = 1;
             _grpEngineerInfo.TabStop = false;
             _grpEngineerInfo.Text = "Engineer Information";
-            // 
+            //
             // txtManager
-            // 
+            //
             _txtManager.Enabled = false;
             _txtManager.Location = new Point(560, 31);
             _txtManager.Name = "txtManager";
             _txtManager.Size = new Size(247, 21);
             _txtManager.TabIndex = 64;
-            // 
+            //
             // txtDepartment
-            // 
+            //
             _txtDepartment.Enabled = false;
             _txtDepartment.Location = new Point(560, 60);
             _txtDepartment.Name = "txtDepartment";
             _txtDepartment.Size = new Size(247, 21);
             _txtDepartment.TabIndex = 63;
-            // 
+            //
             // txtEngineerGroup
-            // 
+            //
             _txtEngineerGroup.Enabled = false;
             _txtEngineerGroup.Location = new Point(560, 90);
             _txtEngineerGroup.Name = "txtEngineerGroup";
             _txtEngineerGroup.Size = new Size(247, 21);
             _txtEngineerGroup.TabIndex = 62;
-            // 
+            //
             // txtRegion
-            // 
+            //
             _txtRegion.Enabled = false;
             _txtRegion.Location = new Point(120, 90);
             _txtRegion.Name = "txtRegion";
             _txtRegion.Size = new Size(247, 21);
             _txtRegion.TabIndex = 61;
-            // 
+            //
             // txtPhone
-            // 
+            //
             _txtPhone.Enabled = false;
             _txtPhone.Location = new Point(120, 60);
             _txtPhone.Name = "txtPhone";
             _txtPhone.Size = new Size(247, 21);
             _txtPhone.TabIndex = 8;
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Enabled = false;
             _txtName.Location = new Point(120, 31);
             _txtName.Name = "txtName";
             _txtName.Size = new Size(247, 21);
             _txtName.TabIndex = 6;
-            // 
+            //
             // lblEngGroup
-            // 
+            //
             _lblEngGroup.AutoSize = true;
             _lblEngGroup.Location = new Point(453, 93);
             _lblEngGroup.Name = "lblEngGroup";
             _lblEngGroup.Size = new Size(101, 13);
             _lblEngGroup.TabIndex = 5;
             _lblEngGroup.Text = "Engineer Group:";
-            // 
+            //
             // lblRegion
-            // 
+            //
             _lblRegion.AutoSize = true;
             _lblRegion.Location = new Point(12, 93);
             _lblRegion.Name = "lblRegion";
             _lblRegion.Size = new Size(51, 13);
             _lblRegion.TabIndex = 4;
             _lblRegion.Text = "Region:";
-            // 
+            //
             // lblDepartment
-            // 
+            //
             _lblDepartment.AutoSize = true;
             _lblDepartment.Location = new Point(453, 63);
             _lblDepartment.Name = "lblDepartment";
             _lblDepartment.Size = new Size(80, 13);
             _lblDepartment.TabIndex = 3;
             _lblDepartment.Text = "Department:";
-            // 
+            //
             // lblTelNum
-            // 
+            //
             _lblTelNum.AutoSize = true;
             _lblTelNum.Location = new Point(12, 63);
             _lblTelNum.Name = "lblTelNum";
             _lblTelNum.Size = new Size(96, 13);
             _lblTelNum.TabIndex = 2;
             _lblTelNum.Text = "Phone Number:";
-            // 
+            //
             // lblManName
-            // 
+            //
             _lblManName.AutoSize = true;
             _lblManName.Location = new Point(453, 34);
             _lblManName.Name = "lblManName";
             _lblManName.Size = new Size(61, 13);
             _lblManName.TabIndex = 1;
             _lblManName.Text = "Manager:";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.AutoSize = true;
             _lblName.Location = new Point(12, 34);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(45, 13);
             _lblName.TabIndex = 0;
             _lblName.Text = "Name:";
-            // 
+            //
             // Customer_Get_ForSiteIDTableAdapter1
-            // 
+            //
             _Customer_Get_ForSiteIDTableAdapter1.ClearBeforeFill = true;
-            // 
+            //
             // grpPostcodes
-            // 
+            //
             _grpPostcodes.Controls.Add(_txtPostcode);
             _grpPostcodes.Location = new Point(0, 205);
             _grpPostcodes.Name = "grpPostcodes";
@@ -659,9 +658,9 @@ namespace FSM
             _grpPostcodes.TabIndex = 2;
             _grpPostcodes.TabStop = false;
             _grpPostcodes.Text = "Postcodes";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Location = new Point(15, 25);
             _txtPostcode.Multiline = true;
             _txtPostcode.Name = "txtPostcode";
@@ -669,9 +668,9 @@ namespace FSM
             _txtPostcode.ScrollBars = ScrollBars.Vertical;
             _txtPostcode.Size = new Size(792, 116);
             _txtPostcode.TabIndex = 0;
-            // 
+            //
             // grpQualifications
-            // 
+            //
             _grpQualifications.Controls.Add(_txtQual);
             _grpQualifications.Location = new Point(0, 370);
             _grpQualifications.Name = "grpQualifications";
@@ -679,9 +678,9 @@ namespace FSM
             _grpQualifications.TabIndex = 3;
             _grpQualifications.TabStop = false;
             _grpQualifications.Text = "Qualifications";
-            // 
+            //
             // txtQual
-            // 
+            //
             _txtQual.Location = new Point(15, 25);
             _txtQual.Multiline = true;
             _txtQual.Name = "txtQual";
@@ -689,18 +688,18 @@ namespace FSM
             _txtQual.ScrollBars = ScrollBars.Vertical;
             _txtQual.Size = new Size(792, 116);
             _txtQual.TabIndex = 0;
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Location = new Point(15, 532);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(75, 23);
             _btnClose.TabIndex = 4;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMViewEngineer
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(829, 561);
             Controls.Add(_btnClose);
@@ -727,6 +726,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void LoadMe(object sender, EventArgs e)
         {
             Populate();
@@ -769,7 +769,7 @@ namespace FSM
 
         private void Populate()
         {
-            Text = Conversions.ToString("Viewing Engineer : " + Engineer.ElementAtOrDefault(0)["Name"]);
+            Text = Conversions.ToString("Viewing Engineer : " + (DataTable)Engineer.ElementAtOrDefault(0)["Name"]);
             if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["Name"]))
             {
                 txtName.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["Name"]);
@@ -847,7 +847,12 @@ namespace FSM
         {
             Close();
         }
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
 
+        void IForm.LoadMe(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

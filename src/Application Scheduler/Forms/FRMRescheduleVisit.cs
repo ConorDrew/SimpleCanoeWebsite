@@ -18,13 +18,13 @@ namespace FSM
     {
         public FRMRescheduleVisit()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSchedulerFind_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMRescheduleVisit(int engineerVisitId) : base()
         {
             base.Load += FRMSchedulerFind_Load;
@@ -523,9 +523,9 @@ namespace FSM
             _grpEngineer.SuspendLayout();
             _grpVisit.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpEngineer
-            // 
+            //
             _grpEngineer.Controls.Add(_btnfindEngineer);
             _grpEngineer.Controls.Add(_txtEngineer);
             _grpEngineer.Controls.Add(_lblEngineer);
@@ -535,9 +535,9 @@ namespace FSM
             _grpEngineer.TabIndex = 46;
             _grpEngineer.TabStop = false;
             _grpEngineer.Text = "Engineer";
-            // 
+            //
             // btnfindEngineer
-            // 
+            //
             _btnfindEngineer.BackColor = Color.White;
             _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnfindEngineer.Location = new Point(336, 18);
@@ -546,26 +546,26 @@ namespace FSM
             _btnfindEngineer.TabIndex = 18;
             _btnfindEngineer.Text = "...";
             _btnfindEngineer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtEngineer
-            // 
+            //
             _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtEngineer.Location = new Point(93, 19);
             _txtEngineer.Name = "txtEngineer";
             _txtEngineer.ReadOnly = true;
             _txtEngineer.Size = new Size(235, 21);
             _txtEngineer.TabIndex = 17;
-            // 
+            //
             // lblEngineer
-            // 
+            //
             _lblEngineer.Location = new Point(8, 23);
             _lblEngineer.Name = "lblEngineer";
             _lblEngineer.Size = new Size(85, 13);
             _lblEngineer.TabIndex = 31;
             _lblEngineer.Text = "Engineer";
-            // 
+            //
             // grpVisit
-            // 
+            //
             _grpVisit.Controls.Add(_txtEndTimeMinutes);
             _grpVisit.Controls.Add(_txtEndTimeHours);
             _grpVisit.Controls.Add(_txtStartTimeMinutes);
@@ -584,111 +584,111 @@ namespace FSM
             _grpVisit.TabIndex = 47;
             _grpVisit.TabStop = false;
             _grpVisit.Text = "Visit";
-            // 
+            //
             // cboAppointment
-            // 
+            //
             _cboAppointment.FormattingEnabled = true;
             _cboAppointment.Location = new Point(92, 93);
             _cboAppointment.Name = "cboAppointment";
             _cboAppointment.Size = new Size(236, 21);
             _cboAppointment.TabIndex = 61;
-            // 
+            //
             // lblAppointment
-            // 
+            //
             _lblAppointment.Location = new Point(8, 96);
             _lblAppointment.Name = "lblAppointment";
             _lblAppointment.Size = new Size(76, 17);
             _lblAppointment.TabIndex = 60;
             _lblAppointment.Text = "Appointment:";
-            // 
+            //
             // dtpVisitDate
-            // 
+            //
             _dtpVisitDate.Location = new Point(93, 21);
             _dtpVisitDate.Name = "dtpVisitDate";
             _dtpVisitDate.Size = new Size(235, 20);
             _dtpVisitDate.TabIndex = 32;
-            // 
+            //
             // lblVisitDate
-            // 
+            //
             _lblVisitDate.Location = new Point(8, 24);
             _lblVisitDate.Name = "lblVisitDate";
             _lblVisitDate.Size = new Size(59, 15);
             _lblVisitDate.TabIndex = 31;
             _lblVisitDate.Text = "Visit Date";
-            // 
+            //
             // btnUpdate
-            // 
+            //
             _btnUpdate.Location = new Point(318, 233);
             _btnUpdate.Name = "btnUpdate";
             _btnUpdate.Size = new Size(75, 23);
             _btnUpdate.TabIndex = 48;
             _btnUpdate.Text = "Update";
             _btnUpdate.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtEndTimeMinutes
-            // 
+            //
             _txtEndTimeMinutes.Location = new Point(304, 59);
             _txtEndTimeMinutes.Name = "txtEndTimeMinutes";
             _txtEndTimeMinutes.Size = new Size(24, 20);
             _txtEndTimeMinutes.TabIndex = 78;
-            // 
+            //
             // txtEndTimeHours
-            // 
+            //
             _txtEndTimeHours.Location = new Point(273, 59);
             _txtEndTimeHours.Name = "txtEndTimeHours";
             _txtEndTimeHours.Size = new Size(24, 20);
             _txtEndTimeHours.TabIndex = 79;
-            // 
+            //
             // txtStartTimeMinutes
-            // 
+            //
             _txtStartTimeMinutes.Location = new Point(123, 59);
             _txtStartTimeMinutes.Name = "txtStartTimeMinutes";
             _txtStartTimeMinutes.Size = new Size(24, 20);
             _txtStartTimeMinutes.TabIndex = 77;
-            // 
+            //
             // txtStartTimeHours
-            // 
+            //
             _txtStartTimeHours.Location = new Point(92, 59);
             _txtStartTimeHours.Name = "txtStartTimeHours";
             _txtStartTimeHours.Size = new Size(24, 20);
             _txtStartTimeHours.TabIndex = 75;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label4.Location = new Point(296, 61);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(8, 17);
             _Label4.TabIndex = 80;
             _Label4.Text = ":";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label3.Location = new Point(114, 61);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(8, 17);
             _Label3.TabIndex = 81;
             _Label3.Text = ":";
-            // 
+            //
             // lblEndTime
-            // 
+            //
             _lblEndTime.Location = new Point(203, 62);
             _lblEndTime.Name = "lblEndTime";
             _lblEndTime.Size = new Size(55, 17);
             _lblEndTime.TabIndex = 76;
             _lblEndTime.Text = "End Time";
-            // 
+            //
             // lblStartTime
-            // 
+            //
             _lblStartTime.Location = new Point(8, 62);
             _lblStartTime.Name = "lblStartTime";
             _lblStartTime.Size = new Size(60, 17);
             _lblStartTime.TabIndex = 74;
             _lblStartTime.Text = "Start Time";
-            // 
+            //
             // FRMRescheduleVisit
-            // 
+            //
             AutoScaleBaseSize = new Size(5, 13);
             BackColor = Color.White;
             ClientSize = new Size(406, 268);
@@ -797,6 +797,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             int appointmentId = EngineerVisit.AppointmentID == 0 ? Conversions.ToInteger(Enums.Appointments.Anytime) : EngineerVisit.AppointmentID;

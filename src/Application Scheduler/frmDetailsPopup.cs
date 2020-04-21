@@ -16,7 +16,7 @@ namespace FSM
             _timer = new Timer();
         }
 
-        public frmDetailsPopup(frmVisit scheduleOwner) : base()
+        public frmDetailsPopup(FrmVisit scheduleOwner) : base()
         {
             _timer = new Timer();
 
@@ -32,6 +32,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public frmDetailsPopup(frmEngineerSchedule scheduleOwner) : base()
         {
             _timer = new Timer();
@@ -184,9 +185,9 @@ namespace FSM
             _pnlPeriod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgSchedule).BeginInit();
             SuspendLayout();
-            // 
+            //
             // lblPeriod
-            // 
+            //
             _lblPeriod.BackColor = Color.SteelBlue;
             _lblPeriod.Dock = DockStyle.Top;
             _lblPeriod.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -197,9 +198,9 @@ namespace FSM
             _lblPeriod.Size = new Size(550, 30);
             _lblPeriod.TabIndex = 1;
             _lblPeriod.Text = "Period";
-            // 
+            //
             // pnlPeriod
-            // 
+            //
             _pnlPeriod.Controls.Add(_lblFreePeriod);
             _pnlPeriod.Controls.Add(_dgSchedule);
             _pnlPeriod.Controls.Add(_lblPeriod);
@@ -208,9 +209,9 @@ namespace FSM
             _pnlPeriod.Name = "pnlPeriod";
             _pnlPeriod.Size = new Size(550, 112);
             _pnlPeriod.TabIndex = 2;
-            // 
+            //
             // lblFreePeriod
-            // 
+            //
             _lblFreePeriod.BackColor = Color.Transparent;
             _lblFreePeriod.Font = new Font("Microsoft Sans Serif", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblFreePeriod.ForeColor = Color.SteelBlue;
@@ -221,9 +222,9 @@ namespace FSM
             _lblFreePeriod.Text = "Free Period";
             _lblFreePeriod.TextAlign = ContentAlignment.MiddleCenter;
             _lblFreePeriod.Visible = false;
-            // 
+            //
             // dgSchedule
-            // 
+            //
             _dgSchedule.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSchedule.ColumnHeadersVisible = false;
@@ -234,9 +235,9 @@ namespace FSM
             _dgSchedule.RowHeadersVisible = false;
             _dgSchedule.Size = new Size(520, 57);
             _dgSchedule.TabIndex = 2;
-            // 
+            //
             // frmDetailsPopup
-            // 
+            //
             AutoScaleBaseSize = new Size(10, 24);
             BackColor = Color.White;
             ClientSize = new Size(550, 112);
@@ -253,6 +254,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         private bool shiftIsHeldDown
         {
             get
@@ -284,7 +286,6 @@ namespace FSM
             {
                 if (__timer != null)
                 {
-
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     __timer.Tick -= Timer_tick;
                 }
@@ -481,39 +482,44 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         [DllImport("user32")]
-        static extern int WindowFromPoint(int xPoint, int yPoint);
+        private static extern int WindowFromPoint(int xPoint, int yPoint);
+
         [DllImport("user32")]
-        static extern int GetWindowRect(int hwnd, ref Rectangle lpRect);
+        private static extern int GetWindowRect(int hwnd, ref Rectangle lpRect);
+
         [DllImport("user32")]
-        static extern int GetParent(int hwnd);
+        private static extern int GetParent(int hwnd);
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         [DllImport("user32")]
-        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
         [DllImport("user32")]
-        static extern int BringWindowToTop(int hwnd);
+        private static extern int BringWindowToTop(int hwnd);
 
         private bool _fadeIn;
         private System.Threading.Thread _fadeThread;
 
         private void fade()
         {
-            if (_fadeIn == true & Opacity == 0M)
+            if (_fadeIn == true & Opacity == 0.0)
             {
                 System.Threading.Thread.Sleep(250);
             }
 
-            while (_fadeIn == true & Opacity != 100M)
+            while (_fadeIn == true & Opacity != 100.0)
             {
-                Opacity += 0.1M;
+                Opacity += 0.1;
                 System.Threading.Thread.Sleep(50);
             }
 
-            while (_fadeIn == false & Opacity != 0M)
+            while (_fadeIn == false & Opacity != 0.0)
             {
-                Opacity -= 0.1M;
+                Opacity -= 0.1;
                 System.Threading.Thread.Sleep(50);
             }
         }

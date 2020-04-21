@@ -11,11 +11,10 @@ namespace FSM
 {
     public class FRMStockUsed : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMStockUsed() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMStockUsed_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpFilter;
 
@@ -506,9 +504,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgParts).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpParts
-            // 
+            //
             _grpParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpParts.Controls.Add(_dgParts);
@@ -518,9 +516,9 @@ namespace FSM
             _grpParts.TabIndex = 2;
             _grpParts.TabStop = false;
             _grpParts.Text = "Parts used";
-            // 
+            //
             // dgParts
-            // 
+            //
             _dgParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgParts.DataMember = "";
@@ -529,9 +527,9 @@ namespace FSM
             _dgParts.Name = "dgParts";
             _dgParts.Size = new Size(681, 122);
             _dgParts.TabIndex = 14;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 306);
@@ -539,9 +537,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 3;
             _btnExport.Text = "Export";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_chkQty);
             _grpFilter.Controls.Add(_cboMonths);
@@ -561,109 +559,109 @@ namespace FSM
             _grpFilter.TabIndex = 1;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // cboMonths
-            // 
+            //
             _cboMonths.FormattingEnabled = true;
             _cboMonths.Location = new Point(386, 72);
             _cboMonths.Name = "cboMonths";
             _cboMonths.Size = new Size(82, 21);
             _cboMonths.TabIndex = 5;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(474, 75);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(53, 18);
             _Label5.TabIndex = 15;
             _Label5.Text = "Months";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(73, 41);
             _txtName.Name = "txtName";
             _txtName.Size = new Size(395, 21);
             _txtName.TabIndex = 2;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(6, 75);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(381, 18);
             _Label4.TabIndex = 13;
             _Label4.Text = "Show all parts not used on any job or customer order in the last";
-            // 
+            //
             // txtNumber
-            // 
+            //
             _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtNumber.Location = new Point(548, 40);
             _txtNumber.Name = "txtNumber";
             _txtNumber.Size = new Size(141, 21);
             _txtNumber.TabIndex = 4;
-            // 
+            //
             // cboCategory
-            // 
+            //
             _cboCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboCategory.FormattingEnabled = true;
             _cboCategory.Location = new Point(73, 14);
             _cboCategory.Name = "cboCategory";
             _cboCategory.Size = new Size(395, 21);
             _cboCategory.TabIndex = 1;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(5, 17);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(88, 16);
             _Label3.TabIndex = 12;
             _Label3.Text = "Category";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label2.Location = new Point(474, 17);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(67, 18);
             _Label2.TabIndex = 11;
             _Label2.Text = "Reference";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(6, 44);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(88, 16);
             _Label1.TabIndex = 10;
             _Label1.Text = "Name";
-            // 
+            //
             // txtReference
-            // 
+            //
             _txtReference.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _txtReference.Location = new Point(548, 12);
             _txtReference.Name = "txtReference";
             _txtReference.Size = new Size(141, 21);
             _txtReference.TabIndex = 3;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _Label6.Location = new Point(474, 40);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(88, 16);
             _Label6.TabIndex = 6;
             _Label6.Text = "Number";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(72, 306);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 4;
             _btnReset.Text = "Reset";
-            // 
+            //
             // chkQty
-            // 
+            //
             _chkQty.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _chkQty.AutoSize = true;
             _chkQty.Location = new Point(548, 72);
@@ -673,9 +671,9 @@ namespace FSM
             _chkQty.TabIndex = 16;
             _chkQty.Text = "Show quantity of 0";
             _chkQty.UseVisualStyleBackColor = true;
-            // 
+            //
             // FRMStockUsed
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(713, 336);
             Controls.Add(_grpFilter);
@@ -699,7 +697,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDataGrid();
@@ -715,7 +714,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -758,6 +757,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             var tbStyle = dgParts.TableStyles[0];
@@ -906,6 +906,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateDatagrid()
         {
             try

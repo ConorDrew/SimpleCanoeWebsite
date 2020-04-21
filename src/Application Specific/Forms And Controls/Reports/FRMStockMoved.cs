@@ -11,11 +11,10 @@ namespace FSM
 {
     public class FRMStockMoved : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMStockMoved() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMStockMoved_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -45,7 +43,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpFilter;
 
@@ -700,9 +698,9 @@ namespace FSM
             _Panel2.SuspendLayout();
             _Panel1.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpAudit
-            // 
+            //
             _grpAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAudit.Controls.Add(_dgIPTAudit);
@@ -712,9 +710,9 @@ namespace FSM
             _grpAudit.TabIndex = 1;
             _grpAudit.TabStop = false;
             _grpAudit.Text = "IPT Audit";
-            // 
+            //
             // dgIPTAudit
-            // 
+            //
             _dgIPTAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgIPTAudit.DataMember = "";
@@ -723,9 +721,9 @@ namespace FSM
             _dgIPTAudit.Name = "dgIPTAudit";
             _dgIPTAudit.Size = new Size(825, 251);
             _dgIPTAudit.TabIndex = 0;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 438);
@@ -733,9 +731,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 2;
             _btnExport.Text = "Export";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_Panel3);
             _grpFilter.Controls.Add(_Panel2);
@@ -757,18 +755,18 @@ namespace FSM
             _grpFilter.TabIndex = 0;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // Panel3
-            // 
+            //
             _Panel3.Controls.Add(_radToWarehouse);
             _Panel3.Controls.Add(_radToVan);
             _Panel3.Location = new Point(442, 50);
             _Panel3.Name = "Panel3";
             _Panel3.Size = new Size(196, 28);
             _Panel3.TabIndex = 27;
-            // 
+            //
             // radToWarehouse
-            // 
+            //
             _radToWarehouse.AutoSize = true;
             _radToWarehouse.Checked = true;
             _radToWarehouse.Location = new Point(3, 3);
@@ -778,9 +776,9 @@ namespace FSM
             _radToWarehouse.TabStop = true;
             _radToWarehouse.Text = "Warehouse";
             _radToWarehouse.UseVisualStyleBackColor = true;
-            // 
+            //
             // radToVan
-            // 
+            //
             _radToVan.AutoSize = true;
             _radToVan.Location = new Point(98, 3);
             _radToVan.Name = "radToVan";
@@ -788,18 +786,18 @@ namespace FSM
             _radToVan.TabIndex = 10;
             _radToVan.Text = "Stock Profile";
             _radToVan.UseVisualStyleBackColor = true;
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.Controls.Add(_radFromWarehouse);
             _Panel2.Controls.Add(_radFromVan);
             _Panel2.Location = new Point(441, 19);
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(197, 26);
             _Panel2.TabIndex = 26;
-            // 
+            //
             // radFromWarehouse
-            // 
+            //
             _radFromWarehouse.AutoSize = true;
             _radFromWarehouse.Checked = true;
             _radFromWarehouse.Location = new Point(3, 3);
@@ -809,9 +807,9 @@ namespace FSM
             _radFromWarehouse.TabStop = true;
             _radFromWarehouse.Text = "Warehouse";
             _radFromWarehouse.UseVisualStyleBackColor = true;
-            // 
+            //
             // radFromVan
-            // 
+            //
             _radFromVan.AutoSize = true;
             _radFromVan.Location = new Point(100, 3);
             _radFromVan.Name = "radFromVan";
@@ -819,9 +817,9 @@ namespace FSM
             _radFromVan.TabIndex = 7;
             _radFromVan.Text = "Stock Profile";
             _radFromVan.UseVisualStyleBackColor = true;
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Controls.Add(_radParts);
             _Panel1.Controls.Add(_radProducts);
             _Panel1.Controls.Add(_radBoth);
@@ -829,9 +827,9 @@ namespace FSM
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(82, 82);
             _Panel1.TabIndex = 25;
-            // 
+            //
             // radParts
-            // 
+            //
             _radParts.AutoSize = true;
             _radParts.Location = new Point(3, 3);
             _radParts.Name = "radParts";
@@ -839,9 +837,9 @@ namespace FSM
             _radParts.TabIndex = 0;
             _radParts.Text = "Parts";
             _radParts.UseVisualStyleBackColor = true;
-            // 
+            //
             // radProducts
-            // 
+            //
             _radProducts.AutoSize = true;
             _radProducts.Location = new Point(3, 33);
             _radProducts.Name = "radProducts";
@@ -849,9 +847,9 @@ namespace FSM
             _radProducts.TabIndex = 1;
             _radProducts.Text = "Products";
             _radProducts.UseVisualStyleBackColor = true;
-            // 
+            //
             // radBoth
-            // 
+            //
             _radBoth.AutoSize = true;
             _radBoth.Checked = true;
             _radBoth.Location = new Point(3, 60);
@@ -861,9 +859,9 @@ namespace FSM
             _radBoth.TabStop = true;
             _radBoth.Text = "Both";
             _radBoth.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnRun
-            // 
+            //
             _btnRun.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRun.Location = new Point(781, 78);
             _btnRun.Name = "btnRun";
@@ -871,88 +869,88 @@ namespace FSM
             _btnRun.TabIndex = 12;
             _btnRun.Text = "Run";
             _btnRun.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboTo
-            // 
+            //
             _cboTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboTo.FormattingEnabled = true;
             _cboTo.Location = new Point(644, 49);
             _cboTo.Name = "cboTo";
             _cboTo.Size = new Size(189, 21);
             _cboTo.TabIndex = 11;
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Location = new Point(358, 52);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(84, 18);
             _Label4.TabIndex = 24;
             _Label4.Text = "Moved To";
-            // 
+            //
             // cboFrom
-            // 
+            //
             _cboFrom.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboFrom.FormattingEnabled = true;
             _cboFrom.Location = new Point(644, 22);
             _cboFrom.Name = "cboFrom";
             _cboFrom.Size = new Size(189, 21);
             _cboFrom.TabIndex = 8;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(358, 25);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(84, 18);
             _Label3.TabIndex = 20;
             _Label3.Text = "Moved From";
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Location = new Point(158, 49);
             _txtName.Name = "txtName";
             _txtName.Size = new Size(194, 21);
             _txtName.TabIndex = 4;
-            // 
+            //
             // txtNumber
-            // 
+            //
             _txtNumber.Location = new Point(158, 22);
             _txtNumber.Name = "txtNumber";
             _txtNumber.Size = new Size(194, 21);
             _txtNumber.TabIndex = 3;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(87, 79);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(67, 18);
             _Label2.TabIndex = 11;
             _Label2.Text = "Reference";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(87, 52);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(88, 16);
             _Label1.TabIndex = 10;
             _Label1.Text = "Name";
-            // 
+            //
             // txtReference
-            // 
+            //
             _txtReference.Location = new Point(158, 76);
             _txtReference.Name = "txtReference";
             _txtReference.Size = new Size(194, 21);
             _txtReference.TabIndex = 5;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(87, 22);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(88, 16);
             _Label6.TabIndex = 6;
             _Label6.Text = "Number";
-            // 
+            //
             // FRMStockMoved
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(857, 468);
             Controls.Add(_grpFilter);
@@ -980,7 +978,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDataGrid();
@@ -1000,7 +999,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1043,6 +1042,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDataGrid()
         {
             var tbStyle = dgIPTAudit.TableStyles[0];
@@ -1189,6 +1189,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateDatagrid()
         {
             try

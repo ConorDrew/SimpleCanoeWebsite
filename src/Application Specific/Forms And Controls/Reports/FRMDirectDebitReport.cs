@@ -10,11 +10,10 @@ namespace FSM
 {
     public class FRMDirectDebitReport : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMDirectDebitReport() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMJobManager_Load;
@@ -23,7 +22,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -44,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpFilter;
 
@@ -315,9 +313,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgDirectDebits).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpJobs
-            // 
+            //
             _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpJobs.Controls.Add(_dgDirectDebits);
@@ -327,9 +325,9 @@ namespace FSM
             _grpJobs.TabIndex = 1;
             _grpJobs.TabStop = false;
             _grpJobs.Text = "Results";
-            // 
+            //
             // dgDirectDebits
-            // 
+            //
             _dgDirectDebits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgDirectDebits.DataMember = "";
@@ -338,9 +336,9 @@ namespace FSM
             _dgDirectDebits.Name = "dgDirectDebits";
             _dgDirectDebits.Size = new Size(768, 339);
             _dgDirectDebits.TabIndex = 0;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 464);
@@ -348,9 +346,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 2;
             _btnExport.Text = "Export";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_Label1);
             _grpFilter.Controls.Add(_dtpTo);
@@ -363,57 +361,57 @@ namespace FSM
             _grpFilter.TabIndex = 0;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(8, 25);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(120, 16);
             _Label1.TabIndex = 5;
             _Label1.Text = "Invoice Raise Date";
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _dtpTo.Location = new Point(488, 24);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(248, 21);
             _dtpTo.TabIndex = 4;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(176, 24);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(248, 21);
             _dtpFrom.TabIndex = 2;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(440, 24);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(48, 16);
             _Label9.TabIndex = 3;
             _Label9.Text = "To";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(136, 25);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(48, 16);
             _Label8.TabIndex = 1;
             _Label8.Text = "From";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(72, 464);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 3;
             _btnReset.Text = "Reset";
-            // 
+            //
             // FRMDirectDebitReport
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(800, 494);
             Controls.Add(_grpFilter);
@@ -436,7 +434,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupDirectDebitsDataGrid();
@@ -451,7 +450,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -494,6 +493,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDirectDebitsDataGrid()
         {
             var tbStyle = dgDirectDebits.TableStyles[0];
@@ -592,6 +592,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid()
         {
             try
@@ -627,8 +628,7 @@ namespace FSM
 
         public void Export()
         {
-            var exporter = new Entity.Sys.Exporting(dvDD.Table, "Direct Debit List");
-            exporter = null;
+            Entity.Sys.ExportHelper.Export(dvDD.Table, "Direct Debit List", Entity.Sys.Enums.ExportType.CSV);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

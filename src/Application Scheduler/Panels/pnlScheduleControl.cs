@@ -413,7 +413,6 @@ namespace FSM
             {
                 if ((_datesString ?? "") == (string.Empty ?? ""))
                 {
-
                     // This will always have one iteration
                     for (int dayCount = 0, loopTo = dateTo.Date.Subtract(dateFrom.Date).Days; dayCount <= loopTo; dayCount++)
                     {
@@ -614,9 +613,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_picBoxCal1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_picBoxCal2).BeginInit();
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnClose.Location = new Point(1306, 3);
             _btnClose.Name = "btnClose";
@@ -624,41 +623,41 @@ namespace FSM
             _btnClose.TabIndex = 5;
             _btnClose.Text = "Close";
             _btnClose.UseVisualStyleBackColor = true;
-            // 
+            //
             // dtpFromDate
-            // 
+            //
             _dtpFromDate.Location = new Point(128, 4);
             _dtpFromDate.Name = "dtpFromDate";
             _dtpFromDate.Size = new Size(144, 21);
             _dtpFromDate.TabIndex = 1;
-            // 
+            //
             // dtpToDate
-            // 
+            //
             _dtpToDate.Location = new Point(296, 4);
             _dtpToDate.Name = "dtpToDate";
             _dtpToDate.Size = new Size(144, 21);
             _dtpToDate.TabIndex = 2;
-            // 
+            //
             // lblFromDate
-            // 
+            //
             _lblFromDate.BackColor = Color.Transparent;
             _lblFromDate.Location = new Point(56, 8);
             _lblFromDate.Name = "lblFromDate";
             _lblFromDate.Size = new Size(76, 14);
             _lblFromDate.TabIndex = 3;
             _lblFromDate.Text = "Diary From";
-            // 
+            //
             // lblTo
-            // 
+            //
             _lblTo.BackColor = Color.Transparent;
             _lblTo.Location = new Point(272, 8);
             _lblTo.Name = "lblTo";
             _lblTo.Size = new Size(24, 16);
             _lblTo.TabIndex = 4;
             _lblTo.Text = "To";
-            // 
+            //
             // btnRefresh
-            // 
+            //
             _btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnRefresh.Location = new Point(1244, 3);
             _btnRefresh.Name = "btnRefresh";
@@ -666,9 +665,9 @@ namespace FSM
             _btnRefresh.TabIndex = 4;
             _btnRefresh.Text = "Refresh";
             _btnRefresh.UseVisualStyleBackColor = true;
-            // 
+            //
             // pnlControls
-            // 
+            //
             _pnlControls.BackColor = Color.Transparent;
             _pnlControls.Controls.Add(_btnBack);
             _pnlControls.Controls.Add(_btnForward);
@@ -681,45 +680,45 @@ namespace FSM
             _pnlControls.Name = "pnlControls";
             _pnlControls.Size = new Size(564, 30);
             _pnlControls.TabIndex = 7;
-            // 
+            //
             // btnBack
-            // 
+            //
             _btnBack.Location = new Point(14, 3);
             _btnBack.Name = "btnBack";
             _btnBack.Size = new Size(36, 23);
             _btnBack.TabIndex = 7;
             _btnBack.Text = "<<";
             _btnBack.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnForward
-            // 
+            //
             _btnForward.Location = new Point(494, 3);
             _btnForward.Name = "btnForward";
             _btnForward.Size = new Size(36, 23);
             _btnForward.TabIndex = 6;
             _btnForward.Text = ">>";
             _btnForward.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnGo
-            // 
+            //
             _btnGo.Location = new Point(452, 3);
             _btnGo.Name = "btnGo";
             _btnGo.Size = new Size(36, 23);
             _btnGo.TabIndex = 5;
             _btnGo.Text = "Go";
             _btnGo.UseVisualStyleBackColor = true;
-            // 
+            //
             // picBoxCal1
-            // 
+            //
             _picBoxCal1.Image = (Image)resources.GetObject("picBoxCal1.Image");
             _picBoxCal1.Location = new Point(0, 0);
             _picBoxCal1.Name = "picBoxCal1";
             _picBoxCal1.Size = new Size(120, 32);
             _picBoxCal1.TabIndex = 8;
             _picBoxCal1.TabStop = false;
-            // 
+            //
             // picBoxCal2
-            // 
+            //
             _picBoxCal2.Image = (Image)resources.GetObject("picBoxCal2.Image");
             _picBoxCal2.Location = new Point(117, 0);
             _picBoxCal2.Name = "picBoxCal2";
@@ -727,9 +726,9 @@ namespace FSM
             _picBoxCal2.SizeMode = PictureBoxSizeMode.StretchImage;
             _picBoxCal2.TabIndex = 9;
             _picBoxCal2.TabStop = false;
-            // 
+            //
             // btnDisplayEngineers
-            // 
+            //
             _btnDisplayEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnDisplayEngineers.Location = new Point(1182, 3);
             _btnDisplayEngineers.Name = "btnDisplayEngineers";
@@ -737,43 +736,43 @@ namespace FSM
             _btnDisplayEngineers.TabIndex = 3;
             _btnDisplayEngineers.Text = "Display";
             _btnDisplayEngineers.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAbsenceLegend
-            // 
+            //
             _btnAbsenceLegend.Location = new Point(3, 3);
             _btnAbsenceLegend.Name = "btnAbsenceLegend";
             _btnAbsenceLegend.Size = new Size(135, 23);
             _btnAbsenceLegend.TabIndex = 10;
             _btnAbsenceLegend.Text = "Absence Colour Key";
             _btnAbsenceLegend.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.BackColor = Color.Transparent;
             _Label1.Location = new Point(162, 10);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(89, 14);
             _Label1.TabIndex = 11;
             _Label1.Text = "Text Size 6-12";
-            // 
+            //
             // txtTextSize
-            // 
+            //
             _txtTextSize.Location = new Point(257, 5);
             _txtTextSize.Name = "txtTextSize";
             _txtTextSize.Size = new Size(41, 21);
             _txtTextSize.TabIndex = 12;
-            // 
+            //
             // btnTextApply
-            // 
+            //
             _btnTextApply.Location = new Point(316, 4);
             _btnTextApply.Name = "btnTextApply";
             _btnTextApply.Size = new Size(47, 23);
             _btnTextApply.TabIndex = 13;
             _btnTextApply.Text = "Apply";
             _btnTextApply.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnFind
-            // 
+            //
             _btnFind.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFind.Location = new Point(1120, 3);
             _btnFind.Name = "btnFind";
@@ -781,9 +780,9 @@ namespace FSM
             _btnFind.TabIndex = 14;
             _btnFind.Text = "Find";
             _btnFind.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnNewJob
-            // 
+            //
             _btnNewJob.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnNewJob.Location = new Point(1052, 3);
             _btnNewJob.Name = "btnNewJob";
@@ -791,9 +790,9 @@ namespace FSM
             _btnNewJob.TabIndex = 15;
             _btnNewJob.Text = "New Job";
             _btnNewJob.UseVisualStyleBackColor = true;
-            // 
+            //
             // pnlScheduleControl
-            // 
+            //
             BackColor = Color.White;
             Controls.Add(_btnNewJob);
             Controls.Add(_btnFind);

@@ -9,11 +9,10 @@ namespace FSM
 {
     public class FRMQuoteJob : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMQuoteJob() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMQuoteJob_Load;
@@ -217,36 +216,36 @@ namespace FSM
             _btnConvert = new Button();
             _btnConvert.Click += new EventHandler(btnConvert_Click);
             SuspendLayout();
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(1184, 708);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnSave.Location = new Point(8, 747);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(56, 23);
             _btnSave.TabIndex = 2;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(72, 747);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(56, 23);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // btnViewJob
-            // 
+            //
             _btnViewJob.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnViewJob.Location = new Point(808, 747);
             _btnViewJob.Name = "btnViewJob";
@@ -254,27 +253,27 @@ namespace FSM
             _btnViewJob.TabIndex = 5;
             _btnViewJob.Text = "View Job";
             _btnViewJob.Visible = false;
-            // 
+            //
             // btnViewSite
-            // 
+            //
             _btnViewSite.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnViewSite.Location = new Point(134, 747);
             _btnViewSite.Name = "btnViewSite";
             _btnViewSite.Size = new Size(100, 24);
             _btnViewSite.TabIndex = 7;
             _btnViewSite.Text = "View Property";
-            // 
+            //
             // btnConvert
-            // 
+            //
             _btnConvert.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnConvert.Location = new Point(1022, 747);
             _btnConvert.Name = "btnConvert";
             _btnConvert.Size = new Size(92, 23);
             _btnConvert.TabIndex = 8;
             _btnConvert.Text = "Convert";
-            // 
+            //
             // FRMQuoteJob
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(1184, 781);
             Controls.Add(_btnConvert);
@@ -299,7 +298,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ((UCQuoteJob)LoadedControl).RefreshButton += ShowButton;
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
@@ -482,6 +482,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void CloseTheForm()
         {
             if (((UCQuoteJob)TheLoadedControl).QuoteNumberUsed == false)

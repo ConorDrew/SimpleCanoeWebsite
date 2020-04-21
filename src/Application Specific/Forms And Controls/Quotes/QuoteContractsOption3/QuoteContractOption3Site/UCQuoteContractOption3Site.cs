@@ -12,11 +12,10 @@ namespace FSM
 {
     public class UCQuoteContractOption3Site : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCQuoteContractOption3Site() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCContractOption3Site_Load;
@@ -547,9 +546,9 @@ namespace FSM
             _gpbAssets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgAssets).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpContractOption3Site
-            // 
+            //
             _grpContractOption3Site.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpContractOption3Site.Controls.Add(_btnRefreshGrid);
@@ -575,18 +574,18 @@ namespace FSM
             _grpContractOption3Site.TabIndex = 1;
             _grpContractOption3Site.TabStop = false;
             _grpContractOption3Site.Text = "Main Details";
-            // 
+            //
             // btnRefreshGrid
-            // 
+            //
             _btnRefreshGrid.UseVisualStyleBackColor = true;
             _btnRefreshGrid.Location = new Point(500, 122);
             _btnRefreshGrid.Name = "btnRefreshGrid";
             _btnRefreshGrid.Size = new Size(200, 23);
             _btnRefreshGrid.TabIndex = 8;
             _btnRefreshGrid.Text = "Load Assets Scheduled";
-            // 
+            //
             // lblWarning
-            // 
+            //
             _lblWarning.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblWarning.ForeColor = Color.Red;
             _lblWarning.Location = new Point(704, 71);
@@ -595,9 +594,9 @@ namespace FSM
             _lblWarning.TabIndex = 34;
             _lblWarning.Text = "! Date must be between Start &&End Date";
             _lblWarning.Visible = false;
-            // 
+            //
             // gpbAssets
-            // 
+            //
             _gpbAssets.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _gpbAssets.Controls.Add(_dgAssets);
             _gpbAssets.Location = new Point(9, 153);
@@ -606,9 +605,9 @@ namespace FSM
             _gpbAssets.TabIndex = 9;
             _gpbAssets.TabStop = false;
             _gpbAssets.Text = "Assets - Enter duration in hours for each month";
-            // 
+            //
             // dgAssets
-            // 
+            //
             _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAssets.DataMember = "";
@@ -617,9 +616,9 @@ namespace FSM
             _dgAssets.Name = "dgAssets";
             _dgAssets.Size = new Size(942, 400);
             _dgAssets.TabIndex = 0;
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Location = new Point(151, 25);
             _txtSite.Multiline = true;
             _txtSite.Name = "txtSite";
@@ -628,17 +627,17 @@ namespace FSM
             _txtSite.Size = new Size(200, 77);
             _txtSite.TabIndex = 0;
             _txtSite.Text = "";
-            // 
+            //
             // lblSiteID
-            // 
+            //
             _lblSiteID.Location = new Point(9, 25);
             _lblSiteID.Name = "lblSiteID";
             _lblSiteID.Size = new Size(139, 20);
             _lblSiteID.TabIndex = 31;
             _lblSiteID.Text = "Property";
-            // 
+            //
             // txtContractSiteReference
-            // 
+            //
             _txtContractSiteReference.Location = new Point(151, 104);
             _txtContractSiteReference.MaxLength = 100;
             _txtContractSiteReference.Name = "txtContractSiteReference";
@@ -647,62 +646,62 @@ namespace FSM
             _txtContractSiteReference.TabIndex = 1;
             _txtContractSiteReference.Tag = "ContractOption3Site.ContractSiteReference";
             _txtContractSiteReference.Text = "";
-            // 
+            //
             // lblContractSiteReference
-            // 
+            //
             _lblContractSiteReference.Location = new Point(10, 104);
             _lblContractSiteReference.Name = "lblContractSiteReference";
             _lblContractSiteReference.Size = new Size(139, 20);
             _lblContractSiteReference.TabIndex = 31;
             _lblContractSiteReference.Text = "Quote Property Reference";
-            // 
+            //
             // dtpStartDate
-            // 
+            //
             _dtpStartDate.Location = new Point(500, 25);
             _dtpStartDate.Name = "dtpStartDate";
             _dtpStartDate.TabIndex = 4;
             _dtpStartDate.Tag = "ContractOption3Site.StartDate";
-            // 
+            //
             // lblStartDate
-            // 
+            //
             _lblStartDate.Location = new Point(366, 25);
             _lblStartDate.Name = "lblStartDate";
             _lblStartDate.Size = new Size(123, 20);
             _lblStartDate.TabIndex = 31;
             _lblStartDate.Text = "Start Date";
-            // 
+            //
             // dtpEndDate
-            // 
+            //
             _dtpEndDate.Location = new Point(500, 49);
             _dtpEndDate.Name = "dtpEndDate";
             _dtpEndDate.TabIndex = 5;
             _dtpEndDate.Tag = "ContractOption3Site.EndDate";
-            // 
+            //
             // lblEndDate
-            // 
+            //
             _lblEndDate.Location = new Point(366, 49);
             _lblEndDate.Name = "lblEndDate";
             _lblEndDate.Size = new Size(123, 20);
             _lblEndDate.TabIndex = 31;
             _lblEndDate.Text = "End Date";
-            // 
+            //
             // dtpFirstVisitDate
-            // 
+            //
             _dtpFirstVisitDate.Location = new Point(500, 72);
             _dtpFirstVisitDate.Name = "dtpFirstVisitDate";
             _dtpFirstVisitDate.TabIndex = 6;
             _dtpFirstVisitDate.Tag = "ContractOption3Site.FirstVisitDate";
-            // 
+            //
             // lblFirstVisitDate
-            // 
+            //
             _lblFirstVisitDate.Location = new Point(367, 72);
             _lblFirstVisitDate.Name = "lblFirstVisitDate";
             _lblFirstVisitDate.Size = new Size(123, 20);
             _lblFirstVisitDate.TabIndex = 31;
             _lblFirstVisitDate.Text = "First Visit Date";
-            // 
+            //
             // cboVisitFrequencyID
-            // 
+            //
             _cboVisitFrequencyID.Cursor = Cursors.Hand;
             _cboVisitFrequencyID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboVisitFrequencyID.Location = new Point(500, 96);
@@ -710,17 +709,17 @@ namespace FSM
             _cboVisitFrequencyID.Size = new Size(200, 21);
             _cboVisitFrequencyID.TabIndex = 7;
             _cboVisitFrequencyID.Tag = "ContractOption3Site.VisitFrequencyID";
-            // 
+            //
             // lblVisitFrequencyID
-            // 
+            //
             _lblVisitFrequencyID.Location = new Point(367, 96);
             _lblVisitFrequencyID.Name = "lblVisitFrequencyID";
             _lblVisitFrequencyID.Size = new Size(96, 20);
             _lblVisitFrequencyID.TabIndex = 31;
             _lblVisitFrequencyID.Text = "Visit Frequency";
-            // 
+            //
             // txtSitePrice
-            // 
+            //
             _txtSitePrice.Location = new Point(151, 128);
             _txtSitePrice.MaxLength = 9;
             _txtSitePrice.Name = "txtSitePrice";
@@ -728,17 +727,17 @@ namespace FSM
             _txtSitePrice.TabIndex = 3;
             _txtSitePrice.Tag = "ContractOption3Site.SitePrice";
             _txtSitePrice.Text = "";
-            // 
+            //
             // lblSitePrice
-            // 
+            //
             _lblSitePrice.Location = new Point(10, 128);
             _lblSitePrice.Name = "lblSitePrice";
             _lblSitePrice.Size = new Size(112, 20);
             _lblSitePrice.TabIndex = 31;
             _lblSitePrice.Text = "Property Price";
-            // 
+            //
             // UCQuoteContractOption3Site
-            // 
+            //
             Controls.Add(_grpContractOption3Site);
             Name = "UCQuoteContractOption3Site";
             Size = new Size(994, 616);
@@ -750,7 +749,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -765,11 +765,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string ExtraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -868,6 +869,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupAssetsDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgAssets);
@@ -954,6 +956,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void ClearAssetsGrid()
         {
             if (CurrentQuoteContractOption3Site is object)
@@ -1040,7 +1043,6 @@ namespace FSM
                             {
                                 if (estVisitDate >= Conversions.ToDate(Strings.Format(dtpStartDate.Value.Date, "dd/MM/yyyy") + " 09:00") & estVisitDate <= Conversions.ToDate(Strings.Format(dtpEndDate.Value.Date, "dd/MM/yyyy") + " 09:00"))
                                 {
-
                                     // I WANT TO STORE THE DATE IT SHOULD HAVE BEEN SO THE DATES AT THE START OF THE MONTH DON@T CREEP UP FOR EAXMPLE - ALP
                                     var shouldHaveBeenDate = estVisitDate;
                                     // MAKE SURE WE DON'T BOOK A SATURADY OR SUNDAY
@@ -1087,7 +1089,7 @@ namespace FSM
             Cursor = Cursors.Default;
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {
@@ -1146,12 +1148,11 @@ namespace FSM
                     App.DB.QuoteContractOption3SiteAssetDurations.QuoteContractOption3SiteAssetDuration_Delete(CurrentQuoteContractOption3Site.QuoteContractSiteID);
                     foreach (object vDate in Visits) // For each Visit
                     {
-
                         // FOR EACH ASSET FOR THE VISIT DATE
                         foreach (DataRow rAsset in Assets.Table.Rows)
                         {
                             // IF DURATION > 0 THEN SAVE DURATION
-                            if (Conversions.ToBoolean(rAsset[Strings.Format(vDate, "MMM yy")] > 0))
+                            if (Conversions.ToBoolean((double)rAsset[Strings.Format(vDate, "MMM yy")] > 0))
                             {
                                 var assetDuration = new Entity.QuoteContractOption3SiteAssetDurations.QuoteContractOption3SiteAssetDuration();
                                 assetDuration.SetQuoteContractSiteID = CurrentQuoteContractOption3Site.QuoteContractSiteID;

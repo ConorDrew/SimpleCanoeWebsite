@@ -9,8 +9,8 @@ namespace FSM
 {
     public class FRMSelectAsset : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSelectAsset() : base()
         {
             base.Load += FRMChooseAsset_Load;
@@ -19,7 +19,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -40,7 +39,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private Label _Label1;
 
@@ -209,26 +208,26 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgAssets).BeginInit();
             SuspendLayout();
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(16, 40);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(320, 24);
             _Label1.TabIndex = 2;
             _Label1.Text = "Please select an Appliance to be serviced";
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(480, 312);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(75, 23);
             _btnOK.TabIndex = 4;
             _btnOK.Text = "OK";
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_dgAssets);
@@ -237,9 +236,9 @@ namespace FSM
             _GroupBox1.Size = new Size(544, 243);
             _GroupBox1.TabIndex = 5;
             _GroupBox1.TabStop = false;
-            // 
+            //
             // dgAssets
-            // 
+            //
             _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAssets.DataMember = "";
@@ -248,9 +247,9 @@ namespace FSM
             _dgAssets.Name = "dgAssets";
             _dgAssets.Size = new Size(528, 217);
             _dgAssets.TabIndex = 0;
-            // 
+            //
             // btnNoAsset
-            // 
+            //
             _btnNoAsset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnNoAsset.Location = new Point(8, 312);
             _btnNoAsset.Name = "btnNoAsset";
@@ -258,9 +257,9 @@ namespace FSM
             _btnNoAsset.TabIndex = 6;
             _btnNoAsset.Text = "No Appliance";
             _btnNoAsset.Visible = false;
-            // 
+            //
             // chkCERT2
-            // 
+            //
             _chkCERT2.AutoSize = true;
             _chkCERT2.Location = new Point(229, 316);
             _chkCERT2.Name = "chkCERT2";
@@ -269,9 +268,9 @@ namespace FSM
             _chkCERT2.Text = "Certificate?";
             _chkCERT2.UseVisualStyleBackColor = true;
             _chkCERT2.Checked = true;
-            // 
+            //
             // FRMSelectAsset
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(560, 342);
             ControlBox = false;
@@ -296,7 +295,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupAssetDataGrid();
@@ -369,7 +369,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -427,6 +427,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupAssetDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgAssets);
@@ -566,6 +567,7 @@ namespace FSM
         {
             DialogResult = DialogResult.Yes;
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

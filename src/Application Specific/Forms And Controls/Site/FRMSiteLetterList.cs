@@ -14,7 +14,8 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             SetupTemplateDataGrid();
             var dt = new DataTable();
@@ -100,6 +101,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupTemplateDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgLetters);
@@ -121,6 +123,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void btnSelect_Click(object sender, EventArgs e)
         {
             if (SelectedLetterDatarow is null)

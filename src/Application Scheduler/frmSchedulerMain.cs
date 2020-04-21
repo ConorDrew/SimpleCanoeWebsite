@@ -9,8 +9,8 @@ namespace FSM
 {
     public class frmSchedulerMain : Form
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public frmSchedulerMain() : base()
         {
             base.Load += frmSchedulerMain_Load;
@@ -339,70 +339,70 @@ namespace FSM
             _MenuItem1 = new MenuItem();
             _MenuItem2 = new MenuItem();
             SuspendLayout();
-            // 
+            //
             // mnuMain
-            // 
+            //
             _mnuMain.MenuItems.AddRange(new MenuItem[] { _mnuScheduler, _mnuAbsences, _mnuWeekSchedule, _MenuItem2 });
-            // 
+            //
             // mnuScheduler
-            // 
+            //
             _mnuScheduler.Index = 0;
             _mnuScheduler.MenuItems.AddRange(new MenuItem[] { _mnuOpenSchedule, _mnuResetScheduler, _mnuDividerScheduler, _mnuCloseScheduler });
             _mnuScheduler.Text = "&Scheduler";
-            // 
+            //
             // mnuOpenSchedule
-            // 
+            //
             _mnuOpenSchedule.Index = 0;
             _mnuOpenSchedule.Shortcut = Shortcut.F2;
             _mnuOpenSchedule.Text = "&Open";
-            // 
+            //
             // mnuResetScheduler
-            // 
+            //
             _mnuResetScheduler.Index = 1;
             _mnuResetScheduler.Shortcut = Shortcut.F3;
             _mnuResetScheduler.Text = "&Reset";
-            // 
+            //
             // mnuDividerScheduler
-            // 
+            //
             _mnuDividerScheduler.Index = 2;
             _mnuDividerScheduler.Text = "-";
-            // 
+            //
             // mnuCloseScheduler
-            // 
+            //
             _mnuCloseScheduler.Index = 3;
             _mnuCloseScheduler.Text = "&Close";
-            // 
+            //
             // mnuAbsences
-            // 
+            //
             _mnuAbsences.Index = 1;
             _mnuAbsences.Text = "&Absences";
-            // 
+            //
             // mnuWeekSchedule
-            // 
+            //
             _mnuWeekSchedule.Index = 2;
             _mnuWeekSchedule.MenuItems.AddRange(new MenuItem[] { _mnuPrintWeek, _MenuItem1 });
             _mnuWeekSchedule.Text = "&Week Schedule";
             _mnuWeekSchedule.Visible = false;
-            // 
+            //
             // mnuPrintWeek
-            // 
+            //
             _mnuPrintWeek.Index = 0;
             _mnuPrintWeek.Text = "&Print";
-            // 
+            //
             // MenuItem1
-            // 
+            //
             _MenuItem1.Index = 1;
             _MenuItem1.Text = "frmVisit";
             _MenuItem1.Visible = false;
-            // 
+            //
             // MenuItem2
-            // 
+            //
             _MenuItem2.Index = 3;
             _MenuItem2.Text = "Development";
             _MenuItem2.Visible = false;
-            // 
+            //
             // frmSchedulerMain
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(744, 371);
             Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));

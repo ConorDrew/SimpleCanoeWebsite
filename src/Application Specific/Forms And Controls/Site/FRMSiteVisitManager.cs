@@ -12,11 +12,10 @@ namespace FSM
 {
     public class FRMSiteVisitManager : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSiteVisitManager() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMVisitManager_Load;
@@ -25,7 +24,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -673,9 +671,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgVisits).BeginInit();
             _grpFilter.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpEngineerVisits
-            // 
+            //
             _grpEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineerVisits.Controls.Add(_dgVisits);
@@ -685,9 +683,9 @@ namespace FSM
             _grpEngineerVisits.TabIndex = 2;
             _grpEngineerVisits.TabStop = false;
             _grpEngineerVisits.Text = "Double Click To View / Edit";
-            // 
+            //
             // dgVisits
-            // 
+            //
             _dgVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgVisits.DataMember = "";
@@ -696,9 +694,9 @@ namespace FSM
             _dgVisits.Name = "dgVisits";
             _dgVisits.Size = new Size(960, 379);
             _dgVisits.TabIndex = 14;
-            // 
+            //
             // btnExport
-            // 
+            //
             _btnExport.AccessibleDescription = "Export Job List To Excel";
             _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnExport.Location = new Point(8, 586);
@@ -706,9 +704,9 @@ namespace FSM
             _btnExport.Size = new Size(56, 23);
             _btnExport.TabIndex = 15;
             _btnExport.Text = "Export";
-            // 
+            //
             // grpFilter
-            // 
+            //
             _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpFilter.Controls.Add(_btnSearch);
             _grpFilter.Controls.Add(_Label12);
@@ -735,34 +733,34 @@ namespace FSM
             _grpFilter.TabIndex = 1;
             _grpFilter.TabStop = false;
             _grpFilter.Text = "Filter";
-            // 
+            //
             // btnSearch
-            // 
+            //
             _btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSearch.Location = new Point(898, 106);
             _btnSearch.Name = "btnSearch";
             _btnSearch.Size = new Size(70, 23);
             _btnSearch.TabIndex = 33;
             _btnSearch.Text = "Run Filter";
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.Location = new Point(304, 77);
             _Label12.Name = "Label12";
             _Label12.Size = new Size(62, 22);
             _Label12.TabIndex = 31;
             _Label12.Text = "Outcome";
-            // 
+            //
             // cboOutcome
-            // 
+            //
             _cboOutcome.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboOutcome.Location = new Point(377, 74);
             _cboOutcome.Name = "cboOutcome";
             _cboOutcome.Size = new Size(184, 21);
             _cboOutcome.TabIndex = 32;
-            // 
+            //
             // btnfindEngineer
-            // 
+            //
             _btnfindEngineer.BackColor = Color.White;
             _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnfindEngineer.Location = new Point(258, 20);
@@ -771,63 +769,63 @@ namespace FSM
             _btnfindEngineer.TabIndex = 29;
             _btnfindEngineer.Text = "...";
             _btnfindEngineer.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtEngineer
-            // 
+            //
             _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _txtEngineer.Location = new Point(68, 20);
             _txtEngineer.Name = "txtEngineer";
             _txtEngineer.ReadOnly = true;
             _txtEngineer.Size = new Size(184, 21);
             _txtEngineer.TabIndex = 28;
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.Location = new Point(7, 19);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(70, 16);
             _Label5.TabIndex = 30;
             _Label5.Text = "Engineer";
-            // 
+            //
             // dtpTo
-            // 
+            //
             _dtpTo.Location = new Point(621, 78);
             _dtpTo.Name = "dtpTo";
             _dtpTo.Size = new Size(155, 21);
             _dtpTo.TabIndex = 13;
-            // 
+            //
             // dtpFrom
-            // 
+            //
             _dtpFrom.Location = new Point(621, 47);
             _dtpFrom.Name = "dtpFrom";
             _dtpFrom.Size = new Size(155, 21);
             _dtpFrom.TabIndex = 12;
-            // 
+            //
             // txtJobNumber
-            // 
+            //
             _txtJobNumber.Location = new Point(377, 20);
             _txtJobNumber.Name = "txtJobNumber";
             _txtJobNumber.Size = new Size(184, 21);
             _txtJobNumber.TabIndex = 9;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(565, 79);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(48, 16);
             _Label9.TabIndex = 10;
             _Label9.Text = "To";
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.Location = new Point(565, 47);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(48, 16);
             _Label8.TabIndex = 9;
             _Label8.Text = "From";
-            // 
+            //
             // chkVisitDate
-            // 
+            //
             _chkVisitDate.Cursor = Cursors.Hand;
             _chkVisitDate.UseVisualStyleBackColor = true;
             _chkVisitDate.Location = new Point(567, 18);
@@ -835,74 +833,74 @@ namespace FSM
             _chkVisitDate.Size = new Size(80, 24);
             _chkVisitDate.TabIndex = 11;
             _chkVisitDate.Text = "Visit Date";
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.Location = new Point(304, 21);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(88, 16);
             _Label6.TabIndex = 6;
             _Label6.Text = "Job Number";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Location = new Point(377, 47);
             _cboType.Name = "cboType";
             _cboType.Size = new Size(184, 21);
             _cboType.TabIndex = 7;
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(8, 77);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(48, 22);
             _Label11.TabIndex = 5;
             _Label11.Text = "Status";
-            // 
+            //
             // cboDefinition
-            // 
+            //
             _cboDefinition.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboDefinition.Location = new Point(68, 47);
             _cboDefinition.Name = "cboDefinition";
             _cboDefinition.Size = new Size(184, 21);
             _cboDefinition.TabIndex = 6;
-            // 
+            //
             // cboStatus
-            // 
+            //
             _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboStatus.Location = new Point(68, 74);
             _cboStatus.Name = "cboStatus";
             _cboStatus.Size = new Size(184, 21);
             _cboStatus.TabIndex = 8;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 50);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(72, 16);
             _Label3.TabIndex = 3;
             _Label3.Text = "Definition";
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.Location = new Point(304, 47);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(55, 22);
             _Label10.TabIndex = 4;
             _Label10.Text = "Type";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(72, 586);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(56, 23);
             _btnReset.TabIndex = 16;
             _btnReset.Text = "Reset";
-            // 
+            //
             // FRMSiteVisitManager
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(992, 616);
             Controls.Add(_grpFilter);
@@ -926,7 +924,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupVisitDataGrid();
@@ -955,7 +954,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
@@ -1052,6 +1051,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupVisitDataGrid()
         {
             var tbStyle = dgVisits.TableStyles[0];
@@ -1246,25 +1246,25 @@ namespace FSM
             var switchExpr = Conversions.ToInteger(SelectedVisitDataRow["StatusEnumID"]);
             switch (switchExpr)
             {
-                case Conversions.ToInteger(Enums.VisitStatus.NOT_SET):
+                case (int)(Enums.VisitStatus.NOT_SET):
                     {
                         App.ShowMessage("This visit has not entered a visit life span yet.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Parts_Need_Ordering):
+                case (int)(Enums.VisitStatus.Parts_Need_Ordering):
                     {
                         App.ShowMessage("Parts Need Ordering for this visit, once ordered and recieved you may proceed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Waiting_For_Parts):
+                case (int)(Enums.VisitStatus.Waiting_For_Parts):
                     {
                         App.ShowMessage("This visit is waiting for parts, once recieved you may proceed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Ready_For_Schedule):
+                case (int)(Enums.VisitStatus.Ready_For_Schedule):
                     {
                         if (App.ShowMessage("This visit is ready for schedule, would you like to manually complete the visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
@@ -1274,7 +1274,7 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Scheduled):
+                case (int)(Enums.VisitStatus.Scheduled):
                     {
                         if (App.ShowMessage("This visit is scheduled, would you like to manually complete the visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
@@ -1284,13 +1284,13 @@ namespace FSM
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Downloaded):
+                case (int)(Enums.VisitStatus.Downloaded):
                     {
                         App.ShowMessage("This visit is currently with an engineer, once returned you may view the details.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.VisitStatus.Uploaded):
+                case (int)(Enums.VisitStatus.Uploaded):
                     {
                         @continue = true;
                         break;
@@ -1329,6 +1329,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void PopulateDatagrid(bool withRun)
         {
             try

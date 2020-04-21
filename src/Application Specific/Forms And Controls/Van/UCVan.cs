@@ -12,11 +12,10 @@ namespace FSM
 {
     public class UCVan : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCVan() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCVan_Load;
@@ -26,7 +25,6 @@ namespace FSM
             var argc = cboPreferredSupplierID;
             Combo.SetUpCombo(ref argc, DynamicDataTables.SupplierIDList, "SupplierID", "Name", Entity.Sys.Enums.ComboValues.Please_Select);
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -1111,9 +1109,9 @@ namespace FSM
             _Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgEquipment).BeginInit();
             SuspendLayout();
-            // 
+            //
             // tcVans
-            // 
+            //
             _tcVans.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _tcVans.Controls.Add(_tabDetails);
@@ -1125,18 +1123,18 @@ namespace FSM
             _tcVans.SelectedIndex = 0;
             _tcVans.Size = new Size(1206, 798);
             _tcVans.TabIndex = 0;
-            // 
+            //
             // tabDetails
-            // 
+            //
             _tabDetails.Controls.Add(_grpVan);
             _tabDetails.Location = new Point(4, 22);
             _tabDetails.Name = "tabDetails";
             _tabDetails.Size = new Size(675, 644);
             _tabDetails.TabIndex = 0;
             _tabDetails.Text = "Main Details";
-            // 
+            //
             // grpVan
-            // 
+            //
             _grpVan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVan.Controls.Add(_txtCurEngineerFleet);
@@ -1155,9 +1153,9 @@ namespace FSM
             _grpVan.TabIndex = 2;
             _grpVan.TabStop = false;
             _grpVan.Text = "Details";
-            // 
+            //
             // txtCurEngineerFleet
-            // 
+            //
             _txtCurEngineerFleet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtCurEngineerFleet.Enabled = false;
@@ -1167,17 +1165,17 @@ namespace FSM
             _txtCurEngineerFleet.Size = new Size(380, 21);
             _txtCurEngineerFleet.TabIndex = 39;
             _txtCurEngineerFleet.Tag = "Profile.EngineerFleet";
-            // 
+            //
             // lblCurEngineerFleet
-            // 
+            //
             _lblCurEngineerFleet.Location = new Point(8, 80);
             _lblCurEngineerFleet.Name = "lblCurEngineerFleet";
             _lblCurEngineerFleet.Size = new Size(117, 20);
             _lblCurEngineerFleet.TabIndex = 38;
             _lblCurEngineerFleet.Text = "Engineer Fleet";
-            // 
+            //
             // txtCurEngineer
-            // 
+            //
             _txtCurEngineer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtCurEngineer.Enabled = false;
@@ -1187,17 +1185,17 @@ namespace FSM
             _txtCurEngineer.Size = new Size(380, 21);
             _txtCurEngineer.TabIndex = 37;
             _txtCurEngineer.Tag = "Profile.Engineer";
-            // 
+            //
             // lblCurEngineer
-            // 
+            //
             _lblCurEngineer.Location = new Point(8, 53);
             _lblCurEngineer.Name = "lblCurEngineer";
             _lblCurEngineer.Size = new Size(117, 20);
             _lblCurEngineer.TabIndex = 36;
             _lblCurEngineer.Text = "Current Engineer";
-            // 
+            //
             // btnCopyProfile
-            // 
+            //
             _btnCopyProfile.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnCopyProfile.Location = new Point(6, 602);
             _btnCopyProfile.Name = "btnCopyProfile";
@@ -1205,18 +1203,18 @@ namespace FSM
             _btnCopyProfile.TabIndex = 35;
             _btnCopyProfile.Text = "Copy Profile";
             _btnCopyProfile.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnEngineerHistory
-            // 
+            //
             _btnEngineerHistory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnEngineerHistory.Location = new Point(530, 19);
             _btnEngineerHistory.Name = "btnEngineerHistory";
             _btnEngineerHistory.Size = new Size(112, 23);
             _btnEngineerHistory.TabIndex = 2;
             _btnEngineerHistory.Text = "Engineer History";
-            // 
+            //
             // txtProfile
-            // 
+            //
             _txtProfile.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtProfile.Location = new Point(131, 21);
@@ -1225,17 +1223,17 @@ namespace FSM
             _txtProfile.Size = new Size(380, 21);
             _txtProfile.TabIndex = 1;
             _txtProfile.Tag = "Profile.Name";
-            // 
+            //
             // lblProfile
-            // 
+            //
             _lblProfile.Location = new Point(8, 24);
             _lblProfile.Name = "lblProfile";
             _lblProfile.Size = new Size(85, 20);
             _lblProfile.TabIndex = 31;
             _lblProfile.Text = "Profile Name";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(131, 117);
@@ -1245,17 +1243,17 @@ namespace FSM
             _txtNotes.Size = new Size(511, 473);
             _txtNotes.TabIndex = 7;
             _txtNotes.Tag = "Profile.Notes";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 117);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(53, 22);
             _lblNotes.TabIndex = 31;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // tabStock
-            // 
+            //
             _tabStock.Controls.Add(_chkContainer);
             _tabStock.Controls.Add(_chkSecondaryPrice);
             _tabStock.Controls.Add(_chkExcludeFromAutoStockReplen);
@@ -1268,9 +1266,9 @@ namespace FSM
             _tabStock.Size = new Size(1198, 772);
             _tabStock.TabIndex = 1;
             _tabStock.Text = "Stock";
-            // 
+            //
             // chkContainer
-            // 
+            //
             _chkContainer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkContainer.AutoSize = true;
             _chkContainer.Location = new Point(528, 742);
@@ -1279,9 +1277,9 @@ namespace FSM
             _chkContainer.TabIndex = 5;
             _chkContainer.Text = "Use Container Stock";
             _chkContainer.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkSecondaryPrice
-            // 
+            //
             _chkSecondaryPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkSecondaryPrice.AutoSize = true;
             _chkSecondaryPrice.Location = new Point(330, 742);
@@ -1290,9 +1288,9 @@ namespace FSM
             _chkSecondaryPrice.TabIndex = 4;
             _chkSecondaryPrice.Text = "Use Secondary Price";
             _chkSecondaryPrice.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkExcludeFromAutoStockReplen
-            // 
+            //
             _chkExcludeFromAutoStockReplen.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _chkExcludeFromAutoStockReplen.AutoSize = true;
             _chkExcludeFromAutoStockReplen.Location = new Point(16, 742);
@@ -1301,9 +1299,9 @@ namespace FSM
             _chkExcludeFromAutoStockReplen.TabIndex = 3;
             _chkExcludeFromAutoStockReplen.Text = "Exclude From Automatic Stock Replenishment";
             _chkExcludeFromAutoStockReplen.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgParts
-            // 
+            //
             _dgParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgParts.DataMember = "";
@@ -1313,9 +1311,9 @@ namespace FSM
             _dgParts.Size = new Size(558, 380);
             _dgParts.TabIndex = 2;
             _dgParts.Visible = false;
-            // 
+            //
             // GroupBox3
-            // 
+            //
             _GroupBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox3.Controls.Add(_cboPreferredSupplierID);
             _GroupBox3.Location = new Point(8, 680);
@@ -1324,9 +1322,9 @@ namespace FSM
             _GroupBox3.TabIndex = 2;
             _GroupBox3.TabStop = false;
             _GroupBox3.Text = "Preferred Supplier";
-            // 
+            //
             // cboPreferredSupplierID
-            // 
+            //
             _cboPreferredSupplierID.Cursor = Cursors.Hand;
             _cboPreferredSupplierID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboPreferredSupplierID.FormattingEnabled = true;
@@ -1334,9 +1332,9 @@ namespace FSM
             _cboPreferredSupplierID.Name = "cboPreferredSupplierID";
             _cboPreferredSupplierID.Size = new Size(616, 21);
             _cboPreferredSupplierID.TabIndex = 0;
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox2.Controls.Add(_btnMerge);
@@ -1351,9 +1349,9 @@ namespace FSM
             _GroupBox2.TabIndex = 1;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Parts Held On Profile";
-            // 
+            //
             // btnMerge
-            // 
+            //
             _btnMerge.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnMerge.Location = new Point(137, 406);
             _btnMerge.Name = "btnMerge";
@@ -1361,9 +1359,9 @@ namespace FSM
             _btnMerge.TabIndex = 37;
             _btnMerge.Text = "Merge Another Profile";
             _btnMerge.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnExportStockProfile
-            // 
+            //
             _btnExportStockProfile.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnExportStockProfile.Location = new Point(557, 406);
             _btnExportStockProfile.Name = "btnExportStockProfile";
@@ -1371,9 +1369,9 @@ namespace FSM
             _btnExportStockProfile.TabIndex = 7;
             _btnExportStockProfile.Text = "Export Stock Profile";
             _btnExportStockProfile.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnClearVanStockProfile
-            // 
+            //
             _btnClearVanStockProfile.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClearVanStockProfile.Location = new Point(8, 406);
             _btnClearVanStockProfile.MaximumSize = new Size(181, 23);
@@ -1382,9 +1380,9 @@ namespace FSM
             _btnClearVanStockProfile.TabIndex = 6;
             _btnClearVanStockProfile.Text = "Clear Stock Profile";
             _btnClearVanStockProfile.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnDeletePartStockProfile
-            // 
+            //
             _btnDeletePartStockProfile.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDeletePartStockProfile.Location = new Point(971, 406);
             _btnDeletePartStockProfile.MaximumSize = new Size(0, 23);
@@ -1393,9 +1391,9 @@ namespace FSM
             _btnDeletePartStockProfile.TabIndex = 5;
             _btnDeletePartStockProfile.Text = "Remove Part from Stock Profile";
             _btnDeletePartStockProfile.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAddPartStockProfile
-            // 
+            //
             _btnAddPartStockProfile.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnAddPartStockProfile.Location = new Point(763, 406);
             _btnAddPartStockProfile.Name = "btnAddPartStockProfile";
@@ -1403,9 +1401,9 @@ namespace FSM
             _btnAddPartStockProfile.TabIndex = 4;
             _btnAddPartStockProfile.Text = "Add Part to Stock Profile";
             _btnAddPartStockProfile.UseVisualStyleBackColor = true;
-            // 
+            //
             // dgvParts
-            // 
+            //
             _dgvParts.AllowUserToAddRows = false;
             _dgvParts.AllowUserToDeleteRows = false;
             _dgvParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -1416,9 +1414,9 @@ namespace FSM
             _dgvParts.Name = "dgvParts";
             _dgvParts.Size = new Size(1162, 380);
             _dgvParts.TabIndex = 3;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_dgProducts);
             _GroupBox1.Location = new Point(8, 8);
@@ -1427,9 +1425,9 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Products Held On Profile";
-            // 
+            //
             // dgProducts
-            // 
+            //
             _dgProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgProducts.DataMember = "";
@@ -1438,9 +1436,9 @@ namespace FSM
             _dgProducts.Name = "dgProducts";
             _dgProducts.Size = new Size(1163, 184);
             _dgProducts.TabIndex = 1;
-            // 
+            //
             // tpWarehouses
-            // 
+            //
             _tpWarehouses.Controls.Add(_grpWarehouses);
             _tpWarehouses.Location = new Point(4, 22);
             _tpWarehouses.Name = "tpWarehouses";
@@ -1449,9 +1447,9 @@ namespace FSM
             _tpWarehouses.TabIndex = 2;
             _tpWarehouses.Text = "Warehouse Locations";
             _tpWarehouses.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpWarehouses
-            // 
+            //
             _grpWarehouses.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpWarehouses.Controls.Add(_dgWarehouses);
@@ -1461,9 +1459,9 @@ namespace FSM
             _grpWarehouses.TabIndex = 3;
             _grpWarehouses.TabStop = false;
             _grpWarehouses.Text = "Tick those warehouses for this profile";
-            // 
+            //
             // dgWarehouses
-            // 
+            //
             _dgWarehouses.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgWarehouses.DataMember = "";
@@ -1472,9 +1470,9 @@ namespace FSM
             _dgWarehouses.Name = "dgWarehouses";
             _dgWarehouses.Size = new Size(651, 606);
             _dgWarehouses.TabIndex = 2;
-            // 
+            //
             // tabEquipment
-            // 
+            //
             _tabEquipment.BackColor = SystemColors.Control;
             _tabEquipment.Controls.Add(_grpVanEquipment);
             _tabEquipment.Location = new Point(4, 22);
@@ -1482,9 +1480,9 @@ namespace FSM
             _tabEquipment.Size = new Size(675, 644);
             _tabEquipment.TabIndex = 3;
             _tabEquipment.Text = "Capital Tools";
-            // 
+            //
             // grpVanEquipment
-            // 
+            //
             _grpVanEquipment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpVanEquipment.Controls.Add(_Panel2);
@@ -1496,9 +1494,9 @@ namespace FSM
             _grpVanEquipment.TabIndex = 14;
             _grpVanEquipment.TabStop = false;
             _grpVanEquipment.Text = "Capital Tools";
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.Controls.Add(_txtEquipmentTool);
             _Panel2.Controls.Add(_Label3);
             _Panel2.Controls.Add(_btnSaveEquipment);
@@ -1506,9 +1504,9 @@ namespace FSM
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(648, 69);
             _Panel2.TabIndex = 2;
-            // 
+            //
             // txtEquipmentTool
-            // 
+            //
             _txtEquipmentTool.AcceptsReturn = true;
             _txtEquipmentTool.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEquipmentTool.Location = new Point(115, 4);
@@ -1519,35 +1517,35 @@ namespace FSM
             _txtEquipmentTool.Size = new Size(432, 56);
             _txtEquipmentTool.TabIndex = 1;
             _txtEquipmentTool.Tag = "Engineer.Name";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(3, 4);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(112, 20);
             _Label3.TabIndex = 55;
             _Label3.Text = @"Equipment\Tool";
-            // 
+            //
             // btnSaveEquipment
-            // 
+            //
             _btnSaveEquipment.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSaveEquipment.Location = new Point(560, 36);
             _btnSaveEquipment.Name = "btnSaveEquipment";
             _btnSaveEquipment.Size = new Size(75, 23);
             _btnSaveEquipment.TabIndex = 2;
             _btnSaveEquipment.Text = "Save";
-            // 
+            //
             // btnDeleteEquipment
-            // 
+            //
             _btnDeleteEquipment.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnDeleteEquipment.Location = new Point(8, 585);
             _btnDeleteEquipment.Name = "btnDeleteEquipment";
             _btnDeleteEquipment.Size = new Size(75, 23);
             _btnDeleteEquipment.TabIndex = 4;
             _btnDeleteEquipment.Text = "Delete";
-            // 
+            //
             // dgEquipment
-            // 
+            //
             _dgEquipment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgEquipment.DataMember = "";
@@ -1556,9 +1554,9 @@ namespace FSM
             _dgEquipment.Name = "dgEquipment";
             _dgEquipment.Size = new Size(646, 474);
             _dgEquipment.TabIndex = 3;
-            // 
+            //
             // UCVan
-            // 
+            //
             Controls.Add(_tcVans);
             Name = "UCVan";
             Size = new Size(1216, 808);
@@ -1587,7 +1585,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupPartsDatagrid();
@@ -1608,11 +1607,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1974,7 +1974,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))
@@ -2544,7 +2545,6 @@ namespace FSM
                     // If Not column Is Nothing Then
                     // Me.dgvParts.Sort(column, System.ComponentModel.ListSortDirection.Descending)
                     // End If
-
                 }
             }
 
@@ -2710,8 +2710,7 @@ namespace FSM
                 // dgParts.UnSelect(itm)
             }
 
-            var exporter = new Entity.Sys.Exporting(exportData, "Van Stock Profiles");
-            exporter = null;
+            Entity.Sys.ExportHelper.Export(exportData, "Van Stock Profiles", Entity.Sys.Enums.ExportType.CSV);
         }
 
         private void btnExportStockProfile_Click(object sender, EventArgs e)

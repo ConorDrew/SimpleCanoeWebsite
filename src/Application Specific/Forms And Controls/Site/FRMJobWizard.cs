@@ -8,11 +8,10 @@ namespace FSM
 {
     public class FRMJobWizard : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMJobWizard() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSite_Load;
@@ -88,7 +87,6 @@ namespace FSM
             {
                 if (_btnPrivateNotes != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnPrivateNotes.Click -= btnReset_Click;
                 }
@@ -190,45 +188,45 @@ namespace FSM
             _btnSaveProg = new Button();
             _btnSaveProg.Click += new EventHandler(Button1_Click);
             SuspendLayout();
-            // 
+            //
             // btnClose
-            // 
+            //
             _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClose.Location = new Point(12, 724);
             _btnClose.Name = "btnClose";
             _btnClose.Size = new Size(87, 25);
             _btnClose.TabIndex = 3;
             _btnClose.Text = "Close";
-            // 
+            //
             // pnlMain
-            // 
+            //
             _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _pnlMain.Location = new Point(0, 32);
             _pnlMain.Name = "pnlMain";
             _pnlMain.Size = new Size(926, 685);
             _pnlMain.TabIndex = 1;
-            // 
+            //
             // btnPrivateNotes
-            // 
+            //
             _btnPrivateNotes.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnPrivateNotes.Location = new Point(380, 724);
             _btnPrivateNotes.Name = "btnPrivateNotes";
             _btnPrivateNotes.Size = new Size(123, 25);
             _btnPrivateNotes.TabIndex = 4;
             _btnPrivateNotes.Text = "Private Notes";
-            // 
+            //
             // btnReset
-            // 
+            //
             _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnReset.Location = new Point(709, 724);
             _btnReset.Name = "btnReset";
             _btnReset.Size = new Size(87, 25);
             _btnReset.TabIndex = 5;
             _btnReset.Text = "Restart";
-            // 
+            //
             // btnSaveProg
-            // 
+            //
             _btnSaveProg.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveProg.Location = new Point(802, 724);
             _btnSaveProg.Name = "btnSaveProg";
@@ -236,9 +234,9 @@ namespace FSM
             _btnSaveProg.TabIndex = 6;
             _btnSaveProg.Text = "Save Progress";
             _btnSaveProg.Visible = false;
-            // 
+            //
             // FRMJobWizard
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(934, 761);
             Controls.Add(_btnSaveProg);
@@ -262,7 +260,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             ((UCJobWizard)LoadedControl).DGVSites.AutoGenerateColumns = false;

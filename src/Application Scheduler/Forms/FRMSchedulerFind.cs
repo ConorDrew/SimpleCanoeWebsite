@@ -11,11 +11,10 @@ namespace FSM
 {
     public class FRMSchedulerFind : Form
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSchedulerFind() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSchedulerFind_Load;
@@ -294,9 +293,9 @@ namespace FSM
             _grpResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgResults).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpFind
-            // 
+            //
             _grpFind.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpFind.Controls.Add(_rbtnCustomer);
             _grpFind.Controls.Add(_rbtnOrder);
@@ -308,9 +307,9 @@ namespace FSM
             _grpFind.TabIndex = 0;
             _grpFind.TabStop = false;
             _grpFind.Text = "Find";
-            // 
+            //
             // rbtnCustomer
-            // 
+            //
             _rbtnCustomer.AutoSize = true;
             _rbtnCustomer.Location = new Point(11, 79);
             _rbtnCustomer.Name = "rbtnCustomer";
@@ -318,9 +317,9 @@ namespace FSM
             _rbtnCustomer.TabIndex = 4;
             _rbtnCustomer.Text = "Customer";
             _rbtnCustomer.UseVisualStyleBackColor = true;
-            // 
+            //
             // rbtnOrder
-            // 
+            //
             _rbtnOrder.AutoSize = true;
             _rbtnOrder.Location = new Point(11, 109);
             _rbtnOrder.Name = "rbtnOrder";
@@ -329,9 +328,9 @@ namespace FSM
             _rbtnOrder.Text = "Order";
             _rbtnOrder.UseVisualStyleBackColor = true;
             _rbtnOrder.Visible = false;
-            // 
+            //
             // rbtnJob
-            // 
+            //
             _rbtnJob.AutoSize = true;
             _rbtnJob.Location = new Point(11, 49);
             _rbtnJob.Name = "rbtnJob";
@@ -339,9 +338,9 @@ namespace FSM
             _rbtnJob.TabIndex = 2;
             _rbtnJob.Text = "Job";
             _rbtnJob.UseVisualStyleBackColor = true;
-            // 
+            //
             // rbtnSite
-            // 
+            //
             _rbtnSite.AutoSize = true;
             _rbtnSite.Checked = true;
             _rbtnSite.Location = new Point(10, 19);
@@ -351,9 +350,9 @@ namespace FSM
             _rbtnSite.TabStop = true;
             _rbtnSite.Text = "Site";
             _rbtnSite.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnFind
-            // 
+            //
             _btnFind.AccessibleDescription = "";
             _btnFind.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFind.Cursor = Cursors.Hand;
@@ -363,18 +362,18 @@ namespace FSM
             _btnFind.Size = new Size(48, 23);
             _btnFind.TabIndex = 5;
             _btnFind.Text = "Find";
-            // 
+            //
             // txtFilter
-            // 
+            //
             _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFilter.Location = new Point(115, 20);
             _txtFilter.MaxLength = 25;
             _txtFilter.Name = "txtFilter";
             _txtFilter.Size = new Size(546, 20);
             _txtFilter.TabIndex = 4;
-            // 
+            //
             // grpResult
-            // 
+            //
             _grpResult.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpResult.Controls.Add(_dgResults);
@@ -384,9 +383,9 @@ namespace FSM
             _grpResult.TabIndex = 4;
             _grpResult.TabStop = false;
             _grpResult.Text = "Result - Double Click to Open";
-            // 
+            //
             // dgResults
-            // 
+            //
             _dgResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgResults.DataMember = "";
@@ -395,9 +394,9 @@ namespace FSM
             _dgResults.Name = "dgResults";
             _dgResults.Size = new Size(588, 341);
             _dgResults.TabIndex = 12;
-            // 
+            //
             // FRMSchedulerFind
-            // 
+            //
             AutoScaleBaseSize = new Size(5, 13);
             BackColor = Color.White;
             ClientSize = new Size(727, 424);
@@ -484,6 +483,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Find()
         {
             switch (true)
@@ -601,6 +601,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupDgSites()
         {
             Helper.SetUpDataGrid(dgResults);

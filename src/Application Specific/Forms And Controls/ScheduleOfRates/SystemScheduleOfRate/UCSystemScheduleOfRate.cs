@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCSystemScheduleOfRate : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCSystemScheduleOfRate() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCSystemScheduleOfRate_Load;
@@ -24,7 +23,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -1123,9 +1121,9 @@ namespace FSM
             _grpEngineerSkills.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgEngineerQual).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpSystemScheduleOfRate
-            // 
+            //
             _grpSystemScheduleOfRate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _grpSystemScheduleOfRate.Controls.Add(_cboSORJobType);
             _grpSystemScheduleOfRate.Controls.Add(_Label9);
@@ -1149,9 +1147,9 @@ namespace FSM
             _grpSystemScheduleOfRate.TabIndex = 0;
             _grpSystemScheduleOfRate.TabStop = false;
             _grpSystemScheduleOfRate.Text = "Main Details";
-            // 
+            //
             // cboSORJobType
-            // 
+            //
             _cboSORJobType.Cursor = Cursors.Hand;
             _cboSORJobType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboSORJobType.Location = new Point(194, 59);
@@ -1159,17 +1157,17 @@ namespace FSM
             _cboSORJobType.Size = new Size(540, 21);
             _cboSORJobType.TabIndex = 27;
             _cboSORJobType.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(11, 59);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(118, 20);
             _Label9.TabIndex = 26;
             _Label9.Text = "Job Type";
-            // 
+            //
             // grpSOR
-            // 
+            //
             _grpSOR.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSOR.Controls.Add(_dgRates);
@@ -1179,9 +1177,9 @@ namespace FSM
             _grpSOR.TabIndex = 14;
             _grpSOR.TabStop = false;
             _grpSOR.Text = "Schedule of Rates";
-            // 
+            //
             // dgRates
-            // 
+            //
             _dgRates.DataMember = "";
             _dgRates.Dock = DockStyle.Fill;
             _dgRates.HeaderForeColor = SystemColors.ControlText;
@@ -1189,53 +1187,53 @@ namespace FSM
             _dgRates.Name = "dgRates";
             _dgRates.Size = new Size(714, 389);
             _dgRates.TabIndex = 13;
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddNew.Location = new Point(14, 674);
             _btnAddNew.Name = "btnAddNew";
             _btnAddNew.Size = new Size(101, 23);
             _btnAddNew.TabIndex = 11;
             _btnAddNew.Text = "Add New";
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnRemove.Location = new Point(633, 674);
             _btnRemove.Name = "btnRemove";
             _btnRemove.Size = new Size(101, 23);
             _btnRemove.TabIndex = 12;
             _btnRemove.Text = "Remove";
-            // 
+            //
             // txtTimeInMins
-            // 
+            //
             _txtTimeInMins.Location = new Point(512, 96);
             _txtTimeInMins.MaxLength = 9;
             _txtTimeInMins.Name = "txtTimeInMins";
             _txtTimeInMins.Size = new Size(103, 21);
             _txtTimeInMins.TabIndex = 7;
             _txtTimeInMins.Tag = "SystemScheduleOfRate.Price";
-            // 
+            //
             // lblTime
-            // 
+            //
             _lblTime.Location = new Point(428, 99);
             _lblTime.Name = "lblTime";
             _lblTime.Size = new Size(78, 20);
             _lblTime.TabIndex = 6;
             _lblTime.Text = "Time (Mins)";
-            // 
+            //
             // btnAddUpdate
-            // 
+            //
             _btnAddUpdate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddUpdate.Location = new Point(633, 232);
             _btnAddUpdate.Name = "btnAddUpdate";
             _btnAddUpdate.Size = new Size(101, 23);
             _btnAddUpdate.TabIndex = 10;
             _btnAddUpdate.Text = "Add/Update";
-            // 
+            //
             // cboScheduleOfRatesCategoryID
-            // 
+            //
             _cboScheduleOfRatesCategoryID.Cursor = Cursors.Hand;
             _cboScheduleOfRatesCategoryID.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboScheduleOfRatesCategoryID.Location = new Point(194, 25);
@@ -1243,34 +1241,34 @@ namespace FSM
             _cboScheduleOfRatesCategoryID.Size = new Size(540, 21);
             _cboScheduleOfRatesCategoryID.TabIndex = 1;
             _cboScheduleOfRatesCategoryID.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblScheduleOfRatesCategoryID
-            // 
+            //
             _lblScheduleOfRatesCategoryID.Location = new Point(11, 25);
             _lblScheduleOfRatesCategoryID.Name = "lblScheduleOfRatesCategoryID";
             _lblScheduleOfRatesCategoryID.Size = new Size(179, 20);
             _lblScheduleOfRatesCategoryID.TabIndex = 0;
             _lblScheduleOfRatesCategoryID.Text = "Schedule Of Rates Category";
-            // 
+            //
             // txtCode
-            // 
+            //
             _txtCode.Location = new Point(279, 96);
             _txtCode.MaxLength = 50;
             _txtCode.Name = "txtCode";
             _txtCode.Size = new Size(131, 21);
             _txtCode.TabIndex = 3;
             _txtCode.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblCode
-            // 
+            //
             _lblCode.Location = new Point(231, 99);
             _lblCode.Name = "lblCode";
             _lblCode.Size = new Size(42, 20);
             _lblCode.TabIndex = 2;
             _lblCode.Text = "Code";
-            // 
+            //
             // txtDescription
-            // 
+            //
             _txtDescription.Location = new Point(95, 145);
             _txtDescription.MaxLength = 0;
             _txtDescription.Multiline = true;
@@ -1279,34 +1277,34 @@ namespace FSM
             _txtDescription.Size = new Size(639, 79);
             _txtDescription.TabIndex = 5;
             _txtDescription.Tag = "SystemScheduleOfRate.Description";
-            // 
+            //
             // lblDescription
-            // 
+            //
             _lblDescription.Location = new Point(12, 145);
             _lblDescription.Name = "lblDescription";
             _lblDescription.Size = new Size(77, 20);
             _lblDescription.TabIndex = 4;
             _lblDescription.Text = "Description";
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Location = new Point(59, 96);
             _txtPrice.MaxLength = 9;
             _txtPrice.Name = "txtPrice";
             _txtPrice.Size = new Size(131, 21);
             _txtPrice.TabIndex = 9;
             _txtPrice.Tag = "SystemScheduleOfRate.Price";
-            // 
+            //
             // lblPrice
-            // 
+            //
             _lblPrice.Location = new Point(11, 99);
             _lblPrice.Name = "lblPrice";
             _lblPrice.Size = new Size(42, 20);
             _lblPrice.TabIndex = 8;
             _lblPrice.Text = "Price";
-            // 
+            //
             // grpJobImportType
-            // 
+            //
             _grpJobImportType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grpJobImportType.Controls.Add(_btnFindEngineerQual);
             _grpJobImportType.Controls.Add(_txtEngineerQual);
@@ -1328,9 +1326,9 @@ namespace FSM
             _grpJobImportType.TabIndex = 15;
             _grpJobImportType.TabStop = false;
             _grpJobImportType.Text = "Job Import Types";
-            // 
+            //
             // btnFindEngineerQual
-            // 
+            //
             _btnFindEngineerQual.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindEngineerQual.BackColor = Color.White;
             _btnFindEngineerQual.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1340,9 +1338,9 @@ namespace FSM
             _btnFindEngineerQual.TabIndex = 41;
             _btnFindEngineerQual.Text = "...";
             _btnFindEngineerQual.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtEngineerQual
-            // 
+            //
             _txtEngineerQual.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEngineerQual.Location = new Point(138, 128);
             _txtEngineerQual.MaxLength = 50;
@@ -1351,43 +1349,43 @@ namespace FSM
             _txtEngineerQual.Size = new Size(183, 21);
             _txtEngineerQual.TabIndex = 40;
             _txtEngineerQual.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblEngineerQual
-            // 
+            //
             _lblEngineerQual.Location = new Point(11, 131);
             _lblEngineerQual.Name = "lblEngineerQual";
             _lblEngineerQual.Size = new Size(163, 20);
             _lblEngineerQual.TabIndex = 39;
             _lblEngineerQual.Text = "Engineer Qual";
-            // 
+            //
             // txtCycle
-            // 
+            //
             _txtCycle.Location = new Point(139, 162);
             _txtCycle.MaxLength = 50;
             _txtCycle.Name = "txtCycle";
             _txtCycle.Size = new Size(230, 21);
             _txtCycle.TabIndex = 25;
             _txtCycle.Tag = "";
-            // 
+            //
             // lblCycle
-            // 
+            //
             _lblCycle.Location = new Point(11, 165);
             _lblCycle.Name = "lblCycle";
             _lblCycle.Size = new Size(100, 20);
             _lblCycle.TabIndex = 24;
             _lblCycle.Text = "Cycle (Yrs)";
-            // 
+            //
             // btnAddNewType
-            // 
+            //
             _btnAddNewType.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnAddNewType.Location = new Point(152, 210);
             _btnAddNewType.Name = "btnAddNewType";
             _btnAddNewType.Size = new Size(101, 23);
             _btnAddNewType.TabIndex = 23;
             _btnAddNewType.Text = "Add New";
-            // 
+            //
             // cboJobType
-            // 
+            //
             _cboJobType.Cursor = Cursors.Hand;
             _cboJobType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboJobType.Location = new Point(138, 94);
@@ -1395,34 +1393,34 @@ namespace FSM
             _cboJobType.Size = new Size(230, 21);
             _cboJobType.TabIndex = 22;
             _cboJobType.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblJobType
-            // 
+            //
             _lblJobType.Location = new Point(11, 97);
             _lblJobType.Name = "lblJobType";
             _lblJobType.Size = new Size(118, 20);
             _lblJobType.TabIndex = 21;
             _lblJobType.Text = "Job Type";
-            // 
+            //
             // txtJobTypeName
-            // 
+            //
             _txtJobTypeName.Location = new Point(138, 60);
             _txtJobTypeName.MaxLength = 50;
             _txtJobTypeName.Name = "txtJobTypeName";
             _txtJobTypeName.Size = new Size(230, 21);
             _txtJobTypeName.TabIndex = 18;
             _txtJobTypeName.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblJobTypeName
-            // 
+            //
             _lblJobTypeName.Location = new Point(11, 63);
             _lblJobTypeName.Name = "lblJobTypeName";
             _lblJobTypeName.Size = new Size(100, 20);
             _lblJobTypeName.TabIndex = 17;
             _lblJobTypeName.Text = "Job Type Name";
-            // 
+            //
             // cboJobImportType
-            // 
+            //
             _cboJobImportType.Cursor = Cursors.Hand;
             _cboJobImportType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboJobImportType.Location = new Point(138, 26);
@@ -1430,35 +1428,35 @@ namespace FSM
             _cboJobImportType.Size = new Size(230, 21);
             _cboJobImportType.TabIndex = 16;
             _cboJobImportType.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblJobImportType
-            // 
+            //
             _lblJobImportType.Location = new Point(11, 29);
             _lblJobImportType.Name = "lblJobImportType";
             _lblJobImportType.Size = new Size(118, 20);
             _lblJobImportType.TabIndex = 15;
             _lblJobImportType.Text = "Job Import Type";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(268, 210);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(101, 23);
             _btnSave.TabIndex = 11;
             _btnSave.Text = "Save";
-            // 
+            //
             // btnRemoveType
-            // 
+            //
             _btnRemoveType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRemoveType.Location = new Point(14, 210);
             _btnRemoveType.Name = "btnRemoveType";
             _btnRemoveType.Size = new Size(101, 23);
             _btnRemoveType.TabIndex = 12;
             _btnRemoveType.Text = "Remove";
-            // 
+            //
             // grpEngineerSkillSOR
-            // 
+            //
             _grpEngineerSkillSOR.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineerSkillSOR.Controls.Add(_btnClearAll);
@@ -1473,18 +1471,18 @@ namespace FSM
             _grpEngineerSkillSOR.TabIndex = 27;
             _grpEngineerSkillSOR.TabStop = false;
             _grpEngineerSkillSOR.Text = "Engineer Skills SOR";
-            // 
+            //
             // btnClearAll
-            // 
+            //
             _btnClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnClearAll.Location = new Point(14, 419);
             _btnClearAll.Name = "btnClearAll";
             _btnClearAll.Size = new Size(101, 23);
             _btnClearAll.TabIndex = 39;
             _btnClearAll.Text = "Clear All";
-            // 
+            //
             // grpEngineerSkills
-            // 
+            //
             _grpEngineerSkills.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineerSkills.Controls.Add(_dgEngineerQual);
@@ -1494,9 +1492,9 @@ namespace FSM
             _grpEngineerSkills.TabIndex = 15;
             _grpEngineerSkills.TabStop = false;
             _grpEngineerSkills.Text = "Qualifications / Skills";
-            // 
+            //
             // dgEngineerQual
-            // 
+            //
             _dgEngineerQual.DataMember = "";
             _dgEngineerQual.Dock = DockStyle.Fill;
             _dgEngineerQual.HeaderForeColor = SystemColors.ControlText;
@@ -1504,9 +1502,9 @@ namespace FSM
             _dgEngineerQual.Name = "dgEngineerQual";
             _dgEngineerQual.Size = new Size(339, 328);
             _dgEngineerQual.TabIndex = 13;
-            // 
+            //
             // btnFindSOR
-            // 
+            //
             _btnFindSOR.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnFindSOR.BackColor = Color.White;
             _btnFindSOR.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -1516,9 +1514,9 @@ namespace FSM
             _btnFindSOR.TabIndex = 38;
             _btnFindSOR.Text = "...";
             _btnFindSOR.UseVisualStyleBackColor = false;
-            // 
+            //
             // txtSOR
-            // 
+            //
             _txtSOR.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtSOR.Location = new Point(182, 25);
             _txtSOR.MaxLength = 50;
@@ -1527,26 +1525,26 @@ namespace FSM
             _txtSOR.Size = new Size(139, 21);
             _txtSOR.TabIndex = 18;
             _txtSOR.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblSORName
-            // 
+            //
             _lblSORName.Location = new Point(15, 28);
             _lblSORName.Name = "lblSORName";
             _lblSORName.Size = new Size(162, 20);
             _lblSORName.TabIndex = 15;
             _lblSORName.Text = "System Schedule of Rate";
-            // 
+            //
             // btnSaveEngineerQual
-            // 
+            //
             _btnSaveEngineerQual.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveEngineerQual.Location = new Point(258, 422);
             _btnSaveEngineerQual.Name = "btnSaveEngineerQual";
             _btnSaveEngineerQual.Size = new Size(101, 23);
             _btnSaveEngineerQual.TabIndex = 11;
             _btnSaveEngineerQual.Text = "Save";
-            // 
+            //
             // UCSystemScheduleOfRate
-            // 
+            //
             Controls.Add(_grpEngineerSkillSOR);
             Controls.Add(_grpJobImportType);
             Controls.Add(_grpSystemScheduleOfRate);
@@ -1567,7 +1565,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             var argc = cboScheduleOfRatesCategoryID;
@@ -1590,11 +1589,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -1768,6 +1768,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupRatesDataGrid()
         {
             var tbStyle = dgRates.TableStyles[0];
@@ -2139,6 +2140,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate(int ID = 0)
         {
             RatesDataview = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll();

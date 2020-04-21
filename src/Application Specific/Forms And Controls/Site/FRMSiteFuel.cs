@@ -13,13 +13,13 @@ namespace FSM
     {
         public FRMSiteFuel()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContactInfo_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSiteFuel(Entity.Sites.Site oSite) : base()
         {
             base.Load += FRMContactInfo_Load;
@@ -1008,9 +1008,9 @@ namespace FSM
             _grpSiteFuelAudit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgSiteFuelAudit).BeginInit();
             SuspendLayout();
-            // 
+            //
             // SiteFuelTabControl
-            // 
+            //
             _SiteFuelTabControl.Controls.Add(_tabSiteFuel);
             _SiteFuelTabControl.Controls.Add(_tabAudit);
             _SiteFuelTabControl.Dock = DockStyle.Fill;
@@ -1019,9 +1019,9 @@ namespace FSM
             _SiteFuelTabControl.SelectedIndex = 0;
             _SiteFuelTabControl.Size = new Size(800, 557);
             _SiteFuelTabControl.TabIndex = 2;
-            // 
+            //
             // tabSiteFuel
-            // 
+            //
             _tabSiteFuel.Controls.Add(_grpSiteFuels);
             _tabSiteFuel.Location = new Point(4, 22);
             _tabSiteFuel.Name = "tabSiteFuel";
@@ -1030,9 +1030,9 @@ namespace FSM
             _tabSiteFuel.TabIndex = 0;
             _tabSiteFuel.Text = "Site Fuels";
             _tabSiteFuel.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpSiteFuels
-            // 
+            //
             _grpSiteFuels.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpSiteFuels.Controls.Add(_grpSite);
@@ -1046,9 +1046,9 @@ namespace FSM
             _grpSiteFuels.TabIndex = 14;
             _grpSiteFuels.TabStop = false;
             _grpSiteFuels.Text = "Site Fuel";
-            // 
+            //
             // grpSite
-            // 
+            //
             _grpSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _grpSite.Controls.Add(_btnUpdateSiteService);
             _grpSite.Controls.Add(_txtSite);
@@ -1069,65 +1069,65 @@ namespace FSM
             _grpSite.TabIndex = 115;
             _grpSite.TabStop = false;
             _grpSite.Text = "Site ";
-            // 
+            //
             // btnUpdateSiteService
-            // 
+            //
             _btnUpdateSiteService.Location = new Point(139, 196);
             _btnUpdateSiteService.Name = "btnUpdateSiteService";
             _btnUpdateSiteService.Size = new Size(139, 23);
             _btnUpdateSiteService.TabIndex = 126;
             _btnUpdateSiteService.Text = "Update Site Service";
-            // 
+            //
             // txtSite
-            // 
+            //
             _txtSite.Location = new Point(117, 48);
             _txtSite.Name = "txtSite";
             _txtSite.ReadOnly = true;
             _txtSite.Size = new Size(161, 21);
             _txtSite.TabIndex = 121;
-            // 
+            //
             // lblSiteName
-            // 
+            //
             _lblSiteName.Location = new Point(8, 51);
             _lblSiteName.Name = "lblSiteName";
             _lblSiteName.Size = new Size(80, 23);
             _lblSiteName.TabIndex = 125;
             _lblSiteName.Text = "Name:";
-            // 
+            //
             // txtCustomerName
-            // 
+            //
             _txtCustomerName.Location = new Point(117, 20);
             _txtCustomerName.Name = "txtCustomerName";
             _txtCustomerName.ReadOnly = true;
             _txtCustomerName.Size = new Size(161, 21);
             _txtCustomerName.TabIndex = 120;
-            // 
+            //
             // lblSite
-            // 
+            //
             _lblSite.Location = new Point(8, 79);
             _lblSite.Name = "lblSite";
             _lblSite.Size = new Size(80, 23);
             _lblSite.TabIndex = 124;
             _lblSite.Text = "Property:";
-            // 
+            //
             // txtSiteName
-            // 
+            //
             _txtSiteName.Location = new Point(117, 76);
             _txtSiteName.Name = "txtSiteName";
             _txtSiteName.ReadOnly = true;
             _txtSiteName.Size = new Size(161, 21);
             _txtSiteName.TabIndex = 122;
-            // 
+            //
             // lblCustomer
-            // 
+            //
             _lblCustomer.Location = new Point(6, 23);
             _lblCustomer.Name = "lblCustomer";
             _lblCustomer.Size = new Size(80, 23);
             _lblCustomer.TabIndex = 123;
             _lblCustomer.Text = "Customer:";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Location = new Point(117, 104);
             _txtTelephoneNum.MaxLength = 50;
             _txtTelephoneNum.Name = "txtTelephoneNum";
@@ -1135,17 +1135,17 @@ namespace FSM
             _txtTelephoneNum.Size = new Size(161, 21);
             _txtTelephoneNum.TabIndex = 114;
             _txtTelephoneNum.Tag = "Site.TelephoneNum";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(8, 107);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(48, 20);
             _lblTelephoneNum.TabIndex = 119;
             _lblTelephoneNum.Text = "Tel";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Location = new Point(117, 160);
             _txtEmailAddress.MaxLength = 100;
             _txtEmailAddress.Name = "txtEmailAddress";
@@ -1153,17 +1153,17 @@ namespace FSM
             _txtEmailAddress.Size = new Size(161, 21);
             _txtEmailAddress.TabIndex = 116;
             _txtEmailAddress.Tag = "Site.EmailAddress";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(8, 163);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(98, 20);
             _lblEmailAddress.TabIndex = 118;
             _lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Location = new Point(117, 132);
             _txtFaxNum.MaxLength = 50;
             _txtFaxNum.Name = "txtFaxNum";
@@ -1171,17 +1171,17 @@ namespace FSM
             _txtFaxNum.Size = new Size(161, 21);
             _txtFaxNum.TabIndex = 115;
             _txtFaxNum.Tag = "Site.FaxNum";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(8, 135);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(50, 20);
             _lblFaxNum.TabIndex = 117;
             _lblFaxNum.Text = "Mobile";
-            // 
+            //
             // grpSiteFuelUpdate
-            // 
+            //
             _grpSiteFuelUpdate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _grpSiteFuelUpdate.Controls.Add(_dtpActualServiceDate);
             _grpSiteFuelUpdate.Controls.Add(_lblActualServiceDate);
@@ -1203,121 +1203,121 @@ namespace FSM
             _grpSiteFuelUpdate.TabIndex = 12;
             _grpSiteFuelUpdate.TabStop = false;
             _grpSiteFuelUpdate.Text = "Fuel";
-            // 
+            //
             // dtpActualServiceDate
-            // 
+            //
             _dtpActualServiceDate.Location = new Point(142, 119);
             _dtpActualServiceDate.Name = "dtpActualServiceDate";
             _dtpActualServiceDate.Size = new Size(139, 21);
             _dtpActualServiceDate.TabIndex = 133;
-            // 
+            //
             // lblActualServiceDate
-            // 
+            //
             _lblActualServiceDate.Location = new Point(6, 125);
             _lblActualServiceDate.Name = "lblActualServiceDate";
             _lblActualServiceDate.Size = new Size(124, 20);
             _lblActualServiceDate.TabIndex = 132;
             _lblActualServiceDate.Text = "Service Date";
-            // 
+            //
             // lblChargeType
-            // 
+            //
             _lblChargeType.AutoSize = true;
             _lblChargeType.Location = new Point(6, 56);
             _lblChargeType.Name = "lblChargeType";
             _lblChargeType.Size = new Size(49, 13);
             _lblChargeType.TabIndex = 131;
             _lblChargeType.Text = "Charge";
-            // 
+            //
             // cboChargeType
-            // 
+            //
             _cboChargeType.FormattingEnabled = true;
             _cboChargeType.Location = new Point(72, 53);
             _cboChargeType.Name = "cboChargeType";
             _cboChargeType.Size = new Size(209, 21);
             _cboChargeType.TabIndex = 130;
-            // 
+            //
             // txtAddedOn
-            // 
+            //
             _txtAddedOn.Location = new Point(120, 185);
             _txtAddedOn.Name = "txtAddedOn";
             _txtAddedOn.ReadOnly = true;
             _txtAddedOn.Size = new Size(161, 21);
             _txtAddedOn.TabIndex = 128;
-            // 
+            //
             // lblAddedOn
-            // 
+            //
             _lblAddedOn.Location = new Point(8, 188);
             _lblAddedOn.Name = "lblAddedOn";
             _lblAddedOn.Size = new Size(80, 23);
             _lblAddedOn.TabIndex = 129;
             _lblAddedOn.Text = "Added On:";
-            // 
+            //
             // txtAddedByText
-            // 
+            //
             _txtAddedByText.Location = new Point(120, 152);
             _txtAddedByText.Name = "txtAddedByText";
             _txtAddedByText.ReadOnly = true;
             _txtAddedByText.Size = new Size(161, 21);
             _txtAddedByText.TabIndex = 126;
-            // 
+            //
             // lblAddedBy
-            // 
+            //
             _lblAddedBy.Location = new Point(6, 155);
             _lblAddedBy.Name = "lblAddedBy";
             _lblAddedBy.Size = new Size(80, 23);
             _lblAddedBy.TabIndex = 127;
             _lblAddedBy.Text = "Added By:";
-            // 
+            //
             // dtpLastServiceDate
-            // 
+            //
             _dtpLastServiceDate.Location = new Point(142, 86);
             _dtpLastServiceDate.Name = "dtpLastServiceDate";
             _dtpLastServiceDate.Size = new Size(139, 21);
             _dtpLastServiceDate.TabIndex = 57;
-            // 
+            //
             // lblLastService
-            // 
+            //
             _lblLastService.Location = new Point(6, 92);
             _lblLastService.Name = "lblLastService";
             _lblLastService.Size = new Size(114, 20);
             _lblLastService.TabIndex = 56;
             _lblLastService.Text = "Service Due Date";
-            // 
+            //
             // lblFuel
-            // 
+            //
             _lblFuel.AutoSize = true;
             _lblFuel.Location = new Point(8, 23);
             _lblFuel.Name = "lblFuel";
             _lblFuel.Size = new Size(30, 13);
             _lblFuel.TabIndex = 55;
             _lblFuel.Text = "Fuel";
-            // 
+            //
             // cboFuel
-            // 
+            //
             _cboFuel.FormattingEnabled = true;
             _cboFuel.Location = new Point(72, 20);
             _cboFuel.Name = "cboFuel";
             _cboFuel.Size = new Size(209, 21);
             _cboFuel.TabIndex = 54;
-            // 
+            //
             // btnSaveFuel
-            // 
+            //
             _btnSaveFuel.Location = new Point(191, 233);
             _btnSaveFuel.Name = "btnSaveFuel";
             _btnSaveFuel.Size = new Size(90, 23);
             _btnSaveFuel.TabIndex = 9;
             _btnSaveFuel.Text = "Save";
-            // 
+            //
             // btnDeleteSiteFuel
-            // 
+            //
             _btnDeleteSiteFuel.Location = new Point(9, 233);
             _btnDeleteSiteFuel.Name = "btnDeleteSiteFuel";
             _btnDeleteSiteFuel.Size = new Size(90, 23);
             _btnDeleteSiteFuel.TabIndex = 10;
             _btnDeleteSiteFuel.Text = "Delete";
-            // 
+            //
             // dgSiteFuel
-            // 
+            //
             _dgSiteFuel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgSiteFuel.DataMember = "";
@@ -1326,9 +1326,9 @@ namespace FSM
             _dgSiteFuel.Name = "dgSiteFuel";
             _dgSiteFuel.Size = new Size(478, 499);
             _dgSiteFuel.TabIndex = 11;
-            // 
+            //
             // tabAudit
-            // 
+            //
             _tabAudit.Controls.Add(_grpSiteFuelAudit);
             _tabAudit.Location = new Point(4, 22);
             _tabAudit.Name = "tabAudit";
@@ -1337,9 +1337,9 @@ namespace FSM
             _tabAudit.TabIndex = 1;
             _tabAudit.Text = "Audit";
             _tabAudit.UseVisualStyleBackColor = true;
-            // 
+            //
             // grpSiteFuelAudit
-            // 
+            //
             _grpSiteFuelAudit.Controls.Add(_dgSiteFuelAudit);
             _grpSiteFuelAudit.Dock = DockStyle.Fill;
             _grpSiteFuelAudit.Location = new Point(3, 3);
@@ -1348,9 +1348,9 @@ namespace FSM
             _grpSiteFuelAudit.TabIndex = 5;
             _grpSiteFuelAudit.TabStop = false;
             _grpSiteFuelAudit.Text = "Site Fuel Audit";
-            // 
+            //
             // dgSiteFuelAudit
-            // 
+            //
             _dgSiteFuelAudit.DataMember = "";
             _dgSiteFuelAudit.Dock = DockStyle.Fill;
             _dgSiteFuelAudit.HeaderForeColor = SystemColors.ControlText;
@@ -1358,9 +1358,9 @@ namespace FSM
             _dgSiteFuelAudit.Name = "dgSiteFuelAudit";
             _dgSiteFuelAudit.Size = new Size(780, 505);
             _dgSiteFuelAudit.TabIndex = 15;
-            // 
+            //
             // FRMSiteFuel
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(800, 557);
             Controls.Add(_SiteFuelTabControl);
@@ -1384,7 +1384,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             SetupSiteFuelDataGrid();
@@ -1399,12 +1400,13 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSiteFuelDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSiteFuel);
@@ -1662,7 +1664,7 @@ namespace FSM
             {
                 if (!App.DB.Sites.SiteFuel_Update(currentFuel))
                     throw new Exception("Failed to save!");
-                // check if site has a service date against it 
+                // check if site has a service date against it
                 if (CurrentSite.LastServiceDate.Date < currentFuel.LastServiceDate)
                 {
                     App.DB.Sites.Site_UpdateLastServiceDate(CurrentSite.SiteID, currentFuel.LastServiceDate, currentFuel.ActualServiceDate, true);
@@ -1807,6 +1809,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateSiteFuelDataGrid()
         {
             try
