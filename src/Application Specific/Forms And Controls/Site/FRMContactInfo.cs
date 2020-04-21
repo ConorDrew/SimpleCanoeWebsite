@@ -11,7 +11,6 @@ namespace FSM
     {
         public FRMContactInfo()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMContactInfo_Load;
@@ -19,6 +18,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMContactInfo(Entity.Sites.Site oSite) : base()
         {
             base.Load += FRMContactInfo_Load;
@@ -29,7 +29,6 @@ namespace FSM
             CurrentSite = oSite;
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -48,6 +47,7 @@ namespace FSM
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private TextBox _txtTelephoneNum;
 
         internal TextBox txtTelephoneNum
@@ -430,134 +430,134 @@ namespace FSM
             _btnSave.Click += new EventHandler(btnSave_Click);
             _grpSite = new GroupBox();
             SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnOK.Location = new Point(595, 236);
             _btnOK.Name = "btnOK";
             _btnOK.Size = new Size(75, 23);
             _btnOK.TabIndex = 4;
             _btnOK.Text = "OK";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Location = new Point(125, 152);
             _txtTelephoneNum.MaxLength = 50;
             _txtTelephoneNum.Name = "txtTelephoneNum";
             _txtTelephoneNum.Size = new Size(132, 21);
             _txtTelephoneNum.TabIndex = 101;
             _txtTelephoneNum.Tag = "Site.TelephoneNum";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(24, 155);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(48, 20);
             _lblTelephoneNum.TabIndex = 107;
             _lblTelephoneNum.Text = "Tel";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Location = new Point(125, 182);
             _txtEmailAddress.MaxLength = 100;
             _txtEmailAddress.Name = "txtEmailAddress";
             _txtEmailAddress.Size = new Size(223, 21);
             _txtEmailAddress.TabIndex = 103;
             _txtEmailAddress.Tag = "Site.EmailAddress";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(24, 185);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(98, 20);
             _lblEmailAddress.TabIndex = 106;
             _lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Location = new Point(362, 154);
             _txtFaxNum.MaxLength = 50;
             _txtFaxNum.Name = "txtFaxNum";
             _txtFaxNum.Size = new Size(145, 21);
             _txtFaxNum.TabIndex = 102;
             _txtFaxNum.Tag = "Site.FaxNum";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(288, 155);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(50, 20);
             _lblFaxNum.TabIndex = 104;
             _lblFaxNum.Text = "Mobile";
-            // 
+            //
             // txtHeadOffice
-            // 
+            //
             _txtHeadOffice.Location = new Point(125, 91);
             _txtHeadOffice.Name = "txtHeadOffice";
             _txtHeadOffice.ReadOnly = true;
             _txtHeadOffice.Size = new Size(382, 21);
             _txtHeadOffice.TabIndex = 109;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.Location = new Point(24, 89);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(80, 23);
             _Label9.TabIndex = 113;
             _Label9.Text = "Head Office:";
-            // 
+            //
             // txtCustomerName
-            // 
+            //
             _txtCustomerName.Location = new Point(125, 62);
             _txtCustomerName.Name = "txtCustomerName";
             _txtCustomerName.ReadOnly = true;
             _txtCustomerName.Size = new Size(382, 21);
             _txtCustomerName.TabIndex = 108;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(24, 122);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(80, 23);
             _Label2.TabIndex = 112;
             _Label2.Text = "Property:";
-            // 
+            //
             // txtSiteName
-            // 
+            //
             _txtSiteName.Location = new Point(125, 120);
             _txtSiteName.Name = "txtSiteName";
             _txtSiteName.ReadOnly = true;
             _txtSiteName.Size = new Size(382, 21);
             _txtSiteName.TabIndex = 110;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(24, 62);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(80, 23);
             _Label1.TabIndex = 111;
             _Label1.Text = "Customer:";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Location = new Point(426, 243);
             _btnSave.Name = "btnSave";
             _btnSave.Size = new Size(109, 30);
             _btnSave.TabIndex = 105;
             _btnSave.Text = "Save";
-            // 
+            //
             // grpSite
-            // 
+            //
             _grpSite.Location = new Point(6, 38);
             _grpSite.Name = "grpSite";
             _grpSite.Size = new Size(529, 188);
             _grpSite.TabIndex = 114;
             _grpSite.TabStop = false;
             _grpSite.Text = "Site ";
-            // 
+            //
             // FRMContactInfo
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(547, 288);
             Controls.Add(_txtHeadOffice);
@@ -599,7 +599,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
         }
@@ -612,7 +613,7 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
+        public void ResetMe(int newID)
         {
         }
 

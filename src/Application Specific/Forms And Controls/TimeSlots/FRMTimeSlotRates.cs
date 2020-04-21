@@ -10,11 +10,10 @@ namespace FSM
 {
     public class FRMTimeSlotRates : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMTimeSlotRates() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMTimeSlotRates_Load;
@@ -43,7 +42,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private DataGrid _dgTimeslots;
 
@@ -259,9 +258,9 @@ namespace FSM
             _gpbBankHolidays.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgBankHolidays).BeginInit();
             SuspendLayout();
-            // 
+            //
             // gpbTimeslots
-            // 
+            //
             _gpbTimeslots.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbTimeslots.Controls.Add(_dgTimeslots);
@@ -271,9 +270,9 @@ namespace FSM
             _gpbTimeslots.TabIndex = 0;
             _gpbTimeslots.TabStop = false;
             _gpbTimeslots.Text = "Time Slot Charge Rates";
-            // 
+            //
             // dgTimeslots
-            // 
+            //
             _dgTimeslots.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgTimeslots.DataMember = "";
@@ -282,9 +281,9 @@ namespace FSM
             _dgTimeslots.Name = "dgTimeslots";
             _dgTimeslots.Size = new Size(661, 227);
             _dgTimeslots.TabIndex = 0;
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tabTimeSlots);
@@ -294,35 +293,35 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(704, 296);
             _TabControl1.TabIndex = 1;
-            // 
+            //
             // tabTimeSlots
-            // 
+            //
             _tabTimeSlots.Controls.Add(_gpbTimeslots);
             _tabTimeSlots.Location = new Point(4, 22);
             _tabTimeSlots.Name = "tabTimeSlots";
             _tabTimeSlots.Size = new Size(696, 270);
             _tabTimeSlots.TabIndex = 0;
             _tabTimeSlots.Text = "Time Slot Charge Rates";
-            // 
+            //
             // tabBankHolidays
-            // 
+            //
             _tabBankHolidays.Controls.Add(_gpbBankHolidays);
             _tabBankHolidays.Location = new Point(4, 22);
             _tabBankHolidays.Name = "tabBankHolidays";
             _tabBankHolidays.Size = new Size(696, 270);
             _tabBankHolidays.TabIndex = 1;
             _tabBankHolidays.Text = "Bank Holidays";
-            // 
+            //
             // btnSave
-            // 
+            //
             _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSave.Location = new Point(616, 352);
             _btnSave.Name = "btnSave";
             _btnSave.TabIndex = 2;
             _btnSave.Text = "&Save";
-            // 
+            //
             // gpbBankHolidays
-            // 
+            //
             _gpbBankHolidays.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _gpbBankHolidays.Controls.Add(_dgBankHolidays);
@@ -332,9 +331,9 @@ namespace FSM
             _gpbBankHolidays.TabIndex = 1;
             _gpbBankHolidays.TabStop = false;
             _gpbBankHolidays.Text = "Bank Holiday Rates";
-            // 
+            //
             // dgBankHolidays
-            // 
+            //
             _dgBankHolidays.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgBankHolidays.DataMember = "";
@@ -343,9 +342,9 @@ namespace FSM
             _dgBankHolidays.Name = "dgBankHolidays";
             _dgBankHolidays.Size = new Size(661, 226);
             _dgBankHolidays.TabIndex = 0;
-            // 
+            //
             // FRMTimeSlotRates
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(704, 390);
             Controls.Add(_btnSave);
@@ -367,7 +366,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
             LabourTypesDataview = App.DB.TimeSlotRates.LabourTypes_Get();
@@ -444,8 +444,10 @@ namespace FSM
                 _dvLabourTypes = value;
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupRatesDataGrid()
         {
             var tbStyle = dgTimeslots.TableStyles[0];
@@ -565,8 +567,10 @@ namespace FSM
         {
             Save();
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             RatesDataview = App.DB.TimeSlotRates.GetAll();
@@ -577,11 +581,6 @@ namespace FSM
         {
             foreach (DataRow dr in RatesDataview.Table.Rows)
                 App.DB.TimeSlotRates.Update(Conversions.ToInteger(dr["UniqueID"]), Conversions.ToInteger(dr["Monday"]), Conversions.ToInteger(dr["Tuesday"]), Conversions.ToInteger(dr["Wednesday"]), Conversions.ToInteger(dr["Thursday"]), Conversions.ToInteger(dr["Friday"]), Conversions.ToInteger(dr["Saturday"]), Conversions.ToInteger(dr["Sunday"]));
-
-
-
-
-
 
             foreach (DataRow bankHoliday in BankHolidayDataview.Table.Rows)
             {

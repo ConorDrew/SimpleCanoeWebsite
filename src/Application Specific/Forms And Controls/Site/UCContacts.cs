@@ -16,7 +16,6 @@ namespace FSM
 
         public UCContacts(Entity.Sites.Site oSite)
         {
-
             // This call is required by the designer.
             InitializeComponent();
             CurrentSite = oSite;
@@ -26,7 +25,6 @@ namespace FSM
             Combo.SetUpCombo(ref argc1, App.DB.Picklists.GetAll(Enums.PickListTypes.Relationship).Table, "ManagerID", "Name", Enums.ComboValues.Please_Select);
 
             // Add any initialization after the InitializeComponent() call.
-
         }
 
         ~UCContacts()
@@ -34,6 +32,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void UCSite_Load(object sender, EventArgs e)
         {
             LoadForm(sender, e);
@@ -113,11 +112,11 @@ namespace FSM
 
         private DataView _dvSiteContacts = null;
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -164,6 +163,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSiteContactsDataGrid()
         {
             Helper.SetUpDataGrid(dgSiteContacts);
@@ -292,6 +292,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void PopulateSiteContactsDataGrid()
         {
             try
@@ -327,6 +328,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void btnSaveContact_Click(object sender, EventArgs e)
         {
             try

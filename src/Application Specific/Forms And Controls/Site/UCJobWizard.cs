@@ -6,7 +6,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Entity.Sys;
 using FSM.Entity.Sys;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
@@ -17,7 +16,6 @@ namespace FSM
     {
         public UCJobWizard() : base()
         {
-
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             try
@@ -56,7 +54,6 @@ namespace FSM
             cbotypeWiz.AutoCompleteMode = AutoCompleteMode.Suggest;
             cbotypeWiz.AutoCompleteSource = AutoCompleteSource.ListItems;
             // Combo.SetUpCombo(Me.cboDefinition, DynamicDataTables.JobDefinitions, "ValueMember", "DisplayMember", Entity.Sys.Enums.ComboValues.Please_Select)
-
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -209,7 +206,6 @@ namespace FSM
             {
                 if (_txtSearch != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _txtSearch.KeyDown -= txtSearch_TextChanged;
@@ -822,7 +818,6 @@ namespace FSM
             {
                 if (_btnxxSiteNext != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnxxSiteNext.Click -= btnSiteNext_Click;
@@ -977,7 +972,6 @@ namespace FSM
             {
                 if (_cbotypeWiz != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _cbotypeWiz.SelectedIndexChanged -= cbotypeWiz_SelectedIndexChanged;
@@ -1056,7 +1050,6 @@ namespace FSM
             {
                 if (_btnAddMain != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnAddMain.Click -= btnAddMain_Click;
@@ -1305,7 +1298,6 @@ namespace FSM
             {
                 if (_btnSORAdd != null)
                 {
-
                     // End Sub
 
                     _btnSORAdd.Click -= btnSORAdd_Click;
@@ -1606,7 +1598,6 @@ namespace FSM
             {
                 if (_chkRecall != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _chkRecall.CheckedChanged -= chkRecall_CheckedChanged;
@@ -1879,7 +1870,6 @@ namespace FSM
             {
                 if (_cboPriority != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _cboPriority.SelectedIndexChanged -= cboPriority_SelectedIndexChanged;
@@ -2080,7 +2070,6 @@ namespace FSM
             {
                 if (_btnAdditionalPlus != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnAdditionalPlus.Click -= btnAdditionalPlus_Click;
@@ -2255,7 +2244,6 @@ namespace FSM
             {
                 if (_dtpFromDate != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _dtpFromDate.ValueChanged -= dtpFromDate_ValueChanged;
                 }
@@ -2283,7 +2271,6 @@ namespace FSM
             {
                 if (_btnOption10 != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnOption10.Click -= btnOption_Click;
@@ -2574,7 +2561,6 @@ namespace FSM
             {
                 if (_btnxx1 != null)
                 {
-
                     // Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles tcSites.SelectedIndexChanged
                     // tcSites.SelectedTab = tcSites.TabPages.Item(tab)
 
@@ -3158,7 +3144,6 @@ namespace FSM
             {
                 if (_dgExistingVisits != null)
                 {
-
                     /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _dgExistingVisits.CellClick -= dgExistingVisits_CellClick;
@@ -4401,9 +4386,9 @@ namespace FSM
             _gpCombo.SuspendLayout();
             _tcComplete.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // tabJobDetails
-            // 
+            //
             _tabJobDetails.Controls.Add(_pnlTimeReq);
             _tabJobDetails.Controls.Add(_Label26);
             _tabJobDetails.Controls.Add(_txtPONumber);
@@ -4421,9 +4406,9 @@ namespace FSM
             _tabJobDetails.Size = new Size(877, 774);
             _tabJobDetails.TabIndex = 4;
             _tabJobDetails.Text = "Job Details";
-            // 
+            //
             // pnlTimeReq
-            // 
+            //
             _pnlTimeReq.Controls.Add(_Label34);
             _pnlTimeReq.Controls.Add(_txtHrs);
             _pnlTimeReq.Controls.Add(_Label32);
@@ -4434,9 +4419,9 @@ namespace FSM
             _pnlTimeReq.Size = new Size(550, 42);
             _pnlTimeReq.TabIndex = 173;
             _pnlTimeReq.Visible = false;
-            // 
+            //
             // Label34
-            // 
+            //
             _Label34.AutoSize = true;
             _Label34.Font = new Font("Verdana", 10.0F);
             _Label34.Location = new Point(432, 11);
@@ -4444,16 +4429,16 @@ namespace FSM
             _Label34.Size = new Size(32, 17);
             _Label34.TabIndex = 174;
             _Label34.Text = "Hrs";
-            // 
+            //
             // txtHrs
-            // 
+            //
             _txtHrs.Location = new Point(347, 10);
             _txtHrs.Name = "txtHrs";
             _txtHrs.Size = new Size(79, 21);
             _txtHrs.TabIndex = 173;
-            // 
+            //
             // Label32
-            // 
+            //
             _Label32.AutoSize = true;
             _Label32.Font = new Font("Verdana", 10.0F);
             _Label32.Location = new Point(3, 12);
@@ -4461,9 +4446,9 @@ namespace FSM
             _Label32.Size = new Size(135, 17);
             _Label32.TabIndex = 170;
             _Label32.Text = "Time Requirement";
-            // 
+            //
             // Label33
-            // 
+            //
             _Label33.AutoSize = true;
             _Label33.Font = new Font("Verdana", 10.0F);
             _Label33.Location = new Point(264, 11);
@@ -4471,16 +4456,16 @@ namespace FSM
             _Label33.Size = new Size(43, 17);
             _Label33.TabIndex = 172;
             _Label33.Text = "Days";
-            // 
+            //
             // txtDays
-            // 
+            //
             _txtDays.Location = new Point(189, 10);
             _txtDays.Name = "txtDays";
             _txtDays.Size = new Size(69, 21);
             _txtDays.TabIndex = 171;
-            // 
+            //
             // Label26
-            // 
+            //
             _Label26.AutoSize = true;
             _Label26.Font = new Font("Verdana", 10.0F);
             _Label26.Location = new Point(128, 407);
@@ -4488,16 +4473,16 @@ namespace FSM
             _Label26.Size = new Size(143, 17);
             _Label26.TabIndex = 169;
             _Label26.Text = "PO / Order Number";
-            // 
+            //
             // txtPONumber
-            // 
+            //
             _txtPONumber.Location = new Point(306, 407);
             _txtPONumber.Name = "txtPONumber";
             _txtPONumber.Size = new Size(358, 21);
             _txtPONumber.TabIndex = 168;
-            // 
+            //
             // lblAdditional
-            // 
+            //
             _lblAdditional.AutoSize = true;
             _lblAdditional.Font = new Font("Verdana", 10.0F);
             _lblAdditional.Location = new Point(127, 453);
@@ -4506,18 +4491,18 @@ namespace FSM
             _lblAdditional.TabIndex = 167;
             _lblAdditional.Text = "Work Details";
             _lblAdditional.Visible = false;
-            // 
+            //
             // txtAdditional
-            // 
+            //
             _txtAdditional.Location = new Point(305, 450);
             _txtAdditional.Multiline = true;
             _txtAdditional.Name = "txtAdditional";
             _txtAdditional.Size = new Size(358, 99);
             _txtAdditional.TabIndex = 166;
             _txtAdditional.Visible = false;
-            // 
+            //
             // btnxx2
-            // 
+            //
             _btnxx2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnxx2.BackColor = SystemColors.Control;
             _btnxx2.BackgroundImage = (Image)resources.GetObject("btnxx2.BackgroundImage");
@@ -4528,18 +4513,18 @@ namespace FSM
             _btnxx2.Size = new Size(62, 45);
             _btnxx2.TabIndex = 163;
             _btnxx2.UseVisualStyleBackColor = false;
-            // 
+            //
             // pnlTypeOfWorks
-            // 
+            //
             _pnlTypeOfWorks.Controls.Add(_cboTypeOfWorks);
             _pnlTypeOfWorks.Controls.Add(_Label25);
             _pnlTypeOfWorks.Location = new Point(124, 354);
             _pnlTypeOfWorks.Name = "pnlTypeOfWorks";
             _pnlTypeOfWorks.Size = new Size(550, 42);
             _pnlTypeOfWorks.TabIndex = 162;
-            // 
+            //
             // cboTypeOfWorks
-            // 
+            //
             _cboTypeOfWorks.Font = new Font("Verdana", 9.0F);
             _cboTypeOfWorks.FormattingEnabled = true;
             _cboTypeOfWorks.Location = new Point(189, 10);
@@ -4547,9 +4532,9 @@ namespace FSM
             _cboTypeOfWorks.Size = new Size(357, 22);
             _cboTypeOfWorks.TabIndex = 163;
             _cboTypeOfWorks.Visible = false;
-            // 
+            //
             // Label25
-            // 
+            //
             _Label25.AutoSize = true;
             _Label25.Font = new Font("Verdana", 10.0F);
             _Label25.Location = new Point(11, 10);
@@ -4558,9 +4543,9 @@ namespace FSM
             _Label25.TabIndex = 162;
             _Label25.Text = "Type Of Works";
             _Label25.Visible = false;
-            // 
+            //
             // pnlSymptoms
-            // 
+            //
             _pnlSymptoms.Controls.Add(_lblSymptom);
             _pnlSymptoms.Controls.Add(_cboSymptom);
             _pnlSymptoms.Controls.Add(_Label15);
@@ -4571,9 +4556,9 @@ namespace FSM
             _pnlSymptoms.Name = "pnlSymptoms";
             _pnlSymptoms.Size = new Size(602, 193);
             _pnlSymptoms.TabIndex = 158;
-            // 
+            //
             // lblSymptom
-            // 
+            //
             _lblSymptom.AutoSize = true;
             _lblSymptom.Font = new Font("Verdana", 10.0F);
             _lblSymptom.Location = new Point(34, 14);
@@ -4581,18 +4566,18 @@ namespace FSM
             _lblSymptom.Size = new Size(76, 17);
             _lblSymptom.TabIndex = 159;
             _lblSymptom.Text = "Symptom";
-            // 
+            //
             // cboSymptom
-            // 
+            //
             _cboSymptom.Font = new Font("Verdana", 9.0F);
             _cboSymptom.FormattingEnabled = true;
             _cboSymptom.Location = new Point(210, 12);
             _cboSymptom.Name = "cboSymptom";
             _cboSymptom.Size = new Size(358, 22);
             _cboSymptom.TabIndex = 158;
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.AutoSize = true;
             _Label15.Font = new Font("Verdana", 10.0F);
             _Label15.Location = new Point(34, 67);
@@ -4600,9 +4585,9 @@ namespace FSM
             _Label15.Size = new Size(140, 17);
             _Label15.TabIndex = 157;
             _Label15.Text = "Applied Symptoms";
-            // 
+            //
             // DGSymptoms
-            // 
+            //
             _DGSymptoms.AllowUserToAddRows = false;
             _DGSymptoms.AllowUserToDeleteRows = false;
             _DGSymptoms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -4618,27 +4603,27 @@ namespace FSM
             _DGSymptoms.ShowRowErrors = false;
             _DGSymptoms.Size = new Size(359, 122);
             _DGSymptoms.TabIndex = 156;
-            // 
+            //
             // btnSymMinus
-            // 
+            //
             _btnSymMinus.Location = new Point(346, 39);
             _btnSymMinus.Name = "btnSymMinus";
             _btnSymMinus.Size = new Size(39, 23);
             _btnSymMinus.TabIndex = 155;
             _btnSymMinus.Text = "-";
             _btnSymMinus.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnSymAdd
-            // 
+            //
             _btnSymAdd.Location = new Point(391, 39);
             _btnSymAdd.Name = "btnSymAdd";
             _btnSymAdd.Size = new Size(39, 23);
             _btnSymAdd.TabIndex = 154;
             _btnSymAdd.Text = "+";
             _btnSymAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblPriority
-            // 
+            //
             _lblPriority.AutoSize = true;
             _lblPriority.Font = new Font("Verdana", 10.0F);
             _lblPriority.Location = new Point(127, 120);
@@ -4647,9 +4632,9 @@ namespace FSM
             _lblPriority.TabIndex = 157;
             _lblPriority.Text = "Priority";
             _lblPriority.Visible = false;
-            // 
+            //
             // cboPriority
-            // 
+            //
             _cboPriority.Font = new Font("Verdana", 9.0F);
             _cboPriority.FormattingEnabled = true;
             _cboPriority.Location = new Point(304, 118);
@@ -4657,9 +4642,9 @@ namespace FSM
             _cboPriority.Size = new Size(357, 22);
             _cboPriority.TabIndex = 156;
             _cboPriority.Visible = false;
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.AutoSize = true;
             _Label12.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label12.Location = new Point(411, 28);
@@ -4667,9 +4652,9 @@ namespace FSM
             _Label12.Size = new Size(141, 25);
             _Label12.TabIndex = 20;
             _Label12.Text = "Job Details";
-            // 
+            //
             // btnxxDetailsNext
-            // 
+            //
             _btnxxDetailsNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnxxDetailsNext.BackColor = SystemColors.Control;
             _btnxxDetailsNext.BackgroundImage = (Image)resources.GetObject("btnxxDetailsNext.BackgroundImage");
@@ -4681,9 +4666,9 @@ namespace FSM
             _btnxxDetailsNext.TabIndex = 154;
             _btnxxDetailsNext.UseVisualStyleBackColor = false;
             _btnxxDetailsNext.Visible = false;
-            // 
+            //
             // tabAppliance
-            // 
+            //
             _tabAppliance.Controls.Add(_btnxx3);
             _tabAppliance.Controls.Add(_Label20);
             _tabAppliance.Controls.Add(_Label13);
@@ -4697,9 +4682,9 @@ namespace FSM
             _tabAppliance.Size = new Size(877, 774);
             _tabAppliance.TabIndex = 3;
             _tabAppliance.Text = "Associated Assets";
-            // 
+            //
             // btnxx3
-            // 
+            //
             _btnxx3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnxx3.BackColor = SystemColors.Control;
             _btnxx3.BackgroundImage = (Image)resources.GetObject("btnxx3.BackgroundImage");
@@ -4710,9 +4695,9 @@ namespace FSM
             _btnxx3.Size = new Size(62, 45);
             _btnxx3.TabIndex = 169;
             _btnxx3.UseVisualStyleBackColor = false;
-            // 
+            //
             // Label20
-            // 
+            //
             _Label20.AutoSize = true;
             _Label20.Font = new Font("Verdana", 10.0F);
             _Label20.Location = new Point(218, 97);
@@ -4720,9 +4705,9 @@ namespace FSM
             _Label20.Size = new Size(436, 17);
             _Label20.TabIndex = 168;
             _Label20.Text = "Add any asset either to be serviced or affected by the works";
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.AutoSize = true;
             _Label13.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label13.Location = new Point(291, 31);
@@ -4730,9 +4715,9 @@ namespace FSM
             _Label13.Size = new Size(243, 25);
             _Label13.TabIndex = 150;
             _Label13.Text = "Associated Asset(s)";
-            // 
+            //
             // DgMain
-            // 
+            //
             _DgMain.AllowUserToAddRows = false;
             _DgMain.AllowUserToDeleteRows = false;
             _DgMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -4748,27 +4733,27 @@ namespace FSM
             _DgMain.ShowRowErrors = false;
             _DgMain.Size = new Size(293, 175);
             _DgMain.TabIndex = 149;
-            // 
+            //
             // btnMinusMain
-            // 
+            //
             _btnMinusMain.Location = new Point(392, 182);
             _btnMinusMain.Name = "btnMinusMain";
             _btnMinusMain.Size = new Size(39, 23);
             _btnMinusMain.TabIndex = 148;
             _btnMinusMain.Text = "-";
             _btnMinusMain.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAddMain
-            // 
+            //
             _btnAddMain.Location = new Point(437, 182);
             _btnAddMain.Name = "btnAddMain";
             _btnAddMain.Size = new Size(39, 23);
             _btnAddMain.TabIndex = 147;
             _btnAddMain.Text = "+";
             _btnAddMain.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboMainApps
-            // 
+            //
             _cboMainApps.Cursor = Cursors.Hand;
             _cboMainApps.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboMainApps.Location = new Point(292, 155);
@@ -4776,9 +4761,9 @@ namespace FSM
             _cboMainApps.Size = new Size(293, 21);
             _cboMainApps.TabIndex = 146;
             _cboMainApps.Tag = "";
-            // 
+            //
             // btnxxApplianceNext
-            // 
+            //
             _btnxxApplianceNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnxxApplianceNext.BackColor = SystemColors.Control;
             _btnxxApplianceNext.BackgroundImage = (Image)resources.GetObject("btnxxApplianceNext.BackgroundImage");
@@ -4790,9 +4775,9 @@ namespace FSM
             _btnxxApplianceNext.TabIndex = 151;
             _btnxxApplianceNext.UseVisualStyleBackColor = false;
             _btnxxApplianceNext.Visible = false;
-            // 
+            //
             // tabJobType
-            // 
+            //
             _tabJobType.Controls.Add(_btnxxExternalBM);
             _tabJobType.Controls.Add(_btnxxCarpentry);
             _tabJobType.Controls.Add(_btnxxPlumbing);
@@ -4814,9 +4799,9 @@ namespace FSM
             _tabJobType.Size = new Size(877, 774);
             _tabJobType.TabIndex = 8;
             _tabJobType.Text = "Job Type";
-            // 
+            //
             // btnxxExternalBM
-            // 
+            //
             _btnxxExternalBM.BackColor = SystemColors.Control;
             _btnxxExternalBM.Cursor = Cursors.Hand;
             _btnxxExternalBM.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4827,9 +4812,9 @@ namespace FSM
             _btnxxExternalBM.Text = "Other External B and M";
             _btnxxExternalBM.UseVisualStyleBackColor = false;
             _btnxxExternalBM.Visible = false;
-            // 
+            //
             // btnxxCarpentry
-            // 
+            //
             _btnxxCarpentry.BackColor = SystemColors.Control;
             _btnxxCarpentry.Cursor = Cursors.Hand;
             _btnxxCarpentry.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4841,9 +4826,9 @@ namespace FSM
             _btnxxCarpentry.Text = "Carpentry";
             _btnxxCarpentry.UseVisualStyleBackColor = false;
             _btnxxCarpentry.Visible = false;
-            // 
+            //
             // btnxxPlumbing
-            // 
+            //
             _btnxxPlumbing.BackColor = SystemColors.Control;
             _btnxxPlumbing.Cursor = Cursors.Hand;
             _btnxxPlumbing.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4855,9 +4840,9 @@ namespace FSM
             _btnxxPlumbing.Text = "Plumbing";
             _btnxxPlumbing.UseVisualStyleBackColor = false;
             _btnxxPlumbing.Visible = false;
-            // 
+            //
             // btnxxElectrical
-            // 
+            //
             _btnxxElectrical.BackColor = SystemColors.Control;
             _btnxxElectrical.Cursor = Cursors.Hand;
             _btnxxElectrical.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4869,9 +4854,9 @@ namespace FSM
             _btnxxElectrical.Text = "Electrical";
             _btnxxElectrical.UseVisualStyleBackColor = false;
             _btnxxElectrical.Visible = false;
-            // 
+            //
             // btnxxMultiTrade
-            // 
+            //
             _btnxxMultiTrade.BackColor = SystemColors.Control;
             _btnxxMultiTrade.Cursor = Cursors.Hand;
             _btnxxMultiTrade.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4883,9 +4868,9 @@ namespace FSM
             _btnxxMultiTrade.Text = "Multi Trade";
             _btnxxMultiTrade.UseVisualStyleBackColor = false;
             _btnxxMultiTrade.Visible = false;
-            // 
+            //
             // btnxxKitchens
-            // 
+            //
             _btnxxKitchens.BackColor = SystemColors.Control;
             _btnxxKitchens.Cursor = Cursors.Hand;
             _btnxxKitchens.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4896,9 +4881,9 @@ namespace FSM
             _btnxxKitchens.Text = "Kitchens";
             _btnxxKitchens.UseVisualStyleBackColor = false;
             _btnxxKitchens.Visible = false;
-            // 
+            //
             // btnxx1
-            // 
+            //
             _btnxx1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnxx1.BackColor = SystemColors.Control;
             _btnxx1.BackgroundImage = (Image)resources.GetObject("btnxx1.BackgroundImage");
@@ -4909,9 +4894,9 @@ namespace FSM
             _btnxx1.Size = new Size(62, 45);
             _btnxx1.TabIndex = 158;
             _btnxx1.UseVisualStyleBackColor = false;
-            // 
+            //
             // pnlSOR
-            // 
+            //
             _pnlSOR.Controls.Add(_DGSOR);
             _pnlSOR.Controls.Add(_btnxxFollow);
             _pnlSOR.Controls.Add(_txtSORQty);
@@ -4924,9 +4909,9 @@ namespace FSM
             _pnlSOR.Size = new Size(519, 159);
             _pnlSOR.TabIndex = 156;
             _pnlSOR.Visible = false;
-            // 
+            //
             // DGSOR
-            // 
+            //
             _DGSOR.AllowUserToAddRows = false;
             _DGSOR.AllowUserToDeleteRows = false;
             _DGSOR.AllowUserToResizeRows = false;
@@ -4940,9 +4925,9 @@ namespace FSM
             _DGSOR.ShowRowErrors = false;
             _DGSOR.Size = new Size(513, 120);
             _DGSOR.TabIndex = 150;
-            // 
+            //
             // btnxxFollow
-            // 
+            //
             _btnxxFollow.BackColor = SystemColors.Control;
             _btnxxFollow.Cursor = Cursors.Hand;
             _btnxxFollow.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -4953,17 +4938,17 @@ namespace FSM
             _btnxxFollow.Text = "Quoted Works /" + (char)13 + (char)10 + "Follow Up Works";
             _btnxxFollow.UseVisualStyleBackColor = false;
             _btnxxFollow.Visible = false;
-            // 
+            //
             // txtSORQty
-            // 
+            //
             _txtSORQty.Location = new Point(412, 5);
             _txtSORQty.Name = "txtSORQty";
             _txtSORQty.Size = new Size(44, 21);
             _txtSORQty.TabIndex = 155;
             _txtSORQty.Text = "1";
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.AutoSize = true;
             _Label14.Font = new Font("Verdana", 10.0F);
             _Label14.Location = new Point(382, 6);
@@ -4972,18 +4957,18 @@ namespace FSM
             _Label14.TabIndex = 154;
             _Label14.Text = "Qty";
             _Label14.Visible = false;
-            // 
+            //
             // btnSORAdd
-            // 
+            //
             _btnSORAdd.Location = new Point(488, 3);
             _btnSORAdd.Name = "btnSORAdd";
             _btnSORAdd.Size = new Size(26, 23);
             _btnSORAdd.TabIndex = 151;
             _btnSORAdd.Text = "+";
             _btnSORAdd.UseVisualStyleBackColor = true;
-            // 
+            //
             // cboSOR
-            // 
+            //
             _cboSOR.BackColor = SystemColors.Window;
             _cboSOR.Font = new Font("Verdana", 9.0F);
             _cboSOR.FormattingEnabled = true;
@@ -4991,18 +4976,18 @@ namespace FSM
             _cboSOR.Name = "cboSOR";
             _cboSOR.Size = new Size(373, 22);
             _cboSOR.TabIndex = 153;
-            // 
+            //
             // btnSORMinus
-            // 
+            //
             _btnSORMinus.Location = new Point(460, 3);
             _btnSORMinus.Name = "btnSORMinus";
             _btnSORMinus.Size = new Size(25, 23);
             _btnSORMinus.TabIndex = 152;
             _btnSORMinus.Text = "-";
             _btnSORMinus.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnxxSOR
-            // 
+            //
             _btnxxSOR.BackColor = SystemColors.Control;
             _btnxxSOR.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnxxSOR.Location = new Point(196, 379);
@@ -5012,9 +4997,9 @@ namespace FSM
             _btnxxSOR.Tag = "67098";
             _btnxxSOR.Text = "SOR Based Works";
             _btnxxSOR.UseVisualStyleBackColor = false;
-            // 
+            //
             // lbltype
-            // 
+            //
             _lbltype.AutoSize = true;
             _lbltype.Font = new Font("Verdana", 10.0F);
             _lbltype.Location = new Point(206, 324);
@@ -5023,9 +5008,9 @@ namespace FSM
             _lbltype.TabIndex = 9;
             _lbltype.Text = "Job Type";
             _lbltype.Visible = false;
-            // 
+            //
             // cbotypeWiz
-            // 
+            //
             _cbotypeWiz.BackColor = SystemColors.Window;
             _cbotypeWiz.Font = new Font("Verdana", 9.0F);
             _cbotypeWiz.FormattingEnabled = true;
@@ -5034,9 +5019,9 @@ namespace FSM
             _cbotypeWiz.Size = new Size(326, 22);
             _cbotypeWiz.TabIndex = 8;
             _cbotypeWiz.Visible = false;
-            // 
+            //
             // btnxxBreakdown
-            // 
+            //
             _btnxxBreakdown.BackColor = SystemColors.Control;
             _btnxxBreakdown.Cursor = Cursors.Hand;
             _btnxxBreakdown.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -5047,9 +5032,9 @@ namespace FSM
             _btnxxBreakdown.Tag = "4703";
             _btnxxBreakdown.Text = "Breakdown";
             _btnxxBreakdown.UseVisualStyleBackColor = false;
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.AutoSize = true;
             _Label11.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label11.Location = new Point(390, 23);
@@ -5057,9 +5042,9 @@ namespace FSM
             _Label11.Size = new Size(117, 25);
             _Label11.TabIndex = 3;
             _Label11.Text = "Job Type";
-            // 
+            //
             // BtnxxService
-            // 
+            //
             _BtnxxService.BackColor = SystemColors.Control;
             _BtnxxService.Cursor = Cursors.Hand;
             _BtnxxService.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -5070,9 +5055,9 @@ namespace FSM
             _BtnxxService.Tag = "519";
             _BtnxxService.Text = "Service";
             _BtnxxService.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnxxOther
-            // 
+            //
             _btnxxOther.BackColor = SystemColors.Control;
             _btnxxOther.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _btnxxOther.Location = new Point(196, 314);
@@ -5081,9 +5066,9 @@ namespace FSM
             _btnxxOther.TabIndex = 5;
             _btnxxOther.Text = "Other";
             _btnxxOther.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnxxJobNext
-            // 
+            //
             _btnxxJobNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnxxJobNext.BackColor = SystemColors.Control;
             _btnxxJobNext.BackgroundImage = (Image)resources.GetObject("btnxxJobNext.BackgroundImage");
@@ -5095,9 +5080,9 @@ namespace FSM
             _btnxxJobNext.TabIndex = 27;
             _btnxxJobNext.UseVisualStyleBackColor = false;
             _btnxxJobNext.Visible = false;
-            // 
+            //
             // tabProp
-            // 
+            //
             _tabProp.Controls.Add(_lblDefect);
             _tabProp.Controls.Add(_txtDefect);
             _tabProp.Controls.Add(_chbCommercial);
@@ -5141,26 +5126,26 @@ namespace FSM
             _tabProp.Size = new Size(877, 774);
             _tabProp.TabIndex = 0;
             _tabProp.Text = "Property";
-            // 
+            //
             // lblDefect
-            // 
+            //
             _lblDefect.AutoSize = true;
             _lblDefect.Location = new Point(208, 583);
             _lblDefect.Name = "lblDefect";
             _lblDefect.Size = new Size(109, 13);
             _lblDefect.TabIndex = 38;
             _lblDefect.Text = "Defect Contractor";
-            // 
+            //
             // txtDefect
-            // 
+            //
             _txtDefect.Location = new Point(318, 582);
             _txtDefect.Name = "txtDefect";
             _txtDefect.ReadOnly = true;
             _txtDefect.Size = new Size(300, 21);
             _txtDefect.TabIndex = 37;
-            // 
+            //
             // chbCommercial
-            // 
+            //
             _chbCommercial.AutoSize = true;
             _chbCommercial.Enabled = false;
             _chbCommercial.Location = new Point(476, 525);
@@ -5170,43 +5155,43 @@ namespace FSM
             _chbCommercial.TabIndex = 36;
             _chbCommercial.Text = "Commercial/District";
             _chbCommercial.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblContactAlert
-            // 
+            //
             _lblContactAlert.AutoSize = true;
             _lblContactAlert.Location = new Point(208, 553);
             _lblContactAlert.Name = "lblContactAlert";
             _lblContactAlert.Size = new Size(88, 13);
             _lblContactAlert.TabIndex = 35;
             _lblContactAlert.Text = "Contact Alerts";
-            // 
+            //
             // txtContactAlert
-            // 
+            //
             _txtContactAlert.Location = new Point(318, 552);
             _txtContactAlert.Name = "txtContactAlert";
             _txtContactAlert.ReadOnly = true;
             _txtContactAlert.Size = new Size(300, 21);
             _txtContactAlert.TabIndex = 34;
-            // 
+            //
             // txtSearchSite
-            // 
+            //
             _txtSearchSite.Location = new Point(610, 56);
             _txtSearchSite.Name = "txtSearchSite";
             _txtSearchSite.Size = new Size(69, 21);
             _txtSearchSite.TabIndex = 33;
             _txtSearchSite.Text = "Search";
             _txtSearchSite.UseVisualStyleBackColor = true;
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Location = new Point(448, 279);
             _txtName.Name = "txtName";
             _txtName.ReadOnly = true;
             _txtName.Size = new Size(171, 21);
             _txtName.TabIndex = 32;
-            // 
+            //
             // txtSiteNotes
-            // 
+            //
             _txtSiteNotes.Location = new Point(318, 611);
             _txtSiteNotes.Multiline = true;
             _txtSiteNotes.Name = "txtSiteNotes";
@@ -5214,45 +5199,45 @@ namespace FSM
             _txtSiteNotes.ScrollBars = ScrollBars.Vertical;
             _txtSiteNotes.Size = new Size(301, 55);
             _txtSiteNotes.TabIndex = 31;
-            // 
+            //
             // Label30
-            // 
+            //
             _Label30.AutoSize = true;
             _Label30.Location = new Point(208, 616);
             _Label30.Name = "Label30";
             _Label30.Size = new Size(65, 13);
             _Label30.TabIndex = 30;
             _Label30.Text = "Site Notes";
-            // 
+            //
             // Label28
-            // 
+            //
             _Label28.AutoSize = true;
             _Label28.Location = new Point(208, 525);
             _Label28.Name = "Label28";
             _Label28.Size = new Size(79, 13);
             _Label28.TabIndex = 29;
             _Label28.Text = "Contract Ref";
-            // 
+            //
             // txtContractRef
-            // 
+            //
             _txtContractRef.Cursor = Cursors.Hand;
             _txtContractRef.Location = new Point(318, 522);
             _txtContractRef.Name = "txtContractRef";
             _txtContractRef.ReadOnly = true;
             _txtContractRef.Size = new Size(121, 21);
             _txtContractRef.TabIndex = 28;
-            // 
+            //
             // btnJobHistory
-            // 
+            //
             _btnJobHistory.Location = new Point(318, 672);
             _btnJobHistory.Name = "btnJobHistory";
             _btnJobHistory.Size = new Size(144, 51);
             _btnJobHistory.TabIndex = 27;
             _btnJobHistory.Text = "Job History";
             _btnJobHistory.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnxxSiteNext
-            // 
+            //
             _btnxxSiteNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnxxSiteNext.BackColor = SystemColors.Control;
             _btnxxSiteNext.BackgroundImage = (Image)resources.GetObject("btnxxSiteNext.BackgroundImage");
@@ -5263,197 +5248,197 @@ namespace FSM
             _btnxxSiteNext.Size = new Size(62, 45);
             _btnxxSiteNext.TabIndex = 26;
             _btnxxSiteNext.UseVisualStyleBackColor = false;
-            // 
+            //
             // Label10
-            // 
+            //
             _Label10.AutoSize = true;
             _Label10.Location = new Point(208, 255);
             _Label10.Name = "Label10";
             _Label10.Size = new Size(63, 13);
             _Label10.TabIndex = 25;
             _Label10.Text = "Customer";
-            // 
+            //
             // txtCustomer
-            // 
+            //
             _txtCustomer.Location = new Point(318, 252);
             _txtCustomer.Name = "txtCustomer";
             _txtCustomer.ReadOnly = true;
             _txtCustomer.Size = new Size(301, 21);
             _txtCustomer.TabIndex = 24;
-            // 
+            //
             // Label9
-            // 
+            //
             _Label9.AutoSize = true;
             _Label9.Location = new Point(208, 498);
             _Label9.Name = "Label9";
             _Label9.Size = new Size(38, 13);
             _Label9.TabIndex = 23;
             _Label9.Text = "Email";
-            // 
+            //
             // txtEmail
-            // 
+            //
             _txtEmail.Location = new Point(318, 495);
             _txtEmail.Name = "txtEmail";
             _txtEmail.ReadOnly = true;
             _txtEmail.Size = new Size(301, 21);
             _txtEmail.TabIndex = 22;
-            // 
+            //
             // Label8
-            // 
+            //
             _Label8.AutoSize = true;
             _Label8.Location = new Point(208, 471);
             _Label8.Name = "Label8";
             _Label8.Size = new Size(46, 13);
             _Label8.TabIndex = 21;
             _Label8.Text = "Tel No.";
-            // 
+            //
             // txtTel
-            // 
+            //
             _txtTel.Location = new Point(318, 468);
             _txtTel.Name = "txtTel";
             _txtTel.ReadOnly = true;
             _txtTel.Size = new Size(121, 21);
             _txtTel.TabIndex = 20;
-            // 
+            //
             // Label6
-            // 
+            //
             _Label6.AutoSize = true;
             _Label6.Location = new Point(445, 471);
             _Label6.Name = "Label6";
             _Label6.Size = new Size(53, 13);
             _Label6.TabIndex = 19;
             _Label6.Text = "Mob No.";
-            // 
+            //
             // txtMob
-            // 
+            //
             _txtMob.Location = new Point(498, 468);
             _txtMob.Name = "txtMob";
             _txtMob.ReadOnly = true;
             _txtMob.Size = new Size(121, 21);
             _txtMob.TabIndex = 18;
-            // 
+            //
             // txtAddress3
-            // 
+            //
             _txtAddress3.Location = new Point(318, 414);
             _txtAddress3.Name = "txtAddress3";
             _txtAddress3.ReadOnly = true;
             _txtAddress3.Size = new Size(301, 21);
             _txtAddress3.TabIndex = 17;
-            // 
+            //
             // Label7
-            // 
+            //
             _Label7.AutoSize = true;
             _Label7.Location = new Point(208, 444);
             _Label7.Name = "Label7";
             _Label7.Size = new Size(58, 13);
             _Label7.TabIndex = 16;
             _Label7.Text = "Postcode";
-            // 
+            //
             // Label5
-            // 
+            //
             _Label5.AutoSize = true;
             _Label5.Location = new Point(208, 363);
             _Label5.Name = "Label5";
             _Label5.Size = new Size(57, 13);
             _Label5.TabIndex = 14;
             _Label5.Text = "Address ";
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.AutoSize = true;
             _Label4.Location = new Point(208, 336);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(59, 13);
             _Label4.TabIndex = 13;
             _Label4.Text = "Surname";
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.AutoSize = true;
             _Label3.Location = new Point(208, 309);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(68, 13);
             _Label3.TabIndex = 12;
             _Label3.Text = "First Name";
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.AutoSize = true;
             _Label2.Location = new Point(208, 282);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(31, 13);
             _Label2.TabIndex = 11;
             _Label2.Text = "Title";
-            // 
+            //
             // cboTitle
-            // 
+            //
             _cboTitle.Enabled = false;
             _cboTitle.FormattingEnabled = true;
             _cboTitle.Location = new Point(318, 279);
             _cboTitle.Name = "cboTitle";
             _cboTitle.Size = new Size(121, 21);
             _cboTitle.TabIndex = 10;
-            // 
+            //
             // txtAddress1
-            // 
+            //
             _txtAddress1.Location = new Point(318, 360);
             _txtAddress1.Name = "txtAddress1";
             _txtAddress1.ReadOnly = true;
             _txtAddress1.Size = new Size(301, 21);
             _txtAddress1.TabIndex = 9;
-            // 
+            //
             // txtAddress2
-            // 
+            //
             _txtAddress2.Location = new Point(318, 387);
             _txtAddress2.Name = "txtAddress2";
             _txtAddress2.ReadOnly = true;
             _txtAddress2.Size = new Size(301, 21);
             _txtAddress2.TabIndex = 8;
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Location = new Point(318, 441);
             _txtPostcode.Name = "txtPostcode";
             _txtPostcode.ReadOnly = true;
             _txtPostcode.Size = new Size(301, 21);
             _txtPostcode.TabIndex = 7;
-            // 
+            //
             // txtSurname
-            // 
+            //
             _txtSurname.Location = new Point(318, 333);
             _txtSurname.Name = "txtSurname";
             _txtSurname.ReadOnly = true;
             _txtSurname.Size = new Size(301, 21);
             _txtSurname.TabIndex = 6;
-            // 
+            //
             // txtFirstName
-            // 
+            //
             _txtFirstName.Location = new Point(318, 306);
             _txtFirstName.Name = "txtFirstName";
             _txtFirstName.ReadOnly = true;
             _txtFirstName.Size = new Size(301, 21);
             _txtFirstName.TabIndex = 5;
-            // 
+            //
             // btnEditSite
-            // 
+            //
             _btnEditSite.Location = new Point(468, 672);
             _btnEditSite.Name = "btnEditSite";
             _btnEditSite.Size = new Size(151, 51);
             _btnEditSite.TabIndex = 4;
             _btnEditSite.Text = "Ammend Other " + (char)13 + (char)10 + "Fields / View Other Notes";
             _btnEditSite.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAddSite
-            // 
+            //
             _btnAddSite.Location = new Point(788, 54);
             _btnAddSite.Name = "btnAddSite";
             _btnAddSite.Size = new Size(75, 23);
             _btnAddSite.TabIndex = 3;
             _btnAddSite.Text = "Add Site";
             _btnAddSite.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.AutoSize = true;
             _Label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label1.Location = new Point(383, 24);
@@ -5461,16 +5446,16 @@ namespace FSM
             _Label1.Size = new Size(145, 25);
             _Label1.TabIndex = 2;
             _Label1.Text = "Search Site";
-            // 
+            //
             // txtSearch
-            // 
+            //
             _txtSearch.Location = new Point(303, 56);
             _txtSearch.Name = "txtSearch";
             _txtSearch.Size = new Size(301, 21);
             _txtSearch.TabIndex = 1;
-            // 
+            //
             // DGVSites
-            // 
+            //
             _DGVSites.AllowUserToAddRows = false;
             _DGVSites.AllowUserToDeleteRows = false;
             _DGVSites.AllowUserToOrderColumns = true;
@@ -5483,9 +5468,9 @@ namespace FSM
             _DGVSites.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _DGVSites.Size = new Size(849, 150);
             _DGVSites.TabIndex = 0;
-            // 
+            //
             // tcSites
-            // 
+            //
             _tcSites.Controls.Add(_tabProp);
             _tcSites.Controls.Add(_tabExistingJobs);
             _tcSites.Controls.Add(_tabJobType);
@@ -5501,9 +5486,9 @@ namespace FSM
             _tcSites.SelectedIndex = 0;
             _tcSites.Size = new Size(885, 800);
             _tcSites.TabIndex = 0;
-            // 
+            //
             // tabExistingJobs
-            // 
+            //
             _tabExistingJobs.BackColor = SystemColors.Control;
             _tabExistingJobs.Controls.Add(_btnxxExistingJobBack);
             _tabExistingJobs.Controls.Add(_btnxxExistingJobNext);
@@ -5515,9 +5500,9 @@ namespace FSM
             _tabExistingJobs.Size = new Size(877, 774);
             _tabExistingJobs.TabIndex = 13;
             _tabExistingJobs.Text = "ExistingJobs";
-            // 
+            //
             // btnxxExistingJobBack
-            // 
+            //
             _btnxxExistingJobBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnxxExistingJobBack.BackColor = SystemColors.Control;
             _btnxxExistingJobBack.BackgroundImage = (Image)resources.GetObject("btnxxExistingJobBack.BackgroundImage");
@@ -5528,9 +5513,9 @@ namespace FSM
             _btnxxExistingJobBack.Size = new Size(62, 45);
             _btnxxExistingJobBack.TabIndex = 179;
             _btnxxExistingJobBack.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnxxExistingJobNext
-            // 
+            //
             _btnxxExistingJobNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnxxExistingJobNext.BackColor = SystemColors.Control;
             _btnxxExistingJobNext.BackgroundImage = (Image)resources.GetObject("btnxxExistingJobNext.BackgroundImage");
@@ -5541,9 +5526,9 @@ namespace FSM
             _btnxxExistingJobNext.Size = new Size(62, 45);
             _btnxxExistingJobNext.TabIndex = 178;
             _btnxxExistingJobNext.UseVisualStyleBackColor = false;
-            // 
+            //
             // dgExistingVisits
-            // 
+            //
             _dgExistingVisits.AllowUserToAddRows = false;
             _dgExistingVisits.AllowUserToDeleteRows = false;
             _dgExistingVisits.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -5560,9 +5545,9 @@ namespace FSM
             _dgExistingVisits.ShowRowErrors = false;
             _dgExistingVisits.Size = new Size(805, 164);
             _dgExistingVisits.TabIndex = 177;
-            // 
+            //
             // Label29
-            // 
+            //
             _Label29.AutoSize = true;
             _Label29.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label29.Location = new Point(314, 35);
@@ -5570,9 +5555,9 @@ namespace FSM
             _Label29.Size = new Size(249, 25);
             _Label29.TabIndex = 5;
             _Label29.Text = "New Or Existing Job";
-            // 
+            //
             // btnxxNewJob
-            // 
+            //
             _btnxxNewJob.BackColor = SystemColors.Control;
             _btnxxNewJob.Cursor = Cursors.Hand;
             _btnxxNewJob.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -5582,9 +5567,9 @@ namespace FSM
             _btnxxNewJob.TabIndex = 4;
             _btnxxNewJob.Text = "New Job";
             _btnxxNewJob.UseVisualStyleBackColor = false;
-            // 
+            //
             // tabAdditional
-            // 
+            //
             _tabAdditional.Controls.Add(_chkCert);
             _tabAdditional.Controls.Add(_lblcert);
             _tabAdditional.Controls.Add(_btnxx4);
@@ -5602,9 +5587,9 @@ namespace FSM
             _tabAdditional.TabIndex = 10;
             _tabAdditional.Text = "Additional Items";
             _tabAdditional.UseVisualStyleBackColor = true;
-            // 
+            //
             // chkCert
-            // 
+            //
             _chkCert.CheckAlign = ContentAlignment.MiddleCenter;
             _chkCert.Font = new Font("Verdana", 20.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _chkCert.Location = new Point(561, 431);
@@ -5612,9 +5597,9 @@ namespace FSM
             _chkCert.Size = new Size(40, 40);
             _chkCert.TabIndex = 184;
             _chkCert.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblcert
-            // 
+            //
             _lblcert.AutoSize = true;
             _lblcert.Font = new Font("Verdana", 10.0F);
             _lblcert.ForeColor = Color.Maroon;
@@ -5624,9 +5609,9 @@ namespace FSM
             _lblcert.TabIndex = 183;
             _lblcert.Text = "L/L Cert Required? ";
             _lblcert.Visible = false;
-            // 
+            //
             // btnxx4
-            // 
+            //
             _btnxx4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnxx4.BackColor = SystemColors.Control;
             _btnxx4.BackgroundImage = (Image)resources.GetObject("btnxx4.BackgroundImage");
@@ -5637,9 +5622,9 @@ namespace FSM
             _btnxx4.Size = new Size(62, 45);
             _btnxx4.TabIndex = 182;
             _btnxx4.UseVisualStyleBackColor = false;
-            // 
+            //
             // lblCoverplanServ
-            // 
+            //
             _lblCoverplanServ.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _lblCoverplanServ.Font = new Font("Verdana", 16.0F, FontStyle.Bold);
             _lblCoverplanServ.ForeColor = Color.Red;
@@ -5650,9 +5635,9 @@ namespace FSM
             _lblCoverplanServ.Text = "This Site Has A Coverplan Service Outstanding";
             _lblCoverplanServ.TextAlign = ContentAlignment.MiddleCenter;
             _lblCoverplanServ.Visible = false;
-            // 
+            //
             // Label22
-            // 
+            //
             _Label22.AutoSize = true;
             _Label22.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label22.Location = new Point(349, 35);
@@ -5660,9 +5645,9 @@ namespace FSM
             _Label22.Size = new Size(208, 25);
             _Label22.TabIndex = 179;
             _Label22.Text = "Additional Items";
-            // 
+            //
             // Label21
-            // 
+            //
             _Label21.AutoSize = true;
             _Label21.Font = new Font("Verdana", 10.0F);
             _Label21.Location = new Point(138, 240);
@@ -5670,18 +5655,18 @@ namespace FSM
             _Label21.Size = new Size(114, 17);
             _Label21.TabIndex = 178;
             _Label21.Text = "Additional Item";
-            // 
+            //
             // cboAdditional
-            // 
+            //
             _cboAdditional.Font = new Font("Verdana", 9.0F);
             _cboAdditional.FormattingEnabled = true;
             _cboAdditional.Location = new Point(314, 238);
             _cboAdditional.Name = "cboAdditional";
             _cboAdditional.Size = new Size(285, 22);
             _cboAdditional.TabIndex = 177;
-            // 
+            //
             // DGAdditional
-            // 
+            //
             _DGAdditional.AllowUserToAddRows = false;
             _DGAdditional.AllowUserToDeleteRows = false;
             _DGAdditional.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -5697,27 +5682,27 @@ namespace FSM
             _DGAdditional.ShowRowErrors = false;
             _DGAdditional.Size = new Size(598, 113);
             _DGAdditional.TabIndex = 176;
-            // 
+            //
             // btnAdditionalMinus
-            // 
+            //
             _btnAdditionalMinus.Location = new Point(406, 266);
             _btnAdditionalMinus.Name = "btnAdditionalMinus";
             _btnAdditionalMinus.Size = new Size(39, 23);
             _btnAdditionalMinus.TabIndex = 175;
             _btnAdditionalMinus.Text = "-";
             _btnAdditionalMinus.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnAdditionalPlus
-            // 
+            //
             _btnAdditionalPlus.Location = new Point(451, 266);
             _btnAdditionalPlus.Name = "btnAdditionalPlus";
             _btnAdditionalPlus.Size = new Size(39, 23);
             _btnAdditionalPlus.TabIndex = 174;
             _btnAdditionalPlus.Text = "+";
             _btnAdditionalPlus.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnxxAdditionalNext
-            // 
+            //
             _btnxxAdditionalNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnxxAdditionalNext.BackColor = SystemColors.Control;
             _btnxxAdditionalNext.BackgroundImage = (Image)resources.GetObject("btnxxAdditionalNext.BackgroundImage");
@@ -5729,9 +5714,9 @@ namespace FSM
             _btnxxAdditionalNext.TabIndex = 180;
             _btnxxAdditionalNext.UseVisualStyleBackColor = false;
             _btnxxAdditionalNext.Visible = false;
-            // 
+            //
             // TabCharging
-            // 
+            //
             _TabCharging.Controls.Add(_lblUnabletoConfirm);
             _TabCharging.Controls.Add(_btnxx5);
             _TabCharging.Controls.Add(_Label16);
@@ -5749,9 +5734,9 @@ namespace FSM
             _TabCharging.TabIndex = 9;
             _TabCharging.Text = "Charging";
             _TabCharging.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblUnabletoConfirm
-            // 
+            //
             _lblUnabletoConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _lblUnabletoConfirm.Font = new Font("Verdana", 16.0F, FontStyle.Bold);
             _lblUnabletoConfirm.ForeColor = Color.Red;
@@ -5762,9 +5747,9 @@ namespace FSM
             _lblUnabletoConfirm.Text = "Unable to confirm if any payment is due please check notes";
             _lblUnabletoConfirm.TextAlign = ContentAlignment.MiddleCenter;
             _lblUnabletoConfirm.Visible = false;
-            // 
+            //
             // btnxx5
-            // 
+            //
             _btnxx5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnxx5.BackColor = SystemColors.Control;
             _btnxx5.BackgroundImage = (Image)resources.GetObject("btnxx5.BackgroundImage");
@@ -5775,9 +5760,9 @@ namespace FSM
             _btnxx5.Size = new Size(62, 45);
             _btnxx5.TabIndex = 176;
             _btnxx5.UseVisualStyleBackColor = false;
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.AutoSize = true;
             _Label16.Font = new Font("Verdana", 10.0F);
             _Label16.Location = new Point(142, 561);
@@ -5785,18 +5770,18 @@ namespace FSM
             _Label16.Size = new Size(115, 17);
             _Label16.TabIndex = 175;
             _Label16.Text = "Payment Terms";
-            // 
+            //
             // cboPayTerms
-            // 
+            //
             _cboPayTerms.Font = new Font("Verdana", 9.0F);
             _cboPayTerms.FormattingEnabled = true;
             _cboPayTerms.Location = new Point(318, 561);
             _cboPayTerms.Name = "cboPayTerms";
             _cboPayTerms.Size = new Size(285, 22);
             _cboPayTerms.TabIndex = 174;
-            // 
+            //
             // chkRecall
-            // 
+            //
             _chkRecall.AutoSize = true;
             _chkRecall.Font = new Font("Verdana", 12.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _chkRecall.ForeColor = Color.Red;
@@ -5805,9 +5790,9 @@ namespace FSM
             _chkRecall.Size = new Size(15, 14);
             _chkRecall.TabIndex = 168;
             _chkRecall.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label19
-            // 
+            //
             _Label19.AutoSize = true;
             _Label19.Font = new Font("Verdana", 10.0F);
             _Label19.Location = new Point(142, 237);
@@ -5815,9 +5800,9 @@ namespace FSM
             _Label19.Size = new Size(47, 17);
             _Label19.TabIndex = 167;
             _Label19.Text = "Recall";
-            // 
+            //
             // Label18
-            // 
+            //
             _Label18.AutoSize = true;
             _Label18.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label18.Location = new Point(389, 28);
@@ -5825,9 +5810,9 @@ namespace FSM
             _Label18.Size = new Size(118, 25);
             _Label18.TabIndex = 166;
             _Label18.Text = "Charging";
-            // 
+            //
             // pnlCharge
-            // 
+            //
             _pnlCharge.Controls.Add(_picTick);
             _pnlCharge.Controls.Add(_Label35);
             _pnlCharge.Controls.Add(_txtDiscountCode);
@@ -5838,9 +5823,9 @@ namespace FSM
             _pnlCharge.Name = "pnlCharge";
             _pnlCharge.Size = new Size(611, 78);
             _pnlCharge.TabIndex = 165;
-            // 
+            //
             // picTick
-            // 
+            //
             _picTick.BackColor = Color.White;
             _picTick.BackgroundImage = My.Resources.Resources.tick;
             _picTick.Cursor = Cursors.No;
@@ -5853,9 +5838,9 @@ namespace FSM
             _picTick.TabIndex = 183;
             _picTick.TabStop = false;
             _picTick.Visible = false;
-            // 
+            //
             // Label35
-            // 
+            //
             _Label35.AutoSize = true;
             _Label35.Font = new Font("Verdana", 10.0F);
             _Label35.Location = new Point(10, 11);
@@ -5863,17 +5848,17 @@ namespace FSM
             _Label35.Size = new Size(132, 17);
             _Label35.TabIndex = 168;
             _Label35.Text = "Promotional Code";
-            // 
+            //
             // txtDiscountCode
-            // 
+            //
             _txtDiscountCode.Location = new Point(255, 6);
             _txtDiscountCode.Name = "txtDiscountCode";
             _txtDiscountCode.Size = new Size(123, 27);
             _txtDiscountCode.TabIndex = 167;
             _txtDiscountCode.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.AutoSize = true;
             _Label17.Font = new Font("Verdana", 10.0F);
             _Label17.Location = new Point(10, 44);
@@ -5881,18 +5866,18 @@ namespace FSM
             _Label17.Size = new Size(232, 17);
             _Label17.TabIndex = 166;
             _Label17.Text = "Payment On Completion Charge";
-            // 
+            //
             // txtCharge
-            // 
+            //
             _txtCharge.Location = new Point(255, 39);
             _txtCharge.Name = "txtCharge";
             _txtCharge.Size = new Size(123, 27);
             _txtCharge.TabIndex = 165;
             _txtCharge.Text = "0";
             _txtCharge.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // picCross
-            // 
+            //
             _picCross.BackColor = Color.White;
             _picCross.BackgroundImage = My.Resources.Resources.cross;
             _picCross.Cursor = Cursors.No;
@@ -5905,9 +5890,9 @@ namespace FSM
             _picCross.TabIndex = 184;
             _picCross.TabStop = false;
             _picCross.Visible = false;
-            // 
+            //
             // txtPayInst
-            // 
+            //
             _txtPayInst.Location = new Point(145, 75);
             _txtPayInst.Multiline = true;
             _txtPayInst.Name = "txtPayInst";
@@ -5915,9 +5900,9 @@ namespace FSM
             _txtPayInst.Size = new Size(598, 141);
             _txtPayInst.TabIndex = 0;
             _txtPayInst.TextAlign = HorizontalAlignment.Center;
-            // 
+            //
             // btnxxChargeNext
-            // 
+            //
             _btnxxChargeNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnxxChargeNext.BackColor = SystemColors.Control;
             _btnxxChargeNext.BackgroundImage = (Image)resources.GetObject("btnxxChargeNext.BackgroundImage");
@@ -5929,9 +5914,9 @@ namespace FSM
             _btnxxChargeNext.TabIndex = 162;
             _btnxxChargeNext.UseVisualStyleBackColor = false;
             _btnxxChargeNext.Visible = false;
-            // 
+            //
             // TabBook
-            // 
+            //
             _TabBook.Controls.Add(_btnOption8);
             _TabBook.Controls.Add(_btnOption7);
             _TabBook.Controls.Add(_btnOption6);
@@ -5957,9 +5942,9 @@ namespace FSM
             _TabBook.TabIndex = 11;
             _TabBook.Text = "Book Visit";
             _TabBook.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnOption8
-            // 
+            //
             _btnOption8.BackColor = Color.PaleGreen;
             _btnOption8.Cursor = Cursors.Hand;
             _btnOption8.Font = new Font("Verdana", 14.0F);
@@ -5971,9 +5956,9 @@ namespace FSM
             _btnOption8.Text = "Searching.....";
             _btnOption8.TextAlign = ContentAlignment.TopCenter;
             _btnOption8.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnOption7
-            // 
+            //
             _btnOption7.BackColor = Color.PaleGreen;
             _btnOption7.Cursor = Cursors.Hand;
             _btnOption7.Font = new Font("Verdana", 14.0F);
@@ -5985,9 +5970,9 @@ namespace FSM
             _btnOption7.Text = "Searching.....";
             _btnOption7.TextAlign = ContentAlignment.TopCenter;
             _btnOption7.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnOption6
-            // 
+            //
             _btnOption6.BackColor = Color.PaleGreen;
             _btnOption6.Cursor = Cursors.Hand;
             _btnOption6.Font = new Font("Verdana", 14.0F);
@@ -5999,9 +5984,9 @@ namespace FSM
             _btnOption6.Text = "Searching.....";
             _btnOption6.TextAlign = ContentAlignment.TopCenter;
             _btnOption6.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnOption5
-            // 
+            //
             _btnOption5.BackColor = Color.PaleGreen;
             _btnOption5.Cursor = Cursors.Hand;
             _btnOption5.Font = new Font("Verdana", 14.0F);
@@ -6013,27 +5998,27 @@ namespace FSM
             _btnOption5.Text = "Searching.....";
             _btnOption5.TextAlign = ContentAlignment.TopCenter;
             _btnOption5.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnRefresh
-            // 
+            //
             _btnRefresh.Location = new Point(754, 137);
             _btnRefresh.Name = "btnRefresh";
             _btnRefresh.Size = new Size(75, 23);
             _btnRefresh.TabIndex = 183;
             _btnRefresh.Text = "Refresh";
             _btnRefresh.UseVisualStyleBackColor = true;
-            // 
+            //
             // Label31
-            // 
+            //
             _Label31.AutoSize = true;
             _Label31.Location = new Point(167, 575);
             _Label31.Name = "Label31";
             _Label31.Size = new Size(539, 13);
             _Label31.TabIndex = 182;
             _Label31.Text = "Green = Best Selection(s)   , Orange = Not as efficient option ,  Red = Only use " + "if authorised";
-            // 
+            //
             // Label24
-            // 
+            //
             _Label24.AutoSize = true;
             _Label24.Font = new Font("Verdana", 10.0F);
             _Label24.Location = new Point(42, 140);
@@ -6041,18 +6026,18 @@ namespace FSM
             _Label24.Size = new Size(126, 17);
             _Label24.TabIndex = 181;
             _Label24.Text = "Specific Engineer";
-            // 
+            //
             // cboEngineer
-            // 
+            //
             _cboEngineer.Font = new Font("Verdana", 9.0F);
             _cboEngineer.FormattingEnabled = true;
             _cboEngineer.Location = new Point(215, 138);
             _cboEngineer.Name = "cboEngineer";
             _cboEngineer.Size = new Size(176, 22);
             _cboEngineer.TabIndex = 180;
-            // 
+            //
             // btnxx6
-            // 
+            //
             _btnxx6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnxx6.BackColor = SystemColors.Control;
             _btnxx6.BackgroundImage = (Image)resources.GetObject("btnxx6.BackgroundImage");
@@ -6063,9 +6048,9 @@ namespace FSM
             _btnxx6.Size = new Size(62, 45);
             _btnxx6.TabIndex = 179;
             _btnxx6.UseVisualStyleBackColor = false;
-            // 
+            //
             // gpCombo
-            // 
+            //
             _gpCombo.Controls.Add(_cboAppointment);
             _gpCombo.ForeColor = SystemColors.ActiveCaptionText;
             _gpCombo.Location = new Point(401, 86);
@@ -6074,18 +6059,18 @@ namespace FSM
             _gpCombo.TabIndex = 178;
             _gpCombo.TabStop = false;
             _gpCombo.Text = "Appointment Type";
-            // 
+            //
             // cboAppointment
-            // 
+            //
             _cboAppointment.Font = new Font("Verdana", 9.0F);
             _cboAppointment.FormattingEnabled = true;
             _cboAppointment.Location = new Point(6, 16);
             _cboAppointment.Name = "cboAppointment";
             _cboAppointment.Size = new Size(422, 22);
             _cboAppointment.TabIndex = 175;
-            // 
+            //
             // lblBookText
-            // 
+            //
             _lblBookText.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _lblBookText.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _lblBookText.Location = new Point(3, 49);
@@ -6094,9 +6079,9 @@ namespace FSM
             _lblBookText.TabIndex = 177;
             _lblBookText.Text = "Booking Visits";
             _lblBookText.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // Label23
-            // 
+            //
             _Label23.AutoSize = true;
             _Label23.Font = new Font("Verdana", 10.0F);
             _Label23.Location = new Point(42, 104);
@@ -6104,16 +6089,16 @@ namespace FSM
             _Label23.Size = new Size(106, 17);
             _Label23.TabIndex = 176;
             _Label23.Text = "Booking From";
-            // 
+            //
             // dtpFromDate
-            // 
+            //
             _dtpFromDate.Location = new Point(215, 102);
             _dtpFromDate.Name = "dtpFromDate";
             _dtpFromDate.Size = new Size(176, 21);
             _dtpFromDate.TabIndex = 175;
-            // 
+            //
             // btnOption10
-            // 
+            //
             _btnOption10.BackColor = Color.PaleGreen;
             _btnOption10.Cursor = Cursors.Hand;
             _btnOption10.Font = new Font("Verdana", 14.0F);
@@ -6125,9 +6110,9 @@ namespace FSM
             _btnOption10.Text = "Searching.....";
             _btnOption10.TextAlign = ContentAlignment.TopCenter;
             _btnOption10.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnOption4
-            // 
+            //
             _btnOption4.BackColor = Color.PaleGreen;
             _btnOption4.Cursor = Cursors.Hand;
             _btnOption4.Font = new Font("Verdana", 14.0F);
@@ -6139,9 +6124,9 @@ namespace FSM
             _btnOption4.Text = "Searching.....";
             _btnOption4.TextAlign = ContentAlignment.TopCenter;
             _btnOption4.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnOption3
-            // 
+            //
             _btnOption3.BackColor = Color.PaleGreen;
             _btnOption3.Cursor = Cursors.Hand;
             _btnOption3.Font = new Font("Verdana", 14.0F);
@@ -6153,9 +6138,9 @@ namespace FSM
             _btnOption3.Text = "Searching.....";
             _btnOption3.TextAlign = ContentAlignment.TopCenter;
             _btnOption3.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnOption2
-            // 
+            //
             _btnOption2.BackColor = Color.PaleGreen;
             _btnOption2.Cursor = Cursors.Hand;
             _btnOption2.Font = new Font("Verdana", 14.0F);
@@ -6167,9 +6152,9 @@ namespace FSM
             _btnOption2.Text = "Searching.....";
             _btnOption2.TextAlign = ContentAlignment.TopCenter;
             _btnOption2.UseVisualStyleBackColor = false;
-            // 
+            //
             // btnOption1
-            // 
+            //
             _btnOption1.BackColor = Color.PaleGreen;
             _btnOption1.Cursor = Cursors.Hand;
             _btnOption1.Font = new Font("Verdana", 14.0F);
@@ -6181,9 +6166,9 @@ namespace FSM
             _btnOption1.Text = "Searching.....";
             _btnOption1.TextAlign = ContentAlignment.TopCenter;
             _btnOption1.UseVisualStyleBackColor = false;
-            // 
+            //
             // chkKeepTogether
-            // 
+            //
             _chkKeepTogether.AutoSize = true;
             _chkKeepTogether.Checked = true;
             _chkKeepTogether.CheckState = CheckState.Checked;
@@ -6195,9 +6180,9 @@ namespace FSM
             _chkKeepTogether.TabIndex = 169;
             _chkKeepTogether.Text = "Keep Visits Together";
             _chkKeepTogether.UseVisualStyleBackColor = true;
-            // 
+            //
             // tcComplete
-            // 
+            //
             _tcComplete.Controls.Add(_btnDocument);
             _tcComplete.Controls.Add(_lblBookedInfo);
             _tcComplete.Controls.Add(_Label27);
@@ -6208,18 +6193,18 @@ namespace FSM
             _tcComplete.TabIndex = 12;
             _tcComplete.Text = "Complete";
             _tcComplete.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnDocument
-            // 
+            //
             _btnDocument.Location = new Point(84, 311);
             _btnDocument.Name = "btnDocument";
             _btnDocument.Size = new Size(708, 23);
             _btnDocument.TabIndex = 180;
             _btnDocument.Text = "Add Documentation";
             _btnDocument.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblBookedInfo
-            // 
+            //
             _lblBookedInfo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _lblBookedInfo.Font = new Font("Verdana", 10.0F, FontStyle.Bold);
             _lblBookedInfo.Location = new Point(8, 236);
@@ -6228,9 +6213,9 @@ namespace FSM
             _lblBookedInfo.TabIndex = 179;
             _lblBookedInfo.Text = "Booked with";
             _lblBookedInfo.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // Label27
-            // 
+            //
             _Label27.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _Label27.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _Label27.Location = new Point(3, 185);
@@ -6239,9 +6224,9 @@ namespace FSM
             _Label27.TabIndex = 178;
             _Label27.Text = "Bookings Complete";
             _Label27.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // btnRestart
-            // 
+            //
             _btnRestart.BackColor = Color.PaleGreen;
             _btnRestart.Cursor = Cursors.Hand;
             _btnRestart.Font = new Font("Verdana", 18.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
@@ -6251,17 +6236,17 @@ namespace FSM
             _btnRestart.TabIndex = 171;
             _btnRestart.Text = "Restart";
             _btnRestart.UseVisualStyleBackColor = false;
-            // 
+            //
             // ToolTip1
-            // 
+            //
             _ToolTip1.AutomaticDelay = 100;
             _ToolTip1.AutoPopDelay = 5000;
             _ToolTip1.InitialDelay = 20;
             _ToolTip1.IsBalloon = true;
             _ToolTip1.ReshowDelay = 10;
-            // 
+            //
             // UCJobWizard
-            // 
+            //
             Controls.Add(_tcSites);
             Name = "UCJobWizard";
             Size = new Size(885, 800);
@@ -6307,7 +6292,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             tcSites.TabPages.Clear();
@@ -6373,11 +6359,11 @@ namespace FSM
         private List<string> rftBundle = new List<string>();
         private string costCentre = null;
 
-        public event RecordsChangedEventHandler RecordsChanged;
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -6578,6 +6564,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupSiteDataGridView()
         {
             Helper.SetUpDataGridView(DGVSites);
@@ -6742,7 +6729,6 @@ namespace FSM
             DGVSites.Columns.Add(Name);
 
             // DGVSites.Sort(Customer, System.ComponentModel.ListSortDirection.Descending)
-
         }
 
         public void SetupAppsDG()
@@ -6770,7 +6756,6 @@ namespace FSM
             DgMain.Columns.Add(Customer);
 
             // DGVSites.Sort(Customer, System.ComponentModel.ListSortDirection.Descending)
-
         }
 
         public void SetupSOR()
@@ -6831,7 +6816,6 @@ namespace FSM
             DGSOR.Columns.Add(Price);
 
             // DGVSites.Sort(Customer, System.ComponentModel.ListSortDirection.Descending)
-
         }
 
         public void SetupDGSymptoms()
@@ -6975,19 +6959,19 @@ namespace FSM
                 else
                 {
                     // dgvRow.DefaultCellStyle.BackColor = Color.LightPink
-
                 }
             }
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public bool Save()
         {
             return true;
         }
 
-        private void Populate(int ID = 0)
+        public void Populate(int ID = 0)
         {
         }
 
@@ -7188,7 +7172,6 @@ namespace FSM
                 btnxxSiteNext.Visible = false;
 
                 // ClearSiteDetails()
-
             }
         }
 
@@ -7746,7 +7729,6 @@ namespace FSM
                     // tcSites.TabPages.Insert(4, tabJobDetails)
                     // tab = tcSites.SelectedIndex + 1
                     // tcSites.SelectedIndex = tcSites.SelectedIndex + 1
-
                 }
 
                 var dv = new DataView();
@@ -8003,7 +7985,6 @@ namespace FSM
 
             // DoCharging()
             // AdditionalCharging()
-
         }
 
         private void btnxxAdditionalNext_Click(object sender, EventArgs e)
@@ -8754,7 +8735,6 @@ namespace FSM
 
                                         foreach (DataGridViewRow dr1 in DgMain.Rows)
                                         {
-
                                             // '
 
                                             // ' start charging
@@ -11114,7 +11094,6 @@ namespace FSM
                 }
 
                 // AM
-
                 else if (Conversions.ToBoolean(AppointmentsView[c]["remainingAM"] >= reqtime & AppointmentsView[c]["AMCLOSE"] < 22))  // ' offer AM
                 {
                     if (DateTime.Today.Hour > 9 & (Conversions.ToDate(AppointmentsView[c]["Date"]).ToString("dd/MM/yyyy") ?? "") == (DateAndTime.Today.ToString("dd/MM/yyyy") ?? ""))  // its too late to book mornings
@@ -11410,6 +11389,7 @@ namespace FSM
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+
         public double distance(double lat1, double lon1, double lat2, double lon2, char unit)
         {
             double theta = lon1 - lon2;
@@ -11447,7 +11427,6 @@ namespace FSM
                 var dr = appointments.Rows[i1];
                 if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["keep"], 0, false) & Operators.ConditionalCompareObjectEqual(dr["remove"], 0, false)))
                 {
-
                     // ' remove non qualified engineers
 
                     // Dim engineerLevels As DataTable = DB.EngineerLevel.Get(dr("EngineerID")).Table
@@ -11680,7 +11659,6 @@ namespace FSM
             }
 
             // End If
-
         }
 
         public void ClearSiteDetails()
@@ -11712,7 +11690,6 @@ namespace FSM
 
         public void Reset()
         {
-
             // For Each dr As DataRow In DTPrivNotes.Select("JobNoteID = 0")
 
             // DB.Job.SaveJobNotes(0, dr("Note"), dr("EditedByUserID"), CurrentJob.JobID, dr("CreatedByUserID")).ToTable()
@@ -11807,7 +11784,6 @@ namespace FSM
                 // ElseIf secTime > 0 Then
                 // '  jobtype = "SERVICE"    ''''''''''''''''''''''''''''''''''' HARD CODE DODGYNESS
                 // FindAppointments(True)   ''' -  lets go round again '''' :)
-
             }
 
             lblBookedInfo.Text = BookingDetail + " (Click here to view job)";
@@ -11824,7 +11800,6 @@ namespace FSM
             {
             }
             // CreateVisits(0, Date.MinValue, "", 0, 1)
-
         }
 
         private void Button1_Click(object sender, EventArgs e)

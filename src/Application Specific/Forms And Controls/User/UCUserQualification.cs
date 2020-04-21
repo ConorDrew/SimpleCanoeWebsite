@@ -11,11 +11,10 @@ namespace FSM
 {
     public class UCUserQualification : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCUserQualification() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCUserQualification_Load;
@@ -622,9 +621,9 @@ namespace FSM
             _pnlQualifications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgTrainingQualifications).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpDetails
-            // 
+            //
             _grpDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _grpDetails.Controls.Add(_lblEmail);
             _grpDetails.Controls.Add(_txtEmailAddress);
@@ -637,43 +636,43 @@ namespace FSM
             _grpDetails.TabIndex = 37;
             _grpDetails.TabStop = false;
             _grpDetails.Text = "Details";
-            // 
+            //
             // lblEmail
-            // 
+            //
             _lblEmail.AutoSize = true;
             _lblEmail.Location = new Point(9, 54);
             _lblEmail.Name = "lblEmail";
             _lblEmail.Size = new Size(38, 13);
             _lblEmail.TabIndex = 16;
             _lblEmail.Text = "Email";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmailAddress.Location = new Point(127, 51);
             _txtEmailAddress.Name = "txtEmailAddress";
             _txtEmailAddress.Size = new Size(454, 21);
             _txtEmailAddress.TabIndex = 15;
-            // 
+            //
             // txtFullName
-            // 
+            //
             _txtFullName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFullName.Location = new Point(127, 24);
             _txtFullName.MaxLength = 255;
             _txtFullName.Name = "txtFullName";
             _txtFullName.Size = new Size(454, 21);
             _txtFullName.TabIndex = 4;
-            // 
+            //
             // lblFullName
-            // 
+            //
             _lblFullName.Location = new Point(8, 24);
             _lblFullName.Name = "lblFullName";
             _lblFullName.Size = new Size(64, 16);
             _lblFullName.TabIndex = 5;
             _lblFullName.Text = "Full Name";
-            // 
+            //
             // grpUserQualifications
-            // 
+            //
             _grpUserQualifications.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpUserQualifications.Controls.Add(_pnlQualifications);
@@ -685,9 +684,9 @@ namespace FSM
             _grpUserQualifications.TabIndex = 38;
             _grpUserQualifications.TabStop = false;
             _grpUserQualifications.Text = "Training && Qualifications";
-            // 
+            //
             // pnlQualifications
-            // 
+            //
             _pnlQualifications.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _pnlQualifications.Controls.Add(_btnSaveQualification);
             _pnlQualifications.Controls.Add(_cboQualificationType);
@@ -706,69 +705,69 @@ namespace FSM
             _pnlQualifications.Name = "pnlQualifications";
             _pnlQualifications.Size = new Size(593, 222);
             _pnlQualifications.TabIndex = 42;
-            // 
+            //
             // btnSaveQualification
-            // 
+            //
             _btnSaveQualification.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSaveQualification.Location = new Point(445, 196);
             _btnSaveQualification.Name = "btnSaveQualification";
             _btnSaveQualification.Size = new Size(137, 23);
             _btnSaveQualification.TabIndex = 56;
             _btnSaveQualification.Text = "Add / Update";
-            // 
+            //
             // cboQualificationType
-            // 
+            //
             _cboQualificationType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboQualificationType.Location = new Point(139, 5);
             _cboQualificationType.Name = "cboQualificationType";
             _cboQualificationType.Size = new Size(443, 21);
             _cboQualificationType.TabIndex = 54;
             _cboQualificationType.Text = "ComboBox1";
-            // 
+            //
             // lblQualificationType
-            // 
+            //
             _lblQualificationType.Location = new Point(7, 5);
             _lblQualificationType.Name = "lblQualificationType";
             _lblQualificationType.Size = new Size(126, 23);
             _lblQualificationType.TabIndex = 55;
             _lblQualificationType.Text = "Qualification Type";
-            // 
+            //
             // dtpQualificationBooked
-            // 
+            //
             _dtpQualificationBooked.Checked = false;
             _dtpQualificationBooked.Location = new Point(332, 68);
             _dtpQualificationBooked.Name = "dtpQualificationBooked";
             _dtpQualificationBooked.ShowCheckBox = true;
             _dtpQualificationBooked.Size = new Size(152, 21);
             _dtpQualificationBooked.TabIndex = 52;
-            // 
+            //
             // lblBooked
-            // 
+            //
             _lblBooked.Location = new Point(269, 74);
             _lblBooked.Name = "lblBooked";
             _lblBooked.Size = new Size(57, 23);
             _lblBooked.TabIndex = 53;
             _lblBooked.Text = "Booked";
-            // 
+            //
             // cboQualification
-            // 
+            //
             _cboQualification.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboQualification.Location = new Point(96, 36);
             _cboQualification.Name = "cboQualification";
             _cboQualification.Size = new Size(486, 21);
             _cboQualification.TabIndex = 1;
             _cboQualification.Text = "ComboBox1";
-            // 
+            //
             // lblQualification
-            // 
+            //
             _lblQualification.Location = new Point(8, 36);
             _lblQualification.Name = "lblQualification";
             _lblQualification.Size = new Size(100, 23);
             _lblQualification.TabIndex = 48;
             _lblQualification.Text = "Qualification";
-            // 
+            //
             // txtQualificatioNote
-            // 
+            //
             _txtQualificatioNote.AcceptsReturn = true;
             _txtQualificatioNote.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
@@ -778,60 +777,60 @@ namespace FSM
             _txtQualificatioNote.ScrollBars = ScrollBars.Vertical;
             _txtQualificatioNote.Size = new Size(486, 55);
             _txtQualificatioNote.TabIndex = 4;
-            // 
+            //
             // lblNote
-            // 
+            //
             _lblNote.Location = new Point(8, 132);
             _lblNote.Name = "lblNote";
             _lblNote.Size = new Size(67, 20);
             _lblNote.TabIndex = 47;
             _lblNote.Text = "Note";
-            // 
+            //
             // dtpQualificationExpires
-            // 
+            //
             _dtpQualificationExpires.Checked = false;
             _dtpQualificationExpires.Location = new Point(96, 99);
             _dtpQualificationExpires.Name = "dtpQualificationExpires";
             _dtpQualificationExpires.ShowCheckBox = true;
             _dtpQualificationExpires.Size = new Size(152, 21);
             _dtpQualificationExpires.TabIndex = 3;
-            // 
+            //
             // lblExpiry
-            // 
+            //
             _lblExpiry.Location = new Point(8, 105);
             _lblExpiry.Name = "lblExpiry";
             _lblExpiry.Size = new Size(80, 23);
             _lblExpiry.TabIndex = 43;
             _lblExpiry.Text = "Expires";
-            // 
+            //
             // dtpQualificationPassed
-            // 
+            //
             _dtpQualificationPassed.Checked = false;
             _dtpQualificationPassed.Location = new Point(96, 68);
             _dtpQualificationPassed.Name = "dtpQualificationPassed";
             _dtpQualificationPassed.ShowCheckBox = true;
             _dtpQualificationPassed.Size = new Size(152, 21);
             _dtpQualificationPassed.TabIndex = 2;
-            // 
+            //
             // lblPassed
-            // 
+            //
             _lblPassed.Location = new Point(8, 74);
             _lblPassed.Name = "lblPassed";
             _lblPassed.Size = new Size(80, 23);
             _lblPassed.TabIndex = 41;
             _lblPassed.Text = "Date Passed";
-            // 
+            //
             // btnRemoveTrainingQualifications
-            // 
+            //
             _btnRemoveTrainingQualifications.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRemoveTrainingQualifications.Location = new Point(10, 506);
             _btnRemoveTrainingQualifications.Name = "btnRemoveTrainingQualifications";
             _btnRemoveTrainingQualifications.Size = new Size(75, 21);
             _btnRemoveTrainingQualifications.TabIndex = 7;
             _btnRemoveTrainingQualifications.Text = "Delete";
-            // 
+            //
             // dgTrainingQualifications
-            // 
+            //
             _dgTrainingQualifications.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgTrainingQualifications.DataMember = "";
@@ -840,9 +839,9 @@ namespace FSM
             _dgTrainingQualifications.Name = "dgTrainingQualifications";
             _dgTrainingQualifications.Size = new Size(590, 250);
             _dgTrainingQualifications.TabIndex = 6;
-            // 
+            //
             // UCUserQualification
-            // 
+            //
             Controls.Add(_grpUserQualifications);
             Controls.Add(_grpDetails);
             Name = "UCUserQualification";
@@ -858,7 +857,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupTrainingQualificationsDataGrid();
@@ -874,11 +874,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -952,6 +953,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupTrainingQualificationsDataGrid()
         {
             try
@@ -1146,7 +1148,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))

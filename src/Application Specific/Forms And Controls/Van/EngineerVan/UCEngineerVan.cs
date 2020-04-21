@@ -10,11 +10,10 @@ namespace FSM
 {
     public class UCEngineerVan : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCEngineerVan() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCEngineerVan_Load;
@@ -257,9 +256,9 @@ namespace FSM
             _lblEndDateTime = new Label();
             _grpEngineerVan.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // grpEngineerVan
-            // 
+            //
             _grpEngineerVan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineerVan.Controls.Add(_chkUntilFurtherNotice);
@@ -275,17 +274,17 @@ namespace FSM
             _grpEngineerVan.TabIndex = 1;
             _grpEngineerVan.TabStop = false;
             _grpEngineerVan.Text = "Main Details";
-            // 
+            //
             // chkUntilFurtherNotice
-            // 
+            //
             _chkUntilFurtherNotice.Location = new Point(408, 88);
             _chkUntilFurtherNotice.Name = "chkUntilFurtherNotice";
             _chkUntilFurtherNotice.Size = new Size(136, 24);
             _chkUntilFurtherNotice.TabIndex = 5;
             _chkUntilFurtherNotice.Text = "Until Further Notice";
-            // 
+            //
             // cboEngineerID
-            // 
+            //
             _cboEngineerID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboEngineerID.Cursor = Cursors.Hand;
             _cboEngineerID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -294,17 +293,17 @@ namespace FSM
             _cboEngineerID.Size = new Size(480, 21);
             _cboEngineerID.TabIndex = 2;
             _cboEngineerID.Tag = "EngineerVan.EngineerID";
-            // 
+            //
             // lblEngineerID
-            // 
+            //
             _lblEngineerID.Location = new Point(8, 24);
             _lblEngineerID.Name = "lblEngineerID";
             _lblEngineerID.Size = new Size(71, 20);
             _lblEngineerID.TabIndex = 31;
             _lblEngineerID.Text = "Engineer";
-            // 
+            //
             // dtpStartDateTime
-            // 
+            //
             _dtpStartDateTime.CustomFormat = "dd MMMM yyyy HH:mm";
             _dtpStartDateTime.Format = DateTimePickerFormat.Custom;
             _dtpStartDateTime.Location = new Point(112, 56);
@@ -312,17 +311,17 @@ namespace FSM
             _dtpStartDateTime.Size = new Size(184, 21);
             _dtpStartDateTime.TabIndex = 3;
             _dtpStartDateTime.Tag = "EngineerVan.StartDateTime";
-            // 
+            //
             // lblStartDateTime
-            // 
+            //
             _lblStartDateTime.Location = new Point(8, 56);
             _lblStartDateTime.Name = "lblStartDateTime";
             _lblStartDateTime.Size = new Size(104, 20);
             _lblStartDateTime.TabIndex = 31;
             _lblStartDateTime.Text = "Start Date Time";
-            // 
+            //
             // dtpEndDateTime
-            // 
+            //
             _dtpEndDateTime.CustomFormat = "dd MMMM yyyy HH:mm";
             _dtpEndDateTime.Format = DateTimePickerFormat.Custom;
             _dtpEndDateTime.Location = new Point(408, 56);
@@ -330,17 +329,17 @@ namespace FSM
             _dtpEndDateTime.Size = new Size(184, 21);
             _dtpEndDateTime.TabIndex = 4;
             _dtpEndDateTime.Tag = "EngineerVan.EndDateTime";
-            // 
+            //
             // lblEndDateTime
-            // 
+            //
             _lblEndDateTime.Location = new Point(304, 56);
             _lblEndDateTime.Name = "lblEndDateTime";
             _lblEndDateTime.Size = new Size(96, 20);
             _lblEndDateTime.TabIndex = 31;
             _lblEndDateTime.Text = "End Date Time";
-            // 
+            //
             // UCEngineerVan
-            // 
+            //
             Controls.Add(_grpEngineerVan);
             Name = "UCEngineerVan";
             Size = new Size(616, 136);
@@ -350,7 +349,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
         }
@@ -365,11 +365,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -425,7 +426,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             if (!(ID == 0))
             {

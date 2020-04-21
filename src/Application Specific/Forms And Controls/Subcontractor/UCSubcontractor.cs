@@ -13,11 +13,10 @@ namespace FSM
 {
     public class UCSubcontractor : UCBase, IUserControl
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCSubcontractor() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCSubcontractor_Load;
@@ -4208,9 +4207,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgUnTicked).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_dgPostalRegions).BeginInit();
             SuspendLayout();
-            // 
+            //
             // txtName
-            // 
+            //
             _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtName.Location = new Point(112, 16);
             _txtName.MaxLength = 255;
@@ -4218,17 +4217,17 @@ namespace FSM
             _txtName.Size = new Size(504, 21);
             _txtName.TabIndex = 1;
             _txtName.Tag = "Subcontractor.Name";
-            // 
+            //
             // lblName
-            // 
+            //
             _lblName.Location = new Point(8, 16);
             _lblName.Name = "lblName";
             _lblName.Size = new Size(53, 20);
             _lblName.TabIndex = 31;
             _lblName.Text = "Name";
-            // 
+            //
             // txtAddress1
-            // 
+            //
             _txtAddress1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress1.Location = new Point(112, 48);
             _txtAddress1.MaxLength = 255;
@@ -4236,17 +4235,17 @@ namespace FSM
             _txtAddress1.Size = new Size(504, 21);
             _txtAddress1.TabIndex = 2;
             _txtAddress1.Tag = "Subcontractor.Address1";
-            // 
+            //
             // lblAddress1
-            // 
+            //
             _lblAddress1.Location = new Point(8, 48);
             _lblAddress1.Name = "lblAddress1";
             _lblAddress1.Size = new Size(78, 20);
             _lblAddress1.TabIndex = 31;
             _lblAddress1.Text = "Address 1";
-            // 
+            //
             // txtAddress2
-            // 
+            //
             _txtAddress2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress2.Location = new Point(112, 80);
             _txtAddress2.MaxLength = 255;
@@ -4254,17 +4253,17 @@ namespace FSM
             _txtAddress2.Size = new Size(504, 21);
             _txtAddress2.TabIndex = 3;
             _txtAddress2.Tag = "Subcontractor.Address2";
-            // 
+            //
             // lblAddress2
-            // 
+            //
             _lblAddress2.Location = new Point(8, 80);
             _lblAddress2.Name = "lblAddress2";
             _lblAddress2.Size = new Size(73, 20);
             _lblAddress2.TabIndex = 31;
             _lblAddress2.Text = "Address 2";
-            // 
+            //
             // txtAddress3
-            // 
+            //
             _txtAddress3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress3.Location = new Point(112, 112);
             _txtAddress3.MaxLength = 255;
@@ -4272,17 +4271,17 @@ namespace FSM
             _txtAddress3.Size = new Size(504, 21);
             _txtAddress3.TabIndex = 4;
             _txtAddress3.Tag = "Subcontractor.Address3";
-            // 
+            //
             // lblAddress3
-            // 
+            //
             _lblAddress3.Location = new Point(8, 112);
             _lblAddress3.Name = "lblAddress3";
             _lblAddress3.Size = new Size(66, 20);
             _lblAddress3.TabIndex = 31;
             _lblAddress3.Text = "Address 3";
-            // 
+            //
             // txtAddress4
-            // 
+            //
             _txtAddress4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress4.Location = new Point(112, 144);
             _txtAddress4.MaxLength = 255;
@@ -4290,17 +4289,17 @@ namespace FSM
             _txtAddress4.Size = new Size(504, 21);
             _txtAddress4.TabIndex = 5;
             _txtAddress4.Tag = "Subcontractor.Address4";
-            // 
+            //
             // lblAddress4
-            // 
+            //
             _lblAddress4.Location = new Point(8, 144);
             _lblAddress4.Name = "lblAddress4";
             _lblAddress4.Size = new Size(67, 20);
             _lblAddress4.TabIndex = 31;
             _lblAddress4.Text = "Address 4";
-            // 
+            //
             // txtAddress5
-            // 
+            //
             _txtAddress5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtAddress5.Location = new Point(112, 176);
             _txtAddress5.MaxLength = 255;
@@ -4308,17 +4307,17 @@ namespace FSM
             _txtAddress5.Size = new Size(504, 21);
             _txtAddress5.TabIndex = 6;
             _txtAddress5.Tag = "Subcontractor.Address5";
-            // 
+            //
             // lblAddress5
-            // 
+            //
             _lblAddress5.Location = new Point(8, 176);
             _lblAddress5.Name = "lblAddress5";
             _lblAddress5.Size = new Size(79, 20);
             _lblAddress5.TabIndex = 31;
             _lblAddress5.Text = "Address 5";
-            // 
+            //
             // txtPostcode
-            // 
+            //
             _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPostcode.Location = new Point(112, 208);
             _txtPostcode.MaxLength = 20;
@@ -4326,17 +4325,17 @@ namespace FSM
             _txtPostcode.Size = new Size(504, 21);
             _txtPostcode.TabIndex = 7;
             _txtPostcode.Tag = "Subcontractor.Postcode";
-            // 
+            //
             // lblPostcode
-            // 
+            //
             _lblPostcode.Location = new Point(8, 208);
             _lblPostcode.Name = "lblPostcode";
             _lblPostcode.Size = new Size(72, 20);
             _lblPostcode.TabIndex = 31;
             _lblPostcode.Text = "Postcode";
-            // 
+            //
             // txtTelephoneNum
-            // 
+            //
             _txtTelephoneNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTelephoneNum.Location = new Point(112, 240);
             _txtTelephoneNum.MaxLength = 50;
@@ -4344,17 +4343,17 @@ namespace FSM
             _txtTelephoneNum.Size = new Size(504, 21);
             _txtTelephoneNum.TabIndex = 8;
             _txtTelephoneNum.Tag = "Subcontractor.TelephoneNum";
-            // 
+            //
             // lblTelephoneNum
-            // 
+            //
             _lblTelephoneNum.Location = new Point(8, 240);
             _lblTelephoneNum.Name = "lblTelephoneNum";
             _lblTelephoneNum.Size = new Size(113, 20);
             _lblTelephoneNum.TabIndex = 31;
             _lblTelephoneNum.Text = "Telephone";
-            // 
+            //
             // txtFaxNum
-            // 
+            //
             _txtFaxNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtFaxNum.Location = new Point(112, 272);
             _txtFaxNum.MaxLength = 50;
@@ -4362,17 +4361,17 @@ namespace FSM
             _txtFaxNum.Size = new Size(504, 21);
             _txtFaxNum.TabIndex = 9;
             _txtFaxNum.Tag = "Subcontractor.FaxNum";
-            // 
+            //
             // lblFaxNum
-            // 
+            //
             _lblFaxNum.Location = new Point(8, 272);
             _lblFaxNum.Name = "lblFaxNum";
             _lblFaxNum.Size = new Size(73, 20);
             _lblFaxNum.TabIndex = 31;
             _lblFaxNum.Text = "Fax";
-            // 
+            //
             // txtEmailAddress
-            // 
+            //
             _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtEmailAddress.Location = new Point(112, 304);
             _txtEmailAddress.MaxLength = 255;
@@ -4380,17 +4379,17 @@ namespace FSM
             _txtEmailAddress.Size = new Size(504, 21);
             _txtEmailAddress.TabIndex = 10;
             _txtEmailAddress.Tag = "Subcontractor.EmailAddress";
-            // 
+            //
             // lblEmailAddress
-            // 
+            //
             _lblEmailAddress.Location = new Point(8, 304);
             _lblEmailAddress.Name = "lblEmailAddress";
             _lblEmailAddress.Size = new Size(103, 20);
             _lblEmailAddress.TabIndex = 31;
             _lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // txtNotes
-            // 
+            //
             _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _txtNotes.Location = new Point(112, 409);
@@ -4401,9 +4400,9 @@ namespace FSM
             _txtNotes.Size = new Size(504, 194);
             _txtNotes.TabIndex = 13;
             _txtNotes.Tag = "Subcontractor.Notes";
-            // 
+            //
             // TabControl1
-            // 
+            //
             _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _TabControl1.Controls.Add(_tpContact);
@@ -4421,9 +4420,9 @@ namespace FSM
             _TabControl1.SelectedIndex = 0;
             _TabControl1.Size = new Size(632, 648);
             _TabControl1.TabIndex = 2;
-            // 
+            //
             // tpContact
-            // 
+            //
             _tpContact.Controls.Add(_cboTaxRate);
             _tpContact.Controls.Add(_Label3);
             _tpContact.Controls.Add(_cboLinkToSupplier);
@@ -4455,58 +4454,58 @@ namespace FSM
             _tpContact.Size = new Size(624, 622);
             _tpContact.TabIndex = 8;
             _tpContact.Text = "Contact Details";
-            // 
+            //
             // cboTaxRate
-            // 
+            //
             _cboTaxRate.FormattingEnabled = true;
             _cboTaxRate.Location = new Point(112, 372);
             _cboTaxRate.Name = "cboTaxRate";
             _cboTaxRate.Size = new Size(504, 21);
             _cboTaxRate.TabIndex = 38;
-            // 
+            //
             // Label3
-            // 
+            //
             _Label3.Location = new Point(8, 375);
             _Label3.Name = "Label3";
             _Label3.Size = new Size(98, 20);
             _Label3.TabIndex = 37;
             _Label3.Text = "Tax Rate";
-            // 
+            //
             // cboLinkToSupplier
-            // 
+            //
             _cboLinkToSupplier.FormattingEnabled = true;
             _cboLinkToSupplier.Location = new Point(112, 338);
             _cboLinkToSupplier.Name = "cboLinkToSupplier";
             _cboLinkToSupplier.Size = new Size(504, 21);
             _cboLinkToSupplier.TabIndex = 36;
-            // 
+            //
             // lblLinkToSupplier
-            // 
+            //
             _lblLinkToSupplier.Location = new Point(8, 341);
             _lblLinkToSupplier.Name = "lblLinkToSupplier";
             _lblLinkToSupplier.Size = new Size(103, 20);
             _lblLinkToSupplier.TabIndex = 35;
             _lblLinkToSupplier.Text = "Link To Supplier";
-            // 
+            //
             // lblNotes
-            // 
+            //
             _lblNotes.Location = new Point(8, 412);
             _lblNotes.Name = "lblNotes";
             _lblNotes.Size = new Size(103, 20);
             _lblNotes.TabIndex = 32;
             _lblNotes.Text = "Notes";
-            // 
+            //
             // tpMain
-            // 
+            //
             _tpMain.Controls.Add(_grpEngineer);
             _tpMain.Location = new Point(4, 22);
             _tpMain.Name = "tpMain";
             _tpMain.Size = new Size(624, 622);
             _tpMain.TabIndex = 0;
             _tpMain.Text = "Engineer Details";
-            // 
+            //
             // grpEngineer
-            // 
+            //
             _grpEngineer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpEngineer.Controls.Add(_cboDepartment);
@@ -4545,9 +4544,9 @@ namespace FSM
             _grpEngineer.TabIndex = 0;
             _grpEngineer.TabStop = false;
             _grpEngineer.Text = "Details";
-            // 
+            //
             // cboUser
-            // 
+            //
             _cboUser.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboUser.Cursor = Cursors.Hand;
             _cboUser.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -4556,75 +4555,75 @@ namespace FSM
             _cboUser.Size = new Size(470, 21);
             _cboUser.TabIndex = 72;
             _cboUser.Tag = "";
-            // 
+            //
             // txtOftecNo
-            // 
+            //
             _txtOftecNo.Location = new Point(512, 18);
             _txtOftecNo.Name = "txtOftecNo";
             _txtOftecNo.Size = new Size(79, 21);
             _txtOftecNo.TabIndex = 70;
             _txtOftecNo.Tag = "Engineer.Name";
-            // 
+            //
             // txtTechnician
-            // 
+            //
             _txtTechnician.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtTechnician.Location = new Point(121, 134);
             _txtTechnician.Name = "txtTechnician";
             _txtTechnician.Size = new Size(470, 21);
             _txtTechnician.TabIndex = 61;
             _txtTechnician.Tag = "";
-            // 
+            //
             // txtGasSafeNo
-            // 
+            //
             _txtGasSafeNo.Location = new Point(333, 18);
             _txtGasSafeNo.Name = "txtGasSafeNo";
             _txtGasSafeNo.Size = new Size(79, 21);
             _txtGasSafeNo.TabIndex = 59;
             _txtGasSafeNo.Tag = "Engineer.Name";
-            // 
+            //
             // txtEngineerID
-            // 
+            //
             _txtEngineerID.Location = new Point(121, 20);
             _txtEngineerID.Name = "txtEngineerID";
             _txtEngineerID.ReadOnly = true;
             _txtEngineerID.Size = new Size(79, 21);
             _txtEngineerID.TabIndex = 62;
             _txtEngineerID.TabStop = false;
-            // 
+            //
             // lblOftecNo
-            // 
+            //
             _lblOftecNo.Location = new Point(438, 21);
             _lblOftecNo.Name = "lblOftecNo";
             _lblOftecNo.Size = new Size(68, 20);
             _lblOftecNo.TabIndex = 71;
             _lblOftecNo.Text = "Oftec No.";
-            // 
+            //
             // lblDepartment
-            // 
+            //
             _lblDepartment.Location = new Point(5, 99);
             _lblDepartment.Name = "lblDepartment";
             _lblDepartment.Size = new Size(104, 20);
             _lblDepartment.TabIndex = 69;
             _lblDepartment.Text = "Department";
-            // 
+            //
             // lblManager
-            // 
+            //
             _lblManager.Location = new Point(5, 175);
             _lblManager.Name = "lblManager";
             _lblManager.Size = new Size(104, 20);
             _lblManager.TabIndex = 67;
             _lblManager.Text = "Manager";
-            // 
+            //
             // lblTechnician
-            // 
+            //
             _lblTechnician.Location = new Point(6, 137);
             _lblTechnician.Name = "lblTechnician";
             _lblTechnician.Size = new Size(104, 20);
             _lblTechnician.TabIndex = 66;
             _lblTechnician.Text = "Technician";
-            // 
+            //
             // cboEngineerGroup
-            // 
+            //
             _cboEngineerGroup.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboEngineerGroup.Cursor = Cursors.Hand;
             _cboEngineerGroup.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -4633,33 +4632,33 @@ namespace FSM
             _cboEngineerGroup.Size = new Size(470, 21);
             _cboEngineerGroup.TabIndex = 60;
             _cboEngineerGroup.Tag = "";
-            // 
+            //
             // Label37
-            // 
+            //
             _Label37.Location = new Point(5, 61);
             _Label37.Name = "Label37";
             _Label37.Size = new Size(105, 20);
             _Label37.TabIndex = 65;
             _Label37.Text = "Engineer Group";
-            // 
+            //
             // lblGasSafeId
-            // 
+            //
             _lblGasSafeId.Location = new Point(223, 23);
             _lblGasSafeId.Name = "lblGasSafeId";
             _lblGasSafeId.Size = new Size(90, 20);
             _lblGasSafeId.TabIndex = 64;
             _lblGasSafeId.Text = "Gas Safe No.";
-            // 
+            //
             // lblEngID
-            // 
+            //
             _lblEngID.Location = new Point(6, 23);
             _lblEngID.Name = "lblEngID";
             _lblEngID.Size = new Size(94, 20);
             _lblEngID.TabIndex = 63;
             _lblEngID.Text = "Engineer ID";
-            // 
+            //
             // dtpDrivingLicenceIssueDate
-            // 
+            //
             _dtpDrivingLicenceIssueDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _dtpDrivingLicenceIssueDate.Checked = false;
             _dtpDrivingLicenceIssueDate.Location = new Point(441, 377);
@@ -4667,34 +4666,34 @@ namespace FSM
             _dtpDrivingLicenceIssueDate.ShowCheckBox = true;
             _dtpDrivingLicenceIssueDate.Size = new Size(150, 21);
             _dtpDrivingLicenceIssueDate.TabIndex = 7;
-            // 
+            //
             // lblDrivingLicenseDate
-            // 
+            //
             _lblDrivingLicenseDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _lblDrivingLicenseDate.Location = new Point(359, 380);
             _lblDrivingLicenseDate.Name = "lblDrivingLicenseDate";
             _lblDrivingLicenseDate.Size = new Size(112, 20);
             _lblDrivingLicenseDate.TabIndex = 41;
             _lblDrivingLicenseDate.Text = "Issued Date";
-            // 
+            //
             // txtDrivingLicenceNo
-            // 
+            //
             _txtDrivingLicenceNo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtDrivingLicenceNo.Location = new Point(121, 377);
             _txtDrivingLicenceNo.Name = "txtDrivingLicenceNo";
             _txtDrivingLicenceNo.Size = new Size(232, 21);
             _txtDrivingLicenceNo.TabIndex = 6;
-            // 
+            //
             // lblDrivingLicense
-            // 
+            //
             _lblDrivingLicense.Location = new Point(6, 380);
             _lblDrivingLicense.Name = "lblDrivingLicense";
             _lblDrivingLicense.Size = new Size(112, 20);
             _lblDrivingLicense.TabIndex = 39;
             _lblDrivingLicense.Text = "Driving Licence No";
-            // 
+            //
             // txtStartingDetails
-            // 
+            //
             _txtStartingDetails.AcceptsReturn = true;
             _txtStartingDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtStartingDetails.Location = new Point(121, 286);
@@ -4703,17 +4702,17 @@ namespace FSM
             _txtStartingDetails.ScrollBars = ScrollBars.Vertical;
             _txtStartingDetails.Size = new Size(470, 74);
             _txtStartingDetails.TabIndex = 5;
-            // 
+            //
             // lblStartDetails
-            // 
+            //
             _lblStartDetails.Location = new Point(6, 289);
             _lblStartDetails.Name = "lblStartDetails";
             _lblStartDetails.Size = new Size(105, 20);
             _lblStartDetails.TabIndex = 37;
             _lblStartDetails.Text = "Starting Details";
-            // 
+            //
             // txtNextOfKinContact
-            // 
+            //
             _txtNextOfKinContact.AcceptsReturn = true;
             _txtNextOfKinContact.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
@@ -4723,50 +4722,50 @@ namespace FSM
             _txtNextOfKinContact.ScrollBars = ScrollBars.Vertical;
             _txtNextOfKinContact.Size = new Size(474, 63);
             _txtNextOfKinContact.TabIndex = 10;
-            // 
+            //
             // lblNextOfKinDetails
-            // 
+            //
             _lblNextOfKinDetails.Location = new Point(5, 497);
             _lblNextOfKinDetails.Name = "lblNextOfKinDetails";
             _lblNextOfKinDetails.Size = new Size(112, 20);
             _lblNextOfKinDetails.TabIndex = 35;
             _lblNextOfKinDetails.Text = "Next of Kin Details";
-            // 
+            //
             // txtNextOfKinName
-            // 
+            //
             _txtNextOfKinName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtNextOfKinName.Location = new Point(117, 456);
             _txtNextOfKinName.Name = "txtNextOfKinName";
             _txtNextOfKinName.Size = new Size(474, 21);
             _txtNextOfKinName.TabIndex = 9;
-            // 
+            //
             // lblNextOfKin
-            // 
+            //
             _lblNextOfKin.Location = new Point(6, 459);
             _lblNextOfKin.Name = "lblNextOfKin";
             _lblNextOfKin.Size = new Size(112, 20);
             _lblNextOfKin.TabIndex = 33;
             _lblNextOfKin.Text = "Next of Kin Name";
-            // 
+            //
             // btnVanHistory
-            // 
+            //
             _btnVanHistory.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnVanHistory.Location = new Point(512, 584);
             _btnVanHistory.Name = "btnVanHistory";
             _btnVanHistory.Size = new Size(88, 23);
             _btnVanHistory.TabIndex = 11;
             _btnVanHistory.Text = "Van History";
-            // 
+            //
             // txtPDAID
-            // 
+            //
             _txtPDAID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPDAID.Location = new Point(121, 248);
             _txtPDAID.Name = "txtPDAID";
             _txtPDAID.Size = new Size(470, 21);
             _txtPDAID.TabIndex = 4;
-            // 
+            //
             // cboRegion
-            // 
+            //
             _cboRegion.Cursor = Cursors.Hand;
             _cboRegion.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboRegion.Location = new Point(121, 210);
@@ -4774,25 +4773,25 @@ namespace FSM
             _cboRegion.Size = new Size(470, 21);
             _cboRegion.TabIndex = 1;
             _cboRegion.Tag = "Engineer.RegionID";
-            // 
+            //
             // lblRegion
-            // 
+            //
             _lblRegion.Location = new Point(5, 213);
             _lblRegion.Name = "lblRegion";
             _lblRegion.Size = new Size(64, 20);
             _lblRegion.TabIndex = 31;
             _lblRegion.Text = "Region";
-            // 
+            //
             // lblPDAID
-            // 
+            //
             _lblPDAID.Location = new Point(6, 251);
             _lblPDAID.Name = "lblPDAID";
             _lblPDAID.Size = new Size(64, 20);
             _lblPDAID.TabIndex = 31;
             _lblPDAID.Text = "PDA ID";
-            // 
+            //
             // chkApprentice
-            // 
+            //
             _chkApprentice.Font = new Font("Verdana", 8.0F);
             _chkApprentice.Location = new Point(121, 415);
             _chkApprentice.Name = "chkApprentice";
@@ -4800,9 +4799,9 @@ namespace FSM
             _chkApprentice.TabIndex = 8;
             _chkApprentice.Tag = "Engineer.Apprentice";
             _chkApprentice.Text = "Apprentice";
-            // 
+            //
             // tabMaxSor
-            // 
+            //
             _tabMaxSor.Controls.Add(_GroupBox8);
             _tabMaxSor.Location = new Point(4, 22);
             _tabMaxSor.Name = "tabMaxSor";
@@ -4810,9 +4809,9 @@ namespace FSM
             _tabMaxSor.TabIndex = 10;
             _tabMaxSor.Text = "Max SOR";
             _tabMaxSor.UseVisualStyleBackColor = true;
-            // 
+            //
             // GroupBox8
-            // 
+            //
             _GroupBox8.BackColor = SystemColors.Control;
             _GroupBox8.Controls.Add(_txtBreakPri);
             _GroupBox8.Controls.Add(_txtServPri);
@@ -4841,167 +4840,167 @@ namespace FSM
             _GroupBox8.TabIndex = 1;
             _GroupBox8.TabStop = false;
             _GroupBox8.Text = "Max Schedule Of Rate Times Per Day (In minutes)";
-            // 
+            //
             // txtBreakPri
-            // 
+            //
             _txtBreakPri.Location = new Point(193, 262);
             _txtBreakPri.Name = "txtBreakPri";
             _txtBreakPri.Size = new Size(41, 21);
             _txtBreakPri.TabIndex = 80;
-            // 
+            //
             // txtServPri
-            // 
+            //
             _txtServPri.Location = new Point(193, 235);
             _txtServPri.Name = "txtServPri";
             _txtServPri.Size = new Size(41, 21);
             _txtServPri.TabIndex = 78;
-            // 
+            //
             // Label40
-            // 
+            //
             _Label40.Location = new Point(28, 265);
             _Label40.Name = "Label40";
             _Label40.Size = new Size(167, 29);
             _Label40.TabIndex = 79;
             _Label40.Text = "Breakdown Priority (1-10)";
-            // 
+            //
             // Label39
-            // 
+            //
             _Label39.Location = new Point(28, 238);
             _Label39.Name = "Label39";
             _Label39.Size = new Size(159, 29);
             _Label39.TabIndex = 77;
             _Label39.Text = "Service Priority (1-10)";
-            // 
+            //
             // txtDailyServiceLimit
-            // 
+            //
             _txtDailyServiceLimit.Location = new Point(193, 209);
             _txtDailyServiceLimit.Name = "txtDailyServiceLimit";
             _txtDailyServiceLimit.Size = new Size(131, 21);
             _txtDailyServiceLimit.TabIndex = 15;
-            // 
+            //
             // Label42
-            // 
+            //
             _Label42.AutoSize = true;
             _Label42.Location = new Point(28, 212);
             _Label42.Name = "Label42";
             _Label42.Size = new Size(114, 13);
             _Label42.TabIndex = 14;
             _Label42.Text = "Daily Service Limit";
-            // 
+            //
             // txtSundayValue
-            // 
+            //
             _txtSundayValue.Location = new Point(193, 183);
             _txtSundayValue.Name = "txtSundayValue";
             _txtSundayValue.Size = new Size(131, 21);
             _txtSundayValue.TabIndex = 13;
-            // 
+            //
             // txtSaturdayValue
-            // 
+            //
             _txtSaturdayValue.Location = new Point(193, 157);
             _txtSaturdayValue.Name = "txtSaturdayValue";
             _txtSaturdayValue.Size = new Size(131, 21);
             _txtSaturdayValue.TabIndex = 12;
-            // 
+            //
             // txtFridayValue
-            // 
+            //
             _txtFridayValue.Location = new Point(193, 131);
             _txtFridayValue.Name = "txtFridayValue";
             _txtFridayValue.Size = new Size(131, 21);
             _txtFridayValue.TabIndex = 11;
-            // 
+            //
             // txtThursdayValue
-            // 
+            //
             _txtThursdayValue.Location = new Point(193, 105);
             _txtThursdayValue.Name = "txtThursdayValue";
             _txtThursdayValue.Size = new Size(131, 21);
             _txtThursdayValue.TabIndex = 10;
-            // 
+            //
             // txtWednesdayValue
-            // 
+            //
             _txtWednesdayValue.Location = new Point(193, 79);
             _txtWednesdayValue.Name = "txtWednesdayValue";
             _txtWednesdayValue.Size = new Size(131, 21);
             _txtWednesdayValue.TabIndex = 9;
-            // 
+            //
             // txtTuesdayValue
-            // 
+            //
             _txtTuesdayValue.Location = new Point(193, 53);
             _txtTuesdayValue.Name = "txtTuesdayValue";
             _txtTuesdayValue.Size = new Size(131, 21);
             _txtTuesdayValue.TabIndex = 8;
-            // 
+            //
             // txtMondayValue
-            // 
+            //
             _txtMondayValue.Location = new Point(193, 27);
             _txtMondayValue.Name = "txtMondayValue";
             _txtMondayValue.Size = new Size(131, 21);
             _txtMondayValue.TabIndex = 7;
-            // 
+            //
             // Label43
-            // 
+            //
             _Label43.AutoSize = true;
             _Label43.Location = new Point(28, 186);
             _Label43.Name = "Label43";
             _Label43.Size = new Size(50, 13);
             _Label43.TabIndex = 6;
             _Label43.Text = "Sunday";
-            // 
+            //
             // Label44
-            // 
+            //
             _Label44.AutoSize = true;
             _Label44.Location = new Point(28, 160);
             _Label44.Name = "Label44";
             _Label44.Size = new Size(59, 13);
             _Label44.TabIndex = 5;
             _Label44.Text = "Saturday";
-            // 
+            //
             // Label45
-            // 
+            //
             _Label45.AutoSize = true;
             _Label45.Location = new Point(28, 134);
             _Label45.Name = "Label45";
             _Label45.Size = new Size(42, 13);
             _Label45.TabIndex = 4;
             _Label45.Text = "Friday";
-            // 
+            //
             // Label46
-            // 
+            //
             _Label46.AutoSize = true;
             _Label46.Location = new Point(28, 108);
             _Label46.Name = "Label46";
             _Label46.Size = new Size(60, 13);
             _Label46.TabIndex = 3;
             _Label46.Text = "Thursday";
-            // 
+            //
             // Label47
-            // 
+            //
             _Label47.AutoSize = true;
             _Label47.Location = new Point(28, 82);
             _Label47.Name = "Label47";
             _Label47.Size = new Size(72, 13);
             _Label47.TabIndex = 2;
             _Label47.Text = "Wednesday";
-            // 
+            //
             // Label48
-            // 
+            //
             _Label48.AutoSize = true;
             _Label48.Location = new Point(28, 56);
             _Label48.Name = "Label48";
             _Label48.Size = new Size(54, 13);
             _Label48.TabIndex = 1;
             _Label48.Text = "Tuesday";
-            // 
+            //
             // Label49
-            // 
+            //
             _Label49.AutoSize = true;
             _Label49.Location = new Point(28, 30);
             _Label49.Name = "Label49";
             _Label49.Size = new Size(51, 13);
             _Label49.TabIndex = 0;
             _Label49.Text = "Monday";
-            // 
+            //
             // tpWages
-            // 
+            //
             _tpWages.Controls.Add(_GroupBox3);
             _tpWages.Controls.Add(_GroupBox1);
             _tpWages.Location = new Point(4, 22);
@@ -5010,9 +5009,9 @@ namespace FSM
             _tpWages.TabIndex = 1;
             _tpWages.Text = "Wages";
             _tpWages.Visible = false;
-            // 
+            //
             // GroupBox3
-            // 
+            //
             _GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox3.Controls.Add(_Label11);
             _GroupBox3.Controls.Add(_txtCostToCompanyDouble);
@@ -5026,54 +5025,54 @@ namespace FSM
             _GroupBox3.TabIndex = 1;
             _GroupBox3.TabStop = false;
             _GroupBox3.Text = "Cost to Company";
-            // 
+            //
             // Label11
-            // 
+            //
             _Label11.Location = new Point(16, 24);
             _Label11.Name = "Label11";
             _Label11.Size = new Size(88, 20);
             _Label11.TabIndex = 55;
             _Label11.Text = "Normal";
-            // 
+            //
             // txtCostToCompanyDouble
-            // 
+            //
             _txtCostToCompanyDouble.Location = new Point(120, 88);
             _txtCostToCompanyDouble.Name = "txtCostToCompanyDouble";
             _txtCostToCompanyDouble.Size = new Size(144, 21);
             _txtCostToCompanyDouble.TabIndex = 6;
-            // 
+            //
             // Label12
-            // 
+            //
             _Label12.Location = new Point(16, 88);
             _Label12.Name = "Label12";
             _Label12.Size = new Size(88, 20);
             _Label12.TabIndex = 54;
             _Label12.Text = "Double";
-            // 
+            //
             // txtCostToCompanyTimeHalf
-            // 
+            //
             _txtCostToCompanyTimeHalf.Location = new Point(120, 56);
             _txtCostToCompanyTimeHalf.Name = "txtCostToCompanyTimeHalf";
             _txtCostToCompanyTimeHalf.Size = new Size(144, 21);
             _txtCostToCompanyTimeHalf.TabIndex = 5;
-            // 
+            //
             // Label13
-            // 
+            //
             _Label13.Location = new Point(16, 56);
             _Label13.Name = "Label13";
             _Label13.Size = new Size(88, 20);
             _Label13.TabIndex = 53;
             _Label13.Text = "Time && Half";
-            // 
+            //
             // txtCostToCompanyNormal
-            // 
+            //
             _txtCostToCompanyNormal.Location = new Point(120, 24);
             _txtCostToCompanyNormal.Name = "txtCostToCompanyNormal";
             _txtCostToCompanyNormal.Size = new Size(144, 21);
             _txtCostToCompanyNormal.TabIndex = 4;
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox1.Controls.Add(_txtNINumber);
             _GroupBox1.Controls.Add(_Label14);
@@ -5087,58 +5086,58 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Wages Information";
-            // 
+            //
             // txtNINumber
-            // 
+            //
             _txtNINumber.Location = new Point(120, 88);
             _txtNINumber.Name = "txtNINumber";
             _txtNINumber.Size = new Size(144, 21);
             _txtNINumber.TabIndex = 3;
             _txtNINumber.Tag = "Engineer.Name";
-            // 
+            //
             // Label14
-            // 
+            //
             _Label14.Location = new Point(8, 88);
             _Label14.Name = "Label14";
             _Label14.Size = new Size(87, 20);
             _Label14.TabIndex = 54;
             _Label14.Text = "NI Number";
-            // 
+            //
             // cboPayGrade
-            // 
+            //
             _cboPayGrade.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboPayGrade.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboPayGrade.Location = new Point(120, 28);
             _cboPayGrade.Name = "cboPayGrade";
             _cboPayGrade.Size = new Size(480, 21);
             _cboPayGrade.TabIndex = 1;
-            // 
+            //
             // Label15
-            // 
+            //
             _Label15.Location = new Point(8, 24);
             _Label15.Name = "Label15";
             _Label15.Size = new Size(100, 23);
             _Label15.TabIndex = 51;
             _Label15.Text = "Pay Grade";
-            // 
+            //
             // txtAnnualSalary
-            // 
+            //
             _txtAnnualSalary.Location = new Point(120, 56);
             _txtAnnualSalary.Name = "txtAnnualSalary";
             _txtAnnualSalary.Size = new Size(143, 21);
             _txtAnnualSalary.TabIndex = 2;
             _txtAnnualSalary.Tag = "Engineer.Name";
-            // 
+            //
             // Label16
-            // 
+            //
             _Label16.Location = new Point(9, 56);
             _Label16.Name = "Label16";
             _Label16.Size = new Size(87, 20);
             _Label16.TabIndex = 50;
             _Label16.Text = "Annual Salary";
-            // 
+            //
             // tpTrainingQualifications
-            // 
+            //
             _tpTrainingQualifications.Controls.Add(_GroupBox5);
             _tpTrainingQualifications.Location = new Point(4, 22);
             _tpTrainingQualifications.Name = "tpTrainingQualifications";
@@ -5146,9 +5145,9 @@ namespace FSM
             _tpTrainingQualifications.TabIndex = 3;
             _tpTrainingQualifications.Text = "Training & Qualifications";
             _tpTrainingQualifications.Visible = false;
-            // 
+            //
             // GroupBox5
-            // 
+            //
             _GroupBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox5.Controls.Add(_Panel1);
@@ -5160,9 +5159,9 @@ namespace FSM
             _GroupBox5.TabIndex = 13;
             _GroupBox5.TabStop = false;
             _GroupBox5.Text = "Training && Qualifications";
-            // 
+            //
             // Panel1
-            // 
+            //
             _Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _Panel1.Controls.Add(_cboQualificationType);
             _Panel1.Controls.Add(_lblQualificationType);
@@ -5181,60 +5180,60 @@ namespace FSM
             _Panel1.Name = "Panel1";
             _Panel1.Size = new Size(595, 225);
             _Panel1.TabIndex = 42;
-            // 
+            //
             // cboQualificationType
-            // 
+            //
             _cboQualificationType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboQualificationType.Location = new Point(139, 8);
             _cboQualificationType.Name = "cboQualificationType";
             _cboQualificationType.Size = new Size(445, 21);
             _cboQualificationType.TabIndex = 54;
             _cboQualificationType.Text = "ComboBox1";
-            // 
+            //
             // lblQualificationType
-            // 
+            //
             _lblQualificationType.Location = new Point(7, 8);
             _lblQualificationType.Name = "lblQualificationType";
             _lblQualificationType.Size = new Size(126, 23);
             _lblQualificationType.TabIndex = 55;
             _lblQualificationType.Text = "Qualification Type";
-            // 
+            //
             // dtpQualificationBooked
-            // 
+            //
             _dtpQualificationBooked.Checked = false;
             _dtpQualificationBooked.Location = new Point(332, 68);
             _dtpQualificationBooked.Name = "dtpQualificationBooked";
             _dtpQualificationBooked.ShowCheckBox = true;
             _dtpQualificationBooked.Size = new Size(152, 21);
             _dtpQualificationBooked.TabIndex = 52;
-            // 
+            //
             // Label36
-            // 
+            //
             _Label36.Location = new Point(269, 74);
             _Label36.Name = "Label36";
             _Label36.Size = new Size(57, 23);
             _Label36.TabIndex = 53;
             _Label36.Text = "Booked";
-            // 
+            //
             // cboQualification
-            // 
+            //
             _cboQualification.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboQualification.Location = new Point(96, 38);
             _cboQualification.Name = "cboQualification";
             _cboQualification.Size = new Size(488, 21);
             _cboQualification.TabIndex = 1;
             _cboQualification.Text = "ComboBox1";
-            // 
+            //
             // Label22
-            // 
+            //
             _Label22.Location = new Point(8, 38);
             _Label22.Name = "Label22";
             _Label22.Size = new Size(100, 23);
             _Label22.TabIndex = 48;
             _Label22.Text = "Qualification";
-            // 
+            //
             // txtQualificatioNote
-            // 
+            //
             _txtQualificatioNote.AcceptsReturn = true;
             _txtQualificatioNote.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
@@ -5244,69 +5243,69 @@ namespace FSM
             _txtQualificatioNote.ScrollBars = ScrollBars.Vertical;
             _txtQualificatioNote.Size = new Size(488, 61);
             _txtQualificatioNote.TabIndex = 4;
-            // 
+            //
             // Label17
-            // 
+            //
             _Label17.Location = new Point(8, 132);
             _Label17.Name = "Label17";
             _Label17.Size = new Size(67, 20);
             _Label17.TabIndex = 47;
             _Label17.Text = "Note";
-            // 
+            //
             // btnSaveQualification
-            // 
+            //
             _btnSaveQualification.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveQualification.Location = new Point(496, 199);
             _btnSaveQualification.Name = "btnSaveQualification";
             _btnSaveQualification.Size = new Size(88, 23);
             _btnSaveQualification.TabIndex = 5;
             _btnSaveQualification.Text = "Save";
-            // 
+            //
             // dtpQualificationExpires
-            // 
+            //
             _dtpQualificationExpires.Checked = false;
             _dtpQualificationExpires.Location = new Point(96, 99);
             _dtpQualificationExpires.Name = "dtpQualificationExpires";
             _dtpQualificationExpires.ShowCheckBox = true;
             _dtpQualificationExpires.Size = new Size(152, 21);
             _dtpQualificationExpires.TabIndex = 3;
-            // 
+            //
             // Label18
-            // 
+            //
             _Label18.Location = new Point(8, 105);
             _Label18.Name = "Label18";
             _Label18.Size = new Size(80, 23);
             _Label18.TabIndex = 43;
             _Label18.Text = "Expires";
-            // 
+            //
             // dtpQualificationPassed
-            // 
+            //
             _dtpQualificationPassed.Checked = false;
             _dtpQualificationPassed.Location = new Point(96, 68);
             _dtpQualificationPassed.Name = "dtpQualificationPassed";
             _dtpQualificationPassed.ShowCheckBox = true;
             _dtpQualificationPassed.Size = new Size(152, 21);
             _dtpQualificationPassed.TabIndex = 2;
-            // 
+            //
             // Label19
-            // 
+            //
             _Label19.Location = new Point(8, 74);
             _Label19.Name = "Label19";
             _Label19.Size = new Size(80, 23);
             _Label19.TabIndex = 41;
             _Label19.Text = "Date Passed";
-            // 
+            //
             // btnRemoveTrainingQualifications
-            // 
+            //
             _btnRemoveTrainingQualifications.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRemoveTrainingQualifications.Location = new Point(10, 576);
             _btnRemoveTrainingQualifications.Name = "btnRemoveTrainingQualifications";
             _btnRemoveTrainingQualifications.Size = new Size(75, 21);
             _btnRemoveTrainingQualifications.TabIndex = 7;
             _btnRemoveTrainingQualifications.Text = "Delete";
-            // 
+            //
             // dgTrainingQualifications
-            // 
+            //
             _dgTrainingQualifications.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgTrainingQualifications.DataMember = "";
@@ -5315,9 +5314,9 @@ namespace FSM
             _dgTrainingQualifications.Name = "dgTrainingQualifications";
             _dgTrainingQualifications.Size = new Size(592, 320);
             _dgTrainingQualifications.TabIndex = 6;
-            // 
+            //
             // tpKit
-            // 
+            //
             _tpKit.Controls.Add(_GroupBox4);
             _tpKit.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
             _tpKit.Location = new Point(4, 22);
@@ -5326,9 +5325,9 @@ namespace FSM
             _tpKit.TabIndex = 4;
             _tpKit.Text = "Equipment";
             _tpKit.Visible = false;
-            // 
+            //
             // GroupBox4
-            // 
+            //
             _GroupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox4.Controls.Add(_Panel2);
@@ -5340,9 +5339,9 @@ namespace FSM
             _GroupBox4.TabIndex = 13;
             _GroupBox4.TabStop = false;
             _GroupBox4.Text = "Specialised Equipment and Tools Issued";
-            // 
+            //
             // Panel2
-            // 
+            //
             _Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _Panel2.Controls.Add(_txtEquipmentTool);
             _Panel2.Controls.Add(_Label20);
@@ -5351,9 +5350,9 @@ namespace FSM
             _Panel2.Name = "Panel2";
             _Panel2.Size = new Size(592, 80);
             _Panel2.TabIndex = 2;
-            // 
+            //
             // txtEquipmentTool
-            // 
+            //
             _txtEquipmentTool.AcceptsReturn = true;
             _txtEquipmentTool.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
@@ -5365,35 +5364,35 @@ namespace FSM
             _txtEquipmentTool.Size = new Size(376, 68);
             _txtEquipmentTool.TabIndex = 1;
             _txtEquipmentTool.Tag = "Engineer.Name";
-            // 
+            //
             // Label20
-            // 
+            //
             _Label20.Location = new Point(3, 4);
             _Label20.Name = "Label20";
             _Label20.Size = new Size(112, 20);
             _Label20.TabIndex = 55;
             _Label20.Text = @"Equipment\Tool";
-            // 
+            //
             // btnSaveEquipment
-            // 
+            //
             _btnSaveEquipment.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnSaveEquipment.Location = new Point(504, 48);
             _btnSaveEquipment.Name = "btnSaveEquipment";
             _btnSaveEquipment.Size = new Size(75, 23);
             _btnSaveEquipment.TabIndex = 2;
             _btnSaveEquipment.Text = "Save";
-            // 
+            //
             // btnRemoveEngineerEquipment
-            // 
+            //
             _btnRemoveEngineerEquipment.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRemoveEngineerEquipment.Location = new Point(8, 576);
             _btnRemoveEngineerEquipment.Name = "btnRemoveEngineerEquipment";
             _btnRemoveEngineerEquipment.Size = new Size(75, 23);
             _btnRemoveEngineerEquipment.TabIndex = 4;
             _btnRemoveEngineerEquipment.Text = "Delete";
-            // 
+            //
             // dgEquipment
-            // 
+            //
             _dgEquipment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgEquipment.DataMember = "";
@@ -5402,9 +5401,9 @@ namespace FSM
             _dgEquipment.Name = "dgEquipment";
             _dgEquipment.Size = new Size(592, 462);
             _dgEquipment.TabIndex = 3;
-            // 
+            //
             // tpDisciplinary
-            // 
+            //
             _tpDisciplinary.Controls.Add(_GroupBox6);
             _tpDisciplinary.Location = new Point(4, 22);
             _tpDisciplinary.Name = "tpDisciplinary";
@@ -5412,9 +5411,9 @@ namespace FSM
             _tpDisciplinary.TabIndex = 2;
             _tpDisciplinary.Text = "Disciplinary";
             _tpDisciplinary.Visible = false;
-            // 
+            //
             // GroupBox6
-            // 
+            //
             _GroupBox6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox6.Controls.Add(_btnAddDisciplinaries);
@@ -5428,18 +5427,18 @@ namespace FSM
             _GroupBox6.TabIndex = 14;
             _GroupBox6.TabStop = false;
             _GroupBox6.Text = "Disciplinary Records";
-            // 
+            //
             // btnAddDisciplinaries
-            // 
+            //
             _btnAddDisciplinaries.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAddDisciplinaries.Location = new Point(8, 576);
             _btnAddDisciplinaries.Name = "btnAddDisciplinaries";
             _btnAddDisciplinaries.Size = new Size(75, 21);
             _btnAddDisciplinaries.TabIndex = 6;
             _btnAddDisciplinaries.Text = "Add";
-            // 
+            //
             // Panel3
-            // 
+            //
             _Panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _Panel3.Controls.Add(_txtDisciplinaryID);
             _Panel3.Controls.Add(_cboDisciplinary);
@@ -5453,95 +5452,95 @@ namespace FSM
             _Panel3.Name = "Panel3";
             _Panel3.Size = new Size(595, 80);
             _Panel3.TabIndex = 42;
-            // 
+            //
             // txtDisciplinaryID
-            // 
+            //
             _txtDisciplinaryID.Location = new Point(352, 31);
             _txtDisciplinaryID.Name = "txtDisciplinaryID";
             _txtDisciplinaryID.Size = new Size(100, 21);
             _txtDisciplinaryID.TabIndex = 47;
             _txtDisciplinaryID.TabStop = false;
             _txtDisciplinaryID.Visible = false;
-            // 
+            //
             // cboDisciplinary
-            // 
+            //
             _cboDisciplinary.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboDisciplinary.Location = new Point(96, 53);
             _cboDisciplinary.Name = "cboDisciplinary";
             _cboDisciplinary.Size = new Size(392, 21);
             _cboDisciplinary.TabIndex = 3;
             _cboDisciplinary.Text = "ComboBox2";
-            // 
+            //
             // btnSaveDisciplinaries
-            // 
+            //
             _btnSaveDisciplinaries.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnSaveDisciplinaries.Location = new Point(496, 53);
             _btnSaveDisciplinaries.Name = "btnSaveDisciplinaries";
             _btnSaveDisciplinaries.Size = new Size(88, 21);
             _btnSaveDisciplinaries.TabIndex = 4;
             _btnSaveDisciplinaries.Text = "Save";
-            // 
+            //
             // Label21
-            // 
+            //
             _Label21.Location = new Point(8, 53);
             _Label21.Name = "Label21";
             _Label21.Size = new Size(80, 23);
             _Label21.TabIndex = 43;
             _Label21.Text = "Status";
-            // 
+            //
             // dtpDisciplinaryIssued
-            // 
+            //
             _dtpDisciplinaryIssued.Checked = false;
             _dtpDisciplinaryIssued.Location = new Point(96, 29);
             _dtpDisciplinaryIssued.Name = "dtpDisciplinaryIssued";
             _dtpDisciplinaryIssued.ShowCheckBox = true;
             _dtpDisciplinaryIssued.Size = new Size(152, 21);
             _dtpDisciplinaryIssued.TabIndex = 2;
-            // 
+            //
             // Label23
-            // 
+            //
             _Label23.Location = new Point(8, 29);
             _Label23.Name = "Label23";
             _Label23.Size = new Size(80, 23);
             _Label23.TabIndex = 41;
             _Label23.Text = "Issued";
-            // 
+            //
             // txtDisciplinary
-            // 
+            //
             _txtDisciplinary.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtDisciplinary.Location = new Point(96, 5);
             _txtDisciplinary.Name = "txtDisciplinary";
             _txtDisciplinary.Size = new Size(496, 21);
             _txtDisciplinary.TabIndex = 1;
-            // 
+            //
             // Label24
-            // 
+            //
             _Label24.Location = new Point(8, 5);
             _Label24.Name = "Label24";
             _Label24.Size = new Size(80, 20);
             _Label24.TabIndex = 40;
             _Label24.Text = "Disciplinary";
-            // 
+            //
             // btnRemoveDisciplinaries
-            // 
+            //
             _btnRemoveDisciplinaries.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnRemoveDisciplinaries.Location = new Point(168, 576);
             _btnRemoveDisciplinaries.Name = "btnRemoveDisciplinaries";
             _btnRemoveDisciplinaries.Size = new Size(75, 21);
             _btnRemoveDisciplinaries.TabIndex = 7;
             _btnRemoveDisciplinaries.Text = "Delete";
-            // 
+            //
             // btnEditDisciplinaries
-            // 
+            //
             _btnEditDisciplinaries.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnEditDisciplinaries.Location = new Point(88, 576);
             _btnEditDisciplinaries.Name = "btnEditDisciplinaries";
             _btnEditDisciplinaries.Size = new Size(75, 21);
             _btnEditDisciplinaries.TabIndex = 6;
             _btnEditDisciplinaries.Text = "Edit";
-            // 
+            //
             // dgDisciplinaries
-            // 
+            //
             _dgDisciplinaries.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgDisciplinaries.DataMember = "";
@@ -5550,9 +5549,9 @@ namespace FSM
             _dgDisciplinaries.Name = "dgDisciplinaries";
             _dgDisciplinaries.Size = new Size(592, 452);
             _dgDisciplinaries.TabIndex = 5;
-            // 
+            //
             // tpDocuments
-            // 
+            //
             _tpDocuments.Controls.Add(_pnlDocuments);
             _tpDocuments.Location = new Point(4, 22);
             _tpDocuments.Name = "tpDocuments";
@@ -5560,17 +5559,17 @@ namespace FSM
             _tpDocuments.TabIndex = 6;
             _tpDocuments.Text = "Documents";
             _tpDocuments.Visible = false;
-            // 
+            //
             // pnlDocuments
-            // 
+            //
             _pnlDocuments.Dock = DockStyle.Fill;
             _pnlDocuments.Location = new Point(0, 0);
             _pnlDocuments.Name = "pnlDocuments";
             _pnlDocuments.Size = new Size(624, 622);
             _pnlDocuments.TabIndex = 0;
-            // 
+            //
             // tpHolidayAbsences
-            // 
+            //
             _tpHolidayAbsences.Controls.Add(_grpAbsences);
             _tpHolidayAbsences.Controls.Add(_GroupBox7);
             _tpHolidayAbsences.Location = new Point(4, 22);
@@ -5579,9 +5578,9 @@ namespace FSM
             _tpHolidayAbsences.TabIndex = 5;
             _tpHolidayAbsences.Text = "Holidays & Absences";
             _tpHolidayAbsences.Visible = false;
-            // 
+            //
             // grpAbsences
-            // 
+            //
             _grpAbsences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpAbsences.Controls.Add(_dgAbsences);
@@ -5591,9 +5590,9 @@ namespace FSM
             _grpAbsences.TabIndex = 4;
             _grpAbsences.TabStop = false;
             _grpAbsences.Text = "Absences";
-            // 
+            //
             // dgAbsences
-            // 
+            //
             _dgAbsences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAbsences.DataMember = "";
@@ -5602,9 +5601,9 @@ namespace FSM
             _dgAbsences.Name = "dgAbsences";
             _dgAbsences.Size = new Size(592, 472);
             _dgAbsences.TabIndex = 4;
-            // 
+            //
             // GroupBox7
-            // 
+            //
             _GroupBox7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox7.Controls.Add(_txtDaysHolidayAllowed);
             _GroupBox7.Controls.Add(_Label25);
@@ -5618,54 +5617,54 @@ namespace FSM
             _GroupBox7.TabIndex = 0;
             _GroupBox7.TabStop = false;
             _GroupBox7.Text = "Holiday Entitlement";
-            // 
+            //
             // txtDaysHolidayAllowed
-            // 
+            //
             _txtDaysHolidayAllowed.Location = new Point(144, 72);
             _txtDaysHolidayAllowed.Name = "txtDaysHolidayAllowed";
             _txtDaysHolidayAllowed.Size = new Size(176, 21);
             _txtDaysHolidayAllowed.TabIndex = 3;
-            // 
+            //
             // Label25
-            // 
+            //
             _Label25.Location = new Point(16, 72);
             _Label25.Name = "Label25";
             _Label25.Size = new Size(128, 23);
             _Label25.TabIndex = 4;
             _Label25.Text = "Holiday Entitlement";
-            // 
+            //
             // txtHolidayYearEnd
-            // 
+            //
             _txtHolidayYearEnd.Location = new Point(144, 48);
             _txtHolidayYearEnd.Name = "txtHolidayYearEnd";
             _txtHolidayYearEnd.Size = new Size(176, 21);
             _txtHolidayYearEnd.TabIndex = 2;
-            // 
+            //
             // Label26
-            // 
+            //
             _Label26.Location = new Point(16, 48);
             _Label26.Name = "Label26";
             _Label26.Size = new Size(128, 23);
             _Label26.TabIndex = 2;
             _Label26.Text = "End Period (dd/mm)";
-            // 
+            //
             // txtHolidayYearStart
-            // 
+            //
             _txtHolidayYearStart.Location = new Point(144, 24);
             _txtHolidayYearStart.Name = "txtHolidayYearStart";
             _txtHolidayYearStart.Size = new Size(176, 21);
             _txtHolidayYearStart.TabIndex = 1;
-            // 
+            //
             // Label27
-            // 
+            //
             _Label27.Location = new Point(16, 24);
             _Label27.Name = "Label27";
             _Label27.Size = new Size(128, 23);
             _Label27.TabIndex = 0;
             _Label27.Text = "Start Period (dd/mm)";
-            // 
+            //
             // tpPostalRegions
-            // 
+            //
             _tpPostalRegions.Controls.Add(_GroupBox2);
             _tpPostalRegions.Controls.Add(_grpPostalRegions);
             _tpPostalRegions.Location = new Point(4, 22);
@@ -5674,9 +5673,9 @@ namespace FSM
             _tpPostalRegions.TabIndex = 7;
             _tpPostalRegions.Text = "Postal Regions";
             _tpPostalRegions.Visible = false;
-            // 
+            //
             // GroupBox2
-            // 
+            //
             _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _GroupBox2.Controls.Add(_Button1);
             _GroupBox2.Controls.Add(_TextBox1);
@@ -5688,9 +5687,9 @@ namespace FSM
             _GroupBox2.TabIndex = 15;
             _GroupBox2.TabStop = false;
             _GroupBox2.Text = "Home ";
-            // 
+            //
             // Button1
-            // 
+            //
             _Button1.Location = new Point(288, 24);
             _Button1.Name = "Button1";
             _Button1.Size = new Size(75, 23);
@@ -5698,24 +5697,24 @@ namespace FSM
             _Button1.Text = "Button1";
             _Button1.UseVisualStyleBackColor = true;
             _Button1.Visible = false;
-            // 
+            //
             // TextBox1
-            // 
+            //
             _TextBox1.Location = new Point(132, 25);
             _TextBox1.Name = "TextBox1";
             _TextBox1.Size = new Size(123, 21);
             _TextBox1.TabIndex = 41;
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(29, 28);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(97, 20);
             _Label1.TabIndex = 42;
             _Label1.Text = "Home Postcode";
-            // 
+            //
             // grpPostalRegions
-            // 
+            //
             _grpPostalRegions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpPostalRegions.Controls.Add(_Label38);
@@ -5730,9 +5729,9 @@ namespace FSM
             _grpPostalRegions.TabIndex = 14;
             _grpPostalRegions.TabStop = false;
             _grpPostalRegions.Text = "Postal Regions";
-            // 
+            //
             // Label38
-            // 
+            //
             _Label38.Font = new Font("Verdana", 10.25F);
             _Label38.Location = new Point(15, 26);
             _Label38.Name = "Label38";
@@ -5740,24 +5739,24 @@ namespace FSM
             _Label38.TabIndex = 43;
             _Label38.Text = "Assigned Areas";
             _Label38.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //
             // txtPCSearch
-            // 
+            //
             _txtPCSearch.Location = new Point(369, 28);
             _txtPCSearch.Name = "txtPCSearch";
             _txtPCSearch.Size = new Size(123, 21);
             _txtPCSearch.TabIndex = 41;
-            // 
+            //
             // Label2
-            // 
+            //
             _Label2.Location = new Point(304, 26);
             _Label2.Name = "Label2";
             _Label2.Size = new Size(59, 20);
             _Label2.TabIndex = 42;
             _Label2.Text = "Search";
-            // 
+            //
             // dgUnTicked
-            // 
+            //
             _dgUnTicked.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _dgUnTicked.CaptionFont = new Font("Verdana", 8.25F, FontStyle.Bold);
             _dgUnTicked.DataMember = "";
@@ -5767,9 +5766,9 @@ namespace FSM
             _dgUnTicked.Name = "dgUnTicked";
             _dgUnTicked.Size = new Size(284, 450);
             _dgUnTicked.TabIndex = 1;
-            // 
+            //
             // dgPostalRegions
-            // 
+            //
             _dgPostalRegions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             _dgPostalRegions.CaptionFont = new Font("Verdana", 8.25F, FontStyle.Bold);
             _dgPostalRegions.DataMember = "";
@@ -5779,9 +5778,9 @@ namespace FSM
             _dgPostalRegions.Name = "dgPostalRegions";
             _dgPostalRegions.Size = new Size(284, 450);
             _dgPostalRegions.TabIndex = 0;
-            // 
+            //
             // cboDepartment
-            // 
+            //
             _cboDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboDepartment.Cursor = Cursors.Hand;
             _cboDepartment.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -5790,9 +5789,9 @@ namespace FSM
             _cboDepartment.Size = new Size(470, 21);
             _cboDepartment.TabIndex = 73;
             _cboDepartment.Tag = "Engineer.Department";
-            // 
+            //
             // UCSubcontractor
-            // 
+            //
             Controls.Add(_TabControl1);
             Name = "UCSubcontractor";
             Size = new Size(640, 652);
@@ -5843,7 +5842,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             SetupPostalRegionsDataGrid();
@@ -5864,11 +5864,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -6003,6 +6004,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupPostalRegionsDataGridUnTicked()
         {
             Helper.SetUpDataGrid(dgUnTicked);
@@ -6062,7 +6064,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void Populate(int ID = 0)
+
+        public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
             if (!(ID == 0))
@@ -6376,6 +6379,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupTrainingQualificationsDataGrid()
         {
             try
@@ -6611,6 +6615,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupEngineerEquipmentDataGrid()
         {
             try
@@ -6754,6 +6759,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupDisciplinariesDataGrid()
         {
             try
@@ -6984,6 +6990,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupAbsenceDataGridGrid()
         {
             SuspendLayout();

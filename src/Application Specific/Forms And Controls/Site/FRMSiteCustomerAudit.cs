@@ -9,11 +9,10 @@ namespace FSM
 {
     public class FRMSiteCustomerAudit : FRMBaseForm, IForm
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public FRMSiteCustomerAudit() : base()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMSiteCustomerAudit_Load;
@@ -22,7 +21,6 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -43,7 +41,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _GroupBox1;
 
@@ -101,9 +99,9 @@ namespace FSM
             _GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgAuditTrail).BeginInit();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_dgAuditTrail);
@@ -112,9 +110,9 @@ namespace FSM
             _GroupBox1.Size = new Size(477, 336);
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
-            // 
+            //
             // dgAuditTrail
-            // 
+            //
             _dgAuditTrail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgAuditTrail.DataMember = "";
@@ -123,9 +121,9 @@ namespace FSM
             _dgAuditTrail.Name = "dgAuditTrail";
             _dgAuditTrail.Size = new Size(458, 309);
             _dgAuditTrail.TabIndex = 0;
-            // 
+            //
             // FRMSiteCustomerAudit
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(496, 385);
             Controls.Add(_GroupBox1);
@@ -140,7 +138,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadMe(object sender, EventArgs e)
+
+        public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             AuditTrail = App.DB.SiteCustomerAudit.SiteCustomerAudit_GetAll(ID);
@@ -196,8 +195,10 @@ namespace FSM
                 dgAuditTrail.DataSource = AuditTrail;
             }
         }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupAuditDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgAuditTrail);

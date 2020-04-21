@@ -13,13 +13,13 @@ namespace FSM
     {
         public UCCustomerScheduleOfRate()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCCustomerScheduleOfRate_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCCustomerScheduleOfRate(Entity.Sys.Enums.TableNames EntityToLinkToIn, int IDToLinkToIn, bool _readOnly = false) : base()
         {
             base.Load += UCCustomerScheduleOfRate_Load;
@@ -475,9 +475,9 @@ namespace FSM
             _grpCustomerScheduleOfRate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgRates).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpCustomerScheduleOfRate
-            // 
+            //
             _grpCustomerScheduleOfRate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpCustomerScheduleOfRate.Controls.Add(_txtTimeInMins);
@@ -501,60 +501,60 @@ namespace FSM
             _grpCustomerScheduleOfRate.TabIndex = 0;
             _grpCustomerScheduleOfRate.TabStop = false;
             _grpCustomerScheduleOfRate.Text = "Schedule Of Rates";
-            // 
+            //
             // txtTimeInMins
-            // 
+            //
             _txtTimeInMins.Location = new Point(194, 135);
             _txtTimeInMins.MaxLength = 9;
             _txtTimeInMins.Name = "txtTimeInMins";
             _txtTimeInMins.Size = new Size(266, 21);
             _txtTimeInMins.TabIndex = 7;
             _txtTimeInMins.Tag = "SystemScheduleOfRate.Price";
-            // 
+            //
             // Label1
-            // 
+            //
             _Label1.Location = new Point(13, 135);
             _Label1.Name = "Label1";
             _Label1.Size = new Size(177, 20);
             _Label1.TabIndex = 6;
             _Label1.Text = "Time (In Minutes)";
-            // 
+            //
             // btnAddSystemScheduleOfRates
-            // 
+            //
             _btnAddSystemScheduleOfRates.Location = new Point(139, 188);
             _btnAddSystemScheduleOfRates.Name = "btnAddSystemScheduleOfRates";
             _btnAddSystemScheduleOfRates.Size = new Size(200, 23);
             _btnAddSystemScheduleOfRates.TabIndex = 12;
             _btnAddSystemScheduleOfRates.Text = "Add System Schedule of Rates";
-            // 
+            //
             // btnAddUpdate
-            // 
+            //
             _btnAddUpdate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddUpdate.Location = new Point(368, 157);
             _btnAddUpdate.Name = "btnAddUpdate";
             _btnAddUpdate.Size = new Size(101, 23);
             _btnAddUpdate.TabIndex = 10;
             _btnAddUpdate.Text = "Add/Update";
-            // 
+            //
             // btnRemove
-            // 
+            //
             _btnRemove.Location = new Point(10, 186);
             _btnRemove.Name = "btnRemove";
             _btnRemove.Size = new Size(101, 23);
             _btnRemove.TabIndex = 11;
             _btnRemove.Text = "Remove";
-            // 
+            //
             // btnAddNew
-            // 
+            //
             _btnAddNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             _btnAddNew.Location = new Point(367, 187);
             _btnAddNew.Name = "btnAddNew";
             _btnAddNew.Size = new Size(101, 23);
             _btnAddNew.TabIndex = 13;
             _btnAddNew.Text = "Add New";
-            // 
+            //
             // dgRates
-            // 
+            //
             _dgRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgRates.DataMember = "";
@@ -563,9 +563,9 @@ namespace FSM
             _dgRates.Name = "dgRates";
             _dgRates.Size = new Size(460, 196);
             _dgRates.TabIndex = 14;
-            // 
+            //
             // cboScheduleOfRatesCategoryID
-            // 
+            //
             _cboScheduleOfRatesCategoryID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboScheduleOfRatesCategoryID.Cursor = Cursors.Hand;
             _cboScheduleOfRatesCategoryID.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -574,17 +574,17 @@ namespace FSM
             _cboScheduleOfRatesCategoryID.Size = new Size(266, 21);
             _cboScheduleOfRatesCategoryID.TabIndex = 1;
             _cboScheduleOfRatesCategoryID.Tag = "CustomerScheduleOfRate.ScheduleOfRatesCategoryID";
-            // 
+            //
             // lblScheduleOfRatesCategoryID
-            // 
+            //
             _lblScheduleOfRatesCategoryID.Location = new Point(11, 19);
             _lblScheduleOfRatesCategoryID.Name = "lblScheduleOfRatesCategoryID";
             _lblScheduleOfRatesCategoryID.Size = new Size(179, 20);
             _lblScheduleOfRatesCategoryID.TabIndex = 0;
             _lblScheduleOfRatesCategoryID.Text = "Schedule Of Rates Category";
-            // 
+            //
             // txtCode
-            // 
+            //
             _txtCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtCode.Location = new Point(194, 47);
             _txtCode.MaxLength = 50;
@@ -592,17 +592,17 @@ namespace FSM
             _txtCode.Size = new Size(266, 21);
             _txtCode.TabIndex = 3;
             _txtCode.Tag = "SystemScheduleOfRate.Code";
-            // 
+            //
             // lblCode
-            // 
+            //
             _lblCode.Location = new Point(11, 47);
             _lblCode.Name = "lblCode";
             _lblCode.Size = new Size(179, 20);
             _lblCode.TabIndex = 2;
             _lblCode.Text = "Code";
-            // 
+            //
             // txtDescription
-            // 
+            //
             _txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtDescription.Location = new Point(194, 76);
             _txtDescription.MaxLength = 0;
@@ -612,17 +612,17 @@ namespace FSM
             _txtDescription.Size = new Size(266, 53);
             _txtDescription.TabIndex = 5;
             _txtDescription.Tag = "CustomerScheduleOfRate.Description";
-            // 
+            //
             // lblDescription
-            // 
+            //
             _lblDescription.Location = new Point(11, 75);
             _lblDescription.Name = "lblDescription";
             _lblDescription.Size = new Size(179, 20);
             _lblDescription.TabIndex = 4;
             _lblDescription.Text = "Description";
-            // 
+            //
             // txtPrice
-            // 
+            //
             _txtPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _txtPrice.Location = new Point(194, 161);
             _txtPrice.MaxLength = 9;
@@ -630,17 +630,17 @@ namespace FSM
             _txtPrice.Size = new Size(160, 21);
             _txtPrice.TabIndex = 9;
             _txtPrice.Tag = "CustomerScheduleOfRate.Price";
-            // 
+            //
             // lblPrice
-            // 
+            //
             _lblPrice.Location = new Point(11, 160);
             _lblPrice.Name = "lblPrice";
             _lblPrice.Size = new Size(179, 20);
             _lblPrice.TabIndex = 8;
             _lblPrice.Text = "Price";
-            // 
+            //
             // UCCustomerScheduleOfRate
-            // 
+            //
             Controls.Add(_grpCustomerScheduleOfRate);
             Name = "UCCustomerScheduleOfRate";
             Size = new Size(481, 424);
@@ -652,7 +652,8 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void LoadForm(object sender, EventArgs e)
+
+        public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
             var argc = cboScheduleOfRatesCategoryID;
@@ -669,11 +670,12 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public event RecordsChangedEventHandler RecordsChanged;
+
+        public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
         public delegate void RecordsChangedEventHandler(DataView dv, Entity.Sys.Enums.PageViewing pageIn, bool FromASave, bool FromADelete, string extraText);
 
-        public event StateChangedEventHandler StateChanged;
+        public event IUserControl.StateChangedEventHandler StateChanged;
 
         public delegate void StateChangedEventHandler(int newID);
 
@@ -799,6 +801,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void SetupRatesDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgRates);
@@ -997,6 +1000,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Populate(int ID = 0)
         {
             RatesDataview = App.DB.CustomerScheduleOfRate.GetAll_For_CustomerID(ID);
