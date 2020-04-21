@@ -1765,7 +1765,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.Area.Area_AdjustOrderNumber(Conversions.ToInteger(SelectedAreaDataRow["AreaID"]), Conversions.ToInteger(SelectedAreaDataRow["OrderNumber"]), Conversions.ToInteger(SelectedAreaDataRow["OrderNumber"] + 1), Conversions.ToInteger(SelectedAreaDataRow["SectionID"]));
+            App.DB.Area.Area_AdjustOrderNumber(Conversions.ToInteger(SelectedAreaDataRow["AreaID"]), Conversions.ToInteger(SelectedAreaDataRow["OrderNumber"]), Conversions.ToInteger((int)SelectedAreaDataRow["OrderNumber"] + 1), Conversions.ToInteger(SelectedAreaDataRow["SectionID"]));
             AreaDataView = App.DB.Area.Area_Get_For_Section(Conversions.ToInteger(SelectedAreaDataRow["SectionID"]));
         }
 
@@ -1777,7 +1777,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.Area.Area_AdjustOrderNumber(Conversions.ToInteger(SelectedAreaDataRow["AreaID"]), Conversions.ToInteger(SelectedAreaDataRow["OrderNumber"]), Conversions.ToInteger(SelectedAreaDataRow["OrderNumber"] - 1), Conversions.ToInteger(SelectedAreaDataRow["SectionID"]));
+            App.DB.Area.Area_AdjustOrderNumber(Conversions.ToInteger(SelectedAreaDataRow["AreaID"]), Conversions.ToInteger(SelectedAreaDataRow["OrderNumber"]), Conversions.ToInteger((int)SelectedAreaDataRow["OrderNumber"] - 1), Conversions.ToInteger(SelectedAreaDataRow["SectionID"]));
             AreaDataView = App.DB.Area.Area_Get_For_Section(Conversions.ToInteger(SelectedAreaDataRow["SectionID"]));
         }
 
@@ -1789,7 +1789,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.Task.Task_AdjustOrderNumber(Conversions.ToInteger(SelectedTaskDataRow["TaskID"]), Conversions.ToInteger(SelectedTaskDataRow["OrderNumber"]), Conversions.ToInteger(SelectedTaskDataRow["OrderNumber"] + 1), Conversions.ToInteger(SelectedTaskDataRow["AreaID"]));
+            App.DB.Task.Task_AdjustOrderNumber(Conversions.ToInteger(SelectedTaskDataRow["TaskID"]), Conversions.ToInteger(SelectedTaskDataRow["OrderNumber"]), Conversions.ToInteger((int)SelectedTaskDataRow["OrderNumber"] + 1), Conversions.ToInteger(SelectedTaskDataRow["AreaID"]));
             TaskDataView = App.DB.Task.Task_Get_For_Area(SelectedTaskDataRow["AreaID"]);
         }
 
@@ -1801,7 +1801,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.Task.Task_AdjustOrderNumber(Conversions.ToInteger(SelectedTaskDataRow["TaskID"]), Conversions.ToInteger(SelectedTaskDataRow["OrderNumber"]), Conversions.ToInteger(SelectedTaskDataRow["OrderNumber"] - 1), Conversions.ToInteger(SelectedTaskDataRow["AreaID"]));
+            App.DB.Task.Task_AdjustOrderNumber(Conversions.ToInteger(SelectedTaskDataRow["TaskID"]), Conversions.ToInteger(SelectedTaskDataRow["OrderNumber"]), Conversions.ToInteger((int)SelectedTaskDataRow["OrderNumber"] - 1), Conversions.ToInteger(SelectedTaskDataRow["AreaID"]));
             TaskDataView = App.DB.Task.Task_Get_For_Area(SelectedTaskDataRow["AreaID"]);
         }
 
@@ -1813,7 +1813,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.SubTask.SubTask_AdjustOrderNumber(Conversions.ToInteger(SelectedSubTaskDataRow["SubTaskID"]), Conversions.ToInteger(SelectedSubTaskDataRow["OrderNumber"]), Conversions.ToInteger(SelectedSubTaskDataRow["OrderNumber"] + 1), Conversions.ToInteger(SelectedSubTaskDataRow["TaskID"]));
+            App.DB.SubTask.SubTask_AdjustOrderNumber(Conversions.ToInteger(SelectedSubTaskDataRow["SubTaskID"]), Conversions.ToInteger(SelectedSubTaskDataRow["OrderNumber"]), Conversions.ToInteger((int)SelectedSubTaskDataRow["OrderNumber"] + 1), Conversions.ToInteger(SelectedSubTaskDataRow["TaskID"]));
             SubTaskDataView = App.DB.SubTask.SubTask_Get_For_Task(Conversions.ToInteger(SelectedSubTaskDataRow["TaskID"]));
         }
 
@@ -1825,7 +1825,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.SubTask.SubTask_AdjustOrderNumber(Conversions.ToInteger(SelectedSubTaskDataRow["SubTaskID"]), Conversions.ToInteger(SelectedSubTaskDataRow["OrderNumber"]), Conversions.ToInteger(SelectedSubTaskDataRow["OrderNumber"] - 1), Conversions.ToInteger(SelectedSubTaskDataRow["TaskID"]));
+            App.DB.SubTask.SubTask_AdjustOrderNumber(Conversions.ToInteger(SelectedSubTaskDataRow["SubTaskID"]), Conversions.ToInteger(SelectedSubTaskDataRow["OrderNumber"]), Conversions.ToInteger((int)SelectedSubTaskDataRow["OrderNumber"] - 1), Conversions.ToInteger(SelectedSubTaskDataRow["TaskID"]));
             SubTaskDataView = App.DB.SubTask.SubTask_Get_For_Task(Conversions.ToInteger(SelectedSubTaskDataRow["TaskID"]));
         }
 

@@ -1,4 +1,10 @@
-﻿using System;
+﻿using FSM.Entity.Customers;
+using FSM.Entity.Engineers;
+using FSM.Entity.Sites;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -7,12 +13,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Customers;
-using FSM.Entity.Engineers;
-using FSM.Entity.Sites;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1176,7 +1176,8 @@ namespace FSM
                 oExcel.DisplayAlerts = false;
                 Microsoft.Office.Interop.Excel.Worksheet oWorksheet;
                 oExcel.Workbooks.Add(File.FullName);
-                oWorksheet = (Microsoft.Office.Interop.Excel.Worksheet)oExcel.Worksheets[1];
+                oWorksheet = oExcel.Worksheets.Item[1];
+
                 string strCom = " SELECT * FROM [" + oWorksheet.Name + "$]";
                 string strCon = "";
                 if ((File.Extension.Trim().ToLower() ?? "") == (".xls".ToLower() ?? ""))
@@ -1264,7 +1265,7 @@ namespace FSM
                     CreateJob(site);
                 }
 
-            nextrow:
+                nextrow:
                 ;
                 MoveProgressOn();
             }

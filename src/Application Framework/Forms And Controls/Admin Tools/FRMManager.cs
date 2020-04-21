@@ -2332,9 +2332,9 @@ namespace FSM
                     var switchExpr = Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboType));
                     switch (switchExpr)
                     {
-                        case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.VATCodes):
-                        case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.PartCategories):
-                        case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.CoverPlanDiscounts):
+                        case (int)(Entity.Sys.Enums.PickListTypes.VATCodes):
+                        case (int)(Entity.Sys.Enums.PickListTypes.PartCategories):
+                        case (int)(Entity.Sys.Enums.PickListTypes.CoverPlanDiscounts):
                             {
                                 lblPercentageRate.Text = "Perc Rate";
                                 lblPercentageRate.Visible = true;
@@ -2342,7 +2342,7 @@ namespace FSM
                                 break;
                             }
 
-                        case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.Engineer_Levels):
+                        case (int)(Entity.Sys.Enums.PickListTypes.Engineer_Levels):
                             {
                                 lblPercentageRate.Text = "Rate";
                                 lblPercentageRate.Visible = true;
@@ -2410,9 +2410,9 @@ namespace FSM
             var switchExpr = Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboType));
             switch (switchExpr)
             {
-                case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.VATCodes):
-                case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.PartCategories):
-                case Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.CoverPlanDiscounts):
+                case (int)(Entity.Sys.Enums.PickListTypes.VATCodes):
+                case (int)(Entity.Sys.Enums.PickListTypes.PartCategories):
+                case (int)(Entity.Sys.Enums.PickListTypes.CoverPlanDiscounts):
                     {
                         picklist.SetPercentageRate = txtPercentageRate.Text.Trim();
                         break;

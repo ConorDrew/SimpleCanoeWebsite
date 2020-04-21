@@ -1,12 +1,13 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -679,7 +680,7 @@ namespace FSM
             }
         }
 
-        private object SetAssets
+        private DataView SetAssets
         {
             set
             {
@@ -701,7 +702,7 @@ namespace FSM
             }
         }
 
-        private object SetAssetsDurations
+        private DataView SetAssetsDurations
         {
             set
             {
@@ -960,7 +961,7 @@ namespace FSM
             var newVisits = new ArrayList();
             for (int i = 0, loopTo = numOfMonths; i <= loopTo; i++)
 
-                assetsDV.Table.Columns.Add(Strings.Format(SelectedSiteDataRow["StartDate"].AddMonths(i), "MMM yy"));
+                assetsDV.Table.Columns.Add(Strings.Format(Helper.MakeDateTimeValid(SelectedSiteDataRow["StartDate"]).AddMonths(i), "MMM yy"));
             if (Conversions.ToBoolean((int)SelectedSiteDataRow["VisitFrequencyID"] > 0))
             {
                 if (Conversions.ToBoolean((DateTime)SelectedSiteDataRow["FirstVisitDate"] >= (DateTime)SelectedSiteDataRow["StartDate"] & (DateTime)SelectedSiteDataRow["FirstVisitDate"] <= (DateTime)SelectedSiteDataRow["EndDate"]))
@@ -1372,12 +1373,12 @@ namespace FSM
                     oEngVisit.StartDateTime = Conversions.ToDate(((ArrayList)matches[i])[0]);
                     if (numOfMintuesNeeded > workingDayMinutes)
                     {
-                        oEngVisit.EndDateTime = Conversions.ToDate(((ArrayList)matches[i])[0].AddHours(Math.Ceiling(workingDayMinutes / (double)60)));
-                        numOfMintuesNeeded -= workingDayMinutes;
+                        oEngVisit.EndDateTime = Conversions.ToDate(Helper.MakeDateTimeValid(((ArrayList)matches[i])[0]).AddHours(Math.Ceiling(workingDayMinutes / (double)60)));
+                        numOfMintuesNeeded -= (int)workingDayMinutes;
                     }
                     else
                     {
-                        oEngVisit.EndDateTime = Conversions.ToDate(((ArrayList)matches[i])[0].AddHours(Math.Ceiling((double)numOfMintuesNeeded / (double)60)));
+                        oEngVisit.EndDateTime = Conversions.ToDate(Helper.MakeDateTimeValid(((ArrayList)matches[i])[0]).AddHours(Math.Ceiling((double)numOfMintuesNeeded / (double)60)));
                     }
 
                     oEngVisit.SetStatusEnumID = Conversions.ToInteger(Entity.Sys.Enums.VisitStatus.Scheduled);

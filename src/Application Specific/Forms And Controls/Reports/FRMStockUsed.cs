@@ -1,11 +1,12 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1011,8 +1012,7 @@ namespace FSM
                 dgParts.UnSelect(itm);
             }
 
-            var exporter = new Entity.Sys.Exporting(exportData, "Stock Used Report");
-            exporter = null;
+            ExportHelper.Export(exportData, "Stock Used Report", Enums.ExportType.XLS);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

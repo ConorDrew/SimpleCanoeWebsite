@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Collections;
 
 namespace FSM.Entity
 {
@@ -34,7 +34,7 @@ namespace FSM.Entity
                     }
                     else
                     {
-                        Array spArr;
+                        string[] spArr;
                         spArr = oContract.ContractReference.Split('/');
                         if (spArr.Length == 1)
                         {
@@ -43,16 +43,16 @@ namespace FSM.Entity
                         else if (spArr.Length == 2)
                         {
                             // MUST BE NUMBER / CHAR
-                            if (Information.IsNumeric(spArr(0)))
+                            if (Information.IsNumeric(spArr[0]))
                             {
-                                if (Information.IsNumeric(spArr(1)))
+                                if (Information.IsNumeric(spArr[1]))
                                 {
                                     AddCriticalMessage(fmtStr);
                                 }
                             }
                             // OR
                             // MUST BE CHAR / NUMBER
-                            else if (!Information.IsNumeric(spArr(1)))
+                            else if (!Information.IsNumeric(spArr[1]))
                             {
                                 AddCriticalMessage(fmtStr);
                             }
@@ -60,11 +60,11 @@ namespace FSM.Entity
                         else if (spArr.Length == 3)
                         {
                             // MUST BE CHAR / NUMBER /CHAR
-                            if (!Information.IsNumeric(spArr(0)))
+                            if (!Information.IsNumeric(spArr[0]))
                             {
-                                if (Information.IsNumeric(spArr(1)))
+                                if (Information.IsNumeric(spArr[1]))
                                 {
-                                    if (Information.IsNumeric(spArr(2)))
+                                    if (Information.IsNumeric(spArr[2]))
                                     {
                                         AddCriticalMessage(fmtStr);
                                     }

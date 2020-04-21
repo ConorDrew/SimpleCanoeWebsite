@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using Microsoft.VisualBasic.CompilerServices;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System.Collections;
 
 namespace FSM.Entity
 {
@@ -10,12 +10,10 @@ namespace FSM.Entity
         {
             public void Validate(QuoteOrderProduct oQuoteOrderProduct)
             {
-
                 // make sure that contact object is valid
                 if (oQuoteOrderProduct.Errors.Count > 0)
                 {
-                    DictionaryEntry de;
-                    foreach (var de in oQuoteOrderProduct.Errors)
+                    foreach (DictionaryEntry de in oQuoteOrderProduct.Errors)
                         AddCriticalMessage(Conversions.ToString(de.Value));
                 }
 

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Windows.Forms;
-using FSM.Entity.Engineers;
+﻿using FSM.Entity.Engineers;
 using FSM.Entity.EngineerVisits;
 using FSM.Entity.JobOfWorks;
 using FSM.Entity.Jobs;
@@ -14,6 +7,13 @@ using FSM.Entity.Sys;
 using FSM.Entity.Users;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 
 namespace FSM
 {
@@ -1727,7 +1727,7 @@ namespace FSM
                     };
                     if (Job?.JobID > 0)
                     {
-                        Job.JobOfWorks[Job.JobOfWorks.Count - 1]?.EngineerVisits.Add(ev);
+                        ((JobOfWork)Job.JobOfWorks[Job.JobOfWorks.Count - 1])?.EngineerVisits.Add(ev);
                         Job = App.DB.Job.Update(Job);
                     }
                     else

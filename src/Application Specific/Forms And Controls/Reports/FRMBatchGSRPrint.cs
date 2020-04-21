@@ -1,12 +1,13 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1700,8 +1701,7 @@ namespace FSM
                 }
             }
 
-            var exporter = new Entity.Sys.Exporting(dtExport, "Gas Summary Spec");
-            exporter = null;
+            ExportHelper.Export(dtExport, "Gas Summary Spec", Enums.ExportType.XLS);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

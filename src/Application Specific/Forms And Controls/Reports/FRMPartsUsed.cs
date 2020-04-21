@@ -1,9 +1,9 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
-using FSM.Entity.Sys;
+﻿using FSM.Entity.Sys;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace FSM
 {
@@ -467,8 +467,7 @@ namespace FSM
                 dgPartsUsed.UnSelect(itm);
             }
 
-            var exporter = new Exporting(dt, "Parts Used Report");
-            exporter = null;
+            ExportHelper.Export(dt, "Parts Used Report", Enums.ExportType.XLS);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -7,8 +9,6 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -122,7 +122,7 @@ namespace FSM
 
             if (forEngineer != 0)
             {
-                var visitDialog = new FrmVisit(forEngineer, forDate, Entity.Sys.Helper.MakeIntegerValid(scheduleRow["SummedSOR"]), AMPMEngineerVisitID, copy);
+                var visitDialog = new frmVisit(forEngineer, forDate, Entity.Sys.Helper.MakeIntegerValid(scheduleRow["SummedSOR"]), AMPMEngineerVisitID, copy);
                 if (visitDialog.ShowDialog() == DialogResult.OK)
                 {
                     @continue = true;

@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -769,73 +769,73 @@ namespace FSM
 
         private void Populate()
         {
-            Text = Conversions.ToString("Viewing Engineer : " + (DataTable)Engineer.ElementAtOrDefault(0)["Name"]);
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["Name"]))
+            Text = Conversions.ToString("Viewing Engineer : " + (DataTable)Engineer.Rows[0]["Name"]);
+            if (!Information.IsDBNull(Engineer.Rows[0]["Name"]))
             {
-                txtName.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["Name"]);
+                txtName.Text = Conversions.ToString(Engineer.Rows[0]["Name"]);
             }
             else
             {
                 txtName.Text = "<<No Name set>>";
             }
 
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["TelephoneNum"]))
+            if (!Information.IsDBNull(Engineer.Rows[0]["TelephoneNum"]))
             {
                 txtPhone.Text = "<<No Phone Number Set>>";
             }
             else
             {
-                txtPhone.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["TelephoneNum"]);
+                txtPhone.Text = Conversions.ToString(Engineer.Rows[0]["TelephoneNum"]);
             }
 
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["Region"]))
+            if (!Information.IsDBNull(Engineer.Rows[0]["Region"]))
             {
-                txtRegion.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["Region"]);
+                txtRegion.Text = Conversions.ToString(Engineer.Rows[0]["Region"]);
             }
             else
             {
                 txtRegion.Text = "<<No Region set>>";
             }
 
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["Manager"]))
+            if (!Information.IsDBNull(Engineer.Rows[0]["Manager"]))
             {
-                txtManager.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["Manager"]);
+                txtManager.Text = Conversions.ToString(Engineer.Rows[0]["Manager"]);
             }
             else
             {
                 txtManager.Text = "<<No Manager set>>";
             }
 
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["Department"]))
+            if (!Information.IsDBNull(Engineer.Rows[0]["Department"]))
             {
-                txtDepartment.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["Department"]);
+                txtDepartment.Text = Conversions.ToString(Engineer.Rows[0]["Department"]);
             }
             else
             {
                 txtDepartment.Text = "<<No Department set>>";
             }
 
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["EngineerGroup"]))
+            if (!Information.IsDBNull(Engineer.Rows[0]["EngineerGroup"]))
             {
-                txtEngineerGroup.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["EngineerGroup"]);
+                txtEngineerGroup.Text = Conversions.ToString(Engineer.Rows[0]["EngineerGroup"]);
             }
             else
             {
                 txtEngineerGroup.Text = "<<No Engineer Group set>>";
             }
 
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["PostCodes"]))
+            if (!Information.IsDBNull(Engineer.Rows[0]["PostCodes"]))
             {
-                txtPostcode.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["PostCodes"]);
+                txtPostcode.Text = Conversions.ToString(Engineer.Rows[0]["PostCodes"]);
             }
             else
             {
                 txtPostcode.Text = "<<No PostCodes set >>";
             }
 
-            if (!Information.IsDBNull(Engineer.ElementAtOrDefault(0)["Qualifications"]))
+            if (!Information.IsDBNull(Engineer.Rows[0]["Qualifications"]))
             {
-                txtQual.Text = Conversions.ToString(Engineer.ElementAtOrDefault(0)["Qualifications"]);
+                txtQual.Text = Conversions.ToString(Engineer.Rows[0]["Qualifications"]);
             }
             else
             {

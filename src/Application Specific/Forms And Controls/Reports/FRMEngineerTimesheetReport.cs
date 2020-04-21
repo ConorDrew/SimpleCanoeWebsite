@@ -1,11 +1,12 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1313,7 +1314,7 @@ dgEngineers.DataMember];
                 var drRw = dtTimes.Select(Conversions.ToString(Conversions.ToString("Engineer='" + SelectedJobDataRow["Engineer"] + "' AND Day='" + Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + "' AND Type='") + SelectedJobDataRow["TimeSheetType"] + "'"));
                 if (drRw.Length > 0)
                 {
-                    drRw[0]["Time"] += DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(SelectedJobDataRow["EndDateTime"], "dd/MM/yyyy HH:mm")));
+                    drRw[0]["Time"] = (long)drRw[0]["Time"] + DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(SelectedJobDataRow["StartDateTime"]), Helper.MakeDateTimeValid(SelectedJobDataRow["EndDateTime"]));
                 }
                 else
                 {
@@ -1838,7 +1839,7 @@ dgEngineers.DataMember];
                 var drRw = dtTimes.Select(Conversions.ToString(Conversions.ToString("Engineer='" + SelectedJobDataRow["Engineer"] + "' AND Day='" + Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + "' AND Type='") + SelectedJobDataRow["TimeSheetType"] + "'"));
                 if (drRw.Length > 0)
                 {
-                    drRw[0]["Time"] += DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(SelectedJobDataRow["EndDateTime"], "dd/MM/yyyy HH:mm")));
+                    drRw[0]["Time"] = (long)drRw[0]["Time"] + DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(SelectedJobDataRow["StartDateTime"]), Helper.MakeDateTimeValid(SelectedJobDataRow["EndDateTime"]));
                 }
                 else
                 {
@@ -1947,7 +1948,7 @@ dgEngineers.DataMember];
                                     }
                                 }
 
-                                MinsTally += DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["StartDay"]), "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["EndDay"]), "dd/MM/yyyy HH:mm"))) - allTotal;
+                                MinsTally += (int)DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(drUnAl[0]["StartDay"]), Helper.MakeDateTimeValid(drUnAl[0]["EndDay"])) - allTotal;
                                 drUnallocated = dtUnallocated.NewRow();
                                 drUnallocated["Day"] = Strings.Format(theDay["Day"], "dd/MM/yyyy");
                                 drUnallocated["Time"] = DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["StartDay"]), "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["EndDay"]), "dd/MM/yyyy HH:mm"))) - allTotal;
@@ -1955,7 +1956,7 @@ dgEngineers.DataMember];
                             }
                             else
                             {
-                                MinsTally += DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["StartDay"]), "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["EndDay"]), "dd/MM/yyyy HH:mm")));
+                                MinsTally += (int)DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(drUnAl[0]["StartDay"]), Helper.MakeDateTimeValid(drUnAl[0]["EndDay"]));
                             }
                         }
                     }
@@ -2025,7 +2026,7 @@ dgEngineers.DataMember];
                             }
                         }
 
-                        MinsTally += DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["StartDay"]), "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["EndDay"]), "dd/MM/yyyy HH:mm"))) - allTotal;
+                        MinsTally += (int)DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(drUnAl[0]["StartDay"]), Helper.MakeDateTimeValid(drUnAl[0]["EndDay"])) - allTotal;
                         drUnallocated = dtUnallocated.NewRow();
                         drUnallocated["Day"] = Strings.Format(theDay["Day"], "dd/MM/yyyy");
                         drUnallocated["Time"] = DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["StartDay"]), "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["EndDay"]), "dd/MM/yyyy HH:mm"))) - allTotal;
@@ -2033,7 +2034,7 @@ dgEngineers.DataMember];
                     }
                     else
                     {
-                        MinsTally += DateAndTime.DateDiff(DateInterval.Minute, Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["StartDay"]), "dd/MM/yyyy HH:mm")), Conversions.ToDate(Strings.Format(Conversions.ToDate(drUnAl[0]["EndDay"]), "dd/MM/yyyy HH:mm")));
+                        MinsTally += (int)DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(drUnAl[0]["StartDay"]), Helper.MakeDateTimeValid(drUnAl[0]["EndDay"]));
                     }
                 }
             }

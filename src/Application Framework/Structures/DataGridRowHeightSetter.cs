@@ -52,7 +52,6 @@ namespace FSM
             var mi = dg.GetType().GetMethod("get_DataGridRows", BindingFlags.FlattenHierarchy | BindingFlags.IgnoreCase | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
             Array dgra = (Array)mi.Invoke(dg, null);
             rowObjects = new ArrayList();
-            object dgrr;
             foreach (var dgrr in dgra)
             {
                 if (dgrr.ToString().EndsWith("DataGridRelationshipRow") == true)
