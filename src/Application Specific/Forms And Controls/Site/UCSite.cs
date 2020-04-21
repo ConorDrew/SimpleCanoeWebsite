@@ -6786,25 +6786,25 @@ namespace FSM
             var switchExpr = Conversions.ToInteger(SelectedJobDataRow["JobDefinitionEnumID"]);
             switch (switchExpr)
             {
-                case Conversions.ToInteger(Enums.JobDefinition.Quoted):
+                case (int)(Enums.JobDefinition.Quoted):
                     {
                         btnRemoveJob.Enabled = true;
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.JobDefinition.Contract):
+                case (int)(Enums.JobDefinition.Contract):
                     {
                         btnRemoveJob.Enabled = true;
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.JobDefinition.Callout):
+                case (int)(Enums.JobDefinition.Callout):
                     {
                         btnRemoveJob.Enabled = true;
                         break;
                     }
 
-                case Conversions.ToInteger(Enums.JobDefinition.Misc):
+                case (int)(Enums.JobDefinition.Misc):
                     {
                         btnRemoveJob.Enabled = true;
                         break;
