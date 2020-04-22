@@ -644,7 +644,9 @@ namespace FSM.Entity
             public static Stream GetStream(string FileName)
             {
                 var assem = Assembly.GetExecutingAssembly();
-                return assem.GetManifestResourceStream(App.TheSystem.Product + "." + FileName);
+                string[] resources = assem.GetManifestResourceNames();
+                string file = resources.Where(x => x.Contains(FileName)).FirstOrDefault();
+                return assem.GetManifestResourceStream(file);
             }
 
             // Start any process on the client machine by filename
