@@ -13,10 +13,11 @@ namespace FSM
     {
         static App()
         {
+            TheSystem = new Entity.Sys.SystemData();
             MouseHanlderEvent = new MouseHandler();
         }
 
-        public static Entity.Sys.SystemData TheSystem = new Entity.Sys.SystemData();
+        public static Entity.Sys.SystemData TheSystem;
         public static FRMLogin LoginForm;
         public static FRMMain MainForm;
         public static Entity.Sys.Database DB;

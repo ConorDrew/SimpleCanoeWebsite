@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using FSM.Entity.Jobs;
+using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 using System;
 using System.Collections.Generic;
@@ -152,52 +153,34 @@ namespace FSM.Entity
                 return Math.Floor(number * Math.Pow(10, decimalPlaces)) / Math.Pow(10, decimalPlaces);
             }
 
-            public static bool MakeBooleanValid(object o)
+            public static bool MakeBooleanValid(object o, bool nullValueToReturnFalse = true)
             {
-                try
-                {
-                    var switchExpr = App.TheSystem.DataBaseServerType;
-                    switch (switchExpr)
-                    {
-                        case Enums.DatabaseSystems.MySQL:
-                            {
-                                if (o == DBNull.Value)
-                                {
-                                    return false;
-                                }
-                                else
-                                {
-                                    return Conversions.ToBoolean(Conversions.ToSByte(o).ToString());
-                                }
-
-                                break;
-                            }
-
-                        case Enums.DatabaseSystems.Microsoft_SQL_Server:
-                            {
-                                if (o is null)
-                                {
-                                    return false;
-                                }
-                                else if (o == DBNull.Value)
-                                {
-                                    return false;
-                                }
-                                else
-                                {
-                                    return Conversions.ToBoolean(o);
-                                }
-
-                                break;
-                            }
-                    }
-                }
-                catch
+                if (o?.ToString() == "0")
                 {
                     return false;
                 }
 
-                return default;
+                if (o?.ToString() == "1")
+                {
+                    return true;
+                }
+
+                if (nullValueToReturnFalse && o == null)
+                {
+                    return false;
+                }
+
+                if (nullValueToReturnFalse && o == DBNull.Value)
+                {
+                    return false;
+                }
+
+                if (o != null && bool.TryParse(o.ToString(), out bool boolValue))
+                {
+                    return boolValue;
+                }
+
+                throw new Exception();
             }
 
             public static DateTime MakeDateTimeValid(object o)
@@ -309,7 +292,7 @@ namespace FSM.Entity
                     var row = dt.NewRow();
                     foreach (PropertyInfo field in fields)
                     {
-                        row[field.Name] = item.GetType().GetProperty(field.Name);
+                        row[field.Name] = item.GetType().GetProperty(field.Name).GetValue(item);
                     }
 
                     dt.Rows.Add(row);
@@ -633,18 +616,18 @@ namespace FSM.Entity
 
             public static string GetTextResource(string FileName)
             {
-                var assem = Assembly.GetExecutingAssembly();
-                var resStream = assem.GetManifestResourceStream(App.TheSystem.Product + "." + FileName);
-                var reader = new StreamReader(resStream);
-                string returnText = reader.ReadToEnd();
-                resStream.Close();
-                return returnText.Trim();
+                using (var reader = new StreamReader(GetStream(FileName)))
+                {
+                    return reader.ReadToEnd().Trim();
+                }
+                throw new Exception("No File Found!");
             }
 
             public static Stream GetStream(string FileName)
             {
                 var assem = Assembly.GetExecutingAssembly();
                 string[] resources = assem.GetManifestResourceNames();
+                //TODO distinct comparison
                 string file = resources.Where(x => x.Contains(FileName)).FirstOrDefault();
                 return assem.GetManifestResourceStream(file);
             }

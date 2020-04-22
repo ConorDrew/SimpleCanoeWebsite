@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.CompilerServices;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic.CompilerServices;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -320,20 +321,12 @@ namespace FSM
         // Place a prefix on the item to indicate the fact that it is a deleted record
         private static string SetComboDeletedPostfix(DataRow DR, string DisplayMember)
         {
-            try
+            if (DR.Table.Columns.Contains("Deleted") && Helper.MakeBooleanValid(DR["Deleted"]))
             {
-                if (Entity.Sys.Helper.MakeBooleanValid(DR["Deleted"]))
-                {
-                    return Conversions.ToString(DR[DisplayMember] + App.TheSystem.DeletedPostfix);
-                }
-                else
-                {
-                    return Conversions.ToString(DR[DisplayMember]);
-                }
+                return Conversions.ToString(DR[DisplayMember] + App.TheSystem.DeletedPostfix);
             }
-            catch
+            else
             {
-                // We know the table does not have a 'Deleted' column in it
                 return Conversions.ToString(DR[DisplayMember]);
             }
         }
