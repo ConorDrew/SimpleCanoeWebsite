@@ -14740,8 +14740,8 @@ namespace FSM
                     WarningNoticeToolStripMenuItem.Visible = true;
             }
 
-            int jobLockUserId = JobLock?.UserID ?? App.loggedInUser.UserID;
-            if (jobLockUserId != App.loggedInUser.UserID)
+            int? jobLockUserId = JobLock?.UserID;
+            if (jobLockUserId.HasValue && (jobLockUserId.Value != App.loggedInUser.UserID))
             {
                 string message = "The job is currently being viewed by: " + JobLock.NameOfUserWhoLocked;
                 MessageBox.Show(message, "READ ONLY - JOB LOCKED!", MessageBoxButtons.OK, MessageBoxIcon.Information);

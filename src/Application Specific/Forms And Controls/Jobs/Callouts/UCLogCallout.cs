@@ -2316,12 +2316,12 @@ namespace FSM
                 chkOTI.Checked = true;
             }
 
-            int jobLockUserId = OnForm?.JobLock?.UserID ?? App.loggedInUser.UserID;
-            if (jobLockUserId != App.loggedInUser.UserID)
+            int? jobLockUserId = OnForm?.JobLock?.UserID;
+            if (jobLockUserId.HasValue && (jobLockUserId.Value != App.loggedInUser.UserID))
             {
                 OnForm.MakeReadOnly();
             }
-
+                        
             if (Job.JobID == 0)
             {
                 if (!Helper.IsStringEmpty(Site.ContactAlerts))
