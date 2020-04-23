@@ -96,11 +96,11 @@ namespace FSM
 
         public static string get_GetSelectedItemValue(ComboBox comboIn)
         {
-            try
+            if (comboIn.Items.Count > 0)
             {
                 return ((Combo)comboIn.SelectedItem).Value;
             }
-            catch
+            else
             {
                 return 0.ToString();
             }

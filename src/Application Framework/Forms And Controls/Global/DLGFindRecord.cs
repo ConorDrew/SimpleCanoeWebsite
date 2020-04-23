@@ -20,6 +20,8 @@ namespace FSM
             InitializeComponent();
 
             // Add any initialization after the InitializeComponent() call
+
+            base.Load += DLGFindRecord_Load;
         }
 
         public DLGFindRecord(System.Data.SqlClient.SqlTransaction trans) : base()
