@@ -1333,7 +1333,7 @@ namespace FSM
                             App.DB.PartTransaction.PartTransaction_Consolidate_All(Conversions.ToInteger(row["LocationID"]), Conversions.ToInteger(row["PartID"]));
                             var oPartTransaction = new Entity.PartTransactions.PartTransaction();
                             oPartTransaction.SetLocationID = row["LocationID"];
-                            oPartTransaction.SetAmount = (double)row["actualAmount"] - (double)row["Amount"];
+                            oPartTransaction.SetAmount = Convert.ToInt32(row["actualAmount"]) - (int)row["Amount"];
                             oPartTransaction.SetPartID = row["PartID"];
                             oPartTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockAdjustment);
                             App.DB.PartTransaction.Insert(oPartTransaction);
@@ -1343,7 +1343,7 @@ namespace FSM
                             App.DB.ProductTransaction.ProductTransaction_Consolidate_All(Conversions.ToInteger(row["LocationID"]), Conversions.ToInteger(row["ProductID"]));
                             var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
                             oProductTransaction.SetLocationID = row["LocationID"];
-                            oProductTransaction.SetAmount = (double)row["actualAmount"] - (double)row["Amount"];
+                            oProductTransaction.SetAmount = Convert.ToInt32(row["actualAmount"]) - (int)row["Amount"];
                             oProductTransaction.SetProductID = row["ProductID"];
                             oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockAdjustment);
                             App.DB.ProductTransaction.Insert(oProductTransaction);
@@ -1354,7 +1354,7 @@ namespace FSM
                             var oStockTakeAudit = new Entity.StockTakeAudit();
                             oStockTakeAudit.SetPartID = row["PartID"];
                             oStockTakeAudit.SetOriginalAmount = row["Amount"];
-                            oStockTakeAudit.SetNewAmount = row["actualAmount"];
+                            oStockTakeAudit.SetNewAmount = Convert.ToInt32(row["actualAmount"]);
                             oStockTakeAudit.SetReasonChange = Conversions.ToInteger(row["Reason"]);
                             oStockTakeAudit.SetLocationID = row["LocationID"];
                             App.DB.StockTakeAudit.Insert(oStockTakeAudit);

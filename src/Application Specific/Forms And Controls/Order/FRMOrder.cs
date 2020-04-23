@@ -128,55 +128,58 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pnlMain = new Panel();
-            SuspendLayout();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pnlMain = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
             //
-            // btnSave
+            // _btnSave
             //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Location = new Point(8, 612);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 25);
-            _btnSave.TabIndex = 2;
-            _btnSave.Text = "Save";
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Location = new System.Drawing.Point(8, 612);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 25);
+            this._btnSave.TabIndex = 2;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             //
-            // btnClose
+            // _btnClose
             //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(75, 613);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 25);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(75, 613);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 25);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
             //
-            // pnlMain
+            // _pnlMain
             //
-            _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlMain.Location = new Point(0, 32);
-            _pnlMain.Name = "pnlMain";
-            _pnlMain.Size = new Size(825, 570);
-            _pnlMain.TabIndex = 1;
+            this._pnlMain.AutoSize = true;
+            this._pnlMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this._pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlMain.Location = new System.Drawing.Point(0, 0);
+            this._pnlMain.Name = "_pnlMain";
+            this._pnlMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
+            this._pnlMain.Size = new System.Drawing.Size(833, 650);
+            this._pnlMain.TabIndex = 1;
             //
             // FRMOrder
             //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(833, 650);
-            Controls.Add(_btnClose);
-            Controls.Add(_btnSave);
-            Controls.Add(_pnlMain);
-            MinimumSize = new Size(841, 684);
-            Name = "FRMOrder";
-            Text = "Order : ID {0}";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_pnlMain, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            ResumeLayout(false);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(833, 650);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._pnlMain);
+            this.MinimumSize = new System.Drawing.Size(841, 684);
+            this.Name = "FRMOrder";
+            this.Text = "Order : ID {0}";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Controls.SetChildIndex(this._pnlMain, 0);
+            this.Controls.SetChildIndex(this._btnSave, 0);
+            this.Controls.SetChildIndex(this._btnClose, 0);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

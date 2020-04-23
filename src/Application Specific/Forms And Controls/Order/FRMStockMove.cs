@@ -1153,8 +1153,7 @@ namespace FSM
                     }
                 }
             }
-
-            if (Conversions.ToBoolean(!mulitple & CurrentQty > (int)SelectedStockDataRow["Amount"]))
+            if (!mulitple & CurrentQty > (int)SelectedStockDataRow["Amount"])
             {
                 if (App.ShowMessage("You are attempting to move more than there is available" + Constants.vbCrLf + "This will result in negative stock" + Constants.vbCrLf + "Are you sure you wish to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
@@ -1263,12 +1262,12 @@ namespace FSM
             dt.TableName = Entity.Sys.Enums.TableNames.tblStock.ToString();
             dt.Columns.Add(new DataColumn("Select", typeof(bool)));
             dt.Columns.Add(new DataColumn("Type"));
-            dt.Columns.Add(new DataColumn("ID"));
-            dt.Columns.Add(new DataColumn("LocationID"));
+            dt.Columns.Add(new DataColumn("ID", typeof(int)));
+            dt.Columns.Add(new DataColumn("LocationID", typeof(int)));
             dt.Columns.Add(new DataColumn("Description"));
             dt.Columns.Add(new DataColumn("Number"));
             dt.Columns.Add(new DataColumn("Reference"));
-            dt.Columns.Add(new DataColumn("Amount"));
+            dt.Columns.Add(new DataColumn("Amount", typeof(int)));
             DataRow r;
             if (!(WarehouseID == 0))
             {

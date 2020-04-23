@@ -55,6 +55,8 @@ namespace FSM
 
             chkDoNotConsolidate.Checked = true;
             // Add any initialization after the InitializeComponent() call
+
+            base.Load += UCOrder_Load;
         }
 
         // UserControl overrides dispose to clean up the component list.
@@ -3285,1667 +3287,1698 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var DataGridViewCellStyle1 = new DataGridViewCellStyle();
-            var DataGridViewCellStyle2 = new DataGridViewCellStyle();
-            var DataGridViewCellStyle3 = new DataGridViewCellStyle();
-            var DataGridViewCellStyle4 = new DataGridViewCellStyle();
-            var DataGridViewCellStyle5 = new DataGridViewCellStyle();
-            var DataGridViewCellStyle6 = new DataGridViewCellStyle();
-            _grpOrder = new GroupBox();
-            _btnApproveOrder = new Button();
-            _btnApproveOrder.Click += new EventHandler(btnApproveOrder_Click);
-            _btnUpdateOrderRef = new Button();
-            _btnUpdateOrderRef.Click += new EventHandler(btnUpdateOrderRef_Click);
-            _cboDept = new ComboBox();
-            _lblOrderBalance = new Label();
-            _lblOrderBalanceLabel = new Label();
-            _chkRevertStatus = new CheckBox();
-            _lblOrderTotalLabel = new Label();
-            _lblOrderTotal = new Label();
-            _chkDoNotConsolidate = new CheckBox();
-            _chkDeadlineNA = new CheckBox();
-            _chkDeadlineNA.CheckedChanged += new EventHandler(chkDeadlineNA_CheckedChanged);
-            _dtpDeliveryDeadline = new DateTimePicker();
-            _Label6 = new Label();
-            _cboOrderStatus = new ComboBox();
-            _cboOrderStatus.SelectedIndexChanged += new EventHandler(cboOrderStatus_SelectedIndexChanged);
-            _Label19 = new Label();
-            _dtpDatePlaced = new DateTimePicker();
-            _lblDatePlaced = new Label();
-            _txtOrderReference = new TextBox();
-            _lblOrderReference = new Label();
-            _tcOrderDetails = new TabControl();
-            _tcOrderDetails.SelectedIndexChanged += new EventHandler(tcOrderDetails_SelectedIndexChanged);
-            _tabDetails = new TabPage();
-            _btnRelatedJob = new Button();
-            _btnRelatedJob.Click += new EventHandler(btnRelatedJob_Click);
-            _pnlDetails = new Panel();
-            _lblOrderTypeID = new Label();
-            _cboOrderTypeID = new ComboBox();
-            _cboOrderTypeID.SelectedIndexChanged += new EventHandler(cboOrderTypeID_SelectedIndexChanged);
-            _btnCharges = new Button();
-            _btnCharges.Click += new EventHandler(btnCharges_Click);
-            _tabParts = new TabPage();
-            _grpPartSearch = new GroupBox();
-            _btnAddNewPart = new Button();
-            _btnAddNewPart.Click += new EventHandler(btnAddNewPart_Click);
-            _cboPartLocation = new ComboBox();
-            _cboPartLocation.SelectedIndexChanged += new EventHandler(cboPartLocation_SelectedIndexChanged);
-            _btnPartSearch = new Button();
-            _btnPartSearch.Click += new EventHandler(btnPartSearch_Click);
-            _txtPartSearch = new TextBox();
-            _txtPartSearch.KeyDown += new KeyEventHandler(txtPartSearch_KeyDown);
-            _grpAvailableParts = new GroupBox();
-            _btnCreatePartRequest = new Button();
-            _btnCreatePartRequest.Click += new EventHandler(btnCreatePartRequest_Click);
-            _Label7 = new Label();
-            _txtPartBuyPrice = new TextBox();
-            _Label3 = new Label();
-            _txtPartQuantity = new TextBox();
-            _btnAddPart = new Button();
-            _btnAddPart.Click += new EventHandler(btnAddPart_Click);
-            _tabProducts = new TabPage();
-            _grpProductsAvailable = new GroupBox();
-            _btnCreateProductPriceRequest = new Button();
-            _btnCreateProductPriceRequest.Click += new EventHandler(btnCreateProductPriceRequest_Click);
-            _txtProductSellPrice = new TextBox();
-            _Label5 = new Label();
-            _txtProductBuyPrice = new TextBox();
-            _Label4 = new Label();
-            _Label1 = new Label();
-            _txtProductQuantity = new TextBox();
-            _dgProduct = new DataGrid();
-            _dgProduct.DoubleClick += new EventHandler(dgProduct_DoubleClick);
-            _dgProduct.Click += new EventHandler(dgProduct_Click);
-            _dgProduct.CurrentCellChanged += new EventHandler(dgProduct_Click);
-            _dgProduct.Click += new EventHandler(dgProduct_Click);
-            _dgProduct.CurrentCellChanged += new EventHandler(dgProduct_Click);
-            _btnAddProduct = new Button();
-            _btnAddProduct.Click += new EventHandler(btnAddProduct_Click);
-            _grpProductSearch = new GroupBox();
-            _btnAddNewProduct = new Button();
-            _btnAddNewProduct.Click += new EventHandler(btnAddNewProduct_Click);
-            _cboProductLocation = new ComboBox();
-            _cboProductLocation.SelectedIndexChanged += new EventHandler(cboProductLocation_SelectedIndexChanged);
-            _btnProductSearch = new Button();
-            _btnProductSearch.Click += new EventHandler(btnProductSearch_Click);
-            _txtProductSearch = new TextBox();
-            _txtProductSearch.KeyDown += new KeyEventHandler(txtProductSearch_KeyDown);
-            _tabItemsIncluded = new TabPage();
-            _GroupBox3 = new GroupBox();
-            _nudItemQty = new NumericUpDown();
-            _btnEngineerReceived = new Button();
-            _btnEngineerReceived.Click += new EventHandler(btnEngineerReceived_Click);
-            _btnReceiveAll = new Button();
-            _btnReceiveAll.Click += new EventHandler(btnReceiveAll_Click);
-            _lblItemQty = new Label();
-            _btnItemQtyUpdate = new Button();
-            _btnItemQtyUpdate.Click += new EventHandler(btnItemRemove_Click);
-            _dgItemsIncluded = new DataGrid();
-            _dgItemsIncluded.DoubleClick += new EventHandler(dgProduct_Click);
-            _dgItemsIncluded.Click += new EventHandler(dgItemsIncluded_Click);
-            _tabPartPriceReq = new TabPage();
-            _GroupBox2 = new GroupBox();
-            _btnUpdatePartPriceRequest = new Button();
-            _btnUpdatePartPriceRequest.Click += new EventHandler(btnUpdatePartPriceRequest_Click);
-            _dgPriceRequests = new DataGrid();
-            _dgPriceRequests.Click += new EventHandler(dgPriceRequests_Click);
-            _dgPriceRequests.CurrentCellChanged += new EventHandler(dgPriceRequests_Click);
-            _dgPriceRequests.Click += new EventHandler(dgPriceRequests_Click);
-            _dgPriceRequests.CurrentCellChanged += new EventHandler(dgPriceRequests_Click);
-            _tabDocuments = new TabPage();
-            _pnlDocuments = new Panel();
-            _btnEmail = new Button();
-            _btnEmail.Click += new EventHandler(btnEmail_Click);
-            _cboPrintType = new ComboBox();
-            _btnPrint = new Button();
-            _btnPrint.Click += new EventHandler(btnPrint_Click);
-            _Label8 = new Label();
-            _tabInvoices = new TabPage();
-            _grpReceivedInvoices = new GroupBox();
-            _btnDeleteSupplierInvoice = new Button();
-            _btnDeleteSupplierInvoice.Click += new EventHandler(btnDeleteSupplierInvoice_Click);
-            _btnUpdateSupplierInvoice = new Button();
-            _btnUpdateSupplierInvoice.Click += new EventHandler(btnUpdateSupplierInvoice_Click);
-            _txtTotalAmount = new TextBox();
-            _lblTotalValue = new Label();
-            _txtVATAmount = new TextBox();
-            _txtVATAmount.LostFocus += new EventHandler(txtVATAmount_LostFocus);
-            _txtNominalCodeNew = new TextBox();
-            _Label16 = new Label();
-            _lblVatValue = new Label();
-            _txtGoodsAmount = new TextBox();
-            _txtGoodsAmount.LostFocus += new EventHandler(txtGoodsAmount_TextChanged);
-            _cboInvoiceTaxCodeNew = new ComboBox();
-            _cboInvoiceTaxCodeNew.SelectedIndexChanged += new EventHandler(cboTaxCode_SelectedIndexChanged);
-            _txtExtraReferenceNew = new TextBox();
-            _Label13 = new Label();
-            _lblGoodsValue = new Label();
-            _Label15 = new Label();
-            _lblInvoiceDate = new Label();
-            _txtSupplierInvoiceRefNew = new TextBox();
-            _lblSupplierRef = new Label();
-            _btnAddSupplierInvoice = new Button();
-            _btnAddSupplierInvoice.Click += new EventHandler(btnAddSupplierInvoice_Click);
-            _dgvReceivedInvoices = new DataGridView();
-            _dgvReceivedInvoices.CellClick += new DataGridViewCellEventHandler(dgvReceivedInvoices_CellClick);
-            _dtpSupplierInvoiceDateNew = new DateTimePicker();
-            _cboReadySageNew = new CheckBox();
-            _TabPage1 = new TabPage();
-            _GroupBox4 = new GroupBox();
-            _Button1 = new Button();
-            _Button1.Click += new EventHandler(Button1_Click);
-            _CheckBox1 = new CheckBox();
-            _txtCreditExRef = new TextBox();
-            _Label21 = new Label();
-            _btnCreditDelete = new Button();
-            _btnCreditDelete.Click += new EventHandler(btnDeleteCredit_Click);
-            _txtCreditTotal = new TextBox();
-            _Label9 = new Label();
-            _txtCreditVAT = new TextBox();
-            _txtCreditVAT.LostFocus += new EventHandler(txtCreditVAT__LostFocus);
-            _txtCreditNominal = new TextBox();
-            _Label10 = new Label();
-            _Label14 = new Label();
-            _txtCreditGoods = new TextBox();
-            _txtCreditGoods.LostFocus += new EventHandler(txtCreditAmount_TextChanged);
-            _cboCreditTax = new ComboBox();
-            _cboCreditTax.SelectedIndexChanged += new EventHandler(cboCreditTaxCode_SelectedIndexChanged);
-            _Label18 = new Label();
-            _Label20 = new Label();
-            _txtCreditRef = new TextBox();
-            _Label23 = new Label();
-            _btnCreditAdd = new Button();
-            _btnCreditAdd.Click += new EventHandler(btnCreditAdd_Click);
-            _dgCredits = new DataGridView();
-            _dgCredits.CellClick += new DataGridViewCellEventHandler(dgCredits_CellClick);
-            _dtpCreditDate = new DateTimePicker();
-            _lblOrderStatus = new Label();
-            _lblOrderStatus.Click += new EventHandler(lblOrderStatus_Click);
-            _GroupBox1 = new GroupBox();
-            _lblCredits = new Label();
-            _Label25 = new Label();
-            _lblSupplierGoods = new Label();
-            _lblGoodsTotal = new Label();
-            _Label17 = new Label();
-            _FSMDataSetBindingSource = new BindingSource(components);
-            _FSMDataSet = new FSMDataSet();
-            _dgParts = new DataGrid();
-            _dgParts.DoubleClick += new EventHandler(dgParts_DoubleClick);
-            _dgParts.Click += new EventHandler(dgParts_Click);
-            _dgParts.CurrentCellChanged += new EventHandler(dgParts_Click);
-            _dgParts.Click += new EventHandler(dgParts_Click);
-            _dgParts.CurrentCellChanged += new EventHandler(dgParts_Click);
-            _grpOrder.SuspendLayout();
-            _tcOrderDetails.SuspendLayout();
-            _tabDetails.SuspendLayout();
-            _tabParts.SuspendLayout();
-            _grpPartSearch.SuspendLayout();
-            _grpAvailableParts.SuspendLayout();
-            _tabProducts.SuspendLayout();
-            _grpProductsAvailable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgProduct).BeginInit();
-            _grpProductSearch.SuspendLayout();
-            _tabItemsIncluded.SuspendLayout();
-            _GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_nudItemQty).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgItemsIncluded).BeginInit();
-            _tabPartPriceReq.SuspendLayout();
-            _GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgPriceRequests).BeginInit();
-            _tabDocuments.SuspendLayout();
-            _tabInvoices.SuspendLayout();
-            _grpReceivedInvoices.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvReceivedInvoices).BeginInit();
-            _TabPage1.SuspendLayout();
-            _GroupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCredits).BeginInit();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_FSMDataSetBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_FSMDataSet).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgParts).BeginInit();
-            SuspendLayout();
-            //
-            // grpOrder
-            //
-            _grpOrder.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpOrder.Controls.Add(_btnApproveOrder);
-            _grpOrder.Controls.Add(_btnUpdateOrderRef);
-            _grpOrder.Controls.Add(_cboDept);
-            _grpOrder.Controls.Add(_lblOrderBalance);
-            _grpOrder.Controls.Add(_lblOrderBalanceLabel);
-            _grpOrder.Controls.Add(_chkRevertStatus);
-            _grpOrder.Controls.Add(_lblOrderTotalLabel);
-            _grpOrder.Controls.Add(_lblOrderTotal);
-            _grpOrder.Controls.Add(_chkDoNotConsolidate);
-            _grpOrder.Controls.Add(_chkDeadlineNA);
-            _grpOrder.Controls.Add(_dtpDeliveryDeadline);
-            _grpOrder.Controls.Add(_Label6);
-            _grpOrder.Controls.Add(_cboOrderStatus);
-            _grpOrder.Controls.Add(_Label19);
-            _grpOrder.Controls.Add(_dtpDatePlaced);
-            _grpOrder.Controls.Add(_lblDatePlaced);
-            _grpOrder.Controls.Add(_txtOrderReference);
-            _grpOrder.Controls.Add(_lblOrderReference);
-            _grpOrder.Controls.Add(_tcOrderDetails);
-            _grpOrder.Controls.Add(_lblOrderStatus);
-            _grpOrder.Controls.Add(_GroupBox1);
-            _grpOrder.Controls.Add(_Label17);
-            _grpOrder.Location = new Point(8, 1);
-            _grpOrder.Name = "grpOrder";
-            _grpOrder.Size = new Size(1822, 561);
-            _grpOrder.TabIndex = 1;
-            _grpOrder.TabStop = false;
-            _grpOrder.Text = "Main Details";
-            //
-            // btnApproveOrder
-            //
-            _btnApproveOrder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnApproveOrder.Location = new Point(1421, 17);
-            _btnApproveOrder.Name = "btnApproveOrder";
-            _btnApproveOrder.Size = new Size(120, 23);
-            _btnApproveOrder.TabIndex = 126;
-            _btnApproveOrder.Text = "Approve Order";
-            _btnApproveOrder.Visible = false;
-            //
-            // btnUpdateOrderRef
-            //
-            _btnUpdateOrderRef.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnUpdateOrderRef.Location = new Point(1230, 17);
-            _btnUpdateOrderRef.Name = "btnUpdateOrderRef";
-            _btnUpdateOrderRef.Size = new Size(120, 23);
-            _btnUpdateOrderRef.TabIndex = 125;
-            _btnUpdateOrderRef.Text = "Change Order Ref";
-            _btnUpdateOrderRef.Visible = false;
-            //
-            // cboDept
-            //
-            _cboDept.FormattingEnabled = true;
-            _cboDept.Location = new Point(80, 94);
-            _cboDept.Name = "cboDept";
-            _cboDept.Size = new Size(170, 21);
-            _cboDept.TabIndex = 124;
-            //
-            // lblOrderBalance
-            //
-            _lblOrderBalance.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblOrderBalance.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblOrderBalance.Location = new Point(1685, 107);
-            _lblOrderBalance.Name = "lblOrderBalance";
-            _lblOrderBalance.Size = new Size(122, 15);
-            _lblOrderBalance.TabIndex = 84;
-            _lblOrderBalance.Text = "£0.00";
-            _lblOrderBalance.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // lblOrderBalanceLabel
-            //
-            _lblOrderBalanceLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblOrderBalanceLabel.AutoSize = true;
-            _lblOrderBalanceLabel.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblOrderBalanceLabel.Location = new Point(1563, 108);
-            _lblOrderBalanceLabel.Name = "lblOrderBalanceLabel";
-            _lblOrderBalanceLabel.Size = new Size(96, 13);
-            _lblOrderBalanceLabel.TabIndex = 85;
-            _lblOrderBalanceLabel.Text = "Unallocated : ";
-            _lblOrderBalanceLabel.TextAlign = ContentAlignment.TopRight;
-            //
-            // chkRevertStatus
-            //
-            _chkRevertStatus.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkRevertStatus.AutoSize = true;
-            _chkRevertStatus.Location = new Point(1230, 97);
-            _chkRevertStatus.Name = "chkRevertStatus";
-            _chkRevertStatus.Size = new Size(209, 17);
-            _chkRevertStatus.TabIndex = 78;
-            _chkRevertStatus.Text = "Revert to Awaiting Confirmation";
-            _chkRevertStatus.UseVisualStyleBackColor = true;
-            _chkRevertStatus.Visible = false;
-            //
-            // lblOrderTotalLabel
-            //
-            _lblOrderTotalLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblOrderTotalLabel.AutoSize = true;
-            _lblOrderTotalLabel.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblOrderTotalLabel.Location = new Point(1559, 13);
-            _lblOrderTotalLabel.Name = "lblOrderTotalLabel";
-            _lblOrderTotalLabel.Size = new Size(157, 13);
-            _lblOrderTotalLabel.TabIndex = 77;
-            _lblOrderTotalLabel.Text = "Purchase Order Total : ";
-            _lblOrderTotalLabel.TextAlign = ContentAlignment.TopRight;
-            //
-            // lblOrderTotal
-            //
-            _lblOrderTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblOrderTotal.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblOrderTotal.Location = new Point(1731, 12);
-            _lblOrderTotal.Name = "lblOrderTotal";
-            _lblOrderTotal.Size = new Size(75, 15);
-            _lblOrderTotal.TabIndex = 76;
-            _lblOrderTotal.Text = "£0.00";
-            _lblOrderTotal.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // chkDoNotConsolidate
-            //
-            _chkDoNotConsolidate.AutoSize = true;
-            _chkDoNotConsolidate.Location = new Point(256, 97);
-            _chkDoNotConsolidate.Name = "chkDoNotConsolidate";
-            _chkDoNotConsolidate.Size = new Size(136, 17);
-            _chkDoNotConsolidate.TabIndex = 69;
-            _chkDoNotConsolidate.Text = "Do Not Consolidate";
-            _chkDoNotConsolidate.UseVisualStyleBackColor = true;
-            _chkDoNotConsolidate.Visible = false;
-            //
-            // chkDeadlineNA
-            //
-            _chkDeadlineNA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkDeadlineNA.Location = new Point(1347, 66);
-            _chkDeadlineNA.Name = "chkDeadlineNA";
-            _chkDeadlineNA.Size = new Size(48, 24);
-            _chkDeadlineNA.TabIndex = 4;
-            _chkDeadlineNA.Text = "N/A";
-            //
-            // dtpDeliveryDeadline
-            //
-            _dtpDeliveryDeadline.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpDeliveryDeadline.Location = new Point(1398, 66);
-            _dtpDeliveryDeadline.Name = "dtpDeliveryDeadline";
-            _dtpDeliveryDeadline.Size = new Size(144, 21);
-            _dtpDeliveryDeadline.TabIndex = 5;
-            _dtpDeliveryDeadline.Tag = "Order.DatePlaced";
-            //
-            // Label6
-            //
-            _Label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label6.Location = new Point(1225, 70);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(114, 23);
-            _Label6.TabIndex = 42;
-            _Label6.Text = "Delivery Deadline";
-            //
-            // cboOrderStatus
-            //
-            _cboOrderStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboOrderStatus.Location = new Point(80, 43);
-            _cboOrderStatus.Name = "cboOrderStatus";
-            _cboOrderStatus.Size = new Size(1142, 21);
-            _cboOrderStatus.TabIndex = 2;
-            //
-            // Label19
-            //
-            _Label19.Location = new Point(6, 43);
-            _Label19.Name = "Label19";
-            _Label19.Size = new Size(48, 23);
-            _Label19.TabIndex = 33;
-            _Label19.Text = "Status";
-            //
-            // dtpDatePlaced
-            //
-            _dtpDatePlaced.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _dtpDatePlaced.Location = new Point(80, 67);
-            _dtpDatePlaced.Name = "dtpDatePlaced";
-            _dtpDatePlaced.Size = new Size(1142, 21);
-            _dtpDatePlaced.TabIndex = 3;
-            _dtpDatePlaced.Tag = "Order.DatePlaced";
-            //
-            // lblDatePlaced
-            //
-            _lblDatePlaced.Location = new Point(6, 67);
-            _lblDatePlaced.Name = "lblDatePlaced";
-            _lblDatePlaced.Size = new Size(79, 20);
-            _lblDatePlaced.TabIndex = 31;
-            _lblDatePlaced.Text = "Date Placed";
-            //
-            // txtOrderReference
-            //
-            _txtOrderReference.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtOrderReference.Location = new Point(80, 19);
-            _txtOrderReference.MaxLength = 100;
-            _txtOrderReference.Name = "txtOrderReference";
-            _txtOrderReference.ReadOnly = true;
-            _txtOrderReference.Size = new Size(1142, 21);
-            _txtOrderReference.TabIndex = 1;
-            _txtOrderReference.Tag = "Order.OrderReference";
-            _txtOrderReference.Visible = false;
-            //
-            // lblOrderReference
-            //
-            _lblOrderReference.Location = new Point(6, 19);
-            _lblOrderReference.Name = "lblOrderReference";
-            _lblOrderReference.Size = new Size(66, 20);
-            _lblOrderReference.TabIndex = 31;
-            _lblOrderReference.Text = "Order Ref";
-            //
-            // tcOrderDetails
-            //
-            _tcOrderDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _tcOrderDetails.Controls.Add(_tabDetails);
-            _tcOrderDetails.Controls.Add(_tabParts);
-            _tcOrderDetails.Controls.Add(_tabProducts);
-            _tcOrderDetails.Controls.Add(_tabItemsIncluded);
-            _tcOrderDetails.Controls.Add(_tabPartPriceReq);
-            _tcOrderDetails.Controls.Add(_tabDocuments);
-            _tcOrderDetails.Controls.Add(_tabInvoices);
-            _tcOrderDetails.Controls.Add(_TabPage1);
-            _tcOrderDetails.Location = new Point(11, 156);
-            _tcOrderDetails.Name = "tcOrderDetails";
-            _tcOrderDetails.SelectedIndex = 0;
-            _tcOrderDetails.Size = new Size(1804, 399);
-            _tcOrderDetails.TabIndex = 6;
-            //
-            // tabDetails
-            //
-            _tabDetails.Controls.Add(_btnRelatedJob);
-            _tabDetails.Controls.Add(_pnlDetails);
-            _tabDetails.Controls.Add(_lblOrderTypeID);
-            _tabDetails.Controls.Add(_cboOrderTypeID);
-            _tabDetails.Controls.Add(_btnCharges);
-            _tabDetails.Location = new Point(4, 22);
-            _tabDetails.Name = "tabDetails";
-            _tabDetails.Size = new Size(1796, 373);
-            _tabDetails.TabIndex = 0;
-            _tabDetails.Text = "Order Details";
-            //
-            // btnRelatedJob
-            //
-            _btnRelatedJob.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnRelatedJob.Enabled = false;
-            _btnRelatedJob.Location = new Point(1491, 7);
-            _btnRelatedJob.Name = "btnRelatedJob";
-            _btnRelatedJob.Size = new Size(120, 23);
-            _btnRelatedJob.TabIndex = 32;
-            _btnRelatedJob.Text = "View Related Job";
-            //
-            // pnlDetails
-            //
-            _pnlDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlDetails.Location = new Point(0, 40);
-            _pnlDetails.Name = "pnlDetails";
-            _pnlDetails.Size = new Size(1793, 324);
-            _pnlDetails.TabIndex = 9;
-            //
-            // lblOrderTypeID
-            //
-            _lblOrderTypeID.Location = new Point(8, 8);
-            _lblOrderTypeID.Name = "lblOrderTypeID";
-            _lblOrderTypeID.Size = new Size(64, 20);
-            _lblOrderTypeID.TabIndex = 31;
-            _lblOrderTypeID.Text = "Order For";
-            //
-            // cboOrderTypeID
-            //
-            _cboOrderTypeID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboOrderTypeID.Cursor = Cursors.Hand;
-            _cboOrderTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboOrderTypeID.Location = new Point(96, 8);
-            _cboOrderTypeID.Name = "cboOrderTypeID";
-            _cboOrderTypeID.Size = new Size(1387, 21);
-            _cboOrderTypeID.TabIndex = 7;
-            _cboOrderTypeID.Tag = "Order.OrderTypeID";
-            //
-            // btnCharges
-            //
-            _btnCharges.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnCharges.Location = new Point(1617, 7);
-            _btnCharges.Name = "btnCharges";
-            _btnCharges.Size = new Size(168, 23);
-            _btnCharges.TabIndex = 8;
-            _btnCharges.Text = "Manage Additional Charges";
-            //
-            // tabParts
-            //
-            _tabParts.Controls.Add(_grpPartSearch);
-            _tabParts.Controls.Add(_grpAvailableParts);
-            _tabParts.Location = new Point(4, 22);
-            _tabParts.Name = "tabParts";
-            _tabParts.Size = new Size(1796, 373);
-            _tabParts.TabIndex = 2;
-            _tabParts.Text = "Parts Available";
-            //
-            // grpPartSearch
-            //
-            _grpPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpPartSearch.Controls.Add(_btnAddNewPart);
-            _grpPartSearch.Controls.Add(_cboPartLocation);
-            _grpPartSearch.Controls.Add(_btnPartSearch);
-            _grpPartSearch.Controls.Add(_txtPartSearch);
-            _grpPartSearch.Location = new Point(8, 8);
-            _grpPartSearch.Name = "grpPartSearch";
-            _grpPartSearch.Size = new Size(1785, 56);
-            _grpPartSearch.TabIndex = 13;
-            _grpPartSearch.TabStop = false;
-            _grpPartSearch.Text = "Part Search From";
-            //
-            // btnAddNewPart
-            //
-            _btnAddNewPart.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAddNewPart.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnAddNewPart.Location = new Point(1708, 24);
-            _btnAddNewPart.Name = "btnAddNewPart";
-            _btnAddNewPart.Size = new Size(64, 22);
-            _btnAddNewPart.TabIndex = 4;
-            _btnAddNewPart.Text = "New Part";
-            //
-            // cboPartLocation
-            //
-            _cboPartLocation.Location = new Point(8, 24);
-            _cboPartLocation.Name = "cboPartLocation";
-            _cboPartLocation.Size = new Size(152, 21);
-            _cboPartLocation.TabIndex = 1;
-            //
-            // btnPartSearch
-            //
-            _btnPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnPartSearch.Enabled = false;
-            _btnPartSearch.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnPartSearch.Location = new Point(1635, 23);
-            _btnPartSearch.Name = "btnPartSearch";
-            _btnPartSearch.Size = new Size(64, 22);
-            _btnPartSearch.TabIndex = 3;
-            _btnPartSearch.Text = "Find";
-            //
-            // txtPartSearch
-            //
-            _txtPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPartSearch.Location = new Point(168, 24);
-            _txtPartSearch.Name = "txtPartSearch";
-            _txtPartSearch.Size = new Size(1460, 21);
-            _txtPartSearch.TabIndex = 2;
-            //
-            // grpAvailableParts
-            //
-            _grpAvailableParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpAvailableParts.Controls.Add(_btnCreatePartRequest);
-            _grpAvailableParts.Controls.Add(_Label7);
-            _grpAvailableParts.Controls.Add(_txtPartBuyPrice);
-            _grpAvailableParts.Controls.Add(_Label3);
-            _grpAvailableParts.Controls.Add(_txtPartQuantity);
-            _grpAvailableParts.Controls.Add(_dgParts);
-            _grpAvailableParts.Controls.Add(_btnAddPart);
-            _grpAvailableParts.Location = new Point(8, 72);
-            _grpAvailableParts.Name = "grpAvailableParts";
-            _grpAvailableParts.Size = new Size(1785, 297);
-            _grpAvailableParts.TabIndex = 14;
-            _grpAvailableParts.TabStop = false;
-            _grpAvailableParts.Text = "Available Parts && Packs";
-            //
-            // btnCreatePartRequest
-            //
-            _btnCreatePartRequest.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _btnCreatePartRequest.Location = new Point(935, 263);
-            _btnCreatePartRequest.Name = "btnCreatePartRequest";
-            _btnCreatePartRequest.Size = new Size(837, 24);
-            _btnCreatePartRequest.TabIndex = 10;
-            _btnCreatePartRequest.Text = "Part Price Request";
-            //
-            // Label7
-            //
-            _Label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label7.Location = new Point(8, 269);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(40, 13);
-            _Label7.TabIndex = 23;
-            _Label7.Text = "Qty";
-            //
-            // txtPartBuyPrice
-            //
-            _txtPartBuyPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtPartBuyPrice.Location = new Point(248, 265);
-            _txtPartBuyPrice.Name = "txtPartBuyPrice";
-            _txtPartBuyPrice.Size = new Size(112, 21);
-            _txtPartBuyPrice.TabIndex = 7;
-            //
-            // Label3
-            //
-            _Label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label3.Location = new Point(176, 269);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(64, 13);
-            _Label3.TabIndex = 14;
-            _Label3.Text = "Buy Price";
-            //
-            // txtPartQuantity
-            //
-            _txtPartQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtPartQuantity.Location = new Point(56, 265);
-            _txtPartQuantity.Name = "txtPartQuantity";
-            _txtPartQuantity.Size = new Size(112, 21);
-            _txtPartQuantity.TabIndex = 6;
-            //
-            // btnAddPart
-            //
-            _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddPart.Location = new Point(378, 263);
-            _btnAddPart.Name = "btnAddPart";
-            _btnAddPart.Size = new Size(56, 24);
-            _btnAddPart.TabIndex = 9;
-            _btnAddPart.Text = "Add";
-            //
-            // tabProducts
-            //
-            _tabProducts.Controls.Add(_grpProductsAvailable);
-            _tabProducts.Controls.Add(_grpProductSearch);
-            _tabProducts.Location = new Point(4, 22);
-            _tabProducts.Name = "tabProducts";
-            _tabProducts.Size = new Size(1796, 373);
-            _tabProducts.TabIndex = 1;
-            _tabProducts.Text = "Products Available";
-            //
-            // grpProductsAvailable
-            //
-            _grpProductsAvailable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpProductsAvailable.Controls.Add(_btnCreateProductPriceRequest);
-            _grpProductsAvailable.Controls.Add(_txtProductSellPrice);
-            _grpProductsAvailable.Controls.Add(_Label5);
-            _grpProductsAvailable.Controls.Add(_txtProductBuyPrice);
-            _grpProductsAvailable.Controls.Add(_Label4);
-            _grpProductsAvailable.Controls.Add(_Label1);
-            _grpProductsAvailable.Controls.Add(_txtProductQuantity);
-            _grpProductsAvailable.Controls.Add(_dgProduct);
-            _grpProductsAvailable.Controls.Add(_btnAddProduct);
-            _grpProductsAvailable.Location = new Point(8, 72);
-            _grpProductsAvailable.Name = "grpProductsAvailable";
-            _grpProductsAvailable.Size = new Size(1785, 298);
-            _grpProductsAvailable.TabIndex = 10;
-            _grpProductsAvailable.TabStop = false;
-            _grpProductsAvailable.Text = "Available Products ";
-            //
-            // btnCreateProductPriceRequest
-            //
-            _btnCreateProductPriceRequest.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _btnCreateProductPriceRequest.Location = new Point(616, 263);
-            _btnCreateProductPriceRequest.Name = "btnCreateProductPriceRequest";
-            _btnCreateProductPriceRequest.Size = new Size(1161, 24);
-            _btnCreateProductPriceRequest.TabIndex = 10;
-            _btnCreateProductPriceRequest.Text = "Product Price Request";
-            //
-            // txtProductSellPrice
-            //
-            _txtProductSellPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtProductSellPrice.Location = new Point(432, 265);
-            _txtProductSellPrice.Name = "txtProductSellPrice";
-            _txtProductSellPrice.Size = new Size(112, 21);
-            _txtProductSellPrice.TabIndex = 8;
-            //
-            // Label5
-            //
-            _Label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label5.Location = new Point(368, 269);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(64, 13);
-            _Label5.TabIndex = 18;
-            _Label5.Text = "Sell Price";
-            //
-            // txtProductBuyPrice
-            //
-            _txtProductBuyPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtProductBuyPrice.Location = new Point(232, 265);
-            _txtProductBuyPrice.Name = "txtProductBuyPrice";
-            _txtProductBuyPrice.Size = new Size(112, 21);
-            _txtProductBuyPrice.TabIndex = 7;
-            //
-            // Label4
-            //
-            _Label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label4.Location = new Point(168, 269);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 13);
-            _Label4.TabIndex = 16;
-            _Label4.Text = "Buy Price";
-            //
-            // Label1
-            //
-            _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label1.Location = new Point(8, 269);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(40, 13);
-            _Label1.TabIndex = 15;
-            _Label1.Text = "Qty";
-            //
-            // txtProductQuantity
-            //
-            _txtProductQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtProductQuantity.Location = new Point(48, 265);
-            _txtProductQuantity.Name = "txtProductQuantity";
-            _txtProductQuantity.Size = new Size(112, 21);
-            _txtProductQuantity.TabIndex = 6;
-            //
-            // dgProduct
-            //
-            _dgProduct.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgProduct.DataMember = "";
-            _dgProduct.HeaderForeColor = SystemColors.ControlText;
-            _dgProduct.Location = new Point(8, 20);
-            _dgProduct.Name = "dgProduct";
-            _dgProduct.Size = new Size(1769, 235);
-            _dgProduct.TabIndex = 5;
-            //
-            // btnAddProduct
-            //
-            _btnAddProduct.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddProduct.Location = new Point(552, 263);
-            _btnAddProduct.Name = "btnAddProduct";
-            _btnAddProduct.Size = new Size(56, 24);
-            _btnAddProduct.TabIndex = 9;
-            _btnAddProduct.Text = "Add ";
-            //
-            // grpProductSearch
-            //
-            _grpProductSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpProductSearch.Controls.Add(_btnAddNewProduct);
-            _grpProductSearch.Controls.Add(_cboProductLocation);
-            _grpProductSearch.Controls.Add(_btnProductSearch);
-            _grpProductSearch.Controls.Add(_txtProductSearch);
-            _grpProductSearch.Location = new Point(8, 8);
-            _grpProductSearch.Name = "grpProductSearch";
-            _grpProductSearch.Size = new Size(1785, 56);
-            _grpProductSearch.TabIndex = 9;
-            _grpProductSearch.TabStop = false;
-            _grpProductSearch.Text = "Product Search From";
-            //
-            // btnAddNewProduct
-            //
-            _btnAddNewProduct.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAddNewProduct.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnAddNewProduct.Location = new Point(1680, 24);
-            _btnAddNewProduct.Name = "btnAddNewProduct";
-            _btnAddNewProduct.Size = new Size(88, 22);
-            _btnAddNewProduct.TabIndex = 4;
-            _btnAddNewProduct.Text = "New Product";
-            //
-            // cboProductLocation
-            //
-            _cboProductLocation.Location = new Point(8, 24);
-            _cboProductLocation.Name = "cboProductLocation";
-            _cboProductLocation.Size = new Size(152, 21);
-            _cboProductLocation.TabIndex = 1;
-            //
-            // btnProductSearch
-            //
-            _btnProductSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnProductSearch.Enabled = false;
-            _btnProductSearch.Location = new Point(1618, 24);
-            _btnProductSearch.Name = "btnProductSearch";
-            _btnProductSearch.Size = new Size(56, 22);
-            _btnProductSearch.TabIndex = 3;
-            _btnProductSearch.Text = "Find";
-            //
-            // txtProductSearch
-            //
-            _txtProductSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtProductSearch.Location = new Point(168, 24);
-            _txtProductSearch.Name = "txtProductSearch";
-            _txtProductSearch.Size = new Size(1444, 21);
-            _txtProductSearch.TabIndex = 2;
-            //
-            // tabItemsIncluded
-            //
-            _tabItemsIncluded.Controls.Add(_GroupBox3);
-            _tabItemsIncluded.Location = new Point(4, 22);
-            _tabItemsIncluded.Name = "tabItemsIncluded";
-            _tabItemsIncluded.Size = new Size(1796, 373);
-            _tabItemsIncluded.TabIndex = 8;
-            _tabItemsIncluded.Text = "Items Included";
-            //
-            // GroupBox3
-            //
-            _GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox3.Controls.Add(_nudItemQty);
-            _GroupBox3.Controls.Add(_btnEngineerReceived);
-            _GroupBox3.Controls.Add(_btnReceiveAll);
-            _GroupBox3.Controls.Add(_lblItemQty);
-            _GroupBox3.Controls.Add(_btnItemQtyUpdate);
-            _GroupBox3.Controls.Add(_dgItemsIncluded);
-            _GroupBox3.Location = new Point(8, 8);
-            _GroupBox3.Name = "GroupBox3";
-            _GroupBox3.Size = new Size(1785, 361);
-            _GroupBox3.TabIndex = 0;
-            _GroupBox3.TabStop = false;
-            _GroupBox3.Text = "Double click to mark as received";
-            //
-            // nudItemQty
-            //
-            _nudItemQty.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _nudItemQty.Location = new Point(70, 327);
-            _nudItemQty.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            _nudItemQty.Name = "nudItemQty";
-            _nudItemQty.Size = new Size(64, 21);
-            _nudItemQty.TabIndex = 30;
-            _nudItemQty.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            //
-            // btnEngineerReceived
-            //
-            _btnEngineerReceived.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnEngineerReceived.Location = new Point(1536, 328);
-            _btnEngineerReceived.Name = "btnEngineerReceived";
-            _btnEngineerReceived.Size = new Size(134, 23);
-            _btnEngineerReceived.TabIndex = 12;
-            _btnEngineerReceived.Text = "Engineer Received";
-            _btnEngineerReceived.UseVisualStyleBackColor = true;
-            //
-            // btnReceiveAll
-            //
-            _btnReceiveAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnReceiveAll.Location = new Point(1676, 328);
-            _btnReceiveAll.Name = "btnReceiveAll";
-            _btnReceiveAll.Size = new Size(101, 23);
-            _btnReceiveAll.TabIndex = 11;
-            _btnReceiveAll.Text = "Receive All";
-            _btnReceiveAll.UseVisualStyleBackColor = true;
-            //
-            // lblItemQty
-            //
-            _lblItemQty.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblItemQty.Location = new Point(8, 329);
-            _lblItemQty.Name = "lblItemQty";
-            _lblItemQty.Size = new Size(56, 21);
-            _lblItemQty.TabIndex = 10;
-            _lblItemQty.Text = "Quantity";
-            //
-            // btnItemQtyUpdate
-            //
-            _btnItemQtyUpdate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnItemQtyUpdate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnItemQtyUpdate.Location = new Point(149, 325);
-            _btnItemQtyUpdate.Name = "btnItemQtyUpdate";
-            _btnItemQtyUpdate.Size = new Size(64, 23);
-            _btnItemQtyUpdate.TabIndex = 3;
-            _btnItemQtyUpdate.Text = "Update";
-            //
-            // dgItemsIncluded
-            //
-            _dgItemsIncluded.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgItemsIncluded.DataMember = "";
-            _dgItemsIncluded.HeaderForeColor = SystemColors.ControlText;
-            _dgItemsIncluded.Location = new Point(8, 20);
-            _dgItemsIncluded.Name = "dgItemsIncluded";
-            _dgItemsIncluded.Size = new Size(1769, 302);
-            _dgItemsIncluded.TabIndex = 1;
-            //
-            // tabPartPriceReq
-            //
-            _tabPartPriceReq.Controls.Add(_GroupBox2);
-            _tabPartPriceReq.Location = new Point(4, 22);
-            _tabPartPriceReq.Name = "tabPartPriceReq";
-            _tabPartPriceReq.Size = new Size(1796, 373);
-            _tabPartPriceReq.TabIndex = 7;
-            _tabPartPriceReq.Text = "Price Requests";
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox2.Controls.Add(_btnUpdatePartPriceRequest);
-            _GroupBox2.Controls.Add(_dgPriceRequests);
-            _GroupBox2.Location = new Point(8, 8);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(1785, 361);
-            _GroupBox2.TabIndex = 1;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Price requests for parts and products";
-            //
-            // btnUpdatePartPriceRequest
-            //
-            _btnUpdatePartPriceRequest.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnUpdatePartPriceRequest.Location = new Point(8, 329);
-            _btnUpdatePartPriceRequest.Name = "btnUpdatePartPriceRequest";
-            _btnUpdatePartPriceRequest.Size = new Size(75, 24);
-            _btnUpdatePartPriceRequest.TabIndex = 2;
-            _btnUpdatePartPriceRequest.Text = "Update";
-            //
-            // dgPriceRequests
-            //
-            _dgPriceRequests.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgPriceRequests.DataMember = "";
-            _dgPriceRequests.HeaderForeColor = SystemColors.ControlText;
-            _dgPriceRequests.Location = new Point(8, 32);
-            _dgPriceRequests.Name = "dgPriceRequests";
-            _dgPriceRequests.Size = new Size(1769, 287);
-            _dgPriceRequests.TabIndex = 1;
-            //
-            // tabDocuments
-            //
-            _tabDocuments.Controls.Add(_pnlDocuments);
-            _tabDocuments.Controls.Add(_btnEmail);
-            _tabDocuments.Controls.Add(_cboPrintType);
-            _tabDocuments.Controls.Add(_btnPrint);
-            _tabDocuments.Controls.Add(_Label8);
-            _tabDocuments.Location = new Point(4, 22);
-            _tabDocuments.Name = "tabDocuments";
-            _tabDocuments.Size = new Size(1796, 373);
-            _tabDocuments.TabIndex = 9;
-            _tabDocuments.Text = "Documents";
-            //
-            // pnlDocuments
-            //
-            _pnlDocuments.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlDocuments.Location = new Point(8, 40);
-            _pnlDocuments.Name = "pnlDocuments";
-            _pnlDocuments.Size = new Size(1785, 324);
-            _pnlDocuments.TabIndex = 4;
-            //
-            // btnEmail
-            //
-            _btnEmail.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnEmail.Location = new Point(1329, 8);
-            _btnEmail.Name = "btnEmail";
-            _btnEmail.Size = new Size(104, 23);
-            _btnEmail.TabIndex = 3;
-            _btnEmail.Text = "Send Via Email";
-            _btnEmail.Visible = false;
-            //
-            // cboPrintType
-            //
-            _cboPrintType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboPrintType.Location = new Point(8, 8);
-            _cboPrintType.Name = "cboPrintType";
-            _cboPrintType.Size = new Size(1225, 21);
-            _cboPrintType.TabIndex = 1;
-            //
-            // btnPrint
-            //
-            _btnPrint.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnPrint.Location = new Point(1241, 8);
-            _btnPrint.Name = "btnPrint";
-            _btnPrint.Size = new Size(56, 23);
-            _btnPrint.TabIndex = 2;
-            _btnPrint.Text = "Print";
-            //
-            // Label8
-            //
-            _Label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label8.Location = new Point(1305, 12);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(18, 16);
-            _Label8.TabIndex = 45;
-            _Label8.Text = "or";
-            _Label8.Visible = false;
-            //
-            // tabInvoices
-            //
-            _tabInvoices.Controls.Add(_grpReceivedInvoices);
-            _tabInvoices.Location = new Point(4, 22);
-            _tabInvoices.Name = "tabInvoices";
-            _tabInvoices.Size = new Size(1796, 373);
-            _tabInvoices.TabIndex = 10;
-            _tabInvoices.Text = "Supplier Invoices";
-            //
-            // grpReceivedInvoices
-            //
-            _grpReceivedInvoices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpReceivedInvoices.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            _grpReceivedInvoices.Controls.Add(_btnDeleteSupplierInvoice);
-            _grpReceivedInvoices.Controls.Add(_btnUpdateSupplierInvoice);
-            _grpReceivedInvoices.Controls.Add(_txtTotalAmount);
-            _grpReceivedInvoices.Controls.Add(_lblTotalValue);
-            _grpReceivedInvoices.Controls.Add(_txtVATAmount);
-            _grpReceivedInvoices.Controls.Add(_txtNominalCodeNew);
-            _grpReceivedInvoices.Controls.Add(_Label16);
-            _grpReceivedInvoices.Controls.Add(_lblVatValue);
-            _grpReceivedInvoices.Controls.Add(_txtGoodsAmount);
-            _grpReceivedInvoices.Controls.Add(_cboInvoiceTaxCodeNew);
-            _grpReceivedInvoices.Controls.Add(_txtExtraReferenceNew);
-            _grpReceivedInvoices.Controls.Add(_Label13);
-            _grpReceivedInvoices.Controls.Add(_lblGoodsValue);
-            _grpReceivedInvoices.Controls.Add(_Label15);
-            _grpReceivedInvoices.Controls.Add(_lblInvoiceDate);
-            _grpReceivedInvoices.Controls.Add(_txtSupplierInvoiceRefNew);
-            _grpReceivedInvoices.Controls.Add(_lblSupplierRef);
-            _grpReceivedInvoices.Controls.Add(_btnAddSupplierInvoice);
-            _grpReceivedInvoices.Controls.Add(_dgvReceivedInvoices);
-            _grpReceivedInvoices.Controls.Add(_dtpSupplierInvoiceDateNew);
-            _grpReceivedInvoices.Controls.Add(_cboReadySageNew);
-            _grpReceivedInvoices.Location = new Point(4, 4);
-            _grpReceivedInvoices.Name = "grpReceivedInvoices";
-            _grpReceivedInvoices.Size = new Size(1789, 366);
-            _grpReceivedInvoices.TabIndex = 0;
-            _grpReceivedInvoices.TabStop = false;
-            _grpReceivedInvoices.Text = "Received Invoices";
-            //
-            // btnDeleteSupplierInvoice
-            //
-            _btnDeleteSupplierInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDeleteSupplierInvoice.Location = new Point(1603, 339);
-            _btnDeleteSupplierInvoice.Name = "btnDeleteSupplierInvoice";
-            _btnDeleteSupplierInvoice.Size = new Size(56, 24);
-            _btnDeleteSupplierInvoice.TabIndex = 121;
-            _btnDeleteSupplierInvoice.Text = "Delete";
-            _btnDeleteSupplierInvoice.Visible = false;
-            //
-            // btnUpdateSupplierInvoice
-            //
-            _btnUpdateSupplierInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnUpdateSupplierInvoice.Location = new Point(1665, 339);
-            _btnUpdateSupplierInvoice.Name = "btnUpdateSupplierInvoice";
-            _btnUpdateSupplierInvoice.Size = new Size(56, 24);
-            _btnUpdateSupplierInvoice.TabIndex = 122;
-            _btnUpdateSupplierInvoice.Text = "Update";
-            _btnUpdateSupplierInvoice.Visible = false;
-            //
-            // txtTotalAmount
-            //
-            _txtTotalAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtTotalAmount.Location = new Point(547, 340);
-            _txtTotalAmount.Name = "txtTotalAmount";
-            _txtTotalAmount.Size = new Size(100, 21);
-            _txtTotalAmount.TabIndex = 109;
-            //
-            // lblTotalValue
-            //
-            _lblTotalValue.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblTotalValue.AutoSize = true;
-            _lblTotalValue.Location = new Point(485, 343);
-            _lblTotalValue.Name = "lblTotalValue";
-            _lblTotalValue.Size = new Size(55, 13);
-            _lblTotalValue.TabIndex = 28;
-            _lblTotalValue.Text = "Total (£)";
-            //
-            // txtVATAmount
-            //
-            _txtVATAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtVATAmount.Location = new Point(379, 340);
-            _txtVATAmount.Name = "txtVATAmount";
-            _txtVATAmount.Size = new Size(100, 21);
-            _txtVATAmount.TabIndex = 108;
-            //
-            // txtNominalCodeNew
-            //
-            _txtNominalCodeNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtNominalCodeNew.Location = new Point(633, 311);
-            _txtNominalCodeNew.MaxLength = 100;
-            _txtNominalCodeNew.Name = "txtNominalCodeNew";
-            _txtNominalCodeNew.Size = new Size(70, 21);
-            _txtNominalCodeNew.TabIndex = 105;
-            _txtNominalCodeNew.Tag = "Order.SupplierInvoiceReference";
-            //
-            // Label16
-            //
-            _Label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label16.Location = new Point(568, 314);
-            _Label16.Name = "Label16";
-            _Label16.Size = new Size(70, 20);
-            _Label16.TabIndex = 65;
-            _Label16.Text = "Nominal";
-            //
-            // lblVatValue
-            //
-            _lblVatValue.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblVatValue.AutoSize = true;
-            _lblVatValue.Location = new Point(322, 343);
-            _lblVatValue.Name = "lblVatValue";
-            _lblVatValue.Size = new Size(50, 13);
-            _lblVatValue.TabIndex = 26;
-            _lblVatValue.Text = "VAT (£)";
-            //
-            // txtGoodsAmount
-            //
-            _txtGoodsAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtGoodsAmount.Location = new Point(76, 340);
-            _txtGoodsAmount.Name = "txtGoodsAmount";
-            _txtGoodsAmount.Size = new Size(100, 21);
-            _txtGoodsAmount.TabIndex = 106;
-            //
-            // cboInvoiceTaxCodeNew
-            //
-            _cboInvoiceTaxCodeNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _cboInvoiceTaxCodeNew.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboInvoiceTaxCodeNew.Location = new Point(258, 340);
-            _cboInvoiceTaxCodeNew.Name = "cboInvoiceTaxCodeNew";
-            _cboInvoiceTaxCodeNew.Size = new Size(58, 21);
-            _cboInvoiceTaxCodeNew.TabIndex = 107;
-            //
-            // txtExtraReferenceNew
-            //
-            _txtExtraReferenceNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtExtraReferenceNew.Location = new Point(493, 311);
-            _txtExtraReferenceNew.MaxLength = 100;
-            _txtExtraReferenceNew.Name = "txtExtraReferenceNew";
-            _txtExtraReferenceNew.Size = new Size(70, 21);
-            _txtExtraReferenceNew.TabIndex = 104;
-            _txtExtraReferenceNew.Tag = "Order.SupplierInvoiceReference";
-            //
-            // Label13
-            //
-            _Label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label13.Location = new Point(182, 343);
-            _Label13.Name = "Label13";
-            _Label13.Size = new Size(70, 20);
-            _Label13.TabIndex = 59;
-            _Label13.Text = "Tax Code";
-            //
-            // lblGoodsValue
-            //
-            _lblGoodsValue.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblGoodsValue.AutoSize = true;
-            _lblGoodsValue.Location = new Point(6, 343);
-            _lblGoodsValue.Name = "lblGoodsValue";
-            _lblGoodsValue.Size = new Size(64, 13);
-            _lblGoodsValue.TabIndex = 24;
-            _lblGoodsValue.Text = "Goods (£)";
-            //
-            // Label15
-            //
-            _Label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label15.Location = new Point(435, 314);
-            _Label15.Name = "Label15";
-            _Label15.Size = new Size(56, 20);
-            _Label15.TabIndex = 63;
-            _Label15.Text = "Ex Ref.";
-            //
-            // lblInvoiceDate
-            //
-            _lblInvoiceDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblInvoiceDate.AutoSize = true;
-            _lblInvoiceDate.Location = new Point(6, 314);
-            _lblInvoiceDate.Name = "lblInvoiceDate";
-            _lblInvoiceDate.Size = new Size(80, 13);
-            _lblInvoiceDate.TabIndex = 1;
-            _lblInvoiceDate.Text = "Invoice Date";
-            //
-            // txtSupplierInvoiceRefNew
-            //
-            _txtSupplierInvoiceRefNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtSupplierInvoiceRefNew.Location = new Point(329, 311);
-            _txtSupplierInvoiceRefNew.Name = "txtSupplierInvoiceRefNew";
-            _txtSupplierInvoiceRefNew.Size = new Size(100, 21);
-            _txtSupplierInvoiceRefNew.TabIndex = 103;
-            //
-            // lblSupplierRef
-            //
-            _lblSupplierRef.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblSupplierRef.AutoSize = true;
-            _lblSupplierRef.Location = new Point(242, 314);
-            _lblSupplierRef.Name = "lblSupplierRef";
-            _lblSupplierRef.Size = new Size(75, 13);
-            _lblSupplierRef.TabIndex = 1;
-            _lblSupplierRef.Text = "Invoice Ref.";
-            //
-            // btnAddSupplierInvoice
-            //
-            _btnAddSupplierInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddSupplierInvoice.Location = new Point(1727, 339);
-            _btnAddSupplierInvoice.Name = "btnAddSupplierInvoice";
-            _btnAddSupplierInvoice.Size = new Size(56, 24);
-            _btnAddSupplierInvoice.TabIndex = 123;
-            _btnAddSupplierInvoice.Text = "Add ";
-            //
-            // dgvReceivedInvoices
-            //
-            _dgvReceivedInvoices.AllowUserToAddRows = false;
-            DataGridViewCellStyle1.BackColor = Color.White;
-            DataGridViewCellStyle1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            DataGridViewCellStyle1.ForeColor = Color.Navy;
-            DataGridViewCellStyle1.SelectionBackColor = Color.Gainsboro;
-            DataGridViewCellStyle1.SelectionForeColor = Color.Navy;
-            DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            _dgvReceivedInvoices.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1;
-            _dgvReceivedInvoices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgvReceivedInvoices.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            _dgvReceivedInvoices.BackgroundColor = Color.White;
-            _dgvReceivedInvoices.BorderStyle = BorderStyle.None;
-            DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            DataGridViewCellStyle2.BackColor = Color.SteelBlue;
-            DataGridViewCellStyle2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            DataGridViewCellStyle2.ForeColor = Color.White;
-            DataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
-            DataGridViewCellStyle2.SelectionForeColor = Color.White;
-            DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            _dgvReceivedInvoices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2;
-            _dgvReceivedInvoices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvReceivedInvoices.EnableHeadersVisualStyles = false;
-            _dgvReceivedInvoices.GridColor = Color.LightSteelBlue;
-            _dgvReceivedInvoices.Location = new Point(3, 17);
-            _dgvReceivedInvoices.MultiSelect = false;
-            _dgvReceivedInvoices.Name = "dgvReceivedInvoices";
-            _dgvReceivedInvoices.RowHeadersVisible = false;
-            DataGridViewCellStyle3.BackColor = Color.White;
-            DataGridViewCellStyle3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            DataGridViewCellStyle3.ForeColor = Color.Navy;
-            DataGridViewCellStyle3.SelectionBackColor = Color.Gainsboro;
-            DataGridViewCellStyle3.SelectionForeColor = Color.Navy;
-            DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            _dgvReceivedInvoices.RowsDefaultCellStyle = DataGridViewCellStyle3;
-            _dgvReceivedInvoices.RowTemplate.Height = 29;
-            _dgvReceivedInvoices.RowTemplate.ReadOnly = true;
-            _dgvReceivedInvoices.RowTemplate.Resizable = DataGridViewTriState.True;
-            _dgvReceivedInvoices.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dgvReceivedInvoices.Size = new Size(1780, 288);
-            _dgvReceivedInvoices.TabIndex = 0;
-            //
-            // dtpSupplierInvoiceDateNew
-            //
-            _dtpSupplierInvoiceDateNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _dtpSupplierInvoiceDateNew.Location = new Point(92, 311);
-            _dtpSupplierInvoiceDateNew.Name = "dtpSupplierInvoiceDateNew";
-            _dtpSupplierInvoiceDateNew.Size = new Size(144, 21);
-            _dtpSupplierInvoiceDateNew.TabIndex = 101;
-            _dtpSupplierInvoiceDateNew.Tag = "Order.SupplierInvoiceDate";
-            //
-            // cboReadySageNew
-            //
-            _cboReadySageNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _cboReadySageNew.Location = new Point(653, 338);
-            _cboReadySageNew.Name = "cboReadySageNew";
-            _cboReadySageNew.RightToLeft = RightToLeft.Yes;
-            _cboReadySageNew.Size = new Size(247, 24);
-            _cboReadySageNew.TabIndex = 110;
-            _cboReadySageNew.Text = "Ready to send to Accounts Package";
-            //
-            // TabPage1
-            //
-            _TabPage1.Controls.Add(_GroupBox4);
-            _TabPage1.Location = new Point(4, 22);
-            _TabPage1.Name = "TabPage1";
-            _TabPage1.Size = new Size(1796, 373);
-            _TabPage1.TabIndex = 11;
-            _TabPage1.Text = "Credits";
-            _TabPage1.UseVisualStyleBackColor = true;
-            //
-            // GroupBox4
-            //
-            _GroupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            _GroupBox4.Controls.Add(_Button1);
-            _GroupBox4.Controls.Add(_CheckBox1);
-            _GroupBox4.Controls.Add(_txtCreditExRef);
-            _GroupBox4.Controls.Add(_Label21);
-            _GroupBox4.Controls.Add(_btnCreditDelete);
-            _GroupBox4.Controls.Add(_txtCreditTotal);
-            _GroupBox4.Controls.Add(_Label9);
-            _GroupBox4.Controls.Add(_txtCreditVAT);
-            _GroupBox4.Controls.Add(_txtCreditNominal);
-            _GroupBox4.Controls.Add(_Label10);
-            _GroupBox4.Controls.Add(_Label14);
-            _GroupBox4.Controls.Add(_txtCreditGoods);
-            _GroupBox4.Controls.Add(_cboCreditTax);
-            _GroupBox4.Controls.Add(_Label18);
-            _GroupBox4.Controls.Add(_Label20);
-            _GroupBox4.Controls.Add(_txtCreditRef);
-            _GroupBox4.Controls.Add(_Label23);
-            _GroupBox4.Controls.Add(_btnCreditAdd);
-            _GroupBox4.Controls.Add(_dgCredits);
-            _GroupBox4.Controls.Add(_dtpCreditDate);
-            _GroupBox4.Location = new Point(3, 4);
-            _GroupBox4.Name = "GroupBox4";
-            _GroupBox4.Size = new Size(1789, 366);
-            _GroupBox4.TabIndex = 1;
-            _GroupBox4.TabStop = false;
-            _GroupBox4.Text = "Part Credits";
-            //
-            // Button1
-            //
-            _Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Button1.Location = new Point(1495, 339);
-            _Button1.Name = "Button1";
-            _Button1.Size = new Size(142, 24);
-            _Button1.TabIndex = 127;
-            _Button1.Text = "Convert to Van stock";
-            //
-            // CheckBox1
-            //
-            _CheckBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _CheckBox1.Location = new Point(-20, 312);
-            _CheckBox1.Name = "CheckBox1";
-            _CheckBox1.RightToLeft = RightToLeft.Yes;
-            _CheckBox1.Size = new Size(141, 24);
-            _CheckBox1.TabIndex = 126;
-            _CheckBox1.Text = "Credit Recieved";
-            //
-            // txtCreditExRef
-            //
-            _txtCreditExRef.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtCreditExRef.Location = new Point(1118, 339);
-            _txtCreditExRef.MaxLength = 100;
-            _txtCreditExRef.Name = "txtCreditExRef";
-            _txtCreditExRef.Size = new Size(70, 21);
-            _txtCreditExRef.TabIndex = 125;
-            _txtCreditExRef.Tag = "Order.SupplierInvoiceReference";
-            //
-            // Label21
-            //
-            _Label21.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label21.Location = new Point(1073, 342);
-            _Label21.Name = "Label21";
-            _Label21.Size = new Size(56, 20);
-            _Label21.TabIndex = 124;
-            _Label21.Text = "Ex Ref.";
-            //
-            // btnCreditDelete
-            //
-            _btnCreditDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnCreditDelete.Location = new Point(1656, 339);
-            _btnCreditDelete.Name = "btnCreditDelete";
-            _btnCreditDelete.Size = new Size(56, 24);
-            _btnCreditDelete.TabIndex = 121;
-            _btnCreditDelete.Text = "Delete";
-            _btnCreditDelete.Visible = false;
-            //
-            // txtCreditTotal
-            //
-            _txtCreditTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtCreditTotal.Location = new Point(539, 342);
-            _txtCreditTotal.Name = "txtCreditTotal";
-            _txtCreditTotal.Size = new Size(68, 21);
-            _txtCreditTotal.TabIndex = 109;
-            //
-            // Label9
-            //
-            _Label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label9.AutoSize = true;
-            _Label9.Location = new Point(467, 345);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(55, 13);
-            _Label9.TabIndex = 28;
-            _Label9.Text = "Total (£)";
-            //
-            // txtCreditVAT
-            //
-            _txtCreditVAT.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtCreditVAT.Location = new Point(372, 341);
-            _txtCreditVAT.Name = "txtCreditVAT";
-            _txtCreditVAT.Size = new Size(68, 21);
-            _txtCreditVAT.TabIndex = 108;
-            //
-            // txtCreditNominal
-            //
-            _txtCreditNominal.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtCreditNominal.Location = new Point(1000, 339);
-            _txtCreditNominal.MaxLength = 100;
-            _txtCreditNominal.Name = "txtCreditNominal";
-            _txtCreditNominal.Size = new Size(70, 21);
-            _txtCreditNominal.TabIndex = 105;
-            _txtCreditNominal.Tag = "Order.SupplierInvoiceReference";
-            //
-            // Label10
-            //
-            _Label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label10.Location = new Point(947, 342);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(70, 20);
-            _Label10.TabIndex = 65;
-            _Label10.Text = "Nominal";
-            //
-            // Label14
-            //
-            _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label14.AutoSize = true;
-            _Label14.Location = new Point(309, 344);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(50, 13);
-            _Label14.TabIndex = 26;
-            _Label14.Text = "VAT (£)";
-            //
-            // txtCreditGoods
-            //
-            _txtCreditGoods.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtCreditGoods.Location = new Point(95, 340);
-            _txtCreditGoods.Name = "txtCreditGoods";
-            _txtCreditGoods.Size = new Size(54, 21);
-            _txtCreditGoods.TabIndex = 106;
-            //
-            // cboCreditTax
-            //
-            _cboCreditTax.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _cboCreditTax.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboCreditTax.Location = new Point(238, 340);
-            _cboCreditTax.Name = "cboCreditTax";
-            _cboCreditTax.Size = new Size(46, 21);
-            _cboCreditTax.TabIndex = 107;
-            //
-            // Label18
-            //
-            _Label18.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label18.Location = new Point(168, 342);
-            _Label18.Name = "Label18";
-            _Label18.Size = new Size(70, 20);
-            _Label18.TabIndex = 59;
-            _Label18.Text = "Tax Code";
-            //
-            // Label20
-            //
-            _Label20.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label20.AutoSize = true;
-            _Label20.Location = new Point(6, 343);
-            _Label20.Name = "Label20";
-            _Label20.Size = new Size(86, 13);
-            _Label20.TabIndex = 24;
-            _Label20.Text = "Credit Net (£)";
-            //
-            // txtCreditRef
-            //
-            _txtCreditRef.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtCreditRef.Location = new Point(871, 339);
-            _txtCreditRef.Name = "txtCreditRef";
-            _txtCreditRef.Size = new Size(70, 21);
-            _txtCreditRef.TabIndex = 103;
-            //
-            // Label23
-            //
-            _Label23.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label23.AutoSize = true;
-            _Label23.Location = new Point(801, 344);
-            _Label23.Name = "Label23";
-            _Label23.Size = new Size(68, 13);
-            _Label23.TabIndex = 1;
-            _Label23.Text = "Credit Ref.";
-            //
-            // btnCreditAdd
-            //
-            _btnCreditAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnCreditAdd.Location = new Point(1727, 339);
-            _btnCreditAdd.Name = "btnCreditAdd";
-            _btnCreditAdd.Size = new Size(56, 24);
-            _btnCreditAdd.TabIndex = 123;
-            _btnCreditAdd.Text = "Add ";
-            //
-            // dgCredits
-            //
-            _dgCredits.AllowUserToAddRows = false;
-            DataGridViewCellStyle4.BackColor = Color.White;
-            DataGridViewCellStyle4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            DataGridViewCellStyle4.ForeColor = Color.Navy;
-            DataGridViewCellStyle4.SelectionBackColor = Color.Gainsboro;
-            DataGridViewCellStyle4.SelectionForeColor = Color.Navy;
-            DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            _dgCredits.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4;
-            _dgCredits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgCredits.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            _dgCredits.BackgroundColor = Color.White;
-            _dgCredits.BorderStyle = BorderStyle.None;
-            DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            DataGridViewCellStyle5.BackColor = Color.SteelBlue;
-            DataGridViewCellStyle5.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            DataGridViewCellStyle5.ForeColor = Color.White;
-            DataGridViewCellStyle5.SelectionBackColor = Color.SteelBlue;
-            DataGridViewCellStyle5.SelectionForeColor = Color.White;
-            DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            _dgCredits.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5;
-            _dgCredits.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgCredits.EnableHeadersVisualStyles = false;
-            _dgCredits.GridColor = Color.LightSteelBlue;
-            _dgCredits.Location = new Point(3, 23);
-            _dgCredits.MultiSelect = false;
-            _dgCredits.Name = "dgCredits";
-            _dgCredits.RowHeadersVisible = false;
-            DataGridViewCellStyle6.BackColor = Color.White;
-            DataGridViewCellStyle6.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            DataGridViewCellStyle6.ForeColor = Color.Navy;
-            DataGridViewCellStyle6.SelectionBackColor = Color.Gainsboro;
-            DataGridViewCellStyle6.SelectionForeColor = Color.Navy;
-            DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            _dgCredits.RowsDefaultCellStyle = DataGridViewCellStyle6;
-            _dgCredits.RowTemplate.Height = 29;
-            _dgCredits.RowTemplate.ReadOnly = true;
-            _dgCredits.RowTemplate.Resizable = DataGridViewTriState.True;
-            _dgCredits.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dgCredits.Size = new Size(1780, 288);
-            _dgCredits.TabIndex = 0;
-            //
-            // dtpCreditDate
-            //
-            _dtpCreditDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _dtpCreditDate.Location = new Point(128, 313);
-            _dtpCreditDate.Name = "dtpCreditDate";
-            _dtpCreditDate.Size = new Size(142, 21);
-            _dtpCreditDate.TabIndex = 101;
-            _dtpCreditDate.Tag = "Order.SupplierInvoiceDate";
-            //
-            // lblOrderStatus
-            //
-            _lblOrderStatus.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _lblOrderStatus.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblOrderStatus.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblOrderStatus.Location = new Point(16, 129);
-            _lblOrderStatus.Name = "lblOrderStatus";
-            _lblOrderStatus.Size = new Size(1645, 24);
-            _lblOrderStatus.TabIndex = 0;
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _GroupBox1.Controls.Add(_lblCredits);
-            _GroupBox1.Controls.Add(_Label25);
-            _GroupBox1.Controls.Add(_lblSupplierGoods);
-            _GroupBox1.Controls.Add(_lblGoodsTotal);
-            _GroupBox1.Location = new Point(1547, 36);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(275, 63);
-            _GroupBox1.TabIndex = 76;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Supplier Invoice Totals";
-            //
-            // lblCredits
-            //
-            _lblCredits.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblCredits.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblCredits.Location = new Point(138, 37);
-            _lblCredits.Name = "lblCredits";
-            _lblCredits.Size = new Size(122, 15);
-            _lblCredits.TabIndex = 80;
-            _lblCredits.Text = "£0.00";
-            _lblCredits.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // Label25
-            //
-            _Label25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label25.AutoSize = true;
-            _Label25.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label25.Location = new Point(14, 40);
-            _Label25.Name = "Label25";
-            _Label25.Size = new Size(123, 13);
-            _Label25.TabIndex = 81;
-            _Label25.Text = "Supplier Credits : ";
-            _Label25.TextAlign = ContentAlignment.TopRight;
-            //
-            // lblSupplierGoods
-            //
-            _lblSupplierGoods.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblSupplierGoods.AutoSize = true;
-            _lblSupplierGoods.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblSupplierGoods.Location = new Point(14, 19);
-            _lblSupplierGoods.Name = "lblSupplierGoods";
-            _lblSupplierGoods.Size = new Size(133, 13);
-            _lblSupplierGoods.TabIndex = 73;
-            _lblSupplierGoods.Text = "Supplier Invoices : ";
-            _lblSupplierGoods.TextAlign = ContentAlignment.TopRight;
-            //
-            // lblGoodsTotal
-            //
-            _lblGoodsTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblGoodsTotal.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblGoodsTotal.Location = new Point(138, 17);
-            _lblGoodsTotal.Name = "lblGoodsTotal";
-            _lblGoodsTotal.Size = new Size(122, 15);
-            _lblGoodsTotal.TabIndex = 70;
-            _lblGoodsTotal.Text = "£0.00";
-            _lblGoodsTotal.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // Label17
-            //
-            _Label17.Location = new Point(6, 97);
-            _Label17.Name = "Label17";
-            _Label17.Size = new Size(79, 20);
-            _Label17.TabIndex = 68;
-            _Label17.Text = "Cost Centre";
-            //
-            // FSMDataSetBindingSource
-            //
-            _FSMDataSetBindingSource.DataSource = _FSMDataSet;
-            _FSMDataSetBindingSource.Position = 0;
-            //
-            // FSMDataSet
-            //
-            _FSMDataSet.DataSetName = "FSMDataSet";
-            _FSMDataSet.SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
-            //
-            // dgParts
-            //
-            _dgParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgParts.DataMember = "";
-            _dgParts.HeaderForeColor = SystemColors.ControlText;
-            _dgParts.Location = new Point(8, 20);
-            _dgParts.Name = "dgParts";
-            _dgParts.Size = new Size(1769, 237);
-            _dgParts.TabIndex = 5;
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            this._grpOrder = new System.Windows.Forms.GroupBox();
+            this._btnApproveOrder = new System.Windows.Forms.Button();
+            this._btnUpdateOrderRef = new System.Windows.Forms.Button();
+            this._cboDept = new System.Windows.Forms.ComboBox();
+            this._lblOrderBalance = new System.Windows.Forms.Label();
+            this._lblOrderBalanceLabel = new System.Windows.Forms.Label();
+            this._chkRevertStatus = new System.Windows.Forms.CheckBox();
+            this._lblOrderTotalLabel = new System.Windows.Forms.Label();
+            this._lblOrderTotal = new System.Windows.Forms.Label();
+            this._chkDoNotConsolidate = new System.Windows.Forms.CheckBox();
+            this._chkDeadlineNA = new System.Windows.Forms.CheckBox();
+            this._dtpDeliveryDeadline = new System.Windows.Forms.DateTimePicker();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._cboOrderStatus = new System.Windows.Forms.ComboBox();
+            this._Label19 = new System.Windows.Forms.Label();
+            this._dtpDatePlaced = new System.Windows.Forms.DateTimePicker();
+            this._lblDatePlaced = new System.Windows.Forms.Label();
+            this._txtOrderReference = new System.Windows.Forms.TextBox();
+            this._lblOrderReference = new System.Windows.Forms.Label();
+            this._tcOrderDetails = new System.Windows.Forms.TabControl();
+            this._tabDetails = new System.Windows.Forms.TabPage();
+            this._btnRelatedJob = new System.Windows.Forms.Button();
+            this._pnlDetails = new System.Windows.Forms.Panel();
+            this._lblOrderTypeID = new System.Windows.Forms.Label();
+            this._cboOrderTypeID = new System.Windows.Forms.ComboBox();
+            this._btnCharges = new System.Windows.Forms.Button();
+            this._tabParts = new System.Windows.Forms.TabPage();
+            this._grpPartSearch = new System.Windows.Forms.GroupBox();
+            this._btnAddNewPart = new System.Windows.Forms.Button();
+            this._cboPartLocation = new System.Windows.Forms.ComboBox();
+            this._btnPartSearch = new System.Windows.Forms.Button();
+            this._txtPartSearch = new System.Windows.Forms.TextBox();
+            this._grpAvailableParts = new System.Windows.Forms.GroupBox();
+            this._btnCreatePartRequest = new System.Windows.Forms.Button();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._txtPartBuyPrice = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtPartQuantity = new System.Windows.Forms.TextBox();
+            this._dgParts = new System.Windows.Forms.DataGrid();
+            this._btnAddPart = new System.Windows.Forms.Button();
+            this._tabProducts = new System.Windows.Forms.TabPage();
+            this._grpProductsAvailable = new System.Windows.Forms.GroupBox();
+            this._btnCreateProductPriceRequest = new System.Windows.Forms.Button();
+            this._txtProductSellPrice = new System.Windows.Forms.TextBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._txtProductBuyPrice = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtProductQuantity = new System.Windows.Forms.TextBox();
+            this._dgProduct = new System.Windows.Forms.DataGrid();
+            this._btnAddProduct = new System.Windows.Forms.Button();
+            this._grpProductSearch = new System.Windows.Forms.GroupBox();
+            this._btnAddNewProduct = new System.Windows.Forms.Button();
+            this._cboProductLocation = new System.Windows.Forms.ComboBox();
+            this._btnProductSearch = new System.Windows.Forms.Button();
+            this._txtProductSearch = new System.Windows.Forms.TextBox();
+            this._tabItemsIncluded = new System.Windows.Forms.TabPage();
+            this._GroupBox3 = new System.Windows.Forms.GroupBox();
+            this._nudItemQty = new System.Windows.Forms.NumericUpDown();
+            this._btnEngineerReceived = new System.Windows.Forms.Button();
+            this._btnReceiveAll = new System.Windows.Forms.Button();
+            this._lblItemQty = new System.Windows.Forms.Label();
+            this._btnItemQtyUpdate = new System.Windows.Forms.Button();
+            this._dgItemsIncluded = new System.Windows.Forms.DataGrid();
+            this._tabPartPriceReq = new System.Windows.Forms.TabPage();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._btnUpdatePartPriceRequest = new System.Windows.Forms.Button();
+            this._dgPriceRequests = new System.Windows.Forms.DataGrid();
+            this._tabDocuments = new System.Windows.Forms.TabPage();
+            this._pnlDocuments = new System.Windows.Forms.Panel();
+            this._btnEmail = new System.Windows.Forms.Button();
+            this._cboPrintType = new System.Windows.Forms.ComboBox();
+            this._btnPrint = new System.Windows.Forms.Button();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._tabInvoices = new System.Windows.Forms.TabPage();
+            this._grpReceivedInvoices = new System.Windows.Forms.GroupBox();
+            this._btnDeleteSupplierInvoice = new System.Windows.Forms.Button();
+            this._btnUpdateSupplierInvoice = new System.Windows.Forms.Button();
+            this._txtTotalAmount = new System.Windows.Forms.TextBox();
+            this._lblTotalValue = new System.Windows.Forms.Label();
+            this._txtVATAmount = new System.Windows.Forms.TextBox();
+            this._txtNominalCodeNew = new System.Windows.Forms.TextBox();
+            this._Label16 = new System.Windows.Forms.Label();
+            this._lblVatValue = new System.Windows.Forms.Label();
+            this._txtGoodsAmount = new System.Windows.Forms.TextBox();
+            this._cboInvoiceTaxCodeNew = new System.Windows.Forms.ComboBox();
+            this._txtExtraReferenceNew = new System.Windows.Forms.TextBox();
+            this._Label13 = new System.Windows.Forms.Label();
+            this._lblGoodsValue = new System.Windows.Forms.Label();
+            this._Label15 = new System.Windows.Forms.Label();
+            this._lblInvoiceDate = new System.Windows.Forms.Label();
+            this._txtSupplierInvoiceRefNew = new System.Windows.Forms.TextBox();
+            this._lblSupplierRef = new System.Windows.Forms.Label();
+            this._btnAddSupplierInvoice = new System.Windows.Forms.Button();
+            this._dgvReceivedInvoices = new System.Windows.Forms.DataGridView();
+            this._dtpSupplierInvoiceDateNew = new System.Windows.Forms.DateTimePicker();
+            this._cboReadySageNew = new System.Windows.Forms.CheckBox();
+            this._TabPage1 = new System.Windows.Forms.TabPage();
+            this._GroupBox4 = new System.Windows.Forms.GroupBox();
+            this._Button1 = new System.Windows.Forms.Button();
+            this._CheckBox1 = new System.Windows.Forms.CheckBox();
+            this._txtCreditExRef = new System.Windows.Forms.TextBox();
+            this._Label21 = new System.Windows.Forms.Label();
+            this._btnCreditDelete = new System.Windows.Forms.Button();
+            this._txtCreditTotal = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._txtCreditVAT = new System.Windows.Forms.TextBox();
+            this._txtCreditNominal = new System.Windows.Forms.TextBox();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._txtCreditGoods = new System.Windows.Forms.TextBox();
+            this._cboCreditTax = new System.Windows.Forms.ComboBox();
+            this._Label18 = new System.Windows.Forms.Label();
+            this._Label20 = new System.Windows.Forms.Label();
+            this._txtCreditRef = new System.Windows.Forms.TextBox();
+            this._Label23 = new System.Windows.Forms.Label();
+            this._btnCreditAdd = new System.Windows.Forms.Button();
+            this._dgCredits = new System.Windows.Forms.DataGridView();
+            this._dtpCreditDate = new System.Windows.Forms.DateTimePicker();
+            this._lblOrderStatus = new System.Windows.Forms.Label();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._lblCredits = new System.Windows.Forms.Label();
+            this._Label25 = new System.Windows.Forms.Label();
+            this._lblSupplierGoods = new System.Windows.Forms.Label();
+            this._lblGoodsTotal = new System.Windows.Forms.Label();
+            this._Label17 = new System.Windows.Forms.Label();
+            this._FSMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._FSMDataSet = new FSM.FSMDataSet();
+            this._grpOrder.SuspendLayout();
+            this._tcOrderDetails.SuspendLayout();
+            this._tabDetails.SuspendLayout();
+            this._tabParts.SuspendLayout();
+            this._grpPartSearch.SuspendLayout();
+            this._grpAvailableParts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgParts)).BeginInit();
+            this._tabProducts.SuspendLayout();
+            this._grpProductsAvailable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgProduct)).BeginInit();
+            this._grpProductSearch.SuspendLayout();
+            this._tabItemsIncluded.SuspendLayout();
+            this._GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._nudItemQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgItemsIncluded)).BeginInit();
+            this._tabPartPriceReq.SuspendLayout();
+            this._GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPriceRequests)).BeginInit();
+            this._tabDocuments.SuspendLayout();
+            this._tabInvoices.SuspendLayout();
+            this._grpReceivedInvoices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvReceivedInvoices)).BeginInit();
+            this._TabPage1.SuspendLayout();
+            this._GroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCredits)).BeginInit();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._FSMDataSet)).BeginInit();
+            this.SuspendLayout();
+            //
+            // _grpOrder
+            //
+            this._grpOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpOrder.Controls.Add(this._btnApproveOrder);
+            this._grpOrder.Controls.Add(this._btnUpdateOrderRef);
+            this._grpOrder.Controls.Add(this._cboDept);
+            this._grpOrder.Controls.Add(this._lblOrderBalance);
+            this._grpOrder.Controls.Add(this._lblOrderBalanceLabel);
+            this._grpOrder.Controls.Add(this._chkRevertStatus);
+            this._grpOrder.Controls.Add(this._lblOrderTotalLabel);
+            this._grpOrder.Controls.Add(this._lblOrderTotal);
+            this._grpOrder.Controls.Add(this._chkDoNotConsolidate);
+            this._grpOrder.Controls.Add(this._chkDeadlineNA);
+            this._grpOrder.Controls.Add(this._dtpDeliveryDeadline);
+            this._grpOrder.Controls.Add(this._Label6);
+            this._grpOrder.Controls.Add(this._cboOrderStatus);
+            this._grpOrder.Controls.Add(this._Label19);
+            this._grpOrder.Controls.Add(this._dtpDatePlaced);
+            this._grpOrder.Controls.Add(this._lblDatePlaced);
+            this._grpOrder.Controls.Add(this._txtOrderReference);
+            this._grpOrder.Controls.Add(this._lblOrderReference);
+            this._grpOrder.Controls.Add(this._tcOrderDetails);
+            this._grpOrder.Controls.Add(this._lblOrderStatus);
+            this._grpOrder.Controls.Add(this._GroupBox1);
+            this._grpOrder.Controls.Add(this._Label17);
+            this._grpOrder.Location = new System.Drawing.Point(8, 1);
+            this._grpOrder.Name = "_grpOrder";
+            this._grpOrder.Size = new System.Drawing.Size(1687, 890);
+            this._grpOrder.TabIndex = 1;
+            this._grpOrder.TabStop = false;
+            this._grpOrder.Text = "Main Details";
+            //
+            // _btnApproveOrder
+            //
+            this._btnApproveOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnApproveOrder.Location = new System.Drawing.Point(1286, 17);
+            this._btnApproveOrder.Name = "_btnApproveOrder";
+            this._btnApproveOrder.Size = new System.Drawing.Size(120, 23);
+            this._btnApproveOrder.TabIndex = 126;
+            this._btnApproveOrder.Text = "Approve Order";
+            this._btnApproveOrder.Visible = false;
+            this._btnApproveOrder.Click += new System.EventHandler(this.btnApproveOrder_Click);
+            //
+            // _btnUpdateOrderRef
+            //
+            this._btnUpdateOrderRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnUpdateOrderRef.Location = new System.Drawing.Point(1095, 17);
+            this._btnUpdateOrderRef.Name = "_btnUpdateOrderRef";
+            this._btnUpdateOrderRef.Size = new System.Drawing.Size(120, 23);
+            this._btnUpdateOrderRef.TabIndex = 125;
+            this._btnUpdateOrderRef.Text = "Change Order Ref";
+            this._btnUpdateOrderRef.Visible = false;
+            this._btnUpdateOrderRef.Click += new System.EventHandler(this.btnUpdateOrderRef_Click);
+            //
+            // _cboDept
+            //
+            this._cboDept.FormattingEnabled = true;
+            this._cboDept.Location = new System.Drawing.Point(80, 94);
+            this._cboDept.Name = "_cboDept";
+            this._cboDept.Size = new System.Drawing.Size(170, 21);
+            this._cboDept.TabIndex = 124;
+            //
+            // _lblOrderBalance
+            //
+            this._lblOrderBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblOrderBalance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblOrderBalance.Location = new System.Drawing.Point(1550, 107);
+            this._lblOrderBalance.Name = "_lblOrderBalance";
+            this._lblOrderBalance.Size = new System.Drawing.Size(122, 15);
+            this._lblOrderBalance.TabIndex = 84;
+            this._lblOrderBalance.Text = "£0.00";
+            this._lblOrderBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            //
+            // _lblOrderBalanceLabel
+            //
+            this._lblOrderBalanceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblOrderBalanceLabel.AutoSize = true;
+            this._lblOrderBalanceLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblOrderBalanceLabel.Location = new System.Drawing.Point(1428, 108);
+            this._lblOrderBalanceLabel.Name = "_lblOrderBalanceLabel";
+            this._lblOrderBalanceLabel.Size = new System.Drawing.Size(96, 13);
+            this._lblOrderBalanceLabel.TabIndex = 85;
+            this._lblOrderBalanceLabel.Text = "Unallocated : ";
+            this._lblOrderBalanceLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            //
+            // _chkRevertStatus
+            //
+            this._chkRevertStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkRevertStatus.AutoSize = true;
+            this._chkRevertStatus.Location = new System.Drawing.Point(1095, 97);
+            this._chkRevertStatus.Name = "_chkRevertStatus";
+            this._chkRevertStatus.Size = new System.Drawing.Size(209, 17);
+            this._chkRevertStatus.TabIndex = 78;
+            this._chkRevertStatus.Text = "Revert to Awaiting Confirmation";
+            this._chkRevertStatus.UseVisualStyleBackColor = true;
+            this._chkRevertStatus.Visible = false;
+            //
+            // _lblOrderTotalLabel
+            //
+            this._lblOrderTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblOrderTotalLabel.AutoSize = true;
+            this._lblOrderTotalLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblOrderTotalLabel.Location = new System.Drawing.Point(1424, 13);
+            this._lblOrderTotalLabel.Name = "_lblOrderTotalLabel";
+            this._lblOrderTotalLabel.Size = new System.Drawing.Size(157, 13);
+            this._lblOrderTotalLabel.TabIndex = 77;
+            this._lblOrderTotalLabel.Text = "Purchase Order Total : ";
+            this._lblOrderTotalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            //
+            // _lblOrderTotal
+            //
+            this._lblOrderTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblOrderTotal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblOrderTotal.Location = new System.Drawing.Point(1596, 12);
+            this._lblOrderTotal.Name = "_lblOrderTotal";
+            this._lblOrderTotal.Size = new System.Drawing.Size(75, 15);
+            this._lblOrderTotal.TabIndex = 76;
+            this._lblOrderTotal.Text = "£0.00";
+            this._lblOrderTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            //
+            // _chkDoNotConsolidate
+            //
+            this._chkDoNotConsolidate.AutoSize = true;
+            this._chkDoNotConsolidate.Location = new System.Drawing.Point(256, 97);
+            this._chkDoNotConsolidate.Name = "_chkDoNotConsolidate";
+            this._chkDoNotConsolidate.Size = new System.Drawing.Size(136, 17);
+            this._chkDoNotConsolidate.TabIndex = 69;
+            this._chkDoNotConsolidate.Text = "Do Not Consolidate";
+            this._chkDoNotConsolidate.UseVisualStyleBackColor = true;
+            this._chkDoNotConsolidate.Visible = false;
+            //
+            // _chkDeadlineNA
+            //
+            this._chkDeadlineNA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkDeadlineNA.Location = new System.Drawing.Point(1212, 66);
+            this._chkDeadlineNA.Name = "_chkDeadlineNA";
+            this._chkDeadlineNA.Size = new System.Drawing.Size(48, 24);
+            this._chkDeadlineNA.TabIndex = 4;
+            this._chkDeadlineNA.Text = "N/A";
+            this._chkDeadlineNA.CheckedChanged += new System.EventHandler(this.chkDeadlineNA_CheckedChanged);
+            //
+            // _dtpDeliveryDeadline
+            //
+            this._dtpDeliveryDeadline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpDeliveryDeadline.Location = new System.Drawing.Point(1263, 66);
+            this._dtpDeliveryDeadline.Name = "_dtpDeliveryDeadline";
+            this._dtpDeliveryDeadline.Size = new System.Drawing.Size(144, 21);
+            this._dtpDeliveryDeadline.TabIndex = 5;
+            this._dtpDeliveryDeadline.Tag = "Order.DatePlaced";
+            //
+            // _Label6
+            //
+            this._Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label6.Location = new System.Drawing.Point(1090, 70);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(114, 23);
+            this._Label6.TabIndex = 42;
+            this._Label6.Text = "Delivery Deadline";
+            //
+            // _cboOrderStatus
+            //
+            this._cboOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboOrderStatus.Location = new System.Drawing.Point(80, 43);
+            this._cboOrderStatus.Name = "_cboOrderStatus";
+            this._cboOrderStatus.Size = new System.Drawing.Size(1007, 21);
+            this._cboOrderStatus.TabIndex = 2;
+            this._cboOrderStatus.SelectedIndexChanged += new System.EventHandler(this.cboOrderStatus_SelectedIndexChanged);
+            //
+            // _Label19
+            //
+            this._Label19.Location = new System.Drawing.Point(6, 43);
+            this._Label19.Name = "_Label19";
+            this._Label19.Size = new System.Drawing.Size(48, 23);
+            this._Label19.TabIndex = 33;
+            this._Label19.Text = "Status";
+            //
+            // _dtpDatePlaced
+            //
+            this._dtpDatePlaced.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpDatePlaced.Location = new System.Drawing.Point(80, 67);
+            this._dtpDatePlaced.Name = "_dtpDatePlaced";
+            this._dtpDatePlaced.Size = new System.Drawing.Size(1007, 21);
+            this._dtpDatePlaced.TabIndex = 3;
+            this._dtpDatePlaced.Tag = "Order.DatePlaced";
+            //
+            // _lblDatePlaced
+            //
+            this._lblDatePlaced.Location = new System.Drawing.Point(6, 67);
+            this._lblDatePlaced.Name = "_lblDatePlaced";
+            this._lblDatePlaced.Size = new System.Drawing.Size(79, 20);
+            this._lblDatePlaced.TabIndex = 31;
+            this._lblDatePlaced.Text = "Date Placed";
+            //
+            // _txtOrderReference
+            //
+            this._txtOrderReference.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtOrderReference.Location = new System.Drawing.Point(80, 19);
+            this._txtOrderReference.MaxLength = 100;
+            this._txtOrderReference.Name = "_txtOrderReference";
+            this._txtOrderReference.ReadOnly = true;
+            this._txtOrderReference.Size = new System.Drawing.Size(1007, 21);
+            this._txtOrderReference.TabIndex = 1;
+            this._txtOrderReference.Tag = "Order.OrderReference";
+            this._txtOrderReference.Visible = false;
+            //
+            // _lblOrderReference
+            //
+            this._lblOrderReference.Location = new System.Drawing.Point(6, 19);
+            this._lblOrderReference.Name = "_lblOrderReference";
+            this._lblOrderReference.Size = new System.Drawing.Size(66, 20);
+            this._lblOrderReference.TabIndex = 31;
+            this._lblOrderReference.Text = "Order Ref";
+            //
+            // _tcOrderDetails
+            //
+            this._tcOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._tcOrderDetails.Controls.Add(this._tabDetails);
+            this._tcOrderDetails.Controls.Add(this._tabParts);
+            this._tcOrderDetails.Controls.Add(this._tabProducts);
+            this._tcOrderDetails.Controls.Add(this._tabItemsIncluded);
+            this._tcOrderDetails.Controls.Add(this._tabPartPriceReq);
+            this._tcOrderDetails.Controls.Add(this._tabDocuments);
+            this._tcOrderDetails.Controls.Add(this._tabInvoices);
+            this._tcOrderDetails.Controls.Add(this._TabPage1);
+            this._tcOrderDetails.Location = new System.Drawing.Point(11, 156);
+            this._tcOrderDetails.Name = "_tcOrderDetails";
+            this._tcOrderDetails.SelectedIndex = 0;
+            this._tcOrderDetails.Size = new System.Drawing.Size(1669, 728);
+            this._tcOrderDetails.TabIndex = 6;
+            this._tcOrderDetails.SelectedIndexChanged += new System.EventHandler(this.tcOrderDetails_SelectedIndexChanged);
+            //
+            // _tabDetails
+            //
+            this._tabDetails.Controls.Add(this._btnRelatedJob);
+            this._tabDetails.Controls.Add(this._pnlDetails);
+            this._tabDetails.Controls.Add(this._lblOrderTypeID);
+            this._tabDetails.Controls.Add(this._cboOrderTypeID);
+            this._tabDetails.Controls.Add(this._btnCharges);
+            this._tabDetails.Location = new System.Drawing.Point(4, 22);
+            this._tabDetails.Name = "_tabDetails";
+            this._tabDetails.Size = new System.Drawing.Size(1661, 702);
+            this._tabDetails.TabIndex = 0;
+            this._tabDetails.Text = "Order Details";
+            //
+            // _btnRelatedJob
+            //
+            this._btnRelatedJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRelatedJob.Enabled = false;
+            this._btnRelatedJob.Location = new System.Drawing.Point(1356, 7);
+            this._btnRelatedJob.Name = "_btnRelatedJob";
+            this._btnRelatedJob.Size = new System.Drawing.Size(120, 23);
+            this._btnRelatedJob.TabIndex = 32;
+            this._btnRelatedJob.Text = "View Related Job";
+            this._btnRelatedJob.Click += new System.EventHandler(this.btnRelatedJob_Click);
+            //
+            // _pnlDetails
+            //
+            this._pnlDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlDetails.Location = new System.Drawing.Point(0, 40);
+            this._pnlDetails.Name = "_pnlDetails";
+            this._pnlDetails.Size = new System.Drawing.Size(1658, 653);
+            this._pnlDetails.TabIndex = 9;
+            //
+            // _lblOrderTypeID
+            //
+            this._lblOrderTypeID.Location = new System.Drawing.Point(8, 8);
+            this._lblOrderTypeID.Name = "_lblOrderTypeID";
+            this._lblOrderTypeID.Size = new System.Drawing.Size(64, 20);
+            this._lblOrderTypeID.TabIndex = 31;
+            this._lblOrderTypeID.Text = "Order For";
+            //
+            // _cboOrderTypeID
+            //
+            this._cboOrderTypeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboOrderTypeID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboOrderTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboOrderTypeID.Location = new System.Drawing.Point(96, 8);
+            this._cboOrderTypeID.Name = "_cboOrderTypeID";
+            this._cboOrderTypeID.Size = new System.Drawing.Size(1252, 21);
+            this._cboOrderTypeID.TabIndex = 7;
+            this._cboOrderTypeID.Tag = "Order.OrderTypeID";
+            this._cboOrderTypeID.SelectedIndexChanged += new System.EventHandler(this.cboOrderTypeID_SelectedIndexChanged);
+            //
+            // _btnCharges
+            //
+            this._btnCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCharges.Location = new System.Drawing.Point(1482, 7);
+            this._btnCharges.Name = "_btnCharges";
+            this._btnCharges.Size = new System.Drawing.Size(168, 23);
+            this._btnCharges.TabIndex = 8;
+            this._btnCharges.Text = "Manage Additional Charges";
+            this._btnCharges.Click += new System.EventHandler(this.btnCharges_Click);
+            //
+            // _tabParts
+            //
+            this._tabParts.Controls.Add(this._grpPartSearch);
+            this._tabParts.Controls.Add(this._grpAvailableParts);
+            this._tabParts.Location = new System.Drawing.Point(4, 22);
+            this._tabParts.Name = "_tabParts";
+            this._tabParts.Size = new System.Drawing.Size(1796, 373);
+            this._tabParts.TabIndex = 2;
+            this._tabParts.Text = "Parts Available";
+            //
+            // _grpPartSearch
+            //
+            this._grpPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpPartSearch.Controls.Add(this._btnAddNewPart);
+            this._grpPartSearch.Controls.Add(this._cboPartLocation);
+            this._grpPartSearch.Controls.Add(this._btnPartSearch);
+            this._grpPartSearch.Controls.Add(this._txtPartSearch);
+            this._grpPartSearch.Location = new System.Drawing.Point(8, 8);
+            this._grpPartSearch.Name = "_grpPartSearch";
+            this._grpPartSearch.Size = new System.Drawing.Size(1785, 56);
+            this._grpPartSearch.TabIndex = 13;
+            this._grpPartSearch.TabStop = false;
+            this._grpPartSearch.Text = "Part Search From";
+            //
+            // _btnAddNewPart
+            //
+            this._btnAddNewPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddNewPart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnAddNewPart.Location = new System.Drawing.Point(1708, 24);
+            this._btnAddNewPart.Name = "_btnAddNewPart";
+            this._btnAddNewPart.Size = new System.Drawing.Size(64, 22);
+            this._btnAddNewPart.TabIndex = 4;
+            this._btnAddNewPart.Text = "New Part";
+            this._btnAddNewPart.Click += new System.EventHandler(this.btnAddNewPart_Click);
+            //
+            // _cboPartLocation
+            //
+            this._cboPartLocation.Location = new System.Drawing.Point(8, 24);
+            this._cboPartLocation.Name = "_cboPartLocation";
+            this._cboPartLocation.Size = new System.Drawing.Size(152, 21);
+            this._cboPartLocation.TabIndex = 1;
+            this._cboPartLocation.SelectedIndexChanged += new System.EventHandler(this.cboPartLocation_SelectedIndexChanged);
+            //
+            // _btnPartSearch
+            //
+            this._btnPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPartSearch.Enabled = false;
+            this._btnPartSearch.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnPartSearch.Location = new System.Drawing.Point(1635, 23);
+            this._btnPartSearch.Name = "_btnPartSearch";
+            this._btnPartSearch.Size = new System.Drawing.Size(64, 22);
+            this._btnPartSearch.TabIndex = 3;
+            this._btnPartSearch.Text = "Find";
+            this._btnPartSearch.Click += new System.EventHandler(this.btnPartSearch_Click);
+            //
+            // _txtPartSearch
+            //
+            this._txtPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartSearch.Location = new System.Drawing.Point(168, 24);
+            this._txtPartSearch.Name = "_txtPartSearch";
+            this._txtPartSearch.Size = new System.Drawing.Size(1460, 21);
+            this._txtPartSearch.TabIndex = 2;
+            this._txtPartSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPartSearch_KeyDown);
+            //
+            // _grpAvailableParts
+            //
+            this._grpAvailableParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpAvailableParts.Controls.Add(this._btnCreatePartRequest);
+            this._grpAvailableParts.Controls.Add(this._Label7);
+            this._grpAvailableParts.Controls.Add(this._txtPartBuyPrice);
+            this._grpAvailableParts.Controls.Add(this._Label3);
+            this._grpAvailableParts.Controls.Add(this._txtPartQuantity);
+            this._grpAvailableParts.Controls.Add(this._dgParts);
+            this._grpAvailableParts.Controls.Add(this._btnAddPart);
+            this._grpAvailableParts.Location = new System.Drawing.Point(8, 72);
+            this._grpAvailableParts.Name = "_grpAvailableParts";
+            this._grpAvailableParts.Size = new System.Drawing.Size(1785, 297);
+            this._grpAvailableParts.TabIndex = 14;
+            this._grpAvailableParts.TabStop = false;
+            this._grpAvailableParts.Text = "Available Parts && Packs";
+            //
+            // _btnCreatePartRequest
+            //
+            this._btnCreatePartRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreatePartRequest.Location = new System.Drawing.Point(935, 263);
+            this._btnCreatePartRequest.Name = "_btnCreatePartRequest";
+            this._btnCreatePartRequest.Size = new System.Drawing.Size(837, 24);
+            this._btnCreatePartRequest.TabIndex = 10;
+            this._btnCreatePartRequest.Text = "Part Price Request";
+            this._btnCreatePartRequest.Click += new System.EventHandler(this.btnCreatePartRequest_Click);
+            //
+            // _Label7
+            //
+            this._Label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label7.Location = new System.Drawing.Point(8, 269);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(40, 13);
+            this._Label7.TabIndex = 23;
+            this._Label7.Text = "Qty";
+            //
+            // _txtPartBuyPrice
+            //
+            this._txtPartBuyPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtPartBuyPrice.Location = new System.Drawing.Point(248, 265);
+            this._txtPartBuyPrice.Name = "_txtPartBuyPrice";
+            this._txtPartBuyPrice.Size = new System.Drawing.Size(112, 21);
+            this._txtPartBuyPrice.TabIndex = 7;
+            //
+            // _Label3
+            //
+            this._Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label3.Location = new System.Drawing.Point(176, 269);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(64, 13);
+            this._Label3.TabIndex = 14;
+            this._Label3.Text = "Buy Price";
+            //
+            // _txtPartQuantity
+            //
+            this._txtPartQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtPartQuantity.Location = new System.Drawing.Point(56, 265);
+            this._txtPartQuantity.Name = "_txtPartQuantity";
+            this._txtPartQuantity.Size = new System.Drawing.Size(112, 21);
+            this._txtPartQuantity.TabIndex = 6;
+            //
+            // _dgParts
+            //
+            this._dgParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgParts.DataMember = "";
+            this._dgParts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgParts.Location = new System.Drawing.Point(8, 20);
+            this._dgParts.Name = "_dgParts";
+            this._dgParts.Size = new System.Drawing.Size(1769, 237);
+            this._dgParts.TabIndex = 5;
+            this._dgParts.CurrentCellChanged += new System.EventHandler(this.dgParts_Click);
+            this._dgParts.Click += new System.EventHandler(this.dgParts_Click);
+            this._dgParts.DoubleClick += new System.EventHandler(this.dgParts_DoubleClick);
+            //
+            // _btnAddPart
+            //
+            this._btnAddPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddPart.Location = new System.Drawing.Point(378, 263);
+            this._btnAddPart.Name = "_btnAddPart";
+            this._btnAddPart.Size = new System.Drawing.Size(56, 24);
+            this._btnAddPart.TabIndex = 9;
+            this._btnAddPart.Text = "Add";
+            this._btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
+            //
+            // _tabProducts
+            //
+            this._tabProducts.Controls.Add(this._grpProductsAvailable);
+            this._tabProducts.Controls.Add(this._grpProductSearch);
+            this._tabProducts.Location = new System.Drawing.Point(4, 22);
+            this._tabProducts.Name = "_tabProducts";
+            this._tabProducts.Size = new System.Drawing.Size(1796, 373);
+            this._tabProducts.TabIndex = 1;
+            this._tabProducts.Text = "Products Available";
+            //
+            // _grpProductsAvailable
+            //
+            this._grpProductsAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpProductsAvailable.Controls.Add(this._btnCreateProductPriceRequest);
+            this._grpProductsAvailable.Controls.Add(this._txtProductSellPrice);
+            this._grpProductsAvailable.Controls.Add(this._Label5);
+            this._grpProductsAvailable.Controls.Add(this._txtProductBuyPrice);
+            this._grpProductsAvailable.Controls.Add(this._Label4);
+            this._grpProductsAvailable.Controls.Add(this._Label1);
+            this._grpProductsAvailable.Controls.Add(this._txtProductQuantity);
+            this._grpProductsAvailable.Controls.Add(this._dgProduct);
+            this._grpProductsAvailable.Controls.Add(this._btnAddProduct);
+            this._grpProductsAvailable.Location = new System.Drawing.Point(8, 72);
+            this._grpProductsAvailable.Name = "_grpProductsAvailable";
+            this._grpProductsAvailable.Size = new System.Drawing.Size(1785, 298);
+            this._grpProductsAvailable.TabIndex = 10;
+            this._grpProductsAvailable.TabStop = false;
+            this._grpProductsAvailable.Text = "Available Products ";
+            //
+            // _btnCreateProductPriceRequest
+            //
+            this._btnCreateProductPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreateProductPriceRequest.Location = new System.Drawing.Point(616, 263);
+            this._btnCreateProductPriceRequest.Name = "_btnCreateProductPriceRequest";
+            this._btnCreateProductPriceRequest.Size = new System.Drawing.Size(1161, 24);
+            this._btnCreateProductPriceRequest.TabIndex = 10;
+            this._btnCreateProductPriceRequest.Text = "Product Price Request";
+            this._btnCreateProductPriceRequest.Click += new System.EventHandler(this.btnCreateProductPriceRequest_Click);
+            //
+            // _txtProductSellPrice
+            //
+            this._txtProductSellPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtProductSellPrice.Location = new System.Drawing.Point(432, 265);
+            this._txtProductSellPrice.Name = "_txtProductSellPrice";
+            this._txtProductSellPrice.Size = new System.Drawing.Size(112, 21);
+            this._txtProductSellPrice.TabIndex = 8;
+            //
+            // _Label5
+            //
+            this._Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label5.Location = new System.Drawing.Point(368, 269);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(64, 13);
+            this._Label5.TabIndex = 18;
+            this._Label5.Text = "Sell Price";
+            //
+            // _txtProductBuyPrice
+            //
+            this._txtProductBuyPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtProductBuyPrice.Location = new System.Drawing.Point(232, 265);
+            this._txtProductBuyPrice.Name = "_txtProductBuyPrice";
+            this._txtProductBuyPrice.Size = new System.Drawing.Size(112, 21);
+            this._txtProductBuyPrice.TabIndex = 7;
+            //
+            // _Label4
+            //
+            this._Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label4.Location = new System.Drawing.Point(168, 269);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 13);
+            this._Label4.TabIndex = 16;
+            this._Label4.Text = "Buy Price";
+            //
+            // _Label1
+            //
+            this._Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label1.Location = new System.Drawing.Point(8, 269);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(40, 13);
+            this._Label1.TabIndex = 15;
+            this._Label1.Text = "Qty";
+            //
+            // _txtProductQuantity
+            //
+            this._txtProductQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtProductQuantity.Location = new System.Drawing.Point(48, 265);
+            this._txtProductQuantity.Name = "_txtProductQuantity";
+            this._txtProductQuantity.Size = new System.Drawing.Size(112, 21);
+            this._txtProductQuantity.TabIndex = 6;
+            //
+            // _dgProduct
+            //
+            this._dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgProduct.DataMember = "";
+            this._dgProduct.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgProduct.Location = new System.Drawing.Point(8, 20);
+            this._dgProduct.Name = "_dgProduct";
+            this._dgProduct.Size = new System.Drawing.Size(1769, 235);
+            this._dgProduct.TabIndex = 5;
+            this._dgProduct.CurrentCellChanged += new System.EventHandler(this.dgProduct_Click);
+            this._dgProduct.Click += new System.EventHandler(this.dgProduct_Click);
+            this._dgProduct.DoubleClick += new System.EventHandler(this.dgProduct_DoubleClick);
+            //
+            // _btnAddProduct
+            //
+            this._btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddProduct.Location = new System.Drawing.Point(552, 263);
+            this._btnAddProduct.Name = "_btnAddProduct";
+            this._btnAddProduct.Size = new System.Drawing.Size(56, 24);
+            this._btnAddProduct.TabIndex = 9;
+            this._btnAddProduct.Text = "Add ";
+            this._btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            //
+            // _grpProductSearch
+            //
+            this._grpProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpProductSearch.Controls.Add(this._btnAddNewProduct);
+            this._grpProductSearch.Controls.Add(this._cboProductLocation);
+            this._grpProductSearch.Controls.Add(this._btnProductSearch);
+            this._grpProductSearch.Controls.Add(this._txtProductSearch);
+            this._grpProductSearch.Location = new System.Drawing.Point(8, 8);
+            this._grpProductSearch.Name = "_grpProductSearch";
+            this._grpProductSearch.Size = new System.Drawing.Size(1785, 56);
+            this._grpProductSearch.TabIndex = 9;
+            this._grpProductSearch.TabStop = false;
+            this._grpProductSearch.Text = "Product Search From";
+            //
+            // _btnAddNewProduct
+            //
+            this._btnAddNewProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddNewProduct.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnAddNewProduct.Location = new System.Drawing.Point(1680, 24);
+            this._btnAddNewProduct.Name = "_btnAddNewProduct";
+            this._btnAddNewProduct.Size = new System.Drawing.Size(88, 22);
+            this._btnAddNewProduct.TabIndex = 4;
+            this._btnAddNewProduct.Text = "New Product";
+            this._btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
+            //
+            // _cboProductLocation
+            //
+            this._cboProductLocation.Location = new System.Drawing.Point(8, 24);
+            this._cboProductLocation.Name = "_cboProductLocation";
+            this._cboProductLocation.Size = new System.Drawing.Size(152, 21);
+            this._cboProductLocation.TabIndex = 1;
+            this._cboProductLocation.SelectedIndexChanged += new System.EventHandler(this.cboProductLocation_SelectedIndexChanged);
+            //
+            // _btnProductSearch
+            //
+            this._btnProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnProductSearch.Enabled = false;
+            this._btnProductSearch.Location = new System.Drawing.Point(1618, 24);
+            this._btnProductSearch.Name = "_btnProductSearch";
+            this._btnProductSearch.Size = new System.Drawing.Size(56, 22);
+            this._btnProductSearch.TabIndex = 3;
+            this._btnProductSearch.Text = "Find";
+            this._btnProductSearch.Click += new System.EventHandler(this.btnProductSearch_Click);
+            //
+            // _txtProductSearch
+            //
+            this._txtProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtProductSearch.Location = new System.Drawing.Point(168, 24);
+            this._txtProductSearch.Name = "_txtProductSearch";
+            this._txtProductSearch.Size = new System.Drawing.Size(1444, 21);
+            this._txtProductSearch.TabIndex = 2;
+            this._txtProductSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductSearch_KeyDown);
+            //
+            // _tabItemsIncluded
+            //
+            this._tabItemsIncluded.Controls.Add(this._GroupBox3);
+            this._tabItemsIncluded.Location = new System.Drawing.Point(4, 22);
+            this._tabItemsIncluded.Name = "_tabItemsIncluded";
+            this._tabItemsIncluded.Size = new System.Drawing.Size(1796, 373);
+            this._tabItemsIncluded.TabIndex = 8;
+            this._tabItemsIncluded.Text = "Items Included";
+            //
+            // _GroupBox3
+            //
+            this._GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox3.Controls.Add(this._nudItemQty);
+            this._GroupBox3.Controls.Add(this._btnEngineerReceived);
+            this._GroupBox3.Controls.Add(this._btnReceiveAll);
+            this._GroupBox3.Controls.Add(this._lblItemQty);
+            this._GroupBox3.Controls.Add(this._btnItemQtyUpdate);
+            this._GroupBox3.Controls.Add(this._dgItemsIncluded);
+            this._GroupBox3.Location = new System.Drawing.Point(8, 8);
+            this._GroupBox3.Name = "_GroupBox3";
+            this._GroupBox3.Size = new System.Drawing.Size(1785, 361);
+            this._GroupBox3.TabIndex = 0;
+            this._GroupBox3.TabStop = false;
+            this._GroupBox3.Text = "Double click to mark as received";
+            //
+            // _nudItemQty
+            //
+            this._nudItemQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._nudItemQty.Location = new System.Drawing.Point(70, 327);
+            this._nudItemQty.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this._nudItemQty.Name = "_nudItemQty";
+            this._nudItemQty.Size = new System.Drawing.Size(64, 21);
+            this._nudItemQty.TabIndex = 30;
+            this._nudItemQty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            //
+            // _btnEngineerReceived
+            //
+            this._btnEngineerReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnEngineerReceived.Location = new System.Drawing.Point(1536, 328);
+            this._btnEngineerReceived.Name = "_btnEngineerReceived";
+            this._btnEngineerReceived.Size = new System.Drawing.Size(134, 23);
+            this._btnEngineerReceived.TabIndex = 12;
+            this._btnEngineerReceived.Text = "Engineer Received";
+            this._btnEngineerReceived.UseVisualStyleBackColor = true;
+            this._btnEngineerReceived.Click += new System.EventHandler(this.btnEngineerReceived_Click);
+            //
+            // _btnReceiveAll
+            //
+            this._btnReceiveAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnReceiveAll.Location = new System.Drawing.Point(1676, 328);
+            this._btnReceiveAll.Name = "_btnReceiveAll";
+            this._btnReceiveAll.Size = new System.Drawing.Size(101, 23);
+            this._btnReceiveAll.TabIndex = 11;
+            this._btnReceiveAll.Text = "Receive All";
+            this._btnReceiveAll.UseVisualStyleBackColor = true;
+            this._btnReceiveAll.Click += new System.EventHandler(this.btnReceiveAll_Click);
+            //
+            // _lblItemQty
+            //
+            this._lblItemQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblItemQty.Location = new System.Drawing.Point(8, 329);
+            this._lblItemQty.Name = "_lblItemQty";
+            this._lblItemQty.Size = new System.Drawing.Size(56, 21);
+            this._lblItemQty.TabIndex = 10;
+            this._lblItemQty.Text = "Quantity";
+            //
+            // _btnItemQtyUpdate
+            //
+            this._btnItemQtyUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnItemQtyUpdate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnItemQtyUpdate.Location = new System.Drawing.Point(149, 325);
+            this._btnItemQtyUpdate.Name = "_btnItemQtyUpdate";
+            this._btnItemQtyUpdate.Size = new System.Drawing.Size(64, 23);
+            this._btnItemQtyUpdate.TabIndex = 3;
+            this._btnItemQtyUpdate.Text = "Update";
+            this._btnItemQtyUpdate.Click += new System.EventHandler(this.btnItemRemove_Click);
+            //
+            // _dgItemsIncluded
+            //
+            this._dgItemsIncluded.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgItemsIncluded.DataMember = "";
+            this._dgItemsIncluded.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgItemsIncluded.Location = new System.Drawing.Point(8, 20);
+            this._dgItemsIncluded.Name = "_dgItemsIncluded";
+            this._dgItemsIncluded.Size = new System.Drawing.Size(1769, 302);
+            this._dgItemsIncluded.TabIndex = 1;
+            this._dgItemsIncluded.Click += new System.EventHandler(this.dgItemsIncluded_Click);
+            this._dgItemsIncluded.DoubleClick += new System.EventHandler(this.dgProduct_Click);
+            //
+            // _tabPartPriceReq
+            //
+            this._tabPartPriceReq.Controls.Add(this._GroupBox2);
+            this._tabPartPriceReq.Location = new System.Drawing.Point(4, 22);
+            this._tabPartPriceReq.Name = "_tabPartPriceReq";
+            this._tabPartPriceReq.Size = new System.Drawing.Size(1796, 373);
+            this._tabPartPriceReq.TabIndex = 7;
+            this._tabPartPriceReq.Text = "Price Requests";
+            //
+            // _GroupBox2
+            //
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox2.Controls.Add(this._btnUpdatePartPriceRequest);
+            this._GroupBox2.Controls.Add(this._dgPriceRequests);
+            this._GroupBox2.Location = new System.Drawing.Point(8, 8);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(1785, 361);
+            this._GroupBox2.TabIndex = 1;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Price requests for parts and products";
+            //
+            // _btnUpdatePartPriceRequest
+            //
+            this._btnUpdatePartPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnUpdatePartPriceRequest.Location = new System.Drawing.Point(8, 329);
+            this._btnUpdatePartPriceRequest.Name = "_btnUpdatePartPriceRequest";
+            this._btnUpdatePartPriceRequest.Size = new System.Drawing.Size(75, 24);
+            this._btnUpdatePartPriceRequest.TabIndex = 2;
+            this._btnUpdatePartPriceRequest.Text = "Update";
+            this._btnUpdatePartPriceRequest.Click += new System.EventHandler(this.btnUpdatePartPriceRequest_Click);
+            //
+            // _dgPriceRequests
+            //
+            this._dgPriceRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPriceRequests.DataMember = "";
+            this._dgPriceRequests.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgPriceRequests.Location = new System.Drawing.Point(8, 32);
+            this._dgPriceRequests.Name = "_dgPriceRequests";
+            this._dgPriceRequests.Size = new System.Drawing.Size(1769, 287);
+            this._dgPriceRequests.TabIndex = 1;
+            this._dgPriceRequests.CurrentCellChanged += new System.EventHandler(this.dgPriceRequests_Click);
+            this._dgPriceRequests.Click += new System.EventHandler(this.dgPriceRequests_Click);
+            //
+            // _tabDocuments
+            //
+            this._tabDocuments.Controls.Add(this._pnlDocuments);
+            this._tabDocuments.Controls.Add(this._btnEmail);
+            this._tabDocuments.Controls.Add(this._cboPrintType);
+            this._tabDocuments.Controls.Add(this._btnPrint);
+            this._tabDocuments.Controls.Add(this._Label8);
+            this._tabDocuments.Location = new System.Drawing.Point(4, 22);
+            this._tabDocuments.Name = "_tabDocuments";
+            this._tabDocuments.Size = new System.Drawing.Size(1796, 373);
+            this._tabDocuments.TabIndex = 9;
+            this._tabDocuments.Text = "Documents";
+            //
+            // _pnlDocuments
+            //
+            this._pnlDocuments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlDocuments.Location = new System.Drawing.Point(8, 40);
+            this._pnlDocuments.Name = "_pnlDocuments";
+            this._pnlDocuments.Size = new System.Drawing.Size(1785, 324);
+            this._pnlDocuments.TabIndex = 4;
+            //
+            // _btnEmail
+            //
+            this._btnEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnEmail.Location = new System.Drawing.Point(1329, 8);
+            this._btnEmail.Name = "_btnEmail";
+            this._btnEmail.Size = new System.Drawing.Size(104, 23);
+            this._btnEmail.TabIndex = 3;
+            this._btnEmail.Text = "Send Via Email";
+            this._btnEmail.Visible = false;
+            this._btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+            //
+            // _cboPrintType
+            //
+            this._cboPrintType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboPrintType.Location = new System.Drawing.Point(8, 8);
+            this._cboPrintType.Name = "_cboPrintType";
+            this._cboPrintType.Size = new System.Drawing.Size(1225, 21);
+            this._cboPrintType.TabIndex = 1;
+            //
+            // _btnPrint
+            //
+            this._btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrint.Location = new System.Drawing.Point(1241, 8);
+            this._btnPrint.Name = "_btnPrint";
+            this._btnPrint.Size = new System.Drawing.Size(56, 23);
+            this._btnPrint.TabIndex = 2;
+            this._btnPrint.Text = "Print";
+            this._btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            //
+            // _Label8
+            //
+            this._Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label8.Location = new System.Drawing.Point(1305, 12);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(18, 16);
+            this._Label8.TabIndex = 45;
+            this._Label8.Text = "or";
+            this._Label8.Visible = false;
+            //
+            // _tabInvoices
+            //
+            this._tabInvoices.Controls.Add(this._grpReceivedInvoices);
+            this._tabInvoices.Location = new System.Drawing.Point(4, 22);
+            this._tabInvoices.Name = "_tabInvoices";
+            this._tabInvoices.Size = new System.Drawing.Size(1796, 373);
+            this._tabInvoices.TabIndex = 10;
+            this._tabInvoices.Text = "Supplier Invoices";
+            //
+            // _grpReceivedInvoices
+            //
+            this._grpReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpReceivedInvoices.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this._grpReceivedInvoices.Controls.Add(this._btnDeleteSupplierInvoice);
+            this._grpReceivedInvoices.Controls.Add(this._btnUpdateSupplierInvoice);
+            this._grpReceivedInvoices.Controls.Add(this._txtTotalAmount);
+            this._grpReceivedInvoices.Controls.Add(this._lblTotalValue);
+            this._grpReceivedInvoices.Controls.Add(this._txtVATAmount);
+            this._grpReceivedInvoices.Controls.Add(this._txtNominalCodeNew);
+            this._grpReceivedInvoices.Controls.Add(this._Label16);
+            this._grpReceivedInvoices.Controls.Add(this._lblVatValue);
+            this._grpReceivedInvoices.Controls.Add(this._txtGoodsAmount);
+            this._grpReceivedInvoices.Controls.Add(this._cboInvoiceTaxCodeNew);
+            this._grpReceivedInvoices.Controls.Add(this._txtExtraReferenceNew);
+            this._grpReceivedInvoices.Controls.Add(this._Label13);
+            this._grpReceivedInvoices.Controls.Add(this._lblGoodsValue);
+            this._grpReceivedInvoices.Controls.Add(this._Label15);
+            this._grpReceivedInvoices.Controls.Add(this._lblInvoiceDate);
+            this._grpReceivedInvoices.Controls.Add(this._txtSupplierInvoiceRefNew);
+            this._grpReceivedInvoices.Controls.Add(this._lblSupplierRef);
+            this._grpReceivedInvoices.Controls.Add(this._btnAddSupplierInvoice);
+            this._grpReceivedInvoices.Controls.Add(this._dgvReceivedInvoices);
+            this._grpReceivedInvoices.Controls.Add(this._dtpSupplierInvoiceDateNew);
+            this._grpReceivedInvoices.Controls.Add(this._cboReadySageNew);
+            this._grpReceivedInvoices.Location = new System.Drawing.Point(4, 4);
+            this._grpReceivedInvoices.Name = "_grpReceivedInvoices";
+            this._grpReceivedInvoices.Size = new System.Drawing.Size(1789, 366);
+            this._grpReceivedInvoices.TabIndex = 0;
+            this._grpReceivedInvoices.TabStop = false;
+            this._grpReceivedInvoices.Text = "Received Invoices";
+            //
+            // _btnDeleteSupplierInvoice
+            //
+            this._btnDeleteSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDeleteSupplierInvoice.Location = new System.Drawing.Point(1603, 339);
+            this._btnDeleteSupplierInvoice.Name = "_btnDeleteSupplierInvoice";
+            this._btnDeleteSupplierInvoice.Size = new System.Drawing.Size(56, 24);
+            this._btnDeleteSupplierInvoice.TabIndex = 121;
+            this._btnDeleteSupplierInvoice.Text = "Delete";
+            this._btnDeleteSupplierInvoice.Visible = false;
+            this._btnDeleteSupplierInvoice.Click += new System.EventHandler(this.btnDeleteSupplierInvoice_Click);
+            //
+            // _btnUpdateSupplierInvoice
+            //
+            this._btnUpdateSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnUpdateSupplierInvoice.Location = new System.Drawing.Point(1665, 339);
+            this._btnUpdateSupplierInvoice.Name = "_btnUpdateSupplierInvoice";
+            this._btnUpdateSupplierInvoice.Size = new System.Drawing.Size(56, 24);
+            this._btnUpdateSupplierInvoice.TabIndex = 122;
+            this._btnUpdateSupplierInvoice.Text = "Update";
+            this._btnUpdateSupplierInvoice.Visible = false;
+            this._btnUpdateSupplierInvoice.Click += new System.EventHandler(this.btnUpdateSupplierInvoice_Click);
+            //
+            // _txtTotalAmount
+            //
+            this._txtTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtTotalAmount.Location = new System.Drawing.Point(547, 340);
+            this._txtTotalAmount.Name = "_txtTotalAmount";
+            this._txtTotalAmount.Size = new System.Drawing.Size(100, 21);
+            this._txtTotalAmount.TabIndex = 109;
+            //
+            // _lblTotalValue
+            //
+            this._lblTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblTotalValue.AutoSize = true;
+            this._lblTotalValue.Location = new System.Drawing.Point(485, 343);
+            this._lblTotalValue.Name = "_lblTotalValue";
+            this._lblTotalValue.Size = new System.Drawing.Size(55, 13);
+            this._lblTotalValue.TabIndex = 28;
+            this._lblTotalValue.Text = "Total (£)";
+            //
+            // _txtVATAmount
+            //
+            this._txtVATAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtVATAmount.Location = new System.Drawing.Point(379, 340);
+            this._txtVATAmount.Name = "_txtVATAmount";
+            this._txtVATAmount.Size = new System.Drawing.Size(100, 21);
+            this._txtVATAmount.TabIndex = 108;
+            this._txtVATAmount.LostFocus += new System.EventHandler(this.txtVATAmount_LostFocus);
+            //
+            // _txtNominalCodeNew
+            //
+            this._txtNominalCodeNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtNominalCodeNew.Location = new System.Drawing.Point(633, 311);
+            this._txtNominalCodeNew.MaxLength = 100;
+            this._txtNominalCodeNew.Name = "_txtNominalCodeNew";
+            this._txtNominalCodeNew.Size = new System.Drawing.Size(70, 21);
+            this._txtNominalCodeNew.TabIndex = 105;
+            this._txtNominalCodeNew.Tag = "Order.SupplierInvoiceReference";
+            //
+            // _Label16
+            //
+            this._Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label16.Location = new System.Drawing.Point(568, 314);
+            this._Label16.Name = "_Label16";
+            this._Label16.Size = new System.Drawing.Size(70, 20);
+            this._Label16.TabIndex = 65;
+            this._Label16.Text = "Nominal";
+            //
+            // _lblVatValue
+            //
+            this._lblVatValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblVatValue.AutoSize = true;
+            this._lblVatValue.Location = new System.Drawing.Point(322, 343);
+            this._lblVatValue.Name = "_lblVatValue";
+            this._lblVatValue.Size = new System.Drawing.Size(50, 13);
+            this._lblVatValue.TabIndex = 26;
+            this._lblVatValue.Text = "VAT (£)";
+            //
+            // _txtGoodsAmount
+            //
+            this._txtGoodsAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtGoodsAmount.Location = new System.Drawing.Point(76, 340);
+            this._txtGoodsAmount.Name = "_txtGoodsAmount";
+            this._txtGoodsAmount.Size = new System.Drawing.Size(100, 21);
+            this._txtGoodsAmount.TabIndex = 106;
+            this._txtGoodsAmount.LostFocus += new System.EventHandler(this.txtGoodsAmount_TextChanged);
+            //
+            // _cboInvoiceTaxCodeNew
+            //
+            this._cboInvoiceTaxCodeNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._cboInvoiceTaxCodeNew.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboInvoiceTaxCodeNew.Location = new System.Drawing.Point(258, 340);
+            this._cboInvoiceTaxCodeNew.Name = "_cboInvoiceTaxCodeNew";
+            this._cboInvoiceTaxCodeNew.Size = new System.Drawing.Size(58, 21);
+            this._cboInvoiceTaxCodeNew.TabIndex = 107;
+            this._cboInvoiceTaxCodeNew.SelectedIndexChanged += new System.EventHandler(this.cboTaxCode_SelectedIndexChanged);
+            //
+            // _txtExtraReferenceNew
+            //
+            this._txtExtraReferenceNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtExtraReferenceNew.Location = new System.Drawing.Point(493, 311);
+            this._txtExtraReferenceNew.MaxLength = 100;
+            this._txtExtraReferenceNew.Name = "_txtExtraReferenceNew";
+            this._txtExtraReferenceNew.Size = new System.Drawing.Size(70, 21);
+            this._txtExtraReferenceNew.TabIndex = 104;
+            this._txtExtraReferenceNew.Tag = "Order.SupplierInvoiceReference";
+            //
+            // _Label13
+            //
+            this._Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label13.Location = new System.Drawing.Point(182, 343);
+            this._Label13.Name = "_Label13";
+            this._Label13.Size = new System.Drawing.Size(70, 20);
+            this._Label13.TabIndex = 59;
+            this._Label13.Text = "Tax Code";
+            //
+            // _lblGoodsValue
+            //
+            this._lblGoodsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblGoodsValue.AutoSize = true;
+            this._lblGoodsValue.Location = new System.Drawing.Point(6, 343);
+            this._lblGoodsValue.Name = "_lblGoodsValue";
+            this._lblGoodsValue.Size = new System.Drawing.Size(64, 13);
+            this._lblGoodsValue.TabIndex = 24;
+            this._lblGoodsValue.Text = "Goods (£)";
+            //
+            // _Label15
+            //
+            this._Label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label15.Location = new System.Drawing.Point(435, 314);
+            this._Label15.Name = "_Label15";
+            this._Label15.Size = new System.Drawing.Size(56, 20);
+            this._Label15.TabIndex = 63;
+            this._Label15.Text = "Ex Ref.";
+            //
+            // _lblInvoiceDate
+            //
+            this._lblInvoiceDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblInvoiceDate.AutoSize = true;
+            this._lblInvoiceDate.Location = new System.Drawing.Point(6, 314);
+            this._lblInvoiceDate.Name = "_lblInvoiceDate";
+            this._lblInvoiceDate.Size = new System.Drawing.Size(80, 13);
+            this._lblInvoiceDate.TabIndex = 1;
+            this._lblInvoiceDate.Text = "Invoice Date";
+            //
+            // _txtSupplierInvoiceRefNew
+            //
+            this._txtSupplierInvoiceRefNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtSupplierInvoiceRefNew.Location = new System.Drawing.Point(329, 311);
+            this._txtSupplierInvoiceRefNew.Name = "_txtSupplierInvoiceRefNew";
+            this._txtSupplierInvoiceRefNew.Size = new System.Drawing.Size(100, 21);
+            this._txtSupplierInvoiceRefNew.TabIndex = 103;
+            //
+            // _lblSupplierRef
+            //
+            this._lblSupplierRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblSupplierRef.AutoSize = true;
+            this._lblSupplierRef.Location = new System.Drawing.Point(242, 314);
+            this._lblSupplierRef.Name = "_lblSupplierRef";
+            this._lblSupplierRef.Size = new System.Drawing.Size(75, 13);
+            this._lblSupplierRef.TabIndex = 1;
+            this._lblSupplierRef.Text = "Invoice Ref.";
+            //
+            // _btnAddSupplierInvoice
+            //
+            this._btnAddSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddSupplierInvoice.Location = new System.Drawing.Point(1727, 339);
+            this._btnAddSupplierInvoice.Name = "_btnAddSupplierInvoice";
+            this._btnAddSupplierInvoice.Size = new System.Drawing.Size(56, 24);
+            this._btnAddSupplierInvoice.TabIndex = 123;
+            this._btnAddSupplierInvoice.Text = "Add ";
+            this._btnAddSupplierInvoice.Click += new System.EventHandler(this.btnAddSupplierInvoice_Click);
+            //
+            // _dgvReceivedInvoices
+            //
+            this._dgvReceivedInvoices.AllowUserToAddRows = false;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgvReceivedInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this._dgvReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgvReceivedInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._dgvReceivedInvoices.BackgroundColor = System.Drawing.Color.White;
+            this._dgvReceivedInvoices.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgvReceivedInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this._dgvReceivedInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvReceivedInvoices.EnableHeadersVisualStyles = false;
+            this._dgvReceivedInvoices.GridColor = System.Drawing.Color.LightSteelBlue;
+            this._dgvReceivedInvoices.Location = new System.Drawing.Point(3, 17);
+            this._dgvReceivedInvoices.MultiSelect = false;
+            this._dgvReceivedInvoices.Name = "_dgvReceivedInvoices";
+            this._dgvReceivedInvoices.RowHeadersVisible = false;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgvReceivedInvoices.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            this._dgvReceivedInvoices.RowTemplate.Height = 29;
+            this._dgvReceivedInvoices.RowTemplate.ReadOnly = true;
+            this._dgvReceivedInvoices.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgvReceivedInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._dgvReceivedInvoices.Size = new System.Drawing.Size(1780, 288);
+            this._dgvReceivedInvoices.TabIndex = 0;
+            this._dgvReceivedInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceivedInvoices_CellClick);
+            //
+            // _dtpSupplierInvoiceDateNew
+            //
+            this._dtpSupplierInvoiceDateNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._dtpSupplierInvoiceDateNew.Location = new System.Drawing.Point(92, 311);
+            this._dtpSupplierInvoiceDateNew.Name = "_dtpSupplierInvoiceDateNew";
+            this._dtpSupplierInvoiceDateNew.Size = new System.Drawing.Size(144, 21);
+            this._dtpSupplierInvoiceDateNew.TabIndex = 101;
+            this._dtpSupplierInvoiceDateNew.Tag = "Order.SupplierInvoiceDate";
+            //
+            // _cboReadySageNew
+            //
+            this._cboReadySageNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._cboReadySageNew.Location = new System.Drawing.Point(653, 338);
+            this._cboReadySageNew.Name = "_cboReadySageNew";
+            this._cboReadySageNew.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._cboReadySageNew.Size = new System.Drawing.Size(247, 24);
+            this._cboReadySageNew.TabIndex = 110;
+            this._cboReadySageNew.Text = "Ready to send to Accounts Package";
+            //
+            // _TabPage1
+            //
+            this._TabPage1.Controls.Add(this._GroupBox4);
+            this._TabPage1.Location = new System.Drawing.Point(4, 22);
+            this._TabPage1.Name = "_TabPage1";
+            this._TabPage1.Size = new System.Drawing.Size(1796, 373);
+            this._TabPage1.TabIndex = 11;
+            this._TabPage1.Text = "Credits";
+            this._TabPage1.UseVisualStyleBackColor = true;
+            //
+            // _GroupBox4
+            //
+            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this._GroupBox4.Controls.Add(this._Button1);
+            this._GroupBox4.Controls.Add(this._CheckBox1);
+            this._GroupBox4.Controls.Add(this._txtCreditExRef);
+            this._GroupBox4.Controls.Add(this._Label21);
+            this._GroupBox4.Controls.Add(this._btnCreditDelete);
+            this._GroupBox4.Controls.Add(this._txtCreditTotal);
+            this._GroupBox4.Controls.Add(this._Label9);
+            this._GroupBox4.Controls.Add(this._txtCreditVAT);
+            this._GroupBox4.Controls.Add(this._txtCreditNominal);
+            this._GroupBox4.Controls.Add(this._Label10);
+            this._GroupBox4.Controls.Add(this._Label14);
+            this._GroupBox4.Controls.Add(this._txtCreditGoods);
+            this._GroupBox4.Controls.Add(this._cboCreditTax);
+            this._GroupBox4.Controls.Add(this._Label18);
+            this._GroupBox4.Controls.Add(this._Label20);
+            this._GroupBox4.Controls.Add(this._txtCreditRef);
+            this._GroupBox4.Controls.Add(this._Label23);
+            this._GroupBox4.Controls.Add(this._btnCreditAdd);
+            this._GroupBox4.Controls.Add(this._dgCredits);
+            this._GroupBox4.Controls.Add(this._dtpCreditDate);
+            this._GroupBox4.Location = new System.Drawing.Point(3, 4);
+            this._GroupBox4.Name = "_GroupBox4";
+            this._GroupBox4.Size = new System.Drawing.Size(1789, 366);
+            this._GroupBox4.TabIndex = 1;
+            this._GroupBox4.TabStop = false;
+            this._GroupBox4.Text = "Part Credits";
+            //
+            // _Button1
+            //
+            this._Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Button1.Location = new System.Drawing.Point(1495, 339);
+            this._Button1.Name = "_Button1";
+            this._Button1.Size = new System.Drawing.Size(142, 24);
+            this._Button1.TabIndex = 127;
+            this._Button1.Text = "Convert to Van stock";
+            this._Button1.Click += new System.EventHandler(this.Button1_Click);
+            //
+            // _CheckBox1
+            //
+            this._CheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._CheckBox1.Location = new System.Drawing.Point(-20, 312);
+            this._CheckBox1.Name = "_CheckBox1";
+            this._CheckBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._CheckBox1.Size = new System.Drawing.Size(141, 24);
+            this._CheckBox1.TabIndex = 126;
+            this._CheckBox1.Text = "Credit Recieved";
+            //
+            // _txtCreditExRef
+            //
+            this._txtCreditExRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtCreditExRef.Location = new System.Drawing.Point(1118, 339);
+            this._txtCreditExRef.MaxLength = 100;
+            this._txtCreditExRef.Name = "_txtCreditExRef";
+            this._txtCreditExRef.Size = new System.Drawing.Size(70, 21);
+            this._txtCreditExRef.TabIndex = 125;
+            this._txtCreditExRef.Tag = "Order.SupplierInvoiceReference";
+            //
+            // _Label21
+            //
+            this._Label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label21.Location = new System.Drawing.Point(1073, 342);
+            this._Label21.Name = "_Label21";
+            this._Label21.Size = new System.Drawing.Size(56, 20);
+            this._Label21.TabIndex = 124;
+            this._Label21.Text = "Ex Ref.";
+            //
+            // _btnCreditDelete
+            //
+            this._btnCreditDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreditDelete.Location = new System.Drawing.Point(1656, 339);
+            this._btnCreditDelete.Name = "_btnCreditDelete";
+            this._btnCreditDelete.Size = new System.Drawing.Size(56, 24);
+            this._btnCreditDelete.TabIndex = 121;
+            this._btnCreditDelete.Text = "Delete";
+            this._btnCreditDelete.Visible = false;
+            this._btnCreditDelete.Click += new System.EventHandler(this.btnDeleteCredit_Click);
+            //
+            // _txtCreditTotal
+            //
+            this._txtCreditTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtCreditTotal.Location = new System.Drawing.Point(539, 342);
+            this._txtCreditTotal.Name = "_txtCreditTotal";
+            this._txtCreditTotal.Size = new System.Drawing.Size(68, 21);
+            this._txtCreditTotal.TabIndex = 109;
+            //
+            // _Label9
+            //
+            this._Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label9.AutoSize = true;
+            this._Label9.Location = new System.Drawing.Point(467, 345);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(55, 13);
+            this._Label9.TabIndex = 28;
+            this._Label9.Text = "Total (£)";
+            //
+            // _txtCreditVAT
+            //
+            this._txtCreditVAT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtCreditVAT.Location = new System.Drawing.Point(372, 341);
+            this._txtCreditVAT.Name = "_txtCreditVAT";
+            this._txtCreditVAT.Size = new System.Drawing.Size(68, 21);
+            this._txtCreditVAT.TabIndex = 108;
+            this._txtCreditVAT.LostFocus += new System.EventHandler(this.txtCreditVAT__LostFocus);
+            //
+            // _txtCreditNominal
+            //
+            this._txtCreditNominal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtCreditNominal.Location = new System.Drawing.Point(1000, 339);
+            this._txtCreditNominal.MaxLength = 100;
+            this._txtCreditNominal.Name = "_txtCreditNominal";
+            this._txtCreditNominal.Size = new System.Drawing.Size(70, 21);
+            this._txtCreditNominal.TabIndex = 105;
+            this._txtCreditNominal.Tag = "Order.SupplierInvoiceReference";
+            //
+            // _Label10
+            //
+            this._Label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label10.Location = new System.Drawing.Point(947, 342);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(70, 20);
+            this._Label10.TabIndex = 65;
+            this._Label10.Text = "Nominal";
+            //
+            // _Label14
+            //
+            this._Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label14.AutoSize = true;
+            this._Label14.Location = new System.Drawing.Point(309, 344);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(50, 13);
+            this._Label14.TabIndex = 26;
+            this._Label14.Text = "VAT (£)";
+            //
+            // _txtCreditGoods
+            //
+            this._txtCreditGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtCreditGoods.Location = new System.Drawing.Point(95, 340);
+            this._txtCreditGoods.Name = "_txtCreditGoods";
+            this._txtCreditGoods.Size = new System.Drawing.Size(54, 21);
+            this._txtCreditGoods.TabIndex = 106;
+            this._txtCreditGoods.LostFocus += new System.EventHandler(this.txtCreditAmount_TextChanged);
+            //
+            // _cboCreditTax
+            //
+            this._cboCreditTax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._cboCreditTax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboCreditTax.Location = new System.Drawing.Point(238, 340);
+            this._cboCreditTax.Name = "_cboCreditTax";
+            this._cboCreditTax.Size = new System.Drawing.Size(46, 21);
+            this._cboCreditTax.TabIndex = 107;
+            this._cboCreditTax.SelectedIndexChanged += new System.EventHandler(this.cboCreditTaxCode_SelectedIndexChanged);
+            //
+            // _Label18
+            //
+            this._Label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label18.Location = new System.Drawing.Point(168, 342);
+            this._Label18.Name = "_Label18";
+            this._Label18.Size = new System.Drawing.Size(70, 20);
+            this._Label18.TabIndex = 59;
+            this._Label18.Text = "Tax Code";
+            //
+            // _Label20
+            //
+            this._Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label20.AutoSize = true;
+            this._Label20.Location = new System.Drawing.Point(6, 343);
+            this._Label20.Name = "_Label20";
+            this._Label20.Size = new System.Drawing.Size(86, 13);
+            this._Label20.TabIndex = 24;
+            this._Label20.Text = "Credit Net (£)";
+            //
+            // _txtCreditRef
+            //
+            this._txtCreditRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtCreditRef.Location = new System.Drawing.Point(871, 339);
+            this._txtCreditRef.Name = "_txtCreditRef";
+            this._txtCreditRef.Size = new System.Drawing.Size(70, 21);
+            this._txtCreditRef.TabIndex = 103;
+            //
+            // _Label23
+            //
+            this._Label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label23.AutoSize = true;
+            this._Label23.Location = new System.Drawing.Point(801, 344);
+            this._Label23.Name = "_Label23";
+            this._Label23.Size = new System.Drawing.Size(68, 13);
+            this._Label23.TabIndex = 1;
+            this._Label23.Text = "Credit Ref.";
+            //
+            // _btnCreditAdd
+            //
+            this._btnCreditAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreditAdd.Location = new System.Drawing.Point(1727, 339);
+            this._btnCreditAdd.Name = "_btnCreditAdd";
+            this._btnCreditAdd.Size = new System.Drawing.Size(56, 24);
+            this._btnCreditAdd.TabIndex = 123;
+            this._btnCreditAdd.Text = "Add ";
+            this._btnCreditAdd.Click += new System.EventHandler(this.btnCreditAdd_Click);
+            //
+            // _dgCredits
+            //
+            this._dgCredits.AllowUserToAddRows = false;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgCredits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            this._dgCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgCredits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._dgCredits.BackgroundColor = System.Drawing.Color.White;
+            this._dgCredits.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgCredits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this._dgCredits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgCredits.EnableHeadersVisualStyles = false;
+            this._dgCredits.GridColor = System.Drawing.Color.LightSteelBlue;
+            this._dgCredits.Location = new System.Drawing.Point(3, 23);
+            this._dgCredits.MultiSelect = false;
+            this._dgCredits.Name = "_dgCredits";
+            this._dgCredits.RowHeadersVisible = false;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgCredits.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            this._dgCredits.RowTemplate.Height = 29;
+            this._dgCredits.RowTemplate.ReadOnly = true;
+            this._dgCredits.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._dgCredits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._dgCredits.Size = new System.Drawing.Size(1780, 288);
+            this._dgCredits.TabIndex = 0;
+            this._dgCredits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCredits_CellClick);
+            //
+            // _dtpCreditDate
+            //
+            this._dtpCreditDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._dtpCreditDate.Location = new System.Drawing.Point(128, 313);
+            this._dtpCreditDate.Name = "_dtpCreditDate";
+            this._dtpCreditDate.Size = new System.Drawing.Size(142, 21);
+            this._dtpCreditDate.TabIndex = 101;
+            this._dtpCreditDate.Tag = "Order.SupplierInvoiceDate";
+            //
+            // _lblOrderStatus
+            //
+            this._lblOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblOrderStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this._lblOrderStatus.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblOrderStatus.Location = new System.Drawing.Point(16, 129);
+            this._lblOrderStatus.Name = "_lblOrderStatus";
+            this._lblOrderStatus.Size = new System.Drawing.Size(1510, 353);
+            this._lblOrderStatus.TabIndex = 0;
+            this._lblOrderStatus.Click += new System.EventHandler(this.lblOrderStatus_Click);
+            //
+            // _GroupBox1
+            //
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._lblCredits);
+            this._GroupBox1.Controls.Add(this._Label25);
+            this._GroupBox1.Controls.Add(this._lblSupplierGoods);
+            this._GroupBox1.Controls.Add(this._lblGoodsTotal);
+            this._GroupBox1.Location = new System.Drawing.Point(1412, 36);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(275, 63);
+            this._GroupBox1.TabIndex = 76;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Supplier Invoice Totals";
+            //
+            // _lblCredits
+            //
+            this._lblCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblCredits.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblCredits.Location = new System.Drawing.Point(138, 37);
+            this._lblCredits.Name = "_lblCredits";
+            this._lblCredits.Size = new System.Drawing.Size(122, 15);
+            this._lblCredits.TabIndex = 80;
+            this._lblCredits.Text = "£0.00";
+            this._lblCredits.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            //
+            // _Label25
+            //
+            this._Label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label25.AutoSize = true;
+            this._Label25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label25.Location = new System.Drawing.Point(14, 40);
+            this._Label25.Name = "_Label25";
+            this._Label25.Size = new System.Drawing.Size(123, 13);
+            this._Label25.TabIndex = 81;
+            this._Label25.Text = "Supplier Credits : ";
+            this._Label25.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            //
+            // _lblSupplierGoods
+            //
+            this._lblSupplierGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblSupplierGoods.AutoSize = true;
+            this._lblSupplierGoods.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblSupplierGoods.Location = new System.Drawing.Point(14, 19);
+            this._lblSupplierGoods.Name = "_lblSupplierGoods";
+            this._lblSupplierGoods.Size = new System.Drawing.Size(133, 13);
+            this._lblSupplierGoods.TabIndex = 73;
+            this._lblSupplierGoods.Text = "Supplier Invoices : ";
+            this._lblSupplierGoods.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            //
+            // _lblGoodsTotal
+            //
+            this._lblGoodsTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblGoodsTotal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblGoodsTotal.Location = new System.Drawing.Point(138, 17);
+            this._lblGoodsTotal.Name = "_lblGoodsTotal";
+            this._lblGoodsTotal.Size = new System.Drawing.Size(122, 15);
+            this._lblGoodsTotal.TabIndex = 70;
+            this._lblGoodsTotal.Text = "£0.00";
+            this._lblGoodsTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            //
+            // _Label17
+            //
+            this._Label17.Location = new System.Drawing.Point(6, 97);
+            this._Label17.Name = "_Label17";
+            this._Label17.Size = new System.Drawing.Size(79, 20);
+            this._Label17.TabIndex = 68;
+            this._Label17.Text = "Cost Centre";
+            //
+            // _FSMDataSetBindingSource
+            //
+            this._FSMDataSetBindingSource.DataSource = this._FSMDataSet;
+            this._FSMDataSetBindingSource.Position = 0;
+            //
+            // _FSMDataSet
+            //
+            this._FSMDataSet.DataSetName = "FSMDataSet";
+            this._FSMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             //
             // UCOrder
             //
-            Controls.Add(_grpOrder);
-            Name = "UCOrder";
-            Size = new Size(1835, 571);
-            _grpOrder.ResumeLayout(false);
-            _grpOrder.PerformLayout();
-            _tcOrderDetails.ResumeLayout(false);
-            _tabDetails.ResumeLayout(false);
-            _tabParts.ResumeLayout(false);
-            _grpPartSearch.ResumeLayout(false);
-            _grpPartSearch.PerformLayout();
-            _grpAvailableParts.ResumeLayout(false);
-            _grpAvailableParts.PerformLayout();
-            _tabProducts.ResumeLayout(false);
-            _grpProductsAvailable.ResumeLayout(false);
-            _grpProductsAvailable.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgProduct).EndInit();
-            _grpProductSearch.ResumeLayout(false);
-            _grpProductSearch.PerformLayout();
-            _tabItemsIncluded.ResumeLayout(false);
-            _GroupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_nudItemQty).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgItemsIncluded).EndInit();
-            _tabPartPriceReq.ResumeLayout(false);
-            _GroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgPriceRequests).EndInit();
-            _tabDocuments.ResumeLayout(false);
-            _tabInvoices.ResumeLayout(false);
-            _grpReceivedInvoices.ResumeLayout(false);
-            _grpReceivedInvoices.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvReceivedInvoices).EndInit();
-            _TabPage1.ResumeLayout(false);
-            _GroupBox4.ResumeLayout(false);
-            _GroupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCredits).EndInit();
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_FSMDataSetBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_FSMDataSet).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgParts).EndInit();
-            ResumeLayout(false);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this._grpOrder);
+            this.Name = "UCOrder";
+            this.Size = new System.Drawing.Size(1700, 900);
+            this._grpOrder.ResumeLayout(false);
+            this._grpOrder.PerformLayout();
+            this._tcOrderDetails.ResumeLayout(false);
+            this._tabDetails.ResumeLayout(false);
+            this._tabParts.ResumeLayout(false);
+            this._grpPartSearch.ResumeLayout(false);
+            this._grpPartSearch.PerformLayout();
+            this._grpAvailableParts.ResumeLayout(false);
+            this._grpAvailableParts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgParts)).EndInit();
+            this._tabProducts.ResumeLayout(false);
+            this._grpProductsAvailable.ResumeLayout(false);
+            this._grpProductsAvailable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgProduct)).EndInit();
+            this._grpProductSearch.ResumeLayout(false);
+            this._grpProductSearch.PerformLayout();
+            this._tabItemsIncluded.ResumeLayout(false);
+            this._GroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._nudItemQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgItemsIncluded)).EndInit();
+            this._tabPartPriceReq.ResumeLayout(false);
+            this._GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgPriceRequests)).EndInit();
+            this._tabDocuments.ResumeLayout(false);
+            this._tabInvoices.ResumeLayout(false);
+            this._grpReceivedInvoices.ResumeLayout(false);
+            this._grpReceivedInvoices.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvReceivedInvoices)).EndInit();
+            this._TabPage1.ResumeLayout(false);
+            this._GroupBox4.ResumeLayout(false);
+            this._GroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCredits)).EndInit();
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._FSMDataSet)).EndInit();
+            this.ResumeLayout(false);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -8489,29 +8522,29 @@ namespace FSM
 
             if (NoError)
             {
-                double itemAmount = 0.0;
-                double invoiceTotal = 0.0;
+                decimal itemAmount = 0;
+                decimal invoiceTotal = 0;
                 foreach (DataRow row in ItemsIncludedDataView.Table.Rows)
-                    itemAmount += (double)row["BuyPrice"] * (int)row["QuantityOnOrder"];
+                    itemAmount += (decimal)row["BuyPrice"] * (int)row["QuantityOnOrder"];
                 // PLUS ADDITIONAL
                 foreach (DataRow row in App.DB.OrderCharge.OrderCharge_GetForOrder(CurrentOrder.OrderID).Table.Rows)
-                    itemAmount += (double)row["Amount"];
+                    itemAmount += (decimal)row["Amount"];
 
                 // GET EXISTING SUPPLIER INVOICES
                 foreach (DataRow row in App.DB.SupplierInvoices.Order_GetSupplierInvoices(CurrentOrder.OrderID).Table.Rows)
-                    invoiceTotal += (double)row["SupplierInvoiceAmount"];
-                double CurrentTotal = 0;
+                    invoiceTotal += (decimal)row["SupplierInvoiceAmount"];
+                decimal CurrentTotal = 0;
                 if (Update)
                 {
-                    double UpdateingAmount = Conversions.ToDouble(Strings.Replace(Conversions.ToString(dgvReceivedInvoices["SupplierInvoiceAmount", dgvReceivedInvoices.CurrentRow.Index].Value), "£", ""));
-                    CurrentTotal = invoiceTotal - UpdateingAmount + Conversions.ToDouble(Strings.Replace(txtGoodsAmount.Text, "£", "")) - 0.05;
+                    decimal UpdateingAmount = Conversions.ToDecimal(Strings.Replace(Conversions.ToString(dgvReceivedInvoices["SupplierInvoiceAmount", dgvReceivedInvoices.CurrentRow.Index].Value), "£", ""));
+                    CurrentTotal = invoiceTotal - UpdateingAmount + Conversions.ToDecimal(Strings.Replace(txtGoodsAmount.Text, "£", "")) - 0.05M;
                 }
                 else
                 {
-                    CurrentTotal = invoiceTotal + Conversions.ToDouble(Strings.Replace(txtGoodsAmount.Text, "£", "")) - 0.05;
+                    CurrentTotal = invoiceTotal + Conversions.ToDecimal(Strings.Replace(txtGoodsAmount.Text, "£", "")) - 0.05M;
                 }
 
-                if (CurrentTotal > Conversions.ToDouble(Strings.Format(itemAmount, "F")))
+                if (CurrentTotal > Conversions.ToDecimal(Strings.Format(itemAmount, "F")))
                 {
                     App.ShowMessage("The entered supplier invoice amount is greater than the total of the order. You will now be prompted to enter the override password to continue", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (!App.EnterOverridePassword())
@@ -8559,9 +8592,9 @@ namespace FSM
 
             if (NoError)
             {
-                double itemAmount = 0.0;
-                double invoiceTotal = 0.0;
-                double CurrentTotal = 0;
+                decimal itemAmount = 0;
+                decimal invoiceTotal = 0;
+                decimal CurrentTotal = 0;
             }
 
             return NoError;
@@ -8753,27 +8786,27 @@ namespace FSM
 
         private void PopulateOrderTotal()
         {
-            double total = 0.0;
+            decimal total = 0;
             foreach (DataRow row in ItemsIncludedDataView.Table.Rows)
-                total += (double)row["BuyPrice"] * (int)row["QuantityOnOrder"];
+                total += (decimal)row["BuyPrice"] * (int)row["QuantityOnOrder"];
             foreach (DataRow row in App.DB.OrderCharge.OrderCharge_GetForOrder(CurrentOrder.OrderID).Table.Rows)
-                total += (double)row["Amount"];
+                total += (decimal)row["Amount"];
             lblOrderTotal.Text = Strings.Format(total, "C");
-            double GoodsTotal = 0.0;
-            double VATTotal = 0.0;
-            double GrandTotal = 0.0;
+            decimal GoodsTotal = 0;
+            decimal VATTotal = 0;
+            decimal GrandTotal = 0;
             foreach (DataRow row in App.DB.SupplierInvoices.Order_GetSupplierInvoices(CurrentOrder.OrderID).Table.Rows)
             {
-                GoodsTotal += (double)row["SupplierInvoiceAmount"];
-                VATTotal += (double)row["SupplierVATAmount"];
-                GrandTotal += (double)row["SupplierGoodsAmount"];
+                GoodsTotal += (decimal)row["SupplierInvoiceAmount"];
+                VATTotal += (decimal)row["SupplierVATAmount"];
+                GrandTotal += (decimal)row["SupplierGoodsAmount"];
             }
 
             lblGoodsTotal.Text = Strings.Format(GoodsTotal, "C");
             lblCredits.Text = "0";
             foreach (DataRow row in App.DB.ExecuteWithReturn("select (AmountReceived) as CreditReceived from tblPartCredits pc inner join (sELECT MAX(tblPartCreditParts.PartsToBeCreditedID) AS MAXIMUN ,PartCreditID  FROM tblPartCreditParts group by PartCreditID) pcp on pcp.PartCreditID = pc.PartCreditsID inner join tblPartsToBeCredited tbc ON tbc.PartsToBeCreditedID = pcp.maximun WHERE OrderID = " + CurrentOrder.OrderID).Rows)
                 lblCredits.Text = lblCredits.Text + row["CreditReceived"];
-            double OrderBalance = total - GoodsTotal + Conversions.ToDouble(lblCredits.Text);
+            decimal OrderBalance = total - GoodsTotal + Conversions.ToDecimal(lblCredits.Text);
             lblCredits.Text = Strings.Format(Conversions.ToDouble(lblCredits.Text), "C");
             lblOrderBalance.Text = Strings.Format(OrderBalance, "C");
             var switchExpr = Strings.Format(OrderBalance, "C");

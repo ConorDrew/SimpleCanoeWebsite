@@ -2442,7 +2442,7 @@ namespace FSM
                     dialogue = (FRMPartSelectLocation)Activator.CreateInstance(typeof(FRMPartSelectLocation));
                 }
 
-                dialogue.Icon = new Icon(dialogue.GetType(), "Logo.ico");
+                //dialogue.Icon = new Icon(dialogue.GetType(), "Logo.ico");
                 dialogue.ShowInTaskbar = false;
                 dialogue.LocationsDataGridView = locationdv.ToTable();
                 dialogue.ShowDialog();
