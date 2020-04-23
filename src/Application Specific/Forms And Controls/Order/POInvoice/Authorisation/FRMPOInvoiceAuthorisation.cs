@@ -25,14 +25,14 @@ namespace FSM
                 case object _ when App.IsGasway:
                     {
                         var argc1 = cboDepartment;
-                        Combo.SetUpCombo(ref argc1, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.Department).Table, "Name", "Name", Entity.Sys.Enums.ComboValues.Please_Select_Negative);
+                        Combo.SetUpCombo(ref argc1, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Name", Entity.Sys.Enums.ComboValues.Please_Select_Negative);
                         break;
                     }
 
                 default:
                     {
                         var argc2 = cboDepartment;
-                        Combo.SetUpCombo(ref argc2, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.Department).Table, "Name", "Description", Entity.Sys.Enums.ComboValues.Please_Select_Negative);
+                        Combo.SetUpCombo(ref argc2, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Description", Entity.Sys.Enums.ComboValues.Please_Select_Negative);
                         break;
                     }
             }
@@ -225,13 +225,13 @@ namespace FSM
             {
                 if (_cboValidateType != null)
                 {
-                    _cboValidateType.SelectedIndexChanged -= SelectedIndexChanged;
+                    _cboValidateType.SelectionChangeCommitted -= SelectionChangeCommitted;
                 }
 
                 _cboValidateType = value;
                 if (_cboValidateType != null)
                 {
-                    _cboValidateType.SelectedIndexChanged += SelectedIndexChanged;
+                    _cboValidateType.SelectionChangeCommitted += SelectionChangeCommitted;
                 }
             }
         }
@@ -299,13 +299,13 @@ namespace FSM
             {
                 if (_cboDepartment != null)
                 {
-                    _cboDepartment.SelectedIndexChanged -= SelectedIndexChanged;
+                    _cboDepartment.SelectionChangeCommitted -= SelectionChangeCommitted;
                 }
 
                 _cboDepartment = value;
                 if (_cboDepartment != null)
                 {
-                    _cboDepartment.SelectedIndexChanged += SelectedIndexChanged;
+                    _cboDepartment.SelectionChangeCommitted += SelectionChangeCommitted;
                 }
             }
         }
@@ -347,11 +347,11 @@ namespace FSM
             _lblProgress = new Label();
             _lblMessages = new Label();
             _cboValidateType = new ComboBox();
-            _cboValidateType.SelectedIndexChanged += new EventHandler(SelectedIndexChanged);
+            _cboValidateType.SelectionChangeCommitted += new EventHandler(SelectionChangeCommitted);
             _grpCatImport = new GroupBox();
             _Label1 = new Label();
             _cboDepartment = new ComboBox();
-            _cboDepartment.SelectedIndexChanged += new EventHandler(SelectedIndexChanged);
+            _cboDepartment.SelectionChangeCommitted += new EventHandler(SelectionChangeCommitted);
             _grpExcelFile.SuspendLayout();
             _grpCatImport.SuspendLayout();
             SuspendLayout();
@@ -565,7 +565,7 @@ namespace FSM
             }
         }
 
-        private void SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectionChangeCommitted(object sender, EventArgs e)
         {
             string Department;
             if (string.IsNullOrEmpty(Combo.get_GetSelectedItemDescription(cboDepartment)))

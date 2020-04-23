@@ -454,7 +454,7 @@ namespace FSM
                                     dialogue = (FRMPOInvoiceIncludedItems)Activator.CreateInstance(typeof(FRMPOInvoiceIncludedItems));
                                 }
 
-                                dialogue.Icon = new Icon(dialogue.GetType(), "Logo.ico");
+                                //dialogue.Icon = new Icon(dialogue.GetType(), "Logo.ico");
                                 dialogue.ShowInTaskbar = false;
                                 dialogue.POToShow = Conversions.ToString(dgvData[5, dgvData.CurrentCell.RowIndex].Value);
                                 dialogue.InvoiceNo = Conversions.ToString(dgvData[3, dgvData.CurrentCell.RowIndex].Value);

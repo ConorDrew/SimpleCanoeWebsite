@@ -36,110 +36,114 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _grbAuthReasons = new GroupBox();
-            _txtAuthReasonOther = new TextBox();
-            _txtAuthReasonOther.TextChanged += new EventHandler(txtAuthReasonOther_TextChanged);
-            _AuthReasonOption1 = new RadioButton();
-            _AuthReasonOption1.CheckedChanged += new EventHandler(AuthReasonOption1_CheckedChanged);
-            _AuthReasonOption3 = new RadioButton();
-            _AuthReasonOption3.CheckedChanged += new EventHandler(AuthReasonOption3_CheckedChanged);
-            _AuthReasonOption2 = new RadioButton();
-            _AuthReasonOption2.CheckedChanged += new EventHandler(AuthReasonOption2_CheckedChanged);
-            _grbAuthReasons.SuspendLayout();
-            SuspendLayout();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._grbAuthReasons = new System.Windows.Forms.GroupBox();
+            this._txtAuthReasonOther = new System.Windows.Forms.TextBox();
+            this._AuthReasonOption1 = new System.Windows.Forms.RadioButton();
+            this._AuthReasonOption3 = new System.Windows.Forms.RadioButton();
+            this._AuthReasonOption2 = new System.Windows.Forms.RadioButton();
+            this._grbAuthReasons.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // btnOK
+            // _btnOK
             // 
-            _btnOK.Location = new Point(441, 347);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(75, 23);
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            _btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(439, 133);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            this._btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // btnCancel
+            // _btnCancel
             // 
-            _btnCancel.Location = new Point(360, 347);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(75, 23);
-            _btnCancel.TabIndex = 5;
-            _btnCancel.Text = "Cancel";
-            _btnCancel.UseVisualStyleBackColor = true;
-            _btnCancel.Visible = false;
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCancel.Location = new System.Drawing.Point(358, 133);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 5;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Visible = false;
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // grbAuthReasons
+            // _grbAuthReasons
             // 
-            _grbAuthReasons.Controls.Add(_txtAuthReasonOther);
-            _grbAuthReasons.Controls.Add(_AuthReasonOption1);
-            _grbAuthReasons.Controls.Add(_AuthReasonOption3);
-            _grbAuthReasons.Controls.Add(_AuthReasonOption2);
-            _grbAuthReasons.Location = new Point(12, 48);
-            _grbAuthReasons.Name = "grbAuthReasons";
-            _grbAuthReasons.Size = new Size(504, 119);
-            _grbAuthReasons.TabIndex = 17;
-            _grbAuthReasons.TabStop = false;
-            _grbAuthReasons.Text = "Authorisation Reason";
+            this._grbAuthReasons.Controls.Add(this._txtAuthReasonOther);
+            this._grbAuthReasons.Controls.Add(this._AuthReasonOption1);
+            this._grbAuthReasons.Controls.Add(this._AuthReasonOption3);
+            this._grbAuthReasons.Controls.Add(this._AuthReasonOption2);
+            this._grbAuthReasons.Location = new System.Drawing.Point(12, 5);
+            this._grbAuthReasons.Name = "_grbAuthReasons";
+            this._grbAuthReasons.Size = new System.Drawing.Size(504, 119);
+            this._grbAuthReasons.TabIndex = 17;
+            this._grbAuthReasons.TabStop = false;
+            this._grbAuthReasons.Text = "Authorisation Reason";
             // 
-            // txtAuthReasonOther
+            // _txtAuthReasonOther
             // 
-            _txtAuthReasonOther.Location = new Point(48, 82);
-            _txtAuthReasonOther.Name = "txtAuthReasonOther";
-            _txtAuthReasonOther.Size = new Size(433, 21);
-            _txtAuthReasonOther.TabIndex = 16;
+            this._txtAuthReasonOther.Location = new System.Drawing.Point(48, 82);
+            this._txtAuthReasonOther.Name = "_txtAuthReasonOther";
+            this._txtAuthReasonOther.Size = new System.Drawing.Size(433, 21);
+            this._txtAuthReasonOther.TabIndex = 16;
+            this._txtAuthReasonOther.TextChanged += new System.EventHandler(this.txtAuthReasonOther_TextChanged);
             // 
-            // AuthReasonOption1
+            // _AuthReasonOption1
             // 
-            _AuthReasonOption1.AutoSize = true;
-            _AuthReasonOption1.Location = new Point(48, 18);
-            _AuthReasonOption1.Name = "AuthReasonOption1";
-            _AuthReasonOption1.Size = new Size(213, 17);
-            _AuthReasonOption1.TabIndex = 13;
-            _AuthReasonOption1.TabStop = true;
-            _AuthReasonOption1.Text = "PO price wrong but value correct";
-            _AuthReasonOption1.UseVisualStyleBackColor = true;
+            this._AuthReasonOption1.AutoSize = true;
+            this._AuthReasonOption1.Location = new System.Drawing.Point(48, 18);
+            this._AuthReasonOption1.Name = "_AuthReasonOption1";
+            this._AuthReasonOption1.Size = new System.Drawing.Size(213, 17);
+            this._AuthReasonOption1.TabIndex = 13;
+            this._AuthReasonOption1.TabStop = true;
+            this._AuthReasonOption1.Text = "PO price wrong but value correct";
+            this._AuthReasonOption1.UseVisualStyleBackColor = true;
+            this._AuthReasonOption1.CheckedChanged += new System.EventHandler(this.AuthReasonOption1_CheckedChanged);
             // 
-            // AuthReasonOption3
+            // _AuthReasonOption3
             // 
-            _AuthReasonOption3.AutoSize = true;
-            _AuthReasonOption3.Location = new Point(48, 58);
-            _AuthReasonOption3.Name = "AuthReasonOption3";
-            _AuthReasonOption3.Size = new Size(57, 17);
-            _AuthReasonOption3.TabIndex = 15;
-            _AuthReasonOption3.TabStop = true;
-            _AuthReasonOption3.Text = "Other";
-            _AuthReasonOption3.UseVisualStyleBackColor = true;
+            this._AuthReasonOption3.AutoSize = true;
+            this._AuthReasonOption3.Location = new System.Drawing.Point(48, 58);
+            this._AuthReasonOption3.Name = "_AuthReasonOption3";
+            this._AuthReasonOption3.Size = new System.Drawing.Size(57, 17);
+            this._AuthReasonOption3.TabIndex = 15;
+            this._AuthReasonOption3.TabStop = true;
+            this._AuthReasonOption3.Text = "Other";
+            this._AuthReasonOption3.UseVisualStyleBackColor = true;
+            this._AuthReasonOption3.CheckedChanged += new System.EventHandler(this.AuthReasonOption3_CheckedChanged);
             // 
-            // AuthReasonOption2
+            // _AuthReasonOption2
             // 
-            _AuthReasonOption2.AutoSize = true;
-            _AuthReasonOption2.Location = new Point(48, 39);
-            _AuthReasonOption2.Name = "AuthReasonOption2";
-            _AuthReasonOption2.Size = new Size(200, 17);
-            _AuthReasonOption2.TabIndex = 14;
-            _AuthReasonOption2.TabStop = true;
-            _AuthReasonOption2.Text = "PO price wrong credit required";
-            _AuthReasonOption2.UseVisualStyleBackColor = true;
+            this._AuthReasonOption2.AutoSize = true;
+            this._AuthReasonOption2.Location = new System.Drawing.Point(48, 39);
+            this._AuthReasonOption2.Name = "_AuthReasonOption2";
+            this._AuthReasonOption2.Size = new System.Drawing.Size(200, 17);
+            this._AuthReasonOption2.TabIndex = 14;
+            this._AuthReasonOption2.TabStop = true;
+            this._AuthReasonOption2.Text = "PO price wrong credit required";
+            this._AuthReasonOption2.UseVisualStyleBackColor = true;
+            this._AuthReasonOption2.CheckedChanged += new System.EventHandler(this.AuthReasonOption2_CheckedChanged);
             // 
             // FRMPOInvoiceAuthReasons
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(528, 382);
-            Controls.Add(_grbAuthReasons);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            Name = "FRMPOInvoiceAuthReasons";
-            Text = "FRMPOInvoiceAuthReasons";
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_grbAuthReasons, 0);
-            _grbAuthReasons.ResumeLayout(false);
-            _grbAuthReasons.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(526, 170);
+            this.Controls.Add(this._grbAuthReasons);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.MinimumSize = new System.Drawing.Size(542, 209);
+            this.Name = "FRMPOInvoiceAuthReasons";
+            this.Text = "FRMPOInvoiceAuthReasons";
+            this.Controls.SetChildIndex(this._btnOK, 0);
+            this.Controls.SetChildIndex(this._btnCancel, 0);
+            this.Controls.SetChildIndex(this._grbAuthReasons, 0);
+            this._grbAuthReasons.ResumeLayout(false);
+            this._grbAuthReasons.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private Button _btnOK;
