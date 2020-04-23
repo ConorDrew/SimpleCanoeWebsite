@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using FSM.Entity.CostCentres.Enums;
+﻿using FSM.Entity.CostCentres.Enums;
 using FSM.Entity.Sys;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace FSM.Entity.CostCentres
 {
@@ -69,7 +70,16 @@ namespace FSM.Entity.CostCentres
 
             if (dt is object && dt.Rows.Count > 0)
             {
-                var costCentres = ObjectMap.DataTableToList<CostCentre>(dt);
+                List<CostCentre> costCentres = (from x in dt.AsEnumerable()
+                                                select new CostCentre()
+                                                {
+                                                    Id = Helper.MakeIntegerValid(x["Id"]),
+                                                    CostCentreId = Helper.MakeIntegerValid(x["CostCentre"]),
+                                                    JobTypeId = Helper.MakeIntegerValid(x["JobTypeId"]),
+                                                    LinkId = Helper.MakeIntegerValid(x["LinkId"]),
+                                                    LinkTypeId = Helper.MakeIntegerValid(x["LinkTypeId"]),
+                                                    JobSpendLimit = (decimal)Helper.MakeDoubleValid(x["JobSpendLimit"]),
+                                                }).ToList();
                 return costCentres;
             }
             else

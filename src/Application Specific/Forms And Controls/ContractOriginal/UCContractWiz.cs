@@ -5531,7 +5531,7 @@ namespace FSM
                     NextVisit();
                 }
 
-                DateTime estVisitDate = Conversions.ToDate(newdate.Date + " 09:00:00");  // TODO
+                DateTime estVisitDate = new DateTime(newdate.Year, newdate.Month, newdate.Day, 9, 0, 0);
                 string jobSummary = string.Empty;
                 int rateCount = 0;
                 if (Conversions.ToDouble(CBT(txtMainAppCount.Text)) > 0)

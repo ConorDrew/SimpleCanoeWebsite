@@ -28,6 +28,7 @@ namespace FSM
         {
             // This call is required by the Windows Form Designer.
             InitializeComponent();
+
             var argc = cboInvType;
             Combo.SetUpCombo(ref argc, App.DB.Picklists.GetAll((Enums.PickListTypes)65).Table, "ManagerID", "Name", Enums.ComboValues.Please_Select);
             var argc1 = cboPaidBy;
@@ -147,6 +148,7 @@ namespace FSM
                         break;
                     }
             }
+            base.Load += FRMEngineerVisit_Load;
         }
 
         // Form overrides dispose to clean up the component list.
@@ -8393,3858 +8395,3942 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            _tcWorkSheet = new TabControl();
-            _tpMainDetails = new TabPage();
-            _chkSORDesc = new CheckBox();
-            _chkSORDesc.CheckedChanged += new EventHandler(chkSORDesc_CheckedChanged);
-            _btnEditInvoiceNotes = new Button();
-            _btnEditInvoiceNotes.Click += new EventHandler(btnEditInvoiceNotes_Click);
-            _txtScheduledTime2 = new TextBox();
-            _Label71 = new Label();
-            _btnChangeOutcome = new Button();
-            _btnChangeOutcome.Click += new EventHandler(btnChangeOutcome_Click);
-            _pbCustomerSignature = new PictureBox();
-            _pbEngineerSignature = new PictureBox();
-            _cbxEmailReceiptToCustomer = new CheckBox();
-            _cboSignatureSelected = new ComboBox();
-            _Label42 = new Label();
-            _dgJobItems = new DataGrid();
-            _dgJobItems.CurrentCellChanged += new EventHandler(dgJobItems_CurrentCellChanged);
-            _Label12 = new Label();
-            _txtNotesToEngineer = new TextBox();
-            _Label6 = new Label();
-            _txtCustomer = new TextBox();
-            _cboEngineer = new ComboBox();
-            _txtNotesFromEngineer = new TextBox();
-            _cboOutcome = new ComboBox();
-            _cboOutcome.SelectedIndexChanged += new EventHandler(cboOutcome_SelectedIndexChanged);
-            _txtOutcomeDetails = new TextBox();
-            _Label11 = new Label();
-            _txtUploadedBy = new TextBox();
-            _txtStatus = new TextBox();
-            _Label9 = new Label();
-            _Label5 = new Label();
-            _Label4 = new Label();
-            _Label3 = new Label();
-            _Label2 = new Label();
-            _Label1 = new Label();
-            _tpAppliances = new TabPage();
-            _gpAppliances = new GroupBox();
-            _dgAssets = new DataGrid();
-            _tpWorksheets = new TabPage();
-            _grpAdditionalWorksheet = new GroupBox();
-            _btnRemoveAdd = new Button();
-            _btnAddAdd = new Button();
-            _dgAdditional = new DataGrid();
-            _dgAdditional.DoubleClick += new EventHandler(dgAdditionalWorkSheets_DoubleClick);
-            _grpAlarmInfo = new GroupBox();
-            _btnRemoveSmokeComo = new Button();
-            _btnRemoveSmokeComo.Click += new EventHandler(btnRemoveSmokeComo_Click);
-            _btnAddSmokeComo = new Button();
-            _btnAddSmokeComo.Click += new EventHandler(btnAddSmokeComo_Click);
-            _DGSmokeComo = new DataGrid();
-            _DGSmokeComo.DoubleClick += new EventHandler(dgSmokeComoWorkSheets_DoubleClick);
-            _grpVisitWorksheetExtended = new GroupBox();
-            _cboSITimer = new ComboBox();
-            _cboFillDisc = new ComboBox();
-            _Label81 = new Label();
-            _Label80 = new Label();
-            _Label79 = new Label();
-            _txtRadiators = new TextBox();
-            _txtVisualInspectionReason = new TextBox();
-            _Label68 = new Label();
-            _Label69 = new Label();
-            _Label70 = new Label();
-            _Label62 = new Label();
-            _Label63 = new Label();
-            _Label64 = new Label();
-            _Label65 = new Label();
-            _Label66 = new Label();
-            _Label67 = new Label();
-            _cboCertificateTypeID = new ComboBox();
-            _cboCODetectorFittedID = new ComboBox();
-            _cboVisualInspectionSatisfactoryID = new ComboBox();
-            _cboImmersionID = new ComboBox();
-            _cboJacketID = new ComboBox();
-            _cboCylinderTypeID = new ComboBox();
-            _cboPartialHeatingID = new ComboBox();
-            _cboHeatingSystemTypeID = new ComboBox();
-            _txtApproxAgeOfBoiler = new TextBox();
-            _cboStrainerInspectedID = new ComboBox();
-            _Label56 = new Label();
-            _Label57 = new Label();
-            _cboStrainerFittedID = new ComboBox();
-            _cboInstallationSafeToUseID = new ComboBox();
-            _cboInstallationPipeWorkCorrectID = new ComboBox();
-            _cboCorrectMaterialsUsedID = new ComboBox();
-            _Label58 = new Label();
-            _Label59 = new Label();
-            _Label60 = new Label();
-            _Label61 = new Label();
-            _grpVisitDefects = new GroupBox();
-            _btnAddVisitDefect = new Button();
-            _btnAddVisitDefect.Click += new EventHandler(btnAddVisitDefect_Click);
-            _btnRemoveVisitDefect = new Button();
-            _btnRemoveVisitDefect.Click += new EventHandler(btnRemoveVisitDefect_Click);
-            _dgVisitDefects = new DataGrid();
-            _dgVisitDefects.DoubleClick += new EventHandler(dgVisitDefects_DoubleClick);
-            _grpApplianceWorksheet = new GroupBox();
-            _btnRemoveApplianceWorkSheet = new Button();
-            _btnRemoveApplianceWorkSheet.Click += new EventHandler(btnRemoveApplianceWorkSheet_Click);
-            _dgApplianceWorkSheets = new DataGrid();
-            _dgApplianceWorkSheets.DoubleClick += new EventHandler(dgApplianceWorkSheets_DoubleClick);
-            _btnAddApplianceWorksheet = new Button();
-            _btnAddApplianceWorksheet.Click += new EventHandler(btnAddApplianceWorksheet_Click);
-            _grpVisitWorksheet = new GroupBox();
-            _cboMeterCapped = new ComboBox();
-            _Label73 = new Label();
-            _cboMeterLocation = new ComboBox();
-            _Label72 = new Label();
-            _txtAmountCollected = new TextBox();
-            _cboPaymentMethod = new ComboBox();
-            _Label44 = new Label();
-            _Label43 = new Label();
-            _cboPropertyRented = new ComboBox();
-            _cboBonding = new ComboBox();
-            _cboEmergencyControlAccessible = new ComboBox();
-            _cboGasInstallationTightnessTest = new ComboBox();
-            _Label41 = new Label();
-            _Label40 = new Label();
-            _Label8 = new Label();
-            _Label7 = new Label();
-            _tpTimesheets = new TabPage();
-            _grpTimesheets = new GroupBox();
-            _txtActualTimeSpent = new TextBox();
-            _txtDifference = new TextBox();
-            _txtSORTimeAllowance = new TextBox();
-            _Label52 = new Label();
-            _Label51 = new Label();
-            _Label50 = new Label();
-            _Label22 = new Label();
-            _cboTimeSheetType = new ComboBox();
-            _Label14 = new Label();
-            _txtComments = new TextBox();
-            _dtpEndDate = new DateTimePicker();
-            _dtpStartDate = new DateTimePicker();
-            _dtpStartDate.ValueChanged += new EventHandler(dtpStartDate_ValueChanged);
-            _dgTimeSheets = new DataGrid();
-            _btnAddTimeSheet = new Button();
-            _btnAddTimeSheet.Click += new EventHandler(btnAddTimeSheet_Click);
-            _Label20 = new Label();
-            _Label21 = new Label();
-            _btnRemoveTimeSheet = new Button();
-            _btnRemoveTimeSheet.Click += new EventHandler(btnRemoveTimeSheet_Click);
-            _txtScheduledTime = new TextBox();
-            _Label10 = new Label();
-            _tpPartsAndProducts = new TabPage();
-            _grpAllocated = new GroupBox();
-            _btnUnselectAllPPA = new Button();
-            _btnUnselectAllPPA.Click += new EventHandler(btnUnselectAllPPA_Click);
-            _btnSelectAllPPA = new Button();
-            _btnSelectAllPPA.Click += new EventHandler(btnSelectAllPPA_Click);
-            _btnRevertUsed = new Button();
-            _btnRevertUsed.Click += new EventHandler(btnRevertUsed_Click);
-            _nudPartAllocatedQty = new NumericUpDown();
-            _lblAllocatedQuantity = new Label();
-            _btnAllUsed = new Button();
-            _btnAllUsed.Click += new EventHandler(btnAllUsed_Click);
-            _Label35 = new Label();
-            _Panel2 = new Panel();
-            _Label34 = new Label();
-            _Panel1 = new Panel();
-            _btnAllocatedNotUsed = new Button();
-            _btnAllocatedNotUsed.Click += new EventHandler(btnAllocatedNotUsed_Click);
-            _dgPartsProductsAllocated = new DataGrid();
-            _dgPartsProductsAllocated.Click += new EventHandler(dgPartsProductsAllocated_Click);
-            _lblQuantityWarning = new Label();
-            _grpUsed = new GroupBox();
-            _lblEquipment = new Label();
-            _lblSellPrice = new Label();
-            _dgPartsAndProductsUsed = new DataGrid();
-            _btnAddPartProductUsed = new Button();
-            _btnAddPartProductUsed.Click += new EventHandler(btnAddPartProduct_Click);
-            _nudQuantityUsed = new NumericUpDown();
-            _txtNameUsed = new TextBox();
-            _txtNumberUsed = new TextBox();
-            _Label13 = new Label();
-            _Label15 = new Label();
-            _Label16 = new Label();
-            _btnRemovePartProductUsed = new Button();
-            _btnRemovePartProductUsed.Click += new EventHandler(btnRemovePartProduct_Click);
-            _btnFindProductUsed = new Button();
-            _btnFindProductUsed.Click += new EventHandler(btnFindProduct_Click);
-            _btnFindPartUsed = new Button();
-            _btnFindPartUsed.Click += new EventHandler(btnFindPart_Click);
-            _tpOutcomes = new TabPage();
-            _grpOutcomes = new GroupBox();
-            _grpSiteFuels = new GroupBox();
-            _dgSiteFuel = new DataGrid();
-            _dgSiteFuel.Click += new EventHandler(dgSiteFuel_Click);
-            _cboNccRad = new ComboBox();
-            _Label76 = new Label();
-            _cboRecharge = new ComboBox();
-            _cboRecharge.SelectedIndexChanged += new EventHandler(cboRecharge_SelectedIndexChanged);
-            _Label75 = new Label();
-            _chkRecharge = new CheckBox();
-            _chkRecharge.CheckedChanged += new EventHandler(chkRecharge_CheckedChanged);
-            _chkGasServiceCompleted = new CheckBox();
-            _tpQC = new TabPage();
-            _GroupBox4 = new GroupBox();
-            _grpQCField = new GroupBox();
-            _cboQCCustSig = new ComboBox();
-            _lblQCCustSig = new Label();
-            _cboRecallEngineer = new ComboBox();
-            _Label49 = new Label();
-            _cboRecall = new ComboBox();
-            _cboRecall.SelectedIndexChanged += new EventHandler(cboRecall_SelectedIndexChanged);
-            _Label48 = new Label();
-            _dtpQCDocumentsRecieved = new DateTimePicker();
-            _chkQCDocumentsRecieved = new CheckBox();
-            _chkQCDocumentsRecieved.CheckedChanged += new EventHandler(chkQCDocumentsRecieved_CheckedChanged);
-            _txtQCPoorJobNotes = new TextBox();
-            _lblQCPoorJobNotes = new Label();
-            _cboQCEngineerPaymentRecieved = new ComboBox();
-            _lblQCEngineerMonies = new Label();
-            _cboQCPaymentSelection = new ComboBox();
-            _lblQCEngPaymentMethod = new Label();
-            _cboQCAppliance = new ComboBox();
-            _cboQCPaymentCollection = new ComboBox();
-            _lblQCPaymentCollection = new Label();
-            _cboQCJobUploadTimescale = new ComboBox();
-            _lblQCAppliance = new Label();
-            _cboQCParts = new ComboBox();
-            _lblJobUploadTimescale = new Label();
-            _lblQCParts = new Label();
-            _cboQCLGSR = new ComboBox();
-            _lblQCLGSR = new Label();
-            _cboQCLabourTime = new ComboBox();
-            _lblQCLabourTime = new Label();
-            _grpOfficeQC = new GroupBox();
-            _cboQCPaymentMethod = new ComboBox();
-            _lblPaymentMethod = new Label();
-            _cboQCOrderNo = new ComboBox();
-            _lblOrderNo = new Label();
-            _cboQCScheduleOfRate = new ComboBox();
-            _lblScheduleRate = new Label();
-            _cboQCCustomerDetails = new ComboBox();
-            _lblCustomerDetails = new Label();
-            _cboQCJobType = new ComboBox();
-            _lblJobTypeCorrect = new Label();
-            _cboFTFCode = new ComboBox();
-            _Label74 = new Label();
-            _tpCharges = new TabPage();
-            _gpbInvoice = new GroupBox();
-            _cboDept = new ComboBox();
-            _cboDept.SelectedIndexChanged += new EventHandler(cboDept_SelectedIndexChanged);
-            _btnCreateServ = new Button();
-            _btnCreateServ.Click += new EventHandler(btnCreateServ_Click);
-            _txtInvAmount = new TextBox();
-            _txtCreditAmount = new TextBox();
-            _txtInvNo = new TextBox();
-            _cboPaidBy = new ComboBox();
-            _cboPaidBy.SelectedIndexChanged += new EventHandler(cboPaidBy_SelectedIndexChanged);
-            _cboInvType = new ComboBox();
-            _cboInvType.SelectedIndexChanged += new EventHandler(cboInvType_SelectedIndexChanged);
-            _cboVATRate = new ComboBox();
-            _cboVATRate.SelectedIndexChanged += new EventHandler(cboVATRate_SelectedIndexChanged);
-            _txtPriceIncVAT = new TextBox();
-            _txtAccountCode = new TextBox();
-            _txtAccountCode.TextChanged += new EventHandler(txtAccountCode_TextChanged);
-            _lblInvoiceAddressDetails = new Label();
-            _txtNominalCode = new TextBox();
-            _txtNominalCode.TextChanged += new EventHandler(txtNominalCode_TextChanged);
-            _btnSearch = new Button();
-            _btnSearch.Click += new EventHandler(btnSearch_Click);
-            _dtpRaiseInvoiceOn = new DateTimePicker();
-            _dtpRaiseInvoiceOn.ValueChanged += new EventHandler(dtpRaiseInvoiceOn_ValueChanged);
-            _cbxReadyToBeInvoiced = new CheckBox();
-            _cbxReadyToBeInvoiced.CheckedChanged += new EventHandler(cbxReadyToBeInvoiced_CheckedChanged);
-            _lblInvAmount = new Label();
-            _lblcredit = new Label();
-            _lblcredit.Click += new EventHandler(lblcredit_Click);
-            _lblInvNo = new Label();
-            _lblPaidBy = new Label();
-            _lblInvType = new Label();
-            _lblVAT = new Label();
-            _lblNominalCode = new Label();
-            _lblAccountCode = new Label();
-            _lblPriceInvVAT = new Label();
-            _lblDepartment = new Label();
-            _lblRaiseInvoiceOn = new Label();
-            _gpbCharges = new GroupBox();
-            _chkShowJobCharges = new CheckBox();
-            _chkShowJobCharges.CheckedChanged += new EventHandler(chkShowJobCharges_CheckedChanged);
-            _GroupBox6 = new GroupBox();
-            _Label82 = new Label();
-            _Label78 = new Label();
-            _Label77 = new Label();
-            _txtProfitPerc = new TextBox();
-            _txtProfit = new TextBox();
-            _CostsToOption1 = new RadioButton();
-            _CostsToOption1.CheckedChanged += new EventHandler(radioButtonCostsTo_CheckedChanged);
-            _txtCosts = new TextBox();
-            _CostsToOption3 = new RadioButton();
-            _CostsToOption3.CheckedChanged += new EventHandler(radioButtonCostsTo_CheckedChanged);
-            _txtSale = new TextBox();
-            _CostsToOption2 = new RadioButton();
-            _CostsToOption2.CheckedChanged += new EventHandler(radioButtonCostsTo_CheckedChanged);
-            _lblContractPerVisit = new Label();
-            _lblOR = new Label();
-            _Label30 = new Label();
-            _lblQuotePercentageTotal = new Label();
-            _lblEquals = new Label();
-            _GroupBox9 = new GroupBox();
-            _rbStandard = new RadioButton();
-            _rbSite = new RadioButton();
-            _lblPercent = new Label();
-            _txtPercentOfQuote = new TextBox();
-            _txtPercentOfQuote.TextChanged += new EventHandler(txtPercentOfQuote_TextChanged);
-            _rdoPercentageOfQuoteValue = new RadioButton();
-            _rdoPercentageOfQuoteValue.CheckedChanged += new EventHandler(rdoPercentageOfQuoteValue_CheckedChanged);
-            _txtCharge = new TextBox();
-            _rdoChargeOther = new RadioButton();
-            _rdoChargeOther.CheckedChanged += new EventHandler(rdoChargeOther_CheckedChanged);
-            _rdoJobValue = new RadioButton();
-            _rdoJobValue.CheckedChanged += new EventHandler(rdoJobValue_CheckedChanged);
-            _txtJobValue = new TextBox();
-            _gpbAdditionalCharges = new GroupBox();
-            _lblAdditionalCharge = new Label();
-            _btnAddAdditionalCharge = new Button();
-            _btnAddAdditionalCharge.Click += new EventHandler(btnAddAdditionalCharge_Click);
-            _txtAdditionalCharge = new TextBox();
-            _btnRemoveAdditionalCharge = new Button();
-            _btnRemoveAdditionalCharge.Click += new EventHandler(btnRemoveAdditionalCharge_Click);
-            _txtAdditionalChargeDescription = new TextBox();
-            _lblDescription = new Label();
-            _txtAdditionalChargeTotal = new TextBox();
-            _Label29 = new Label();
-            _dgAdditionalCharges = new DataGrid();
-            _gpbPartsAndProducts = new GroupBox();
-            _txtPartsMarkUp = new TextBox();
-            _txtPartsMarkUp.Leave += new EventHandler(txtPartsMarkUp_Leave);
-            _chkPartsSelectAll = new CheckBox();
-            _chkPartsSelectAll.Click += new EventHandler(chkPartsSelectAll_Click);
-            _txtPartProductCost = new TextBox();
-            _txtPartsProductTotal = new TextBox();
-            _txtPartsProductTotal.Leave += new EventHandler(txtPartsProductTotal_Leave);
-            _Label28 = new Label();
-            _lblPPTotalCost = new Label();
-            _lblPartsMarkUp = new Label();
-            _dgPartsProductCharging = new DataGrid();
-            _dgPartsProductCharging.MouseUp += new MouseEventHandler(dgPartsProductCharging_MouseUp);
-            _gpbTimesheets = new GroupBox();
-            _chkTimesheetSelectAll = new CheckBox();
-            _chkTimesheetSelectAll.Click += new EventHandler(chkTimesheetSelectAll_Click);
-            _txtEngineerCostTotal = new TextBox();
-            _txtTimesheetTotal = new TextBox();
-            _txtTimesheetTotal.Leave += new EventHandler(txtTimesheetTotal_Leave);
-            _Label27 = new Label();
-            _Label32 = new Label();
-            _dgTimesheetCharges = new DataGrid();
-            _dgTimesheetCharges.MouseUp += new MouseEventHandler(dgTimesheetCharges_MouseUp);
-            _gpbScheduleOfRates = new GroupBox();
-            _btnAddSoR = new Button();
-            _btnAddSoR.Click += new EventHandler(btnAddSoR_Click);
-            _txtScheduleOfRatesTotal = new TextBox();
-            _dgScheduleOfRateCharges = new DataGrid();
-            _dgScheduleOfRateCharges.MouseUp += new MouseEventHandler(dgScheduleOfRateCharges_MouseUp);
-            _Label26 = new Label();
-            _tpDocuments = new TabPage();
-            _tpPhotos = new TabPage();
-            _tpPhotos.Enter += new EventHandler(tpPhotos_Enter);
-            _flPhotos = new FlowLayoutPanel();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _mnuAddChecklist = new ContextMenu();
-            _cbxVisitLockDown = new CheckBox();
-            _cbxVisitLockDown.CheckedChanged += new EventHandler(cbxVisitLockDown_CheckedChanged);
-            _lblStatusWarning = new Label();
-            _btnOrders = new Button();
-            _btnOrders.Click += new EventHandler(btnOrders_Click);
-            _btnInvoice = new Button();
-            _btnInvoice.Click += new EventHandler(btnInvoice_Click);
-            _btnPrint = new Button();
-            _btnPrint.Click += new EventHandler(btnPrint_Click);
-            _PrintMenu = new ContextMenuStrip(components);
-            _mnuGasSafetyInspectionBoilerServiceRecord = new ToolStripMenuItem();
-            _txtCurrentContract = new TextBox();
-            _Label39 = new Label();
-            _btnPrintGSR = new Button();
-            _btnPrintGSR.Click += new EventHandler(btnPrintGSR_Click);
-            _btnPrintSVR = new Button();
-            _btnPrintSVR.Click += new EventHandler(btnPrintSVR_Click);
-            _btnJob = new Button();
-            _btnJob.Click += new EventHandler(btnJob_Click);
-            _lblRechargeTicked = new Label();
-            _btnShowVisits = new Button();
-            _btnShowVisits.Click += new EventHandler(btnShowVisits_Click);
-            _BottomToolStripPanel = new ToolStripPanel();
-            _TopToolStripPanel = new ToolStripPanel();
-            _RightToolStripPanel = new ToolStripPanel();
-            _LeftToolStripPanel = new ToolStripPanel();
-            _ContentPanel = new ToolStripContentPanel();
-            _Button1 = new Button();
-            _Button1.Click += new EventHandler(Button1_Click);
-            _txtCustEmail = new TextBox();
-            _SVRs = new ContextMenuStrip(components);
-            _AllGasPaperworkToolStripMenuItem = new ToolStripMenuItem();
-            _AllGasPaperworkToolStripMenuItem.Click += new EventHandler(AllGasPaperworkToolStripMenuItem_Click);
-            _svrmenu = new ToolStripMenuItem();
-            _svrmenu.Click += new EventHandler(svrmenu_Click);
-            _JobSheetMenu = new ToolStripMenuItem();
-            _JobSheetMenu.Click += new EventHandler(JobSheetMenu_Click);
-            _DomesticGSRToolStripMenuItem = new ToolStripMenuItem();
-            _DomesticGSRToolStripMenuItem.Click += new EventHandler(DomesticGSRToolStripMenuItem_Click);
-            _WarningNoticeToolStripMenuItem = new ToolStripMenuItem();
-            _WarningNoticeToolStripMenuItem.Click += new EventHandler(WarningNoticeToolStripMenuItem_Click);
-            _CommercialGSRToolStripMenuItem = new ToolStripMenuItem();
-            _CommercialGSRToolStripMenuItem.Click += new EventHandler(CommercialGSRToolStripMenuItem_Click);
-            _QCResultsToolStripMenuItem = new ToolStripMenuItem();
-            _QCResultsToolStripMenuItem.Click += new EventHandler(QCResultsToolStripMenuItem_Click);
-            _ElectricalMinorWorksToolStripMenuItem = new ToolStripMenuItem();
-            _ElectricalMinorWorksToolStripMenuItem.Click += new EventHandler(ElectricalMinorWorksToolStripMenuItem_Click);
-            _CommercialCateringToolStripMenuItem = new ToolStripMenuItem();
-            _CommercialCateringToolStripMenuItem.Click += new EventHandler(CommercialCateringToolStripMenuItem_Click);
-            _SaffronUnventedWorkshhetToolStripMenuItem = new ToolStripMenuItem();
-            _SaffronUnventedWorkshhetToolStripMenuItem.Click += new EventHandler(SaffronUnventedWorkshhetToolStripMenuItem_Click);
-            _PropertyMaintenanceWorksheetToolStripMenuItem = new ToolStripMenuItem();
-            _PropertyMaintenanceWorksheetToolStripMenuItem.Click += new EventHandler(PropertyMaintenanceWorksheetToolStripMenuItem_Click);
-            _ASHPWorksheetToolStripMenuItem = new ToolStripMenuItem();
-            _ASHPWorksheetToolStripMenuItem.Click += new EventHandler(ASHPWorksheetToolStripMenuItem_Click);
-            _CommissioningChecklistToolStripMenuItem = new ToolStripMenuItem();
-            _CommissioningChecklistToolStripMenuItem.Click += new EventHandler(CommissioningChecklistToolStripMenuItem_Click);
-            _HotWorksPermitToolStripMenuItem = new ToolStripMenuItem();
-            _HotWorksPermitToolStripMenuItem.Click += new EventHandler(HotWorksPermitToolStripMenuItem_Click);
-            _tcWorkSheet.SuspendLayout();
-            _tpMainDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_pbCustomerSignature).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_pbEngineerSignature).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgJobItems).BeginInit();
-            _tpAppliances.SuspendLayout();
-            _gpAppliances.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAssets).BeginInit();
-            _tpWorksheets.SuspendLayout();
-            _grpAdditionalWorksheet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAdditional).BeginInit();
-            _grpAlarmInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_DGSmokeComo).BeginInit();
-            _grpVisitWorksheetExtended.SuspendLayout();
-            _grpVisitDefects.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgVisitDefects).BeginInit();
-            _grpApplianceWorksheet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgApplianceWorkSheets).BeginInit();
-            _grpVisitWorksheet.SuspendLayout();
-            _tpTimesheets.SuspendLayout();
-            _grpTimesheets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgTimeSheets).BeginInit();
-            _tpPartsAndProducts.SuspendLayout();
-            _grpAllocated.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_nudPartAllocatedQty).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsProductsAllocated).BeginInit();
-            _grpUsed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsAndProductsUsed).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_nudQuantityUsed).BeginInit();
-            _tpOutcomes.SuspendLayout();
-            _grpOutcomes.SuspendLayout();
-            _grpSiteFuels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSiteFuel).BeginInit();
-            _tpQC.SuspendLayout();
-            _GroupBox4.SuspendLayout();
-            _grpQCField.SuspendLayout();
-            _grpOfficeQC.SuspendLayout();
-            _tpCharges.SuspendLayout();
-            _gpbInvoice.SuspendLayout();
-            _gpbCharges.SuspendLayout();
-            _GroupBox6.SuspendLayout();
-            _GroupBox9.SuspendLayout();
-            _gpbAdditionalCharges.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAdditionalCharges).BeginInit();
-            _gpbPartsAndProducts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsProductCharging).BeginInit();
-            _gpbTimesheets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgTimesheetCharges).BeginInit();
-            _gpbScheduleOfRates.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgScheduleOfRateCharges).BeginInit();
-            _tpPhotos.SuspendLayout();
-            _PrintMenu.SuspendLayout();
-            _SVRs.SuspendLayout();
-            SuspendLayout();
-            //
-            // tcWorkSheet
-            //
-            _tcWorkSheet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _tcWorkSheet.Controls.Add(_tpMainDetails);
-            _tcWorkSheet.Controls.Add(_tpAppliances);
-            _tcWorkSheet.Controls.Add(_tpWorksheets);
-            _tcWorkSheet.Controls.Add(_tpTimesheets);
-            _tcWorkSheet.Controls.Add(_tpPartsAndProducts);
-            _tcWorkSheet.Controls.Add(_tpOutcomes);
-            _tcWorkSheet.Controls.Add(_tpQC);
-            _tcWorkSheet.Controls.Add(_tpCharges);
-            _tcWorkSheet.Controls.Add(_tpDocuments);
-            _tcWorkSheet.Controls.Add(_tpPhotos);
-            _tcWorkSheet.Location = new Point(0, 64);
-            _tcWorkSheet.Name = "tcWorkSheet";
-            _tcWorkSheet.SelectedIndex = 0;
-            _tcWorkSheet.Size = new Size(1255, 678);
-            _tcWorkSheet.TabIndex = 1;
-            //
-            // tpMainDetails
-            //
-            _tpMainDetails.Controls.Add(_chkSORDesc);
-            _tpMainDetails.Controls.Add(_btnEditInvoiceNotes);
-            _tpMainDetails.Controls.Add(_txtScheduledTime2);
-            _tpMainDetails.Controls.Add(_Label71);
-            _tpMainDetails.Controls.Add(_btnChangeOutcome);
-            _tpMainDetails.Controls.Add(_pbCustomerSignature);
-            _tpMainDetails.Controls.Add(_pbEngineerSignature);
-            _tpMainDetails.Controls.Add(_cbxEmailReceiptToCustomer);
-            _tpMainDetails.Controls.Add(_cboSignatureSelected);
-            _tpMainDetails.Controls.Add(_Label42);
-            _tpMainDetails.Controls.Add(_dgJobItems);
-            _tpMainDetails.Controls.Add(_Label12);
-            _tpMainDetails.Controls.Add(_txtNotesToEngineer);
-            _tpMainDetails.Controls.Add(_Label6);
-            _tpMainDetails.Controls.Add(_txtCustomer);
-            _tpMainDetails.Controls.Add(_cboEngineer);
-            _tpMainDetails.Controls.Add(_txtNotesFromEngineer);
-            _tpMainDetails.Controls.Add(_cboOutcome);
-            _tpMainDetails.Controls.Add(_txtOutcomeDetails);
-            _tpMainDetails.Controls.Add(_Label11);
-            _tpMainDetails.Controls.Add(_txtUploadedBy);
-            _tpMainDetails.Controls.Add(_txtStatus);
-            _tpMainDetails.Controls.Add(_Label9);
-            _tpMainDetails.Controls.Add(_Label5);
-            _tpMainDetails.Controls.Add(_Label4);
-            _tpMainDetails.Controls.Add(_Label3);
-            _tpMainDetails.Controls.Add(_Label2);
-            _tpMainDetails.Controls.Add(_Label1);
-            _tpMainDetails.Location = new Point(4, 22);
-            _tpMainDetails.Name = "tpMainDetails";
-            _tpMainDetails.Size = new Size(1247, 652);
-            _tpMainDetails.TabIndex = 0;
-            _tpMainDetails.Text = "Main Details";
-            _tpMainDetails.UseVisualStyleBackColor = true;
-            //
-            // chkSORDesc
-            //
-            _chkSORDesc.AutoSize = true;
-            _chkSORDesc.Font = new Font("Verdana", 16.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _chkSORDesc.Location = new Point(128, 413);
-            _chkSORDesc.Name = "chkSORDesc";
-            _chkSORDesc.Size = new Size(394, 30);
-            _chkSORDesc.TabIndex = 35;
-            _chkSORDesc.Text = "Use SOR Descriptions for Invoice";
-            _chkSORDesc.UseVisualStyleBackColor = true;
-            //
-            // btnEditInvoiceNotes
-            //
-            _btnEditInvoiceNotes.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnEditInvoiceNotes.Location = new Point(11, 384);
-            _btnEditInvoiceNotes.Name = "btnEditInvoiceNotes";
-            _btnEditInvoiceNotes.Size = new Size(97, 23);
-            _btnEditInvoiceNotes.TabIndex = 34;
-            _btnEditInvoiceNotes.Text = "Edit Inv Notes";
-            _btnEditInvoiceNotes.Visible = false;
-            //
-            // txtScheduledTime2
-            //
-            _txtScheduledTime2.Location = new Point(128, 204);
-            _txtScheduledTime2.Name = "txtScheduledTime2";
-            _txtScheduledTime2.ReadOnly = true;
-            _txtScheduledTime2.Size = new Size(510, 21);
-            _txtScheduledTime2.TabIndex = 32;
-            //
-            // Label71
-            //
-            _Label71.Location = new Point(8, 207);
-            _Label71.Name = "Label71";
-            _Label71.Size = new Size(104, 16);
-            _Label71.TabIndex = 33;
-            _Label71.Text = "Scheduled";
-            //
-            // btnChangeOutcome
-            //
-            _btnChangeOutcome.Location = new Point(128, 171);
-            _btnChangeOutcome.Name = "btnChangeOutcome";
-            _btnChangeOutcome.Size = new Size(114, 23);
-            _btnChangeOutcome.TabIndex = 31;
-            _btnChangeOutcome.Text = "Change Outcome";
-            _btnChangeOutcome.UseVisualStyleBackColor = true;
-            //
-            // pbCustomerSignature
-            //
-            _pbCustomerSignature.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _pbCustomerSignature.BorderStyle = BorderStyle.FixedSingle;
-            _pbCustomerSignature.Location = new Point(647, 207);
-            _pbCustomerSignature.Name = "pbCustomerSignature";
-            _pbCustomerSignature.Size = new Size(592, 119);
-            _pbCustomerSignature.SizeMode = PictureBoxSizeMode.Zoom;
-            _pbCustomerSignature.TabIndex = 30;
-            _pbCustomerSignature.TabStop = false;
-            //
-            // pbEngineerSignature
-            //
-            _pbEngineerSignature.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _pbEngineerSignature.BorderStyle = BorderStyle.FixedSingle;
-            _pbEngineerSignature.Location = new Point(647, 44);
-            _pbEngineerSignature.Name = "pbEngineerSignature";
-            _pbEngineerSignature.Size = new Size(592, 121);
-            _pbEngineerSignature.SizeMode = PictureBoxSizeMode.Zoom;
-            _pbEngineerSignature.TabIndex = 29;
-            _pbEngineerSignature.TabStop = false;
-            //
-            // cbxEmailReceiptToCustomer
-            //
-            _cbxEmailReceiptToCustomer.AutoSize = true;
-            _cbxEmailReceiptToCustomer.Location = new Point(647, 390);
-            _cbxEmailReceiptToCustomer.Name = "cbxEmailReceiptToCustomer";
-            _cbxEmailReceiptToCustomer.Size = new Size(180, 17);
-            _cbxEmailReceiptToCustomer.TabIndex = 28;
-            _cbxEmailReceiptToCustomer.Text = "Email Receipt To Customer";
-            _cbxEmailReceiptToCustomer.UseVisualStyleBackColor = true;
-            //
-            // cboSignatureSelected
-            //
-            _cboSignatureSelected.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboSignatureSelected.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboSignatureSelected.Location = new Point(714, 332);
-            _cboSignatureSelected.Name = "cboSignatureSelected";
-            _cboSignatureSelected.Size = new Size(525, 21);
-            _cboSignatureSelected.TabIndex = 27;
-            //
-            // Label42
-            //
-            _Label42.Location = new Point(644, 335);
-            _Label42.Name = "Label42";
-            _Label42.Size = new Size(64, 23);
-            _Label42.TabIndex = 26;
-            _Label42.Text = "Signature";
-            //
-            // dgJobItems
-            //
-            _dgJobItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgJobItems.DataMember = "";
-            _dgJobItems.HeaderForeColor = SystemColors.ControlText;
-            _dgJobItems.Location = new Point(128, 450);
-            _dgJobItems.Name = "dgJobItems";
-            _dgJobItems.Size = new Size(1111, 196);
-            _dgJobItems.TabIndex = 9;
-            _dgJobItems.TabStop = false;
-            //
-            // Label12
-            //
-            _Label12.Location = new Point(8, 450);
-            _Label12.Name = "Label12";
-            _Label12.Size = new Size(80, 16);
-            _Label12.TabIndex = 25;
-            _Label12.Text = "Job Items";
-            //
-            // txtNotesToEngineer
-            //
-            _txtNotesToEngineer.Location = new Point(128, 44);
-            _txtNotesToEngineer.Multiline = true;
-            _txtNotesToEngineer.Name = "txtNotesToEngineer";
-            _txtNotesToEngineer.ReadOnly = true;
-            _txtNotesToEngineer.ScrollBars = ScrollBars.Both;
-            _txtNotesToEngineer.Size = new Size(510, 66);
-            _txtNotesToEngineer.TabIndex = 10;
-            _txtNotesToEngineer.TabStop = false;
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(8, 40);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(64, 16);
-            _Label6.TabIndex = 21;
-            _Label6.Text = "Notes";
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Location = new Point(714, 173);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.Size = new Size(525, 21);
-            _txtCustomer.TabIndex = 6;
-            //
-            // cboEngineer
-            //
-            _cboEngineer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboEngineer.Location = new Point(714, 14);
-            _cboEngineer.Name = "cboEngineer";
-            _cboEngineer.Size = new Size(525, 21);
-            _cboEngineer.TabIndex = 4;
-            //
-            // txtNotesFromEngineer
-            //
-            _txtNotesFromEngineer.Location = new Point(128, 335);
-            _txtNotesFromEngineer.Multiline = true;
-            _txtNotesFromEngineer.Name = "txtNotesFromEngineer";
-            _txtNotesFromEngineer.ScrollBars = ScrollBars.Both;
-            _txtNotesFromEngineer.Size = new Size(510, 72);
-            _txtNotesFromEngineer.TabIndex = 3;
-            //
-            // cboOutcome
-            //
-            _cboOutcome.Location = new Point(128, 144);
-            _cboOutcome.Name = "cboOutcome";
-            _cboOutcome.Size = new Size(510, 21);
-            _cboOutcome.TabIndex = 1;
-            //
-            // txtOutcomeDetails
-            //
-            _txtOutcomeDetails.Location = new Point(128, 231);
-            _txtOutcomeDetails.Multiline = true;
-            _txtOutcomeDetails.Name = "txtOutcomeDetails";
-            _txtOutcomeDetails.ScrollBars = ScrollBars.Both;
-            _txtOutcomeDetails.Size = new Size(510, 95);
-            _txtOutcomeDetails.TabIndex = 2;
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(8, 234);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(80, 16);
-            _Label11.TabIndex = 12;
-            _Label11.Text = "Details";
-            //
-            // txtUploadedBy
-            //
-            _txtUploadedBy.Location = new Point(128, 116);
-            _txtUploadedBy.Name = "txtUploadedBy";
-            _txtUploadedBy.ReadOnly = true;
-            _txtUploadedBy.Size = new Size(510, 21);
-            _txtUploadedBy.TabIndex = 2;
-            _txtUploadedBy.TabStop = false;
-            //
-            // txtStatus
-            //
-            _txtStatus.Location = new Point(128, 14);
-            _txtStatus.Name = "txtStatus";
-            _txtStatus.ReadOnly = true;
-            _txtStatus.Size = new Size(510, 21);
-            _txtStatus.TabIndex = 1;
-            _txtStatus.TabStop = false;
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(8, 147);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(80, 19);
-            _Label9.TabIndex = 8;
-            _Label9.Text = "Outcome";
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(644, 176);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(64, 16);
-            _Label5.TabIndex = 4;
-            _Label5.Text = "Customer";
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(8, 119);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(80, 16);
-            _Label4.TabIndex = 3;
-            _Label4.Text = "Uploaded by";
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 16);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(56, 16);
-            _Label3.TabIndex = 2;
-            _Label3.Text = "Status";
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 335);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(128, 24);
-            _Label2.TabIndex = 1;
-            _Label2.Text = "Invoice Notes";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(644, 14);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(64, 16);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Engineer";
-            //
-            // tpAppliances
-            //
-            _tpAppliances.Controls.Add(_gpAppliances);
-            _tpAppliances.Location = new Point(4, 22);
-            _tpAppliances.Name = "tpAppliances";
-            _tpAppliances.Padding = new Padding(3);
-            _tpAppliances.Size = new Size(1247, 652);
-            _tpAppliances.TabIndex = 6;
-            _tpAppliances.Text = "Appliances";
-            _tpAppliances.UseVisualStyleBackColor = true;
-            //
-            // gpAppliances
-            //
-            _gpAppliances.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gpAppliances.Controls.Add(_dgAssets);
-            _gpAppliances.Location = new Point(6, 6);
-            _gpAppliances.Name = "gpAppliances";
-            _gpAppliances.Size = new Size(1235, 640);
-            _gpAppliances.TabIndex = 0;
-            _gpAppliances.TabStop = false;
-            _gpAppliances.Text = "Appliances";
-            //
-            // dgAssets
-            //
-            _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAssets.DataMember = "";
-            _dgAssets.HeaderForeColor = SystemColors.ControlText;
-            _dgAssets.Location = new Point(6, 20);
-            _dgAssets.Name = "dgAssets";
-            _dgAssets.Size = new Size(1223, 614);
-            _dgAssets.TabIndex = 2;
-            //
-            // tpWorksheets
-            //
-            _tpWorksheets.Controls.Add(_grpAdditionalWorksheet);
-            _tpWorksheets.Controls.Add(_grpAlarmInfo);
-            _tpWorksheets.Controls.Add(_grpVisitWorksheetExtended);
-            _tpWorksheets.Controls.Add(_grpVisitDefects);
-            _tpWorksheets.Controls.Add(_grpApplianceWorksheet);
-            _tpWorksheets.Controls.Add(_grpVisitWorksheet);
-            _tpWorksheets.Location = new Point(4, 22);
-            _tpWorksheets.Name = "tpWorksheets";
-            _tpWorksheets.Size = new Size(1247, 652);
-            _tpWorksheets.TabIndex = 5;
-            _tpWorksheets.Text = "Worksheets";
-            _tpWorksheets.UseVisualStyleBackColor = true;
-            //
-            // grpAdditionalWorksheet
-            //
-            _grpAdditionalWorksheet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpAdditionalWorksheet.Controls.Add(_btnRemoveAdd);
-            _grpAdditionalWorksheet.Controls.Add(_btnAddAdd);
-            _grpAdditionalWorksheet.Controls.Add(_dgAdditional);
-            _grpAdditionalWorksheet.Location = new Point(515, 259);
-            _grpAdditionalWorksheet.Name = "grpAdditionalWorksheet";
-            _grpAdditionalWorksheet.Size = new Size(360, 247);
-            _grpAdditionalWorksheet.TabIndex = 29;
-            _grpAdditionalWorksheet.TabStop = false;
-            _grpAdditionalWorksheet.Text = "Additional Worksheets";
-            //
-            // btnRemoveAdd
-            //
-            _btnRemoveAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnRemoveAdd.Location = new Point(8, 218);
-            _btnRemoveAdd.Name = "btnRemoveAdd";
-            _btnRemoveAdd.Size = new Size(75, 23);
-            _btnRemoveAdd.TabIndex = 3;
-            _btnRemoveAdd.Text = "Remove";
-            //
-            // btnAddAdd
-            //
-            _btnAddAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddAdd.Location = new Point(275, 218);
-            _btnAddAdd.Name = "btnAddAdd";
-            _btnAddAdd.Size = new Size(75, 23);
-            _btnAddAdd.TabIndex = 4;
-            _btnAddAdd.Text = "Add";
-            //
-            // dgAdditional
-            //
-            _dgAdditional.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAdditional.DataMember = "";
-            _dgAdditional.HeaderForeColor = SystemColors.ControlText;
-            _dgAdditional.Location = new Point(6, 20);
-            _dgAdditional.Name = "dgAdditional";
-            _dgAdditional.Size = new Size(344, 192);
-            _dgAdditional.TabIndex = 0;
-            //
-            // grpAlarmInfo
-            //
-            _grpAlarmInfo.Controls.Add(_btnRemoveSmokeComo);
-            _grpAlarmInfo.Controls.Add(_btnAddSmokeComo);
-            _grpAlarmInfo.Controls.Add(_DGSmokeComo);
-            _grpAlarmInfo.Location = new Point(515, 8);
-            _grpAlarmInfo.Name = "grpAlarmInfo";
-            _grpAlarmInfo.Size = new Size(360, 242);
-            _grpAlarmInfo.TabIndex = 4;
-            _grpAlarmInfo.TabStop = false;
-            _grpAlarmInfo.Text = "Alarm Info";
-            //
-            // btnRemoveSmokeComo
-            //
-            _btnRemoveSmokeComo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnRemoveSmokeComo.Location = new Point(12, 202);
-            _btnRemoveSmokeComo.Name = "btnRemoveSmokeComo";
-            _btnRemoveSmokeComo.Size = new Size(75, 23);
-            _btnRemoveSmokeComo.TabIndex = 30;
-            _btnRemoveSmokeComo.Text = "Remove";
-            //
-            // btnAddSmokeComo
-            //
-            _btnAddSmokeComo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddSmokeComo.Location = new Point(275, 202);
-            _btnAddSmokeComo.Name = "btnAddSmokeComo";
-            _btnAddSmokeComo.Size = new Size(75, 23);
-            _btnAddSmokeComo.TabIndex = 31;
-            _btnAddSmokeComo.Text = "Add";
-            //
-            // DGSmokeComo
-            //
-            _DGSmokeComo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _DGSmokeComo.DataMember = "";
-            _DGSmokeComo.HeaderForeColor = SystemColors.ControlText;
-            _DGSmokeComo.Location = new Point(12, 17);
-            _DGSmokeComo.Name = "DGSmokeComo";
-            _DGSmokeComo.Size = new Size(338, 181);
-            _DGSmokeComo.TabIndex = 29;
-            //
-            // grpVisitWorksheetExtended
-            //
-            _grpVisitWorksheetExtended.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpVisitWorksheetExtended.Controls.Add(_cboSITimer);
-            _grpVisitWorksheetExtended.Controls.Add(_cboFillDisc);
-            _grpVisitWorksheetExtended.Controls.Add(_Label81);
-            _grpVisitWorksheetExtended.Controls.Add(_Label80);
-            _grpVisitWorksheetExtended.Controls.Add(_Label79);
-            _grpVisitWorksheetExtended.Controls.Add(_txtRadiators);
-            _grpVisitWorksheetExtended.Controls.Add(_txtVisualInspectionReason);
-            _grpVisitWorksheetExtended.Controls.Add(_Label68);
-            _grpVisitWorksheetExtended.Controls.Add(_Label69);
-            _grpVisitWorksheetExtended.Controls.Add(_Label70);
-            _grpVisitWorksheetExtended.Controls.Add(_Label62);
-            _grpVisitWorksheetExtended.Controls.Add(_Label63);
-            _grpVisitWorksheetExtended.Controls.Add(_Label64);
-            _grpVisitWorksheetExtended.Controls.Add(_Label65);
-            _grpVisitWorksheetExtended.Controls.Add(_Label66);
-            _grpVisitWorksheetExtended.Controls.Add(_Label67);
-            _grpVisitWorksheetExtended.Controls.Add(_cboCertificateTypeID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboCODetectorFittedID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboVisualInspectionSatisfactoryID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboImmersionID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboJacketID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboCylinderTypeID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboPartialHeatingID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboHeatingSystemTypeID);
-            _grpVisitWorksheetExtended.Controls.Add(_txtApproxAgeOfBoiler);
-            _grpVisitWorksheetExtended.Controls.Add(_cboStrainerInspectedID);
-            _grpVisitWorksheetExtended.Controls.Add(_Label56);
-            _grpVisitWorksheetExtended.Controls.Add(_Label57);
-            _grpVisitWorksheetExtended.Controls.Add(_cboStrainerFittedID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboInstallationSafeToUseID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboInstallationPipeWorkCorrectID);
-            _grpVisitWorksheetExtended.Controls.Add(_cboCorrectMaterialsUsedID);
-            _grpVisitWorksheetExtended.Controls.Add(_Label58);
-            _grpVisitWorksheetExtended.Controls.Add(_Label59);
-            _grpVisitWorksheetExtended.Controls.Add(_Label60);
-            _grpVisitWorksheetExtended.Controls.Add(_Label61);
-            _grpVisitWorksheetExtended.Location = new Point(881, 8);
-            _grpVisitWorksheetExtended.Name = "grpVisitWorksheetExtended";
-            _grpVisitWorksheetExtended.Size = new Size(358, 636);
-            _grpVisitWorksheetExtended.TabIndex = 3;
-            _grpVisitWorksheetExtended.TabStop = false;
-            _grpVisitWorksheetExtended.Text = "Visit Worksheet - Extended";
-            //
-            // cboSITimer
-            //
-            _cboSITimer.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboSITimer.Location = new Point(192, 449);
-            _cboSITimer.Name = "cboSITimer";
-            _cboSITimer.Size = new Size(160, 21);
-            _cboSITimer.TabIndex = 33;
-            //
-            // cboFillDisc
-            //
-            _cboFillDisc.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboFillDisc.Location = new Point(192, 422);
-            _cboFillDisc.Name = "cboFillDisc";
-            _cboFillDisc.Size = new Size(160, 21);
-            _cboFillDisc.TabIndex = 32;
-            //
-            // Label81
-            //
-            _Label81.Location = new Point(6, 477);
-            _Label81.Name = "Label81";
-            _Label81.Size = new Size(180, 21);
-            _Label81.TabIndex = 31;
-            _Label81.Text = "Flue/Tank In loft details";
-            //
-            // Label80
-            //
-            _Label80.Location = new Point(6, 423);
-            _Label80.Name = "Label80";
-            _Label80.Size = new Size(180, 21);
-            _Label80.TabIndex = 30;
-            _Label80.Text = "Filling Loop Disconnected?";
-            //
-            // Label79
-            //
-            _Label79.Location = new Point(6, 449);
-            _Label79.Name = "Label79";
-            _Label79.Size = new Size(180, 21);
-            _Label79.TabIndex = 29;
-            _Label79.Text = "SI Timer Reset";
-            //
-            // txtRadiators
-            //
-            _txtRadiators.Location = new Point(192, 287);
-            _txtRadiators.Name = "txtRadiators";
-            _txtRadiators.Size = new Size(160, 21);
-            _txtRadiators.TabIndex = 10;
-            _txtRadiators.Text = "0";
-            //
-            // txtVisualInspectionReason
-            //
-            _txtVisualInspectionReason.Location = new Point(192, 476);
-            _txtVisualInspectionReason.Multiline = true;
-            _txtVisualInspectionReason.Name = "txtVisualInspectionReason";
-            _txtVisualInspectionReason.Size = new Size(160, 43);
-            _txtVisualInspectionReason.TabIndex = 15;
-            //
-            // Label68
-            //
-            _Label68.Location = new Point(6, 397);
-            _Label68.Name = "Label68";
-            _Label68.Size = new Size(180, 21);
-            _Label68.TabIndex = 28;
-            _Label68.Text = "Flue/Tank In Loft Satisfactory" + (char)13 + (char)10;
-            //
-            // Label69
-            //
-            _Label69.Location = new Point(6, 371);
-            _Label69.Name = "Label69";
-            _Label69.Size = new Size(180, 23);
-            _Label69.TabIndex = 27;
-            _Label69.Text = "Certificate Type";
-            //
-            // Label70
-            //
-            _Label70.Location = new Point(6, 344);
-            _Label70.Name = "Label70";
-            _Label70.Size = new Size(180, 23);
-            _Label70.TabIndex = 26;
-            _Label70.Text = "Approx. Age Of Boiler";
-            //
-            // Label62
-            //
-            _Label62.Location = new Point(6, 317);
-            _Label62.Name = "Label62";
-            _Label62.Size = new Size(180, 23);
-            _Label62.TabIndex = 25;
-            _Label62.Text = "CO Detector Fitted ";
-            //
-            // Label63
-            //
-            _Label63.Location = new Point(6, 290);
-            _Label63.Name = "Label63";
-            _Label63.Size = new Size(180, 23);
-            _Label63.TabIndex = 24;
-            _Label63.Text = "Radiators";
-            //
-            // Label64
-            //
-            _Label64.Location = new Point(6, 128);
-            _Label64.Name = "Label64";
-            _Label64.Size = new Size(180, 23);
-            _Label64.TabIndex = 23;
-            _Label64.Text = "Is Strainer Inspected";
-            //
-            // Label65
-            //
-            _Label65.Location = new Point(6, 101);
-            _Label65.Name = "Label65";
-            _Label65.Size = new Size(180, 23);
-            _Label65.TabIndex = 22;
-            _Label65.Text = "Is Strainer Fitted";
-            //
-            // Label66
-            //
-            _Label66.Location = new Point(6, 263);
-            _Label66.Name = "Label66";
-            _Label66.Size = new Size(180, 23);
-            _Label66.TabIndex = 21;
-            _Label66.Text = "Immersion";
-            //
-            // Label67
-            //
-            _Label67.Location = new Point(6, 236);
-            _Label67.Name = "Label67";
-            _Label67.Size = new Size(180, 23);
-            _Label67.TabIndex = 20;
-            _Label67.Text = "Jacket";
-            //
-            // cboCertificateTypeID
-            //
-            _cboCertificateTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboCertificateTypeID.Location = new Point(192, 368);
-            _cboCertificateTypeID.Name = "cboCertificateTypeID";
-            _cboCertificateTypeID.Size = new Size(160, 21);
-            _cboCertificateTypeID.TabIndex = 13;
-            //
-            // cboCODetectorFittedID
-            //
-            _cboCODetectorFittedID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboCODetectorFittedID.Location = new Point(192, 314);
-            _cboCODetectorFittedID.Name = "cboCODetectorFittedID";
-            _cboCODetectorFittedID.Size = new Size(160, 21);
-            _cboCODetectorFittedID.TabIndex = 11;
-            //
-            // cboVisualInspectionSatisfactoryID
-            //
-            _cboVisualInspectionSatisfactoryID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboVisualInspectionSatisfactoryID.Location = new Point(192, 395);
-            _cboVisualInspectionSatisfactoryID.Name = "cboVisualInspectionSatisfactoryID";
-            _cboVisualInspectionSatisfactoryID.Size = new Size(160, 21);
-            _cboVisualInspectionSatisfactoryID.TabIndex = 14;
-            //
-            // cboImmersionID
-            //
-            _cboImmersionID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboImmersionID.Location = new Point(192, 260);
-            _cboImmersionID.Name = "cboImmersionID";
-            _cboImmersionID.Size = new Size(160, 21);
-            _cboImmersionID.TabIndex = 9;
-            //
-            // cboJacketID
-            //
-            _cboJacketID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboJacketID.Location = new Point(192, 233);
-            _cboJacketID.Name = "cboJacketID";
-            _cboJacketID.Size = new Size(160, 21);
-            _cboJacketID.TabIndex = 8;
-            //
-            // cboCylinderTypeID
-            //
-            _cboCylinderTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboCylinderTypeID.Location = new Point(192, 206);
-            _cboCylinderTypeID.Name = "cboCylinderTypeID";
-            _cboCylinderTypeID.Size = new Size(160, 21);
-            _cboCylinderTypeID.TabIndex = 7;
-            //
-            // cboPartialHeatingID
-            //
-            _cboPartialHeatingID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboPartialHeatingID.Location = new Point(192, 179);
-            _cboPartialHeatingID.Name = "cboPartialHeatingID";
-            _cboPartialHeatingID.Size = new Size(160, 21);
-            _cboPartialHeatingID.TabIndex = 6;
-            //
-            // cboHeatingSystemTypeID
-            //
-            _cboHeatingSystemTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboHeatingSystemTypeID.Location = new Point(192, 152);
-            _cboHeatingSystemTypeID.Name = "cboHeatingSystemTypeID";
-            _cboHeatingSystemTypeID.Size = new Size(160, 21);
-            _cboHeatingSystemTypeID.TabIndex = 5;
-            //
-            // txtApproxAgeOfBoiler
-            //
-            _txtApproxAgeOfBoiler.Location = new Point(192, 341);
-            _txtApproxAgeOfBoiler.Name = "txtApproxAgeOfBoiler";
-            _txtApproxAgeOfBoiler.Size = new Size(160, 21);
-            _txtApproxAgeOfBoiler.TabIndex = 12;
-            _txtApproxAgeOfBoiler.Text = "0";
-            //
-            // cboStrainerInspectedID
-            //
-            _cboStrainerInspectedID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStrainerInspectedID.Location = new Point(192, 125);
-            _cboStrainerInspectedID.Name = "cboStrainerInspectedID";
-            _cboStrainerInspectedID.Size = new Size(160, 21);
-            _cboStrainerInspectedID.TabIndex = 4;
-            //
-            // Label56
-            //
-            _Label56.Location = new Point(6, 209);
-            _Label56.Name = "Label56";
-            _Label56.Size = new Size(180, 23);
-            _Label56.TabIndex = 9;
-            _Label56.Text = "Cylinder type ";
-            //
-            // Label57
-            //
-            _Label57.Location = new Point(6, 182);
-            _Label57.Name = "Label57";
-            _Label57.Size = new Size(180, 23);
-            _Label57.TabIndex = 8;
-            _Label57.Text = "Partial Heating";
-            //
-            // cboStrainerFittedID
-            //
-            _cboStrainerFittedID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStrainerFittedID.Location = new Point(192, 98);
-            _cboStrainerFittedID.Name = "cboStrainerFittedID";
-            _cboStrainerFittedID.Size = new Size(160, 21);
-            _cboStrainerFittedID.TabIndex = 3;
-            //
-            // cboInstallationSafeToUseID
-            //
-            _cboInstallationSafeToUseID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboInstallationSafeToUseID.Location = new Point(192, 71);
-            _cboInstallationSafeToUseID.Name = "cboInstallationSafeToUseID";
-            _cboInstallationSafeToUseID.Size = new Size(160, 21);
-            _cboInstallationSafeToUseID.TabIndex = 2;
-            //
-            // cboInstallationPipeWorkCorrectID
-            //
-            _cboInstallationPipeWorkCorrectID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboInstallationPipeWorkCorrectID.Location = new Point(192, 44);
-            _cboInstallationPipeWorkCorrectID.Name = "cboInstallationPipeWorkCorrectID";
-            _cboInstallationPipeWorkCorrectID.Size = new Size(160, 21);
-            _cboInstallationPipeWorkCorrectID.TabIndex = 1;
-            //
-            // cboCorrectMaterialsUsedID
-            //
-            _cboCorrectMaterialsUsedID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboCorrectMaterialsUsedID.Location = new Point(192, 17);
-            _cboCorrectMaterialsUsedID.Name = "cboCorrectMaterialsUsedID";
-            _cboCorrectMaterialsUsedID.Size = new Size(160, 21);
-            _cboCorrectMaterialsUsedID.TabIndex = 0;
-            //
-            // Label58
-            //
-            _Label58.Location = new Point(6, 155);
-            _Label58.Name = "Label58";
-            _Label58.Size = new Size(180, 23);
-            _Label58.TabIndex = 3;
-            _Label58.Text = "Heating System Type";
-            //
-            // Label59
-            //
-            _Label59.Location = new Point(6, 74);
-            _Label59.Name = "Label59";
-            _Label59.Size = new Size(180, 23);
-            _Label59.TabIndex = 2;
-            _Label59.Text = "Installation Safe To Use ";
-            //
-            // Label60
-            //
-            _Label60.Location = new Point(6, 47);
-            _Label60.Name = "Label60";
-            _Label60.Size = new Size(180, 23);
-            _Label60.TabIndex = 1;
-            _Label60.Text = "Installation Pipework Correct";
-            //
-            // Label61
-            //
-            _Label61.Location = new Point(6, 20);
-            _Label61.Name = "Label61";
-            _Label61.Size = new Size(180, 23);
-            _Label61.TabIndex = 0;
-            _Label61.Text = "Correct Materials Used In Installation ";
-            //
-            // grpVisitDefects
-            //
-            _grpVisitDefects.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpVisitDefects.Controls.Add(_btnAddVisitDefect);
-            _grpVisitDefects.Controls.Add(_btnRemoveVisitDefect);
-            _grpVisitDefects.Controls.Add(_dgVisitDefects);
-            _grpVisitDefects.Location = new Point(8, 503);
-            _grpVisitDefects.Name = "grpVisitDefects";
-            _grpVisitDefects.Size = new Size(501, 141);
-            _grpVisitDefects.TabIndex = 2;
-            _grpVisitDefects.TabStop = false;
-            _grpVisitDefects.Text = "Visit Defects";
-            //
-            // btnAddVisitDefect
-            //
-            _btnAddVisitDefect.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddVisitDefect.Location = new Point(421, 109);
-            _btnAddVisitDefect.Name = "btnAddVisitDefect";
-            _btnAddVisitDefect.Size = new Size(75, 23);
-            _btnAddVisitDefect.TabIndex = 3;
-            _btnAddVisitDefect.Text = "Add";
-            //
-            // btnRemoveVisitDefect
-            //
-            _btnRemoveVisitDefect.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnRemoveVisitDefect.Location = new Point(8, 109);
-            _btnRemoveVisitDefect.Name = "btnRemoveVisitDefect";
-            _btnRemoveVisitDefect.Size = new Size(75, 23);
-            _btnRemoveVisitDefect.TabIndex = 2;
-            _btnRemoveVisitDefect.Text = "Remove";
-            //
-            // dgVisitDefects
-            //
-            _dgVisitDefects.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgVisitDefects.DataMember = "";
-            _dgVisitDefects.HeaderForeColor = SystemColors.ControlText;
-            _dgVisitDefects.Location = new Point(8, 20);
-            _dgVisitDefects.Name = "dgVisitDefects";
-            _dgVisitDefects.Size = new Size(485, 83);
-            _dgVisitDefects.TabIndex = 1;
-            //
-            // grpApplianceWorksheet
-            //
-            _grpApplianceWorksheet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpApplianceWorksheet.Controls.Add(_btnRemoveApplianceWorkSheet);
-            _grpApplianceWorksheet.Controls.Add(_dgApplianceWorkSheets);
-            _grpApplianceWorksheet.Controls.Add(_btnAddApplianceWorksheet);
-            _grpApplianceWorksheet.Location = new Point(8, 256);
-            _grpApplianceWorksheet.Name = "grpApplianceWorksheet";
-            _grpApplianceWorksheet.Size = new Size(501, 247);
-            _grpApplianceWorksheet.TabIndex = 1;
-            _grpApplianceWorksheet.TabStop = false;
-            _grpApplianceWorksheet.Text = "Appliance Worksheets";
-            //
-            // btnRemoveApplianceWorkSheet
-            //
-            _btnRemoveApplianceWorkSheet.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnRemoveApplianceWorkSheet.Location = new Point(8, 218);
-            _btnRemoveApplianceWorkSheet.Name = "btnRemoveApplianceWorkSheet";
-            _btnRemoveApplianceWorkSheet.Size = new Size(75, 23);
-            _btnRemoveApplianceWorkSheet.TabIndex = 3;
-            _btnRemoveApplianceWorkSheet.Text = "Remove";
-            //
-            // dgApplianceWorkSheets
-            //
-            _dgApplianceWorkSheets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgApplianceWorkSheets.DataMember = "";
-            _dgApplianceWorkSheets.HeaderForeColor = SystemColors.ControlText;
-            _dgApplianceWorkSheets.Location = new Point(8, 20);
-            _dgApplianceWorkSheets.Name = "dgApplianceWorkSheets";
-            _dgApplianceWorkSheets.Size = new Size(485, 192);
-            _dgApplianceWorkSheets.TabIndex = 0;
-            //
-            // btnAddApplianceWorksheet
-            //
-            _btnAddApplianceWorksheet.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddApplianceWorksheet.Location = new Point(413, 218);
-            _btnAddApplianceWorksheet.Name = "btnAddApplianceWorksheet";
-            _btnAddApplianceWorksheet.Size = new Size(75, 23);
-            _btnAddApplianceWorksheet.TabIndex = 4;
-            _btnAddApplianceWorksheet.Text = "Add";
-            //
-            // grpVisitWorksheet
-            //
-            _grpVisitWorksheet.Controls.Add(_cboMeterCapped);
-            _grpVisitWorksheet.Controls.Add(_Label73);
-            _grpVisitWorksheet.Controls.Add(_cboMeterLocation);
-            _grpVisitWorksheet.Controls.Add(_Label72);
-            _grpVisitWorksheet.Controls.Add(_txtAmountCollected);
-            _grpVisitWorksheet.Controls.Add(_cboPaymentMethod);
-            _grpVisitWorksheet.Controls.Add(_Label44);
-            _grpVisitWorksheet.Controls.Add(_Label43);
-            _grpVisitWorksheet.Controls.Add(_cboPropertyRented);
-            _grpVisitWorksheet.Controls.Add(_cboBonding);
-            _grpVisitWorksheet.Controls.Add(_cboEmergencyControlAccessible);
-            _grpVisitWorksheet.Controls.Add(_cboGasInstallationTightnessTest);
-            _grpVisitWorksheet.Controls.Add(_Label41);
-            _grpVisitWorksheet.Controls.Add(_Label40);
-            _grpVisitWorksheet.Controls.Add(_Label8);
-            _grpVisitWorksheet.Controls.Add(_Label7);
-            _grpVisitWorksheet.Location = new Point(8, 8);
-            _grpVisitWorksheet.Name = "grpVisitWorksheet";
-            _grpVisitWorksheet.Size = new Size(501, 242);
-            _grpVisitWorksheet.TabIndex = 0;
-            _grpVisitWorksheet.TabStop = false;
-            _grpVisitWorksheet.Text = "Visit Worksheet";
-            //
-            // cboMeterCapped
-            //
-            _cboMeterCapped.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboMeterCapped.Location = new Point(216, 211);
-            _cboMeterCapped.Name = "cboMeterCapped";
-            _cboMeterCapped.Size = new Size(276, 21);
-            _cboMeterCapped.TabIndex = 15;
-            //
-            // Label73
-            //
-            _Label73.Location = new Point(16, 214);
-            _Label73.Name = "Label73";
-            _Label73.Size = new Size(120, 23);
-            _Label73.TabIndex = 14;
-            _Label73.Text = "Meter Capped";
-            //
-            // cboMeterLocation
-            //
-            _cboMeterLocation.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboMeterLocation.Location = new Point(216, 182);
-            _cboMeterLocation.Name = "cboMeterLocation";
-            _cboMeterLocation.Size = new Size(276, 21);
-            _cboMeterLocation.TabIndex = 13;
-            //
-            // Label72
-            //
-            _Label72.Location = new Point(16, 185);
-            _Label72.Name = "Label72";
-            _Label72.Size = new Size(120, 23);
-            _Label72.TabIndex = 12;
-            _Label72.Text = "Meter Location";
-            //
-            // txtAmountCollected
-            //
-            _txtAmountCollected.Location = new Point(216, 155);
-            _txtAmountCollected.Name = "txtAmountCollected";
-            _txtAmountCollected.Size = new Size(276, 21);
-            _txtAmountCollected.TabIndex = 11;
-            //
-            // cboPaymentMethod
-            //
-            _cboPaymentMethod.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboPaymentMethod.Location = new Point(216, 128);
-            _cboPaymentMethod.Name = "cboPaymentMethod";
-            _cboPaymentMethod.Size = new Size(276, 21);
-            _cboPaymentMethod.TabIndex = 10;
-            //
-            // Label44
-            //
-            _Label44.Location = new Point(16, 158);
-            _Label44.Name = "Label44";
-            _Label44.Size = new Size(120, 23);
-            _Label44.TabIndex = 9;
-            _Label44.Text = "Amount Collected";
-            //
-            // Label43
-            //
-            _Label43.Location = new Point(16, 131);
-            _Label43.Name = "Label43";
-            _Label43.Size = new Size(100, 23);
-            _Label43.TabIndex = 8;
-            _Label43.Text = "Payment Method";
-            //
-            // cboPropertyRented
-            //
-            _cboPropertyRented.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboPropertyRented.Location = new Point(216, 101);
-            _cboPropertyRented.Name = "cboPropertyRented";
-            _cboPropertyRented.Size = new Size(276, 21);
-            _cboPropertyRented.TabIndex = 7;
-            //
-            // cboBonding
-            //
-            _cboBonding.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboBonding.Location = new Point(216, 74);
-            _cboBonding.Name = "cboBonding";
-            _cboBonding.Size = new Size(276, 21);
-            _cboBonding.TabIndex = 6;
-            //
-            // cboEmergencyControlAccessible
-            //
-            _cboEmergencyControlAccessible.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboEmergencyControlAccessible.Location = new Point(216, 47);
-            _cboEmergencyControlAccessible.Name = "cboEmergencyControlAccessible";
-            _cboEmergencyControlAccessible.Size = new Size(276, 21);
-            _cboEmergencyControlAccessible.TabIndex = 5;
-            //
-            // cboGasInstallationTightnessTest
-            //
-            _cboGasInstallationTightnessTest.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboGasInstallationTightnessTest.Location = new Point(216, 20);
-            _cboGasInstallationTightnessTest.Name = "cboGasInstallationTightnessTest";
-            _cboGasInstallationTightnessTest.Size = new Size(276, 21);
-            _cboGasInstallationTightnessTest.TabIndex = 4;
-            //
-            // Label41
-            //
-            _Label41.Location = new Point(16, 104);
-            _Label41.Name = "Label41";
-            _Label41.Size = new Size(128, 23);
-            _Label41.TabIndex = 3;
-            _Label41.Text = "Property Rented";
-            //
-            // Label40
-            //
-            _Label40.Location = new Point(16, 77);
-            _Label40.Name = "Label40";
-            _Label40.Size = new Size(64, 23);
-            _Label40.TabIndex = 2;
-            _Label40.Text = "Bonding";
-            //
-            // Label8
-            //
-            _Label8.Location = new Point(16, 50);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(192, 23);
-            _Label8.TabIndex = 1;
-            _Label8.Text = "Emergency Control Accessible";
-            //
-            // Label7
-            //
-            _Label7.Location = new Point(16, 23);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(192, 23);
-            _Label7.TabIndex = 0;
-            _Label7.Text = "Gas Installation Tightness Test";
-            //
-            // tpTimesheets
-            //
-            _tpTimesheets.Controls.Add(_grpTimesheets);
-            _tpTimesheets.Controls.Add(_txtScheduledTime);
-            _tpTimesheets.Controls.Add(_Label10);
-            _tpTimesheets.Location = new Point(4, 22);
-            _tpTimesheets.Name = "tpTimesheets";
-            _tpTimesheets.Size = new Size(1247, 652);
-            _tpTimesheets.TabIndex = 2;
-            _tpTimesheets.Text = "Timesheets";
-            _tpTimesheets.UseVisualStyleBackColor = true;
-            //
-            // grpTimesheets
-            //
-            _grpTimesheets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpTimesheets.Controls.Add(_txtActualTimeSpent);
-            _grpTimesheets.Controls.Add(_txtDifference);
-            _grpTimesheets.Controls.Add(_txtSORTimeAllowance);
-            _grpTimesheets.Controls.Add(_Label52);
-            _grpTimesheets.Controls.Add(_Label51);
-            _grpTimesheets.Controls.Add(_Label50);
-            _grpTimesheets.Controls.Add(_Label22);
-            _grpTimesheets.Controls.Add(_cboTimeSheetType);
-            _grpTimesheets.Controls.Add(_Label14);
-            _grpTimesheets.Controls.Add(_txtComments);
-            _grpTimesheets.Controls.Add(_dtpEndDate);
-            _grpTimesheets.Controls.Add(_dtpStartDate);
-            _grpTimesheets.Controls.Add(_dgTimeSheets);
-            _grpTimesheets.Controls.Add(_btnAddTimeSheet);
-            _grpTimesheets.Controls.Add(_Label20);
-            _grpTimesheets.Controls.Add(_Label21);
-            _grpTimesheets.Controls.Add(_btnRemoveTimeSheet);
-            _grpTimesheets.Location = new Point(8, 48);
-            _grpTimesheets.Name = "grpTimesheets";
-            _grpTimesheets.Size = new Size(1231, 598);
-            _grpTimesheets.TabIndex = 3;
-            _grpTimesheets.TabStop = false;
-            _grpTimesheets.Text = "TimeSheets";
-            //
-            // txtActualTimeSpent
-            //
-            _txtActualTimeSpent.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtActualTimeSpent.Location = new Point(348, 541);
-            _txtActualTimeSpent.Name = "txtActualTimeSpent";
-            _txtActualTimeSpent.ReadOnly = true;
-            _txtActualTimeSpent.Size = new Size(136, 21);
-            _txtActualTimeSpent.TabIndex = 70;
-            //
-            // txtDifference
-            //
-            _txtDifference.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtDifference.Location = new Point(348, 571);
-            _txtDifference.Name = "txtDifference";
-            _txtDifference.ReadOnly = true;
-            _txtDifference.Size = new Size(136, 21);
-            _txtDifference.TabIndex = 72;
-            //
-            // txtSORTimeAllowance
-            //
-            _txtSORTimeAllowance.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtSORTimeAllowance.Location = new Point(348, 509);
-            _txtSORTimeAllowance.Name = "txtSORTimeAllowance";
-            _txtSORTimeAllowance.ReadOnly = true;
-            _txtSORTimeAllowance.Size = new Size(136, 21);
-            _txtSORTimeAllowance.TabIndex = 68;
-            //
-            // Label52
-            //
-            _Label52.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label52.AutoSize = true;
-            _Label52.Location = new Point(203, 577);
-            _Label52.Name = "Label52";
-            _Label52.Size = new Size(71, 13);
-            _Label52.TabIndex = 71;
-            _Label52.Text = "Difference:";
-            //
-            // Label51
-            //
-            _Label51.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label51.AutoSize = true;
-            _Label51.Location = new Point(203, 544);
-            _Label51.Name = "Label51";
-            _Label51.Size = new Size(103, 13);
-            _Label51.TabIndex = 69;
-            _Label51.Text = "Act. Time Spent:";
-            //
-            // Label50
-            //
-            _Label50.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label50.AutoSize = true;
-            _Label50.Location = new Point(203, 512);
-            _Label50.Name = "Label50";
-            _Label50.Size = new Size(130, 13);
-            _Label50.TabIndex = 67;
-            _Label50.Text = "SOR Time Allowance:";
-            //
-            // Label22
-            //
-            _Label22.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label22.Location = new Point(506, 512);
-            _Label22.Name = "Label22";
-            _Label22.Size = new Size(72, 23);
-            _Label22.TabIndex = 66;
-            _Label22.Text = "Comments";
-            //
-            // cboTimeSheetType
-            //
-            _cboTimeSheetType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _cboTimeSheetType.Location = new Point(46, 509);
-            _cboTimeSheetType.Name = "cboTimeSheetType";
-            _cboTimeSheetType.Size = new Size(136, 21);
-            _cboTimeSheetType.TabIndex = 3;
-            //
-            // Label14
-            //
-            _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label14.Location = new Point(5, 512);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(41, 23);
-            _Label14.TabIndex = 64;
-            _Label14.Text = "Type";
-            //
-            // txtComments
-            //
-            _txtComments.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtComments.Location = new Point(584, 509);
-            _txtComments.Multiline = true;
-            _txtComments.Name = "txtComments";
-            _txtComments.ScrollBars = ScrollBars.Vertical;
-            _txtComments.Size = new Size(404, 83);
-            _txtComments.TabIndex = 4;
-            //
-            // dtpEndDate
-            //
-            _dtpEndDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _dtpEndDate.CustomFormat = "dd/MM/yyyy HH:mm";
-            _dtpEndDate.Format = DateTimePickerFormat.Custom;
-            _dtpEndDate.Location = new Point(46, 571);
-            _dtpEndDate.Name = "dtpEndDate";
-            _dtpEndDate.Size = new Size(136, 21);
-            _dtpEndDate.TabIndex = 2;
-            //
-            // dtpStartDate
-            //
-            _dtpStartDate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _dtpStartDate.CustomFormat = "dd/MM/yyyy HH:mm";
-            _dtpStartDate.Format = DateTimePickerFormat.Custom;
-            _dtpStartDate.Location = new Point(46, 540);
-            _dtpStartDate.Name = "dtpStartDate";
-            _dtpStartDate.Size = new Size(136, 21);
-            _dtpStartDate.TabIndex = 1;
-            //
-            // dgTimeSheets
-            //
-            _dgTimeSheets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgTimeSheets.DataMember = "";
-            _dgTimeSheets.HeaderForeColor = SystemColors.ControlText;
-            _dgTimeSheets.Location = new Point(8, 30);
-            _dgTimeSheets.Name = "dgTimeSheets";
-            _dgTimeSheets.Size = new Size(1215, 466);
-            _dgTimeSheets.TabIndex = 7;
-            _dgTimeSheets.TabStop = false;
-            //
-            // btnAddTimeSheet
-            //
-            _btnAddTimeSheet.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddTimeSheet.Location = new Point(1151, 569);
-            _btnAddTimeSheet.Name = "btnAddTimeSheet";
-            _btnAddTimeSheet.Size = new Size(72, 23);
-            _btnAddTimeSheet.TabIndex = 5;
-            _btnAddTimeSheet.Text = "Add";
-            //
-            // Label20
-            //
-            _Label20.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label20.Location = new Point(5, 573);
-            _Label20.Name = "Label20";
-            _Label20.Size = new Size(35, 23);
-            _Label20.TabIndex = 28;
-            _Label20.Text = "End";
-            //
-            // Label21
-            //
-            _Label21.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label21.Location = new Point(5, 544);
-            _Label21.Name = "Label21";
-            _Label21.Size = new Size(35, 23);
-            _Label21.TabIndex = 25;
-            _Label21.Text = "Start Date/Time";
-            //
-            // btnRemoveTimeSheet
-            //
-            _btnRemoveTimeSheet.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRemoveTimeSheet.Location = new Point(1151, 534);
-            _btnRemoveTimeSheet.Name = "btnRemoveTimeSheet";
-            _btnRemoveTimeSheet.Size = new Size(72, 23);
-            _btnRemoveTimeSheet.TabIndex = 6;
-            _btnRemoveTimeSheet.Text = "Remove";
-            //
-            // txtScheduledTime
-            //
-            _txtScheduledTime.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtScheduledTime.Location = new Point(112, 16);
-            _txtScheduledTime.Name = "txtScheduledTime";
-            _txtScheduledTime.ReadOnly = true;
-            _txtScheduledTime.Size = new Size(1127, 21);
-            _txtScheduledTime.TabIndex = 1;
-            //
-            // Label10
-            //
-            _Label10.Location = new Point(8, 16);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(104, 16);
-            _Label10.TabIndex = 9;
-            _Label10.Text = "Scheduled time";
-            //
-            // tpPartsAndProducts
-            //
-            _tpPartsAndProducts.Controls.Add(_grpAllocated);
-            _tpPartsAndProducts.Controls.Add(_grpUsed);
-            _tpPartsAndProducts.Location = new Point(4, 22);
-            _tpPartsAndProducts.Name = "tpPartsAndProducts";
-            _tpPartsAndProducts.Size = new Size(1247, 652);
-            _tpPartsAndProducts.TabIndex = 1;
-            _tpPartsAndProducts.Text = "Parts && Products";
-            _tpPartsAndProducts.UseVisualStyleBackColor = true;
-            //
-            // grpAllocated
-            //
-            _grpAllocated.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpAllocated.Controls.Add(_btnUnselectAllPPA);
-            _grpAllocated.Controls.Add(_btnSelectAllPPA);
-            _grpAllocated.Controls.Add(_btnRevertUsed);
-            _grpAllocated.Controls.Add(_nudPartAllocatedQty);
-            _grpAllocated.Controls.Add(_lblAllocatedQuantity);
-            _grpAllocated.Controls.Add(_btnAllUsed);
-            _grpAllocated.Controls.Add(_Label35);
-            _grpAllocated.Controls.Add(_Panel2);
-            _grpAllocated.Controls.Add(_Label34);
-            _grpAllocated.Controls.Add(_Panel1);
-            _grpAllocated.Controls.Add(_btnAllocatedNotUsed);
-            _grpAllocated.Controls.Add(_dgPartsProductsAllocated);
-            _grpAllocated.Controls.Add(_lblQuantityWarning);
-            _grpAllocated.Location = new Point(8, 8);
-            _grpAllocated.Name = "grpAllocated";
-            _grpAllocated.Size = new Size(1231, 275);
-            _grpAllocated.TabIndex = 1;
-            _grpAllocated.TabStop = false;
-            _grpAllocated.Text = "Parts && Products Allocated";
-            //
-            // btnUnselectAllPPA
-            //
-            _btnUnselectAllPPA.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnUnselectAllPPA.Location = new Point(438, 244);
-            _btnUnselectAllPPA.Name = "btnUnselectAllPPA";
-            _btnUnselectAllPPA.Size = new Size(98, 23);
-            _btnUnselectAllPPA.TabIndex = 34;
-            _btnUnselectAllPPA.Text = "Deselect All";
-            //
-            // btnSelectAllPPA
-            //
-            _btnSelectAllPPA.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSelectAllPPA.Location = new Point(334, 244);
-            _btnSelectAllPPA.Name = "btnSelectAllPPA";
-            _btnSelectAllPPA.Size = new Size(98, 23);
-            _btnSelectAllPPA.TabIndex = 33;
-            _btnSelectAllPPA.Text = "Select All";
-            //
-            // btnRevertUsed
-            //
-            _btnRevertUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnRevertUsed.Location = new Point(234, 244);
-            _btnRevertUsed.Name = "btnRevertUsed";
-            _btnRevertUsed.Size = new Size(96, 23);
-            _btnRevertUsed.TabIndex = 32;
-            _btnRevertUsed.Text = "Revert Used";
-            //
-            // nudPartAllocatedQty
-            //
-            _nudPartAllocatedQty.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _nudPartAllocatedQty.Location = new Point(937, 243);
-            _nudPartAllocatedQty.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            _nudPartAllocatedQty.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            _nudPartAllocatedQty.Name = "nudPartAllocatedQty";
-            _nudPartAllocatedQty.Size = new Size(64, 21);
-            _nudPartAllocatedQty.TabIndex = 29;
-            _nudPartAllocatedQty.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            //
-            // lblAllocatedQuantity
-            //
-            _lblAllocatedQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblAllocatedQuantity.Location = new Point(873, 243);
-            _lblAllocatedQuantity.Name = "lblAllocatedQuantity";
-            _lblAllocatedQuantity.Size = new Size(64, 23);
-            _lblAllocatedQuantity.TabIndex = 30;
-            _lblAllocatedQuantity.Text = "Quantity";
-            //
-            // btnAllUsed
-            //
-            _btnAllUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAllUsed.Location = new Point(1015, 243);
-            _btnAllUsed.Name = "btnAllUsed";
-            _btnAllUsed.Size = new Size(96, 23);
-            _btnAllUsed.TabIndex = 2;
-            _btnAllUsed.Text = "Used";
-            //
-            // Label35
-            //
-            _Label35.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label35.Location = new Point(160, 249);
-            _Label35.Name = "Label35";
-            _Label35.Size = new Size(104, 16);
-            _Label35.TabIndex = 28;
-            _Label35.Text = "Distributed";
-            //
-            // Panel2
-            //
-            _Panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel2.BackColor = Color.Lime;
-            _Panel2.Location = new Point(136, 247);
-            _Panel2.Name = "Panel2";
-            _Panel2.Size = new Size(16, 16);
-            _Panel2.TabIndex = 27;
-            //
-            // Label34
-            //
-            _Label34.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label34.Location = new Point(32, 249);
-            _Label34.Name = "Label34";
-            _Label34.Size = new Size(104, 16);
-            _Label34.TabIndex = 26;
-            _Label34.Text = "Not Distributed";
-            //
-            // Panel1
-            //
-            _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel1.BackColor = Color.Red;
-            _Panel1.Location = new Point(8, 246);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(16, 16);
-            _Panel1.TabIndex = 25;
-            //
-            // btnAllocatedNotUsed
-            //
-            _btnAllocatedNotUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAllocatedNotUsed.Location = new Point(1119, 243);
-            _btnAllocatedNotUsed.Name = "btnAllocatedNotUsed";
-            _btnAllocatedNotUsed.Size = new Size(96, 23);
-            _btnAllocatedNotUsed.TabIndex = 3;
-            _btnAllocatedNotUsed.Text = "Not Used";
-            //
-            // dgPartsProductsAllocated
-            //
-            _dgPartsProductsAllocated.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgPartsProductsAllocated.DataMember = "";
-            _dgPartsProductsAllocated.HeaderForeColor = SystemColors.ControlText;
-            _dgPartsProductsAllocated.Location = new Point(8, 18);
-            _dgPartsProductsAllocated.Name = "dgPartsProductsAllocated";
-            _dgPartsProductsAllocated.Size = new Size(1215, 222);
-            _dgPartsProductsAllocated.TabIndex = 1;
-            _dgPartsProductsAllocated.TabStop = false;
-            //
-            // lblQuantityWarning
-            //
-            _lblQuantityWarning.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblQuantityWarning.AutoSize = true;
-            _lblQuantityWarning.Location = new Point(603, 249);
-            _lblQuantityWarning.Name = "lblQuantityWarning";
-            _lblQuantityWarning.Size = new Size(241, 13);
-            _lblQuantityWarning.TabIndex = 31;
-            _lblQuantityWarning.Text = "The quantity ordered will be carried over";
-            _lblQuantityWarning.Visible = false;
-            //
-            // grpUsed
-            //
-            _grpUsed.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpUsed.Controls.Add(_lblEquipment);
-            _grpUsed.Controls.Add(_lblSellPrice);
-            _grpUsed.Controls.Add(_dgPartsAndProductsUsed);
-            _grpUsed.Controls.Add(_btnAddPartProductUsed);
-            _grpUsed.Controls.Add(_nudQuantityUsed);
-            _grpUsed.Controls.Add(_txtNameUsed);
-            _grpUsed.Controls.Add(_txtNumberUsed);
-            _grpUsed.Controls.Add(_Label13);
-            _grpUsed.Controls.Add(_Label15);
-            _grpUsed.Controls.Add(_Label16);
-            _grpUsed.Controls.Add(_btnRemovePartProductUsed);
-            _grpUsed.Controls.Add(_btnFindProductUsed);
-            _grpUsed.Controls.Add(_btnFindPartUsed);
-            _grpUsed.Location = new Point(8, 289);
-            _grpUsed.Name = "grpUsed";
-            _grpUsed.Size = new Size(1231, 360);
-            _grpUsed.TabIndex = 2;
-            _grpUsed.TabStop = false;
-            _grpUsed.Text = "Parts && Products Used";
-            //
-            // lblEquipment
-            //
-            _lblEquipment.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblEquipment.Location = new Point(853, 296);
-            _lblEquipment.Name = "lblEquipment";
-            _lblEquipment.Size = new Size(100, 23);
-            _lblEquipment.TabIndex = 24;
-            _lblEquipment.Text = "Equipment?";
-            _lblEquipment.Visible = false;
-            //
-            // lblSellPrice
-            //
-            _lblSellPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblSellPrice.Location = new Point(1007, 296);
-            _lblSellPrice.Name = "lblSellPrice";
-            _lblSellPrice.Size = new Size(100, 23);
-            _lblSellPrice.TabIndex = 23;
-            _lblSellPrice.Text = "SELL PRICE";
-            _lblSellPrice.Visible = false;
-            //
-            // dgPartsAndProductsUsed
-            //
-            _dgPartsAndProductsUsed.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgPartsAndProductsUsed.DataMember = "";
-            _dgPartsAndProductsUsed.HeaderForeColor = SystemColors.ControlText;
-            _dgPartsAndProductsUsed.Location = new Point(8, 13);
-            _dgPartsAndProductsUsed.Name = "dgPartsAndProductsUsed";
-            _dgPartsAndProductsUsed.Size = new Size(1215, 283);
-            _dgPartsAndProductsUsed.TabIndex = 1;
-            _dgPartsAndProductsUsed.TabStop = false;
-            //
-            // btnAddPartProductUsed
-            //
-            _btnAddPartProductUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddPartProductUsed.Enabled = false;
-            _btnAddPartProductUsed.Location = new Point(1119, 328);
-            _btnAddPartProductUsed.Name = "btnAddPartProductUsed";
-            _btnAddPartProductUsed.Size = new Size(96, 23);
-            _btnAddPartProductUsed.TabIndex = 5;
-            _btnAddPartProductUsed.Text = "PICK ITEM";
-            //
-            // nudQuantityUsed
-            //
-            _nudQuantityUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _nudQuantityUsed.Location = new Point(1047, 328);
-            _nudQuantityUsed.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            _nudQuantityUsed.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            _nudQuantityUsed.Name = "nudQuantityUsed";
-            _nudQuantityUsed.Size = new Size(64, 21);
-            _nudQuantityUsed.TabIndex = 4;
-            _nudQuantityUsed.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            //
-            // txtNameUsed
-            //
-            _txtNameUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _txtNameUsed.Location = new Point(312, 328);
-            _txtNameUsed.Name = "txtNameUsed";
-            _txtNameUsed.ReadOnly = true;
-            _txtNameUsed.Size = new Size(671, 21);
-            _txtNameUsed.TabIndex = 8;
-            //
-            // txtNumberUsed
-            //
-            _txtNumberUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtNumberUsed.Location = new Point(72, 328);
-            _txtNumberUsed.Name = "txtNumberUsed";
-            _txtNumberUsed.ReadOnly = true;
-            _txtNumberUsed.Size = new Size(184, 21);
-            _txtNumberUsed.TabIndex = 7;
-            //
-            // Label13
-            //
-            _Label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label13.Location = new Point(983, 328);
-            _Label13.Name = "Label13";
-            _Label13.Size = new Size(64, 23);
-            _Label13.TabIndex = 16;
-            _Label13.Text = "Quantity";
-            //
-            // Label15
-            //
-            _Label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label15.Location = new Point(264, 328);
-            _Label15.Name = "Label15";
-            _Label15.Size = new Size(64, 23);
-            _Label15.TabIndex = 15;
-            _Label15.Text = "Name";
-            //
-            // Label16
-            //
-            _Label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label16.Location = new Point(8, 328);
-            _Label16.Name = "Label16";
-            _Label16.Size = new Size(72, 23);
-            _Label16.TabIndex = 12;
-            _Label16.Text = "Number";
-            //
-            // btnRemovePartProductUsed
-            //
-            _btnRemovePartProductUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRemovePartProductUsed.Location = new Point(1119, 296);
-            _btnRemovePartProductUsed.Name = "btnRemovePartProductUsed";
-            _btnRemovePartProductUsed.Size = new Size(96, 23);
-            _btnRemovePartProductUsed.TabIndex = 6;
-            _btnRemovePartProductUsed.Text = "Remove";
-            //
-            // btnFindProductUsed
-            //
-            _btnFindProductUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnFindProductUsed.Location = new Point(104, 296);
-            _btnFindProductUsed.Name = "btnFindProductUsed";
-            _btnFindProductUsed.Size = new Size(88, 23);
-            _btnFindProductUsed.TabIndex = 3;
-            _btnFindProductUsed.Text = "Find Product";
-            //
-            // btnFindPartUsed
-            //
-            _btnFindPartUsed.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnFindPartUsed.Location = new Point(8, 296);
-            _btnFindPartUsed.Name = "btnFindPartUsed";
-            _btnFindPartUsed.Size = new Size(88, 23);
-            _btnFindPartUsed.TabIndex = 2;
-            _btnFindPartUsed.Text = "Find Part";
-            //
-            // tpOutcomes
-            //
-            _tpOutcomes.Controls.Add(_grpOutcomes);
-            _tpOutcomes.Location = new Point(4, 22);
-            _tpOutcomes.Name = "tpOutcomes";
-            _tpOutcomes.Padding = new Padding(3);
-            _tpOutcomes.Size = new Size(1247, 652);
-            _tpOutcomes.TabIndex = 7;
-            _tpOutcomes.Text = "Outcomes";
-            _tpOutcomes.UseVisualStyleBackColor = true;
-            //
-            // grpOutcomes
-            //
-            _grpOutcomes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpOutcomes.Controls.Add(_grpSiteFuels);
-            _grpOutcomes.Controls.Add(_cboNccRad);
-            _grpOutcomes.Controls.Add(_Label76);
-            _grpOutcomes.Controls.Add(_cboRecharge);
-            _grpOutcomes.Controls.Add(_Label75);
-            _grpOutcomes.Controls.Add(_chkRecharge);
-            _grpOutcomes.Controls.Add(_chkGasServiceCompleted);
-            _grpOutcomes.Location = new Point(8, 6);
-            _grpOutcomes.Name = "grpOutcomes";
-            _grpOutcomes.Size = new Size(1231, 640);
-            _grpOutcomes.TabIndex = 2;
-            _grpOutcomes.TabStop = false;
-            _grpOutcomes.Text = "Tick those that have been completed on this visit";
-            //
-            // grpSiteFuels
-            //
-            _grpSiteFuels.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpSiteFuels.Controls.Add(_dgSiteFuel);
-            _grpSiteFuels.Location = new Point(3, 17);
-            _grpSiteFuels.Margin = new Padding(0);
-            _grpSiteFuels.Name = "grpSiteFuels";
-            _grpSiteFuels.Padding = new Padding(0);
-            _grpSiteFuels.Size = new Size(437, 390);
-            _grpSiteFuels.TabIndex = 15;
-            _grpSiteFuels.TabStop = false;
-            _grpSiteFuels.Text = "Site Fuel";
-            //
-            // dgSiteFuel
-            //
-            _dgSiteFuel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgSiteFuel.DataMember = "";
-            _dgSiteFuel.HeaderForeColor = SystemColors.ControlText;
-            _dgSiteFuel.Location = new Point(5, 19);
-            _dgSiteFuel.Name = "dgSiteFuel";
-            _dgSiteFuel.Size = new Size(429, 366);
-            _dgSiteFuel.TabIndex = 11;
-            //
-            // cboNccRad
-            //
-            _cboNccRad.FormattingEnabled = true;
-            _cboNccRad.Location = new Point(649, 108);
-            _cboNccRad.Name = "cboNccRad";
-            _cboNccRad.Size = new Size(180, 21);
-            _cboNccRad.TabIndex = 9;
-            //
-            // Label76
-            //
-            _Label76.AutoSize = true;
-            _Label76.Location = new Point(458, 111);
-            _Label76.Name = "Label76";
-            _Label76.Size = new Size(172, 13);
-            _Label76.TabIndex = 8;
-            _Label76.Text = "Ncc Radiator Removal / Refit";
-            //
-            // cboRecharge
-            //
-            _cboRecharge.FormattingEnabled = true;
-            _cboRecharge.Location = new Point(649, 81);
-            _cboRecharge.Name = "cboRecharge";
-            _cboRecharge.Size = new Size(180, 21);
-            _cboRecharge.TabIndex = 7;
-            //
-            // Label75
-            //
-            _Label75.AutoSize = true;
-            _Label75.Location = new Point(458, 84);
-            _Label75.Name = "Label75";
-            _Label75.Size = new Size(83, 13);
-            _Label75.TabIndex = 6;
-            _Label75.Text = "Recharge To:";
-            //
-            // chkRecharge
-            //
-            _chkRecharge.AutoSize = true;
-            _chkRecharge.Location = new Point(458, 59);
-            _chkRecharge.Name = "chkRecharge";
-            _chkRecharge.Size = new Size(80, 17);
-            _chkRecharge.TabIndex = 2;
-            _chkRecharge.Text = "Recharge";
-            _chkRecharge.UseVisualStyleBackColor = true;
-            //
-            // chkGasServiceCompleted
-            //
-            _chkGasServiceCompleted.AutoSize = true;
-            _chkGasServiceCompleted.Location = new Point(458, 36);
-            _chkGasServiceCompleted.Name = "chkGasServiceCompleted";
-            _chkGasServiceCompleted.Size = new Size(135, 17);
-            _chkGasServiceCompleted.TabIndex = 1;
-            _chkGasServiceCompleted.Text = "Service Completed";
-            _chkGasServiceCompleted.UseVisualStyleBackColor = true;
-            //
-            // tpQC
-            //
-            _tpQC.Controls.Add(_GroupBox4);
-            _tpQC.Location = new Point(4, 22);
-            _tpQC.Name = "tpQC";
-            _tpQC.Padding = new Padding(3);
-            _tpQC.Size = new Size(1247, 652);
-            _tpQC.TabIndex = 8;
-            _tpQC.Text = "QC";
-            _tpQC.UseVisualStyleBackColor = true;
-            //
-            // GroupBox4
-            //
-            _GroupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox4.Controls.Add(_grpQCField);
-            _GroupBox4.Controls.Add(_grpOfficeQC);
-            _GroupBox4.Location = new Point(8, 0);
-            _GroupBox4.Name = "GroupBox4";
-            _GroupBox4.Size = new Size(1235, 646);
-            _GroupBox4.TabIndex = 0;
-            _GroupBox4.TabStop = false;
-            _GroupBox4.Text = "QC";
-            //
-            // grpQCField
-            //
-            _grpQCField.Controls.Add(_cboQCCustSig);
-            _grpQCField.Controls.Add(_lblQCCustSig);
-            _grpQCField.Controls.Add(_cboRecallEngineer);
-            _grpQCField.Controls.Add(_Label49);
-            _grpQCField.Controls.Add(_cboRecall);
-            _grpQCField.Controls.Add(_Label48);
-            _grpQCField.Controls.Add(_dtpQCDocumentsRecieved);
-            _grpQCField.Controls.Add(_chkQCDocumentsRecieved);
-            _grpQCField.Controls.Add(_txtQCPoorJobNotes);
-            _grpQCField.Controls.Add(_lblQCPoorJobNotes);
-            _grpQCField.Controls.Add(_cboQCEngineerPaymentRecieved);
-            _grpQCField.Controls.Add(_lblQCEngineerMonies);
-            _grpQCField.Controls.Add(_cboQCPaymentSelection);
-            _grpQCField.Controls.Add(_lblQCEngPaymentMethod);
-            _grpQCField.Controls.Add(_cboQCAppliance);
-            _grpQCField.Controls.Add(_cboQCPaymentCollection);
-            _grpQCField.Controls.Add(_lblQCPaymentCollection);
-            _grpQCField.Controls.Add(_cboQCJobUploadTimescale);
-            _grpQCField.Controls.Add(_lblQCAppliance);
-            _grpQCField.Controls.Add(_cboQCParts);
-            _grpQCField.Controls.Add(_lblJobUploadTimescale);
-            _grpQCField.Controls.Add(_lblQCParts);
-            _grpQCField.Controls.Add(_cboQCLGSR);
-            _grpQCField.Controls.Add(_lblQCLGSR);
-            _grpQCField.Controls.Add(_cboQCLabourTime);
-            _grpQCField.Controls.Add(_lblQCLabourTime);
-            _grpQCField.Location = new Point(9, 158);
-            _grpQCField.Name = "grpQCField";
-            _grpQCField.Size = new Size(1220, 342);
-            _grpQCField.TabIndex = 38;
-            _grpQCField.TabStop = false;
-            _grpQCField.Text = "Field";
-            //
-            // cboQCCustSig
-            //
-            _cboQCCustSig.FormattingEnabled = true;
-            _cboQCCustSig.Location = new Point(251, 198);
-            _cboQCCustSig.Name = "cboQCCustSig";
-            _cboQCCustSig.Size = new Size(277, 21);
-            _cboQCCustSig.TabIndex = 84;
-            //
-            // lblQCCustSig
-            //
-            _lblQCCustSig.AutoSize = true;
-            _lblQCCustSig.Location = new Point(12, 201);
-            _lblQCCustSig.Name = "lblQCCustSig";
-            _lblQCCustSig.Size = new Size(111, 13);
-            _lblQCCustSig.TabIndex = 83;
-            _lblQCCustSig.Text = "Customer Signed:";
-            //
-            // cboRecallEngineer
-            //
-            _cboRecallEngineer.FormattingEnabled = true;
-            _cboRecallEngineer.Location = new Point(847, 27);
-            _cboRecallEngineer.Name = "cboRecallEngineer";
-            _cboRecallEngineer.Size = new Size(353, 21);
-            _cboRecallEngineer.TabIndex = 82;
-            //
-            // Label49
-            //
-            _Label49.AutoSize = true;
-            _Label49.Location = new Point(584, 27);
-            _Label49.Name = "Label49";
-            _Label49.Size = new Size(100, 13);
-            _Label49.TabIndex = 81;
-            _Label49.Text = "Recall Engineer:";
-            //
-            // cboRecall
-            //
-            _cboRecall.FormattingEnabled = true;
-            _cboRecall.Location = new Point(251, 24);
-            _cboRecall.Name = "cboRecall";
-            _cboRecall.Size = new Size(277, 21);
-            _cboRecall.TabIndex = 80;
-            //
-            // Label48
-            //
-            _Label48.AutoSize = true;
-            _Label48.Location = new Point(12, 27);
-            _Label48.Name = "Label48";
-            _Label48.Size = new Size(46, 13);
-            _Label48.TabIndex = 79;
-            _Label48.Text = "Recall:";
-            //
-            // dtpQCDocumentsRecieved
-            //
-            _dtpQCDocumentsRecieved.Location = new Point(251, 236);
-            _dtpQCDocumentsRecieved.Name = "dtpQCDocumentsRecieved";
-            _dtpQCDocumentsRecieved.Size = new Size(180, 21);
-            _dtpQCDocumentsRecieved.TabIndex = 78;
-            _dtpQCDocumentsRecieved.Visible = false;
-            //
-            // chkQCDocumentsRecieved
-            //
-            _chkQCDocumentsRecieved.AutoSize = true;
-            _chkQCDocumentsRecieved.CheckAlign = ContentAlignment.MiddleRight;
-            _chkQCDocumentsRecieved.Location = new Point(15, 236);
-            _chkQCDocumentsRecieved.Name = "chkQCDocumentsRecieved";
-            _chkQCDocumentsRecieved.Size = new Size(164, 17);
-            _chkQCDocumentsRecieved.TabIndex = 77;
-            _chkQCDocumentsRecieved.Text = "All documents recieved:";
-            _chkQCDocumentsRecieved.UseVisualStyleBackColor = true;
-            //
-            // txtQCPoorJobNotes
-            //
-            _txtQCPoorJobNotes.Location = new Point(759, 198);
-            _txtQCPoorJobNotes.Multiline = true;
-            _txtQCPoorJobNotes.Name = "txtQCPoorJobNotes";
-            _txtQCPoorJobNotes.ScrollBars = ScrollBars.Vertical;
-            _txtQCPoorJobNotes.Size = new Size(441, 111);
-            _txtQCPoorJobNotes.TabIndex = 76;
-            _txtQCPoorJobNotes.Tag = "";
-            //
-            // lblQCPoorJobNotes
-            //
-            _lblQCPoorJobNotes.AutoSize = true;
-            _lblQCPoorJobNotes.Location = new Point(584, 198);
-            _lblQCPoorJobNotes.Name = "lblQCPoorJobNotes";
-            _lblQCPoorJobNotes.Size = new Size(95, 13);
-            _lblQCPoorJobNotes.TabIndex = 40;
-            _lblQCPoorJobNotes.Text = "Poor job notes:";
-            //
-            // cboQCEngineerPaymentRecieved
-            //
-            _cboQCEngineerPaymentRecieved.FormattingEnabled = true;
-            _cboQCEngineerPaymentRecieved.Location = new Point(847, 162);
-            _cboQCEngineerPaymentRecieved.Name = "cboQCEngineerPaymentRecieved";
-            _cboQCEngineerPaymentRecieved.Size = new Size(353, 21);
-            _cboQCEngineerPaymentRecieved.TabIndex = 39;
-            //
-            // lblQCEngineerMonies
-            //
-            _lblQCEngineerMonies.AutoSize = true;
-            _lblQCEngineerMonies.Location = new Point(584, 162);
-            _lblQCEngineerMonies.Name = "lblQCEngineerMonies";
-            _lblQCEngineerMonies.Size = new Size(251, 13);
-            _lblQCEngineerMonies.TabIndex = 38;
-            _lblQCEngineerMonies.Text = "Engineer Cash/Cheque payment recieved:";
-            //
-            // cboQCPaymentSelection
-            //
-            _cboQCPaymentSelection.FormattingEnabled = true;
-            _cboQCPaymentSelection.Location = new Point(847, 130);
-            _cboQCPaymentSelection.Name = "cboQCPaymentSelection";
-            _cboQCPaymentSelection.Size = new Size(353, 21);
-            _cboQCPaymentSelection.TabIndex = 37;
-            //
-            // lblQCEngPaymentMethod
-            //
-            _lblQCEngPaymentMethod.AutoSize = true;
-            _lblQCEngPaymentMethod.Location = new Point(584, 130);
-            _lblQCEngPaymentMethod.Name = "lblQCEngPaymentMethod";
-            _lblQCEngPaymentMethod.Size = new Size(207, 13);
-            _lblQCEngPaymentMethod.TabIndex = 36;
-            _lblQCEngPaymentMethod.Text = "Correct payment method selected:";
-            //
-            // cboQCAppliance
-            //
-            _cboQCAppliance.FormattingEnabled = true;
-            _cboQCAppliance.Location = new Point(847, 96);
-            _cboQCAppliance.Name = "cboQCAppliance";
-            _cboQCAppliance.Size = new Size(353, 21);
-            _cboQCAppliance.TabIndex = 35;
-            //
-            // cboQCPaymentCollection
-            //
-            _cboQCPaymentCollection.FormattingEnabled = true;
-            _cboQCPaymentCollection.Location = new Point(251, 159);
-            _cboQCPaymentCollection.Name = "cboQCPaymentCollection";
-            _cboQCPaymentCollection.Size = new Size(277, 21);
-            _cboQCPaymentCollection.TabIndex = 16;
-            //
-            // lblQCPaymentCollection
-            //
-            _lblQCPaymentCollection.AutoSize = true;
-            _lblQCPaymentCollection.Location = new Point(12, 162);
-            _lblQCPaymentCollection.Name = "lblQCPaymentCollection";
-            _lblQCPaymentCollection.Size = new Size(116, 13);
-            _lblQCPaymentCollection.TabIndex = 15;
-            _lblQCPaymentCollection.Text = "Payment collected:";
-            //
-            // cboQCJobUploadTimescale
-            //
-            _cboQCJobUploadTimescale.FormattingEnabled = true;
-            _cboQCJobUploadTimescale.Location = new Point(251, 127);
-            _cboQCJobUploadTimescale.Name = "cboQCJobUploadTimescale";
-            _cboQCJobUploadTimescale.Size = new Size(277, 21);
-            _cboQCJobUploadTimescale.TabIndex = 14;
-            //
-            // lblQCAppliance
-            //
-            _lblQCAppliance.AutoSize = true;
-            _lblQCAppliance.Location = new Point(584, 96);
-            _lblQCAppliance.Name = "lblQCAppliance";
-            _lblQCAppliance.Size = new Size(122, 13);
-            _lblQCAppliance.TabIndex = 34;
-            _lblQCAppliance.Text = "Appliance recorded:";
-            //
-            // cboQCParts
-            //
-            _cboQCParts.FormattingEnabled = true;
-            _cboQCParts.Location = new Point(251, 93);
-            _cboQCParts.Name = "cboQCParts";
-            _cboQCParts.Size = new Size(277, 21);
-            _cboQCParts.TabIndex = 33;
-            //
-            // lblJobUploadTimescale
-            //
-            _lblJobUploadTimescale.AutoSize = true;
-            _lblJobUploadTimescale.Location = new Point(12, 130);
-            _lblJobUploadTimescale.Name = "lblJobUploadTimescale";
-            _lblJobUploadTimescale.Size = new Size(159, 13);
-            _lblJobUploadTimescale.TabIndex = 13;
-            _lblJobUploadTimescale.Text = "Job uploaded in timescale:";
-            //
-            // lblQCParts
-            //
-            _lblQCParts.AutoSize = true;
-            _lblQCParts.Location = new Point(12, 96);
-            _lblQCParts.Name = "lblQCParts";
-            _lblQCParts.Size = new Size(102, 13);
-            _lblQCParts.TabIndex = 32;
-            _lblQCParts.Text = "Parts confirmed:";
-            //
-            // cboQCLGSR
-            //
-            _cboQCLGSR.FormattingEnabled = true;
-            _cboQCLGSR.Location = new Point(847, 62);
-            _cboQCLGSR.Name = "cboQCLGSR";
-            _cboQCLGSR.Size = new Size(353, 21);
-            _cboQCLGSR.TabIndex = 31;
-            //
-            // lblQCLGSR
-            //
-            _lblQCLGSR.AutoSize = true;
-            _lblQCLGSR.Location = new Point(584, 62);
-            _lblQCLGSR.Name = "lblQCLGSR";
-            _lblQCLGSR.Size = new Size(90, 13);
-            _lblQCLGSR.TabIndex = 30;
-            _lblQCLGSR.Text = "LGSR missing:";
-            //
-            // cboQCLabourTime
-            //
-            _cboQCLabourTime.FormattingEnabled = true;
-            _cboQCLabourTime.Location = new Point(251, 59);
-            _cboQCLabourTime.Name = "cboQCLabourTime";
-            _cboQCLabourTime.Size = new Size(277, 21);
-            _cboQCLabourTime.TabIndex = 29;
-            //
-            // lblQCLabourTime
-            //
-            _lblQCLabourTime.AutoSize = true;
-            _lblQCLabourTime.Location = new Point(12, 62);
-            _lblQCLabourTime.Name = "lblQCLabourTime";
-            _lblQCLabourTime.Size = new Size(167, 13);
-            _lblQCLabourTime.TabIndex = 28;
-            _lblQCLabourTime.Text = "Labour/Travel time missing:";
-            //
-            // grpOfficeQC
-            //
-            _grpOfficeQC.Controls.Add(_cboQCPaymentMethod);
-            _grpOfficeQC.Controls.Add(_lblPaymentMethod);
-            _grpOfficeQC.Controls.Add(_cboQCOrderNo);
-            _grpOfficeQC.Controls.Add(_lblOrderNo);
-            _grpOfficeQC.Controls.Add(_cboQCScheduleOfRate);
-            _grpOfficeQC.Controls.Add(_lblScheduleRate);
-            _grpOfficeQC.Controls.Add(_cboQCCustomerDetails);
-            _grpOfficeQC.Controls.Add(_lblCustomerDetails);
-            _grpOfficeQC.Controls.Add(_cboQCJobType);
-            _grpOfficeQC.Controls.Add(_lblJobTypeCorrect);
-            _grpOfficeQC.Controls.Add(_cboFTFCode);
-            _grpOfficeQC.Controls.Add(_Label74);
-            _grpOfficeQC.Location = new Point(9, 20);
-            _grpOfficeQC.Name = "grpOfficeQC";
-            _grpOfficeQC.Size = new Size(1220, 132);
-            _grpOfficeQC.TabIndex = 30;
-            _grpOfficeQC.TabStop = false;
-            _grpOfficeQC.Text = "Office";
-            //
-            // cboQCPaymentMethod
-            //
-            _cboQCPaymentMethod.FormattingEnabled = true;
-            _cboQCPaymentMethod.Location = new Point(251, 90);
-            _cboQCPaymentMethod.Name = "cboQCPaymentMethod";
-            _cboQCPaymentMethod.Size = new Size(277, 21);
-            _cboQCPaymentMethod.TabIndex = 37;
-            //
-            // lblPaymentMethod
-            //
-            _lblPaymentMethod.AutoSize = true;
-            _lblPaymentMethod.Location = new Point(12, 93);
-            _lblPaymentMethod.Name = "lblPaymentMethod";
-            _lblPaymentMethod.Size = new Size(158, 13);
-            _lblPaymentMethod.TabIndex = 36;
-            _lblPaymentMethod.Text = "Payment method detailed:";
-            //
-            // cboQCOrderNo
-            //
-            _cboQCOrderNo.FormattingEnabled = true;
-            _cboQCOrderNo.Location = new Point(759, 57);
-            _cboQCOrderNo.Name = "cboQCOrderNo";
-            _cboQCOrderNo.Size = new Size(441, 21);
-            _cboQCOrderNo.TabIndex = 35;
-            //
-            // lblOrderNo
-            //
-            _lblOrderNo.AutoSize = true;
-            _lblOrderNo.Location = new Point(584, 60);
-            _lblOrderNo.Name = "lblOrderNo";
-            _lblOrderNo.Size = new Size(150, 13);
-            _lblOrderNo.TabIndex = 34;
-            _lblOrderNo.Text = "Order number attached: ";
-            //
-            // cboQCScheduleOfRate
-            //
-            _cboQCScheduleOfRate.FormattingEnabled = true;
-            _cboQCScheduleOfRate.Location = new Point(251, 54);
-            _cboQCScheduleOfRate.Name = "cboQCScheduleOfRate";
-            _cboQCScheduleOfRate.Size = new Size(277, 21);
-            _cboQCScheduleOfRate.TabIndex = 33;
-            //
-            // lblScheduleRate
-            //
-            _lblScheduleRate.AutoSize = true;
-            _lblScheduleRate.Location = new Point(12, 57);
-            _lblScheduleRate.Name = "lblScheduleRate";
-            _lblScheduleRate.Size = new Size(208, 13);
-            _lblScheduleRate.TabIndex = 32;
-            _lblScheduleRate.Text = "Correct schedule of rates selected:";
-            //
-            // cboQCCustomerDetails
-            //
-            _cboQCCustomerDetails.FormattingEnabled = true;
-            _cboQCCustomerDetails.Location = new Point(759, 20);
-            _cboQCCustomerDetails.Name = "cboQCCustomerDetails";
-            _cboQCCustomerDetails.Size = new Size(441, 21);
-            _cboQCCustomerDetails.TabIndex = 31;
-            //
-            // lblCustomerDetails
-            //
-            _lblCustomerDetails.AutoSize = true;
-            _lblCustomerDetails.Location = new Point(584, 23);
-            _lblCustomerDetails.Name = "lblCustomerDetails";
-            _lblCustomerDetails.Size = new Size(157, 13);
-            _lblCustomerDetails.TabIndex = 30;
-            _lblCustomerDetails.Text = "Correct customer details: ";
-            //
-            // cboQCJobType
-            //
-            _cboQCJobType.FormattingEnabled = true;
-            _cboQCJobType.Location = new Point(251, 20);
-            _cboQCJobType.Name = "cboQCJobType";
-            _cboQCJobType.Size = new Size(277, 21);
-            _cboQCJobType.TabIndex = 29;
-            //
-            // lblJobTypeCorrect
-            //
-            _lblJobTypeCorrect.AutoSize = true;
-            _lblJobTypeCorrect.Location = new Point(12, 23);
-            _lblJobTypeCorrect.Name = "lblJobTypeCorrect";
-            _lblJobTypeCorrect.Size = new Size(157, 13);
-            _lblJobTypeCorrect.TabIndex = 28;
-            _lblJobTypeCorrect.Text = "Correct job type selected:";
-            //
-            // cboFTFCode
-            //
-            _cboFTFCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboFTFCode.FormattingEnabled = true;
-            _cboFTFCode.Location = new Point(759, 90);
-            _cboFTFCode.Name = "cboFTFCode";
-            _cboFTFCode.Size = new Size(441, 21);
-            _cboFTFCode.TabIndex = 27;
-            //
-            // Label74
-            //
-            _Label74.AutoSize = true;
-            _Label74.Location = new Point(584, 93);
-            _Label74.Name = "Label74";
-            _Label74.Size = new Size(65, 13);
-            _Label74.TabIndex = 26;
-            _Label74.Text = "FTF Code:";
-            //
-            // tpCharges
-            //
-            _tpCharges.Controls.Add(_gpbInvoice);
-            _tpCharges.Controls.Add(_gpbCharges);
-            _tpCharges.Controls.Add(_gpbAdditionalCharges);
-            _tpCharges.Controls.Add(_gpbPartsAndProducts);
-            _tpCharges.Controls.Add(_gpbTimesheets);
-            _tpCharges.Controls.Add(_gpbScheduleOfRates);
-            _tpCharges.Location = new Point(4, 22);
-            _tpCharges.Name = "tpCharges";
-            _tpCharges.Size = new Size(1247, 652);
-            _tpCharges.TabIndex = 4;
-            _tpCharges.Text = "Visit Charges";
-            _tpCharges.UseVisualStyleBackColor = true;
-            //
-            // gpbInvoice
-            //
-            _gpbInvoice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _gpbInvoice.Controls.Add(_cboDept);
-            _gpbInvoice.Controls.Add(_btnCreateServ);
-            _gpbInvoice.Controls.Add(_txtInvAmount);
-            _gpbInvoice.Controls.Add(_txtCreditAmount);
-            _gpbInvoice.Controls.Add(_txtInvNo);
-            _gpbInvoice.Controls.Add(_cboPaidBy);
-            _gpbInvoice.Controls.Add(_cboInvType);
-            _gpbInvoice.Controls.Add(_cboVATRate);
-            _gpbInvoice.Controls.Add(_txtPriceIncVAT);
-            _gpbInvoice.Controls.Add(_txtAccountCode);
-            _gpbInvoice.Controls.Add(_lblInvoiceAddressDetails);
-            _gpbInvoice.Controls.Add(_txtNominalCode);
-            _gpbInvoice.Controls.Add(_btnSearch);
-            _gpbInvoice.Controls.Add(_dtpRaiseInvoiceOn);
-            _gpbInvoice.Controls.Add(_cbxReadyToBeInvoiced);
-            _gpbInvoice.Controls.Add(_lblInvAmount);
-            _gpbInvoice.Controls.Add(_lblcredit);
-            _gpbInvoice.Controls.Add(_lblInvNo);
-            _gpbInvoice.Controls.Add(_lblPaidBy);
-            _gpbInvoice.Controls.Add(_lblInvType);
-            _gpbInvoice.Controls.Add(_lblVAT);
-            _gpbInvoice.Controls.Add(_lblNominalCode);
-            _gpbInvoice.Controls.Add(_lblAccountCode);
-            _gpbInvoice.Controls.Add(_lblPriceInvVAT);
-            _gpbInvoice.Controls.Add(_lblDepartment);
-            _gpbInvoice.Controls.Add(_lblRaiseInvoiceOn);
-            _gpbInvoice.Location = new Point(717, 425);
-            _gpbInvoice.Name = "gpbInvoice";
-            _gpbInvoice.Size = new Size(522, 221);
-            _gpbInvoice.TabIndex = 6;
-            _gpbInvoice.TabStop = false;
-            _gpbInvoice.Text = "Ready To Be Invoiced";
-            //
-            // cboDept
-            //
-            _cboDept.FormattingEnabled = true;
-            _cboDept.Location = new Point(315, 26);
-            _cboDept.Name = "cboDept";
-            _cboDept.Size = new Size(98, 21);
-            _cboDept.TabIndex = 32;
-            //
-            // btnCreateServ
-            //
-            _btnCreateServ.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnCreateServ.Location = new Point(8, 192);
-            _btnCreateServ.Name = "btnCreateServ";
-            _btnCreateServ.Size = new Size(159, 23);
-            _btnCreateServ.TabIndex = 31;
-            _btnCreateServ.Text = "Create Multiple Services";
-            //
-            // txtInvAmount
-            //
-            _txtInvAmount.Location = new Point(340, 190);
-            _txtInvAmount.Name = "txtInvAmount";
-            _txtInvAmount.ReadOnly = true;
-            _txtInvAmount.Size = new Size(74, 21);
-            _txtInvAmount.TabIndex = 27;
-            _txtInvAmount.Visible = false;
-            //
-            // txtCreditAmount
-            //
-            _txtCreditAmount.Location = new Point(425, 190);
-            _txtCreditAmount.Name = "txtCreditAmount";
-            _txtCreditAmount.ReadOnly = true;
-            _txtCreditAmount.Size = new Size(91, 21);
-            _txtCreditAmount.TabIndex = 25;
-            _txtCreditAmount.Visible = false;
-            //
-            // txtInvNo
-            //
-            _txtInvNo.Location = new Point(251, 190);
-            _txtInvNo.Name = "txtInvNo";
-            _txtInvNo.ReadOnly = true;
-            _txtInvNo.Size = new Size(76, 21);
-            _txtInvNo.TabIndex = 23;
-            _txtInvNo.Visible = false;
-            //
-            // cboPaidBy
-            //
-            _cboPaidBy.FormattingEnabled = true;
-            _cboPaidBy.Location = new Point(249, 106);
-            _cboPaidBy.Name = "cboPaidBy";
-            _cboPaidBy.Size = new Size(164, 21);
-            _cboPaidBy.TabIndex = 19;
-            _cboPaidBy.Visible = false;
-            //
-            // cboInvType
-            //
-            _cboInvType.FormattingEnabled = true;
-            _cboInvType.Location = new Point(249, 64);
-            _cboInvType.Name = "cboInvType";
-            _cboInvType.Size = new Size(164, 21);
-            _cboInvType.TabIndex = 17;
-            _cboInvType.Visible = false;
-            //
-            // cboVATRate
-            //
-            _cboVATRate.FormattingEnabled = true;
-            _cboVATRate.Location = new Point(425, 63);
-            _cboVATRate.Name = "cboVATRate";
-            _cboVATRate.Size = new Size(90, 21);
-            _cboVATRate.TabIndex = 13;
-            _cboVATRate.Visible = false;
-            //
-            // txtPriceIncVAT
-            //
-            _txtPriceIncVAT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtPriceIncVAT.Location = new Point(425, 106);
-            _txtPriceIncVAT.Name = "txtPriceIncVAT";
-            _txtPriceIncVAT.ReadOnly = true;
-            _txtPriceIncVAT.Size = new Size(91, 21);
-            _txtPriceIncVAT.TabIndex = 3;
-            _txtPriceIncVAT.Visible = false;
-            //
-            // txtAccountCode
-            //
-            _txtAccountCode.Location = new Point(425, 24);
-            _txtAccountCode.Name = "txtAccountCode";
-            _txtAccountCode.Size = new Size(91, 21);
-            _txtAccountCode.TabIndex = 12;
-            _txtAccountCode.Visible = false;
-            //
-            // lblInvoiceAddressDetails
-            //
-            _lblInvoiceAddressDetails.Location = new Point(8, 43);
-            _lblInvoiceAddressDetails.Name = "lblInvoiceAddressDetails";
-            _lblInvoiceAddressDetails.Size = new Size(231, 127);
-            _lblInvoiceAddressDetails.TabIndex = 4;
-            _lblInvoiceAddressDetails.Visible = false;
-            //
-            // txtNominalCode
-            //
-            _txtNominalCode.Location = new Point(249, 24);
-            _txtNominalCode.Name = "txtNominalCode";
-            _txtNominalCode.Size = new Size(47, 21);
-            _txtNominalCode.TabIndex = 9;
-            //
-            // btnSearch
-            //
-            _btnSearch.Location = new Point(177, 16);
-            _btnSearch.Name = "btnSearch";
-            _btnSearch.Size = new Size(62, 23);
-            _btnSearch.TabIndex = 1;
-            _btnSearch.Text = "Change";
-            _btnSearch.Visible = false;
-            //
-            // dtpRaiseInvoiceOn
-            //
-            _dtpRaiseInvoiceOn.Format = DateTimePickerFormat.Short;
-            _dtpRaiseInvoiceOn.Location = new Point(425, 148);
-            _dtpRaiseInvoiceOn.Name = "dtpRaiseInvoiceOn";
-            _dtpRaiseInvoiceOn.Size = new Size(91, 21);
-            _dtpRaiseInvoiceOn.TabIndex = 6;
-            _dtpRaiseInvoiceOn.Visible = false;
-            //
-            // cbxReadyToBeInvoiced
-            //
-            _cbxReadyToBeInvoiced.Location = new Point(8, 22);
-            _cbxReadyToBeInvoiced.Name = "cbxReadyToBeInvoiced";
-            _cbxReadyToBeInvoiced.Size = new Size(180, 16);
-            _cbxReadyToBeInvoiced.TabIndex = 0;
-            _cbxReadyToBeInvoiced.Text = "Ready To Be Invoiced To:";
-            //
-            // lblInvAmount
-            //
-            _lblInvAmount.Location = new Point(338, 172);
-            _lblInvAmount.Name = "lblInvAmount";
-            _lblInvAmount.Size = new Size(76, 17);
-            _lblInvAmount.TabIndex = 28;
-            _lblInvAmount.Text = "Inv Ex VAT";
-            _lblInvAmount.TextAlign = ContentAlignment.MiddleLeft;
-            _lblInvAmount.Visible = false;
-            //
-            // lblcredit
-            //
-            _lblcredit.Location = new Point(420, 173);
-            _lblcredit.Name = "lblcredit";
-            _lblcredit.Size = new Size(92, 14);
-            _lblcredit.TabIndex = 26;
-            _lblcredit.Text = "Credit Ex VAT";
-            _lblcredit.TextAlign = ContentAlignment.MiddleLeft;
-            _lblcredit.Visible = false;
-            //
-            // lblInvNo
-            //
-            _lblInvNo.Location = new Point(249, 170);
-            _lblInvNo.Name = "lblInvNo";
-            _lblInvNo.Size = new Size(91, 17);
-            _lblInvNo.TabIndex = 24;
-            _lblInvNo.Text = "Invoice No.";
-            _lblInvNo.TextAlign = ContentAlignment.MiddleLeft;
-            _lblInvNo.Visible = false;
-            //
-            // lblPaidBy
-            //
-            _lblPaidBy.Location = new Point(248, 89);
-            _lblPaidBy.Name = "lblPaidBy";
-            _lblPaidBy.Size = new Size(130, 17);
-            _lblPaidBy.TabIndex = 20;
-            _lblPaidBy.Text = "Paid By";
-            _lblPaidBy.TextAlign = ContentAlignment.MiddleLeft;
-            _lblPaidBy.Visible = false;
-            //
-            // lblInvType
-            //
-            _lblInvType.Location = new Point(248, 48);
-            _lblInvType.Name = "lblInvType";
-            _lblInvType.Size = new Size(130, 17);
-            _lblInvType.TabIndex = 18;
-            _lblInvType.Text = "Invoice Type";
-            _lblInvType.TextAlign = ContentAlignment.MiddleLeft;
-            _lblInvType.Visible = false;
-            //
-            // lblVAT
-            //
-            _lblVAT.Location = new Point(420, 48);
-            _lblVAT.Name = "lblVAT";
-            _lblVAT.Size = new Size(94, 17);
-            _lblVAT.TabIndex = 14;
-            _lblVAT.Text = "VAT Rate";
-            _lblVAT.TextAlign = ContentAlignment.MiddleLeft;
-            _lblVAT.Visible = false;
-            //
-            // lblNominalCode
-            //
-            _lblNominalCode.Location = new Point(246, 9);
-            _lblNominalCode.Name = "lblNominalCode";
-            _lblNominalCode.Size = new Size(60, 14);
-            _lblNominalCode.TabIndex = 7;
-            _lblNominalCode.Text = "Nominal";
-            _lblNominalCode.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // lblAccountCode
-            //
-            _lblAccountCode.Location = new Point(420, 8);
-            _lblAccountCode.Name = "lblAccountCode";
-            _lblAccountCode.Size = new Size(107, 14);
-            _lblAccountCode.TabIndex = 11;
-            _lblAccountCode.Text = "Account Code";
-            _lblAccountCode.TextAlign = ContentAlignment.MiddleLeft;
-            _lblAccountCode.Visible = false;
-            //
-            // lblPriceInvVAT
-            //
-            _lblPriceInvVAT.Location = new Point(420, 87);
-            _lblPriceInvVAT.Name = "lblPriceInvVAT";
-            _lblPriceInvVAT.Size = new Size(92, 16);
-            _lblPriceInvVAT.TabIndex = 2;
-            _lblPriceInvVAT.Text = "Price Inc VAT";
-            _lblPriceInvVAT.TextAlign = ContentAlignment.MiddleLeft;
-            _lblPriceInvVAT.Visible = false;
-            //
-            // lblDepartment
-            //
-            _lblDepartment.Location = new Point(312, 7);
-            _lblDepartment.Name = "lblDepartment";
-            _lblDepartment.Size = new Size(79, 16);
-            _lblDepartment.TabIndex = 8;
-            _lblDepartment.Text = "Cost Centre";
-            _lblDepartment.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // lblRaiseInvoiceOn
-            //
-            _lblRaiseInvoiceOn.Location = new Point(423, 130);
-            _lblRaiseInvoiceOn.Name = "lblRaiseInvoiceOn";
-            _lblRaiseInvoiceOn.Size = new Size(99, 16);
-            _lblRaiseInvoiceOn.TabIndex = 5;
-            _lblRaiseInvoiceOn.Text = "Raise Inv Date:";
-            _lblRaiseInvoiceOn.TextAlign = ContentAlignment.MiddleLeft;
-            _lblRaiseInvoiceOn.Visible = false;
-            //
-            // gpbCharges
-            //
-            _gpbCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _gpbCharges.Controls.Add(_chkShowJobCharges);
-            _gpbCharges.Controls.Add(_GroupBox6);
-            _gpbCharges.Controls.Add(_lblContractPerVisit);
-            _gpbCharges.Controls.Add(_lblOR);
-            _gpbCharges.Controls.Add(_Label30);
-            _gpbCharges.Controls.Add(_lblQuotePercentageTotal);
-            _gpbCharges.Controls.Add(_lblEquals);
-            _gpbCharges.Controls.Add(_GroupBox9);
-            _gpbCharges.Controls.Add(_lblPercent);
-            _gpbCharges.Controls.Add(_txtPercentOfQuote);
-            _gpbCharges.Controls.Add(_rdoPercentageOfQuoteValue);
-            _gpbCharges.Controls.Add(_txtCharge);
-            _gpbCharges.Controls.Add(_rdoChargeOther);
-            _gpbCharges.Controls.Add(_rdoJobValue);
-            _gpbCharges.Controls.Add(_txtJobValue);
-            _gpbCharges.Location = new Point(8, 425);
-            _gpbCharges.Name = "gpbCharges";
-            _gpbCharges.Size = new Size(603, 221);
-            _gpbCharges.TabIndex = 3;
-            _gpbCharges.TabStop = false;
-            _gpbCharges.Text = "Charges";
-            //
-            // chkShowJobCharges
-            //
-            _chkShowJobCharges.AutoSize = true;
-            _chkShowJobCharges.Location = new Point(41, 187);
-            _chkShowJobCharges.Name = "chkShowJobCharges";
-            _chkShowJobCharges.Size = new Size(183, 17);
-            _chkShowJobCharges.TabIndex = 17;
-            _chkShowJobCharges.Text = "Show All Charges From Job";
-            _chkShowJobCharges.UseVisualStyleBackColor = true;
-            //
-            // GroupBox6
-            //
-            _GroupBox6.Controls.Add(_Label82);
-            _GroupBox6.Controls.Add(_Label78);
-            _GroupBox6.Controls.Add(_Label77);
-            _GroupBox6.Controls.Add(_txtProfitPerc);
-            _GroupBox6.Controls.Add(_txtProfit);
-            _GroupBox6.Controls.Add(_CostsToOption1);
-            _GroupBox6.Controls.Add(_txtCosts);
-            _GroupBox6.Controls.Add(_CostsToOption3);
-            _GroupBox6.Controls.Add(_txtSale);
-            _GroupBox6.Controls.Add(_CostsToOption2);
-            _GroupBox6.Location = new Point(8, 93);
-            _GroupBox6.Name = "GroupBox6";
-            _GroupBox6.Size = new Size(583, 82);
-            _GroupBox6.TabIndex = 16;
-            _GroupBox6.TabStop = false;
-            _GroupBox6.Text = "Costs To:";
-            //
-            // Label82
-            //
-            _Label82.Location = new Point(266, 17);
-            _Label82.Name = "Label82";
-            _Label82.Size = new Size(101, 16);
-            _Label82.TabIndex = 23;
-            _Label82.Text = "Sale";
-            //
-            // Label78
-            //
-            _Label78.Location = new Point(266, 57);
-            _Label78.Name = "Label78";
-            _Label78.Size = new Size(101, 19);
-            _Label78.TabIndex = 22;
-            _Label78.Text = "Profit";
-            //
-            // Label77
-            //
-            _Label77.Location = new Point(266, 36);
-            _Label77.Name = "Label77";
-            _Label77.Size = new Size(101, 20);
-            _Label77.TabIndex = 21;
-            _Label77.Text = "Costs";
-            //
-            // txtProfitPerc
-            //
-            _txtProfitPerc.Location = new Point(501, 57);
-            _txtProfitPerc.Name = "txtProfitPerc";
-            _txtProfitPerc.ReadOnly = true;
-            _txtProfitPerc.Size = new Size(76, 21);
-            _txtProfitPerc.TabIndex = 20;
-            //
-            // txtProfit
-            //
-            _txtProfit.Location = new Point(373, 57);
-            _txtProfit.Name = "txtProfit";
-            _txtProfit.ReadOnly = true;
-            _txtProfit.Size = new Size(120, 21);
-            _txtProfit.TabIndex = 19;
-            //
-            // CostsToOption1
-            //
-            _CostsToOption1.AutoSize = true;
-            _CostsToOption1.Location = new Point(33, 16);
-            _CostsToOption1.Name = "CostsToOption1";
-            _CostsToOption1.Size = new Size(74, 17);
-            _CostsToOption1.TabIndex = 13;
-            _CostsToOption1.TabStop = true;
-            _CostsToOption1.Text = "Contract";
-            _CostsToOption1.UseVisualStyleBackColor = true;
-            //
-            // txtCosts
-            //
-            _txtCosts.Location = new Point(373, 34);
-            _txtCosts.Name = "txtCosts";
-            _txtCosts.ReadOnly = true;
-            _txtCosts.Size = new Size(120, 21);
-            _txtCosts.TabIndex = 18;
-            //
-            // CostsToOption3
-            //
-            _CostsToOption3.AutoSize = true;
-            _CostsToOption3.Location = new Point(33, 62);
-            _CostsToOption3.Name = "CostsToOption3";
-            _CostsToOption3.Size = new Size(77, 17);
-            _CostsToOption3.TabIndex = 15;
-            _CostsToOption3.TabStop = true;
-            _CostsToOption3.Text = "Warranty";
-            _CostsToOption3.UseVisualStyleBackColor = true;
-            //
-            // txtSale
-            //
-            _txtSale.Location = new Point(373, 12);
-            _txtSale.Name = "txtSale";
-            _txtSale.ReadOnly = true;
-            _txtSale.Size = new Size(120, 21);
-            _txtSale.TabIndex = 17;
-            //
-            // CostsToOption2
-            //
-            _CostsToOption2.AutoSize = true;
-            _CostsToOption2.Location = new Point(33, 39);
-            _CostsToOption2.Name = "CostsToOption2";
-            _CostsToOption2.Size = new Size(91, 17);
-            _CostsToOption2.TabIndex = 14;
-            _CostsToOption2.TabStop = true;
-            _CostsToOption2.Text = "Chargeable";
-            _CostsToOption2.UseVisualStyleBackColor = true;
-            //
-            // lblContractPerVisit
-            //
-            _lblContractPerVisit.BackColor = SystemColors.Info;
-            _lblContractPerVisit.BorderStyle = BorderStyle.FixedSingle;
-            _lblContractPerVisit.Location = new Point(507, 14);
-            _lblContractPerVisit.Name = "lblContractPerVisit";
-            _lblContractPerVisit.Size = new Size(85, 56);
-            _lblContractPerVisit.TabIndex = 3;
-            _lblContractPerVisit.Text = "Contract Job - Invoicing Per Visit";
-            _lblContractPerVisit.Visible = false;
-            //
-            // lblOR
-            //
-            _lblOR.Location = new Point(8, 58);
-            _lblOR.Name = "lblOR";
-            _lblOR.Size = new Size(27, 26);
-            _lblOR.TabIndex = 5;
-            _lblOR.Text = "OR";
-            //
-            // Label30
-            //
-            _Label30.Location = new Point(8, 34);
-            _Label30.Name = "Label30";
-            _Label30.Size = new Size(27, 18);
-            _Label30.TabIndex = 2;
-            _Label30.Text = "OR";
-            //
-            // lblQuotePercentageTotal
-            //
-            _lblQuotePercentageTotal.Location = new Point(537, 73);
-            _lblQuotePercentageTotal.Name = "lblQuotePercentageTotal";
-            _lblQuotePercentageTotal.Size = new Size(34, 16);
-            _lblQuotePercentageTotal.TabIndex = 11;
-            _lblQuotePercentageTotal.Text = "N/A";
-            //
-            // lblEquals
-            //
-            _lblEquals.Location = new Point(522, 73);
-            _lblEquals.Name = "lblEquals";
-            _lblEquals.Size = new Size(24, 16);
-            _lblEquals.TabIndex = 10;
-            _lblEquals.Text = "=";
-            //
-            // GroupBox9
-            //
-            _GroupBox9.Controls.Add(_rbStandard);
-            _GroupBox9.Controls.Add(_rbSite);
-            _GroupBox9.Location = new Point(354, 177);
-            _GroupBox9.Name = "GroupBox9";
-            _GroupBox9.Size = new Size(238, 31);
-            _GroupBox9.TabIndex = 83;
-            _GroupBox9.TabStop = false;
-            _GroupBox9.Visible = false;
-            //
-            // rbStandard
-            //
-            _rbStandard.AutoSize = true;
-            _rbStandard.Checked = true;
-            _rbStandard.Location = new Point(114, 10);
-            _rbStandard.Name = "rbStandard";
-            _rbStandard.Size = new Size(123, 17);
-            _rbStandard.TabIndex = 1;
-            _rbStandard.TabStop = true;
-            _rbStandard.Text = "Standard Markup";
-            _rbStandard.UseVisualStyleBackColor = true;
-            //
-            // rbSite
-            //
-            _rbSite.AutoSize = true;
-            _rbSite.Location = new Point(11, 11);
-            _rbSite.Name = "rbSite";
-            _rbSite.Size = new Size(95, 17);
-            _rbSite.TabIndex = 0;
-            _rbSite.Text = "Site markup";
-            _rbSite.UseVisualStyleBackColor = true;
-            //
-            // lblPercent
-            //
-            _lblPercent.Location = new Point(506, 73);
-            _lblPercent.Name = "lblPercent";
-            _lblPercent.Size = new Size(24, 16);
-            _lblPercent.TabIndex = 9;
-            _lblPercent.Text = "%";
-            //
-            // txtPercentOfQuote
-            //
-            _txtPercentOfQuote.Location = new Point(381, 69);
-            _txtPercentOfQuote.Name = "txtPercentOfQuote";
-            _txtPercentOfQuote.Size = new Size(120, 21);
-            _txtPercentOfQuote.TabIndex = 8;
-            //
-            // rdoPercentageOfQuoteValue
-            //
-            _rdoPercentageOfQuoteValue.Location = new Point(41, 66);
-            _rdoPercentageOfQuoteValue.Name = "rdoPercentageOfQuoteValue";
-            _rdoPercentageOfQuoteValue.Size = new Size(175, 24);
-            _rdoPercentageOfQuoteValue.TabIndex = 7;
-            _rdoPercentageOfQuoteValue.Text = "Charge % of Quote Value";
-            //
-            // txtCharge
-            //
-            _txtCharge.Location = new Point(381, 44);
-            _txtCharge.Name = "txtCharge";
-            _txtCharge.ReadOnly = true;
-            _txtCharge.Size = new Size(120, 21);
-            _txtCharge.TabIndex = 6;
-            //
-            // rdoChargeOther
-            //
-            _rdoChargeOther.Location = new Point(41, 41);
-            _rdoChargeOther.Name = "rdoChargeOther";
-            _rdoChargeOther.Size = new Size(171, 24);
-            _rdoChargeOther.TabIndex = 4;
-            _rdoChargeOther.Text = "Charge Other";
-            //
-            // rdoJobValue
-            //
-            _rdoJobValue.Location = new Point(41, 16);
-            _rdoJobValue.Name = "rdoJobValue";
-            _rdoJobValue.Size = new Size(149, 24);
-            _rdoJobValue.TabIndex = 0;
-            _rdoJobValue.Text = "Charge Visit Value";
-            //
-            // txtJobValue
-            //
-            _txtJobValue.Location = new Point(381, 19);
-            _txtJobValue.Name = "txtJobValue";
-            _txtJobValue.ReadOnly = true;
-            _txtJobValue.Size = new Size(120, 21);
-            _txtJobValue.TabIndex = 1;
-            //
-            // gpbAdditionalCharges
-            //
-            _gpbAdditionalCharges.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _gpbAdditionalCharges.Controls.Add(_lblAdditionalCharge);
-            _gpbAdditionalCharges.Controls.Add(_btnAddAdditionalCharge);
-            _gpbAdditionalCharges.Controls.Add(_txtAdditionalCharge);
-            _gpbAdditionalCharges.Controls.Add(_btnRemoveAdditionalCharge);
-            _gpbAdditionalCharges.Controls.Add(_txtAdditionalChargeDescription);
-            _gpbAdditionalCharges.Controls.Add(_lblDescription);
-            _gpbAdditionalCharges.Controls.Add(_txtAdditionalChargeTotal);
-            _gpbAdditionalCharges.Controls.Add(_Label29);
-            _gpbAdditionalCharges.Controls.Add(_dgAdditionalCharges);
-            _gpbAdditionalCharges.Location = new Point(617, 184);
-            _gpbAdditionalCharges.Name = "gpbAdditionalCharges";
-            _gpbAdditionalCharges.Size = new Size(622, 233);
-            _gpbAdditionalCharges.TabIndex = 5;
-            _gpbAdditionalCharges.TabStop = false;
-            _gpbAdditionalCharges.Text = "Additional Charges";
-            //
-            // lblAdditionalCharge
-            //
-            _lblAdditionalCharge.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblAdditionalCharge.Location = new Point(8, 206);
-            _lblAdditionalCharge.Name = "lblAdditionalCharge";
-            _lblAdditionalCharge.Size = new Size(74, 20);
-            _lblAdditionalCharge.TabIndex = 9;
-            _lblAdditionalCharge.Text = "Charge";
-            //
-            // btnAddAdditionalCharge
-            //
-            _btnAddAdditionalCharge.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddAdditionalCharge.Location = new Point(539, 204);
-            _btnAddAdditionalCharge.Name = "btnAddAdditionalCharge";
-            _btnAddAdditionalCharge.Size = new Size(75, 23);
-            _btnAddAdditionalCharge.TabIndex = 8;
-            _btnAddAdditionalCharge.Text = "Add";
-            _btnAddAdditionalCharge.UseVisualStyleBackColor = true;
-            //
-            // txtAdditionalCharge
-            //
-            _txtAdditionalCharge.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtAdditionalCharge.Location = new Point(88, 203);
-            _txtAdditionalCharge.Name = "txtAdditionalCharge";
-            _txtAdditionalCharge.Size = new Size(96, 21);
-            _txtAdditionalCharge.TabIndex = 7;
-            //
-            // btnRemoveAdditionalCharge
-            //
-            _btnRemoveAdditionalCharge.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnRemoveAdditionalCharge.Location = new Point(8, 129);
-            _btnRemoveAdditionalCharge.Name = "btnRemoveAdditionalCharge";
-            _btnRemoveAdditionalCharge.Size = new Size(75, 23);
-            _btnRemoveAdditionalCharge.TabIndex = 1;
-            _btnRemoveAdditionalCharge.Text = "Remove";
-            _btnRemoveAdditionalCharge.UseVisualStyleBackColor = true;
-            //
-            // txtAdditionalChargeDescription
-            //
-            _txtAdditionalChargeDescription.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAdditionalChargeDescription.Location = new Point(88, 157);
-            _txtAdditionalChargeDescription.Multiline = true;
-            _txtAdditionalChargeDescription.Name = "txtAdditionalChargeDescription";
-            _txtAdditionalChargeDescription.Size = new Size(526, 40);
-            _txtAdditionalChargeDescription.TabIndex = 5;
-            //
-            // lblDescription
-            //
-            _lblDescription.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblDescription.Location = new Point(8, 161);
-            _lblDescription.Name = "lblDescription";
-            _lblDescription.Size = new Size(74, 23);
-            _lblDescription.TabIndex = 4;
-            _lblDescription.Text = "Description";
-            //
-            // txtAdditionalChargeTotal
-            //
-            _txtAdditionalChargeTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtAdditionalChargeTotal.Location = new Point(541, 131);
-            _txtAdditionalChargeTotal.Name = "txtAdditionalChargeTotal";
-            _txtAdditionalChargeTotal.ReadOnly = true;
-            _txtAdditionalChargeTotal.Size = new Size(71, 21);
-            _txtAdditionalChargeTotal.TabIndex = 3;
-            //
-            // Label29
-            //
-            _Label29.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label29.Location = new Point(492, 131);
-            _Label29.Name = "Label29";
-            _Label29.Size = new Size(40, 23);
-            _Label29.TabIndex = 2;
-            _Label29.Text = "Total";
-            _Label29.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // dgAdditionalCharges
-            //
-            _dgAdditionalCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAdditionalCharges.DataMember = "";
-            _dgAdditionalCharges.HeaderForeColor = SystemColors.ControlText;
-            _dgAdditionalCharges.Location = new Point(8, 20);
-            _dgAdditionalCharges.Name = "dgAdditionalCharges";
-            _dgAdditionalCharges.Size = new Size(606, 109);
-            _dgAdditionalCharges.TabIndex = 0;
-            //
-            // gpbPartsAndProducts
-            //
-            _gpbPartsAndProducts.Controls.Add(_txtPartsMarkUp);
-            _gpbPartsAndProducts.Controls.Add(_chkPartsSelectAll);
-            _gpbPartsAndProducts.Controls.Add(_txtPartProductCost);
-            _gpbPartsAndProducts.Controls.Add(_txtPartsProductTotal);
-            _gpbPartsAndProducts.Controls.Add(_Label28);
-            _gpbPartsAndProducts.Controls.Add(_lblPPTotalCost);
-            _gpbPartsAndProducts.Controls.Add(_lblPartsMarkUp);
-            _gpbPartsAndProducts.Controls.Add(_dgPartsProductCharging);
-            _gpbPartsAndProducts.Location = new Point(8, 184);
-            _gpbPartsAndProducts.Name = "gpbPartsAndProducts";
-            _gpbPartsAndProducts.Size = new Size(603, 233);
-            _gpbPartsAndProducts.TabIndex = 1;
-            _gpbPartsAndProducts.TabStop = false;
-            _gpbPartsAndProducts.Text = "Parts && Products";
-            //
-            // txtPartsMarkUp
-            //
-            _txtPartsMarkUp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPartsMarkUp.Enabled = false;
-            _txtPartsMarkUp.Location = new Point(405, 203);
-            _txtPartsMarkUp.Name = "txtPartsMarkUp";
-            _txtPartsMarkUp.Size = new Size(37, 21);
-            _txtPartsMarkUp.TabIndex = 81;
-            _txtPartsMarkUp.Visible = false;
-            //
-            // chkPartsSelectAll
-            //
-            _chkPartsSelectAll.AutoCheck = false;
-            _chkPartsSelectAll.AutoSize = true;
-            _chkPartsSelectAll.Location = new Point(6, 205);
-            _chkPartsSelectAll.Name = "chkPartsSelectAll";
-            _chkPartsSelectAll.Size = new Size(79, 17);
-            _chkPartsSelectAll.TabIndex = 80;
-            _chkPartsSelectAll.Text = "Select All";
-            _chkPartsSelectAll.UseVisualStyleBackColor = true;
-            //
-            // txtPartProductCost
-            //
-            _txtPartProductCost.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPartProductCost.Location = new Point(252, 203);
-            _txtPartProductCost.Name = "txtPartProductCost";
-            _txtPartProductCost.ReadOnly = true;
-            _txtPartProductCost.Size = new Size(71, 21);
-            _txtPartProductCost.TabIndex = 2;
-            //
-            // txtPartsProductTotal
-            //
-            _txtPartsProductTotal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPartsProductTotal.Location = new Point(525, 202);
-            _txtPartsProductTotal.Name = "txtPartsProductTotal";
-            _txtPartsProductTotal.ReadOnly = true;
-            _txtPartsProductTotal.Size = new Size(71, 21);
-            _txtPartsProductTotal.TabIndex = 4;
-            //
-            // Label28
-            //
-            _Label28.Location = new Point(448, 202);
-            _Label28.Name = "Label28";
-            _Label28.Size = new Size(72, 21);
-            _Label28.TabIndex = 3;
-            _Label28.Text = "Total Price";
-            _Label28.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // lblPPTotalCost
-            //
-            _lblPPTotalCost.Location = new Point(174, 203);
-            _lblPPTotalCost.Name = "lblPPTotalCost";
-            _lblPPTotalCost.Size = new Size(72, 21);
-            _lblPPTotalCost.TabIndex = 79;
-            _lblPPTotalCost.Text = "Total Cost";
-            _lblPPTotalCost.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // lblPartsMarkUp
-            //
-            _lblPartsMarkUp.Location = new Point(329, 202);
-            _lblPartsMarkUp.Name = "lblPartsMarkUp";
-            _lblPartsMarkUp.Size = new Size(70, 21);
-            _lblPartsMarkUp.TabIndex = 82;
-            _lblPartsMarkUp.Text = "Mark Up %";
-            _lblPartsMarkUp.TextAlign = ContentAlignment.MiddleLeft;
-            _lblPartsMarkUp.Visible = false;
-            //
-            // dgPartsProductCharging
-            //
-            _dgPartsProductCharging.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgPartsProductCharging.DataMember = "";
-            _dgPartsProductCharging.HeaderForeColor = SystemColors.ControlText;
-            _dgPartsProductCharging.Location = new Point(9, 16);
-            _dgPartsProductCharging.Name = "dgPartsProductCharging";
-            _dgPartsProductCharging.Size = new Size(587, 181);
-            _dgPartsProductCharging.TabIndex = 0;
-            //
-            // gpbTimesheets
-            //
-            _gpbTimesheets.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _gpbTimesheets.Controls.Add(_chkTimesheetSelectAll);
-            _gpbTimesheets.Controls.Add(_txtEngineerCostTotal);
-            _gpbTimesheets.Controls.Add(_txtTimesheetTotal);
-            _gpbTimesheets.Controls.Add(_Label27);
-            _gpbTimesheets.Controls.Add(_Label32);
-            _gpbTimesheets.Controls.Add(_dgTimesheetCharges);
-            _gpbTimesheets.Location = new Point(617, 8);
-            _gpbTimesheets.Name = "gpbTimesheets";
-            _gpbTimesheets.Size = new Size(622, 170);
-            _gpbTimesheets.TabIndex = 4;
-            _gpbTimesheets.TabStop = false;
-            _gpbTimesheets.Text = "Timesheets";
-            //
-            // chkTimesheetSelectAll
-            //
-            _chkTimesheetSelectAll.AutoCheck = false;
-            _chkTimesheetSelectAll.AutoSize = true;
-            _chkTimesheetSelectAll.Location = new Point(6, 142);
-            _chkTimesheetSelectAll.Name = "chkTimesheetSelectAll";
-            _chkTimesheetSelectAll.Size = new Size(79, 17);
-            _chkTimesheetSelectAll.TabIndex = 81;
-            _chkTimesheetSelectAll.Text = "Select All";
-            _chkTimesheetSelectAll.UseVisualStyleBackColor = true;
-            //
-            // txtEngineerCostTotal
-            //
-            _txtEngineerCostTotal.Location = new Point(382, 140);
-            _txtEngineerCostTotal.Name = "txtEngineerCostTotal";
-            _txtEngineerCostTotal.ReadOnly = true;
-            _txtEngineerCostTotal.Size = new Size(71, 21);
-            _txtEngineerCostTotal.TabIndex = 2;
-            //
-            // txtTimesheetTotal
-            //
-            _txtTimesheetTotal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtTimesheetTotal.Location = new Point(540, 140);
-            _txtTimesheetTotal.Name = "txtTimesheetTotal";
-            _txtTimesheetTotal.ReadOnly = true;
-            _txtTimesheetTotal.Size = new Size(71, 21);
-            _txtTimesheetTotal.TabIndex = 4;
-            //
-            // Label27
-            //
-            _Label27.Location = new Point(462, 140);
-            _Label27.Name = "Label27";
-            _Label27.Size = new Size(72, 21);
-            _Label27.TabIndex = 3;
-            _Label27.Text = "Total Price";
-            _Label27.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // Label32
-            //
-            _Label32.Location = new Point(308, 139);
-            _Label32.Name = "Label32";
-            _Label32.Size = new Size(68, 23);
-            _Label32.TabIndex = 1;
-            _Label32.Text = "Total Cost";
-            _Label32.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // dgTimesheetCharges
-            //
-            _dgTimesheetCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgTimesheetCharges.DataMember = "";
-            _dgTimesheetCharges.HeaderForeColor = SystemColors.ControlText;
-            _dgTimesheetCharges.Location = new Point(6, 17);
-            _dgTimesheetCharges.Name = "dgTimesheetCharges";
-            _dgTimesheetCharges.Size = new Size(606, 118);
-            _dgTimesheetCharges.TabIndex = 0;
-            //
-            // gpbScheduleOfRates
-            //
-            _gpbScheduleOfRates.Controls.Add(_btnAddSoR);
-            _gpbScheduleOfRates.Controls.Add(_txtScheduleOfRatesTotal);
-            _gpbScheduleOfRates.Controls.Add(_dgScheduleOfRateCharges);
-            _gpbScheduleOfRates.Controls.Add(_Label26);
-            _gpbScheduleOfRates.Location = new Point(8, 8);
-            _gpbScheduleOfRates.Name = "gpbScheduleOfRates";
-            _gpbScheduleOfRates.Size = new Size(603, 170);
-            _gpbScheduleOfRates.TabIndex = 0;
-            _gpbScheduleOfRates.TabStop = false;
-            _gpbScheduleOfRates.Text = "Schedule Of Rates";
-            //
-            // btnAddSoR
-            //
-            _btnAddSoR.Location = new Point(6, 141);
-            _btnAddSoR.Name = "btnAddSoR";
-            _btnAddSoR.Size = new Size(75, 23);
-            _btnAddSoR.TabIndex = 1;
-            _btnAddSoR.Text = "Add";
-            //
-            // txtScheduleOfRatesTotal
-            //
-            _txtScheduleOfRatesTotal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtScheduleOfRatesTotal.Location = new Point(521, 143);
-            _txtScheduleOfRatesTotal.Name = "txtScheduleOfRatesTotal";
-            _txtScheduleOfRatesTotal.ReadOnly = true;
-            _txtScheduleOfRatesTotal.Size = new Size(71, 21);
-            _txtScheduleOfRatesTotal.TabIndex = 3;
-            //
-            // dgScheduleOfRateCharges
-            //
-            _dgScheduleOfRateCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgScheduleOfRateCharges.DataMember = "";
-            _dgScheduleOfRateCharges.HeaderForeColor = SystemColors.ControlText;
-            _dgScheduleOfRateCharges.Location = new Point(8, 17);
-            _dgScheduleOfRateCharges.Name = "dgScheduleOfRateCharges";
-            _dgScheduleOfRateCharges.Size = new Size(585, 121);
-            _dgScheduleOfRateCharges.TabIndex = 0;
-            //
-            // Label26
-            //
-            _Label26.Location = new Point(481, 141);
-            _Label26.Name = "Label26";
-            _Label26.Size = new Size(39, 23);
-            _Label26.TabIndex = 2;
-            _Label26.Text = "Total";
-            _Label26.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // tpDocuments
-            //
-            _tpDocuments.Location = new Point(4, 22);
-            _tpDocuments.Name = "tpDocuments";
-            _tpDocuments.Size = new Size(1247, 652);
-            _tpDocuments.TabIndex = 9;
-            _tpDocuments.Text = "Documents";
-            _tpDocuments.UseVisualStyleBackColor = true;
-            //
-            // tpPhotos
-            //
-            _tpPhotos.Controls.Add(_flPhotos);
-            _tpPhotos.Location = new Point(4, 22);
-            _tpPhotos.Name = "tpPhotos";
-            _tpPhotos.Size = new Size(1247, 652);
-            _tpPhotos.TabIndex = 10;
-            _tpPhotos.Text = "Photos";
-            _tpPhotos.UseVisualStyleBackColor = true;
-            //
-            // flPhotos
-            //
-            _flPhotos.AutoScroll = true;
-            _flPhotos.AutoSize = true;
-            _flPhotos.Dock = DockStyle.Fill;
-            _flPhotos.Location = new Point(0, 0);
-            _flPhotos.Name = "flPhotos";
-            _flPhotos.Size = new Size(1247, 652);
-            _flPhotos.TabIndex = 2;
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(8, 750);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(64, 23);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.Location = new Point(1183, 750);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(64, 23);
-            _btnSave.TabIndex = 6;
-            _btnSave.Text = "Save";
-            //
-            // cbxVisitLockDown
-            //
-            _cbxVisitLockDown.BackColor = SystemColors.Info;
-            _cbxVisitLockDown.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cbxVisitLockDown.Location = new Point(8, 32);
-            _cbxVisitLockDown.Name = "cbxVisitLockDown";
-            _cbxVisitLockDown.Size = new Size(296, 24);
-            _cbxVisitLockDown.TabIndex = 5;
-            _cbxVisitLockDown.Text = "Visit locked down and ready for charging";
-            _cbxVisitLockDown.UseVisualStyleBackColor = false;
-            //
-            // lblStatusWarning
-            //
-            _lblStatusWarning.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _lblStatusWarning.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblStatusWarning.ForeColor = Color.Red;
-            _lblStatusWarning.Location = new Point(312, 32);
-            _lblStatusWarning.Name = "lblStatusWarning";
-            _lblStatusWarning.Size = new Size(736, 23);
-            _lblStatusWarning.TabIndex = 6;
-            _lblStatusWarning.Text = "Reversing this status will result in the lost of charge changes";
-            _lblStatusWarning.TextAlign = ContentAlignment.MiddleLeft;
-            _lblStatusWarning.Visible = false;
-            //
-            // btnOrders
-            //
-            _btnOrders.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnOrders.Location = new Point(148, 750);
-            _btnOrders.Name = "btnOrders";
-            _btnOrders.Size = new Size(64, 23);
-            _btnOrders.TabIndex = 4;
-            _btnOrders.Text = "Orders";
-            //
-            // btnInvoice
-            //
-            _btnInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnInvoice.Location = new Point(289, 750);
-            _btnInvoice.Name = "btnInvoice";
-            _btnInvoice.Size = new Size(64, 23);
-            _btnInvoice.TabIndex = 5;
-            _btnInvoice.Text = "Invoice";
-            //
-            // btnPrint
-            //
-            _btnPrint.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPrint.Location = new Point(1064, 750);
-            _btnPrint.Name = "btnPrint";
-            _btnPrint.Size = new Size(103, 23);
-            _btnPrint.TabIndex = 7;
-            _btnPrint.Text = "Print QC";
-            //
-            // PrintMenu
-            //
-            _PrintMenu.Items.AddRange(new ToolStripItem[] { _mnuGasSafetyInspectionBoilerServiceRecord });
-            _PrintMenu.Name = "PrintMenu";
-            _PrintMenu.Size = new Size(302, 26);
-            //
-            // mnuGasSafetyInspectionBoilerServiceRecord
-            //
-            _mnuGasSafetyInspectionBoilerServiceRecord.Name = "mnuGasSafetyInspectionBoilerServiceRecord";
-            _mnuGasSafetyInspectionBoilerServiceRecord.Size = new Size(301, 22);
-            _mnuGasSafetyInspectionBoilerServiceRecord.Text = "Gas Safety Inspection/Boiler Service Record";
-            //
-            // txtCurrentContract
-            //
-            _txtCurrentContract.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtCurrentContract.Location = new Point(1116, 38);
-            _txtCurrentContract.Name = "txtCurrentContract";
-            _txtCurrentContract.ReadOnly = true;
-            _txtCurrentContract.Size = new Size(135, 21);
-            _txtCurrentContract.TabIndex = 27;
-            //
-            // Label39
-            //
-            _Label39.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label39.Location = new Point(1054, 39);
-            _Label39.Name = "Label39";
-            _Label39.Size = new Size(63, 16);
-            _Label39.TabIndex = 26;
-            _Label39.Text = "Contract:";
-            //
-            // btnPrintGSR
-            //
-            _btnPrintGSR.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPrintGSR.Location = new Point(1064, 750);
-            _btnPrintGSR.Name = "btnPrintGSR";
-            _btnPrintGSR.Size = new Size(105, 23);
-            _btnPrintGSR.TabIndex = 29;
-            _btnPrintGSR.Text = "Print GSR";
-            //
-            // btnPrintSVR
-            //
-            _btnPrintSVR.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPrintSVR.Location = new Point(1057, 750);
-            _btnPrintSVR.Name = "btnPrintSVR";
-            _btnPrintSVR.Size = new Size(112, 23);
-            _btnPrintSVR.TabIndex = 30;
-            _btnPrintSVR.Text = "Print...";
-            //
-            // btnJob
-            //
-            _btnJob.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnJob.Location = new Point(78, 750);
-            _btnJob.Name = "btnJob";
-            _btnJob.Size = new Size(64, 23);
-            _btnJob.TabIndex = 31;
-            _btnJob.Text = "Job";
-            //
-            // lblRechargeTicked
-            //
-            _lblRechargeTicked.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblRechargeTicked.ForeColor = Color.Red;
-            _lblRechargeTicked.Location = new Point(75, 4);
-            _lblRechargeTicked.Name = "lblRechargeTicked";
-            _lblRechargeTicked.Size = new Size(457, 23);
-            _lblRechargeTicked.TabIndex = 32;
-            _lblRechargeTicked.Text = "Recharge is Selected";
-            _lblRechargeTicked.TextAlign = ContentAlignment.MiddleLeft;
-            _lblRechargeTicked.Visible = false;
-            //
-            // btnShowVisits
-            //
-            _btnShowVisits.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnShowVisits.Location = new Point(687, 750);
-            _btnShowVisits.Name = "btnShowVisits";
-            _btnShowVisits.Size = new Size(99, 23);
-            _btnShowVisits.TabIndex = 33;
-            _btnShowVisits.Text = "Show History";
-            _btnShowVisits.UseVisualStyleBackColor = true;
-            //
-            // BottomToolStripPanel
-            //
-            _BottomToolStripPanel.Location = new Point(0, 0);
-            _BottomToolStripPanel.Name = "BottomToolStripPanel";
-            _BottomToolStripPanel.Orientation = Orientation.Horizontal;
-            _BottomToolStripPanel.RowMargin = new Padding(3, 0, 0, 0);
-            _BottomToolStripPanel.Size = new Size(0, 0);
-            //
-            // TopToolStripPanel
-            //
-            _TopToolStripPanel.Location = new Point(0, 0);
-            _TopToolStripPanel.Name = "TopToolStripPanel";
-            _TopToolStripPanel.Orientation = Orientation.Horizontal;
-            _TopToolStripPanel.RowMargin = new Padding(3, 0, 0, 0);
-            _TopToolStripPanel.Size = new Size(0, 0);
-            //
-            // RightToolStripPanel
-            //
-            _RightToolStripPanel.Location = new Point(0, 0);
-            _RightToolStripPanel.Name = "RightToolStripPanel";
-            _RightToolStripPanel.Orientation = Orientation.Horizontal;
-            _RightToolStripPanel.RowMargin = new Padding(3, 0, 0, 0);
-            _RightToolStripPanel.Size = new Size(0, 0);
-            //
-            // LeftToolStripPanel
-            //
-            _LeftToolStripPanel.Location = new Point(0, 0);
-            _LeftToolStripPanel.Name = "LeftToolStripPanel";
-            _LeftToolStripPanel.Orientation = Orientation.Horizontal;
-            _LeftToolStripPanel.RowMargin = new Padding(3, 0, 0, 0);
-            _LeftToolStripPanel.Size = new Size(0, 0);
-            //
-            // ContentPanel
-            //
-            _ContentPanel.Size = new Size(150, 150);
-            //
-            // Button1
-            //
-            _Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Button1.Location = new Point(218, 750);
-            _Button1.Name = "Button1";
-            _Button1.Size = new Size(64, 23);
-            _Button1.TabIndex = 34;
-            _Button1.Text = "Cust";
-            //
-            // txtCustEmail
-            //
-            _txtCustEmail.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtCustEmail.BorderStyle = BorderStyle.None;
-            _txtCustEmail.Location = new Point(718, 8);
-            _txtCustEmail.Name = "txtCustEmail";
-            _txtCustEmail.ReadOnly = true;
-            _txtCustEmail.Size = new Size(533, 14);
-            _txtCustEmail.TabIndex = 36;
-            //
-            // SVRs
-            //
-            _SVRs.Items.AddRange(new ToolStripItem[] { _AllGasPaperworkToolStripMenuItem, _svrmenu, _JobSheetMenu, _DomesticGSRToolStripMenuItem, _WarningNoticeToolStripMenuItem, _CommercialGSRToolStripMenuItem, _QCResultsToolStripMenuItem, _ElectricalMinorWorksToolStripMenuItem, _CommercialCateringToolStripMenuItem, _SaffronUnventedWorkshhetToolStripMenuItem, _PropertyMaintenanceWorksheetToolStripMenuItem, _ASHPWorksheetToolStripMenuItem, _CommissioningChecklistToolStripMenuItem, _HotWorksPermitToolStripMenuItem });
-            _SVRs.Name = "SVRs";
-            _SVRs.Size = new Size(251, 312);
-            //
-            // AllGasPaperworkToolStripMenuItem
-            //
-            _AllGasPaperworkToolStripMenuItem.Name = "AllGasPaperworkToolStripMenuItem";
-            _AllGasPaperworkToolStripMenuItem.Size = new Size(250, 22);
-            _AllGasPaperworkToolStripMenuItem.Text = "All Safety Paperwork";
-            //
-            // svrmenu
-            //
-            _svrmenu.Name = "svrmenu";
-            _svrmenu.Size = new Size(250, 22);
-            _svrmenu.Text = "SVR";
-            //
-            // JobSheetMenu
-            //
-            _JobSheetMenu.Name = "JobSheetMenu";
-            _JobSheetMenu.Size = new Size(250, 22);
-            _JobSheetMenu.Text = "Job Sheet";
-            //
-            // DomesticGSRToolStripMenuItem
-            //
-            _DomesticGSRToolStripMenuItem.Name = "DomesticGSRToolStripMenuItem";
-            _DomesticGSRToolStripMenuItem.Size = new Size(250, 22);
-            _DomesticGSRToolStripMenuItem.Text = "Domestic LSR";
-            //
-            // WarningNoticeToolStripMenuItem
-            //
-            _WarningNoticeToolStripMenuItem.Name = "WarningNoticeToolStripMenuItem";
-            _WarningNoticeToolStripMenuItem.Size = new Size(250, 22);
-            _WarningNoticeToolStripMenuItem.Text = "Warning Notice";
-            //
-            // CommercialGSRToolStripMenuItem
-            //
-            _CommercialGSRToolStripMenuItem.Name = "CommercialGSRToolStripMenuItem";
-            _CommercialGSRToolStripMenuItem.Size = new Size(250, 22);
-            _CommercialGSRToolStripMenuItem.Text = "Commercial LSR";
-            //
-            // QCResultsToolStripMenuItem
-            //
-            _QCResultsToolStripMenuItem.Name = "QCResultsToolStripMenuItem";
-            _QCResultsToolStripMenuItem.Size = new Size(250, 22);
-            _QCResultsToolStripMenuItem.Text = "QC Results";
-            //
-            // ElectricalMinorWorksToolStripMenuItem
-            //
-            _ElectricalMinorWorksToolStripMenuItem.Name = "ElectricalMinorWorksToolStripMenuItem";
-            _ElectricalMinorWorksToolStripMenuItem.Size = new Size(250, 22);
-            _ElectricalMinorWorksToolStripMenuItem.Text = "Electrical Minor Works";
-            //
-            // CommercialCateringToolStripMenuItem
-            //
-            _CommercialCateringToolStripMenuItem.Name = "CommercialCateringToolStripMenuItem";
-            _CommercialCateringToolStripMenuItem.Size = new Size(250, 22);
-            _CommercialCateringToolStripMenuItem.Text = "Commercial Catering";
-            //
-            // SaffronUnventedWorkshhetToolStripMenuItem
-            //
-            _SaffronUnventedWorkshhetToolStripMenuItem.Name = "SaffronUnventedWorkshhetToolStripMenuItem";
-            _SaffronUnventedWorkshhetToolStripMenuItem.Size = new Size(250, 22);
-            _SaffronUnventedWorkshhetToolStripMenuItem.Text = "Saffron Unvented Worksheet";
-            //
-            // PropertyMaintenanceWorksheetToolStripMenuItem
-            //
-            _PropertyMaintenanceWorksheetToolStripMenuItem.Name = "PropertyMaintenanceWorksheetToolStripMenuItem";
-            _PropertyMaintenanceWorksheetToolStripMenuItem.Size = new Size(250, 22);
-            _PropertyMaintenanceWorksheetToolStripMenuItem.Text = "Property Maintenance Worksheet";
-            //
-            // ASHPWorksheetToolStripMenuItem
-            //
-            _ASHPWorksheetToolStripMenuItem.Name = "ASHPWorksheetToolStripMenuItem";
-            _ASHPWorksheetToolStripMenuItem.Size = new Size(250, 22);
-            _ASHPWorksheetToolStripMenuItem.Text = "Waveney ASHP Worksheet";
-            //
-            // CommissioningChecklistToolStripMenuItem
-            //
-            _CommissioningChecklistToolStripMenuItem.Name = "CommissioningChecklistToolStripMenuItem";
-            _CommissioningChecklistToolStripMenuItem.Size = new Size(250, 22);
-            _CommissioningChecklistToolStripMenuItem.Text = "Commissioning Checklist";
-            //
-            // HotWorksPermitToolStripMenuItem
-            //
-            _HotWorksPermitToolStripMenuItem.Name = "HotWorksPermitToolStripMenuItem";
-            _HotWorksPermitToolStripMenuItem.Size = new Size(250, 22);
-            _HotWorksPermitToolStripMenuItem.Text = "Hot Works Permit";
+            this.components = new System.ComponentModel.Container();
+            this._tcWorkSheet = new System.Windows.Forms.TabControl();
+            this._tpMainDetails = new System.Windows.Forms.TabPage();
+            this._chkSORDesc = new System.Windows.Forms.CheckBox();
+            this._btnEditInvoiceNotes = new System.Windows.Forms.Button();
+            this._txtScheduledTime2 = new System.Windows.Forms.TextBox();
+            this._Label71 = new System.Windows.Forms.Label();
+            this._btnChangeOutcome = new System.Windows.Forms.Button();
+            this._pbCustomerSignature = new System.Windows.Forms.PictureBox();
+            this._pbEngineerSignature = new System.Windows.Forms.PictureBox();
+            this._cbxEmailReceiptToCustomer = new System.Windows.Forms.CheckBox();
+            this._cboSignatureSelected = new System.Windows.Forms.ComboBox();
+            this._Label42 = new System.Windows.Forms.Label();
+            this._dgJobItems = new System.Windows.Forms.DataGrid();
+            this._Label12 = new System.Windows.Forms.Label();
+            this._txtNotesToEngineer = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._cboEngineer = new System.Windows.Forms.ComboBox();
+            this._txtNotesFromEngineer = new System.Windows.Forms.TextBox();
+            this._cboOutcome = new System.Windows.Forms.ComboBox();
+            this._txtOutcomeDetails = new System.Windows.Forms.TextBox();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._txtUploadedBy = new System.Windows.Forms.TextBox();
+            this._txtStatus = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._tpAppliances = new System.Windows.Forms.TabPage();
+            this._gpAppliances = new System.Windows.Forms.GroupBox();
+            this._dgAssets = new System.Windows.Forms.DataGrid();
+            this._tpWorksheets = new System.Windows.Forms.TabPage();
+            this._grpAdditionalWorksheet = new System.Windows.Forms.GroupBox();
+            this._btnRemoveAdd = new System.Windows.Forms.Button();
+            this._btnAddAdd = new System.Windows.Forms.Button();
+            this._dgAdditional = new System.Windows.Forms.DataGrid();
+            this._grpAlarmInfo = new System.Windows.Forms.GroupBox();
+            this._btnRemoveSmokeComo = new System.Windows.Forms.Button();
+            this._btnAddSmokeComo = new System.Windows.Forms.Button();
+            this._DGSmokeComo = new System.Windows.Forms.DataGrid();
+            this._grpVisitWorksheetExtended = new System.Windows.Forms.GroupBox();
+            this._cboSITimer = new System.Windows.Forms.ComboBox();
+            this._cboFillDisc = new System.Windows.Forms.ComboBox();
+            this._Label81 = new System.Windows.Forms.Label();
+            this._Label80 = new System.Windows.Forms.Label();
+            this._Label79 = new System.Windows.Forms.Label();
+            this._txtRadiators = new System.Windows.Forms.TextBox();
+            this._txtVisualInspectionReason = new System.Windows.Forms.TextBox();
+            this._Label68 = new System.Windows.Forms.Label();
+            this._Label69 = new System.Windows.Forms.Label();
+            this._Label70 = new System.Windows.Forms.Label();
+            this._Label62 = new System.Windows.Forms.Label();
+            this._Label63 = new System.Windows.Forms.Label();
+            this._Label64 = new System.Windows.Forms.Label();
+            this._Label65 = new System.Windows.Forms.Label();
+            this._Label66 = new System.Windows.Forms.Label();
+            this._Label67 = new System.Windows.Forms.Label();
+            this._cboCertificateTypeID = new System.Windows.Forms.ComboBox();
+            this._cboCODetectorFittedID = new System.Windows.Forms.ComboBox();
+            this._cboVisualInspectionSatisfactoryID = new System.Windows.Forms.ComboBox();
+            this._cboImmersionID = new System.Windows.Forms.ComboBox();
+            this._cboJacketID = new System.Windows.Forms.ComboBox();
+            this._cboCylinderTypeID = new System.Windows.Forms.ComboBox();
+            this._cboPartialHeatingID = new System.Windows.Forms.ComboBox();
+            this._cboHeatingSystemTypeID = new System.Windows.Forms.ComboBox();
+            this._txtApproxAgeOfBoiler = new System.Windows.Forms.TextBox();
+            this._cboStrainerInspectedID = new System.Windows.Forms.ComboBox();
+            this._Label56 = new System.Windows.Forms.Label();
+            this._Label57 = new System.Windows.Forms.Label();
+            this._cboStrainerFittedID = new System.Windows.Forms.ComboBox();
+            this._cboInstallationSafeToUseID = new System.Windows.Forms.ComboBox();
+            this._cboInstallationPipeWorkCorrectID = new System.Windows.Forms.ComboBox();
+            this._cboCorrectMaterialsUsedID = new System.Windows.Forms.ComboBox();
+            this._Label58 = new System.Windows.Forms.Label();
+            this._Label59 = new System.Windows.Forms.Label();
+            this._Label60 = new System.Windows.Forms.Label();
+            this._Label61 = new System.Windows.Forms.Label();
+            this._grpVisitDefects = new System.Windows.Forms.GroupBox();
+            this._btnAddVisitDefect = new System.Windows.Forms.Button();
+            this._btnRemoveVisitDefect = new System.Windows.Forms.Button();
+            this._dgVisitDefects = new System.Windows.Forms.DataGrid();
+            this._grpApplianceWorksheet = new System.Windows.Forms.GroupBox();
+            this._btnRemoveApplianceWorkSheet = new System.Windows.Forms.Button();
+            this._dgApplianceWorkSheets = new System.Windows.Forms.DataGrid();
+            this._btnAddApplianceWorksheet = new System.Windows.Forms.Button();
+            this._grpVisitWorksheet = new System.Windows.Forms.GroupBox();
+            this._cboMeterCapped = new System.Windows.Forms.ComboBox();
+            this._Label73 = new System.Windows.Forms.Label();
+            this._cboMeterLocation = new System.Windows.Forms.ComboBox();
+            this._Label72 = new System.Windows.Forms.Label();
+            this._txtAmountCollected = new System.Windows.Forms.TextBox();
+            this._cboPaymentMethod = new System.Windows.Forms.ComboBox();
+            this._Label44 = new System.Windows.Forms.Label();
+            this._Label43 = new System.Windows.Forms.Label();
+            this._cboPropertyRented = new System.Windows.Forms.ComboBox();
+            this._cboBonding = new System.Windows.Forms.ComboBox();
+            this._cboEmergencyControlAccessible = new System.Windows.Forms.ComboBox();
+            this._cboGasInstallationTightnessTest = new System.Windows.Forms.ComboBox();
+            this._Label41 = new System.Windows.Forms.Label();
+            this._Label40 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._tpTimesheets = new System.Windows.Forms.TabPage();
+            this._grpTimesheets = new System.Windows.Forms.GroupBox();
+            this._txtActualTimeSpent = new System.Windows.Forms.TextBox();
+            this._txtDifference = new System.Windows.Forms.TextBox();
+            this._txtSORTimeAllowance = new System.Windows.Forms.TextBox();
+            this._Label52 = new System.Windows.Forms.Label();
+            this._Label51 = new System.Windows.Forms.Label();
+            this._Label50 = new System.Windows.Forms.Label();
+            this._Label22 = new System.Windows.Forms.Label();
+            this._cboTimeSheetType = new System.Windows.Forms.ComboBox();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._txtComments = new System.Windows.Forms.TextBox();
+            this._dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this._dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this._dgTimeSheets = new System.Windows.Forms.DataGrid();
+            this._btnAddTimeSheet = new System.Windows.Forms.Button();
+            this._Label20 = new System.Windows.Forms.Label();
+            this._Label21 = new System.Windows.Forms.Label();
+            this._btnRemoveTimeSheet = new System.Windows.Forms.Button();
+            this._txtScheduledTime = new System.Windows.Forms.TextBox();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._tpPartsAndProducts = new System.Windows.Forms.TabPage();
+            this._grpAllocated = new System.Windows.Forms.GroupBox();
+            this._btnUnselectAllPPA = new System.Windows.Forms.Button();
+            this._btnSelectAllPPA = new System.Windows.Forms.Button();
+            this._btnRevertUsed = new System.Windows.Forms.Button();
+            this._nudPartAllocatedQty = new System.Windows.Forms.NumericUpDown();
+            this._lblAllocatedQuantity = new System.Windows.Forms.Label();
+            this._btnAllUsed = new System.Windows.Forms.Button();
+            this._Label35 = new System.Windows.Forms.Label();
+            this._Panel2 = new System.Windows.Forms.Panel();
+            this._Label34 = new System.Windows.Forms.Label();
+            this._Panel1 = new System.Windows.Forms.Panel();
+            this._btnAllocatedNotUsed = new System.Windows.Forms.Button();
+            this._dgPartsProductsAllocated = new System.Windows.Forms.DataGrid();
+            this._lblQuantityWarning = new System.Windows.Forms.Label();
+            this._grpUsed = new System.Windows.Forms.GroupBox();
+            this._lblEquipment = new System.Windows.Forms.Label();
+            this._lblSellPrice = new System.Windows.Forms.Label();
+            this._dgPartsAndProductsUsed = new System.Windows.Forms.DataGrid();
+            this._btnAddPartProductUsed = new System.Windows.Forms.Button();
+            this._nudQuantityUsed = new System.Windows.Forms.NumericUpDown();
+            this._txtNameUsed = new System.Windows.Forms.TextBox();
+            this._txtNumberUsed = new System.Windows.Forms.TextBox();
+            this._Label13 = new System.Windows.Forms.Label();
+            this._Label15 = new System.Windows.Forms.Label();
+            this._Label16 = new System.Windows.Forms.Label();
+            this._btnRemovePartProductUsed = new System.Windows.Forms.Button();
+            this._btnFindProductUsed = new System.Windows.Forms.Button();
+            this._btnFindPartUsed = new System.Windows.Forms.Button();
+            this._tpOutcomes = new System.Windows.Forms.TabPage();
+            this._grpOutcomes = new System.Windows.Forms.GroupBox();
+            this._grpSiteFuels = new System.Windows.Forms.GroupBox();
+            this._dgSiteFuel = new System.Windows.Forms.DataGrid();
+            this._cboNccRad = new System.Windows.Forms.ComboBox();
+            this._Label76 = new System.Windows.Forms.Label();
+            this._cboRecharge = new System.Windows.Forms.ComboBox();
+            this._Label75 = new System.Windows.Forms.Label();
+            this._chkRecharge = new System.Windows.Forms.CheckBox();
+            this._chkGasServiceCompleted = new System.Windows.Forms.CheckBox();
+            this._tpQC = new System.Windows.Forms.TabPage();
+            this._GroupBox4 = new System.Windows.Forms.GroupBox();
+            this._grpQCField = new System.Windows.Forms.GroupBox();
+            this._cboQCCustSig = new System.Windows.Forms.ComboBox();
+            this._lblQCCustSig = new System.Windows.Forms.Label();
+            this._cboRecallEngineer = new System.Windows.Forms.ComboBox();
+            this._Label49 = new System.Windows.Forms.Label();
+            this._cboRecall = new System.Windows.Forms.ComboBox();
+            this._Label48 = new System.Windows.Forms.Label();
+            this._dtpQCDocumentsRecieved = new System.Windows.Forms.DateTimePicker();
+            this._chkQCDocumentsRecieved = new System.Windows.Forms.CheckBox();
+            this._txtQCPoorJobNotes = new System.Windows.Forms.TextBox();
+            this._lblQCPoorJobNotes = new System.Windows.Forms.Label();
+            this._cboQCEngineerPaymentRecieved = new System.Windows.Forms.ComboBox();
+            this._lblQCEngineerMonies = new System.Windows.Forms.Label();
+            this._cboQCPaymentSelection = new System.Windows.Forms.ComboBox();
+            this._lblQCEngPaymentMethod = new System.Windows.Forms.Label();
+            this._cboQCAppliance = new System.Windows.Forms.ComboBox();
+            this._cboQCPaymentCollection = new System.Windows.Forms.ComboBox();
+            this._lblQCPaymentCollection = new System.Windows.Forms.Label();
+            this._cboQCJobUploadTimescale = new System.Windows.Forms.ComboBox();
+            this._lblQCAppliance = new System.Windows.Forms.Label();
+            this._cboQCParts = new System.Windows.Forms.ComboBox();
+            this._lblJobUploadTimescale = new System.Windows.Forms.Label();
+            this._lblQCParts = new System.Windows.Forms.Label();
+            this._cboQCLGSR = new System.Windows.Forms.ComboBox();
+            this._lblQCLGSR = new System.Windows.Forms.Label();
+            this._cboQCLabourTime = new System.Windows.Forms.ComboBox();
+            this._lblQCLabourTime = new System.Windows.Forms.Label();
+            this._grpOfficeQC = new System.Windows.Forms.GroupBox();
+            this._cboQCPaymentMethod = new System.Windows.Forms.ComboBox();
+            this._lblPaymentMethod = new System.Windows.Forms.Label();
+            this._cboQCOrderNo = new System.Windows.Forms.ComboBox();
+            this._lblOrderNo = new System.Windows.Forms.Label();
+            this._cboQCScheduleOfRate = new System.Windows.Forms.ComboBox();
+            this._lblScheduleRate = new System.Windows.Forms.Label();
+            this._cboQCCustomerDetails = new System.Windows.Forms.ComboBox();
+            this._lblCustomerDetails = new System.Windows.Forms.Label();
+            this._cboQCJobType = new System.Windows.Forms.ComboBox();
+            this._lblJobTypeCorrect = new System.Windows.Forms.Label();
+            this._cboFTFCode = new System.Windows.Forms.ComboBox();
+            this._Label74 = new System.Windows.Forms.Label();
+            this._tpCharges = new System.Windows.Forms.TabPage();
+            this._gpbInvoice = new System.Windows.Forms.GroupBox();
+            this._cboDept = new System.Windows.Forms.ComboBox();
+            this._btnCreateServ = new System.Windows.Forms.Button();
+            this._txtInvAmount = new System.Windows.Forms.TextBox();
+            this._txtCreditAmount = new System.Windows.Forms.TextBox();
+            this._txtInvNo = new System.Windows.Forms.TextBox();
+            this._cboPaidBy = new System.Windows.Forms.ComboBox();
+            this._cboInvType = new System.Windows.Forms.ComboBox();
+            this._cboVATRate = new System.Windows.Forms.ComboBox();
+            this._txtPriceIncVAT = new System.Windows.Forms.TextBox();
+            this._txtAccountCode = new System.Windows.Forms.TextBox();
+            this._lblInvoiceAddressDetails = new System.Windows.Forms.Label();
+            this._txtNominalCode = new System.Windows.Forms.TextBox();
+            this._btnSearch = new System.Windows.Forms.Button();
+            this._dtpRaiseInvoiceOn = new System.Windows.Forms.DateTimePicker();
+            this._cbxReadyToBeInvoiced = new System.Windows.Forms.CheckBox();
+            this._lblInvAmount = new System.Windows.Forms.Label();
+            this._lblcredit = new System.Windows.Forms.Label();
+            this._lblInvNo = new System.Windows.Forms.Label();
+            this._lblPaidBy = new System.Windows.Forms.Label();
+            this._lblInvType = new System.Windows.Forms.Label();
+            this._lblVAT = new System.Windows.Forms.Label();
+            this._lblNominalCode = new System.Windows.Forms.Label();
+            this._lblAccountCode = new System.Windows.Forms.Label();
+            this._lblPriceInvVAT = new System.Windows.Forms.Label();
+            this._lblDepartment = new System.Windows.Forms.Label();
+            this._lblRaiseInvoiceOn = new System.Windows.Forms.Label();
+            this._gpbCharges = new System.Windows.Forms.GroupBox();
+            this._chkShowJobCharges = new System.Windows.Forms.CheckBox();
+            this._GroupBox6 = new System.Windows.Forms.GroupBox();
+            this._Label82 = new System.Windows.Forms.Label();
+            this._Label78 = new System.Windows.Forms.Label();
+            this._Label77 = new System.Windows.Forms.Label();
+            this._txtProfitPerc = new System.Windows.Forms.TextBox();
+            this._txtProfit = new System.Windows.Forms.TextBox();
+            this._CostsToOption1 = new System.Windows.Forms.RadioButton();
+            this._txtCosts = new System.Windows.Forms.TextBox();
+            this._CostsToOption3 = new System.Windows.Forms.RadioButton();
+            this._txtSale = new System.Windows.Forms.TextBox();
+            this._CostsToOption2 = new System.Windows.Forms.RadioButton();
+            this._lblContractPerVisit = new System.Windows.Forms.Label();
+            this._lblOR = new System.Windows.Forms.Label();
+            this._Label30 = new System.Windows.Forms.Label();
+            this._lblQuotePercentageTotal = new System.Windows.Forms.Label();
+            this._lblEquals = new System.Windows.Forms.Label();
+            this._GroupBox9 = new System.Windows.Forms.GroupBox();
+            this._rbStandard = new System.Windows.Forms.RadioButton();
+            this._rbSite = new System.Windows.Forms.RadioButton();
+            this._lblPercent = new System.Windows.Forms.Label();
+            this._txtPercentOfQuote = new System.Windows.Forms.TextBox();
+            this._rdoPercentageOfQuoteValue = new System.Windows.Forms.RadioButton();
+            this._txtCharge = new System.Windows.Forms.TextBox();
+            this._rdoChargeOther = new System.Windows.Forms.RadioButton();
+            this._rdoJobValue = new System.Windows.Forms.RadioButton();
+            this._txtJobValue = new System.Windows.Forms.TextBox();
+            this._gpbAdditionalCharges = new System.Windows.Forms.GroupBox();
+            this._lblAdditionalCharge = new System.Windows.Forms.Label();
+            this._btnAddAdditionalCharge = new System.Windows.Forms.Button();
+            this._txtAdditionalCharge = new System.Windows.Forms.TextBox();
+            this._btnRemoveAdditionalCharge = new System.Windows.Forms.Button();
+            this._txtAdditionalChargeDescription = new System.Windows.Forms.TextBox();
+            this._lblDescription = new System.Windows.Forms.Label();
+            this._txtAdditionalChargeTotal = new System.Windows.Forms.TextBox();
+            this._Label29 = new System.Windows.Forms.Label();
+            this._dgAdditionalCharges = new System.Windows.Forms.DataGrid();
+            this._gpbPartsAndProducts = new System.Windows.Forms.GroupBox();
+            this._txtPartsMarkUp = new System.Windows.Forms.TextBox();
+            this._chkPartsSelectAll = new System.Windows.Forms.CheckBox();
+            this._txtPartProductCost = new System.Windows.Forms.TextBox();
+            this._txtPartsProductTotal = new System.Windows.Forms.TextBox();
+            this._Label28 = new System.Windows.Forms.Label();
+            this._lblPPTotalCost = new System.Windows.Forms.Label();
+            this._lblPartsMarkUp = new System.Windows.Forms.Label();
+            this._dgPartsProductCharging = new System.Windows.Forms.DataGrid();
+            this._gpbTimesheets = new System.Windows.Forms.GroupBox();
+            this._chkTimesheetSelectAll = new System.Windows.Forms.CheckBox();
+            this._txtEngineerCostTotal = new System.Windows.Forms.TextBox();
+            this._txtTimesheetTotal = new System.Windows.Forms.TextBox();
+            this._Label27 = new System.Windows.Forms.Label();
+            this._Label32 = new System.Windows.Forms.Label();
+            this._dgTimesheetCharges = new System.Windows.Forms.DataGrid();
+            this._gpbScheduleOfRates = new System.Windows.Forms.GroupBox();
+            this._btnAddSoR = new System.Windows.Forms.Button();
+            this._txtScheduleOfRatesTotal = new System.Windows.Forms.TextBox();
+            this._dgScheduleOfRateCharges = new System.Windows.Forms.DataGrid();
+            this._Label26 = new System.Windows.Forms.Label();
+            this._tpDocuments = new System.Windows.Forms.TabPage();
+            this._tpPhotos = new System.Windows.Forms.TabPage();
+            this._flPhotos = new System.Windows.Forms.FlowLayoutPanel();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._mnuAddChecklist = new System.Windows.Forms.ContextMenu();
+            this._cbxVisitLockDown = new System.Windows.Forms.CheckBox();
+            this._lblStatusWarning = new System.Windows.Forms.Label();
+            this._btnOrders = new System.Windows.Forms.Button();
+            this._btnInvoice = new System.Windows.Forms.Button();
+            this._btnPrint = new System.Windows.Forms.Button();
+            this._PrintMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._mnuGasSafetyInspectionBoilerServiceRecord = new System.Windows.Forms.ToolStripMenuItem();
+            this._txtCurrentContract = new System.Windows.Forms.TextBox();
+            this._Label39 = new System.Windows.Forms.Label();
+            this._btnPrintGSR = new System.Windows.Forms.Button();
+            this._btnPrintSVR = new System.Windows.Forms.Button();
+            this._btnJob = new System.Windows.Forms.Button();
+            this._lblRechargeTicked = new System.Windows.Forms.Label();
+            this._btnShowVisits = new System.Windows.Forms.Button();
+            this._BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this._TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this._RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this._LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this._ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
+            this._Button1 = new System.Windows.Forms.Button();
+            this._txtCustEmail = new System.Windows.Forms.TextBox();
+            this._SVRs = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._AllGasPaperworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._svrmenu = new System.Windows.Forms.ToolStripMenuItem();
+            this._JobSheetMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this._DomesticGSRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._WarningNoticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._CommercialGSRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._QCResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._ElectricalMinorWorksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._CommercialCateringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._SaffronUnventedWorkshhetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._PropertyMaintenanceWorksheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._ASHPWorksheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._CommissioningChecklistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._HotWorksPermitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._tcWorkSheet.SuspendLayout();
+            this._tpMainDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._pbCustomerSignature)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbEngineerSignature)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobItems)).BeginInit();
+            this._tpAppliances.SuspendLayout();
+            this._gpAppliances.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).BeginInit();
+            this._tpWorksheets.SuspendLayout();
+            this._grpAdditionalWorksheet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAdditional)).BeginInit();
+            this._grpAlarmInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._DGSmokeComo)).BeginInit();
+            this._grpVisitWorksheetExtended.SuspendLayout();
+            this._grpVisitDefects.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgVisitDefects)).BeginInit();
+            this._grpApplianceWorksheet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgApplianceWorkSheets)).BeginInit();
+            this._grpVisitWorksheet.SuspendLayout();
+            this._tpTimesheets.SuspendLayout();
+            this._grpTimesheets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimeSheets)).BeginInit();
+            this._tpPartsAndProducts.SuspendLayout();
+            this._grpAllocated.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._nudPartAllocatedQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductsAllocated)).BeginInit();
+            this._grpUsed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsAndProductsUsed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._nudQuantityUsed)).BeginInit();
+            this._tpOutcomes.SuspendLayout();
+            this._grpOutcomes.SuspendLayout();
+            this._grpSiteFuels.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSiteFuel)).BeginInit();
+            this._tpQC.SuspendLayout();
+            this._GroupBox4.SuspendLayout();
+            this._grpQCField.SuspendLayout();
+            this._grpOfficeQC.SuspendLayout();
+            this._tpCharges.SuspendLayout();
+            this._gpbInvoice.SuspendLayout();
+            this._gpbCharges.SuspendLayout();
+            this._GroupBox6.SuspendLayout();
+            this._GroupBox9.SuspendLayout();
+            this._gpbAdditionalCharges.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAdditionalCharges)).BeginInit();
+            this._gpbPartsAndProducts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductCharging)).BeginInit();
+            this._gpbTimesheets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheetCharges)).BeginInit();
+            this._gpbScheduleOfRates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgScheduleOfRateCharges)).BeginInit();
+            this._tpPhotos.SuspendLayout();
+            this._PrintMenu.SuspendLayout();
+            this._SVRs.SuspendLayout();
+            this.SuspendLayout();
+            //
+            // _tcWorkSheet
+            //
+            this._tcWorkSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._tcWorkSheet.Controls.Add(this._tpMainDetails);
+            this._tcWorkSheet.Controls.Add(this._tpAppliances);
+            this._tcWorkSheet.Controls.Add(this._tpWorksheets);
+            this._tcWorkSheet.Controls.Add(this._tpTimesheets);
+            this._tcWorkSheet.Controls.Add(this._tpPartsAndProducts);
+            this._tcWorkSheet.Controls.Add(this._tpOutcomes);
+            this._tcWorkSheet.Controls.Add(this._tpQC);
+            this._tcWorkSheet.Controls.Add(this._tpCharges);
+            this._tcWorkSheet.Controls.Add(this._tpDocuments);
+            this._tcWorkSheet.Controls.Add(this._tpPhotos);
+            this._tcWorkSheet.Location = new System.Drawing.Point(0, 64);
+            this._tcWorkSheet.Name = "_tcWorkSheet";
+            this._tcWorkSheet.SelectedIndex = 0;
+            this._tcWorkSheet.Size = new System.Drawing.Size(1255, 678);
+            this._tcWorkSheet.TabIndex = 1;
+            //
+            // _tpMainDetails
+            //
+            this._tpMainDetails.Controls.Add(this._chkSORDesc);
+            this._tpMainDetails.Controls.Add(this._btnEditInvoiceNotes);
+            this._tpMainDetails.Controls.Add(this._txtScheduledTime2);
+            this._tpMainDetails.Controls.Add(this._Label71);
+            this._tpMainDetails.Controls.Add(this._btnChangeOutcome);
+            this._tpMainDetails.Controls.Add(this._pbCustomerSignature);
+            this._tpMainDetails.Controls.Add(this._pbEngineerSignature);
+            this._tpMainDetails.Controls.Add(this._cbxEmailReceiptToCustomer);
+            this._tpMainDetails.Controls.Add(this._cboSignatureSelected);
+            this._tpMainDetails.Controls.Add(this._Label42);
+            this._tpMainDetails.Controls.Add(this._dgJobItems);
+            this._tpMainDetails.Controls.Add(this._Label12);
+            this._tpMainDetails.Controls.Add(this._txtNotesToEngineer);
+            this._tpMainDetails.Controls.Add(this._Label6);
+            this._tpMainDetails.Controls.Add(this._txtCustomer);
+            this._tpMainDetails.Controls.Add(this._cboEngineer);
+            this._tpMainDetails.Controls.Add(this._txtNotesFromEngineer);
+            this._tpMainDetails.Controls.Add(this._cboOutcome);
+            this._tpMainDetails.Controls.Add(this._txtOutcomeDetails);
+            this._tpMainDetails.Controls.Add(this._Label11);
+            this._tpMainDetails.Controls.Add(this._txtUploadedBy);
+            this._tpMainDetails.Controls.Add(this._txtStatus);
+            this._tpMainDetails.Controls.Add(this._Label9);
+            this._tpMainDetails.Controls.Add(this._Label5);
+            this._tpMainDetails.Controls.Add(this._Label4);
+            this._tpMainDetails.Controls.Add(this._Label3);
+            this._tpMainDetails.Controls.Add(this._Label2);
+            this._tpMainDetails.Controls.Add(this._Label1);
+            this._tpMainDetails.Location = new System.Drawing.Point(4, 22);
+            this._tpMainDetails.Name = "_tpMainDetails";
+            this._tpMainDetails.Size = new System.Drawing.Size(1247, 652);
+            this._tpMainDetails.TabIndex = 0;
+            this._tpMainDetails.Text = "Main Details";
+            this._tpMainDetails.UseVisualStyleBackColor = true;
+            //
+            // _chkSORDesc
+            //
+            this._chkSORDesc.AutoSize = true;
+            this._chkSORDesc.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._chkSORDesc.Location = new System.Drawing.Point(128, 413);
+            this._chkSORDesc.Name = "_chkSORDesc";
+            this._chkSORDesc.Size = new System.Drawing.Size(394, 30);
+            this._chkSORDesc.TabIndex = 35;
+            this._chkSORDesc.Text = "Use SOR Descriptions for Invoice";
+            this._chkSORDesc.UseVisualStyleBackColor = true;
+            this._chkSORDesc.CheckedChanged += new System.EventHandler(this.chkSORDesc_CheckedChanged);
+            //
+            // _btnEditInvoiceNotes
+            //
+            this._btnEditInvoiceNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnEditInvoiceNotes.Location = new System.Drawing.Point(11, 384);
+            this._btnEditInvoiceNotes.Name = "_btnEditInvoiceNotes";
+            this._btnEditInvoiceNotes.Size = new System.Drawing.Size(97, 23);
+            this._btnEditInvoiceNotes.TabIndex = 34;
+            this._btnEditInvoiceNotes.Text = "Edit Inv Notes";
+            this._btnEditInvoiceNotes.Visible = false;
+            this._btnEditInvoiceNotes.Click += new System.EventHandler(this.btnEditInvoiceNotes_Click);
+            //
+            // _txtScheduledTime2
+            //
+            this._txtScheduledTime2.Location = new System.Drawing.Point(128, 204);
+            this._txtScheduledTime2.Name = "_txtScheduledTime2";
+            this._txtScheduledTime2.ReadOnly = true;
+            this._txtScheduledTime2.Size = new System.Drawing.Size(510, 21);
+            this._txtScheduledTime2.TabIndex = 32;
+            //
+            // _Label71
+            //
+            this._Label71.Location = new System.Drawing.Point(8, 207);
+            this._Label71.Name = "_Label71";
+            this._Label71.Size = new System.Drawing.Size(104, 16);
+            this._Label71.TabIndex = 33;
+            this._Label71.Text = "Scheduled";
+            //
+            // _btnChangeOutcome
+            //
+            this._btnChangeOutcome.Location = new System.Drawing.Point(128, 171);
+            this._btnChangeOutcome.Name = "_btnChangeOutcome";
+            this._btnChangeOutcome.Size = new System.Drawing.Size(114, 23);
+            this._btnChangeOutcome.TabIndex = 31;
+            this._btnChangeOutcome.Text = "Change Outcome";
+            this._btnChangeOutcome.UseVisualStyleBackColor = true;
+            this._btnChangeOutcome.Click += new System.EventHandler(this.btnChangeOutcome_Click);
+            //
+            // _pbCustomerSignature
+            //
+            this._pbCustomerSignature.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbCustomerSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._pbCustomerSignature.Location = new System.Drawing.Point(647, 207);
+            this._pbCustomerSignature.Name = "_pbCustomerSignature";
+            this._pbCustomerSignature.Size = new System.Drawing.Size(592, 119);
+            this._pbCustomerSignature.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this._pbCustomerSignature.TabIndex = 30;
+            this._pbCustomerSignature.TabStop = false;
+            //
+            // _pbEngineerSignature
+            //
+            this._pbEngineerSignature.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbEngineerSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._pbEngineerSignature.Location = new System.Drawing.Point(647, 44);
+            this._pbEngineerSignature.Name = "_pbEngineerSignature";
+            this._pbEngineerSignature.Size = new System.Drawing.Size(592, 121);
+            this._pbEngineerSignature.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this._pbEngineerSignature.TabIndex = 29;
+            this._pbEngineerSignature.TabStop = false;
+            //
+            // _cbxEmailReceiptToCustomer
+            //
+            this._cbxEmailReceiptToCustomer.AutoSize = true;
+            this._cbxEmailReceiptToCustomer.Location = new System.Drawing.Point(647, 390);
+            this._cbxEmailReceiptToCustomer.Name = "_cbxEmailReceiptToCustomer";
+            this._cbxEmailReceiptToCustomer.Size = new System.Drawing.Size(180, 17);
+            this._cbxEmailReceiptToCustomer.TabIndex = 28;
+            this._cbxEmailReceiptToCustomer.Text = "Email Receipt To Customer";
+            this._cbxEmailReceiptToCustomer.UseVisualStyleBackColor = true;
+            //
+            // _cboSignatureSelected
+            //
+            this._cboSignatureSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboSignatureSelected.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboSignatureSelected.Location = new System.Drawing.Point(714, 332);
+            this._cboSignatureSelected.Name = "_cboSignatureSelected";
+            this._cboSignatureSelected.Size = new System.Drawing.Size(525, 21);
+            this._cboSignatureSelected.TabIndex = 27;
+            //
+            // _Label42
+            //
+            this._Label42.Location = new System.Drawing.Point(644, 335);
+            this._Label42.Name = "_Label42";
+            this._Label42.Size = new System.Drawing.Size(64, 23);
+            this._Label42.TabIndex = 26;
+            this._Label42.Text = "Signature";
+            //
+            // _dgJobItems
+            //
+            this._dgJobItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgJobItems.DataMember = "";
+            this._dgJobItems.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgJobItems.Location = new System.Drawing.Point(128, 450);
+            this._dgJobItems.Name = "_dgJobItems";
+            this._dgJobItems.Size = new System.Drawing.Size(1111, 196);
+            this._dgJobItems.TabIndex = 9;
+            this._dgJobItems.TabStop = false;
+            this._dgJobItems.CurrentCellChanged += new System.EventHandler(this.dgJobItems_CurrentCellChanged);
+            //
+            // _Label12
+            //
+            this._Label12.Location = new System.Drawing.Point(8, 450);
+            this._Label12.Name = "_Label12";
+            this._Label12.Size = new System.Drawing.Size(80, 16);
+            this._Label12.TabIndex = 25;
+            this._Label12.Text = "Job Items";
+            //
+            // _txtNotesToEngineer
+            //
+            this._txtNotesToEngineer.Location = new System.Drawing.Point(128, 44);
+            this._txtNotesToEngineer.Multiline = true;
+            this._txtNotesToEngineer.Name = "_txtNotesToEngineer";
+            this._txtNotesToEngineer.ReadOnly = true;
+            this._txtNotesToEngineer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this._txtNotesToEngineer.Size = new System.Drawing.Size(510, 66);
+            this._txtNotesToEngineer.TabIndex = 10;
+            this._txtNotesToEngineer.TabStop = false;
+            //
+            // _Label6
+            //
+            this._Label6.Location = new System.Drawing.Point(8, 40);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(64, 16);
+            this._Label6.TabIndex = 21;
+            this._Label6.Text = "Notes";
+            //
+            // _txtCustomer
+            //
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Location = new System.Drawing.Point(714, 173);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.Size = new System.Drawing.Size(525, 21);
+            this._txtCustomer.TabIndex = 6;
+            //
+            // _cboEngineer
+            //
+            this._cboEngineer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboEngineer.Location = new System.Drawing.Point(714, 14);
+            this._cboEngineer.Name = "_cboEngineer";
+            this._cboEngineer.Size = new System.Drawing.Size(525, 21);
+            this._cboEngineer.TabIndex = 4;
+            //
+            // _txtNotesFromEngineer
+            //
+            this._txtNotesFromEngineer.Location = new System.Drawing.Point(128, 335);
+            this._txtNotesFromEngineer.Multiline = true;
+            this._txtNotesFromEngineer.Name = "_txtNotesFromEngineer";
+            this._txtNotesFromEngineer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this._txtNotesFromEngineer.Size = new System.Drawing.Size(510, 72);
+            this._txtNotesFromEngineer.TabIndex = 3;
+            //
+            // _cboOutcome
+            //
+            this._cboOutcome.Location = new System.Drawing.Point(128, 144);
+            this._cboOutcome.Name = "_cboOutcome";
+            this._cboOutcome.Size = new System.Drawing.Size(510, 21);
+            this._cboOutcome.TabIndex = 1;
+            this._cboOutcome.SelectedIndexChanged += new System.EventHandler(this.cboOutcome_SelectedIndexChanged);
+            //
+            // _txtOutcomeDetails
+            //
+            this._txtOutcomeDetails.Location = new System.Drawing.Point(128, 231);
+            this._txtOutcomeDetails.Multiline = true;
+            this._txtOutcomeDetails.Name = "_txtOutcomeDetails";
+            this._txtOutcomeDetails.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this._txtOutcomeDetails.Size = new System.Drawing.Size(510, 95);
+            this._txtOutcomeDetails.TabIndex = 2;
+            //
+            // _Label11
+            //
+            this._Label11.Location = new System.Drawing.Point(8, 234);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(80, 16);
+            this._Label11.TabIndex = 12;
+            this._Label11.Text = "Details";
+            //
+            // _txtUploadedBy
+            //
+            this._txtUploadedBy.Location = new System.Drawing.Point(128, 116);
+            this._txtUploadedBy.Name = "_txtUploadedBy";
+            this._txtUploadedBy.ReadOnly = true;
+            this._txtUploadedBy.Size = new System.Drawing.Size(510, 21);
+            this._txtUploadedBy.TabIndex = 2;
+            this._txtUploadedBy.TabStop = false;
+            //
+            // _txtStatus
+            //
+            this._txtStatus.Location = new System.Drawing.Point(128, 14);
+            this._txtStatus.Name = "_txtStatus";
+            this._txtStatus.ReadOnly = true;
+            this._txtStatus.Size = new System.Drawing.Size(510, 21);
+            this._txtStatus.TabIndex = 1;
+            this._txtStatus.TabStop = false;
+            //
+            // _Label9
+            //
+            this._Label9.Location = new System.Drawing.Point(8, 147);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(80, 19);
+            this._Label9.TabIndex = 8;
+            this._Label9.Text = "Outcome";
+            //
+            // _Label5
+            //
+            this._Label5.Location = new System.Drawing.Point(644, 176);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(64, 16);
+            this._Label5.TabIndex = 4;
+            this._Label5.Text = "Customer";
+            //
+            // _Label4
+            //
+            this._Label4.Location = new System.Drawing.Point(8, 119);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(80, 16);
+            this._Label4.TabIndex = 3;
+            this._Label4.Text = "Uploaded by";
+            //
+            // _Label3
+            //
+            this._Label3.Location = new System.Drawing.Point(8, 16);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(56, 16);
+            this._Label3.TabIndex = 2;
+            this._Label3.Text = "Status";
+            //
+            // _Label2
+            //
+            this._Label2.Location = new System.Drawing.Point(8, 335);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(128, 24);
+            this._Label2.TabIndex = 1;
+            this._Label2.Text = "Invoice Notes";
+            //
+            // _Label1
+            //
+            this._Label1.Location = new System.Drawing.Point(644, 14);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(64, 16);
+            this._Label1.TabIndex = 0;
+            this._Label1.Text = "Engineer";
+            //
+            // _tpAppliances
+            //
+            this._tpAppliances.Controls.Add(this._gpAppliances);
+            this._tpAppliances.Location = new System.Drawing.Point(4, 22);
+            this._tpAppliances.Name = "_tpAppliances";
+            this._tpAppliances.Padding = new System.Windows.Forms.Padding(3);
+            this._tpAppliances.Size = new System.Drawing.Size(1247, 652);
+            this._tpAppliances.TabIndex = 6;
+            this._tpAppliances.Text = "Appliances";
+            this._tpAppliances.UseVisualStyleBackColor = true;
+            //
+            // _gpAppliances
+            //
+            this._gpAppliances.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpAppliances.Controls.Add(this._dgAssets);
+            this._gpAppliances.Location = new System.Drawing.Point(6, 6);
+            this._gpAppliances.Name = "_gpAppliances";
+            this._gpAppliances.Size = new System.Drawing.Size(1235, 640);
+            this._gpAppliances.TabIndex = 0;
+            this._gpAppliances.TabStop = false;
+            this._gpAppliances.Text = "Appliances";
+            //
+            // _dgAssets
+            //
+            this._dgAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAssets.DataMember = "";
+            this._dgAssets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgAssets.Location = new System.Drawing.Point(6, 20);
+            this._dgAssets.Name = "_dgAssets";
+            this._dgAssets.Size = new System.Drawing.Size(1223, 614);
+            this._dgAssets.TabIndex = 2;
+            //
+            // _tpWorksheets
+            //
+            this._tpWorksheets.Controls.Add(this._grpAdditionalWorksheet);
+            this._tpWorksheets.Controls.Add(this._grpAlarmInfo);
+            this._tpWorksheets.Controls.Add(this._grpVisitWorksheetExtended);
+            this._tpWorksheets.Controls.Add(this._grpVisitDefects);
+            this._tpWorksheets.Controls.Add(this._grpApplianceWorksheet);
+            this._tpWorksheets.Controls.Add(this._grpVisitWorksheet);
+            this._tpWorksheets.Location = new System.Drawing.Point(4, 22);
+            this._tpWorksheets.Name = "_tpWorksheets";
+            this._tpWorksheets.Size = new System.Drawing.Size(1247, 652);
+            this._tpWorksheets.TabIndex = 5;
+            this._tpWorksheets.Text = "Worksheets";
+            this._tpWorksheets.UseVisualStyleBackColor = true;
+            //
+            // _grpAdditionalWorksheet
+            //
+            this._grpAdditionalWorksheet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpAdditionalWorksheet.Controls.Add(this._btnRemoveAdd);
+            this._grpAdditionalWorksheet.Controls.Add(this._btnAddAdd);
+            this._grpAdditionalWorksheet.Controls.Add(this._dgAdditional);
+            this._grpAdditionalWorksheet.Location = new System.Drawing.Point(515, 259);
+            this._grpAdditionalWorksheet.Name = "_grpAdditionalWorksheet";
+            this._grpAdditionalWorksheet.Size = new System.Drawing.Size(360, 247);
+            this._grpAdditionalWorksheet.TabIndex = 29;
+            this._grpAdditionalWorksheet.TabStop = false;
+            this._grpAdditionalWorksheet.Text = "Additional Worksheets";
+            //
+            // _btnRemoveAdd
+            //
+            this._btnRemoveAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveAdd.Location = new System.Drawing.Point(8, 218);
+            this._btnRemoveAdd.Name = "_btnRemoveAdd";
+            this._btnRemoveAdd.Size = new System.Drawing.Size(75, 23);
+            this._btnRemoveAdd.TabIndex = 3;
+            this._btnRemoveAdd.Text = "Remove";
+            //
+            // _btnAddAdd
+            //
+            this._btnAddAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddAdd.Location = new System.Drawing.Point(275, 218);
+            this._btnAddAdd.Name = "_btnAddAdd";
+            this._btnAddAdd.Size = new System.Drawing.Size(75, 23);
+            this._btnAddAdd.TabIndex = 4;
+            this._btnAddAdd.Text = "Add";
+            //
+            // _dgAdditional
+            //
+            this._dgAdditional.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAdditional.DataMember = "";
+            this._dgAdditional.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgAdditional.Location = new System.Drawing.Point(6, 20);
+            this._dgAdditional.Name = "_dgAdditional";
+            this._dgAdditional.Size = new System.Drawing.Size(344, 192);
+            this._dgAdditional.TabIndex = 0;
+            this._dgAdditional.DoubleClick += new System.EventHandler(this.dgAdditionalWorkSheets_DoubleClick);
+            //
+            // _grpAlarmInfo
+            //
+            this._grpAlarmInfo.Controls.Add(this._btnRemoveSmokeComo);
+            this._grpAlarmInfo.Controls.Add(this._btnAddSmokeComo);
+            this._grpAlarmInfo.Controls.Add(this._DGSmokeComo);
+            this._grpAlarmInfo.Location = new System.Drawing.Point(515, 8);
+            this._grpAlarmInfo.Name = "_grpAlarmInfo";
+            this._grpAlarmInfo.Size = new System.Drawing.Size(360, 242);
+            this._grpAlarmInfo.TabIndex = 4;
+            this._grpAlarmInfo.TabStop = false;
+            this._grpAlarmInfo.Text = "Alarm Info";
+            //
+            // _btnRemoveSmokeComo
+            //
+            this._btnRemoveSmokeComo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveSmokeComo.Location = new System.Drawing.Point(12, 202);
+            this._btnRemoveSmokeComo.Name = "_btnRemoveSmokeComo";
+            this._btnRemoveSmokeComo.Size = new System.Drawing.Size(75, 23);
+            this._btnRemoveSmokeComo.TabIndex = 30;
+            this._btnRemoveSmokeComo.Text = "Remove";
+            this._btnRemoveSmokeComo.Click += new System.EventHandler(this.btnRemoveSmokeComo_Click);
+            //
+            // _btnAddSmokeComo
+            //
+            this._btnAddSmokeComo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddSmokeComo.Location = new System.Drawing.Point(275, 202);
+            this._btnAddSmokeComo.Name = "_btnAddSmokeComo";
+            this._btnAddSmokeComo.Size = new System.Drawing.Size(75, 23);
+            this._btnAddSmokeComo.TabIndex = 31;
+            this._btnAddSmokeComo.Text = "Add";
+            this._btnAddSmokeComo.Click += new System.EventHandler(this.btnAddSmokeComo_Click);
+            //
+            // _DGSmokeComo
+            //
+            this._DGSmokeComo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._DGSmokeComo.DataMember = "";
+            this._DGSmokeComo.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._DGSmokeComo.Location = new System.Drawing.Point(12, 17);
+            this._DGSmokeComo.Name = "_DGSmokeComo";
+            this._DGSmokeComo.Size = new System.Drawing.Size(338, 181);
+            this._DGSmokeComo.TabIndex = 29;
+            this._DGSmokeComo.DoubleClick += new System.EventHandler(this.dgSmokeComoWorkSheets_DoubleClick);
+            //
+            // _grpVisitWorksheetExtended
+            //
+            this._grpVisitWorksheetExtended.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboSITimer);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboFillDisc);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label81);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label80);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label79);
+            this._grpVisitWorksheetExtended.Controls.Add(this._txtRadiators);
+            this._grpVisitWorksheetExtended.Controls.Add(this._txtVisualInspectionReason);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label68);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label69);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label70);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label62);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label63);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label64);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label65);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label66);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label67);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboCertificateTypeID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboCODetectorFittedID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboVisualInspectionSatisfactoryID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboImmersionID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboJacketID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboCylinderTypeID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboPartialHeatingID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboHeatingSystemTypeID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._txtApproxAgeOfBoiler);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboStrainerInspectedID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label56);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label57);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboStrainerFittedID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboInstallationSafeToUseID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboInstallationPipeWorkCorrectID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._cboCorrectMaterialsUsedID);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label58);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label59);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label60);
+            this._grpVisitWorksheetExtended.Controls.Add(this._Label61);
+            this._grpVisitWorksheetExtended.Location = new System.Drawing.Point(881, 8);
+            this._grpVisitWorksheetExtended.Name = "_grpVisitWorksheetExtended";
+            this._grpVisitWorksheetExtended.Size = new System.Drawing.Size(358, 636);
+            this._grpVisitWorksheetExtended.TabIndex = 3;
+            this._grpVisitWorksheetExtended.TabStop = false;
+            this._grpVisitWorksheetExtended.Text = "Visit Worksheet - Extended";
+            //
+            // _cboSITimer
+            //
+            this._cboSITimer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboSITimer.Location = new System.Drawing.Point(192, 449);
+            this._cboSITimer.Name = "_cboSITimer";
+            this._cboSITimer.Size = new System.Drawing.Size(160, 21);
+            this._cboSITimer.TabIndex = 33;
+            //
+            // _cboFillDisc
+            //
+            this._cboFillDisc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboFillDisc.Location = new System.Drawing.Point(192, 422);
+            this._cboFillDisc.Name = "_cboFillDisc";
+            this._cboFillDisc.Size = new System.Drawing.Size(160, 21);
+            this._cboFillDisc.TabIndex = 32;
+            //
+            // _Label81
+            //
+            this._Label81.Location = new System.Drawing.Point(6, 477);
+            this._Label81.Name = "_Label81";
+            this._Label81.Size = new System.Drawing.Size(180, 21);
+            this._Label81.TabIndex = 31;
+            this._Label81.Text = "Flue/Tank In loft details";
+            //
+            // _Label80
+            //
+            this._Label80.Location = new System.Drawing.Point(6, 423);
+            this._Label80.Name = "_Label80";
+            this._Label80.Size = new System.Drawing.Size(180, 21);
+            this._Label80.TabIndex = 30;
+            this._Label80.Text = "Filling Loop Disconnected?";
+            //
+            // _Label79
+            //
+            this._Label79.Location = new System.Drawing.Point(6, 449);
+            this._Label79.Name = "_Label79";
+            this._Label79.Size = new System.Drawing.Size(180, 21);
+            this._Label79.TabIndex = 29;
+            this._Label79.Text = "SI Timer Reset";
+            //
+            // _txtRadiators
+            //
+            this._txtRadiators.Location = new System.Drawing.Point(192, 287);
+            this._txtRadiators.Name = "_txtRadiators";
+            this._txtRadiators.Size = new System.Drawing.Size(160, 21);
+            this._txtRadiators.TabIndex = 10;
+            this._txtRadiators.Text = "0";
+            //
+            // _txtVisualInspectionReason
+            //
+            this._txtVisualInspectionReason.Location = new System.Drawing.Point(192, 476);
+            this._txtVisualInspectionReason.Multiline = true;
+            this._txtVisualInspectionReason.Name = "_txtVisualInspectionReason";
+            this._txtVisualInspectionReason.Size = new System.Drawing.Size(160, 43);
+            this._txtVisualInspectionReason.TabIndex = 15;
+            //
+            // _Label68
+            //
+            this._Label68.Location = new System.Drawing.Point(6, 397);
+            this._Label68.Name = "_Label68";
+            this._Label68.Size = new System.Drawing.Size(180, 21);
+            this._Label68.TabIndex = 28;
+            this._Label68.Text = "Flue/Tank In Loft Satisfactory\r\n";
+            //
+            // _Label69
+            //
+            this._Label69.Location = new System.Drawing.Point(6, 371);
+            this._Label69.Name = "_Label69";
+            this._Label69.Size = new System.Drawing.Size(180, 23);
+            this._Label69.TabIndex = 27;
+            this._Label69.Text = "Certificate Type";
+            //
+            // _Label70
+            //
+            this._Label70.Location = new System.Drawing.Point(6, 344);
+            this._Label70.Name = "_Label70";
+            this._Label70.Size = new System.Drawing.Size(180, 23);
+            this._Label70.TabIndex = 26;
+            this._Label70.Text = "Approx. Age Of Boiler";
+            //
+            // _Label62
+            //
+            this._Label62.Location = new System.Drawing.Point(6, 317);
+            this._Label62.Name = "_Label62";
+            this._Label62.Size = new System.Drawing.Size(180, 23);
+            this._Label62.TabIndex = 25;
+            this._Label62.Text = "CO Detector Fitted ";
+            //
+            // _Label63
+            //
+            this._Label63.Location = new System.Drawing.Point(6, 290);
+            this._Label63.Name = "_Label63";
+            this._Label63.Size = new System.Drawing.Size(180, 23);
+            this._Label63.TabIndex = 24;
+            this._Label63.Text = "Radiators";
+            //
+            // _Label64
+            //
+            this._Label64.Location = new System.Drawing.Point(6, 128);
+            this._Label64.Name = "_Label64";
+            this._Label64.Size = new System.Drawing.Size(180, 23);
+            this._Label64.TabIndex = 23;
+            this._Label64.Text = "Is Strainer Inspected";
+            //
+            // _Label65
+            //
+            this._Label65.Location = new System.Drawing.Point(6, 101);
+            this._Label65.Name = "_Label65";
+            this._Label65.Size = new System.Drawing.Size(180, 23);
+            this._Label65.TabIndex = 22;
+            this._Label65.Text = "Is Strainer Fitted";
+            //
+            // _Label66
+            //
+            this._Label66.Location = new System.Drawing.Point(6, 263);
+            this._Label66.Name = "_Label66";
+            this._Label66.Size = new System.Drawing.Size(180, 23);
+            this._Label66.TabIndex = 21;
+            this._Label66.Text = "Immersion";
+            //
+            // _Label67
+            //
+            this._Label67.Location = new System.Drawing.Point(6, 236);
+            this._Label67.Name = "_Label67";
+            this._Label67.Size = new System.Drawing.Size(180, 23);
+            this._Label67.TabIndex = 20;
+            this._Label67.Text = "Jacket";
+            //
+            // _cboCertificateTypeID
+            //
+            this._cboCertificateTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboCertificateTypeID.Location = new System.Drawing.Point(192, 368);
+            this._cboCertificateTypeID.Name = "_cboCertificateTypeID";
+            this._cboCertificateTypeID.Size = new System.Drawing.Size(160, 21);
+            this._cboCertificateTypeID.TabIndex = 13;
+            //
+            // _cboCODetectorFittedID
+            //
+            this._cboCODetectorFittedID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboCODetectorFittedID.Location = new System.Drawing.Point(192, 314);
+            this._cboCODetectorFittedID.Name = "_cboCODetectorFittedID";
+            this._cboCODetectorFittedID.Size = new System.Drawing.Size(160, 21);
+            this._cboCODetectorFittedID.TabIndex = 11;
+            //
+            // _cboVisualInspectionSatisfactoryID
+            //
+            this._cboVisualInspectionSatisfactoryID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboVisualInspectionSatisfactoryID.Location = new System.Drawing.Point(192, 395);
+            this._cboVisualInspectionSatisfactoryID.Name = "_cboVisualInspectionSatisfactoryID";
+            this._cboVisualInspectionSatisfactoryID.Size = new System.Drawing.Size(160, 21);
+            this._cboVisualInspectionSatisfactoryID.TabIndex = 14;
+            //
+            // _cboImmersionID
+            //
+            this._cboImmersionID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboImmersionID.Location = new System.Drawing.Point(192, 260);
+            this._cboImmersionID.Name = "_cboImmersionID";
+            this._cboImmersionID.Size = new System.Drawing.Size(160, 21);
+            this._cboImmersionID.TabIndex = 9;
+            //
+            // _cboJacketID
+            //
+            this._cboJacketID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboJacketID.Location = new System.Drawing.Point(192, 233);
+            this._cboJacketID.Name = "_cboJacketID";
+            this._cboJacketID.Size = new System.Drawing.Size(160, 21);
+            this._cboJacketID.TabIndex = 8;
+            //
+            // _cboCylinderTypeID
+            //
+            this._cboCylinderTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboCylinderTypeID.Location = new System.Drawing.Point(192, 206);
+            this._cboCylinderTypeID.Name = "_cboCylinderTypeID";
+            this._cboCylinderTypeID.Size = new System.Drawing.Size(160, 21);
+            this._cboCylinderTypeID.TabIndex = 7;
+            //
+            // _cboPartialHeatingID
+            //
+            this._cboPartialHeatingID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboPartialHeatingID.Location = new System.Drawing.Point(192, 179);
+            this._cboPartialHeatingID.Name = "_cboPartialHeatingID";
+            this._cboPartialHeatingID.Size = new System.Drawing.Size(160, 21);
+            this._cboPartialHeatingID.TabIndex = 6;
+            //
+            // _cboHeatingSystemTypeID
+            //
+            this._cboHeatingSystemTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboHeatingSystemTypeID.Location = new System.Drawing.Point(192, 152);
+            this._cboHeatingSystemTypeID.Name = "_cboHeatingSystemTypeID";
+            this._cboHeatingSystemTypeID.Size = new System.Drawing.Size(160, 21);
+            this._cboHeatingSystemTypeID.TabIndex = 5;
+            //
+            // _txtApproxAgeOfBoiler
+            //
+            this._txtApproxAgeOfBoiler.Location = new System.Drawing.Point(192, 341);
+            this._txtApproxAgeOfBoiler.Name = "_txtApproxAgeOfBoiler";
+            this._txtApproxAgeOfBoiler.Size = new System.Drawing.Size(160, 21);
+            this._txtApproxAgeOfBoiler.TabIndex = 12;
+            this._txtApproxAgeOfBoiler.Text = "0";
+            //
+            // _cboStrainerInspectedID
+            //
+            this._cboStrainerInspectedID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStrainerInspectedID.Location = new System.Drawing.Point(192, 125);
+            this._cboStrainerInspectedID.Name = "_cboStrainerInspectedID";
+            this._cboStrainerInspectedID.Size = new System.Drawing.Size(160, 21);
+            this._cboStrainerInspectedID.TabIndex = 4;
+            //
+            // _Label56
+            //
+            this._Label56.Location = new System.Drawing.Point(6, 209);
+            this._Label56.Name = "_Label56";
+            this._Label56.Size = new System.Drawing.Size(180, 23);
+            this._Label56.TabIndex = 9;
+            this._Label56.Text = "Cylinder type ";
+            //
+            // _Label57
+            //
+            this._Label57.Location = new System.Drawing.Point(6, 182);
+            this._Label57.Name = "_Label57";
+            this._Label57.Size = new System.Drawing.Size(180, 23);
+            this._Label57.TabIndex = 8;
+            this._Label57.Text = "Partial Heating";
+            //
+            // _cboStrainerFittedID
+            //
+            this._cboStrainerFittedID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStrainerFittedID.Location = new System.Drawing.Point(192, 98);
+            this._cboStrainerFittedID.Name = "_cboStrainerFittedID";
+            this._cboStrainerFittedID.Size = new System.Drawing.Size(160, 21);
+            this._cboStrainerFittedID.TabIndex = 3;
+            //
+            // _cboInstallationSafeToUseID
+            //
+            this._cboInstallationSafeToUseID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboInstallationSafeToUseID.Location = new System.Drawing.Point(192, 71);
+            this._cboInstallationSafeToUseID.Name = "_cboInstallationSafeToUseID";
+            this._cboInstallationSafeToUseID.Size = new System.Drawing.Size(160, 21);
+            this._cboInstallationSafeToUseID.TabIndex = 2;
+            //
+            // _cboInstallationPipeWorkCorrectID
+            //
+            this._cboInstallationPipeWorkCorrectID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboInstallationPipeWorkCorrectID.Location = new System.Drawing.Point(192, 44);
+            this._cboInstallationPipeWorkCorrectID.Name = "_cboInstallationPipeWorkCorrectID";
+            this._cboInstallationPipeWorkCorrectID.Size = new System.Drawing.Size(160, 21);
+            this._cboInstallationPipeWorkCorrectID.TabIndex = 1;
+            //
+            // _cboCorrectMaterialsUsedID
+            //
+            this._cboCorrectMaterialsUsedID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboCorrectMaterialsUsedID.Location = new System.Drawing.Point(192, 17);
+            this._cboCorrectMaterialsUsedID.Name = "_cboCorrectMaterialsUsedID";
+            this._cboCorrectMaterialsUsedID.Size = new System.Drawing.Size(160, 21);
+            this._cboCorrectMaterialsUsedID.TabIndex = 0;
+            //
+            // _Label58
+            //
+            this._Label58.Location = new System.Drawing.Point(6, 155);
+            this._Label58.Name = "_Label58";
+            this._Label58.Size = new System.Drawing.Size(180, 23);
+            this._Label58.TabIndex = 3;
+            this._Label58.Text = "Heating System Type";
+            //
+            // _Label59
+            //
+            this._Label59.Location = new System.Drawing.Point(6, 74);
+            this._Label59.Name = "_Label59";
+            this._Label59.Size = new System.Drawing.Size(180, 23);
+            this._Label59.TabIndex = 2;
+            this._Label59.Text = "Installation Safe To Use ";
+            //
+            // _Label60
+            //
+            this._Label60.Location = new System.Drawing.Point(6, 47);
+            this._Label60.Name = "_Label60";
+            this._Label60.Size = new System.Drawing.Size(180, 23);
+            this._Label60.TabIndex = 1;
+            this._Label60.Text = "Installation Pipework Correct";
+            //
+            // _Label61
+            //
+            this._Label61.Location = new System.Drawing.Point(6, 20);
+            this._Label61.Name = "_Label61";
+            this._Label61.Size = new System.Drawing.Size(180, 23);
+            this._Label61.TabIndex = 0;
+            this._Label61.Text = "Correct Materials Used In Installation ";
+            //
+            // _grpVisitDefects
+            //
+            this._grpVisitDefects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpVisitDefects.Controls.Add(this._btnAddVisitDefect);
+            this._grpVisitDefects.Controls.Add(this._btnRemoveVisitDefect);
+            this._grpVisitDefects.Controls.Add(this._dgVisitDefects);
+            this._grpVisitDefects.Location = new System.Drawing.Point(8, 503);
+            this._grpVisitDefects.Name = "_grpVisitDefects";
+            this._grpVisitDefects.Size = new System.Drawing.Size(501, 141);
+            this._grpVisitDefects.TabIndex = 2;
+            this._grpVisitDefects.TabStop = false;
+            this._grpVisitDefects.Text = "Visit Defects";
+            //
+            // _btnAddVisitDefect
+            //
+            this._btnAddVisitDefect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddVisitDefect.Location = new System.Drawing.Point(421, 109);
+            this._btnAddVisitDefect.Name = "_btnAddVisitDefect";
+            this._btnAddVisitDefect.Size = new System.Drawing.Size(75, 23);
+            this._btnAddVisitDefect.TabIndex = 3;
+            this._btnAddVisitDefect.Text = "Add";
+            this._btnAddVisitDefect.Click += new System.EventHandler(this.btnAddVisitDefect_Click);
+            //
+            // _btnRemoveVisitDefect
+            //
+            this._btnRemoveVisitDefect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveVisitDefect.Location = new System.Drawing.Point(8, 109);
+            this._btnRemoveVisitDefect.Name = "_btnRemoveVisitDefect";
+            this._btnRemoveVisitDefect.Size = new System.Drawing.Size(75, 23);
+            this._btnRemoveVisitDefect.TabIndex = 2;
+            this._btnRemoveVisitDefect.Text = "Remove";
+            this._btnRemoveVisitDefect.Click += new System.EventHandler(this.btnRemoveVisitDefect_Click);
+            //
+            // _dgVisitDefects
+            //
+            this._dgVisitDefects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgVisitDefects.DataMember = "";
+            this._dgVisitDefects.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgVisitDefects.Location = new System.Drawing.Point(8, 20);
+            this._dgVisitDefects.Name = "_dgVisitDefects";
+            this._dgVisitDefects.Size = new System.Drawing.Size(485, 83);
+            this._dgVisitDefects.TabIndex = 1;
+            this._dgVisitDefects.DoubleClick += new System.EventHandler(this.dgVisitDefects_DoubleClick);
+            //
+            // _grpApplianceWorksheet
+            //
+            this._grpApplianceWorksheet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpApplianceWorksheet.Controls.Add(this._btnRemoveApplianceWorkSheet);
+            this._grpApplianceWorksheet.Controls.Add(this._dgApplianceWorkSheets);
+            this._grpApplianceWorksheet.Controls.Add(this._btnAddApplianceWorksheet);
+            this._grpApplianceWorksheet.Location = new System.Drawing.Point(8, 256);
+            this._grpApplianceWorksheet.Name = "_grpApplianceWorksheet";
+            this._grpApplianceWorksheet.Size = new System.Drawing.Size(501, 247);
+            this._grpApplianceWorksheet.TabIndex = 1;
+            this._grpApplianceWorksheet.TabStop = false;
+            this._grpApplianceWorksheet.Text = "Appliance Worksheets";
+            //
+            // _btnRemoveApplianceWorkSheet
+            //
+            this._btnRemoveApplianceWorkSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveApplianceWorkSheet.Location = new System.Drawing.Point(8, 218);
+            this._btnRemoveApplianceWorkSheet.Name = "_btnRemoveApplianceWorkSheet";
+            this._btnRemoveApplianceWorkSheet.Size = new System.Drawing.Size(75, 23);
+            this._btnRemoveApplianceWorkSheet.TabIndex = 3;
+            this._btnRemoveApplianceWorkSheet.Text = "Remove";
+            this._btnRemoveApplianceWorkSheet.Click += new System.EventHandler(this.btnRemoveApplianceWorkSheet_Click);
+            //
+            // _dgApplianceWorkSheets
+            //
+            this._dgApplianceWorkSheets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgApplianceWorkSheets.DataMember = "";
+            this._dgApplianceWorkSheets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgApplianceWorkSheets.Location = new System.Drawing.Point(8, 20);
+            this._dgApplianceWorkSheets.Name = "_dgApplianceWorkSheets";
+            this._dgApplianceWorkSheets.Size = new System.Drawing.Size(485, 192);
+            this._dgApplianceWorkSheets.TabIndex = 0;
+            this._dgApplianceWorkSheets.DoubleClick += new System.EventHandler(this.dgApplianceWorkSheets_DoubleClick);
+            //
+            // _btnAddApplianceWorksheet
+            //
+            this._btnAddApplianceWorksheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddApplianceWorksheet.Location = new System.Drawing.Point(413, 218);
+            this._btnAddApplianceWorksheet.Name = "_btnAddApplianceWorksheet";
+            this._btnAddApplianceWorksheet.Size = new System.Drawing.Size(75, 23);
+            this._btnAddApplianceWorksheet.TabIndex = 4;
+            this._btnAddApplianceWorksheet.Text = "Add";
+            this._btnAddApplianceWorksheet.Click += new System.EventHandler(this.btnAddApplianceWorksheet_Click);
+            //
+            // _grpVisitWorksheet
+            //
+            this._grpVisitWorksheet.Controls.Add(this._cboMeterCapped);
+            this._grpVisitWorksheet.Controls.Add(this._Label73);
+            this._grpVisitWorksheet.Controls.Add(this._cboMeterLocation);
+            this._grpVisitWorksheet.Controls.Add(this._Label72);
+            this._grpVisitWorksheet.Controls.Add(this._txtAmountCollected);
+            this._grpVisitWorksheet.Controls.Add(this._cboPaymentMethod);
+            this._grpVisitWorksheet.Controls.Add(this._Label44);
+            this._grpVisitWorksheet.Controls.Add(this._Label43);
+            this._grpVisitWorksheet.Controls.Add(this._cboPropertyRented);
+            this._grpVisitWorksheet.Controls.Add(this._cboBonding);
+            this._grpVisitWorksheet.Controls.Add(this._cboEmergencyControlAccessible);
+            this._grpVisitWorksheet.Controls.Add(this._cboGasInstallationTightnessTest);
+            this._grpVisitWorksheet.Controls.Add(this._Label41);
+            this._grpVisitWorksheet.Controls.Add(this._Label40);
+            this._grpVisitWorksheet.Controls.Add(this._Label8);
+            this._grpVisitWorksheet.Controls.Add(this._Label7);
+            this._grpVisitWorksheet.Location = new System.Drawing.Point(8, 8);
+            this._grpVisitWorksheet.Name = "_grpVisitWorksheet";
+            this._grpVisitWorksheet.Size = new System.Drawing.Size(501, 242);
+            this._grpVisitWorksheet.TabIndex = 0;
+            this._grpVisitWorksheet.TabStop = false;
+            this._grpVisitWorksheet.Text = "Visit Worksheet";
+            //
+            // _cboMeterCapped
+            //
+            this._cboMeterCapped.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboMeterCapped.Location = new System.Drawing.Point(216, 211);
+            this._cboMeterCapped.Name = "_cboMeterCapped";
+            this._cboMeterCapped.Size = new System.Drawing.Size(276, 21);
+            this._cboMeterCapped.TabIndex = 15;
+            //
+            // _Label73
+            //
+            this._Label73.Location = new System.Drawing.Point(16, 214);
+            this._Label73.Name = "_Label73";
+            this._Label73.Size = new System.Drawing.Size(120, 23);
+            this._Label73.TabIndex = 14;
+            this._Label73.Text = "Meter Capped";
+            //
+            // _cboMeterLocation
+            //
+            this._cboMeterLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboMeterLocation.Location = new System.Drawing.Point(216, 182);
+            this._cboMeterLocation.Name = "_cboMeterLocation";
+            this._cboMeterLocation.Size = new System.Drawing.Size(276, 21);
+            this._cboMeterLocation.TabIndex = 13;
+            //
+            // _Label72
+            //
+            this._Label72.Location = new System.Drawing.Point(16, 185);
+            this._Label72.Name = "_Label72";
+            this._Label72.Size = new System.Drawing.Size(120, 23);
+            this._Label72.TabIndex = 12;
+            this._Label72.Text = "Meter Location";
+            //
+            // _txtAmountCollected
+            //
+            this._txtAmountCollected.Location = new System.Drawing.Point(216, 155);
+            this._txtAmountCollected.Name = "_txtAmountCollected";
+            this._txtAmountCollected.Size = new System.Drawing.Size(276, 21);
+            this._txtAmountCollected.TabIndex = 11;
+            //
+            // _cboPaymentMethod
+            //
+            this._cboPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboPaymentMethod.Location = new System.Drawing.Point(216, 128);
+            this._cboPaymentMethod.Name = "_cboPaymentMethod";
+            this._cboPaymentMethod.Size = new System.Drawing.Size(276, 21);
+            this._cboPaymentMethod.TabIndex = 10;
+            //
+            // _Label44
+            //
+            this._Label44.Location = new System.Drawing.Point(16, 158);
+            this._Label44.Name = "_Label44";
+            this._Label44.Size = new System.Drawing.Size(120, 23);
+            this._Label44.TabIndex = 9;
+            this._Label44.Text = "Amount Collected";
+            //
+            // _Label43
+            //
+            this._Label43.Location = new System.Drawing.Point(16, 131);
+            this._Label43.Name = "_Label43";
+            this._Label43.Size = new System.Drawing.Size(100, 23);
+            this._Label43.TabIndex = 8;
+            this._Label43.Text = "Payment Method";
+            //
+            // _cboPropertyRented
+            //
+            this._cboPropertyRented.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboPropertyRented.Location = new System.Drawing.Point(216, 101);
+            this._cboPropertyRented.Name = "_cboPropertyRented";
+            this._cboPropertyRented.Size = new System.Drawing.Size(276, 21);
+            this._cboPropertyRented.TabIndex = 7;
+            //
+            // _cboBonding
+            //
+            this._cboBonding.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboBonding.Location = new System.Drawing.Point(216, 74);
+            this._cboBonding.Name = "_cboBonding";
+            this._cboBonding.Size = new System.Drawing.Size(276, 21);
+            this._cboBonding.TabIndex = 6;
+            //
+            // _cboEmergencyControlAccessible
+            //
+            this._cboEmergencyControlAccessible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboEmergencyControlAccessible.Location = new System.Drawing.Point(216, 47);
+            this._cboEmergencyControlAccessible.Name = "_cboEmergencyControlAccessible";
+            this._cboEmergencyControlAccessible.Size = new System.Drawing.Size(276, 21);
+            this._cboEmergencyControlAccessible.TabIndex = 5;
+            //
+            // _cboGasInstallationTightnessTest
+            //
+            this._cboGasInstallationTightnessTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboGasInstallationTightnessTest.Location = new System.Drawing.Point(216, 20);
+            this._cboGasInstallationTightnessTest.Name = "_cboGasInstallationTightnessTest";
+            this._cboGasInstallationTightnessTest.Size = new System.Drawing.Size(276, 21);
+            this._cboGasInstallationTightnessTest.TabIndex = 4;
+            //
+            // _Label41
+            //
+            this._Label41.Location = new System.Drawing.Point(16, 104);
+            this._Label41.Name = "_Label41";
+            this._Label41.Size = new System.Drawing.Size(128, 23);
+            this._Label41.TabIndex = 3;
+            this._Label41.Text = "Property Rented";
+            //
+            // _Label40
+            //
+            this._Label40.Location = new System.Drawing.Point(16, 77);
+            this._Label40.Name = "_Label40";
+            this._Label40.Size = new System.Drawing.Size(64, 23);
+            this._Label40.TabIndex = 2;
+            this._Label40.Text = "Bonding";
+            //
+            // _Label8
+            //
+            this._Label8.Location = new System.Drawing.Point(16, 50);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(192, 23);
+            this._Label8.TabIndex = 1;
+            this._Label8.Text = "Emergency Control Accessible";
+            //
+            // _Label7
+            //
+            this._Label7.Location = new System.Drawing.Point(16, 23);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(192, 23);
+            this._Label7.TabIndex = 0;
+            this._Label7.Text = "Gas Installation Tightness Test";
+            //
+            // _tpTimesheets
+            //
+            this._tpTimesheets.Controls.Add(this._grpTimesheets);
+            this._tpTimesheets.Controls.Add(this._txtScheduledTime);
+            this._tpTimesheets.Controls.Add(this._Label10);
+            this._tpTimesheets.Location = new System.Drawing.Point(4, 22);
+            this._tpTimesheets.Name = "_tpTimesheets";
+            this._tpTimesheets.Size = new System.Drawing.Size(1247, 652);
+            this._tpTimesheets.TabIndex = 2;
+            this._tpTimesheets.Text = "Timesheets";
+            this._tpTimesheets.UseVisualStyleBackColor = true;
+            //
+            // _grpTimesheets
+            //
+            this._grpTimesheets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpTimesheets.Controls.Add(this._txtActualTimeSpent);
+            this._grpTimesheets.Controls.Add(this._txtDifference);
+            this._grpTimesheets.Controls.Add(this._txtSORTimeAllowance);
+            this._grpTimesheets.Controls.Add(this._Label52);
+            this._grpTimesheets.Controls.Add(this._Label51);
+            this._grpTimesheets.Controls.Add(this._Label50);
+            this._grpTimesheets.Controls.Add(this._Label22);
+            this._grpTimesheets.Controls.Add(this._cboTimeSheetType);
+            this._grpTimesheets.Controls.Add(this._Label14);
+            this._grpTimesheets.Controls.Add(this._txtComments);
+            this._grpTimesheets.Controls.Add(this._dtpEndDate);
+            this._grpTimesheets.Controls.Add(this._dtpStartDate);
+            this._grpTimesheets.Controls.Add(this._dgTimeSheets);
+            this._grpTimesheets.Controls.Add(this._btnAddTimeSheet);
+            this._grpTimesheets.Controls.Add(this._Label20);
+            this._grpTimesheets.Controls.Add(this._Label21);
+            this._grpTimesheets.Controls.Add(this._btnRemoveTimeSheet);
+            this._grpTimesheets.Location = new System.Drawing.Point(8, 48);
+            this._grpTimesheets.Name = "_grpTimesheets";
+            this._grpTimesheets.Size = new System.Drawing.Size(1231, 598);
+            this._grpTimesheets.TabIndex = 3;
+            this._grpTimesheets.TabStop = false;
+            this._grpTimesheets.Text = "TimeSheets";
+            //
+            // _txtActualTimeSpent
+            //
+            this._txtActualTimeSpent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtActualTimeSpent.Location = new System.Drawing.Point(348, 541);
+            this._txtActualTimeSpent.Name = "_txtActualTimeSpent";
+            this._txtActualTimeSpent.ReadOnly = true;
+            this._txtActualTimeSpent.Size = new System.Drawing.Size(136, 21);
+            this._txtActualTimeSpent.TabIndex = 70;
+            //
+            // _txtDifference
+            //
+            this._txtDifference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtDifference.Location = new System.Drawing.Point(348, 571);
+            this._txtDifference.Name = "_txtDifference";
+            this._txtDifference.ReadOnly = true;
+            this._txtDifference.Size = new System.Drawing.Size(136, 21);
+            this._txtDifference.TabIndex = 72;
+            //
+            // _txtSORTimeAllowance
+            //
+            this._txtSORTimeAllowance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtSORTimeAllowance.Location = new System.Drawing.Point(348, 509);
+            this._txtSORTimeAllowance.Name = "_txtSORTimeAllowance";
+            this._txtSORTimeAllowance.ReadOnly = true;
+            this._txtSORTimeAllowance.Size = new System.Drawing.Size(136, 21);
+            this._txtSORTimeAllowance.TabIndex = 68;
+            //
+            // _Label52
+            //
+            this._Label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label52.AutoSize = true;
+            this._Label52.Location = new System.Drawing.Point(203, 577);
+            this._Label52.Name = "_Label52";
+            this._Label52.Size = new System.Drawing.Size(71, 13);
+            this._Label52.TabIndex = 71;
+            this._Label52.Text = "Difference:";
+            //
+            // _Label51
+            //
+            this._Label51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label51.AutoSize = true;
+            this._Label51.Location = new System.Drawing.Point(203, 544);
+            this._Label51.Name = "_Label51";
+            this._Label51.Size = new System.Drawing.Size(103, 13);
+            this._Label51.TabIndex = 69;
+            this._Label51.Text = "Act. Time Spent:";
+            //
+            // _Label50
+            //
+            this._Label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label50.AutoSize = true;
+            this._Label50.Location = new System.Drawing.Point(203, 512);
+            this._Label50.Name = "_Label50";
+            this._Label50.Size = new System.Drawing.Size(130, 13);
+            this._Label50.TabIndex = 67;
+            this._Label50.Text = "SOR Time Allowance:";
+            //
+            // _Label22
+            //
+            this._Label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label22.Location = new System.Drawing.Point(506, 512);
+            this._Label22.Name = "_Label22";
+            this._Label22.Size = new System.Drawing.Size(72, 23);
+            this._Label22.TabIndex = 66;
+            this._Label22.Text = "Comments";
+            //
+            // _cboTimeSheetType
+            //
+            this._cboTimeSheetType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._cboTimeSheetType.Location = new System.Drawing.Point(46, 509);
+            this._cboTimeSheetType.Name = "_cboTimeSheetType";
+            this._cboTimeSheetType.Size = new System.Drawing.Size(136, 21);
+            this._cboTimeSheetType.TabIndex = 3;
+            //
+            // _Label14
+            //
+            this._Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label14.Location = new System.Drawing.Point(5, 512);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(41, 23);
+            this._Label14.TabIndex = 64;
+            this._Label14.Text = "Type";
+            //
+            // _txtComments
+            //
+            this._txtComments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtComments.Location = new System.Drawing.Point(584, 509);
+            this._txtComments.Multiline = true;
+            this._txtComments.Name = "_txtComments";
+            this._txtComments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtComments.Size = new System.Drawing.Size(404, 83);
+            this._txtComments.TabIndex = 4;
+            //
+            // _dtpEndDate
+            //
+            this._dtpEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._dtpEndDate.CustomFormat = "dd/MM/yyyy HH:mm";
+            this._dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this._dtpEndDate.Location = new System.Drawing.Point(46, 571);
+            this._dtpEndDate.Name = "_dtpEndDate";
+            this._dtpEndDate.Size = new System.Drawing.Size(136, 21);
+            this._dtpEndDate.TabIndex = 2;
+            //
+            // _dtpStartDate
+            //
+            this._dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._dtpStartDate.CustomFormat = "dd/MM/yyyy HH:mm";
+            this._dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this._dtpStartDate.Location = new System.Drawing.Point(46, 540);
+            this._dtpStartDate.Name = "_dtpStartDate";
+            this._dtpStartDate.Size = new System.Drawing.Size(136, 21);
+            this._dtpStartDate.TabIndex = 1;
+            this._dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
+            //
+            // _dgTimeSheets
+            //
+            this._dgTimeSheets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgTimeSheets.DataMember = "";
+            this._dgTimeSheets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgTimeSheets.Location = new System.Drawing.Point(8, 30);
+            this._dgTimeSheets.Name = "_dgTimeSheets";
+            this._dgTimeSheets.Size = new System.Drawing.Size(1215, 466);
+            this._dgTimeSheets.TabIndex = 7;
+            this._dgTimeSheets.TabStop = false;
+            //
+            // _btnAddTimeSheet
+            //
+            this._btnAddTimeSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddTimeSheet.Location = new System.Drawing.Point(1151, 569);
+            this._btnAddTimeSheet.Name = "_btnAddTimeSheet";
+            this._btnAddTimeSheet.Size = new System.Drawing.Size(72, 23);
+            this._btnAddTimeSheet.TabIndex = 5;
+            this._btnAddTimeSheet.Text = "Add";
+            this._btnAddTimeSheet.Click += new System.EventHandler(this.btnAddTimeSheet_Click);
+            //
+            // _Label20
+            //
+            this._Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label20.Location = new System.Drawing.Point(5, 573);
+            this._Label20.Name = "_Label20";
+            this._Label20.Size = new System.Drawing.Size(35, 23);
+            this._Label20.TabIndex = 28;
+            this._Label20.Text = "End";
+            //
+            // _Label21
+            //
+            this._Label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label21.Location = new System.Drawing.Point(5, 544);
+            this._Label21.Name = "_Label21";
+            this._Label21.Size = new System.Drawing.Size(35, 23);
+            this._Label21.TabIndex = 25;
+            this._Label21.Text = "Start Date/Time";
+            //
+            // _btnRemoveTimeSheet
+            //
+            this._btnRemoveTimeSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemoveTimeSheet.Location = new System.Drawing.Point(1151, 534);
+            this._btnRemoveTimeSheet.Name = "_btnRemoveTimeSheet";
+            this._btnRemoveTimeSheet.Size = new System.Drawing.Size(72, 23);
+            this._btnRemoveTimeSheet.TabIndex = 6;
+            this._btnRemoveTimeSheet.Text = "Remove";
+            this._btnRemoveTimeSheet.Click += new System.EventHandler(this.btnRemoveTimeSheet_Click);
+            //
+            // _txtScheduledTime
+            //
+            this._txtScheduledTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtScheduledTime.Location = new System.Drawing.Point(112, 16);
+            this._txtScheduledTime.Name = "_txtScheduledTime";
+            this._txtScheduledTime.ReadOnly = true;
+            this._txtScheduledTime.Size = new System.Drawing.Size(1127, 21);
+            this._txtScheduledTime.TabIndex = 1;
+            //
+            // _Label10
+            //
+            this._Label10.Location = new System.Drawing.Point(8, 16);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(104, 16);
+            this._Label10.TabIndex = 9;
+            this._Label10.Text = "Scheduled time";
+            //
+            // _tpPartsAndProducts
+            //
+            this._tpPartsAndProducts.Controls.Add(this._grpAllocated);
+            this._tpPartsAndProducts.Controls.Add(this._grpUsed);
+            this._tpPartsAndProducts.Location = new System.Drawing.Point(4, 22);
+            this._tpPartsAndProducts.Name = "_tpPartsAndProducts";
+            this._tpPartsAndProducts.Size = new System.Drawing.Size(1247, 652);
+            this._tpPartsAndProducts.TabIndex = 1;
+            this._tpPartsAndProducts.Text = "Parts && Products";
+            this._tpPartsAndProducts.UseVisualStyleBackColor = true;
+            //
+            // _grpAllocated
+            //
+            this._grpAllocated.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpAllocated.Controls.Add(this._btnUnselectAllPPA);
+            this._grpAllocated.Controls.Add(this._btnSelectAllPPA);
+            this._grpAllocated.Controls.Add(this._btnRevertUsed);
+            this._grpAllocated.Controls.Add(this._nudPartAllocatedQty);
+            this._grpAllocated.Controls.Add(this._lblAllocatedQuantity);
+            this._grpAllocated.Controls.Add(this._btnAllUsed);
+            this._grpAllocated.Controls.Add(this._Label35);
+            this._grpAllocated.Controls.Add(this._Panel2);
+            this._grpAllocated.Controls.Add(this._Label34);
+            this._grpAllocated.Controls.Add(this._Panel1);
+            this._grpAllocated.Controls.Add(this._btnAllocatedNotUsed);
+            this._grpAllocated.Controls.Add(this._dgPartsProductsAllocated);
+            this._grpAllocated.Controls.Add(this._lblQuantityWarning);
+            this._grpAllocated.Location = new System.Drawing.Point(8, 8);
+            this._grpAllocated.Name = "_grpAllocated";
+            this._grpAllocated.Size = new System.Drawing.Size(1231, 275);
+            this._grpAllocated.TabIndex = 1;
+            this._grpAllocated.TabStop = false;
+            this._grpAllocated.Text = "Parts && Products Allocated";
+            //
+            // _btnUnselectAllPPA
+            //
+            this._btnUnselectAllPPA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnUnselectAllPPA.Location = new System.Drawing.Point(438, 244);
+            this._btnUnselectAllPPA.Name = "_btnUnselectAllPPA";
+            this._btnUnselectAllPPA.Size = new System.Drawing.Size(98, 23);
+            this._btnUnselectAllPPA.TabIndex = 34;
+            this._btnUnselectAllPPA.Text = "Deselect All";
+            this._btnUnselectAllPPA.Click += new System.EventHandler(this.btnUnselectAllPPA_Click);
+            //
+            // _btnSelectAllPPA
+            //
+            this._btnSelectAllPPA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSelectAllPPA.Location = new System.Drawing.Point(334, 244);
+            this._btnSelectAllPPA.Name = "_btnSelectAllPPA";
+            this._btnSelectAllPPA.Size = new System.Drawing.Size(98, 23);
+            this._btnSelectAllPPA.TabIndex = 33;
+            this._btnSelectAllPPA.Text = "Select All";
+            this._btnSelectAllPPA.Click += new System.EventHandler(this.btnSelectAllPPA_Click);
+            //
+            // _btnRevertUsed
+            //
+            this._btnRevertUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRevertUsed.Location = new System.Drawing.Point(234, 244);
+            this._btnRevertUsed.Name = "_btnRevertUsed";
+            this._btnRevertUsed.Size = new System.Drawing.Size(96, 23);
+            this._btnRevertUsed.TabIndex = 32;
+            this._btnRevertUsed.Text = "Revert Used";
+            this._btnRevertUsed.Click += new System.EventHandler(this.btnRevertUsed_Click);
+            //
+            // _nudPartAllocatedQty
+            //
+            this._nudPartAllocatedQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._nudPartAllocatedQty.Location = new System.Drawing.Point(937, 243);
+            this._nudPartAllocatedQty.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this._nudPartAllocatedQty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this._nudPartAllocatedQty.Name = "_nudPartAllocatedQty";
+            this._nudPartAllocatedQty.Size = new System.Drawing.Size(64, 21);
+            this._nudPartAllocatedQty.TabIndex = 29;
+            this._nudPartAllocatedQty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            //
+            // _lblAllocatedQuantity
+            //
+            this._lblAllocatedQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblAllocatedQuantity.Location = new System.Drawing.Point(873, 243);
+            this._lblAllocatedQuantity.Name = "_lblAllocatedQuantity";
+            this._lblAllocatedQuantity.Size = new System.Drawing.Size(64, 23);
+            this._lblAllocatedQuantity.TabIndex = 30;
+            this._lblAllocatedQuantity.Text = "Quantity";
+            //
+            // _btnAllUsed
+            //
+            this._btnAllUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAllUsed.Location = new System.Drawing.Point(1015, 243);
+            this._btnAllUsed.Name = "_btnAllUsed";
+            this._btnAllUsed.Size = new System.Drawing.Size(96, 23);
+            this._btnAllUsed.TabIndex = 2;
+            this._btnAllUsed.Text = "Used";
+            this._btnAllUsed.Click += new System.EventHandler(this.btnAllUsed_Click);
+            //
+            // _Label35
+            //
+            this._Label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label35.Location = new System.Drawing.Point(160, 249);
+            this._Label35.Name = "_Label35";
+            this._Label35.Size = new System.Drawing.Size(104, 16);
+            this._Label35.TabIndex = 28;
+            this._Label35.Text = "Distributed";
+            //
+            // _Panel2
+            //
+            this._Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel2.BackColor = System.Drawing.Color.Lime;
+            this._Panel2.Location = new System.Drawing.Point(136, 247);
+            this._Panel2.Name = "_Panel2";
+            this._Panel2.Size = new System.Drawing.Size(16, 16);
+            this._Panel2.TabIndex = 27;
+            //
+            // _Label34
+            //
+            this._Label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label34.Location = new System.Drawing.Point(32, 249);
+            this._Label34.Name = "_Label34";
+            this._Label34.Size = new System.Drawing.Size(104, 16);
+            this._Label34.TabIndex = 26;
+            this._Label34.Text = "Not Distributed";
+            //
+            // _Panel1
+            //
+            this._Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel1.BackColor = System.Drawing.Color.Red;
+            this._Panel1.Location = new System.Drawing.Point(8, 246);
+            this._Panel1.Name = "_Panel1";
+            this._Panel1.Size = new System.Drawing.Size(16, 16);
+            this._Panel1.TabIndex = 25;
+            //
+            // _btnAllocatedNotUsed
+            //
+            this._btnAllocatedNotUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAllocatedNotUsed.Location = new System.Drawing.Point(1119, 243);
+            this._btnAllocatedNotUsed.Name = "_btnAllocatedNotUsed";
+            this._btnAllocatedNotUsed.Size = new System.Drawing.Size(96, 23);
+            this._btnAllocatedNotUsed.TabIndex = 3;
+            this._btnAllocatedNotUsed.Text = "Not Used";
+            this._btnAllocatedNotUsed.Click += new System.EventHandler(this.btnAllocatedNotUsed_Click);
+            //
+            // _dgPartsProductsAllocated
+            //
+            this._dgPartsProductsAllocated.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartsProductsAllocated.DataMember = "";
+            this._dgPartsProductsAllocated.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgPartsProductsAllocated.Location = new System.Drawing.Point(8, 18);
+            this._dgPartsProductsAllocated.Name = "_dgPartsProductsAllocated";
+            this._dgPartsProductsAllocated.Size = new System.Drawing.Size(1215, 222);
+            this._dgPartsProductsAllocated.TabIndex = 1;
+            this._dgPartsProductsAllocated.TabStop = false;
+            this._dgPartsProductsAllocated.Click += new System.EventHandler(this.dgPartsProductsAllocated_Click);
+            //
+            // _lblQuantityWarning
+            //
+            this._lblQuantityWarning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblQuantityWarning.AutoSize = true;
+            this._lblQuantityWarning.Location = new System.Drawing.Point(603, 249);
+            this._lblQuantityWarning.Name = "_lblQuantityWarning";
+            this._lblQuantityWarning.Size = new System.Drawing.Size(241, 13);
+            this._lblQuantityWarning.TabIndex = 31;
+            this._lblQuantityWarning.Text = "The quantity ordered will be carried over";
+            this._lblQuantityWarning.Visible = false;
+            //
+            // _grpUsed
+            //
+            this._grpUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpUsed.Controls.Add(this._lblEquipment);
+            this._grpUsed.Controls.Add(this._lblSellPrice);
+            this._grpUsed.Controls.Add(this._dgPartsAndProductsUsed);
+            this._grpUsed.Controls.Add(this._btnAddPartProductUsed);
+            this._grpUsed.Controls.Add(this._nudQuantityUsed);
+            this._grpUsed.Controls.Add(this._txtNameUsed);
+            this._grpUsed.Controls.Add(this._txtNumberUsed);
+            this._grpUsed.Controls.Add(this._Label13);
+            this._grpUsed.Controls.Add(this._Label15);
+            this._grpUsed.Controls.Add(this._Label16);
+            this._grpUsed.Controls.Add(this._btnRemovePartProductUsed);
+            this._grpUsed.Controls.Add(this._btnFindProductUsed);
+            this._grpUsed.Controls.Add(this._btnFindPartUsed);
+            this._grpUsed.Location = new System.Drawing.Point(8, 289);
+            this._grpUsed.Name = "_grpUsed";
+            this._grpUsed.Size = new System.Drawing.Size(1231, 360);
+            this._grpUsed.TabIndex = 2;
+            this._grpUsed.TabStop = false;
+            this._grpUsed.Text = "Parts && Products Used";
+            //
+            // _lblEquipment
+            //
+            this._lblEquipment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblEquipment.Location = new System.Drawing.Point(853, 296);
+            this._lblEquipment.Name = "_lblEquipment";
+            this._lblEquipment.Size = new System.Drawing.Size(100, 23);
+            this._lblEquipment.TabIndex = 24;
+            this._lblEquipment.Text = "Equipment?";
+            this._lblEquipment.Visible = false;
+            //
+            // _lblSellPrice
+            //
+            this._lblSellPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblSellPrice.Location = new System.Drawing.Point(1007, 296);
+            this._lblSellPrice.Name = "_lblSellPrice";
+            this._lblSellPrice.Size = new System.Drawing.Size(100, 23);
+            this._lblSellPrice.TabIndex = 23;
+            this._lblSellPrice.Text = "SELL PRICE";
+            this._lblSellPrice.Visible = false;
+            //
+            // _dgPartsAndProductsUsed
+            //
+            this._dgPartsAndProductsUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartsAndProductsUsed.DataMember = "";
+            this._dgPartsAndProductsUsed.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgPartsAndProductsUsed.Location = new System.Drawing.Point(8, 13);
+            this._dgPartsAndProductsUsed.Name = "_dgPartsAndProductsUsed";
+            this._dgPartsAndProductsUsed.Size = new System.Drawing.Size(1215, 283);
+            this._dgPartsAndProductsUsed.TabIndex = 1;
+            this._dgPartsAndProductsUsed.TabStop = false;
+            //
+            // _btnAddPartProductUsed
+            //
+            this._btnAddPartProductUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddPartProductUsed.Enabled = false;
+            this._btnAddPartProductUsed.Location = new System.Drawing.Point(1119, 328);
+            this._btnAddPartProductUsed.Name = "_btnAddPartProductUsed";
+            this._btnAddPartProductUsed.Size = new System.Drawing.Size(96, 23);
+            this._btnAddPartProductUsed.TabIndex = 5;
+            this._btnAddPartProductUsed.Text = "PICK ITEM";
+            this._btnAddPartProductUsed.Click += new System.EventHandler(this.btnAddPartProduct_Click);
+            //
+            // _nudQuantityUsed
+            //
+            this._nudQuantityUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._nudQuantityUsed.Location = new System.Drawing.Point(1047, 328);
+            this._nudQuantityUsed.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this._nudQuantityUsed.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this._nudQuantityUsed.Name = "_nudQuantityUsed";
+            this._nudQuantityUsed.Size = new System.Drawing.Size(64, 21);
+            this._nudQuantityUsed.TabIndex = 4;
+            this._nudQuantityUsed.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            //
+            // _txtNameUsed
+            //
+            this._txtNameUsed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNameUsed.Location = new System.Drawing.Point(312, 328);
+            this._txtNameUsed.Name = "_txtNameUsed";
+            this._txtNameUsed.ReadOnly = true;
+            this._txtNameUsed.Size = new System.Drawing.Size(671, 21);
+            this._txtNameUsed.TabIndex = 8;
+            //
+            // _txtNumberUsed
+            //
+            this._txtNumberUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtNumberUsed.Location = new System.Drawing.Point(72, 328);
+            this._txtNumberUsed.Name = "_txtNumberUsed";
+            this._txtNumberUsed.ReadOnly = true;
+            this._txtNumberUsed.Size = new System.Drawing.Size(184, 21);
+            this._txtNumberUsed.TabIndex = 7;
+            //
+            // _Label13
+            //
+            this._Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label13.Location = new System.Drawing.Point(983, 328);
+            this._Label13.Name = "_Label13";
+            this._Label13.Size = new System.Drawing.Size(64, 23);
+            this._Label13.TabIndex = 16;
+            this._Label13.Text = "Quantity";
+            //
+            // _Label15
+            //
+            this._Label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label15.Location = new System.Drawing.Point(264, 328);
+            this._Label15.Name = "_Label15";
+            this._Label15.Size = new System.Drawing.Size(64, 23);
+            this._Label15.TabIndex = 15;
+            this._Label15.Text = "Name";
+            //
+            // _Label16
+            //
+            this._Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label16.Location = new System.Drawing.Point(8, 328);
+            this._Label16.Name = "_Label16";
+            this._Label16.Size = new System.Drawing.Size(72, 23);
+            this._Label16.TabIndex = 12;
+            this._Label16.Text = "Number";
+            //
+            // _btnRemovePartProductUsed
+            //
+            this._btnRemovePartProductUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemovePartProductUsed.Location = new System.Drawing.Point(1119, 296);
+            this._btnRemovePartProductUsed.Name = "_btnRemovePartProductUsed";
+            this._btnRemovePartProductUsed.Size = new System.Drawing.Size(96, 23);
+            this._btnRemovePartProductUsed.TabIndex = 6;
+            this._btnRemovePartProductUsed.Text = "Remove";
+            this._btnRemovePartProductUsed.Click += new System.EventHandler(this.btnRemovePartProduct_Click);
+            //
+            // _btnFindProductUsed
+            //
+            this._btnFindProductUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnFindProductUsed.Location = new System.Drawing.Point(104, 296);
+            this._btnFindProductUsed.Name = "_btnFindProductUsed";
+            this._btnFindProductUsed.Size = new System.Drawing.Size(88, 23);
+            this._btnFindProductUsed.TabIndex = 3;
+            this._btnFindProductUsed.Text = "Find Product";
+            this._btnFindProductUsed.Click += new System.EventHandler(this.btnFindProduct_Click);
+            //
+            // _btnFindPartUsed
+            //
+            this._btnFindPartUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnFindPartUsed.Location = new System.Drawing.Point(8, 296);
+            this._btnFindPartUsed.Name = "_btnFindPartUsed";
+            this._btnFindPartUsed.Size = new System.Drawing.Size(88, 23);
+            this._btnFindPartUsed.TabIndex = 2;
+            this._btnFindPartUsed.Text = "Find Part";
+            this._btnFindPartUsed.Click += new System.EventHandler(this.btnFindPart_Click);
+            //
+            // _tpOutcomes
+            //
+            this._tpOutcomes.Controls.Add(this._grpOutcomes);
+            this._tpOutcomes.Location = new System.Drawing.Point(4, 22);
+            this._tpOutcomes.Name = "_tpOutcomes";
+            this._tpOutcomes.Padding = new System.Windows.Forms.Padding(3);
+            this._tpOutcomes.Size = new System.Drawing.Size(1247, 652);
+            this._tpOutcomes.TabIndex = 7;
+            this._tpOutcomes.Text = "Outcomes";
+            this._tpOutcomes.UseVisualStyleBackColor = true;
+            //
+            // _grpOutcomes
+            //
+            this._grpOutcomes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpOutcomes.Controls.Add(this._grpSiteFuels);
+            this._grpOutcomes.Controls.Add(this._cboNccRad);
+            this._grpOutcomes.Controls.Add(this._Label76);
+            this._grpOutcomes.Controls.Add(this._cboRecharge);
+            this._grpOutcomes.Controls.Add(this._Label75);
+            this._grpOutcomes.Controls.Add(this._chkRecharge);
+            this._grpOutcomes.Controls.Add(this._chkGasServiceCompleted);
+            this._grpOutcomes.Location = new System.Drawing.Point(8, 6);
+            this._grpOutcomes.Name = "_grpOutcomes";
+            this._grpOutcomes.Size = new System.Drawing.Size(1231, 640);
+            this._grpOutcomes.TabIndex = 2;
+            this._grpOutcomes.TabStop = false;
+            this._grpOutcomes.Text = "Tick those that have been completed on this visit";
+            //
+            // _grpSiteFuels
+            //
+            this._grpSiteFuels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpSiteFuels.Controls.Add(this._dgSiteFuel);
+            this._grpSiteFuels.Location = new System.Drawing.Point(3, 17);
+            this._grpSiteFuels.Margin = new System.Windows.Forms.Padding(0);
+            this._grpSiteFuels.Name = "_grpSiteFuels";
+            this._grpSiteFuels.Padding = new System.Windows.Forms.Padding(0);
+            this._grpSiteFuels.Size = new System.Drawing.Size(437, 390);
+            this._grpSiteFuels.TabIndex = 15;
+            this._grpSiteFuels.TabStop = false;
+            this._grpSiteFuels.Text = "Site Fuel";
+            //
+            // _dgSiteFuel
+            //
+            this._dgSiteFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgSiteFuel.DataMember = "";
+            this._dgSiteFuel.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSiteFuel.Location = new System.Drawing.Point(5, 19);
+            this._dgSiteFuel.Name = "_dgSiteFuel";
+            this._dgSiteFuel.Size = new System.Drawing.Size(429, 366);
+            this._dgSiteFuel.TabIndex = 11;
+            this._dgSiteFuel.Click += new System.EventHandler(this.dgSiteFuel_Click);
+            //
+            // _cboNccRad
+            //
+            this._cboNccRad.FormattingEnabled = true;
+            this._cboNccRad.Location = new System.Drawing.Point(649, 108);
+            this._cboNccRad.Name = "_cboNccRad";
+            this._cboNccRad.Size = new System.Drawing.Size(180, 21);
+            this._cboNccRad.TabIndex = 9;
+            //
+            // _Label76
+            //
+            this._Label76.AutoSize = true;
+            this._Label76.Location = new System.Drawing.Point(458, 111);
+            this._Label76.Name = "_Label76";
+            this._Label76.Size = new System.Drawing.Size(172, 13);
+            this._Label76.TabIndex = 8;
+            this._Label76.Text = "Ncc Radiator Removal / Refit";
+            //
+            // _cboRecharge
+            //
+            this._cboRecharge.FormattingEnabled = true;
+            this._cboRecharge.Location = new System.Drawing.Point(649, 81);
+            this._cboRecharge.Name = "_cboRecharge";
+            this._cboRecharge.Size = new System.Drawing.Size(180, 21);
+            this._cboRecharge.TabIndex = 7;
+            this._cboRecharge.SelectedIndexChanged += new System.EventHandler(this.cboRecharge_SelectedIndexChanged);
+            //
+            // _Label75
+            //
+            this._Label75.AutoSize = true;
+            this._Label75.Location = new System.Drawing.Point(458, 84);
+            this._Label75.Name = "_Label75";
+            this._Label75.Size = new System.Drawing.Size(83, 13);
+            this._Label75.TabIndex = 6;
+            this._Label75.Text = "Recharge To:";
+            //
+            // _chkRecharge
+            //
+            this._chkRecharge.AutoSize = true;
+            this._chkRecharge.Location = new System.Drawing.Point(458, 59);
+            this._chkRecharge.Name = "_chkRecharge";
+            this._chkRecharge.Size = new System.Drawing.Size(80, 17);
+            this._chkRecharge.TabIndex = 2;
+            this._chkRecharge.Text = "Recharge";
+            this._chkRecharge.UseVisualStyleBackColor = true;
+            this._chkRecharge.CheckedChanged += new System.EventHandler(this.chkRecharge_CheckedChanged);
+            //
+            // _chkGasServiceCompleted
+            //
+            this._chkGasServiceCompleted.AutoSize = true;
+            this._chkGasServiceCompleted.Location = new System.Drawing.Point(458, 36);
+            this._chkGasServiceCompleted.Name = "_chkGasServiceCompleted";
+            this._chkGasServiceCompleted.Size = new System.Drawing.Size(135, 17);
+            this._chkGasServiceCompleted.TabIndex = 1;
+            this._chkGasServiceCompleted.Text = "Service Completed";
+            this._chkGasServiceCompleted.UseVisualStyleBackColor = true;
+            //
+            // _tpQC
+            //
+            this._tpQC.Controls.Add(this._GroupBox4);
+            this._tpQC.Location = new System.Drawing.Point(4, 22);
+            this._tpQC.Name = "_tpQC";
+            this._tpQC.Padding = new System.Windows.Forms.Padding(3);
+            this._tpQC.Size = new System.Drawing.Size(1247, 652);
+            this._tpQC.TabIndex = 8;
+            this._tpQC.Text = "QC";
+            this._tpQC.UseVisualStyleBackColor = true;
+            //
+            // _GroupBox4
+            //
+            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox4.Controls.Add(this._grpQCField);
+            this._GroupBox4.Controls.Add(this._grpOfficeQC);
+            this._GroupBox4.Location = new System.Drawing.Point(8, 0);
+            this._GroupBox4.Name = "_GroupBox4";
+            this._GroupBox4.Size = new System.Drawing.Size(1235, 646);
+            this._GroupBox4.TabIndex = 0;
+            this._GroupBox4.TabStop = false;
+            this._GroupBox4.Text = "QC";
+            //
+            // _grpQCField
+            //
+            this._grpQCField.Controls.Add(this._cboQCCustSig);
+            this._grpQCField.Controls.Add(this._lblQCCustSig);
+            this._grpQCField.Controls.Add(this._cboRecallEngineer);
+            this._grpQCField.Controls.Add(this._Label49);
+            this._grpQCField.Controls.Add(this._cboRecall);
+            this._grpQCField.Controls.Add(this._Label48);
+            this._grpQCField.Controls.Add(this._dtpQCDocumentsRecieved);
+            this._grpQCField.Controls.Add(this._chkQCDocumentsRecieved);
+            this._grpQCField.Controls.Add(this._txtQCPoorJobNotes);
+            this._grpQCField.Controls.Add(this._lblQCPoorJobNotes);
+            this._grpQCField.Controls.Add(this._cboQCEngineerPaymentRecieved);
+            this._grpQCField.Controls.Add(this._lblQCEngineerMonies);
+            this._grpQCField.Controls.Add(this._cboQCPaymentSelection);
+            this._grpQCField.Controls.Add(this._lblQCEngPaymentMethod);
+            this._grpQCField.Controls.Add(this._cboQCAppliance);
+            this._grpQCField.Controls.Add(this._cboQCPaymentCollection);
+            this._grpQCField.Controls.Add(this._lblQCPaymentCollection);
+            this._grpQCField.Controls.Add(this._cboQCJobUploadTimescale);
+            this._grpQCField.Controls.Add(this._lblQCAppliance);
+            this._grpQCField.Controls.Add(this._cboQCParts);
+            this._grpQCField.Controls.Add(this._lblJobUploadTimescale);
+            this._grpQCField.Controls.Add(this._lblQCParts);
+            this._grpQCField.Controls.Add(this._cboQCLGSR);
+            this._grpQCField.Controls.Add(this._lblQCLGSR);
+            this._grpQCField.Controls.Add(this._cboQCLabourTime);
+            this._grpQCField.Controls.Add(this._lblQCLabourTime);
+            this._grpQCField.Location = new System.Drawing.Point(9, 158);
+            this._grpQCField.Name = "_grpQCField";
+            this._grpQCField.Size = new System.Drawing.Size(1220, 342);
+            this._grpQCField.TabIndex = 38;
+            this._grpQCField.TabStop = false;
+            this._grpQCField.Text = "Field";
+            //
+            // _cboQCCustSig
+            //
+            this._cboQCCustSig.FormattingEnabled = true;
+            this._cboQCCustSig.Location = new System.Drawing.Point(251, 198);
+            this._cboQCCustSig.Name = "_cboQCCustSig";
+            this._cboQCCustSig.Size = new System.Drawing.Size(277, 21);
+            this._cboQCCustSig.TabIndex = 84;
+            //
+            // _lblQCCustSig
+            //
+            this._lblQCCustSig.AutoSize = true;
+            this._lblQCCustSig.Location = new System.Drawing.Point(12, 201);
+            this._lblQCCustSig.Name = "_lblQCCustSig";
+            this._lblQCCustSig.Size = new System.Drawing.Size(111, 13);
+            this._lblQCCustSig.TabIndex = 83;
+            this._lblQCCustSig.Text = "Customer Signed:";
+            //
+            // _cboRecallEngineer
+            //
+            this._cboRecallEngineer.FormattingEnabled = true;
+            this._cboRecallEngineer.Location = new System.Drawing.Point(847, 27);
+            this._cboRecallEngineer.Name = "_cboRecallEngineer";
+            this._cboRecallEngineer.Size = new System.Drawing.Size(353, 21);
+            this._cboRecallEngineer.TabIndex = 82;
+            //
+            // _Label49
+            //
+            this._Label49.AutoSize = true;
+            this._Label49.Location = new System.Drawing.Point(584, 27);
+            this._Label49.Name = "_Label49";
+            this._Label49.Size = new System.Drawing.Size(100, 13);
+            this._Label49.TabIndex = 81;
+            this._Label49.Text = "Recall Engineer:";
+            //
+            // _cboRecall
+            //
+            this._cboRecall.FormattingEnabled = true;
+            this._cboRecall.Location = new System.Drawing.Point(251, 24);
+            this._cboRecall.Name = "_cboRecall";
+            this._cboRecall.Size = new System.Drawing.Size(277, 21);
+            this._cboRecall.TabIndex = 80;
+            this._cboRecall.SelectedIndexChanged += new System.EventHandler(this.cboRecall_SelectedIndexChanged);
+            //
+            // _Label48
+            //
+            this._Label48.AutoSize = true;
+            this._Label48.Location = new System.Drawing.Point(12, 27);
+            this._Label48.Name = "_Label48";
+            this._Label48.Size = new System.Drawing.Size(46, 13);
+            this._Label48.TabIndex = 79;
+            this._Label48.Text = "Recall:";
+            //
+            // _dtpQCDocumentsRecieved
+            //
+            this._dtpQCDocumentsRecieved.Location = new System.Drawing.Point(251, 236);
+            this._dtpQCDocumentsRecieved.Name = "_dtpQCDocumentsRecieved";
+            this._dtpQCDocumentsRecieved.Size = new System.Drawing.Size(180, 21);
+            this._dtpQCDocumentsRecieved.TabIndex = 78;
+            this._dtpQCDocumentsRecieved.Visible = false;
+            //
+            // _chkQCDocumentsRecieved
+            //
+            this._chkQCDocumentsRecieved.AutoSize = true;
+            this._chkQCDocumentsRecieved.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._chkQCDocumentsRecieved.Location = new System.Drawing.Point(15, 236);
+            this._chkQCDocumentsRecieved.Name = "_chkQCDocumentsRecieved";
+            this._chkQCDocumentsRecieved.Size = new System.Drawing.Size(164, 17);
+            this._chkQCDocumentsRecieved.TabIndex = 77;
+            this._chkQCDocumentsRecieved.Text = "All documents recieved:";
+            this._chkQCDocumentsRecieved.UseVisualStyleBackColor = true;
+            this._chkQCDocumentsRecieved.CheckedChanged += new System.EventHandler(this.chkQCDocumentsRecieved_CheckedChanged);
+            //
+            // _txtQCPoorJobNotes
+            //
+            this._txtQCPoorJobNotes.Location = new System.Drawing.Point(759, 198);
+            this._txtQCPoorJobNotes.Multiline = true;
+            this._txtQCPoorJobNotes.Name = "_txtQCPoorJobNotes";
+            this._txtQCPoorJobNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtQCPoorJobNotes.Size = new System.Drawing.Size(441, 111);
+            this._txtQCPoorJobNotes.TabIndex = 76;
+            this._txtQCPoorJobNotes.Tag = "";
+            //
+            // _lblQCPoorJobNotes
+            //
+            this._lblQCPoorJobNotes.AutoSize = true;
+            this._lblQCPoorJobNotes.Location = new System.Drawing.Point(584, 198);
+            this._lblQCPoorJobNotes.Name = "_lblQCPoorJobNotes";
+            this._lblQCPoorJobNotes.Size = new System.Drawing.Size(95, 13);
+            this._lblQCPoorJobNotes.TabIndex = 40;
+            this._lblQCPoorJobNotes.Text = "Poor job notes:";
+            //
+            // _cboQCEngineerPaymentRecieved
+            //
+            this._cboQCEngineerPaymentRecieved.FormattingEnabled = true;
+            this._cboQCEngineerPaymentRecieved.Location = new System.Drawing.Point(847, 162);
+            this._cboQCEngineerPaymentRecieved.Name = "_cboQCEngineerPaymentRecieved";
+            this._cboQCEngineerPaymentRecieved.Size = new System.Drawing.Size(353, 21);
+            this._cboQCEngineerPaymentRecieved.TabIndex = 39;
+            //
+            // _lblQCEngineerMonies
+            //
+            this._lblQCEngineerMonies.AutoSize = true;
+            this._lblQCEngineerMonies.Location = new System.Drawing.Point(584, 162);
+            this._lblQCEngineerMonies.Name = "_lblQCEngineerMonies";
+            this._lblQCEngineerMonies.Size = new System.Drawing.Size(251, 13);
+            this._lblQCEngineerMonies.TabIndex = 38;
+            this._lblQCEngineerMonies.Text = "Engineer Cash/Cheque payment recieved:";
+            //
+            // _cboQCPaymentSelection
+            //
+            this._cboQCPaymentSelection.FormattingEnabled = true;
+            this._cboQCPaymentSelection.Location = new System.Drawing.Point(847, 130);
+            this._cboQCPaymentSelection.Name = "_cboQCPaymentSelection";
+            this._cboQCPaymentSelection.Size = new System.Drawing.Size(353, 21);
+            this._cboQCPaymentSelection.TabIndex = 37;
+            //
+            // _lblQCEngPaymentMethod
+            //
+            this._lblQCEngPaymentMethod.AutoSize = true;
+            this._lblQCEngPaymentMethod.Location = new System.Drawing.Point(584, 130);
+            this._lblQCEngPaymentMethod.Name = "_lblQCEngPaymentMethod";
+            this._lblQCEngPaymentMethod.Size = new System.Drawing.Size(207, 13);
+            this._lblQCEngPaymentMethod.TabIndex = 36;
+            this._lblQCEngPaymentMethod.Text = "Correct payment method selected:";
+            //
+            // _cboQCAppliance
+            //
+            this._cboQCAppliance.FormattingEnabled = true;
+            this._cboQCAppliance.Location = new System.Drawing.Point(847, 96);
+            this._cboQCAppliance.Name = "_cboQCAppliance";
+            this._cboQCAppliance.Size = new System.Drawing.Size(353, 21);
+            this._cboQCAppliance.TabIndex = 35;
+            //
+            // _cboQCPaymentCollection
+            //
+            this._cboQCPaymentCollection.FormattingEnabled = true;
+            this._cboQCPaymentCollection.Location = new System.Drawing.Point(251, 159);
+            this._cboQCPaymentCollection.Name = "_cboQCPaymentCollection";
+            this._cboQCPaymentCollection.Size = new System.Drawing.Size(277, 21);
+            this._cboQCPaymentCollection.TabIndex = 16;
+            //
+            // _lblQCPaymentCollection
+            //
+            this._lblQCPaymentCollection.AutoSize = true;
+            this._lblQCPaymentCollection.Location = new System.Drawing.Point(12, 162);
+            this._lblQCPaymentCollection.Name = "_lblQCPaymentCollection";
+            this._lblQCPaymentCollection.Size = new System.Drawing.Size(116, 13);
+            this._lblQCPaymentCollection.TabIndex = 15;
+            this._lblQCPaymentCollection.Text = "Payment collected:";
+            //
+            // _cboQCJobUploadTimescale
+            //
+            this._cboQCJobUploadTimescale.FormattingEnabled = true;
+            this._cboQCJobUploadTimescale.Location = new System.Drawing.Point(251, 127);
+            this._cboQCJobUploadTimescale.Name = "_cboQCJobUploadTimescale";
+            this._cboQCJobUploadTimescale.Size = new System.Drawing.Size(277, 21);
+            this._cboQCJobUploadTimescale.TabIndex = 14;
+            //
+            // _lblQCAppliance
+            //
+            this._lblQCAppliance.AutoSize = true;
+            this._lblQCAppliance.Location = new System.Drawing.Point(584, 96);
+            this._lblQCAppliance.Name = "_lblQCAppliance";
+            this._lblQCAppliance.Size = new System.Drawing.Size(122, 13);
+            this._lblQCAppliance.TabIndex = 34;
+            this._lblQCAppliance.Text = "Appliance recorded:";
+            //
+            // _cboQCParts
+            //
+            this._cboQCParts.FormattingEnabled = true;
+            this._cboQCParts.Location = new System.Drawing.Point(251, 93);
+            this._cboQCParts.Name = "_cboQCParts";
+            this._cboQCParts.Size = new System.Drawing.Size(277, 21);
+            this._cboQCParts.TabIndex = 33;
+            //
+            // _lblJobUploadTimescale
+            //
+            this._lblJobUploadTimescale.AutoSize = true;
+            this._lblJobUploadTimescale.Location = new System.Drawing.Point(12, 130);
+            this._lblJobUploadTimescale.Name = "_lblJobUploadTimescale";
+            this._lblJobUploadTimescale.Size = new System.Drawing.Size(159, 13);
+            this._lblJobUploadTimescale.TabIndex = 13;
+            this._lblJobUploadTimescale.Text = "Job uploaded in timescale:";
+            //
+            // _lblQCParts
+            //
+            this._lblQCParts.AutoSize = true;
+            this._lblQCParts.Location = new System.Drawing.Point(12, 96);
+            this._lblQCParts.Name = "_lblQCParts";
+            this._lblQCParts.Size = new System.Drawing.Size(102, 13);
+            this._lblQCParts.TabIndex = 32;
+            this._lblQCParts.Text = "Parts confirmed:";
+            //
+            // _cboQCLGSR
+            //
+            this._cboQCLGSR.FormattingEnabled = true;
+            this._cboQCLGSR.Location = new System.Drawing.Point(847, 62);
+            this._cboQCLGSR.Name = "_cboQCLGSR";
+            this._cboQCLGSR.Size = new System.Drawing.Size(353, 21);
+            this._cboQCLGSR.TabIndex = 31;
+            //
+            // _lblQCLGSR
+            //
+            this._lblQCLGSR.AutoSize = true;
+            this._lblQCLGSR.Location = new System.Drawing.Point(584, 62);
+            this._lblQCLGSR.Name = "_lblQCLGSR";
+            this._lblQCLGSR.Size = new System.Drawing.Size(90, 13);
+            this._lblQCLGSR.TabIndex = 30;
+            this._lblQCLGSR.Text = "LGSR missing:";
+            //
+            // _cboQCLabourTime
+            //
+            this._cboQCLabourTime.FormattingEnabled = true;
+            this._cboQCLabourTime.Location = new System.Drawing.Point(251, 59);
+            this._cboQCLabourTime.Name = "_cboQCLabourTime";
+            this._cboQCLabourTime.Size = new System.Drawing.Size(277, 21);
+            this._cboQCLabourTime.TabIndex = 29;
+            //
+            // _lblQCLabourTime
+            //
+            this._lblQCLabourTime.AutoSize = true;
+            this._lblQCLabourTime.Location = new System.Drawing.Point(12, 62);
+            this._lblQCLabourTime.Name = "_lblQCLabourTime";
+            this._lblQCLabourTime.Size = new System.Drawing.Size(167, 13);
+            this._lblQCLabourTime.TabIndex = 28;
+            this._lblQCLabourTime.Text = "Labour/Travel time missing:";
+            //
+            // _grpOfficeQC
+            //
+            this._grpOfficeQC.Controls.Add(this._cboQCPaymentMethod);
+            this._grpOfficeQC.Controls.Add(this._lblPaymentMethod);
+            this._grpOfficeQC.Controls.Add(this._cboQCOrderNo);
+            this._grpOfficeQC.Controls.Add(this._lblOrderNo);
+            this._grpOfficeQC.Controls.Add(this._cboQCScheduleOfRate);
+            this._grpOfficeQC.Controls.Add(this._lblScheduleRate);
+            this._grpOfficeQC.Controls.Add(this._cboQCCustomerDetails);
+            this._grpOfficeQC.Controls.Add(this._lblCustomerDetails);
+            this._grpOfficeQC.Controls.Add(this._cboQCJobType);
+            this._grpOfficeQC.Controls.Add(this._lblJobTypeCorrect);
+            this._grpOfficeQC.Controls.Add(this._cboFTFCode);
+            this._grpOfficeQC.Controls.Add(this._Label74);
+            this._grpOfficeQC.Location = new System.Drawing.Point(9, 20);
+            this._grpOfficeQC.Name = "_grpOfficeQC";
+            this._grpOfficeQC.Size = new System.Drawing.Size(1220, 132);
+            this._grpOfficeQC.TabIndex = 30;
+            this._grpOfficeQC.TabStop = false;
+            this._grpOfficeQC.Text = "Office";
+            //
+            // _cboQCPaymentMethod
+            //
+            this._cboQCPaymentMethod.FormattingEnabled = true;
+            this._cboQCPaymentMethod.Location = new System.Drawing.Point(251, 90);
+            this._cboQCPaymentMethod.Name = "_cboQCPaymentMethod";
+            this._cboQCPaymentMethod.Size = new System.Drawing.Size(277, 21);
+            this._cboQCPaymentMethod.TabIndex = 37;
+            //
+            // _lblPaymentMethod
+            //
+            this._lblPaymentMethod.AutoSize = true;
+            this._lblPaymentMethod.Location = new System.Drawing.Point(12, 93);
+            this._lblPaymentMethod.Name = "_lblPaymentMethod";
+            this._lblPaymentMethod.Size = new System.Drawing.Size(158, 13);
+            this._lblPaymentMethod.TabIndex = 36;
+            this._lblPaymentMethod.Text = "Payment method detailed:";
+            //
+            // _cboQCOrderNo
+            //
+            this._cboQCOrderNo.FormattingEnabled = true;
+            this._cboQCOrderNo.Location = new System.Drawing.Point(759, 57);
+            this._cboQCOrderNo.Name = "_cboQCOrderNo";
+            this._cboQCOrderNo.Size = new System.Drawing.Size(441, 21);
+            this._cboQCOrderNo.TabIndex = 35;
+            //
+            // _lblOrderNo
+            //
+            this._lblOrderNo.AutoSize = true;
+            this._lblOrderNo.Location = new System.Drawing.Point(584, 60);
+            this._lblOrderNo.Name = "_lblOrderNo";
+            this._lblOrderNo.Size = new System.Drawing.Size(150, 13);
+            this._lblOrderNo.TabIndex = 34;
+            this._lblOrderNo.Text = "Order number attached: ";
+            //
+            // _cboQCScheduleOfRate
+            //
+            this._cboQCScheduleOfRate.FormattingEnabled = true;
+            this._cboQCScheduleOfRate.Location = new System.Drawing.Point(251, 54);
+            this._cboQCScheduleOfRate.Name = "_cboQCScheduleOfRate";
+            this._cboQCScheduleOfRate.Size = new System.Drawing.Size(277, 21);
+            this._cboQCScheduleOfRate.TabIndex = 33;
+            //
+            // _lblScheduleRate
+            //
+            this._lblScheduleRate.AutoSize = true;
+            this._lblScheduleRate.Location = new System.Drawing.Point(12, 57);
+            this._lblScheduleRate.Name = "_lblScheduleRate";
+            this._lblScheduleRate.Size = new System.Drawing.Size(208, 13);
+            this._lblScheduleRate.TabIndex = 32;
+            this._lblScheduleRate.Text = "Correct schedule of rates selected:";
+            //
+            // _cboQCCustomerDetails
+            //
+            this._cboQCCustomerDetails.FormattingEnabled = true;
+            this._cboQCCustomerDetails.Location = new System.Drawing.Point(759, 20);
+            this._cboQCCustomerDetails.Name = "_cboQCCustomerDetails";
+            this._cboQCCustomerDetails.Size = new System.Drawing.Size(441, 21);
+            this._cboQCCustomerDetails.TabIndex = 31;
+            //
+            // _lblCustomerDetails
+            //
+            this._lblCustomerDetails.AutoSize = true;
+            this._lblCustomerDetails.Location = new System.Drawing.Point(584, 23);
+            this._lblCustomerDetails.Name = "_lblCustomerDetails";
+            this._lblCustomerDetails.Size = new System.Drawing.Size(157, 13);
+            this._lblCustomerDetails.TabIndex = 30;
+            this._lblCustomerDetails.Text = "Correct customer details: ";
+            //
+            // _cboQCJobType
+            //
+            this._cboQCJobType.FormattingEnabled = true;
+            this._cboQCJobType.Location = new System.Drawing.Point(251, 20);
+            this._cboQCJobType.Name = "_cboQCJobType";
+            this._cboQCJobType.Size = new System.Drawing.Size(277, 21);
+            this._cboQCJobType.TabIndex = 29;
+            //
+            // _lblJobTypeCorrect
+            //
+            this._lblJobTypeCorrect.AutoSize = true;
+            this._lblJobTypeCorrect.Location = new System.Drawing.Point(12, 23);
+            this._lblJobTypeCorrect.Name = "_lblJobTypeCorrect";
+            this._lblJobTypeCorrect.Size = new System.Drawing.Size(157, 13);
+            this._lblJobTypeCorrect.TabIndex = 28;
+            this._lblJobTypeCorrect.Text = "Correct job type selected:";
+            //
+            // _cboFTFCode
+            //
+            this._cboFTFCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboFTFCode.FormattingEnabled = true;
+            this._cboFTFCode.Location = new System.Drawing.Point(759, 90);
+            this._cboFTFCode.Name = "_cboFTFCode";
+            this._cboFTFCode.Size = new System.Drawing.Size(441, 21);
+            this._cboFTFCode.TabIndex = 27;
+            //
+            // _Label74
+            //
+            this._Label74.AutoSize = true;
+            this._Label74.Location = new System.Drawing.Point(584, 93);
+            this._Label74.Name = "_Label74";
+            this._Label74.Size = new System.Drawing.Size(65, 13);
+            this._Label74.TabIndex = 26;
+            this._Label74.Text = "FTF Code:";
+            //
+            // _tpCharges
+            //
+            this._tpCharges.Controls.Add(this._gpbInvoice);
+            this._tpCharges.Controls.Add(this._gpbCharges);
+            this._tpCharges.Controls.Add(this._gpbAdditionalCharges);
+            this._tpCharges.Controls.Add(this._gpbPartsAndProducts);
+            this._tpCharges.Controls.Add(this._gpbTimesheets);
+            this._tpCharges.Controls.Add(this._gpbScheduleOfRates);
+            this._tpCharges.Location = new System.Drawing.Point(4, 22);
+            this._tpCharges.Name = "_tpCharges";
+            this._tpCharges.Size = new System.Drawing.Size(1247, 652);
+            this._tpCharges.TabIndex = 4;
+            this._tpCharges.Text = "Visit Charges";
+            this._tpCharges.UseVisualStyleBackColor = true;
+            //
+            // _gpbInvoice
+            //
+            this._gpbInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbInvoice.Controls.Add(this._cboDept);
+            this._gpbInvoice.Controls.Add(this._btnCreateServ);
+            this._gpbInvoice.Controls.Add(this._txtInvAmount);
+            this._gpbInvoice.Controls.Add(this._txtCreditAmount);
+            this._gpbInvoice.Controls.Add(this._txtInvNo);
+            this._gpbInvoice.Controls.Add(this._cboPaidBy);
+            this._gpbInvoice.Controls.Add(this._cboInvType);
+            this._gpbInvoice.Controls.Add(this._cboVATRate);
+            this._gpbInvoice.Controls.Add(this._txtPriceIncVAT);
+            this._gpbInvoice.Controls.Add(this._txtAccountCode);
+            this._gpbInvoice.Controls.Add(this._lblInvoiceAddressDetails);
+            this._gpbInvoice.Controls.Add(this._txtNominalCode);
+            this._gpbInvoice.Controls.Add(this._btnSearch);
+            this._gpbInvoice.Controls.Add(this._dtpRaiseInvoiceOn);
+            this._gpbInvoice.Controls.Add(this._cbxReadyToBeInvoiced);
+            this._gpbInvoice.Controls.Add(this._lblInvAmount);
+            this._gpbInvoice.Controls.Add(this._lblcredit);
+            this._gpbInvoice.Controls.Add(this._lblInvNo);
+            this._gpbInvoice.Controls.Add(this._lblPaidBy);
+            this._gpbInvoice.Controls.Add(this._lblInvType);
+            this._gpbInvoice.Controls.Add(this._lblVAT);
+            this._gpbInvoice.Controls.Add(this._lblNominalCode);
+            this._gpbInvoice.Controls.Add(this._lblAccountCode);
+            this._gpbInvoice.Controls.Add(this._lblPriceInvVAT);
+            this._gpbInvoice.Controls.Add(this._lblDepartment);
+            this._gpbInvoice.Controls.Add(this._lblRaiseInvoiceOn);
+            this._gpbInvoice.Location = new System.Drawing.Point(717, 425);
+            this._gpbInvoice.Name = "_gpbInvoice";
+            this._gpbInvoice.Size = new System.Drawing.Size(522, 221);
+            this._gpbInvoice.TabIndex = 6;
+            this._gpbInvoice.TabStop = false;
+            this._gpbInvoice.Text = "Ready To Be Invoiced";
+            //
+            // _cboDept
+            //
+            this._cboDept.FormattingEnabled = true;
+            this._cboDept.Location = new System.Drawing.Point(315, 26);
+            this._cboDept.Name = "_cboDept";
+            this._cboDept.Size = new System.Drawing.Size(98, 21);
+            this._cboDept.TabIndex = 32;
+            this._cboDept.SelectedIndexChanged += new System.EventHandler(this.cboDept_SelectedIndexChanged);
+            //
+            // _btnCreateServ
+            //
+            this._btnCreateServ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreateServ.Location = new System.Drawing.Point(8, 192);
+            this._btnCreateServ.Name = "_btnCreateServ";
+            this._btnCreateServ.Size = new System.Drawing.Size(159, 23);
+            this._btnCreateServ.TabIndex = 31;
+            this._btnCreateServ.Text = "Create Multiple Services";
+            this._btnCreateServ.Click += new System.EventHandler(this.btnCreateServ_Click);
+            //
+            // _txtInvAmount
+            //
+            this._txtInvAmount.Location = new System.Drawing.Point(340, 190);
+            this._txtInvAmount.Name = "_txtInvAmount";
+            this._txtInvAmount.ReadOnly = true;
+            this._txtInvAmount.Size = new System.Drawing.Size(74, 21);
+            this._txtInvAmount.TabIndex = 27;
+            this._txtInvAmount.Visible = false;
+            //
+            // _txtCreditAmount
+            //
+            this._txtCreditAmount.Location = new System.Drawing.Point(425, 190);
+            this._txtCreditAmount.Name = "_txtCreditAmount";
+            this._txtCreditAmount.ReadOnly = true;
+            this._txtCreditAmount.Size = new System.Drawing.Size(91, 21);
+            this._txtCreditAmount.TabIndex = 25;
+            this._txtCreditAmount.Visible = false;
+            //
+            // _txtInvNo
+            //
+            this._txtInvNo.Location = new System.Drawing.Point(251, 190);
+            this._txtInvNo.Name = "_txtInvNo";
+            this._txtInvNo.ReadOnly = true;
+            this._txtInvNo.Size = new System.Drawing.Size(76, 21);
+            this._txtInvNo.TabIndex = 23;
+            this._txtInvNo.Visible = false;
+            //
+            // _cboPaidBy
+            //
+            this._cboPaidBy.FormattingEnabled = true;
+            this._cboPaidBy.Location = new System.Drawing.Point(249, 106);
+            this._cboPaidBy.Name = "_cboPaidBy";
+            this._cboPaidBy.Size = new System.Drawing.Size(164, 21);
+            this._cboPaidBy.TabIndex = 19;
+            this._cboPaidBy.Visible = false;
+            this._cboPaidBy.SelectedIndexChanged += new System.EventHandler(this.cboPaidBy_SelectedIndexChanged);
+            //
+            // _cboInvType
+            //
+            this._cboInvType.FormattingEnabled = true;
+            this._cboInvType.Location = new System.Drawing.Point(249, 64);
+            this._cboInvType.Name = "_cboInvType";
+            this._cboInvType.Size = new System.Drawing.Size(164, 21);
+            this._cboInvType.TabIndex = 17;
+            this._cboInvType.Visible = false;
+            this._cboInvType.SelectedIndexChanged += new System.EventHandler(this.cboInvType_SelectedIndexChanged);
+            //
+            // _cboVATRate
+            //
+            this._cboVATRate.FormattingEnabled = true;
+            this._cboVATRate.Location = new System.Drawing.Point(425, 63);
+            this._cboVATRate.Name = "_cboVATRate";
+            this._cboVATRate.Size = new System.Drawing.Size(90, 21);
+            this._cboVATRate.TabIndex = 13;
+            this._cboVATRate.Visible = false;
+            this._cboVATRate.SelectedIndexChanged += new System.EventHandler(this.cboVATRate_SelectedIndexChanged);
+            //
+            // _txtPriceIncVAT
+            //
+            this._txtPriceIncVAT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPriceIncVAT.Location = new System.Drawing.Point(425, 106);
+            this._txtPriceIncVAT.Name = "_txtPriceIncVAT";
+            this._txtPriceIncVAT.ReadOnly = true;
+            this._txtPriceIncVAT.Size = new System.Drawing.Size(91, 21);
+            this._txtPriceIncVAT.TabIndex = 3;
+            this._txtPriceIncVAT.Visible = false;
+            //
+            // _txtAccountCode
+            //
+            this._txtAccountCode.Location = new System.Drawing.Point(425, 24);
+            this._txtAccountCode.Name = "_txtAccountCode";
+            this._txtAccountCode.Size = new System.Drawing.Size(91, 21);
+            this._txtAccountCode.TabIndex = 12;
+            this._txtAccountCode.Visible = false;
+            this._txtAccountCode.TextChanged += new System.EventHandler(this.txtAccountCode_TextChanged);
+            //
+            // _lblInvoiceAddressDetails
+            //
+            this._lblInvoiceAddressDetails.Location = new System.Drawing.Point(8, 43);
+            this._lblInvoiceAddressDetails.Name = "_lblInvoiceAddressDetails";
+            this._lblInvoiceAddressDetails.Size = new System.Drawing.Size(231, 127);
+            this._lblInvoiceAddressDetails.TabIndex = 4;
+            this._lblInvoiceAddressDetails.Visible = false;
+            //
+            // _txtNominalCode
+            //
+            this._txtNominalCode.Location = new System.Drawing.Point(249, 24);
+            this._txtNominalCode.Name = "_txtNominalCode";
+            this._txtNominalCode.Size = new System.Drawing.Size(47, 21);
+            this._txtNominalCode.TabIndex = 9;
+            this._txtNominalCode.TextChanged += new System.EventHandler(this.txtNominalCode_TextChanged);
+            //
+            // _btnSearch
+            //
+            this._btnSearch.Location = new System.Drawing.Point(177, 16);
+            this._btnSearch.Name = "_btnSearch";
+            this._btnSearch.Size = new System.Drawing.Size(62, 23);
+            this._btnSearch.TabIndex = 1;
+            this._btnSearch.Text = "Change";
+            this._btnSearch.Visible = false;
+            this._btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            //
+            // _dtpRaiseInvoiceOn
+            //
+            this._dtpRaiseInvoiceOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this._dtpRaiseInvoiceOn.Location = new System.Drawing.Point(425, 148);
+            this._dtpRaiseInvoiceOn.Name = "_dtpRaiseInvoiceOn";
+            this._dtpRaiseInvoiceOn.Size = new System.Drawing.Size(91, 21);
+            this._dtpRaiseInvoiceOn.TabIndex = 6;
+            this._dtpRaiseInvoiceOn.Visible = false;
+            this._dtpRaiseInvoiceOn.ValueChanged += new System.EventHandler(this.dtpRaiseInvoiceOn_ValueChanged);
+            //
+            // _cbxReadyToBeInvoiced
+            //
+            this._cbxReadyToBeInvoiced.Location = new System.Drawing.Point(8, 22);
+            this._cbxReadyToBeInvoiced.Name = "_cbxReadyToBeInvoiced";
+            this._cbxReadyToBeInvoiced.Size = new System.Drawing.Size(180, 16);
+            this._cbxReadyToBeInvoiced.TabIndex = 0;
+            this._cbxReadyToBeInvoiced.Text = "Ready To Be Invoiced To:";
+            this._cbxReadyToBeInvoiced.CheckedChanged += new System.EventHandler(this.cbxReadyToBeInvoiced_CheckedChanged);
+            //
+            // _lblInvAmount
+            //
+            this._lblInvAmount.Location = new System.Drawing.Point(338, 172);
+            this._lblInvAmount.Name = "_lblInvAmount";
+            this._lblInvAmount.Size = new System.Drawing.Size(76, 17);
+            this._lblInvAmount.TabIndex = 28;
+            this._lblInvAmount.Text = "Inv Ex VAT";
+            this._lblInvAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblInvAmount.Visible = false;
+            //
+            // _lblcredit
+            //
+            this._lblcredit.Location = new System.Drawing.Point(420, 173);
+            this._lblcredit.Name = "_lblcredit";
+            this._lblcredit.Size = new System.Drawing.Size(92, 14);
+            this._lblcredit.TabIndex = 26;
+            this._lblcredit.Text = "Credit Ex VAT";
+            this._lblcredit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblcredit.Visible = false;
+            this._lblcredit.Click += new System.EventHandler(this.lblcredit_Click);
+            //
+            // _lblInvNo
+            //
+            this._lblInvNo.Location = new System.Drawing.Point(249, 170);
+            this._lblInvNo.Name = "_lblInvNo";
+            this._lblInvNo.Size = new System.Drawing.Size(91, 17);
+            this._lblInvNo.TabIndex = 24;
+            this._lblInvNo.Text = "Invoice No.";
+            this._lblInvNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblInvNo.Visible = false;
+            //
+            // _lblPaidBy
+            //
+            this._lblPaidBy.Location = new System.Drawing.Point(248, 89);
+            this._lblPaidBy.Name = "_lblPaidBy";
+            this._lblPaidBy.Size = new System.Drawing.Size(130, 17);
+            this._lblPaidBy.TabIndex = 20;
+            this._lblPaidBy.Text = "Paid By";
+            this._lblPaidBy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblPaidBy.Visible = false;
+            //
+            // _lblInvType
+            //
+            this._lblInvType.Location = new System.Drawing.Point(248, 48);
+            this._lblInvType.Name = "_lblInvType";
+            this._lblInvType.Size = new System.Drawing.Size(130, 17);
+            this._lblInvType.TabIndex = 18;
+            this._lblInvType.Text = "Invoice Type";
+            this._lblInvType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblInvType.Visible = false;
+            //
+            // _lblVAT
+            //
+            this._lblVAT.Location = new System.Drawing.Point(420, 48);
+            this._lblVAT.Name = "_lblVAT";
+            this._lblVAT.Size = new System.Drawing.Size(94, 17);
+            this._lblVAT.TabIndex = 14;
+            this._lblVAT.Text = "VAT Rate";
+            this._lblVAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblVAT.Visible = false;
+            //
+            // _lblNominalCode
+            //
+            this._lblNominalCode.Location = new System.Drawing.Point(246, 9);
+            this._lblNominalCode.Name = "_lblNominalCode";
+            this._lblNominalCode.Size = new System.Drawing.Size(60, 14);
+            this._lblNominalCode.TabIndex = 7;
+            this._lblNominalCode.Text = "Nominal";
+            this._lblNominalCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _lblAccountCode
+            //
+            this._lblAccountCode.Location = new System.Drawing.Point(420, 8);
+            this._lblAccountCode.Name = "_lblAccountCode";
+            this._lblAccountCode.Size = new System.Drawing.Size(107, 14);
+            this._lblAccountCode.TabIndex = 11;
+            this._lblAccountCode.Text = "Account Code";
+            this._lblAccountCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblAccountCode.Visible = false;
+            //
+            // _lblPriceInvVAT
+            //
+            this._lblPriceInvVAT.Location = new System.Drawing.Point(420, 87);
+            this._lblPriceInvVAT.Name = "_lblPriceInvVAT";
+            this._lblPriceInvVAT.Size = new System.Drawing.Size(92, 16);
+            this._lblPriceInvVAT.TabIndex = 2;
+            this._lblPriceInvVAT.Text = "Price Inc VAT";
+            this._lblPriceInvVAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblPriceInvVAT.Visible = false;
+            //
+            // _lblDepartment
+            //
+            this._lblDepartment.Location = new System.Drawing.Point(312, 7);
+            this._lblDepartment.Name = "_lblDepartment";
+            this._lblDepartment.Size = new System.Drawing.Size(79, 16);
+            this._lblDepartment.TabIndex = 8;
+            this._lblDepartment.Text = "Cost Centre";
+            this._lblDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _lblRaiseInvoiceOn
+            //
+            this._lblRaiseInvoiceOn.Location = new System.Drawing.Point(423, 130);
+            this._lblRaiseInvoiceOn.Name = "_lblRaiseInvoiceOn";
+            this._lblRaiseInvoiceOn.Size = new System.Drawing.Size(99, 16);
+            this._lblRaiseInvoiceOn.TabIndex = 5;
+            this._lblRaiseInvoiceOn.Text = "Raise Inv Date:";
+            this._lblRaiseInvoiceOn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblRaiseInvoiceOn.Visible = false;
+            //
+            // _gpbCharges
+            //
+            this._gpbCharges.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._gpbCharges.Controls.Add(this._chkShowJobCharges);
+            this._gpbCharges.Controls.Add(this._GroupBox6);
+            this._gpbCharges.Controls.Add(this._lblContractPerVisit);
+            this._gpbCharges.Controls.Add(this._lblOR);
+            this._gpbCharges.Controls.Add(this._Label30);
+            this._gpbCharges.Controls.Add(this._lblQuotePercentageTotal);
+            this._gpbCharges.Controls.Add(this._lblEquals);
+            this._gpbCharges.Controls.Add(this._GroupBox9);
+            this._gpbCharges.Controls.Add(this._lblPercent);
+            this._gpbCharges.Controls.Add(this._txtPercentOfQuote);
+            this._gpbCharges.Controls.Add(this._rdoPercentageOfQuoteValue);
+            this._gpbCharges.Controls.Add(this._txtCharge);
+            this._gpbCharges.Controls.Add(this._rdoChargeOther);
+            this._gpbCharges.Controls.Add(this._rdoJobValue);
+            this._gpbCharges.Controls.Add(this._txtJobValue);
+            this._gpbCharges.Location = new System.Drawing.Point(8, 425);
+            this._gpbCharges.Name = "_gpbCharges";
+            this._gpbCharges.Size = new System.Drawing.Size(603, 221);
+            this._gpbCharges.TabIndex = 3;
+            this._gpbCharges.TabStop = false;
+            this._gpbCharges.Text = "Charges";
+            //
+            // _chkShowJobCharges
+            //
+            this._chkShowJobCharges.AutoSize = true;
+            this._chkShowJobCharges.Location = new System.Drawing.Point(41, 187);
+            this._chkShowJobCharges.Name = "_chkShowJobCharges";
+            this._chkShowJobCharges.Size = new System.Drawing.Size(183, 17);
+            this._chkShowJobCharges.TabIndex = 17;
+            this._chkShowJobCharges.Text = "Show All Charges From Job";
+            this._chkShowJobCharges.UseVisualStyleBackColor = true;
+            this._chkShowJobCharges.CheckedChanged += new System.EventHandler(this.chkShowJobCharges_CheckedChanged);
+            //
+            // _GroupBox6
+            //
+            this._GroupBox6.Controls.Add(this._Label82);
+            this._GroupBox6.Controls.Add(this._Label78);
+            this._GroupBox6.Controls.Add(this._Label77);
+            this._GroupBox6.Controls.Add(this._txtProfitPerc);
+            this._GroupBox6.Controls.Add(this._txtProfit);
+            this._GroupBox6.Controls.Add(this._CostsToOption1);
+            this._GroupBox6.Controls.Add(this._txtCosts);
+            this._GroupBox6.Controls.Add(this._CostsToOption3);
+            this._GroupBox6.Controls.Add(this._txtSale);
+            this._GroupBox6.Controls.Add(this._CostsToOption2);
+            this._GroupBox6.Location = new System.Drawing.Point(8, 93);
+            this._GroupBox6.Name = "_GroupBox6";
+            this._GroupBox6.Size = new System.Drawing.Size(583, 82);
+            this._GroupBox6.TabIndex = 16;
+            this._GroupBox6.TabStop = false;
+            this._GroupBox6.Text = "Costs To:";
+            //
+            // _Label82
+            //
+            this._Label82.Location = new System.Drawing.Point(266, 17);
+            this._Label82.Name = "_Label82";
+            this._Label82.Size = new System.Drawing.Size(101, 16);
+            this._Label82.TabIndex = 23;
+            this._Label82.Text = "Sale";
+            //
+            // _Label78
+            //
+            this._Label78.Location = new System.Drawing.Point(266, 57);
+            this._Label78.Name = "_Label78";
+            this._Label78.Size = new System.Drawing.Size(101, 19);
+            this._Label78.TabIndex = 22;
+            this._Label78.Text = "Profit";
+            //
+            // _Label77
+            //
+            this._Label77.Location = new System.Drawing.Point(266, 36);
+            this._Label77.Name = "_Label77";
+            this._Label77.Size = new System.Drawing.Size(101, 20);
+            this._Label77.TabIndex = 21;
+            this._Label77.Text = "Costs";
+            //
+            // _txtProfitPerc
+            //
+            this._txtProfitPerc.Location = new System.Drawing.Point(501, 57);
+            this._txtProfitPerc.Name = "_txtProfitPerc";
+            this._txtProfitPerc.ReadOnly = true;
+            this._txtProfitPerc.Size = new System.Drawing.Size(76, 21);
+            this._txtProfitPerc.TabIndex = 20;
+            //
+            // _txtProfit
+            //
+            this._txtProfit.Location = new System.Drawing.Point(373, 57);
+            this._txtProfit.Name = "_txtProfit";
+            this._txtProfit.ReadOnly = true;
+            this._txtProfit.Size = new System.Drawing.Size(120, 21);
+            this._txtProfit.TabIndex = 19;
+            //
+            // _CostsToOption1
+            //
+            this._CostsToOption1.AutoSize = true;
+            this._CostsToOption1.Location = new System.Drawing.Point(33, 16);
+            this._CostsToOption1.Name = "_CostsToOption1";
+            this._CostsToOption1.Size = new System.Drawing.Size(74, 17);
+            this._CostsToOption1.TabIndex = 13;
+            this._CostsToOption1.TabStop = true;
+            this._CostsToOption1.Text = "Contract";
+            this._CostsToOption1.UseVisualStyleBackColor = true;
+            this._CostsToOption1.CheckedChanged += new System.EventHandler(this.radioButtonCostsTo_CheckedChanged);
+            //
+            // _txtCosts
+            //
+            this._txtCosts.Location = new System.Drawing.Point(373, 34);
+            this._txtCosts.Name = "_txtCosts";
+            this._txtCosts.ReadOnly = true;
+            this._txtCosts.Size = new System.Drawing.Size(120, 21);
+            this._txtCosts.TabIndex = 18;
+            //
+            // _CostsToOption3
+            //
+            this._CostsToOption3.AutoSize = true;
+            this._CostsToOption3.Location = new System.Drawing.Point(33, 62);
+            this._CostsToOption3.Name = "_CostsToOption3";
+            this._CostsToOption3.Size = new System.Drawing.Size(77, 17);
+            this._CostsToOption3.TabIndex = 15;
+            this._CostsToOption3.TabStop = true;
+            this._CostsToOption3.Text = "Warranty";
+            this._CostsToOption3.UseVisualStyleBackColor = true;
+            this._CostsToOption3.CheckedChanged += new System.EventHandler(this.radioButtonCostsTo_CheckedChanged);
+            //
+            // _txtSale
+            //
+            this._txtSale.Location = new System.Drawing.Point(373, 12);
+            this._txtSale.Name = "_txtSale";
+            this._txtSale.ReadOnly = true;
+            this._txtSale.Size = new System.Drawing.Size(120, 21);
+            this._txtSale.TabIndex = 17;
+            //
+            // _CostsToOption2
+            //
+            this._CostsToOption2.AutoSize = true;
+            this._CostsToOption2.Location = new System.Drawing.Point(33, 39);
+            this._CostsToOption2.Name = "_CostsToOption2";
+            this._CostsToOption2.Size = new System.Drawing.Size(91, 17);
+            this._CostsToOption2.TabIndex = 14;
+            this._CostsToOption2.TabStop = true;
+            this._CostsToOption2.Text = "Chargeable";
+            this._CostsToOption2.UseVisualStyleBackColor = true;
+            this._CostsToOption2.CheckedChanged += new System.EventHandler(this.radioButtonCostsTo_CheckedChanged);
+            //
+            // _lblContractPerVisit
+            //
+            this._lblContractPerVisit.BackColor = System.Drawing.SystemColors.Info;
+            this._lblContractPerVisit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._lblContractPerVisit.Location = new System.Drawing.Point(507, 14);
+            this._lblContractPerVisit.Name = "_lblContractPerVisit";
+            this._lblContractPerVisit.Size = new System.Drawing.Size(85, 56);
+            this._lblContractPerVisit.TabIndex = 3;
+            this._lblContractPerVisit.Text = "Contract Job - Invoicing Per Visit";
+            this._lblContractPerVisit.Visible = false;
+            //
+            // _lblOR
+            //
+            this._lblOR.Location = new System.Drawing.Point(8, 58);
+            this._lblOR.Name = "_lblOR";
+            this._lblOR.Size = new System.Drawing.Size(27, 26);
+            this._lblOR.TabIndex = 5;
+            this._lblOR.Text = "OR";
+            //
+            // _Label30
+            //
+            this._Label30.Location = new System.Drawing.Point(8, 34);
+            this._Label30.Name = "_Label30";
+            this._Label30.Size = new System.Drawing.Size(27, 18);
+            this._Label30.TabIndex = 2;
+            this._Label30.Text = "OR";
+            //
+            // _lblQuotePercentageTotal
+            //
+            this._lblQuotePercentageTotal.Location = new System.Drawing.Point(537, 73);
+            this._lblQuotePercentageTotal.Name = "_lblQuotePercentageTotal";
+            this._lblQuotePercentageTotal.Size = new System.Drawing.Size(34, 16);
+            this._lblQuotePercentageTotal.TabIndex = 11;
+            this._lblQuotePercentageTotal.Text = "N/A";
+            //
+            // _lblEquals
+            //
+            this._lblEquals.Location = new System.Drawing.Point(522, 73);
+            this._lblEquals.Name = "_lblEquals";
+            this._lblEquals.Size = new System.Drawing.Size(24, 16);
+            this._lblEquals.TabIndex = 10;
+            this._lblEquals.Text = "=";
+            //
+            // _GroupBox9
+            //
+            this._GroupBox9.Controls.Add(this._rbStandard);
+            this._GroupBox9.Controls.Add(this._rbSite);
+            this._GroupBox9.Location = new System.Drawing.Point(354, 177);
+            this._GroupBox9.Name = "_GroupBox9";
+            this._GroupBox9.Size = new System.Drawing.Size(238, 31);
+            this._GroupBox9.TabIndex = 83;
+            this._GroupBox9.TabStop = false;
+            this._GroupBox9.Visible = false;
+            //
+            // _rbStandard
+            //
+            this._rbStandard.AutoSize = true;
+            this._rbStandard.Checked = true;
+            this._rbStandard.Location = new System.Drawing.Point(114, 10);
+            this._rbStandard.Name = "_rbStandard";
+            this._rbStandard.Size = new System.Drawing.Size(123, 17);
+            this._rbStandard.TabIndex = 1;
+            this._rbStandard.TabStop = true;
+            this._rbStandard.Text = "Standard Markup";
+            this._rbStandard.UseVisualStyleBackColor = true;
+            //
+            // _rbSite
+            //
+            this._rbSite.AutoSize = true;
+            this._rbSite.Location = new System.Drawing.Point(11, 11);
+            this._rbSite.Name = "_rbSite";
+            this._rbSite.Size = new System.Drawing.Size(95, 17);
+            this._rbSite.TabIndex = 0;
+            this._rbSite.Text = "Site markup";
+            this._rbSite.UseVisualStyleBackColor = true;
+            //
+            // _lblPercent
+            //
+            this._lblPercent.Location = new System.Drawing.Point(506, 73);
+            this._lblPercent.Name = "_lblPercent";
+            this._lblPercent.Size = new System.Drawing.Size(24, 16);
+            this._lblPercent.TabIndex = 9;
+            this._lblPercent.Text = "%";
+            //
+            // _txtPercentOfQuote
+            //
+            this._txtPercentOfQuote.Location = new System.Drawing.Point(381, 69);
+            this._txtPercentOfQuote.Name = "_txtPercentOfQuote";
+            this._txtPercentOfQuote.Size = new System.Drawing.Size(120, 21);
+            this._txtPercentOfQuote.TabIndex = 8;
+            this._txtPercentOfQuote.TextChanged += new System.EventHandler(this.txtPercentOfQuote_TextChanged);
+            //
+            // _rdoPercentageOfQuoteValue
+            //
+            this._rdoPercentageOfQuoteValue.Location = new System.Drawing.Point(41, 66);
+            this._rdoPercentageOfQuoteValue.Name = "_rdoPercentageOfQuoteValue";
+            this._rdoPercentageOfQuoteValue.Size = new System.Drawing.Size(175, 24);
+            this._rdoPercentageOfQuoteValue.TabIndex = 7;
+            this._rdoPercentageOfQuoteValue.Text = "Charge % of Quote Value";
+            this._rdoPercentageOfQuoteValue.CheckedChanged += new System.EventHandler(this.rdoPercentageOfQuoteValue_CheckedChanged);
+            //
+            // _txtCharge
+            //
+            this._txtCharge.Location = new System.Drawing.Point(381, 44);
+            this._txtCharge.Name = "_txtCharge";
+            this._txtCharge.ReadOnly = true;
+            this._txtCharge.Size = new System.Drawing.Size(120, 21);
+            this._txtCharge.TabIndex = 6;
+            //
+            // _rdoChargeOther
+            //
+            this._rdoChargeOther.Location = new System.Drawing.Point(41, 41);
+            this._rdoChargeOther.Name = "_rdoChargeOther";
+            this._rdoChargeOther.Size = new System.Drawing.Size(171, 24);
+            this._rdoChargeOther.TabIndex = 4;
+            this._rdoChargeOther.Text = "Charge Other";
+            this._rdoChargeOther.CheckedChanged += new System.EventHandler(this.rdoChargeOther_CheckedChanged);
+            //
+            // _rdoJobValue
+            //
+            this._rdoJobValue.Location = new System.Drawing.Point(41, 16);
+            this._rdoJobValue.Name = "_rdoJobValue";
+            this._rdoJobValue.Size = new System.Drawing.Size(149, 24);
+            this._rdoJobValue.TabIndex = 0;
+            this._rdoJobValue.Text = "Charge Visit Value";
+            this._rdoJobValue.CheckedChanged += new System.EventHandler(this.rdoJobValue_CheckedChanged);
+            //
+            // _txtJobValue
+            //
+            this._txtJobValue.Location = new System.Drawing.Point(381, 19);
+            this._txtJobValue.Name = "_txtJobValue";
+            this._txtJobValue.ReadOnly = true;
+            this._txtJobValue.Size = new System.Drawing.Size(120, 21);
+            this._txtJobValue.TabIndex = 1;
+            //
+            // _gpbAdditionalCharges
+            //
+            this._gpbAdditionalCharges.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbAdditionalCharges.Controls.Add(this._lblAdditionalCharge);
+            this._gpbAdditionalCharges.Controls.Add(this._btnAddAdditionalCharge);
+            this._gpbAdditionalCharges.Controls.Add(this._txtAdditionalCharge);
+            this._gpbAdditionalCharges.Controls.Add(this._btnRemoveAdditionalCharge);
+            this._gpbAdditionalCharges.Controls.Add(this._txtAdditionalChargeDescription);
+            this._gpbAdditionalCharges.Controls.Add(this._lblDescription);
+            this._gpbAdditionalCharges.Controls.Add(this._txtAdditionalChargeTotal);
+            this._gpbAdditionalCharges.Controls.Add(this._Label29);
+            this._gpbAdditionalCharges.Controls.Add(this._dgAdditionalCharges);
+            this._gpbAdditionalCharges.Location = new System.Drawing.Point(617, 184);
+            this._gpbAdditionalCharges.Name = "_gpbAdditionalCharges";
+            this._gpbAdditionalCharges.Size = new System.Drawing.Size(622, 233);
+            this._gpbAdditionalCharges.TabIndex = 5;
+            this._gpbAdditionalCharges.TabStop = false;
+            this._gpbAdditionalCharges.Text = "Additional Charges";
+            //
+            // _lblAdditionalCharge
+            //
+            this._lblAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblAdditionalCharge.Location = new System.Drawing.Point(8, 206);
+            this._lblAdditionalCharge.Name = "_lblAdditionalCharge";
+            this._lblAdditionalCharge.Size = new System.Drawing.Size(74, 20);
+            this._lblAdditionalCharge.TabIndex = 9;
+            this._lblAdditionalCharge.Text = "Charge";
+            //
+            // _btnAddAdditionalCharge
+            //
+            this._btnAddAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddAdditionalCharge.Location = new System.Drawing.Point(539, 204);
+            this._btnAddAdditionalCharge.Name = "_btnAddAdditionalCharge";
+            this._btnAddAdditionalCharge.Size = new System.Drawing.Size(75, 23);
+            this._btnAddAdditionalCharge.TabIndex = 8;
+            this._btnAddAdditionalCharge.Text = "Add";
+            this._btnAddAdditionalCharge.UseVisualStyleBackColor = true;
+            this._btnAddAdditionalCharge.Click += new System.EventHandler(this.btnAddAdditionalCharge_Click);
+            //
+            // _txtAdditionalCharge
+            //
+            this._txtAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtAdditionalCharge.Location = new System.Drawing.Point(88, 203);
+            this._txtAdditionalCharge.Name = "_txtAdditionalCharge";
+            this._txtAdditionalCharge.Size = new System.Drawing.Size(96, 21);
+            this._txtAdditionalCharge.TabIndex = 7;
+            //
+            // _btnRemoveAdditionalCharge
+            //
+            this._btnRemoveAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveAdditionalCharge.Location = new System.Drawing.Point(8, 129);
+            this._btnRemoveAdditionalCharge.Name = "_btnRemoveAdditionalCharge";
+            this._btnRemoveAdditionalCharge.Size = new System.Drawing.Size(75, 23);
+            this._btnRemoveAdditionalCharge.TabIndex = 1;
+            this._btnRemoveAdditionalCharge.Text = "Remove";
+            this._btnRemoveAdditionalCharge.UseVisualStyleBackColor = true;
+            this._btnRemoveAdditionalCharge.Click += new System.EventHandler(this.btnRemoveAdditionalCharge_Click);
+            //
+            // _txtAdditionalChargeDescription
+            //
+            this._txtAdditionalChargeDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAdditionalChargeDescription.Location = new System.Drawing.Point(88, 157);
+            this._txtAdditionalChargeDescription.Multiline = true;
+            this._txtAdditionalChargeDescription.Name = "_txtAdditionalChargeDescription";
+            this._txtAdditionalChargeDescription.Size = new System.Drawing.Size(526, 40);
+            this._txtAdditionalChargeDescription.TabIndex = 5;
+            //
+            // _lblDescription
+            //
+            this._lblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblDescription.Location = new System.Drawing.Point(8, 161);
+            this._lblDescription.Name = "_lblDescription";
+            this._lblDescription.Size = new System.Drawing.Size(74, 23);
+            this._lblDescription.TabIndex = 4;
+            this._lblDescription.Text = "Description";
+            //
+            // _txtAdditionalChargeTotal
+            //
+            this._txtAdditionalChargeTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAdditionalChargeTotal.Location = new System.Drawing.Point(541, 131);
+            this._txtAdditionalChargeTotal.Name = "_txtAdditionalChargeTotal";
+            this._txtAdditionalChargeTotal.ReadOnly = true;
+            this._txtAdditionalChargeTotal.Size = new System.Drawing.Size(71, 21);
+            this._txtAdditionalChargeTotal.TabIndex = 3;
+            //
+            // _Label29
+            //
+            this._Label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label29.Location = new System.Drawing.Point(492, 131);
+            this._Label29.Name = "_Label29";
+            this._Label29.Size = new System.Drawing.Size(40, 23);
+            this._Label29.TabIndex = 2;
+            this._Label29.Text = "Total";
+            this._Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _dgAdditionalCharges
+            //
+            this._dgAdditionalCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAdditionalCharges.DataMember = "";
+            this._dgAdditionalCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgAdditionalCharges.Location = new System.Drawing.Point(8, 20);
+            this._dgAdditionalCharges.Name = "_dgAdditionalCharges";
+            this._dgAdditionalCharges.Size = new System.Drawing.Size(606, 109);
+            this._dgAdditionalCharges.TabIndex = 0;
+            //
+            // _gpbPartsAndProducts
+            //
+            this._gpbPartsAndProducts.Controls.Add(this._txtPartsMarkUp);
+            this._gpbPartsAndProducts.Controls.Add(this._chkPartsSelectAll);
+            this._gpbPartsAndProducts.Controls.Add(this._txtPartProductCost);
+            this._gpbPartsAndProducts.Controls.Add(this._txtPartsProductTotal);
+            this._gpbPartsAndProducts.Controls.Add(this._Label28);
+            this._gpbPartsAndProducts.Controls.Add(this._lblPPTotalCost);
+            this._gpbPartsAndProducts.Controls.Add(this._lblPartsMarkUp);
+            this._gpbPartsAndProducts.Controls.Add(this._dgPartsProductCharging);
+            this._gpbPartsAndProducts.Location = new System.Drawing.Point(8, 184);
+            this._gpbPartsAndProducts.Name = "_gpbPartsAndProducts";
+            this._gpbPartsAndProducts.Size = new System.Drawing.Size(603, 233);
+            this._gpbPartsAndProducts.TabIndex = 1;
+            this._gpbPartsAndProducts.TabStop = false;
+            this._gpbPartsAndProducts.Text = "Parts && Products";
+            //
+            // _txtPartsMarkUp
+            //
+            this._txtPartsMarkUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartsMarkUp.Enabled = false;
+            this._txtPartsMarkUp.Location = new System.Drawing.Point(405, 203);
+            this._txtPartsMarkUp.Name = "_txtPartsMarkUp";
+            this._txtPartsMarkUp.Size = new System.Drawing.Size(37, 21);
+            this._txtPartsMarkUp.TabIndex = 81;
+            this._txtPartsMarkUp.Visible = false;
+            this._txtPartsMarkUp.Leave += new System.EventHandler(this.txtPartsMarkUp_Leave);
+            //
+            // _chkPartsSelectAll
+            //
+            this._chkPartsSelectAll.AutoCheck = false;
+            this._chkPartsSelectAll.AutoSize = true;
+            this._chkPartsSelectAll.Location = new System.Drawing.Point(6, 205);
+            this._chkPartsSelectAll.Name = "_chkPartsSelectAll";
+            this._chkPartsSelectAll.Size = new System.Drawing.Size(79, 17);
+            this._chkPartsSelectAll.TabIndex = 80;
+            this._chkPartsSelectAll.Text = "Select All";
+            this._chkPartsSelectAll.UseVisualStyleBackColor = true;
+            this._chkPartsSelectAll.Click += new System.EventHandler(this.chkPartsSelectAll_Click);
+            //
+            // _txtPartProductCost
+            //
+            this._txtPartProductCost.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartProductCost.Location = new System.Drawing.Point(252, 203);
+            this._txtPartProductCost.Name = "_txtPartProductCost";
+            this._txtPartProductCost.ReadOnly = true;
+            this._txtPartProductCost.Size = new System.Drawing.Size(71, 21);
+            this._txtPartProductCost.TabIndex = 2;
+            //
+            // _txtPartsProductTotal
+            //
+            this._txtPartsProductTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartsProductTotal.Location = new System.Drawing.Point(525, 202);
+            this._txtPartsProductTotal.Name = "_txtPartsProductTotal";
+            this._txtPartsProductTotal.ReadOnly = true;
+            this._txtPartsProductTotal.Size = new System.Drawing.Size(71, 21);
+            this._txtPartsProductTotal.TabIndex = 4;
+            this._txtPartsProductTotal.Leave += new System.EventHandler(this.txtPartsProductTotal_Leave);
+            //
+            // _Label28
+            //
+            this._Label28.Location = new System.Drawing.Point(448, 202);
+            this._Label28.Name = "_Label28";
+            this._Label28.Size = new System.Drawing.Size(72, 21);
+            this._Label28.TabIndex = 3;
+            this._Label28.Text = "Total Price";
+            this._Label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _lblPPTotalCost
+            //
+            this._lblPPTotalCost.Location = new System.Drawing.Point(174, 203);
+            this._lblPPTotalCost.Name = "_lblPPTotalCost";
+            this._lblPPTotalCost.Size = new System.Drawing.Size(72, 21);
+            this._lblPPTotalCost.TabIndex = 79;
+            this._lblPPTotalCost.Text = "Total Cost";
+            this._lblPPTotalCost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _lblPartsMarkUp
+            //
+            this._lblPartsMarkUp.Location = new System.Drawing.Point(329, 202);
+            this._lblPartsMarkUp.Name = "_lblPartsMarkUp";
+            this._lblPartsMarkUp.Size = new System.Drawing.Size(70, 21);
+            this._lblPartsMarkUp.TabIndex = 82;
+            this._lblPartsMarkUp.Text = "Mark Up %";
+            this._lblPartsMarkUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblPartsMarkUp.Visible = false;
+            //
+            // _dgPartsProductCharging
+            //
+            this._dgPartsProductCharging.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartsProductCharging.DataMember = "";
+            this._dgPartsProductCharging.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgPartsProductCharging.Location = new System.Drawing.Point(9, 16);
+            this._dgPartsProductCharging.Name = "_dgPartsProductCharging";
+            this._dgPartsProductCharging.Size = new System.Drawing.Size(587, 181);
+            this._dgPartsProductCharging.TabIndex = 0;
+            this._dgPartsProductCharging.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgPartsProductCharging_MouseUp);
+            //
+            // _gpbTimesheets
+            //
+            this._gpbTimesheets.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbTimesheets.Controls.Add(this._chkTimesheetSelectAll);
+            this._gpbTimesheets.Controls.Add(this._txtEngineerCostTotal);
+            this._gpbTimesheets.Controls.Add(this._txtTimesheetTotal);
+            this._gpbTimesheets.Controls.Add(this._Label27);
+            this._gpbTimesheets.Controls.Add(this._Label32);
+            this._gpbTimesheets.Controls.Add(this._dgTimesheetCharges);
+            this._gpbTimesheets.Location = new System.Drawing.Point(617, 8);
+            this._gpbTimesheets.Name = "_gpbTimesheets";
+            this._gpbTimesheets.Size = new System.Drawing.Size(622, 170);
+            this._gpbTimesheets.TabIndex = 4;
+            this._gpbTimesheets.TabStop = false;
+            this._gpbTimesheets.Text = "Timesheets";
+            //
+            // _chkTimesheetSelectAll
+            //
+            this._chkTimesheetSelectAll.AutoCheck = false;
+            this._chkTimesheetSelectAll.AutoSize = true;
+            this._chkTimesheetSelectAll.Location = new System.Drawing.Point(6, 142);
+            this._chkTimesheetSelectAll.Name = "_chkTimesheetSelectAll";
+            this._chkTimesheetSelectAll.Size = new System.Drawing.Size(79, 17);
+            this._chkTimesheetSelectAll.TabIndex = 81;
+            this._chkTimesheetSelectAll.Text = "Select All";
+            this._chkTimesheetSelectAll.UseVisualStyleBackColor = true;
+            this._chkTimesheetSelectAll.Click += new System.EventHandler(this.chkTimesheetSelectAll_Click);
+            //
+            // _txtEngineerCostTotal
+            //
+            this._txtEngineerCostTotal.Location = new System.Drawing.Point(382, 140);
+            this._txtEngineerCostTotal.Name = "_txtEngineerCostTotal";
+            this._txtEngineerCostTotal.ReadOnly = true;
+            this._txtEngineerCostTotal.Size = new System.Drawing.Size(71, 21);
+            this._txtEngineerCostTotal.TabIndex = 2;
+            //
+            // _txtTimesheetTotal
+            //
+            this._txtTimesheetTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTimesheetTotal.Location = new System.Drawing.Point(540, 140);
+            this._txtTimesheetTotal.Name = "_txtTimesheetTotal";
+            this._txtTimesheetTotal.ReadOnly = true;
+            this._txtTimesheetTotal.Size = new System.Drawing.Size(71, 21);
+            this._txtTimesheetTotal.TabIndex = 4;
+            this._txtTimesheetTotal.Leave += new System.EventHandler(this.txtTimesheetTotal_Leave);
+            //
+            // _Label27
+            //
+            this._Label27.Location = new System.Drawing.Point(462, 140);
+            this._Label27.Name = "_Label27";
+            this._Label27.Size = new System.Drawing.Size(72, 21);
+            this._Label27.TabIndex = 3;
+            this._Label27.Text = "Total Price";
+            this._Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _Label32
+            //
+            this._Label32.Location = new System.Drawing.Point(308, 139);
+            this._Label32.Name = "_Label32";
+            this._Label32.Size = new System.Drawing.Size(68, 23);
+            this._Label32.TabIndex = 1;
+            this._Label32.Text = "Total Cost";
+            this._Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _dgTimesheetCharges
+            //
+            this._dgTimesheetCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgTimesheetCharges.DataMember = "";
+            this._dgTimesheetCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgTimesheetCharges.Location = new System.Drawing.Point(6, 17);
+            this._dgTimesheetCharges.Name = "_dgTimesheetCharges";
+            this._dgTimesheetCharges.Size = new System.Drawing.Size(606, 118);
+            this._dgTimesheetCharges.TabIndex = 0;
+            this._dgTimesheetCharges.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgTimesheetCharges_MouseUp);
+            //
+            // _gpbScheduleOfRates
+            //
+            this._gpbScheduleOfRates.Controls.Add(this._btnAddSoR);
+            this._gpbScheduleOfRates.Controls.Add(this._txtScheduleOfRatesTotal);
+            this._gpbScheduleOfRates.Controls.Add(this._dgScheduleOfRateCharges);
+            this._gpbScheduleOfRates.Controls.Add(this._Label26);
+            this._gpbScheduleOfRates.Location = new System.Drawing.Point(8, 8);
+            this._gpbScheduleOfRates.Name = "_gpbScheduleOfRates";
+            this._gpbScheduleOfRates.Size = new System.Drawing.Size(603, 170);
+            this._gpbScheduleOfRates.TabIndex = 0;
+            this._gpbScheduleOfRates.TabStop = false;
+            this._gpbScheduleOfRates.Text = "Schedule Of Rates";
+            //
+            // _btnAddSoR
+            //
+            this._btnAddSoR.Location = new System.Drawing.Point(6, 141);
+            this._btnAddSoR.Name = "_btnAddSoR";
+            this._btnAddSoR.Size = new System.Drawing.Size(75, 23);
+            this._btnAddSoR.TabIndex = 1;
+            this._btnAddSoR.Text = "Add";
+            this._btnAddSoR.Click += new System.EventHandler(this.btnAddSoR_Click);
+            //
+            // _txtScheduleOfRatesTotal
+            //
+            this._txtScheduleOfRatesTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtScheduleOfRatesTotal.Location = new System.Drawing.Point(521, 143);
+            this._txtScheduleOfRatesTotal.Name = "_txtScheduleOfRatesTotal";
+            this._txtScheduleOfRatesTotal.ReadOnly = true;
+            this._txtScheduleOfRatesTotal.Size = new System.Drawing.Size(71, 21);
+            this._txtScheduleOfRatesTotal.TabIndex = 3;
+            //
+            // _dgScheduleOfRateCharges
+            //
+            this._dgScheduleOfRateCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgScheduleOfRateCharges.DataMember = "";
+            this._dgScheduleOfRateCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgScheduleOfRateCharges.Location = new System.Drawing.Point(8, 17);
+            this._dgScheduleOfRateCharges.Name = "_dgScheduleOfRateCharges";
+            this._dgScheduleOfRateCharges.Size = new System.Drawing.Size(585, 121);
+            this._dgScheduleOfRateCharges.TabIndex = 0;
+            this._dgScheduleOfRateCharges.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgScheduleOfRateCharges_MouseUp);
+            //
+            // _Label26
+            //
+            this._Label26.Location = new System.Drawing.Point(481, 141);
+            this._Label26.Name = "_Label26";
+            this._Label26.Size = new System.Drawing.Size(39, 23);
+            this._Label26.TabIndex = 2;
+            this._Label26.Text = "Total";
+            this._Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // _tpDocuments
+            //
+            this._tpDocuments.Location = new System.Drawing.Point(4, 22);
+            this._tpDocuments.Name = "_tpDocuments";
+            this._tpDocuments.Size = new System.Drawing.Size(1247, 652);
+            this._tpDocuments.TabIndex = 9;
+            this._tpDocuments.Text = "Documents";
+            this._tpDocuments.UseVisualStyleBackColor = true;
+            //
+            // _tpPhotos
+            //
+            this._tpPhotos.Controls.Add(this._flPhotos);
+            this._tpPhotos.Location = new System.Drawing.Point(4, 22);
+            this._tpPhotos.Name = "_tpPhotos";
+            this._tpPhotos.Size = new System.Drawing.Size(1247, 652);
+            this._tpPhotos.TabIndex = 10;
+            this._tpPhotos.Text = "Photos";
+            this._tpPhotos.UseVisualStyleBackColor = true;
+            this._tpPhotos.Enter += new System.EventHandler(this.tpPhotos_Enter);
+            //
+            // _flPhotos
+            //
+            this._flPhotos.AutoScroll = true;
+            this._flPhotos.AutoSize = true;
+            this._flPhotos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._flPhotos.Location = new System.Drawing.Point(0, 0);
+            this._flPhotos.Name = "_flPhotos";
+            this._flPhotos.Size = new System.Drawing.Size(1247, 652);
+            this._flPhotos.TabIndex = 2;
+            //
+            // _btnClose
+            //
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(8, 750);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(64, 23);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            //
+            // _btnSave
+            //
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Location = new System.Drawing.Point(1183, 750);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(64, 23);
+            this._btnSave.TabIndex = 6;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            //
+            // _cbxVisitLockDown
+            //
+            this._cbxVisitLockDown.BackColor = System.Drawing.SystemColors.Info;
+            this._cbxVisitLockDown.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cbxVisitLockDown.Location = new System.Drawing.Point(8, 32);
+            this._cbxVisitLockDown.Name = "_cbxVisitLockDown";
+            this._cbxVisitLockDown.Size = new System.Drawing.Size(296, 24);
+            this._cbxVisitLockDown.TabIndex = 5;
+            this._cbxVisitLockDown.Text = "Visit locked down and ready for charging";
+            this._cbxVisitLockDown.UseVisualStyleBackColor = false;
+            this._cbxVisitLockDown.CheckedChanged += new System.EventHandler(this.cbxVisitLockDown_CheckedChanged);
+            //
+            // _lblStatusWarning
+            //
+            this._lblStatusWarning.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblStatusWarning.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblStatusWarning.ForeColor = System.Drawing.Color.Red;
+            this._lblStatusWarning.Location = new System.Drawing.Point(312, 32);
+            this._lblStatusWarning.Name = "_lblStatusWarning";
+            this._lblStatusWarning.Size = new System.Drawing.Size(736, 23);
+            this._lblStatusWarning.TabIndex = 6;
+            this._lblStatusWarning.Text = "Reversing this status will result in the lost of charge changes";
+            this._lblStatusWarning.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblStatusWarning.Visible = false;
+            //
+            // _btnOrders
+            //
+            this._btnOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnOrders.Location = new System.Drawing.Point(148, 750);
+            this._btnOrders.Name = "_btnOrders";
+            this._btnOrders.Size = new System.Drawing.Size(64, 23);
+            this._btnOrders.TabIndex = 4;
+            this._btnOrders.Text = "Orders";
+            this._btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
+            //
+            // _btnInvoice
+            //
+            this._btnInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnInvoice.Location = new System.Drawing.Point(289, 750);
+            this._btnInvoice.Name = "_btnInvoice";
+            this._btnInvoice.Size = new System.Drawing.Size(64, 23);
+            this._btnInvoice.TabIndex = 5;
+            this._btnInvoice.Text = "Invoice";
+            this._btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
+            //
+            // _btnPrint
+            //
+            this._btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrint.Location = new System.Drawing.Point(1064, 750);
+            this._btnPrint.Name = "_btnPrint";
+            this._btnPrint.Size = new System.Drawing.Size(103, 23);
+            this._btnPrint.TabIndex = 7;
+            this._btnPrint.Text = "Print QC";
+            this._btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            //
+            // _PrintMenu
+            //
+            this._PrintMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._mnuGasSafetyInspectionBoilerServiceRecord});
+            this._PrintMenu.Name = "PrintMenu";
+            this._PrintMenu.Size = new System.Drawing.Size(302, 26);
+            //
+            // _mnuGasSafetyInspectionBoilerServiceRecord
+            //
+            this._mnuGasSafetyInspectionBoilerServiceRecord.Name = "_mnuGasSafetyInspectionBoilerServiceRecord";
+            this._mnuGasSafetyInspectionBoilerServiceRecord.Size = new System.Drawing.Size(301, 22);
+            this._mnuGasSafetyInspectionBoilerServiceRecord.Text = "Gas Safety Inspection/Boiler Service Record";
+            //
+            // _txtCurrentContract
+            //
+            this._txtCurrentContract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCurrentContract.Location = new System.Drawing.Point(1116, 38);
+            this._txtCurrentContract.Name = "_txtCurrentContract";
+            this._txtCurrentContract.ReadOnly = true;
+            this._txtCurrentContract.Size = new System.Drawing.Size(135, 21);
+            this._txtCurrentContract.TabIndex = 27;
+            //
+            // _Label39
+            //
+            this._Label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label39.Location = new System.Drawing.Point(1054, 39);
+            this._Label39.Name = "_Label39";
+            this._Label39.Size = new System.Drawing.Size(63, 16);
+            this._Label39.TabIndex = 26;
+            this._Label39.Text = "Contract:";
+            //
+            // _btnPrintGSR
+            //
+            this._btnPrintGSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrintGSR.Location = new System.Drawing.Point(1064, 750);
+            this._btnPrintGSR.Name = "_btnPrintGSR";
+            this._btnPrintGSR.Size = new System.Drawing.Size(105, 23);
+            this._btnPrintGSR.TabIndex = 29;
+            this._btnPrintGSR.Text = "Print GSR";
+            this._btnPrintGSR.Click += new System.EventHandler(this.btnPrintGSR_Click);
+            //
+            // _btnPrintSVR
+            //
+            this._btnPrintSVR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrintSVR.Location = new System.Drawing.Point(1057, 750);
+            this._btnPrintSVR.Name = "_btnPrintSVR";
+            this._btnPrintSVR.Size = new System.Drawing.Size(112, 23);
+            this._btnPrintSVR.TabIndex = 30;
+            this._btnPrintSVR.Text = "Print...";
+            this._btnPrintSVR.Click += new System.EventHandler(this.btnPrintSVR_Click);
+            //
+            // _btnJob
+            //
+            this._btnJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnJob.Location = new System.Drawing.Point(78, 750);
+            this._btnJob.Name = "_btnJob";
+            this._btnJob.Size = new System.Drawing.Size(64, 23);
+            this._btnJob.TabIndex = 31;
+            this._btnJob.Text = "Job";
+            this._btnJob.Click += new System.EventHandler(this.btnJob_Click);
+            //
+            // _lblRechargeTicked
+            //
+            this._lblRechargeTicked.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblRechargeTicked.ForeColor = System.Drawing.Color.Red;
+            this._lblRechargeTicked.Location = new System.Drawing.Point(75, 4);
+            this._lblRechargeTicked.Name = "_lblRechargeTicked";
+            this._lblRechargeTicked.Size = new System.Drawing.Size(457, 23);
+            this._lblRechargeTicked.TabIndex = 32;
+            this._lblRechargeTicked.Text = "Recharge is Selected";
+            this._lblRechargeTicked.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblRechargeTicked.Visible = false;
+            //
+            // _btnShowVisits
+            //
+            this._btnShowVisits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnShowVisits.Location = new System.Drawing.Point(687, 750);
+            this._btnShowVisits.Name = "_btnShowVisits";
+            this._btnShowVisits.Size = new System.Drawing.Size(99, 23);
+            this._btnShowVisits.TabIndex = 33;
+            this._btnShowVisits.Text = "Show History";
+            this._btnShowVisits.UseVisualStyleBackColor = true;
+            this._btnShowVisits.Click += new System.EventHandler(this.btnShowVisits_Click);
+            //
+            // _BottomToolStripPanel
+            //
+            this._BottomToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this._BottomToolStripPanel.Name = "_BottomToolStripPanel";
+            this._BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this._BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this._BottomToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            //
+            // _TopToolStripPanel
+            //
+            this._TopToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this._TopToolStripPanel.Name = "_TopToolStripPanel";
+            this._TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this._TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this._TopToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            //
+            // _RightToolStripPanel
+            //
+            this._RightToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this._RightToolStripPanel.Name = "_RightToolStripPanel";
+            this._RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this._RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this._RightToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            //
+            // _LeftToolStripPanel
+            //
+            this._LeftToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this._LeftToolStripPanel.Name = "_LeftToolStripPanel";
+            this._LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this._LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this._LeftToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            //
+            // _ContentPanel
+            //
+            this._ContentPanel.Size = new System.Drawing.Size(150, 150);
+            //
+            // _Button1
+            //
+            this._Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Button1.Location = new System.Drawing.Point(218, 750);
+            this._Button1.Name = "_Button1";
+            this._Button1.Size = new System.Drawing.Size(64, 23);
+            this._Button1.TabIndex = 34;
+            this._Button1.Text = "Cust";
+            this._Button1.Click += new System.EventHandler(this.Button1_Click);
+            //
+            // _txtCustEmail
+            //
+            this._txtCustEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtCustEmail.Location = new System.Drawing.Point(718, 8);
+            this._txtCustEmail.Name = "_txtCustEmail";
+            this._txtCustEmail.ReadOnly = true;
+            this._txtCustEmail.Size = new System.Drawing.Size(533, 14);
+            this._txtCustEmail.TabIndex = 36;
+            //
+            // _SVRs
+            //
+            this._SVRs.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._AllGasPaperworkToolStripMenuItem,
+            this._svrmenu,
+            this._JobSheetMenu,
+            this._DomesticGSRToolStripMenuItem,
+            this._WarningNoticeToolStripMenuItem,
+            this._CommercialGSRToolStripMenuItem,
+            this._QCResultsToolStripMenuItem,
+            this._ElectricalMinorWorksToolStripMenuItem,
+            this._CommercialCateringToolStripMenuItem,
+            this._SaffronUnventedWorkshhetToolStripMenuItem,
+            this._PropertyMaintenanceWorksheetToolStripMenuItem,
+            this._ASHPWorksheetToolStripMenuItem,
+            this._CommissioningChecklistToolStripMenuItem,
+            this._HotWorksPermitToolStripMenuItem});
+            this._SVRs.Name = "SVRs";
+            this._SVRs.Size = new System.Drawing.Size(251, 312);
+            //
+            // _AllGasPaperworkToolStripMenuItem
+            //
+            this._AllGasPaperworkToolStripMenuItem.Name = "_AllGasPaperworkToolStripMenuItem";
+            this._AllGasPaperworkToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._AllGasPaperworkToolStripMenuItem.Text = "All Safety Paperwork";
+            this._AllGasPaperworkToolStripMenuItem.Click += new System.EventHandler(this.AllGasPaperworkToolStripMenuItem_Click);
+            //
+            // _svrmenu
+            //
+            this._svrmenu.Name = "_svrmenu";
+            this._svrmenu.Size = new System.Drawing.Size(250, 22);
+            this._svrmenu.Text = "SVR";
+            this._svrmenu.Click += new System.EventHandler(this.svrmenu_Click);
+            //
+            // _JobSheetMenu
+            //
+            this._JobSheetMenu.Name = "_JobSheetMenu";
+            this._JobSheetMenu.Size = new System.Drawing.Size(250, 22);
+            this._JobSheetMenu.Text = "Job Sheet";
+            this._JobSheetMenu.Click += new System.EventHandler(this.JobSheetMenu_Click);
+            //
+            // _DomesticGSRToolStripMenuItem
+            //
+            this._DomesticGSRToolStripMenuItem.Name = "_DomesticGSRToolStripMenuItem";
+            this._DomesticGSRToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._DomesticGSRToolStripMenuItem.Text = "Domestic LSR";
+            this._DomesticGSRToolStripMenuItem.Click += new System.EventHandler(this.DomesticGSRToolStripMenuItem_Click);
+            //
+            // _WarningNoticeToolStripMenuItem
+            //
+            this._WarningNoticeToolStripMenuItem.Name = "_WarningNoticeToolStripMenuItem";
+            this._WarningNoticeToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._WarningNoticeToolStripMenuItem.Text = "Warning Notice";
+            this._WarningNoticeToolStripMenuItem.Click += new System.EventHandler(this.WarningNoticeToolStripMenuItem_Click);
+            //
+            // _CommercialGSRToolStripMenuItem
+            //
+            this._CommercialGSRToolStripMenuItem.Name = "_CommercialGSRToolStripMenuItem";
+            this._CommercialGSRToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._CommercialGSRToolStripMenuItem.Text = "Commercial LSR";
+            this._CommercialGSRToolStripMenuItem.Click += new System.EventHandler(this.CommercialGSRToolStripMenuItem_Click);
+            //
+            // _QCResultsToolStripMenuItem
+            //
+            this._QCResultsToolStripMenuItem.Name = "_QCResultsToolStripMenuItem";
+            this._QCResultsToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._QCResultsToolStripMenuItem.Text = "QC Results";
+            this._QCResultsToolStripMenuItem.Click += new System.EventHandler(this.QCResultsToolStripMenuItem_Click);
+            //
+            // _ElectricalMinorWorksToolStripMenuItem
+            //
+            this._ElectricalMinorWorksToolStripMenuItem.Name = "_ElectricalMinorWorksToolStripMenuItem";
+            this._ElectricalMinorWorksToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._ElectricalMinorWorksToolStripMenuItem.Text = "Electrical Minor Works";
+            this._ElectricalMinorWorksToolStripMenuItem.Click += new System.EventHandler(this.ElectricalMinorWorksToolStripMenuItem_Click);
+            //
+            // _CommercialCateringToolStripMenuItem
+            //
+            this._CommercialCateringToolStripMenuItem.Name = "_CommercialCateringToolStripMenuItem";
+            this._CommercialCateringToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._CommercialCateringToolStripMenuItem.Text = "Commercial Catering";
+            this._CommercialCateringToolStripMenuItem.Click += new System.EventHandler(this.CommercialCateringToolStripMenuItem_Click);
+            //
+            // _SaffronUnventedWorkshhetToolStripMenuItem
+            //
+            this._SaffronUnventedWorkshhetToolStripMenuItem.Name = "_SaffronUnventedWorkshhetToolStripMenuItem";
+            this._SaffronUnventedWorkshhetToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._SaffronUnventedWorkshhetToolStripMenuItem.Text = "Saffron Unvented Worksheet";
+            this._SaffronUnventedWorkshhetToolStripMenuItem.Click += new System.EventHandler(this.SaffronUnventedWorkshhetToolStripMenuItem_Click);
+            //
+            // _PropertyMaintenanceWorksheetToolStripMenuItem
+            //
+            this._PropertyMaintenanceWorksheetToolStripMenuItem.Name = "_PropertyMaintenanceWorksheetToolStripMenuItem";
+            this._PropertyMaintenanceWorksheetToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._PropertyMaintenanceWorksheetToolStripMenuItem.Text = "Property Maintenance Worksheet";
+            this._PropertyMaintenanceWorksheetToolStripMenuItem.Click += new System.EventHandler(this.PropertyMaintenanceWorksheetToolStripMenuItem_Click);
+            //
+            // _ASHPWorksheetToolStripMenuItem
+            //
+            this._ASHPWorksheetToolStripMenuItem.Name = "_ASHPWorksheetToolStripMenuItem";
+            this._ASHPWorksheetToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._ASHPWorksheetToolStripMenuItem.Text = "Waveney ASHP Worksheet";
+            this._ASHPWorksheetToolStripMenuItem.Click += new System.EventHandler(this.ASHPWorksheetToolStripMenuItem_Click);
+            //
+            // _CommissioningChecklistToolStripMenuItem
+            //
+            this._CommissioningChecklistToolStripMenuItem.Name = "_CommissioningChecklistToolStripMenuItem";
+            this._CommissioningChecklistToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._CommissioningChecklistToolStripMenuItem.Text = "Commissioning Checklist";
+            this._CommissioningChecklistToolStripMenuItem.Click += new System.EventHandler(this.CommissioningChecklistToolStripMenuItem_Click);
+            //
+            // _HotWorksPermitToolStripMenuItem
+            //
+            this._HotWorksPermitToolStripMenuItem.Name = "_HotWorksPermitToolStripMenuItem";
+            this._HotWorksPermitToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this._HotWorksPermitToolStripMenuItem.Text = "Hot Works Permit";
+            this._HotWorksPermitToolStripMenuItem.Click += new System.EventHandler(this.HotWorksPermitToolStripMenuItem_Click);
             //
             // FRMEngineerVisit
             //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1255, 780);
-            Controls.Add(_btnPrintSVR);
-            Controls.Add(_txtCustEmail);
-            Controls.Add(_Button1);
-            Controls.Add(_btnShowVisits);
-            Controls.Add(_lblRechargeTicked);
-            Controls.Add(_btnJob);
-            Controls.Add(_btnPrintGSR);
-            Controls.Add(_txtCurrentContract);
-            Controls.Add(_Label39);
-            Controls.Add(_btnPrint);
-            Controls.Add(_btnInvoice);
-            Controls.Add(_btnOrders);
-            Controls.Add(_lblStatusWarning);
-            Controls.Add(_cbxVisitLockDown);
-            Controls.Add(_btnSave);
-            Controls.Add(_btnClose);
-            Controls.Add(_tcWorkSheet);
-            MinimumSize = new Size(936, 664);
-            Name = "FRMEngineerVisit";
-            Text = "Engineer Visit";
-            Controls.SetChildIndex(_tcWorkSheet, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_cbxVisitLockDown, 0);
-            Controls.SetChildIndex(_lblStatusWarning, 0);
-            Controls.SetChildIndex(_btnOrders, 0);
-            Controls.SetChildIndex(_btnInvoice, 0);
-            Controls.SetChildIndex(_btnPrint, 0);
-            Controls.SetChildIndex(_Label39, 0);
-            Controls.SetChildIndex(_txtCurrentContract, 0);
-            Controls.SetChildIndex(_btnPrintGSR, 0);
-            Controls.SetChildIndex(_btnJob, 0);
-            Controls.SetChildIndex(_lblRechargeTicked, 0);
-            Controls.SetChildIndex(_btnShowVisits, 0);
-            Controls.SetChildIndex(_Button1, 0);
-            Controls.SetChildIndex(_txtCustEmail, 0);
-            Controls.SetChildIndex(_btnPrintSVR, 0);
-            _tcWorkSheet.ResumeLayout(false);
-            _tpMainDetails.ResumeLayout(false);
-            _tpMainDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_pbCustomerSignature).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_pbEngineerSignature).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgJobItems).EndInit();
-            _tpAppliances.ResumeLayout(false);
-            _gpAppliances.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgAssets).EndInit();
-            _tpWorksheets.ResumeLayout(false);
-            _grpAdditionalWorksheet.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgAdditional).EndInit();
-            _grpAlarmInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_DGSmokeComo).EndInit();
-            _grpVisitWorksheetExtended.ResumeLayout(false);
-            _grpVisitWorksheetExtended.PerformLayout();
-            _grpVisitDefects.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgVisitDefects).EndInit();
-            _grpApplianceWorksheet.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgApplianceWorkSheets).EndInit();
-            _grpVisitWorksheet.ResumeLayout(false);
-            _grpVisitWorksheet.PerformLayout();
-            _tpTimesheets.ResumeLayout(false);
-            _tpTimesheets.PerformLayout();
-            _grpTimesheets.ResumeLayout(false);
-            _grpTimesheets.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgTimeSheets).EndInit();
-            _tpPartsAndProducts.ResumeLayout(false);
-            _grpAllocated.ResumeLayout(false);
-            _grpAllocated.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_nudPartAllocatedQty).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsProductsAllocated).EndInit();
-            _grpUsed.ResumeLayout(false);
-            _grpUsed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsAndProductsUsed).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_nudQuantityUsed).EndInit();
-            _tpOutcomes.ResumeLayout(false);
-            _grpOutcomes.ResumeLayout(false);
-            _grpOutcomes.PerformLayout();
-            _grpSiteFuels.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgSiteFuel).EndInit();
-            _tpQC.ResumeLayout(false);
-            _GroupBox4.ResumeLayout(false);
-            _grpQCField.ResumeLayout(false);
-            _grpQCField.PerformLayout();
-            _grpOfficeQC.ResumeLayout(false);
-            _grpOfficeQC.PerformLayout();
-            _tpCharges.ResumeLayout(false);
-            _gpbInvoice.ResumeLayout(false);
-            _gpbInvoice.PerformLayout();
-            _gpbCharges.ResumeLayout(false);
-            _gpbCharges.PerformLayout();
-            _GroupBox6.ResumeLayout(false);
-            _GroupBox6.PerformLayout();
-            _GroupBox9.ResumeLayout(false);
-            _GroupBox9.PerformLayout();
-            _gpbAdditionalCharges.ResumeLayout(false);
-            _gpbAdditionalCharges.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAdditionalCharges).EndInit();
-            _gpbPartsAndProducts.ResumeLayout(false);
-            _gpbPartsAndProducts.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsProductCharging).EndInit();
-            _gpbTimesheets.ResumeLayout(false);
-            _gpbTimesheets.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgTimesheetCharges).EndInit();
-            _gpbScheduleOfRates.ResumeLayout(false);
-            _gpbScheduleOfRates.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgScheduleOfRateCharges).EndInit();
-            _tpPhotos.ResumeLayout(false);
-            _tpPhotos.PerformLayout();
-            _PrintMenu.ResumeLayout(false);
-            _SVRs.ResumeLayout(false);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1255, 780);
+            this.Controls.Add(this._btnPrintSVR);
+            this.Controls.Add(this._txtCustEmail);
+            this.Controls.Add(this._Button1);
+            this.Controls.Add(this._btnShowVisits);
+            this.Controls.Add(this._lblRechargeTicked);
+            this.Controls.Add(this._btnJob);
+            this.Controls.Add(this._btnPrintGSR);
+            this.Controls.Add(this._txtCurrentContract);
+            this.Controls.Add(this._Label39);
+            this.Controls.Add(this._btnPrint);
+            this.Controls.Add(this._btnInvoice);
+            this.Controls.Add(this._btnOrders);
+            this.Controls.Add(this._lblStatusWarning);
+            this.Controls.Add(this._cbxVisitLockDown);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._tcWorkSheet);
+            this.MinimumSize = new System.Drawing.Size(936, 664);
+            this.Name = "FRMEngineerVisit";
+            this.Text = "Engineer Visit";
+
+            this.Controls.SetChildIndex(this._tcWorkSheet, 0);
+            this.Controls.SetChildIndex(this._btnClose, 0);
+            this.Controls.SetChildIndex(this._btnSave, 0);
+            this.Controls.SetChildIndex(this._cbxVisitLockDown, 0);
+            this.Controls.SetChildIndex(this._lblStatusWarning, 0);
+            this.Controls.SetChildIndex(this._btnOrders, 0);
+            this.Controls.SetChildIndex(this._btnInvoice, 0);
+            this.Controls.SetChildIndex(this._btnPrint, 0);
+            this.Controls.SetChildIndex(this._Label39, 0);
+            this.Controls.SetChildIndex(this._txtCurrentContract, 0);
+            this.Controls.SetChildIndex(this._btnPrintGSR, 0);
+            this.Controls.SetChildIndex(this._btnJob, 0);
+            this.Controls.SetChildIndex(this._lblRechargeTicked, 0);
+            this.Controls.SetChildIndex(this._btnShowVisits, 0);
+            this.Controls.SetChildIndex(this._Button1, 0);
+            this.Controls.SetChildIndex(this._txtCustEmail, 0);
+            this.Controls.SetChildIndex(this._btnPrintSVR, 0);
+            this._tcWorkSheet.ResumeLayout(false);
+            this._tpMainDetails.ResumeLayout(false);
+            this._tpMainDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._pbCustomerSignature)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbEngineerSignature)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobItems)).EndInit();
+            this._tpAppliances.ResumeLayout(false);
+            this._gpAppliances.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).EndInit();
+            this._tpWorksheets.ResumeLayout(false);
+            this._grpAdditionalWorksheet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgAdditional)).EndInit();
+            this._grpAlarmInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._DGSmokeComo)).EndInit();
+            this._grpVisitWorksheetExtended.ResumeLayout(false);
+            this._grpVisitWorksheetExtended.PerformLayout();
+            this._grpVisitDefects.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgVisitDefects)).EndInit();
+            this._grpApplianceWorksheet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgApplianceWorkSheets)).EndInit();
+            this._grpVisitWorksheet.ResumeLayout(false);
+            this._grpVisitWorksheet.PerformLayout();
+            this._tpTimesheets.ResumeLayout(false);
+            this._tpTimesheets.PerformLayout();
+            this._grpTimesheets.ResumeLayout(false);
+            this._grpTimesheets.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimeSheets)).EndInit();
+            this._tpPartsAndProducts.ResumeLayout(false);
+            this._grpAllocated.ResumeLayout(false);
+            this._grpAllocated.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._nudPartAllocatedQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductsAllocated)).EndInit();
+            this._grpUsed.ResumeLayout(false);
+            this._grpUsed.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsAndProductsUsed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._nudQuantityUsed)).EndInit();
+            this._tpOutcomes.ResumeLayout(false);
+            this._grpOutcomes.ResumeLayout(false);
+            this._grpOutcomes.PerformLayout();
+            this._grpSiteFuels.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgSiteFuel)).EndInit();
+            this._tpQC.ResumeLayout(false);
+            this._GroupBox4.ResumeLayout(false);
+            this._grpQCField.ResumeLayout(false);
+            this._grpQCField.PerformLayout();
+            this._grpOfficeQC.ResumeLayout(false);
+            this._grpOfficeQC.PerformLayout();
+            this._tpCharges.ResumeLayout(false);
+            this._gpbInvoice.ResumeLayout(false);
+            this._gpbInvoice.PerformLayout();
+            this._gpbCharges.ResumeLayout(false);
+            this._gpbCharges.PerformLayout();
+            this._GroupBox6.ResumeLayout(false);
+            this._GroupBox6.PerformLayout();
+            this._GroupBox9.ResumeLayout(false);
+            this._GroupBox9.PerformLayout();
+            this._gpbAdditionalCharges.ResumeLayout(false);
+            this._gpbAdditionalCharges.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAdditionalCharges)).EndInit();
+            this._gpbPartsAndProducts.ResumeLayout(false);
+            this._gpbPartsAndProducts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductCharging)).EndInit();
+            this._gpbTimesheets.ResumeLayout(false);
+            this._gpbTimesheets.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheetCharges)).EndInit();
+            this._gpbScheduleOfRates.ResumeLayout(false);
+            this._gpbScheduleOfRates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgScheduleOfRateCharges)).EndInit();
+            this._tpPhotos.ResumeLayout(false);
+            this._tpPhotos.PerformLayout();
+            this._PrintMenu.ResumeLayout(false);
+            this._SVRs.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -14654,9 +14740,8 @@ namespace FSM
                     WarningNoticeToolStripMenuItem.Visible = true;
             }
 
-            if (JobLock is null)
-                JobLock = App.DB.JobLock.JobLock(Job.JobID);
-            if (JobLock?.UserID != App.loggedInUser.UserID == true)
+            int jobLockUserId = JobLock?.UserID ?? App.loggedInUser.UserID;
+            if (jobLockUserId != App.loggedInUser.UserID)
             {
                 string message = "The job is currently being viewed by: " + JobLock.NameOfUserWhoLocked;
                 MessageBox.Show(message, "READ ONLY - JOB LOCKED!", MessageBoxButtons.OK, MessageBoxIcon.Information);

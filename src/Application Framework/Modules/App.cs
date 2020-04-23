@@ -178,7 +178,10 @@ namespace FSM
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
+
+
         // Starting point of the application
+        [STAThread]
         public static void Main()
         {
             try

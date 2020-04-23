@@ -936,11 +936,11 @@ namespace FSM
             }
 
             var dtAdded = new DataTable();
-            dtAdded.Columns.Add(new DataColumn("JobItemID"));
-            dtAdded.Columns.Add(new DataColumn("Summary"));
-            dtAdded.Columns.Add(new DataColumn("RateID"));
-            dtAdded.Columns.Add(new DataColumn("Qty"));
-            dtAdded.Columns.Add(new DataColumn("SystemLinkID"));
+            dtAdded.Columns.Add(new DataColumn("JobItemID", typeof(int)));
+            dtAdded.Columns.Add(new DataColumn("Summary", typeof(string)));
+            dtAdded.Columns.Add(new DataColumn("RateID", typeof(int)));
+            dtAdded.Columns.Add(new DataColumn("Qty", typeof(int)));
+            dtAdded.Columns.Add(new DataColumn("SystemLinkID", typeof(int)));
             JobItemsAddedDataView = new DataView(dtAdded);
             if (JobOfWork.JobOfWorkID == 0)
             {

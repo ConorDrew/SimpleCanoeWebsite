@@ -402,13 +402,10 @@ namespace FSM
 
         private void FRMContractOriginal_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            try
+            var type = get_GetParameter(2)?.GetType();
+            if (type == typeof(FRMContractManager))
             {
                 ((FRMContractManager)get_GetParameter(2)).PopulateDatagrid();
-            }
-            catch (Exception ex)
-            {
-                // EMPTY TRY - ALP
             }
         }
 

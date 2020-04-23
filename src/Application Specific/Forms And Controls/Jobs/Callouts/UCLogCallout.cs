@@ -2316,7 +2316,8 @@ namespace FSM
                 chkOTI.Checked = true;
             }
 
-            if (OnForm?.JobLock?.UserID != App.loggedInUser.UserID == true)
+            int jobLockUserId = OnForm?.JobLock?.UserID ?? App.loggedInUser.UserID;
+            if (jobLockUserId != App.loggedInUser.UserID)
             {
                 OnForm.MakeReadOnly();
             }
@@ -2341,7 +2342,7 @@ namespace FSM
                 txtCustomerName.Text += " - " + currentSiteHQ.Address1 + ", " + currentSiteHQ.Address2 + " (Tel: " + currentSiteHQ.TelephoneNum + ")";
             }
 
-            if ((Enums.CustomerStatus)Conversions.ToInteger(Customer.Status) == Enums.CustomerStatus.OnHold)
+            if ((Enums.CustomerStatus)Customer.Status == Enums.CustomerStatus.OnHold)
             {
                 lblOnHold.Visible = true;
             }
@@ -2378,7 +2379,8 @@ namespace FSM
             }
             else
             {
-                txtCurrentContract.Text = currentContract.ContractType + Constants.vbCrLf + ((Enums.ContractStatus)Conversions.ToInteger(currentContract.ContractStatusID)).ToString() + Constants.vbCrLf + "Expires " + Strings.Format(currentContract.ContractEndDate, "dd/MM/yyyy");
+                txtCurrentContract.Text = currentContract.ContractType + Environment.NewLine + ((Enums.ContractStatus)currentContract.ContractStatusID).ToString() + Environment.NewLine +
+                    "Expires " + currentContract.ContractEndDate.ToString("dd/MM/yyyy");
                 if (currentContract.ContractStatusID == Conversions.ToInteger(Enums.ContractStatus.Inactive))
                 {
                     lblContractInactive.Visible = true;

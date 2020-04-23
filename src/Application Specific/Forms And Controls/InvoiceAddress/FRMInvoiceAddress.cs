@@ -200,7 +200,8 @@ namespace FSM
         public void ResetMe(int newID)
         {
             ID = newID;
-            if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(((Form)get_GetParameter(2)).Name, "FRMSelectInvoiceAddress", false)))
+            var type = get_GetParameter(2)?.GetType();
+            if (type == typeof(UCSite))
             {
                 ((UCSite)get_GetParameter(2)).PopulateInvoiceAddresses();
             }

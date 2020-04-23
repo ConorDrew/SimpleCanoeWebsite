@@ -20,7 +20,11 @@ namespace FSM.Entity.Sys
                         try
                         {
                             var propertyInfo = obj.GetType().GetProperty(prop.Name);
-                            propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
+                            // propertyInfo.SetValue(instanceOfT, dataRow[properties.Name], null);
+
+                            object value = row[prop.Name];
+                            object safeValue = value == null || DBNull.Value.Equals(value) ? null : Convert.ChangeType(value, propertyInfo.PropertyType);
+                            propertyInfo.SetValue(obj, safeValue);
                         }
                         catch
                         {

@@ -6080,9 +6080,17 @@ namespace FSM.Entity
                                         {
                                             try
                                             {
-                                                var assetIds = (from r in dtAppliances.AsEnumerable()
-                                                                select r.Field<int>("AssetID")).ToList();
-                                                dtFaults = dvFaults.Table.AsEnumerable().Where((row, index) => assetIds.Contains(Conversions.ToInteger(Helper.MakeStringValid(row["AssetID"])))).CopyToDataTable();
+                                                List<int> assetIds = (from r in dtAppliances.AsEnumerable() select r.Field<int>("AssetID")).ToList();
+                                                var drFaults = dvFaults.Table.AsEnumerable().Where((row, index) => assetIds.Contains((int)row["AssetID"]));
+                                                if (drFaults.Any())
+                                                {
+                                                    dtFaults = drFaults.CopyToDataTable();
+                                                }
+                                                else
+                                                {
+                                                    dtFaults = new DataTable();
+                                                }
+
                                                 try
                                                 {
                                                     var drSiteFaults = dvFaults.Table.Select("AssetID IS NULL OR AssetID = 0");
@@ -6981,6 +6989,7 @@ namespace FSM.Entity
                             }
                             else
                             {
+
                                 foreach (DataRow faultRow in faults.Select(Conversions.ToString("AssetID = " + EngineerVisitAssetWorksheets.Rows[i]["AssetID"])))
                                 {
                                     if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(faultRow["ADDEDTOPRINTOUT"], true, false)))

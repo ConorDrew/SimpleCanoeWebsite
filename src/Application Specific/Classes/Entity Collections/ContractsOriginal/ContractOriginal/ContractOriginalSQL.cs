@@ -1,8 +1,8 @@
-﻿using System;
-using System.Data;
-using FSM.Entity.Sys;
+﻿using FSM.Entity.Sys;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Data;
 
 namespace FSM.Entity
 {
@@ -365,6 +365,7 @@ namespace FSM.Entity
                 {
                     foreach (DataRow i in dtContracts.Rows)
                     {
+                        Enums.InvoiceFrequency invoiceFrequency = (Enums.InvoiceFrequency)i.Field<int>("InvoiceFrequencyID");
                         string PayType = "";
                         if (Information.IsDBNull(i["Type"]))
                         {
@@ -389,7 +390,8 @@ namespace FSM.Entity
                                 i["InvoiceNumber"] = dt.Rows[0]["InvoiceNumber"];
                             }
                         }
-                        else if (Conversions.ToBoolean((PayType ?? "") == "TRANS" | (PayType ?? "") == "AMEND" | (PayType ?? "") == "RENEWAL" & (Operators.ConditionalCompareObjectEqual(i["InvoiceFrequencyID"], Enums.InvoiceFrequency.AnnuallyDD, false) | Operators.ConditionalCompareObjectEqual(i["InvoiceFrequencyID"], Enums.InvoiceFrequency.Monthly, false)) | Operators.ConditionalCompareObjectEqual((Double)i["installments"] % 12, 0, false) & !Operators.ConditionalCompareObjectEqual(i["installments"], 0, false)))
+                        else if (Conversions.ToBoolean((PayType ?? "") == "TRANS" | (PayType ?? "") == "AMEND" | (PayType ?? "") == "RENEWAL" & 
+                            (invoiceFrequency == Enums.InvoiceFrequency.AnnuallyDD | invoiceFrequency == Enums.InvoiceFrequency.Monthly) | (int)i["installments"] % 12 == 0 & (int)i["installments"] != 0))
                         {
                         }
                         // DONT RAISE A FUCKING INVOICE
