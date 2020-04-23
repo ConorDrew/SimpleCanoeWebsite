@@ -7548,6 +7548,7 @@ namespace FSM
         public void PopulateJobs()
         {
             JobsDataView = App.DB.Job.Job_GetTop100_For_Site(CurrentSite.SiteID, CurrentSite.CustomerID);
+
             if (JobsDataView.Count > 0)
                 dgJobs.ContextMenuStrip = cmsJobs;
         }

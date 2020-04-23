@@ -19,6 +19,31 @@ namespace FSM
             // This call is required by the Windows Form Designer.
             InitializeComponent();
 
+            var argc = cboType;
+            Combo.SetUpCombo(ref argc, DynamicDataTables.OrderTypeForSearch, "ValueMember", "DisplayMember", Enums.ComboValues.No_Filter);
+            var argc1 = cboStatus;
+            Combo.SetUpCombo(ref argc1, App.DB.Order.OrderStatus_Get_All().Table, "OrderStatusID", "Name", Enums.ComboValues.No_Filter);
+            var argc2 = cboSupplierInvoiceSent;
+            Combo.SetUpCombo(ref argc2, DynamicDataTables.Yes_No, "ValueMember", "DisplayMember", Enums.ComboValues.No_Filter);
+            var argc3 = cboSupplier;
+            Combo.SetUpCombo(ref argc3, App.DB.Supplier.Supplier_GetAll().Table, "SupplierID", "Name", Enums.ComboValues.No_Filter);
+            switch (true)
+            {
+                case object _ when App.IsGasway:
+                    {
+                        var argc4 = cboDepartment;
+                        Combo.SetUpCombo(ref argc4, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Name", Enums.ComboValues.Please_Select_Negative);
+                        break;
+                    }
+
+                default:
+                    {
+                        var argc5 = cboDepartment;
+                        Combo.SetUpCombo(ref argc5, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Description", Enums.ComboValues.Please_Select_Negative);
+                        break;
+                    }
+            }
+
             // Add any initialization after the InitializeComponent() call
         }
 
@@ -996,7 +1021,7 @@ namespace FSM
             _Label6 = new Label();
             _Label5 = new Label();
             _cboSupplierInvoiceSent = new ComboBox();
-            _cboSupplierInvoiceSent.SelectedIndexChanged += new EventHandler(cboSupplierInvoiceSent_SelectedIndexChanged);
+            //_cboSupplierInvoiceSent.SelectedIndexChanged += new EventHandler(cboSupplierInvoiceSent_SelectedIndexChanged);
             _dtpDeliveryDeadlineTo = new DateTimePicker();
             _dtpDeliveryDeadlineTo.ValueChanged += new EventHandler(dtpDeliveryDeadlineTo_ValueChanged);
             _dtpDeliveryDeadlineFrom = new DateTimePicker();
@@ -1004,7 +1029,7 @@ namespace FSM
             _Label2 = new Label();
             _Label3 = new Label();
             _cboSupplier = new ComboBox();
-            _cboSupplier.SelectedIndexChanged += new EventHandler(cboSupplier_SelectedIndexChanged);
+            //_cboSupplier.SelectedIndexChanged += new EventHandler(cboSupplier_SelectedIndexChanged);
             _Label1 = new Label();
             _btnFindRecord = new Button();
             _btnFindRecord.Click += new EventHandler(btnFindRecord_Click);
@@ -1023,10 +1048,10 @@ namespace FSM
             _lblSearch = new Label();
             _Label10 = new Label();
             _cboType = new ComboBox();
-            _cboType.SelectedIndexChanged += new EventHandler(cboType_SelectedIndexChanged);
+            //_cboType.SelectedIndexChanged += new EventHandler(cboType_SelectedIndexChanged);
             _Label11 = new Label();
             _cboStatus = new ComboBox();
-            _cboStatus.SelectedIndexChanged += new EventHandler(cboStatus_SelectedIndexChanged);
+            //_cboStatus.SelectedIndexChanged += new EventHandler(cboStatus_SelectedIndexChanged);
             _chkDeliveryDeadline = new CheckBox();
             _chkDeliveryDeadline.CheckedChanged += new EventHandler(chkDeliveryDeadline_CheckedChanged);
             _btnReset = new Button();
@@ -1453,30 +1478,6 @@ namespace FSM
         {
             LoadForm(sender, e, this);
             SetupOrdersDataGrid();
-            var argc = cboType;
-            Combo.SetUpCombo(ref argc, DynamicDataTables.OrderTypeForSearch, "ValueMember", "DisplayMember", Enums.ComboValues.No_Filter);
-            var argc1 = cboStatus;
-            Combo.SetUpCombo(ref argc1, App.DB.Order.OrderStatus_Get_All().Table, "OrderStatusID", "Name", Enums.ComboValues.No_Filter);
-            var argc2 = cboSupplierInvoiceSent;
-            Combo.SetUpCombo(ref argc2, DynamicDataTables.Yes_No, "ValueMember", "DisplayMember", Enums.ComboValues.No_Filter);
-            var argc3 = cboSupplier;
-            Combo.SetUpCombo(ref argc3, App.DB.Supplier.Supplier_GetAll().Table, "SupplierID", "Name", Enums.ComboValues.No_Filter);
-            switch (true)
-            {
-                case object _ when App.IsGasway:
-                    {
-                        var argc4 = cboDepartment;
-                        Combo.SetUpCombo(ref argc4, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Name", Enums.ComboValues.Please_Select_Negative);
-                        break;
-                    }
-
-                default:
-                    {
-                        var argc5 = cboDepartment;
-                        Combo.SetUpCombo(ref argc5, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Description", Enums.ComboValues.Please_Select_Negative);
-                        break;
-                    }
-            }
 
             ResetFilters();
             if (get_GetParameter(0) is object)

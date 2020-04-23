@@ -28,7 +28,12 @@ namespace FSM
             LoadForm(sender, e, this);
             var argc = cboTaxCode;
             Combo.SetUpCombo(ref argc, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.VATCodes).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Dashes);
-            PartCreditsID = Conversions.ToInteger(get_GetParameter(0));
+            var paraType = get_GetParameter(0)?.GetType();
+            if (paraType == typeof(int))
+            {
+                PartCreditsID = (int)get_GetParameter(0);
+            }
+
             SetupCreditDataGrid();
         }
 

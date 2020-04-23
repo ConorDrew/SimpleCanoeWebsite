@@ -1302,11 +1302,11 @@ namespace FSM
             int quantityFromLocation = 0;
             if ((MinimumOrRecommended ?? "") == "MinimumQuantity")
             {
-                quantityFromLocation = Conversions.ToInteger((int)row["MinimumQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]);
+                quantityFromLocation = Conversions.ToInteger((int)row["MinimumQuantity"] - (int)row["Amount"] - (int)row["PacksOnOrder"]);
             }
             else if ((MinimumOrRecommended ?? "") == "RecommendedQuantity")
             {
-                quantityFromLocation = Conversions.ToInteger((int)row["RecommendedQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]);
+                quantityFromLocation = Conversions.ToInteger((int)row["RecommendedQuantity"] - (int)row["Amount"] - (int)row["PacksOnOrder"]);
             }
 
             if (quantityFromLocation <= 0)
