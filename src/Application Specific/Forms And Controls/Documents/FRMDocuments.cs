@@ -200,13 +200,11 @@ namespace FSM
         public void ResetMe(int newID)
         {
             ID = newID;
-            // CType(GetParameter(3), UCDocumentsList).Documents = DB.Documents.Documents_GetAll_For_Entity_ID( GetParameter(0), Entity.Sys.Helper.MakeIntegerValid(GetParameter(1)))
-            try
+            var valueType = get_GetParameter(1)?.GetType();
+            var formType = get_GetParameter(3)?.GetType();
+            if (valueType.IsValueType && formType == typeof(UCDocumentsList))
             {
                 ((UCDocumentsList)get_GetParameter(3)).IDToLinkTo = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(1));
-            }
-            catch (Exception ex)
-            {
             }
         }
 

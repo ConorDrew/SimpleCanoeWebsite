@@ -7464,12 +7464,12 @@ namespace FSM
             var dv = new DataView();
             var dt1 = new DataTable();
             dt1.TableName = "1";
-            dt1.Columns.Add("SORID");
-            dt1.Columns.Add("Code");
-            dt1.Columns.Add("Description");
-            dt1.Columns.Add("Qty");
-            dt1.Columns.Add("TimeInMins");
-            dt1.Columns.Add("Price");
+            dt1.Columns.Add("SORID", typeof(int));
+            dt1.Columns.Add("Code", typeof(string));
+            dt1.Columns.Add("Description", typeof(string));
+            dt1.Columns.Add("Qty", typeof(decimal));
+            dt1.Columns.Add("TimeInMins", typeof(int));
+            dt1.Columns.Add("Price", typeof(decimal));
             dv.Table = dt1;
             SORDataView = dv;
             DGSOR.DataSource = dt1;
@@ -8772,11 +8772,11 @@ namespace FSM
                 case "SOR":
                     {
                         // SOR BASED Call
-                        double cost = 0;
+                        decimal cost = 0;
                         foreach (DataGridViewRow dr in DGSOR.Rows)
                         {
                             time += (int)dr.Cells["TimeInMins"].Value;
-                            cost += (double)dr.Cells["Price"].Value;
+                            cost += (decimal)dr.Cells["Price"].Value;
                         }
 
                         var switchExpr5 = c.CustomerTypeID;
