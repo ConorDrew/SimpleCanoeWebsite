@@ -1,5 +1,10 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using LinqToExcel;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -7,10 +12,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using LinqToExcel;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1182,37 +1183,6 @@ namespace FSM
             }
         }
 
-        private void KillInstances(Microsoft.Office.Interop.Excel.Application app)
-        {
-            /*TODO, CHeck trycatch - Conor
-             */
-            app.Quit();
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
-            app = null;
-            GC.Collect();
-            var mp = Process.GetProcessesByName("EXCEL");
-            foreach (var p in mp)
-            {
-                try
-                {
-                    if (p.Responding)
-                    {
-                        if (string.IsNullOrEmpty(p.MainWindowTitle))
-                        {
-                            p.Kill();
-                        }
-                    }
-                    else
-                    {
-                        p.Kill();
-                    }
-                }
-                catch
-                {
-                }
-            };
-        }
-
         public void MoveProgressOn(bool toMaximum = false)
         {
             if (toMaximum)
@@ -1228,13 +1198,7 @@ namespace FSM
 
             Application.DoEvents();
         }
-
-        public void SetLastPartAttempted(string PartCode)
-        {
-            lblMessages.Visible = true;
-            lblMessages.Text = PartCode;
-        }
-
+        
         private void Import()
         {
             if (Supplier is null || !Supplier.Exists)
@@ -1262,7 +1226,6 @@ namespace FSM
                 return;
             }
 
-            Microsoft.Office.Interop.Excel.Application oExcel = null;
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
@@ -1275,14 +1238,14 @@ namespace FSM
                 var excel = new ExcelQueryFactory(File.FullName);
                 object obj = from a in excel.Worksheet("Upload Template")
                              select a;
-                object columnNames = excel.GetColumnNames("Upload Template");
+                List<string> columnNames = excel.GetColumnNames("Upload Template").ToList();
                 var data = new DataTable();
-                foreach (DataColumn columnName in (IEnumerable)columnNames)
+                foreach (string columnName in columnNames)
                     data.Columns.Add(columnName);
                 foreach (Row rr in (IEnumerable)obj)
                 {
                     var dr = data.NewRow();
-                    foreach (int columnName in (IEnumerable)columnNames)
+                    foreach (string columnName in columnNames)
                         dr[columnName] = rr[columnName];
                     data.Rows.Add(dr);
                 }
@@ -1342,7 +1305,7 @@ namespace FSM
                     lblMessages.Text = "Adding part " + (i + 1) + " of " + data.Rows.Count + " from file.";
                     lblMessages.Visible = true;
                     dt.Rows.Add(new object[] { supplierId, mpn, description, spn, netPrice, pfhPrice, category });
-                nextrow:
+                    nextrow:
                     ;
                     MoveProgressOn();
                 }
@@ -1359,7 +1322,6 @@ namespace FSM
             finally
             {
                 MoveProgressOn(true);
-                KillInstances(oExcel);
                 if (success)
                 {
                     try

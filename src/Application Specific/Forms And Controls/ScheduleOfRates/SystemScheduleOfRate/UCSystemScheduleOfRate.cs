@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1996,6 +1996,9 @@ namespace FSM
 
         private void btnSaveEngineerQual_Click(object sender, EventArgs e)
         {
+            if (EngineerQualSOR == null)
+                return;
+
             App.DB.SystemScheduleOfRate.SOREnginerQual_Delete(EngineerQualSOR.SystemScheduleOfRateID);
             foreach (DataRow dr in EngineerQualsDataview.Table.Rows)
             {

@@ -2956,7 +2956,7 @@
     <None Include="Release Notes\18.06.22_RN.txt" />
     <None Include="Release Notes\18.07.19_RN.txt" />
     <Content Include="flagship.ico" />
-    <None Include="Release Notes\18.09.25_RN.txt" />
+    <EmbeddedResource Include="Release Notes\18.09.25_RN.txt" />
     <None Include="Release Notes\18.11.27_RN.txt" />
     <EmbeddedResource Include="Application Specific\Forms And Controls\Site\UCContacts.resx">
       <DependentUpon>UCContacts.cs</DependentUpon>
