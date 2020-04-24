@@ -70,8 +70,8 @@ namespace FSM
 
         private ArrayList _engineerSchedules = new ArrayList();
         private pnlScheduleControl _ScheduleControl;
-        private object _engineerScheduleColumnCount = 1;
-        private object _engineerScheduleHeight = 200;
+        private double _engineerScheduleColumnCount = 1;
+        private double _engineerScheduleHeight = 200;
         public DateTime FromDate = DateAndTime.Now;
         public DateTime ToDate = DateAndTime.Now.AddDays(10);
         private int _OldEngineerVisitID = 0;
@@ -299,21 +299,20 @@ namespace FSM
                 ToDate = dateTo;
                 Cursor.Current = Cursors.WaitCursor;
                 _mdiClient.Enabled = false;
-                // _dtSummary = DB.Scheduler.Scheduler_GetWorkLoadForDaysAndEngineers(engineersString, datesString)
                 var engineerScheduleWidth = default(double);
                 int index = 0;
                 foreach (DataRow engineer in Engineers.Select("Include"))
                 {
-                    double newWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
+                    double newWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
                     if (newWidth != engineerScheduleWidth)
                     {
-                        engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
+                        engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
                         foreach (frmEngineerSchedule schedule in _engineerSchedules)
                             schedule.Width = Conversions.ToInteger(engineerScheduleWidth);
                     }
 
                     index += 1;
-                    int row = Conversions.ToInteger(Math.Ceiling(index / (double)_engineerScheduleColumnCount));
+                    int row = Conversions.ToInteger(Math.Ceiling(index / _engineerScheduleColumnCount));
                     int col = Conversions.ToInteger(Math.Floor(index / (double)row));
                     var engineerSchedule = new frmEngineerSchedule(gridMouseDown, gridMouseMove, gridDragOver, gridDragDrop, gridMouseUp, engineer, _ScheduleControl.textsize);
                     engineerSchedule.FormClosing += ScheduleClosing;
@@ -1575,18 +1574,18 @@ namespace FSM
             _mdiClient.Resize -= ControlResize;
             _unscheduledCalls.Resize -= ControlResize;
             double engineerScheduleWidth;
-            engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
+            engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
             for (int index = 1, loopTo = _engineerSchedules.Count; index <= loopTo; index++)
             {
-                double newWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
+                double newWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
                 if (newWidth != engineerScheduleWidth)
                 {
-                    engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / (double)_engineerScheduleColumnCount);
+                    engineerScheduleWidth = Conversions.ToDouble((double)_mdiClient.ClientSize.Width / _engineerScheduleColumnCount);
                     foreach (frmEngineerSchedule schedule in _engineerSchedules)
                         schedule.Width = Conversions.ToInteger(engineerScheduleWidth);
                 }
 
-                int row = Conversions.ToInteger(Math.Ceiling(index / (double)_engineerScheduleColumnCount));
+                int row = Conversions.ToInteger(Math.Ceiling(index / _engineerScheduleColumnCount));
                 int col = Conversions.ToInteger(Math.Floor(index / (double)row));
                 frmEngineerSchedule peopleSchedule = (frmEngineerSchedule)_engineerSchedules[index - 1];
                 peopleSchedule.Left = Conversions.ToInteger(engineerScheduleWidth * (col - 1));

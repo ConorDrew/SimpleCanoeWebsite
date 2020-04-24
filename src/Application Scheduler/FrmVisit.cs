@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -6,8 +8,6 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -2171,9 +2171,9 @@ namespace FSM
                         DateTime theTimeEnteredEnd = default;
                         if (!string.IsNullOrEmpty(txtStartTimeHours.Text) && !string.IsNullOrEmpty(txtStartTimeMinutes.Text) && !string.IsNullOrEmpty(txtEndTimeHours.Text) && !string.IsNullOrEmpty(txtEndTimeMinutes.Text))
                         {
-                            theDateTimeColumn = Conversions.ToDate(DateAndTime.Now.Date + " " + time.ColumnName.Substring(1, 2) + ":" + time.ColumnName.Substring(3, 2) + ":00");
-                            theTimeEnteredStart = Conversions.ToDate(DateAndTime.Now.Date + " " + txtStartTimeHours.Text.Trim() + ":" + txtStartTimeMinutes.Text.Trim() + ":00");
-                            theTimeEnteredEnd = Conversions.ToDate(DateAndTime.Now.Date + " " + txtEndTimeHours.Text.Trim() + ":" + txtEndTimeMinutes.Text.Trim() + ":00");
+                            theDateTimeColumn = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Convert.ToInt32(time.ColumnName.Substring(1, 2)), Convert.ToInt32(time.ColumnName.Substring(3, 2)), 0);
+                            theTimeEnteredStart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Convert.ToInt32(txtStartTimeHours.Text.Trim()), Convert.ToInt32(txtStartTimeMinutes.Text.Trim()), 0);
+                            theTimeEnteredEnd = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Convert.ToInt32(txtEndTimeHours.Text.Trim()), Convert.ToInt32(txtEndTimeMinutes.Text.Trim()), 0);
                         }
 
                         Color TheColour;

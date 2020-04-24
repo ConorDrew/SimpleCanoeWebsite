@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FSM.Entity.ContactAttempts;
+using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
@@ -6,10 +10,6 @@ using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
-using FSM.Entity.ContactAttempts;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -17,6 +17,8 @@ namespace FSM
     {
         public frmEngineerSchedule()
         {
+            base.Load += frmEngineerSchedule_Load;
+            base.Resize += frmEngineerSchedule_Resize;
             EngineerScheduleTimer = new Timer();
         }
 
@@ -28,6 +30,9 @@ namespace FSM
 
             // This call is required by the Windows Form Designer.
             InitializeComponent();
+
+            base.Load += frmEngineerSchedule_Load;
+            base.Resize += frmEngineerSchedule_Resize;
 
             // Add any initialization after the InitializeComponent() call
             dgDay.MouseDown += gridMouseDown;
@@ -329,7 +334,7 @@ namespace FSM
         {
             try
             {
-                detailPopup.Dispose();
+                detailPopup?.Dispose();
                 if (disposing)
                 {
                     if (!(components is null))
@@ -854,388 +859,399 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEngineerSchedule));
-            _pnlHeader = new Panel();
-            _pbClose = new PictureBox();
-            _pbClose.Click += new EventHandler(PictureBox1_Click);
-            _pbGreen = new PictureBox();
-            _pbRed = new PictureBox();
-            _picVan = new PictureBox();
-            _picQuestion = new PictureBox();
-            _picSpanner = new PictureBox();
-            _picLevels = new PictureBox();
-            _picPostalRegions = new PictureBox();
-            _picRegion = new PictureBox();
-            _lblTitle = new Label();
-            _pbInfomation = new PictureBox();
-            _pbInfomation.Click += new EventHandler(imgEye_Click);
-            _dgDaySummary = new DataGrid();
-            _dgDaySummary.MouseUp += new MouseEventHandler(dgDaySummary_MouseUp);
-            _mnuDayAction = new ContextMenu();
-            _btnCreateJob = new MenuItem();
-            _btnCreateJob.Click += new EventHandler(btnCreateJob_Click);
-            _btnExportJobs = new MenuItem();
-            _btnExportJobs.Click += new EventHandler(btnExportJobs_Click);
-            _splitEngineer = new Splitter();
-            _splitEngineer.SplitterMoved += new SplitterEventHandler(splitEngineer_SplitterMoved);
-            _mnuVisitAction = new ContextMenu();
-            _mnuVisitAction.Popup += new EventHandler(mnuVisitAction_Popup);
-            _btnSendText = new MenuItem();
-            _btnSendText.Click += new EventHandler(btnSendText_Click);
-            _btnReschedule = new MenuItem();
-            _btnReschedule.Click += new EventHandler(btnReschedule_Click);
-            _btnTextMessage = new MenuItem();
-            _btnTextMessage.Click += new EventHandler(btnTextMessage_Click);
-            _MenuItem1 = new MenuItem();
-            _btnSiteReport = new MenuItem();
-            _btnSiteReport.Click += new EventHandler(btnSiteReport_Click);
-            _btnPrintLsr = new MenuItem();
-            _btnPrintLsr.Click += new EventHandler(btnPrintLsr_Click);
-            _btnServiceLetter = new MenuItem();
-            _btnServiceLetter.Click += new EventHandler(btnServiceLetter_Click);
-            _btnSolarInstallation = new MenuItem();
-            _btnSolarInstallation.Click += new EventHandler(btnSolarInstallation_Click);
-            _btnElectricalAppointment = new MenuItem();
-            _btnElectricalAppointment.Click += new EventHandler(btnElectricalAppointment_Click);
-            _imgLstIcons = new ImageList(components);
-            _dgDay = new DataGrid();
-            _dgDay.DoubleClick += new EventHandler(dgDay_DoubleClick);
-            _dgDay.MouseUp += new MouseEventHandler(dgDay_MouseUp);
-            _dgDay.MouseMove += new MouseEventHandler(dgDay_MouseMove);
-            _picPlanner = new PictureBox();
-            _picPlanner.MouseUp += new MouseEventHandler(picPlanner_MouseUp);
-            _ttStatus = new ToolTip(components);
-            _pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_pbClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_pbGreen).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_pbRed).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picVan).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picQuestion).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picSpanner).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picLevels).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picPostalRegions).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picRegion).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_pbInfomation).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgDaySummary).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgDay).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picPlanner).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEngineerSchedule));
+            this._pnlHeader = new System.Windows.Forms.Panel();
+            this._pbClose = new System.Windows.Forms.PictureBox();
+            this._pbGreen = new System.Windows.Forms.PictureBox();
+            this._pbRed = new System.Windows.Forms.PictureBox();
+            this._picVan = new System.Windows.Forms.PictureBox();
+            this._picQuestion = new System.Windows.Forms.PictureBox();
+            this._picSpanner = new System.Windows.Forms.PictureBox();
+            this._picLevels = new System.Windows.Forms.PictureBox();
+            this._picPostalRegions = new System.Windows.Forms.PictureBox();
+            this._picRegion = new System.Windows.Forms.PictureBox();
+            this._lblTitle = new System.Windows.Forms.Label();
+            this._pbInfomation = new System.Windows.Forms.PictureBox();
+            this._dgDaySummary = new System.Windows.Forms.DataGrid();
+            this._mnuDayAction = new System.Windows.Forms.ContextMenu();
+            this._btnCreateJob = new System.Windows.Forms.MenuItem();
+            this._btnExportJobs = new System.Windows.Forms.MenuItem();
+            this._splitEngineer = new System.Windows.Forms.Splitter();
+            this._mnuVisitAction = new System.Windows.Forms.ContextMenu();
+            this._btnSendText = new System.Windows.Forms.MenuItem();
+            this._btnReschedule = new System.Windows.Forms.MenuItem();
+            this._btnTextMessage = new System.Windows.Forms.MenuItem();
+            this._MenuItem1 = new System.Windows.Forms.MenuItem();
+            this._btnSiteReport = new System.Windows.Forms.MenuItem();
+            this._btnPrintLsr = new System.Windows.Forms.MenuItem();
+            this._btnServiceLetter = new System.Windows.Forms.MenuItem();
+            this._btnSolarInstallation = new System.Windows.Forms.MenuItem();
+            this._btnElectricalAppointment = new System.Windows.Forms.MenuItem();
+            this._imgLstIcons = new System.Windows.Forms.ImageList(this.components);
+            this._dgDay = new System.Windows.Forms.DataGrid();
+            this._picPlanner = new System.Windows.Forms.PictureBox();
+            this._ttStatus = new System.Windows.Forms.ToolTip(this.components);
+            this._pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbGreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picVan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picQuestion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picSpanner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picLevels)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picPostalRegions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picRegion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbInfomation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgDaySummary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picPlanner)).BeginInit();
+            this.SuspendLayout();
             //
-            // pnlHeader
+            // _pnlHeader
             //
-            _pnlHeader.BackColor = Color.SteelBlue;
-            _pnlHeader.Controls.Add(_pbClose);
-            _pnlHeader.Controls.Add(_pbGreen);
-            _pnlHeader.Controls.Add(_pbRed);
-            _pnlHeader.Controls.Add(_picVan);
-            _pnlHeader.Controls.Add(_picQuestion);
-            _pnlHeader.Controls.Add(_picSpanner);
-            _pnlHeader.Controls.Add(_picLevels);
-            _pnlHeader.Controls.Add(_picPostalRegions);
-            _pnlHeader.Controls.Add(_picRegion);
-            _pnlHeader.Controls.Add(_lblTitle);
-            _pnlHeader.Controls.Add(_pbInfomation);
-            _pnlHeader.Dock = DockStyle.Top;
-            _pnlHeader.Location = new Point(0, 0);
-            _pnlHeader.Name = "pnlHeader";
-            _pnlHeader.Size = new Size(432, 18);
-            _pnlHeader.TabIndex = 1;
+            this._pnlHeader.BackColor = System.Drawing.Color.SteelBlue;
+            this._pnlHeader.Controls.Add(this._pbClose);
+            this._pnlHeader.Controls.Add(this._pbGreen);
+            this._pnlHeader.Controls.Add(this._pbRed);
+            this._pnlHeader.Controls.Add(this._picVan);
+            this._pnlHeader.Controls.Add(this._picQuestion);
+            this._pnlHeader.Controls.Add(this._picSpanner);
+            this._pnlHeader.Controls.Add(this._picLevels);
+            this._pnlHeader.Controls.Add(this._picPostalRegions);
+            this._pnlHeader.Controls.Add(this._picRegion);
+            this._pnlHeader.Controls.Add(this._lblTitle);
+            this._pnlHeader.Controls.Add(this._pbInfomation);
+            this._pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this._pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this._pnlHeader.Name = "_pnlHeader";
+            this._pnlHeader.Size = new System.Drawing.Size(432, 18);
+            this._pnlHeader.TabIndex = 1;
             //
-            // pbClose
+            // _pbClose
             //
-            _pbClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _pbClose.BackColor = Color.Transparent;
-            _pbClose.Cursor = Cursors.Hand;
-            _pbClose.Image = My.Resources.Resources.delete;
-            _pbClose.Location = new Point(410, 1);
-            _pbClose.Name = "pbClose";
-            _pbClose.Size = new Size(19, 17);
-            _pbClose.SizeMode = PictureBoxSizeMode.StretchImage;
-            _pbClose.TabIndex = 9;
-            _pbClose.TabStop = false;
+            this._pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbClose.BackColor = System.Drawing.Color.Transparent;
+            this._pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._pbClose.Image = global::FSM.My.Resources.Resources.delete;
+            this._pbClose.Location = new System.Drawing.Point(410, 1);
+            this._pbClose.Name = "_pbClose";
+            this._pbClose.Size = new System.Drawing.Size(19, 17);
+            this._pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._pbClose.TabIndex = 9;
+            this._pbClose.TabStop = false;
+            this._pbClose.Click += new System.EventHandler(this.PictureBox1_Click);
             //
-            // pbGreen
+            // _pbGreen
             //
-            _pbGreen.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _pbGreen.BackColor = Color.Transparent;
-            _pbGreen.Image = My.Resources.Resources.green_light;
-            _pbGreen.Location = new Point(358, 1);
-            _pbGreen.Name = "pbGreen";
-            _pbGreen.Size = new Size(19, 17);
-            _pbGreen.SizeMode = PictureBoxSizeMode.StretchImage;
-            _pbGreen.TabIndex = 8;
-            _pbGreen.TabStop = false;
-            _pbGreen.Visible = false;
+            this._pbGreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbGreen.BackColor = System.Drawing.Color.Transparent;
+            this._pbGreen.Image = global::FSM.My.Resources.Resources.green_light;
+            this._pbGreen.Location = new System.Drawing.Point(358, 1);
+            this._pbGreen.Name = "_pbGreen";
+            this._pbGreen.Size = new System.Drawing.Size(19, 17);
+            this._pbGreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._pbGreen.TabIndex = 8;
+            this._pbGreen.TabStop = false;
+            this._pbGreen.Visible = false;
             //
-            // pbRed
+            // _pbRed
             //
-            _pbRed.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _pbRed.BackColor = Color.Transparent;
-            _pbRed.Image = My.Resources.Resources.red_light;
-            _pbRed.Location = new Point(358, 1);
-            _pbRed.Name = "pbRed";
-            _pbRed.Size = new Size(19, 17);
-            _pbRed.SizeMode = PictureBoxSizeMode.StretchImage;
-            _pbRed.TabIndex = 7;
-            _pbRed.TabStop = false;
-            _pbRed.Visible = false;
+            this._pbRed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbRed.BackColor = System.Drawing.Color.Transparent;
+            this._pbRed.Image = global::FSM.My.Resources.Resources.red_light;
+            this._pbRed.Location = new System.Drawing.Point(358, 1);
+            this._pbRed.Name = "_pbRed";
+            this._pbRed.Size = new System.Drawing.Size(19, 17);
+            this._pbRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._pbRed.TabIndex = 7;
+            this._pbRed.TabStop = false;
+            this._pbRed.Visible = false;
             //
-            // picVan
+            // _picVan
             //
-            _picVan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _picVan.BackColor = Color.Transparent;
-            _picVan.Image = My.Resources.Resources.Van;
-            _picVan.Location = new Point(383, 1);
-            _picVan.Name = "picVan";
-            _picVan.Size = new Size(19, 17);
-            _picVan.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picVan.TabIndex = 6;
-            _picVan.TabStop = false;
-            _picVan.Visible = false;
+            this._picVan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._picVan.BackColor = System.Drawing.Color.Transparent;
+            this._picVan.Image = global::FSM.My.Resources.Resources.Van;
+            this._picVan.Location = new System.Drawing.Point(383, 1);
+            this._picVan.Name = "_picVan";
+            this._picVan.Size = new System.Drawing.Size(19, 17);
+            this._picVan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picVan.TabIndex = 6;
+            this._picVan.TabStop = false;
+            this._picVan.Visible = false;
             //
-            // picQuestion
+            // _picQuestion
             //
-            _picQuestion.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _picQuestion.BackColor = Color.Transparent;
-            _picQuestion.Image = My.Resources.Resources.Question_mark_icon;
-            _picQuestion.Location = new Point(383, 0);
-            _picQuestion.Name = "picQuestion";
-            _picQuestion.Size = new Size(15, 18);
-            _picQuestion.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picQuestion.TabIndex = 5;
-            _picQuestion.TabStop = false;
-            _picQuestion.Visible = false;
+            this._picQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._picQuestion.BackColor = System.Drawing.Color.Transparent;
+            this._picQuestion.Image = global::FSM.My.Resources.Resources.Question_mark_icon;
+            this._picQuestion.Location = new System.Drawing.Point(383, 0);
+            this._picQuestion.Name = "_picQuestion";
+            this._picQuestion.Size = new System.Drawing.Size(15, 18);
+            this._picQuestion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picQuestion.TabIndex = 5;
+            this._picQuestion.TabStop = false;
+            this._picQuestion.Visible = false;
             //
-            // picSpanner
+            // _picSpanner
             //
-            _picSpanner.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _picSpanner.BackColor = Color.Transparent;
-            _picSpanner.Image = My.Resources.Resources.imagesWITCGZO5;
-            _picSpanner.Location = new Point(383, 1);
-            _picSpanner.Name = "picSpanner";
-            _picSpanner.Size = new Size(16, 16);
-            _picSpanner.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picSpanner.TabIndex = 4;
-            _picSpanner.TabStop = false;
-            _picSpanner.Visible = false;
+            this._picSpanner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._picSpanner.BackColor = System.Drawing.Color.Transparent;
+            this._picSpanner.Image = global::FSM.My.Resources.Resources.imagesWITCGZO5;
+            this._picSpanner.Location = new System.Drawing.Point(383, 1);
+            this._picSpanner.Name = "_picSpanner";
+            this._picSpanner.Size = new System.Drawing.Size(16, 16);
+            this._picSpanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picSpanner.TabIndex = 4;
+            this._picSpanner.TabStop = false;
+            this._picSpanner.Visible = false;
             //
-            // picLevels
+            // _picLevels
             //
-            _picLevels.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _picLevels.BackColor = Color.Transparent;
-            _picLevels.Image = (Image)resources.GetObject("picLevels.Image");
-            _picLevels.Location = new Point(306, 1);
-            _picLevels.Name = "picLevels";
-            _picLevels.Size = new Size(16, 16);
-            _picLevels.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picLevels.TabIndex = 3;
-            _picLevels.TabStop = false;
-            _picLevels.Visible = false;
+            this._picLevels.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._picLevels.BackColor = System.Drawing.Color.Transparent;
+            this._picLevels.Image = ((System.Drawing.Image)(resources.GetObject("_picLevels.Image")));
+            this._picLevels.Location = new System.Drawing.Point(306, 1);
+            this._picLevels.Name = "_picLevels";
+            this._picLevels.Size = new System.Drawing.Size(16, 16);
+            this._picLevels.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picLevels.TabIndex = 3;
+            this._picLevels.TabStop = false;
+            this._picLevels.Visible = false;
             //
-            // picPostalRegions
+            // _picPostalRegions
             //
-            _picPostalRegions.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _picPostalRegions.BackColor = Color.Transparent;
-            _picPostalRegions.Image = (Image)resources.GetObject("picPostalRegions.Image");
-            _picPostalRegions.Location = new Point(286, 2);
-            _picPostalRegions.Name = "picPostalRegions";
-            _picPostalRegions.Size = new Size(16, 16);
-            _picPostalRegions.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picPostalRegions.TabIndex = 2;
-            _picPostalRegions.TabStop = false;
-            _picPostalRegions.Visible = false;
+            this._picPostalRegions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._picPostalRegions.BackColor = System.Drawing.Color.Transparent;
+            this._picPostalRegions.Image = ((System.Drawing.Image)(resources.GetObject("_picPostalRegions.Image")));
+            this._picPostalRegions.Location = new System.Drawing.Point(286, 2);
+            this._picPostalRegions.Name = "_picPostalRegions";
+            this._picPostalRegions.Size = new System.Drawing.Size(16, 16);
+            this._picPostalRegions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picPostalRegions.TabIndex = 2;
+            this._picPostalRegions.TabStop = false;
+            this._picPostalRegions.Visible = false;
             //
-            // picRegion
+            // _picRegion
             //
-            _picRegion.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _picRegion.BackColor = Color.Transparent;
-            _picRegion.Image = (Image)resources.GetObject("picRegion.Image");
-            _picRegion.Location = new Point(328, 0);
-            _picRegion.Name = "picRegion";
-            _picRegion.Size = new Size(16, 16);
-            _picRegion.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picRegion.TabIndex = 1;
-            _picRegion.TabStop = false;
-            _picRegion.Visible = false;
+            this._picRegion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._picRegion.BackColor = System.Drawing.Color.Transparent;
+            this._picRegion.Image = ((System.Drawing.Image)(resources.GetObject("_picRegion.Image")));
+            this._picRegion.Location = new System.Drawing.Point(328, 0);
+            this._picRegion.Name = "_picRegion";
+            this._picRegion.Size = new System.Drawing.Size(16, 16);
+            this._picRegion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picRegion.TabIndex = 1;
+            this._picRegion.TabStop = false;
+            this._picRegion.Visible = false;
             //
-            // lblTitle
+            // _lblTitle
             //
-            _lblTitle.AutoSize = true;
-            _lblTitle.Dock = DockStyle.Left;
-            _lblTitle.Font = new Font("Verdana", 9.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblTitle.ForeColor = Color.White;
-            _lblTitle.Location = new Point(19, 0);
-            _lblTitle.Name = "lblTitle";
-            _lblTitle.Size = new Size(142, 16);
-            _lblTitle.TabIndex = 0;
-            _lblTitle.Text = "Engineer Schedule";
-            _lblTitle.TextAlign = ContentAlignment.MiddleRight;
+            this._lblTitle.AutoSize = true;
+            this._lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this._lblTitle.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblTitle.ForeColor = System.Drawing.Color.White;
+            this._lblTitle.Location = new System.Drawing.Point(19, 0);
+            this._lblTitle.Name = "_lblTitle";
+            this._lblTitle.Size = new System.Drawing.Size(142, 16);
+            this._lblTitle.TabIndex = 0;
+            this._lblTitle.Text = "Engineer Schedule";
+            this._lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             //
-            // pbInfomation
+            // _pbInfomation
             //
-            _pbInfomation.BackColor = Color.Transparent;
-            _pbInfomation.Cursor = Cursors.Hand;
-            _pbInfomation.Dock = DockStyle.Left;
-            _pbInfomation.Image = (Image)resources.GetObject("pbInfomation.Image");
-            _pbInfomation.Location = new Point(0, 0);
-            _pbInfomation.Name = "pbInfomation";
-            _pbInfomation.Size = new Size(19, 18);
-            _pbInfomation.SizeMode = PictureBoxSizeMode.StretchImage;
-            _pbInfomation.TabIndex = 10;
-            _pbInfomation.TabStop = false;
-            _ttStatus.SetToolTip(_pbInfomation, "View Engineer Information");
+            this._pbInfomation.BackColor = System.Drawing.Color.Transparent;
+            this._pbInfomation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._pbInfomation.Dock = System.Windows.Forms.DockStyle.Left;
+            this._pbInfomation.Image = ((System.Drawing.Image)(resources.GetObject("_pbInfomation.Image")));
+            this._pbInfomation.Location = new System.Drawing.Point(0, 0);
+            this._pbInfomation.Name = "_pbInfomation";
+            this._pbInfomation.Size = new System.Drawing.Size(19, 18);
+            this._pbInfomation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._pbInfomation.TabIndex = 10;
+            this._pbInfomation.TabStop = false;
+            this._ttStatus.SetToolTip(this._pbInfomation, "View Engineer Information");
+            this._pbInfomation.Click += new System.EventHandler(this.imgEye_Click);
             //
-            // dgDaySummary
+            // _dgDaySummary
             //
-            _dgDaySummary.AllowDrop = true;
-            _dgDaySummary.ContextMenu = _mnuDayAction;
-            _dgDaySummary.DataMember = "";
-            _dgDaySummary.Dock = DockStyle.Left;
-            _dgDaySummary.HeaderForeColor = SystemColors.ControlText;
-            _dgDaySummary.Location = new Point(0, 18);
-            _dgDaySummary.Name = "dgDaySummary";
-            _dgDaySummary.Size = new Size(63, 103);
-            _dgDaySummary.TabIndex = 2;
+            this._dgDaySummary.AllowDrop = true;
+            this._dgDaySummary.ContextMenu = this._mnuDayAction;
+            this._dgDaySummary.DataMember = "";
+            this._dgDaySummary.Dock = System.Windows.Forms.DockStyle.Left;
+            this._dgDaySummary.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgDaySummary.Location = new System.Drawing.Point(0, 18);
+            this._dgDaySummary.Name = "_dgDaySummary";
+            this._dgDaySummary.Size = new System.Drawing.Size(63, 103);
+            this._dgDaySummary.TabIndex = 2;
+            this._dgDaySummary.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgDaySummary_MouseUp);
             //
-            // mnuDayAction
+            // _mnuDayAction
             //
-            _mnuDayAction.MenuItems.AddRange(new MenuItem[] { _btnCreateJob, _btnExportJobs });
+            this._mnuDayAction.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._btnCreateJob,
+            this._btnExportJobs});
             //
-            // btnCreateJob
+            // _btnCreateJob
             //
-            _btnCreateJob.Index = 0;
-            _btnCreateJob.Text = "Create Job";
+            this._btnCreateJob.Index = 0;
+            this._btnCreateJob.Text = "Create Job";
+            this._btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
             //
-            // btnExportJobs
+            // _btnExportJobs
             //
-            _btnExportJobs.Index = 1;
-            _btnExportJobs.Text = "&Export Jobs";
-            _btnExportJobs.Visible = false;
+            this._btnExportJobs.Index = 1;
+            this._btnExportJobs.Text = "&Export Jobs";
+            this._btnExportJobs.Visible = false;
+            this._btnExportJobs.Click += new System.EventHandler(this.btnExportJobs_Click);
             //
-            // splitEngineer
+            // _splitEngineer
             //
-            _splitEngineer.Location = new Point(63, 18);
-            _splitEngineer.Name = "splitEngineer";
-            _splitEngineer.Size = new Size(3, 103);
-            _splitEngineer.TabIndex = 3;
-            _splitEngineer.TabStop = false;
+            this._splitEngineer.Location = new System.Drawing.Point(63, 18);
+            this._splitEngineer.Name = "_splitEngineer";
+            this._splitEngineer.Size = new System.Drawing.Size(3, 103);
+            this._splitEngineer.TabIndex = 3;
+            this._splitEngineer.TabStop = false;
+            this._splitEngineer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitEngineer_SplitterMoved);
             //
-            // mnuVisitAction
+            // _mnuVisitAction
             //
-            _mnuVisitAction.MenuItems.AddRange(new MenuItem[] { _btnSendText, _btnReschedule, _btnTextMessage, _MenuItem1 });
+            this._mnuVisitAction.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._btnSendText,
+            this._btnReschedule,
+            this._btnTextMessage,
+            this._MenuItem1});
+            this._mnuVisitAction.Popup += new System.EventHandler(this.mnuVisitAction_Popup);
             //
-            // btnSendText
+            // _btnSendText
             //
-            _btnSendText.Index = 0;
-            _btnSendText.Text = "&Send Text";
-            _btnSendText.Visible = false;
+            this._btnSendText.Index = 0;
+            this._btnSendText.Text = "&Send Text";
+            this._btnSendText.Visible = false;
+            this._btnSendText.Click += new System.EventHandler(this.btnSendText_Click);
             //
-            // btnReschedule
+            // _btnReschedule
             //
-            _btnReschedule.Index = 1;
-            _btnReschedule.Text = "Reschedule";
-            _btnReschedule.Visible = false;
+            this._btnReschedule.Index = 1;
+            this._btnReschedule.Text = "Reschedule";
+            this._btnReschedule.Visible = false;
+            this._btnReschedule.Click += new System.EventHandler(this.btnReschedule_Click);
             //
-            // btnTextMessage
+            // _btnTextMessage
             //
-            _btnTextMessage.Index = 2;
-            _btnTextMessage.Text = "Include In Message Run";
+            this._btnTextMessage.Index = 2;
+            this._btnTextMessage.Text = "Include In Message Run";
+            this._btnTextMessage.Click += new System.EventHandler(this.btnTextMessage_Click);
             //
-            // MenuItem1
+            // _MenuItem1
             //
-            _MenuItem1.Index = 3;
-            _MenuItem1.MenuItems.AddRange(new MenuItem[] { _btnSiteReport, _btnPrintLsr, _btnServiceLetter, _btnSolarInstallation, _btnElectricalAppointment });
-            _MenuItem1.Text = "Print";
+            this._MenuItem1.Index = 3;
+            this._MenuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._btnSiteReport,
+            this._btnPrintLsr,
+            this._btnServiceLetter,
+            this._btnSolarInstallation,
+            this._btnElectricalAppointment});
+            this._MenuItem1.Text = "Print";
             //
-            // btnSiteReport
+            // _btnSiteReport
             //
-            _btnSiteReport.Index = 0;
-            _btnSiteReport.Text = "Site Report";
+            this._btnSiteReport.Index = 0;
+            this._btnSiteReport.Text = "Site Report";
+            this._btnSiteReport.Click += new System.EventHandler(this.btnSiteReport_Click);
             //
-            // btnPrintLsr
+            // _btnPrintLsr
             //
-            _btnPrintLsr.Index = 1;
-            _btnPrintLsr.Text = "LSR";
-            _btnPrintLsr.Visible = false;
+            this._btnPrintLsr.Index = 1;
+            this._btnPrintLsr.Text = "LSR";
+            this._btnPrintLsr.Visible = false;
+            this._btnPrintLsr.Click += new System.EventHandler(this.btnPrintLsr_Click);
             //
-            // btnServiceLetter
+            // _btnServiceLetter
             //
-            _btnServiceLetter.Index = 2;
-            _btnServiceLetter.Text = "Service Letter";
+            this._btnServiceLetter.Index = 2;
+            this._btnServiceLetter.Text = "Service Letter";
+            this._btnServiceLetter.Click += new System.EventHandler(this.btnServiceLetter_Click);
             //
-            // btnSolarInstallation
+            // _btnSolarInstallation
             //
-            _btnSolarInstallation.Index = 3;
-            _btnSolarInstallation.Text = "Solar Installation";
+            this._btnSolarInstallation.Index = 3;
+            this._btnSolarInstallation.Text = "Solar Installation";
+            this._btnSolarInstallation.Click += new System.EventHandler(this.btnSolarInstallation_Click);
             //
-            // btnElectricalAppointment
+            // _btnElectricalAppointment
             //
-            _btnElectricalAppointment.Index = 4;
-            _btnElectricalAppointment.Text = "Electrical Appointment";
+            this._btnElectricalAppointment.Index = 4;
+            this._btnElectricalAppointment.Text = "Electrical Appointment";
+            this._btnElectricalAppointment.Click += new System.EventHandler(this.btnElectricalAppointment_Click);
             //
-            // imgLstIcons
+            // _imgLstIcons
             //
-            _imgLstIcons.ColorDepth = ColorDepth.Depth24Bit;
-            _imgLstIcons.ImageSize = new Size(16, 16);
-            _imgLstIcons.TransparentColor = Color.Transparent;
+            this._imgLstIcons.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
+            this._imgLstIcons.ImageSize = new System.Drawing.Size(16, 16);
+            this._imgLstIcons.TransparentColor = System.Drawing.Color.Transparent;
             //
-            // dgDay
+            // _dgDay
             //
-            _dgDay.CaptionFont = new Font("Verdana", 6.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _dgDay.ContextMenu = _mnuVisitAction;
-            _dgDay.DataMember = "";
-            _dgDay.Dock = DockStyle.Fill;
-            _dgDay.Font = new Font("Verdana", 5.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _dgDay.HeaderFont = new Font("Verdana", 6.75F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _dgDay.HeaderForeColor = SystemColors.ControlText;
-            _dgDay.Location = new Point(66, 18);
-            _dgDay.Name = "dgDay";
-            _dgDay.PreferredRowHeight = 12;
-            _dgDay.Size = new Size(366, 79);
-            _dgDay.TabIndex = 6;
+            this._dgDay.CaptionFont = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._dgDay.ContextMenu = this._mnuVisitAction;
+            this._dgDay.DataMember = "";
+            this._dgDay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dgDay.Font = new System.Drawing.Font("Verdana", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._dgDay.HeaderFont = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._dgDay.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgDay.Location = new System.Drawing.Point(66, 18);
+            this._dgDay.Name = "_dgDay";
+            this._dgDay.PreferredRowHeight = 12;
+            this._dgDay.Size = new System.Drawing.Size(366, 79);
+            this._dgDay.TabIndex = 6;
+            this._dgDay.DoubleClick += new System.EventHandler(this.dgDay_DoubleClick);
+            this._dgDay.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgDay_MouseMove);
+            this._dgDay.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgDay_MouseUp);
             //
-            // picPlanner
+            // _picPlanner
             //
-            _picPlanner.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
-            _picPlanner.BorderStyle = BorderStyle.Fixed3D;
-            _picPlanner.Dock = DockStyle.Bottom;
-            _picPlanner.Location = new Point(66, 97);
-            _picPlanner.Name = "picPlanner";
-            _picPlanner.Size = new Size(366, 24);
-            _picPlanner.TabIndex = 5;
-            _picPlanner.TabStop = false;
+            this._picPlanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._picPlanner.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this._picPlanner.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this._picPlanner.Location = new System.Drawing.Point(66, 97);
+            this._picPlanner.Name = "_picPlanner";
+            this._picPlanner.Size = new System.Drawing.Size(366, 24);
+            this._picPlanner.TabIndex = 5;
+            this._picPlanner.TabStop = false;
+            this._picPlanner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picPlanner_MouseUp);
             //
             // frmEngineerSchedule
             //
-            ClientSize = new Size(432, 121);
-            ControlBox = false;
-            Controls.Add(_dgDay);
-            Controls.Add(_picPlanner);
-            Controls.Add(_splitEngineer);
-            Controls.Add(_dgDaySummary);
-            Controls.Add(_pnlHeader);
-            Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "frmEngineerSchedule";
-            Opacity = 0D;
-            StartPosition = FormStartPosition.Manual;
-            _pnlHeader.ResumeLayout(false);
-            _pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_pbClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_pbGreen).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_pbRed).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picVan).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picQuestion).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picSpanner).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picLevels).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picPostalRegions).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picRegion).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_pbInfomation).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgDaySummary).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgDay).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picPlanner).EndInit();
-            ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(432, 121);
+            this.ControlBox = false;
+            this.Controls.Add(this._dgDay);
+            this.Controls.Add(this._picPlanner);
+            this.Controls.Add(this._splitEngineer);
+            this.Controls.Add(this._dgDaySummary);
+            this.Controls.Add(this._pnlHeader);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "frmEngineerSchedule";
+            this.Opacity = 0D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this._pnlHeader.ResumeLayout(false);
+            this._pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._pbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbGreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picVan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picQuestion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picSpanner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picLevels)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picPostalRegions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picRegion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pbInfomation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgDaySummary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picPlanner)).EndInit();
+            this.ResumeLayout(false);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -2234,12 +2250,12 @@ namespace FSM
             DtTimeSlot = App.DB.Scheduler.Scheduler_DayTimeSlots(Conversions.ToDate(SelectedDay()), EngineerID);
             picPlanner.Image = Scheduler_DayTimeSlots_Bitmap();
             SetupTimeSheetStatus();
-            var scheduledVisits = _dsEngineerSchedule.Tables[date].Select("VisitStatusID = " + Enums.VisitStatus.Scheduled);
+            var scheduledVisits = _dsEngineerSchedule.Tables[date].Select("VisitStatusID = " + (int)Enums.VisitStatus.Scheduled);
             if (App.IsGasway)
                 btnSendText.Visible = scheduledVisits.Length > 0;
-            var rescheduleVisits = _dsEngineerSchedule.Tables[date].Select("VisitStatusID IN ( " + Enums.VisitStatus.Scheduled + " , " + Enums.VisitStatus.Downloaded + ")");
+            var rescheduleVisits = _dsEngineerSchedule.Tables[date].Select("VisitStatusID IN ( " + (int)Enums.VisitStatus.Scheduled + " , " + (int)Enums.VisitStatus.Downloaded + ")");
             btnReschedule.Visible = rescheduleVisits.Length > 0;
-            var serviceList = _dsEngineerSchedule.Tables[date].Select("OutcomeEnumID = " + Enums.EngineerVisitOutcomes.Complete + " AND JobTypeID In (" + Enums.JobTypes.Service + ", " + Enums.JobTypes.ServiceCertificate + ", " + Enums.JobTypes.Commission + ")");
+            var serviceList = _dsEngineerSchedule.Tables[date].Select("OutcomeEnumID = " + (int)Enums.EngineerVisitOutcomes.Complete + " AND JobTypeID In (" + (int)Enums.JobTypes.Service + ", " + (int)Enums.JobTypes.ServiceCertificate + ", " + (int)Enums.JobTypes.Commission + ")");
             btnPrintLsr.Visible = serviceList.Length > 0;
             return AddJobStatus(_dsEngineerSchedule.Tables[date], Conversions.ToDate(date));
         }

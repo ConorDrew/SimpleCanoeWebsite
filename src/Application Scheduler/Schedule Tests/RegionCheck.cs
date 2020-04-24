@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {

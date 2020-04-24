@@ -919,7 +919,7 @@ namespace FSM
 
         private void mnuEngineerAbsence_Click(object sender, EventArgs e)
         {
-            var frm = new FrmEngineerAbsence();
+            var frm = new FrmEngineerAbsence(0);
             frm.ShowDialog();
         }
 
@@ -1051,7 +1051,7 @@ namespace FSM
 
         public void NewAbsence()
         {
-            var frm = new FrmEngineerAbsence();
+            var frm = new FrmEngineerAbsence(0);
             frm.ShowDialog();
         }
 

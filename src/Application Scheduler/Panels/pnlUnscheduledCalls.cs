@@ -1,11 +1,11 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -719,6 +719,7 @@ namespace FSM
         {
             TEXTSIZE = TEXTSIZEs;
             InitializeComponent();
+            base.Load += pnlUnscheduledCalls_Load;
             dgCalls.MouseDown += gridMouseDown;
             dgCalls.MouseMove += gridMouseMove;
             dgCalls.DragOver += gridDragOver;
