@@ -5480,7 +5480,7 @@ namespace FSM
                         newRow["Name"] = drPart["PartName"];
                         newRow["Quantity"] = (int)drPart["Qty"] * qty;
                         newRow["BuyPrice"] = dvPartSupplier[0]["Price"];
-                        newRow["Total"] = (int)newRow["Quantity"] * (double)newRow["BuyPrice"];
+                        newRow["Total"] = (int)newRow["Quantity"] * (decimal)newRow["BuyPrice"];
                         newRow["Type"] = "Part";
                         newRow["Supplier"] = dvPartSupplier[0]["SupplierName"];
                         CurrentQuoteJob.QuoteJobPartsAndProducts.Table.Rows.Add(newRow);
@@ -5497,7 +5497,7 @@ namespace FSM
                     newRow["Name"] = dr["PartName"];
                     newRow["Quantity"] = dr["Qty"];
                     newRow["BuyPrice"] = dr["Price"];
-                    newRow["Total"] = (int)newRow["Quantity"] * (double)newRow["BuyPrice"];
+                    newRow["Total"] = (int)newRow["Quantity"] * (decimal)newRow["BuyPrice"];
                     newRow["Type"] = "Part";
                     newRow["Supplier"] = dr["SupplierName"];
                     if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["IsSpecialPart"], 1, false)))
@@ -5513,7 +5513,7 @@ namespace FSM
                             newRow["SpecialDescription"] = f.PartName;
                             newRow["Number"] = f.SPN;
                             newRow["Extra"] = f.SPN;
-                            newRow["Total"] = (int)newRow["Quantity"] * (double)newRow["BuyPrice"];
+                            newRow["Total"] = (int)newRow["Quantity"] * (decimal)newRow["BuyPrice"];
                         }
                         else
                         {
@@ -6151,9 +6151,9 @@ namespace FSM
 
         private void SetupPartsTotals()
         {
-            double parts = 0.0;
+            decimal parts = 0;
             foreach (DataRow row in CurrentQuoteJob.QuoteJobPartsAndProducts.Table.Rows)
-                parts += (int)row["Quantity"] * (double)row["BuyPrice"];
+                parts += (int)row["Quantity"] * (decimal)row["BuyPrice"];
             CurrentQuoteJob.SetPartsAndProductsTotal = parts;
             txtPartsCost.Text = Strings.Format(parts, "C");
             WorkOutGrandTotal();
@@ -6161,9 +6161,9 @@ namespace FSM
 
         private void SetupSORTotals()
         {
-            double rates = 0.0;
+            decimal rates = 0;
             foreach (DataRow row in CurrentQuoteJob.ScheduleOfRates.Table.Rows)
-                rates += (double)row["Total"];
+                rates += (decimal)row["Total"];
             CurrentQuoteJob.SetScheduleOfRatesTotal = rates;
             txtScheduleRatesCost.Text = Strings.Format(rates, "C");
             WorkOutGrandTotal();

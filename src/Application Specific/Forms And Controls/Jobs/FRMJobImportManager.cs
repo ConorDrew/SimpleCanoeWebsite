@@ -236,6 +236,11 @@ namespace FSM
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
+            if (Convert.ToDouble(Combo.get_GetSelectedItemValue(cboJobType)) == 0)
+            {
+                App.ShowMessage("No job type selected.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             var theDate = dtpLetterCreateDate.Value;
             bool bankHoliday = false;
             var dvBankHolidays = App.DB.TimeSlotRates.BankHolidays_GetAll();
@@ -555,7 +560,7 @@ namespace FSM
                             }
 
                             var maxAmPmAmounts = GetMaxAmPmAmount(Helper.MakeIntegerValid(appointment["MaxSOR"]), visitTime);
-                            if (Conversions.ToBoolean(Helper.MakeIntegerValid(appointment["AM"]) < maxAmPmAmounts.amAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & (double)appointment["RemainingSOR"] > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0))
+                            if (Helper.MakeIntegerValid(appointment["AM"]) < maxAmPmAmounts.amAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & Convert.ToDouble(appointment["RemainingSOR"]) > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0)
                             {
                                 job["EngName"] = appointment["Name"];
                                 job["EngineerID"] = appointment["EngineerID"];
@@ -564,11 +569,11 @@ namespace FSM
                                 appointment["AM"] = Helper.MakeIntegerValid(appointment["AM"]) + 1;
                                 job["LetterDate"] = dtpLetterCreateDate.Value;
                                 job["ETA"] = true;
-                                appointment["RemainingSOR"] = (double)appointment["RemainingSOR"] - visitTime;
+                                appointment["RemainingSOR"] = Convert.ToInt32(appointment["RemainingSOR"]) - visitTime;
                                 continue;
                             }
 
-                            if (Conversions.ToBoolean(Helper.MakeIntegerValid(appointment["PM"]) < maxAmPmAmounts.pmAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & (double)appointment["RemainingSOR"] > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0))
+                            if (Helper.MakeIntegerValid(appointment["PM"]) < maxAmPmAmounts.pmAmount & (Information.IsDBNull(job["BookedVisit"]) | !Information.IsDBNull(job["Letter1"])) & Convert.ToDouble(appointment["RemainingSOR"]) > 0 & Information.IsDBNull(job["ETA"]) & dvEngineerPostcodes.Table.Select(Conversions.ToString(Conversions.ToString("EngineerID = " + appointment["EngineerID"] + " And Name = '") + job["OutwardCode"] + "'")).Length > 0)
                             {
                                 job["EngName"] = appointment["Name"];
                                 job["EngineerID"] = appointment["EngineerID"];
@@ -577,7 +582,7 @@ namespace FSM
                                 appointment["PM"] = Helper.MakeIntegerValid(appointment["PM"]) + 1;
                                 job["LetterDate"] = dtpLetterCreateDate.Value;
                                 job["ETA"] = true;
-                                appointment["RemainingSOR"] = (double)appointment["RemainingSOR"] - visitTime;
+                                appointment["RemainingSOR"] = Convert.ToInt32(appointment["RemainingSOR"]) - visitTime;
                             } // end of main if
                         }
                     }

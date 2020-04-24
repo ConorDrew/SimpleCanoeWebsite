@@ -238,7 +238,7 @@ namespace FSM
 
         private void btnFindCustomer_Click(object sender, EventArgs e)
         {
-            int customerID = Conversions.ToInteger(App.FindRecord(Enums.TableNames.tblCustomer));
+            int customerID = Convert.ToInt32(App.FindRecord(Enums.TableNames.tblCustomer));
             if (customerID > 0)
             {
                 theCustomer = App.DB.Customer.Customer_Get(customerID);
@@ -337,7 +337,7 @@ namespace FSM
                 SelectedServiceDueView.RowFilter = "SendLetterTick = 1";
                 var details = new ArrayList();
                 details.Add(SelectedServiceDueView);
-                var oPrint = new Printing(details, "NCC Service Letters MK3", Enums.SystemDocumentType.ServiceLettersMK2, true, 0, false, Conversions.ToInteger(tbMinsPerDay.Text), theCustomer.CustomerID, Conversions.ToDate(dtpLetterCreateDate.Text));
+                var oPrint = new Printing(details, "NCC Service Letters MK3", Enums.SystemDocumentType.ServiceLettersMK2, true, 0, false, Convert.ToInt32(tbMinsPerDay.Text), theCustomer.CustomerID, Conversions.ToDate(dtpLetterCreateDate.Text));
             }
         }
 
@@ -352,7 +352,7 @@ namespace FSM
         private void btnReleaseLockedSites_Click(object sender, EventArgs e)
         {
             foreach (DataRowView dr in ServiceDueDataview)
-                App.DB.LetterManager.ClearStuckSite(Conversions.ToDate(dr["LastServiceDate"]), Conversions.ToInteger(dr["SiteID"]), Conversions.ToString(dr["Type"]));
+                App.DB.LetterManager.ClearStuckSite(Conversions.ToDate(dr["LastServiceDate"]), Convert.ToInt32(dr["SiteID"]), Conversions.ToString(dr["Type"]));
         }
 
         private void dgServicesDue_MouseClick(object sender, MouseEventArgs e)
@@ -387,7 +387,7 @@ namespace FSM
 
         private void btnFindSite_Click(object sender, EventArgs e)
         {
-            int ID = Conversions.ToInteger(App.FindRecord(Enums.TableNames.tblSite));
+            int ID = Convert.ToInt32(App.FindRecord(Enums.TableNames.tblSite));
             if (!(ID == 0))
             {
                 var oSite = App.DB.Sites.Get(ID);
@@ -440,19 +440,19 @@ namespace FSM
                         int Alreadybooked = 0;
                         if (AlreadyBookedDT.Rows.Count > 0)
                         {
-                            Alreadybooked = Conversions.ToInteger(AlreadyBookedDT.Rows[0]["ServicesBooked"]);
+                            Alreadybooked = Convert.ToInt32(AlreadyBookedDT.Rows[0]["ServicesBooked"]);
                         }
 
                         if (DateAndTime.Month(friday2weeks.AddDays(i)) < 4 | DateAndTime.Month(friday2weeks.AddDays(i)) > 9) // winter
                         {
                             nr["Day"] = i + 5;
-                            nr["Avail"] = Conversions.ToInteger(Conversion.Int(theCustomer.WinterServ / (double)workingDaysInMonth - Alreadybooked));
+                            nr["Avail"] = Convert.ToInt32(Conversion.Int(theCustomer.WinterServ / (double)workingDaysInMonth - Alreadybooked));
                             AvailView.Table.Rows.Add(nr);
                         }
                         else
                         {
                             nr["Day"] = i + 5;
-                            nr["Avail"] = Conversions.ToInteger(Conversion.Int(theCustomer.SummerServ / (double)workingDaysInMonth - Alreadybooked));
+                            nr["Avail"] = Convert.ToInt32(Conversion.Int(theCustomer.SummerServ / (double)workingDaysInMonth - Alreadybooked));
                             AvailView.Table.Rows.Add(nr);
                         }
                     }
@@ -478,7 +478,7 @@ namespace FSM
             }
 
             foreach (DataRow dr in AvailView.Table.Rows)
-                amtServ = Conversions.ToInteger(amtServ + (int)dr["Avail"]);
+                amtServ = Convert.ToInt32(amtServ + (int)dr["Avail"]);
             if (AvailView.Count > 0 & fake == false)
                 profile = true;
         }
@@ -573,7 +573,7 @@ namespace FSM
             var argcombo = cboLetterNumber;
             Combo.SetSelectedComboItem_By_Value(ref argcombo, 1.ToString());
             dtpLetterCreateDate.Value = DateAndTime.Now;
-            theCustomer = App.DB.Customer.Customer_Get(Conversions.ToInteger(Enums.Customer.Flagship));
+            theCustomer = App.DB.Customer.Customer_Get(Convert.ToInt32(Enums.Customer.Flagship));
         }
 
         public DataTable AppointmentStrip(ref DataTable appointments, List<int> levelslist, List<string> Postcodes, bool keepweekends = false)
@@ -589,7 +589,7 @@ namespace FSM
                 if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["keep"], 0, false) & Operators.ConditionalCompareObjectEqual(dr["remove"], 0, false)))
                 {
                     // ' remove non qualified engineers
-                    var engineerLevels = App.DB.EngineerLevel.Get(Conversions.ToInteger(dr["EngineerID"])).Table;
+                    var engineerLevels = App.DB.EngineerLevel.Get(Convert.ToInt32(dr["EngineerID"])).Table;
                     bool removeengineer = true;
                     bool cbuoc = false;
                     bool Solid = false;
@@ -601,15 +601,15 @@ namespace FSM
                     {
                         foreach (DataRow dr2 in engineerLevels.Select("tick = 1"))
                         {
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Conversions.ToInteger(Enums.EngineerQual.CBUOC), false)))
+                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.CBUOC), false)))
                                 cbuoc = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Conversions.ToInteger(Enums.EngineerQual.SOLIDFUEL), false)))
+                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.SOLIDFUEL), false)))
                                 Solid = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Conversions.ToInteger(Enums.EngineerQual.OILOFTEC), false)))
+                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.OILOFTEC), false)))
                                 Oil = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Conversions.ToInteger(Enums.EngineerQual.DOMGAS), false)))
+                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.DOMGAS), false)))
                                 Gas = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Conversions.ToInteger(Enums.EngineerQual.ASHP), false)))
+                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.ASHP), false)))
                                 ASHP = true;
                             if (Helper.MakeStringValid(dr2["Name"]).Length > 2)
                             {
@@ -639,7 +639,7 @@ namespace FSM
                     {
                         removeengineer = true;
                         var engpostcodes = new List<string>();
-                        var dt = App.DB.EngineerPostalRegion.GetTicked(Conversions.ToInteger(dr["EngineerID"])).Table;
+                        var dt = App.DB.EngineerPostalRegion.GetTicked(Convert.ToInt32(dr["EngineerID"])).Table;
                         foreach (DataRow row in dt.Rows)
                             engpostcodes.Add(Conversions.ToString(row["Name"]));
                         foreach (string pc in Postcodes)
@@ -764,19 +764,19 @@ namespace FSM
                 else
                     SelectedServiceDueView.Sort = "Postcode";
                 var AppointmentsView = new DataView();
-                AppointmentsView.Table = App.DB.LetterManager.Get_Appointments_Main_MK3(DateHelper.GetTheMonday(dtpLetterCreateDate.Value), 15, 31, (int)(Conversions.ToInteger(tbMinsPerDay.Text) / (double)2));
+                AppointmentsView.Table = App.DB.LetterManager.Get_Appointments_Main_MK3(DateHelper.GetTheMonday(dtpLetterCreateDate.Value), 15, 31, (int)(Convert.ToInt32(tbMinsPerDay.Text) / (double)2));
                 IList<int> levelsList = new List<int>();
                 int co = 0;
                 var dd = App.DB.Customer.Requirements_Get_For_CustomerID(theCustomer.CustomerID).Table.Select("tick = 1");
                 foreach (DataRow d in dd)
                 {
-                    levelsList.Add(Conversions.ToInteger(d["ManagerID"]));
+                    levelsList.Add(Convert.ToInt32(d["ManagerID"]));
                     co += 1;
                 }
 
                 if (co == 0)
                 {
-                    levelsList.Add(Conversions.ToInteger(Enums.EngineerQual.RETAIL)); // Retail Engineer Skill level
+                    levelsList.Add(Convert.ToInt32(Enums.EngineerQual.RETAIL)); // Retail Engineer Skill level
                 }
 
                 Postcodes.Clear();
@@ -843,7 +843,7 @@ namespace FSM
                         {
                             VisitTime = 15;
                         }
-                        else if (Conversions.ToBoolean((!Information.IsDBNull(ServiceVisit["FuelID"]) && Conversions.ToInteger(ServiceVisit["FuelID"]) == (int)Enums.FuelTypes.SolidFuel) | Operators.ConditionalCompareObjectEqual(ServiceVisit["SolidFuel"], true, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("SOLID FUEL")))
+                        else if (Conversions.ToBoolean((!Information.IsDBNull(ServiceVisit["FuelID"]) && Convert.ToInt32(ServiceVisit["FuelID"]) == (int)Enums.FuelTypes.SolidFuel) | Operators.ConditionalCompareObjectEqual(ServiceVisit["SolidFuel"], true, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("SOLID FUEL")))
                         {
                             VisitTime = 75;
                         }
@@ -882,7 +882,7 @@ namespace FSM
 
                         foreach (DataRowView EngineerApp in AppointmentsView)
                         {
-                            if (AllEngineerPostcodes.Table.Select(Conversions.ToString("EngineerID = " + EngineerApp["EngineerID"] + " AND Name = '" + ServiceVisit["Postcode"].ToString().Substring(0, Conversions.ToInteger(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-"))) + "'")).Length > 0)
+                            if (AllEngineerPostcodes.Table.Select(Conversions.ToString("EngineerID = " + EngineerApp["EngineerID"] + " AND Name = '" + ServiceVisit["Postcode"].ToString().Substring(0, Convert.ToInt32(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-"))) + "'")).Length > 0)
                             {
                                 // engineer works this area
                                 // quals?
@@ -901,28 +901,28 @@ namespace FSM
                                 }
                                 else if (Information.IsDBNull(EngineerApp["AMCLOSE"]))
                                 {
-                                    EngineerApp["AMCLOSE"] = (int)EngineerApp["PMCLOSE"] - Conversions.ToInteger(txtTravelBetween.Text);
+                                    EngineerApp["AMCLOSE"] = (int)EngineerApp["PMCLOSE"] - Convert.ToInt32(txtTravelBetween.Text);
                                     FlagAMPeriodWasEmpty = true;
                                 }
                                 else if (Information.IsDBNull(EngineerApp["PMCLOSE"]))
                                 {
-                                    EngineerApp["PMCLOSE"] = (int)EngineerApp["AMCLOSE"] - Conversions.ToInteger(txtTravelBetween.Text);
+                                    EngineerApp["PMCLOSE"] = (int)EngineerApp["AMCLOSE"] - Convert.ToInt32(txtTravelBetween.Text);
                                     FlagPMPeriodWasEmpty = true;
                                 }
 
-                                if (Conversions.ToBoolean((double)EngineerApp["remainingAM"] >= VisitTime & (int)EngineerApp["AMCLOSE"] < Conversions.ToInteger(txtMaxTravel.Text) & !(BookedDate is object & (BookedAMPM ?? "") == "PM")))
+                                if ((decimal)EngineerApp["remainingAM"] >= VisitTime & (int)EngineerApp["AMCLOSE"] < Convert.ToInt32(txtMaxTravel.Text) & !(BookedDate is object & (BookedAMPM ?? "") == "PM"))
                                 {
                                     ServiceVisit["EngName"] = EngineerApp["Name"];
                                     ServiceVisit["EngineerID"] = EngineerApp["EngineerID"];
                                     ServiceVisit["BookedDateTime"] = EngineerApp["Date"];
                                     ServiceVisit["NextVisitDate"] = EngineerApp["Date"];
                                     ServiceVisit["AMPM"] = "AM";
-                                    EngineerApp["remainingAM"] = (double)EngineerApp["remainingAM"] - VisitTime;
+                                    EngineerApp["remainingAM"] = (decimal)EngineerApp["remainingAM"] - VisitTime;
                                     AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] = (int)AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] - 1;
-                                    if (Conversions.ToInteger(EngineerApp["PMCLOSE"]) == -1 | FlagAMPeriodWasEmpty)
+                                    if (Convert.ToInt32(EngineerApp["PMCLOSE"]) == -1 | FlagAMPeriodWasEmpty)
                                     {
                                         // split this out to follow the code below
-                                        var drs = AppointmentsView.Table.Select("EngineerID = " + Conversions.ToInteger(ServiceVisit["EngineerID"]) + " AND DATE = #" + suggestedVisit.ToString("yyyy-MM-dd") + "#");
+                                        var drs = AppointmentsView.Table.Select("EngineerID = " + Convert.ToInt32(ServiceVisit["EngineerID"]) + " AND DATE = #" + suggestedVisit.ToString("yyyy-MM-dd") + "#");
                                         if (drs.Length > -1) // If We got results
                                         {
                                             foreach (DataRow dr in drs)
@@ -935,16 +935,16 @@ namespace FSM
 
                                     break;
                                 }
-                                else if (Conversions.ToBoolean((double)EngineerApp["RemainingPM"] >= VisitTime & (int)EngineerApp["PMCLOSE"] < Conversions.ToInteger(txtMaxTravel.Text) & !(BookedDate is object & (BookedAMPM ?? "") == "AM")))
+                                else if ((decimal)EngineerApp["RemainingPM"] >= VisitTime & (int)EngineerApp["PMCLOSE"] < Convert.ToInt32(txtMaxTravel.Text) & !(BookedDate is object & (BookedAMPM ?? "") == "AM"))
                                 {
                                     ServiceVisit["EngName"] = EngineerApp["Name"];
                                     ServiceVisit["EngineerID"] = EngineerApp["EngineerID"];
                                     ServiceVisit["BookedDateTime"] = EngineerApp["Date"];
                                     ServiceVisit["NextVisitDate"] = EngineerApp["Date"];
                                     ServiceVisit["AMPM"] = "PM";
-                                    EngineerApp["remainingPM"] = (double)EngineerApp["remainingPM"] - VisitTime;
+                                    EngineerApp["remainingPM"] = (decimal)EngineerApp["remainingPM"] - VisitTime;
                                     AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] = (int)AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] - 1;
-                                    if (Conversions.ToInteger(EngineerApp["PMCLOSE"]) == -1 | FlagPMPeriodWasEmpty) // legacy way was to do the select in one line
+                                    if (Convert.ToInt32(EngineerApp["PMCLOSE"]) == -1 | FlagPMPeriodWasEmpty) // legacy way was to do the select in one line
                                     {
                                         foreach (DataRow ee in AppointmentsView.Table.Select(Conversions.ToString("EngineerID = '" + ServiceVisit["EngineerID"] + "' AND DATE = #" + suggestedVisit.ToString("yyyy-MM-dd") + "#")))
                                         {
@@ -1004,14 +1004,14 @@ namespace FSM
                         case "Letter 1":
                             {
                                 SchedulerAppsView.RowFilter = "DATE <= #" + DateHelper.GetTheFriday(suggestedVisit).ToString("yyyy-MM-dd") + "# AND DATE >= #" + DateHelper.GetTheMonday(suggestedVisit).ToString("yyyy-MM-dd") + "#";
-                                BookedDate = Conversions.ToString(DateHelper.CheckBankHolidaySatOrSunForward(DateHelper.GetTheMonday(dtpLetterCreateDate.Value).AddDays(Conversions.ToDouble(14 + ((int)availdt.Rows[0]["Day"] - 1)))));
+                                BookedDate = Conversions.ToString(DateHelper.CheckBankHolidaySatOrSunForward(DateHelper.GetTheMonday(dtpLetterCreateDate.Value).AddDays(Conversions.ToDouble(14 + (Convert.ToInt32(availdt.Rows[0]["Day"]) - 1)))));
                                 break;
                             }
 
                         case "Letter 2":
                             {
                                 SchedulerAppsView.RowFilter = "DATE <= #" + DateHelper.GetTheFriday(suggestedVisit).ToString("yyyy-MM-dd") + "# AND DATE >= #" + DateHelper.GetTheMonday(suggestedVisit).ToString("yyyy-MM-dd") + "#";
-                                BookedDate = Conversions.ToString(DateHelper.CheckBankHolidaySatOrSunForward(DateHelper.GetTheMonday(dtpLetterCreateDate.Value).AddDays(Conversions.ToDouble(14 + ((int)availdt.Rows[0]["Day"] - 1)))));
+                                BookedDate = Conversions.ToString(DateHelper.CheckBankHolidaySatOrSunForward(DateHelper.GetTheMonday(dtpLetterCreateDate.Value).AddDays(Conversions.ToDouble(14 + (Convert.ToInt32(availdt.Rows[0]["Day"]) - 1)))));
                                 break;
                             }
 
@@ -1030,7 +1030,7 @@ namespace FSM
 
                     foreach (DataRowView Scheduler in SchedulerAppsView)
                     {
-                        if (AllEngineerPostcodes.Table.Select(Conversions.ToString("EngineerID = " + Scheduler["EngineerID"] + " AND Name = '" + ServiceVisit["Postcode"].ToString().Substring(0, Conversions.ToInteger(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-"))) + "'")).Length > 0)
+                        if (AllEngineerPostcodes.Table.Select(Conversions.ToString("EngineerID = " + Scheduler["EngineerID"] + " AND Name = '" + ServiceVisit["Postcode"].ToString().Substring(0, Convert.ToInt32(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-"))) + "'")).Length > 0)
                         {
                             ServiceVisit["EngName"] = Scheduler["Name"];
                             ServiceVisit["EngineerID"] = Scheduler["EngineerID"];
@@ -1039,12 +1039,12 @@ namespace FSM
                             if (c1 < 5)
                             {
                                 ServiceVisit["AMPM"] = "AM";
-                                AvailView.Table.Rows[Conversions.ToInteger((int)availdt.Rows[0]["Day"] - 1)]["Avail"] = (int)AvailView.Table.Rows[Conversions.ToInteger((int)availdt.Rows[0]["Day"] - 1)]["Avail"] - 1;
+                                AvailView.Table.Rows[Convert.ToInt32(Convert.ToInt32(availdt.Rows[0]["Day"]) - 1)]["Avail"] = (int)AvailView.Table.Rows[Convert.ToInt32(Convert.ToInt32(availdt.Rows[0]["Day"]) - 1)]["Avail"] - 1;
                             }
                             else if (c1 > 4)
                             {
                                 ServiceVisit["AMPM"] = "PM";
-                                AvailView.Table.Rows[Conversions.ToInteger((int)availdt.Rows[0]["Day"] - 1)]["Avail"] = (int)AvailView.Table.Rows[Conversions.ToInteger((int)availdt.Rows[0]["Day"] - 1)]["Avail"] - 1;
+                                AvailView.Table.Rows[Convert.ToInt32(Convert.ToInt32(availdt.Rows[0]["Day"]) - 1)]["Avail"] = (int)AvailView.Table.Rows[Convert.ToInt32(Convert.ToInt32(availdt.Rows[0]["Day"]) - 1)]["Avail"] - 1;
                                 if (c1 > 7)
                                 {
                                     c1 = 0;
@@ -1063,7 +1063,7 @@ namespace FSM
                         SelectedServiceDueView.RowFilter = "SendLetterTick = 1";
                         var details = new ArrayList();
                         details.Add(SelectedServiceDueView);
-                        var oPrint = new Printing(details, "NCC Service Letters MK2", Enums.SystemDocumentType.ServiceLettersMK2, true, 0, false, Conversions.ToInteger(tbMinsPerDay.Text), theCustomer.CustomerID, Conversions.ToDate(dtpLetterCreateDate.Text));
+                        var oPrint = new Printing(details, "NCC Service Letters MK2", Enums.SystemDocumentType.ServiceLettersMK2, true, 0, false, Convert.ToInt32(tbMinsPerDay.Text), theCustomer.CustomerID, Conversions.ToDate(dtpLetterCreateDate.Text));
                         var endProcess = DateAndTime.Now;
                         Interaction.MsgBox("Start: " + startProcess + Constants.vbCrLf + "End: " + endProcess);
                     }

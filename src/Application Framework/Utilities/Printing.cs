@@ -762,17 +762,17 @@ namespace FSM.Entity
                                                         if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dDay["MondayDate"], DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), false) & !Operators.ConditionalCompareObjectEqual(dDay["Count"], 0, false)))
                                                         {
                                                             theVisitDate = Conversions.ToDate(dDay["TheDate"]);
-                                                            dDay["Count"] = (int)dDay["Count"] - 1;
+                                                            dDay["Count"] = Convert.ToInt32(dDay["Count"]) - 1;
                                                             if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(dDay["AM"], 0, false)))
                                                             {
                                                                 AMPM = "AM";
-                                                                dDay["AM"] = (int)dDay["AM"] - 1;
+                                                                dDay["AM"] = Convert.ToInt32(dDay["AM"]) - 1;
                                                                 App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), Conversions.ToInteger(dDay["AM"]), default, Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
                                                             }
                                                             else
                                                             {
                                                                 AMPM = "PM";
-                                                                dDay["PM"] = (int)dDay["PM"] - 1;
+                                                                dDay["PM"] = Convert.ToInt32(dDay["PM"]) - 1;
                                                                 App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), default, Conversions.ToInteger(dDay["PM"]), Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
                                                             }
 
@@ -796,14 +796,14 @@ namespace FSM.Entity
                                                     var theRow = dtLetter2AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
                                                     if (theRow.Length > 0)
                                                     {
-                                                        if (Conversions.ToBoolean((double)theRow[0]["AMAssigned"] >= ((double)theRow[0]["Count"]) / 2))
+                                                        if (Convert.ToInt32(theRow[0]["AMAssigned"]) >= (Convert.ToInt32(theRow[0]["Count"])) / 2)
                                                         {
                                                             AMPM = "PM";
                                                         }
                                                         else
                                                         {
                                                             AMPM = "AM";
-                                                            theRow[0]["AMAssigned"] = (int)theRow[0]["AMAssigned"] + 1;
+                                                            theRow[0]["AMAssigned"] = Convert.ToInt32(theRow[0]["AMAssigned"]) + 1;
                                                         }
                                                     }
 
@@ -825,14 +825,14 @@ namespace FSM.Entity
                                                     var theRow = dtLetter3AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
                                                     if (theRow.Length > 0)
                                                     {
-                                                        if (Conversions.ToBoolean((double)theRow[0]["AMAssigned"] >= (double)theRow[0]["Count"] / 2))
+                                                        if (Convert.ToInt32(theRow[0]["AMAssigned"]) >= (Convert.ToInt32(theRow[0]["Count"])) / 2)
                                                         {
                                                             AMPM = "PM";
                                                         }
                                                         else
                                                         {
                                                             AMPM = "AM";
-                                                            theRow[0]["AMAssigned"] = (int)theRow[0]["AMAssigned"] + 1;
+                                                            theRow[0]["AMAssigned"] = Convert.ToInt32(theRow[0]["AMAssigned"]) + 1;
                                                         }
                                                     }
                                                 }
@@ -1266,7 +1266,7 @@ namespace FSM.Entity
                             {
                                 folderName = App.TheSystem.Configuration.DocumentsLocation + @"ServiceLetters\ServiceLetters" + Strings.Format(DateAndTime.Now, "ddMMyyHHmm") + @"\";
                                 Directory.CreateDirectory(folderName);
-                                DataTable dt = (DataTable)((ArrayList)DetailsToPrint)[0];
+                                DataTable dt = ((DataView)((ArrayList)DetailsToPrint)[0]).ToTable();
                                 StreamWriter oWriteSolidFuels;
                                 oWriteSolidFuels = File.CreateText(folderName + "SolidFuels.txt");
                                 oWriteSolidFuels.WriteLine("Solid Fuels Properties : ");
@@ -2106,7 +2106,7 @@ namespace FSM.Entity
 
                                 fCMngr.MoveProgressOn();
                                 filePath = App.TheSystem.Configuration.DocumentsLocation + @"ContractExpiryLetters\" + DocumentName + Strings.Format(DateAndTime.Now, "dd-MM-yyyy HHmm") + ".doc"; // "_" & dr("ContractReference") & ".doc"
-                                object argTemplate42 = Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\ContractExpiry.dot";
+                                object argTemplate42 = Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + "\\Contracts" + @"\AnnualContractExpiry.docx";
                                 WordDoc = MsWordApp.Documents.Add(ref argTemplate42);
                                 MsWordApp.Selection.WholeStory();
                                 MsWordApp.Selection.Copy();
@@ -3496,7 +3496,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    ProptMain:
+                ProptMain:
                     ;
                     if (PM is object)
                     {
@@ -3535,7 +3535,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    SaffUnv:
+                SaffUnv:
                     ;
                     if (SaffUnv is object)
                     {
@@ -3574,7 +3574,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    NextLSR:
+                NextLSR:
                     ;
                     if (isBlank)
                     {
@@ -3822,7 +3822,7 @@ namespace FSM.Entity
                 bool patchCheck = dr.Table.Columns.Contains("PatchCheck") && Helper.MakeBooleanValid(dr["PatchCheck"]);
                 var serviceProcess = App.DB.Customer.CustomerServiceProcess_Get_ForCustomer(customerId);
                 string letter = Helper.MakeStringValid(dr["Type"]).ToLower();
-                byte[] template = null;
+                byte[] template = TemplateHelper.ReadWordDoc(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\ServiceLetters\AnnualSafetyInspection.docx");
                 string fileName = dr.Table.Columns.Contains("FileName") && !string.IsNullOrEmpty(Helper.MakeStringValid(dr["FileName"])) ? Helper.MakeStringValid(dr["FileName"]) : string.Empty;
                 var contacts = App.DB.Contact.Contacts_GetAll_ForLink(Conversions.ToInteger(Enums.TableNames.tblSite), Helper.MakeIntegerValid(dr["SiteID"]));
                 DataRow drPOC = null;
@@ -3835,10 +3835,6 @@ namespace FSM.Entity
                     if (patchCheck)
                     {
                         template = TemplateHelper.ReadWordDoc(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\ServiceLetters\PatchCheck.docx");
-                    }
-                    else
-                    {
-                        template = TemplateHelper.ReadWordDoc(Application.StartupPath + App.TheSystem.Configuration.TemplateLocation + @"\ServiceLetters\AnnualSafetyInspection.docx");
                     }
                 }
                 else if (patchCheck)
@@ -5445,17 +5441,24 @@ namespace FSM.Entity
                                 }
                         }
                     }
-
+                    var mm = new MemoryStream();
+                    using (mm)
                     {
-                        var withBlock = WordDoc.Tables[tblIndex];
-                        if (Helper.MakeBooleanValid(dr["DirectDebit"]) == true)
+                        var wordDoc = WordprocessingDocument.Open(mm, true);
+                        using (wordDoc)
                         {
-                            withBlock.Cell(2, 1).Delete();
+                            AddCompanyDetails(wordDoc, true);
                         }
-                        else
-                        {
-                            withBlock.Cell(1, 1).Delete();
-                        }
+                    }
+
+                    var withBlock = WordDoc.Tables[tblIndex];
+                    if (Helper.MakeBooleanValid(dr["DirectDebit"]) == true)
+                    {
+                        withBlock.Cell(2, 1).Delete();
+                    }
+                    else
+                    {
+                        withBlock.Cell(1, 1).Delete();
                     }
 
                     return true;
@@ -6989,8 +6992,7 @@ namespace FSM.Entity
                             }
                             else
                             {
-
-                                foreach (DataRow faultRow in faults.Select(Conversions.ToString("AssetID = " + EngineerVisitAssetWorksheets.Rows[i]["AssetID"])))
+                                foreach (DataRow faultRow in faults.Select(Conversions.ToString("AssetID = " + EngineerVisitAssetWorksheets.Rows[1]["AssetID"])))
                                 {
                                     if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(faultRow["ADDEDTOPRINTOUT"], true, false)))
                                     {
