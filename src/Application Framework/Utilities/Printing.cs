@@ -575,18 +575,18 @@ namespace FSM.Entity
                                                                 int ApptsMinsTally = Conversions.ToInteger(theRow[0]["ApptsMinsTally"]);
                                                                 if (ApptsMinsTally <= MinsPerDayIn / (double)2)
                                                                 {
-                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
-                                                                    theRow[0]["AM"] = (int)theRow[0]["AM"] + 1;
-                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
+                                                                    theRow[0]["count"] = Convert.ToInt32(theRow[0]["count"]) + 1;
+                                                                    theRow[0]["AM"] = Convert.ToInt32(theRow[0]["AM"]) + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = Convert.ToInt32(theRow[0]["ApptsMinsTally"]) + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), Conversions.ToInteger(theRow[0]["AM"]), default, Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                     break;
                                                                 }
                                                                 else if (ApptsMinsTally > MinsPerDayIn / (double)2 & ApptsMinsTally <= MinsPerDayIn)
                                                                 {
-                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
-                                                                    theRow[0]["PM"] = (int)theRow[0]["PM"] + 1;
-                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
+                                                                    theRow[0]["count"] = Convert.ToInt32(theRow[0]["count"]) + 1 + 1;
+                                                                    theRow[0]["PM"] = Convert.ToInt32(theRow[0]["PM"]) + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = Convert.ToInt32(theRow[0]["ApptsMinsTally"]) + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), default, Conversions.ToInteger(theRow[0]["PM"]), Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                     break;
@@ -622,17 +622,17 @@ namespace FSM.Entity
                                                                 int ApptsMinsTally = Conversions.ToInteger(theRow[0]["ApptsMinsTally"]);
                                                                 if (ApptsMinsTally <= MinsPerDayIn / (double)2)
                                                                 {
-                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
-                                                                    theRow[0]["AM"] = (int)theRow[0]["AM"] + 1;
-                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
+                                                                    theRow[0]["count"] = Convert.ToInt32(theRow[0]["count"]) + 1;
+                                                                    theRow[0]["AM"] = Convert.ToInt32(theRow[0]["AM"]) + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = Convert.ToInt32(theRow[0]["ApptsMinsTally"]) + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), Conversions.ToInteger(theRow[0]["AM"]), default, Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                 }
                                                                 else if (ApptsMinsTally > MinsPerDayIn / (double)2 & ApptsMinsTally <= MinsPerDayIn)
                                                                 {
-                                                                    theRow[0]["count"] = ((int)theRow[0]["count"]) + 1;
-                                                                    theRow[0]["PM"] = (int)theRow[0]["PM"] + 1;
-                                                                    theRow[0]["ApptsMinsTally"] = (int)theRow[0]["ApptsMinsTally"] + TimeInMins;
+                                                                    theRow[0]["count"] = Convert.ToInt32(theRow[0]["count"]) + 1;
+                                                                    theRow[0]["AM"] = Convert.ToInt32(theRow[0]["PM"]) + 1;
+                                                                    theRow[0]["ApptsMinsTally"] = Convert.ToInt32(theRow[0]["ApptsMinsTally"]) + TimeInMins;
                                                                     App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])), DateHelper.GetTheMonday(Conversions.ToDate(d["NextVisitDate"])).AddDays(dow), Conversions.ToInteger(theRow[0]["count"]), default, Conversions.ToInteger(theRow[0]["PM"]), Conversions.ToInteger(theRow[0]["ApptsMinsTally"]), lps);
                                                                     ApptFound = true;
                                                                 }
@@ -663,7 +663,7 @@ namespace FSM.Entity
                                             }
                                             else
                                             {
-                                                theRow[0]["count"] = (int)theRow[0]["count"] + 1;
+                                                theRow[0]["count"] = Convert.ToInt32(theRow[0]["count"]) + 1;
                                             }
                                         }
                                         else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(d["Type"], "Letter 3", false)))
@@ -675,7 +675,7 @@ namespace FSM.Entity
                                             }
                                             else
                                             {
-                                                theRow[0]["count"] = (int)theRow[0]["count"] + 1;
+                                                theRow[0]["count"] = Convert.ToInt32(theRow[0]["count"]) + 1;
                                             }
                                         }
                                         else
@@ -3597,9 +3597,10 @@ namespace FSM.Entity
 
             private bool GenerateServiceLetter(DataRow dr, string AMPM, DateTime VisitDate, string JobNumber, DateTime TheDate)
             {
+                string dd = WordDoc.Content.Text;
                 try
                 {
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -4721,7 +4722,7 @@ namespace FSM.Entity
                 var customer = App.DB.Customer.Customer_Get(address.CustomerID);
                 try
                 {
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -5301,7 +5302,7 @@ namespace FSM.Entity
             {
                 try
                 {
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -6403,7 +6404,7 @@ namespace FSM.Entity
                             }
                         }
 
-                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content.ToString()))
+                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content.Text))
                         {
                             var switchExpr = wordField.Value;
                             switch (switchExpr)
@@ -6800,7 +6801,7 @@ namespace FSM.Entity
                     catch (Exception ex)
                     {
                         actualNo -= 1;
-                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content.ToString()))
+                        foreach (Match wordField in Printing.GetTemplateFields(wordDoc.Content.Text))
                         {
                             var switchExpr = wordField.Value;
                             switch (switchExpr)
@@ -8033,7 +8034,7 @@ namespace FSM.Entity
                     var oCustomer = App.DB.Customer.Customer_Get(oSite.CustomerID);
                     var visitDate = ((ArrayList)DetailsToPrint)[1].ToString();
                     int currentPage = 1;
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text)
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -10271,7 +10272,7 @@ namespace FSM.Entity
                         ositeHQ = App.DB.Sites.Get(oSite.CustomerID, Sites.SiteSQL.GetBy.CustomerHq);
                     }
 
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
@@ -10727,7 +10728,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.ToString()))
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
