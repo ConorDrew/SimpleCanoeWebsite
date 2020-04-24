@@ -939,7 +939,7 @@ namespace FSM
             dtAdded.Columns.Add(new DataColumn("JobItemID", typeof(int)));
             dtAdded.Columns.Add(new DataColumn("Summary", typeof(string)));
             dtAdded.Columns.Add(new DataColumn("RateID", typeof(int)));
-            dtAdded.Columns.Add(new DataColumn("Qty", typeof(int)));
+            dtAdded.Columns.Add(new DataColumn("Qty", typeof(decimal)));
             dtAdded.Columns.Add(new DataColumn("SystemLinkID", typeof(int)));
             JobItemsAddedDataView = new DataView(dtAdded);
             if (JobOfWork.JobOfWorkID == 0)

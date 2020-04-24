@@ -109,7 +109,7 @@ namespace FSM.Entity.Sys
             }
 
             var dataType = dr[columnName].GetType();
-            if (dataType != paramType.GetType())
+            if (dataType != paramType)
             {
                 return false;
             }

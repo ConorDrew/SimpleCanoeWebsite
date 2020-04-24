@@ -14781,10 +14781,10 @@ namespace FSM
                 totalCost += Helper.MakeDoubleValid(txtPartProductCost.Text);
                 txtSale.Text = txtJobValue.Text;
                 txtCosts.Text = totalCost.ToString("C");
-                txtProfit.Text = (Convert.ToDouble(txtSale.Text) - Convert.ToDouble(txtCosts.Text)).ToString("C");
+                txtProfit.Text = (Helper.MakeDoubleValid(txtSale.Text) - Helper.MakeDoubleValid(txtCosts.Text)).ToString("C");
                 if (txtSale.Text.Length > 0)
                 {
-                    txtProfitPerc.Text = Math.Round(Convert.ToDouble(txtProfit.Text) / Convert.ToDouble(txtSale.Text) * 100, 2) + "%";
+                    txtProfitPerc.Text = Math.Round(Helper.MakeDoubleValid(txtProfit.Text) / Helper.MakeDoubleValid(txtSale.Text) * 100, 2) + "%";
                 }
                 else
                 {
@@ -15546,7 +15546,7 @@ namespace FSM
             }
             else
             {
-                App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Insert(EngineerVisit.EngineerVisitID, txtAdditionalChargeDescription.Text, Convert.ToDouble(txtAdditionalCharge.Text));
+                App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Insert(EngineerVisit.EngineerVisitID, txtAdditionalChargeDescription.Text, Helper.MakeDoubleValid(txtAdditionalCharge.Text));
                 txtAdditionalCharge.Text = "";
                 txtAdditionalChargeDescription.Text = "";
                 PopulateAdditionalCharges();
@@ -15798,7 +15798,7 @@ namespace FSM
             {
                 if (txtPercentOfQuote.Text.All(char.IsDigit))
                 {
-                    percentage = Convert.ToDouble(txtPercentOfQuote.Text);
+                    percentage = Helper.MakeDoubleValid(txtPercentOfQuote.Text);
                     percentTotal = Helper.MakeDoubleValid(txtCharge.Text) / 100 * percentage;
                     lblQuotePercentageTotal.Text = percentTotal.ToString("C");
                     SaveVisitCharge();
@@ -15940,7 +15940,7 @@ namespace FSM
             if (EngVisitCharge is object)
             {
                 Entity.VATRatess.VATRates vatRate;
-                if (Convert.ToDouble(Combo.get_GetSelectedItemValue(cboVATRate)) < 1)
+                if (Helper.MakeDoubleValid(Combo.get_GetSelectedItemValue(cboVATRate)) < 1)
                 {
                     vatRate = App.DB.VATRatesSQL.VATRates_Get(App.DB.VATRatesSQL.VATRates_Get_ByDate(dtpRaiseInvoiceOn.Value));
                 }
@@ -15999,7 +15999,7 @@ namespace FSM
                 newJbItm = App.DB.JobItems.Insert(newJbItm);
 
                 // SAVE VISIT UNITS USED
-                App.DB.EngineerVisits.EngineerVisitUnitsUsed_Insert(EngineerVisit.EngineerVisitID, newJbItm.JobItemID, Convert.ToDouble(newJbItm.Qty));
+                App.DB.EngineerVisits.EngineerVisitUnitsUsed_Insert(EngineerVisit.EngineerVisitID, newJbItm.JobItemID, Helper.MakeDoubleValid(newJbItm.Qty));
 
                 // SAVE TO ENGINEER VISIT SCHEDULE RATES CHARGES
                 App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID, newJbItm.JobItemID, Helper.MakeDoubleValid(newSoR["Price"]), 1);
@@ -16143,11 +16143,11 @@ namespace FSM
             {
                 if (row.Field<string>("Type") == "Part")
                 {
-                    App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, row.Field<int>("ID"), Convert.ToDouble(row["SellPrice"]), 1, GetPartProductCost(row), (int)row["UniqueID"]);
+                    App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, row.Field<int>("ID"), Helper.MakeDoubleValid(row["SellPrice"]), 1, GetPartProductCost(row), (int)row["UniqueID"]);
                 }
                 else
                 {
-                    App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)row["ID"], Convert.ToDouble(row["SellPrice"]), 1, GetPartProductCost(row));
+                    App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)row["ID"], Helper.MakeDoubleValid(row["SellPrice"]), 1, GetPartProductCost(row));
                 }
             }
 
@@ -16673,7 +16673,7 @@ namespace FSM
             foreach (DataRow charge in TimeSheetCharges.Table.Rows)
                 tsCostTotal += Helper.MakeDoubleValid(charge["EngineerCost"]);
             if (EngVisitCharge.LabourPrice > 0)
-                tSChargeTotal = Convert.ToDouble(EngVisitCharge.LabourPrice);
+                tSChargeTotal = Helper.MakeDoubleValid(EngVisitCharge.LabourPrice);
             if (recalc | EngVisitCharge.LabourPrice == 0)
             {
                 tSChargeTotal = 0;
@@ -16863,7 +16863,7 @@ namespace FSM
                         int ibcCostCentre = Helper.GetNumber(ibcDetails);
                         var departments = App.DB.Picklists.GetAll(Enums.PickListTypes.Department);
                         if ((from x in departments.Table.AsEnumerable()
-                             where Convert.ToDouble(x.Field<string>("Name")) == ibcCostCentre
+                             where Helper.MakeDoubleValid(x.Field<string>("Name")) == ibcCostCentre
                              select x).Count() > 0)
                         {
                             costCentre = ibcCostCentre;
@@ -17126,18 +17126,18 @@ namespace FSM
                 var drPre = dt.Select("Preferred=1");
                 if (drPre.Length > 0)
                 {
-                    return Convert.ToDouble((double)drPre[0]["Price"] * Helper.MakeDoubleValid(dr["Quantity"]));
+                    return Helper.MakeDoubleValid((double)drPre[0]["Price"] * Helper.MakeDoubleValid(dr["Quantity"]));
                 }
 
                 double lowest = 0;
                 if (dt.Rows.Count > 0)
                 {
-                    lowest = Convert.ToDouble(dt.Rows[0]["Price"]);
+                    lowest = Helper.MakeDoubleValid(dt.Rows[0]["Price"]);
                     foreach (DataRow r in dt.Rows)
                     {
                         if (Convert.ToBoolean((double)r["Price"] < lowest))
                         {
-                            lowest = Convert.ToDouble(r["Price"]);
+                            lowest = Helper.MakeDoubleValid(r["Price"]);
                         }
                     }
                 }
@@ -18605,7 +18605,7 @@ namespace FSM
 
         private void cboRecharge_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToDouble(Combo.get_GetSelectedItemValue(cboRecharge)) > 0)
+            if (Helper.MakeDoubleValid(Combo.get_GetSelectedItemValue(cboRecharge)) > 0)
             {
                 lblRechargeTicked.Visible = true;
             }
@@ -18637,7 +18637,7 @@ namespace FSM
 
         private void cboInvType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToDouble(Combo.get_GetSelectedItemValue(cboInvType)) == 69491)
+            if (Helper.MakeDoubleValid(Combo.get_GetSelectedItemValue(cboInvType)) == 69491)
             {
                 lblPaidBy.Visible = true;
                 cboPaidBy.Visible = true;
@@ -19071,12 +19071,12 @@ namespace FSM
                         if ((string)dr["Type"] == "Part")
                         {
                             App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete((int)dr["ChargeID"]);
-                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 1, Convert.ToDouble(dr["Cost"]), (int)dr["PartUsedID"]);
+                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Helper.MakeDoubleValid(dr["Price"]), 1, Helper.MakeDoubleValid(dr["Cost"]), (int)dr["PartUsedID"]);
                         }
                         else
                         {
                             App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete((int)dr["ChargeID"]);
-                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 1, Convert.ToDouble(dr["Cost"]));
+                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Helper.MakeDoubleValid(dr["Price"]), 1, Helper.MakeDoubleValid(dr["Cost"]));
                         }
 
                         dr["tick"] = true;
@@ -19089,12 +19089,12 @@ namespace FSM
                         if ((string)dr["Type"] == "Part")
                         {
                             App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete((int)dr["ChargeID"]);
-                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]), (int)dr["PartUsedID"]);
+                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Helper.MakeDoubleValid(dr["Price"]), 0, Helper.MakeDoubleValid(dr["Cost"]), (int)dr["PartUsedID"]);
                         }
                         else
                         {
                             App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete((int)dr["ChargeID"]);
-                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]));
+                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Helper.MakeDoubleValid(dr["Price"]), 0, Helper.MakeDoubleValid(dr["Cost"]));
                         }
 
                         dr["tick"] = false;
@@ -19152,12 +19152,12 @@ namespace FSM
                     if ((string)dr["Type"] == "Part")
                     {
                         App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete((int)dr["ChargeID"]);
-                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]), (int)dr["PartUsedID"]);
+                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Helper.MakeDoubleValid(dr["Price"]), 0, Helper.MakeDoubleValid(dr["Cost"]), (int)dr["PartUsedID"]);
                     }
                     else
                     {
                         App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete((int)dr["ChargeID"]);
-                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Helper.MakeDoubleValid(dr["Price"]), 0, Helper.MakeDoubleValid(dr["Cost"]));
                     }
 
                     dr["tick"] = false;

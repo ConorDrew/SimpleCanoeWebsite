@@ -2215,7 +2215,7 @@ namespace FSM
             var f = new FRMInvoiceExtraDetail();
             f.ShowDialog();
             details.Add(f.txtNotes.Text);
-            details.Add(Conversions.ToDouble(f.txtCharge.Text));
+            details.Add(double.TryParse(f.txtCharge.Text, out double val) ? val : 0.0);
             details.Add(App.DB.VATRatesSQL.VATRates_Get(Conversions.ToInteger(Combo.get_GetSelectedItemValue(f.cbo))).VATRate);
             var oPrint = new Printing(details, "ProFormaFromVisit", Enums.SystemDocumentType.ProFormaFromVisit, true);
         }

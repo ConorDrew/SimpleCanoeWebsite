@@ -2694,20 +2694,20 @@ namespace FSM
         public void ResetMe(int newID)
         {
             ID = newID;
-            Form form = (Form)get_GetParameter(2);
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(form.Name.ToLower(), typeof(UCSite).Name.ToLower(), false)))
+            var formType = get_GetParameter(2)?.GetType();
+            if (formType == typeof(UCSite))
             {
                 ((UCSite)get_GetParameter(2)).PopulateJobs();
                 App.MainForm.RefreshEntity(Helper.MakeIntegerValid(get_GetParameter(1)));
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(form.Name.ToLower(), typeof(UCAsset).Name.ToLower(), false)))
+            if (formType == typeof(UCAsset))
             {
                 ((UCAsset)get_GetParameter(2)).PopulateJobs();
                 App.MainForm.RefreshEntity(Helper.MakeIntegerValid(get_GetParameter(1)));
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(form.Name.ToLower(), typeof(UCQuoteJob).Name.ToLower(), false)))
+            if (formType == typeof(UCQuoteJob))
             {
                 // CType(LoadedControl, UCLogCallout).CurrentJob = DB.Job.Job_Get(ID)
             }
@@ -2879,10 +2879,10 @@ namespace FSM
             var dt = new DataTable();
             dt.TableName = "QuoteTable";
             Data.Table = dt;
-            Data.Table.Columns.Add("PartName");
-            Data.Table.Columns.Add("PartNumber");
-            Data.Table.Columns.Add("PartCost");
-            Data.Table.Columns.Add("PartQty");
+            Data.Table.Columns.Add("PartName", typeof(string));
+            Data.Table.Columns.Add("PartNumber", typeof(string));
+            Data.Table.Columns.Add("PartCost", typeof(decimal));
+            Data.Table.Columns.Add("PartQty", typeof(int));
             var ID = new DataGridViewTextBoxColumn();
             ID.HeaderText = "CustomerScheduleOfRateID";
             ID.DataPropertyName = "CustomerScheduleOfRateID";
@@ -3357,7 +3357,7 @@ namespace FSM
                     else if (Conversions.ToBoolean((int)dr["PartQty"] > 0))
                     {
                         rCount += 1;
-                        partMup = Conversions.ToDouble((int)dr["Partcost"] * markup2);
+                        partMup = Conversions.ToDouble((decimal)dr["Partcost"] * markup2);
                         partResult += Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString("Materials " + rCount + ": Code: " + dr["PartNumber"] + " / Name: ") + dr["PartName"] + " / Cost: £") + partMup + " X ") + dr["PartQty"] + " = £") + Math.Round(partMup * (int)dr["PartQty"], 2, MidpointRounding.AwayFromZero) + Constants.vbCrLf;
                         partTotal += Math.Round(partMup * (int)dr["PartQty"], 2, MidpointRounding.AwayFromZero);
                     }
