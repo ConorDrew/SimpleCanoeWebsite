@@ -57,6 +57,17 @@ namespace FSM
         private void FRMChangeInvoicedTotal_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
+
+            if (App.loggedInUser.HasAccessToModule(Entity.Sys.Enums.SecuritySystemModules.AccountPeriod))
+            {
+                dtpTaxDate.Enabled = true;
+                btnSave.Enabled = true;
+            }
+            else
+            {
+                dtpTaxDate.Enabled = false;
+                btnSave.Enabled = false;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -67,16 +78,6 @@ namespace FSM
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            if ((Entity.Sys.Helper.HashPassword(txtPassword.Text.Trim()) ?? "") == (App.DB.Manager.Get().OverridePassword_Service ?? ""))
-            {
-                dtpTaxDate.Enabled = true;
-                btnSave.Enabled = true;
-            }
-            else
-            {
-                dtpTaxDate.Enabled = false;
-                btnSave.Enabled = false;
-            }
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

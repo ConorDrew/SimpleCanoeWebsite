@@ -37,90 +37,69 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _dtpTaxDate = new DateTimePicker();
-            _Label3 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _txtPassword = new TextBox();
-            _txtPassword.TextChanged += new EventHandler(txtPassword_TextChanged);
-            _Label1 = new Label();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dtpTaxDate = new System.Windows.Forms.DateTimePicker();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_dtpTaxDate);
-            _GroupBox1.Controls.Add(_Label3);
-            _GroupBox1.Controls.Add(_btnSave);
-            _GroupBox1.Controls.Add(_txtPassword);
-            _GroupBox1.Controls.Add(_Label1);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(502, 171);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Change Invoiced Total";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dtpTaxDate);
+            this._GroupBox1.Controls.Add(this._Label3);
+            this._GroupBox1.Controls.Add(this._btnSave);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 38);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(502, 97);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Change Invoiced Total";
             // 
-            // dtpTaxDate
+            // _dtpTaxDate
             // 
-            _dtpTaxDate.Location = new Point(194, 68);
-            _dtpTaxDate.Name = "dtpTaxDate";
-            _dtpTaxDate.Size = new Size(291, 21);
-            _dtpTaxDate.TabIndex = 13;
+            this._dtpTaxDate.Location = new System.Drawing.Point(194, 22);
+            this._dtpTaxDate.Name = "_dtpTaxDate";
+            this._dtpTaxDate.Size = new System.Drawing.Size(291, 21);
+            this._dtpTaxDate.TabIndex = 13;
             // 
-            // Label3
+            // _Label3
             // 
-            _Label3.AutoSize = true;
-            _Label3.Location = new Point(6, 76);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(67, 13);
-            _Label3.TabIndex = 5;
-            _Label3.Text = "Sage Date";
+            this._Label3.AutoSize = true;
+            this._Label3.Location = new System.Drawing.Point(6, 30);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(67, 13);
+            this._Label3.TabIndex = 5;
+            this._Label3.Text = "Sage Date";
             // 
-            // btnSave
+            // _btnSave
             // 
-            _btnSave.Enabled = false;
-            _btnSave.Location = new Point(410, 136);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(75, 23);
-            _btnSave.TabIndex = 4;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
-            // 
-            // txtPassword
-            // 
-            _txtPassword.Location = new Point(194, 27);
-            _txtPassword.Name = "txtPassword";
-            _txtPassword.PasswordChar = (char)42;
-            _txtPassword.Size = new Size(291, 21);
-            _txtPassword.TabIndex = 1;
-            _txtPassword.UseSystemPasswordChar = true;
-            // 
-            // Label1
-            // 
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(6, 30);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(169, 13);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Enter the override password";
+            this._btnSave.Enabled = false;
+            this._btnSave.Location = new System.Drawing.Point(410, 58);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 4;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FRMChangeSageDate
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(526, 221);
-            Controls.Add(_GroupBox1);
-            Name = "FRMChangeSageDate";
-            Text = "Change Sage Date";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            Load += new EventHandler(FRMChangeInvoicedTotal_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(526, 147);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FRMChangeSageDate";
+            this.Text = "Change Sage Date";
+            this.Load += new System.EventHandler(this.FRMChangeInvoicedTotal_Load);
+            this.Controls.SetChildIndex(this._GroupBox1, 0);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         void IForm.LoadMe(object sender, EventArgs e)
@@ -174,56 +153,6 @@ namespace FSM
                 if (_btnSave != null)
                 {
                     _btnSave.Click += btnSave_Click;
-                }
-            }
-        }
-
-        private TextBox _txtPassword;
-
-        internal TextBox txtPassword
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtPassword;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtPassword != null)
-                {
-                    _txtPassword.TextChanged -= txtPassword_TextChanged;
-                }
-
-                _txtPassword = value;
-                if (_txtPassword != null)
-                {
-                    _txtPassword.TextChanged += txtPassword_TextChanged;
-                }
-            }
-        }
-
-        private Label _Label1;
-
-        internal Label Label1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label1 != null)
-                {
-                }
-
-                _Label1 = value;
-                if (_Label1 != null)
-                {
                 }
             }
         }

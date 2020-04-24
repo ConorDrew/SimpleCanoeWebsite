@@ -248,7 +248,8 @@
                 Region = 39,
                 SocialHousingSecurity = 40,
                 NeopostPrint = 41,
-                CustomerCharges = 42
+                CustomerCharges = 42,
+                AccountPeriod = 43
             }
 
             public enum AdditionalChecksTypes
