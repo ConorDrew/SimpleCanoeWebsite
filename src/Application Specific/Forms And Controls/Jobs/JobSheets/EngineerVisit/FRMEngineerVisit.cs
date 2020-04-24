@@ -4,8 +4,6 @@ using FSM.Entity.EngineerVisits;
 using FSM.Entity.EngineerVisits.EngineerVisitEngineers;
 using FSM.Entity.EngineerVisits.EngineerVisitEngineers.Enums;
 using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8733,37 +8731,37 @@ namespace FSM
             this._HotWorksPermitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._tcWorkSheet.SuspendLayout();
             this._tpMainDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._pbCustomerSignature)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._pbEngineerSignature)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._dgJobItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._pbCustomerSignature).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._pbEngineerSignature).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgJobItems).BeginInit();
             this._tpAppliances.SuspendLayout();
             this._gpAppliances.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgAssets).BeginInit();
             this._tpWorksheets.SuspendLayout();
             this._grpAdditionalWorksheet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgAdditional)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgAdditional).BeginInit();
             this._grpAlarmInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._DGSmokeComo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._DGSmokeComo).BeginInit();
             this._grpVisitWorksheetExtended.SuspendLayout();
             this._grpVisitDefects.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgVisitDefects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgVisitDefects).BeginInit();
             this._grpApplianceWorksheet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgApplianceWorkSheets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgApplianceWorkSheets).BeginInit();
             this._grpVisitWorksheet.SuspendLayout();
             this._tpTimesheets.SuspendLayout();
             this._grpTimesheets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgTimeSheets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgTimeSheets).BeginInit();
             this._tpPartsAndProducts.SuspendLayout();
             this._grpAllocated.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._nudPartAllocatedQty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductsAllocated)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._nudPartAllocatedQty).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgPartsProductsAllocated).BeginInit();
             this._grpUsed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgPartsAndProductsUsed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._nudQuantityUsed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgPartsAndProductsUsed).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._nudQuantityUsed).BeginInit();
             this._tpOutcomes.SuspendLayout();
             this._grpOutcomes.SuspendLayout();
             this._grpSiteFuels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgSiteFuel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgSiteFuel).BeginInit();
             this._tpQC.SuspendLayout();
             this._GroupBox4.SuspendLayout();
             this._grpQCField.SuspendLayout();
@@ -8774,13 +8772,13 @@ namespace FSM
             this._GroupBox6.SuspendLayout();
             this._GroupBox9.SuspendLayout();
             this._gpbAdditionalCharges.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgAdditionalCharges)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgAdditionalCharges).BeginInit();
             this._gpbPartsAndProducts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductCharging)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgPartsProductCharging).BeginInit();
             this._gpbTimesheets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheetCharges)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgTimesheetCharges).BeginInit();
             this._gpbScheduleOfRates.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgScheduleOfRateCharges)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgScheduleOfRateCharges).BeginInit();
             this._tpPhotos.SuspendLayout();
             this._PrintMenu.SuspendLayout();
             this._SVRs.SuspendLayout();
@@ -8788,9 +8786,9 @@ namespace FSM
             //
             // _tcWorkSheet
             //
-            this._tcWorkSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._tcWorkSheet.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._tcWorkSheet.Controls.Add(this._tpMainDetails);
             this._tcWorkSheet.Controls.Add(this._tpAppliances);
             this._tcWorkSheet.Controls.Add(this._tpWorksheets);
@@ -8847,7 +8845,7 @@ namespace FSM
             // _chkSORDesc
             //
             this._chkSORDesc.AutoSize = true;
-            this._chkSORDesc.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._chkSORDesc.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             this._chkSORDesc.Location = new System.Drawing.Point(128, 413);
             this._chkSORDesc.Name = "_chkSORDesc";
             this._chkSORDesc.Size = new System.Drawing.Size(394, 30);
@@ -8858,7 +8856,7 @@ namespace FSM
             //
             // _btnEditInvoiceNotes
             //
-            this._btnEditInvoiceNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnEditInvoiceNotes.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnEditInvoiceNotes.Location = new System.Drawing.Point(11, 384);
             this._btnEditInvoiceNotes.Name = "_btnEditInvoiceNotes";
             this._btnEditInvoiceNotes.Size = new System.Drawing.Size(97, 23);
@@ -8895,8 +8893,8 @@ namespace FSM
             //
             // _pbCustomerSignature
             //
-            this._pbCustomerSignature.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbCustomerSignature.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._pbCustomerSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._pbCustomerSignature.Location = new System.Drawing.Point(647, 207);
             this._pbCustomerSignature.Name = "_pbCustomerSignature";
@@ -8907,8 +8905,8 @@ namespace FSM
             //
             // _pbEngineerSignature
             //
-            this._pbEngineerSignature.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbEngineerSignature.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._pbEngineerSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._pbEngineerSignature.Location = new System.Drawing.Point(647, 44);
             this._pbEngineerSignature.Name = "_pbEngineerSignature";
@@ -8929,8 +8927,8 @@ namespace FSM
             //
             // _cboSignatureSelected
             //
-            this._cboSignatureSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboSignatureSelected.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._cboSignatureSelected.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cboSignatureSelected.Location = new System.Drawing.Point(714, 332);
             this._cboSignatureSelected.Name = "_cboSignatureSelected";
@@ -8947,9 +8945,9 @@ namespace FSM
             //
             // _dgJobItems
             //
-            this._dgJobItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgJobItems.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgJobItems.DataMember = "";
             this._dgJobItems.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgJobItems.Location = new System.Drawing.Point(128, 450);
@@ -8988,8 +8986,8 @@ namespace FSM
             //
             // _txtCustomer
             //
-            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtCustomer.Location = new System.Drawing.Point(714, 173);
             this._txtCustomer.Name = "_txtCustomer";
             this._txtCustomer.Size = new System.Drawing.Size(525, 21);
@@ -8997,8 +8995,8 @@ namespace FSM
             //
             // _cboEngineer
             //
-            this._cboEngineer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboEngineer.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._cboEngineer.Location = new System.Drawing.Point(714, 14);
             this._cboEngineer.Name = "_cboEngineer";
             this._cboEngineer.Size = new System.Drawing.Size(525, 21);
@@ -9117,9 +9115,9 @@ namespace FSM
             //
             // _gpAppliances
             //
-            this._gpAppliances.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpAppliances.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._gpAppliances.Controls.Add(this._dgAssets);
             this._gpAppliances.Location = new System.Drawing.Point(6, 6);
             this._gpAppliances.Name = "_gpAppliances";
@@ -9130,9 +9128,9 @@ namespace FSM
             //
             // _dgAssets
             //
-            this._dgAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAssets.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgAssets.DataMember = "";
             this._dgAssets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgAssets.Location = new System.Drawing.Point(6, 20);
@@ -9157,8 +9155,8 @@ namespace FSM
             //
             // _grpAdditionalWorksheet
             //
-            this._grpAdditionalWorksheet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpAdditionalWorksheet.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left;
             this._grpAdditionalWorksheet.Controls.Add(this._btnRemoveAdd);
             this._grpAdditionalWorksheet.Controls.Add(this._btnAddAdd);
             this._grpAdditionalWorksheet.Controls.Add(this._dgAdditional);
@@ -9171,7 +9169,7 @@ namespace FSM
             //
             // _btnRemoveAdd
             //
-            this._btnRemoveAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnRemoveAdd.Location = new System.Drawing.Point(8, 218);
             this._btnRemoveAdd.Name = "_btnRemoveAdd";
             this._btnRemoveAdd.Size = new System.Drawing.Size(75, 23);
@@ -9180,7 +9178,7 @@ namespace FSM
             //
             // _btnAddAdd
             //
-            this._btnAddAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAddAdd.Location = new System.Drawing.Point(275, 218);
             this._btnAddAdd.Name = "_btnAddAdd";
             this._btnAddAdd.Size = new System.Drawing.Size(75, 23);
@@ -9189,9 +9187,9 @@ namespace FSM
             //
             // _dgAdditional
             //
-            this._dgAdditional.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAdditional.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgAdditional.DataMember = "";
             this._dgAdditional.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgAdditional.Location = new System.Drawing.Point(6, 20);
@@ -9214,7 +9212,7 @@ namespace FSM
             //
             // _btnRemoveSmokeComo
             //
-            this._btnRemoveSmokeComo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveSmokeComo.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnRemoveSmokeComo.Location = new System.Drawing.Point(12, 202);
             this._btnRemoveSmokeComo.Name = "_btnRemoveSmokeComo";
             this._btnRemoveSmokeComo.Size = new System.Drawing.Size(75, 23);
@@ -9224,7 +9222,7 @@ namespace FSM
             //
             // _btnAddSmokeComo
             //
-            this._btnAddSmokeComo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddSmokeComo.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAddSmokeComo.Location = new System.Drawing.Point(275, 202);
             this._btnAddSmokeComo.Name = "_btnAddSmokeComo";
             this._btnAddSmokeComo.Size = new System.Drawing.Size(75, 23);
@@ -9234,9 +9232,9 @@ namespace FSM
             //
             // _DGSmokeComo
             //
-            this._DGSmokeComo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._DGSmokeComo.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._DGSmokeComo.DataMember = "";
             this._DGSmokeComo.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._DGSmokeComo.Location = new System.Drawing.Point(12, 17);
@@ -9247,9 +9245,9 @@ namespace FSM
             //
             // _grpVisitWorksheetExtended
             //
-            this._grpVisitWorksheetExtended.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpVisitWorksheetExtended.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._grpVisitWorksheetExtended.Controls.Add(this._cboSITimer);
             this._grpVisitWorksheetExtended.Controls.Add(this._cboFillDisc);
             this._grpVisitWorksheetExtended.Controls.Add(this._Label81);
@@ -9583,7 +9581,7 @@ namespace FSM
             //
             // _grpVisitDefects
             //
-            this._grpVisitDefects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpVisitDefects.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._grpVisitDefects.Controls.Add(this._btnAddVisitDefect);
             this._grpVisitDefects.Controls.Add(this._btnRemoveVisitDefect);
             this._grpVisitDefects.Controls.Add(this._dgVisitDefects);
@@ -9596,7 +9594,7 @@ namespace FSM
             //
             // _btnAddVisitDefect
             //
-            this._btnAddVisitDefect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddVisitDefect.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAddVisitDefect.Location = new System.Drawing.Point(421, 109);
             this._btnAddVisitDefect.Name = "_btnAddVisitDefect";
             this._btnAddVisitDefect.Size = new System.Drawing.Size(75, 23);
@@ -9606,7 +9604,7 @@ namespace FSM
             //
             // _btnRemoveVisitDefect
             //
-            this._btnRemoveVisitDefect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveVisitDefect.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnRemoveVisitDefect.Location = new System.Drawing.Point(8, 109);
             this._btnRemoveVisitDefect.Name = "_btnRemoveVisitDefect";
             this._btnRemoveVisitDefect.Size = new System.Drawing.Size(75, 23);
@@ -9616,9 +9614,9 @@ namespace FSM
             //
             // _dgVisitDefects
             //
-            this._dgVisitDefects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgVisitDefects.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgVisitDefects.DataMember = "";
             this._dgVisitDefects.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgVisitDefects.Location = new System.Drawing.Point(8, 20);
@@ -9629,8 +9627,8 @@ namespace FSM
             //
             // _grpApplianceWorksheet
             //
-            this._grpApplianceWorksheet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpApplianceWorksheet.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left;
             this._grpApplianceWorksheet.Controls.Add(this._btnRemoveApplianceWorkSheet);
             this._grpApplianceWorksheet.Controls.Add(this._dgApplianceWorkSheets);
             this._grpApplianceWorksheet.Controls.Add(this._btnAddApplianceWorksheet);
@@ -9643,7 +9641,7 @@ namespace FSM
             //
             // _btnRemoveApplianceWorkSheet
             //
-            this._btnRemoveApplianceWorkSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveApplianceWorkSheet.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnRemoveApplianceWorkSheet.Location = new System.Drawing.Point(8, 218);
             this._btnRemoveApplianceWorkSheet.Name = "_btnRemoveApplianceWorkSheet";
             this._btnRemoveApplianceWorkSheet.Size = new System.Drawing.Size(75, 23);
@@ -9653,9 +9651,9 @@ namespace FSM
             //
             // _dgApplianceWorkSheets
             //
-            this._dgApplianceWorkSheets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgApplianceWorkSheets.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgApplianceWorkSheets.DataMember = "";
             this._dgApplianceWorkSheets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgApplianceWorkSheets.Location = new System.Drawing.Point(8, 20);
@@ -9666,7 +9664,7 @@ namespace FSM
             //
             // _btnAddApplianceWorksheet
             //
-            this._btnAddApplianceWorksheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddApplianceWorksheet.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAddApplianceWorksheet.Location = new System.Drawing.Point(413, 218);
             this._btnAddApplianceWorksheet.Name = "_btnAddApplianceWorksheet";
             this._btnAddApplianceWorksheet.Size = new System.Drawing.Size(75, 23);
@@ -9840,9 +9838,9 @@ namespace FSM
             //
             // _grpTimesheets
             //
-            this._grpTimesheets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpTimesheets.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._grpTimesheets.Controls.Add(this._txtActualTimeSpent);
             this._grpTimesheets.Controls.Add(this._txtDifference);
             this._grpTimesheets.Controls.Add(this._txtSORTimeAllowance);
@@ -9869,7 +9867,7 @@ namespace FSM
             //
             // _txtActualTimeSpent
             //
-            this._txtActualTimeSpent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtActualTimeSpent.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._txtActualTimeSpent.Location = new System.Drawing.Point(348, 541);
             this._txtActualTimeSpent.Name = "_txtActualTimeSpent";
             this._txtActualTimeSpent.ReadOnly = true;
@@ -9878,7 +9876,7 @@ namespace FSM
             //
             // _txtDifference
             //
-            this._txtDifference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtDifference.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._txtDifference.Location = new System.Drawing.Point(348, 571);
             this._txtDifference.Name = "_txtDifference";
             this._txtDifference.ReadOnly = true;
@@ -9887,7 +9885,7 @@ namespace FSM
             //
             // _txtSORTimeAllowance
             //
-            this._txtSORTimeAllowance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtSORTimeAllowance.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._txtSORTimeAllowance.Location = new System.Drawing.Point(348, 509);
             this._txtSORTimeAllowance.Name = "_txtSORTimeAllowance";
             this._txtSORTimeAllowance.ReadOnly = true;
@@ -9896,7 +9894,7 @@ namespace FSM
             //
             // _Label52
             //
-            this._Label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label52.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label52.AutoSize = true;
             this._Label52.Location = new System.Drawing.Point(203, 577);
             this._Label52.Name = "_Label52";
@@ -9906,7 +9904,7 @@ namespace FSM
             //
             // _Label51
             //
-            this._Label51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label51.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label51.AutoSize = true;
             this._Label51.Location = new System.Drawing.Point(203, 544);
             this._Label51.Name = "_Label51";
@@ -9916,7 +9914,7 @@ namespace FSM
             //
             // _Label50
             //
-            this._Label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label50.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label50.AutoSize = true;
             this._Label50.Location = new System.Drawing.Point(203, 512);
             this._Label50.Name = "_Label50";
@@ -9926,7 +9924,7 @@ namespace FSM
             //
             // _Label22
             //
-            this._Label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label22.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label22.Location = new System.Drawing.Point(506, 512);
             this._Label22.Name = "_Label22";
             this._Label22.Size = new System.Drawing.Size(72, 23);
@@ -9935,7 +9933,7 @@ namespace FSM
             //
             // _cboTimeSheetType
             //
-            this._cboTimeSheetType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._cboTimeSheetType.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._cboTimeSheetType.Location = new System.Drawing.Point(46, 509);
             this._cboTimeSheetType.Name = "_cboTimeSheetType";
             this._cboTimeSheetType.Size = new System.Drawing.Size(136, 21);
@@ -9943,7 +9941,7 @@ namespace FSM
             //
             // _Label14
             //
-            this._Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label14.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label14.Location = new System.Drawing.Point(5, 512);
             this._Label14.Name = "_Label14";
             this._Label14.Size = new System.Drawing.Size(41, 23);
@@ -9952,7 +9950,7 @@ namespace FSM
             //
             // _txtComments
             //
-            this._txtComments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtComments.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._txtComments.Location = new System.Drawing.Point(584, 509);
             this._txtComments.Multiline = true;
             this._txtComments.Name = "_txtComments";
@@ -9962,7 +9960,7 @@ namespace FSM
             //
             // _dtpEndDate
             //
-            this._dtpEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._dtpEndDate.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._dtpEndDate.CustomFormat = "dd/MM/yyyy HH:mm";
             this._dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dtpEndDate.Location = new System.Drawing.Point(46, 571);
@@ -9972,7 +9970,7 @@ namespace FSM
             //
             // _dtpStartDate
             //
-            this._dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._dtpStartDate.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._dtpStartDate.CustomFormat = "dd/MM/yyyy HH:mm";
             this._dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dtpStartDate.Location = new System.Drawing.Point(46, 540);
@@ -9983,9 +9981,9 @@ namespace FSM
             //
             // _dgTimeSheets
             //
-            this._dgTimeSheets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgTimeSheets.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgTimeSheets.DataMember = "";
             this._dgTimeSheets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgTimeSheets.Location = new System.Drawing.Point(8, 30);
@@ -9996,7 +9994,7 @@ namespace FSM
             //
             // _btnAddTimeSheet
             //
-            this._btnAddTimeSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddTimeSheet.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAddTimeSheet.Location = new System.Drawing.Point(1151, 569);
             this._btnAddTimeSheet.Name = "_btnAddTimeSheet";
             this._btnAddTimeSheet.Size = new System.Drawing.Size(72, 23);
@@ -10006,7 +10004,7 @@ namespace FSM
             //
             // _Label20
             //
-            this._Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label20.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label20.Location = new System.Drawing.Point(5, 573);
             this._Label20.Name = "_Label20";
             this._Label20.Size = new System.Drawing.Size(35, 23);
@@ -10015,7 +10013,7 @@ namespace FSM
             //
             // _Label21
             //
-            this._Label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label21.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label21.Location = new System.Drawing.Point(5, 544);
             this._Label21.Name = "_Label21";
             this._Label21.Size = new System.Drawing.Size(35, 23);
@@ -10024,7 +10022,7 @@ namespace FSM
             //
             // _btnRemoveTimeSheet
             //
-            this._btnRemoveTimeSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemoveTimeSheet.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnRemoveTimeSheet.Location = new System.Drawing.Point(1151, 534);
             this._btnRemoveTimeSheet.Name = "_btnRemoveTimeSheet";
             this._btnRemoveTimeSheet.Size = new System.Drawing.Size(72, 23);
@@ -10034,8 +10032,8 @@ namespace FSM
             //
             // _txtScheduledTime
             //
-            this._txtScheduledTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtScheduledTime.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtScheduledTime.Location = new System.Drawing.Point(112, 16);
             this._txtScheduledTime.Name = "_txtScheduledTime";
             this._txtScheduledTime.ReadOnly = true;
@@ -10063,8 +10061,8 @@ namespace FSM
             //
             // _grpAllocated
             //
-            this._grpAllocated.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpAllocated.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._grpAllocated.Controls.Add(this._btnUnselectAllPPA);
             this._grpAllocated.Controls.Add(this._btnSelectAllPPA);
             this._grpAllocated.Controls.Add(this._btnRevertUsed);
@@ -10087,7 +10085,7 @@ namespace FSM
             //
             // _btnUnselectAllPPA
             //
-            this._btnUnselectAllPPA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnUnselectAllPPA.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnUnselectAllPPA.Location = new System.Drawing.Point(438, 244);
             this._btnUnselectAllPPA.Name = "_btnUnselectAllPPA";
             this._btnUnselectAllPPA.Size = new System.Drawing.Size(98, 23);
@@ -10097,7 +10095,7 @@ namespace FSM
             //
             // _btnSelectAllPPA
             //
-            this._btnSelectAllPPA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSelectAllPPA.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnSelectAllPPA.Location = new System.Drawing.Point(334, 244);
             this._btnSelectAllPPA.Name = "_btnSelectAllPPA";
             this._btnSelectAllPPA.Size = new System.Drawing.Size(98, 23);
@@ -10107,7 +10105,7 @@ namespace FSM
             //
             // _btnRevertUsed
             //
-            this._btnRevertUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRevertUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnRevertUsed.Location = new System.Drawing.Point(234, 244);
             this._btnRevertUsed.Name = "_btnRevertUsed";
             this._btnRevertUsed.Size = new System.Drawing.Size(96, 23);
@@ -10117,7 +10115,7 @@ namespace FSM
             //
             // _nudPartAllocatedQty
             //
-            this._nudPartAllocatedQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._nudPartAllocatedQty.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._nudPartAllocatedQty.Location = new System.Drawing.Point(937, 243);
             this._nudPartAllocatedQty.Maximum = new decimal(new int[] {
             100000,
@@ -10140,7 +10138,7 @@ namespace FSM
             //
             // _lblAllocatedQuantity
             //
-            this._lblAllocatedQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblAllocatedQuantity.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._lblAllocatedQuantity.Location = new System.Drawing.Point(873, 243);
             this._lblAllocatedQuantity.Name = "_lblAllocatedQuantity";
             this._lblAllocatedQuantity.Size = new System.Drawing.Size(64, 23);
@@ -10149,7 +10147,7 @@ namespace FSM
             //
             // _btnAllUsed
             //
-            this._btnAllUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAllUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAllUsed.Location = new System.Drawing.Point(1015, 243);
             this._btnAllUsed.Name = "_btnAllUsed";
             this._btnAllUsed.Size = new System.Drawing.Size(96, 23);
@@ -10159,7 +10157,7 @@ namespace FSM
             //
             // _Label35
             //
-            this._Label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label35.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label35.Location = new System.Drawing.Point(160, 249);
             this._Label35.Name = "_Label35";
             this._Label35.Size = new System.Drawing.Size(104, 16);
@@ -10168,7 +10166,7 @@ namespace FSM
             //
             // _Panel2
             //
-            this._Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Panel2.BackColor = System.Drawing.Color.Lime;
             this._Panel2.Location = new System.Drawing.Point(136, 247);
             this._Panel2.Name = "_Panel2";
@@ -10177,7 +10175,7 @@ namespace FSM
             //
             // _Label34
             //
-            this._Label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label34.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label34.Location = new System.Drawing.Point(32, 249);
             this._Label34.Name = "_Label34";
             this._Label34.Size = new System.Drawing.Size(104, 16);
@@ -10186,7 +10184,7 @@ namespace FSM
             //
             // _Panel1
             //
-            this._Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Panel1.BackColor = System.Drawing.Color.Red;
             this._Panel1.Location = new System.Drawing.Point(8, 246);
             this._Panel1.Name = "_Panel1";
@@ -10195,7 +10193,7 @@ namespace FSM
             //
             // _btnAllocatedNotUsed
             //
-            this._btnAllocatedNotUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAllocatedNotUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAllocatedNotUsed.Location = new System.Drawing.Point(1119, 243);
             this._btnAllocatedNotUsed.Name = "_btnAllocatedNotUsed";
             this._btnAllocatedNotUsed.Size = new System.Drawing.Size(96, 23);
@@ -10205,9 +10203,9 @@ namespace FSM
             //
             // _dgPartsProductsAllocated
             //
-            this._dgPartsProductsAllocated.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartsProductsAllocated.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgPartsProductsAllocated.DataMember = "";
             this._dgPartsProductsAllocated.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgPartsProductsAllocated.Location = new System.Drawing.Point(8, 18);
@@ -10219,7 +10217,7 @@ namespace FSM
             //
             // _lblQuantityWarning
             //
-            this._lblQuantityWarning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblQuantityWarning.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._lblQuantityWarning.AutoSize = true;
             this._lblQuantityWarning.Location = new System.Drawing.Point(603, 249);
             this._lblQuantityWarning.Name = "_lblQuantityWarning";
@@ -10230,9 +10228,9 @@ namespace FSM
             //
             // _grpUsed
             //
-            this._grpUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpUsed.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._grpUsed.Controls.Add(this._lblEquipment);
             this._grpUsed.Controls.Add(this._lblSellPrice);
             this._grpUsed.Controls.Add(this._dgPartsAndProductsUsed);
@@ -10255,7 +10253,7 @@ namespace FSM
             //
             // _lblEquipment
             //
-            this._lblEquipment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblEquipment.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._lblEquipment.Location = new System.Drawing.Point(853, 296);
             this._lblEquipment.Name = "_lblEquipment";
             this._lblEquipment.Size = new System.Drawing.Size(100, 23);
@@ -10265,7 +10263,7 @@ namespace FSM
             //
             // _lblSellPrice
             //
-            this._lblSellPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblSellPrice.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._lblSellPrice.Location = new System.Drawing.Point(1007, 296);
             this._lblSellPrice.Name = "_lblSellPrice";
             this._lblSellPrice.Size = new System.Drawing.Size(100, 23);
@@ -10275,9 +10273,9 @@ namespace FSM
             //
             // _dgPartsAndProductsUsed
             //
-            this._dgPartsAndProductsUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartsAndProductsUsed.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgPartsAndProductsUsed.DataMember = "";
             this._dgPartsAndProductsUsed.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgPartsAndProductsUsed.Location = new System.Drawing.Point(8, 13);
@@ -10288,7 +10286,7 @@ namespace FSM
             //
             // _btnAddPartProductUsed
             //
-            this._btnAddPartProductUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddPartProductUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAddPartProductUsed.Enabled = false;
             this._btnAddPartProductUsed.Location = new System.Drawing.Point(1119, 328);
             this._btnAddPartProductUsed.Name = "_btnAddPartProductUsed";
@@ -10299,7 +10297,7 @@ namespace FSM
             //
             // _nudQuantityUsed
             //
-            this._nudQuantityUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._nudQuantityUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._nudQuantityUsed.Location = new System.Drawing.Point(1047, 328);
             this._nudQuantityUsed.Maximum = new decimal(new int[] {
             100000,
@@ -10322,8 +10320,8 @@ namespace FSM
             //
             // _txtNameUsed
             //
-            this._txtNameUsed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNameUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtNameUsed.Location = new System.Drawing.Point(312, 328);
             this._txtNameUsed.Name = "_txtNameUsed";
             this._txtNameUsed.ReadOnly = true;
@@ -10332,7 +10330,7 @@ namespace FSM
             //
             // _txtNumberUsed
             //
-            this._txtNumberUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtNumberUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._txtNumberUsed.Location = new System.Drawing.Point(72, 328);
             this._txtNumberUsed.Name = "_txtNumberUsed";
             this._txtNumberUsed.ReadOnly = true;
@@ -10341,7 +10339,7 @@ namespace FSM
             //
             // _Label13
             //
-            this._Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label13.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._Label13.Location = new System.Drawing.Point(983, 328);
             this._Label13.Name = "_Label13";
             this._Label13.Size = new System.Drawing.Size(64, 23);
@@ -10350,7 +10348,7 @@ namespace FSM
             //
             // _Label15
             //
-            this._Label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label15.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label15.Location = new System.Drawing.Point(264, 328);
             this._Label15.Name = "_Label15";
             this._Label15.Size = new System.Drawing.Size(64, 23);
@@ -10359,7 +10357,7 @@ namespace FSM
             //
             // _Label16
             //
-            this._Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label16.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Label16.Location = new System.Drawing.Point(8, 328);
             this._Label16.Name = "_Label16";
             this._Label16.Size = new System.Drawing.Size(72, 23);
@@ -10368,7 +10366,7 @@ namespace FSM
             //
             // _btnRemovePartProductUsed
             //
-            this._btnRemovePartProductUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemovePartProductUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnRemovePartProductUsed.Location = new System.Drawing.Point(1119, 296);
             this._btnRemovePartProductUsed.Name = "_btnRemovePartProductUsed";
             this._btnRemovePartProductUsed.Size = new System.Drawing.Size(96, 23);
@@ -10378,7 +10376,7 @@ namespace FSM
             //
             // _btnFindProductUsed
             //
-            this._btnFindProductUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnFindProductUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnFindProductUsed.Location = new System.Drawing.Point(104, 296);
             this._btnFindProductUsed.Name = "_btnFindProductUsed";
             this._btnFindProductUsed.Size = new System.Drawing.Size(88, 23);
@@ -10388,7 +10386,7 @@ namespace FSM
             //
             // _btnFindPartUsed
             //
-            this._btnFindPartUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnFindPartUsed.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnFindPartUsed.Location = new System.Drawing.Point(8, 296);
             this._btnFindPartUsed.Name = "_btnFindPartUsed";
             this._btnFindPartUsed.Size = new System.Drawing.Size(88, 23);
@@ -10409,9 +10407,9 @@ namespace FSM
             //
             // _grpOutcomes
             //
-            this._grpOutcomes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpOutcomes.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._grpOutcomes.Controls.Add(this._grpSiteFuels);
             this._grpOutcomes.Controls.Add(this._cboNccRad);
             this._grpOutcomes.Controls.Add(this._Label76);
@@ -10428,9 +10426,9 @@ namespace FSM
             //
             // _grpSiteFuels
             //
-            this._grpSiteFuels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpSiteFuels.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._grpSiteFuels.Controls.Add(this._dgSiteFuel);
             this._grpSiteFuels.Location = new System.Drawing.Point(3, 17);
             this._grpSiteFuels.Margin = new System.Windows.Forms.Padding(0);
@@ -10443,9 +10441,9 @@ namespace FSM
             //
             // _dgSiteFuel
             //
-            this._dgSiteFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgSiteFuel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgSiteFuel.DataMember = "";
             this._dgSiteFuel.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgSiteFuel.Location = new System.Drawing.Point(5, 19);
@@ -10523,9 +10521,9 @@ namespace FSM
             //
             // _GroupBox4
             //
-            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._GroupBox4.Controls.Add(this._grpQCField);
             this._GroupBox4.Controls.Add(this._grpOfficeQC);
             this._GroupBox4.Location = new System.Drawing.Point(8, 0);
@@ -10905,8 +10903,8 @@ namespace FSM
             //
             // _cboFTFCode
             //
-            this._cboFTFCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboFTFCode.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._cboFTFCode.FormattingEnabled = true;
             this._cboFTFCode.Location = new System.Drawing.Point(759, 90);
             this._cboFTFCode.Name = "_cboFTFCode";
@@ -10939,8 +10937,8 @@ namespace FSM
             //
             // _gpbInvoice
             //
-            this._gpbInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbInvoice.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Right;
             this._gpbInvoice.Controls.Add(this._cboDept);
             this._gpbInvoice.Controls.Add(this._btnCreateServ);
             this._gpbInvoice.Controls.Add(this._txtInvAmount);
@@ -10985,7 +10983,7 @@ namespace FSM
             //
             // _btnCreateServ
             //
-            this._btnCreateServ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreateServ.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnCreateServ.Location = new System.Drawing.Point(8, 192);
             this._btnCreateServ.Name = "_btnCreateServ";
             this._btnCreateServ.Size = new System.Drawing.Size(159, 23);
@@ -11052,7 +11050,7 @@ namespace FSM
             //
             // _txtPriceIncVAT
             //
-            this._txtPriceIncVAT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPriceIncVAT.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this._txtPriceIncVAT.Location = new System.Drawing.Point(425, 106);
             this._txtPriceIncVAT.Name = "_txtPriceIncVAT";
             this._txtPriceIncVAT.ReadOnly = true;
@@ -11225,8 +11223,8 @@ namespace FSM
             //
             // _gpbCharges
             //
-            this._gpbCharges.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this._gpbCharges.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left;
             this._gpbCharges.Controls.Add(this._chkShowJobCharges);
             this._gpbCharges.Controls.Add(this._GroupBox6);
             this._gpbCharges.Controls.Add(this._lblContractPerVisit);
@@ -11508,8 +11506,8 @@ namespace FSM
             //
             // _gpbAdditionalCharges
             //
-            this._gpbAdditionalCharges.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbAdditionalCharges.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._gpbAdditionalCharges.Controls.Add(this._lblAdditionalCharge);
             this._gpbAdditionalCharges.Controls.Add(this._btnAddAdditionalCharge);
             this._gpbAdditionalCharges.Controls.Add(this._txtAdditionalCharge);
@@ -11528,7 +11526,7 @@ namespace FSM
             //
             // _lblAdditionalCharge
             //
-            this._lblAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblAdditionalCharge.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._lblAdditionalCharge.Location = new System.Drawing.Point(8, 206);
             this._lblAdditionalCharge.Name = "_lblAdditionalCharge";
             this._lblAdditionalCharge.Size = new System.Drawing.Size(74, 20);
@@ -11537,7 +11535,7 @@ namespace FSM
             //
             // _btnAddAdditionalCharge
             //
-            this._btnAddAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddAdditionalCharge.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnAddAdditionalCharge.Location = new System.Drawing.Point(539, 204);
             this._btnAddAdditionalCharge.Name = "_btnAddAdditionalCharge";
             this._btnAddAdditionalCharge.Size = new System.Drawing.Size(75, 23);
@@ -11548,7 +11546,7 @@ namespace FSM
             //
             // _txtAdditionalCharge
             //
-            this._txtAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtAdditionalCharge.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._txtAdditionalCharge.Location = new System.Drawing.Point(88, 203);
             this._txtAdditionalCharge.Name = "_txtAdditionalCharge";
             this._txtAdditionalCharge.Size = new System.Drawing.Size(96, 21);
@@ -11556,7 +11554,7 @@ namespace FSM
             //
             // _btnRemoveAdditionalCharge
             //
-            this._btnRemoveAdditionalCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRemoveAdditionalCharge.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnRemoveAdditionalCharge.Location = new System.Drawing.Point(8, 129);
             this._btnRemoveAdditionalCharge.Name = "_btnRemoveAdditionalCharge";
             this._btnRemoveAdditionalCharge.Size = new System.Drawing.Size(75, 23);
@@ -11567,8 +11565,8 @@ namespace FSM
             //
             // _txtAdditionalChargeDescription
             //
-            this._txtAdditionalChargeDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAdditionalChargeDescription.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtAdditionalChargeDescription.Location = new System.Drawing.Point(88, 157);
             this._txtAdditionalChargeDescription.Multiline = true;
             this._txtAdditionalChargeDescription.Name = "_txtAdditionalChargeDescription";
@@ -11577,7 +11575,7 @@ namespace FSM
             //
             // _lblDescription
             //
-            this._lblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblDescription.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._lblDescription.Location = new System.Drawing.Point(8, 161);
             this._lblDescription.Name = "_lblDescription";
             this._lblDescription.Size = new System.Drawing.Size(74, 23);
@@ -11586,7 +11584,7 @@ namespace FSM
             //
             // _txtAdditionalChargeTotal
             //
-            this._txtAdditionalChargeTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAdditionalChargeTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._txtAdditionalChargeTotal.Location = new System.Drawing.Point(541, 131);
             this._txtAdditionalChargeTotal.Name = "_txtAdditionalChargeTotal";
             this._txtAdditionalChargeTotal.ReadOnly = true;
@@ -11595,7 +11593,7 @@ namespace FSM
             //
             // _Label29
             //
-            this._Label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label29.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._Label29.Location = new System.Drawing.Point(492, 131);
             this._Label29.Name = "_Label29";
             this._Label29.Size = new System.Drawing.Size(40, 23);
@@ -11605,9 +11603,9 @@ namespace FSM
             //
             // _dgAdditionalCharges
             //
-            this._dgAdditionalCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAdditionalCharges.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgAdditionalCharges.DataMember = "";
             this._dgAdditionalCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgAdditionalCharges.Location = new System.Drawing.Point(8, 20);
@@ -11634,8 +11632,8 @@ namespace FSM
             //
             // _txtPartsMarkUp
             //
-            this._txtPartsMarkUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartsMarkUp.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtPartsMarkUp.Enabled = false;
             this._txtPartsMarkUp.Location = new System.Drawing.Point(405, 203);
             this._txtPartsMarkUp.Name = "_txtPartsMarkUp";
@@ -11658,8 +11656,8 @@ namespace FSM
             //
             // _txtPartProductCost
             //
-            this._txtPartProductCost.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartProductCost.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtPartProductCost.Location = new System.Drawing.Point(252, 203);
             this._txtPartProductCost.Name = "_txtPartProductCost";
             this._txtPartProductCost.ReadOnly = true;
@@ -11668,8 +11666,8 @@ namespace FSM
             //
             // _txtPartsProductTotal
             //
-            this._txtPartsProductTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartsProductTotal.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtPartsProductTotal.Location = new System.Drawing.Point(525, 202);
             this._txtPartsProductTotal.Name = "_txtPartsProductTotal";
             this._txtPartsProductTotal.ReadOnly = true;
@@ -11707,9 +11705,9 @@ namespace FSM
             //
             // _dgPartsProductCharging
             //
-            this._dgPartsProductCharging.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartsProductCharging.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgPartsProductCharging.DataMember = "";
             this._dgPartsProductCharging.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgPartsProductCharging.Location = new System.Drawing.Point(9, 16);
@@ -11720,8 +11718,8 @@ namespace FSM
             //
             // _gpbTimesheets
             //
-            this._gpbTimesheets.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbTimesheets.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._gpbTimesheets.Controls.Add(this._chkTimesheetSelectAll);
             this._gpbTimesheets.Controls.Add(this._txtEngineerCostTotal);
             this._gpbTimesheets.Controls.Add(this._txtTimesheetTotal);
@@ -11757,8 +11755,8 @@ namespace FSM
             //
             // _txtTimesheetTotal
             //
-            this._txtTimesheetTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTimesheetTotal.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtTimesheetTotal.Location = new System.Drawing.Point(540, 140);
             this._txtTimesheetTotal.Name = "_txtTimesheetTotal";
             this._txtTimesheetTotal.ReadOnly = true;
@@ -11786,9 +11784,9 @@ namespace FSM
             //
             // _dgTimesheetCharges
             //
-            this._dgTimesheetCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgTimesheetCharges.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgTimesheetCharges.DataMember = "";
             this._dgTimesheetCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgTimesheetCharges.Location = new System.Drawing.Point(6, 17);
@@ -11821,8 +11819,8 @@ namespace FSM
             //
             // _txtScheduleOfRatesTotal
             //
-            this._txtScheduleOfRatesTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtScheduleOfRatesTotal.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._txtScheduleOfRatesTotal.Location = new System.Drawing.Point(521, 143);
             this._txtScheduleOfRatesTotal.Name = "_txtScheduleOfRatesTotal";
             this._txtScheduleOfRatesTotal.ReadOnly = true;
@@ -11831,9 +11829,9 @@ namespace FSM
             //
             // _dgScheduleOfRateCharges
             //
-            this._dgScheduleOfRateCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgScheduleOfRateCharges.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom
+            | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
             this._dgScheduleOfRateCharges.DataMember = "";
             this._dgScheduleOfRateCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgScheduleOfRateCharges.Location = new System.Drawing.Point(8, 17);
@@ -11883,7 +11881,7 @@ namespace FSM
             //
             // _btnClose
             //
-            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnClose.Location = new System.Drawing.Point(8, 750);
             this._btnClose.Name = "_btnClose";
             this._btnClose.Size = new System.Drawing.Size(64, 23);
@@ -11893,7 +11891,7 @@ namespace FSM
             //
             // _btnSave
             //
-            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnSave.Location = new System.Drawing.Point(1183, 750);
             this._btnSave.Name = "_btnSave";
             this._btnSave.Size = new System.Drawing.Size(64, 23);
@@ -11904,7 +11902,7 @@ namespace FSM
             // _cbxVisitLockDown
             //
             this._cbxVisitLockDown.BackColor = System.Drawing.SystemColors.Info;
-            this._cbxVisitLockDown.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cbxVisitLockDown.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             this._cbxVisitLockDown.Location = new System.Drawing.Point(8, 32);
             this._cbxVisitLockDown.Name = "_cbxVisitLockDown";
             this._cbxVisitLockDown.Size = new System.Drawing.Size(296, 24);
@@ -11915,9 +11913,9 @@ namespace FSM
             //
             // _lblStatusWarning
             //
-            this._lblStatusWarning.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._lblStatusWarning.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblStatusWarning.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left
+            | System.Windows.Forms.AnchorStyles.Right;
+            this._lblStatusWarning.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             this._lblStatusWarning.ForeColor = System.Drawing.Color.Red;
             this._lblStatusWarning.Location = new System.Drawing.Point(312, 32);
             this._lblStatusWarning.Name = "_lblStatusWarning";
@@ -11929,7 +11927,7 @@ namespace FSM
             //
             // _btnOrders
             //
-            this._btnOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnOrders.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnOrders.Location = new System.Drawing.Point(148, 750);
             this._btnOrders.Name = "_btnOrders";
             this._btnOrders.Size = new System.Drawing.Size(64, 23);
@@ -11939,7 +11937,7 @@ namespace FSM
             //
             // _btnInvoice
             //
-            this._btnInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnInvoice.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnInvoice.Location = new System.Drawing.Point(289, 750);
             this._btnInvoice.Name = "_btnInvoice";
             this._btnInvoice.Size = new System.Drawing.Size(64, 23);
@@ -11949,7 +11947,7 @@ namespace FSM
             //
             // _btnPrint
             //
-            this._btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnPrint.Location = new System.Drawing.Point(1064, 750);
             this._btnPrint.Name = "_btnPrint";
             this._btnPrint.Size = new System.Drawing.Size(103, 23);
@@ -11972,7 +11970,7 @@ namespace FSM
             //
             // _txtCurrentContract
             //
-            this._txtCurrentContract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCurrentContract.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this._txtCurrentContract.Location = new System.Drawing.Point(1116, 38);
             this._txtCurrentContract.Name = "_txtCurrentContract";
             this._txtCurrentContract.ReadOnly = true;
@@ -11981,7 +11979,7 @@ namespace FSM
             //
             // _Label39
             //
-            this._Label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label39.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this._Label39.Location = new System.Drawing.Point(1054, 39);
             this._Label39.Name = "_Label39";
             this._Label39.Size = new System.Drawing.Size(63, 16);
@@ -11990,7 +11988,7 @@ namespace FSM
             //
             // _btnPrintGSR
             //
-            this._btnPrintGSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrintGSR.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnPrintGSR.Location = new System.Drawing.Point(1064, 750);
             this._btnPrintGSR.Name = "_btnPrintGSR";
             this._btnPrintGSR.Size = new System.Drawing.Size(105, 23);
@@ -12000,7 +11998,7 @@ namespace FSM
             //
             // _btnPrintSVR
             //
-            this._btnPrintSVR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrintSVR.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnPrintSVR.Location = new System.Drawing.Point(1057, 750);
             this._btnPrintSVR.Name = "_btnPrintSVR";
             this._btnPrintSVR.Size = new System.Drawing.Size(112, 23);
@@ -12010,7 +12008,7 @@ namespace FSM
             //
             // _btnJob
             //
-            this._btnJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnJob.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._btnJob.Location = new System.Drawing.Point(78, 750);
             this._btnJob.Name = "_btnJob";
             this._btnJob.Size = new System.Drawing.Size(64, 23);
@@ -12020,7 +12018,7 @@ namespace FSM
             //
             // _lblRechargeTicked
             //
-            this._lblRechargeTicked.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblRechargeTicked.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             this._lblRechargeTicked.ForeColor = System.Drawing.Color.Red;
             this._lblRechargeTicked.Location = new System.Drawing.Point(75, 4);
             this._lblRechargeTicked.Name = "_lblRechargeTicked";
@@ -12032,7 +12030,7 @@ namespace FSM
             //
             // _btnShowVisits
             //
-            this._btnShowVisits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnShowVisits.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
             this._btnShowVisits.Location = new System.Drawing.Point(687, 750);
             this._btnShowVisits.Name = "_btnShowVisits";
             this._btnShowVisits.Size = new System.Drawing.Size(99, 23);
@@ -12079,7 +12077,7 @@ namespace FSM
             //
             // _Button1
             //
-            this._Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this._Button1.Location = new System.Drawing.Point(218, 750);
             this._Button1.Name = "_Button1";
             this._Button1.Size = new System.Drawing.Size(64, 23);
@@ -12089,7 +12087,7 @@ namespace FSM
             //
             // _txtCustEmail
             //
-            this._txtCustEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustEmail.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             this._txtCustEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this._txtCustEmail.Location = new System.Drawing.Point(718, 8);
             this._txtCustEmail.Name = "_txtCustEmail";
@@ -12260,44 +12258,44 @@ namespace FSM
             this._tcWorkSheet.ResumeLayout(false);
             this._tpMainDetails.ResumeLayout(false);
             this._tpMainDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._pbCustomerSignature)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._pbEngineerSignature)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._dgJobItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._pbCustomerSignature).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._pbEngineerSignature).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgJobItems).EndInit();
             this._tpAppliances.ResumeLayout(false);
             this._gpAppliances.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgAssets).EndInit();
             this._tpWorksheets.ResumeLayout(false);
             this._grpAdditionalWorksheet.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._dgAdditional)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgAdditional).EndInit();
             this._grpAlarmInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._DGSmokeComo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._DGSmokeComo).EndInit();
             this._grpVisitWorksheetExtended.ResumeLayout(false);
             this._grpVisitWorksheetExtended.PerformLayout();
             this._grpVisitDefects.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._dgVisitDefects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgVisitDefects).EndInit();
             this._grpApplianceWorksheet.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._dgApplianceWorkSheets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgApplianceWorkSheets).EndInit();
             this._grpVisitWorksheet.ResumeLayout(false);
             this._grpVisitWorksheet.PerformLayout();
             this._tpTimesheets.ResumeLayout(false);
             this._tpTimesheets.PerformLayout();
             this._grpTimesheets.ResumeLayout(false);
             this._grpTimesheets.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgTimeSheets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgTimeSheets).EndInit();
             this._tpPartsAndProducts.ResumeLayout(false);
             this._grpAllocated.ResumeLayout(false);
             this._grpAllocated.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._nudPartAllocatedQty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductsAllocated)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._nudPartAllocatedQty).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgPartsProductsAllocated).EndInit();
             this._grpUsed.ResumeLayout(false);
             this._grpUsed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgPartsAndProductsUsed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._nudQuantityUsed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgPartsAndProductsUsed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._nudQuantityUsed).EndInit();
             this._tpOutcomes.ResumeLayout(false);
             this._grpOutcomes.ResumeLayout(false);
             this._grpOutcomes.PerformLayout();
             this._grpSiteFuels.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._dgSiteFuel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgSiteFuel).EndInit();
             this._tpQC.ResumeLayout(false);
             this._GroupBox4.ResumeLayout(false);
             this._grpQCField.ResumeLayout(false);
@@ -12315,16 +12313,16 @@ namespace FSM
             this._GroupBox9.PerformLayout();
             this._gpbAdditionalCharges.ResumeLayout(false);
             this._gpbAdditionalCharges.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgAdditionalCharges)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgAdditionalCharges).EndInit();
             this._gpbPartsAndProducts.ResumeLayout(false);
             this._gpbPartsAndProducts.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductCharging)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgPartsProductCharging).EndInit();
             this._gpbTimesheets.ResumeLayout(false);
             this._gpbTimesheets.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheetCharges)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgTimesheetCharges).EndInit();
             this._gpbScheduleOfRates.ResumeLayout(false);
             this._gpbScheduleOfRates.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgScheduleOfRateCharges)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this._dgScheduleOfRateCharges).EndInit();
             this._tpPhotos.ResumeLayout(false);
             this._tpPhotos.PerformLayout();
             this._PrintMenu.ResumeLayout(false);
@@ -12463,7 +12461,7 @@ namespace FSM
             var timesheetTypesDT = App.DB.Picklists.GetAll(Enums.PickListTypes.TimeSheetTypes).Table;
             for (int i = timesheetTypesDT.Rows.Count - 1; i >= 0; i -= 1)
             {
-                if (Conversions.ToBoolean(!(Operators.ConditionalCompareObjectEqual(timesheetTypesDT.Rows[i]["Name"], "Travelling", false) | Operators.ConditionalCompareObjectEqual(timesheetTypesDT.Rows[i]["Name"], "Working", false))))
+                if (timesheetTypesDT.Rows[i].Field<string>("Name") == "Travelling" | timesheetTypesDT.Rows[i].Field<string>("Name") == "Working")
                 {
                     timesheetTypesDT.Rows.RemoveAt(i);
                 }
@@ -12819,7 +12817,7 @@ namespace FSM
                 }
                 else
                 {
-                    txtCurrentContract.Text = currentContract.ContractType + " - Expires " + Strings.Format(currentContract.ContractEndDate, "dd/MM/yyyy");
+                    txtCurrentContract.Text = currentContract.ContractType + " - Expires " + currentContract.ContractEndDate.ToString("dd/MM/yyyy");
                 }
             }
         }
@@ -13330,23 +13328,23 @@ namespace FSM
                     string errorMsg = "";
                     if (EngVisitCharge.NominalCode.Trim().Length == 0)
                     {
-                        errorMsg += "* Nominal Code is Mandatory" + Constants.vbCrLf;
+                        errorMsg += "* Nominal Code is Mandatory" + Environment.NewLine;
                     }
 
                     if (EngVisitCharge.ForSageAccountCode.Trim().Length == 0)
                     {
-                        errorMsg += "* Account Code is Mandatory" + Constants.vbCrLf;
+                        errorMsg += "* Account Code is Mandatory" + Environment.NewLine;
                     }
 
                     if (EngVisitCharge.Department.Trim().Length == 0)
                     {
-                        errorMsg += "* Department is Mandatory" + Constants.vbCrLf;
+                        errorMsg += "* Department is Mandatory" + Environment.NewLine;
                     }
 
                     if (errorMsg.Length > 0)
                     {
                         e.Cancel = true;
-                        App.ShowMessage("Cannot close for the following reasons:" + Constants.vbCrLf + errorMsg, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        App.ShowMessage("Cannot close for the following reasons:" + Environment.NewLine + errorMsg, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                 }
@@ -13388,7 +13386,7 @@ namespace FSM
             Loading = false;
             if (Job is object)
             {
-                if (Job.StatusEnumID >= Conversions.ToInteger(Enums.JobStatus.Complete))
+                if (Job.StatusEnumID >= (int)Enums.JobStatus.Complete)
                 {
                     cbxVisitLockDown.Enabled = false;
                     cbxReadyToBeInvoiced.Enabled = false;
@@ -13415,7 +13413,7 @@ namespace FSM
 
         private void btnFindPart_Click(object sender, EventArgs e)
         {
-            int partID = Conversions.ToInteger(App.FindRecord(Enums.TableNames.tblPart));
+            int partID = (int)App.FindRecord(Enums.TableNames.tblPart);
             if (!(partID == 0))
             {
                 var part = App.DB.Part.Part_Get(partID);
@@ -13434,7 +13432,7 @@ namespace FSM
 
         private void btnFindProduct_Click(object sender, EventArgs e)
         {
-            int productID = Conversions.ToInteger(App.FindRecord(Enums.TableNames.tblProduct));
+            int productID = (int)App.FindRecord(Enums.TableNames.tblProduct);
             if (!(productID == 0))
             {
                 var product = App.DB.Product.Product_Get(productID);
@@ -13453,11 +13451,10 @@ namespace FSM
         {
             if (dgPartsAndProductsUsed.CurrentRowIndex > -1)
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["LocationID"], 0, false) & (EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["AllocatedID"] == DBNull.Value || Operators.ConditionalCompareObjectEqual(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["AllocatedID"], 0, false))))
+                DataRow drPartsUsed = EngineerVisit.PartsAndProductsUsed.Table.Rows[this.dgPartsAndProductsUsed.CurrentRowIndex];
+                if (drPartsUsed.Field<int>("LocationID") == 0 & drPartsUsed.Field<int>("AllocatedID") == 0)
                 {
-                    // wasn't got from anywhere in the first place.
-
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Type"], "Part", false)))
+                    if (drPartsUsed.Field<string>("Type") == "Part")
                     {
                         App.DB.EngineerVisitsPartsAndProducts.PartsUsed_DeleteOne(Helper.MakeIntegerValid(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["UniqueID"]));
                     }
@@ -13469,10 +13466,10 @@ namespace FSM
                     EngineerVisit.PartsAndProductsUsed.Table.AcceptChanges();
                     EngineerVisit.PartsAndProductsUsed.Table.Rows.RemoveAt(dgPartsAndProductsUsed.CurrentRowIndex);
                 }
-                else if (RemovePart(Conversions.ToInteger(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Quantity"]), Conversions.ToString(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Name"]), Conversions.ToString(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Type"]), Conversions.ToInteger(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["ID"])))
+                else if (RemovePart(drPartsUsed.Field<int>("Quantity"), drPartsUsed.Field<string>("Name"), drPartsUsed.Field<string>("Type"), drPartsUsed.Field<int>("ID")))
                 {
                     // REMOVE FROM DB
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Type"], "Part", false)))
+                    if (drPartsUsed.Field<string>("Type") == "Part")
                     {
                         App.DB.EngineerVisitsPartsAndProducts.PartsUsed_DeleteOne(Helper.MakeIntegerValid(EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["UniqueID"]));
                     }
@@ -13557,7 +13554,7 @@ namespace FSM
                 }
             }
 
-            if ((btnAddPartProductUsed.Text ?? "") == "Add Part" & Conversions.ToBoolean(lblEquipment.Text) == true)
+            if ((btnAddPartProductUsed.Text ?? "") == "Add Part" & Convert.ToBoolean(lblEquipment.Text) == true)
             {
                 EngineerVisit.PartsAndProductsUsed.Table.Rows.Add(newRow);
                 PartProductIDUsed = 0;
@@ -13567,7 +13564,7 @@ namespace FSM
                 btnAddPartProductUsed.Text = "PICK ITEM";
                 btnAddPartProductUsed.Enabled = false;
             }
-            else if (DeclareWhereGotFrom(Conversions.ToInteger(newRow["Quantity"]), Conversions.ToString(newRow["Name"]), Conversions.ToString(newRow["Type"]), Conversions.ToInteger(newRow["ID"])))
+            else if (DeclareWhereGotFrom(newRow.Field<int>("Quantity"), newRow.Field<string>("Name"), newRow.Field<string>("Type"), newRow.Field<int>("ID")))
             {
                 EngineerVisit.PartsAndProductsUsed.Table.Rows.Add(newRow);
                 PartProductIDUsed = 0;
@@ -13598,7 +13595,7 @@ namespace FSM
                 return;
             }
 
-            if (!(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboTimeSheetType)) > 0))
+            if (!(Convert.ToInt32(Combo.get_GetSelectedItemValue(cboTimeSheetType)) > 0))
             {
                 MessageBox.Show("Select a Timesheet Type", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
                 return;
@@ -13606,19 +13603,19 @@ namespace FSM
 
             foreach (DataRow timesheet in EngineerVisit.TimeSheets.Table.Rows)
             {
-                if (Conversions.ToBoolean(dtpStartDate.Value >= Helper.MakeDateTimeValid(timesheet["StartDateTime"]) & dtpStartDate.Value <= Helper.MakeDateTimeValid(timesheet["EndDateTime"])))
+                if (dtpStartDate.Value >= Helper.MakeDateTimeValid(timesheet["StartDateTime"]) & dtpStartDate.Value <= Helper.MakeDateTimeValid(timesheet["EndDateTime"]))
                 {
                     MessageBox.Show("This timesheet overlaps an existing timesheet.", "Overlap", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
-                if (Conversions.ToBoolean(dtpEndDate.Value >= Helper.MakeDateTimeValid(timesheet["StartDateTime"]) & dtpEndDate.Value <= Helper.MakeDateTimeValid(timesheet["EndDateTime"])))
+                if (dtpEndDate.Value >= Helper.MakeDateTimeValid(timesheet["StartDateTime"]) & dtpEndDate.Value <= Helper.MakeDateTimeValid(timesheet["EndDateTime"]))
                 {
                     MessageBox.Show("This timesheet overlaps an existing timesheet.", "Overlap", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
-                if (Conversions.ToBoolean(dtpStartDate.Value <= Helper.MakeDateTimeValid(timesheet["StartDateTime"]) & dtpEndDate.Value >= Helper.MakeDateTimeValid(timesheet["EndDateTime"])))
+                if (dtpStartDate.Value <= Helper.MakeDateTimeValid(timesheet["StartDateTime"]) & dtpEndDate.Value >= Helper.MakeDateTimeValid(timesheet["EndDateTime"]))
                 {
                     MessageBox.Show("This timesheet overlaps an existing timesheet.", "Overlap", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -13627,14 +13624,15 @@ namespace FSM
 
             var newRow = EngineerVisit.TimeSheets.Table.NewRow();
             // TIMESHHETS ADD
-            newRow["StartDateTime"] = Conversions.ToDate(Strings.Format(dtpStartDate.Value, "dd/MMM/yyyy HH:mm") + ":00");
-            newRow["EndDateTime"] = Conversions.ToDate(Strings.Format(dtpEndDate.Value, "dd/MMM/yyyy HH:mm") + ":00");
+            newRow["StartDateTime"] = dtpStartDate.Value;
+            newRow["EndDateTime"] = dtpEndDate.Value;
             newRow["Comments"] = txtComments.Text;
-            newRow["TimesheetTypeID"] = Combo.get_GetSelectedItemValue(cboTimeSheetType);
+            newRow["TimesheetTypeID"] = Convert.ToInt32(Combo.get_GetSelectedItemValue(cboTimeSheetType));
             newRow["TimesheetType"] = Combo.get_GetSelectedItemDescription(cboTimeSheetType);
             EngineerVisit.TimeSheets.Table.Rows.Add(newRow);
-            dtpStartDate.Value = DateAndTime.Now;
-            dtpEndDate.Value = DateAndTime.Now.AddMinutes(1);
+
+            dtpStartDate.Value = DateTime.Now;
+            dtpEndDate.Value = DateTime.Now.AddMinutes(1);
             txtComments.Text = "";
             var argcombo = cboTimeSheetType;
             Combo.SetSelectedComboItem_By_Value(ref argcombo, "0");
@@ -13669,11 +13667,11 @@ namespace FSM
                             return;
                         }
 
-                        if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboOutcome)) == (double)Enums.EngineerVisitOutcomes.Complete)
+                        if (Convert.ToInt32(Combo.get_GetSelectedItemValue(cboOutcome)) == (int)Enums.EngineerVisitOutcomes.Complete)
                         {
-                            if (Job?.JobTypeID == (int?)Enums.JobTypes.Commission == true)
+                            if (Job?.JobTypeID == (int?)Enums.JobTypes.Commission)
                             {
-                                if ((int)MessageBox.Show("Have You" + Constants.vbCrLf + "- Changed fuels?" + Constants.vbCrLf + "- Changed last service date?" + Constants.vbCrLf + "- Deactivated old Assets?", "Lock Visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)MsgBoxResult.No)
+                                if (MessageBox.Show("Have You" + Environment.NewLine + "- Changed fuels?" + Environment.NewLine + "- Changed last service date?" + Environment.NewLine + "- Deactivated old Assets?", "Lock Visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                                 {
                                     App.ShowMessage("Please complete the tasks and then try again.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     cbxVisitLockDown.Checked = false;
@@ -13683,7 +13681,7 @@ namespace FSM
                         }
 
                         // This will : save any changes, lock visit down AND enable the visit charge tab-are you sure
-                        if ((int)MessageBox.Show("Any changes will now be saved, the visit details will be locked and the visit charges made available" + Constants.vbCrLf + "Do you want to continue?", "Lock Visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)MsgBoxResult.Yes)
+                        if (MessageBox.Show("Any changes will now be saved, the visit details will be locked and the visit charges made available" + Environment.NewLine + "Do you want to continue?", "Lock Visit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             if (Save())
                             {
@@ -13850,7 +13848,7 @@ namespace FSM
             string errorMsg = "";
             if (cbxReadyToBeInvoiced.Checked == false)
             {
-                errorMsg += "* Visit is not ready to be invoiced" + Constants.vbCrLf;
+                errorMsg += "* Visit is not ready to be invoiced" + Environment.NewLine;
             }
 
             if (EngVisitCharge.NominalCode.Trim().Length == 0)
@@ -13859,18 +13857,18 @@ namespace FSM
 
             if (EngVisitCharge.ForSageAccountCode.Trim().Length == 0)
             {
-                errorMsg += "* Account Code is Mandatory" + Constants.vbCrLf;
+                errorMsg += "* Account Code is Mandatory" + Environment.NewLine;
             }
 
             if (EngVisitCharge.Department.Trim().Length == 0)
             {
-                errorMsg += "* Department is Mandatory" + Constants.vbCrLf;
+                errorMsg += "* Department is Mandatory" + Environment.NewLine;
             }
 
             if (errorMsg.Length > 0)
             {
                 // e.Cancel = True
-                App.ShowMessage("Cannot close for the following reasons:" + Constants.vbCrLf + errorMsg, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                App.ShowMessage("Cannot close for the following reasons:" + Environment.NewLine + errorMsg, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -13896,7 +13894,7 @@ namespace FSM
                     bool @checked = true;
                     if (dv.Table.Rows.Count > 0)
                     {
-                        if (App.DB.InvoicedLines.InvoicedLines_GetAll_ByInvoiceToBeRaisedID(Conversions.ToInteger(dv.Table.Rows[0]["InvoiceToBeRaisedID"])).Table.Rows.Count > 0)
+                        if (App.DB.InvoicedLines.InvoicedLines_GetAll_ByInvoiceToBeRaisedID((int)dv.Table.Rows[0]["InvoiceToBeRaisedID"]).Table.Rows.Count > 0)
                         {
                             @checked = false;
                         }
@@ -13918,10 +13916,13 @@ namespace FSM
         {
             if (Save())
             {
-                var dt = App.DB.ExecuteWithReturn("Select TestType From tblEngineerVisitAdditionalChecks Where EngineerVisitID = " + EngineerVisit.EngineerVisitID);
+                DataTable dt = App.DB.ExecuteWithReturn("Select TestType From tblEngineerVisitAdditionalChecks Where EngineerVisitID = " + EngineerVisit.EngineerVisitID);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["TestType"], 69318, false) | Operators.ConditionalCompareObjectEqual(dr["TestType"], 69319, false) | Operators.ConditionalCompareObjectEqual(dr["TestType"], 69473, false) | Operators.ConditionalCompareObjectEqual(dr["TestType"], 69592, false)))
+                    if (dr.Field<int>("TestType") == (int)Enums.AdditionalChecksTypes.WorkInProgressAuditDomGASWork |
+                        dr.Field<int>("TestType") == (int)Enums.AdditionalChecksTypes.PostCompleteAuditDomWork |
+                        dr.Field<int>("TestType") == (int)Enums.AdditionalChecksTypes.WorkInProgressAuditDomesticOilWork |
+                        dr.Field<int>("TestType") == (int)Enums.AdditionalChecksTypes.WorkInProgressAuditCommercialGASWork)
                     {
                         var details = new ArrayList();
                         details.Add(EngineerVisit.EngineerVisitID);
@@ -13948,7 +13949,7 @@ namespace FSM
 
             // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
             dialogue.ShowInTaskbar = false;
-            dialogue.Defect = App.DB.EngineerVisitDefects.EngineerVisitDefects_Get(Conversions.ToInteger(SelectedVisitDefectDataRow["EngineerVisitDefectID"]));
+            dialogue.Defect = App.DB.EngineerVisitDefects.EngineerVisitDefects_Get((int)SelectedVisitDefectDataRow["EngineerVisitDefectID"]);
             dialogue.EngineerVisit = EngineerVisit;
             dialogue.JobID = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(EngineerVisit.EngineerVisitID).JobID;
             dialogue.Updating = true;
@@ -13977,7 +13978,7 @@ namespace FSM
 
             // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
             dialogue.ShowInTaskbar = false;
-            dialogue.Worksheet = App.DB.EngineerVisitAssetWorkSheet.EngineerVisitAssetWorkSheet_Get(Conversions.ToInteger(SelectedApplianceWorkSheetDataRow["EngineerVisitAssetWorkSheetID"]));
+            dialogue.Worksheet = App.DB.EngineerVisitAssetWorkSheet.EngineerVisitAssetWorkSheet_Get((int)SelectedApplianceWorkSheetDataRow["EngineerVisitAssetWorkSheetID"]);
             dialogue.EngineerVisit = EngineerVisit;
             dialogue.JobID = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(EngineerVisit.EngineerVisitID).JobID;
             dialogue.Updating = true;
@@ -14006,7 +14007,7 @@ namespace FSM
 
             // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
             dialogue.ShowInTaskbar = false;
-            dialogue.Worksheet = App.DB.EngineerVisitAdditional.EngineerVisitAdditional_Get(Conversions.ToInteger(SelectedAdditionalWorkSheetDataRow["EngineerVisitAdditionalID"]));
+            dialogue.Worksheet = App.DB.EngineerVisitAdditional.EngineerVisitAdditional_Get((int)SelectedAdditionalWorkSheetDataRow["EngineerVisitAdditionalID"]);
             dialogue.EngineerVisit = EngineerVisit;
             dialogue.TheSite = theSite;
             dialogue.JobID = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(EngineerVisit.EngineerVisitID).JobID;
@@ -14042,11 +14043,11 @@ namespace FSM
             Combo.SetUpCombo(ref argc1, App.DB.Picklists.GetAll((Enums.PickListTypes)55).Table, "ManagerID", "Name", Enums.ComboValues.Please_Select);
             var argc2 = dialogue.cboDateType;
             Combo.SetUpCombo(ref argc2, DynamicDataTables.ComoDateType, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
-            dialogue.AdditionalID = Conversions.ToInteger(SelectedSmokeComoDataRow["EngineerVisitAdditionalID"]);
+            dialogue.AdditionalID = (int)SelectedSmokeComoDataRow["EngineerVisitAdditionalID"];
             dialogue.EngineerVisitID = EngineerVisit.EngineerVisitID;
             try
             {
-                dialogue.dtpDate.Value = Conversions.ToDate(SelectedSmokeComoDataRow["Date"]);
+                dialogue.dtpDate.Value = SelectedSmokeComoDataRow.Field<DateTime>("Date");
             }
             catch (Exception ex)
             {
@@ -14056,12 +14057,12 @@ namespace FSM
             }
 
             var argcombo = dialogue.cboDetType;
-            Combo.SetSelectedComboItem_By_Description(ref argcombo, Conversions.ToString(SelectedSmokeComoDataRow["Type"]));
+            Combo.SetSelectedComboItem_By_Description(ref argcombo, SelectedSmokeComoDataRow.Field<string>("Type"));
             var argcombo1 = dialogue.cboPower;
-            Combo.SetSelectedComboItem_By_Description(ref argcombo1, Conversions.ToString(SelectedSmokeComoDataRow["PowerType"]));
+            Combo.SetSelectedComboItem_By_Description(ref argcombo1, SelectedSmokeComoDataRow.Field<string>("PowerType"));
             var argcombo2 = dialogue.cboDateType;
-            Combo.SetSelectedComboItem_By_Description(ref argcombo2, Conversions.ToString(SelectedSmokeComoDataRow["DateType"]));
-            dialogue.txtLocation.Text = Conversions.ToString(SelectedSmokeComoDataRow["Location"]);
+            Combo.SetSelectedComboItem_By_Description(ref argcombo2, SelectedSmokeComoDataRow.Field<string>("DateType"));
+            dialogue.txtLocation.Text = SelectedSmokeComoDataRow.Field<string>("Location");
             dialogue.ShowDialog();
             if (dialogue.DialogResult == DialogResult.OK)
             {
@@ -14104,7 +14105,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.EngineerVisitAdditional.Delete(Conversions.ToInteger(SelectedSmokeComoDataRow["EngineerVisitAdditionalID"]));
+            App.DB.EngineerVisitAdditional.Delete((int)SelectedSmokeComoDataRow["EngineerVisitAdditionalID"]);
             SmokeComoDataview = App.DB.EngineerVisitAdditional.EngineerVisitSmokeComo_GetForVisitDV(EngineerVisit.EngineerVisitID);
         }
 
@@ -14188,7 +14189,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.EngineerVisitDefects.Delete(Conversions.ToInteger(SelectedVisitDefectDataRow["EngineerVisitDefectID"]));
+            App.DB.EngineerVisitDefects.Delete((int)SelectedVisitDefectDataRow["EngineerVisitDefectID"]);
             VisitDefectDataview = App.DB.EngineerVisitDefects.EngineerVisitDefects_GetForEngineerVisit(EngineerVisit.EngineerVisitID);
         }
 
@@ -14199,7 +14200,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.EngineerVisitAssetWorkSheet.Delete(Conversions.ToInteger(SelectedApplianceWorkSheetDataRow["EngineerVisitAssetWorkSheetID"]));
+            App.DB.EngineerVisitAssetWorkSheet.Delete((int)SelectedApplianceWorkSheetDataRow["EngineerVisitAssetWorkSheetID"]);
             ApplianceWorkSheetDataview = App.DB.EngineerVisitAssetWorkSheet.EngineerVisitAssetWorkSheet_GetForVisit(EngineerVisit.EngineerVisitID);
         }
 
@@ -14210,7 +14211,7 @@ namespace FSM
                 return;
             }
 
-            App.DB.EngineerVisitAdditional.Delete(Conversions.ToInteger(SelectedAdditionalWorkSheetDataRow["EngineerVisitAdditionalID"]));
+            App.DB.EngineerVisitAdditional.Delete((int)SelectedAdditionalWorkSheetDataRow["EngineerVisitAdditionalID"]);
             ApplianceWorkSheetDataview = App.DB.EngineerVisitAdditional.EngineerVisitAdditionalWorkSheet_GetForVisitDV(EngineerVisit.EngineerVisitID);
         }
 
@@ -14299,14 +14300,14 @@ namespace FSM
             {
                 if (App.loggedInUser.UserRegions.Table.Select("RegionID = " + theSite.RegionID).Length < 1)
                 {
-                    string msg = "You do not have the necessary security permissions." + Constants.vbCrLf;
+                    string msg = "You do not have the necessary security permissions." + Environment.NewLine;
                     msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
                     throw new System.Security.SecurityException(msg);
                 }
             }
             else
             {
-                string msg = "You do not have the necessary security permissions." + Constants.vbCrLf;
+                string msg = "You do not have the necessary security permissions." + Environment.NewLine;
                 msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
                 throw new System.Security.SecurityException(msg);
             }
@@ -14325,45 +14326,45 @@ namespace FSM
             }
 
             bool closeMe = false;
-            var switchExpr = Conversions.ToInteger(EngineerVisit.StatusEnumID);
+            var switchExpr = EngineerVisit.StatusEnumID;
             switch (switchExpr)
             {
-                case (int)(Enums.VisitStatus.NOT_SET):
+                case (int)Enums.VisitStatus.NOT_SET:
                     {
                         App.ShowMessage("This visit has not entered a visit life span yet.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         closeMe = true;
                         break;
                     }
 
-                case (int)(Enums.VisitStatus.Parts_Need_Ordering):
+                case (int)Enums.VisitStatus.Parts_Need_Ordering:
                     {
                         App.ShowMessage("Parts Need Ordering for this visit, once ordered and recieved you may proceed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         closeMe = true;
                         break;
                     }
 
-                case (int)(Enums.VisitStatus.Waiting_For_Parts):
+                case (int)Enums.VisitStatus.Waiting_For_Parts:
                     {
                         App.ShowMessage("This visit is waiting for parts, once recieved you may proceed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         closeMe = true;
                         break;
                     }
 
-                case (int)(Enums.VisitStatus.Ready_For_Schedule):
+                case (int)Enums.VisitStatus.Ready_For_Schedule:
                     {
                         txtStatus.Text = "Ready For Schedule";
                         txtUploadedBy.Text = "Not Set";
                         break;
                     }
 
-                case (int)(Enums.VisitStatus.Scheduled):
+                case (int)Enums.VisitStatus.Scheduled:
                     {
                         txtStatus.Text = "Scheduled";
                         txtUploadedBy.Text = "Not Set";
                         break;
                     }
 
-                case (int)(Enums.VisitStatus.Downloaded):
+                case (int)Enums.VisitStatus.Downloaded:
                     {
                         App.ShowMessage("This visit is currently with an engineer, once returned you may view the details.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         closeMe = true;
@@ -14379,7 +14380,7 @@ namespace FSM
                         }
                         else
                         {
-                            txtUploadedBy.Text = App.DB.User.Get(EngineerVisit.ManualEntryByUserID).Fullname + " via PC @ " + Strings.Format(EngineerVisit.ManualEntryOn, "dddd dd MMMM yyyy HH:mm:ss");
+                            txtUploadedBy.Text = App.DB.User.Get(EngineerVisit.ManualEntryByUserID).Fullname + " via PC @ " + EngineerVisit.ManualEntryOn.ToString("dddd dd MMMM yyyy HH:mm:ss");
                         }
 
                         break;
@@ -14412,7 +14413,7 @@ namespace FSM
 
                 var argcombo = cboOutcome;
                 Combo.SetSelectedComboItem_By_Value(ref argcombo, EngineerVisit.OutcomeEnumID.ToString());
-                var switchExpr1 = (Enums.EngineerVisitOutcomes)Conversions.ToInteger(EngineerVisit.OutcomeEnumID);
+                var switchExpr1 = (Enums.EngineerVisitOutcomes)EngineerVisit.OutcomeEnumID;
                 switch (switchExpr1)
                 {
                     case Enums.EngineerVisitOutcomes.Carded:
@@ -14449,7 +14450,7 @@ namespace FSM
                 txtOutcomeDetails.Text = EngineerVisit.OutcomeDetails;
                 var argcombo1 = cboEngineer;
                 Combo.SetSelectedComboItem_By_Value(ref argcombo1, EngineerVisit.EngineerID.ToString());
-                if (Conversions.ToBoolean(Conversions.ToInteger(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboEngineer)) == 0) & EngineerVisit.EngineerID))
+                if ((Convert.ToInt32(Combo.get_GetSelectedItemValue(cboEngineer)) == 0) & EngineerVisit.EngineerID > 0)
                 {
                     var nc = new Combo(App.DB.Engineer.Engineer_Get(EngineerVisit.EngineerID).Name, EngineerVisit.EngineerID.ToString());
                     cboEngineer.Items.Add(nc);
@@ -14477,7 +14478,7 @@ namespace FSM
                 }
                 else
                 {
-                    txtScheduledTime.Text += Strings.Format(EngineerVisit.StartDateTime, "dddd dd MMMM yyyy HH:mm:ss");
+                    txtScheduledTime.Text += EngineerVisit.StartDateTime.ToString("dddd dd MMMM yyyy HH:mm:ss");
                 }
 
                 txtScheduledTime.Text += " to ";
@@ -14487,7 +14488,7 @@ namespace FSM
                 }
                 else
                 {
-                    txtScheduledTime.Text += Strings.Format(EngineerVisit.EndDateTime, "dddd dd MMMM yyyy HH:mm:ss");
+                    txtScheduledTime.Text += EngineerVisit.EndDateTime.ToString("dddd dd MMMM yyyy HH:mm:ss");
                 }
 
                 // -------------------------------
@@ -14498,7 +14499,7 @@ namespace FSM
                 }
                 else
                 {
-                    txtScheduledTime2.Text += Strings.Format(EngineerVisit.StartDateTime, "ddd dd/MM/yyyy HH:mm:ss");
+                    txtScheduledTime2.Text += EngineerVisit.StartDateTime.ToString("ddd dd/MM/yyyy HH:mm:ss");
                 }
 
                 txtScheduledTime2.Text += "-";
@@ -14508,7 +14509,7 @@ namespace FSM
                 }
                 else
                 {
-                    txtScheduledTime2.Text += Strings.Format(EngineerVisit.EndDateTime, "ddd dd/MM/yyyy HH:mm:ss");
+                    txtScheduledTime2.Text += EngineerVisit.EndDateTime.ToString("ddd dd/MM/yyyy HH:mm:ss");
                 }
                 // --------------------------------
 
@@ -14554,7 +14555,7 @@ namespace FSM
                 {
                     foreach (DataRow dr in App.DB.JobAsset.JobAsset_Get_For_Job(Job.JobID).Table.Rows)
                     {
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(Conversions.ToInteger(row["AssetID"]), dr["AssetID"], false)))
+                        if (row.Field<int>("AssetID") == dr.Field<int>("AssetID"))
                         {
                             row["Tick"] = true;
                             break;
@@ -14605,7 +14606,7 @@ namespace FSM
                 Combo.SetSelectedComboItem_By_Value(ref argcombo29, QC.EngineerID.ToString());
                 txtQCPoorJobNotes.Text = QC.PoorJobNotes;
                 chkQCDocumentsRecieved.Checked = QC.DocumentsRecieved;
-                dtpQCDocumentsRecieved.Value = Conversions.ToDate(Interaction.IIf(QC.DateDocumentsRecieved != default, QC.DateDocumentsRecieved, DateAndTime.Now));
+                dtpQCDocumentsRecieved.Value = QC.DateDocumentsRecieved != default ? QC.DateDocumentsRecieved : DateTime.Now;
                 Profitable();
                 if (EngineerVisit.EngineerVisitNCCGSR is object)
                 {
@@ -14661,7 +14662,7 @@ namespace FSM
                 HotWorksPermitToolStripMenuItem.Visible = false;
                 foreach (DataRow dr in AdditionalDT.Rows)
                 {
-                    var switchExpr2 = Conversions.ToInteger(dr["TestType"]);
+                    var switchExpr2 = (int)dr["TestType"];
                     switch (switchExpr2)
                     {
                         case (int)Enums.AdditionalChecksTypes.WorkInProgressAuditDomGASWork:
@@ -14779,11 +14780,11 @@ namespace FSM
                 // totalCost += Helper.MakeDoubleValid(Me.txtAdditionalChargeTotal.Text)
                 totalCost += Helper.MakeDoubleValid(txtPartProductCost.Text);
                 txtSale.Text = txtJobValue.Text;
-                txtCosts.Text = Strings.Format(totalCost, "C");
-                txtProfit.Text = Strings.Format(Conversions.ToDouble(txtSale.Text) - Conversions.ToDouble(txtCosts.Text), "C");
+                txtCosts.Text = totalCost.ToString("C");
+                txtProfit.Text = (Convert.ToDouble(txtSale.Text) - Convert.ToDouble(txtCosts.Text)).ToString("C");
                 if (txtSale.Text.Length > 0)
                 {
-                    txtProfitPerc.Text = Math.Round(Conversions.ToDouble(txtProfit.Text) / Conversions.ToDouble(txtSale.Text) * 100, 2) + "%";
+                    txtProfitPerc.Text = Math.Round(Convert.ToDouble(txtProfit.Text) / Convert.ToDouble(txtSale.Text) * 100, 2) + "%";
                 }
                 else
                 {
@@ -14791,7 +14792,7 @@ namespace FSM
                 }
 
                 double totalCharge = 0;
-                var switchExpr = (Enums.JobChargingType)Conversions.ToInteger(EngVisitCharge.ChargeTypeID);
+                var switchExpr = (Enums.JobChargingType)EngVisitCharge.ChargeTypeID;
                 switch (switchExpr)
                 {
                     case Enums.JobChargingType.JobValue:
@@ -14834,24 +14835,24 @@ namespace FSM
                 {
                     if (App.loggedInUser.UserRegions.Table.Select("RegionID = " + theSite.RegionID).Length < 1)
                     {
-                        string msg = "You do not have the necessary security permissions." + Constants.vbCrLf;
+                        string msg = "You do not have the necessary security permissions." + Environment.NewLine;
                         msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
                         throw new System.Security.SecurityException(msg);
                     }
                 }
                 else
                 {
-                    string msg = "You do not have the necessary security permissions." + Constants.vbCrLf;
+                    string msg = "You do not have the necessary security permissions." + Environment.NewLine;
                     msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
                     throw new System.Security.SecurityException(msg);
                 }
 
                 int fuelId = 0;
                 if (SiteFuelsDataView.Table.Select("tick = 1").Length > 0)
-                    fuelId = Conversions.ToInteger(SiteFuelsDataView.Table.Select("tick = 1")[0]["ManagerID"]);
-                if (chkGasServiceCompleted.Checked && fuelId == Conversions.ToInteger(Enums.FuelTypes.NA))
+                    fuelId = (int)SiteFuelsDataView.Table.Select("tick = 1")[0]["ManagerID"];
+                if (chkGasServiceCompleted.Checked && fuelId == (int)Enums.FuelTypes.NA)
                 {
-                    App.ShowMessage("Please select correct fuel type." + Constants.vbCrLf + "Cannot find fuel, please contact your administrator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    App.ShowMessage("Please select correct fuel type." + Environment.NewLine + "Cannot find fuel, please contact your administrator", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return false;
                 }
 
@@ -14920,11 +14921,11 @@ namespace FSM
 
                 var jV = new EngineerVisitValidator();
                 jV.Validate(EngineerVisit, theSite.CustomerID);
-                var switchExpr = Conversions.ToInteger(EngineerVisit.StatusEnumID);
+                var switchExpr = EngineerVisit.StatusEnumID;
                 switch (switchExpr)
                 {
-                    case (int)(Enums.VisitStatus.Ready_For_Schedule):
-                    case (int)(Enums.VisitStatus.Scheduled):
+                    case (int)Enums.VisitStatus.Ready_For_Schedule:
+                    case (int)Enums.VisitStatus.Scheduled:
                         {
                             if (App.ShowMessage("Are you sure you wish to manually complete this visit? (The outcome can not be altered from this point)", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                             {
@@ -14954,7 +14955,7 @@ namespace FSM
                 QC.SetEngineerID = Combo.get_GetSelectedItemValue(cboRecallEngineer);
                 QC.SetPoorJobNotes = txtQCPoorJobNotes.Text;
                 QC.SetDocumentsRecieved = chkQCDocumentsRecieved.Checked;
-                QC.DateDocumentsRecieved = Conversions.ToDate(Interaction.IIf(chkQCDocumentsRecieved.Checked, dtpQCDocumentsRecieved.Value, null));
+                QC.DateDocumentsRecieved = chkQCDocumentsRecieved.Checked ? dtpQCDocumentsRecieved.Value : default;
                 QC.SetEngineerVisitID = EngineerVisit.EngineerVisitID;
                 if (QC.Exists)
                 {
@@ -14974,9 +14975,9 @@ namespace FSM
                 var dtPriorities = App.DB.Picklists.GetAll(Enums.PickListTypes.JOWPriority).Table;
                 foreach (DataRow drPriority in dtPriorities.Rows)
                 {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(drPriority["Name"], "RC - Recall", false)))
+                    if (drPriority.Field<string>("Name") == "RC - Recall")
                     {
-                        recallID = Conversions.ToInteger(drPriority["ManagerID"]);
+                        recallID = drPriority.Field<int>("ManagerID");
                         break;
                     }
                 }
@@ -14988,14 +14989,14 @@ namespace FSM
                     {
                         // Set to Recall
                         jow.SetPriority = recallID;
-                        jow.PriorityDateSet = DateAndTime.Now;
+                        jow.PriorityDateSet = DateTime.Now;
                         App.DB.JobOfWorks.Update_Priority(jow);
                     }
                     else if ((pk.Name ?? "") != "RC - Recall")
                     {
                         // Set to Recall
                         jow.SetPriority = recallID;
-                        jow.PriorityDateSet = DateAndTime.Now;
+                        jow.PriorityDateSet = DateTime.Now;
                         App.DB.JobOfWorks.Update_Priority(jow);
                     }
                 }
@@ -15011,7 +15012,7 @@ namespace FSM
                             var f = new FRMChangePriority();
                             f.ShowDialog();
                             jow.SetPriority = Combo.get_GetSelectedItemValue(f.cboJobType);
-                            jow.PriorityDateSet = DateAndTime.Now;
+                            jow.PriorityDateSet = DateTime.Now;
                             App.DB.JobOfWorks.Update_Priority(jow);
                         }
                     }
@@ -15023,14 +15024,14 @@ namespace FSM
             }
             catch (ValidationException vex)
             {
-                string msg = "Please correct the following errors: " + Constants.vbNewLine + "{0}{1}";
-                msg = string.Format(msg, Constants.vbNewLine, vex.Validator.CriticalMessagesString());
+                string msg = "Please correct the following errors: " + Environment.NewLine + "{0}{1}";
+                msg = string.Format(msg, Environment.NewLine, vex.Validator.CriticalMessagesString());
                 App.ShowMessage(msg, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
             catch (Exception ex)
             {
-                App.ShowMessage("Error saving details : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                App.ShowMessage("Error saving details : " + Environment.NewLine + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -15128,7 +15129,7 @@ namespace FSM
                 {
                     btnInvoice.Visible = false;
                 }
-                else if (EngVisitCharge.InvoiceReadyID == Conversions.ToInteger(Enums.InvoiceReady.Ready))
+                else if (EngVisitCharge.InvoiceReadyID == (int)Enums.InvoiceReady.Ready)
                 {
                     btnInvoice.Visible = true;
                 }
@@ -15526,26 +15527,26 @@ namespace FSM
             string errMsg = "";
             if (!(txtAdditionalChargeDescription.Text.Trim().Length > 0))
             {
-                errMsg += "* Charge Description Required" + Constants.vbCrLf;
+                errMsg += "* Charge Description Required" + Environment.NewLine;
             }
 
             if (!(txtAdditionalCharge.Text.Trim().Length > 0))
             {
-                errMsg += "* Charge Required" + Constants.vbCrLf;
+                errMsg += "* Charge Required" + Environment.NewLine;
             }
-            else if (!Information.IsNumeric(txtAdditionalCharge.Text))
+            else if (!txtAdditionalCharge.Text.All(char.IsDigit))
             {
-                errMsg += "* Charge Must Be Numeric" + Constants.vbCrLf;
+                errMsg += "* Charge Must Be Numeric" + Environment.NewLine;
             }
 
             if (errMsg.Length > 0)
             {
-                errMsg = "Please correct the following errors:" + Constants.vbCrLf + errMsg;
+                errMsg = "Please correct the following errors:" + Environment.NewLine + errMsg;
                 MessageBox.Show(errMsg, "Additional Charge", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Insert(EngineerVisit.EngineerVisitID, txtAdditionalChargeDescription.Text, Conversions.ToDouble(txtAdditionalCharge.Text));
+                App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Insert(EngineerVisit.EngineerVisitID, txtAdditionalChargeDescription.Text, Convert.ToDouble(txtAdditionalCharge.Text));
                 txtAdditionalCharge.Text = "";
                 txtAdditionalChargeDescription.Text = "";
                 PopulateAdditionalCharges();
@@ -15556,7 +15557,7 @@ namespace FSM
         {
             if (!(SelectedAdditionalChargesDataRow is null))
             {
-                App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Delete(Conversions.ToInteger(SelectedAdditionalChargesDataRow["EngineerVisitAdditionalChargeID"]));
+                App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Delete((int)SelectedAdditionalChargesDataRow["EngineerVisitAdditionalChargeID"]);
                 PopulateAdditionalCharges();
             }
         }
@@ -15582,21 +15583,24 @@ namespace FSM
                     return;
                 }
 
-                App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Delete(Conversions.ToInteger(SelectedScheduleOfRateChargesDataRow["EngineerVisitScheduleOfRateChargesID"]));
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedScheduleOfRateChargesDataRow["tick"], 0, false)))
+                App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Delete((int)SelectedScheduleOfRateChargesDataRow["EngineerVisitScheduleOfRateChargesID"]);
+
+                if (SelectedScheduleOfRateChargesDataRow.Field<bool>("tick") == false)
                 {
-                    App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(SelectedScheduleOfRateChargesDataRow["jobitemID"]), Conversions.ToDouble(SelectedScheduleOfRateChargesDataRow["Price"]), 1);
+                    App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID,
+                        SelectedScheduleOfRateChargesDataRow.Field<int>("jobitemID"), SelectedScheduleOfRateChargesDataRow.Field<double>("Price"), 1);
                 }
                 else
                 {
-                    App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(SelectedScheduleOfRateChargesDataRow["jobitemID"]), Conversions.ToDouble(SelectedScheduleOfRateChargesDataRow["Price"]), 0);
+                    App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID,
+                         SelectedScheduleOfRateChargesDataRow.Field<int>("jobitemID"), SelectedScheduleOfRateChargesDataRow.Field<double>("Price"), 0);
                 }
 
                 PopulateScheduleOfRateCharges();
             }
             catch (Exception ex)
             {
-                App.ShowMessage("Cannot change tick state : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                App.ShowMessage("Cannot change tick state : " + Environment.NewLine + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -15643,36 +15647,36 @@ namespace FSM
                     return;
                 }
 
-                double price = Conversions.ToDouble((double)SelectedPartProductsChargesDataRow["Rate"] * ((double)1 + (double)Helper.MakeIntegerValid(txtPartsMarkUp.Text) / (double)100));
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedPartProductsChargesDataRow["Type"], "Part", false)))
+                double price = SelectedPartProductsChargesDataRow.Field<double>("Rate") * (1 + Helper.MakeIntegerValid(txtPartsMarkUp.Text) / 100);
+                if (SelectedPartProductsChargesDataRow.Field<string>("Type") == "Part")
                 {
                     try   // loosing the plot
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete(Conversions.ToInteger(SelectedPartProductsChargesDataRow["ChargeID"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete((int)SelectedPartProductsChargesDataRow["ChargeID"]);
                     }
                     catch (Exception ex)
                     {
                     }
 
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedPartProductsChargesDataRow["tick"], 0, false)))
+                    if (SelectedPartProductsChargesDataRow.Field<bool>("tick") == false)
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(SelectedPartProductsChargesDataRow["UniqueID"]), price, 1, Conversions.ToDouble(SelectedPartProductsChargesDataRow["Rate"]), Conversions.ToInteger(SelectedPartProductsChargesDataRow["PartUsedID"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)SelectedPartProductsChargesDataRow["UniqueID"], price, 1, SelectedPartProductsChargesDataRow.Field<double>("Rate"), SelectedPartProductsChargesDataRow.Field<int>("PartUsedID"));
                     }
                     else
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(SelectedPartProductsChargesDataRow["UniqueID"]), price, 0, Conversions.ToDouble(SelectedPartProductsChargesDataRow["Rate"]), Conversions.ToInteger(SelectedPartProductsChargesDataRow["PartUsedID"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)SelectedPartProductsChargesDataRow["UniqueID"], price, 0, SelectedPartProductsChargesDataRow.Field<double>("Rate"), SelectedPartProductsChargesDataRow.Field<int>("PartUsedID"));
                     }
                 }
                 else
                 {
                     App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete(Helper.MakeIntegerValid(SelectedPartProductsChargesDataRow["ChargeID"]));
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedPartProductsChargesDataRow["tick"], 0, false)))
+                    if (SelectedPartProductsChargesDataRow.Field<bool>("tick") == false)
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(SelectedPartProductsChargesDataRow["UniqueID"]), price, 1, Conversions.ToDouble(SelectedPartProductsChargesDataRow["Rate"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)SelectedPartProductsChargesDataRow["UniqueID"], price, 1, SelectedPartProductsChargesDataRow.Field<double>("Rate"));
                     }
                     else
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(SelectedPartProductsChargesDataRow["UniqueID"]), price, 0, Conversions.ToDouble(SelectedPartProductsChargesDataRow["Rate"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)SelectedPartProductsChargesDataRow["UniqueID"], price, 0, SelectedPartProductsChargesDataRow.Field<double>("Rate"));
                     }
                 }
 
@@ -15680,7 +15684,7 @@ namespace FSM
             }
             catch (Exception ex)
             {
-                App.ShowMessage("Cannot change tick state : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                App.ShowMessage("Cannot change tick state : " + Environment.NewLine + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -15697,7 +15701,7 @@ namespace FSM
                 if (EngVisitCharge is object)
                 {
                     // Make sure we're not overwriting status alreay set - shouldn't be possible
-                    if ((Enums.InvoiceReady)Conversions.ToInteger(EngVisitCharge.InvoiceReadyID) == Enums.InvoiceReady.Ready)
+                    if ((Enums.InvoiceReady)EngVisitCharge.InvoiceReadyID == Enums.InvoiceReady.Ready)
                     {
                         cbxReadyToBeInvoiced.Checked = true;
                     }
@@ -15722,7 +15726,7 @@ namespace FSM
                 if (Job is object)
                 {
                     // If it a quote we invoice
-                    if ((Enums.JobDefinition)Conversions.ToInteger(Job.JobDefinitionEnumID) == Enums.JobDefinition.Quoted)
+                    if ((Enums.JobDefinition)Job.JobDefinitionEnumID == Enums.JobDefinition.Quoted)
                     {
                         gpbInvoice.Enabled = true;
                         ShowEditableVisitCharges();
@@ -15730,7 +15734,7 @@ namespace FSM
                         if (EngVisitCharge is object)
                         {
                             // Make sure we're not overwriting status alreay set - shouldn't be possible
-                            if ((Enums.InvoiceReady)Conversions.ToInteger(EngVisitCharge.InvoiceReadyID) == Enums.InvoiceReady.Ready)
+                            if ((Enums.InvoiceReady)EngVisitCharge.InvoiceReadyID == Enums.InvoiceReady.Ready)
                             {
                                 cbxReadyToBeInvoiced.Checked = true;
                             }
@@ -15770,7 +15774,7 @@ namespace FSM
                 if (EngVisitCharge is object)
                 {
                     // Make sure we're not overwriting status alreay set - shouldn't be possible
-                    if ((Enums.InvoiceReady)Conversions.ToInteger(EngVisitCharge.InvoiceReadyID) == Enums.InvoiceReady.Ready)
+                    if ((Enums.InvoiceReady)EngVisitCharge.InvoiceReadyID == Enums.InvoiceReady.Ready)
                     {
                         cbxReadyToBeInvoiced.Checked = true;
                     }
@@ -15792,11 +15796,11 @@ namespace FSM
             double percentTotal = 0.0;
             if (!(txtPercentOfQuote.Text.Trim().Length == 0))
             {
-                if (Information.IsNumeric(txtPercentOfQuote.Text))
+                if (txtPercentOfQuote.Text.All(char.IsDigit))
                 {
-                    percentage = Conversions.ToDouble(txtPercentOfQuote.Text);
+                    percentage = Convert.ToDouble(txtPercentOfQuote.Text);
                     percentTotal = Helper.MakeDoubleValid(txtCharge.Text) / 100 * percentage;
-                    lblQuotePercentageTotal.Text = Strings.Format(percentTotal, "C");
+                    lblQuotePercentageTotal.Text = percentTotal.ToString("C");
                     SaveVisitCharge();
                 }
                 else
@@ -15831,27 +15835,29 @@ namespace FSM
                     return;
                 }
 
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedTimeSheetChargesDataRow["tick"], 0, false)))
+                if (SelectedTimeSheetChargesDataRow.Field<bool>("tick") == false)
                 {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedTimeSheetChargesDataRow["EngineerVisitTimesheetChargeID"], 0, false)))
+                    if (SelectedTimeSheetChargesDataRow.Field<int>("EngineerVisitTimesheetChargeID") == 0)
                     {
-                        InsertEngineerTimnesheetCharge(Conversions.ToDate(SelectedTimeSheetChargesDataRow["StartDateTime"]), Conversions.ToDate(SelectedTimeSheetChargesDataRow["EndDateTime"]), Conversions.ToInteger(SelectedTimeSheetChargesDataRow["TimesheetID"]), Conversions.ToInteger(SelectedTimeSheetChargesDataRow["TimeSheetTypeID"]), Conversions.ToDouble(SelectedTimeSheetChargesDataRow["EngineerCost"]), Conversions.ToBoolean(1), Conversions.ToInteger(SelectedTimeSheetChargesDataRow["EngineerVisitID"]));
+                        InsertEngineerTimnesheetCharge(SelectedTimeSheetChargesDataRow.Field<DateTime>("StartDateTime"), SelectedTimeSheetChargesDataRow.Field<DateTime>("EndDateTime"),
+                            SelectedTimeSheetChargesDataRow.Field<int>("TimesheetID"), SelectedTimeSheetChargesDataRow.Field<int>("TimeSheetTypeID"), SelectedTimeSheetChargesDataRow.Field<double>("EngineerCost"),
+                            true, SelectedTimeSheetChargesDataRow.Field<int>("EngineerVisitID"));
                     }
                     else
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(Conversions.ToInteger(SelectedTimeSheetChargesDataRow["EngineerVisitTimesheetChargeID"]), 1);
+                        App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(SelectedTimeSheetChargesDataRow.Field<int>("EngineerVisitTimesheetChargeID"), 1);
                     }
                 }
                 else
                 {
-                    App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(Conversions.ToInteger(SelectedTimeSheetChargesDataRow["EngineerVisitTimesheetChargeID"]), 0);
+                    App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(SelectedTimeSheetChargesDataRow.Field<int>("EngineerVisitTimesheetChargeID"), 0);
                 }
 
                 PopulateTimeSheetCharges(false, true);
             }
             catch (Exception ex)
             {
-                App.ShowMessage("Cannot change tick state : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                App.ShowMessage("Cannot change tick state : " + Environment.NewLine + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -15868,7 +15874,7 @@ namespace FSM
                 double chargeableAmount = 0.0;
                 if (Job.JobDefinitionEnumID == (int)Enums.JobDefinition.Quoted)
                 {
-                    var switchExpr = (Enums.JobChargingType)Conversions.ToInteger(EngVisitCharge.ChargeTypeID);
+                    var switchExpr = (Enums.JobChargingType)EngVisitCharge.ChargeTypeID;
                     switch (switchExpr)
                     {
                         case Enums.JobChargingType.JobValue:
@@ -15934,18 +15940,18 @@ namespace FSM
             if (EngVisitCharge is object)
             {
                 Entity.VATRatess.VATRates vatRate;
-                if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboVATRate)) < 1)
+                if (Convert.ToDouble(Combo.get_GetSelectedItemValue(cboVATRate)) < 1)
                 {
                     vatRate = App.DB.VATRatesSQL.VATRates_Get(App.DB.VATRatesSQL.VATRates_Get_ByDate(dtpRaiseInvoiceOn.Value));
                 }
                 else
                 {
-                    vatRate = App.DB.VATRatesSQL.VATRates_Get(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboVATRate)));
+                    vatRate = App.DB.VATRatesSQL.VATRates_Get(Convert.ToInt32(Combo.get_GetSelectedItemValue(cboVATRate)));
                 }
 
                 if (vatRate is object)
                 {
-                    txtPriceIncVAT.Text = Strings.Format(EngVisitCharge.JobValue * (1 + vatRate.VATRate / 100), "C");
+                    txtPriceIncVAT.Text = (EngVisitCharge.JobValue * (1 + vatRate.VATRate / 100)).ToString("C");
                 }
             }
         }
@@ -15993,7 +15999,7 @@ namespace FSM
                 newJbItm = App.DB.JobItems.Insert(newJbItm);
 
                 // SAVE VISIT UNITS USED
-                App.DB.EngineerVisits.EngineerVisitUnitsUsed_Insert(EngineerVisit.EngineerVisitID, newJbItm.JobItemID, Conversions.ToDouble(newJbItm.Qty));
+                App.DB.EngineerVisits.EngineerVisitUnitsUsed_Insert(EngineerVisit.EngineerVisitID, newJbItm.JobItemID, Convert.ToDouble(newJbItm.Qty));
 
                 // SAVE TO ENGINEER VISIT SCHEDULE RATES CHARGES
                 App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID, newJbItm.JobItemID, Helper.MakeDoubleValid(newSoR["Price"]), 1);
@@ -16044,7 +16050,7 @@ namespace FSM
             EngVisitCharge = new EngineerVisitCharge();
 
             // MileageRate
-            var switchExpr = (Enums.JobDefinition)Conversions.ToInteger(Job.JobDefinitionEnumID);
+            var switchExpr = (Enums.JobDefinition)Job.JobDefinitionEnumID;
             switch (switchExpr)
             {
                 case Enums.JobDefinition.Quoted:
@@ -16052,16 +16058,16 @@ namespace FSM
                         if (jbQuote is null)
                         {
                             EngVisitCharge.SetLabourRate = App.DB.EngineerVisitCharge.EngineerVisit_Get_MileageRate_For_Site(EngineerVisit.EngineerVisitID);
-                            EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.JobValue);
+                            EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.JobValue;
                             EngVisitCharge.SetCharge = 0;
-                            EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Not_Ready);
+                            EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Not_Ready;
                         }
                         else
                         {
                             EngVisitCharge.SetLabourRate = Helper.MakeDoubleValid(jbQuote.MileageRate);
-                            EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.QuoteValue);
+                            EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.QuoteValue;
                             EngVisitCharge.SetCharge = 0;
-                            EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Not_Ready);
+                            EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Not_Ready;
                         }
 
                         break;
@@ -16072,19 +16078,19 @@ namespace FSM
                         // NEED TO SEE IF WE ARE INVOICING PER VISIT OR NOT?
                         int invoiceFreqID = App.DB.EngineerVisitCharge.EngineerVisitCharge_GetContractInvoiceFrequency(EngineerVisit.EngineerVisitID);
                         EngVisitCharge.SetLabourRate = App.DB.EngineerVisitCharge.EngineerVisit_Get_MileageRate_For_ContractJob(Job.JobID);
-                        if ((Enums.InvoiceFrequency)Conversions.ToInteger(invoiceFreqID) == Enums.InvoiceFrequency.Per_Visit)
+                        if ((Enums.InvoiceFrequency)invoiceFreqID == Enums.InvoiceFrequency.Per_Visit)
                         {
                             // IF IS THEN LETS CHARGE FOR THE VISIT
-                            EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.JobValue);
+                            EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.JobValue;
                             EngVisitCharge.SetCharge = 0;
-                            EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Not_Ready);
+                            EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Not_Ready;
                             lblContractPerVisit.Visible = true;
                         }
                         else
                         {
-                            EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.NoChargeContractInvoice);
+                            EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.NoChargeContractInvoice;
                             EngVisitCharge.SetCharge = 0;
-                            EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Never);
+                            EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Never;
                             lblContractPerVisit.Visible = false;
                         }
 
@@ -16094,18 +16100,18 @@ namespace FSM
                 case Enums.JobDefinition.Misc:
                     {
                         EngVisitCharge.SetLabourRate = App.DB.EngineerVisitCharge.EngineerVisit_Get_MileageRate_For_Site(EngineerVisit.EngineerVisitID);
-                        EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.NoChargeMisc);
+                        EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.NoChargeMisc;
                         EngVisitCharge.SetCharge = 0;
-                        EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Never);
+                        EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Never;
                         break;
                     }
 
                 case Enums.JobDefinition.Callout:
                     {
                         EngVisitCharge.SetLabourRate = App.DB.EngineerVisitCharge.EngineerVisit_Get_MileageRate_For_Site(EngineerVisit.EngineerVisitID);
-                        EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.JobValue);
+                        EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.JobValue;
                         EngVisitCharge.SetCharge = 0;
-                        EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Not_Ready);
+                        EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Not_Ready;
                         break;
                     }
             }
@@ -16126,7 +16132,7 @@ namespace FSM
             double scheduleOfRatesTotal = 0.0;
             foreach (DataRow jobItemDR in JobItems.Table.Rows)
             {
-                App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(jobItemDR["JobItemID"]), Helper.MakeDoubleValid(jobItemDR["Price"]), 1);
+                App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Insert(EngineerVisit.EngineerVisitID, (int)jobItemDR["JobItemID"], Helper.MakeDoubleValid(jobItemDR["Price"]), 1);
                 scheduleOfRatesTotal += Helper.MakeDoubleValid(jobItemDR["Price"]);
             }
 
@@ -16135,13 +16141,13 @@ namespace FSM
             txtPartsMarkUp.Text = CustomerCharge.PartsMarkup.ToString();
             foreach (DataRow row in EngineerVisit.PartsAndProductsUsed.Table.Rows)
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["Type"], "Part", false)))
+                if (row.Field<string>("Type") == "Part")
                 {
-                    App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(row["ID"]), Conversions.ToDouble(row["SellPrice"]), 1, GetPartProductCost(row), Conversions.ToInteger(row["UniqueID"]));
+                    App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, row.Field<int>("ID"), Convert.ToDouble(row["SellPrice"]), 1, GetPartProductCost(row), (int)row["UniqueID"]);
                 }
                 else
                 {
-                    App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(row["ID"]), Conversions.ToDouble(row["SellPrice"]), 1, GetPartProductCost(row));
+                    App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)row["ID"], Convert.ToDouble(row["SellPrice"]), 1, GetPartProductCost(row));
                 }
             }
 
@@ -16172,7 +16178,7 @@ namespace FSM
                 var custSorTable = App.DB.CustomerScheduleOfRate.Customer_Jobtype_Sor_Get(theSite.CustomerID, Job.JobTypeID).Table;
                 if (custSorTable.Rows.Count > 0)
                 {
-                    int id = Conversions.ToInteger(custSorTable.Rows[0]["CustomerScheduleOfRateID"]);
+                    int id = (int)custSorTable.Rows[0]["CustomerScheduleOfRateID"];
                     TradeLabourRate = App.DB.CustomerScheduleOfRate.Get(id);  // Using a trade rate for a linked type of work
                     normalRate = TradeLabourRate.Price;
                     timeNHalfRate = TradeLabourRate.Price;
@@ -16180,7 +16186,7 @@ namespace FSM
                 }
 
                 foreach (DataRow timeSheet in EngineerVisit.TimeSheets.Table.Rows)
-                    InsertEngineerTimnesheetCharge(Conversions.ToDate(timeSheet["StartDateTime"]), Conversions.ToDate(timeSheet["EndDateTime"]), Conversions.ToInteger(timeSheet["EngineerVisitTimeSheetID"]), Conversions.ToInteger(timeSheet["TimeSheetTypeID"]), 0, tick, EngineerVisit.EngineerVisitID);
+                    InsertEngineerTimnesheetCharge(timeSheet.Field<DateTime>("StartDateTime"), timeSheet.Field<DateTime>("EndDateTime"), (int)timeSheet["EngineerVisitTimeSheetID"], (int)timeSheet["TimeSheetTypeID"], 0, tick, EngineerVisit.EngineerVisitID);
             }
         }
 
@@ -16219,7 +16225,7 @@ namespace FSM
             var custSorTable = App.DB.CustomerScheduleOfRate.Customer_Jobtype_Sor_Get(theSite.CustomerID, Job.JobTypeID).Table;
             if (custSorTable.Rows.Count > 0)
             {
-                int id = Conversions.ToInteger(custSorTable.Rows[0]["CustomerScheduleOfRateID"]);
+                int id = (int)custSorTable.Rows[0]["CustomerScheduleOfRateID"];
                 TradeLabourRate = App.DB.CustomerScheduleOfRate.Get(id);  // Using a trade rate for a linked type of work
                 normalRate = TradeLabourRate.Price;
                 timeNHalfRate = TradeLabourRate.Price;
@@ -16228,7 +16234,7 @@ namespace FSM
 
             double totalPrice = 0.0;
             string summaryStr = "";
-            int bankHolidayRate = Conversions.ToInteger(false);
+            int bankHolidayRate = 0;
             double engineerCostTotal = 0.0;
 
             // see if bank holiday first
@@ -16239,30 +16245,31 @@ namespace FSM
                 timeSheetRates = App.DB.EngineerVisitCharge.EngineerVisitTimesheetCharge_ByTimeSheet(TimesheetID);
                 foreach (DataRow rate in timeSheetRates.Table.Rows)
                 {
-                    var switchExpr = (Enums.LabourTypes)Conversions.ToInteger(rate["rate"]);
+                    var switchExpr = (Enums.LabourTypes)(int)rate["rate"];
+                    int total = rate.Field<int>("Total");
                     switch (switchExpr)
                     {
                         case Enums.LabourTypes.Basic:
                             {
-                                totalPrice += (double)rate["Total"] / 60 * normalRate;
-                                summaryStr += "Basic: " + (double)rate["Total"] + "mins@" + Strings.Format(normalRate, "C") + "/hr; ";
-                                engineerCostTotal += (double)rate["Total"] / 60 * engineerCostNormal;
+                                totalPrice += total / 60 * normalRate;
+                                summaryStr += "Basic: " + total + "mins@" + normalRate.ToString("C") + "/hr; ";
+                                engineerCostTotal += total / 60 * engineerCostNormal;
                                 break;
                             }
 
                         case Enums.LabourTypes.Time_And_Half:
                             {
-                                totalPrice += (double)rate["Total"] / 60 * timeNHalfRate;
-                                summaryStr += "Time&Half: " + rate["Total"] + "mins@" + Strings.Format(timeNHalfRate, "C") + "/hr; ";
-                                engineerCostTotal += (double)rate["Total"] / 60 * engineerCostTimeHalf;
+                                totalPrice += total / 60 * timeNHalfRate;
+                                summaryStr += "Time&Half: " + total + "mins@" + timeNHalfRate.ToString("C") + "/hr; ";
+                                engineerCostTotal += total / 60 * engineerCostTimeHalf;
                                 break;
                             }
 
                         case Enums.LabourTypes.Double:
                             {
-                                totalPrice += (double)rate["Total"] / 60 * doubleRate;
-                                summaryStr += "Double: " + rate["Total"] + "mins@" + Strings.Format(doubleRate, "C") + "/hr; ";
-                                engineerCostTotal += (double)rate["Total"] / 60 * engineerCostDouble;
+                                totalPrice += total / 60 * doubleRate;
+                                summaryStr += "Double: " + total + "mins@" + doubleRate.ToString("C") + "/hr; ";
+                                engineerCostTotal += total / 60 * engineerCostDouble;
                                 break;
                             }
                     }
@@ -16270,30 +16277,30 @@ namespace FSM
             }
             else
             {
-                var switchExpr1 = (Enums.LabourTypes)Conversions.ToInteger(bankHolidayRate);
+                var switchExpr1 = (Enums.LabourTypes)bankHolidayRate;
                 switch (switchExpr1)
                 {
                     case Enums.LabourTypes.Basic:
                         {
-                            totalPrice = DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) / (double)60 * normalRate;
-                            summaryStr += "Bank Holiday Rate (Basic): " + DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) + "mins@" + Strings.Format(normalRate, "C") + "/hr; ";
-                            engineerCostTotal += DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) / (double)60 * engineerCostNormal;
+                            totalPrice = (EndDateTime - StartDateTime).Minutes / 60 * normalRate;
+                            summaryStr += "Bank Holiday Rate (Basic): " + (EndDateTime - StartDateTime).Minutes + "mins@" + normalRate.ToString("C") + "/hr; ";
+                            engineerCostTotal += (EndDateTime - StartDateTime).Minutes / 60 * engineerCostNormal;
                             break;
                         }
 
                     case Enums.LabourTypes.Time_And_Half:
                         {
-                            totalPrice = DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) / (double)60 * timeNHalfRate;
-                            summaryStr += "Bank Holiday Rate (Time&Half): " + DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) + "mins@" + Strings.Format(timeNHalfRate, "C") + "/hr; ";
-                            engineerCostTotal += DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) / (double)60 * engineerCostTimeHalf;
+                            totalPrice = (EndDateTime - StartDateTime).Minutes / 60 * timeNHalfRate;
+                            summaryStr += "Bank Holiday Rate (Time&Half): " + (EndDateTime - StartDateTime).Minutes + "mins@" + timeNHalfRate.ToString("C") + "/hr; ";
+                            engineerCostTotal += (EndDateTime - StartDateTime).Minutes / 60 * engineerCostTimeHalf;
                             break;
                         }
 
                     case Enums.LabourTypes.Double:
                         {
-                            totalPrice = DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) / (double)60 * doubleRate;
-                            summaryStr += "Bank Holiday Rate (Double): " + DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) + "mins@" + Strings.Format(doubleRate, "C") + "/hr; ";
-                            engineerCostTotal += DateAndTime.DateDiff(DateInterval.Minute, StartDateTime, EndDateTime) / (double)60 * engineerCostDouble;
+                            totalPrice = (EndDateTime - StartDateTime).Minutes / 60 * doubleRate;
+                            summaryStr += "Bank Holiday Rate (Double): " + (EndDateTime - StartDateTime).Minutes + "mins@" + doubleRate.ToString("C") + "/hr; ";
+                            engineerCostTotal += (EndDateTime - StartDateTime).Minutes / 60 * engineerCostDouble;
                             break;
                         }
                 }
@@ -16304,7 +16311,7 @@ namespace FSM
                 engineerCostTotal = EngCost;
             }
 
-            App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Insert(EngineerVisitID, Conversions.ToInteger(Tick), StartDateTime, EndDateTime, totalPrice, TimesheettypeID, summaryStr, engineerCostTotal);
+            App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Insert(EngineerVisitID, Convert.ToInt32(Tick), StartDateTime, EndDateTime, totalPrice, TimesheettypeID, summaryStr, engineerCostTotal);
         }
 
         private void DeleteCharges()
@@ -16319,14 +16326,14 @@ namespace FSM
             if (AdditionalCharges is object)
             {
                 foreach (DataRow addCharge in AdditionalCharges.Table.Rows)
-                    App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Delete(Conversions.ToInteger(addCharge["EngineerVisitAdditionalChargeID"]));
+                    App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Delete((int)addCharge["EngineerVisitAdditionalChargeID"]);
             }
 
             // Delete Schedule OF Rate
             if (ScheduleOfRateCharges is object)
             {
                 foreach (DataRow SofR in ScheduleOfRateCharges.Table.Rows)
-                    App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Delete(Conversions.ToInteger(SofR["EngineerVisitScheduleOfRateChargesID"]));
+                    App.DB.EngineerVisitCharge.EngineerVisitScheduleOfRatesCharge_Delete((int)SofR["EngineerVisitScheduleOfRateChargesID"]);
             }
 
             App.DB.EvEngineer.Delete(EngineerVisit.EngineerVisitID, DeleteBy.EngineerVisitId);
@@ -16344,7 +16351,7 @@ namespace FSM
             Loading = true;
             var jbQuote = new Entity.QuoteJobs.QuoteJob();
             // If its quoted work get the quote
-            if (Job.JobDefinitionEnumID == Conversions.ToInteger(Enums.JobDefinition.Quoted))
+            if (Job.JobDefinitionEnumID == (int)Enums.JobDefinition.Quoted)
             {
                 jbQuote = App.DB.QuoteJob.Get(Job.QuoteID);
             }
@@ -16371,7 +16378,7 @@ namespace FSM
             lblOR.Visible = false;
 
             // Check the radio button for the type of job charge
-            var switchExpr = (Enums.JobChargingType)Conversions.ToInteger(EngVisitCharge.ChargeTypeID);
+            var switchExpr = (Enums.JobChargingType)EngVisitCharge.ChargeTypeID;
             switch (switchExpr)
             {
                 case Enums.JobChargingType.JobValue:
@@ -16395,7 +16402,7 @@ namespace FSM
             }
 
             // Now show other controls/text dependent on job definition
-            var switchExpr1 = (Enums.JobDefinition)Conversions.ToInteger(Job.JobDefinitionEnumID);
+            var switchExpr1 = (Enums.JobDefinition)Job.JobDefinitionEnumID;
             switch (switchExpr1)
             {
                 case Enums.JobDefinition.Quoted:
@@ -16423,7 +16430,7 @@ namespace FSM
                     }
             }
 
-            var switchExpr2 = (Enums.InvoiceReady)Conversions.ToInteger(EngVisitCharge.InvoiceReadyID);
+            var switchExpr2 = (Enums.InvoiceReady)EngVisitCharge.InvoiceReadyID;
             switch (switchExpr2)
             {
                 case Enums.InvoiceReady.Never:
@@ -16463,11 +16470,13 @@ namespace FSM
                 taxrateid = App.DB.ExecuteWithReturn("Select TOP(1) i.VATRateID, i.InvoiceNumber, i.TermID, i.PaidByID,il.Amount,il.CreditAmount from tblInvoiced i inner  JOIN (Select SUM(Amount) Amount , ISNULL(SUM(CreditAmount),0) CreditAmount, InvoicedID,InvoiceToBeRaisedID from tblInvoicedLines il2 LEFT JOIN tblInvoicedLinesCredit ilc On ilc.InvoicedLineID = il2.InvoicedLineID   Group by InvoicedID,InvoiceToBeRaisedID) il On il.invoicedid = i.InvoicedID  where InvoiceToBeRaisedID =  " + InvoiceToBeRaised.InvoiceToBeRaisedID);
                 var readytobe = App.DB.ExecuteWithReturn("Select PaymentTermID,TaxrateID from tblInvoiceToBeRaised where InvoiceToBeRaisedID =  " + InvoiceToBeRaised.InvoiceToBeRaisedID);
                 // brought in two tables to compare and use values ready to be invoice and invoiced
-                if (taxrateid.Rows.Count == 0 || Information.IsDBNull(taxrateid.Rows[0]["VATRateID"])) // Check invoice details first if fail go looking for ready to be invoiced details..
+
+                if (taxrateid.Rows.Count == 0 || taxrateid.Rows[0].GetNullableValue<int?>("VATRateID") == null) // Check invoice details first if fail go looking for ready to be invoiced details..
                 {
                     var argc = cboVATRate;
                     Combo.SetUpCombo(ref argc, App.DB.VATRatesSQL.VATRates_GetAll_InputOrOutput('O').Table, "VATRateID", "Friendly", Enums.ComboValues.Please_Select);
-                    if (readytobe is null || Information.IsDBNull(readytobe.Rows[0]["TaxrateID"])) // if not check if we have a rerady to be invoiced detailed if fail use default values..
+
+                    if (readytobe is null || readytobe.Rows[0].GetNullableValue<int?>("TaxrateID") == null) // if not check if we have a rerady to be invoiced detailed if fail use default values..
                     {
                         var argcombo = cboVATRate;
                         Combo.SetSelectedComboItem_By_Value(ref argcombo, 6.ToString());
@@ -16477,9 +16486,9 @@ namespace FSM
                     else // if they do exist use the ready to be invoiced details
                     {
                         var argcombo2 = cboVATRate;
-                        Combo.SetSelectedComboItem_By_Value(ref argcombo2, Conversions.ToString(readytobe.Rows[0]["TaxrateID"]));
+                        Combo.SetSelectedComboItem_By_Value(ref argcombo2, readytobe.Rows[0].GetValue<int>("TaxrateID").ToString());
                         var argcombo3 = cboInvType;
-                        Combo.SetSelectedComboItem_By_Value(ref argcombo3, Conversions.ToString(readytobe.Rows[0]["PaymentTermID"]));
+                        Combo.SetSelectedComboItem_By_Value(ref argcombo3, readytobe.Rows[0].Field<int>("PaymentTermID").ToString());
                     }
                 }
                 else // if there are invoice details (an invoice has been raised) use the invoice details
@@ -16487,15 +16496,17 @@ namespace FSM
                     var argc1 = cboVATRate;
                     Combo.SetUpCombo(ref argc1, App.DB.VATRatesSQL.VATRates_GetAll_InputOrOutput('O').Table, "VATRateID", "Friendly", Enums.ComboValues.Please_Select);
                     var argcombo4 = cboVATRate;
-                    Combo.SetSelectedComboItem_By_Value(ref argcombo4, Conversions.ToString(taxrateid.Rows[0]["VATRateID"]));
-                    if (!Information.IsDBNull(taxrateid.Rows[0]["TermID"]))
+                    Combo.SetSelectedComboItem_By_Value(ref argcombo4, taxrateid.Rows[0].GetValue<int>("VATRateID").ToString());
+
+                    if (taxrateid.Rows[0].GetNullableValue<int?>("TermID") != null)
                     {
                         var argcombo5 = cboInvType;
-                        Combo.SetSelectedComboItem_By_Value(ref argcombo5, Conversions.ToString(taxrateid.Rows[0]["TermID"]));
-                        if (!Information.IsDBNull(taxrateid.Rows[0]["PaidByID"]) && Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(taxrateid.Rows[0]["TermID"], 69491, false)))
+                        Combo.SetSelectedComboItem_By_Value(ref argcombo5, taxrateid.Rows[0].GetValue<int>("TermID").ToString());
+                        int? paidById = taxrateid.Rows[0].Field<int?>("PaidByID");
+                        if (paidById.HasValue && (paidById.Value == (int)Enums.QuoteJobOfWorkTypes.Reciept))
                         {
                             var argcombo6 = cboPaidBy;
-                            Combo.SetSelectedComboItem_By_Value(ref argcombo6, Conversions.ToString(taxrateid.Rows[0]["PaidByID"]));
+                            Combo.SetSelectedComboItem_By_Value(ref argcombo6, paidById.Value.ToString());
                         }
                     }
                     else
@@ -16504,9 +16515,9 @@ namespace FSM
                         Combo.SetSelectedComboItem_By_Value(ref argcombo7, 69482.ToString());
                     }
 
-                    txtInvNo.Text = Conversions.ToString(taxrateid.Rows[0]["InvoiceNumber"]);
-                    txtInvAmount.Text = Strings.Format(taxrateid.Rows[0]["Amount"], "C");
-                    txtCreditAmount.Text = Strings.Format(taxrateid.Rows[0]["CreditAmount"], "C");
+                    txtInvNo.Text = taxrateid.Rows[0].Field<string>("InvoiceNumber");
+                    txtInvAmount.Text = taxrateid.Rows[0].Field<decimal>("Amount").ToString("C");
+                    txtCreditAmount.Text = taxrateid.Rows[0].Field<decimal>("CreditAmount").ToString("C");
                 }
 
                 dtpRaiseInvoiceOn.Value = InvoiceToBeRaised.RaiseDate;
@@ -16556,7 +16567,7 @@ namespace FSM
             double additionalChargeTotal = 0.0;
             foreach (DataRow charge in AdditionalCharges.Table.Rows)
                 additionalChargeTotal += Helper.MakeDoubleValid(charge["Charge"]);
-            txtAdditionalChargeTotal.Text = Strings.Format(additionalChargeTotal, "C");
+            txtAdditionalChargeTotal.Text = additionalChargeTotal.ToString("C");
             if (!batchRun)
                 CalculateJobValue();
         }
@@ -16573,7 +16584,7 @@ namespace FSM
                 }
             }
 
-            txtScheduleOfRatesTotal.Text = Strings.Format(SORChargeTotal, "C");
+            txtScheduleOfRatesTotal.Text = SORChargeTotal.ToString("C");
             if (!batchRun)
                 CalculateJobValue();
         }
@@ -16635,8 +16646,8 @@ namespace FSM
                 }
             }
 
-            txtPartsProductTotal.Text = Strings.Format(PPChargeTotal, "C");
-            txtPartProductCost.Text = Strings.Format(PPCostTotal, "C");
+            txtPartsProductTotal.Text = PPChargeTotal.ToString("C");
+            txtPartProductCost.Text = PPCostTotal.ToString("C");
             int tickCount = (int)PartProductsCharges.Table.Select("Tick = " + true)?.Count();
             if (tickCount == PartProductsCharges.Count)
                 chkPartsSelectAll.Checked = true;
@@ -16662,7 +16673,7 @@ namespace FSM
             foreach (DataRow charge in TimeSheetCharges.Table.Rows)
                 tsCostTotal += Helper.MakeDoubleValid(charge["EngineerCost"]);
             if (EngVisitCharge.LabourPrice > 0)
-                tSChargeTotal = Conversions.ToDouble(EngVisitCharge.LabourPrice);
+                tSChargeTotal = Convert.ToDouble(EngVisitCharge.LabourPrice);
             if (recalc | EngVisitCharge.LabourPrice == 0)
             {
                 tSChargeTotal = 0;
@@ -16675,8 +16686,8 @@ namespace FSM
                 }
             }
 
-            txtTimesheetTotal.Text = Strings.Format(tSChargeTotal, "C");
-            txtEngineerCostTotal.Text = Strings.Format(tsCostTotal, "C");
+            txtTimesheetTotal.Text = tSChargeTotal.ToString("C");
+            txtEngineerCostTotal.Text = tsCostTotal.ToString("C");
             int tickCount = (int)TimeSheetCharges.Table.Select("Tick = " + true)?.Count();
             if (tickCount == TimeSheetCharges.Count)
                 chkTimesheetSelectAll.Checked = true;
@@ -16695,7 +16706,7 @@ namespace FSM
             JobValue += Helper.MakeDoubleValid(txtTimesheetTotal.Text.Replace("£", ""));
 
             // MINUS OFF THE DISCOUNT
-            txtJobValue.Text = Strings.Format(JobValue, "C");
+            txtJobValue.Text = JobValue.ToString("C");
             if (EngVisitCharge is null)
             {
                 EngVisitCharge = new EngineerVisitCharge();
@@ -16730,64 +16741,64 @@ namespace FSM
                 EngVisitCharge.SetTaxRateID = Combo.get_GetSelectedItemValue(cboVATRate);
                 if (rdoJobValue.Checked == true) // Job Value
                 {
-                    EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.JobValue);
+                    EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.JobValue;
                     EngVisitCharge.SetCharge = 0;
                     if (cbxReadyToBeInvoiced.Checked)
                     {
-                        EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Ready);
+                        EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Ready;
                     }
                     else
                     {
-                        EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Not_Ready);
+                        EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Not_Ready;
                     }
                 }
                 else if (rdoPercentageOfQuoteValue.Checked == true) // Charging a percentage of a quote
                 {
-                    EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.PercentageOfQuote);
+                    EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.PercentageOfQuote;
                     EngVisitCharge.SetCharge = Helper.MakeDoubleValid(txtPercentOfQuote.Text.Trim());
                     if (cbxReadyToBeInvoiced.Checked)
                     {
-                        EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Ready);
+                        EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Ready;
                     }
                     else
                     {
-                        EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Not_Ready);
+                        EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Not_Ready;
                     }
                 }
                 else
                 {
-                    var switchExpr = (Enums.JobDefinition)Conversions.ToInteger(Job.JobDefinitionEnumID);
+                    var switchExpr = (Enums.JobDefinition)Job.JobDefinitionEnumID;
                     switch (switchExpr)
                     {
                         case Enums.JobDefinition.Quoted:
                             {
-                                EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.QuoteValue);
+                                EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.QuoteValue;
                                 EngVisitCharge.SetCharge = 0;
-                                EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Never);
+                                EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Never;
                                 break;
                             }
 
                         case Enums.JobDefinition.Contract:
                             {
-                                EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.NoChargeContractInvoice);
+                                EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.NoChargeContractInvoice;
                                 EngVisitCharge.SetCharge = 0;
-                                EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Never);
+                                EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Never;
                                 break;
                             }
 
                         case Enums.JobDefinition.Misc:
                             {
-                                EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.NoChargeMisc);
+                                EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.NoChargeMisc;
                                 EngVisitCharge.SetCharge = 0; // No charge
-                                EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Never);
+                                EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Never;
                                 break;
                             }
 
                         case Enums.JobDefinition.Callout:
                             {
-                                EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.NoChargeCallout);
+                                EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.NoChargeCallout;
                                 EngVisitCharge.SetCharge = 0; // No charge
-                                EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Never);
+                                EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Never;
                                 break;
                             }
                     }
@@ -16830,7 +16841,7 @@ namespace FSM
                                   select x.Field<int>("SupplierId")).Distinct().ToList();
             var specialPartIds = new List<int>() { Consts.IbcPoPartID, Consts.SpecialOrderPartNumber };
             var drIBCs = EngineerVisit.PartsAndProductsAllocated.Table.Select("PartProductID IN (" + string.Join(",", specialPartIds.ToArray()) + ") AND SupplierID IN (" + string.Join(",", ibcSupplierIds.ToArray()) + ")");
-            if (drIBCs.Length == 1 & EngineerVisit.OutcomeEnumID == Conversions.ToInteger(Enums.EngineerVisitOutcomes.Complete))
+            if (drIBCs.Length == 1 & EngineerVisit.OutcomeEnumID == (int)Enums.EngineerVisitOutcomes.Complete)
             {
                 double poValue = Helper.MakeDoubleValid(drIBCs[0]["SellPrice"]);
                 int supplierId = Helper.MakeIntegerValid(drIBCs[0]["SupplierID"]);
@@ -16852,7 +16863,7 @@ namespace FSM
                         int ibcCostCentre = Helper.GetNumber(ibcDetails);
                         var departments = App.DB.Picklists.GetAll(Enums.PickListTypes.Department);
                         if ((from x in departments.Table.AsEnumerable()
-                             where Conversions.ToDouble(x.Field<string>("Name")) == ibcCostCentre
+                             where Convert.ToDouble(x.Field<string>("Name")) == ibcCostCentre
                              select x).Count() > 0)
                         {
                             costCentre = ibcCostCentre;
@@ -16867,8 +16878,8 @@ namespace FSM
 
                     string nominal = Helper.MakeStringValid(drIbc["Nominal"]);
                     App.DB.EngineerVisitCharge.EngineerVisitAdditionalCharge_Insert(EngineerVisit.EngineerVisitID, "IBC" + costCentre + " - " + poValue.ToString("C"), poValue);
-                    EngVisitCharge.SetChargeTypeID = Conversions.ToInteger(Enums.JobChargingType.JobValue);
-                    EngVisitCharge.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Ready);
+                    EngVisitCharge.SetChargeTypeID = (int)Enums.JobChargingType.JobValue;
+                    EngVisitCharge.SetInvoiceReadyID = (int)Enums.InvoiceReady.Ready;
                     EngVisitCharge.SetDepartment = department;
                     EngVisitCharge.SetCharge = poValue;
                     EngVisitCharge.SetJobValue = poValue;
@@ -16890,9 +16901,9 @@ namespace FSM
                     invoiceAddress.SetPostcode = App.TheSystem.Configuration.CompanyPostcode;
                     invoiceAddress.SetSiteID = Job.PropertyID;
                     int invoiceAddressId = (int)App.DB.InvoiceAddress.Insert(invoiceAddress)?.InvoiceAddressID;
-                    int invoiceAddressTypeId = Conversions.ToInteger(Enums.InvoiceAddressType.Invoice);
+                    int invoiceAddressTypeId = (int)Enums.InvoiceAddressType.Invoice;
                     var invoiceRaiseDate = EngineerVisit.StartDateTime;
-                    if (invoiceRaiseDate == default || DateHelper.GetFirstDayOfMonth(invoiceRaiseDate) < DateHelper.GetFirstDayOfMonth(DateAndTime.Now))
+                    if (invoiceRaiseDate == default || DateHelper.GetFirstDayOfMonth(invoiceRaiseDate) < DateHelper.GetFirstDayOfMonth(DateTime.Now))
                     {
                         var f = new FRMContractUpgradeDowngrade();
                         f.Text = "Select Date";
@@ -16909,8 +16920,8 @@ namespace FSM
                         var withBlock = InvoiceToBeRaised;
                         withBlock.SetAddressLinkID = invoiceAddressId;
                         withBlock.SetAddressTypeID = invoiceAddressTypeId;
-                        withBlock.RaiseDate = invoiceRaiseDate == default ? DateAndTime.Now : invoiceRaiseDate;
-                        withBlock.SetInvoiceTypeID = Conversions.ToInteger(Enums.InvoiceType.Visit);
+                        withBlock.RaiseDate = invoiceRaiseDate == default ? DateTime.Now : invoiceRaiseDate;
+                        withBlock.SetInvoiceTypeID = (int)Enums.InvoiceType.Visit;
                         withBlock.SetLinkID = EngVisitCharge.EngineerVisitChargeID;
                         withBlock.SetCustomerID = theSite.CustomerID;
                         withBlock.SetTaxRateID = 7;
@@ -16974,7 +16985,7 @@ namespace FSM
             txtInvAmount.Visible = cbxReadyToBeInvoiced.Checked;
             lblcredit.Visible = cbxReadyToBeInvoiced.Checked;
             txtCreditAmount.Visible = cbxReadyToBeInvoiced.Checked;
-            if (EngVisitCharge.InvoiceReadyID == Conversions.ToInteger(Enums.InvoiceReady.Ready))
+            if (EngVisitCharge.InvoiceReadyID == (int)Enums.InvoiceReady.Ready)
             {
                 btnInvoice.Visible = true;
             }
@@ -16989,7 +17000,7 @@ namespace FSM
             Job = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(EngineerVisit.EngineerVisitID);
             if (Loading == false)
             {
-                dtpRaiseInvoiceOn.Value = DateAndTime.Now;
+                dtpRaiseInvoiceOn.Value = DateTime.Now;
                 if (EngineerVisit.StartDateTime != default)
                 {
                     dtpRaiseInvoiceOn.Value = EngineerVisit.StartDateTime;
@@ -17030,7 +17041,7 @@ namespace FSM
                 }
 
                 InvoiceToBeRaised.RaiseDate = dtpRaiseInvoiceOn.Value;
-                InvoiceToBeRaised.SetInvoiceTypeID = Conversions.ToInteger(Enums.InvoiceType.Visit);
+                InvoiceToBeRaised.SetInvoiceTypeID = (int)Enums.InvoiceType.Visit;
                 InvoiceToBeRaised.SetLinkID = EngVisitCharge.EngineerVisitChargeID;
                 InvoiceToBeRaised.SetCustomerID = App.DB.Customer.Customer_Get_ForSiteID(theSite.SiteID).CustomerID;
                 InvoiceToBeRaised.SetTaxRateID = Combo.get_GetSelectedItemValue(cboVATRate);
@@ -17058,7 +17069,7 @@ namespace FSM
         private double GetPartProductCost(DataRow dr)
         {
             string partProductColumnName = "ID";
-            string Type = Conversions.ToString(dr["Type"]);
+            string Type = Convert.ToString(dr["Type"]);
 
             // WAS THE PART/PRODUCT ALLOCATED TO THE JOB ?
             // Dim sR As DataRow() = EngineerVisit.PartsAndProductsAllocated.Table.Select("Type='" & Type & "' AND PartProductID=" & dr(partProductColumnName))
@@ -17069,12 +17080,12 @@ namespace FSM
                 // WAS IT ORDERED
                 if (Helper.MakeIntegerValid(Sr[0]["OrderID"]) > 0)
                 {
-                    var dv = App.DB.Order.Order_ItemsGetAll(Conversions.ToInteger(Sr[0]["OrderID"]));
+                    var dv = App.DB.Order.Order_ItemsGetAll((int)Sr[0]["OrderID"]);
                     DataRow[] pR;
                     // WAS IT SOURCED FROM SUPPLIER
-                    if ((Enums.LocationType)Conversions.ToInteger(Sr[0]["OrderLocationTypeID"]) == Enums.LocationType.Supplier)
+                    if ((Enums.LocationType)(int)Sr[0]["OrderLocationTypeID"] == Enums.LocationType.Supplier)
                     {
-                        pR = dv.Table.Select(Conversions.ToString("Type='Order" + Type + "' AND PartProductID=" + dr[partProductColumnName]));
+                        pR = dv.Table.Select(Convert.ToString("Type='Order" + Type + "' AND PartProductID=" + dr[partProductColumnName]));
                     }
                     else  // FROM WAREHOUSE OR VAN
                     {
@@ -17111,22 +17122,22 @@ namespace FSM
             DataTable dt;
             if ((Helper.MakeStringValid(dr["Type"]).ToLower() ?? "") == "part")
             {
-                dt = App.DB.PartSupplier.Get_ByPartID(Conversions.ToInteger(dr["ID"])).Table;
+                dt = App.DB.PartSupplier.Get_ByPartID((int)dr["ID"]).Table;
                 var drPre = dt.Select("Preferred=1");
                 if (drPre.Length > 0)
                 {
-                    return Conversions.ToDouble((double)drPre[0]["Price"] * Helper.MakeDoubleValid(dr["Quantity"]));
+                    return Convert.ToDouble((double)drPre[0]["Price"] * Helper.MakeDoubleValid(dr["Quantity"]));
                 }
 
                 double lowest = 0;
                 if (dt.Rows.Count > 0)
                 {
-                    lowest = Conversions.ToDouble(dt.Rows[0]["Price"]);
+                    lowest = Convert.ToDouble(dt.Rows[0]["Price"]);
                     foreach (DataRow r in dt.Rows)
                     {
-                        if (Conversions.ToBoolean((double)r["Price"] < lowest))
+                        if (Convert.ToBoolean((double)r["Price"] < lowest))
                         {
-                            lowest = Conversions.ToDouble(r["Price"]);
+                            lowest = Convert.ToDouble(r["Price"]);
                         }
                     }
                 }
@@ -17135,7 +17146,7 @@ namespace FSM
             }
             else
             {
-                dt = App.DB.ProductSupplier.Get_ByProductID(Conversions.ToInteger(dr["ID"])).Table;
+                dt = App.DB.ProductSupplier.Get_ByProductID((int)dr["ID"]).Table;
             }
 
             if (dt.Rows.Count > 0)
@@ -17153,44 +17164,44 @@ namespace FSM
             string address = "";
             switch (AddressTypeID)
             {
-                case (int)(Enums.InvoiceAddressType.HQ):
-                case (int)(Enums.InvoiceAddressType.Site):
+                case (int)Enums.InvoiceAddressType.HQ:
+                case (int)Enums.InvoiceAddressType.Site:
                     {
                         {
                             var withBlock = App.DB.Sites.Get(AddressLinkID);
                             if (withBlock.Name.Trim().Length > 0)
                             {
-                                address += withBlock.Name + Constants.vbCrLf;
+                                address += withBlock.Name + Environment.NewLine;
                             }
 
                             if (withBlock.Address1.Trim().Length > 0)
                             {
-                                address += withBlock.Address1 + Constants.vbCrLf;
+                                address += withBlock.Address1 + Environment.NewLine;
                             }
 
                             if (withBlock.Address2.Trim().Length > 0)
                             {
-                                address += withBlock.Address2 + Constants.vbCrLf;
+                                address += withBlock.Address2 + Environment.NewLine;
                             }
 
                             if (withBlock.Address3.Trim().Length > 0)
                             {
-                                address += withBlock.Address3 + Constants.vbCrLf;
+                                address += withBlock.Address3 + Environment.NewLine;
                             }
 
                             if (withBlock.Address4.Trim().Length > 0)
                             {
-                                address += withBlock.Address4 + Constants.vbCrLf;
+                                address += withBlock.Address4 + Environment.NewLine;
                             }
 
                             if (withBlock.Address5.Trim().Length > 0)
                             {
-                                address += withBlock.Address5 + Constants.vbCrLf;
+                                address += withBlock.Address5 + Environment.NewLine;
                             }
 
                             if (withBlock.Postcode.Trim().Length > 0)
                             {
-                                address += withBlock.Postcode + Constants.vbCrLf;
+                                address += withBlock.Postcode + Environment.NewLine;
                             }
                         }
 
@@ -17198,38 +17209,38 @@ namespace FSM
                         break;
                     }
 
-                case (int)(Enums.InvoiceAddressType.Invoice):
+                case (int)Enums.InvoiceAddressType.Invoice:
                     {
                         {
                             var withBlock1 = App.DB.InvoiceAddress.InvoiceAddress_Get(AddressLinkID);
                             if (withBlock1.Address1.Trim().Length > 0)
                             {
-                                address += withBlock1.Address1 + Constants.vbCrLf;
+                                address += withBlock1.Address1 + Environment.NewLine;
                             }
 
                             if (withBlock1.Address2.Trim().Length > 0)
                             {
-                                address += withBlock1.Address2 + Constants.vbCrLf;
+                                address += withBlock1.Address2 + Environment.NewLine;
                             }
 
                             if (withBlock1.Address3.Trim().Length > 0)
                             {
-                                address += withBlock1.Address3 + Constants.vbCrLf;
+                                address += withBlock1.Address3 + Environment.NewLine;
                             }
 
                             if (withBlock1.Address4.Trim().Length > 0)
                             {
-                                address += withBlock1.Address4 + Constants.vbCrLf;
+                                address += withBlock1.Address4 + Environment.NewLine;
                             }
 
                             if (withBlock1.Address5.Trim().Length > 0)
                             {
-                                address += withBlock1.Address5 + Constants.vbCrLf;
+                                address += withBlock1.Address5 + Environment.NewLine;
                             }
 
                             if (withBlock1.Postcode.Trim().Length > 0)
                             {
-                                address += withBlock1.Postcode + Constants.vbCrLf;
+                                address += withBlock1.Postcode + Environment.NewLine;
                             }
                         }
 
@@ -17257,10 +17268,10 @@ namespace FSM
             var visits = App.DB.EngineerVisits.EngineerVisits_Get_All_JobID((int)Job?.JobID);
             if (visits.Count == 0)
                 return;
-            var openVisits = visits.Table.Select("StatusEnumID = " + Conversions.ToInteger(Enums.VisitStatus.Uploaded));
+            var openVisits = visits.Table.Select("StatusEnumID = " + (int)Enums.VisitStatus.Uploaded);
             if (openVisits.Length == 0)
                 return;
-            string msg = "This current visit has job releated charges." + Constants.vbCrLf + Constants.vbCrLf + "There are open relating visits, do you want to cost them off as non-chargeable?";
+            string msg = "This current visit has job releated charges." + Environment.NewLine + Environment.NewLine + "There are open relating visits, do you want to cost them off as non-chargeable?";
             var dialogResult = App.ShowMessage(msg, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             switch (dialogResult)
             {
@@ -17273,7 +17284,7 @@ namespace FSM
                             if (ev is null)
                                 continue;
                             ev.SetVisitLocked = true;
-                            ev.SetStatusEnumID = Conversions.ToInteger(Enums.VisitStatus.Not_To_Be_Invoiced);
+                            ev.SetStatusEnumID = (int)Enums.VisitStatus.Not_To_Be_Invoiced;
                             App.DB.EngineerVisits.Update(ev, 0, true);
                             var evc = new EngineerVisitCharge();
                             {
@@ -17282,7 +17293,7 @@ namespace FSM
                                 withBlock.SetNominalCode = txtNominalCode.Text.Trim();
                                 withBlock.SetDepartment = Combo.get_GetSelectedItemValue(cboDept).Trim();
                                 withBlock.SetForSageAccountCode = txtAccountCode.Text.Trim();
-                                withBlock.SetInvoiceReadyID = Conversions.ToInteger(Enums.InvoiceReady.Never);
+                                withBlock.SetInvoiceReadyID = (int)Enums.InvoiceReady.Never;
                                 withBlock.SetPartsMarkUp = Helper.MakeIntegerValid(txtPartsMarkUp.Text);
                                 withBlock.SetMainContractorDiscount = 0;
                                 withBlock.SetJobValue = 0;
@@ -17479,9 +17490,9 @@ namespace FSM
                     int distributed = 0;
                     bool creditcolumn = false;
                     int creditamt = 0;
-                    foreach (DataRow distrow in PartsAndProductsDistribution.Table.Select(Conversions.ToString("Type = '" + row["Type"] + "'")))
+                    foreach (DataRow distrow in PartsAndProductsDistribution.Table.Select(Convert.ToString("Type = '" + row["Type"] + "'")))
                     {
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(distrow["AllocatedID"], row["ID"], false)))
+                        if (distrow.Field<int>("AllocatedID") == row.Field<int>("ID"))
                         {
                             distributed += (int)distrow["Quantity"];
                         }
@@ -17506,14 +17517,14 @@ namespace FSM
                     }
                     else
                     {
-                        creditamt = Conversions.ToInteger(row["CreditQty"]);
+                        creditamt = (int)row["CreditQty"];
                     }
 
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["OrderItemID"], 0, false)))
+                    if (row.Field<int>("OrderItemID") == 0)
                     {
                         row["Status"] = true;
                     }
-                    else if (Conversions.ToBoolean(distributed + creditamt >= (int)row["QtyRemaining"]))
+                    else if (Convert.ToBoolean(distributed + creditamt >= (int)row["QtyRemaining"]))
                     {
                         row["Status"] = true;
                     }
@@ -17603,22 +17614,22 @@ namespace FSM
             }
 
             int distributed = 0;
-            foreach (DataRow row in PartsAndProductsDistribution.Table.Select(Conversions.ToString("Type = '" + SelectedPartProductAllocatedDataRow["Type"] + "'")))
+            foreach (DataRow row in PartsAndProductsDistribution.Table.Select(Convert.ToString("Type = '" + SelectedPartProductAllocatedDataRow["Type"] + "'")))
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["AllocatedID"], SelectedPartProductAllocatedDataRow["ID"], false)))
+                if ((int)row["AllocatedID"] == (int)SelectedPartProductAllocatedDataRow["ID"])
                 {
                     distributed += (int)row["Quantity"];
                 }
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(distributed, SelectedPartProductAllocatedDataRow["Quantity"], false)))
+            if (distributed == (int)SelectedPartProductAllocatedDataRow["Quantity"])
             {
-                App.ShowMessage(Conversions.ToString("Distribution is complete for this " + SelectedPartProductAllocatedDataRow["Type"]), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                App.ShowMessage(Convert.ToString("Distribution is complete for this " + SelectedPartProductAllocatedDataRow["Type"]), MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             string msg = "Are you sure the remaining";
-            msg += Conversions.ToString(" " + ((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed) + ", ") + SelectedPartProductAllocatedDataRow["Name"] + "'s have not been used? This action cannot be reversed once the job details have been saved";
+            msg += Convert.ToString(" " + ((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed) + ", ") + SelectedPartProductAllocatedDataRow["Name"] + "'s have not been used? This action cannot be reversed once the job details have been saved";
             if (App.ShowMessage(msg, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
@@ -17636,7 +17647,7 @@ namespace FSM
                 r["Quantity"] = (int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed;
                 r["PartProductID"] = SelectedPartProductAllocatedDataRow["PartProductID"];
                 r["OrderPartProductID"] = 0;
-                r["StockTransactionType"] = Conversions.ToInteger(Enums.Transaction.StockIn);
+                r["StockTransactionType"] = (int)Enums.Transaction.StockIn;
                 PartsAndProductsDistribution.Table.Rows.Add(r);
                 SelectedPartProductAllocatedDataRow["Status"] = true;
             }
@@ -17645,18 +17656,18 @@ namespace FSM
                 int qtyReturned = 0;
                 // IS THE PART ON A SUPPLIER PO THAT IS COMPLETE
                 bool flagComleted = false;
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedPartProductAllocatedDataRow["OrderStatusID"], Conversions.ToInteger(Enums.OrderStatus.Confirmed), false)))
+                if ((int)SelectedPartProductAllocatedDataRow["OrderStatusID"] == (int)Enums.OrderStatus.Confirmed)
                 {
                     if (App.ShowMessage("This order is still confirmed! Would you like to make it as complete now?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        CompleteOrder(Conversions.ToInteger(SelectedPartProductAllocatedDataRow["OrderItemID"]));
+                        CompleteOrder((int)SelectedPartProductAllocatedDataRow["OrderItemID"]);
                         flagComleted = true;
                     }
                 }
 
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedPartProductAllocatedDataRow["OrderLocationTypeID"], Conversions.ToInteger(Enums.LocationType.Supplier), false) & ((int)SelectedPartProductAllocatedDataRow["OrderStatusID"] >= Conversions.ToInteger(Enums.OrderStatus.Complete) | flagComleted == true)))
+                if ((int)SelectedPartProductAllocatedDataRow["OrderLocationTypeID"] == (int)Enums.LocationType.Supplier & ((int)SelectedPartProductAllocatedDataRow["OrderStatusID"] >= (int)Enums.OrderStatus.Complete | flagComleted == true))
                 {
-                    var fAddPartToBeCredited = new FRMAddPartToBeCredited(Conversions.ToInteger((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed));
+                    var fAddPartToBeCredited = new FRMAddPartToBeCredited((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed);
                     if (fAddPartToBeCredited.ShowDialog() == DialogResult.OK)
                     {
                         qtyReturned = Helper.MakeIntegerValid(fAddPartToBeCredited.txtQtyToReturn.Text);
@@ -17682,15 +17693,15 @@ namespace FSM
                     }
                 }
 
-                if (Conversions.ToBoolean((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed > 0))
+                if (Convert.ToBoolean((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed > 0))
                 {
-                    var frmDistribution = new FRMDistributeAllocated(false, Conversions.ToInteger((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed), Conversions.ToString(SelectedPartProductAllocatedDataRow["Name"]), Conversions.ToString(SelectedPartProductAllocatedDataRow["Type"]), Conversions.ToInteger(SelectedPartProductAllocatedDataRow["PartProductID"]), null);
+                    var frmDistribution = new FRMDistributeAllocated(false, (int)((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed), Convert.ToString(SelectedPartProductAllocatedDataRow["Name"]), Convert.ToString(SelectedPartProductAllocatedDataRow["Type"]), (int)SelectedPartProductAllocatedDataRow["PartProductID"], null);
                     if (frmDistribution.ShowDialog() == DialogResult.OK)
                     {
                         PartsAndProductsDistribution.Table.AcceptChanges();
                         foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                         {
-                            if (Conversions.ToBoolean((int)row["Quantity"] > 0))
+                            if (Convert.ToBoolean((int)row["Quantity"] > 0))
                             {
                                 var r = PartsAndProductsDistribution.Table.NewRow();
                                 r["Type"] = SelectedPartProductAllocatedDataRow["Type"];
@@ -17701,7 +17712,7 @@ namespace FSM
                                 r["Quantity"] = row["Quantity"];
                                 r["PartProductID"] = SelectedPartProductAllocatedDataRow["PartProductID"];
                                 r["OrderPartProductID"] = SelectedPartProductAllocatedDataRow["OrderItemID"];
-                                r["StockTransactionType"] = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                r["StockTransactionType"] = (int)Enums.Transaction.StockIn;
                                 PartsAndProductsDistribution.Table.Rows.Add(r);
                             }
                         }
@@ -17718,7 +17729,7 @@ namespace FSM
             if (OrderPartz is null)
                 return;
             var CurrentOrder = App.DB.Order.Order_Get(OrderPartz.OrderID);
-            if (!(CurrentOrder.OrderStatusID == Conversions.ToInteger(Enums.OrderStatus.Confirmed)))
+            if (!(CurrentOrder.OrderStatusID == (int)Enums.OrderStatus.Confirmed))
             {
                 App.ShowMessage("Order must be confirmed to Complete", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -17727,17 +17738,17 @@ namespace FSM
             var ItemsIncludedDataView = App.DB.Order.Order_ItemsGetAll(OrderPartz.OrderID);
             foreach (DataRow itemRow in ItemsIncludedDataView.Table.Rows)
             {
-                if (!(Conversions.ToInteger(itemRow["QuantityOnOrder"]) == Conversions.ToInteger(itemRow["QuantityReceived"])))
+                if (!((int)itemRow["QuantityOnOrder"] == (int)itemRow["QuantityReceived"]))
                 {
-                    int quantityInput = Conversions.ToInteger(itemRow["QuantityOnOrder"]) - Conversions.ToInteger(itemRow["QuantityReceived"]);
-                    var switchExpr = Conversions.ToString(itemRow["Type"]);
+                    int quantityInput = (int)itemRow["QuantityOnOrder"] - (int)itemRow["QuantityReceived"];
+                    var switchExpr = Convert.ToString(itemRow["Type"]);
                     switch (switchExpr)
                     {
                         case "OrderProduct":
                             {
                                 var OrderProduct = new Entity.OrderProducts.OrderProduct();
                                 var oProduct = new Entity.Products.Product();
-                                OrderProduct = App.DB.OrderProduct.OrderProduct_Get(Conversions.ToInteger(itemRow["ID"]));
+                                OrderProduct = App.DB.OrderProduct.OrderProduct_Get((int)itemRow["ID"]);
                                 var oProductSupplier = App.DB.ProductSupplier.ProductSupplier_Get(OrderProduct.ProductSupplierID);
                                 oProduct = App.DB.Product.Product_Get(oProductSupplier.ProductID);
                                 OrderProduct.SetQuantityReceived = OrderProduct.QuantityReceived + quantityInput;
@@ -17745,22 +17756,22 @@ namespace FSM
                                 var switchExpr1 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr1)
                                 {
-                                    case (int)(Enums.OrderType.Customer):
+                                    case (int)Enums.OrderType.Customer:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.Job):
+                                    case (int)Enums.OrderType.Job:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.StockProfile):
+                                    case (int)Enums.OrderType.StockProfile:
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case (int)(Enums.OrderType.Warehouse):
+                                    case (int)Enums.OrderType.Warehouse:
                                         {
                                             var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderProduct.OrderID);
                                             var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
@@ -17768,7 +17779,7 @@ namespace FSM
                                             oProductTransaction.SetProductID = oProductSupplier.ProductID;
                                             oProductTransaction.SetOrderProductID = OrderProduct.OrderProductID;
                                             oProductTransaction.SetAmount = quantityInput * oProductSupplier.QuantityInPack;
-                                            oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                            oProductTransaction.SetTransactionTypeID = (int)Enums.Transaction.StockIn;
                                             App.DB.ProductTransaction.Insert(oProductTransaction);
                                             break;
                                         }
@@ -17780,28 +17791,28 @@ namespace FSM
                         case "OrderPart":
                             {
                                 var OrderPart = new Entity.OrderParts.OrderPart();
-                                OrderPart = App.DB.OrderPart.OrderPart_Get(Conversions.ToInteger(itemRow["ID"]));
+                                OrderPart = App.DB.OrderPart.OrderPart_Get((int)itemRow["ID"]);
                                 OrderPart.SetQuantityReceived = OrderPart.QuantityReceived + quantityInput;
                                 App.DB.OrderPart.Update(OrderPart);
                                 var switchExpr2 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr2)
                                 {
-                                    case (int)(Enums.OrderType.Customer):
+                                    case (int)Enums.OrderType.Customer:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.Job):
+                                    case (int)Enums.OrderType.Job:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.StockProfile):
+                                    case (int)Enums.OrderType.StockProfile:
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case (int)(Enums.OrderType.Warehouse):
+                                    case (int)Enums.OrderType.Warehouse:
                                         {
                                             var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderPart.OrderID);
                                             var oPartSupplier = App.DB.PartSupplier.PartSupplier_Get(OrderPart.PartSupplierID);
@@ -17810,7 +17821,7 @@ namespace FSM
                                             oPartTransaction.SetPartID = oPartSupplier.PartID;
                                             oPartTransaction.SetOrderPartID = OrderPart.OrderPartID;
                                             oPartTransaction.SetAmount = quantityInput * oPartSupplier.QuantityInPack;
-                                            oPartTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                            oPartTransaction.SetTransactionTypeID = (int)Enums.Transaction.StockIn;
                                             App.DB.PartTransaction.Insert(oPartTransaction);
                                             break;
                                         }
@@ -17821,14 +17832,14 @@ namespace FSM
 
                         case "OrderLocationProduct":
                             {
-                                var OrderLocationProduct = App.DB.OrderLocationProduct.OrderLocationProduct_Get(Conversions.ToInteger(itemRow["ID"]));
+                                var OrderLocationProduct = App.DB.OrderLocationProduct.OrderLocationProduct_Get((int)itemRow["ID"]);
                                 var oProductTransaction = App.DB.ProductTransaction.ProductTransaction_GetByOrderLocationProduct(OrderLocationProduct.OrderLocationProductID);
                                 oProductTransaction.SetAmount = oProductTransaction.Amount + quantityInput;
                                 App.DB.ProductTransaction.Update(oProductTransaction);
                                 oProductTransaction.SetLocationID = OrderLocationProduct.LocationID;
                                 oProductTransaction.SetProductID = OrderLocationProduct.ProductID;
                                 oProductTransaction.SetOrderLocationProductID = OrderLocationProduct.OrderLocationProductID;
-                                oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockOut);
+                                oProductTransaction.SetTransactionTypeID = (int)Enums.Transaction.StockOut;
                                 oProductTransaction.SetAmount = -quantityInput;
                                 App.DB.ProductTransaction.Insert(oProductTransaction);
                                 OrderLocationProduct.SetQuantityReceived = OrderLocationProduct.QuantityReceived + quantityInput;
@@ -17836,27 +17847,27 @@ namespace FSM
                                 var switchExpr3 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr3)
                                 {
-                                    case (int)(Enums.OrderType.Customer):
+                                    case (int)Enums.OrderType.Customer:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.Job):
+                                    case (int)Enums.OrderType.Job:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.StockProfile):
+                                    case (int)Enums.OrderType.StockProfile:
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case (int)(Enums.OrderType.Warehouse):
+                                    case (int)Enums.OrderType.Warehouse:
                                         {
                                             Entity.OrderLocations.OrderLocation oOrderLocation;
                                             oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationProduct.OrderID);
                                             oProductTransaction.SetLocationID = oOrderLocation.LocationID;
-                                            oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                            oProductTransaction.SetTransactionTypeID = (int)Enums.Transaction.StockIn;
                                             oProductTransaction.SetOrderLocationProductID = OrderLocationProduct.OrderLocationProductID;
                                             oProductTransaction.SetAmount = quantityInput;
                                             oProductTransaction.SetProductID = OrderLocationProduct.ProductID;
@@ -17870,14 +17881,14 @@ namespace FSM
 
                         case "OrderLocationPart":
                             {
-                                var OrderLocationPart = App.DB.OrderLocationPart.OrderLocationPart_Get(Conversions.ToInteger(itemRow["ID"]));
+                                var OrderLocationPart = App.DB.OrderLocationPart.OrderLocationPart_Get((int)itemRow["ID"]);
                                 var oPartTransaction = App.DB.PartTransaction.PartTransaction_GetByOrderLocationPart(OrderLocationPart.OrderLocationPartID);
                                 oPartTransaction.SetAmount = oPartTransaction.Amount + quantityInput;
                                 App.DB.PartTransaction.Update(oPartTransaction);
                                 oPartTransaction.SetLocationID = OrderLocationPart.LocationID;
                                 oPartTransaction.SetPartID = OrderLocationPart.PartID;
                                 oPartTransaction.SetOrderLocationPartID = OrderLocationPart.OrderLocationPartID;
-                                oPartTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockOut);
+                                oPartTransaction.SetTransactionTypeID = (int)Enums.Transaction.StockOut;
                                 oPartTransaction.SetAmount = -quantityInput;
                                 App.DB.PartTransaction.Insert(oPartTransaction);
                                 OrderLocationPart.SetQuantityReceived = OrderLocationPart.QuantityReceived + quantityInput;
@@ -17885,27 +17896,27 @@ namespace FSM
                                 var switchExpr4 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr4)
                                 {
-                                    case (int)(Enums.OrderType.Customer):
+                                    case (int)Enums.OrderType.Customer:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.Job):
+                                    case (int)Enums.OrderType.Job:
                                         {
                                             break;
                                         }
                                     // DO NOTHING
-                                    case (int)(Enums.OrderType.StockProfile):
+                                    case (int)Enums.OrderType.StockProfile:
                                         {
                                             break;
                                         }
                                     // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case (int)(Enums.OrderType.Warehouse):
+                                    case (int)Enums.OrderType.Warehouse:
                                         {
                                             Entity.OrderLocations.OrderLocation oOrderLocation;
                                             oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationPart.OrderID);
                                             oPartTransaction.SetLocationID = oOrderLocation.LocationID;
-                                            oPartTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                            oPartTransaction.SetTransactionTypeID = (int)Enums.Transaction.StockIn;
                                             oPartTransaction.SetOrderLocationPartID = OrderLocationPart.OrderLocationPartID;
                                             oPartTransaction.SetAmount = quantityInput;
                                             oPartTransaction.SetPartID = OrderLocationPart.PartID;
@@ -17922,7 +17933,7 @@ namespace FSM
 
             // Populate(CurrentOrder.OrderID)
 
-            CurrentOrder.SetOrderStatusID = Conversions.ToInteger(Enums.OrderStatus.Complete);
+            CurrentOrder.SetOrderStatusID = (int)Enums.OrderStatus.Complete;
             App.DB.Order.Update(CurrentOrder);
         }
 
@@ -17934,14 +17945,14 @@ namespace FSM
                 PartsAndProductsDistribution.Table.AcceptChanges();
                 foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                 {
-                    if (Conversions.ToBoolean((int)row["Quantity"] > 0))
+                    if (Convert.ToBoolean((int)row["Quantity"] > 0))
                     {
                         var r = PartsAndProductsDistribution.Table.NewRow();
                         r["Type"] = TypeIn;
                         r["DistributedID"] = 0;
                         r["LocationID"] = row["LocationID"];
                         r["AllocatedID"] = row["AllocatedID"];
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["LocationID"], 0, false) & Operators.ConditionalCompareObjectEqual(row["AllocatedID"], 0, false)))
+                        if ((int)row["LocationID"] == 0 && (int)row["AllocatedID"] == 0)
                         {
                             r["Other"] = true;
                         }
@@ -17961,15 +17972,15 @@ namespace FSM
                 foreach (DataRow row in PartsAndProductsAllocated.Table.Rows)
                 {
                     int distributed = 0;
-                    foreach (DataRow distrow in PartsAndProductsDistribution.Table.Select(Conversions.ToString("Type = '" + row["Type"] + "'")))
+                    foreach (DataRow distrow in PartsAndProductsDistribution.Table.Select(Convert.ToString("Type = '" + row["Type"] + "'")))
                     {
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(distrow["AllocatedID"], row["ID"], false)))
+                        if ((int)distrow["AllocatedID"] == (int)row["ID"])
                         {
                             distributed += (int)distrow["Quantity"];
                         }
                     }
 
-                    if (Conversions.ToBoolean(distributed >= (int)row["Quantity"]))
+                    if (Convert.ToBoolean(distributed >= (int)row["Quantity"]))
                     {
                         row["Status"] = true;
                     }
@@ -17992,18 +18003,18 @@ namespace FSM
             var arr = new ArrayList();
             foreach (DataRow row in PartsAndProductsAllocated.Table.Rows)
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["Status"], false, false) & Operators.ConditionalCompareObjectEqual(row["PartProductID"], PartProductIDIn, false) & Operators.ConditionalCompareObjectEqual(row["Type"], TypeIn, false) & Helper.MakeIntegerValid(row["OrderID"]) != 0))
+                if ((bool)row["Status"] == false && (int)row["PartProductID"] == PartProductIDIn && (string)row["Type"] == TypeIn && Helper.MakeIntegerValid(row["OrderID"]) != 0)
                 {
                     int distributed = 0;
                     foreach (DataRow dist in PartsAndProductsDistribution.Table.Select("Type = '" + TypeIn + "'"))
                     {
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dist["AllocatedID"], row["ID"], false)))
+                        if ((int)dist["AllocatedID"] == (int)row["ID"])
                         {
                             distributed += (int)dist["Quantity"];
                         }
                     }
 
-                    int amountAvailable = Conversions.ToInteger((int)row["Quantity"] - distributed);
+                    int amountAvailable = (int)row["Quantity"] - distributed;
                     if (amountAvailable >= 0)
                     {
                         var a = new ArrayList();
@@ -18037,7 +18048,7 @@ namespace FSM
                 int distributed = 0;
                 if (!(dgPartsProductsAllocated.CurrentRowIndex == -1))
                 {
-                    var fAddPartToBeCredited = new FRMAddPartToBeCredited(Conversions.ToInteger((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed));
+                    var fAddPartToBeCredited = new FRMAddPartToBeCredited((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed);
                     if (fAddPartToBeCredited.ShowDialog() == DialogResult.OK)
                     {
                         qtyReturned = Helper.MakeIntegerValid(fAddPartToBeCredited.txtQtyToReturn.Text);
@@ -18062,7 +18073,7 @@ namespace FSM
                         SelectedPartProductAllocatedDataRow["Status"] = true;
                     }
 
-                    if (Conversions.ToBoolean((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed > 0))
+                    if (Convert.ToBoolean((int)SelectedPartProductAllocatedDataRow["Quantity"] - distributed > 0))
                     {
                         var frmDistribution = new FRMDistributeAllocated(false, Quantity, PartProductName, Type, PartProductID, null);
                         if (frmDistribution.ShowDialog() == DialogResult.OK)
@@ -18070,7 +18081,7 @@ namespace FSM
                             PartsAndProductsDistribution.Table.AcceptChanges();
                             foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                             {
-                                if (Conversions.ToBoolean((int)row["Quantity"] > 0))
+                                if (Convert.ToBoolean((int)row["Quantity"] > 0))
                                 {
                                     var r = PartsAndProductsDistribution.Table.NewRow();
                                     r["Type"] = Type;
@@ -18081,7 +18092,7 @@ namespace FSM
                                     r["Quantity"] = row["Quantity"];
                                     r["PartProductID"] = PartProductID;
                                     r["OrderPartProductID"] = 0;
-                                    r["StockTransactionType"] = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                    r["StockTransactionType"] = (int)Enums.Transaction.StockIn;
                                     PartsAndProductsDistribution.Table.Rows.Add(r);
                                 }
                             }
@@ -18100,9 +18111,9 @@ namespace FSM
                 }
                 else if (!(dgPartsAndProductsUsed.CurrentRowIndex == -1)) // PArtsUsed
                 {
-                    if (Conversions.ToBoolean((int)EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["OrderPartID"] > 0))
+                    if (Convert.ToBoolean((int)EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["OrderPartID"] > 0))
                     {
-                        var fAddPartToBeCredited = new FRMAddPartToBeCredited(Conversions.ToInteger((int)EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Quantity"] - distributed));
+                        var fAddPartToBeCredited = new FRMAddPartToBeCredited((int)EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Quantity"] - distributed);
                         if (fAddPartToBeCredited.ShowDialog() == DialogResult.OK)
                         {
                             qtyReturned = Helper.MakeIntegerValid(fAddPartToBeCredited.txtQtyToReturn.Text);
@@ -18128,7 +18139,7 @@ namespace FSM
                         // SelectedPartProductUsedDataRow.Item("Status") = True
                     }
 
-                    if (Conversions.ToBoolean((int)EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Quantity"] - distributed > 0))
+                    if (Convert.ToBoolean((int)EngineerVisit.PartsAndProductsUsed.Table.Rows[dgPartsAndProductsUsed.CurrentRowIndex]["Quantity"] - distributed > 0))
                     {
                         var frmDistribution = new FRMDistributeAllocated(false, Quantity, PartProductName, Type, PartProductID, null);
                         if (frmDistribution.ShowDialog() == DialogResult.OK)
@@ -18136,7 +18147,7 @@ namespace FSM
                             PartsAndProductsDistribution.Table.AcceptChanges();
                             foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                             {
-                                if (Conversions.ToBoolean((int)row["Quantity"] > 0))
+                                if (Convert.ToBoolean((int)row["Quantity"] > 0))
                                 {
                                     var r = PartsAndProductsDistribution.Table.NewRow();
                                     r["Type"] = Type;
@@ -18147,7 +18158,7 @@ namespace FSM
                                     r["Quantity"] = row["Quantity"];
                                     r["PartProductID"] = PartProductID;
                                     r["OrderPartProductID"] = 0;
-                                    r["StockTransactionType"] = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                    r["StockTransactionType"] = (int)Enums.Transaction.StockIn;
                                     PartsAndProductsDistribution.Table.Rows.Add(r);
                                 }
                             }
@@ -18186,7 +18197,7 @@ namespace FSM
             int selectedCount = 0;
             foreach (DataRow dr in PartsAndProductsAllocated.Table.Rows)
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Tick"], true, false)))
+                if ((bool)dr["Tick"])
                 {
                     selectedCount += 1;
                     if (selectedCount > 1)
@@ -18201,9 +18212,9 @@ namespace FSM
             {
                 foreach (DataRow dr in PartsAndProductsAllocated.Table.Rows)
                 {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Tick"], true, false) & (int)dr["QtyRemaining"] > 0))
+                    if ((bool)dr["Tick"] && ((int)dr["QtyRemaining"] > 0))
                     {
-                        UsePart(dr, Conversions.ToInteger(dr["QtyRemaining"]));
+                        UsePart(dr, (int)dr["QtyRemaining"]);
                     }
                 }
             }
@@ -18211,9 +18222,9 @@ namespace FSM
             {
                 foreach (DataRow dr in PartsAndProductsAllocated.Table.Rows)
                 {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Tick"], true, false)))
+                    if ((bool)dr["Tick"])
                     {
-                        UsePart(dr, Conversions.ToInteger(nudPartAllocatedQty.Value));
+                        UsePart(dr, (int)nudPartAllocatedQty.Value);
                     }
                 }
             }
@@ -18224,31 +18235,31 @@ namespace FSM
             bool addUsed = false;
             int LocationID = 0;
             int distributed = 0;
-            foreach (DataRow row in PartsAndProductsDistribution.Table.Select(Conversions.ToString("Type = '" + dr["Type"] + "'")))
+            foreach (DataRow row in PartsAndProductsDistribution.Table.Select(Convert.ToString("Type = '" + dr["Type"] + "'")))
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["AllocatedID"], dr["ID"], false)))
+                if ((int)row["AllocatedID"] == (int)dr["ID"])
                 {
                     distributed += (int)row["Quantity"];
                 }
             }
 
-            if (Conversions.ToBoolean(distributed >= (int)dr["Quantity"]))
+            if (Convert.ToBoolean(distributed >= (int)dr["Quantity"]))
             {
-                App.ShowMessage(Conversions.ToString("Distribution is complete for this " + dr["Type"]), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                App.ShowMessage(Convert.ToString("Distribution is complete for this " + dr["Type"]), MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (Helper.MakeIntegerValid(dr["OrderID"]) == 0)
             {
-                var frmDistribution = new FRMDistributeAllocated(true, qty, Conversions.ToString(dr["Name"]), Conversions.ToString(dr["Type"]), Conversions.ToInteger(dr["PartProductID"]), BuildAllocatedArray(Conversions.ToInteger(dr["PartProductID"]), Conversions.ToString(dr["Type"])));
+                var frmDistribution = new FRMDistributeAllocated(true, qty, Convert.ToString(dr["Name"]), Convert.ToString(dr["Type"]), (int)dr["PartProductID"], BuildAllocatedArray((int)dr["PartProductID"], Convert.ToString(dr["Type"])));
                 if (frmDistribution.ShowDialog() == DialogResult.OK)
                 {
                     PartsAndProductsDistribution.Table.AcceptChanges();
                     foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                     {
-                        if (Conversions.ToBoolean((int)row["QtyRemaining"] > 0))
+                        if (Convert.ToBoolean((int)row["QtyRemaining"] > 0))
                         {
-                            var drA = PartsAndProductsDistribution.Table.Select(Conversions.ToString("AllocatedID = " + dr["ID"]));
+                            var drA = PartsAndProductsDistribution.Table.Select(Convert.ToString("AllocatedID = " + dr["ID"]));
                             foreach (DataRow r in drA)
                             {
                                 if (r is null)
@@ -18258,7 +18269,7 @@ namespace FSM
                                     drr["DistributedID"] = 0;
                                     drr["LocationID"] = row["LocationID"];
                                     drr["AllocatedID"] = dr["ID"];
-                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["LocationID"], 0, false)))
+                                    if ((int)row["LocationID"] == 0)
                                     {
                                         drr["Other"] = true;
                                     }
@@ -18270,9 +18281,9 @@ namespace FSM
                                     drr["Quantity"] = qty;
                                     drr["PartProductID"] = dr["PartProductID"];
                                     drr["OrderPartProductID"] = 0;
-                                    drr["StockTransactionType"] = Conversions.ToInteger(Enums.Transaction.StockOut);
+                                    drr["StockTransactionType"] = (int)Enums.Transaction.StockOut;
                                     PartsAndProductsDistribution.Table.Rows.Add(drr);
-                                    LocationID = Conversions.ToInteger(row["LocationID"]);
+                                    LocationID = (int)row["LocationID"];
                                 }
                                 else
                                 {
@@ -18283,7 +18294,7 @@ namespace FSM
                     }
 
                     dr["QtyRemaining"] = (int)dr["QtyRemaining"] - qty;
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual((int)dr["Quantity"] - (int)dr["QtyRemaining"], dr["Quantity"], false)))
+                    if (((int)dr["Quantity"] - (int)dr["QtyRemaining"]) == (int)dr["Quantity"])
                     {
                         dr["Status"] = true;
                     }
@@ -18295,11 +18306,11 @@ namespace FSM
             {
                 // HAS THE ORDER BEEN RECEIVED?
                 bool flagComleted = false;
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["OrderStatusID"], Conversions.ToInteger(Enums.OrderStatus.Confirmed), false)))
+                if ((int)dr["OrderStatusID"] == (int)Enums.OrderStatus.Confirmed)
                 {
                     if (App.ShowMessage("This order is still confirmed! Would you like to make it as complete now?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        CompleteOrder(Conversions.ToInteger(dr["OrderItemID"]));
+                        CompleteOrder((int)dr["OrderItemID"]);
                         flagComleted = true;
                     }
                 }
@@ -18307,7 +18318,7 @@ namespace FSM
                 if (Helper.MakeIntegerValid(dr["QuantityOrdered"]) == Helper.MakeIntegerValid(dr["QuantityReceived"]) | flagComleted == true)
                 {
                     PartsAndProductsDistribution.Table.AcceptChanges();
-                    var drA = PartsAndProductsDistribution.Table.Select(Conversions.ToString("AllocatedID = " + dr["ID"]));
+                    var drA = PartsAndProductsDistribution.Table.Select(Convert.ToString("AllocatedID = " + dr["ID"]));
                     foreach (DataRow r in drA)
                     {
                         if (r is null)
@@ -18331,24 +18342,24 @@ namespace FSM
                     }
 
                     dr["QtyRemaining"] = (int)dr["QtyRemaining"] - qty;
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual((int)dr["Quantity"] - (int)dr["QtyRemaining"], dr["Quantity"], false)))
+                    if (((int)dr["Quantity"] - (int)dr["QtyRemaining"]) == (int)dr["Quantity"])
                     {
                         dr["Status"] = true;
                     }
 
                     addUsed = true;
                 }
-                else if (App.ShowMessage("This is part that has been ordered but not fully received." + Constants.vbCrLf + "Would you like to continue and select stock from another location?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                else if (App.ShowMessage("This is part that has been ordered but not fully received." + Environment.NewLine + "Would you like to continue and select stock from another location?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    var frmDistribution = new FRMDistributeAllocated(true, qty, Conversions.ToString(dr["Name"]), Conversions.ToString(dr["Type"]), Conversions.ToInteger(dr["PartProductID"]), BuildAllocatedArray(Conversions.ToInteger(dr["PartProductID"]), Conversions.ToString(dr["Type"])));
+                    var frmDistribution = new FRMDistributeAllocated(true, qty, Convert.ToString(dr["Name"]), Convert.ToString(dr["Type"]), (int)dr["PartProductID"], BuildAllocatedArray((int)dr["PartProductID"], Convert.ToString(dr["Type"])));
                     if (frmDistribution.ShowDialog() == DialogResult.OK)
                     {
                         PartsAndProductsDistribution.Table.AcceptChanges();
                         foreach (DataRow row in frmDistribution.Locations.Table.Rows)
                         {
-                            if (Conversions.ToBoolean((int)row["QtyRemaining"] > 0))
+                            if (Convert.ToBoolean((int)row["QtyRemaining"] > 0))
                             {
-                                var drA = PartsAndProductsDistribution.Table.Select(Conversions.ToString("AllocatedID = " + dr["ID"]));
+                                var drA = PartsAndProductsDistribution.Table.Select(Convert.ToString("AllocatedID = " + dr["ID"]));
                                 foreach (DataRow r in drA)
                                 {
                                     if (r is null)
@@ -18358,7 +18369,7 @@ namespace FSM
                                         drr["DistributedID"] = 0;
                                         drr["LocationID"] = row["LocationID"];
                                         drr["AllocatedID"] = dr["ID"];
-                                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["LocationID"], 0, false)))
+                                        if ((int)row["LocationID"] == 0)
                                         {
                                             drr["Other"] = true;
                                         }
@@ -18370,9 +18381,9 @@ namespace FSM
                                         drr["Quantity"] = qty;
                                         drr["PartProductID"] = dr["PartProductID"];
                                         drr["OrderPartProductID"] = 0;
-                                        drr["StockTransactionType"] = Conversions.ToInteger(Enums.Transaction.StockOut);
+                                        drr["StockTransactionType"] = (int)Enums.Transaction.StockOut;
                                         PartsAndProductsDistribution.Table.Rows.Add(drr);
-                                        LocationID = Conversions.ToInteger(row["LocationID"]);
+                                        LocationID = (int)row["LocationID"];
                                     }
                                     else
                                     {
@@ -18383,7 +18394,7 @@ namespace FSM
                         }
 
                         dr["QtyRemaining"] = (int)dr["QtyRemaining"] - qty;
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual((int)dr["Quantity"] - (int)dr["QtyRemaining"], dr["Quantity"], false)))
+                        if (((int)dr["Quantity"] - (int)dr["QtyRemaining"]) == (int)dr["Quantity"])
                         {
                             dr["Status"] = true;
                         }
@@ -18400,7 +18411,7 @@ namespace FSM
                 newRow["AllocatedID"] = dr["ID"];
                 newRow["Type"] = dr["Type"];
                 newRow["Quantity"] = qty;
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Type"], "Part", false)))
+                if ((string)dr["Type"] == "Part")
                 {
                     FRMChooseAsset dialogue;
                     dialogue = (FRMChooseAsset)App.checkIfExists(typeof(FRMChooseAsset).Name, true);
@@ -18411,10 +18422,10 @@ namespace FSM
                     // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
                     dialogue.ShowInTaskbar = false;
                     dialogue.JobID = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(EngineerVisit.EngineerVisitID).JobID;
-                    dialogue.Part = Conversions.ToString(dr["Name"]);
+                    dialogue.Part = Convert.ToString(dr["Name"]);
                     dialogue.ShowDialog();
                     dialogue.Close();
-                    var part = App.DB.Part.Part_Get(Conversions.ToInteger(dr["PartProductID"]));
+                    var part = App.DB.Part.Part_Get((int)dr["PartProductID"]);
                     newRow["Number"] = part.Number;
                     newRow["Name"] = dr["Name"];
                     newRow["Reference"] = part.Reference;
@@ -18430,7 +18441,7 @@ namespace FSM
                 }
                 else
                 {
-                    var product = App.DB.Product.Product_Get(Conversions.ToInteger(dr["PartProductID"]));
+                    var product = App.DB.Product.Product_Get((int)dr["PartProductID"]);
                     newRow["Number"] = product.Number;
                     newRow["Name"] = product.Name;
                     newRow["Reference"] = product.Reference;
@@ -18479,8 +18490,8 @@ namespace FSM
             {
                 var ucPhotoControl = new ucEngineerVisitPhoto();
                 ucPhotoControl.Photo = Image.FromStream(new System.IO.MemoryStream((byte[])photoRow["Photo"]));
-                ucPhotoControl.Caption = Conversions.ToString(photoRow["Caption"]);
-                ucPhotoControl.EngineerVisitPhotoID = Conversions.ToInteger(photoRow["EngineerVisitPhotoID"]);
+                ucPhotoControl.Caption = Convert.ToString(photoRow["Caption"]);
+                ucPhotoControl.EngineerVisitPhotoID = (int)photoRow["EngineerVisitPhotoID"];
                 ucPhotoControl.PhotoDeleteClicked += PhotoDeleteClicked;
                 ucPhotoControl.PhotoCaptionChanged += PhotoCaptionChanged;
                 flPhotos.Controls.Add(ucPhotoControl);
@@ -18518,10 +18529,10 @@ namespace FSM
 
         private void cboOutcome_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboOutcome)) == Conversions.ToInteger(Enums.EngineerVisitOutcomes.Complete))
+            if (Convert.ToInt32(Combo.get_GetSelectedItemValue(cboOutcome)) == (int)Enums.EngineerVisitOutcomes.Complete)
             {
                 chkGasServiceCompleted.Enabled = true;
-                if (Job.JobTypeID == Conversions.ToInteger(Enums.JobTypes.ServiceCertificate) | Job.JobTypeID == Conversions.ToInteger(Enums.JobTypes.Service))
+                if (Job.JobTypeID == (int)Enums.JobTypes.ServiceCertificate | Job.JobTypeID == (int)Enums.JobTypes.Service)
                 {
                     chkGasServiceCompleted.Checked = true;
                 }
@@ -18594,7 +18605,7 @@ namespace FSM
 
         private void cboRecharge_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboRecharge)) > 0)
+            if (Convert.ToDouble(Combo.get_GetSelectedItemValue(cboRecharge)) > 0)
             {
                 lblRechargeTicked.Visible = true;
             }
@@ -18626,7 +18637,7 @@ namespace FSM
 
         private void cboInvType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboInvType)) == 69491)
+            if (Convert.ToDouble(Combo.get_GetSelectedItemValue(cboInvType)) == 69491)
             {
                 lblPaidBy.Visible = true;
                 cboPaidBy.Visible = true;
@@ -18861,12 +18872,12 @@ namespace FSM
                 return;
             }
 
-            bool selected = !Conversions.ToBoolean(dgPartsProductsAllocated[dgPartsProductsAllocated.CurrentRowIndex, 1]);
+            bool selected = !Convert.ToBoolean(dgPartsProductsAllocated[dgPartsProductsAllocated.CurrentRowIndex, 1]);
             dgPartsProductsAllocated[dgPartsProductsAllocated.CurrentRowIndex, 1] = selected;
             int selectedCount = 0;
             foreach (DataRow dr in PartsAndProductsAllocated.Table.Rows)
             {
-                if (Conversions.ToBoolean(dr["Tick"]))
+                if (Convert.ToBoolean(dr["Tick"]))
                 {
                     selectedCount += 1;
                     if (selectedCount > 1)
@@ -19007,7 +19018,7 @@ namespace FSM
             }
             catch (Exception ex)
             {
-                App.ShowMessage("Form cannot setup : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                App.ShowMessage("Form cannot setup : " + Environment.NewLine + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -19020,7 +19031,7 @@ namespace FSM
 
             foreach (DataRow dr in SiteFuelsDataView.Table.Rows)
                 dr["tick"] = 0;
-            bool selected = !Conversions.ToBoolean(dgSiteFuel[dgSiteFuel.CurrentRowIndex, 0]);
+            bool selected = !Convert.ToBoolean(dgSiteFuel[dgSiteFuel.CurrentRowIndex, 0]);
             dgSiteFuel[dgSiteFuel.CurrentRowIndex, 0] = selected;
         }
 
@@ -19032,19 +19043,19 @@ namespace FSM
                 if (chkTimesheetSelectAll.Checked)
                 {
                     foreach (DataRow dr in TimeSheetCharges.Table.Rows)
-                        App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(Conversions.ToInteger(dr["EngineerVisitTimesheetChargeID"]), 1);
+                        App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update((int)dr["EngineerVisitTimesheetChargeID"], 1);
                 }
                 else
                 {
                     foreach (DataRow dr in TimeSheetCharges.Table.Rows)
-                        App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(Conversions.ToInteger(dr["EngineerVisitTimesheetChargeID"]), 0);
+                        App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update((int)dr["EngineerVisitTimesheetChargeID"], 0);
                 }
 
                 PopulateTimeSheetCharges(false, true);
             }
             catch (Exception ex)
             {
-                App.ShowMessage("Cannot change tick state : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                App.ShowMessage("Cannot change tick state : " + Environment.NewLine + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -19057,15 +19068,15 @@ namespace FSM
                 {
                     foreach (DataRow dr in PartProductsCharges.Table.Rows)
                     {
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Type"], "Part", false)))
+                        if ((string)dr["Type"] == "Part")
                         {
-                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete(Conversions.ToInteger(dr["ChargeID"]));
-                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(dr["UniqueID"]), Conversions.ToDouble(dr["Price"]), 1, Conversions.ToDouble(dr["Cost"]), Conversions.ToInteger(dr["PartUsedID"]));
+                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete((int)dr["ChargeID"]);
+                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 1, Convert.ToDouble(dr["Cost"]), (int)dr["PartUsedID"]);
                         }
                         else
                         {
-                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete(Conversions.ToInteger(dr["ChargeID"]));
-                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(dr["UniqueID"]), Conversions.ToDouble(dr["Price"]), 1, Conversions.ToDouble(dr["Cost"]));
+                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete((int)dr["ChargeID"]);
+                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 1, Convert.ToDouble(dr["Cost"]));
                         }
 
                         dr["tick"] = true;
@@ -19075,15 +19086,15 @@ namespace FSM
                 {
                     foreach (DataRow dr in PartProductsCharges.Table.Rows)
                     {
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Type"], "Part", false)))
+                        if ((string)dr["Type"] == "Part")
                         {
-                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete(Conversions.ToInteger(dr["ChargeID"]));
-                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(dr["UniqueID"]), Conversions.ToDouble(dr["Price"]), 0, Conversions.ToDouble(dr["Cost"]), Conversions.ToInteger(dr["PartUsedID"]));
+                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete((int)dr["ChargeID"]);
+                            App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]), (int)dr["PartUsedID"]);
                         }
                         else
                         {
-                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete(Conversions.ToInteger(dr["ChargeID"]));
-                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(dr["UniqueID"]), Conversions.ToDouble(dr["Price"]), 0, Conversions.ToDouble(dr["Cost"]));
+                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete((int)dr["ChargeID"]);
+                            App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]));
                         }
 
                         dr["tick"] = false;
@@ -19094,7 +19105,7 @@ namespace FSM
             }
             catch (Exception ex)
             {
-                App.ShowMessage("Cannot change tick state : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                App.ShowMessage("Cannot change tick state : " + Environment.NewLine + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -19103,7 +19114,7 @@ namespace FSM
             try
             {
                 foreach (DataRow dr in TimeSheetCharges.Table.Rows)
-                    App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(Conversions.ToInteger(dr["EngineerVisitTimesheetChargeID"]), 1);
+                    App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update((int)dr["EngineerVisitTimesheetChargeID"], 1);
             }
             catch (Exception ex)
             {
@@ -19138,22 +19149,22 @@ namespace FSM
             {
                 foreach (DataRow dr in PartProductsCharges.Table.Rows)
                 {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["Type"], "Part", false)))
+                    if ((string)dr["Type"] == "Part")
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete(Conversions.ToInteger(dr["ChargeID"]));
-                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(dr["UniqueID"]), Conversions.ToDouble(dr["Price"]), 0, Conversions.ToDouble(dr["Cost"]), Conversions.ToInteger(dr["PartUsedID"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Delete((int)dr["ChargeID"]);
+                        App.DB.EngineerVisitCharge.EngineerVisitPartCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]), (int)dr["PartUsedID"]);
                     }
                     else
                     {
-                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete(Conversions.ToInteger(dr["ChargeID"]));
-                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, Conversions.ToInteger(dr["UniqueID"]), Conversions.ToDouble(dr["Price"]), 0, Conversions.ToDouble(dr["Cost"]));
+                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Delete((int)dr["ChargeID"]);
+                        App.DB.EngineerVisitCharge.EngineerVisitProductCharge_Insert(EngineerVisit.EngineerVisitID, (int)dr["UniqueID"], Convert.ToDouble(dr["Price"]), 0, Convert.ToDouble(dr["Cost"]));
                     }
 
                     dr["tick"] = false;
                 }
 
                 foreach (DataRow dr in TimeSheetCharges.Table.Rows)
-                    App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update(Conversions.ToInteger(dr["EngineerVisitTimesheetChargeID"]), 0);
+                    App.DB.EngineerVisitCharge.EngineerVisitTimeSheetCharges_Update((int)dr["EngineerVisitTimesheetChargeID"], 0);
             }
             catch (Exception ex)
             {

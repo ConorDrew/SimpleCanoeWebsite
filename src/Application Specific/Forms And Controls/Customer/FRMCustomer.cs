@@ -22,6 +22,7 @@ namespace FSM
             // Add any initialization after the InitializeComponent() call
 
             TheLoadedControl = new UCCustomer();
+
             pnlMain.Controls.Add((Control)TheLoadedControl);
             LoadedControl.StateChanged += ResetMe;
         }
@@ -187,12 +188,15 @@ namespace FSM
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
             ((UCCustomer)LoadedControl).CurrentCustomer = App.DB.Customer.Customer_Get(ID);
-            ((UCCustomer)LoadedControl).SetupContractsDataGrid();
+            LoadForm(sender, e, this);
+            ((UCCustomer)LoadedControl).Populate(ID);
+            ((UCCustomer)LoadedControl).SetupDG();
             ((UCCustomer)LoadedControl).SetupPrioritiesDGV();
+            ((UCCustomer)LoadedControl).SetupRaiseEngDGV();
             ((UCCustomer)LoadedControl).SetupRequirements();
+            ((UCCustomer)LoadedControl).SetupContractsDataGrid();
             ((UCCustomer)LoadedControl).SetupCustomerAuthorityAuditDataGrid();
             ((UCCustomer)LoadedControl).SetupCustomerAlertsDataGrid();
-            LoadForm(sender, e, this);
         }
 
         public IUserControl LoadedControl

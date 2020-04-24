@@ -499,7 +499,11 @@ namespace FSM.Entity
             {
                 string ext = Path.GetExtension(filePath);
                 if ((ext ?? "") != ".docx")
+                {
                     return Conversions.ToString(false);
+                }
+                if (File.Exists(filePath))
+                {
                 try
                 {
                     string pass = Helper.CreateRandomPassword(8);
@@ -522,6 +526,13 @@ namespace FSM.Entity
                 {
                     return filePath;
                 }
+
+                }
+                else
+                {
+                    return filePath;
+                }
+
             }
 
             public static void RemoveSpacingInDoc(string filePath)

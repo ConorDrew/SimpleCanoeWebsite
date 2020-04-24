@@ -3900,7 +3900,7 @@ namespace FSM
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
-        private void SetupDG()
+        public void SetupDG()
         {
             Helper.SetUpDataGridView(dgvParts);
             dgvParts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

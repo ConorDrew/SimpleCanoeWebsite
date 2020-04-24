@@ -465,6 +465,7 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application Framework\Utilities\HelperExtensions.cs" />
     <Compile Include="Application Scheduler\frmVisit.cs">
       <SubType>Form</SubType>
     </Compile>

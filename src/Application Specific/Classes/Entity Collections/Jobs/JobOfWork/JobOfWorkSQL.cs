@@ -1,11 +1,11 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
 {
@@ -351,8 +351,9 @@ namespace FSM.Entity
                                           SetPriority = Helper.MakeIntegerValid(x["Priority"]),
                                           SetStatus = Helper.MakeIntegerValid(x["Status"]),
                                           PriorityDateSet = Helper.MakeDateTimeValid(x["PriorityDateSet"]),
-                                          SetQualificationID = Helper.MakeIntegerValid(x["QualificationID"])
+                                          SetQualificationID = x.GetValue<int>("QualificationID")
                                       }).ToList();
+
                     return jobOfWorks;
                 }
                 else
