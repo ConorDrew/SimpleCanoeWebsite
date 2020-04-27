@@ -44,6 +44,7 @@ namespace FSM
                     }
             }
 
+            base.Load += FRMOrderManager_Load;
             // Add any initialization after the InitializeComponent() call
         }
 
@@ -1992,20 +1993,6 @@ namespace FSM
 
         private void txtContains_TextChanged(object sender, EventArgs e)
         {
-            // Try
-            // If txtContains.Text.Length >= 3 Then
-
-            // Cursor.Current = Cursors.WaitCursor
-
-            // OrdersDataview = DB.Order.Order_GetAll(Me.txtContains.Text.Trim)
-
-            // RunFilter()
-            // End If
-            // Catch ex As Exception
-            // Exit Sub
-            // Finally
-            // Cursor.Current = Cursors.Default
-            // End Try
         }
 
         private void dgOrders_DoubleClick(object sender, EventArgs e)
