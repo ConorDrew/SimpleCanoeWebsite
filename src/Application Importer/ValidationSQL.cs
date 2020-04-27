@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Importer.Validation
 {
@@ -237,7 +237,7 @@ namespace FSM.Importer.Validation
         {
             _database.ClearParameter();
             _database.AddParameter("@ID", ImportID, true);
-            int rows = _database.ExecuteSP_ReturnRowsAffected("POInvoiceImport_ValidateOrder_Mk1");
+            int rows = _database.ExecuteSP_ReturnRowsAffected("POInvoiceImport_ValidateOrder_Mk2");
             bool result = false;
             if (rows == 1)
                 result = true;

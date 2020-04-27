@@ -745,7 +745,7 @@ namespace FSM
 
         public DataTable LoadUnsheduledWorkBegin()
         {
-            var dtUnscheduledWork = new DataTable();
+            DataTable dtUnscheduledWork = new DataTable();
             bool viewAll = _unscheduledCalls?.chkViewAll.Checked == true;
             if (viewAll)
             {

@@ -1,4 +1,11 @@
-﻿using System;
+﻿using FSM.Entity.Orders;
+using FSM.Entity.PartsToBeCrediteds;
+using FSM.Entity.Sys;
+using FSM.Importer;
+using LinqToExcel;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -8,13 +15,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Orders;
-using FSM.Entity.PartsToBeCrediteds;
-using FSM.Entity.Sys;
-using FSM.Importer;
-using LinqToExcel;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1500,17 +1500,17 @@ namespace FSM
                 pbStatus.Value = 0;
                 Application.DoEvents();
                 var excel = new ExcelQueryFactory(File.FullName);
-                object obj = from a in excel.Worksheet()
-                             select a;
-                object ij = excel.GetWorksheetNames();
-                object columnNames = excel.GetColumnNames("Sheet1");
+                List<string> worksheets = excel.GetWorksheetNames().ToList();
+                string firstWorksheet = worksheets.FirstOrDefault();
+                var obj = (from a in excel.Worksheet(firstWorksheet) select a);
+                List<string> columnNames = excel.GetColumnNames(firstWorksheet).ToList();
                 var data = new DataTable();
-                foreach (DataColumn columnName in (IEnumerable)columnNames)
+                foreach (string columnName in columnNames)
                     data.Columns.Add(columnName);
                 foreach (Row rr in (IEnumerable)obj)
                 {
                     var dr = data.NewRow();
-                    foreach (String columnName in (IEnumerable)columnNames)
+                    foreach (string columnName in columnNames)
                         dr[columnName] = rr[columnName];
                     data.Rows.Add(dr);
                 }
@@ -1663,6 +1663,7 @@ namespace FSM
                                 App.DB.ImportValidation.POInvoiceImport_ValidateOrder(orderId);
                             }
                         }
+                        MoveProgressOn();
                     }
 
                     MoveProgressOn(true);
