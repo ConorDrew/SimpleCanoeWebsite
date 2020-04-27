@@ -3495,7 +3495,6 @@ namespace FSM
             _tabDocuments = new TabPage();
             _btnSaveFault = new Button();
             _btnSaveFault.Click += new EventHandler(btnSaveFault_Click);
-            _btnSaveFault.Click += new EventHandler(btnSaveFault_Click);
             _tabHistory.SuspendLayout();
             _grpHistoryDetails.SuspendLayout();
             _grpVanAudit.SuspendLayout();
@@ -6224,12 +6223,12 @@ namespace FSM
                         }
 
                         update = true;
-                        change += "Contract start mileage changed from: " + withBlock.StartingMileage + " to: " + txtStartingMileage.Text;
+                        change += "Starting mileage changed from: " + withBlock.StartingMileage + " to: " + txtStartingMileage.Text;
                     }
                 }
                 else
                 {
-                    App.ShowMessage("Contract mileage requires a numberical value", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    App.ShowMessage("Starting mileage requires a numberical value", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
                 if (withBlock.ExcessMileageRate != Conversions.ToDouble(txtExcessMileageRate.Text))
@@ -6952,6 +6951,7 @@ namespace FSM
 
         private void btnSaveFault_Click(object sender, EventArgs e)
         {
+            btnSaveFault_Click();
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

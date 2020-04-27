@@ -8034,7 +8034,7 @@ namespace FSM.Entity
                     var oCustomer = App.DB.Customer.Customer_Get(oSite.CustomerID);
                     var visitDate = ((ArrayList)DetailsToPrint)[1].ToString();
                     int currentPage = 1;
-                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text)
+                    foreach (Match wordField in Printing.GetTemplateFields(WordDoc.Content.Text))
                     {
                         var switchExpr = wordField.Value.ToLower();
                         switch (switchExpr)
