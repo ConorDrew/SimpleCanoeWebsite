@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1413,7 +1413,7 @@ namespace FSM
                         }
                 }
 
-                NumOfVisits = Conversions.ToInteger(Math.Floor(ContractDuration / (double)VisitFreqInDays));
+                NumOfVisits = Conversions.ToInteger(Math.Floor(ContractDuration / (decimal)VisitFreqInDays));
                 if (NumOfVisits == 0)
                 {
                     NumOfVisits = 1;
@@ -1582,7 +1582,7 @@ namespace FSM
             // NUM OF SLOTS NEEDED FOR VISIT
             if (visitDuration > 0)
             {
-                numOfSlotsNeeded = (int)(visitDuration / (double)slotDuration);
+                numOfSlotsNeeded = (int)(visitDuration / (decimal)slotDuration);
             }
             // ***************************************************************
 
@@ -1779,13 +1779,13 @@ namespace FSM
                 // Invoice the visit
                 case Entity.Sys.Enums.InvoiceFrequency.Quarterly:
                     {
-                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Month, CurrentContract.ContractStartDate, CurrentContract.ContractEndDate) / (double)3);
+                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Month, CurrentContract.ContractStartDate, CurrentContract.ContractEndDate) / (decimal)3);
                         break;
                     }
 
                 case Entity.Sys.Enums.InvoiceFrequency.Weekly:
                     {
-                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Day, CurrentContract.ContractStartDate, CurrentContract.ContractEndDate) / (double)7);
+                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Day, CurrentContract.ContractStartDate, CurrentContract.ContractEndDate) / (decimal)7);
                         break;
                     }
             }

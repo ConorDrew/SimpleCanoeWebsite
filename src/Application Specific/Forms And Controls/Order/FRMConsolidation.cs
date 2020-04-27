@@ -2181,7 +2181,7 @@ namespace FSM
                 return;
             }
 
-            if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboStatus)) > (double)Entity.Sys.Enums.OrderStatus.AwaitingConfirmation)
+            if (Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboStatus)) > (int)Entity.Sys.Enums.OrderStatus.AwaitingConfirmation)
             {
                 bool dept = true;
                 string orderNum = "";
@@ -2567,12 +2567,12 @@ namespace FSM
                 oCValidator.Validate(OrderConsolidation, false);
                 if (OrderConsolidation.ReadyToSendToSage)
                 {
-                    double itemAmount = 0.0;
+                    decimal itemAmount = 0;
                     foreach (DataRow row in ItemsDataView.Table.Rows)
-                        itemAmount += (double)row["BuyPrice"] * (int)row["QuantityOnOrder"];
+                        itemAmount += (decimal)row["BuyPrice"] * (int)row["QuantityOnOrder"];
                     // PLUS ADDITIONAL
                     foreach (DataRow row in App.DB.OrderCharge.OrderCharge_GetForConsolidatedOrder(OrderConsolidation.OrderConsolidationID).Table.Rows)
-                        itemAmount += (double)row["Amount"];
+                        itemAmount += (decimal)row["Amount"];
                     if (!((Strings.Format(OrderConsolidation.SupplierInvoiceAmount, "F") ?? "") == (Strings.Format(itemAmount, "F") ?? "")))
                     {
                         App.ShowMessage("The entered supplier invoice amount does not match the total of the consolidation. You will now be prompted to enter the override password to continue", MessageBoxButtons.OK, MessageBoxIcon.Information);

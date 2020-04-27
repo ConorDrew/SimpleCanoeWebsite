@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -6,8 +8,6 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -934,16 +934,18 @@ namespace FSM
 
         private void Populate()
         {
-            engineersPostcodes = string.Join(",", (from x in EngineersDataView.Table.AsEnumerable()
-                                                   select x["PostCodes"]).ToArray());
+            engineersPostcodes = string.Join(",", (from x in EngineersDataView.Table.AsEnumerable() select x["PostCodes"]).ToArray());
             engineersPostcodesList = engineersPostcodes.ToLower().Split(',').Select(x => x.Trim()).Distinct().ToList();
-            engineersQualifications = string.Join(",", (from x in EngineersDataView.Table.AsEnumerable()
-                                                        select x["Qualifications"]).ToArray());
+            engineersQualifications = string.Join(",", (from x in EngineersDataView.Table.AsEnumerable() select x["Qualifications"]).ToArray());
             engineersQualificationsList = engineersQualifications.ToLower().Split(',').Select(x => x.Trim()).Distinct().ToList();
         }
 
         private void Filter()
         {
+            if (EngineersDataView == null)
+            {
+                return;
+            }
             string regionFilter = string.Empty;
             int regionId = Helper.MakeIntegerValid(Combo.get_GetSelectedItemValue(cboRegionID));
             if (regionId > 0)

@@ -1519,7 +1519,7 @@ namespace FSM
                         }
                 }
 
-                NumOfVisits = Conversions.ToInteger(Math.Floor(ContractDuration / (double)VisitFreqInDays));
+                NumOfVisits = Conversions.ToInteger(Math.Floor(ContractDuration / (decimal)VisitFreqInDays));
                 if (NumOfVisits == 0)
                 {
                     NumOfVisits = 1;

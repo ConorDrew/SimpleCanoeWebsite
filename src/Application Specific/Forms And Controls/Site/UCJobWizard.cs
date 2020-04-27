@@ -7251,11 +7251,11 @@ namespace FSM
 
         private void cbotypeWiz_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cbotypeWiz)) < 1)
+            if (Conversions.ToInteger(Combo.get_GetSelectedItemValue(cbotypeWiz)) < 1)
             {
                 btnxxJobNext.Visible = false;
             }
-            else if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cbotypeWiz)) == (double)Enums.JobTypes.ServiceCertificate)
+            else if (Conversions.ToInteger(Combo.get_GetSelectedItemValue(cbotypeWiz)) == (int)Enums.JobTypes.ServiceCertificate)
             {
                 lblcert.Visible = true;
                 chkCert.Visible = true;
@@ -7263,7 +7263,7 @@ namespace FSM
                 btnxxJobNext.Visible = true;
                 jobtype = Combo.get_GetSelectedItemDescription(cbotypeWiz).ToUpper();
             }
-            else if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cbotypeWiz)) == (double)Enums.JobTypes.Service)
+            else if (Conversions.ToInteger(Combo.get_GetSelectedItemValue(cbotypeWiz)) == (int)Enums.JobTypes.Service)
             {
                 lblcert.Visible = true;
                 chkCert.Visible = true;
@@ -9350,7 +9350,7 @@ namespace FSM
                 {
                     try
                     {
-                        if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboPriority)) == (double)Enums.JobPriority.EMTwentyFourHours)
+                        if (Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboPriority)) == (int)Enums.JobPriority.EMTwentyFourHours)
                         {
                             sorTableSERV.Rows.Add(SORdt.Select("Code='EA7003'")[0].ItemArray);
                         }
@@ -11040,7 +11040,7 @@ namespace FSM
                         i = i + 1;
                     }
 
-                    if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69939 & (int)AppointmentsView[c]["EIGHT_TWELVE"] >= reqtime))
+                    if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69939 & (int)AppointmentsView[c]["EIGHT_TWELVE"] >= reqtime))
                     {
                         detail = Conversions.ToString("Distance : " + AppointmentsView[c]["ORIGAMCLOSE"] + "  Area Engineer : " + aa + "  On Call Engineer : " + callo + "  In Target : " + target);
                         buts = buts + 1;
@@ -11053,7 +11053,7 @@ namespace FSM
                         i = i + 1;
                     }
 
-                    if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69940 & (int)AppointmentsView[c]["TEN_TWO"] >= reqtime))
+                    if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69940 & (int)AppointmentsView[c]["TEN_TWO"] >= reqtime))
                     {
                         detail = Conversions.ToString("Distance : " + AppointmentsView[c]["ORIGPMCLOSE"] + "  Area Engineer : " + aa + "  On Call Engineer : " + callo + "  In Target : " + target);
                         buts = buts + 1;
@@ -11066,7 +11066,7 @@ namespace FSM
                         i = i + 1;
                     }
 
-                    if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69941 & (int)AppointmentsView[c]["TWELVE_FOUR"] >= reqtime))
+                    if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69941 & (int)AppointmentsView[c]["TWELVE_FOUR"] >= reqtime))
                     {
                         detail = Conversions.ToString("Distance : " + AppointmentsView[c]["ORIGPMCLOSE"] + "  Area Engineer : " + aa + "  On Call Engineer : " + callo + "  In Target : " + target);
                         buts = buts + 1;
@@ -11079,7 +11079,7 @@ namespace FSM
                         i = i + 1;
                     }
 
-                    if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69942 & (int)AppointmentsView[c]["TWO_SIX"] >= reqtime))
+                    if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69942 & (int)AppointmentsView[c]["TWO_SIX"] >= reqtime))
                     {
                         buts = buts + 1;
                         detail = Conversions.ToString("Distance : " + AppointmentsView[c]["ORIGPMCLOSE"] + "  Area Engineer : " + aa + "  On Call Engineer : " + callo + "  In Target : " + target);
@@ -11128,7 +11128,7 @@ namespace FSM
                             i = i + 1;
                         }
 
-                        if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69939 & (int)AppointmentsView[c]["EIGHT_TWELVE"] >= reqtime))
+                        if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69939 & (int)AppointmentsView[c]["EIGHT_TWELVE"] >= reqtime))
                         {
                             buts = buts + 1;
                             buttons[i].Text = Conversions.ToString(Conversions.ToString(AppointmentsView[c]["name"] + Constants.vbNewLine) + AppointmentsView[c]["Date"] + " 8AM - 12PM");
@@ -11140,7 +11140,7 @@ namespace FSM
                             i = i + 1;
                         }
 
-                        if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69940 & (int)AppointmentsView[c]["TEN_TWO"] >= reqtime))
+                        if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69940 & (int)AppointmentsView[c]["TEN_TWO"] >= reqtime))
                         {
                             buts = buts + 1;
                             buttons[i].Text = Conversions.ToString(Conversions.ToString(AppointmentsView[c]["name"] + Constants.vbNewLine) + AppointmentsView[c]["Date"] + " 10AM - 2PM");
@@ -11180,7 +11180,7 @@ namespace FSM
                         i = i + 1;
                     }
 
-                    if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69940 & (int)AppointmentsView[c]["TEN_TWO"] >= reqtime))
+                    if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69940 & (int)AppointmentsView[c]["TEN_TWO"] >= reqtime))
                     {
                         buts = buts + 1;
                         buttons[i].Text = Conversions.ToString(Conversions.ToString(AppointmentsView[c]["name"] + Constants.vbNewLine) + AppointmentsView[c]["Date"] + " 10AM - 2PM");
@@ -11192,7 +11192,7 @@ namespace FSM
                         i = i + 1;
                     }
 
-                    if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69941 & (int)AppointmentsView[c]["TWELVE_FOUR"] >= reqtime))
+                    if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == 69941 & (int)AppointmentsView[c]["TWELVE_FOUR"] >= reqtime))
                     {
                         buts = buts + 1;
                         buttons[i].Text = Conversions.ToString(Conversions.ToString(AppointmentsView[c]["name"] + Constants.vbNewLine) + AppointmentsView[c]["Date"] + " 12PM - 4PM");
@@ -11204,7 +11204,7 @@ namespace FSM
                         i = i + 1;
                     }
 
-                    if (Conversions.ToBoolean(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboAppointment)) == (double)69942 & (int)AppointmentsView[c]["TWO_SIX"] >= reqtime))
+                    if (Conversions.ToBoolean(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboAppointment)) == (decimal)69942 & (int)AppointmentsView[c]["TWO_SIX"] >= reqtime))
                     {
                         buts = buts + 1;
                         buttons[i].Text = Conversions.ToString(Conversions.ToString(AppointmentsView[c]["name"] + Constants.vbNewLine) + AppointmentsView[c]["Date"] + " 2PM - 6PM");
@@ -11849,7 +11849,7 @@ namespace FSM
             stringFormat.LineAlignment = StringAlignment.Center;
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            e.Graphics.DrawString(detail, bfont, Brushes.Black, Conversions.ToInteger(button2.Width / (double)2), button2.Height - 10, stringFormat);
+            e.Graphics.DrawString(detail, bfont, Brushes.Black, Conversions.ToInteger(button2.Width / (decimal)2), button2.Height - 10, stringFormat);
         }
 
         private void btnxx_Click(object sender, EventArgs e)
@@ -11997,9 +11997,9 @@ namespace FSM
             {
                 picCross.Visible = false;
                 picTick.Visible = true;
-                txtCharge.Text = Helper.MakeStringValid((Conversions.ToDouble(FinalCharge) - Conversions.ToDouble(FinalCharge) * ((double)dr[0]["DiscountPercent"] / 100)));
-                txtPayInst.Text = Conversions.ToString(FinalText + Constants.vbNewLine + "Promotion Applied: " + dr[0]["PromotionText"] + " = -" + Strings.Format(Conversions.ToDouble(Conversions.ToString(Math.Round(Conversions.ToDouble(FinalCharge) * ((double)dr[0]["DiscountPercent"] / 100), 2))), "C"));
-                PromotionText = Conversions.ToString("Promotion Applied: " + dr[0]["PromotionText"] + " = -" + Strings.Format(Conversions.ToDouble(Conversions.ToString(Math.Round(Conversions.ToDouble(FinalCharge) * ((double)dr[0]["DiscountPercent"] / 100), 2))), "C"));
+                txtCharge.Text = Helper.MakeStringValid((Conversions.ToDecimal(FinalCharge) - Conversions.ToDecimal(FinalCharge) * ((decimal)dr[0]["DiscountPercent"] / 100)));
+                txtPayInst.Text = Conversions.ToString(FinalText + Constants.vbNewLine + "Promotion Applied: " + dr[0]["PromotionText"] + " = -" + Strings.Format(Conversions.ToDouble(Conversions.ToString(Math.Round(Conversions.ToDecimal(FinalCharge) * ((decimal)dr[0]["DiscountPercent"] / 100), 2))), "C"));
+                PromotionText = Conversions.ToString("Promotion Applied: " + dr[0]["PromotionText"] + " = -" + Strings.Format(Conversions.ToDouble(Conversions.ToString(Math.Round(Conversions.ToDecimal(FinalCharge) * ((decimal)dr[0]["DiscountPercent"] / 100), 2))), "C"));
             }
             else
             {

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace FSM
 {
@@ -1010,10 +1010,10 @@ namespace FSM
             // exportData.Columns.Add("VisitStatus")
             // exportData.Columns.Add("StartDateTime")
             // exportData.Columns.Add("Engineer")
-            // exportData.Columns.Add("VisitValue", GetType(Double))
+            // exportData.Columns.Add("VisitValue", GetType(decimal))
             // exportData.Columns.Add("VisitCharge")
-            // exportData.Columns.Add("EngineerCost", GetType(Double))
-            // exportData.Columns.Add("PartProductCost", GetType(Double))
+            // exportData.Columns.Add("EngineerCost", GetType(decimal))
+            // exportData.Columns.Add("PartProductCost", GetType(decimal))
 
             exportData.Columns.Add("StartDateTime", typeof(DateTime));
             exportData.Columns.Add("VisitStatus");
@@ -1030,7 +1030,7 @@ namespace FSM
             exportData.Columns.Add("JobDefinition");
             exportData.Columns.Add("Type");
             exportData.Columns.Add("Engineer");
-            exportData.Columns.Add("VisitCharge", typeof(double));
+            exportData.Columns.Add("VisitCharge", typeof(decimal));
             exportData.Columns.Add("EngineerCost");
             exportData.Columns.Add("PartProductCost");
             exportData.Columns.Add("PartsToFit");
@@ -1040,7 +1040,7 @@ namespace FSM
             exportData.Columns.Add("Jobitems");
             exportData.Columns.Add("Department");
             exportData.Columns.Add("NominalCode");
-            exportData.Columns.Add("JobValue", typeof(double));
+            exportData.Columns.Add("JobValue", typeof(decimal));
             exportData.Columns.Add("WorkingHours");
             exportData.Columns.Add("TravelingHours");
             for (int itm = 0, loopTo = ((DataView)dgVisits.DataSource).Count - 1; itm <= loopTo; itm++)

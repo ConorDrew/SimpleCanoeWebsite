@@ -996,7 +996,7 @@ namespace FSM
                             }
                     }
 
-                    numOfVisits = Conversions.ToInteger(Math.Ceiling(DateAndTime.DateDiff(DateInterval.Month, Conversions.ToDate(SelectedSiteDataRow["StartDate"]), Conversions.ToDate(SelectedSiteDataRow["EndDate"])) / (double)visitFreqInMonths));
+                    numOfVisits = Conversions.ToInteger(Math.Ceiling(DateAndTime.DateDiff(DateInterval.Month, Conversions.ToDate(SelectedSiteDataRow["StartDate"]), Conversions.ToDate(SelectedSiteDataRow["EndDate"])) / (decimal)visitFreqInMonths));
                     if (numOfVisits == 0)
                     {
                         numOfVisits = 1;
@@ -1200,13 +1200,13 @@ namespace FSM
                 // Invoice the visit
                 case Entity.Sys.Enums.InvoiceFrequency.Quarterly:
                     {
-                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Month, CurrentContractOption3Site.StartDate, CurrentContractOption3Site.EndDate) / (double)3);
+                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Month, CurrentContractOption3Site.StartDate, CurrentContractOption3Site.EndDate) / (decimal)3);
                         break;
                     }
 
                 case Entity.Sys.Enums.InvoiceFrequency.Weekly:
                     {
-                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Day, CurrentContractOption3Site.StartDate, CurrentContractOption3Site.EndDate) / (double)7);
+                        numberOfInvoicesToRaise = (int)(DateAndTime.DateDiff(DateInterval.Day, CurrentContractOption3Site.StartDate, CurrentContractOption3Site.EndDate) / (decimal)7);
                         break;
                     }
             }
@@ -1293,7 +1293,7 @@ namespace FSM
             foreach (DataRow rAsset in ((DataView)Assets[currentSiteRow]).Table.Rows)
             {
                 // IF DURATION > 0 THEN SAVE DURATION
-                if (Conversions.ToBoolean((double)rAsset[Strings.Format(vDate, "MMM yy")] > 0))
+                if (Conversions.ToBoolean((decimal)rAsset[Strings.Format(vDate, "MMM yy")] > 0))
                 {
                     var assetDuration = new Entity.ContractOption3SiteAsset.ContractOption3SiteAsset();
                     assetDuration.SetContractSiteID = newSite.ContractSiteID;
@@ -1350,7 +1350,7 @@ namespace FSM
             // NUMBER OF SLOTS IN A DAY
             workingDayMinutes = DateAndTime.DateDiff(DateInterval.Minute, dayStartDate, dayEndDate);
             workingDaySlots = (int)(workingDayMinutes / slotDuration);
-            numOfDaysNeeded = Conversions.ToInteger(Math.Ceiling(numOfSlotsNeeded / (double)workingDaySlots));
+            numOfDaysNeeded = Conversions.ToInteger(Math.Ceiling(numOfSlotsNeeded / (decimal)workingDaySlots));
             var matches = new ArrayList(); // Arraylist of arraylists
                                            // FIND A SUITABLE ENGINEER FIRST
             matches = GetEngineersAndVisits(numOfDaysNeeded, workingDaySlots, vDate, newSite);
@@ -1373,12 +1373,12 @@ namespace FSM
                     oEngVisit.StartDateTime = Conversions.ToDate(((ArrayList)matches[i])[0]);
                     if (numOfMintuesNeeded > workingDayMinutes)
                     {
-                        oEngVisit.EndDateTime = Conversions.ToDate(Helper.MakeDateTimeValid(((ArrayList)matches[i])[0]).AddHours(Math.Ceiling(workingDayMinutes / (double)60)));
+                        oEngVisit.EndDateTime = Conversions.ToDate(Helper.MakeDateTimeValid(((ArrayList)matches[i])[0]).AddHours(Math.Ceiling(workingDayMinutes / 60)));
                         numOfMintuesNeeded -= (int)workingDayMinutes;
                     }
                     else
                     {
-                        oEngVisit.EndDateTime = Conversions.ToDate(Helper.MakeDateTimeValid(((ArrayList)matches[i])[0]).AddHours(Math.Ceiling((double)numOfMintuesNeeded / (double)60)));
+                        oEngVisit.EndDateTime = Conversions.ToDate(Helper.MakeDateTimeValid(((ArrayList)matches[i])[0]).AddHours((double)Math.Ceiling((decimal)numOfMintuesNeeded / 60)));
                     }
 
                     oEngVisit.SetStatusEnumID = Conversions.ToInteger(Entity.Sys.Enums.VisitStatus.Scheduled);

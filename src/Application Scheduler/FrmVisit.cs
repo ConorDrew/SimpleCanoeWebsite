@@ -325,11 +325,13 @@ namespace FSM
             {
                 if (_txtEndTimeHours != null)
                 {
+                    _txtEndTimeHours.TextChanged -= txtEndTimeHours_TextChanged;
                 }
 
                 _txtEndTimeHours = value;
                 if (_txtEndTimeHours != null)
                 {
+                    _txtEndTimeHours.TextChanged -= txtEndTimeHours_TextChanged;
                 }
             }
         }
@@ -1216,6 +1218,7 @@ namespace FSM
             _txtEndTimeMinutes = new TextBox();
             _txtEndTimeMinutes.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
             _txtEndTimeHours = new TextBox();
+            _txtEndTimeHours.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
             _txtStartTimeMinutes = new TextBox();
             _txtStartTimeMinutes.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
             _txtStartTimeHours = new TextBox();

@@ -2127,11 +2127,11 @@ dgEngineers.DataMember];
 
             if (Minutes % 60 < 10)
             {
-                return Math.Floor(Minutes / (double)60) + ":0" + Minutes % 60;
+                return Math.Floor(Minutes / (decimal)60) + ":0" + Minutes % 60;
             }
             else
             {
-                return Math.Floor(Minutes / (double)60) + ":" + Minutes % 60;
+                return Math.Floor(Minutes / (decimal)60) + ":" + Minutes % 60;
             }
         }
 

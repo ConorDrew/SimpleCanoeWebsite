@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1032,7 +1032,7 @@ namespace FSM
                             }
 
                             // numOfVisits = Math.Floor(Math.Ceiling(DateDiff(DateInterval.Day, dtpStartDate.Value, dtpEndDate.Value)) / visitFreqInDays)
-                            numOfVisits = Conversions.ToInteger(Math.Ceiling(DateAndTime.DateDiff(DateInterval.Month, dtpStartDate.Value, dtpEndDate.Value) / (double)visitFreqInMonths));
+                            numOfVisits = Conversions.ToInteger(Math.Ceiling(DateAndTime.DateDiff(DateInterval.Month, dtpStartDate.Value, dtpEndDate.Value) / (decimal)visitFreqInMonths));
                             if (numOfVisits == 0)
                             {
                                 numOfVisits = 1;
@@ -1152,7 +1152,7 @@ namespace FSM
                         foreach (DataRow rAsset in Assets.Table.Rows)
                         {
                             // IF DURATION > 0 THEN SAVE DURATION
-                            if (Conversions.ToBoolean((double)rAsset[Strings.Format(vDate, "MMM yy")] > 0))
+                            if (Conversions.ToBoolean((decimal)rAsset[Strings.Format(vDate, "MMM yy")] > 0))
                             {
                                 var assetDuration = new Entity.QuoteContractOption3SiteAssetDurations.QuoteContractOption3SiteAssetDuration();
                                 assetDuration.SetQuoteContractSiteID = CurrentQuoteContractOption3Site.QuoteContractSiteID;

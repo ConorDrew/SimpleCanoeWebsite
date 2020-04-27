@@ -613,7 +613,7 @@ namespace FSM
             else
             {
                 pbStatus.Value += 1;
-                lblProgress.Text = Math.Floor(pbStatus.Value / (double)pbStatus.Maximum * 100) + "%";
+                lblProgress.Text = Math.Floor(pbStatus.Value / (decimal)pbStatus.Maximum * 100) + "%";
             }
 
             Application.DoEvents();

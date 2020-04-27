@@ -17096,7 +17096,7 @@ namespace FSM
                     // FOUND PART
                     if (pR.Length > 0)
                     {
-                        return Helper.MakeDoubleValid((double)pR[0]["BuyPrice"] * (double)dr["Quantity"]);
+                        return Helper.MakeDoubleValid((decimal)pR[0]["BuyPrice"] * (int)dr["Quantity"]);
                     }
                     else
                     {

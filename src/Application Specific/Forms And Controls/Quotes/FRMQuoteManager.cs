@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1320,7 +1320,7 @@ namespace FSM
             exportData.Columns.Add("SitePostcode");
             exportData.Columns.Add("Reference");
             exportData.Columns.Add("QuoteDate");
-            exportData.Columns.Add("Price", typeof(double));
+            exportData.Columns.Add("Price", typeof(decimal));
             exportData.Columns.Add("Status");
             exportData.Columns.Add("RejectedReason");
             for (int itm = 0, loopTo = ((DataView)dgQuotes.DataSource).Count - 1; itm <= loopTo; itm++)

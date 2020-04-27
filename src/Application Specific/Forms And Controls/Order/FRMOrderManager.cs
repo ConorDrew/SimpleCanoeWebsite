@@ -2302,8 +2302,8 @@ namespace FSM
             exportData.Columns.Add("JobNumber");
             exportData.Columns.Add("Status");
             exportData.Columns.Add("Supplier Invoice Sent To Sage");
-            exportData.Columns.Add("BuyPrice", typeof(double));
-            exportData.Columns.Add("SellPrice", typeof(double));
+            exportData.Columns.Add("BuyPrice", typeof(decimal));
+            exportData.Columns.Add("SellPrice", typeof(decimal));
             exportData.Columns.Add("CreatedBy");
             exportData.Columns.Add("DepartmentRef");
             Enums.SecuritySystemModules ssm;

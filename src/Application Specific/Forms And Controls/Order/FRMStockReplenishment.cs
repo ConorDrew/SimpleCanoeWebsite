@@ -1349,11 +1349,11 @@ namespace FSM
                 int quantityNeeded = 0;
                 if ((MinimumOrRecommended ?? "") == "MinimumQuantity")
                 {
-                    quantityNeeded = Conversions.ToInteger(Math.Ceiling(((int)row["MinimumQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]) / QuantityInPack));
+                    quantityNeeded = Conversions.ToInteger(Math.Ceiling(((int)row["MinimumQuantity"] - (decimal)row["Amount"] - (int)row["PacksOnOrder"]) / QuantityInPack));
                 }
                 else if ((MinimumOrRecommended ?? "") == "RecommendedQuantity")
                 {
-                    quantityNeeded = Conversions.ToInteger(Math.Ceiling(((int)row["RecommendedQuantity"] - (double)row["Amount"] - (int)row["PacksOnOrder"]) / QuantityInPack));
+                    quantityNeeded = Conversions.ToInteger(Math.Ceiling(((int)row["RecommendedQuantity"] - (decimal)row["Amount"] - (int)row["PacksOnOrder"]) / QuantityInPack));
                 }
 
                 if (quantityNeeded <= 0)

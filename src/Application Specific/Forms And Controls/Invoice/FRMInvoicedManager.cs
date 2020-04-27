@@ -4585,7 +4585,7 @@ namespace FSM
                                             grossLine.DebitCredit = "C";
                                             if (App.IsRFT)
                                             {
-                                                netLine.TransactionAmount = Conversions.ToDouble((double)r["Amount"] + (double)r["VATAmount"]);
+                                                netLine.TransactionAmount = Conversions.ToDouble((decimal)r["Amount"] + (decimal)r["VATAmount"]);
                                             }
                                             else
                                             {
@@ -4593,7 +4593,7 @@ namespace FSM
                                             }
 
                                             vatLine.TransactionAmount = Conversions.ToDouble(r["VATAmount"]);
-                                            grossLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"] + -(double)r["VATAmount"]);
+                                            grossLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"] + -(decimal)r["VATAmount"]);
                                             payload.Ledger.Add(netLine);
                                             payload.Ledger.Add(vatLine);
                                             payload.Ledger.Add(grossLine);
@@ -4614,7 +4614,7 @@ namespace FSM
                                             grossLine.DebitCredit = "C";
                                             if (App.IsRFT)
                                             {
-                                                netLine.TransactionAmount = Conversions.ToDouble((double)r["Amount"] + (double)r["VATAmount"]);
+                                                netLine.TransactionAmount = Conversions.ToDouble((decimal)r["Amount"] + (decimal)r["VATAmount"]);
                                             }
                                             else
                                             {
@@ -4622,7 +4622,7 @@ namespace FSM
                                             }
 
                                             vatLine.TransactionAmount = Conversions.ToDouble(r["VATAmount"]);
-                                            grossLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"] + -(double)r["VATAmount"]);
+                                            grossLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"] + -(decimal)r["VATAmount"]);
                                             payload.Ledger.Add(netLine);
                                             payload.Ledger.Add(vatLine);
                                             payload.Ledger.Add(grossLine);
@@ -4674,15 +4674,15 @@ namespace FSM
                                             grossLine.DebitCredit = "D";
                                             if (App.IsRFT)
                                             {
-                                                netLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"] + -(double)r["VATAmount"]);
+                                                netLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"] + -(decimal)r["VATAmount"]);
                                             }
                                             else
                                             {
-                                                netLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"]);
+                                                netLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"]);
                                             }
 
-                                            vatLine.TransactionAmount = Conversions.ToDouble(-(double)r["VATAmount"]);
-                                            grossLine.TransactionAmount = Conversions.ToDouble((double)r["Amount"] + (double)r["VATAmount"]);
+                                            vatLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["VATAmount"]);
+                                            grossLine.TransactionAmount = Conversions.ToDouble((decimal)r["Amount"] + (decimal)r["VATAmount"]);
                                             payload.Ledger.Add(netLine);
                                             payload.Ledger.Add(vatLine);
                                             payload.Ledger.Add(grossLine);
@@ -4703,15 +4703,15 @@ namespace FSM
                                             grossLine.DebitCredit = "D";
                                             if (App.IsRFT)
                                             {
-                                                netLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"] + -(double)r["VATAmount"]);
+                                                netLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"] + -(decimal)r["VATAmount"]);
                                             }
                                             else
                                             {
-                                                netLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"]);
+                                                netLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"]);
                                             }
 
-                                            vatLine.TransactionAmount = Conversions.ToDouble(-(double)r["VATAmount"]);
-                                            grossLine.TransactionAmount = Conversions.ToDouble((double)r["Amount"] + (double)r["VATAmount"]);
+                                            vatLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["VATAmount"]);
+                                            grossLine.TransactionAmount = Conversions.ToDouble((decimal)r["Amount"] + (decimal)r["VATAmount"]);
                                             payload.Ledger.Add(netLine);
                                             payload.Ledger.Add(vatLine);
                                             payload.Ledger.Add(grossLine);
@@ -4741,7 +4741,7 @@ namespace FSM
                                         grossLine.DebitCredit = "C";
                                         if (App.IsRFT)
                                         {
-                                            netLine.TransactionAmount = Conversions.ToDouble((double)r["Amount"] + (double)r["VATAmount"]);
+                                            netLine.TransactionAmount = Conversions.ToDouble((decimal)r["Amount"] + (decimal)r["VATAmount"]);
                                         }
                                         else
                                         {
@@ -4749,7 +4749,7 @@ namespace FSM
                                         }
 
                                         vatLine.TransactionAmount = Conversions.ToDouble(r["VATAmount"]);
-                                        grossLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"] + -(double)r["VATAmount"]);
+                                        grossLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"] + -(decimal)r["VATAmount"]);
                                         payload.Ledger.Add(netLine);
                                         payload.Ledger.Add(vatLine);
                                         payload.Ledger.Add(grossLine);
@@ -4811,7 +4811,7 @@ namespace FSM
                                         decimal VATRateDecimal = VATRate / 100;
                                         if (Helper.MakeBooleanValid(r["IsOutOfScope"]))
                                             VATRateDecimal = 0;
-                                        netLine.TransactionAmount = Conversions.ToDouble(-(double)r["Amount"]);
+                                        netLine.TransactionAmount = Conversions.ToDouble(-(decimal)r["Amount"]);
                                         vatLine.TransactionAmount = Conversions.ToDouble(-(Conversions.ToDecimal(r["Amount"]) * VATRateDecimal));
                                         grossLine.TransactionAmount = Conversions.ToDouble((decimal)r["Amount"] + Conversions.ToDecimal(r["Amount"]) * VATRateDecimal);
                                         payload.Ledger.Add(netLine);

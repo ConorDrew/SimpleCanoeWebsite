@@ -446,13 +446,13 @@ namespace FSM
                         if (DateAndTime.Month(friday2weeks.AddDays(i)) < 4 | DateAndTime.Month(friday2weeks.AddDays(i)) > 9) // winter
                         {
                             nr["Day"] = i + 5;
-                            nr["Avail"] = Convert.ToInt32(Conversion.Int(theCustomer.WinterServ / (double)workingDaysInMonth - Alreadybooked));
+                            nr["Avail"] = Convert.ToInt32(Conversion.Int(theCustomer.WinterServ / (decimal)workingDaysInMonth - Alreadybooked));
                             AvailView.Table.Rows.Add(nr);
                         }
                         else
                         {
                             nr["Day"] = i + 5;
-                            nr["Avail"] = Convert.ToInt32(Conversion.Int(theCustomer.SummerServ / (double)workingDaysInMonth - Alreadybooked));
+                            nr["Avail"] = Convert.ToInt32(Conversion.Int(theCustomer.SummerServ / (decimal)workingDaysInMonth - Alreadybooked));
                             AvailView.Table.Rows.Add(nr);
                         }
                     }
@@ -764,7 +764,7 @@ namespace FSM
                 else
                     SelectedServiceDueView.Sort = "Postcode";
                 var AppointmentsView = new DataView();
-                AppointmentsView.Table = App.DB.LetterManager.Get_Appointments_Main_MK3(DateHelper.GetTheMonday(dtpLetterCreateDate.Value), 15, 31, (int)(Convert.ToInt32(tbMinsPerDay.Text) / (double)2));
+                AppointmentsView.Table = App.DB.LetterManager.Get_Appointments_Main_MK3(DateHelper.GetTheMonday(dtpLetterCreateDate.Value), 15, 31, (int)(Convert.ToInt32(tbMinsPerDay.Text) / (decimal)2));
                 IList<int> levelsList = new List<int>();
                 int co = 0;
                 var dd = App.DB.Customer.Requirements_Get_For_CustomerID(theCustomer.CustomerID).Table.Select("tick = 1");

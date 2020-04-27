@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM
 {
@@ -1896,7 +1896,7 @@ namespace FSM
         private void CalculateRates()
         {
             decimal oldTotal = 0.0M;
-            double runningTotal = 0.0;
+            decimal runningTotal = 0.0M;
             if (txtRatesTotal.Text.Trim().Length == 0)
             {
                 txtRatesTotal.Text = "£0.00";
@@ -1907,7 +1907,7 @@ namespace FSM
             }
 
             foreach (DataRow rate in ScheduleOfRatesDataview.Table.Rows)
-                runningTotal += (double)rate["Price"] * (int)rate["QtyPerVisit"];
+                runningTotal += (decimal)rate["Price"] * (int)rate["QtyPerVisit"];
             txtRatesTotal.Text = Strings.Format(runningTotal, "C");
             if (chkRates.Checked)
             {
@@ -1939,7 +1939,7 @@ namespace FSM
         public void CalculateItemTotal()
         {
             decimal oldTotal = 0.0M;
-            double runningTotal = 0.0;
+            decimal runningTotal = 0.0M;
             if (txtItemTotal.Text.Trim().Length == 0)
             {
                 txtItemTotal.Text = "£0.00";
@@ -1950,7 +1950,7 @@ namespace FSM
             }
 
             foreach (DataRow ji in JobItemsAddedDataView.Table.Rows)
-                runningTotal += (double)ji["ItemPricePerVisit"];
+                runningTotal += (decimal)ji["ItemPricePerVisit"];
             txtItemTotal.Text = Strings.Format(runningTotal, "C");
             txtPricePerVisit.Text = (Entity.Sys.Helper.MakeDoubleValid(txtPricePerVisit.Text.Replace("£", "")) - Conversions.ToDouble(oldTotal)).ToString();
             txtPricePerVisit.Text = Strings.Format(Entity.Sys.Helper.MakeDoubleValid(txtPricePerVisit.Text.Replace("£", "")) + Conversions.ToDouble(runningTotal), "C");

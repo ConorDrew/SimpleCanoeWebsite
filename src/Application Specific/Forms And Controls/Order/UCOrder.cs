@@ -6625,7 +6625,7 @@ namespace FSM
             bool RemoveConsolidation = false;
             if (IsLoading == false)
             {
-                if (!(Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboOrderStatus)) == (double)Enums.OrderStatus.Confirmed))
+                if (!(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboOrderStatus)) == (int)Enums.OrderStatus.Confirmed))
                 {
                     if (CurrentOrder.OrderConsolidationID > 0)
                     {

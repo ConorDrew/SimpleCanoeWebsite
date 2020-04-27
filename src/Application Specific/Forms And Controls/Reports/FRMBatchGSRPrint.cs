@@ -1827,10 +1827,10 @@ namespace FSM
             exportData.Columns.Add("VisitStatus");
             exportData.Columns.Add("StartDateTime");
             exportData.Columns.Add("Engineer");
-            exportData.Columns.Add("VisitValue", typeof(double));
+            exportData.Columns.Add("VisitValue", typeof(decimal));
             exportData.Columns.Add("VisitCharge");
-            exportData.Columns.Add("EngineerCost", typeof(double));
-            exportData.Columns.Add("PartProductCost", typeof(double));
+            exportData.Columns.Add("EngineerCost", typeof(decimal));
+            exportData.Columns.Add("PartProductCost", typeof(decimal));
             for (int itm = 0, loopTo = ((DataView)dgVisits.DataSource).Count - 1; itm <= loopTo; itm++)
             {
                 dgVisits.CurrentRowIndex = itm;
