@@ -425,7 +425,7 @@ namespace FSM
                 filterList = SelectedServiceDueDataRow.Table.Select("Tick=1");
                 var details = new ArrayList();
                 details.Add(filterList);
-                var oPrint = new Entity.Sys.Printing(details, "NCC Service Letters", Entity.Sys.Enums.SystemDocumentType.ServiceLetters, true, 0, false, Conversions.ToInteger(tbMinsPerDay.Text), Customer.CustomerID, Conversions.ToDate(dtpLetterCreateDate.Text));
+                var oPrint = new Entity.Sys.Printing(details, "NCC Service Letters", Entity.Sys.Enums.SystemDocumentType.ServiceLetters, true, 0, false, Convert.ToInt32(tbMinsPerDay.Text), Customer.CustomerID, Conversions.ToDate(dtpLetterCreateDate.Text));
                 PopulateDatagrid();
                 var endProcess = DateAndTime.Now;
                 Interaction.MsgBox("Start: " + startProcess + Constants.vbCrLf + "End: " + endProcess);
