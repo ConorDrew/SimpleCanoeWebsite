@@ -1055,7 +1055,7 @@ namespace FSM
         public void Populate()
         {
             RatesDataview = App.DB.SalesCredit.InvoicedLines_GetAll_ByInvoicedIDRows(IDToLinkTo);
-            RatesDataview.Table.Columns.Add("SalesCreditID");
+            RatesDataview.Table.Columns.Add("SalesCreditID", typeof(int));
             RatesDataview.Table.Columns.Add("CreditReference");
             txtNominal.Text = Conversions.ToString(RatesDataview.Table.Rows[0]["NominalCode"]);
             txtDept.Text = Conversions.ToString(RatesDataview.Table.Rows[0]["Department"]);
@@ -1071,7 +1071,7 @@ namespace FSM
             double totalAfterCredit = Entity.Sys.Helper.MakeDoubleValid(txtAfter.Text.Trim());
             foreach (DataRow dr in RatesDataview.Table.Rows)
             {
-                if (Conversions.ToBoolean((int)dr["Credit"] > 0) && totalAfterCredit >= 0)
+                if (Conversions.ToBoolean((decimal)dr["Credit"] > 0) && totalAfterCredit >= 0)
                 {
                     raise = true; // yup
                     var oSalesCredit = new Entity.SalesCredits.SalesCredit();
@@ -1102,7 +1102,7 @@ namespace FSM
                     oCredit.SetCreditReference = jobnum.Prefix + jobnum.Number;
                     oCredit.SetAccountNumber = dr["AccountNumber"];
                     oCredit.DateCredited = DateTimePicker1.Value;
-                    dr["SalesCreditID"] = App.DB.SalesCredit.Insert(oCredit);
+                    dr["SalesCreditID"] = App.DB.SalesCredit.Insert(oCredit)?.SalesCreditID;
                     dr["CreditReference"] = jobnum.Prefix + jobnum.Number;
                 }
             }
@@ -1132,20 +1132,20 @@ namespace FSM
 
         private void DoTotals()
         {
-            txtCredit.Text = 0.ToString();
-            txtInvoiced.Text = 0.ToString();
-            double creditApplied = 0.0;
+            decimal credit = 0.0M;
+            decimal invoiced = 0.0M;
+            decimal creditApplied = 0.0M;
             foreach (DataGridViewRow dr in dgRates.Rows)
             {
-                txtInvoiced.Text += dr.Cells[1].Value;
-                txtCredit.Text += dr.Cells[3].Value;
-                creditApplied = Entity.Sys.Helper.MakeDoubleValid(dr.Cells[2].Value);
+                invoiced += Conversions.ToDecimal(dr.Cells[1].Value);
+                credit += Conversions.ToDecimal(dr.Cells[3].Value);
+                creditApplied = Conversions.ToDecimal(dr.Cells[2].Value);
             }
 
-            double creditTotal = creditApplied + Entity.Sys.Helper.MakeDoubleValid(txtCredit.Text);
-            txtAfter.Text = "£" + (Conversions.ToDouble(txtInvoiced.Text) - creditTotal);
-            txtCredit.Text = "£" + txtCredit.Text;
-            txtInvoiced.Text = "£" + txtInvoiced.Text;
+            decimal creditTotal = creditApplied + credit;
+            txtAfter.Text = (invoiced - creditTotal).ToString("C");
+            txtCredit.Text = credit.ToString("C");
+            txtInvoiced.Text = invoiced.ToString("C");
         }
 
         private void grpSystemScheduleOfRate_Enter(object sender, EventArgs e)

@@ -2217,11 +2217,6 @@ namespace FSM.Entity
                                 }
                                 finally
                                 {
-                                    if (App.IsRFT)
-                                    {
-                                        filePath = filePath.ToLower().Replace(".doc", ".pdf");
-                                    }
-
                                     Finalise(filePath, success, true, false);
                                     invoices.Add(filePath);
                                     Cursor.Current = Cursors.Default;
@@ -3496,7 +3491,7 @@ namespace FSM.Entity
                         }
                     }
 
-                ProptMain:
+                    ProptMain:
                     ;
                     if (PM is object)
                     {
@@ -3535,7 +3530,7 @@ namespace FSM.Entity
                         }
                     }
 
-                SaffUnv:
+                    SaffUnv:
                     ;
                     if (SaffUnv is object)
                     {
@@ -3574,7 +3569,7 @@ namespace FSM.Entity
                         }
                     }
 
-                NextLSR:
+                    NextLSR:
                     ;
                     if (isBlank)
                     {
@@ -12398,7 +12393,7 @@ namespace FSM.Entity
                                     else
                                     {
                                         // hhhh
-                                        filepath = filepath.ToLower().Replace(".doc", ".pdf");
+                                        filepath = Path.ChangeExtension(filepath, ".pdf");
                                         if (File.Exists(filepath))
                                         {
                                             File.Delete(filepath);

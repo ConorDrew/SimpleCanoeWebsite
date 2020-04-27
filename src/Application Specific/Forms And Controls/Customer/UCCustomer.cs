@@ -3945,7 +3945,7 @@ namespace FSM
             Supplier.SortMode = DataGridViewColumnSortMode.Programmatic;
             Supplier.Visible = true;
             dgvParts.Columns.Add(Supplier);
-            dgvParts.Sort(Supplier, System.ComponentModel.ListSortDirection.Descending);
+            //dgvParts.Sort(Supplier, System.ComponentModel.ListSortDirection.Descending);
         }
 
         public void SetupPrioritiesDGV()
