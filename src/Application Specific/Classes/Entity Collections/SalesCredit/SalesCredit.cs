@@ -15,6 +15,7 @@ namespace FSM.Entity
             }
 
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -254,9 +255,9 @@ namespace FSM.Entity
                 }
             }
 
-            private int _DepartmentRef = 0;
+            private string _DepartmentRef = "";
 
-            public int DepartmentRef
+            public string DepartmentRef
             {
                 get
                 {
@@ -361,11 +362,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_AccountNumber", value);
                 }
             }
-
-
-
-
-
 
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         }
