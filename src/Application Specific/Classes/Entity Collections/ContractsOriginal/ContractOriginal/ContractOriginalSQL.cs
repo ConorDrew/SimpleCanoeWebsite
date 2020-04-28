@@ -390,14 +390,14 @@ namespace FSM.Entity
                                 i["InvoiceNumber"] = dt.Rows[0]["InvoiceNumber"];
                             }
                         }
-                        else if (Conversions.ToBoolean((PayType ?? "") == "TRANS" | (PayType ?? "") == "AMEND" | (PayType ?? "") == "RENEWAL" & 
+                        else if (Conversions.ToBoolean((PayType ?? "") == "TRANS" | (PayType ?? "") == "AMEND" | (PayType ?? "") == "RENEWAL" &
                             (invoiceFrequency == Enums.InvoiceFrequency.AnnuallyDD | invoiceFrequency == Enums.InvoiceFrequency.Monthly) | (int)i["installments"] % 12 == 0 & (int)i["installments"] != 0))
                         {
                         }
                         // DONT RAISE A FUCKING INVOICE
                         else
                         {
-                            var dt = App.DB.ExecuteWithReturn(Conversions.ToString("select * from tblInvoicedLines il INNER join tblInvoiced i on i.InvoicedID = il.InvoicedID WHERE InvoiceToBeRaisedID = " + i["InvoiceToBeRaisedID"]));
+                            var dt = App.DB.ExecuteWithReturn(Conversions.ToString("select * from tblInvoicedLines il INNER join tblInvoiced i on i.InvoicedID = il.InvoicedID WHERE InvoiceToBeRaisedID = " + i.GetValue<int>("InvoiceToBeRaisedID")));
                             if (dt.Rows.Count > 0) // an invoice already exists
                             {
                                 i["InvoiceNumber"] = dt.Rows[0]["InvoiceNumber"];
