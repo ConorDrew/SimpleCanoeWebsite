@@ -6705,7 +6705,7 @@ namespace FSM
 
         private void PopulatePostalRegions()
         {
-            PostalRegionsDataView = App.DB.EngineerPostalRegion.GetTicked(CurrentEngineer.EngineerID);
+            PostalRegionsDataView = App.DB.EngineerPostalRegion.GetOnlyTicked(CurrentEngineer.EngineerID);
             PostalRegionsDataViewUT = App.DB.EngineerPostalRegion.GetUnTicked(CurrentEngineer.EngineerID);
         }
 

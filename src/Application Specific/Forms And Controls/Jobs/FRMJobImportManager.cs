@@ -529,7 +529,7 @@ namespace FSM
                 int visitTime = 60;
                 var dvSOR = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_Get_ByEngineerQual(jobImportType.EngineerQualID);
                 visitTime = Conversions.ToInteger(dvSOR.Table.Rows[0]["TimeInMins"]);
-                var dvEngineerPostcodes = App.DB.EngineerPostalRegion.GetALLTicked();
+                var dvEngineerPostcodes = App.DB.EngineerPostalRegion.GetAll();
                 try // Added a try to stop it breaking the app when an error occours
                 {
                     int c = -1;

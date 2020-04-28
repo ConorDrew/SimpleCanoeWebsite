@@ -13,9 +13,9 @@ namespace FSM.Entity.EngineerLevels
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public void Insert(int EngineerID, DataTable t)
         {
-
             // delete all first
             _database.ClearParameter();
             _database.AddParameter("@EngineerID", EngineerID, true);
@@ -45,6 +45,14 @@ namespace FSM.Entity.EngineerLevels
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@EngineerID", EngineerID);
             var dt = _database.ExecuteCommand_DataTable(command);
+            dt.TableName = Sys.Enums.TableNames.tblEngineerLevel.ToString();
+            return new DataView(dt);
+        }
+
+        public DataView GetAllTicked()
+        {
+            _database.ClearParameter();
+            var dt = _database.ExecuteSP_DataTable("EngineerLevels_GetAllTicked");
             dt.TableName = Sys.Enums.TableNames.tblEngineerLevel.ToString();
             return new DataView(dt);
         }
@@ -111,10 +119,6 @@ namespace FSM.Entity.EngineerLevels
             return dt;
         }
 
-
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-
-
-
     }
 }

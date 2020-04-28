@@ -1,6 +1,6 @@
-﻿using System.Data;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System.Data;
 using System.Data.SqlClient;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
 {
@@ -45,7 +45,7 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView GetALLTicked()
+            public DataView GetAll()
             {
                 // _database.ClearParameter()
                 // _database.AddParameter("@EngineerID", EngineerID, True)
@@ -57,7 +57,7 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView GetTicked(int EngineerID)
+            public DataView GetOnlyTicked(int EngineerID)
             {
                 // _database.ClearParameter()
                 // _database.AddParameter("@EngineerID", EngineerID, True)
@@ -66,6 +66,14 @@ namespace FSM.Entity
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@EngineerID", EngineerID);
                 var dt = _database.ExecuteCommand_DataTable(command);
+                dt.TableName = Sys.Enums.TableNames.tblEngineerPostalRegion.ToString();
+                return new DataView(dt);
+            }
+
+            public DataView GetAllTicked()
+            {
+                _database.ClearParameter();
+                var dt = _database.ExecuteSP_DataTable("EngineerPostalRegion_GetAllTicked");
                 dt.TableName = Sys.Enums.TableNames.tblEngineerPostalRegion.ToString();
                 return new DataView(dt);
             }

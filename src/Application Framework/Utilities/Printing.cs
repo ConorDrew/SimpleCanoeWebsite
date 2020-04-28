@@ -13016,7 +13016,7 @@ namespace FSM.Entity
 
                 var osite = App.DB.Sites.Get(oEngineerVisit.EngineerVisitID, Sites.SiteSQL.GetBy.EngineerVisitId);
                 var ositeHQ = App.DB.Sites.Get(osite.CustomerID, Sites.SiteSQL.GetBy.CustomerHq);
-                if (osite.CustomerID == (int)Enums.Customer.Domestic)
+                if (ositeHQ == null)
                     ositeHQ = new Sites.Site();
                 var Timesheets = App.DB.EngineerVisitsTimeSheet.EngineerVisitTimeSheet_Get_For_EngineerVisitID(oEngineerVisit.EngineerVisitID).Table;
                 var Engineer = App.DB.Engineer.Engineer_Get(oEngineerVisit.EngineerID);
@@ -13077,20 +13077,26 @@ namespace FSM.Entity
                 }
 
                 // --------------------------------------------------------------------------
-                var engSig = new Bitmap(new MemoryStream(oEngineerVisit.EngineerSignature));
-                engSig.Save(Application.StartupPath + @"\TEMP\EngSig.bmp");
-                var ad = pdfFormFields.GetNewPushbuttonFromField("EngSig");
-                // ad.setLayout(PushbuttonField.LAYOUT_ICON_ONLY)
-                // ad.setProportionalIcon(True);
-                ad.Image = text.Image.GetInstance(Application.StartupPath + @"\TEMP\EngSig.bmp");
-                pdfFormFields.ReplacePushbuttonField("EngSig", ad.Field);
-                var CustSig = new Bitmap(new MemoryStream(oEngineerVisit.CustomerSignature));
-                CustSig.Save(Application.StartupPath + @"\TEMP\CustSig.bmp");
-                var ad1 = pdfFormFields.GetNewPushbuttonFromField("Signature");
-                // ad.setLayout(PushbuttonField.LAYOUT_ICON_ONLY)
-                // ad.setProportionalIcon(True);
-                ad1.Image = text.Image.GetInstance(Application.StartupPath + @"\TEMP\CustSig.bmp");
-                pdfFormFields.ReplacePushbuttonField("Signature", ad1.Field);
+                if (oEngineerVisit.EngineerSignature != null)
+                {
+                    var engSig = new Bitmap(new MemoryStream(oEngineerVisit.EngineerSignature));
+                    engSig.Save(Application.StartupPath + @"\TEMP\EngSig.bmp");
+                    var ad = pdfFormFields.GetNewPushbuttonFromField("EngSig");
+                    // ad.setLayout(PushbuttonField.LAYOUT_ICON_ONLY)
+                    // ad.setProportionalIcon(True);
+                    ad.Image = text.Image.GetInstance(Application.StartupPath + @"\TEMP\EngSig.bmp");
+                    pdfFormFields.ReplacePushbuttonField("EngSig", ad.Field);
+                }
+                if (oEngineerVisit.CustomerSignature != null)
+                {
+                    var CustSig = new Bitmap(new MemoryStream(oEngineerVisit.CustomerSignature));
+                    CustSig.Save(Application.StartupPath + @"\TEMP\CustSig.bmp");
+                    var ad1 = pdfFormFields.GetNewPushbuttonFromField("Signature");
+                    // ad.setLayout(PushbuttonField.LAYOUT_ICON_ONLY)
+                    // ad.setProportionalIcon(True);
+                    ad1.Image = text.Image.GetInstance(Application.StartupPath + @"\TEMP\CustSig.bmp");
+                    pdfFormFields.ReplacePushbuttonField("Signature", ad1.Field);
+                }
 
                 // close the pdf
                 pdfStamper.Close();

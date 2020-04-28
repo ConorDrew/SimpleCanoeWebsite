@@ -5,6 +5,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace FSM
@@ -576,145 +578,73 @@ namespace FSM
             theCustomer = App.DB.Customer.Customer_Get(Convert.ToInt32(Enums.Customer.Flagship));
         }
 
-        public DataTable AppointmentStrip(ref DataTable appointments, List<int> levelslist, List<string> Postcodes, bool keepweekends = false)
+        public DataTable AppointmentStrip(ref DataTable appointments, List<int> levelslist, List<string> Postcodes, DataTable engineerPostcodes, bool keepweekends = false)
         {
-            appointments.Columns.Add("SolidQual");
-            appointments.Columns.Add("OilQual");
-            appointments.Columns.Add("GasQual");
-            appointments.Columns.Add("ASHPQual");
-            appointments.Columns.Add("ComQual");
-            for (int i1 = appointments.Rows.Count - 1; i1 >= 0; i1 -= 1)
+            appointments.Columns.Add("SolidQual", typeof(bool));
+            appointments.Columns.Add("OilQual", typeof(bool));
+            appointments.Columns.Add("GasQual", typeof(bool));
+            appointments.Columns.Add("ASHPQual", typeof(bool));
+            appointments.Columns.Add("ComQual", typeof(bool));
+
+            List<int> quals = new List<int>();
+            quals.Add((int)Enums.EngineerQual.CBUOC);
+            quals.Add((int)Enums.EngineerQual.SOLIDFUEL);
+            quals.Add((int)Enums.EngineerQual.OILOFTEC);
+            quals.Add((int)Enums.EngineerQual.DOMGAS);
+            quals.Add((int)Enums.EngineerQual.ASHP);
+
+            var engineerDetails = (from x in appointments.AsEnumerable() select new { EngineerId = x.GetValue<int>("EngineerId"), ServPri = x.GetValue<int>("ServPri") }).Distinct();
+            DataTable engineerLevels = App.DB.EngineerLevel.GetAllTicked().Table;
+
+            foreach (var engineer in engineerDetails)
             {
-                var dr = appointments.Rows[i1];
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["keep"], 0, false) & Operators.ConditionalCompareObjectEqual(dr["remove"], 0, false)))
+                bool removeengineer = true;
+                List<int> qualificationIds = (from x in engineerLevels.AsEnumerable() where x.GetValue<int>("EngineerID") == engineer.EngineerId select x.Field<int>("ManagerID")).Distinct().ToList();
+                List<string> commericalQuals = (from x in engineerLevels.AsEnumerable() where x.GetValue<string>("Name").Length > 2 && x.GetValue<string>("Name").Substring(0, 3).Contains("COM") select x.GetValue<string>("Name")).ToList();
+
+                var mandatoryQual = qualificationIds.Where(x => levelslist.Contains(x)).ToList();
+                var matchingQuals = qualificationIds.Where(x => quals.Contains(x)).ToList();
+
+                if (mandatoryQual.Count > 0)
                 {
-                    // ' remove non qualified engineers
-                    var engineerLevels = App.DB.EngineerLevel.Get(Convert.ToInt32(dr["EngineerID"])).Table;
-                    bool removeengineer = true;
-                    bool cbuoc = false;
-                    bool Solid = false;
-                    bool Oil = false;
-                    bool Gas = false;
-                    bool ASHP = false;
-                    bool com = false;
-                    foreach (int i in levelslist)
+                    removeengineer = false;
+                }
+
+                if (engineer.ServPri == 10)
+                    removeengineer = true;
+
+                if (removeengineer == false)
+                {
+                    removeengineer = true;
+
+                    List<string> engpostcodes = engineerPostcodes.AsEnumerable().Where(x => x.GetValue<int>("EngineerID") == engineer.EngineerId).Select(x => x.GetValue<string>("Name")).Distinct().ToList();
+                    List<string> matchingPostcodes = engpostcodes.Where(x => Postcodes.Contains(x)).ToList();
+
+                    if (matchingPostcodes.Count > 0)
+                        removeengineer = false;
+                }
+
+                DataRow[] dataToUpdate = appointments.Select("EngineerID = " + engineer.EngineerId);
+
+                if (removeengineer)
+                {
+                    foreach (var r in dataToUpdate)
                     {
-                        foreach (DataRow dr2 in engineerLevels.Select("tick = 1"))
-                        {
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.CBUOC), false)))
-                                cbuoc = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.SOLIDFUEL), false)))
-                                Solid = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.OILOFTEC), false)))
-                                Oil = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.DOMGAS), false)))
-                                Gas = true;
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr2["ManagerID"], Convert.ToInt32(Enums.EngineerQual.ASHP), false)))
-                                ASHP = true;
-                            if (Helper.MakeStringValid(dr2["Name"]).Length > 2)
-                            {
-                                if (Helper.MakeStringValid(dr2["Name"]).Substring(0, 3).Contains("COM"))
-                                    com = true;
-                            }
-                        }
-
-                        foreach (DataRow dr2 in engineerLevels.Select("tick = 1"))
-                        {
-                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(i, dr2["ManagerID"], false)))
-                            {
-                                removeengineer = false;
-                                break;
-                            }
-
-                            removeengineer = true;
-                        }
-
-                        if (removeengineer == true)
-                            break;
+                        r.SetField("remove", true);
                     }
-
-                    if (!Information.IsDBNull(dr["ServPri"]) && Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["ServPri"], "10", false)))
-                        removeengineer = true;
-                    if (removeengineer == false)
+                }
+                else
+                {
+                    foreach (var r in dataToUpdate)
                     {
-                        removeengineer = true;
-                        var engpostcodes = new List<string>();
-                        var dt = App.DB.EngineerPostalRegion.GetTicked(Convert.ToInt32(dr["EngineerID"])).Table;
-                        foreach (DataRow row in dt.Rows)
-                            engpostcodes.Add(Conversions.ToString(row["Name"]));
-                        foreach (string pc in Postcodes)
-                        {
-                            if (engpostcodes.Contains(pc))
-                            {
-                                removeengineer = false;
-                            }
-                        }
+                        r.SetField("keep", true);
+                        r.SetField("OilQual", matchingQuals.Contains((int)Enums.EngineerQual.OILOFTEC));
+                        r.SetField("SolidQual", matchingQuals.Contains((int)Enums.EngineerQual.SOLIDFUEL));
+                        r.SetField("ASHPQual", matchingQuals.Contains((int)Enums.EngineerQual.ASHP));
+                        r.SetField("GasQual", matchingQuals.Contains((int)Enums.EngineerQual.DOMGAS));
+                        r.SetField("ComQual", matchingQuals.Count > 0);
                     }
-
-                    if (removeengineer == false)
-                    {
-                        if (!Information.IsDBNull(dr["ServPri"]) && Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr["ServPri"], 10, false)))
-                        {
-                            removeengineer = true;
-                        }
-                    }
-
-                    foreach (DataRow dr3 in appointments.Select(Conversions.ToString("engineerid = " + dr["EngineerID"])))
-                    {
-                        if (removeengineer)
-                        {
-                            dr3["remove"] = 1;
-                        }
-                        else
-                        {
-                            dr3["keep"] = 1;
-                            if (Oil == true)
-                            {
-                                dr3["OilQual"] = 1;
-                            }
-                            else
-                            {
-                                dr3["OilQual"] = 0;
-                            }
-
-                            if (Solid == true)
-                            {
-                                dr3["SolidQual"] = 1;
-                            }
-                            else
-                            {
-                                dr3["SolidQual"] = 0;
-                            }
-
-                            if (ASHP == true)
-                            {
-                                dr3["ASHPQual"] = 1;
-                            }
-                            else
-                            {
-                                dr3["ASHPQual"] = 0;
-                            }
-
-                            if (Gas == true)
-                            {
-                                dr3["GasQual"] = 1;
-                            }
-                            else
-                            {
-                                dr3["GasQual"] = 0;
-                            }
-
-                            if (com == true)
-                            {
-                                dr3["ComQual"] = 1;
-                            }
-                            else
-                            {
-                                dr3["ComQual"] = 0;
-                            }
-                        }
-                    }
-                } // end of if that checks if its already been marked to be deleted
+                }
             }
 
             var dtr = appointments.Select("remove = 1  AND CBUOC = 0");
@@ -727,7 +657,9 @@ namespace FSM
                 var dtr2 = appointments.Select("1=1");
                 foreach (DataRow dr10 in dtr2)
                 {
-                    if (Conversions.ToDate(dr10["thedate"]).DayOfWeek == DayOfWeek.Saturday || Conversions.ToDate(dr10["thedate"]).DayOfWeek == DayOfWeek.Sunday || Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dr10["BH"], 1, false)))
+                    DateTime theDate = dr10.GetValue<DateTime>("thedate");
+
+                    if (theDate.DayOfWeek == DayOfWeek.Saturday || theDate.DayOfWeek == DayOfWeek.Sunday || dr10.GetValue<bool>("BH") == true)
                     {
                         appointments.Rows.Remove(dr10);
                     }
@@ -739,7 +671,6 @@ namespace FSM
 
         private bool GetAppointments(bool DoJobs = false)
         {
-            string BookedAMPM = "";
             Cursor = Cursors.WaitCursor;
             var startProcess = DateAndTime.Now;
             var SelectedServiceDueView = new DataView();
@@ -765,7 +696,9 @@ namespace FSM
                     SelectedServiceDueView.Sort = "Postcode";
                 var AppointmentsView = new DataView();
                 AppointmentsView.Table = App.DB.LetterManager.Get_Appointments_Main_MK3(DateHelper.GetTheMonday(dtpLetterCreateDate.Value), 15, 31, (int)(Convert.ToInt32(tbMinsPerDay.Text) / (decimal)2));
-                IList<int> levelsList = new List<int>();
+
+                List<int> levelsList = new List<int>();
+
                 int co = 0;
                 var dd = App.DB.Customer.Requirements_Get_For_CustomerID(theCustomer.CustomerID).Table.Select("tick = 1");
                 foreach (DataRow d in dd)
@@ -783,30 +716,24 @@ namespace FSM
                 foreach (DataRowView dr in SelectedServiceDueView)
                     Postcodes.Add(Conversions.ToString(Convert.ToString(dr["Postcode"]).Substring(0, Convert.ToString(dr["Postcode"]).IndexOf("-"))));
                 var argappointments = AppointmentsView.Table;
-                AppointmentsView.Table = AppointmentStrip(ref argappointments, (List<int>)levelsList, Postcodes); // strip out not postcoded engineers and those who dont work on this work.
-                                                                                                                  // only engineers for this client who touch one of the postcodes left in the view
 
-                var dtCloned = AppointmentsView.Table.Clone();  // I was having issues with incorrect DataTypes when doing select statements .
-                                                                // so i have Cloned the database here in order to set the columns DataType correctly
-                dtCloned.Columns.Add("AMCLOSE");
-                dtCloned.Columns.Add("PMCLOSE");
-                dtCloned.Columns["AMCLOSE"].DataType = Type.GetType("System.Int32");
-                dtCloned.Columns["PMCLOSE"].DataType = Type.GetType("System.Int32");
-                dtCloned.Columns["DATE"].DataType = Type.GetType("System.DateTime");
-                foreach (DataRow row in AppointmentsView.Table.Rows)  // then copy the data back
-                    dtCloned.ImportRow(row);
-                AppointmentsView.Table = dtCloned; // and apply the new structure
+                DataTable engineerPostcodes = App.DB.EngineerPostalRegion.GetAllTicked().Table;
+                AppointmentsView.Table = AppointmentStrip(ref argappointments, levelsList, Postcodes, engineerPostcodes); // strip out not postcoded engineers and those who dont work on this work.
+                AppointmentsView.Table.Columns.Add("AMCLOSE", typeof(int));
+                AppointmentsView.Table.Columns.Add("PMCLOSE", typeof(int));
+                AppointmentsView.Table.Columns.Add("AMLatitude", typeof(double));
+                AppointmentsView.Table.Columns.Add("AMLongitude", typeof(double));
+                AppointmentsView.Table.Columns.Add("PMLatitude", typeof(double));
+                AppointmentsView.Table.Columns.Add("PMLongitude", typeof(double));
                 AppointmentsView.Sort = "ServPri ASC, EngineerID, daynumber";
-                var AllEngineerPostcodes = App.DB.EngineerPostalRegion.GetALLTicked();
+
                 try // Added a try to stop it breaking the app when an error occours
                 {
                     int c = -1;
                     do
                     {
                         c = c + 1;
-                        var ServiceVisit = SelectedServiceDueView[c];
-
-                        // ''''''''''''''''''''''''''In Area Shit ''''''''''''''''''''''''''''''''
+                        DataRow ServiceVisit = SelectedServiceDueView[c].Row;
 
                         foreach (DataRow dr in AppointmentsView.Table.Rows)
                         {
@@ -830,24 +757,26 @@ namespace FSM
                                 dr["PMCLOSE"] = DBNull.Value;
                             }
                         }
-                        // ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
                         if (Information.IsDBNull(ServiceVisit["FuelID"]))
                             ServiceVisit["FuelID"] = 0;
                         if (Information.IsDBNull(ServiceVisit["CommercialDistrict"]))
                             ServiceVisit["CommercialDistrict"] = false;
-                        string BookedDate = "";
+
                         int VisitTime = 40;
-                        bool patchCheck = Conversions.ToBoolean(ServiceVisit.Row.Table.Columns.Contains("PatchCheck") && Operators.ConditionalCompareObjectEqual(ServiceVisit["PatchCheck"], true, false));
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(ServiceVisit["CommercialDistrict"], true, false) | patchCheck))
+                        Enums.FuelTypes fuel = (Enums.FuelTypes)ServiceVisit.GetValue<int>("FuelID");
+                        string siteFuel = ServiceVisit.GetValue<string>("SiteFuel");
+
+                        bool patchCheck = Conversions.ToBoolean(ServiceVisit.Table.Columns.Contains("PatchCheck") && Conversions.ToBoolean(ServiceVisit["PatchCheck"]) == true);
+                        if (ServiceVisit.GetValue<bool>("CommercialDistrict") == true || patchCheck)
                         {
                             VisitTime = 15;
                         }
-                        else if (Conversions.ToBoolean((!Information.IsDBNull(ServiceVisit["FuelID"]) && Convert.ToInt32(ServiceVisit["FuelID"]) == (int)Enums.FuelTypes.SolidFuel) | Operators.ConditionalCompareObjectEqual(ServiceVisit["SolidFuel"], true, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("SOLID FUEL")))
+                        else if (fuel == Enums.FuelTypes.SolidFuel || ServiceVisit.GetValue<bool>("SolidFuel") == true || siteFuel.Contains("Solid"))
                         {
                             VisitTime = 75;
                         }
-                        else if (Conversions.ToBoolean((!Information.IsDBNull(ServiceVisit["FuelID"]) && Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.Oil, false)) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("OIL")))
+                        else if (fuel == Enums.FuelTypes.Oil || siteFuel.Contains("Oil"))
                         {
                             VisitTime = 60;
                         }
@@ -880,48 +809,46 @@ namespace FSM
                                 }
                         }
 
-                        foreach (DataRowView EngineerApp in AppointmentsView)
+                        foreach (DataRowView engineer in AppointmentsView)
                         {
-                            if (AllEngineerPostcodes.Table.Select(Conversions.ToString("EngineerID = " + EngineerApp["EngineerID"] + " AND Name = '" + ServiceVisit["Postcode"].ToString().Substring(0, Convert.ToInt32(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-"))) + "'")).Length > 0)
+                            string sitePostcode = ServiceVisit["Postcode"].ToString().Substring(0, Convert.ToInt32(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-")));
+                            DataRow[] matches = engineerPostcodes.Select("EngineerID = " + (int)engineer["EngineerID"] + " AND Name = '" + sitePostcode + "'");
+                            if (matches.Length > 0)
                             {
-                                // engineer works this area
-                                // quals?
-                                if (Conversions.ToBoolean((Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.NatGas, false) | Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.LPG, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("GAS") | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("LPG")) & Operators.ConditionalCompareObjectEqual(EngineerApp["GasQual"], 0, false) | (Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.SolidFuel, false) | Operators.ConditionalCompareObjectEqual(ServiceVisit["SolidFuel"], true, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("SOLID FUEL")) & Operators.ConditionalCompareObjectEqual(EngineerApp["SolidQual"], 0, false) | (Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.Oil, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("OIL")) & Operators.ConditionalCompareObjectEqual(EngineerApp["OilQual"], 0, false) | (ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("AIR SOURCE") | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("ASHP")) & Operators.ConditionalCompareObjectEqual(EngineerApp["ASHPQual"], 0, false) | Operators.ConditionalCompareObjectEqual(ServiceVisit["CommercialDistrict"], true, false) & Operators.ConditionalCompareObjectEqual(EngineerApp["ComQual"], 0, false)))
+                                if (Conversions.ToBoolean((Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.NatGas, false) | Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.LPG, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("GAS") | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("LPG")) & Operators.ConditionalCompareObjectEqual(engineer["GasQual"], 0, false) | (Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.SolidFuel, false) | Operators.ConditionalCompareObjectEqual(ServiceVisit["SolidFuel"], true, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("SOLID FUEL")) & Operators.ConditionalCompareObjectEqual(engineer["SolidQual"], 0, false) | (Operators.ConditionalCompareObjectEqual(ServiceVisit["FuelID"], Enums.FuelTypes.Oil, false) | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("OIL")) & Operators.ConditionalCompareObjectEqual(engineer["OilQual"], 0, false) | (ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("AIR SOURCE") | ServiceVisit["SiteFuel"].ToString().ToUpper().Contains("ASHP")) & Operators.ConditionalCompareObjectEqual(engineer["ASHPQual"], 0, false) | Operators.ConditionalCompareObjectEqual(ServiceVisit["CommercialDistrict"], true, false) & Operators.ConditionalCompareObjectEqual(engineer["ComQual"], 0, false)))
                                 {
                                     continue;
-                                    // '''''''''          NULL ISSUE
                                 }
 
-                                bool FlagAMPeriodWasEmpty = false;
-                                bool FlagPMPeriodWasEmpty = false;
-                                if (Information.IsDBNull(EngineerApp["AMCLOSE"]) & Information.IsDBNull(EngineerApp["PMCLOSE"]))
+                                bool emptyAm = false;
+                                bool emptyPm = false;
+                                if (engineer.Row.GetValue<int>("AMCLOSE") == 0 && engineer.Row.GetValue<int>("PMCLOSE") == 0)
                                 {
-                                    EngineerApp["AMCLOSE"] = -1;
-                                    EngineerApp["PMCLOSE"] = -1;
+                                    engineer["AMCLOSE"] = -1;
+                                    engineer["PMCLOSE"] = -1;
                                 }
-                                else if (Information.IsDBNull(EngineerApp["AMCLOSE"]))
+                                else if (engineer.Row.GetValue<int>("AMCLOSE") == 0)
                                 {
-                                    EngineerApp["AMCLOSE"] = (int)EngineerApp["PMCLOSE"] - Convert.ToInt32(txtTravelBetween.Text);
-                                    FlagAMPeriodWasEmpty = true;
+                                    engineer["AMCLOSE"] = engineer.Row.GetValue<int>("PMCLOSE") - Convert.ToInt32(txtTravelBetween.Text);
+                                    emptyAm = true;
                                 }
-                                else if (Information.IsDBNull(EngineerApp["PMCLOSE"]))
+                                else if (engineer.Row.GetValue<int>("PMCLOSE") == 0)
                                 {
-                                    EngineerApp["PMCLOSE"] = (int)EngineerApp["AMCLOSE"] - Convert.ToInt32(txtTravelBetween.Text);
-                                    FlagPMPeriodWasEmpty = true;
+                                    engineer["PMCLOSE"] = engineer.Row.GetValue<int>("AMCLOSE") - Convert.ToInt32(txtTravelBetween.Text);
+                                    emptyPm = true;
                                 }
 
-                                if ((decimal)EngineerApp["remainingAM"] >= VisitTime & (int)EngineerApp["AMCLOSE"] < Convert.ToInt32(txtMaxTravel.Text) & !(BookedDate is object & (BookedAMPM ?? "") == "PM"))
+                                if (engineer.Row.GetValue<decimal>("remainingAM") >= VisitTime && engineer.Row.GetValue<int>("AMCLOSE") < Convert.ToInt32(txtMaxTravel.Text))
                                 {
-                                    ServiceVisit["EngName"] = EngineerApp["Name"];
-                                    ServiceVisit["EngineerID"] = EngineerApp["EngineerID"];
-                                    ServiceVisit["BookedDateTime"] = EngineerApp["Date"];
-                                    ServiceVisit["NextVisitDate"] = EngineerApp["Date"];
+                                    ServiceVisit["EngName"] = engineer["Name"];
+                                    ServiceVisit["EngineerID"] = engineer["EngineerID"];
+                                    ServiceVisit["BookedDateTime"] = engineer["Date"];
+                                    ServiceVisit["NextVisitDate"] = engineer["Date"];
                                     ServiceVisit["AMPM"] = "AM";
-                                    EngineerApp["remainingAM"] = (decimal)EngineerApp["remainingAM"] - VisitTime;
-                                    AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] = (int)AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] - 1;
-                                    if (Convert.ToInt32(EngineerApp["PMCLOSE"]) == -1 | FlagAMPeriodWasEmpty)
+                                    engineer["remainingAM"] = (decimal)engineer["remainingAM"] - VisitTime;
+                                    AvailView.Table.Rows[(int)Conversions.ToDate(engineer["Date"]).DayOfWeek - 1]["Avail"] = (int)AvailView.Table.Rows[(int)Conversions.ToDate(engineer["Date"]).DayOfWeek - 1]["Avail"] - 1;
+                                    if (engineer.Row.GetValue<int>("AMCLOSE") == -1 || emptyAm)
                                     {
-                                        // split this out to follow the code below
                                         var drs = AppointmentsView.Table.Select("EngineerID = " + Convert.ToInt32(ServiceVisit["EngineerID"]) + " AND DATE = #" + suggestedVisit.ToString("yyyy-MM-dd") + "#");
                                         if (drs.Length > -1) // If We got results
                                         {
@@ -932,19 +859,19 @@ namespace FSM
                                             }
                                         }
                                     }
-
+                                    AppointmentsView.Table.AcceptChanges();
                                     break;
                                 }
-                                else if ((decimal)EngineerApp["RemainingPM"] >= VisitTime & (int)EngineerApp["PMCLOSE"] < Convert.ToInt32(txtMaxTravel.Text) & !(BookedDate is object & (BookedAMPM ?? "") == "AM"))
+                                else if (engineer.Row.GetValue<decimal>("RemainingPM") >= VisitTime && engineer.Row.GetValue<int>("PMCLOSE") < Convert.ToInt32(txtMaxTravel.Text))
                                 {
-                                    ServiceVisit["EngName"] = EngineerApp["Name"];
-                                    ServiceVisit["EngineerID"] = EngineerApp["EngineerID"];
-                                    ServiceVisit["BookedDateTime"] = EngineerApp["Date"];
-                                    ServiceVisit["NextVisitDate"] = EngineerApp["Date"];
+                                    ServiceVisit["EngName"] = engineer["Name"];
+                                    ServiceVisit["EngineerID"] = engineer["EngineerID"];
+                                    ServiceVisit["BookedDateTime"] = engineer["Date"];
+                                    ServiceVisit["NextVisitDate"] = engineer["Date"];
                                     ServiceVisit["AMPM"] = "PM";
-                                    EngineerApp["remainingPM"] = (decimal)EngineerApp["remainingPM"] - VisitTime;
-                                    AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] = (int)AvailView.Table.Rows[(int)Conversions.ToDate(EngineerApp["Date"]).DayOfWeek - 1]["Avail"] - 1;
-                                    if (Convert.ToInt32(EngineerApp["PMCLOSE"]) == -1 | FlagPMPeriodWasEmpty) // legacy way was to do the select in one line
+                                    engineer["remainingPM"] = (decimal)engineer["remainingPM"] - VisitTime;
+                                    AvailView.Table.Rows[(int)Conversions.ToDate(engineer["Date"]).DayOfWeek - 1]["Avail"] = (int)AvailView.Table.Rows[(int)Conversions.ToDate(engineer["Date"]).DayOfWeek - 1]["Avail"] - 1;
+                                    if (engineer.Row.GetValue<int>("PMCLOSE") == -1 | emptyPm) // legacy way was to do the select in one line
                                     {
                                         foreach (DataRow ee in AppointmentsView.Table.Select(Conversions.ToString("EngineerID = '" + ServiceVisit["EngineerID"] + "' AND DATE = #" + suggestedVisit.ToString("yyyy-MM-dd") + "#")))
                                         {
@@ -952,10 +879,10 @@ namespace FSM
                                             ee["PMLongitude"] = ServiceVisit["Longitude"];
                                         }
                                     }
-
+                                    AppointmentsView.Table.AcceptChanges();
                                     break;
                                 }
-                            } // end of main if
+                            }
                         }
 
                         if (Helper.MakeBooleanValid(ServiceVisit["MultipleFuelSite"]) & !Information.IsDBNull(ServiceVisit["BookedDateTime"]))
@@ -979,7 +906,7 @@ namespace FSM
                 var SchedulerAppsView = new DataView();
                 SchedulerAppsView.Table = App.DB.EngineerVisits.Get_Appointments_Scheduler(DateTime.Now.ToString("yyyy-MM-dd"), 15);
                 var argappointments1 = SchedulerAppsView.Table;
-                SchedulerAppsView.Table = AppointmentStrip(ref argappointments1, (List<int>)levelsList, Postcodes, false);
+                SchedulerAppsView.Table = AppointmentStrip(ref argappointments1, levelsList, Postcodes, engineerPostcodes, false);
                 SchedulerAppsView.Sort = "Daynumber";
                 if (SchedulerAppsView.Count == 0)
                 {
@@ -1030,7 +957,9 @@ namespace FSM
 
                     foreach (DataRowView Scheduler in SchedulerAppsView)
                     {
-                        if (AllEngineerPostcodes.Table.Select(Conversions.ToString("EngineerID = " + Scheduler["EngineerID"] + " AND Name = '" + ServiceVisit["Postcode"].ToString().Substring(0, Convert.ToInt32(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-"))) + "'")).Length > 0)
+                        string sitePostcode = ServiceVisit["Postcode"].ToString().Substring(0, Convert.ToInt32(Convert.ToString(ServiceVisit["Postcode"]).IndexOf("-")));
+                        DataRow[] matches = engineerPostcodes.Select("EngineerID = " + Scheduler.Row.GetValue<int>("EngineerID") + " AND Name = '" + sitePostcode + "'");
+                        if (matches.Length > 0)
                         {
                             ServiceVisit["EngName"] = Scheduler["Name"];
                             ServiceVisit["EngineerID"] = Scheduler["EngineerID"];

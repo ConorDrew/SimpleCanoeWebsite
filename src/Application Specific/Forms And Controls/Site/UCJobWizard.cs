@@ -11489,7 +11489,7 @@ namespace FSM
                         }
 
                         var engpostcodes = new List<string>();
-                        var dt = App.DB.EngineerPostalRegion.GetTicked(Conversions.ToInteger(dr["EngineerID"])).Table;
+                        var dt = App.DB.EngineerPostalRegion.GetOnlyTicked(Conversions.ToInteger(dr["EngineerID"])).Table;
                         foreach (DataRow row in dt.Rows)
                             engpostcodes.Add(Conversions.ToString(row["Name"]));
                         if (engpostcodes.Contains(CurrentSite.Postcode.Substring(0, CurrentSite.Postcode.IndexOf("-"))))

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity.LetterManager
 {
@@ -16,6 +16,7 @@ namespace FSM.Entity.LetterManager
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public DataView GetBucketsL1(DateTime LetterManagerFilterDate, int CustomerID)
         {
             _database.ClearParameter();
@@ -74,7 +75,7 @@ namespace FSM.Entity.LetterManager
             return new DataView(_database.ExecuteSP_DataTable("LetterManager"));
         }
 
-        public DataTable Letter2Manager(DateTime LetterManagerFilterDate, int CustomerID, int Days = -330)                // 
+        public DataTable Letter2Manager(DateTime LetterManagerFilterDate, int CustomerID, int Days = -330)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@LetterManagerFilterDate", LetterManagerFilterDate, true);
@@ -83,7 +84,7 @@ namespace FSM.Entity.LetterManager
             return _database.ExecuteSP_DataTable("Letter2Manager");
         }
 
-        public DataView Letter2ManagerMK2(DateTime LetterManagerFilterDate, int CustomerID)                // 
+        public DataView Letter2ManagerMK2(DateTime LetterManagerFilterDate, int CustomerID)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@LetterManagerFilterDate", LetterManagerFilterDate, true);
@@ -91,7 +92,7 @@ namespace FSM.Entity.LetterManager
             return new DataView(_database.ExecuteSP_DataTable("LetterManager_2_MK2_New"));
         }
 
-        public DataView Letter3ManagerMK2(DateTime LetterManagerFilterDate, int CustomerID)                // 
+        public DataView Letter3ManagerMK2(DateTime LetterManagerFilterDate, int CustomerID)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@LetterManagerFilterDate", LetterManagerFilterDate, true);
@@ -99,7 +100,7 @@ namespace FSM.Entity.LetterManager
             return new DataView(_database.ExecuteSP_DataTable("LetterManager_3_MK2_New"));
         }
 
-        public DataTable Letter3Manager(DateTime LetterManagerFilterDate, int CustomerID)                // 
+        public DataTable Letter3Manager(DateTime LetterManagerFilterDate, int CustomerID)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@LetterManagerFilterDate", LetterManagerFilterDate, true);
@@ -134,14 +135,14 @@ namespace FSM.Entity.LetterManager
             _database.ExecuteSP_NO_Return("LetterGenerated");
         }
 
-        public DataTable LetterReport(int SiteID)                // 
+        public DataTable LetterReport(int SiteID)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@SiteID", SiteID, true);
             return _database.ExecuteSP_DataTable("LetterReport");
         }
 
-        public DataTable Letter3_TomorrowsVisit(DateTime tomorrow)                // 
+        public DataTable Letter3_TomorrowsVisit(DateTime tomorrow)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@TomorrowStart", Conversions.ToDate(Strings.Format(tomorrow, "dd-MMM-yyyy") + " 00:00:00"), true);
@@ -189,7 +190,7 @@ namespace FSM.Entity.LetterManager
             return new DataView(_database.ExecuteSP_DataTable("LetterManager_1_Mk4_MultipleFuel"));
         }
 
-        public DataView Get_Letter2Jobs(DateTime LetterManagerFilterDate, int CustomerID)                // 
+        public DataView Get_Letter2Jobs(DateTime LetterManagerFilterDate, int CustomerID)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@LetterManagerFilterDate", LetterManagerFilterDate, true);
@@ -197,7 +198,7 @@ namespace FSM.Entity.LetterManager
             return new DataView(_database.ExecuteSP_DataTable("LetterManager_2_Mk4"));
         }
 
-        public DataView Get_Letter3Jobs(DateTime LetterManagerFilterDate, int CustomerID, int fuelId = 0)                // 
+        public DataView Get_Letter3Jobs(DateTime LetterManagerFilterDate, int CustomerID, int fuelId = 0)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@LetterManagerFilterDate", LetterManagerFilterDate, true);
@@ -220,7 +221,7 @@ namespace FSM.Entity.LetterManager
             _database.AddParameter("@timereq", TimeReq, true);
             _database.AddParameter("@Days", days, true);
             _database.AddParameter("@TimeLimit", TimeLimit, true);
-            var dt = _database.ExecuteSP_DataTable("Get_Appointments_Main");
+            var dt = _database.ExecuteSP_DataTable("Get_Appointments_Main_Mk4");
             dt.TableName = Sys.Enums.TableNames.tblJobItem.ToString();
             return dt;
         }
@@ -246,7 +247,7 @@ namespace FSM.Entity.LetterManager
             return dt;
         }
 
-        public DataView LetterManagerAddSiteMK3(DateTime LetterManagerFilterDate, int SiteID)                // 
+        public DataView LetterManagerAddSiteMK3(DateTime LetterManagerFilterDate, int SiteID)                //
         {
             _database.ClearParameter();
             _database.AddParameter("@LetterManagerFilterDate", LetterManagerFilterDate, true);
