@@ -7333,6 +7333,7 @@ namespace FSM
             if (!(ID == 0))
             {
                 CurrentSite = App.DB.Sites.Get(ID);
+                return;
             }
 
             var currentContract = App.DB.ContractOriginal.Get_Current_ForSite(CurrentSite.SiteID);
