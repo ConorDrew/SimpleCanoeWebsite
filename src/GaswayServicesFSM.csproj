@@ -2128,15 +2128,6 @@
     <Compile Include="Application Specific\Forms And Controls\Contact\UCContact.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\ContractOption3\ContractOption3Site\FRMContractOption3Site.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\ContractOption3\ContractOption3Site\UCContractOption3Site.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\ContractOption3\FRMAvailableContractNos.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\ContractOriginal\ContractOriginalSite\FRMContractOriginalSite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3612,18 +3603,6 @@
       <DependentUpon>UCContact.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\ContractOption3\ContractOption3Site\FRMContractOption3Site.resx">
-      <DependentUpon>FRMContractOption3Site.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\ContractOption3\ContractOption3Site\UCContractOption3Site.resx">
-      <DependentUpon>UCContractOption3Site.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\ContractOption3\FRMAvailableContractNos.resx">
-      <DependentUpon>FRMAvailableContractNos.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\ContractOriginal\ContractOriginalSite\FRMContractOriginalSite.resx">
       <DependentUpon>FRMContractOriginalSite.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4491,7 +4470,6 @@
     <Folder Include="Application Framework\Forms And Controls\Admin Tools\Data Downloader\" />
     <Folder Include="Application Scheduler\Summary\" />
     <Folder Include="Application Specific\Classes\Entity Collections\SiteCharge\" />
-    <Folder Include="Application Specific\Forms And Controls\ContractOption3\ContractOption3\" />
     <Folder Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOriginal\QuoteContractOriginal\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

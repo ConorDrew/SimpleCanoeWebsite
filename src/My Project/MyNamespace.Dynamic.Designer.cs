@@ -491,28 +491,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMAvailableContractNos m_FRMAvailableContractNos;
-
-            public FRMAvailableContractNos FRMAvailableContractNos
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMAvailableContractNos = MyForms.Create__Instance__(m_FRMAvailableContractNos);
-                    return m_FRMAvailableContractNos;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMAvailableContractNos)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMAvailableContractNos);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMBaseForm m_FRMBaseForm;
@@ -1045,28 +1024,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMContractOption3Site m_FRMContractOption3Site;
-
-            public FRMContractOption3Site FRMContractOption3Site
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMContractOption3Site = MyForms.Create__Instance__(m_FRMContractOption3Site);
-                    return m_FRMContractOption3Site;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMContractOption3Site)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMContractOption3Site);
-                }
-            }
+           
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMContractOriginal m_FRMContractOriginal;
