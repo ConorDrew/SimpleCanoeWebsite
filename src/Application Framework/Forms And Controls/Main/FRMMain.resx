@@ -117,652 +117,292 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MnuMainNav.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="_MnuMainNav.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="mnuChangeLogin.Text" xml:space="preserve">
-    <value>&amp;Change Login</value>
-  </data>
-  <data name="MenuItem3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="mnuLogout.Text" xml:space="preserve">
-    <value>&amp;Logout</value>
-  </data>
-  <data name="mnuFile.Text" xml:space="preserve">
+  <data name="_mnuFile.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
-  <data name="mnuCustomers.Text" xml:space="preserve">
-    <value>&amp;Customers</value>
+  <data name="_mnuChangeLogin.Text" xml:space="preserve">
+    <value>&amp;Change Login</value>
   </data>
-  <data name="mnuSpares.Text" xml:space="preserve">
-    <value>S&amp;pares</value>
-  </data>
-  <data name="mnuStaff.Text" xml:space="preserve">
-    <value>&amp;Staff</value>
-  </data>
-  <data name="mnuJobs.Text" xml:space="preserve">
-    <value>&amp;Jobs</value>
-  </data>
-  <data name="mnuScheduler.Text" xml:space="preserve">
-    <value>Sc&amp;heduler</value>
-  </data>
-  <data name="mnuInvoicing.Text" xml:space="preserve">
-    <value>&amp;Invoicing</value>
-  </data>
-  <data name="mnuReports.Text" xml:space="preserve">
-    <value>Repor&amp;ts</value>
-  </data>
-  <data name="mnuVan.Text" xml:space="preserve">
-    <value>Fleet</value>
-  </data>
-  <data name="mnuSetup.Text" xml:space="preserve">
-    <value>Se&amp;tup</value>
-  </data>
-  <data name="mnuContactSheet.Text" xml:space="preserve">
-    <value>&amp;Contact Sheet</value>
-  </data>
-  <data name="MenuItem15.Text" xml:space="preserve">
+  <data name="_MenuItem3.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="mnuAbout.Text" xml:space="preserve">
-    <value>&amp;About</value>
+  <data name="_mnuLogout.Text" xml:space="preserve">
+    <value>&amp;Logout</value>
   </data>
-  <data name="mnuSystemHelp.Text" xml:space="preserve">
-    <value>&amp;Help</value>
+  <data name="_mnuCustomers.Text" xml:space="preserve">
+    <value>&amp;Customers</value>
   </data>
-  <data name="mnuUpstairs.Text" xml:space="preserve">
-    <value>Upstairs</value>
+  <data name="_mnuSpares.Text" xml:space="preserve">
+    <value>S&amp;pares</value>
   </data>
-  <data name="mnuDownstairs.Text" xml:space="preserve">
-    <value>Downstairs</value>
+  <data name="_mnuStaff.Text" xml:space="preserve">
+    <value>&amp;Staff</value>
   </data>
-  <data name="mnuNpPrint.Text" xml:space="preserve">
+  <data name="_mnuJobs.Text" xml:space="preserve">
+    <value>&amp;Jobs</value>
+  </data>
+  <data name="_mnuScheduler.Text" xml:space="preserve">
+    <value>Sc&amp;heduler</value>
+  </data>
+  <data name="_mnuInvoicing.Text" xml:space="preserve">
+    <value>&amp;Invoicing</value>
+  </data>
+  <data name="_mnuReports.Text" xml:space="preserve">
+    <value>Repor&amp;ts</value>
+  </data>
+  <data name="_mnuVan.Text" xml:space="preserve">
+    <value>Fleet</value>
+  </data>
+  <data name="_mnuSetup.Text" xml:space="preserve">
+    <value>Se&amp;tup</value>
+  </data>
+  <data name="_mnuNpPrint.Text" xml:space="preserve">
     <value>NP Print</value>
   </data>
+  <data name="_mnuUpstairs.Text" xml:space="preserve">
+    <value>Upstairs</value>
+  </data>
+  <data name="_mnuDownstairs.Text" xml:space="preserve">
+    <value>Downstairs</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="infoBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="_infoBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="infoBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1164</value>
+  <data name="_infoBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1018</value>
   </data>
-  <data name="infoBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2268, 22</value>
+  <data name="_infoBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1924, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="infoBar.TabIndex" type="System.Int32, mscorlib">
+  <data name="_infoBar.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;infoBar.Name" xml:space="preserve">
-    <value>infoBar</value>
+  <data name="&gt;&gt;_infoBar.Name" xml:space="preserve">
+    <value>_infoBar</value>
   </data>
-  <data name="&gt;&gt;infoBar.Type" xml:space="preserve">
+  <data name="&gt;&gt;_infoBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;infoBar.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_infoBar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;infoBar.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_infoBar.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="pnlLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="_pnlLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="pnlLeft.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_pnlLeft.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="pnlLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 1164</value>
+  <data name="_pnlLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 1018</value>
   </data>
-  <data name="pnlLeft.TabIndex" type="System.Int32, mscorlib">
+  <data name="_pnlLeft.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;pnlLeft.Name" xml:space="preserve">
-    <value>pnlLeft</value>
+  <data name="&gt;&gt;_pnlLeft.Name" xml:space="preserve">
+    <value>_pnlLeft</value>
   </data>
-  <data name="&gt;&gt;pnlLeft.Type" xml:space="preserve">
+  <data name="&gt;&gt;_pnlLeft.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlLeft.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_pnlLeft.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlLeft.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_pnlLeft.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="splitLeftAndMiddle.Enabled" type="System.Boolean, mscorlib">
+  <data name="_splitLeftAndMiddle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="splitLeftAndMiddle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="_splitLeftAndMiddle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="splitLeftAndMiddle.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_splitLeftAndMiddle.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 0</value>
   </data>
-  <data name="splitLeftAndMiddle.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="_splitLeftAndMiddle.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>5, 0</value>
   </data>
-  <data name="splitLeftAndMiddle.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="_splitLeftAndMiddle.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>5, 0</value>
   </data>
-  <data name="splitLeftAndMiddle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>5, 1164</value>
+  <data name="_splitLeftAndMiddle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>5, 1018</value>
   </data>
-  <data name="splitLeftAndMiddle.TabIndex" type="System.Int32, mscorlib">
+  <data name="_splitLeftAndMiddle.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;splitLeftAndMiddle.Name" xml:space="preserve">
-    <value>splitLeftAndMiddle</value>
+  <data name="&gt;&gt;_splitLeftAndMiddle.Name" xml:space="preserve">
+    <value>_splitLeftAndMiddle</value>
   </data>
-  <data name="&gt;&gt;splitLeftAndMiddle.Type" xml:space="preserve">
+  <data name="&gt;&gt;_splitLeftAndMiddle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;splitLeftAndMiddle.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_splitLeftAndMiddle.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;splitLeftAndMiddle.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_splitLeftAndMiddle.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="dgSearchResults.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;_dgSearchResults.Name" xml:space="preserve">
+    <value>_dgSearchResults</value>
   </data>
-  <data name="dgSearchResults.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="dgSearchResults.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 1082</value>
-  </data>
-  <data name="dgSearchResults.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dgSearchResults.Name" xml:space="preserve">
-    <value>dgSearchResults</value>
-  </data>
-  <data name="&gt;&gt;dgSearchResults.Type" xml:space="preserve">
+  <data name="&gt;&gt;_dgSearchResults.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGrid, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dgSearchResults.Parent" xml:space="preserve">
-    <value>pnlMiddle</value>
+  <data name="&gt;&gt;_dgSearchResults.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;dgSearchResults.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_dgSearchResults.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="splitMiddleTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="&gt;&gt;_splitMiddleTop.Name" xml:space="preserve">
+    <value>_splitMiddleTop</value>
   </data>
-  <data name="splitMiddleTop.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="splitMiddleTop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="splitMiddleTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 34</value>
-  </data>
-  <data name="splitMiddleTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 3</value>
-  </data>
-  <data name="splitMiddleTop.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;splitMiddleTop.Name" xml:space="preserve">
-    <value>splitMiddleTop</value>
-  </data>
-  <data name="&gt;&gt;splitMiddleTop.Type" xml:space="preserve">
+  <data name="&gt;&gt;_splitMiddleTop.Type" xml:space="preserve">
     <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;splitMiddleTop.Parent" xml:space="preserve">
-    <value>pnlMiddle</value>
+  <data name="&gt;&gt;_splitMiddleTop.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;splitMiddleTop.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_splitMiddleTop.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pnlMiddleTitle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
-        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
-        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA8AL0DASIAAhEBAxEB/8QA
-        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
-        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
-        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
-        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
-        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
-        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
-        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
-        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDymiiivePECiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
-        ooAKKKKACiig0DCl2kIG4wSR1Gfy/GjHFIaBBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF
-        FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF
-        FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUGiigBSc0lFFAH/9k=
-</value>
+  <data name="&gt;&gt;_pnlMiddleTitle.Name" xml:space="preserve">
+    <value>_pnlMiddleTitle</value>
   </data>
-  <data name="btnCloseMiddle.AccessibleDescription" xml:space="preserve">
-    <value>Close this window</value>
-  </data>
-  <data name="btnCloseMiddle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btnCloseMiddle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="btnCloseMiddle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCloseMiddle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 8</value>
-  </data>
-  <data name="btnCloseMiddle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 16</value>
-  </data>
-  <data name="btnCloseMiddle.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnCloseMiddle.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;btnCloseMiddle.Name" xml:space="preserve">
-    <value>btnCloseMiddle</value>
-  </data>
-  <data name="&gt;&gt;btnCloseMiddle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCloseMiddle.Parent" xml:space="preserve">
-    <value>pnlMiddleTitle</value>
-  </data>
-  <data name="&gt;&gt;btnCloseMiddle.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblMiddleTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="lblMiddleTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 10pt, style=Bold</value>
-  </data>
-  <data name="lblMiddleTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMiddleTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblMiddleTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 32</value>
-  </data>
-  <data name="lblMiddleTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMiddleTitle.Text" xml:space="preserve">
-    <value>SET IN CODE</value>
-  </data>
-  <data name="lblMiddleTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblMiddleTitle.Name" xml:space="preserve">
-    <value>lblMiddleTitle</value>
-  </data>
-  <data name="&gt;&gt;lblMiddleTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMiddleTitle.Parent" xml:space="preserve">
-    <value>pnlMiddleTitle</value>
-  </data>
-  <data name="&gt;&gt;lblMiddleTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlMiddleTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlMiddleTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlMiddleTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 34</value>
-  </data>
-  <data name="pnlMiddleTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnlMiddleTitle.Name" xml:space="preserve">
-    <value>pnlMiddleTitle</value>
-  </data>
-  <data name="&gt;&gt;pnlMiddleTitle.Type" xml:space="preserve">
+  <data name="&gt;&gt;_pnlMiddleTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlMiddleTitle.Parent" xml:space="preserve">
-    <value>pnlMiddle</value>
+  <data name="&gt;&gt;_pnlMiddleTitle.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;pnlMiddleTitle.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_pnlMiddleTitle.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="splitMiddleBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="&gt;&gt;_splitMiddleBottom.Name" xml:space="preserve">
+    <value>_splitMiddleBottom</value>
   </data>
-  <data name="splitMiddleBottom.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="splitMiddleBottom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="splitMiddleBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1119</value>
-  </data>
-  <data name="splitMiddleBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 5</value>
-  </data>
-  <data name="splitMiddleBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;splitMiddleBottom.Name" xml:space="preserve">
-    <value>splitMiddleBottom</value>
-  </data>
-  <data name="&gt;&gt;splitMiddleBottom.Type" xml:space="preserve">
+  <data name="&gt;&gt;_splitMiddleBottom.Type" xml:space="preserve">
     <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;splitMiddleBottom.Parent" xml:space="preserve">
-    <value>pnlMiddle</value>
+  <data name="&gt;&gt;_splitMiddleBottom.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;splitMiddleBottom.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_splitMiddleBottom.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="ContainerMiddlePanelBtns.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;_pnlButtons.Name" xml:space="preserve">
+    <value>_pnlButtons</value>
   </data>
-  <data name="ContainerMiddlePanelBtns.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnExport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="btnExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnExport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 4</value>
-  </data>
-  <data name="btnExport.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>72, 21</value>
-  </data>
-  <data name="btnExport.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>53, 21</value>
-  </data>
-  <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 21</value>
-  </data>
-  <data name="btnExport.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btnExport.Text" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="btnExport.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnExport.Name" xml:space="preserve">
-    <value>btnExport</value>
-  </data>
-  <data name="&gt;&gt;btnExport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExport.Parent" xml:space="preserve">
-    <value>ContainerMiddlePanelBtns</value>
-  </data>
-  <data name="&gt;&gt;btnExport.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnAddNew.AccessibleDescription" xml:space="preserve">
-    <value>Add New Record</value>
-  </data>
-  <data name="btnAddNew.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="btnAddNew.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAddNew.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
-  </data>
-  <data name="btnAddNew.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>64, 21</value>
-  </data>
-  <data name="btnAddNew.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>35, 21</value>
-  </data>
-  <data name="btnAddNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 21</value>
-  </data>
-  <data name="btnAddNew.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnAddNew.Text" xml:space="preserve">
-    <value>Add New</value>
-  </data>
-  <data name="&gt;&gt;btnAddNew.Name" xml:space="preserve">
-    <value>btnAddNew</value>
-  </data>
-  <data name="&gt;&gt;btnAddNew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddNew.Parent" xml:space="preserve">
-    <value>ContainerMiddlePanelBtns</value>
-  </data>
-  <data name="&gt;&gt;btnAddNew.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnDelete.AccessibleDescription" xml:space="preserve">
-    <value>Delete Record From Database (Confirmation Required)</value>
-  </data>
-  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 4</value>
-  </data>
-  <data name="btnDelete.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>64, 21</value>
-  </data>
-  <data name="btnDelete.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>20, 21</value>
-  </data>
-  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 21</value>
-  </data>
-  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnDelete.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
-    <value>btnDelete</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
-    <value>ContainerMiddlePanelBtns</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ContainerMiddlePanelBtns.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 6</value>
-  </data>
-  <data name="ContainerMiddlePanelBtns.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="ContainerMiddlePanelBtns.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ContainerMiddlePanelBtns.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 28</value>
-  </data>
-  <data name="ContainerMiddlePanelBtns.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;ContainerMiddlePanelBtns.Name" xml:space="preserve">
-    <value>ContainerMiddlePanelBtns</value>
-  </data>
-  <data name="&gt;&gt;ContainerMiddlePanelBtns.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ContainerMiddlePanelBtns.Parent" xml:space="preserve">
-    <value>pnlButtons</value>
-  </data>
-  <data name="&gt;&gt;ContainerMiddlePanelBtns.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ContainerMiddlePanelBtns.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnExport" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnAddNew" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDelete" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,29.07801,Percent,38.29787" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="pnlButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="pnlButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1124</value>
-  </data>
-  <data name="pnlButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 40</value>
-  </data>
-  <data name="pnlButtons.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnlButtons.Name" xml:space="preserve">
-    <value>pnlButtons</value>
-  </data>
-  <data name="&gt;&gt;pnlButtons.Type" xml:space="preserve">
+  <data name="&gt;&gt;_pnlButtons.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlButtons.Parent" xml:space="preserve">
-    <value>pnlMiddle</value>
+  <data name="&gt;&gt;_pnlButtons.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;pnlButtons.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_pnlButtons.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pnlMiddle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="_pnlMiddle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="pnlMiddle.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_pnlMiddle.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 0</value>
   </data>
-  <data name="pnlMiddle.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="_pnlMiddle.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>347, 0</value>
   </data>
-  <data name="pnlMiddle.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="_pnlMiddle.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>150, 0</value>
   </data>
-  <data name="pnlMiddle.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="_pnlMiddle.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 5, 0</value>
   </data>
-  <data name="pnlMiddle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 1164</value>
+  <data name="_pnlMiddle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 1018</value>
   </data>
-  <data name="pnlMiddle.TabIndex" type="System.Int32, mscorlib">
+  <data name="_pnlMiddle.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="pnlMiddle.Visible" type="System.Boolean, mscorlib">
+  <data name="_pnlMiddle.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;pnlMiddle.Name" xml:space="preserve">
-    <value>pnlMiddle</value>
+  <data name="&gt;&gt;_pnlMiddle.Name" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;pnlMiddle.Type" xml:space="preserve">
+  <data name="&gt;&gt;_pnlMiddle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlMiddle.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_pnlMiddle.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlMiddle.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_pnlMiddle.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pnlRight.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="Splitter2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="Splitter2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Splitter2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Splitter2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1044</value>
-  </data>
-  <data name="Splitter2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1756, 5</value>
-  </data>
-  <data name="Splitter2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Splitter2.Name" xml:space="preserve">
-    <value>Splitter2</value>
-  </data>
-  <data name="&gt;&gt;Splitter2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Splitter2.Parent" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;Splitter2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pnlContent.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="_dgSearchResults.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="pnlContent.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_dgSearchResults.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 37</value>
   </data>
-  <data name="pnlContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1756, 1012</value>
+  <data name="_dgSearchResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 936</value>
   </data>
-  <data name="pnlContent.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pnlContent.Name" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;pnlContent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlContent.Parent" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;pnlContent.ZOrder" xml:space="preserve">
+  <data name="_dgSearchResults.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="Splitter1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;_dgSearchResults.Name" xml:space="preserve">
+    <value>_dgSearchResults</value>
+  </data>
+  <data name="&gt;&gt;_dgSearchResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGrid, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_dgSearchResults.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
+  </data>
+  <data name="&gt;&gt;_dgSearchResults.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_splitMiddleTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="Splitter1.Enabled" type="System.Boolean, mscorlib">
+  <data name="_splitMiddleTop.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="Splitter1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="_splitMiddleTop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Splitter1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_splitMiddleTop.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 34</value>
   </data>
-  <data name="Splitter1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1756, 3</value>
+  <data name="_splitMiddleTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 3</value>
   </data>
-  <data name="Splitter1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="_splitMiddleTop.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;Splitter1.Name" xml:space="preserve">
-    <value>Splitter1</value>
+  <data name="&gt;&gt;_splitMiddleTop.Name" xml:space="preserve">
+    <value>_splitMiddleTop</value>
   </data>
-  <data name="&gt;&gt;Splitter1.Type" xml:space="preserve">
+  <data name="&gt;&gt;_splitMiddleTop.Type" xml:space="preserve">
     <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Splitter1.Parent" xml:space="preserve">
-    <value>pnlRight</value>
+  <data name="&gt;&gt;_splitMiddleTop.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;Splitter1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;_splitMiddleTop.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="pnleHeaderRight.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_pnlMiddleTitle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
         JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
@@ -780,274 +420,877 @@
         FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUGiigBSc0lFFAH/9k=
 </value>
   </data>
-  <data name="btnHQ.AccessibleDescription" xml:space="preserve">
-    <value>Close this window</value>
+  <data name="&gt;&gt;_btnCloseMiddle.Name" xml:space="preserve">
+    <value>_btnCloseMiddle</value>
   </data>
-  <data name="btnHQ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btnHQ.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="btnHQ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnHQ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1662, 9</value>
-  </data>
-  <data name="btnHQ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 16</value>
-  </data>
-  <data name="btnHQ.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btnHQ.Text" xml:space="preserve">
-    <value>Show HQ</value>
-  </data>
-  <data name="&gt;&gt;btnHQ.Name" xml:space="preserve">
-    <value>btnHQ</value>
-  </data>
-  <data name="&gt;&gt;btnHQ.Type" xml:space="preserve">
+  <data name="&gt;&gt;_btnCloseMiddle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnHQ.Parent" xml:space="preserve">
-    <value>pnleHeaderRight</value>
+  <data name="&gt;&gt;_btnCloseMiddle.Parent" xml:space="preserve">
+    <value>_pnlMiddleTitle</value>
   </data>
-  <data name="&gt;&gt;btnHQ.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_btnCloseMiddle.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnCloseRight.AccessibleDescription" xml:space="preserve">
-    <value>Close this window</value>
+  <data name="&gt;&gt;_lblMiddleTitle.Name" xml:space="preserve">
+    <value>_lblMiddleTitle</value>
   </data>
-  <data name="btnCloseRight.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btnCloseRight.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="btnCloseRight.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCloseRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1733, 9</value>
-  </data>
-  <data name="btnCloseRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 16</value>
-  </data>
-  <data name="btnCloseRight.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btnCloseRight.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;btnCloseRight.Name" xml:space="preserve">
-    <value>btnCloseRight</value>
-  </data>
-  <data name="&gt;&gt;btnCloseRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCloseRight.Parent" xml:space="preserve">
-    <value>pnleHeaderRight</value>
-  </data>
-  <data name="&gt;&gt;btnCloseRight.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblRightTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="lblRightTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 10pt, style=Bold</value>
-  </data>
-  <data name="lblRightTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblRightTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblRightTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1756, 32</value>
-  </data>
-  <data name="lblRightTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblRightTitle.Text" xml:space="preserve">
-    <value>SET IN CODE</value>
-  </data>
-  <data name="lblRightTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblRightTitle.Name" xml:space="preserve">
-    <value>lblRightTitle</value>
-  </data>
-  <data name="&gt;&gt;lblRightTitle.Type" xml:space="preserve">
+  <data name="&gt;&gt;_lblMiddleTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblRightTitle.Parent" xml:space="preserve">
-    <value>pnleHeaderRight</value>
+  <data name="&gt;&gt;_lblMiddleTitle.Parent" xml:space="preserve">
+    <value>_pnlMiddleTitle</value>
   </data>
-  <data name="&gt;&gt;lblRightTitle.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;_lblMiddleTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="pnleHeaderRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="_pnlMiddleTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="pnleHeaderRight.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_pnlMiddleTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="pnleHeaderRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1756, 34</value>
+  <data name="_pnlMiddleTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 34</value>
   </data>
-  <data name="pnleHeaderRight.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="_pnlMiddleTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;pnleHeaderRight.Name" xml:space="preserve">
-    <value>pnleHeaderRight</value>
+  <data name="&gt;&gt;_pnlMiddleTitle.Name" xml:space="preserve">
+    <value>_pnlMiddleTitle</value>
   </data>
-  <data name="&gt;&gt;pnleHeaderRight.Type" xml:space="preserve">
+  <data name="&gt;&gt;_pnlMiddleTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnleHeaderRight.Parent" xml:space="preserve">
-    <value>pnlRight</value>
+  <data name="&gt;&gt;_pnlMiddleTitle.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
   </data>
-  <data name="&gt;&gt;pnleHeaderRight.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;_pnlMiddleTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="btnGoBack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="_btnCloseMiddle.AccessibleDescription" xml:space="preserve">
+    <value>Close this window</value>
+  </data>
+  <data name="_btnCloseMiddle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_btnCloseMiddle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="_btnCloseMiddle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnGoBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+  <data name="_btnCloseMiddle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 8</value>
   </data>
-  <data name="btnGoBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 23</value>
+  <data name="_btnCloseMiddle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
   </data>
-  <data name="btnGoBack.TabIndex" type="System.Int32, mscorlib">
+  <data name="_btnCloseMiddle.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="btnGoBack.Text" xml:space="preserve">
-    <value>Go To</value>
+  <data name="_btnCloseMiddle.Text" xml:space="preserve">
+    <value>X</value>
   </data>
-  <data name="btnGoBack.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;_btnCloseMiddle.Name" xml:space="preserve">
+    <value>_btnCloseMiddle</value>
   </data>
-  <data name="&gt;&gt;btnGoBack.Name" xml:space="preserve">
-    <value>btnGoBack</value>
-  </data>
-  <data name="&gt;&gt;btnGoBack.Type" xml:space="preserve">
+  <data name="&gt;&gt;_btnCloseMiddle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnGoBack.Parent" xml:space="preserve">
-    <value>pnlButtonsRight</value>
+  <data name="&gt;&gt;_btnCloseMiddle.Parent" xml:space="preserve">
+    <value>_pnlMiddleTitle</value>
   </data>
-  <data name="&gt;&gt;btnGoBack.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_btnCloseMiddle.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnSave.AccessibleDescription" xml:space="preserve">
-    <value>Save Details</value>
+  <data name="_lblMiddleTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="_lblMiddleTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10pt, style=Bold</value>
   </data>
-  <data name="btnSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="_lblMiddleTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1684, 8</value>
+  <data name="_lblMiddleTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
+  <data name="_lblMiddleTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 32</value>
   </data>
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
-    <value>pnlButtonsRight</value>
-  </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+  <data name="_lblMiddleTitle.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="pnlButtonsRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="_lblMiddleTitle.Text" xml:space="preserve">
+    <value>SET IN CODE</value>
+  </data>
+  <data name="_lblMiddleTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;_lblMiddleTitle.Name" xml:space="preserve">
+    <value>_lblMiddleTitle</value>
+  </data>
+  <data name="&gt;&gt;_lblMiddleTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_lblMiddleTitle.Parent" xml:space="preserve">
+    <value>_pnlMiddleTitle</value>
+  </data>
+  <data name="&gt;&gt;_lblMiddleTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_splitMiddleBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
-  <data name="pnlButtonsRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1049</value>
-  </data>
-  <data name="pnlButtonsRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1756, 40</value>
-  </data>
-  <data name="pnlButtonsRight.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pnlButtonsRight.Name" xml:space="preserve">
-    <value>pnlButtonsRight</value>
-  </data>
-  <data name="&gt;&gt;pnlButtonsRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlButtonsRight.Parent" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;pnlButtonsRight.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pnlRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>552, 32</value>
-  </data>
-  <data name="pnlRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1756, 1089</value>
-  </data>
-  <data name="pnlRight.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="pnlRight.Visible" type="System.Boolean, mscorlib">
+  <data name="_splitMiddleBottom.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;pnlRight.Name" xml:space="preserve">
-    <value>pnlRight</value>
+  <data name="_splitMiddleBottom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;pnlRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="_splitMiddleBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 973</value>
   </data>
-  <data name="&gt;&gt;pnlRight.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="_splitMiddleBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 5</value>
   </data>
-  <data name="&gt;&gt;pnlRight.ZOrder" xml:space="preserve">
+  <data name="_splitMiddleBottom.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="splitMiddleAndRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 0</value>
+  <data name="&gt;&gt;_splitMiddleBottom.Name" xml:space="preserve">
+    <value>_splitMiddleBottom</value>
   </data>
-  <data name="splitMiddleAndRight.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="splitMiddleAndRight.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="splitMiddleAndRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>3, 1164</value>
-  </data>
-  <data name="splitMiddleAndRight.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;splitMiddleAndRight.Name" xml:space="preserve">
-    <value>splitMiddleAndRight</value>
-  </data>
-  <data name="&gt;&gt;splitMiddleAndRight.Type" xml:space="preserve">
+  <data name="&gt;&gt;_splitMiddleBottom.Type" xml:space="preserve">
     <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;splitMiddleAndRight.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_splitMiddleBottom.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
+  </data>
+  <data name="&gt;&gt;_splitMiddleBottom.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.Name" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.Parent" xml:space="preserve">
+    <value>_pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="_btnExport" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="_btnAddNew" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_btnDelete" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,29.07801,Percent,38.29787" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="_pnlButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="_pnlButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 978</value>
+  </data>
+  <data name="_pnlButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 40</value>
+  </data>
+  <data name="_pnlButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtons.Name" xml:space="preserve">
+    <value>_pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtons.Parent" xml:space="preserve">
+    <value>_pnlMiddle</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtons.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.Name" xml:space="preserve">
+    <value>_btnExport</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.Parent" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.Name" xml:space="preserve">
+    <value>_btnAddNew</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.Parent" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.Name" xml:space="preserve">
+    <value>_btnDelete</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.Parent" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 6</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 28</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.Name" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.Parent" xml:space="preserve">
+    <value>_pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;_ContainerMiddlePanelBtns.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_ContainerMiddlePanelBtns.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="_btnExport" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="_btnAddNew" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_btnDelete" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,29.07801,Percent,38.29787" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="_btnExport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="_btnExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 4</value>
+  </data>
+  <data name="_btnExport.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="_btnExport.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>53, 21</value>
+  </data>
+  <data name="_btnExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 21</value>
+  </data>
+  <data name="_btnExport.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_btnExport.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="_btnExport.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.Name" xml:space="preserve">
+    <value>_btnExport</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.Parent" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_btnExport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_btnAddNew.AccessibleDescription" xml:space="preserve">
+    <value>Add New Record</value>
+  </data>
+  <data name="_btnAddNew.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="_btnAddNew.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnAddNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="_btnAddNew.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="_btnAddNew.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>35, 21</value>
+  </data>
+  <data name="_btnAddNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 21</value>
+  </data>
+  <data name="_btnAddNew.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_btnAddNew.Text" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.Name" xml:space="preserve">
+    <value>_btnAddNew</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.Parent" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_btnAddNew.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_btnDelete.AccessibleDescription" xml:space="preserve">
+    <value>Delete Record From Database (Confirmation Required)</value>
+  </data>
+  <data name="_btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="_btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 4</value>
+  </data>
+  <data name="_btnDelete.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="_btnDelete.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 21</value>
+  </data>
+  <data name="_btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 21</value>
+  </data>
+  <data name="_btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="_btnDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.Name" xml:space="preserve">
+    <value>_btnDelete</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.Parent" xml:space="preserve">
+    <value>_ContainerMiddlePanelBtns</value>
+  </data>
+  <data name="&gt;&gt;_btnDelete.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_pnlRight.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.Name" xml:space="preserve">
+    <value>_Splitter2</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.Name" xml:space="preserve">
+    <value>_pnlContent</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.Name" xml:space="preserve">
+    <value>_Splitter1</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.Name" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.Name" xml:space="preserve">
+    <value>_pnlButtonsRight</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_pnlRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>552, 32</value>
+  </data>
+  <data name="_pnlRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1756, 1068</value>
+  </data>
+  <data name="_pnlRight.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="_pnlRight.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;_pnlRight.Name" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_pnlRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnlRight.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;splitMiddleAndRight.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_pnlRight.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_Splitter2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="_Splitter2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_Splitter2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_Splitter2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1023</value>
+  </data>
+  <data name="_Splitter2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1756, 5</value>
+  </data>
+  <data name="_Splitter2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.Name" xml:space="preserve">
+    <value>_Splitter2</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_Splitter2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_pnlContent.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_pnlContent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="_pnlContent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1756, 991</value>
+  </data>
+  <data name="_pnlContent.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.Name" xml:space="preserve">
+    <value>_pnlContent</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_pnlContent.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_Splitter1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="_Splitter1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_Splitter1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_Splitter1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 34</value>
+  </data>
+  <data name="_Splitter1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1756, 3</value>
+  </data>
+  <data name="_Splitter1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.Name" xml:space="preserve">
+    <value>_Splitter1</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_Splitter1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_pnleHeaderRight.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA8AL0DASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDymiiivePECiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiig0DCl2kIG4wSR1Gfy/GjHFIaBBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF
+        FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF
+        FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUGiigBSc0lFFAH/9k=
+</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.Name" xml:space="preserve">
+    <value>_btnHQ</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.Parent" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.Name" xml:space="preserve">
+    <value>_btnCloseRight</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.Parent" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.Name" xml:space="preserve">
+    <value>_lblRightTitle</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.Parent" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_pnleHeaderRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="_pnleHeaderRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_pnleHeaderRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1756, 34</value>
+  </data>
+  <data name="_pnleHeaderRight.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.Name" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_pnleHeaderRight.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_btnHQ.AccessibleDescription" xml:space="preserve">
+    <value>Close this window</value>
+  </data>
+  <data name="_btnHQ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_btnHQ.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="_btnHQ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnHQ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1662, 9</value>
+  </data>
+  <data name="_btnHQ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 16</value>
+  </data>
+  <data name="_btnHQ.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="_btnHQ.Text" xml:space="preserve">
+    <value>Show HQ</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.Name" xml:space="preserve">
+    <value>_btnHQ</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.Parent" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_btnHQ.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_btnCloseRight.AccessibleDescription" xml:space="preserve">
+    <value>Close this window</value>
+  </data>
+  <data name="_btnCloseRight.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="_btnCloseRight.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="_btnCloseRight.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnCloseRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1733, 9</value>
+  </data>
+  <data name="_btnCloseRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="_btnCloseRight.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_btnCloseRight.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.Name" xml:space="preserve">
+    <value>_btnCloseRight</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.Parent" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_btnCloseRight.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_lblRightTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="_lblRightTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10pt, style=Bold</value>
+  </data>
+  <data name="_lblRightTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_lblRightTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_lblRightTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1756, 32</value>
+  </data>
+  <data name="_lblRightTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_lblRightTitle.Text" xml:space="preserve">
+    <value>SET IN CODE</value>
+  </data>
+  <data name="_lblRightTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.Name" xml:space="preserve">
+    <value>_lblRightTitle</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.Parent" xml:space="preserve">
+    <value>_pnleHeaderRight</value>
+  </data>
+  <data name="&gt;&gt;_lblRightTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.Name" xml:space="preserve">
+    <value>_btnGoBack</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.Parent" xml:space="preserve">
+    <value>_pnlButtonsRight</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.Name" xml:space="preserve">
+    <value>_btnSave</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.Parent" xml:space="preserve">
+    <value>_pnlButtonsRight</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_pnlButtonsRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="_pnlButtonsRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1028</value>
+  </data>
+  <data name="_pnlButtonsRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1756, 40</value>
+  </data>
+  <data name="_pnlButtonsRight.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.Name" xml:space="preserve">
+    <value>_pnlButtonsRight</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.Parent" xml:space="preserve">
+    <value>_pnlRight</value>
+  </data>
+  <data name="&gt;&gt;_pnlButtonsRight.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_btnGoBack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnGoBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="_btnGoBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 23</value>
+  </data>
+  <data name="_btnGoBack.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="_btnGoBack.Text" xml:space="preserve">
+    <value>Go To</value>
+  </data>
+  <data name="_btnGoBack.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.Name" xml:space="preserve">
+    <value>_btnGoBack</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.Parent" xml:space="preserve">
+    <value>_pnlButtonsRight</value>
+  </data>
+  <data name="&gt;&gt;_btnGoBack.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_btnSave.AccessibleDescription" xml:space="preserve">
+    <value>Save Details</value>
+  </data>
+  <data name="_btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="_btnSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1684, 8</value>
+  </data>
+  <data name="_btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="_btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="_btnSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.Name" xml:space="preserve">
+    <value>_btnSave</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.Parent" xml:space="preserve">
+    <value>_pnlButtonsRight</value>
+  </data>
+  <data name="&gt;&gt;_btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_splitMiddleAndRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 0</value>
+  </data>
+  <data name="_splitMiddleAndRight.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="_splitMiddleAndRight.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="_splitMiddleAndRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>3, 1018</value>
+  </data>
+  <data name="_splitMiddleAndRight.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;_splitMiddleAndRight.Name" xml:space="preserve">
+    <value>_splitMiddleAndRight</value>
+  </data>
+  <data name="&gt;&gt;_splitMiddleAndRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_splitMiddleAndRight.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_splitMiddleAndRight.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1060,7 +1303,7 @@
     <value>6, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>2268, 1186</value>
+    <value>1924, 1040</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 8.25pt</value>
@@ -1697,130 +1940,106 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Field Service Management</value>
   </data>
-  <data name="&gt;&gt;MnuMainNav.Name" xml:space="preserve">
-    <value>MnuMainNav</value>
+  <data name="&gt;&gt;_MnuMainNav.Name" xml:space="preserve">
+    <value>_MnuMainNav</value>
   </data>
-  <data name="&gt;&gt;MnuMainNav.Type" xml:space="preserve">
+  <data name="&gt;&gt;_MnuMainNav.Type" xml:space="preserve">
     <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuFile.Name" xml:space="preserve">
-    <value>mnuFile</value>
+  <data name="&gt;&gt;_mnuFile.Name" xml:space="preserve">
+    <value>_mnuFile</value>
   </data>
-  <data name="&gt;&gt;mnuFile.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuChangeLogin.Name" xml:space="preserve">
-    <value>mnuChangeLogin</value>
+  <data name="&gt;&gt;_mnuChangeLogin.Name" xml:space="preserve">
+    <value>_mnuChangeLogin</value>
   </data>
-  <data name="&gt;&gt;mnuChangeLogin.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuChangeLogin.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
-    <value>MenuItem3</value>
+  <data name="&gt;&gt;_MenuItem3.Name" xml:space="preserve">
+    <value>_MenuItem3</value>
   </data>
-  <data name="&gt;&gt;MenuItem3.Type" xml:space="preserve">
+  <data name="&gt;&gt;_MenuItem3.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuLogout.Name" xml:space="preserve">
-    <value>mnuLogout</value>
+  <data name="&gt;&gt;_mnuLogout.Name" xml:space="preserve">
+    <value>_mnuLogout</value>
   </data>
-  <data name="&gt;&gt;mnuLogout.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuLogout.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuCustomers.Name" xml:space="preserve">
-    <value>mnuCustomers</value>
+  <data name="&gt;&gt;_mnuCustomers.Name" xml:space="preserve">
+    <value>_mnuCustomers</value>
   </data>
-  <data name="&gt;&gt;mnuCustomers.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuCustomers.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuSpares.Name" xml:space="preserve">
-    <value>mnuSpares</value>
+  <data name="&gt;&gt;_mnuSpares.Name" xml:space="preserve">
+    <value>_mnuSpares</value>
   </data>
-  <data name="&gt;&gt;mnuSpares.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuSpares.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuStaff.Name" xml:space="preserve">
-    <value>mnuStaff</value>
+  <data name="&gt;&gt;_mnuStaff.Name" xml:space="preserve">
+    <value>_mnuStaff</value>
   </data>
-  <data name="&gt;&gt;mnuStaff.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuStaff.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuJobs.Name" xml:space="preserve">
-    <value>mnuJobs</value>
+  <data name="&gt;&gt;_mnuJobs.Name" xml:space="preserve">
+    <value>_mnuJobs</value>
   </data>
-  <data name="&gt;&gt;mnuJobs.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuJobs.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuScheduler.Name" xml:space="preserve">
-    <value>mnuScheduler</value>
+  <data name="&gt;&gt;_mnuScheduler.Name" xml:space="preserve">
+    <value>_mnuScheduler</value>
   </data>
-  <data name="&gt;&gt;mnuScheduler.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuScheduler.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuInvoicing.Name" xml:space="preserve">
-    <value>mnuInvoicing</value>
+  <data name="&gt;&gt;_mnuInvoicing.Name" xml:space="preserve">
+    <value>_mnuInvoicing</value>
   </data>
-  <data name="&gt;&gt;mnuInvoicing.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuInvoicing.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuReports.Name" xml:space="preserve">
-    <value>mnuReports</value>
+  <data name="&gt;&gt;_mnuReports.Name" xml:space="preserve">
+    <value>_mnuReports</value>
   </data>
-  <data name="&gt;&gt;mnuReports.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuReports.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuVan.Name" xml:space="preserve">
-    <value>mnuVan</value>
+  <data name="&gt;&gt;_mnuVan.Name" xml:space="preserve">
+    <value>_mnuVan</value>
   </data>
-  <data name="&gt;&gt;mnuVan.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuVan.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuSetup.Name" xml:space="preserve">
-    <value>mnuSetup</value>
+  <data name="&gt;&gt;_mnuSetup.Name" xml:space="preserve">
+    <value>_mnuSetup</value>
   </data>
-  <data name="&gt;&gt;mnuSetup.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuSetup.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuSystemHelp.Name" xml:space="preserve">
-    <value>mnuSystemHelp</value>
+  <data name="&gt;&gt;_mnuNpPrint.Name" xml:space="preserve">
+    <value>_mnuNpPrint</value>
   </data>
-  <data name="&gt;&gt;mnuSystemHelp.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuNpPrint.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mnuContactSheet.Name" xml:space="preserve">
-    <value>mnuContactSheet</value>
+  <data name="&gt;&gt;_mnuUpstairs.Name" xml:space="preserve">
+    <value>_mnuUpstairs</value>
   </data>
-  <data name="&gt;&gt;mnuContactSheet.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuUpstairs.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuItem15.Name" xml:space="preserve">
-    <value>MenuItem15</value>
+  <data name="&gt;&gt;_mnuDownstairs.Name" xml:space="preserve">
+    <value>_mnuDownstairs</value>
   </data>
-  <data name="&gt;&gt;MenuItem15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuAbout.Name" xml:space="preserve">
-    <value>mnuAbout</value>
-  </data>
-  <data name="&gt;&gt;mnuAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuNpPrint.Name" xml:space="preserve">
-    <value>mnuNpPrint</value>
-  </data>
-  <data name="&gt;&gt;mnuNpPrint.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuUpstairs.Name" xml:space="preserve">
-    <value>mnuUpstairs</value>
-  </data>
-  <data name="&gt;&gt;mnuUpstairs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuDownstairs.Name" xml:space="preserve">
-    <value>mnuDownstairs</value>
-  </data>
-  <data name="&gt;&gt;mnuDownstairs.Type" xml:space="preserve">
+  <data name="&gt;&gt;_mnuDownstairs.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

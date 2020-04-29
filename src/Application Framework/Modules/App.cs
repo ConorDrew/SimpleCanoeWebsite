@@ -424,30 +424,6 @@ namespace FSM
             /* TODO ERROR: Skipped EndIfDirectiveTrivia */
         }
 
-        public static bool EnterOverridePassword_Service()
-        {
-            DLGPasswordOverride dialogue;
-            dialogue = (DLGPasswordOverride)checkIfExists(typeof(DLGPasswordOverride_Service).Name, true);
-            if (dialogue is null)
-            {
-                dialogue = (DLGPasswordOverride)Activator.CreateInstance(typeof(DLGPasswordOverride_Service));
-            }
-            // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
-            dialogue.ShowInTaskbar = false;
-            dialogue.ShowDialog();
-            if (dialogue.DialogResult == DialogResult.OK)
-            {
-                return true;
-            }
-            else
-            {
-                ShowMessage("Incorrect password or operation cancelled by user", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            dialogue.Close();
-        }
-
         public static object FindRecord(Entity.Sys.Enums.TableNames tableToSearchIn, int ForeignKeyFilter = 0, string PartNumber = "", bool ForMassPartEntry = false)
         {
             DLGFindRecord dialogue;
