@@ -1080,28 +1080,6 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMCostCentre m_FRMCostCentre;
-
-            public FRMCostCentre FRMCostCentre
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMCostCentre = MyForms.Create__Instance__(m_FRMCostCentre);
-                    return m_FRMCostCentre;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMCostCentre)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMCostCentre);
-                }
-            }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMCreateServices m_FRMCreateServices;

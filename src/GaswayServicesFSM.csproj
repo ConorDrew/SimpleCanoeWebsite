@@ -2518,12 +2518,6 @@
     <Compile Include="Application Specific\Forms And Controls\Site\FRMAdditionalNotes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Site\FRMCostCentre.Designer.cs">
-      <DependentUpon>FRMCostCentre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Site\FRMCostCentre.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Site\FRMContactInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2786,9 +2780,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Site\FRMAdditionalNotes.resx">
       <DependentUpon>FRMAdditionalNotes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Site\FRMCostCentre.resx">
-      <DependentUpon>FRMCostCentre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\FleetVan\FRMFleetVanType.resx">
       <DependentUpon>FRMFleetVanType.cs</DependentUpon>
