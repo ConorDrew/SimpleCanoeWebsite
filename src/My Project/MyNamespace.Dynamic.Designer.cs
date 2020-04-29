@@ -469,29 +469,6 @@ namespace FSM.My
             }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMAnswers m_FRMAnswers;
-
-            public FRMAnswers FRMAnswers
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMAnswers = MyForms.Create__Instance__(m_FRMAnswers);
-                    return m_FRMAnswers;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMAnswers)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMAnswers);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMAsset m_FRMAsset;
 
             public FRMAsset FRMAsset
@@ -1043,28 +1020,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMContractAlternativeSite m_FRMContractAlternativeSite;
-
-            public FRMContractAlternativeSite FRMContractAlternativeSite
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMContractAlternativeSite = MyForms.Create__Instance__(m_FRMContractAlternativeSite);
-                    return m_FRMContractAlternativeSite;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMContractAlternativeSite)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMContractAlternativeSite);
-                }
-            }
+          
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMContractManager m_FRMContractManager;
@@ -2170,28 +2126,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMJobItemAssets m_FRMJobItemAssets;
-
-            public FRMJobItemAssets FRMJobItemAssets
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMJobItemAssets = MyForms.Create__Instance__(m_FRMJobItemAssets);
-                    return m_FRMJobItemAssets;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMJobItemAssets)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMJobItemAssets);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMJobLocks m_FRMJobLocks;
@@ -4148,28 +4083,6 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMViewContractAlternativeChargeDetails m_FRMViewContractAlternativeChargeDetails;
-
-            public FRMViewContractAlternativeChargeDetails FRMViewContractAlternativeChargeDetails
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMViewContractAlternativeChargeDetails = MyForms.Create__Instance__(m_FRMViewContractAlternativeChargeDetails);
-                    return m_FRMViewContractAlternativeChargeDetails;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMViewContractAlternativeChargeDetails)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMViewContractAlternativeChargeDetails);
-                }
-            }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMVisitManager m_FRMVisitManager;
