@@ -2672,11 +2672,6 @@ namespace FSM
             }
         }
 
-        private void btnContractNumber_Click(object sender, EventArgs e)
-        {
-            App.ShowForm(typeof(FRMAvailableContractNos), true, new object[] { txtContractReference, this });
-        }
-
         private void dgInvoiceAddress_Click(object sender, EventArgs e)
         {
             dgInvoiceAddress.Select(dgInvoiceAddress.CurrentRowIndex);

@@ -12,13 +12,13 @@ namespace FSM
     {
         public UCQuotesList()
         {
-
             /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
             /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += UCQuotesList_Load;
         }
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public UCQuotesList(Entity.Sys.Enums.TableNames EntityToLinkToIn, int CustomerIDIn, int SiteIDIn) : base()
         {
             base.Load += UCQuotesList_Load;
@@ -234,9 +234,9 @@ namespace FSM
             _grpQuotes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)_dgQuotes).BeginInit();
             SuspendLayout();
-            // 
+            //
             // grpQuotes
-            // 
+            //
             _grpQuotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _grpQuotes.Controls.Add(_dgQuotes);
@@ -246,9 +246,9 @@ namespace FSM
             _grpQuotes.TabIndex = 0;
             _grpQuotes.TabStop = false;
             _grpQuotes.Text = "Double Click To View / Edit";
-            // 
+            //
             // dgQuotes
-            // 
+            //
             _dgQuotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _dgQuotes.DataMember = "";
@@ -257,9 +257,9 @@ namespace FSM
             _dgQuotes.Name = "dgQuotes";
             _dgQuotes.Size = new Size(472, 477);
             _dgQuotes.TabIndex = 1;
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.AccessibleDescription = "Delete Contract";
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.Location = new Point(440, 528);
@@ -267,9 +267,9 @@ namespace FSM
             _btnDelete.Size = new Size(56, 25);
             _btnDelete.TabIndex = 3;
             _btnDelete.Text = "Delete";
-            // 
+            //
             // btnAdd
-            // 
+            //
             _btnAdd.AccessibleDescription = "Add New Contract";
             _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnAdd.Location = new Point(8, 528);
@@ -277,18 +277,18 @@ namespace FSM
             _btnAdd.Size = new Size(56, 25);
             _btnAdd.TabIndex = 2;
             _btnAdd.Text = "Add";
-            // 
+            //
             // ctxtMnuQuotes
-            // 
+            //
             _ctxtMnuQuotes.MenuItems.AddRange(new MenuItem[] { _mnuJobQuote });
-            // 
+            //
             // mnuJobQuote
-            // 
+            //
             _mnuJobQuote.Index = 0;
             _mnuJobQuote.Text = "Job Quote";
-            // 
+            //
             // UCQuotesList
-            // 
+            //
             Controls.Add(_btnDelete);
             Controls.Add(_btnAdd);
             Controls.Add(_grpQuotes);
@@ -301,6 +301,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public event RefreshContractsEventHandler RefreshContracts;
 
         public delegate void RefreshContractsEventHandler();
@@ -406,6 +407,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void SetupContractsDataGrid()
         {
             var tStyle = dgQuotes.TableStyles[0];
@@ -497,11 +499,7 @@ namespace FSM
                 return;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Contract_Opt_3.ToString(), false)))
-            {
-                App.ShowForm(typeof(FRMQuoteContractOption3), true, new object[] { Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]), Entity.Sys.Helper.MakeIntegerValid(CustomerID) });
-            }
-            else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Job.ToString(), false)))
+            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Job.ToString(), false)))
             {
                 App.ShowForm(typeof(FRMQuoteJob), true, new object[] { Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]), SelectedQuoteDataRow["IDToLinkTo"] });
             }
@@ -559,6 +557,7 @@ namespace FSM
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         private void Populate()
         {
             if (EntityToLinkTo == Entity.Sys.Enums.TableNames.tblCustomer)

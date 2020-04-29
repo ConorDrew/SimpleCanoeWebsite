@@ -8,28 +8,7 @@ namespace FSM.My
     {
         internal partial class MyForms
         {
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public DLGAdvancedItemSearch m_DLGAdvancedItemSearch;
-
-            public DLGAdvancedItemSearch DLGAdvancedItemSearch
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_DLGAdvancedItemSearch = MyForms.Create__Instance__(m_DLGAdvancedItemSearch);
-                    return m_DLGAdvancedItemSearch;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_DLGAdvancedItemSearch)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_DLGAdvancedItemSearch);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public DLGEngineerVisitDefect m_DLGEngineerVisitDefect;
@@ -376,28 +355,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMAddPostcodeManager m_FRMAddPostcodeManager;
-
-            public FRMAddPostcodeManager FRMAddPostcodeManager
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMAddPostcodeManager = MyForms.Create__Instance__(m_FRMAddPostcodeManager);
-                    return m_FRMAddPostcodeManager;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMAddPostcodeManager)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMAddPostcodeManager);
-                }
-            }
+           
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMAddtoOrder m_FRMAddtoOrder;
@@ -469,29 +427,6 @@ namespace FSM.My
             }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMAnswers m_FRMAnswers;
-
-            public FRMAnswers FRMAnswers
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMAnswers = MyForms.Create__Instance__(m_FRMAnswers);
-                    return m_FRMAnswers;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMAnswers)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMAnswers);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMAsset m_FRMAsset;
 
             public FRMAsset FRMAsset
@@ -514,28 +449,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMAvailableContractNos m_FRMAvailableContractNos;
-
-            public FRMAvailableContractNos FRMAvailableContractNos
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMAvailableContractNos = MyForms.Create__Instance__(m_FRMAvailableContractNos);
-                    return m_FRMAvailableContractNos;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMAvailableContractNos)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMAvailableContractNos);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMBaseForm m_FRMBaseForm;
@@ -1043,28 +957,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMContractAlternativeSite m_FRMContractAlternativeSite;
-
-            public FRMContractAlternativeSite FRMContractAlternativeSite
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMContractAlternativeSite = MyForms.Create__Instance__(m_FRMContractAlternativeSite);
-                    return m_FRMContractAlternativeSite;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMContractAlternativeSite)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMContractAlternativeSite);
-                }
-            }
+          
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMContractManager m_FRMContractManager;
@@ -1089,28 +982,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMContractOption3Site m_FRMContractOption3Site;
-
-            public FRMContractOption3Site FRMContractOption3Site
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMContractOption3Site = MyForms.Create__Instance__(m_FRMContractOption3Site);
-                    return m_FRMContractOption3Site;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMContractOption3Site)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMContractOption3Site);
-                }
-            }
+           
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMContractOriginal m_FRMContractOriginal;
@@ -1664,28 +1536,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMEnterEmailAddress m_FRMEnterEmailAddress;
-
-            public FRMEnterEmailAddress FRMEnterEmailAddress
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMEnterEmailAddress = MyForms.Create__Instance__(m_FRMEnterEmailAddress);
-                    return m_FRMEnterEmailAddress;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMEnterEmailAddress)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMEnterEmailAddress);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMEquipment m_FRMEquipment;
@@ -2170,28 +2021,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMJobItemAssets m_FRMJobItemAssets;
-
-            public FRMJobItemAssets FRMJobItemAssets
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMJobItemAssets = MyForms.Create__Instance__(m_FRMJobItemAssets);
-                    return m_FRMJobItemAssets;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMJobItemAssets)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMJobItemAssets);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMJobLocks m_FRMJobLocks;
@@ -3113,121 +2943,9 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractAlternativeConvert m_FRMQuoteContractAlternativeConvert;
+            
 
-            public FRMQuoteContractAlternativeConvert FRMQuoteContractAlternativeConvert
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractAlternativeConvert = MyForms.Create__Instance__(m_FRMQuoteContractAlternativeConvert);
-                    return m_FRMQuoteContractAlternativeConvert;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractAlternativeConvert)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractAlternativeConvert);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractAlternativeSite m_FRMQuoteContractAlternativeSite;
-
-            public FRMQuoteContractAlternativeSite FRMQuoteContractAlternativeSite
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractAlternativeSite = MyForms.Create__Instance__(m_FRMQuoteContractAlternativeSite);
-                    return m_FRMQuoteContractAlternativeSite;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractAlternativeSite)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractAlternativeSite);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractOption3 m_FRMQuoteContractOption3;
-
-            public FRMQuoteContractOption3 FRMQuoteContractOption3
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractOption3 = MyForms.Create__Instance__(m_FRMQuoteContractOption3);
-                    return m_FRMQuoteContractOption3;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractOption3)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractOption3);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractOption3Convert m_FRMQuoteContractOption3Convert;
-
-            public FRMQuoteContractOption3Convert FRMQuoteContractOption3Convert
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractOption3Convert = MyForms.Create__Instance__(m_FRMQuoteContractOption3Convert);
-                    return m_FRMQuoteContractOption3Convert;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractOption3Convert)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractOption3Convert);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractOption3Site m_FRMQuoteContractOption3Site;
-
-            public FRMQuoteContractOption3Site FRMQuoteContractOption3Site
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractOption3Site = MyForms.Create__Instance__(m_FRMQuoteContractOption3Site);
-                    return m_FRMQuoteContractOption3Site;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractOption3Site)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractOption3Site);
-                }
-            }
-
+            
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMQuoteJob m_FRMQuoteJob;
 
@@ -3251,29 +2969,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteJobItemAssets m_FRMQuoteJobItemAssets;
-
-            public FRMQuoteJobItemAssets FRMQuoteJobItemAssets
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteJobItemAssets = MyForms.Create__Instance__(m_FRMQuoteJobItemAssets);
-                    return m_FRMQuoteJobItemAssets;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteJobItemAssets)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteJobItemAssets);
-                }
-            }
-
+           
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMQuoteJobSelectASite m_FRMQuoteJobSelectASite;
 
@@ -4148,28 +3844,6 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMViewContractAlternativeChargeDetails m_FRMViewContractAlternativeChargeDetails;
-
-            public FRMViewContractAlternativeChargeDetails FRMViewContractAlternativeChargeDetails
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMViewContractAlternativeChargeDetails = MyForms.Create__Instance__(m_FRMViewContractAlternativeChargeDetails);
-                    return m_FRMViewContractAlternativeChargeDetails;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMViewContractAlternativeChargeDetails)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMViewContractAlternativeChargeDetails);
-                }
-            }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMVisitManager m_FRMVisitManager;
