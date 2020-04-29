@@ -663,9 +663,6 @@
     <Compile Include="Application Framework\Structures\Contract3AssetsColourColumn.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Application Framework\Structures\Contract3AssetsColourColumnConvert.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Application Framework\Structures\BitToStringDescriptionColumn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2467,24 +2464,6 @@
     <Compile Include="Application Specific\Forms And Controls\Quotes\FRMQuoteManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Convert\FRMQuoteContractOption3Convert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Convert\UCQuoteContractOption3Convert.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Site\FRMQuoteContractOption3Site.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Site\UCQuoteContractOption3Site.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3\FRMQuoteContractOption3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3\UCQuoteContractOption3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteJob\FRMQuoteJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3472,10 +3451,6 @@
       <DependentUpon>Contract3AssetsColourColumn.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Structures\Contract3AssetsColourColumnConvert.resx">
-      <DependentUpon>Contract3AssetsColourColumnConvert.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Structures\DataGridCheckBox.resx">
       <DependentUpon>DataGridCheckBox.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3862,30 +3837,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\FRMQuoteManager.resx">
       <DependentUpon>FRMQuoteManager.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Convert\FRMQuoteContractOption3Convert.resx">
-      <DependentUpon>FRMQuoteContractOption3Convert.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Convert\UCQuoteContractOption3Convert.resx">
-      <DependentUpon>UCQuoteContractOption3Convert.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Site\FRMQuoteContractOption3Site.resx">
-      <DependentUpon>FRMQuoteContractOption3Site.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Site\UCQuoteContractOption3Site.resx">
-      <DependentUpon>UCQuoteContractOption3Site.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3\FRMQuoteContractOption3.resx">
-      <DependentUpon>FRMQuoteContractOption3.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3\UCQuoteContractOption3.resx">
-      <DependentUpon>UCQuoteContractOption3.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteJob\FRMQuoteJob.resx">

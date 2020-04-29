@@ -1204,11 +1204,7 @@ namespace FSM
                 return;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Contract_Opt_3.ToString(), false)))
-            {
-                App.ShowForm(typeof(FRMQuoteContractOption3), true, new object[] { Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]), Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["IDToLinkTo"]) });
-            }
-            else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Job.ToString(), false)))
+            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Job.ToString(), false)))
             {
                 App.ShowForm(typeof(FRMQuoteJob), true, new object[] { Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]), SelectedQuoteDataRow["IDToLinkTo"] });
             }

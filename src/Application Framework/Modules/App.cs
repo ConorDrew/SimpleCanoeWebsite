@@ -178,8 +178,6 @@ namespace FSM
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
-
-
         // Starting point of the application
         [STAThread]
         public static void Main()
@@ -335,17 +333,9 @@ namespace FSM
 
                         if ((frm.Name.ToUpper() ?? "") == ("FRMQuoteRejection".ToUpper() ?? ""))
                         {
-                            if ((((UserControl)parameters[0]).Name ?? "") == "UCQuoteContractAlternative")
-                            {
-                                ((FRMQuoteRejection)newForm).ReasonEdited += ((UCQuoteContractAlternative)parameters[0]).RejectReasonChanged;
-                            }
-                            else if ((((UserControl)parameters[0]).Name ?? "") == "UCGenerateQuote")
+                            if ((((UserControl)parameters[0]).Name ?? "") == "UCGenerateQuote")
                             {
                                 ((FRMQuoteRejection)newForm).ReasonEdited += ((UCGenerateQuote)parameters[0]).RejectReasonChanged;
-                            }
-                            else if ((((UserControl)parameters[0]).Name ?? "") == "UCQuoteContractOption3")
-                            {
-                                ((FRMQuoteRejection)newForm).ReasonEdited += ((UCQuoteContractOption3)parameters[0]).RejectReasonChanged;
                             }
                             else
                             {

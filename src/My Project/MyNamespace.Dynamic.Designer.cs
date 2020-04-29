@@ -3008,75 +3008,7 @@ namespace FSM.My
 
             
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractOption3 m_FRMQuoteContractOption3;
-
-            public FRMQuoteContractOption3 FRMQuoteContractOption3
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractOption3 = MyForms.Create__Instance__(m_FRMQuoteContractOption3);
-                    return m_FRMQuoteContractOption3;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractOption3)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractOption3);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractOption3Convert m_FRMQuoteContractOption3Convert;
-
-            public FRMQuoteContractOption3Convert FRMQuoteContractOption3Convert
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractOption3Convert = MyForms.Create__Instance__(m_FRMQuoteContractOption3Convert);
-                    return m_FRMQuoteContractOption3Convert;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractOption3Convert)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractOption3Convert);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractOption3Site m_FRMQuoteContractOption3Site;
-
-            public FRMQuoteContractOption3Site FRMQuoteContractOption3Site
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractOption3Site = MyForms.Create__Instance__(m_FRMQuoteContractOption3Site);
-                    return m_FRMQuoteContractOption3Site;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractOption3Site)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractOption3Site);
-                }
-            }
-
+            
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMQuoteJob m_FRMQuoteJob;
 
