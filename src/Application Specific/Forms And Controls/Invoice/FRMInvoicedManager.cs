@@ -4039,25 +4039,25 @@ namespace FSM
             foreach (DataRowView dr in (DataView)dgInvoices.DataSource)
             {
                 var newRw = exportData.NewRow();
-                newRw["PaidStatus"] = SelectedInvoiceDataRow["PaidStatus"];
-                newRw["Customer"] = SelectedInvoiceDataRow["Customer"];
-                newRw["Site"] = SelectedInvoiceDataRow["Site"];
-                newRw["InvoiceType"] = SelectedInvoiceDataRow["InvoiceType"];
-                newRw["JobNumber"] = SelectedInvoiceDataRow["JobNumber"];
-                newRw["InvoiceAddressType"] = SelectedInvoiceDataRow["InvoiceAddressType"];
-                newRw["InvoiceAddress"] = SelectedInvoiceDataRow["InvoiceAddress"];
-                newRw["Amount"] = SelectedInvoiceDataRow["Amount"];
-                newRw["InvoiceNumber"] = SelectedInvoiceDataRow["InvoiceNumber"];
-                newRw["RaisedDate"] = Strings.Format(SelectedInvoiceDataRow["RaisedDate"], "dd/MM/yyyy");
-                newRw["Fullname"] = SelectedInvoiceDataRow["Fullname"];
-                newRw["Department"] = SelectedInvoiceDataRow["Department"];
-                if (Helper.MakeDateTimeValid(SelectedInvoiceDataRow["DateExportedToSage"]) == default)
+                newRw["PaidStatus"] = dr["PaidStatus"];
+                newRw["Customer"] = dr["Customer"];
+                newRw["Site"] = dr["Site"];
+                newRw["InvoiceType"] = dr["InvoiceType"];
+                newRw["JobNumber"] = dr["JobNumber"];
+                newRw["InvoiceAddressType"] = dr["InvoiceAddressType"];
+                newRw["InvoiceAddress"] = dr["InvoiceAddress"];
+                newRw["Amount"] = dr["Amount"];
+                newRw["InvoiceNumber"] = dr["InvoiceNumber"];
+                newRw["RaisedDate"] = Strings.Format(dr["RaisedDate"], "dd/MM/yyyy");
+                newRw["Fullname"] = dr["Fullname"];
+                newRw["Department"] = dr["Department"];
+                if (Helper.MakeDateTimeValid(dr["DateExportedToSage"]) == default)
                 {
                     newRw["Exported"] = "";
                 }
                 else
                 {
-                    newRw["Exported"] = Strings.Format(SelectedInvoiceDataRow["DateExportedToSage"], "dd/MM/yyyy");
+                    newRw["Exported"] = Strings.Format(dr["DateExportedToSage"], "dd/MM/yyyy");
                 }
 
                 exportData.Rows.Add(newRw);
