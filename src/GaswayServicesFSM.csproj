@@ -2467,33 +2467,6 @@
     <Compile Include="Application Specific\Forms And Controls\Quotes\FRMQuoteManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeConvert\FRMQuoteContractAlternativeConvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeConvert\UCConvertJobOfWork.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeConvert\UCQuoteContractAlternativeConvert.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\ContractAlternativeAssets\FRMQuoteJobItemAssets.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\ContractAlternativeAssets\UCQuoteJobItemAssets.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\FRMQuoteContractAlternativeSite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\UCQuoteContractAlternativeSite.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\UCQuoteJobOfWork.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternative\UCQuoteContractAlternative.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Convert\FRMQuoteContractOption3Convert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3891,42 +3864,6 @@
       <DependentUpon>FRMQuoteManager.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeConvert\FRMQuoteContractAlternativeConvert.resx">
-      <DependentUpon>FRMQuoteContractAlternativeConvert.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeConvert\UCConvertJobOfWork.resx">
-      <DependentUpon>UCConvertJobOfWork.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeConvert\UCQuoteContractAlternativeConvert.resx">
-      <DependentUpon>UCQuoteContractAlternativeConvert.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\ContractAlternativeAssets\FRMQuoteJobItemAssets.resx">
-      <DependentUpon>FRMQuoteJobItemAssets.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\ContractAlternativeAssets\UCQuoteJobItemAssets.resx">
-      <DependentUpon>UCQuoteJobItemAssets.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\FRMQuoteContractAlternativeSite.resx">
-      <DependentUpon>FRMQuoteContractAlternativeSite.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\UCQuoteContractAlternativeSite.resx">
-      <DependentUpon>UCQuoteContractAlternativeSite.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\UCQuoteJobOfWork.resx">
-      <DependentUpon>UCQuoteJobOfWork.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsAlternative\QuoteContractAlternative\UCQuoteContractAlternative.resx">
-      <DependentUpon>UCQuoteContractAlternative.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOption3\QuoteContractOption3Convert\FRMQuoteContractOption3Convert.resx">
       <DependentUpon>FRMQuoteContractOption3Convert.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4470,7 +4407,6 @@
     <Folder Include="Application Framework\Forms And Controls\Admin Tools\Data Downloader\" />
     <Folder Include="Application Scheduler\Summary\" />
     <Folder Include="Application Specific\Classes\Entity Collections\SiteCharge\" />
-    <Folder Include="Application Specific\Forms And Controls\Quotes\QuoteContractsOriginal\QuoteContractOriginal\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

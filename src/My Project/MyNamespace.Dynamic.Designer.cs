@@ -3006,51 +3006,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractAlternativeConvert m_FRMQuoteContractAlternativeConvert;
-
-            public FRMQuoteContractAlternativeConvert FRMQuoteContractAlternativeConvert
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractAlternativeConvert = MyForms.Create__Instance__(m_FRMQuoteContractAlternativeConvert);
-                    return m_FRMQuoteContractAlternativeConvert;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractAlternativeConvert)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractAlternativeConvert);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteContractAlternativeSite m_FRMQuoteContractAlternativeSite;
-
-            public FRMQuoteContractAlternativeSite FRMQuoteContractAlternativeSite
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteContractAlternativeSite = MyForms.Create__Instance__(m_FRMQuoteContractAlternativeSite);
-                    return m_FRMQuoteContractAlternativeSite;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteContractAlternativeSite)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteContractAlternativeSite);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMQuoteContractOption3 m_FRMQuoteContractOption3;
@@ -3144,29 +3100,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMQuoteJobItemAssets m_FRMQuoteJobItemAssets;
-
-            public FRMQuoteJobItemAssets FRMQuoteJobItemAssets
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMQuoteJobItemAssets = MyForms.Create__Instance__(m_FRMQuoteJobItemAssets);
-                    return m_FRMQuoteJobItemAssets;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMQuoteJobItemAssets)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMQuoteJobItemAssets);
-                }
-            }
-
+           
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMQuoteJobSelectASite m_FRMQuoteJobSelectASite;
 
