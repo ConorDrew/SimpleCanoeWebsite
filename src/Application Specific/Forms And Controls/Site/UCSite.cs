@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Data;
 using System.Diagnostics;
@@ -7,10 +11,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using FSM.Entity.Sys;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
-using Newtonsoft.Json.Linq;
 
 namespace FSM
 {
@@ -7425,7 +7425,7 @@ namespace FSM
             txtAddress4.Text = CurrentSite.Address4;
             txtAddress5.Text = CurrentSite.Address5;
             txtPostcode.Text = CurrentSite.Postcode;
-            if (CurrentCustomer?.CustomerTypeID == (int?)Enums.CustomerType.SocialHousing == true)
+            if (CurrentCustomer?.CustomerTypeID == (int)Enums.CustomerType.SocialHousing && !App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.IT))
             {
                 txtAddress1.ReadOnly = true;
                 txtAddress2.ReadOnly = true;
@@ -7433,6 +7433,7 @@ namespace FSM
                 txtAddress4.ReadOnly = true;
                 txtAddress5.ReadOnly = true;
                 txtPostcode.ReadOnly = true;
+                txtPolicyNumber.ReadOnly = true;
             }
 
             txtPolicyNumber.Text = CurrentSite.PolicyNumber;

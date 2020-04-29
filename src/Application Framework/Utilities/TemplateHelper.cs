@@ -75,6 +75,12 @@ namespace FSM.Entity.Sys
                                 TestServiceLetter(template, filePath);
                                 break;
                             }
+                        case Enums.TemplateType.Eicr:
+                            {
+                                filePath = saveDir.SelectedPath + @"\Eicr_" + DateTime.Now.ToString("ddMMyyyyHHmmss") + ".docx";
+                                TestEicrLetter(template, filePath);
+                                break;
+                            }
                     }
                 }
             }
@@ -128,6 +134,41 @@ namespace FSM.Entity.Sys
                 using (fileStream)
                     mm.WriteTo(fileStream);
                 fileStream.Close();
+                Process.Start(savePath);
+            }
+        }
+
+        private static void TestEicrLetter(byte[] template, string savePath)
+        {
+            MemoryStream mm = new MemoryStream();
+            using (mm)
+            {
+                mm.Write(template, 0, template.Length);
+                WordprocessingDocument doc = WordprocessingDocument.Open(mm, true);
+                using (doc)
+                {
+                    CompanyDetails.CompanyDetails companyDetails = App.DB.CompanyDetails.Get();
+                    PrintHelper.ReplaceText(doc, "[Name]", companyDetails.Name);
+                    PrintHelper.ReplaceText(doc, "[Address1]", companyDetails.Address1);
+                    PrintHelper.ReplaceText(doc, "[Address2]", companyDetails.Address2);
+                    PrintHelper.ReplaceText(doc, "[Address3]", companyDetails.Address3);
+                    PrintHelper.ReplaceText(doc, "[Postcode]", Helper.FormatPostcode(companyDetails.Postcode));
+                    PrintHelper.ReplaceText(doc, "[Letter]", DateTime.Now.ToString("dd/MM/yyyy"));
+                    PrintHelper.ReplaceText(doc, "[Date]", DateTime.Now.ToString("dddd, dd/MM/yyyy"));
+
+                    if (DateTime.Now.Hour > 12)
+                        PrintHelper.ReplaceText(doc, "[Time]", "between 12:00pm and 5:30pm");
+                    else
+                        PrintHelper.ReplaceText(doc, "[Time]", "between 8:00am and 1:00pm");
+                    PrintHelper.ReplaceText(doc, "[User]", App.loggedInUser.Fullname);
+                    PrintHelper.ReplaceText(doc, "[Type]", "Test");
+                }
+                FileStream fileStream = new FileStream(savePath, FileMode.CreateNew);
+                mm.Position = 0;
+                using ((fileStream))
+                    mm.WriteTo(fileStream);
+                fileStream.Close();
+
                 Process.Start(savePath);
             }
         }

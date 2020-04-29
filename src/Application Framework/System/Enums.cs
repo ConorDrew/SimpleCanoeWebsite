@@ -1167,7 +1167,8 @@
 
             public enum TemplateType
             {
-                ServiceLetter = 1
+                ServiceLetter = 1,
+                Eicr = 2
             }
 
             public enum JobItemPrice
