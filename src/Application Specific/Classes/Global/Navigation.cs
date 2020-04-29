@@ -7,8 +7,8 @@ namespace FSM
 {
     public class Navigation
     {
-
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
+
         public static bool Navigate(Entity.Sys.Enums.MenuTypes MenuType)
         {
             if (App.IsLowResolution)
@@ -661,13 +661,6 @@ namespace FSM
 
                             break;
                         }
-                    // Case "FRMTimeSlotRates".ToLower
-                    // If loggedInUser.HasAccessToModule(Entity.Sys.Enums.SecuritySystemModules.Compliance) Then
-                    // ShowForm(GetType(FRMTimeSlotRates), False, Nothing)
-                    // Else
-                    // Dim msg As String = "You do not have the necessary security permissions."
-                    // Throw New Security.SecurityException(msg)
-                    // End If
                     case var case22 when case22 == "FRMEngineerRoles".ToLower():
                         {
                             if (App.loggedInUser.HasAccessToModule(Entity.Sys.Enums.SecuritySystemModules.Finance))
@@ -737,12 +730,6 @@ namespace FSM
                             break;
                         }
 
-                    case var case29 when case29 == "FRMDirectDebitReport".ToLower():
-                        {
-                            App.ShowForm(typeof(FRMDirectDebitReport), false, null);
-                            break;
-                        }
-
                     case var case30 when case30 == "FRMVATRates".ToLower():
                         {
                             App.ShowForm(typeof(FRMVATRates), false, null);
@@ -758,18 +745,6 @@ namespace FSM
                     case var case32 when case32 == "FRMStandardSentences".ToLower():
                         {
                             App.ShowForm(typeof(FRMStandardSentences), false, null);
-                            break;
-                        }
-
-                    case var case33 when case33 == "FRMStockValuation".ToLower():
-                        {
-                            App.ShowForm(typeof(FRMStockValuation), false, null);
-                            break;
-                        }
-
-                    case var case34 when case34 == "FRMStockCategoryValuation".ToLower():
-                        {
-                            App.ShowForm(typeof(FRMStockCategoryValuation), false, null);
                             break;
                         }
 
@@ -1077,12 +1052,6 @@ namespace FSM
                                     }
                             }
 
-                            break;
-                        }
-
-                    case var case51 when case51 == "FRMBatchVisitCosts".ToLower():
-                        {
-                            App.ShowForm(typeof(FRMBatchVisitCosts), false, null);
                             break;
                         }
 

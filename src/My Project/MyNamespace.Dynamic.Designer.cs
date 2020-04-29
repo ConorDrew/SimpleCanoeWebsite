@@ -497,28 +497,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMBatchVisitCosts m_FRMBatchVisitCosts;
-
-            public FRMBatchVisitCosts FRMBatchVisitCosts
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMBatchVisitCosts = MyForms.Create__Instance__(m_FRMBatchVisitCosts);
-                    return m_FRMBatchVisitCosts;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMBatchVisitCosts)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMBatchVisitCosts);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FrmBlockAbsence m_FrmBlockAbsence;
@@ -543,28 +522,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMBookJob m_FRMBookJob;
-
-            public FRMBookJob FRMBookJob
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMBookJob = MyForms.Create__Instance__(m_FRMBookJob);
-                    return m_FRMBookJob;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMBookJob)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMBookJob);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMBulkJobCreation m_FRMBulkJobCreation;
@@ -1260,28 +1218,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMDirectDebitReport m_FRMDirectDebitReport;
-
-            public FRMDirectDebitReport FRMDirectDebitReport
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMDirectDebitReport = MyForms.Create__Instance__(m_FRMDirectDebitReport);
-                    return m_FRMDirectDebitReport;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMDirectDebitReport)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMDirectDebitReport);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FrmDisplayEngineers m_FrmDisplayEngineers;
@@ -3177,28 +3114,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMSelectAMonth m_FRMSelectAMonth;
-
-            public FRMSelectAMonth FRMSelectAMonth
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMSelectAMonth = MyForms.Create__Instance__(m_FRMSelectAMonth);
-                    return m_FRMSelectAMonth;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMSelectAMonth)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMSelectAMonth);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMSelectAsset m_FRMSelectAsset;
@@ -3407,28 +3323,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMStockCategoryValuation m_FRMStockCategoryValuation;
-
-            public FRMStockCategoryValuation FRMStockCategoryValuation
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMStockCategoryValuation = MyForms.Create__Instance__(m_FRMStockCategoryValuation);
-                    return m_FRMStockCategoryValuation;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMStockCategoryValuation)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMStockCategoryValuation);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMStockMove m_FRMStockMove;
@@ -3545,28 +3440,6 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMStockValuation m_FRMStockValuation;
-
-            public FRMStockValuation FRMStockValuation
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMStockValuation = MyForms.Create__Instance__(m_FRMStockValuation);
-                    return m_FRMStockValuation;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMStockValuation)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMStockValuation);
-                }
-            }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMSubcontractor m_FRMSubcontractor;

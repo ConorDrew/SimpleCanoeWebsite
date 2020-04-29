@@ -2419,12 +2419,6 @@
     <Compile Include="Application Specific\Forms And Controls\Part\FRMPartSelectLocation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Part\LetterManager\FRMBookJob.Designer.cs">
-      <DependentUpon>FRMBookJob.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Part\LetterManager\FRMBookJob.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Part\LetterManager\FRMLetterManagerMK3.Designer.cs">
       <DependentUpon>FRMLetterManagerMK3.cs</DependentUpon>
     </Compile>
@@ -2473,9 +2467,6 @@
     <Compile Include="Application Specific\Forms And Controls\Quotes\QuotesList\UCQuotesList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Reports\FRMBatchVisitCosts.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Reports\FRMEquipmentUsed.Designer.cs">
       <DependentUpon>FRMEquipmentUsed.cs</DependentUpon>
     </Compile>
@@ -2497,25 +2488,10 @@
     <Compile Include="Application Specific\Forms And Controls\Reports\FRMStockUsed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Reports\FRMStockCategoryValuation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Reports\FRMStockValuation.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Reports\FRMLastGSRReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Reports\FRMDirectDebitReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Reports\FRMEngineerTimesheetReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Reports\FRMSelectAMonth.Designer.cs">
-      <DependentUpon>FRMSelectAMonth.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Reports\FRMSelectAMonth.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Specific\Forms And Controls\Reports\UCLiveVisitCost.cs">
@@ -3231,16 +3207,9 @@
     <EmbeddedResource Include="Application Specific\Forms And Controls\Part\FRMPartSelectLocation.resx">
       <DependentUpon>FRMPartSelectLocation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Part\LetterManager\FRMBookJob.resx">
-      <DependentUpon>FRMBookJob.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Part\UCPartPack.resx">
       <DependentUpon>UCPartPack.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMBatchVisitCosts.resx">
-      <DependentUpon>FRMBatchVisitCosts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMEquipmentUsed.resx">
       <DependentUpon>FRMEquipmentUsed.cs</DependentUpon>
@@ -3258,20 +3227,9 @@
       <DependentUpon>FRMStockUsed.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMStockCategoryValuation.resx">
-      <DependentUpon>FRMStockCategoryValuation.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMStockValuation.resx">
-      <DependentUpon>FRMStockValuation.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMLastGSRReport.resx">
       <DependentUpon>FRMLastGSRReport.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMSelectAMonth.resx">
-      <DependentUpon>FRMSelectAMonth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\UCLiveVisitCost.resx">
       <DependentUpon>UCLiveVisitCost.cs</DependentUpon>
@@ -3837,10 +3795,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Quotes\QuotesList\UCQuotesList.resx">
       <DependentUpon>UCQuotesList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMDirectDebitReport.resx">
-      <DependentUpon>FRMDirectDebitReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMEngineerTimesheetReport.resx">
