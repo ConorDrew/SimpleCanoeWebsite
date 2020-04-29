@@ -3534,28 +3534,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMTimeSlotRates m_FRMTimeSlotRates;
-
-            public FRMTimeSlotRates FRMTimeSlotRates
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMTimeSlotRates = MyForms.Create__Instance__(m_FRMTimeSlotRates);
-                    return m_FRMTimeSlotRates;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMTimeSlotRates)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMTimeSlotRates);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMTypeMakeModel m_FRMTypeMakeModel;

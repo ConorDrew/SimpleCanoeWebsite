@@ -1094,9 +1094,6 @@
     <Compile Include="Application Importer\FRMPartsImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Importer\FRMErrors.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Importer\FRMImport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2584,9 +2581,6 @@
     <Compile Include="Application Specific\Forms And Controls\Supplier\UCSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\TimeSlots\FRMTimeSlotRates.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\User\FRMUserQualification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2809,32 +2803,19 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
-    <None Include="Release Notes\18.01.30_RN.txt" />
-    <None Include="Release Notes\18.02.02_RN.txt" />
-    <None Include="Release Notes\18.02.16_RN.txt" />
-    <None Include="Release Notes\18.03.03_RN.txt" />
-    <None Include="Release Notes\18.03.16_RN.txt" />
-    <None Include="Release Notes\18.04.01_RN.txt" />
-    <None Include="Release Notes\18.04.06_RN.txt" />
     <EmbeddedResource Include="Application Specific\Forms And Controls\Part\LetterManager\FRMLetterManagerMK3.resx">
       <DependentUpon>FRMLetterManagerMK3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Site\FRMContactInfo.resx">
       <DependentUpon>FRMContactInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Release Notes\18.04.30_RN.txt" />
     <None Include="dll\MonthCalendar.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Site\FRMSiteFuel.resx">
       <DependentUpon>FRMSiteFuel.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Release Notes\18.05.21_RN.txt" />
-    <None Include="Release Notes\18.06.22_RN.txt" />
-    <None Include="Release Notes\18.07.19_RN.txt" />
     <Content Include="flagship.ico" />
-    <EmbeddedResource Include="Release Notes\18.09.25_RN.txt" />
-    <None Include="Release Notes\18.11.27_RN.txt" />
     <EmbeddedResource Include="Application Specific\Forms And Controls\Site\UCContacts.resx">
       <DependentUpon>UCContacts.cs</DependentUpon>
     </EmbeddedResource>
@@ -2848,10 +2829,6 @@
     <None Include="Resources\tick.png" />
     <None Include="Resources\kisspng-green-area-pattern-green-tick-png-file-5aa1fca44815e7.0555979215205654122953.png" />
     <None Include="Resources\5a2245d18ac963.6784328515121955375685.png" />
-    <None Include="Release Notes\18.12.13_RN.txt" />
-    <EmbeddedResource Include="Release Notes\19.01.03_RN.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <None Include="Resources\Blueflame.bmp" />
     <None Include="Resources\Blueflame.png" />
     <Content Include="Resources\GC_Logo.jpg">
@@ -2892,7 +2869,6 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="developer-docs\2014.06.02-danny.txt" />
     <Content Include="ApplicationSettings.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -2921,8 +2897,6 @@
     <None Include="ScheduleSummary.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Release Notes\18.01.29_RN.txt" />
-    <None Include="sql-backups\2014.06.02-Order_GetAll_NEW.sql" />
     <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_Get_PartMapping.sql" />
     <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_InsertPartMapping.sql" />
     <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_UpdatePartMapping.sql" />
@@ -3081,9 +3055,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Importer\FRMPartsImport.resx">
       <DependentUpon>FRMPartsImport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Importer\FRMErrors.resx">
-      <DependentUpon>FRMErrors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Importer\FRMImport.resx">
       <DependentUpon>FRMImport.cs</DependentUpon>
@@ -3834,10 +3805,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Supplier\UCSupplier.resx">
       <DependentUpon>UCSupplier.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\TimeSlots\FRMTimeSlotRates.resx">
-      <DependentUpon>FRMTimeSlotRates.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Van\EngineerVan\FRMEngineerVan.resx">
