@@ -8,28 +8,7 @@ namespace FSM.My
     {
         internal partial class MyForms
         {
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public DLGAdvancedItemSearch m_DLGAdvancedItemSearch;
-
-            public DLGAdvancedItemSearch DLGAdvancedItemSearch
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_DLGAdvancedItemSearch = MyForms.Create__Instance__(m_DLGAdvancedItemSearch);
-                    return m_DLGAdvancedItemSearch;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_DLGAdvancedItemSearch)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_DLGAdvancedItemSearch);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public DLGEngineerVisitDefect m_DLGEngineerVisitDefect;
@@ -376,28 +355,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMAddPostcodeManager m_FRMAddPostcodeManager;
-
-            public FRMAddPostcodeManager FRMAddPostcodeManager
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMAddPostcodeManager = MyForms.Create__Instance__(m_FRMAddPostcodeManager);
-                    return m_FRMAddPostcodeManager;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMAddPostcodeManager)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMAddPostcodeManager);
-                }
-            }
+           
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMAddtoOrder m_FRMAddtoOrder;
@@ -1578,28 +1536,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMEnterEmailAddress m_FRMEnterEmailAddress;
-
-            public FRMEnterEmailAddress FRMEnterEmailAddress
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMEnterEmailAddress = MyForms.Create__Instance__(m_FRMEnterEmailAddress);
-                    return m_FRMEnterEmailAddress;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMEnterEmailAddress)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMEnterEmailAddress);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMEquipment m_FRMEquipment;

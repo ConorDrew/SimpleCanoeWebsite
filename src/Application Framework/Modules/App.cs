@@ -333,14 +333,7 @@ namespace FSM
 
                         if ((frm.Name.ToUpper() ?? "") == ("FRMQuoteRejection".ToUpper() ?? ""))
                         {
-                            if ((((UserControl)parameters[0]).Name ?? "") == "UCGenerateQuote")
-                            {
-                                ((FRMQuoteRejection)newForm).ReasonEdited += ((UCGenerateQuote)parameters[0]).RejectReasonChanged;
-                            }
-                            else
-                            {
-                                ((FRMQuoteRejection)newForm).ReasonEdited += ((UCQuoteJob)parameters[0]).RejectReasonChanged;
-                            }
+                            ((FRMQuoteRejection)newForm).ReasonEdited += ((UCQuoteJob)parameters[0]).RejectReasonChanged;
                         }
 
                         if ((frm.Name.ToUpper() ?? "") == ("FRMOrderRejection".ToUpper() ?? ""))
