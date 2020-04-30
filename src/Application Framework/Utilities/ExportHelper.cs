@@ -17,7 +17,7 @@ namespace FSM.Entity
     {
         public class ExportHelper
         {
-            public static void Export(DataTable dtData, string exportFileName, Enums.ExportType exportType)
+            public static void Export(DataTable dtData, string exportFileName, Enums.ExportType exportType, bool openDocument = true)
             {
                 if (!App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.Export))
                     App.ShowSecurityError();
@@ -45,8 +45,10 @@ namespace FSM.Entity
                                 break;
                             }
                     }
-
-                    Process.Start(filepath);
+                    if (openDocument)
+                    {
+                        Process.Start(filepath);
+                    }
                 }
             }
 

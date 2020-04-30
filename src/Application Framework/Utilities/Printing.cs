@@ -25,7 +25,6 @@ namespace FSM.Entity
     {
         public class Printing
         {
-            
             private string details1 = "";
             private string details2 = "";
             private int tableCnt = 1;
@@ -488,12 +487,7 @@ namespace FSM.Entity
                                     // LETS DO DATES FIRST
                                     foreach (DataRow d in dr)
                                     {
-                                        if (CustomerID == 5155 & Conversions.ToDate(d["LastServiceDate"]) < Conversions.ToDate("2012-05-01 00:00:00"))
-                                        {
-                                            // do nothing
-                                            DateTime DateHolder = Conversions.ToDate(d["LastServiceDate"]);
-                                        }
-                                        else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(d["type"], "Letter 1", false)))
+                                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(d["type"], "Letter 1", false)))
                                         {
                                             var oSite = App.DB.Sites.Get(d["SiteID"]);
                                             DataRow[] sorRows;
@@ -531,22 +525,7 @@ namespace FSM.Entity
                                                 }
                                             }
 
-                                            if (CustomerID == 5155) // Waveney
-                                            {
-                                                if (Conversions.ToDate(d["NextVisitDate"]) <= Conversions.ToDate("2013-05-07 00:00:00"))
-                                                {
-                                                    var NewNextVisitDate = LetterCreationDate.AddDays(56);
-                                                    d["NextVisitDate"] = DateHelper.CheckBankHolidaySatOrSun(NewNextVisitDate);
-                                                }
-                                                else
-                                                {
-                                                    d["NextVisitDate"] = DateHelper.CheckBankHolidaySatOrSun(Conversions.ToDate(d["NextVisitDate"]));
-                                                }
-                                            }
-                                            else
-                                            {
-                                                d["NextVisitDate"] = DateHelper.CheckBankHolidaySatOrSun(Conversions.ToDate(d["NextVisitDate"]));
-                                            }
+                                            d["NextVisitDate"] = DateHelper.CheckBankHolidaySatOrSun(Conversions.ToDate(d["NextVisitDate"]));
 
                                             int MaxLoops = 1;
                                             bool ApptFound = false;
@@ -716,444 +695,371 @@ namespace FSM.Entity
                                     {
                                         try
                                         {
-                                            if (CustomerID == 5155 & Conversions.ToDate(r["LastServiceDate"]) < Conversions.ToDate("2012-05-01 00:00:00"))
+                                            con = new System.Data.SqlClient.SqlConnection(App.DB.ServerConnectionString);
+                                            con.Open();
+                                            trans = con.BeginTransaction(IsolationLevel.ReadUncommitted);
+                                            var JobNumber = new JobNumber();
+                                            switch (CustomerID)
                                             {
-                                                // do nothing
-                                                DateTime DateHolder = Conversions.ToDate(r["LastServiceDate"]);
+                                                case (int)Enums.Customer.NCC: // Norwich City Council
+                                                    {
+                                                        JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.SERVICE_LETTER_JOB, trans);
+                                                        break;
+                                                    }
+
+                                                default:
+                                                    {
+                                                        JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Callout, trans);
+                                                        break;
+                                                    }
                                             }
-                                            else
+
+                                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["type"], "Letter 1", false)))
                                             {
-                                                con = new System.Data.SqlClient.SqlConnection(App.DB.ServerConnectionString);
-                                                con.Open();
-                                                trans = con.BeginTransaction(IsolationLevel.ReadUncommitted);
-                                                var JobNumber = new JobNumber();
-                                                switch (CustomerID)
+                                                WordDoc = Letter1Doc;
+                                                WordDoc.GrammarChecked = true;
+                                                WordDoc.SpellingChecked = true;
+                                                WordDocCopy.Select();
+                                                MsWordApp.Selection.WholeStory();
+                                                MsWordApp.Selection.Copy();
+                                                WordDoc.Activate();
+                                                object argUnit = WD.WdUnits.wdStory;
+                                                MsWordApp.Selection.EndKey(Unit: ref argUnit);
+                                                MsWordApp.Selection.Paste();
+                                                DateTime VisitDateHolder = Conversions.ToDate(r["NextVisitDate"]);
+                                                string PostCodeHolder = Helper.FormatPostcode(r["Postcode"]);
+                                                foreach (DataRow dDay in dtDays.Rows)
                                                 {
-                                                    case (int)Enums.Customer.NCC: // Norwich City Council
+                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dDay["MondayDate"], DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), false) & !Operators.ConditionalCompareObjectEqual(dDay["Count"], 0, false)))
+                                                    {
+                                                        theVisitDate = Conversions.ToDate(dDay["TheDate"]);
+                                                        dDay["Count"] = Convert.ToInt32(dDay["Count"]) - 1;
+                                                        if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(dDay["AM"], 0, false)))
                                                         {
-                                                            JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.SERVICE_LETTER_JOB, trans);
-                                                            break;
+                                                            AMPM = "AM";
+                                                            dDay["AM"] = Convert.ToInt32(dDay["AM"]) - 1;
+                                                            App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), Conversions.ToInteger(dDay["AM"]), default, Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
+                                                        }
+                                                        else
+                                                        {
+                                                            AMPM = "PM";
+                                                            dDay["PM"] = Convert.ToInt32(dDay["PM"]) - 1;
+                                                            App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), default, Conversions.ToInteger(dDay["PM"]), Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
                                                         }
 
-                                                    default:
-                                                        {
-                                                            JobNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.Callout, trans);
-                                                            break;
-                                                        }
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
+                                            {
+                                                WordDoc = Letter2Doc;
+                                                WordDoc.GrammarChecked = true;
+                                                WordDoc.SpellingChecked = true;
+                                                WordDoc2Copy.Select();
+                                                MsWordApp.Selection.WholeStory();
+                                                MsWordApp.Selection.Copy();
+                                                WordDoc.Activate();
+                                                object argUnit2 = WD.WdUnits.wdStory;
+                                                MsWordApp.Selection.EndKey(Unit: ref argUnit2);
+                                                MsWordApp.Selection.Paste();
+                                                theVisitDate = DateHelper.CheckBankHolidaySatOrSun(Conversions.ToDate(r["NextVisitDate"]));
+                                                var theRow = dtLetter2AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
+                                                if (theRow.Length > 0)
+                                                {
+                                                    if (Convert.ToInt32(theRow[0]["AMAssigned"]) >= (Convert.ToInt32(theRow[0]["Count"])) / 2)
+                                                    {
+                                                        AMPM = "PM";
+                                                    }
+                                                    else
+                                                    {
+                                                        AMPM = "AM";
+                                                        theRow[0]["AMAssigned"] = Convert.ToInt32(theRow[0]["AMAssigned"]) + 1;
+                                                    }
                                                 }
 
+                                                MsWordApp.Selection.InsertBreak();
+                                            }
+                                            else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
+                                            {
+                                                WordDoc = Letter3Doc;
+                                                WordDoc.GrammarChecked = true;
+                                                WordDoc.SpellingChecked = true;
+                                                WordDoc3Copy.Select();
+                                                MsWordApp.Selection.WholeStory();
+                                                MsWordApp.Selection.Copy();
+                                                WordDoc.Activate();
+                                                object argUnit1 = WD.WdUnits.wdStory;
+                                                MsWordApp.Selection.EndKey(Unit: ref argUnit1);
+                                                MsWordApp.Selection.Paste();
+                                                theVisitDate = DateHelper.CheckBankHolidaySatOrSun(Conversions.ToDate(r["NextVisitDate"]));
+                                                var theRow = dtLetter3AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
+                                                if (theRow.Length > 0)
+                                                {
+                                                    if (Convert.ToInt32(theRow[0]["AMAssigned"]) >= (Convert.ToInt32(theRow[0]["Count"])) / 2)
+                                                    {
+                                                        AMPM = "PM";
+                                                    }
+                                                    else
+                                                    {
+                                                        AMPM = "AM";
+                                                        theRow[0]["AMAssigned"] = Convert.ToInt32(theRow[0]["AMAssigned"]) + 1;
+                                                    }
+                                                }
+                                            }
+
+                                            success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
+                                            if (success == true)
+                                            {
+                                                object argType = WD.WdBreakType.wdPageBreak;
+                                                MsWordApp.Selection.InsertBreak(Type: ref argType);
+
+                                                var oSite = App.DB.Sites.Get(r["SiteID"]);
                                                 if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["type"], "Letter 1", false)))
                                                 {
-                                                    WordDoc = Letter1Doc;
-                                                    WordDoc.GrammarChecked = true;
-                                                    WordDoc.SpellingChecked = true;
-                                                    WordDocCopy.Select();
-                                                    MsWordApp.Selection.WholeStory();
-                                                    MsWordApp.Selection.Copy();
-                                                    WordDoc.Activate();
-                                                    object argUnit = WD.WdUnits.wdStory;
-                                                    MsWordApp.Selection.EndKey(Unit: ref argUnit);
-                                                    MsWordApp.Selection.Paste();
-                                                    DateTime VisitDateHolder = Conversions.ToDate(r["NextVisitDate"]);
-                                                    string PostCodeHolder = Helper.FormatPostcode(r["Postcode"]);
-                                                    foreach (DataRow dDay in dtDays.Rows)
-                                                    {
-                                                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(dDay["MondayDate"], DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), false) & !Operators.ConditionalCompareObjectEqual(dDay["Count"], 0, false)))
-                                                        {
-                                                            theVisitDate = Conversions.ToDate(dDay["TheDate"]);
-                                                            dDay["Count"] = Convert.ToInt32(dDay["Count"]) - 1;
-                                                            if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(dDay["AM"], 0, false)))
-                                                            {
-                                                                AMPM = "AM";
-                                                                dDay["AM"] = Convert.ToInt32(dDay["AM"]) - 1;
-                                                                App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), Conversions.ToInteger(dDay["AM"]), default, Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
-                                                            }
-                                                            else
-                                                            {
-                                                                AMPM = "PM";
-                                                                dDay["PM"] = Convert.ToInt32(dDay["PM"]) - 1;
-                                                                App.DB.LetterManager.Update_LetterDays_Table(DateHelper.GetTheMonday(Conversions.ToDate(r["NextVisitDate"])), Conversions.ToDate(dDay["TheDate"]), Conversions.ToInteger(dDay["Count"]), default, Conversions.ToInteger(dDay["PM"]), Conversions.ToInteger(dDay["ApptsMinsTally"]), Conversions.ToInteger(dDay["Loops"]));
-                                                            }
-
-                                                            break;
-                                                        }
-                                                    }
+                                                    Letter1Doc = WordDoc;
                                                 }
                                                 else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
                                                 {
-                                                    WordDoc = Letter2Doc;
+                                                    Letter2Doc = WordDoc;
+
+                                                    // HAND DELIVER LETTER
+                                                    WordDoc = Letter2HandLetters;
                                                     WordDoc.GrammarChecked = true;
                                                     WordDoc.SpellingChecked = true;
-                                                    WordDoc2Copy.Select();
+                                                    WordDoc2HandCopy.Select();
                                                     MsWordApp.Selection.WholeStory();
                                                     MsWordApp.Selection.Copy();
                                                     WordDoc.Activate();
-                                                    object argUnit2 = WD.WdUnits.wdStory;
-                                                    MsWordApp.Selection.EndKey(Unit: ref argUnit2);
+                                                    object argUnit4 = WD.WdUnits.wdStory;
+                                                    MsWordApp.Selection.EndKey(Unit: ref argUnit4);
                                                     MsWordApp.Selection.Paste();
-                                                    theVisitDate = DateHelper.CheckBankHolidaySatOrSun(Conversions.ToDate(r["NextVisitDate"]));
-                                                    var theRow = dtLetter2AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
-                                                    if (theRow.Length > 0)
-                                                    {
-                                                        if (Convert.ToInt32(theRow[0]["AMAssigned"]) >= (Convert.ToInt32(theRow[0]["Count"])) / 2)
-                                                        {
-                                                            AMPM = "PM";
-                                                        }
-                                                        else
-                                                        {
-                                                            AMPM = "AM";
-                                                            theRow[0]["AMAssigned"] = Convert.ToInt32(theRow[0]["AMAssigned"]) + 1;
-                                                        }
-                                                    }
-
-                                                    MsWordApp.Selection.InsertBreak();
+                                                    success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
+                                                    Letter2HandLetters = WordDoc;
                                                 }
                                                 else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
                                                 {
-                                                    WordDoc = Letter3Doc;
+                                                    Letter3Doc = WordDoc;
+                                                    // HAND DELIVER LETTER
+                                                    WordDoc = Letter3HandLetters;
                                                     WordDoc.GrammarChecked = true;
                                                     WordDoc.SpellingChecked = true;
-                                                    WordDoc3Copy.Select();
+                                                    if (oSite.CommercialDistrict == true)
+                                                    {
+                                                        WordDoc3HandCopyCommercial.Select();
+                                                    }
+                                                    else
+                                                    {
+                                                        WordDoc3HandCopy.Select();
+                                                    }
+
                                                     MsWordApp.Selection.WholeStory();
                                                     MsWordApp.Selection.Copy();
                                                     WordDoc.Activate();
-                                                    object argUnit1 = WD.WdUnits.wdStory;
-                                                    MsWordApp.Selection.EndKey(Unit: ref argUnit1);
+                                                    object argUnit3 = WD.WdUnits.wdStory;
+                                                    MsWordApp.Selection.EndKey(Unit: ref argUnit3);
                                                     MsWordApp.Selection.Paste();
-                                                    theVisitDate = DateHelper.CheckBankHolidaySatOrSun(Conversions.ToDate(r["NextVisitDate"]));
-                                                    var theRow = dtLetter3AMPM.Select(Conversions.ToString("Date='" + r["NextVisitDate"] + "'"));
-                                                    if (theRow.Length > 0)
+                                                    success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
+                                                    Letter3HandLetters = WordDoc;
+                                                }
+
+                                                if (success == true)
+                                                {
+                                                    // CREATE JOB
+                                                    _currentJob = new Jobs.Job();
+                                                    _currentJob.SetPropertyID = r["SiteID"];
+                                                    _currentJob.SetJobDefinitionEnumID = Conversions.ToInteger(Enums.JobDefinition.Callout);
+                                                    _currentJob.SetJobTypeID = App.DB.Picklists.GetAll(Enums.PickListTypes.JobTypes).Table.Select("NAME = 'Service and Certificate'")[0]["ManagerID"];
+                                                    _currentJob.SetStatusEnumID = Conversions.ToInteger(Enums.JobStatus.Open);
+                                                    _currentJob.SetCreatedByUserID = App.loggedInUser.UserID;
+                                                    _currentJob.SetFOC = true;
+                                                    _currentJob.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
+                                                    _currentJob.SetPONumber = "";
+                                                    _currentJob.SetQuoteID = 0;
+                                                    _currentJob.SetContractID = 0;
+
+                                                    // INSERT JOB ITEM
+                                                    var jobOfWork = new JobOfWorks.JobOfWork();
+                                                    jobOfWork.SetPONumber = "";
+                                                    jobOfWork.SetPriority = servicePriority;
+                                                    if (!(jobOfWork.Priority == 0))
                                                     {
-                                                        if (Convert.ToInt32(theRow[0]["AMAssigned"]) >= (Convert.ToInt32(theRow[0]["Count"])) / 2)
+                                                        jobOfWork.PriorityDateSet = DateAndTime.Now;
+                                                    }
+
+                                                    jobOfWork.IgnoreExceptionsOnSetMethods = true;
+                                                    DataRow[] sorRows = null;
+                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
+                                                    {
+                                                        if (oSite.CommercialDistrict == true)
                                                         {
-                                                            AMPM = "PM";
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7008'");
+                                                        }
+                                                        else if (oSite.SolidFuel == true)
+                                                        {
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7001'");
                                                         }
                                                         else
                                                         {
-                                                            AMPM = "AM";
-                                                            theRow[0]["AMAssigned"] = Convert.ToInt32(theRow[0]["AMAssigned"]) + 1;
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7007'");
                                                         }
-                                                    }
-                                                }
-
-                                                success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
-                                                if (success == true)
-                                                {
-                                                    var oSite = App.DB.Sites.Get(r["SiteID"]);
-                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["type"], "Letter 1", false)))
-                                                    {
-                                                        Letter1Doc = WordDoc;
                                                     }
                                                     else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
                                                     {
-                                                        Letter2Doc = WordDoc;
-
-                                                        // HAND DELIVER LETTER
-                                                        WordDoc = Letter2HandLetters;
-                                                        WordDoc.GrammarChecked = true;
-                                                        WordDoc.SpellingChecked = true;
-                                                        WordDoc2HandCopy.Select();
-                                                        MsWordApp.Selection.WholeStory();
-                                                        MsWordApp.Selection.Copy();
-                                                        WordDoc.Activate();
-                                                        object argUnit4 = WD.WdUnits.wdStory;
-                                                        MsWordApp.Selection.EndKey(Unit: ref argUnit4);
-                                                        MsWordApp.Selection.Paste();
-                                                        success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
-                                                        Letter2HandLetters = WordDoc;
+                                                        if (oSite.CommercialDistrict == true)
+                                                        {
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7008*'");
+                                                        }
+                                                        else if (oSite.SolidFuel == true)
+                                                        {
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7001*'");
+                                                        }
+                                                        else
+                                                        {
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7007*'");
+                                                        }
                                                     }
                                                     else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
                                                     {
-                                                        Letter3Doc = WordDoc;
-                                                        // HAND DELIVER LETTER
-                                                        WordDoc = Letter3HandLetters;
-                                                        WordDoc.GrammarChecked = true;
-                                                        WordDoc.SpellingChecked = true;
                                                         if (oSite.CommercialDistrict == true)
                                                         {
-                                                            WordDoc3HandCopyCommercial.Select();
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7008^'");
+                                                        }
+                                                        else if (oSite.SolidFuel == true)
+                                                        {
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7001^'");
                                                         }
                                                         else
                                                         {
-                                                            WordDoc3HandCopy.Select();
+                                                            sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7007^'");
                                                         }
-
-                                                        MsWordApp.Selection.WholeStory();
-                                                        MsWordApp.Selection.Copy();
-                                                        WordDoc.Activate();
-                                                        object argUnit3 = WD.WdUnits.wdStory;
-                                                        MsWordApp.Selection.EndKey(Unit: ref argUnit3);
-                                                        MsWordApp.Selection.Paste();
-                                                        success = GenerateServiceLetter(r, AMPM, theVisitDate, JobNumber.Prefix + JobNumber.Number, DateAndTime.Now);
-                                                        Letter3HandLetters = WordDoc;
                                                     }
 
-                                                    if (success == true)
+                                                    if (sorRows.Length > 0)
                                                     {
-                                                        // CREATE JOB
-                                                        _currentJob = new Jobs.Job();
-                                                        _currentJob.SetPropertyID = r["SiteID"];
-                                                        _currentJob.SetJobDefinitionEnumID = Conversions.ToInteger(Enums.JobDefinition.Callout);
-                                                        _currentJob.SetJobTypeID = App.DB.Picklists.GetAll(Enums.PickListTypes.JobTypes).Table.Select("NAME = 'Service and Certificate'")[0]["ManagerID"];
-                                                        _currentJob.SetStatusEnumID = Conversions.ToInteger(Enums.JobStatus.Open);
-                                                        _currentJob.SetCreatedByUserID = App.loggedInUser.UserID;
-                                                        _currentJob.SetFOC = true;
-                                                        _currentJob.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
-                                                        _currentJob.SetPONumber = "";
-                                                        _currentJob.SetQuoteID = 0;
-                                                        _currentJob.SetContractID = 0;
-
-                                                        // INSERT JOB ITEM
-                                                        var jobOfWork = new JobOfWorks.JobOfWork();
-                                                        jobOfWork.SetPONumber = "";
-                                                        jobOfWork.SetPriority = servicePriority;
-                                                        if (!(jobOfWork.Priority == 0))
+                                                        var sorRow = sorRows[0];
+                                                        var customerSors = App.DB.CustomerScheduleOfRate.Exists(Conversions.ToInteger(sorRow["ScheduleOfRatesCategoryID"]), Conversions.ToString(sorRow["Description"]), Conversions.ToString(sorRow["Code"]), CustomerID);
+                                                        int customerSorId = 0;
+                                                        if (customerSors.Rows.Count > 0)
+                                                            customerSorId = Helper.MakeIntegerValid(customerSors.Rows[0][0]);
+                                                        if (!(customerSorId > 0))
                                                         {
-                                                            jobOfWork.PriorityDateSet = DateAndTime.Now;
-                                                        }
-
-                                                        jobOfWork.IgnoreExceptionsOnSetMethods = true;
-                                                        DataRow[] sorRows = null;
-                                                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
-                                                        {
-                                                            if (oSite.CommercialDistrict == true)
+                                                            var customerSor = new CustomerScheduleOfRates.CustomerScheduleOfRate()
                                                             {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7008'");
-                                                            }
-                                                            else if (oSite.SolidFuel == true)
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7001'");
-                                                            }
-                                                            else
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7007'");
-                                                            }
-                                                        }
-                                                        else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
-                                                        {
-                                                            if (oSite.CommercialDistrict == true)
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7008*'");
-                                                            }
-                                                            else if (oSite.SolidFuel == true)
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7001*'");
-                                                            }
-                                                            else
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7007*'");
-                                                            }
-                                                        }
-                                                        else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
-                                                        {
-                                                            if (oSite.CommercialDistrict == true)
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7008^'");
-                                                            }
-                                                            else if (oSite.SolidFuel == true)
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7001^'");
-                                                            }
-                                                            else
-                                                            {
-                                                                sorRows = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll().Table.Select("Code='EA7007^'");
-                                                            }
+                                                                SetCode = sorRow["Code"],
+                                                                SetDescription = sorRow["Description"],
+                                                                SetPrice = sorRow["Price"],
+                                                                SetScheduleOfRatesCategoryID = sorRow["ScheduleOfRatesCategoryID"],
+                                                                SetTimeInMins = sorRow["TimeInMins"],
+                                                                SetCustomerID = CustomerID
+                                                            };
+                                                            customerSorId = App.DB.CustomerScheduleOfRate.Insert(customerSor).CustomerScheduleOfRateID;
+                                                            App.DB.CustomerScheduleOfRate.Delete(customerSorId);
                                                         }
 
-                                                        if (sorRows.Length > 0)
-                                                        {
-                                                            var sorRow = sorRows[0];
-                                                            var customerSors = App.DB.CustomerScheduleOfRate.Exists(Conversions.ToInteger(sorRow["ScheduleOfRatesCategoryID"]), Conversions.ToString(sorRow["Description"]), Conversions.ToString(sorRow["Code"]), CustomerID);
-                                                            int customerSorId = 0;
-                                                            if (customerSors.Rows.Count > 0)
-                                                                customerSorId = Helper.MakeIntegerValid(customerSors.Rows[0][0]);
-                                                            if (!(customerSorId > 0))
-                                                            {
-                                                                var customerSor = new CustomerScheduleOfRates.CustomerScheduleOfRate()
-                                                                {
-                                                                    SetCode = sorRow["Code"],
-                                                                    SetDescription = sorRow["Description"],
-                                                                    SetPrice = sorRow["Price"],
-                                                                    SetScheduleOfRatesCategoryID = sorRow["ScheduleOfRatesCategoryID"],
-                                                                    SetTimeInMins = sorRow["TimeInMins"],
-                                                                    SetCustomerID = CustomerID
-                                                                };
-                                                                customerSorId = App.DB.CustomerScheduleOfRate.Insert(customerSor).CustomerScheduleOfRateID;
-                                                                App.DB.CustomerScheduleOfRate.Delete(customerSorId);
-                                                            }
+                                                        var jobItem = new JobItems.JobItem();
+                                                        jobItem.IgnoreExceptionsOnSetMethods = true;
+                                                        jobItem.SetSummary = sorRow["Description"];
+                                                        jobItem.SetQty = 1;
+                                                        jobItem.SetRateID = customerSorId;
+                                                        jobItem.SetSystemLinkID = Conversions.ToInteger(Enums.TableNames.tblCustomerScheduleOfRate);
+                                                        jobOfWork.JobItems.Add(jobItem);
+                                                    }
 
-                                                            var jobItem = new JobItems.JobItem();
-                                                            jobItem.IgnoreExceptionsOnSetMethods = true;
-                                                            jobItem.SetSummary = sorRow["Description"];
-                                                            jobItem.SetQty = 1;
-                                                            jobItem.SetRateID = customerSorId;
-                                                            jobItem.SetSystemLinkID = Conversions.ToInteger(Enums.TableNames.tblCustomerScheduleOfRate);
-                                                            jobOfWork.JobItems.Add(jobItem);
-                                                        }
+                                                    var engineerVisit = new EngineerVisits.EngineerVisit();
+                                                    engineerVisit.IgnoreExceptionsOnSetMethods = true;
+                                                    engineerVisit.SetEngineerID = 0;
 
-                                                        var engineerVisit = new EngineerVisits.EngineerVisit();
-                                                        engineerVisit.IgnoreExceptionsOnSetMethods = true;
-                                                        engineerVisit.SetEngineerID = 0;
+                                                    // set site fuel in visit notes
+                                                    if (r["SiteFuel"] == DBNull.Value)
+                                                    {
+                                                        Fuel = "";
+                                                    }
+                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["SiteFuel"], "Gas", false) | Operators.ConditionalCompareObjectEqual(r["siteFuel"], "0", false)))
+                                                    {
+                                                        Fuel = "";
+                                                    }
+                                                    else
+                                                    {
+                                                        Fuel = Conversions.ToString(r["siteFuel"]);
+                                                    }
 
-                                                        // set site fuel in visit notes
-                                                        if (r["SiteFuel"] == DBNull.Value)
-                                                        {
-                                                            Fuel = "";
-                                                        }
-                                                        else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["SiteFuel"], "Gas", false) | Operators.ConditionalCompareObjectEqual(r["siteFuel"], "0", false)))
-                                                        {
-                                                            Fuel = "";
-                                                        }
-                                                        else
-                                                        {
-                                                            Fuel = Conversions.ToString(r["siteFuel"]);
-                                                        }
+                                                    engineerVisit.SetNotesToEngineer = "(" + AMPM + ") - " + Fuel + " - Carry out safety inspection";
+                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
+                                                    {
+                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer + ", Take hand delivered letter and red sticker. ";
+                                                    }
+                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
+                                                    {
+                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer;
+                                                    }
 
-                                                        engineerVisit.SetNotesToEngineer = "(" + AMPM + ") - " + Fuel + " - Carry out safety inspection";
-                                                        switch (CustomerID)
-                                                        {
-                                                            case (int)Enums.Customer.NCC: // Norwich City Council
-                                                                {
-                                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer + ", Take hand delivered letter and red sticker. ";
-                                                                    }
-                                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer;
-                                                                    }
+                                                    if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
+                                                    {
+                                                        engineerVisit.SetPartsToFit = true;
+                                                    }
 
-                                                                    if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
-                                                                    {
-                                                                        engineerVisit.SetPartsToFit = true;
-                                                                    }
+                                                    engineerVisit.StartDateTime = DateTime.MinValue;
+                                                    engineerVisit.EndDateTime = DateTime.MinValue;
+                                                    engineerVisit.SetStatusEnumID = Conversions.ToInteger(Enums.VisitStatus.Ready_For_Schedule);
+                                                    engineerVisit.DueDate = theVisitDate;
+                                                    engineerVisit.SetAMPM = AMPM;
+                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
+                                                    {
+                                                        engineerVisit.SetVisitNumber = 1;
+                                                    }
+                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
+                                                    {
+                                                        engineerVisit.SetVisitNumber = 2;
+                                                    }
+                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
+                                                    {
+                                                        engineerVisit.SetVisitNumber = 3;
+                                                    }
 
-                                                                    break;
-                                                                }
-
-                                                            case 5872:
-                                                                {
-                                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer + ", Second Visit, Take hand delivered letter and Yellow Sticker. Service Expires: " + Conversions.ToDate(r["LastServiceDate"]).AddYears(1);
-                                                                    }
-                                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer + ", Two to attend  -  Yellow tape visit, take hand delivered letter, camera and yellow tape.";
-                                                                    }
-
-                                                                    if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
-                                                                    {
-                                                                        engineerVisit.SetPartsToFit = false;
-                                                                    }
-
-                                                                    break;
-                                                                }
-
-                                                            case 5155:
-                                                                {
-                                                                    var ChangedDate = Conversions.ToDate(r["LastServiceDate"]).AddYears(1);
-                                                                    ChangedDate = ChangedDate.AddDays(-7);
-                                                                    ChangedDate = DateHelper.CheckBankHolidaySatOrSun(ChangedDate);
-                                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer + ", Second Visit, Take hand delivered letter and Red Sticker. Final Visit: " + ChangedDate;
-                                                                    }
-                                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer + ", Two to attend  -  Yellow tape visit, take hand delivered letter, camera and yellow tape.";
-                                                                    }
-
-                                                                    if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
-                                                                    {
-                                                                        engineerVisit.SetPartsToFit = false;
-                                                                    }
-
-                                                                    break;
-                                                                }
-
-                                                            default:
-                                                                {
-                                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer;
-                                                                    }
-                                                                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
-                                                                    {
-                                                                        engineerVisit.SetNotesToEngineer = engineerVisit.NotesToEngineer;
-                                                                    }
-
-                                                                    if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
-                                                                    {
-                                                                        engineerVisit.SetPartsToFit = false;
-                                                                    }
-
-                                                                    break;
-                                                                }
-                                                        }
-
-                                                        engineerVisit.StartDateTime = DateTime.MinValue;
-                                                        engineerVisit.EndDateTime = DateTime.MinValue;
-                                                        engineerVisit.SetStatusEnumID = Conversions.ToInteger(Enums.VisitStatus.Ready_For_Schedule);
-                                                        engineerVisit.DueDate = theVisitDate;
-                                                        engineerVisit.SetAMPM = AMPM;
-                                                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 1", false)))
-                                                        {
-                                                            engineerVisit.SetVisitNumber = 1;
-                                                        }
-                                                        else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 2", false)))
-                                                        {
-                                                            engineerVisit.SetVisitNumber = 2;
-                                                        }
-                                                        else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false)))
-                                                        {
-                                                            engineerVisit.SetVisitNumber = 3;
-                                                        }
-
+                                                    jobOfWork.EngineerVisits.Add(engineerVisit);
+                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false) & CustomerID != (int)Enums.Customer.NCC))
+                                                    {
                                                         jobOfWork.EngineerVisits.Add(engineerVisit);
-                                                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["Type"], "Letter 3", false) & CustomerID != (int)Enums.Customer.NCC))
+                                                    }
+
+                                                    _currentJob.JobOfWorks.Add(jobOfWork);
+                                                    _currentJob = App.DB.Job.Insert(_currentJob, trans);
+
+                                                    // RECORD JOB/LETTER CREATION
+                                                    App.DB.LetterManager.LetterGenerated(Conversions.ToInteger(r["SiteID"]), Conversions.ToString(r["Type"]), Conversions.ToDate(r["LastServiceDate"]), _currentJob.JobID, folderName, trans);
+
+                                                    // RECORD SOLID FUELS
+                                                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["SolidFuel"], true, false)))
+                                                    {
+                                                        oWriteSolidFuels.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]));
+                                                    }
+
+                                                    // RECORD WARNINGS OR ADVICE
+                                                    if (r["Notes"].ToString().Contains("T1WARN") | r["Notes"].ToString().Contains("T1ADVI") | r["Notes"].ToString().Contains("T2WARN") | r["Notes"].ToString().Contains("T2ADVI"))
+                                                    {
+                                                        oWriteWA.WriteLine(" ");
+                                                        oWriteWA.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]) + " NOTES : ") + r["Notes"]);
+                                                    }
+
+                                                    // RECORD VOID PROPERTIES
+                                                    if (Helper.MakeBooleanValid(r["PropertyVoid"]) == true)
+                                                    {
+                                                        oWriteVoids.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]));
+                                                    }
+
+                                                    // RECORD NON GAS SITE FUELS
+                                                    if (!(r["SiteFuel"] == DBNull.Value))
+                                                    {
+                                                        if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(r["SiteFuel"], "Gas", false)))
                                                         {
-                                                            jobOfWork.EngineerVisits.Add(engineerVisit);
-                                                        }
-
-                                                        _currentJob.JobOfWorks.Add(jobOfWork);
-                                                        _currentJob = App.DB.Job.Insert(_currentJob, trans);
-
-                                                        // RECORD JOB/LETTER CREATION
-                                                        App.DB.LetterManager.LetterGenerated(Conversions.ToInteger(r["SiteID"]), Conversions.ToString(r["Type"]), Conversions.ToDate(r["LastServiceDate"]), _currentJob.JobID, folderName, trans);
-
-                                                        // RECORD SOLID FUELS
-                                                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(r["SolidFuel"], true, false)))
-                                                        {
-                                                            oWriteSolidFuels.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]));
-                                                        }
-
-                                                        // RECORD WARNINGS OR ADVICE
-                                                        if (r["Notes"].ToString().Contains("T1WARN") | r["Notes"].ToString().Contains("T1ADVI") | r["Notes"].ToString().Contains("T2WARN") | r["Notes"].ToString().Contains("T2ADVI"))
-                                                        {
-                                                            oWriteWA.WriteLine(" ");
-                                                            oWriteWA.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]) + " NOTES : ") + r["Notes"]);
-                                                        }
-
-                                                        // RECORD VOID PROPERTIES
-                                                        if (Helper.MakeBooleanValid(r["PropertyVoid"]) == true)
-                                                        {
-                                                            oWriteVoids.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]));
-                                                        }
-
-                                                        // RECORD NON GAS SITE FUELS
-                                                        if (!(r["SiteFuel"] == DBNull.Value))
-                                                        {
-                                                            if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(r["SiteFuel"], "Gas", false)))
-                                                            {
-                                                                oWriteSiteFuel.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]) + ", ") + r["SiteFuel"]);
-                                                            }
+                                                            oWriteSiteFuel.WriteLine(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(Conversions.ToString(r["Name"] + ", ") + r["Address1"] + ", ") + r["Address2"] + ", ") + r["Address3"] + ", ") + r["Address4"] + ", ") + r["Address5"] + ", " + Helper.FormatPostcode(r["Postcode"]) + ", ") + r["SiteFuel"]);
                                                         }
                                                     }
                                                 }
-
-                                                trans.Commit();
                                             }
+
+                                            trans.Commit();
                                         }
                                         catch (Exception ex)
                                         {
@@ -1234,7 +1140,7 @@ namespace FSM.Entity
                                 }
 
                                 var dt3rdVisitReport = App.DB.LetterManager.Letter3_TomorrowsVisit(tomorrow);
-                                ExportHelper.Export(dt3rdVisitReport, "3rd Visits", Enums.ExportType.XLS);
+                                ExportHelper.Export(dt3rdVisitReport, "3rd Visits", Enums.ExportType.XLS, false);
                             }
                             catch (Exception ex)
                             {
@@ -1561,7 +1467,7 @@ namespace FSM.Entity
                                 }
 
                                 var dt3rdVisitReport = App.DB.LetterManager.Letter3_TomorrowsVisit(tomorrow);
-                                ExportHelper.Export(dt3rdVisitReport, "3rd Visits", Enums.ExportType.XLS);
+                                ExportHelper.Export(dt3rdVisitReport, "3rd Visits", Enums.ExportType.XLS, false);
                             }
                             catch (Exception ex)
                             {
@@ -1582,10 +1488,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.ServiceLetterReport:
                         {
-                            
                             string folderName = @"C:\";
                             try
                             {
@@ -1954,10 +1858,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.GSRDue:
                         {
-                            
                             try
                             {
                                 var dtPrinted = new DataTable();
@@ -2084,10 +1986,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.ContractExpiry:
                         {
-                            
                             try
                             {
                                 FRMContractManager fCMngr = (FRMContractManager)((ArrayList)DetailsToPrint)[1];
@@ -2152,10 +2052,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.Invoice:
                         {
-                            
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
                             var arLst = new ArrayList();
@@ -2226,10 +2124,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.SupplierPurchaseOrder:
                         {
-                            
                             ArrayList details = (ArrayList)DetailsToPrint;
                             Sites.Site oSite = null;
                             Warehouses.Warehouse oWarehouse = null;
@@ -2297,10 +2193,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.ContractOption1:
                         {
-                            
                             try
                             {
                                 var folderToSaveTo = new FolderBrowserDialog();
@@ -2342,10 +2236,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.PartCredit:
                         {
-                            
                             try
                             {
                                 var details = new ArrayList();
@@ -2415,10 +2307,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.ProForma:
                         {
-                            
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
                             var job = new Jobs.Job();
@@ -2480,10 +2370,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.ProFormaFromVisit:
                         {
-                            
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
                             var job = new Jobs.Job();
@@ -2533,10 +2421,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.AlphaPartCredit:
                         {
-                            
                             try
                             {
                                 var details = new ArrayList();
@@ -2606,10 +2492,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.JobImportLetters:
                         {
-                            
                             try
                             {
                                 var folderToSaveTo = new FolderBrowserDialog();
@@ -2684,10 +2568,8 @@ namespace FSM.Entity
                             break;
                         }
 
-                    
                     case Enums.SystemDocumentType.SalesCredit:
                         {
-                            
                             try
                             {
                                 Cursor.Current = Cursors.WaitCursor;
@@ -2717,8 +2599,6 @@ namespace FSM.Entity
 
                             break;
                         }
-
-                        
                 }
             }
 
@@ -12354,9 +12234,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
             private string Finalise(string filepath, bool success, bool withSave = true, bool withKill = true, bool gsr = false)
             {
                 Documentss.Documents documentLine;
@@ -13104,8 +12981,6 @@ namespace FSM.Entity
                 Process.Start(filePath);
                 Cursor.Current = Cursors.Default;
             }
-
-            
         }
     }
 }
