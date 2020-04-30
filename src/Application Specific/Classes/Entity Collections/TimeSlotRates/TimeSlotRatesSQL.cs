@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public DataView GetAll()
             {
                 _database.ClearParameter();
@@ -66,35 +65,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblBankHolidays.ToString();
                 return new DataView(dt);
             }
-
-            public object BankHolidays_Insert(DateTime BankHolidayDate, int LabourRateID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@BankHolidayDate", BankHolidayDate, true);
-                _database.AddParameter("@LabourRateID", LabourRateID, true);
-                App.DB.ExecuteSP_NO_Return("BankHolidays_Insert");
-                return default;
-            }
-
-            public object BankHolidays_Update(DateTime BankHolidayDate, int LabourRateID, int BankHolidayID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@BankHolidayDate", BankHolidayDate, true);
-                _database.AddParameter("@LabourRateID", LabourRateID, true);
-                _database.AddParameter("@BankHolidayID", BankHolidayID, true);
-                App.DB.ExecuteSP_NO_Return("BankHolidays_Update");
-                return default;
-            }
-
-            public DataView LabourTypes_Get()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("LabourTypes_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblTimeslotRates.ToString();
-                return new DataView(dt);
-            }
-
-            
         }
     }
 }

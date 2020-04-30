@@ -814,7 +814,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Audit\StockTakeAuditSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderItem.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderPart.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\UserLevel\UserLevelSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Settings\Scheduler\JobTypeColour.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Settings\Scheduler\JobTypeColourSql.cs" />

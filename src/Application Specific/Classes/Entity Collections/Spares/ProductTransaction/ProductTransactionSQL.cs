@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public ProductTransaction ProductTransaction_GetByOrderLocationProduct(int OrderLocationProductID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -204,51 +203,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("ProductTransaction_Delete");
             }
 
-            public ProductTransaction ProductTransaction_Get(int ProductTransactionID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ProductTransactionID", ProductTransactionID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("ProductTransaction_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oProductTransaction = new ProductTransaction();
-                        oProductTransaction.IgnoreExceptionsOnSetMethods = true;
-                        oProductTransaction.SetProductTransactionID = dt.Rows[0]["ProductTransactionID"];
-                        oProductTransaction.SetProductID = dt.Rows[0]["ProductID"];
-                        oProductTransaction.SetAmount = dt.Rows[0]["Amount"];
-                        oProductTransaction.TransactionDate = Conversions.ToDate(dt.Rows[0]["TransactionDate"]);
-                        oProductTransaction.SetUserID = dt.Rows[0]["UserID"];
-                        oProductTransaction.SetTransactionTypeID = dt.Rows[0]["TransactionTypeID"];
-                        oProductTransaction.SetLocationID = dt.Rows[0]["LocationID"];
-                        oProductTransaction.SetOrderProductID = dt.Rows[0]["OrderProductID"];
-                        oProductTransaction.SetOrderLocationProductID = dt.Rows[0]["OrderLocationProductID"];
-                        oProductTransaction.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oProductTransaction.Exists = true;
-                        return oProductTransaction;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public DataView ProductTransaction_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("ProductTransaction_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblProductTransaction.ToString();
-                return new DataView(dt);
-            }
-
             public ProductTransaction Insert(ProductTransaction oProductTransaction, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -295,8 +249,6 @@ namespace FSM.Entity
                 _database.AddParameter("@OrderProductID", oProductTransaction.OrderProductID, true);
                 _database.AddParameter("@OrderLocationProductID", oProductTransaction.OrderLocationProductID, true);
             }
-
-            
         }
     }
 }

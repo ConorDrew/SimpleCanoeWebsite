@@ -15,8 +15,6 @@ namespace FSM.Entity.UserAbsence
             _database = database;
         }
 
-        
-
         public void Delete(int UserAbsenceID)
         {
             _database.ClearParameter();
@@ -51,28 +49,6 @@ namespace FSM.Entity.UserAbsence
             {
                 return null;
             }
-        }
-
-        public DataTable UserAbsence_GetAll()
-        {
-            // get the all the UserAbsence data from the 
-
-            DataTable dt;
-            dt = _database.ExecuteSP_DataTable("UserAbsence_GetAll");
-            dt.TableName = "tblUserAbsence";
-            return dt;
-        }
-
-        public DataTable UserAbsence_GetAll_ByDates(DateTime startDate, DateTime endDate)
-        {
-            // get the all the UserAbsence data from the 
-            _database.ClearParameter();
-            _database.AddParameter("@StartDate", Sys.Helper.MakeDateTimeValid(Strings.Format(startDate, "dd/MMM/yyyy") + " 00:00:00"), true);
-            _database.AddParameter("@EndDate", Sys.Helper.MakeDateTimeValid(Strings.Format(endDate, "dd/MMM/yyyy") + " 23:59:59"), true);
-            DataTable dt;
-            dt = _database.ExecuteSP_DataTable("UserAbsence_GetAll_ByDates");
-            dt.TableName = "tblUserAbsence";
-            return dt;
         }
 
         public UserAbsence Insert(UserAbsence oUserAbsence)
@@ -116,8 +92,5 @@ namespace FSM.Entity.UserAbsence
             dt.TableName = "tblUserAbsence";
             return dt;
         }
-
-
-        
     }
 }

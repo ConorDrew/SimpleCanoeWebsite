@@ -159,35 +159,6 @@ namespace FSM
             return dt;
         }
 
-        public static DataTable Setup_Advanced_Search_Options(Entity.Sys.Enums.MenuTypes MenuType)
-        {
-            var dt = new DataTable();
-            dt.TableName = Entity.Sys.Enums.TableNames.NOT_IN_DATABASE_TBLSearchFor.ToString();
-            dt.Columns.Add(new DataColumn("ValueMember"));
-            dt.Columns.Add(new DataColumn("DisplayMember"));
-            dt.Columns.Add(new DataColumn("Deleted", Type.GetType("System.Boolean")));
-            DataRow newRow;
-            switch (MenuType)
-            {
-                case Entity.Sys.Enums.MenuTypes.Spares:
-                    {
-                        newRow = dt.NewRow();
-                        newRow["ValueMember"] = Conversions.ToInteger(Entity.Sys.Enums.TableNames.tblPart);
-                        newRow["DisplayMember"] = "Part";
-                        newRow["Deleted"] = false;
-                        dt.Rows.Add(newRow);
-                        newRow = dt.NewRow();
-                        newRow["ValueMember"] = Conversions.ToInteger(Entity.Sys.Enums.TableNames.tblProduct);
-                        newRow["DisplayMember"] = "Product";
-                        newRow["Deleted"] = false;
-                        dt.Rows.Add(newRow);
-                        break;
-                    }
-            }
-
-            return dt;
-        }
-
         public static DataTable Setup_Search_Options(Entity.Sys.Enums.MenuTypes MenuType)
         {
             var dt = new DataTable();

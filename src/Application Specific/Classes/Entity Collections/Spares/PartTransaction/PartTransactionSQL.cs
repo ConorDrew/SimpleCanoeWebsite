@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public PartTransaction PartTransaction_GetByOrderLocationPart(int OrderLocationPartID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -117,139 +116,6 @@ namespace FSM.Entity
                 var dt = _database.ExecuteSP_DataTable("Part_SearchByVan");
                 dt.TableName = Sys.Enums.TableNames.tblPart.ToString();
                 return new DataView(dt);
-            }
-
-            public DataView GetByVan4(int VanID, bool WithLocation = false, bool ForIPT = false, int SupplierID = 0)
-            {
-                if (WithLocation)
-                {
-                    string registration = App.DB.Van.Van_Get(VanID).Registration.Split('*')[0].Trim();
-                    DataTable dtPartSupplier;
-                    var dt = new DataTable();
-                    dt.Columns.Add(new DataColumn("Location"));
-                    dt.Columns.Add(new DataColumn("PartID", Type.GetType("System.Int32")));
-                    dt.Columns.Add(new DataColumn("PartName"));
-                    dt.Columns.Add(new DataColumn("PartNumber"));
-                    dt.Columns.Add(new DataColumn("Reference"));
-                    dt.Columns.Add(new DataColumn("Amount", Type.GetType("System.Int32")));
-                    dt.Columns.Add(new DataColumn("CategoryID", Type.GetType("System.Int32")));
-                    dt.Columns.Add(new DataColumn("LocationID", Type.GetType("System.Int32")));
-                    dt.Columns.Add(new DataColumn("Min", Type.GetType("System.Int32")));
-                    dt.Columns.Add(new DataColumn("Max", Type.GetType("System.Int32")));
-                    dt.Columns.Add(new DataColumn("MinMaxID", Type.GetType("System.Int32")));
-                    dt.Columns.Add(new DataColumn("SPN"));
-                    foreach (DataRow vanRow in App.DB.Van.Van_GetAll(false).Table.Rows)
-                    {
-                        if ((Sys.Helper.MakeStringValid(vanRow["Registration"]).Split('*')[0].Trim() ?? "") == (registration ?? ""))
-                        {
-                            _database.ClearParameter();
-                            _database.AddParameter("@VanID", vanRow["VanID"], true);
-                            if (ForIPT)
-                            {
-                                _database.AddParameter("@ForIPT", 1, true);
-                            }
-                            else
-                            {
-                                _database.AddParameter("@ForIPT", 0, true);
-                            }
-
-                            var dtPartsByVan = _database.ExecuteSP_DataTable("Part_GetByVan");
-                            foreach (DataRow row in dtPartsByVan.Rows)
-                            {
-                                var r = dt.NewRow();
-                                r["Location"] = Sys.Helper.MakeStringValid(vanRow["Registration"]).Split('*')[1].Trim();
-                                r["PartID"] = row["PartID"];
-                                r["PartName"] = row["PartName"];
-                                r["PartNumber"] = row["PartNumber"];
-                                r["Reference"] = row["Reference"];
-                                r["Amount"] = row["Amount"];
-                                r["CategoryID"] = row["CategoryID"];
-                                r["LocationID"] = row["LocationID"];
-                                _database.ClearParameter();
-                                _database.AddParameter("@PartID", row["PartID"], true);
-                                var dtMinMaxByPart = _database.ExecuteSP_DataTable("PartLocations_GetAll");
-                                if (dtMinMaxByPart is object)
-                                {
-                                    if (dtMinMaxByPart.Rows.Count == 0)
-                                    {
-                                        r["Min"] = 0;
-                                        r["Max"] = 0;
-                                        r["MinMaxID"] = 0;
-                                        r["SPN"] = "";
-                                    }
-                                    else
-                                    {
-                                        bool rowadded = false;
-                                        foreach (DataRow partrow in dtMinMaxByPart.Rows)
-                                        {
-                                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(partrow["VanID"], vanRow["VanID"], false)))
-                                            {
-                                                r["Min"] = partrow["MinQty"];
-                                                r["Max"] = partrow["RecQty"];
-                                                r["MinMaxID"] = partrow["PartLocationID"];
-                                                _database.ClearParameter();
-                                                _database.AddParameter("@PartID", row["PartID"], true);
-                                                _database.AddParameter("@SupplierID", SupplierID, true);
-                                                dtPartSupplier = _database.ExecuteSP_DataTable("PartSupplier_GetByPartAndSupplier");
-                                                if (dtPartSupplier.Rows.Count == 0)
-                                                {
-                                                    r["SPN"] = "";
-                                                }
-                                                else if (dtPartSupplier.Rows.Count > 1)
-                                                {
-                                                    r["SPN"] = "Multi";
-                                                }
-                                                else
-                                                {
-                                                    r["SPN"] = dtPartSupplier.Rows[0]["PartCode"].ToString();
-                                                }
-
-                                                rowadded = true;
-                                            }
-                                        }
-
-                                        if (rowadded == false)
-                                        {
-                                            r["Min"] = 0;
-                                            r["Max"] = 0;
-                                            r["MinMaxID"] = 0;
-                                            r["SPN"] = "";
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    r["Min"] = 0;
-                                    r["Max"] = 0;
-                                    r["MinMaxID"] = 0;
-                                    r["SPN"] = "";
-                                }
-
-                                dt.Rows.Add(r);
-                            }
-                        }
-                    }
-
-                    dt.TableName = Sys.Enums.TableNames.tblPart.ToString();
-                    return new DataView(dt);
-                }
-                else
-                {
-                    _database.ClearParameter();
-                    _database.AddParameter("@VanID", VanID, true);
-                    if (ForIPT)
-                    {
-                        _database.AddParameter("@ForIPT", 1, true);
-                    }
-                    else
-                    {
-                        _database.AddParameter("@ForIPT", 0, true);
-                    }
-
-                    var dt = _database.ExecuteSP_DataTable("Part_GetByVan");
-                    dt.TableName = Sys.Enums.TableNames.tblPart.ToString();
-                    return new DataView(dt);
-                }
             }
 
             public DataTable GetByVan2(int VanID, bool WithLocation = false, bool ForIPT = false, int SupplierID = 0)
@@ -379,51 +245,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("PartTransaction_DeleteByPartAndLocation");
             }
 
-            public PartTransaction PartTransaction_Get(int PartTransactionID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@PartTransactionID", PartTransactionID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("PartTransaction_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oPartTransaction = new PartTransaction();
-                        oPartTransaction.IgnoreExceptionsOnSetMethods = true;
-                        oPartTransaction.SetPartTransactionID = dt.Rows[0]["PartTransactionID"];
-                        oPartTransaction.SetPartID = dt.Rows[0]["PartID"];
-                        oPartTransaction.SetAmount = dt.Rows[0]["Amount"];
-                        oPartTransaction.TransactionDate = Conversions.ToDate(dt.Rows[0]["TransactionDate"]);
-                        oPartTransaction.SetUserID = dt.Rows[0]["UserID"];
-                        oPartTransaction.SetTransactionTypeID = dt.Rows[0]["TransactionTypeID"];
-                        oPartTransaction.SetLocationID = dt.Rows[0]["LocationID"];
-                        oPartTransaction.SetOrderPartID = dt.Rows[0]["OrderPartID"];
-                        oPartTransaction.SetOrderLocationPartID = dt.Rows[0]["OrderLocationPartID"];
-                        oPartTransaction.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oPartTransaction.Exists = true;
-                        return oPartTransaction;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public DataView PartTransaction_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("PartTransaction_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblPartTransaction.ToString();
-                return new DataView(dt);
-            }
-
             public PartTransaction Insert(PartTransaction oPartTransaction)
             {
                 _database.ClearParameter();
@@ -480,16 +301,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("PartLocations_UpdateMinMax");
             }
 
-            public void PartLocations_Insert(int PartID, int LocationID, int MinValue, int MaxValue)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@PartID", PartID, true);
-                _database.AddParameter("@LocationID", LocationID, true);
-                _database.AddParameter("@MinQty", MinValue, true);
-                _database.AddParameter("@RecQty", MaxValue, true);
-                _database.ExecuteSP_NO_Return("PartLocations_Insert");
-            }
-
             public int PartLocations_Insert2(int PartID, int LocationID, int MinValue, int MaxValue)
             {
                 _database.ClearParameter();
@@ -499,7 +310,6 @@ namespace FSM.Entity
                 _database.AddParameter("@RecQty", MaxValue, true);
                 return Conversions.ToInteger(_database.ExecuteSP_OBJECT("PartLocations_Insert_WithPartLocationReturn"));
             }
-            
         }
     }
 }

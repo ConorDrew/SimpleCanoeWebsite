@@ -144,7 +144,6 @@ namespace FSM.Entity.Sys
             EngineerVisitNCCGSR = new EngineerVisitNCCGSRs.EngineerVisitNCCGSRSQL(this);
             EngineerVisitAdditional = new EngineerVisitAdditionals.EngineerVisitAdditionalSQL(this);
             POInvoice = new Orders.POInvoiceSQL(this);
-            TabletOrders = new TabletOrders.TabletOrderSQL(this);
             EngineerVisitPhotos = new EngineerVisitPhotos.EngineerVisitPhotoSQL(this);
             ContractVisits = new ContractOriginalVisits.ContractOriginalVisitSQL(this);
             Appointments = new Appointments.AppointmentsSQL(this);
@@ -352,7 +351,6 @@ namespace FSM.Entity.Sys
         public EngineerVisitNCCGSRs.EngineerVisitNCCGSRSQL EngineerVisitNCCGSR;
         public EngineerVisitAdditionals.EngineerVisitAdditionalSQL EngineerVisitAdditional;
         public Orders.POInvoiceSQL POInvoice;
-        public TabletOrders.TabletOrderSQL TabletOrders;
         public EngineerVisitPhotos.EngineerVisitPhotoSQL EngineerVisitPhotos;
         public ContractOriginalVisits.ContractOriginalVisitSQL ContractVisits;
         public Appointments.AppointmentsSQL Appointments;
