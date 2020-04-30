@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = databaseIn;
             }
 
-            
-
             public DataView PickListTypes()
             {
                 var dt = new DataTable();
@@ -264,8 +262,8 @@ namespace FSM.Entity
                 else
                 {
                     _database.ClearParameter();
-                    _database.AddParameter("?EnumTypeID", Conversions.ToInteger(enumTypeID));
-                    dt = _database.ExecuteCommand_DataTable("Picklists_Get.sql");
+                    _database.AddParameter("@EnumTypeID", (int)enumTypeID);
+                    dt = _database.ExecuteSP_DataTable("Picklists_GetByEnumTypeId");
                 }
 
                 dt.TableName = Sys.Enums.TableNames.tblPickLists.ToString();
@@ -275,8 +273,8 @@ namespace FSM.Entity
             public DataView GetAllPartMappings(Sys.Enums.PickListTypes enumTypeID)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?EnumTypeID", Conversions.ToInteger(enumTypeID));
-                var dt = _database.ExecuteCommand_DataTable("Picklists_Get_PartMapping.sql");
+                _database.AddParameter("@EnumTypeID", (int)enumTypeID);
+                var dt = _database.ExecuteSP_DataTable("Picklists_Get_PartMapping");
                 dt.TableName = Sys.Enums.TableNames.tblPartCategoryMapping.ToString();
                 return new DataView(dt);
             }
@@ -284,8 +282,8 @@ namespace FSM.Entity
             public PickList Get_One_As_Object(int ManagerID)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?ManagerID", ManagerID);
-                var dt = _database.ExecuteCommand_DataTable("Picklists_GetOne.sql");
+                _database.AddParameter("@ManagerID", ManagerID);
+                var dt = _database.ExecuteSP_DataTable("Picklists_Get");
                 if (dt.Rows.Count > 0)
                 {
                     var picklist = new PickList();
@@ -308,10 +306,10 @@ namespace FSM.Entity
             public int Insert(PickList pickList)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?EnumTypeID", pickList.EnumTypeID);
-                _database.AddParameter("?Name", pickList.Name);
-                _database.AddParameter("?Description", pickList.Description);
-                _database.AddParameter("?Mandatory", pickList.Mandatory);
+                _database.AddParameter("@EnumTypeID", pickList.EnumTypeID);
+                _database.AddParameter("@Name", pickList.Name);
+                _database.AddParameter("@Description", pickList.Description);
+                _database.AddParameter("@Mandatory", pickList.Mandatory);
                 var switchExpr = pickList.EnumTypeID;
                 switch (switchExpr)
                 {
@@ -319,41 +317,41 @@ namespace FSM.Entity
                     case (int)Sys.Enums.PickListTypes.PartCategories:
                     case (int)Sys.Enums.PickListTypes.CoverPlanDiscounts:
                         {
-                            _database.AddParameter("?PercentageRate", pickList.PercentageRate);
+                            _database.AddParameter("@PercentageRate", pickList.PercentageRate);
                             break;
                         }
 
                     case (int)Sys.Enums.PickListTypes.Engineer_Levels:
                         {
-                            _database.AddParameter("?PercentageRate", pickList.PercentageRate);
+                            _database.AddParameter("@PercentageRate", pickList.PercentageRate);
                             break;
                         }
 
                     default:
                         {
-                            _database.AddParameter("?PercentageRate", 0);
+                            _database.AddParameter("@PercentageRate", 0);
                             break;
                         }
                 }
 
-                return Conversions.ToInteger(_database.ExecuteCommand_Object("Picklists_Insert.sql"));
+                return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("Picklists_Insert"));
             }
 
             public int InsertPartCategory(int ManagerID, string PartMapMatch)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?ManagerID", ManagerID);
-                _database.AddParameter("?PartMapMatch", PartMapMatch);
-                return Conversions.ToInteger(_database.ExecuteCommand_Object("Picklists_InsertPartMapping.sql"));
+                _database.AddParameter("@ManagerID", ManagerID);
+                _database.AddParameter("@PartMapMatch", PartMapMatch);
+                return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("Picklists_InsertPartMapping"));
             }
 
             public void Update(PickList pickList)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?Name", pickList.Name);
-                _database.AddParameter("?Description", pickList.Description);
-                _database.AddParameter("?Mandatory", pickList.Mandatory);
-                _database.AddParameter("?ManagerID", pickList.ManagerID);
+                _database.AddParameter("@Name", pickList.Name);
+                _database.AddParameter("@Description", pickList.Description);
+                _database.AddParameter("@Mandatory", pickList.Mandatory);
+                _database.AddParameter("@ManagerID", pickList.ManagerID);
                 var switchExpr = pickList.EnumTypeID;
                 switch (switchExpr)
                 {
@@ -361,33 +359,33 @@ namespace FSM.Entity
                     case (int)Sys.Enums.PickListTypes.PartCategories:
                     case (int)Sys.Enums.PickListTypes.CoverPlanDiscounts:
                         {
-                            _database.AddParameter("?PercentageRate", pickList.PercentageRate);
+                            _database.AddParameter("@PercentageRate", pickList.PercentageRate);
                             break;
                         }
 
                     case (int)Sys.Enums.PickListTypes.Engineer_Levels:
                         {
-                            _database.AddParameter("?PercentageRate", pickList.PercentageRate);
+                            _database.AddParameter("@PercentageRate", pickList.PercentageRate);
                             break;
                         }
 
                     default:
                         {
-                            _database.AddParameter("?PercentageRate", 0);
+                            _database.AddParameter("@PercentageRate", 0);
                             break;
                         }
                 }
 
-                _database.ExecuteCommand_NO_Return("Picklists_Update.sql");
+                _database.ExecuteSP_OBJECT("Picklists_Update");
             }
 
             public void UpdatePartMapping(int PartMapID, int ManagerID, string PartMapMatch)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?PartMapID", PartMapID);
-                _database.AddParameter("?ManagerID", ManagerID);
-                _database.AddParameter("?PartMapMatch", PartMapMatch);
-                _database.ExecuteCommand_NO_Return("Picklists_UpdatePartMapping.sql");
+                _database.AddParameter("@PartMapID", PartMapID);
+                _database.AddParameter("@ManagerID", ManagerID);
+                _database.AddParameter("@PartMapMatch", PartMapMatch);
+                _database.ExecuteSP_OBJECT("Picklists_UpdatePartMapping");
             }
 
             public void UpdateSellPrices(PickList pickList)
@@ -408,15 +406,15 @@ namespace FSM.Entity
             public void Delete(int ManagerID)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?ManagerID", ManagerID);
-                _database.ExecuteCommand_NO_Return("Picklists_Delete.sql");
+                _database.AddParameter("@ManagerID", ManagerID);
+                _database.ExecuteSP_OBJECT("Picklists_Delete");
             }
 
             public void DeletePartMapping(int PartMapID)
             {
                 _database.ClearParameter();
-                _database.AddParameter("?PartMapID", PartMapID);
-                _database.ExecuteCommand_NO_Return("Picklists_DeletePartMapping.sql");
+                _database.AddParameter("@PartMapID", PartMapID);
+                _database.ExecuteSP_OBJECT("Picklists_DeletePartMapping");
             }
 
             public DataView Region_Usage(int RegionID)
@@ -446,8 +444,6 @@ namespace FSM.Entity
                 string Description = Sys.Helper.MakeStringValid(_database.ExecuteScalar("SELECT Description " + "FROM tblpicklists WHERE EnumTypeID = " + Conversions.ToInteger(type) + " AND Name = '" + Name + "'", false));
                 return Description;
             }
-
-            
         }
     }
 }

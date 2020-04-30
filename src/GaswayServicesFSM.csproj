@@ -2646,11 +2646,6 @@
     <None Include="ScheduleSummary.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_Get_PartMapping.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_InsertPartMapping.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_UpdatePartMapping.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_DeletePartMapping.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Management\Settings_UpdateOverridePassword_Service.sql" />
     <None Include="Application Scheduler\Images\Levels.ICO" />
     <None Include="Application Scheduler\Images\PostalRegions.GIF" />
     <None Include="Application Scheduler\Images\Region.ICO" />
@@ -2995,16 +2990,6 @@
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <EmbeddedResource Include="Application Framework\Entities\Management\History_Delete.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Management\History_Get.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Management\Settings_Get.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Management\Settings_Update.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Management\Settings_UpdateOverridePassword.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_Delete.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_Get.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_GetOne.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_Insert.sql" />
-    <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_Update.sql" />
     <EmbeddedResource Include="Application Framework\Forms And Controls\Admin Tools\FRMHistory.resx">
       <DependentUpon>FRMHistory.cs</DependentUpon>
       <SubType>Designer</SubType>

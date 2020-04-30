@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMHistory : FRMBaseForm, IForm
     {
-        
-
         public FRMHistory() : base()
         {
-            
-            
             base.Load += FRMHistory_Load;
 
             // This call is required by the Windows Form Designer.
@@ -327,9 +323,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -363,8 +356,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvHistory;
 
         private DataView HistoryDataview
@@ -384,9 +375,6 @@ namespace FSM
                 dgHistory.DataSource = HistoryDataview;
             }
         }
-
-        
-        
 
         private void SetupHistoryDataGrid()
         {
@@ -472,9 +460,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         private void PopulatePage()
         {
             try
@@ -486,7 +471,5 @@ namespace FSM
                 App.ShowMessage("Form cannot setup : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, (MessageBoxIcon)MsgBoxStyle.Exclamation);
             }
         }
-
-        
     }
 }
