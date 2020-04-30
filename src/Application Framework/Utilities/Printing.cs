@@ -398,7 +398,6 @@ namespace FSM.Entity
                                 t = Type.GetTypeFromProgID("Word.Application", true);
                                 obj = Activator.CreateInstance(t, true);
                                 MsWordApp = (WD.Application)obj;
-                                MessageFilter.Register();
 
                                 // WordApp = New Word.Application
                                 MsWordApp.DisplayAlerts = WD.WdAlertLevel.wdAlertsNone;
@@ -1247,7 +1246,6 @@ namespace FSM.Entity
                                 MsWordApp.Selection.WholeStory();
                                 MsWordApp.Selection.Font.Name = "Arial";
                                 Finalise(filePath, success);
-                                MessageFilter.Revoke();
                                 if (success)
                                 {
                                     Process.Start(folderName);
@@ -1573,7 +1571,6 @@ namespace FSM.Entity
                             finally
                             {
                                 Finalise(filePath, success);
-                                MessageFilter.Revoke();
                                 if (success)
                                 {
                                     Process.Start(folderName);
@@ -3491,7 +3488,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    ProptMain:
+                ProptMain:
                     ;
                     if (PM is object)
                     {
@@ -3530,7 +3527,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    SaffUnv:
+                SaffUnv:
                     ;
                     if (SaffUnv is object)
                     {
@@ -3569,7 +3566,7 @@ namespace FSM.Entity
                         }
                     }
 
-                    NextLSR:
+                NextLSR:
                     ;
                     if (isBlank)
                     {
