@@ -21,8 +21,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -371,15 +369,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
                 var dt = _database.ExecuteSP_DataTable("EngineerVisits_Get_ForVal");
-                dt.TableName = Enums.TableNames.tblEngineerVisit.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView EngineerVisitSymptom_GetForVisit(int EngineerVisitID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitSymptom_GetForVisit");
                 dt.TableName = Enums.TableNames.tblEngineerVisit.ToString();
                 return new DataView(dt);
             }
@@ -1790,8 +1779,6 @@ namespace FSM.Entity
                 var dt = _database.ExecuteSP_DataTable("EngineerVisit_Get_ByEngineerIdAndStatusEnumId");
                 return new DataView(dt);
             }
-
-            
 
             public List<EngineerVisit> Get_ByJobId(int jobId)
             {

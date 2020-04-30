@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void EngineerVisitCharge_Delete(int EngineerVisitChargeID)
             {
                 _database.ClearParameter();
@@ -171,8 +170,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            
-            
             public void EngineerVisitAdditionalCharge_Delete(int EngineerVisitAdditionalChargeID)
             {
                 _database.ClearParameter();
@@ -198,8 +195,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitAdditionalCharge_Insert");
             }
 
-            
-            
             public DataView EngineerVisitScheduleOfRatesCharge_Get_For_EngineerVisitID(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -226,8 +221,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitScheduleOfRatesCharge_Delete");
             }
 
-            
-            
             public DataView EngineerVisitPartsAndProductsCharge_Get_For_EngineerVisitID(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -299,8 +292,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitPartsCharge_Update_Price");
             }
 
-            
-            
             public DataView EngineerVisitTimeSheetCharges_Get(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -341,14 +332,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitTimeSheetCharges_Update");
             }
 
-            public void EngineerVisitTimeSheetCharges_Update_PriceAndMarkUp(int EngineerVisitTimesheetChargeID, int Tick)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitTimesheetChargeID", EngineerVisitTimesheetChargeID, true);
-                _database.AddParameter("@Tick", Tick, true);
-                _database.ExecuteSP_NO_Return("EngineerVisitTimeSheetCharges_Update");
-            }
-
             public void EngineerVisitTimeSheetCharges_Delete(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -371,8 +354,6 @@ namespace FSM.Entity
                 _database.AddParameter("@theDate", Conversions.ToDate(Strings.Format(theDate, "dd/MM/yyyy") + " 00:00:00"), true);
                 return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("EngineerVisitTimeSheetCharges_BankHoliday"));
             }
-
-            
         }
     }
 }

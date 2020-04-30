@@ -19,7 +19,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int EngineerID)
             {
                 _database.ClearParameter();
@@ -430,31 +429,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView EngineerSkills_Get(int engineerId)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerID", engineerId, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerJobSkill_Get_ForEngineerID");
-                dt.TableName = Enums.TableNames.tblEngineerSkills.ToString();
-                return new DataView(dt);
-            }
-
-            public void EngineerSkills_Insert(int engineerID, int jobTypeID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerID", engineerID, true);
-                _database.AddParameter("@JobTypeID", jobTypeID, true);
-                _database.ExecuteSP_OBJECT("EngineerJobSkill_Insert");
-            }
-
-            public void EngineerSkills_Delete(int engineerID)
-            {
-                _database.ClearParameter();
-                App.DB.ExecuteScalar("DELETE FROM tblEngineerJobSkill Where EngineerID = " + engineerID);
-            }
-
-            
-            
             public void SaveDisciplinaryRecords(int engineerID, DataTable t)
             {
                 // delete all first
@@ -482,11 +456,8 @@ namespace FSM.Entity
                 return _database.ExecuteSP_DataTable("Engineer_Disciplinary_Get");
             }
 
-            
-            
             public void SaveEquipmentRecords(int engineerID, DataTable t)
             {
-
                 // delete all first
                 _database.ClearParameter();
                 _database.AddParameter("@EngineerID", engineerID, true);
@@ -509,8 +480,6 @@ namespace FSM.Entity
                 _database.AddParameter("@EngineerID", engineerID, true);
                 return _database.ExecuteSP_DataTable("Engineer_Equipment_Get");
             }
-
-            
         }
     }
 }
