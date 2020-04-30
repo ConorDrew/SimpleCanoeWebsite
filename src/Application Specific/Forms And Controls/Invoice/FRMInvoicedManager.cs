@@ -14,12 +14,8 @@ namespace FSM
 {
     public class FRMInvoicedManager : FRMBaseForm, IForm
     {
-        
-
         public FRMInvoicedManager() : base()
         {
-            
-            
             base.Load += FRMInvoicedManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -978,8 +974,6 @@ namespace FSM
             {
                 if (_btnMarkAsNotExported != null)
                 {
-                    
-                    
                     _btnMarkAsNotExported.Click -= btnMarkAsNotExported_Click;
                 }
 
@@ -2608,9 +2602,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -2642,8 +2633,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvInvoices;
 
         private DataView InvoicesDataview
@@ -2755,9 +2744,6 @@ namespace FSM
                 _IsLoading = value;
             }
         }
-
-        
-        
 
         private void SetupInvoiceDataGrid()
         {
@@ -3818,9 +3804,6 @@ namespace FSM
                 App.ShowMessage("Unable to save: " + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
-        
 
         private void view()
         {
@@ -5021,7 +5004,5 @@ namespace FSM
             chkExportedOn.Checked = !chkExportedOn.Checked;
             dtpExportedOn.Enabled = chkExportedOn.Checked;
         }
-
-        
     }
 }

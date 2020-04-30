@@ -18,8 +18,6 @@ namespace FSM
             InitializeComponent();
         }
 
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -43,8 +41,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataTable Avail = new DataTable();
         private DataView AvailView = new DataView();
         private int amtServ = 0; // how many services we need?
@@ -108,9 +104,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupLettersDataGrid()
         {
@@ -234,9 +227,6 @@ namespace FSM
             tbStyle.MappingName = "ServiceDue";
             dgServicesDue.TableStyles.Add(tbStyle);
         }
-
-        
-        
 
         private void btnFindCustomer_Click(object sender, EventArgs e)
         {
@@ -411,9 +401,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void CalcAvail()
         {
@@ -904,7 +891,7 @@ namespace FSM
 
                 // different way of catching the change
                 var SchedulerAppsView = new DataView();
-                SchedulerAppsView.Table = App.DB.EngineerVisits.Get_Appointments_Scheduler(DateTime.Now.ToString("yyyy-MM-dd"), 15);
+                SchedulerAppsView.Table = App.DB.EngineerVisits.Get_Appointments_Scheduler(DateHelper.GetTheMonday(dtpLetterCreateDate.Value).ToString("yyyy-MM-dd"), 15);
                 var argappointments1 = SchedulerAppsView.Table;
                 SchedulerAppsView.Table = AppointmentStrip(ref argappointments1, levelsList, Postcodes, engineerPostcodes, false);
                 SchedulerAppsView.Sort = "Daynumber";
@@ -1011,7 +998,5 @@ namespace FSM
             Cursor = Cursors.Default;
             return true;
         }
-
-        
     }
 }
