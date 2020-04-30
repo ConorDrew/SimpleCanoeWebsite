@@ -14,58 +14,11 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int MaxEngineerTimeID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@MaxEngineerTimeID", MaxEngineerTimeID, true);
                 _database.ExecuteSP_NO_Return("MaxEngineerTime_Delete");
-            }
-
-            public MaxEngineerTime MaxEngineerTime_Get(int MaxEngineerTimeID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@MaxEngineerTimeID", MaxEngineerTimeID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("MaxEngineerTime_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oMaxEngineerTime = new MaxEngineerTime();
-                        oMaxEngineerTime.IgnoreExceptionsOnSetMethods = true;
-                        oMaxEngineerTime.SetMaxEngineerTimeID = dt.Rows[0]["MaxEngineerTimeID"];
-                        oMaxEngineerTime.SetEngineerID = dt.Rows[0]["EngineerID"];
-                        oMaxEngineerTime.SetMondayValue = dt.Rows[0]["MondayValue"];
-                        oMaxEngineerTime.SetTuesdayValue = dt.Rows[0]["TuesdayValue"];
-                        oMaxEngineerTime.SetWednesdayValue = dt.Rows[0]["WednesdayValue"];
-                        oMaxEngineerTime.SetThursdayValue = dt.Rows[0]["ThursdayValue"];
-                        oMaxEngineerTime.SetFridayValue = dt.Rows[0]["FridayValue"];
-                        oMaxEngineerTime.SetSaturdayValue = dt.Rows[0]["SaturdayValue"];
-                        oMaxEngineerTime.SetSundayValue = dt.Rows[0]["SundayValue"];
-                        oMaxEngineerTime.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oMaxEngineerTime.Exists = true;
-                        return oMaxEngineerTime;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public DataView MaxEngineerTime_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("MaxEngineerTime_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblMaxEngineerTime.ToString();
-                return new DataView(dt);
             }
 
             public MaxEngineerTime MaxEngineerTime_GetForEngineer(int EngineerID)
@@ -136,9 +89,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@SundayValue", oMaxEngineerTime.SundayValue, true);
                 }
             }
-
-
-            
         }
     }
 }

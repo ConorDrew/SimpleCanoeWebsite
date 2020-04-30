@@ -5,14 +5,9 @@ namespace FSM
 {
     public class CalculatedProperties : Properties
     {
-        
-
         internal CalculatedProperties(BindableItem parent) : base(parent)
         {
         }
-
-        
-        
 
         internal new BindableItem Parent
         {
@@ -27,44 +22,11 @@ namespace FSM
             }
         }
 
-        
-        
-
         public new CalculatedProperty AddNew(string name)
         {
             var newItem = new CalculatedProperty(this, name);
             AddNew(newItem);
             return newItem;
-        }
-
-        public new CalculatedProperty AddNew(string name, string triggers)
-        {
-            // triggers is a comma delimited string of property names that when
-            // have a change, trigger a change to this calculated value as well.
-            int pos;
-            string propName;
-            string newStr = triggers;
-            {
-                var withBlock = AddNew(name);
-                do
-                {
-                    pos = newStr.IndexOf(",");
-                    if (pos > 0)
-                    {
-                        propName = newStr.Substring(0, pos);
-                        newStr = newStr.Substring(pos + 1);
-                    }
-                    else
-                    {
-                        propName = newStr;
-                    }
-
-                    withBlock.triggers.AddNew(propName);
-                }
-                while (pos != -1);
-            }
-
-            return default;
         }
 
         public new CalculatedProperty this[int Index]
@@ -83,21 +45,15 @@ namespace FSM
             }
         }
 
-        
-        
-
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
                 this[x].onChildPropertyChanged(sender, e);
         }
-
-        
     }
 
     public class CalculatedProperty : Property
     {
-        
         private BindableItem _Parent;
 
         private BindableItem Parent
@@ -127,16 +83,10 @@ namespace FSM
         internal SimpleStringArray triggers = new SimpleStringArray();
         private object _value;
 
-        
-        
-
         internal CalculatedProperty(CalculatedProperties container, string name) : base(container, name)
         {
             Parent = container.Parent;
         }
-
-        
-        
 
         internal new CalculatedProperties Container
         {
@@ -151,9 +101,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public object Value
         {
             get
@@ -166,9 +113,6 @@ namespace FSM
                 _value = value;
             }
         }
-
-        
-        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -190,20 +134,13 @@ namespace FSM
                 Parent.onPropertyChanged(name);
             }
         }
-
-        
     }
 
     public class CollectionProperties : Properties
     {
-        
-
         internal CollectionProperties(BindableCollection parent) : base(parent)
         {
         }
-
-        
-        
 
         internal new BindableCollection Parent
         {
@@ -218,44 +155,11 @@ namespace FSM
             }
         }
 
-        
-        
-
         public new CollectionProperty AddNew(string name)
         {
             var newItem = new CollectionProperty(this, name);
             AddNew(newItem);
             return newItem;
-        }
-
-        public new CollectionProperty AddNew(string name, string childTriggers)
-        {
-            // triggers is a comma delimited string of child property names that when
-            // have a change, trigger a change to this value as well.
-            int pos;
-            string propName;
-            string newStr = childTriggers;
-            {
-                var withBlock = AddNew(name);
-                do
-                {
-                    pos = newStr.IndexOf(",");
-                    if (pos > 0)
-                    {
-                        propName = newStr.Substring(0, pos);
-                        newStr = newStr.Substring(pos + 1);
-                    }
-                    else
-                    {
-                        propName = newStr;
-                    }
-
-                    withBlock.childTriggers.AddNew(propName);
-                }
-                while (pos != -1);
-            }
-
-            return default;
         }
 
         public new CollectionProperty this[int Index]
@@ -274,9 +178,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
@@ -288,14 +189,10 @@ namespace FSM
             for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
                 this[x].onListChanged();
         }
-
-        
     }
 
     public class CollectionProperty : Property
     {
-        
-
         // Indicates to raise the ListChanged event after the PropertyChanged event
         public bool DoListChangedOnPropertyChange = true;
 
@@ -306,15 +203,9 @@ namespace FSM
         // in this calculated collection property.
         internal SimpleStringArray childTriggers = new SimpleStringArray();
 
-        
-        
-
         internal CollectionProperty(CollectionProperties container, string name) : base(container, name)
         {
         }
-
-        
-        
 
         internal new CollectionProperties Container
         {
@@ -328,9 +219,6 @@ namespace FSM
                 base.Container = value;
             }
         }
-
-        
-        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -356,7 +244,5 @@ namespace FSM
                 myParent.onPropertyChanged(name);
             }
         }
-
-        
     }
 }

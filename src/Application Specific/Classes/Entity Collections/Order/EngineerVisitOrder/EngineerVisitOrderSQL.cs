@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void EngineerVisitOrder_DeleteForOrder(int OrderID)
             {
                 _database.ClearParameter();
@@ -27,15 +26,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 _database.AddParameter("@EngineerVisitOrderID", EngineerVisitOrderID, true);
                 _database.ExecuteSP_NO_Return("EngineerVistOrder_Delete");
-            }
-
-            public DataView EngineerVisitOrder_Get(int EngineerVisitID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", EngineerVisitID);
-
-                // Get the datatable from the database store in dt
-                return new DataView(_database.ExecuteSP_DataTable("EngineerVisitOrder_Get"));
             }
 
             public EngineerVisitOrder EngineerVisitOrder_GetForOrder(int OrderID)
@@ -110,9 +100,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@WarehouseID", oEngineerVisitOrder.WarehouseID, true);
                 }
             }
-
-
-            
         }
     }
 }

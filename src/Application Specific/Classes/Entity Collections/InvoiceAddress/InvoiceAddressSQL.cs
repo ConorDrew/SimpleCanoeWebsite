@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int InvoiceAddressID)
             {
                 _database.ClearParameter();
@@ -66,18 +64,6 @@ namespace FSM.Entity
             {
                 _database.ClearParameter();
                 var dt = _database.ExecuteSP_DataTable("InvoiceAddress_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblInvoiceAddress.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView InvoiceAddress_Get_EngineerVisitID(int EngineerVisitID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
-                _database.AddParameter("@InvoiceEnumVal", Conversions.ToInteger(Sys.Enums.InvoiceAddressType.Invoice), true);
-                _database.AddParameter("@SiteEnumVal", Conversions.ToInteger(Sys.Enums.InvoiceAddressType.Site), true);
-                _database.AddParameter("@HQEnumVal", Conversions.ToInteger(Sys.Enums.InvoiceAddressType.HQ), true);
-                var dt = _database.ExecuteSP_DataTable("InvoiceAddress_Get_EngineerVisitID");
                 dt.TableName = Sys.Enums.TableNames.tblInvoiceAddress.ToString();
                 return new DataView(dt);
             }
@@ -136,15 +122,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView InvoiceAddress_Search(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("InvoiceAddress_Search");
-                dt.TableName = Sys.Enums.TableNames.tblInvoiceAddress.ToString();
-                return new DataView(dt);
-            }
-
             public void Update(InvoiceAddress oInvoiceAddress)
             {
                 _database.ClearParameter();
@@ -169,9 +146,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@SiteID", oInvoiceAddress.SiteID, true);
                 }
             }
-
-
-            
         }
     }
 }

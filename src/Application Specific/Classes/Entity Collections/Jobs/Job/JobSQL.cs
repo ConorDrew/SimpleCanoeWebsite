@@ -18,8 +18,6 @@ namespace FSM.Entity.Jobs
             _database = database;
         }
 
-        
-
         public void DeleteReservedOrderNumber(int JobNumber, string Prefix)
         {
             string sql;
@@ -397,16 +395,6 @@ namespace FSM.Entity.Jobs
             _database.AddParameter("@PoNumber", poNumber, true);
             _database.AddParameter("@IsJobOpen", isJobOpen, true);
             var dt = _database.ExecuteSP_DataTable("Job_Manager_Search");
-            dt.TableName = Enums.TableNames.tblJob.ToString();
-            return new DataView(dt);
-        }
-
-        public DataView Job_Search(string Criteria)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@Criteria", Criteria, true);
-            _database.AddParameter("@InvoiceTypeIDEnum", Enums.InvoiceType.Visit, true);
-            var dt = _database.ExecuteSP_DataTable("Job_Search");
             dt.TableName = Enums.TableNames.tblJob.ToString();
             return new DataView(dt);
         }
@@ -877,15 +865,6 @@ namespace FSM.Entity.Jobs
             return new DataView(dt);
         }
 
-        public bool JobQualificationsLevels_EngineerCheck(int jobID, int engineerID)
-        {
-            var command = new SqlCommand("JobQualificationsLevels_EngineerCheck", new SqlConnection(_database.ServerConnectionString));
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@JobID", jobID);
-            command.Parameters.AddWithValue("@EngineerID", engineerID);
-            return Conversions.ToBoolean(command.ExecuteScalar());
-        }
-
         private void JobQualificationsLevels_Insert(Job oJob)
         {
             _database.ClearParameter();
@@ -1007,264 +986,11 @@ namespace FSM.Entity.Jobs
             }
         }
 
-        public void CompleteJob(int JobID)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@JobID", JobID, true);
-            _database.AddParameter("@StatusID", Conversions.ToInteger(Enums.JobStatus.Complete), true);
-            _database.ExecuteSP_NO_Return("Job_Complete");
-        }
-
-        public void UnlockTimed(int UserID)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@UserID", UserID, true);
-            _database.ExecuteSP_NO_Return("JobLock_DeleteAll_After_Time");
-        }
-
-        public void UnlockAll(int UserID)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@UserID", UserID, true);
-            _database.ExecuteSP_NO_Return("JobLock_DeleteAll");
-        }
-
-        public DataView Job_Get_All_WithNumberOfVisits(string WhereFilter)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@InvoiceTypeIDEnum", Enums.InvoiceType.Visit, true);
-            _database.AddParameter("@WhereFilter", WhereFilter, true);
-            var dt = _database.ExecuteSP_DataTable("Job_Get_All_WithNumberOfVisits");
-            dt.TableName = Enums.TableNames.tblJob.ToString();
-            return new DataView(dt);
-        }
-
         public bool JobOfWork_Required_Priority(int SiteID)
         {
             _database.ClearParameter();
             _database.AddParameter("@SiteID", SiteID, true);
             return Helper.MakeBooleanValid(_database.ExecuteSP_OBJECT("JobOfWork_Required_Priority"));
-        }
-
-        public string GetEngineerTabletOrderRef(int EngineerVisitID, int EngineerID)
-        {
-            try
-            {
-                string ExistingOrderRef = 0.ToString();
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
-                ExistingOrderRef = Conversions.ToString(_database.ExecuteScalar("SELECT EngNextOrder FROM tblEngineerVisit WHERE EngineerVisitID = " + EngineerVisitID));
-                if ((ExistingOrderRef ?? "") == "0")
-                {
-                    if (EngineerID == 0)
-                    {
-                        App.ShowMessage("An error has occurred:" + Constants.vbCrLf + "There is no engineer assigned to this visit, process cannot continue", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return "False";
-                        return default;
-                    }
-
-                    var Eng_ds = new DataSet();
-                    var Eng_dt = new DataTable();
-                    string EngineerName = "";
-                    string Dept = "";
-                    _database.ClearParameter();
-                    _database.AddParameter("@EngineerID", EngineerID, true);
-                    Eng_dt = _database.ExecuteSP_DataTable("Engineer_Get");
-                    Eng_ds.Tables.Add(Eng_dt);
-                    if (Eng_ds.Tables[0].Rows.Count > 0)
-                    {
-                        {
-                            var withBlock = Eng_ds.Tables[0].Rows[0];
-                            EngineerName = Conversions.ToString(withBlock["Name"]);
-                            Dept = Conversions.ToString(withBlock["Department"]);
-                        }
-                    }
-
-                    var Job_ds = new DataSet();
-                    var Job_dt = new DataTable();
-                    string Job_JobID = "";
-                    var Job_VisitType = default(int);
-                    var Job_SiteID = default(int);
-                    _database.ClearParameter();
-                    _database.AddParameter("@engineerVisitID", EngineerVisitID, true);
-                    Job_dt = _database.ExecuteSP_DataTable("Job_Get_For_An_EngineerVisit_ID");
-                    Job_ds.Tables.Add(Job_dt);
-                    if (Job_ds.Tables[0].Rows.Count > 0)
-                    {
-                        {
-                            var withBlock1 = Job_ds.Tables[0].Rows[0];
-                            Job_JobID = Conversions.ToString(withBlock1["JobID"]);
-                            Job_VisitType = Conversions.ToInteger(Conversions.ToString(withBlock1["JobTypeID"]));
-                            Job_SiteID = Conversions.ToInteger(Conversions.ToString(withBlock1["SiteID"]));
-                        }
-                    }
-
-                    if (!(Job_VisitType == 4703)) // not breakdown
-                    {
-                        string Job_JobNumber;
-                        string Job_JobPrefix;
-                        var JobNumber_ds = new DataSet();
-                        var JobNumber_dt = new DataTable();
-                        _database.ClearParameter();
-                        _database.AddParameter("@JobDefinition", Enums.JobDefinition.Callout, true);
-                        JobNumber_dt = _database.ExecuteSP_DataTable("JobNumber_Get");
-                        JobNumber_ds.Tables.Add(JobNumber_dt);
-                        if (JobNumber_ds.Tables[0].Rows.Count > 0)
-                        {
-                            {
-                                var withBlock2 = JobNumber_ds.Tables[0].Rows[0];
-                                Job_JobNumber = Conversions.ToString(withBlock2["JobNumber"]);
-                                Job_JobPrefix = Conversions.ToString(withBlock2["Prefix"]);
-                            }
-
-                            Job_JobNumber = Job_JobPrefix + Job_JobNumber;
-                            _database.ClearParameter();
-                            _database.AddParameter("@SiteID", Job_SiteID, true);
-                            _database.AddParameter("@JobDefinitionEnumID", Enums.JobDefinition.Callout, true);
-                            _database.AddParameter("@JobTypeID", 4703, true);
-                            _database.AddParameter("@CreatedByUserID", 2, true);
-                            _database.AddParameter("@JobNumber", Job_JobNumber, true);
-                            _database.AddParameter("@PONumber", DBNull.Value, true);
-                            _database.AddParameter("@QuoteID", 0, true);
-                            _database.AddParameter("@ContractID", 0, true);
-                            _database.AddParameter("@ToBePartPaid", false, true);
-                            _database.AddParameter("@Retention", 0, true);
-                            _database.AddParameter("@CollectPayment", false, true);
-                            _database.AddParameter("@POC", false, true);
-                            _database.AddParameter("@OTI", false, true);
-                            _database.AddParameter("@FOC", false, true);
-                            _database.AddParameter("@Deleted", 0, true);
-                            Job_JobID = Conversions.ToString(_database.SP_ExecuteScalar("Job_Insert"));
-                            string NewJobActionChange = "New Job Inserted (From Tablet - Engineer " + EngineerName + ") - JobNumber: " + Job_JobNumber + " (Unique Job ID: " + Job_JobID + ")";
-                            _database.ClearParameter();
-                            _database.AddParameter("@JobID", Job_JobID, true);
-                            _database.AddParameter("@ActionChange", NewJobActionChange, true);
-                            _database.AddParameter("@ActionDateTime", DateAndTime.Now, true);
-                            _database.AddParameter("@UserID", "2", true);
-                            _database.SP_ExecuteScalar("JobAudit_Insert");
-                        }
-                    }
-
-                    int JoW_JoWID;
-                    _database.ClearParameter();
-                    _database.AddParameter("@JobID", Job_JobID, true);
-                    _database.AddParameter("@Deleted", "0", true);
-                    _database.AddParameter("@PONumber", DBNull.Value, true);
-                    _database.AddParameter("@Status", "1", true);
-                    _database.AddParameter("@Priority", DBNull.Value, true);
-                    _database.AddParameter("@PriorityDateSet", DBNull.Value, true);
-                    JoW_JoWID = Conversions.ToInteger(_database.SP_ExecuteScalar("JobOfWork_Insert"));
-                    string NewVisitID;
-                    _database.ClearParameter();
-                    _database.AddParameter("@JobOfWorkID", JoW_JoWID, true);
-                    _database.AddParameter("@EngineerID", "0", true);
-                    _database.AddParameter("@StartDateTime", DBNull.Value, true);
-                    _database.AddParameter("@EndDateTime", DBNull.Value, true);
-                    _database.AddParameter("@StatusEnumID", "0", true);
-                    _database.AddParameter("@NotesToEngineer", "Created from Tablet", true);
-                    _database.AddParameter("@PartsToFit", "1", true);
-                    _database.AddParameter("@ExpectedEngineerID", "0", true);
-                    _database.AddParameter("@DueDate", DBNull.Value, true);
-                    _database.AddParameter("@Recharge", "0", true);
-                    _database.AddParameter("@Deleted", "0", true);
-                    _database.AddParameter("@AMPM", DBNull.Value, true);
-                    NewVisitID = Conversions.ToString(_database.SP_ExecuteScalar("EngineerVisit_Insert"));
-                    string ActionChange = "New Visit Inserted (From Tablet - Engineer " + EngineerName + ") - Status: " + Strings.Replace(((Enums.VisitStatus)Conversions.ToInteger(0)).ToString(), "_", " ") + " (Unique Visit ID: " + NewVisitID + ")";
-                    _database.ClearParameter();
-                    _database.AddParameter("@JobID", Job_JobID, true);
-                    _database.AddParameter("@ActionChange", ActionChange, true);
-                    _database.AddParameter("@ActionDateTime", DateAndTime.Now, true);
-                    _database.AddParameter("@UserID", "2", true);
-                    _database.SP_ExecuteScalar("JobAudit_Insert");
-                    var Order_ds = new DataSet();
-                    var Order_dt = new DataTable();
-                    string OrderID = "";
-                    _database.ClearParameter();
-                    _database.AddParameter("@JobDefinition", Enums.JobDefinition.ORDER, true);
-                    Order_dt = _database.ExecuteSP_DataTable("JobNumber_Get");
-                    Order_ds.Tables.Add(Order_dt);
-                    if (Order_ds.Tables[0].Rows.Count > 0)
-                    {
-                        {
-                            var withBlock3 = Order_ds.Tables[0].Rows[0];
-                            OrderID = Conversions.ToString(withBlock3["JobNumber"]);
-                        }
-                    }
-
-                    string OrderRef = GetOrderReference(Enums.OrderType.Job, EngineerName, OrderID);
-                    int NewOrderID;
-                    _database.ClearParameter();
-                    _database.AddParameter("@DatePlaced", DateAndTime.Now, true);
-                    _database.AddParameter("@OrderTypeID", Enums.OrderType.Job, true);
-                    _database.AddParameter("@OrderReference", OrderRef, true);
-                    _database.AddParameter("@UserID", "2", true);
-                    _database.AddParameter("@OrderStatusID", Enums.OrderStatus.AwaitingConfirmation, true);
-                    _database.AddParameter("@ReasonForReject", DBNull.Value, true);
-                    _database.AddParameter("@DeliveryDeadline", DBNull.Value, true);
-                    _database.AddParameter("@SpecialInstructions", DBNull.Value, true);
-                    _database.AddParameter("@ContactID", "0", true);
-                    _database.AddParameter("@InvoiceAddressID", "0", true);
-                    _database.AddParameter("@AllocatedToUser", "0", true);
-                    _database.AddParameter("@DepartmentRef", Dept, true);
-                    _database.AddParameter("@DoNotConsolidated", "1", true);
-                    NewOrderID = Conversions.ToInteger(_database.SP_ExecuteScalar("Order_Insert"));
-                    _database.ClearParameter();
-                    _database.AddParameter("@OrderID", NewOrderID, true);
-                    _database.AddParameter("@EngineerVisitID", NewVisitID, true);
-                    _database.AddParameter("@WarehouseID", "0", true);
-                    _database.SP_ExecuteScalar("EngineerVisitOrder_Insert");
-                    _database.ClearParameter();
-                    _database.ExecuteScalar("UPDATE tblEngineerVisit SET EngNextOrder = '" + OrderRef + "' WHERE EngineerVisitID = '" + EngineerVisitID + "'");
-                    return OrderRef;
-                }
-                else
-                {
-                    return ExistingOrderRef;
-                }
-            }
-            catch (SqlException ex)
-            {
-                return ex.Message;
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
-
-        public static string GetOrderReference(Enums.OrderType oOrderType, string EngineerName, string JobNumberIn)
-        {
-            var OrderNumber = new JobNumber();
-            OrderNumber.OrderNumber = JobNumberIn;
-            while (OrderNumber.OrderNumber.Length < 5)
-                OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
-            string typePrefix = "";
-            switch (oOrderType)
-            {
-                case Enums.OrderType.Customer:
-                    {
-                        typePrefix = "W";
-                        break;
-                    }
-
-                case Enums.OrderType.StockProfile:
-                    {
-                        typePrefix = "V";
-                        break;
-                    }
-
-                case Enums.OrderType.Warehouse:
-                    {
-                        typePrefix = "W";
-                        break;
-                    }
-            }
-
-            string userPrefix = "";
-            var username = EngineerName.Split(' ');
-            foreach (string s in username)
-                userPrefix = s.Substring(0, 1);
-            return userPrefix + typePrefix + OrderNumber.OrderNumber;
         }
 
         public Job CreateJobImportAdHocVisit(DataRow r, bool scheduleJobs)
@@ -1850,9 +1576,6 @@ namespace FSM.Entity.Jobs
             return _currentJob;
         }
 
-        
-        
-
         public DataView GetJobNotes(int jobID)
         {
             _database.ClearParameter();
@@ -1898,7 +1621,5 @@ namespace FSM.Entity.Jobs
             _database.AddParameter("@JobNoteID", jobNoteID, true);
             _database.ExecuteSP_NO_Return("JobNote_Delete");
         }
-
-        
     }
 }

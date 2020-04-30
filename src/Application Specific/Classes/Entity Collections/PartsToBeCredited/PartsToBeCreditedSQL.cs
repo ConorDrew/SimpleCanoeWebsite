@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public PartsToBeCredited PartsToBeCredited_Get(int PartsToBeCreditedID)
             {
                 _database.ClearParameter();
@@ -122,11 +121,6 @@ namespace FSM.Entity
 
             public int PartCredits_Insert(double AmountReceived, string Notes, DateTime DateReceived, DateTime DateExportedToSage, int TaxCodeID, string NominalCode, string DepartmentRef, string ExtraRef, string SupplierCreditRef)
 
-
-
-
-
-
             {
                 _database.ClearParameter();
                 _database.AddParameter("@AmountReceived", AmountReceived, true);
@@ -151,12 +145,6 @@ namespace FSM.Entity
 
             public int PartCredits_Update(int PartCreditsID, double AmountReceived, string Notes, DateTime DateReceived, DateTime DateExportedToSage, int TaxCodeID, string NominalCode, string DepartmentRef, string ExtraRef, string SupplierCreditRef)
 
-
-
-
-
-
-
             {
                 _database.ClearParameter();
                 _database.AddParameter("@PartCreditsID", PartCreditsID, true);
@@ -178,39 +166,6 @@ namespace FSM.Entity
                 _database.AddParameter("@ExtraRef", ExtraRef, true);
                 _database.AddParameter("@SupplierCreditRef", SupplierCreditRef, true);
                 return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("PartCredits_Update"));
-            }
-
-            public int PartCredits_Update_SageDate(int PartCreditsID, DateTime DateExportedToSage)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@PartCreditsID", PartCreditsID, true);
-                if (DateExportedToSage == DateTime.MinValue)
-                {
-                    _database.AddParameter("@DateExportedToSage", DBNull.Value, true);
-                }
-                else
-                {
-                    _database.AddParameter("@DateExportedToSage", DateExportedToSage, true);
-                }
-
-                return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("PartCredits_Update_SageDate"));
-            }
-
-            public void PartCreditParts_Insert(int PartCreditID, int PartsToBeCreditedID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@PartCreditID", PartCreditID, true);
-                _database.AddParameter("@PartsToBeCreditedID", PartsToBeCreditedID, true);
-                _database.ExecuteSP_NO_Return("PartCreditParts_Insert");
-            }
-
-            public DataView Order_GetCredit(int PartCreditID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@CreditID", PartCreditID, true);
-                var dt = _database.ExecuteSP_DataTable("PartsToBeCredited_Get_For_CreditID");
-                dt.TableName = Sys.Enums.TableNames.tblPartsToBeCredited.ToString();
-                return new DataView(dt);
             }
 
             public void Delete(int CreditID)
@@ -246,13 +201,6 @@ namespace FSM.Entity
                 _database.AddParameter("@OrderPartID", OrderPArtID, true);
                 return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("PartsToBeCredited_Insert"));
             }
-
-
-
-
-
-
-            
         }
     }
 }

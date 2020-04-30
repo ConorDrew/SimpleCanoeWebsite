@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int OrderLocationPartID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -32,13 +31,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 _database.AddParameter("@OrderLocationPartID", OrderLocationPartID, true);
                 _database.ExecuteSP_NO_Return("OrderLocationPart_Delete");
-            }
-
-            public void DeleteForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                _database.ExecuteSP_NO_Return("OrderLocationPart_DeleteForOrder");
             }
 
             public OrderLocationPart OrderLocationPart_Get(int OrderLocationPartID, SqlTransaction trans)
@@ -116,14 +108,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataView OrderLocationPart_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("OrderLocationPart_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblOrderLocationPart.ToString();
-                return new DataView(dt);
-            }
-
             public OrderLocationPart Insert(OrderLocationPart oOrderLocationPart, bool DoConsolidation)
             {
                 _database.ClearParameter();
@@ -188,16 +172,6 @@ namespace FSM.Entity
                 _database.AddParameter("@OrderLocationPartID", OrderLocationPartID, true);
                 _database.ExecuteSP_NO_Return("OrderLocationPart_EngineerReceived");
             }
-
-            public void MarkOrderQuantityReceived(int OrderLocationPartID, int OrderLocationQuantityOrdered)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderLocationPartID", OrderLocationPartID, true);
-                _database.AddParameter("@QuantityReceived", OrderLocationQuantityOrdered, true);
-                _database.ExecuteSP_NO_Return("OrderLocationPart_MarkOrderQuantityReceived");
-            }
-
-            
         }
     }
 }

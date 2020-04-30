@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int InvoiceToBeRaisedID)
             {
                 _database.ClearParameter();
@@ -96,14 +95,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataView InvoiceToBeRaised_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("InvoiceToBeRaised_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblInvoiceToBeRaised.ToString();
-                return new DataView(dt);
-            }
-
             public DataView Invoices_GetAll_Manager(DateTime RaiseFrom, DateTime RaiseTo)
             {
                 _database.ClearParameter();
@@ -153,15 +144,6 @@ namespace FSM.Entity
                 return oInvoiceToBeRaised;
             }
 
-            public DataView InvoiceToBeRaised_Search(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("InvoiceToBeRaised_Search");
-                dt.TableName = Sys.Enums.TableNames.tblInvoiceToBeRaised.ToString();
-                return new DataView(dt);
-            }
-
             public void Update(InvoiceToBeRaised oInvoiceToBeRaised)
             {
                 _database.ClearParameter();
@@ -205,35 +187,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_tblInvoices.ToString();
                 return new DataView(dt);
             }
-
-            public double InvoicesToBeRaised_GetAmount_ByInvoiceToBeRaisedID(int InvoiceToBeRaisedID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@InvoiceTypeIDEnum", Conversions.ToInteger(Sys.Enums.InvoiceType.Visit), true);
-                _database.AddParameter("@InvoiceToBeRaisedID", InvoiceToBeRaisedID, true);
-                return Sys.Helper.MakeDoubleValid(App.DB.ExecuteSP_OBJECT("InvoicesToBeRaised_GetAmount_ByInvoiceToBeRaisedID"));
-            }
-
-            public DataView Invoices_GetAll_ForDirectDebitRpt(DateTime DateFrom, DateTime DateTo)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@RaiseFrom", Conversions.ToDate(Strings.Format(DateFrom, "dd/MM/yyyy") + " 00:00:00"), true);
-                _database.AddParameter("@RaiseTo", Conversions.ToDate(Strings.Format(DateTo, "dd/MM/yyyy") + " 23:59:59"), true);
-                _database.AddParameter("@ContractOpt1Enum", Conversions.ToInteger(Sys.Enums.InvoiceType.Contract_Option1), true);
-                var dt = _database.ExecuteSP_DataTable("Invoices_GetAll_ForDirectDebitRpt");
-                dt.TableName = Sys.Enums.TableNames.tblInvoiceToBeRaised.ToString();
-                return new DataView(dt);
-            }
-
-            public bool InvoicesToBeRaised_Update_PaymentID(int InvoiceToBeRaisedID, int paymentTermID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@InvoiceToBeRaisedID", InvoiceToBeRaisedID, true);
-                _database.AddParameter("@PaymentTermID", paymentTermID, true);
-                return Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(_database.ExecuteSP_OBJECT("InvoicesToBeRaised_Update_PaymentID"), 1, false));
-            }
-
-            
         }
     }
 }

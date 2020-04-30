@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int EngineerVisitAssetWorkSheetID)
             {
                 _database.ClearParameter();
@@ -82,14 +81,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataView EngineerVisitAssetWorkSheet_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitAssetWorkSheet_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblEngineerVisitAssetWorkSheet.ToString();
-                return new DataView(dt);
-            }
-
             public DataView EngineerVisitAssetWorkSheet_GetForVisit(int EngineerVisitID, int Oil = -1)
             {
                 _database.ClearParameter();
@@ -116,15 +107,6 @@ namespace FSM.Entity
                 oEngineerVisitAssetWorkSheet.SetEngineerVisitAssetWorkSheetID = Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("EngineerVisitAssetWorkSheet_Insert"));
                 oEngineerVisitAssetWorkSheet.Exists = true;
                 return oEngineerVisitAssetWorkSheet;
-            }
-
-            public DataView EngineerVisitAssetWorkSheet_Search(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitAssetWorkSheet_Search");
-                dt.TableName = Sys.Enums.TableNames.tblEngineerVisitAssetWorkSheet.ToString();
-                return new DataView(dt);
             }
 
             public void Update(EngineerVisitAssetWorkSheet oEngineerVisitAssetWorkSheet)
@@ -212,8 +194,6 @@ namespace FSM.Entity
 
                 _database.ExecuteSP_NO_Return("PrintedGSRLettersInsert");
             }
-
-            
         }
     }
 }

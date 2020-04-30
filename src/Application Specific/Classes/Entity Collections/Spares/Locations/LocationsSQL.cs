@@ -16,8 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int LocationID)
             {
                 _database.ClearParameter();
@@ -68,7 +66,7 @@ namespace FSM.Entity
             {
                 _database.ClearParameter();
                 _database.AddParameter("@Reg", VanReg, true);
-                var dt = _database.ExecuteSP_DataTable("Locations_Get_ForVanReg_ActiveOnly");  // ' Why would it be pulling deleted ones? I changed this to not. 
+                var dt = _database.ExecuteSP_DataTable("Locations_Get_ForVanReg_ActiveOnly");  // ' Why would it be pulling deleted ones? I changed this to not.
                 dt.TableName = Sys.Enums.TableNames.tblLocations.ToString();
                 return new DataView(dt);
             }
@@ -207,7 +205,6 @@ namespace FSM.Entity
             // Return New DataView(dt)
             // End Function
 
-
             public DataView StockTake_Replenishment_Filtered(string Location, string Item, bool IncludeVans, bool LessMin, bool LessRec)
 
             {
@@ -218,38 +215,6 @@ namespace FSM.Entity
                 _database.AddParameter("@LessMin", LessMin, true);
                 _database.AddParameter("@LessRec", LessRec, true);
                 var dt = _database.ExecuteSP_DataTable("StockTake_Replenishment_Filtered");
-                dt.TableName = Sys.Enums.TableNames.tblStock.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView StockTake_Replenishment_Filtered_OvernightSP()
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Location", "", true);
-                _database.AddParameter("@Item", "", true);
-                _database.AddParameter("@IncludeVans", true, true);
-                _database.AddParameter("@LessMin", true, true);
-                _database.AddParameter("@LessRec", true, true);
-                var dt = _database.ExecuteSP_DataTable("StockTake_Replenishment_OvernightSP_VansOnly");
-                dt.TableName = Sys.Enums.TableNames.tblStock.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView StockTake_Replenishment_Daily_Filtered(int FilterType = 0, int VanID = 0)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@FilterType", FilterType, true);
-                _database.AddParameter("@VanID", VanID, true);
-                DataTable dt;
-                if (FilterType == 0)
-                {
-                    dt = _database.ExecuteSP_DataTable("StockTake_Replenishment_Daily_FilterResults_ALL");
-                }
-                else
-                {
-                    dt = _database.ExecuteSP_DataTable("StockTake_Replenishment_Daily_FilterResults");
-                }
-
                 dt.TableName = Sys.Enums.TableNames.tblStock.ToString();
                 return new DataView(dt);
             }
@@ -269,24 +234,6 @@ namespace FSM.Entity
                 _database.AddParameter("@ItemID", ItemID, true);
                 _database.AddParameter("@AmountToOrder", AmountToOrder, true);
                 _database.ExecuteSP_NO_Return("StockTake_Replenishment_Daily_UpdateAmountToOrder");
-                return default;
-            }
-
-            public DataView StockTake_Replenishment_Daily_UpdateFilterType(int ItemID, int FilterType)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ItemID", ItemID, true);
-                _database.AddParameter("@FilterType", FilterType, true);
-                _database.ExecuteSP_NO_Return("StockTake_Replenishment_Daily_UpdateFilterType");
-                return default;
-            }
-
-            public DataView StockTake_Replenishment_Daily_UpdateSupplier(int ItemID, int PartSupplierID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ItemID", ItemID, true);
-                _database.AddParameter("@PartSupplierID", PartSupplierID, true);
-                _database.ExecuteSP_NO_Return("StockTake_Replenishment_Daily_UpdateSupplier");
                 return default;
             }
 
@@ -372,8 +319,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblIPTAudit.ToString();
                 return new DataView(dt);
             }
-
-            
         }
     }
 }

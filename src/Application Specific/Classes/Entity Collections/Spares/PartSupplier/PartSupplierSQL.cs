@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public object PartSupplier_FindTabletOrder(string SearchString, int SupplierID = 0)
             {
                 _database.ClearParameter();
@@ -164,22 +163,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView Get_ByPartID(int PartID, SqlTransaction trans)
-            {
-                var Command = new SqlCommand();
-                Command.CommandText = "PartSupplier_GetByPart";
-                Command.CommandType = CommandType.StoredProcedure;
-                Command.Transaction = trans;
-                Command.Connection = trans.Connection;
-                Command.Parameters.AddWithValue("@PartID", PartID);
-                var Adapter = new SqlDataAdapter(Command);
-                var returnDS = new DataSet();
-                Adapter.Fill(returnDS);
-                var dt = returnDS.Tables[0];
-                dt.TableName = Sys.Enums.TableNames.tblPartSupplier.ToString();
-                return new DataView(dt);
-            }
-
             public DataView Get_ByPartIDAndSupplierID(int PartID, int SupplierID)
             {
                 _database.ClearParameter();
@@ -256,8 +239,6 @@ namespace FSM.Entity
 
                 _database.ExecuteSP_NO_Return("PartSupplier_Update_Preferred");
             }
-
-            
         }
     }
 }

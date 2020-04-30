@@ -807,7 +807,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\SalesCredit\SalesCredit.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\SalesCredit\SalesCreditSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\SalesCredit\SalesValidator.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Reports\ReportSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Scheduler\HeartBeat.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Skills\Skills.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Skills\SkillsSQL.cs" />
@@ -1573,9 +1572,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSiteAsset\QuoteContractOriginalSiteAsset.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSiteAsset\QuoteContractOriginalSiteAssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSiteAsset\QuoteContractOriginalSiteAssetValidator.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1648,22 +1644,13 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderPart\QuoteOrderPart.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderPart\QuoteOrderPartSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderPart\QuoteOrderPartValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderProduct\QuoteOrderProduct.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderProduct\QuoteOrderProductSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderProduct\QuoteOrderProductValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderSQL.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderValidator.cs">
@@ -3920,7 +3907,9 @@
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Application Specific\Classes\Entity Collections\Reports\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

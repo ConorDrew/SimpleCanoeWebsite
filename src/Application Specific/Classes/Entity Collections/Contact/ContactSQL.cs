@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int ContactID)
             {
                 _database.ClearParameter();
@@ -29,15 +28,6 @@ namespace FSM.Entity
                 oContact.SetContactID = Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("Contact_Insert"));
                 oContact.Exists = true;
                 return oContact;
-            }
-
-            public DataView Contact_Search(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("Contact_Search");
-                dt.TableName = Sys.Enums.TableNames.tblContact.ToString();
-                return new DataView(dt);
             }
 
             public void Update(Contact oContact)
@@ -106,19 +96,6 @@ namespace FSM.Entity
                 }
             }
 
-            public bool Check_Unique_PortalUsername(string username, int ID)
-            {
-                int NumberOfUsers = Sys.Helper.MakeIntegerValid(_database.ExecuteScalar("SELECT COUNT(Contactid) as 'NumberOfUsers' " + "FROM tblContact WHERE portalusername = '" + username + "' AND contactid <> " + ID + " AND PortalUserName IS NOT NULL", false));
-                if (NumberOfUsers == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-
             private void AddContactParametersToCommand(ref Contact oContact)
             {
                 {
@@ -149,8 +126,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             public DataView Contacts_GetAll_ForLink(int linkId, int linkRef, bool deleted = false)
             {
                 _database.ClearParameter();
@@ -256,8 +231,6 @@ namespace FSM.Entity
                 _database.AddParameter("@ContactID", contactId, true);
                 return Conversions.ToBoolean(_database.ExecuteSP_ReturnRowsAffected("Contacts_Delete") == 1);
             }
-
-            
         }
     }
 }

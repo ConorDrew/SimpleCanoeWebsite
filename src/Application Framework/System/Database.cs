@@ -99,9 +99,6 @@ namespace FSM.Entity.Sys
             Scheduler = new Scheduler.SchedulerSQL(this);
             OrderCharge = new OrderCharges.OrderChargeSQL(this);
             CustomerOrder = new CustomerOrders.CustomerOrderSQL(this);
-            QuoteOrder = new QuoteOrders.QuoteOrderSQL(this);
-            QuoteOrderPart = new QuoteOrderParts.QuoteOrderPartSQL(this);
-            QuoteOrderProduct = new QuoteOrderProducts.QuoteOrderProductSQL(this);
             QuoteJobParts = new QuoteJobPartss.QuoteJobPartsSQL(this);
             QuoteJobProducts = new QuoteJobProductss.QuoteJobProductsSQL(this);
             EngineerAbsence = new EngineerAbsence.EngineerAbsenceSQL(this);
@@ -112,7 +109,6 @@ namespace FSM.Entity.Sys
             ContractOriginalPPMVisit = new ContractOriginalPPMVisits.ContractOriginalPPMVisitSQL(this);
             QuoteContractOriginal = new QuoteContractOriginals.QuoteContractOriginalSQL(this);
             QuoteContractOriginalSite = new QuoteContractOriginalSites.QuoteContractOriginalSiteSQL(this);
-            QuoteContractOriginalSiteAsset = new QuoteContractOriginalSiteAssets.QuoteContractOriginalSiteAssetSQL(this);
             QuoteContractOriginalPPMVisits = new QuoteContractOriginalPPMVisits.QuoteContractOriginalPPMVisitSQL(this);
             Notes = new Notes.NotesSQL(this);
             EngineerVisitsPartsAndProducts = new EngineerVisitsPartsAndProducts.EngineerVisitPartsAndProductsSQL(this);
@@ -149,7 +145,6 @@ namespace FSM.Entity.Sys
             EngineerVisitAdditional = new EngineerVisitAdditionals.EngineerVisitAdditionalSQL(this);
             POInvoice = new Orders.POInvoiceSQL(this);
             TabletOrders = new TabletOrders.TabletOrderSQL(this);
-            Reports = new Reports.ReportSQL(this);
             EngineerVisitPhotos = new EngineerVisitPhotos.EngineerVisitPhotoSQL(this);
             ContractVisits = new ContractOriginalVisits.ContractOriginalVisitSQL(this);
             Appointments = new Appointments.AppointmentsSQL(this);
@@ -172,7 +167,6 @@ namespace FSM.Entity.Sys
             CompanyDetails = new CompanyDetails.CompanyDetailsSql(this);
         }
 
-        
         private SqlConnection _paggedQueryConnection = null;
 
         private SqlConnection PaggedQueryConnection
@@ -248,8 +242,6 @@ namespace FSM.Entity.Sys
             }
         }
 
-        
-        
         public Management.ManagerSQL Manager;
         public PickLists.PickListSQL Picklists;
         public Users.UserSQL User;
@@ -315,9 +307,6 @@ namespace FSM.Entity.Sys
         public Scheduler.SchedulerSQL Scheduler;
         public OrderCharges.OrderChargeSQL OrderCharge;
         public CustomerOrders.CustomerOrderSQL CustomerOrder;
-        public QuoteOrders.QuoteOrderSQL QuoteOrder;
-        public QuoteOrderParts.QuoteOrderPartSQL QuoteOrderPart;
-        public QuoteOrderProducts.QuoteOrderProductSQL QuoteOrderProduct;
         public QuoteJobPartss.QuoteJobPartsSQL QuoteJobParts;
         public QuoteJobProductss.QuoteJobProductsSQL QuoteJobProducts;
         public EngineerAbsence.EngineerAbsenceSQL EngineerAbsence;
@@ -328,7 +317,6 @@ namespace FSM.Entity.Sys
         public ContractOriginalPPMVisits.ContractOriginalPPMVisitSQL ContractOriginalPPMVisit;
         public QuoteContractOriginalPPMVisits.QuoteContractOriginalPPMVisitSQL QuoteContractOriginalPPMVisits;
         public QuoteContractOriginalSites.QuoteContractOriginalSiteSQL QuoteContractOriginalSite;
-        public QuoteContractOriginalSiteAssets.QuoteContractOriginalSiteAssetSQL QuoteContractOriginalSiteAsset;
         public QuoteContractOriginals.QuoteContractOriginalSQL QuoteContractOriginal;
         public Notes.NotesSQL Notes;
         public EngineerVisitsPartsAndProducts.EngineerVisitPartsAndProductsSQL EngineerVisitsPartsAndProducts;
@@ -365,7 +353,6 @@ namespace FSM.Entity.Sys
         public EngineerVisitAdditionals.EngineerVisitAdditionalSQL EngineerVisitAdditional;
         public Orders.POInvoiceSQL POInvoice;
         public TabletOrders.TabletOrderSQL TabletOrders;
-        public Reports.ReportSQL Reports;
         public EngineerVisitPhotos.EngineerVisitPhotoSQL EngineerVisitPhotos;
         public ContractOriginalVisits.ContractOriginalVisitSQL ContractVisits;
         public Appointments.AppointmentsSQL Appointments;
@@ -386,9 +373,6 @@ namespace FSM.Entity.Sys
         public ContactAttempts.ContactAttemptSql ContactAttempts;
         public Customers.CustomerAlertSql CustomerAlert;
         public CompanyDetails.CompanyDetailsSql CompanyDetails;
-
-        
-        
 
         private bool OpenConnection()
         {
@@ -1088,8 +1072,6 @@ namespace FSM.Entity.Sys
             // End Try
         }
 
-        
-
         public async Task<object> ExecuteAsync(string spName, params SqlParameter[] parameters)
         {
             using (var newConnection = new SqlConnection(App.TheSystem.Configuration.ConnectionString))
@@ -1104,8 +1086,5 @@ namespace FSM.Entity.Sys
                 }
             }
         }
-
-        
-        
     }
 }

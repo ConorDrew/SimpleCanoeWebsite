@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int SiteOrderID)
             {
                 _database.ClearParameter();
@@ -28,36 +26,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 _database.AddParameter("@OrderID", OrderID, true);
                 _database.ExecuteSP_NO_Return("SiteOrder_DeleteByOrder");
-            }
-
-            public SiteOrder SiteOrder_Get(int SiteOrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@SiteOrderID", SiteOrderID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("SiteOrder_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oSiteOrder = new SiteOrder();
-                        oSiteOrder.IgnoreExceptionsOnSetMethods = true;
-                        oSiteOrder.SetSiteOrderID = dt.Rows[0]["SiteOrderID"];
-                        oSiteOrder.SetSiteID = dt.Rows[0]["SiteID"];
-                        oSiteOrder.SetOrderID = dt.Rows[0]["OrderID"];
-                        oSiteOrder.Exists = true;
-                        return oSiteOrder;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
             }
 
             public SiteOrder SiteOrder_GetForOrder(int OrderID)
@@ -88,14 +56,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public DataView SiteOrder_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("SiteOrder_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblSiteOrder.ToString();
-                return new DataView(dt);
             }
 
             public SiteOrder Insert(SiteOrder oSiteOrder, SqlTransaction trans)
@@ -137,9 +97,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@OrderID", oSiteOrder.OrderID, true);
                 }
             }
-
-
-            
         }
     }
 }

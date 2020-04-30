@@ -16,8 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public DataView EngineerVisitPartAndProductsAllocated_GetAll_For_Engineer_Visit(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -493,89 +491,6 @@ namespace FSM.Entity
                 App.DB.ExecuteSP_NO_Return("EngineerVisitProductAllocated_Delete");
             }
 
-            public void EngineerVisitPartAllocated_Delete(int OrderLocationTypeID, int OrderPartID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderPartID", OrderPartID, true);
-                _database.AddParameter("@OrderLocationTypeID", OrderLocationTypeID, true);
-                _database.AddParameter("@SupplierOrderLocationEnumValue", Conversions.ToInteger(Sys.Enums.LocationType.Supplier), true);
-                App.DB.ExecuteSP_NO_Return("EngineerVisitPartAllocated_Delete");
-            }
-
-            public void EngineerVisitPartAllocated_DeleteByID(int EngineerVisitPartAllocatedID, DataView PartsAndProductsDistribution)
-            {
-                foreach (DataRow row in PartsAndProductsDistribution.Table.Rows)
-                {
-                    if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["StockTransactionType"], -1, false)))
-                    {
-                        // PART CREDIT
-                        var CurrentPartsToBeCredited = new PartsToBeCrediteds.PartsToBeCredited();
-                        CurrentPartsToBeCredited.IgnoreExceptionsOnSetMethods = true;
-                        var op = App.DB.OrderPart.OrderPart_Get(Conversions.ToInteger(row["OrderPartProductID"]));
-                        var ps = App.DB.PartSupplier.PartSupplier_Get(op.PartSupplierID);
-                        CurrentPartsToBeCredited.SetOrderID = op.OrderID;
-                        CurrentPartsToBeCredited.SetSupplierID = ps.SupplierID;
-                        CurrentPartsToBeCredited.SetPartID = row["PartProductID"];
-                        CurrentPartsToBeCredited.SetQty = row["Quantity"];
-                        CurrentPartsToBeCredited.SetStatusID = Conversions.ToInteger(Sys.Enums.PartsToBeCreditedStatus.Awaiting_Part_Return);
-                        CurrentPartsToBeCredited.SetManuallyAdded = false;
-                        CurrentPartsToBeCredited.SetOrderReference = App.DB.Order.Order_Get(op.OrderID).OrderReference;
-                        App.DB.PartsToBeCredited.Insert(CurrentPartsToBeCredited);
-                    }
-
-                    if (Conversions.ToBoolean((int)row["LocationID"] > 0 & (int)row["StockTransactionType"] > 0))
-                    {
-                        var switchExpr = row["Type"];
-                        switch (switchExpr)
-                        {
-                            case var @case when @case == "Part":
-                                {
-                                    var oPartTransaction = new PartTransactions.PartTransaction();
-                                    oPartTransaction.SetLocationID = row["LocationID"];
-                                    oPartTransaction.SetPartID = row["PartProductID"];
-                                    oPartTransaction.SetOrderPartID = row["OrderPartProductID"];
-                                    if (Conversions.ToInteger(row["StockTransactionType"]) == Conversions.ToInteger(Sys.Enums.Transaction.StockOut))
-                                    {
-                                        oPartTransaction.SetAmount = (int)row["Quantity"] * -1;
-                                    }
-                                    else
-                                    {
-                                        oPartTransaction.SetAmount = row["Quantity"];
-                                    }
-
-                                    oPartTransaction.SetTransactionTypeID = row["StockTransactionType"];
-                                    App.DB.PartTransaction.Insert(oPartTransaction);
-                                    break;
-                                }
-
-                            case var case1 when case1 == "Product":
-                                {
-                                    var oProductTransaction = new ProductTransactions.ProductTransaction();
-                                    oProductTransaction.SetLocationID = row["LocationID"];
-                                    oProductTransaction.SetProductID = row["PartProductID"];
-                                    oProductTransaction.SetOrderProductID = row["OrderPartProductID"];
-                                    if (Conversions.ToInteger(row["StockTransactionType"]) == Conversions.ToInteger(Sys.Enums.Transaction.StockOut))
-                                    {
-                                        oProductTransaction.SetAmount = (int)row["Quantity"] * -1;
-                                    }
-                                    else
-                                    {
-                                        oProductTransaction.SetAmount = row["Quantity"];
-                                    }
-
-                                    oProductTransaction.SetTransactionTypeID = row["StockTransactionType"];
-                                    App.DB.ProductTransaction.Insert(oProductTransaction);
-                                    break;
-                                }
-                        }
-                    }
-                }
-
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitPartAllocatedID", EngineerVisitPartAllocatedID, true);
-                App.DB.ExecuteSP_NO_Return("EngineerVisitPartAllocated_DeleteByID");
-            }
-
             public void EngineerVisitPartAllocated_RemoveFromOrder(int OrderLocationTypeID, int OrderPartID)
             {
                 _database.ClearParameter();
@@ -593,8 +508,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_PartsAndProducts.ToString();
                 return new DataView(dt);
             }
-
-            
         }
     }
 }

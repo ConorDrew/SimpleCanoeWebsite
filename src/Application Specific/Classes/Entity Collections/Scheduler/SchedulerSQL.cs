@@ -19,38 +19,6 @@ namespace FSM.Entity.Scheduler
             _database = database;
         }
 
-        
-        public DataTable getJobsForVisitSummary(DateTime StartDateIN, DateTime EndDateIN)
-        {
-            var pStartDate = new SqlParameter("@StartDate", Strings.Format(StartDateIN, "dd-MMM-yyyy 00:00:00"));
-            var pEndDate = new SqlParameter("@EndDate", Strings.Format(EndDateIN, "dd-MMM-yyyy 23:59:59"));
-            return _database.ExecuteSP_DataTable("Scheduler_Get_Jobs_For_VisitSummary", pStartDate, pEndDate);
-        }
-
-        public DataTable Scheduler_GetWorkLoadForDaysAndEngineers(string Engineers, string Days)
-        {
-            var pDays = new SqlParameter("@DataRange", Days);
-            var pEngineerID = new SqlParameter("@Engineers", Engineers);
-            DataTable dtSummary;
-            dtSummary = _database.ExecuteSP_DataTable("Scheduler_GetWorkLoadForDaysAndEngineers", pDays, pEngineerID);
-            dtSummary.TableName = "ScheduleSummary";
-            return dtSummary;
-        }
-
-        public DataTable getSummary(string EngineerID, string Days)
-        {
-            // Dim pDays As New SqlClient.SqlParameter("@DataRange", Days)
-            // Dim pEngineerID As New SqlClient.SqlParameter("@EngineerID", EngineerID)
-
-            var command = new SqlCommand("Scheduler_GetEngineerWorkLoadForDays", new SqlConnection(_database.ServerConnectionString));
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandTimeout = 100000;
-            command.Parameters.AddWithValue("@DataRange", Days);
-            command.Parameters.AddWithValue("@EngineerID", EngineerID);
-            return _database.ExecuteCommand_DataTable(command);
-            // Return _database.ExecuteSP_DataTable("Scheduler_GetEngineerWorkLoadForDays", pDays, pEngineerID)
-        }
-
         public DataTable getSummaryNEW(string EngineerID, DateTime Start, DateTime Endin)
         {
             // Dim pDays As New SqlClient.SqlParameter("@DataRange", Days)
@@ -64,24 +32,6 @@ namespace FSM.Entity.Scheduler
             command.Parameters.AddWithValue("@EngineerID", EngineerID);
             return _database.ExecuteCommand_DataTable(command);
             // Return _database.ExecuteSP_DataTable("Scheduler_GetEngineerWorkLoadForDays", pDays, pEngineerID)
-        }
-
-        public bool VisitOverlaps(string EngineerID, DateTime StartDateTime, DateTime EndDateTime)
-        {
-            var dt = new DataTable();
-            var pEngineerID = new SqlParameter("@EngineerID", EngineerID);
-            var pStartDate = new SqlParameter("@StartDateTime", StartDateTime);
-            var pEndDate = new SqlParameter("@EndDateTime", EndDateTime);
-            dt = _database.ExecuteSP_DataTable("Scheduler_VisitOverlapCheck", pEngineerID, pStartDate, pEndDate);
-            dt.TableName = "dtVisitOverlap";
-            if (dt.Rows.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
         public bool AbsenceOverlap(string EngineerID, DateTime Day)
@@ -116,23 +66,6 @@ namespace FSM.Entity.Scheduler
             dt = _database.ExecuteCommand_DataTable(command);
             dt.TableName = "dtUnscheduledVisits";
             return dt;
-        }
-
-        public int Scheduler_EngineerFreeMins(DateTime day, string engineerid)
-        {
-            var command = new SqlCommand("Scheduler_EngineerFreeMins", new SqlConnection(_database.ServerConnectionString));
-            try
-            {
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@VisitDate", Strings.Format(day, "yyyy/MMM/dd").ToString());
-                command.Parameters.AddWithValue("@EngineerID", engineerid);
-                command.Connection.Open();
-                return Conversions.ToInteger(command.ExecuteScalar());
-            }
-            finally
-            {
-                command.Connection.Close();
-            }
         }
 
         public DataTable Scheduler_DayTimeSlots(DateTime day, string engineerid)
@@ -483,7 +416,5 @@ namespace FSM.Entity.Scheduler
                 command.Connection.Close();
             }
         }
-
-        
     }
 }

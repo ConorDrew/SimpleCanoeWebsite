@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int DocumentID)
             {
                 _database.ClearParameter();
@@ -64,14 +63,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public DataView Documents_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("Documents_GetAll");
-                dt.TableName = Enums.TableNames.tblDocuments.ToString();
-                return new DataView(dt);
             }
 
             public DataView Documents_GetAll_For_Customer_ID(Enums.TableNames EntityToSearchBy, int RecordID)
@@ -228,15 +219,6 @@ namespace FSM.Entity
                 return oDocuments;
             }
 
-            public DataView Documents_Search(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("Documents_Search");
-                dt.TableName = Enums.TableNames.tblDocuments.ToString();
-                return new DataView(dt);
-            }
-
             public void Update(Documents oDocuments)
             {
                 _database.ClearParameter();
@@ -297,8 +279,6 @@ namespace FSM.Entity
                     return null;
                 }
             }
-
-            
         }
     }
 }

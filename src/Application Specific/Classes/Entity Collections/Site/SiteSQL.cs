@@ -25,7 +25,6 @@ namespace FSM.Entity.Sites
             _database = database;
         }
 
-        
         public void Delete(int SiteID)
         {
             _database.ClearParameter();
@@ -217,15 +216,6 @@ namespace FSM.Entity.Sites
             return new DataView(dt);
         }
 
-        public DataView GetAll_Light(int userId)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@UserID", userId, true);
-            var dt = _database.ExecuteSP_DataTable("Site_GetAll_Light_Mk1");
-            dt.TableName = Enums.TableNames.tblSite.ToString();
-            return new DataView(dt);
-        }
-
         public DataView GetAll_Light_New(int userId)
         {
             _database.ClearParameter();
@@ -405,11 +395,9 @@ namespace FSM.Entity.Sites
             return Conversions.ToBoolean(_database.ExecuteSP_ReturnRowsAffected("Site_Update_ContactAlerts") == 1);
         }
 
-        
-        
         public DataView GetSiteNotes(int siteID)
         {
-            // 
+            //
             _database.ClearParameter();
             _database.AddParameter("@SiteID", siteID, true);
             var dt = _database.ExecuteSP_DataTable("SiteNote_Get_For_Site");
@@ -445,8 +433,6 @@ namespace FSM.Entity.Sites
             _database.ExecuteSP_NO_Return("SiteNote_Delete");
         }
 
-        
-        
         public DataView SiteFuel_GetAll_ForSite(int siteID)
         {
             _database.ClearParameter();
@@ -557,8 +543,6 @@ namespace FSM.Entity.Sites
             return new DataView(dt);
         }
 
-        
-        
         public DataView SiteFuelCharge_GetAll()
         {
             _database.ClearParameter();
@@ -566,7 +550,5 @@ namespace FSM.Entity.Sites
             dt.TableName = Enums.TableNames.tblSiteFuel.ToString();
             return new DataView(dt);
         }
-
-        
     }
 }

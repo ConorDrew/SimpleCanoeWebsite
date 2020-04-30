@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public DataView Contracts_GetAll(DateTime datefrom)
             {
                 _database.ClearParameter();
@@ -46,15 +45,6 @@ namespace FSM.Entity
                 return Sys.Helper.MakeIntegerValid(App.DB.ExecuteSP_OBJECT("ContractRenewals_GetNewID_ByOldID"));
             }
 
-            public DataView ContractRenewal_AlternativeSitesJobOfWorks(int ContractID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ContractID", ContractID, true);
-                var dt = _database.ExecuteSP_DataTable("ContractRenewal_AlternativeSitesJobOfWorks");
-                dt.TableName = Sys.Enums.TableNames.NO_TABLE.ToString();
-                return new DataView(dt);
-            }
-
             public DataView Contracts_GetAddresses(string ContractIDs)
             {
                 _database.ClearParameter();
@@ -63,8 +53,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.NO_TABLE.ToString();
                 return new DataView(dt);
             }
-
-            
         }
     }
 }

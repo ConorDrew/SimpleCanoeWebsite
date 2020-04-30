@@ -18,7 +18,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void OrderConsolidation_Clear_Orders(int OrderConsolidationID)
             {
                 _database.ClearParameter();
@@ -108,24 +107,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public DataView OrderConsolidation_GetAll(bool forLocation, string SearchCriteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@SearchCriteria", SearchCriteria, true);
-                if (forLocation)
-                {
-                    _database.AddParameter("@ForLocation", 1, true);
-                }
-                else
-                {
-                    _database.AddParameter("@ForLocation", 0, true);
-                }
-
-                var dt = _database.ExecuteSP_DataTable("OrderConsolidation_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
             }
 
             public DataView Order_GetForConsolidation(int SupplierID, int LocationID)
@@ -476,8 +457,6 @@ namespace FSM.Entity
                 _database.AddParameter("@OrderConsolidationID", OrderConsolidationID, true);
                 return _database.ExecuteSP_DataSet("[Orders_Complete_ByConsolidationOrderID]");
             }
-
-            
         }
     }
 }

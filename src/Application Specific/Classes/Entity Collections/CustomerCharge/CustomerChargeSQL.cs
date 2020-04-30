@@ -14,45 +14,11 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int CustomerChargeID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@CustomerChargeID", CustomerChargeID, true);
                 _database.ExecuteSP_NO_Return("CustomerCharge_Delete");
-            }
-
-            public CustomerCharge CustomerCharge_Get(int CustomerChargeID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@CustomerChargeID", CustomerChargeID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("CustomerCharge_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oCustomerCharge = new CustomerCharge();
-                        oCustomerCharge.IgnoreExceptionsOnSetMethods = true;
-                        oCustomerCharge.SetCustomerChargeID = dt.Rows[0]["CustomerChargeID"];
-                        oCustomerCharge.SetCustomerID = dt.Rows[0]["CustomerID"];
-                        oCustomerCharge.SetMileageRate = dt.Rows[0]["MileageRate"];
-                        oCustomerCharge.SetPartsMarkup = dt.Rows[0]["PartsMarkup"];
-                        oCustomerCharge.SetRatesMarkup = dt.Rows[0]["RatesMarkup"];
-                        oCustomerCharge.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oCustomerCharge.Exists = true;
-                        return oCustomerCharge;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
             }
 
             public CustomerCharge CustomerCharge_GetForCustomer(int CustomerID)
@@ -86,47 +52,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public CustomerCharge CustomerCharge_GetForSite(int siteId)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@SiteID", siteId);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("CustomerCharge_GetForSite");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oCustomerCharge = new CustomerCharge();
-                        oCustomerCharge.IgnoreExceptionsOnSetMethods = true;
-                        oCustomerCharge.SetCustomerChargeID = dt.Rows[0]["CustomerChargeID"];
-                        oCustomerCharge.SetCustomerID = dt.Rows[0]["CustomerID"];
-                        oCustomerCharge.SetMileageRate = dt.Rows[0]["MileageRate"];
-                        oCustomerCharge.SetPartsMarkup = dt.Rows[0]["PartsMarkup"];
-                        oCustomerCharge.SetRatesMarkup = dt.Rows[0]["RatesMarkup"];
-                        oCustomerCharge.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oCustomerCharge.Exists = true;
-                        return oCustomerCharge;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public DataView CustomerCharge_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("CustomerCharge_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblCustomerCharge.ToString();
-                return new DataView(dt);
             }
 
             public CustomerCharge Insert(CustomerCharge oCustomerCharge)
@@ -164,8 +89,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@RatesMarkup", oCustomerCharge.RatesMarkup, true);
                 }
             }
-
-            
         }
     }
 }

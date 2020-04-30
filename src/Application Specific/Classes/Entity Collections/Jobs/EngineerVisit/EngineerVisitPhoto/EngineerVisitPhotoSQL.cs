@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int EngineerVisitPhotoID)
             {
                 _database.ClearParameter();
@@ -64,14 +62,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView EngineerVisitPhoto_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitPhoto_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblEngineerVisitPhoto.ToString();
-                return new DataView(dt);
-            }
-
             public EngineerVisitPhoto Insert(EngineerVisitPhoto oEngineerVisitPhoto)
             {
                 _database.ClearParameter();
@@ -79,15 +69,6 @@ namespace FSM.Entity
                 oEngineerVisitPhoto.SetEngineerVisitPhotoID = Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("EngineerVisitPhoto_Insert"));
                 oEngineerVisitPhoto.Exists = true;
                 return oEngineerVisitPhoto;
-            }
-
-            public DataView EngineerVisitPhoto_Search(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitPhoto_Search");
-                dt.TableName = Sys.Enums.TableNames.tblEngineerVisitPhoto.ToString();
-                return new DataView(dt);
             }
 
             public void Update(EngineerVisitPhoto oEngineerVisitPhoto)
@@ -107,9 +88,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@Caption", oEngineerVisitPhoto.Caption, true);
                 }
             }
-
-
-            
         }
     }
 }

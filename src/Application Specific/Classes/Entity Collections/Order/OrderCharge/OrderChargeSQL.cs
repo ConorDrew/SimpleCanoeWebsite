@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int OrderChargeID)
             {
                 _database.ClearParameter();
@@ -32,52 +30,11 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public OrderCharge OrderCharge_Get(int OrderChargeID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderChargeID", OrderChargeID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("OrderCharge_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oOrderCharge = new OrderCharge();
-                        oOrderCharge.IgnoreExceptionsOnSetMethods = true;
-                        oOrderCharge.SetOrderChargeID = dt.Rows[0]["OrderChargeID"];
-                        oOrderCharge.SetOrderID = dt.Rows[0]["OrderID"];
-                        oOrderCharge.SetOrderChargeTypeID = dt.Rows[0]["OrderChargeTypeID"];
-                        oOrderCharge.SetAmount = dt.Rows[0]["Amount"];
-                        oOrderCharge.SetReference = dt.Rows[0]["Reference"];
-                        oOrderCharge.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oOrderCharge.Exists = true;
-                        return oOrderCharge;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
             public DataView OrderCharge_GetForConsolidatedOrder(int OrderConsolidationID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@OrderConsolidationID", OrderConsolidationID, true);
                 var dt = _database.ExecuteSP_DataTable("OrderCharge_GetForConsolidatedOrder");
-                dt.TableName = Sys.Enums.TableNames.tblOrderCharge.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView OrderCharge_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("OrderCharge_GetAll");
                 dt.TableName = Sys.Enums.TableNames.tblOrderCharge.ToString();
                 return new DataView(dt);
             }
@@ -109,9 +66,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@Reference", oOrderCharge.Reference, true);
                 }
             }
-
-
-            
         }
     }
 }

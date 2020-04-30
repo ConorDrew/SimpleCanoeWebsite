@@ -15,8 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int OrderLocationProductID)
             {
                 _database.ClearParameter();
@@ -33,13 +31,6 @@ namespace FSM.Entity
                 Command.Connection = trans.Connection;
                 Command.Parameters.AddWithValue("@OrderLocationProductID", OrderLocationProductID);
                 Command.ExecuteNonQuery();
-            }
-
-            public void DeleteForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                _database.ExecuteSP_NO_Return("OrderLocationProduct_DeleteForOrder");
             }
 
             public OrderLocationProduct OrderLocationProduct_Get(int OrderLocationProductID, SqlTransaction trans)
@@ -117,14 +108,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataView OrderLocationProduct_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("OrderLocationProduct_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblOrderLocationProduct.ToString();
-                return new DataView(dt);
-            }
-
             public OrderLocationProduct Insert(OrderLocationProduct oOrderLocationProduct, bool DoConsolidation)
             {
                 _database.ClearParameter();
@@ -182,16 +165,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@SellPrice", oOrderLocationProduct.SellPrice, true);
                 }
             }
-
-            public void MarkOrderQuantityReceived(int OrderLocationProductID, int QuantityReceived)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderLocationProductID", OrderLocationProductID, true);
-                _database.AddParameter("@QuantityRecieved", QuantityReceived, true);
-                _database.ExecuteSP_NO_Return("OrderLocationProduct_MarkOrderQuantityReceived");
-            }
-
-            
         }
     }
 }

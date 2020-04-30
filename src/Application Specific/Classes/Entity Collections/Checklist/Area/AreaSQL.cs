@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int AreaID)
             {
                 _database.ClearParameter();
@@ -23,51 +21,11 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("Area_Delete");
             }
 
-            public Area Area_Get(int AreaID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@AreaID", AreaID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("Area_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oArea = new Area();
-                        oArea.IgnoreExceptionsOnSetMethods = true;
-                        oArea.SetAreaID = dt.Rows[0]["AreaID"];
-                        oArea.SetDescription = dt.Rows[0]["Description"];
-                        oArea.SetSectionID = dt.Rows[0]["SectionID"];
-                        oArea.SetOrderNumber = dt.Rows[0]["OrderNumber"];
-                        oArea.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oArea.Exists = true;
-                        return oArea;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
             public DataView Area_Get_For_Section(int SectionID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@SectionID", SectionID, true);
                 var dt = _database.ExecuteSP_DataTable("Area_Get_For_Section");
-                dt.TableName = Sys.Enums.TableNames.tblArea.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView Area_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("Area_GetAll");
                 dt.TableName = Sys.Enums.TableNames.tblArea.ToString();
                 return new DataView(dt);
             }
@@ -129,8 +87,6 @@ namespace FSM.Entity
                     return nextID + 1;
                 }
             }
-
-            
         }
     }
 }

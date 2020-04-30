@@ -14,7 +14,7 @@ namespace FSM.Entity
             {
                 _database = database;
             }
-            
+
             public void POInvoiceImport_UpdateAuthorised(int ID, bool Authorised, int AuthorisedByUserID, DateTime AuthorisedOn, string AuthReason, string AuthReasonDetail = "")
             {
                 _database.ClearParameter();
@@ -37,15 +37,6 @@ namespace FSM.Entity
                 dt.TableName = "POInvoiceImport_ShowData";
                 return new DataView(dt);
             }
-
-            public int POExceptionCount(string PODepartment)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@PODepartment", PODepartment, true);
-                return Conversions.ToInteger(_database.ExecuteScalar("SELECT COUNT(*) from tblPOInvoiceImport_Orders WHERE RequiresAuthorisation = 1 AND Authorised = 0 AND PODepartment = @PODepartment"));
-            }
-
-            
         }
     }
 }

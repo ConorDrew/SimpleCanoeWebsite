@@ -5,25 +5,12 @@ namespace FSM
 {
     public class Properties : SimpleObjectArrayByKey
     {
-
-        
         // native member declarations
         internal object Parent;
 
-        
-        
         internal Properties(object parent)
         {
             Parent = parent;
-        }
-
-        
-        
-        public new Property AddNew(string name)
-        {
-            var newItem = new Property(this, name);
-            AddNew(newItem);
-            return newItem;
         }
 
         public new object AddNew(Property item)
@@ -47,20 +34,15 @@ namespace FSM
                 return (Property)base[name];
             }
         }
-
-        
     }
 
     public class Property
     {
-
-        
         // native member declarations
         protected internal string name;
+
         private Properties _container;
 
-        
-        
         internal Properties Container
         {
             get
@@ -74,8 +56,6 @@ namespace FSM
             }
         }
 
-        
-        
         internal Property(Properties container, string name)
         {
             // This keeps us from raising property changed events during
@@ -83,20 +63,14 @@ namespace FSM
             Container = container;
             this.name = name;
         }
-
-        
     }
 
     public class PersistedProperties : Properties
     {
-
-        
         internal PersistedProperties(BindableItem parent) : base(parent)
         {
         }
 
-        
-        
         internal new BindableItem Parent
         {
             get
@@ -110,20 +84,11 @@ namespace FSM
             }
         }
 
-        
-        
         public new PersistedProperty AddNew(string name, object value)
         {
             var newItem = new PersistedProperty(this, name, value);
             AddNew(newItem);
             return newItem;
-        }
-
-        public new object AddNew(string name, object value, bool required)
-        {
-            AddNew(name, value);
-            this[name].Required = required;
-            return default;
         }
 
         public new PersistedProperty this[int Index]
@@ -142,8 +107,6 @@ namespace FSM
             }
         }
 
-        
-        
         internal void BeginEdit()
         {
             for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
@@ -173,22 +136,17 @@ namespace FSM
                 return s;
             }
         }
-
-        
     }
 
     public class PersistedProperty : Property
     {
-
-        
         // native member declarations
         private bool _beingConstructed;
+
         private object _oldValue;
         private object _value;
         internal bool Required = true;
 
-        
-        
         internal PersistedProperty(PersistedProperties container, string name, object value) : base(container, name)
         {
             _beingConstructed = true;
@@ -196,8 +154,6 @@ namespace FSM
             _beingConstructed = false;
         }
 
-        
-        
         internal new PersistedProperties Container
         {
             get
@@ -211,8 +167,6 @@ namespace FSM
             }
         }
 
-        
-        
         internal string Error
         {
             get
@@ -319,8 +273,6 @@ namespace FSM
             }
         }
 
-        
-        
         private static bool get_isBoolean(object myValue)
         {
             if (!get_isPrimitive(myValue))
@@ -501,8 +453,6 @@ namespace FSM
             }
         }
 
-        
-        
         private bool isBoolean
         {
             get
@@ -583,8 +533,6 @@ namespace FSM
             }
         }
 
-        
-        
         internal void BeginEdit()
         {
             _oldValue = _value;
@@ -595,7 +543,5 @@ namespace FSM
             // by using the accessor, then other pertinant events will be called
             Value = _oldValue;
         }
-
-        
     }
 }

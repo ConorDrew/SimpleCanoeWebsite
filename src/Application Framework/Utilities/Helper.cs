@@ -22,8 +22,6 @@ namespace FSM.Entity
     {
         public class Helper
         {
-            
-
             public static string MakeStringValid(object o)
             {
                 try
@@ -206,22 +204,6 @@ namespace FSM.Entity
                 }
             }
 
-            public static DateTime? MakeNullableDateTimeValid(object o)
-            {
-                if (o is null)
-                {
-                    return default;
-                }
-                else if (o == DBNull.Value)
-                {
-                    return default;
-                }
-                else
-                {
-                    return DateTime.Parse(FormatDateTime_Load(Conversions.ToDate(0)));
-                }
-            }
-
             public static TimeSpan MakeTimeValid(object o)
             {
                 if (o is null)
@@ -380,9 +362,6 @@ namespace FSM.Entity
                 return string.IsNullOrEmpty(Conversions.ToString(value)) | string.IsNullOrWhiteSpace(Conversions.ToString(value));
             }
 
-            
-            
-
             // Set the format and data
             public static void SetUpDataGrid(DataGrid dg, bool captionIsVisible = false)
             {
@@ -453,9 +432,6 @@ namespace FSM.Entity
                 return DataGridTableStyle1;
             }
 
-            
-            
-
             public static void SetUpDataGridView(DataGridView dgv, bool captionIsVisible = false)
             {
                 dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
@@ -479,9 +455,6 @@ namespace FSM.Entity
                 // AddHandler dgv.Click, AddressOf dGridView_Multievents
                 // AddHandler dgv.CurrentCellChanged, AddressOf dGrid_Multievents
             }
-
-            
-            
 
             public static void ClearGroupBox(GroupBox grp)
             {
@@ -511,41 +484,6 @@ namespace FSM.Entity
                     else if (cntr is DateTimePicker)
                     {
                         ((DateTimePicker)cntr).Value = DateAndTime.Today.Date;
-                    }
-                }
-            }
-
-            public static void ClearTabControl(TabControl tabcontrol)
-            {
-                foreach (TabPage page in tabcontrol.TabPages)
-                {
-                    foreach (Control ctrl in page.Controls)
-                    {
-                        if (ctrl is TextBox)
-                        {
-                            ((TextBox)ctrl).Text = "";
-                        }
-                        else if (ctrl is ComboBox)
-                        {
-                            ComboBox argcombo = (ComboBox)ctrl;
-                            Combo.SetSelectedComboItem_By_Value(ref argcombo, 0.ToString());
-                        }
-                        else if (ctrl is CheckBox)
-                        {
-                            ((CheckBox)ctrl).Checked = false;
-                        }
-                        else if (ctrl is NumericUpDown)
-                        {
-                            ((NumericUpDown)ctrl).Value = 1;
-                        }
-                        else if (ctrl is RadioButton)
-                        {
-                            ((RadioButton)ctrl).Checked = false;
-                        }
-                        else if (ctrl is DateTimePicker)
-                        {
-                            ((DateTimePicker)ctrl).Value = DateAndTime.Today.Date;
-                        }
                     }
                 }
             }
@@ -599,9 +537,6 @@ namespace FSM.Entity
                 hoverToolTip.SetToolTip(btn, caption);
             }
 
-            
-            
-
             public static string HashPassword(string password)
             {
                 using (var hasher = MD5.Create())
@@ -638,11 +573,6 @@ namespace FSM.Entity
                 Cursor.Current = Cursors.WaitCursor;
                 Process.Start(filename);
                 Cursor.Current = Cursors.Default;
-            }
-
-            public static int CalculateDays(DateTime d1, DateTime d2)
-            {
-                return Conversions.ToInteger((d2.Date - d1.Date).TotalDays);
             }
 
             public static double Distance(double lat1, double lon1, double lat2, double lon2, char unit)
