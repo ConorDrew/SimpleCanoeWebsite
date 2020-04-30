@@ -13,12 +13,8 @@ namespace FSM
 {
     public class FRMVisitManager : FRMBaseForm, IForm
     {
-
-
         public FRMVisitManager() : base()
         {
-
-
             base.Load += FRMVisitManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -880,7 +876,6 @@ namespace FSM
             {
                 if (_cboOutcome != null)
                 {
-
                     _cboOutcome.TextChanged -= cboOutcome_TextChanged;
                     _cboOutcome.SelectedIndexChanged -= cboOutcome_SelectedIndexChanged_1;
                 }
@@ -2429,9 +2424,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-
-
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -2533,8 +2525,6 @@ namespace FSM
         public void ResetMe(int newID)
         {
         }
-
-
 
         private int count = 0;
         private DataView _dvVisits;
@@ -2679,9 +2669,6 @@ namespace FSM
                 _dtVisit = value;
             }
         }
-
-
-
 
         private void SetupVisitDataGrid()
         {
@@ -3121,13 +3108,20 @@ namespace FSM
             // End If
         }
 
+        private void txtPostcode_TextChanged(object sender, EventArgs e)
+        {
+            // RunFilter()
+        }
+
+        private void cboOutcome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // RunFilter()
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             PopulateDatagrid(true);
         }
-
-
-
 
         public void PopulateDatagrid(bool withRun)
         {
