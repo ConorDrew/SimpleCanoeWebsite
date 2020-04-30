@@ -640,9 +640,6 @@
     <Compile Include="Application Framework\Structures\Combo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Framework\Structures\Contract3AssetsColourColumn.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Application Framework\Structures\BitToStringDescriptionColumn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -688,16 +685,10 @@
     <Compile Include="Application Framework\Structures\DataGridLabelColumn.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Application Framework\Structures\DataGridRowHeightSetter.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Framework\Structures\DataGridSchedulerColumn.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Application Framework\Structures\DataGridTinyIntColumn.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Application Framework\Structures\JobCompletedIn1Column.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Application Framework\Structures\JobNumber.cs">
@@ -3283,10 +3274,6 @@
       <DependentUpon>ActiveReminderColourColumn.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Structures\Contract3AssetsColourColumn.resx">
-      <DependentUpon>Contract3AssetsColourColumn.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Structures\DataGridCheckBox.resx">
       <DependentUpon>DataGridCheckBox.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3297,10 +3284,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Structures\DataGridTinyIntColumn.resx">
       <DependentUpon>DataGridTinyIntColumn.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Structures\JobCompletedIn1Column.resx">
-      <DependentUpon>JobCompletedIn1Column.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Structures\OutOfHoursColourColumn.resx">
