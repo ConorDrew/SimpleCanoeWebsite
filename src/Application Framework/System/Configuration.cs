@@ -165,7 +165,9 @@ namespace FSM.Entity
                 get
                 {
                     /* TODO ERROR: Skipped IfDirectiveTrivia */
+#if Debug
                     _isDebug = true;
+#endif
                     /* TODO ERROR: Skipped EndIfDirectiveTrivia */
                     return _isDebug;
                 }
@@ -177,6 +179,9 @@ namespace FSM.Entity
             {
                 get
                 {
+#if Release
+                    _isRelease = true;
+#endif
                     /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
                     return _isRelease;
                 }
@@ -188,6 +193,9 @@ namespace FSM.Entity
             {
                 get
                 {
+#if Gasway
+                    _isGasway = true;
+#endif
                     /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
                     return _isGasway;
                 }
@@ -199,6 +207,9 @@ namespace FSM.Entity
             {
                 get
                 {
+#if RFT
+                    _isRFT = true;
+#endif
                     /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
                     return _isRFT;
                 }
@@ -210,6 +221,9 @@ namespace FSM.Entity
             {
                 get
                 {
+#if RFTTEST
+                    _isRFTTEST = true;
+#endif
                     /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
                     return _isRFTTEST;
                 }
@@ -221,6 +235,9 @@ namespace FSM.Entity
             {
                 get
                 {
+#if Blueflame
+                    _isBlueflame = true;
+#endif
                     /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
                     return _isBlueflame;
                 }
@@ -232,6 +249,9 @@ namespace FSM.Entity
             {
                 get
                 {
+#if BlueflameTest
+                    _isBlueflameTest = true;
+#endif
                     /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
                     return _isBlueflameTest;
                 }

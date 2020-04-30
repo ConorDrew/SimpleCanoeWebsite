@@ -177,9 +177,10 @@ namespace FSM.Entity
                         From = Conversions.ToString(Interaction.IIf(string.IsNullOrEmpty(From), EmailAddress.Gabriel, From));
                         message.From = new MailAddress(From);
                         /* TODO ERROR: Skipped IfDirectiveTrivia */
+#if Debug || RFTTEST
                         message.To.Add(EmailAddress.Test);
                         return true;
-
+#endif
                         /* TODO ERROR: Skipped ElseDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
                         message.Subject = Subject;
                         message.Body = Body;

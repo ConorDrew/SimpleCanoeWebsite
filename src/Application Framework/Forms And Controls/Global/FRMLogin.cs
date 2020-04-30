@@ -295,6 +295,7 @@ namespace FSM
             LoadForm(sender, e, this);
 
             /* TODO ERROR: Skipped IfDirectiveTrivia */
+#if Debug
             txtUserName.Text = "admin";
             switch (true)
             {
@@ -316,6 +317,7 @@ namespace FSM
                         break;
                     }
             }
+#endif
             /* TODO ERROR: Skipped EndIfDirectiveTrivia */
         }
 
