@@ -12,8 +12,6 @@ namespace FSM
 {
     public class frmAbsences : FRMBaseForm
     {
-
-        
         public frmAbsences() : base()
         {
             base.Load += frmHolidays_Load;
@@ -21,7 +19,6 @@ namespace FSM
             // This call is required by the Windows Form Designer.
             InitializeComponent();
             // Add any initialization after the InitializeComponent() call
-
         }
 
         // Form overrides dispose to clean up the component list.
@@ -42,7 +39,7 @@ namespace FSM
         private System.ComponentModel.IContainer components;
 
         // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.  
+        // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _GroupBox1;
 
@@ -597,9 +594,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgAbsences).BeginInit();
             _Search.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // GroupBox1
-            // 
+            //
             _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
             _GroupBox1.Controls.Add(_dgAbsences);
@@ -610,9 +607,9 @@ namespace FSM
             _GroupBox1.TabIndex = 0;
             _GroupBox1.TabStop = false;
             _GroupBox1.Text = "Double click to edit";
-            // 
+            //
             // dgAbsences
-            // 
+            //
             _dgAbsences.AllowNavigation = false;
             _dgAbsences.AlternatingBackColor = Color.GhostWhite;
             _dgAbsences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -640,9 +637,9 @@ namespace FSM
             _dgAbsences.SelectionForeColor = Color.PaleGreen;
             _dgAbsences.Size = new Size(722, 190);
             _dgAbsences.TabIndex = 7;
-            // 
+            //
             // Search
-            // 
+            //
             _Search.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _Search.Controls.Add(_Label5);
             _Search.Controls.Add(_cboUsers);
@@ -662,9 +659,9 @@ namespace FSM
             _Search.TabIndex = 1;
             _Search.TabStop = false;
             _Search.Text = "Search";
-            // 
+            //
             // Label5
-            // 
+            //
 
             _Label5.Font = new Font("Verdana", 8.0F);
             _Label5.Location = new Point(16, 52);
@@ -672,9 +669,9 @@ namespace FSM
             _Label5.Size = new Size(96, 17);
             _Label5.TabIndex = 24;
             _Label5.Text = "User:";
-            // 
+            //
             // cboUsers
-            // 
+            //
             _cboUsers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboUsers.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboUsers.Font = new Font("Verdana", 8.0F);
@@ -682,9 +679,9 @@ namespace FSM
             _cboUsers.Name = "cboUsers";
             _cboUsers.Size = new Size(624, 21);
             _cboUsers.TabIndex = 2;
-            // 
+            //
             // Label2
-            // 
+            //
 
             _Label2.Font = new Font("Verdana", 8.0F);
             _Label2.Location = new Point(16, 112);
@@ -692,18 +689,18 @@ namespace FSM
             _Label2.Size = new Size(80, 18);
             _Label2.TabIndex = 22;
             _Label2.Text = "Absent From";
-            // 
+            //
             // dtTo
-            // 
+            //
             _dtTo.Font = new Font("Verdana", 8.0F);
             _dtTo.Format = DateTimePickerFormat.Short;
             _dtTo.Location = new Point(304, 112);
             _dtTo.Name = "dtTo";
             _dtTo.Size = new Size(152, 20);
             _dtTo.TabIndex = 5;
-            // 
+            //
             // dtFrom
-            // 
+            //
             _dtFrom.Font = new Font("Verdana", 8.0F);
             _dtFrom.Format = DateTimePickerFormat.Short;
             _dtFrom.Location = new Point(112, 112);
@@ -711,18 +708,18 @@ namespace FSM
             _dtFrom.Size = new Size(152, 20);
             _dtFrom.TabIndex = 4;
             _dtFrom.Value = new DateTime(2007, 9, 14, 0, 0, 0, 0);
-            // 
+            //
             // Label4
-            // 
+            //
             _Label4.Font = new Font("Verdana", 8.0F);
             _Label4.Location = new Point(272, 112);
             _Label4.Name = "Label4";
             _Label4.Size = new Size(32, 18);
             _Label4.TabIndex = 19;
             _Label4.Text = "To";
-            // 
+            //
             // Label3
-            // 
+            //
 
             _Label3.Font = new Font("Verdana", 8.0F);
             _Label3.Location = new Point(16, 80);
@@ -730,9 +727,9 @@ namespace FSM
             _Label3.Size = new Size(96, 17);
             _Label3.TabIndex = 18;
             _Label3.Text = "Absence Type:";
-            // 
+            //
             // cboType
-            // 
+            //
             _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboType.Font = new Font("Verdana", 8.0F);
@@ -740,9 +737,9 @@ namespace FSM
             _cboType.Name = "cboType";
             _cboType.Size = new Size(624, 21);
             _cboType.TabIndex = 3;
-            // 
+            //
             // btnShowResults
-            // 
+            //
             _btnShowResults.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnShowResults.UseVisualStyleBackColor = true;
             _btnShowResults.Font = new Font("Verdana", 8.0F);
@@ -751,9 +748,9 @@ namespace FSM
             _btnShowResults.Size = new Size(64, 23);
             _btnShowResults.TabIndex = 6;
             _btnShowResults.Text = "Show";
-            // 
+            //
             // Label1
-            // 
+            //
 
             _Label1.Font = new Font("Verdana", 8.0F);
             _Label1.Location = new Point(16, 24);
@@ -761,9 +758,9 @@ namespace FSM
             _Label1.Size = new Size(96, 17);
             _Label1.TabIndex = 1;
             _Label1.Text = "Engineer:";
-            // 
+            //
             // cboEngineers
-            // 
+            //
             _cboEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _cboEngineers.DropDownStyle = ComboBoxStyle.DropDownList;
             _cboEngineers.Font = new Font("Verdana", 8.0F);
@@ -771,9 +768,9 @@ namespace FSM
             _cboEngineers.Name = "cboEngineers";
             _cboEngineers.Size = new Size(624, 21);
             _cboEngineers.TabIndex = 1;
-            // 
+            //
             // btnNew
-            // 
+            //
             _btnNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _btnNew.ContextMenu = _mnuAbsenceType;
             _btnNew.UseVisualStyleBackColor = true;
@@ -783,23 +780,23 @@ namespace FSM
             _btnNew.Size = new Size(64, 23);
             _btnNew.TabIndex = 8;
             _btnNew.Text = "Add New";
-            // 
+            //
             // mnuAbsenceType
-            // 
+            //
             _mnuAbsenceType.MenuItems.AddRange(new MenuItem[] { _mnuEngineerAbsence, _mnuUserAbsence, _MenuItem2, _mnuBlockOfAbsences });
-            // 
+            //
             // mnuEngineerAbsence
-            // 
+            //
             _mnuEngineerAbsence.Index = 0;
             _mnuEngineerAbsence.Text = "Engineer Absence";
-            // 
+            //
             // mnuUserAbsence
-            // 
+            //
             _mnuUserAbsence.Index = 1;
             _mnuUserAbsence.Text = "User Absence";
-            // 
+            //
             // btnDelete
-            // 
+            //
             _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             _btnDelete.UseVisualStyleBackColor = true;
             _btnDelete.Font = new Font("Verdana", 8.0F);
@@ -808,19 +805,19 @@ namespace FSM
             _btnDelete.Size = new Size(64, 23);
             _btnDelete.TabIndex = 9;
             _btnDelete.Text = "Delete";
-            // 
+            //
             // mnuBlockOfAbsences
-            // 
+            //
             _mnuBlockOfAbsences.Index = 3;
             _mnuBlockOfAbsences.Text = "Block of Absences";
-            // 
+            //
             // MenuItem2
-            // 
+            //
             _MenuItem2.Index = 2;
             _MenuItem2.Text = "-";
-            // 
+            //
             // frmAbsences
-            // 
+            //
             AutoScaleBaseSize = new Size(6, 14);
             ClientSize = new Size(760, 446);
             Controls.Add(_btnDelete);
@@ -840,8 +837,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
         private DataView _dvAbsences = new DataView();
 
         public DataView AbsencesDataView
@@ -877,8 +872,6 @@ namespace FSM
             }
         }
 
-        
-        
         public event RefreshEngineerAbsencesEventHandler RefreshEngineerAbsences;
 
         public delegate void RefreshEngineerAbsencesEventHandler();
@@ -936,8 +929,6 @@ namespace FSM
             frm.ShowDialog();
         }
 
-        
-        
         private void SetupAbsenceDataGridGrid()
         {
             SuspendLayout();
@@ -1047,12 +1038,6 @@ namespace FSM
                     }
                 }
             }
-        }
-
-        public void NewAbsence()
-        {
-            var frm = new FrmEngineerAbsence(0);
-            frm.ShowDialog();
         }
 
         private void SearchAbsences()
@@ -1185,8 +1170,5 @@ namespace FSM
                 App.ShowMessage("Please select an absence to delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        
-
     }
 }

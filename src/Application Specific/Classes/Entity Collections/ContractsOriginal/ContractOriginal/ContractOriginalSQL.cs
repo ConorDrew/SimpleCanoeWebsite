@@ -17,8 +17,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public ContractOriginal Get(int ContractID)
             {
                 _database.ClearParameter();
@@ -92,13 +90,6 @@ namespace FSM.Entity
                 return Helper.MakeDoubleValid(_database.ExecuteSP_OBJECT("ContractOriginalCalculatedTotal"));
             }
 
-            public DataView Contract_GetAll_Renewal()
-            {
-                var dt = _database.ExecuteSP_DataTable("Contract_GetAll_Renewal");
-                dt.TableName = Enums.TableNames.tblContract.ToString();
-                return new DataView(dt);
-            }
-
             public DataView Contract_Get_Renewal(int ContractID)
             {
                 _database.ClearParameter();
@@ -106,59 +97,6 @@ namespace FSM.Entity
                 var dt = _database.ExecuteSP_DataTable("Contract_Get_Renewal");
                 dt.TableName = Enums.TableNames.tblContract.ToString();
                 return new DataView(dt);
-            }
-
-            public ContractOriginal Get_For_Quote_ID(int QuoteContractID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@QuoteContractID", QuoteContractID, true);
-                var dt = _database.ExecuteSP_DataTable("ContractOriginal_Get_For_Quote_ID");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oContract = new ContractOriginal();
-                        oContract.IgnoreExceptionsOnSetMethods = true;
-                        oContract.SetContractID = dt.Rows[0]["ContractID"];
-                        oContract.SetCustomerID = dt.Rows[0]["CustomerID"];
-                        oContract.SetContractReference = dt.Rows[0]["ContractReference"];
-                        oContract.ContractStartDate = Conversions.ToDate(dt.Rows[0]["ContractStartDate"]);
-                        oContract.ContractEndDate = Conversions.ToDate(dt.Rows[0]["ContractEndDate"]);
-                        oContract.SetContractStatusID = dt.Rows[0]["ContractStatusID"];
-                        oContract.SetContractPrice = dt.Rows[0]["ContractPrice"];
-                        oContract.SetQuoteContractID = dt.Rows[0]["QuoteContractID"];
-                        oContract.SetInvoiceFrequencyID = dt.Rows[0]["InvoiceFrequencyID"];
-                        oContract.FirstInvoiceDate = Conversions.ToDate(dt.Rows[0]["FirstInvoiceDate"]);
-                        oContract.SetInvoiceAddressID = dt.Rows[0]["InvoiceAddressID"];
-                        oContract.SetInvoiceAddressTypeID = dt.Rows[0]["InvoiceAddressTypeID"];
-                        oContract.SetContractTypeID = dt.Rows[0]["ContractTypeID"];
-                        oContract.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oContract.SetCheque = Helper.MakeBooleanValid(dt.Rows[0]["Cheque"]);
-                        oContract.SetCreditCard = Helper.MakeBooleanValid(dt.Rows[0]["CreditCard"]);
-                        oContract.SetDirectDebit = Helper.MakeBooleanValid(dt.Rows[0]["DirectDebit"]);
-                        oContract.SetBankName = Helper.MakeStringValid(dt.Rows[0]["BankName"]);
-                        oContract.SetAccountNumber = Helper.MakeStringValid(dt.Rows[0]["AccountNumber"]);
-                        oContract.SetSortCode = Helper.MakeStringValid(dt.Rows[0]["SortCode"]);
-                        oContract.SetGasSupplyPipework = Helper.MakeBooleanValid(dt.Rows[0]["GasSupplyPipework"]);
-                        oContract.SetPlumbingDrainage = Helper.MakeBooleanValid(dt.Rows[0]["PlumbingDrainage"]);
-                        oContract.SetWindowLockPest = Helper.MakeBooleanValid(dt.Rows[0]["WindowLockPest"]);
-                        oContract.SetPoNumber = Helper.MakeStringValid(dt.Rows[0]["PONumber"]);
-                        oContract.SetDiscountID = dt.Rows[0]["DiscountID"];
-                        oContract.SetDoNotRenew = dt.Rows[0]["DoNotRenew"];
-                        oContract.SetDDMSRef = dt.Rows[0]["DDMSRef"];
-                        oContract.SetNotes = dt.Rows[0]["Notes"];
-                        oContract.Exists = true;
-                        return oContract;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
             }
 
             public ContractOriginal Insert(ContractOriginal oContract)
@@ -308,22 +246,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("ContractOriginal_GetAll");
-                dt.TableName = Enums.TableNames.tblContract.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView GetAllActive()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("ContractOriginal_GetAll_Active");
-                dt.TableName = Enums.TableNames.tblContract.ToString();
-                return new DataView(dt);
-            }
-
             public DataView GetAll_ForSite_Active(int SiteID)
             {
                 _database.ClearParameter();
@@ -437,8 +359,6 @@ namespace FSM.Entity
                     return null;
                 }
             }
-
-            
         }
     }
 }

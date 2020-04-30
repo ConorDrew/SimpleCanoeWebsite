@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int EngineerVisitAdditionalID)
             {
                 _database.ClearParameter();
@@ -215,14 +214,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataView EngineerVisitAdditional_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitAdditional_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblEngineerVisitNCCGSR.ToString();
-                return new DataView(dt);
-            }
-
             public EngineerVisitAdditional Insert(EngineerVisitAdditional oEngineerVisitAdditional)
             {
                 _database.ClearParameter();
@@ -357,7 +348,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            
             public static DateTime MakeDateSafe(object myDate)
             {
                 if (string.IsNullOrEmpty(myDate.ToString()))

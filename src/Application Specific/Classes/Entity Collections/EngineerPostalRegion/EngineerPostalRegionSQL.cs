@@ -15,8 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int EngineerID)
             {
                 _database.ClearParameter();
@@ -107,17 +105,6 @@ namespace FSM.Entity
                     command.Connection.Close();
                 }
             }
-
-            public DataView EngineerPostalRegion_Get_For_Postcode(string Postcode)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Postcode", Postcode, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerPostalRegion_Get_For_Postcode");
-                dt.TableName = Sys.Enums.TableNames.tblEngineerPostalRegion.ToString();
-                return new DataView(dt);
-            }
-
-            
         }
     }
 }

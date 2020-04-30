@@ -483,31 +483,6 @@ namespace FSM
             dialogue.Close();
         }
 
-        public static int PickPartProductSupplier(Entity.Sys.Enums.TableNames tableToSearchIn, int PartOrProductID)
-        {
-            DLGPickPartProductSupplier dialogue;
-            dialogue = (DLGPickPartProductSupplier)checkIfExists(typeof(DLGPickPartProductSupplier).Name, true);
-            if (dialogue is null)
-            {
-                dialogue = (DLGPickPartProductSupplier)Activator.CreateInstance(typeof(DLGPickPartProductSupplier));
-            }
-            // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
-            dialogue.ShowInTaskbar = false;
-            dialogue.ID = PartOrProductID;
-            dialogue.TableToSearch = tableToSearchIn;
-            dialogue.ShowDialog();
-            if (dialogue.DialogResult == DialogResult.OK)
-            {
-                return dialogue.ID;
-            }
-            else
-            {
-                return 0;
-            }
-
-            dialogue.Close();
-        }
-
         public static int FindRecordMultiId(Entity.Sys.Enums.TableNames tableToSearchIn, List<int> foreignKeyFilter)
         {
             DLGFindRecord dialogue;

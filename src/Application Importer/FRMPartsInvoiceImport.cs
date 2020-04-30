@@ -12,8 +12,6 @@ namespace FSM
 {
     public class FRMPartsInvoiceImport : FRMBaseForm
     {
-        
-
         public FRMPartsInvoiceImport() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -286,8 +284,6 @@ namespace FSM
             {
                 if (_cboValidateType != null)
                 {
-                    
-                    
                     _cboValidateType.SelectedIndexChanged -= cboValidateType_SelectedIndexChanged;
                 }
 
@@ -390,7 +386,6 @@ namespace FSM
             {
                 if (_Button1 != null)
                 {
-                    
                     _Button1.Click -= Button1_Click;
                 }
 
@@ -638,9 +633,6 @@ namespace FSM
             _grpCatImport.ResumeLayout(false);
             ResumeLayout(false);
         }
-
-        
-        
 
         public IUserControl LoadedControl
         {
@@ -1439,19 +1431,6 @@ namespace FSM
             var argcombo = cboValidateType;
             Combo.SetSelectedComboItem_By_Value(ref argcombo, "0");
             ShowData();
-            lblMessages.Text = "Validation complete.";
-            lblMessages.Visible = true;
-            Cursor.Current = Cursors.Default;
-        }
-
-        public void ValidateCurrentlyDisplayedRecords()
-        {
-            // ShowMessage("Validation can take up to two minutes.  The progress bar at the bottom will not increase during this time.  Please be patient.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            lblMessages.Text = "Now validating records, this can take up to two minutes. Please be patient.";
-            lblMessages.Visible = true;
-            Cursor.Current = Cursors.WaitCursor;
-            App.DB.ImportValidation.POInvoiceImport_ValidateOrders(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboValidateType)));
-            ShowData(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboValidateType)));
             lblMessages.Text = "Validation complete.";
             lblMessages.Visible = true;
             Cursor.Current = Cursors.Default;
@@ -2646,9 +2625,6 @@ namespace FSM
             ValidateAllRecords();
         }
 
-        
-        
-
         public bool checkArray(string[] var, string Text)
         {
             if (Array.IndexOf(var, Text) > -1)
@@ -2719,12 +2695,6 @@ namespace FSM
             }
 
             Application.DoEvents();
-        }
-
-        public void SetLastPartAttempted(string PartCode)
-        {
-            lblMessages.Visible = true;
-            lblMessages.Text = PartCode;
         }
 
         private void Button1_Click(object sender, EventArgs e)

@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int CustomerID)
             {
                 _database.ClearParameter();
@@ -290,15 +289,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView Site_Search_JobWizard(int userId)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@UserID", userId, true);
-                var dt = _database.ExecuteSP_DataTable("Site_Search_JobWizard");
-                dt.TableName = Sys.Enums.TableNames.tblCustomer.ToString();
-                return new DataView(dt);
-            }
-
             public Customer Insert(Customer oCustomer)
             {
                 _database.ClearParameter();
@@ -498,8 +488,6 @@ namespace FSM.Entity
                 return siteCount;
             }
 
-            
-            
             public CustomerServiceProcess CustomerServiceProcess_Get_ForCustomer(int customerId)
             {
                 _database.ClearParameter();
@@ -580,8 +568,6 @@ namespace FSM.Entity
                 _database.AddParameter("@CustomerServiceProcessID", customerServiceProcessId, true);
                 return Conversions.ToBoolean(_database.ExecuteSP_ReturnRowsAffected("CustomerServiceProcess_Delete") == 1);
             }
-
-            
         }
     }
 }

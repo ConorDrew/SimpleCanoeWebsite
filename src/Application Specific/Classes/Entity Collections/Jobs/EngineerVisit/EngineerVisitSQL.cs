@@ -429,60 +429,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView EngineerPerformance_Get(int Dept, int EngineerID, DateTime StartDate, DateTime EndDate, string performanceType)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Dept", Dept, true);
-                _database.AddParameter("@EngineerID", EngineerID, true);
-                _database.AddParameter("@StartDate", StartDate, true);
-                _database.AddParameter("@EndDate", EndDate, true);
-                _database.AddParameter("@PerType", performanceType, true);
-                var dt = _database.ExecuteSP_DataTable("Engineer_Get_Performance");
-                dt.TableName = Enums.TableNames.tblEngineerVisit.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView EngineerVisits_Appliances_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("EngineerVisits_Appliances_GetAll");
-                dt.TableName = Enums.TableNames.tblEngineerVisit.ToString();
-                return new DataView(dt);
-            }
-
-            public DataTable EngineerVisits_VisitManager_New(int CustomerID, int SiteID, int EngineerID, int JobDefinitionEnumID, int JobTypeID, int VisitEnumID, int OutcomeEnumID, string JobNumber, string PONumber, string Postcode, DateTime? DateFrom, DateTime? DateTo, int RegionID, int ContractTypeID, string LetterType, DateTime? DueDateFrom, DateTime? DueDateTo, int ChargeInProgress, string CostsTo)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@totalRowCount", 0, true);
-                _database.AddParameter("@sortBy", "1", true);
-                _database.AddParameter("@InvoiceTypeIDEnum", Conversions.ToInteger(Enums.InvoiceType.Visit), true);
-                _database.AddParameter("@InvoicedIDEnum", Conversions.ToInteger(Enums.VisitStatus.Invoiced), true);
-                _database.AddParameter("@ReadyToBeInvoicedIDEnum", Conversions.ToInteger(Enums.VisitStatus.Ready_To_Be_Invoiced), true);
-                _database.AddParameter("@NoNeedForInvoiceIDEnum", Conversions.ToInteger(Enums.VisitStatus.Not_To_Be_Invoiced), true);
-                _database.AddParameter("@CustomerID", CustomerID, true);
-                _database.AddParameter("@SiteID", SiteID, true);
-                _database.AddParameter("@EngineerID", EngineerID, true);
-                _database.AddParameter("@JobDefinitionEnumID", JobDefinitionEnumID, true);
-                _database.AddParameter("@JobTypeID", JobTypeID, true);
-                _database.AddParameter("@VisitEnumID", VisitEnumID, true);
-                _database.AddParameter("@OutcomeEnumID", OutcomeEnumID, true);
-                _database.AddParameter("@JobNumber", JobNumber, true);
-                _database.AddParameter("@PONumber", PONumber, true);
-                _database.AddParameter("@Postcode", Postcode, true);
-                _database.AddParameter("@DateFrom", DateFrom, true);
-                _database.AddParameter("@DateTo", DateTo, true);
-                _database.AddParameter("@RegionID", RegionID, true);
-                _database.AddParameter("@ContractTypeID", ContractTypeID, true);
-                _database.AddParameter("@LetterType", LetterType, true);
-                _database.AddParameter("@DueDateFrom", DueDateFrom, true);
-                _database.AddParameter("@DueDateTo", DueDateTo, true);
-                _database.AddParameter("@ChargeInProgress", ChargeInProgress, true);
-                _database.AddParameter("@CostsTo", CostsTo, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerVisits_Manager_Search_NEW");
-                dt.TableName = Enums.TableNames.tblEngineerVisit.ToString();
-                return dt;
-            }
-
             public DataView EngineerVisits_Get_All_ForSite(string Where)
             {
                 _database.ClearParameter();
@@ -735,40 +681,6 @@ namespace FSM.Entity
                 }
             }
 
-            public EngineerVisit EngineerVisits_Get_LastForJob_Light(int jobID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@JobID", jobID, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerVisits_Get_LastForJobID_Light");
-                if (dt.Rows.Count > 0)
-                {
-                    {
-                        var withBlock = dt.Rows[0];
-                        var visit = new EngineerVisit();
-                        visit.IgnoreExceptionsOnSetMethods = true;
-                        visit.Exists = true;
-                        visit.SetEngineerVisitID = withBlock["EngineerVisitID"];
-                        visit.SetJobOfWorkID = withBlock["JobOfWorkID"];
-                        visit.SetEngineerID = withBlock["EngineerID"];
-                        visit.StartDateTime = Helper.MakeDateTimeValid(withBlock["StartDateTime"]);
-                        visit.EndDateTime = Helper.MakeDateTimeValid(withBlock["EndDateTime"]);
-                        visit.SetStatusEnumID = withBlock["StatusEnumID"];
-                        visit.SetNotesToEngineer = withBlock["NotesToEngineer"];
-                        visit.SetNotesFromEngineer = withBlock["NotesFromEngineer"];
-                        visit.SetOutcomeEnumID = withBlock["OutcomeEnumID"];
-                        visit.SetOutcomeDetails = withBlock["OutcomeDetails"];
-                        visit.SetCustomerName = withBlock["CustomerName"];
-                        visit.SetVisitOutcome = withBlock["VisitOutcome"];
-                        visit.SetDeleted = Conversions.ToBoolean(withBlock["Deleted"]);
-                        return visit;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
             public EngineerVisit EngineerVisits_Get_As_Object(int EngineerVisitID, System.Data.SqlClient.SqlTransaction trans)
             {
                 var Command = new System.Data.SqlClient.SqlCommand();
@@ -856,68 +768,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public ArrayList EngineerVisits_Get_For_Job_Of_Work_As_Objects(int JobOfWorkID)
-            {
-                var engineerVisits = new ArrayList();
-                foreach (DataRow row in EngineerVisits_Get_For_Job_Of_Work(JobOfWorkID).Table.Rows)
-                {
-                    var visit = new EngineerVisit();
-                    visit.IgnoreExceptionsOnSetMethods = true;
-                    visit.Exists = true;
-                    visit.SetEngineerVisitID = row["EngineerVisitID"];
-                    visit.SetJobOfWorkID = row["JobOfWorkID"];
-                    visit.SetEngineerID = row["EngineerID"];
-                    visit.StartDateTime = Helper.MakeDateTimeValid(row["StartDateTime"]);
-                    visit.EndDateTime = Helper.MakeDateTimeValid(row["EndDateTime"]);
-                    visit.SetStatusEnumID = row["StatusEnumID"];
-                    visit.SetNotesToEngineer = row["NotesToEngineer"];
-                    visit.SetNotesFromEngineer = row["NotesFromEngineer"];
-                    visit.SetOutcomeEnumID = row["OutcomeEnumID"];
-                    visit.SetOutcomeDetails = row["OutcomeDetails"];
-                    visit.SetCustomerName = row["CustomerName"];
-                    if (Information.IsDBNull(row["Downloading"]))
-                    {
-                        visit.Downloading = DateTime.MinValue;
-                    }
-                    else
-                    {
-                        visit.Downloading = Conversions.ToDate(row["Downloading"]);
-                    }
-
-                    visit.SetManualEntryByUserID = row["ManualEntryByUserID"];
-                    visit.ManualEntryOn = Helper.MakeDateTimeValid(row["ManualEntryOn"]);
-                    visit.SetVisitLocked = Conversions.ToBoolean(row["VisitLocked"]);
-                    visit.SetDeleted = Conversions.ToBoolean(row["Deleted"]);
-                    visit.SetGasInstallationTightnessTestID = row["GasInstallationTightnessTestID"];
-                    visit.SetEmergencyControlAccessibleID = row["EmergencyControlAccessibleID"];
-                    visit.SetPaymentMethodID = row["PaymentMethodID"];
-                    visit.SetAmountCollected = row["AmountCollected"];
-                    visit.SetBondingID = row["BondingID"];
-                    visit.SetExpectedEngineerID = row["ExpectedEngineerID"];
-                    visit.SetPropertyRented = row["PropertyRented"];
-                    visit.SetSignatureSelectedID = row["SignatureSelectedID"];
-                    visit.SetPartsToFit = row["PartsToFit"];
-                    visit.SetGasServiceCompleted = row["GasServiceCompleted"];
-                    visit.SetEmailReceipt = Helper.MakeBooleanValid(row["EmailReceipt"]);
-                    visit.SetRecharge = Helper.MakeBooleanValid(row["Recharge"]);
-                    visit.PartsAndProductsAllocated = App.DB.EngineerVisitPartProductAllocated.EngineerVisitPartAndProductsAllocated_GetAll_For_Engineer_Visit(visit.EngineerVisitID);
-                    visit.EngineerVisitNCCGSR = App.DB.EngineerVisitNCCGSR.EngineerVisitNCCGSR_GetForEngineerVisit(visit.EngineerVisitID);
-                    visit.EstimatedDate = Conversions.ToDate(row["EstimatedVisitDate"]);
-                    visit.setRechargeTypeID = row["RechargeType"];
-                    visit.setNccRadID = row["NccRadID"];
-                    visit.SetVisitNumber = row["VisitNumber"];
-                    visit.SetUseSORDescription = Helper.MakeBooleanValid(row["UseSORDescription"]);
-                    visit.SetMeterCappedID = row["MeterCappedID"];
-                    visit.SetMeterLocationID = row["MeterLocationID"];
-                    visit.SetExpectedDepartment = row["ExpectedDepartment"];
-                    if (row.Table.Columns.Contains("FuelID"))
-                        visit.SetFuelID = row["FuelID"];
-                    engineerVisits.Add(visit);
-                }
-
-                return engineerVisits;
             }
 
             public ArrayList EngineerVisits_Get_For_Job_Of_Work_As_Objects_Light(int JobOfWorkID)
@@ -1530,13 +1380,6 @@ namespace FSM.Entity
                 }
             }
 
-            public int EngineerVisits_Count_Visits_Not_Ready_For_Invoice_For_JobID(int JobID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@JobID", JobID, true);
-                return Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("EngineerVisits_Count_Visits_Not_Ready_For_Invoice_For_JobID"));
-            }
-
             public double EngineerCharge_VAT_Amount(int EngineerChargeID, DateTime VisitDate, double Amount)
             {
                 _database.ClearParameter();
@@ -1545,14 +1388,6 @@ namespace FSM.Entity
                 _database.AddParameter("@VisitDate", VisitDate, true);
                 _database.AddParameter("@Amount", Amount, true);
                 return Conversions.ToDouble(_database.ExecuteSP_OBJECT("EngineerCharge_VAT_Amount"));
-            }
-
-            public DataTable EngineerVisitLiveCostReport()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("EngineerVisits_Get_All_REPORT_Yesterday");
-                dt.TableName = Enums.TableNames.tblJobItem.ToString();
-                return dt;
             }
 
             public void AlterEstimatedDate(int JobWorkID, DateTime EstDate)
@@ -1569,18 +1404,6 @@ namespace FSM.Entity
                 _database.AddParameter("@EngineerVisitID", EngineerID, true);
                 _database.AddParameter("@IncludeCurrentVisit", includeCurrentVisit, true);
                 var dt = _database.ExecuteSP_DataTable("EngineerVisit_GetFutureVisits");
-                dt.TableName = Enums.TableNames.tblJobItem.ToString();
-                return dt;
-            }
-
-            public DataTable Get_Appointments_Main(DateTime StartDate, int TimeReq, int days = 14, int TimeLimit = 240)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@StartDate", StartDate, true);
-                _database.AddParameter("@timereq", TimeReq, true);
-                _database.AddParameter("@Days", days, true);
-                _database.AddParameter("@TimeLimit", TimeLimit, true);
-                var dt = _database.ExecuteSP_DataTable("Get_Appointments_Main");
                 dt.TableName = Enums.TableNames.tblJobItem.ToString();
                 return dt;
             }

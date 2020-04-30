@@ -84,13 +84,6 @@ namespace FSM
             }
         }
 
-        public new PersistedProperty AddNew(string name, object value)
-        {
-            var newItem = new PersistedProperty(this, name, value);
-            AddNew(newItem);
-            return newItem;
-        }
-
         public new PersistedProperty this[int Index]
         {
             get
@@ -105,12 +98,6 @@ namespace FSM
             {
                 return (PersistedProperty)base[name];
             }
-        }
-
-        internal void BeginEdit()
-        {
-            for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
-                this[x].BeginEdit();
         }
 
         internal void CancelEdit()

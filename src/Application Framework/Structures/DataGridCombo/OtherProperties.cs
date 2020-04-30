@@ -22,13 +22,6 @@ namespace FSM
             }
         }
 
-        public new CalculatedProperty AddNew(string name)
-        {
-            var newItem = new CalculatedProperty(this, name);
-            AddNew(newItem);
-            return newItem;
-        }
-
         public new CalculatedProperty this[int Index]
         {
             get
@@ -153,13 +146,6 @@ namespace FSM
             {
                 base.Parent = value;
             }
-        }
-
-        public new CollectionProperty AddNew(string name)
-        {
-            var newItem = new CollectionProperty(this, name);
-            AddNew(newItem);
-            return newItem;
         }
 
         public new CollectionProperty this[int Index]

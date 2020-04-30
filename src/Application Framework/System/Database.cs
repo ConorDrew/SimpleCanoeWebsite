@@ -496,23 +496,10 @@ namespace FSM.Entity.Sys
             }
         }
 
-        public DataTable ExecuteCommand_DataTable(string fileName, bool recordInteraction = true)
-        {
-            _command.CommandText = Helper.GetTextResource(fileName);
-            var returnDT = ExecuteWithReturn(BuildSQL(), recordInteraction);
-            return returnDT;
-        }
-
         public void ExecuteCommand_NO_Return(string fileName, bool recordInteraction = true)
         {
             _command.CommandText = Helper.GetTextResource(fileName);
             ExecuteWithOutReturn(BuildSQL(), recordInteraction);
-        }
-
-        public object ExecuteCommand_Object(string fileName, bool recordInteraction = true)
-        {
-            _command.CommandText = Helper.GetTextResource(fileName);
-            return ExecuteScalar(BuildSQL(), recordInteraction);
         }
 
         public DataTable ExecuteSP_DataTable(string SPName, bool RecordTheInteraction = true)

@@ -413,22 +413,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataView Performance_Report(int EngineerID, ArrayList Months, DateTime StartDate, DateTime EndDate)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerID", EngineerID, true);
-                _database.AddParameter("@Start", Conversions.ToDate(Strings.Format(StartDate, "dd-MMM-yyyy") + " 00:00:00"), true);
-                _database.AddParameter("@End", Conversions.ToDate(Strings.Format(EndDate, "dd-MMM-yyyy") + " 23:59:59"), true);
-                string monthStr = "";
-                foreach (string item in Months)
-                    monthStr += item + ";";
-                _database.AddParameter("@Months", monthStr, true);
-                var dt = _database.ExecuteSP_DataTable("Engineer_Performance_Report");
-                dt.Columns.Remove("EngineerID");
-                dt.TableName = Enums.TableNames.tblEngineer.ToString();
-                return new DataView(dt);
-            }
-
             public void SaveDisciplinaryRecords(int engineerID, DataTable t)
             {
                 // delete all first

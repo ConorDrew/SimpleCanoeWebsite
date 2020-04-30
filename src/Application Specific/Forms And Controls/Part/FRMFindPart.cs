@@ -10,8 +10,6 @@ namespace FSM
 {
     public class FRMFindPart : FRMBaseForm, IForm
     {
-        
-
         public FRMFindPart() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -414,9 +412,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -436,8 +431,6 @@ namespace FSM
         {
         }
 
-        
-        
         private System.Data.SqlClient.SqlTransaction _Trans;
 
         public System.Data.SqlClient.SqlTransaction Trans
@@ -755,9 +748,6 @@ namespace FSM
 
         private DataGridViewSelectedRowCollection old;
 
-        
-        
-
         private void DLGFindRecord_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -773,18 +763,10 @@ namespace FSM
             DialogResult = DialogResult.Cancel;
         }
 
-        public void DBParts()
-        {
-            Records = (DataView)App.DB.PartSupplier.PartSupplier_Search(txtFilter.Text);
-        }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             SelectItem();
         }
-
-        
-        
 
         private void SelectItem()
         {
@@ -867,9 +849,6 @@ namespace FSM
             Records.RowFilter = whereClause;
         }
 
-        
-        
-
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -891,8 +870,6 @@ namespace FSM
                 g.DrawString("", DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
             }
         }
-
-        
 
         private void btnFilter_Click(object sender, EventArgs e)
         {

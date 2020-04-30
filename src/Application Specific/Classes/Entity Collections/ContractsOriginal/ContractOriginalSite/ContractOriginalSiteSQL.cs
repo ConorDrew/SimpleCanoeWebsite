@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public ContractOriginalSite Get(int ContractSiteID)
             {
                 _database.ClearParameter();
@@ -163,29 +162,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@SecondryAppliances", oContractSite.SecondryAppliances, true);
                 }
             }
-
-            private void SaveRates(ContractOriginalSite oContractSite)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ContractSiteID", oContractSite.ContractSiteID, true);
-                _database.ExecuteSP_NO_Return("ContractOriginalSiteScheduleOfRate_Delete");
-                if (oContractSite.ContractSiteScheduleOfRates is object)
-                {
-                    foreach (DataRow r in oContractSite.ContractSiteScheduleOfRates.Table.Rows)
-                    {
-                        _database.ClearParameter();
-                        _database.AddParameter("@ContractSiteID", oContractSite.ContractSiteID, true);
-                        _database.AddParameter("@ScheduleOfRatesCategoryID", r["ScheduleOfRatesCategoryID"], true);
-                        _database.AddParameter("@Code", r["Code"], true);
-                        _database.AddParameter("@Description", r["Description"], true);
-                        _database.AddParameter("@Price", r["Price"], true);
-                        _database.AddParameter("@QtyPerVisit", r["QtyPerVisit"], true);
-                        _database.ExecuteSP_NO_Return("ContractOriginalSiteScheduleOfRate_Insert");
-                    }
-                }
-            }
-
-            
         }
     }
 }
