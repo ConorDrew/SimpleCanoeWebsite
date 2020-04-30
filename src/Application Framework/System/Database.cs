@@ -114,12 +114,6 @@ namespace FSM.Entity.Sys
             QuoteContractOriginalSite = new QuoteContractOriginalSites.QuoteContractOriginalSiteSQL(this);
             QuoteContractOriginalSiteAsset = new QuoteContractOriginalSiteAssets.QuoteContractOriginalSiteAssetSQL(this);
             QuoteContractOriginalPPMVisits = new QuoteContractOriginalPPMVisits.QuoteContractOriginalPPMVisitSQL(this);
-            QuoteContractAlternativePPMVisits = new QuoteContractAlternativePPMVisits.QuoteContractAlternativePPMVisitSQL(this);
-            QuoteContractAlternativeSite = new QuoteContractAlternativeSites.QuoteContractAlternativeSiteSQL(this);
-            QuoteContractAlternativeSiteAsset = new QuoteContractAlternativeSiteAssets.QuoteContractAlternativeSiteAssetSQL(this);
-            QuoteContractAlternative = new QuoteContractAlternatives.QuoteContractAlternativeSQL(this);
-            QuoteContractAlternativeSiteJobItems = new QuoteContractAlternativeSiteJobItems.QuoteContractAlternativeSiteJobItemsSQL(this);
-            QuoteContractAlternativeSiteJobOfWork = new QuoteContractAlternativeSiteJobOfWorks.QuoteContractAlternativeSiteJobOfWorkSQL(this);
             Notes = new Notes.NotesSQL(this);
             EngineerVisitsPartsAndProducts = new EngineerVisitsPartsAndProducts.EngineerVisitPartsAndProductsSQL(this);
             EngineerVisitsTimeSheet = new EngineerVisitTimeSheets.EngineerVisitTimeSheetSQL(this);
@@ -127,9 +121,6 @@ namespace FSM.Entity.Sys
             SystemScheduleOfRate = new SystemScheduleOfRates.SystemScheduleOfRateSQL(this);
             CustomerScheduleOfRate = new CustomerScheduleOfRates.CustomerScheduleOfRateSQL(this);
             EngineerVan = new EngineerVans.EngineerVanSQL(this);
-            QuoteContractOption3 = new QuoteContractOption3s.QuoteContractOption3SQL(this);
-            QuoteContractOption3Site = new QuoteContractOption3Sites.QuoteContractOption3SiteSQL(this);
-            QuoteContractOption3SiteAssetDurations = new QuoteContractOption3SiteAssetDurations.QuoteContractOption3SiteAssetDurationSQL(this);
             TimeSlotRates = new TimeSlotRates.TimeSlotRatesSQL(this);
             EngineerVisitCharge = new EngineerVisitCharges.EngineerVisitChargeSQL(this);
             JobAudit = new JobAudits.JobAuditSQL(this);
@@ -339,12 +330,6 @@ namespace FSM.Entity.Sys
         public QuoteContractOriginalSites.QuoteContractOriginalSiteSQL QuoteContractOriginalSite;
         public QuoteContractOriginalSiteAssets.QuoteContractOriginalSiteAssetSQL QuoteContractOriginalSiteAsset;
         public QuoteContractOriginals.QuoteContractOriginalSQL QuoteContractOriginal;
-        public QuoteContractAlternativePPMVisits.QuoteContractAlternativePPMVisitSQL QuoteContractAlternativePPMVisits;
-        public QuoteContractAlternativeSites.QuoteContractAlternativeSiteSQL QuoteContractAlternativeSite;
-        public QuoteContractAlternativeSiteAssets.QuoteContractAlternativeSiteAssetSQL QuoteContractAlternativeSiteAsset;
-        public QuoteContractAlternatives.QuoteContractAlternativeSQL QuoteContractAlternative;
-        public QuoteContractAlternativeSiteJobItems.QuoteContractAlternativeSiteJobItemsSQL QuoteContractAlternativeSiteJobItems;
-        public QuoteContractAlternativeSiteJobOfWorks.QuoteContractAlternativeSiteJobOfWorkSQL QuoteContractAlternativeSiteJobOfWork;
         public Notes.NotesSQL Notes;
         public EngineerVisitsPartsAndProducts.EngineerVisitPartsAndProductsSQL EngineerVisitsPartsAndProducts;
         public EngineerVisitTimeSheets.EngineerVisitTimeSheetSQL EngineerVisitsTimeSheet;
@@ -352,9 +337,6 @@ namespace FSM.Entity.Sys
         public SystemScheduleOfRates.SystemScheduleOfRateSQL SystemScheduleOfRate;
         public CustomerScheduleOfRates.CustomerScheduleOfRateSQL CustomerScheduleOfRate;
         public EngineerVans.EngineerVanSQL EngineerVan;
-        public QuoteContractOption3s.QuoteContractOption3SQL QuoteContractOption3;
-        public QuoteContractOption3Sites.QuoteContractOption3SiteSQL QuoteContractOption3Site;
-        public QuoteContractOption3SiteAssetDurations.QuoteContractOption3SiteAssetDurationSQL QuoteContractOption3SiteAssetDurations;
         public TimeSlotRates.TimeSlotRatesSQL TimeSlotRates;
         public EngineerVisitCharges.EngineerVisitChargeSQL EngineerVisitCharge;
         public JobAudits.JobAuditSQL JobAudit;

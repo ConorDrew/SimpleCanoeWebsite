@@ -471,9 +471,6 @@
     <Compile Include="Application Scheduler\frmVisit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternative\QuoteContractAlternative.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternative\QuoteContractAlternativeSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternative\QuoteContractAlternativeValidator.cs" />
     <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
@@ -1566,78 +1563,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCredited.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCreditedSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCreditedValidator.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativePPMVisit\QuoteContractAlternativePPMVisit.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativePPMVisit\QuoteContractAlternativePPMVisitSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativePPMVisit\QuoteContractAlternativePPMVisitValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteAsset\QuoteContractOriginalSiteAsset.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteAsset\QuoteContractOriginalSiteAssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteAsset\QuoteContractOriginalSiteAssetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteJobItem\QCAlternativeSiteJobItemValidate.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteJobItem\QuoteContractAlternativeSiteJobItem.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteJobItem\QuoteContractAlternativeSiteJobItemSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteJobOfWork\QCAlternativeSiteJobOfWorkValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteJobOfWork\QuoteContractAlternativeSiteJobOfWork.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSiteJobOfWork\QuoteContractAlternativeSiteJobOfWorkSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\QuoteContractAlternativeSite.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\QuoteContractAlternativeSiteSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsAlternative\QuoteContractAlternativeSite\QuoteContractAlternativeSiteValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3SiteAssetDuration\QuoteContractOption3SiteAssetDuration.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3SiteAssetDuration\QuoteContractOption3SiteAssetDurationSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3SiteAssetDuration\QuoteContractOption3SiteAssetDurationValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3Site\QuoteContractOption3Site.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3Site\QuoteContractOption3SiteSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3Site\QuoteContractOption3SiteValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3\QuoteContractOption3.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3\QuoteContractOption3SQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOption3\QuoteContractOption3\QuoteContractOption3Validator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalPPMVisit\QuoteContractOriginalPPMVisit.cs">
       <SubType>Code</SubType>
     </Compile>

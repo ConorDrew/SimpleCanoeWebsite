@@ -529,27 +529,9 @@ namespace FSM
                     App.DB.QuoteContractOriginalSite.Delete(Conversions.ToInteger(r["QuoteContractSiteID"]));
                 App.DB.QuoteContractOriginal.Delete(Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]));
             }
-            else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Contract_Opt_2.ToString(), false)))
-            {
-                // DELETE  PPM Visits, Quote Contract Site Assets, Quote Contract Sites
-                var sites = new DataView();
-                sites = App.DB.QuoteContractAlternativeSite.GetAll_QuoteContractID(Conversions.ToInteger(SelectedQuoteDataRow["QuoteID"]), CustomerID);
-                foreach (DataRow r in sites.Table.Rows)
-                    App.DB.QuoteContractAlternativeSite.Delete(Conversions.ToInteger(r["QuoteContractSiteID"]));
-                App.DB.QuoteContractAlternative.Delete(Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]));
-            }
             else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Job.ToString(), false)))
             {
                 App.DB.QuoteJob.Delete(Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]));
-            }
-            else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedQuoteDataRow["QuoteType"], Entity.Sys.Enums.QuoteType.Contract_Opt_3.ToString(), false)))
-            {
-                // DELETE   Quote Contract Site Assets, Quote Contract Sites
-                var sites = new DataView();
-                sites = App.DB.QuoteContractOption3Site.QuoteContractOption3Site_GetAll_ForQuoteContract(Conversions.ToInteger(SelectedQuoteDataRow["QuoteID"]), CustomerID);
-                foreach (DataRow r in sites.Table.Rows)
-                    App.DB.QuoteContractOption3Site.Delete(Conversions.ToInteger(r["QuoteContractSiteID"]));
-                App.DB.QuoteContractOption3.Delete(Entity.Sys.Helper.MakeIntegerValid(SelectedQuoteDataRow["QuoteID"]));
             }
 
             Populate();
