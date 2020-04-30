@@ -1061,9 +1061,6 @@
     <Compile Include="Application Importer\FRMImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Importer\ImporterLabelColumn.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Application Importer\UCData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1134,9 +1131,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Scheduler\Schedule Tests\SOROverloadCheck.cs" />
-    <Compile Include="Application Scheduler\Schedule Tests\VisitOverlapCheck.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Scheduler\Scheduler.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2998,9 +2992,6 @@
     <EmbeddedResource Include="Application Importer\FRMImport.resx">
       <DependentUpon>FRMImport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Importer\ImporterLabelColumn.resx">
-      <DependentUpon>ImporterLabelColumn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Importer\UCData.resx">
       <DependentUpon>UCData.cs</DependentUpon>
     </EmbeddedResource>
@@ -4142,7 +4133,6 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Application Scheduler\Summary\" />
     <Folder Include="Application Specific\Classes\Entity Collections\SiteCharge\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
