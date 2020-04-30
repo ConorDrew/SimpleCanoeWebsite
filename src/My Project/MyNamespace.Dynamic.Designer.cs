@@ -102,51 +102,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public DLGPasswordOverride_Service m_DLGPasswordOverride_Service;
-
-            public DLGPasswordOverride_Service DLGPasswordOverride_Service
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_DLGPasswordOverride_Service = MyForms.Create__Instance__(m_DLGPasswordOverride_Service);
-                    return m_DLGPasswordOverride_Service;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_DLGPasswordOverride_Service)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_DLGPasswordOverride_Service);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public DLGPasswordOverrideINV m_DLGPasswordOverrideINV;
-
-            public DLGPasswordOverrideINV DLGPasswordOverrideINV
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_DLGPasswordOverrideINV = MyForms.Create__Instance__(m_DLGPasswordOverrideINV);
-                    return m_DLGPasswordOverrideINV;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_DLGPasswordOverrideINV)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_DLGPasswordOverrideINV);
-                }
-            }
+            
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public DLGPickPartProductSupplier m_DLGPickPartProductSupplier;
@@ -240,28 +196,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMAbout m_FRMAbout;
-
-            public FRMAbout FRMAbout
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMAbout = MyForms.Create__Instance__(m_FRMAbout);
-                    return m_FRMAbout;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMAbout)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMAbout);
-                }
-            }
+           
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMAbsenceColourKey m_FRMAbsenceColourKey;
@@ -892,29 +827,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMContactDetails m_FRMContactDetails;
-
-            public FRMContactDetails FRMContactDetails
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMContactDetails = MyForms.Create__Instance__(m_FRMContactDetails);
-                    return m_FRMContactDetails;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMContactDetails)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMContactDetails);
-                }
-            }
-
+           
           
 
             [EditorBrowsable(EditorBrowsableState.Never)]
@@ -3000,29 +2913,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMReleaseNotes m_FRMReleaseNotes;
-
-            public FRMReleaseNotes FRMReleaseNotes
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMReleaseNotes = MyForms.Create__Instance__(m_FRMReleaseNotes);
-                    return m_FRMReleaseNotes;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMReleaseNotes)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMReleaseNotes);
-                }
-            }
-
+            
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMSchedulerFind m_FRMSchedulerFind;
 
@@ -3488,28 +3379,7 @@ namespace FSM.My
                 }
             }
 
-            [EditorBrowsable(EditorBrowsableState.Never)]
-            public FRMSupport m_FRMSupport;
-
-            public FRMSupport FRMSupport
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_FRMSupport = MyForms.Create__Instance__(m_FRMSupport);
-                    return m_FRMSupport;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_FRMSupport)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_FRMSupport);
-                }
-            }
+ 
 
             [EditorBrowsable(EditorBrowsableState.Never)]
             public FRMSystemScheduleOfRate m_FRMSystemScheduleOfRate;

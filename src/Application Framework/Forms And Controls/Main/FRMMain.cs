@@ -176,84 +176,6 @@ namespace FSM
             }
         }
 
-        private MenuItem _MenuItem15;
-
-        internal MenuItem MenuItem15
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _MenuItem15;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_MenuItem15 != null)
-                {
-                }
-
-                _MenuItem15 = value;
-                if (_MenuItem15 != null)
-                {
-                }
-            }
-        }
-
-        private MenuItem _mnuAbout;
-
-        internal MenuItem mnuAbout
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuAbout;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuAbout != null)
-                {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
-                    _mnuAbout.Click -= mnuAbout_Click;
-                }
-
-                _mnuAbout = value;
-                if (_mnuAbout != null)
-                {
-                    _mnuAbout.Click += mnuAbout_Click;
-                }
-            }
-        }
-
-        private MenuItem _mnuContactSheet;
-
-        internal MenuItem mnuContactSheet
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuContactSheet;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuContactSheet != null)
-                {
-                    _mnuContactSheet.Click -= mnuContactSheet_Click;
-                }
-
-                _mnuContactSheet = value;
-                if (_mnuContactSheet != null)
-                {
-                    _mnuContactSheet.Click += mnuContactSheet_Click;
-                }
-            }
-        }
-
         private StatusBar _infoBar;
 
         internal StatusBar infoBar
@@ -273,30 +195,6 @@ namespace FSM
 
                 _infoBar = value;
                 if (_infoBar != null)
-                {
-                }
-            }
-        }
-
-        private MenuItem _mnuSystemHelp;
-
-        internal MenuItem mnuSystemHelp
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuSystemHelp;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuSystemHelp != null)
-                {
-                }
-
-                _mnuSystemHelp = value;
-                if (_mnuSystemHelp != null)
                 {
                 }
             }
@@ -1266,423 +1164,411 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMMain));
-            _MnuMainNav = new MainMenu(components);
-            _mnuFile = new MenuItem();
-            _mnuChangeLogin = new MenuItem();
-            _mnuChangeLogin.Click += new EventHandler(mnuChangeLogin_Click);
-            _MenuItem3 = new MenuItem();
-            _mnuLogout = new MenuItem();
-            _mnuLogout.Click += new EventHandler(mnuLogout_Click);
-            _mnuCustomers = new MenuItem();
-            _mnuCustomers.Click += new EventHandler(mnuCustomers_Click);
-            _mnuSpares = new MenuItem();
-            _mnuSpares.Click += new EventHandler(mnuSpares_Click);
-            _mnuStaff = new MenuItem();
-            _mnuStaff.Click += new EventHandler(mnuStaff_Click);
-            _mnuJobs = new MenuItem();
-            _mnuJobs.Click += new EventHandler(mnuJobs_Click);
-            _mnuScheduler = new MenuItem();
-            _mnuScheduler.Click += new EventHandler(mnuScheduler_Click);
-            _mnuInvoicing = new MenuItem();
-            _mnuInvoicing.Click += new EventHandler(mnuInvoicing_Click);
-            _mnuReports = new MenuItem();
-            _mnuReports.Click += new EventHandler(mnuReports_Click);
-            _mnuVan = new MenuItem();
-            _mnuVan.Click += new EventHandler(mnuVan_Click);
-            _mnuSetup = new MenuItem();
-            _mnuSetup.Click += new EventHandler(mnuSetup_Click);
-            _mnuSystemHelp = new MenuItem();
-            _mnuContactSheet = new MenuItem();
-            _mnuContactSheet.Click += new EventHandler(mnuContactSheet_Click);
-            _MenuItem15 = new MenuItem();
-            _mnuAbout = new MenuItem();
-            _mnuAbout.Click += new EventHandler(mnuAbout_Click);
-            _mnuNpPrint = new MenuItem();
-            _mnuUpstairs = new MenuItem();
-            _mnuUpstairs.Click += new EventHandler(mnuUpstairs_Click);
-            _mnuDownstairs = new MenuItem();
-            _mnuDownstairs.Click += new EventHandler(mnuDownstairs_Click);
-            _infoBar = new StatusBar();
-            _pnlLeft = new Panel();
-            _splitLeftAndMiddle = new Splitter();
-            _pnlMiddle = new Panel();
-            _pnlMiddle.Resize += new EventHandler(pnlMiddle_Resize);
-            _dgSearchResults = new DataGrid();
-            _dgSearchResults.Click += new EventHandler(dgSearchResults_Click);
-            _dgSearchResults.CurrentCellChanged += new EventHandler(dgSearchResults_Click);
-            _dgSearchResults.Click += new EventHandler(dgSearchResults_Click);
-            _dgSearchResults.CurrentCellChanged += new EventHandler(dgSearchResults_Click);
-            _dgSearchResults.DoubleClick += new EventHandler(dgSearchResults_DoubleClick);
-            _splitMiddleTop = new Splitter();
-            _pnlMiddleTitle = new Panel();
-            _btnCloseMiddle = new Button();
-            _btnCloseMiddle.Click += new EventHandler(btnCloseMiddle_Click);
-            _lblMiddleTitle = new Label();
-            _splitMiddleBottom = new Splitter();
-            _pnlButtons = new Panel();
-            _ContainerMiddlePanelBtns = new TableLayoutPanel();
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _btnAddNew = new Button();
-            _btnAddNew.Click += new EventHandler(btnAddNew_Click);
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _pnlRight = new Panel();
-            _Splitter2 = new Splitter();
-            _pnlContent = new Panel();
-            _Splitter1 = new Splitter();
-            _pnleHeaderRight = new Panel();
-            _btnHQ = new Button();
-            _btnHQ.Click += new EventHandler(btnHQ_Click);
-            _btnCloseRight = new Button();
-            _btnCloseRight.Click += new EventHandler(btnCloseRight_Click);
-            _lblRightTitle = new Label();
-            _pnlButtonsRight = new Panel();
-            _btnGoBack = new Button();
-            _btnGoBack.Click += new EventHandler(btnGoBack_Click);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _splitMiddleAndRight = new Splitter();
-            _pnlMiddle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSearchResults).BeginInit();
-            _pnlMiddleTitle.SuspendLayout();
-            _pnlButtons.SuspendLayout();
-            _ContainerMiddlePanelBtns.SuspendLayout();
-            _pnlRight.SuspendLayout();
-            _pnleHeaderRight.SuspendLayout();
-            _pnlButtonsRight.SuspendLayout();
-            SuspendLayout();
-            //
-            // MnuMainNav
-            //
-            _MnuMainNav.MenuItems.AddRange(new MenuItem[] { _mnuFile, _mnuCustomers, _mnuSpares, _mnuStaff, _mnuJobs, _mnuScheduler, _mnuInvoicing, _mnuReports, _mnuVan, _mnuSetup, _mnuSystemHelp, _mnuNpPrint });
-            //
-            // mnuFile
-            //
-            _mnuFile.Index = 0;
-            _mnuFile.MenuItems.AddRange(new MenuItem[] { _mnuChangeLogin, _MenuItem3, _mnuLogout });
-            resources.ApplyResources(_mnuFile, "mnuFile");
-            //
-            // mnuChangeLogin
-            //
-            _mnuChangeLogin.Index = 0;
-            resources.ApplyResources(_mnuChangeLogin, "mnuChangeLogin");
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMMain));
+            this._MnuMainNav = new System.Windows.Forms.MainMenu(this.components);
+            this._mnuFile = new System.Windows.Forms.MenuItem();
+            this._mnuChangeLogin = new System.Windows.Forms.MenuItem();
+            this._MenuItem3 = new System.Windows.Forms.MenuItem();
+            this._mnuLogout = new System.Windows.Forms.MenuItem();
+            this._mnuCustomers = new System.Windows.Forms.MenuItem();
+            this._mnuSpares = new System.Windows.Forms.MenuItem();
+            this._mnuStaff = new System.Windows.Forms.MenuItem();
+            this._mnuJobs = new System.Windows.Forms.MenuItem();
+            this._mnuScheduler = new System.Windows.Forms.MenuItem();
+            this._mnuInvoicing = new System.Windows.Forms.MenuItem();
+            this._mnuReports = new System.Windows.Forms.MenuItem();
+            this._mnuVan = new System.Windows.Forms.MenuItem();
+            this._mnuSetup = new System.Windows.Forms.MenuItem();
+            this._mnuNpPrint = new System.Windows.Forms.MenuItem();
+            this._mnuUpstairs = new System.Windows.Forms.MenuItem();
+            this._mnuDownstairs = new System.Windows.Forms.MenuItem();
+            this._infoBar = new System.Windows.Forms.StatusBar();
+            this._pnlLeft = new System.Windows.Forms.Panel();
+            this._splitLeftAndMiddle = new System.Windows.Forms.Splitter();
+            this._pnlMiddle = new System.Windows.Forms.Panel();
+            this._dgSearchResults = new System.Windows.Forms.DataGrid();
+            this._splitMiddleTop = new System.Windows.Forms.Splitter();
+            this._pnlMiddleTitle = new System.Windows.Forms.Panel();
+            this._btnCloseMiddle = new System.Windows.Forms.Button();
+            this._lblMiddleTitle = new System.Windows.Forms.Label();
+            this._splitMiddleBottom = new System.Windows.Forms.Splitter();
+            this._pnlButtons = new System.Windows.Forms.Panel();
+            this._ContainerMiddlePanelBtns = new System.Windows.Forms.TableLayoutPanel();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._pnlRight = new System.Windows.Forms.Panel();
+            this._Splitter2 = new System.Windows.Forms.Splitter();
+            this._pnlContent = new System.Windows.Forms.Panel();
+            this._Splitter1 = new System.Windows.Forms.Splitter();
+            this._pnleHeaderRight = new System.Windows.Forms.Panel();
+            this._btnHQ = new System.Windows.Forms.Button();
+            this._btnCloseRight = new System.Windows.Forms.Button();
+            this._lblRightTitle = new System.Windows.Forms.Label();
+            this._pnlButtonsRight = new System.Windows.Forms.Panel();
+            this._btnGoBack = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._splitMiddleAndRight = new System.Windows.Forms.Splitter();
+            this._pnlMiddle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSearchResults)).BeginInit();
+            this._pnlMiddleTitle.SuspendLayout();
+            this._pnlButtons.SuspendLayout();
+            this._ContainerMiddlePanelBtns.SuspendLayout();
+            this._pnlRight.SuspendLayout();
+            this._pnleHeaderRight.SuspendLayout();
+            this._pnlButtonsRight.SuspendLayout();
+            this.SuspendLayout();
+            //
+            // _MnuMainNav
+            //
+            this._MnuMainNav.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._mnuFile,
+            this._mnuCustomers,
+            this._mnuSpares,
+            this._mnuStaff,
+            this._mnuJobs,
+            this._mnuScheduler,
+            this._mnuInvoicing,
+            this._mnuReports,
+            this._mnuVan,
+            this._mnuSetup,
+            this._mnuNpPrint});
+            //
+            // _mnuFile
+            //
+            this._mnuFile.Index = 0;
+            this._mnuFile.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._mnuChangeLogin,
+            this._MenuItem3,
+            this._mnuLogout});
+            resources.ApplyResources(this._mnuFile, "_mnuFile");
+            //
+            // _mnuChangeLogin
+            //
+            this._mnuChangeLogin.Index = 0;
+            resources.ApplyResources(this._mnuChangeLogin, "_mnuChangeLogin");
+            this._mnuChangeLogin.Click += new System.EventHandler(this.mnuChangeLogin_Click);
+            //
+            // _MenuItem3
+            //
+            this._MenuItem3.Index = 1;
+            resources.ApplyResources(this._MenuItem3, "_MenuItem3");
+            //
+            // _mnuLogout
+            //
+            this._mnuLogout.Index = 2;
+            resources.ApplyResources(this._mnuLogout, "_mnuLogout");
+            this._mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
+            //
+            // _mnuCustomers
+            //
+            this._mnuCustomers.Index = 1;
+            resources.ApplyResources(this._mnuCustomers, "_mnuCustomers");
+            this._mnuCustomers.Click += new System.EventHandler(this.mnuCustomers_Click);
             //
-            // MenuItem3
+            // _mnuSpares
             //
-            _MenuItem3.Index = 1;
-            resources.ApplyResources(_MenuItem3, "MenuItem3");
+            this._mnuSpares.Index = 2;
+            resources.ApplyResources(this._mnuSpares, "_mnuSpares");
+            this._mnuSpares.Click += new System.EventHandler(this.mnuSpares_Click);
             //
-            // mnuLogout
+            // _mnuStaff
             //
-            _mnuLogout.Index = 2;
-            resources.ApplyResources(_mnuLogout, "mnuLogout");
+            this._mnuStaff.Index = 3;
+            resources.ApplyResources(this._mnuStaff, "_mnuStaff");
+            this._mnuStaff.Click += new System.EventHandler(this.mnuStaff_Click);
             //
-            // mnuCustomers
+            // _mnuJobs
             //
-            _mnuCustomers.Index = 1;
-            resources.ApplyResources(_mnuCustomers, "mnuCustomers");
+            this._mnuJobs.Index = 4;
+            resources.ApplyResources(this._mnuJobs, "_mnuJobs");
+            this._mnuJobs.Click += new System.EventHandler(this.mnuJobs_Click);
             //
-            // mnuSpares
+            // _mnuScheduler
             //
-            _mnuSpares.Index = 2;
-            resources.ApplyResources(_mnuSpares, "mnuSpares");
+            this._mnuScheduler.Index = 5;
+            resources.ApplyResources(this._mnuScheduler, "_mnuScheduler");
+            this._mnuScheduler.Click += new System.EventHandler(this.mnuScheduler_Click);
             //
-            // mnuStaff
+            // _mnuInvoicing
             //
-            _mnuStaff.Index = 3;
-            resources.ApplyResources(_mnuStaff, "mnuStaff");
+            this._mnuInvoicing.Index = 6;
+            resources.ApplyResources(this._mnuInvoicing, "_mnuInvoicing");
+            this._mnuInvoicing.Click += new System.EventHandler(this.mnuInvoicing_Click);
             //
-            // mnuJobs
+            // _mnuReports
             //
-            _mnuJobs.Index = 4;
-            resources.ApplyResources(_mnuJobs, "mnuJobs");
+            this._mnuReports.Index = 7;
+            resources.ApplyResources(this._mnuReports, "_mnuReports");
+            this._mnuReports.Click += new System.EventHandler(this.mnuReports_Click);
             //
-            // mnuScheduler
+            // _mnuVan
             //
-            _mnuScheduler.Index = 5;
-            resources.ApplyResources(_mnuScheduler, "mnuScheduler");
+            this._mnuVan.Index = 8;
+            resources.ApplyResources(this._mnuVan, "_mnuVan");
+            this._mnuVan.Click += new System.EventHandler(this.mnuVan_Click);
             //
-            // mnuInvoicing
+            // _mnuSetup
             //
-            _mnuInvoicing.Index = 6;
-            resources.ApplyResources(_mnuInvoicing, "mnuInvoicing");
+            this._mnuSetup.Index = 9;
+            resources.ApplyResources(this._mnuSetup, "_mnuSetup");
+            this._mnuSetup.Click += new System.EventHandler(this.mnuSetup_Click);
             //
-            // mnuReports
+            // _mnuNpPrint
             //
-            _mnuReports.Index = 7;
-            resources.ApplyResources(_mnuReports, "mnuReports");
+            this._mnuNpPrint.Index = 10;
+            this._mnuNpPrint.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._mnuUpstairs,
+            this._mnuDownstairs});
+            resources.ApplyResources(this._mnuNpPrint, "_mnuNpPrint");
             //
-            // mnuVan
+            // _mnuUpstairs
             //
-            _mnuVan.Index = 8;
-            resources.ApplyResources(_mnuVan, "mnuVan");
+            this._mnuUpstairs.Index = 0;
+            resources.ApplyResources(this._mnuUpstairs, "_mnuUpstairs");
+            this._mnuUpstairs.Click += new System.EventHandler(this.mnuUpstairs_Click);
             //
-            // mnuSetup
+            // _mnuDownstairs
             //
-            _mnuSetup.Index = 9;
-            resources.ApplyResources(_mnuSetup, "mnuSetup");
+            this._mnuDownstairs.Index = 1;
+            resources.ApplyResources(this._mnuDownstairs, "_mnuDownstairs");
+            this._mnuDownstairs.Click += new System.EventHandler(this.mnuDownstairs_Click);
             //
-            // mnuSystemHelp
+            // _infoBar
             //
-            _mnuSystemHelp.Index = 10;
-            _mnuSystemHelp.MenuItems.AddRange(new MenuItem[] { _mnuContactSheet, _MenuItem15, _mnuAbout });
-            resources.ApplyResources(_mnuSystemHelp, "mnuSystemHelp");
+            resources.ApplyResources(this._infoBar, "_infoBar");
+            this._infoBar.Name = "_infoBar";
+            this._infoBar.SizingGrip = false;
             //
-            // mnuContactSheet
+            // _pnlLeft
             //
-            _mnuContactSheet.Index = 0;
-            resources.ApplyResources(_mnuContactSheet, "mnuContactSheet");
+            this._pnlLeft.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this._pnlLeft, "_pnlLeft");
+            this._pnlLeft.Name = "_pnlLeft";
             //
-            // MenuItem15
+            // _splitLeftAndMiddle
             //
-            _MenuItem15.Index = 1;
-            resources.ApplyResources(_MenuItem15, "MenuItem15");
+            this._splitLeftAndMiddle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            resources.ApplyResources(this._splitLeftAndMiddle, "_splitLeftAndMiddle");
+            this._splitLeftAndMiddle.Name = "_splitLeftAndMiddle";
+            this._splitLeftAndMiddle.TabStop = false;
             //
-            // mnuAbout
+            // _pnlMiddle
             //
-            _mnuAbout.Index = 2;
-            resources.ApplyResources(_mnuAbout, "mnuAbout");
+            this._pnlMiddle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._pnlMiddle.Controls.Add(this._dgSearchResults);
+            this._pnlMiddle.Controls.Add(this._splitMiddleTop);
+            this._pnlMiddle.Controls.Add(this._pnlMiddleTitle);
+            this._pnlMiddle.Controls.Add(this._splitMiddleBottom);
+            this._pnlMiddle.Controls.Add(this._pnlButtons);
+            resources.ApplyResources(this._pnlMiddle, "_pnlMiddle");
+            this._pnlMiddle.Name = "_pnlMiddle";
+            this._pnlMiddle.Resize += new System.EventHandler(this.pnlMiddle_Resize);
             //
-            // mnuNpPrint
+            // _dgSearchResults
             //
-            _mnuNpPrint.Index = 11;
-            _mnuNpPrint.MenuItems.AddRange(new MenuItem[] { _mnuUpstairs, _mnuDownstairs });
-            resources.ApplyResources(_mnuNpPrint, "mnuNpPrint");
+            this._dgSearchResults.DataMember = "";
+            resources.ApplyResources(this._dgSearchResults, "_dgSearchResults");
+            this._dgSearchResults.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSearchResults.Name = "_dgSearchResults";
+            this._dgSearchResults.CurrentCellChanged += new System.EventHandler(this.dgSearchResults_Click);
+            this._dgSearchResults.Click += new System.EventHandler(this.dgSearchResults_Click);
+            this._dgSearchResults.DoubleClick += new System.EventHandler(this.dgSearchResults_DoubleClick);
             //
-            // mnuUpstairs
+            // _splitMiddleTop
             //
-            _mnuUpstairs.Index = 0;
-            resources.ApplyResources(_mnuUpstairs, "mnuUpstairs");
+            this._splitMiddleTop.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._splitMiddleTop, "_splitMiddleTop");
+            this._splitMiddleTop.Name = "_splitMiddleTop";
+            this._splitMiddleTop.TabStop = false;
             //
-            // mnuDownstairs
+            // _pnlMiddleTitle
             //
-            _mnuDownstairs.Index = 1;
-            resources.ApplyResources(_mnuDownstairs, "mnuDownstairs");
+            resources.ApplyResources(this._pnlMiddleTitle, "_pnlMiddleTitle");
+            this._pnlMiddleTitle.Controls.Add(this._btnCloseMiddle);
+            this._pnlMiddleTitle.Controls.Add(this._lblMiddleTitle);
+            this._pnlMiddleTitle.Name = "_pnlMiddleTitle";
             //
-            // infoBar
+            // _btnCloseMiddle
             //
-            resources.ApplyResources(_infoBar, "infoBar");
-            _infoBar.Name = "infoBar";
-            _infoBar.SizingGrip = false;
+            resources.ApplyResources(this._btnCloseMiddle, "_btnCloseMiddle");
+            this._btnCloseMiddle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnCloseMiddle.Name = "_btnCloseMiddle";
+            this._btnCloseMiddle.Click += new System.EventHandler(this.btnCloseMiddle_Click);
             //
-            // pnlLeft
+            // _lblMiddleTitle
             //
-            _pnlLeft.BackColor = Color.White;
-            resources.ApplyResources(_pnlLeft, "pnlLeft");
-            _pnlLeft.Name = "pnlLeft";
+            this._lblMiddleTitle.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this._lblMiddleTitle, "_lblMiddleTitle");
+            this._lblMiddleTitle.ForeColor = System.Drawing.Color.White;
+            this._lblMiddleTitle.Name = "_lblMiddleTitle";
             //
-            // splitLeftAndMiddle
+            // _splitMiddleBottom
             //
-            _splitLeftAndMiddle.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(244)), Conversions.ToInteger(Conversions.ToByte(244)), Conversions.ToInteger(Conversions.ToByte(244)));
-            resources.ApplyResources(_splitLeftAndMiddle, "splitLeftAndMiddle");
-            _splitLeftAndMiddle.Name = "splitLeftAndMiddle";
-            _splitLeftAndMiddle.TabStop = false;
+            this._splitMiddleBottom.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._splitMiddleBottom, "_splitMiddleBottom");
+            this._splitMiddleBottom.Name = "_splitMiddleBottom";
+            this._splitMiddleBottom.TabStop = false;
             //
-            // pnlMiddle
+            // _pnlButtons
             //
-            _pnlMiddle.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
-            _pnlMiddle.Controls.Add(_dgSearchResults);
-            _pnlMiddle.Controls.Add(_splitMiddleTop);
-            _pnlMiddle.Controls.Add(_pnlMiddleTitle);
-            _pnlMiddle.Controls.Add(_splitMiddleBottom);
-            _pnlMiddle.Controls.Add(_pnlButtons);
-            resources.ApplyResources(_pnlMiddle, "pnlMiddle");
-            _pnlMiddle.Name = "pnlMiddle";
+            this._pnlButtons.BackColor = System.Drawing.Color.White;
+            this._pnlButtons.Controls.Add(this._ContainerMiddlePanelBtns);
+            resources.ApplyResources(this._pnlButtons, "_pnlButtons");
+            this._pnlButtons.Name = "_pnlButtons";
             //
-            // dgSearchResults
+            // _ContainerMiddlePanelBtns
             //
-            _dgSearchResults.DataMember = "";
-            resources.ApplyResources(_dgSearchResults, "dgSearchResults");
-            _dgSearchResults.HeaderForeColor = SystemColors.ControlText;
-            _dgSearchResults.Name = "dgSearchResults";
+            resources.ApplyResources(this._ContainerMiddlePanelBtns, "_ContainerMiddlePanelBtns");
+            this._ContainerMiddlePanelBtns.Controls.Add(this._btnExport, 2, 0);
+            this._ContainerMiddlePanelBtns.Controls.Add(this._btnAddNew, 0, 0);
+            this._ContainerMiddlePanelBtns.Controls.Add(this._btnDelete, 1, 0);
+            this._ContainerMiddlePanelBtns.Name = "_ContainerMiddlePanelBtns";
             //
-            // splitMiddleTop
+            // _btnExport
             //
-            _splitMiddleTop.BackColor = Color.Silver;
-            resources.ApplyResources(_splitMiddleTop, "splitMiddleTop");
-            _splitMiddleTop.Name = "splitMiddleTop";
-            _splitMiddleTop.TabStop = false;
+            resources.ApplyResources(this._btnExport, "_btnExport");
+            this._btnExport.BackColor = System.Drawing.SystemColors.Control;
+            this._btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.UseVisualStyleBackColor = false;
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
             //
-            // pnlMiddleTitle
+            // _btnAddNew
             //
-            resources.ApplyResources(_pnlMiddleTitle, "pnlMiddleTitle");
-            _pnlMiddleTitle.Controls.Add(_btnCloseMiddle);
-            _pnlMiddleTitle.Controls.Add(_lblMiddleTitle);
-            _pnlMiddleTitle.Name = "pnlMiddleTitle";
+            resources.ApplyResources(this._btnAddNew, "_btnAddNew");
+            this._btnAddNew.BackColor = System.Drawing.SystemColors.Control;
+            this._btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.UseVisualStyleBackColor = false;
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             //
-            // btnCloseMiddle
+            // _btnDelete
             //
-            resources.ApplyResources(_btnCloseMiddle, "btnCloseMiddle");
-            _btnCloseMiddle.Cursor = Cursors.Hand;
-            _btnCloseMiddle.Name = "btnCloseMiddle";
+            resources.ApplyResources(this._btnDelete, "_btnDelete");
+            this._btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this._btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.UseVisualStyleBackColor = false;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             //
-            // lblMiddleTitle
+            // _pnlRight
             //
-            _lblMiddleTitle.BackColor = Color.Transparent;
-            resources.ApplyResources(_lblMiddleTitle, "lblMiddleTitle");
-            _lblMiddleTitle.ForeColor = Color.White;
-            _lblMiddleTitle.Name = "lblMiddleTitle";
+            resources.ApplyResources(this._pnlRight, "_pnlRight");
+            this._pnlRight.BackColor = System.Drawing.Color.White;
+            this._pnlRight.Controls.Add(this._Splitter2);
+            this._pnlRight.Controls.Add(this._pnlContent);
+            this._pnlRight.Controls.Add(this._Splitter1);
+            this._pnlRight.Controls.Add(this._pnleHeaderRight);
+            this._pnlRight.Controls.Add(this._pnlButtonsRight);
+            this._pnlRight.Name = "_pnlRight";
             //
-            // splitMiddleBottom
+            // _Splitter2
             //
-            _splitMiddleBottom.BackColor = Color.Silver;
-            resources.ApplyResources(_splitMiddleBottom, "splitMiddleBottom");
-            _splitMiddleBottom.Name = "splitMiddleBottom";
-            _splitMiddleBottom.TabStop = false;
+            this._Splitter2.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._Splitter2, "_Splitter2");
+            this._Splitter2.Name = "_Splitter2";
+            this._Splitter2.TabStop = false;
             //
-            // pnlButtons
+            // _pnlContent
             //
-            _pnlButtons.BackColor = Color.White;
-            _pnlButtons.Controls.Add(_ContainerMiddlePanelBtns);
-            resources.ApplyResources(_pnlButtons, "pnlButtons");
-            _pnlButtons.Name = "pnlButtons";
+            this._pnlContent.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this._pnlContent, "_pnlContent");
+            this._pnlContent.Name = "_pnlContent";
             //
-            // ContainerMiddlePanelBtns
+            // _Splitter1
             //
-            resources.ApplyResources(_ContainerMiddlePanelBtns, "ContainerMiddlePanelBtns");
-            _ContainerMiddlePanelBtns.Controls.Add(_btnExport, 2, 0);
-            _ContainerMiddlePanelBtns.Controls.Add(_btnAddNew, 0, 0);
-            _ContainerMiddlePanelBtns.Controls.Add(_btnDelete, 1, 0);
-            _ContainerMiddlePanelBtns.Name = "ContainerMiddlePanelBtns";
+            this._Splitter1.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._Splitter1, "_Splitter1");
+            this._Splitter1.Name = "_Splitter1";
+            this._Splitter1.TabStop = false;
             //
-            // btnExport
+            // _pnleHeaderRight
             //
-            resources.ApplyResources(_btnExport, "btnExport");
-            _btnExport.BackColor = SystemColors.Control;
-            _btnExport.Cursor = Cursors.Hand;
-            _btnExport.Name = "btnExport";
-            _btnExport.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this._pnleHeaderRight, "_pnleHeaderRight");
+            this._pnleHeaderRight.Controls.Add(this._btnHQ);
+            this._pnleHeaderRight.Controls.Add(this._btnCloseRight);
+            this._pnleHeaderRight.Controls.Add(this._lblRightTitle);
+            this._pnleHeaderRight.Name = "_pnleHeaderRight";
             //
-            // btnAddNew
+            // _btnHQ
             //
-            resources.ApplyResources(_btnAddNew, "btnAddNew");
-            _btnAddNew.BackColor = SystemColors.Control;
-            _btnAddNew.Cursor = Cursors.Hand;
-            _btnAddNew.Name = "btnAddNew";
-            _btnAddNew.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this._btnHQ, "_btnHQ");
+            this._btnHQ.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnHQ.Name = "_btnHQ";
+            this._btnHQ.Click += new System.EventHandler(this.btnHQ_Click);
             //
-            // btnDelete
+            // _btnCloseRight
             //
-            resources.ApplyResources(_btnDelete, "btnDelete");
-            _btnDelete.BackColor = SystemColors.Control;
-            _btnDelete.Cursor = Cursors.Hand;
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this._btnCloseRight, "_btnCloseRight");
+            this._btnCloseRight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnCloseRight.Name = "_btnCloseRight";
+            this._btnCloseRight.Click += new System.EventHandler(this.btnCloseRight_Click);
             //
-            // pnlRight
+            // _lblRightTitle
             //
-            resources.ApplyResources(_pnlRight, "pnlRight");
-            _pnlRight.BackColor = Color.White;
-            _pnlRight.Controls.Add(_Splitter2);
-            _pnlRight.Controls.Add(_pnlContent);
-            _pnlRight.Controls.Add(_Splitter1);
-            _pnlRight.Controls.Add(_pnleHeaderRight);
-            _pnlRight.Controls.Add(_pnlButtonsRight);
-            _pnlRight.Name = "pnlRight";
+            this._lblRightTitle.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this._lblRightTitle, "_lblRightTitle");
+            this._lblRightTitle.ForeColor = System.Drawing.Color.White;
+            this._lblRightTitle.Name = "_lblRightTitle";
             //
-            // Splitter2
+            // _pnlButtonsRight
             //
-            _Splitter2.BackColor = Color.Silver;
-            resources.ApplyResources(_Splitter2, "Splitter2");
-            _Splitter2.Name = "Splitter2";
-            _Splitter2.TabStop = false;
+            this._pnlButtonsRight.BackColor = System.Drawing.Color.White;
+            this._pnlButtonsRight.Controls.Add(this._btnGoBack);
+            this._pnlButtonsRight.Controls.Add(this._btnSave);
+            resources.ApplyResources(this._pnlButtonsRight, "_pnlButtonsRight");
+            this._pnlButtonsRight.Name = "_pnlButtonsRight";
             //
-            // pnlContent
+            // _btnGoBack
             //
-            _pnlContent.BackColor = Color.Transparent;
-            resources.ApplyResources(_pnlContent, "pnlContent");
-            _pnlContent.Name = "pnlContent";
+            this._btnGoBack.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this._btnGoBack, "_btnGoBack");
+            this._btnGoBack.Name = "_btnGoBack";
+            this._btnGoBack.UseVisualStyleBackColor = false;
+            this._btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             //
-            // Splitter1
+            // _btnSave
             //
-            _Splitter1.BackColor = Color.Silver;
-            resources.ApplyResources(_Splitter1, "Splitter1");
-            _Splitter1.Name = "Splitter1";
-            _Splitter1.TabStop = false;
+            resources.ApplyResources(this._btnSave, "_btnSave");
+            this._btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this._btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.UseVisualStyleBackColor = false;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             //
-            // pnleHeaderRight
+            // _splitMiddleAndRight
             //
-            resources.ApplyResources(_pnleHeaderRight, "pnleHeaderRight");
-            _pnleHeaderRight.Controls.Add(_btnHQ);
-            _pnleHeaderRight.Controls.Add(_btnCloseRight);
-            _pnleHeaderRight.Controls.Add(_lblRightTitle);
-            _pnleHeaderRight.Name = "pnleHeaderRight";
-            //
-            // btnHQ
-            //
-            resources.ApplyResources(_btnHQ, "btnHQ");
-            _btnHQ.Cursor = Cursors.Hand;
-            _btnHQ.Name = "btnHQ";
-            //
-            // btnCloseRight
-            //
-            resources.ApplyResources(_btnCloseRight, "btnCloseRight");
-            _btnCloseRight.Cursor = Cursors.Hand;
-            _btnCloseRight.Name = "btnCloseRight";
-            //
-            // lblRightTitle
-            //
-            _lblRightTitle.BackColor = Color.Transparent;
-            resources.ApplyResources(_lblRightTitle, "lblRightTitle");
-            _lblRightTitle.ForeColor = Color.White;
-            _lblRightTitle.Name = "lblRightTitle";
-            //
-            // pnlButtonsRight
-            //
-            _pnlButtonsRight.BackColor = Color.White;
-            _pnlButtonsRight.Controls.Add(_btnGoBack);
-            _pnlButtonsRight.Controls.Add(_btnSave);
-            resources.ApplyResources(_pnlButtonsRight, "pnlButtonsRight");
-            _pnlButtonsRight.Name = "pnlButtonsRight";
-            //
-            // btnGoBack
-            //
-            _btnGoBack.BackColor = SystemColors.Control;
-            resources.ApplyResources(_btnGoBack, "btnGoBack");
-            _btnGoBack.Name = "btnGoBack";
-            _btnGoBack.UseVisualStyleBackColor = false;
-            //
-            // btnSave
-            //
-            resources.ApplyResources(_btnSave, "btnSave");
-            _btnSave.BackColor = SystemColors.Control;
-            _btnSave.Cursor = Cursors.Hand;
-            _btnSave.Name = "btnSave";
-            _btnSave.UseVisualStyleBackColor = false;
-            //
-            // splitMiddleAndRight
-            //
-            resources.ApplyResources(_splitMiddleAndRight, "splitMiddleAndRight");
-            _splitMiddleAndRight.Name = "splitMiddleAndRight";
-            _splitMiddleAndRight.TabStop = false;
+            resources.ApplyResources(this._splitMiddleAndRight, "_splitMiddleAndRight");
+            this._splitMiddleAndRight.Name = "_splitMiddleAndRight";
+            this._splitMiddleAndRight.TabStop = false;
             //
             // FRMMain
             //
             resources.ApplyResources(this, "$this");
-            BackColor = Color.Gainsboro;
-            Controls.Add(_splitMiddleAndRight);
-            Controls.Add(_pnlRight);
-            Controls.Add(_pnlMiddle);
-            Controls.Add(_splitLeftAndMiddle);
-            Controls.Add(_pnlLeft);
-            Controls.Add(_infoBar);
-            IsMdiContainer = true;
-            Menu = _MnuMainNav;
-            Name = "FRMMain";
-            ShowIcon = false;
-            WindowState = FormWindowState.Maximized;
-            _pnlMiddle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgSearchResults).EndInit();
-            _pnlMiddleTitle.ResumeLayout(false);
-            _pnlButtons.ResumeLayout(false);
-            _ContainerMiddlePanelBtns.ResumeLayout(false);
-            _pnlRight.ResumeLayout(false);
-            _pnleHeaderRight.ResumeLayout(false);
-            _pnlButtonsRight.ResumeLayout(false);
-            ResumeLayout(false);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this._splitMiddleAndRight);
+            this.Controls.Add(this._pnlRight);
+            this.Controls.Add(this._pnlMiddle);
+            this.Controls.Add(this._splitLeftAndMiddle);
+            this.Controls.Add(this._pnlLeft);
+            this.Controls.Add(this._infoBar);
+            this.IsMdiContainer = true;
+            this.Menu = this._MnuMainNav;
+            this.Name = "FRMMain";
+            this.ShowIcon = false;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FRMMain_Load);
+            this._pnlMiddle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgSearchResults)).EndInit();
+            this._pnlMiddleTitle.ResumeLayout(false);
+            this._pnlButtons.ResumeLayout(false);
+            this._ContainerMiddlePanelBtns.ResumeLayout(false);
+            this._pnlRight.ResumeLayout(false);
+            this._pnleHeaderRight.ResumeLayout(false);
+            this._pnlButtonsRight.ResumeLayout(false);
+            this.ResumeLayout(false);
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
@@ -1914,18 +1800,6 @@ namespace FSM
         private void mnuSetup_Click(object sender, EventArgs e)
         {
             Navigation.Navigate(Enums.MenuTypes.Setup);
-        }
-
-        private void mnuAbout_Click(object sender, EventArgs e)
-        {
-            Navigation.Navigate(Enums.MenuTypes.NONE);
-            App.ShowForm(typeof(FRMAbout), false, null);
-        }
-
-        private void mnuContactSheet_Click(object sender, EventArgs e)
-        {
-            Navigation.Navigate(Enums.MenuTypes.NONE);
-            App.ShowForm(typeof(FRMContactDetails), false, null);
         }
 
         private void btnCloseMiddle_Click(object sender, EventArgs e)
@@ -3845,6 +3719,10 @@ namespace FSM
             }
 
             Navigation.Show_Right();
+        }
+
+        private void FRMMain_Load(object sender, EventArgs e)
+        {
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

@@ -474,9 +474,6 @@
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="Application Framework\Forms And Controls\Global\FRMReleaseNotes.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\FRMSchedulerSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -595,13 +592,7 @@
     <Compile Include="Application Framework\Forms And Controls\Base\UCBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Application Framework\Forms And Controls\Global\DLGPasswordOverrideINV.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\FRMChangeOverridePassword_Service.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Framework\Forms And Controls\Global\DLGPasswordOverride_Service.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\DLGFindRecord.cs">
@@ -610,16 +601,10 @@
     <Compile Include="Application Framework\Forms And Controls\Global\DLGPasswordOverride.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Framework\Forms And Controls\Global\FRMAbout.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\FRMChangeOverridePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\FRMChangePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Framework\Forms And Controls\Global\FRMContactDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\FRMLogin.cs">
@@ -629,9 +614,6 @@
       <DependentUpon>FRMSelectDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\FRMSelectDatabase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Framework\Forms And Controls\Global\FRMSupport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\UCSignature.cs">
@@ -2908,20 +2890,9 @@
     <None Include="Application Scheduler\Images\Levels.ICO" />
     <None Include="Application Scheduler\Images\PostalRegions.GIF" />
     <None Include="Application Scheduler\Images\Region.ICO" />
-    <EmbeddedResource Include="Application Framework\Forms And Controls\Global\DLGPasswordOverrideINV.resx">
-      <DependentUpon>DLGPasswordOverrideINV.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMChangeOverridePassword_Service.resx">
       <DependentUpon>FRMChangeOverridePassword_Service.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Forms And Controls\Global\DLGPasswordOverride_Service.resx">
-      <DependentUpon>DLGPasswordOverride_Service.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMReleaseNotes.resx">
-      <DependentUpon>FRMReleaseNotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMSelectDatabase.resx">
       <DependentUpon>FRMSelectDatabase.cs</DependentUpon>
@@ -3312,10 +3283,6 @@
       <DependentUpon>DLGPasswordOverride.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMAbout.resx">
-      <DependentUpon>FRMAbout.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMChangeOverridePassword.resx">
       <DependentUpon>FRMChangeOverridePassword.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3324,16 +3291,8 @@
       <DependentUpon>FRMChangePassword.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMContactDetails.resx">
-      <DependentUpon>FRMContactDetails.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMLogin.resx">
       <DependentUpon>FRMLogin.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMSupport.resx">
-      <DependentUpon>FRMSupport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Framework\Forms And Controls\Global\UCSignature.resx">
@@ -4240,7 +4199,6 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Application Framework\Forms And Controls\Admin Tools\Data Downloader\" />
     <Folder Include="Application Scheduler\Summary\" />
     <Folder Include="Application Specific\Classes\Entity Collections\SiteCharge\" />
   </ItemGroup>
