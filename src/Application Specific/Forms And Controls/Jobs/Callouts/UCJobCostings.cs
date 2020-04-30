@@ -10,12 +10,8 @@ namespace FSM
     {
         public UCJobCostings()
         {
-            
-            
             base.Load += UCJobCost_Load;
         }
-
-        
 
         public UCJobCostings(int IDToLinkToIn) : base()
         {
@@ -62,9 +58,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         private Entity.JobInstalls.JobInstall _JI;
 
         private Entity.JobInstalls.JobInstall JI
@@ -102,80 +95,10 @@ namespace FSM
         }
 
         private DataView _dvDocuments;
-        // Public Property Documents() As DataView
-        // Get
-        // Return _dvDocuments
-        // End Get
-        // Set(ByVal value As DataView)
-        // _dvDocuments = value
-        // _dvDocuments.Table.TableName = Entity.Sys.Enums.TableNames.tblDocuments.ToString
-        // _dvDocuments.AllowNew = False
-        // _dvDocuments.AllowEdit = False
-        // _dvDocuments.AllowDelete = False
-        // Me.dgDocuments.DataSource = Documents
-        // End Set
-        // End Property
-
-        // Private ReadOnly Property SelectedDocumentDataRow() As DataRow
-        // Get
-        // If Not Me.dgDocuments.CurrentRowIndex = -1 Then
-        // Return Documents(Me.dgDocuments.CurrentRowIndex).Row
-        // Else
-        // Return Nothing
-        // End If
-        // End Get
-        // End Property
-
-        
-        
-
-        private void SetupDocumentsDataGrid()
-        {
-        }
 
         private void UCJobCost_Load(object sender, EventArgs e)
         {
             LoadBaseControl(this);
-            // UCLogCallout.OnCostings = Me
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            // ShowForm(GetType(FRMDocuments), True, New Object() {EntityToLinkTo, Entity.Sys.Helper.MakeIntegerValid(IDToLinkTo), 0, Me})
-        }
-
-        // Private Sub btnDelete_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        // If SelectedDocumentDataRow Is Nothing Then
-        // ShowMessage("Please select a document to delete", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        // Exit Sub
-        // End If
-
-        // If ShowMessage("Are you sure you want to delete the selected record?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
-        // Exit Sub
-        // End If
-
-        // DB.Documents.Delete(Entity.Sys.Helper.MakeIntegerValid(SelectedDocumentDataRow.Item("DocumentID")))
-        // ' Documents = DB.Documents.Documents_GetAll_For_Entity_ID(EntityToLinkTo, IDToLinkTo)
-        // 'JUST REFERESH THROUGH THE PROPERTY
-        // IDToLinkTo = IDToLinkTo
-
-        // End Sub
-
-        // Private Sub dgDocuments_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs)
-        // If SelectedDocumentDataRow Is Nothing Then
-        // Exit Sub
-        // End If
-
-        // ShowForm(GetType(FRMDocuments), True, New Object() {CType(SelectedDocumentDataRow.Item("TableEnumID"), Entity.Sys.Enums.TableNames), Entity.Sys.Helper.MakeIntegerValid(IDToLinkTo), Entity.Sys.Helper.MakeIntegerValid(SelectedDocumentDataRow.Item("DocumentID")), Me})
-        // End Sub
-
-        
-        
-
-        public void Populate()
-        {
-        }
-
-        
     }
 }

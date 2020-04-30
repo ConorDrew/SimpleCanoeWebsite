@@ -13,12 +13,8 @@ namespace FSM
 {
     public class FRMContractRenewal : FRMBaseForm, IForm
     {
-        
-
         public FRMContractRenewal() : base()
         {
-            
-            
             base.Load += FRMContractManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -476,7 +472,6 @@ namespace FSM
             {
                 if (_cboInvoiceFrequencyID != null)
                 {
-                    
                     _cboInvoiceFrequencyID.SelectedIndexChanged -= cboInvoiceFrequencyID_SelectedIndexChanged;
                 }
 
@@ -789,9 +784,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -836,8 +828,6 @@ namespace FSM
         {
         }
 
-        
-        
         private int _ContractID;
 
         private int ContractID
@@ -937,9 +927,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void FormSetUp()
         {
@@ -1253,9 +1240,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         private void Populate()
         {
             try
@@ -1404,326 +1388,6 @@ namespace FSM
                 App.ShowMessage("Error: " + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-        }
-
-        
-
-        private void ScheduleJobContractOne(Entity.ContractsOriginal.ContractOriginal Contract, Entity.ContractOriginalSites.ContractOriginalSite CurrentContractSite)
-        {
-            try
-            {
-                // Duration OF Contract In Days
-                int contractDuration;
-                contractDuration = Contract.ContractEndDate.Subtract(Contract.ContractStartDate).Days;
-
-                // How Visit Should happen in days
-                int numOfVisits = 0;
-                int visitFreqInDays = 0;
-                var switchExpr = (Entity.Sys.Enums.VisitFrequency)Conversions.ToInteger(CurrentContractSite.VisitFrequencyID);
-                switch (switchExpr)
-                {
-                    case Entity.Sys.Enums.VisitFrequency.Annually:
-                        {
-                            visitFreqInDays = 365;
-                            break;
-                        }
-
-                    case Entity.Sys.Enums.VisitFrequency.Bi_Annually:
-                        {
-                            visitFreqInDays = 182;
-                            break;
-                        }
-
-                    case Entity.Sys.Enums.VisitFrequency.Monthly:
-                        {
-                            visitFreqInDays = 30;
-                            break;
-                        }
-
-                    case Entity.Sys.Enums.VisitFrequency.Quarterly:
-                        {
-                            visitFreqInDays = 91;
-                            break;
-                        }
-
-                    case Entity.Sys.Enums.VisitFrequency.Weekly:
-                        {
-                            visitFreqInDays = 7;
-                            break;
-                        }
-                }
-
-                numOfVisits = Conversions.ToInteger(Math.Floor(contractDuration / (double)visitFreqInDays));
-                if (numOfVisits == 0)
-                {
-                    numOfVisits = 1;
-                }
-
-                DateTime estVisitDate = Conversions.ToDate(CurrentContractSite.FirstVisitDate.Date + " 09:00:00");
-                for (int i = 1, loopTo = numOfVisits; i <= loopTo; i++)
-                {
-                    if (Conversions.ToDate(Strings.Format(estVisitDate, "dd/MM/yyyy") + " 00:00:00") >= Conversions.ToDate(Strings.Format(Contract.ContractStartDate, "dd/MM/yyyy") + " 00:00:00") & Conversions.ToDate(Strings.Format(estVisitDate, "dd/MM/yyyy") + " 00:00:00") <= Conversions.ToDate(Strings.Format(Contract.ContractEndDate, "dd/MM/yyyy") + " 00:00:00"))
-
-                    {
-                        // MAKE SURE WE DON'T BOOK A SATURADY OR SUNDAY
-                        if (estVisitDate.DayOfWeek == DayOfWeek.Saturday)
-                        {
-                            estVisitDate = estVisitDate.AddDays(2);
-                        }
-                        else if (estVisitDate.DayOfWeek == DayOfWeek.Sunday)
-                        {
-                            estVisitDate = estVisitDate.AddDays(1);
-                        }
-
-                        // CREATE JOB
-                        var job = new Entity.Jobs.Job();
-                        job.SetPropertyID = CurrentContractSite.PropertyID;
-                        job.SetJobDefinitionEnumID = Conversions.ToInteger(Entity.Sys.Enums.JobDefinition.Contract);
-                        job.SetJobTypeID = 0;
-                        job.SetStatusEnumID = Conversions.ToInteger(Entity.Sys.Enums.JobStatus.Open);
-                        job.SetCreatedByUserID = App.loggedInUser.UserID;
-                        var JobNumber = new JobNumber();
-                        JobNumber = App.DB.Job.GetNextJobNumber(Entity.Sys.Enums.JobDefinition.Contract);
-                        job.SetJobNumber = JobNumber.Prefix + JobNumber.Number;
-                        job.SetPONumber = "";
-                        job.SetQuoteID = 0;
-                        job.SetContractID = Contract.ContractID;
-                        if ((Entity.Sys.Enums.ContractStatus)Conversions.ToInteger(Contract.ContractStatusID) == Entity.Sys.Enums.ContractStatus.Inactive)
-                        {
-                            job.SetDeleted = true;
-                        }
-
-                        // INSERT ANY ASSETS
-                        foreach (DataRow dr in App.DB.ContractOriginalSiteAsset.GetAll_ContractSiteID(CurrentContractSite.ContractSiteID, CurrentContractSite.PropertyID).Table.Rows)
-                        {
-                            if (Entity.Sys.Helper.MakeBooleanValid(dr["Tick"]) == true)
-                            {
-                                var JobAsset = new Entity.JobAssets.JobAsset();
-                                JobAsset.SetAssetID = dr["AssetID"];
-                                job.Assets.Add(JobAsset);
-                            }
-                        }
-
-                        // INSERT JOB ITEM
-                        var jobOfWork = new Entity.JobOfWorks.JobOfWork();
-                        jobOfWork.IgnoreExceptionsOnSetMethods = true;
-                        jobOfWork.SetPONumber = "";
-                        jobOfWork.SetDeleted = true;
-                        var jobItem = new Entity.JobItems.JobItem();
-                        jobItem.IgnoreExceptionsOnSetMethods = true;
-                        jobItem.SetSummary = Entity.Sys.Helper.MakeStringValid("PPM Contract Visit");
-                        jobOfWork.JobItems.Add(jobItem);
-
-                        // NOW SEE IF WE CAN FIND A MATCHING ENGINEER
-                        var match = new ArrayList();
-                        int engineerID = 0;
-                        DateTime actualVisitDate = default;
-                        match = MatchingEngineerContractOne(job, estVisitDate, CurrentContractSite.VisitDuration);
-                        if (match is object)
-                        {
-                            if (match.Count > 0)
-                            {
-                                actualVisitDate = Conversions.ToDate(match[0]);
-                                engineerID = Conversions.ToInteger(match[1]);
-                            }
-                        }
-
-                        // IF WE FIND A MATCHING ENGINEER INSERT ENGINEER VISIT
-                        var engineerVisit = new Entity.EngineerVisits.EngineerVisit();
-                        engineerVisit.IgnoreExceptionsOnSetMethods = true;
-                        engineerVisit.SetEngineerID = engineerID;
-                        engineerVisit.SetNotesToEngineer = "PPM Contract Visit";
-                        if (engineerID > 0)
-                        {
-                            engineerVisit.StartDateTime = actualVisitDate;
-                            engineerVisit.EndDateTime = actualVisitDate.AddHours(CurrentContractSite.VisitDuration);
-                            engineerVisit.SetStatusEnumID = Conversions.ToInteger(Entity.Sys.Enums.VisitStatus.Scheduled);
-                        }
-                        else
-                        {
-                            engineerVisit.StartDateTime = DateTime.MinValue;
-                            engineerVisit.EndDateTime = DateTime.MinValue;
-                            engineerVisit.SetStatusEnumID = Conversions.ToInteger(Entity.Sys.Enums.VisitStatus.Ready_For_Schedule);
-                        }
-
-                        if ((Entity.Sys.Enums.ContractStatus)Conversions.ToInteger(Contract.ContractStatusID) == Entity.Sys.Enums.ContractStatus.Inactive)
-                        {
-                            engineerVisit.SetDeleted = true;
-                        }
-
-                        jobOfWork.EngineerVisits.Add(engineerVisit);
-                        job.JobOfWorks.Add(jobOfWork);
-                        job = App.DB.Job.Insert(job);
-
-                        // CREATE PPM VISIT RECORD
-                        var PPM = new Entity.ContractOriginalPPMVisits.ContractOriginalPPMVisit();
-                        PPM.SetContractSiteID = CurrentContractSite.ContractSiteID;
-                        PPM.EstimatedVisitDate = estVisitDate;
-                        PPM.SetJobID = job.JobID;
-                        App.DB.ContractOriginalPPMVisit.Insert(PPM);
-                        estVisitDate = estVisitDate.AddDays(visitFreqInDays);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                App.ShowMessage("Data cannot save : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private ArrayList MatchingEngineerContractOne(Entity.Jobs.Job job, DateTime estVisitDate, double visitDuration)
-        {
-            var site = new Entity.Sites.Site();
-            int engineerID = 0;
-            int slotDuration = 0; // MINTUES
-                                  // Dim visitDuration As Integer = 0
-            int numOfSlotsNeeded = 0;
-            var match = new ArrayList();
-            string postcode = "";
-            DataView postcodeEngineers = null;
-            int cntPostcodeEng = 0;
-            int randomNum = 0;
-
-            // SYSTEM NUMBER OF MINUTES IN A SLOTS
-            slotDuration = App.DB.Manager.Get().TimeSlot;
-
-            // 'VISIT DURATION FOR THIS SITE IN HOURS
-            // visitDuration = Combo.GetSelectedItemValue(visitDuration)
-
-            // NUM OF SLOTS NEEDED FOR VISIT
-            if (visitDuration > 0)
-            {
-                numOfSlotsNeeded = (int)(visitDuration / slotDuration);
-            }
-            // ***************************************************************
-
-            // SEE IF THE SITE HAS A DEFAULT ENGINEER
-            site = App.DB.Sites.Get(job.PropertyID);
-            if (site.EngineerID > 0)
-            {
-                // IF THE SITE DOES, ARE THEY AVAILABLE ON THE DAY OR FOLLOWING 4 DAYS ( NOT WEEKENDS)
-                match = CheckAvailabilityContractOne(estVisitDate, site.EngineerID, numOfSlotsNeeded);
-            }
-            // IF A ENG & SLOT IS FOUND, RETURN
-            if (match.Count > 0)
-            {
-                return match;
-            }
-
-            // NO MATCH FOUND FOR SITE ENGINEER
-            // IS THERE A MATCH FOR POSTCODE ENGINEERS
-            postcode = site.Postcode.Replace("-", "");
-            postcode = postcode.Replace(" ", "");
-            postcode = postcode.Substring(0, postcode.Length - 3);
-
-            // GET ALL THE ENGINEERS THAT COVER THAT POSTCODE
-            postcodeEngineers = App.DB.EngineerPostalRegion.EngineerPostalRegion_Get_For_Postcode(postcode);
-            cntPostcodeEng = postcodeEngineers.Table.Rows.Count;
-            if (cntPostcodeEng > 0)
-            {
-                for (int i = 0, loopTo = cntPostcodeEng - 1; i <= loopTo; i++)
-                {
-                    VBMath.Randomize();
-                    randomNum = Conversions.ToInteger(Conversion.Int(postcodeEngineers.Table.Rows.Count * VBMath.Rnd() + 1)) - 1;
-                    match = CheckAvailabilityContractOne(estVisitDate, Conversions.ToInteger(postcodeEngineers.Table.Rows[randomNum]["EngineerID"]), numOfSlotsNeeded);
-
-                    // IF A ENG & SLOT IS FOUND, RETURN
-                    if (match.Count > 0)
-                    {
-                        return match;
-                    }
-                    else
-                    {
-                        postcodeEngineers.Table.Rows.Remove(postcodeEngineers.Table.Rows[randomNum]);
-                    }
-                }
-            }
-
-            return default;
-        }
-
-        private ArrayList CheckAvailabilityContractOne(DateTime estimatedVisitDate, int engineerID, int numOfSlotsNeeded)
-        {
-            DataTable engTimeSlots;
-            var numOfSlotsAvailable = new ArrayList();
-            var actualVisitDate = estimatedVisitDate;
-            var match = new ArrayList();
-            string startSlotTime = "";
-            for (int day = 0; day <= 4; day++)
-            {
-                numOfSlotsAvailable.Clear();
-
-                // ADD ON DAYS - UNLESS FIRST TIME IN
-                if (day != 0)
-                {
-                    actualVisitDate = actualVisitDate.AddDays(1);
-                }
-
-                // MAKE IT NOT SAT
-                if (actualVisitDate.DayOfWeek == DayOfWeek.Saturday)
-                {
-                    actualVisitDate = actualVisitDate.AddDays(2);
-                }
-                // MAKE IT NOT SUN
-                if (actualVisitDate.DayOfWeek == DayOfWeek.Saturday)
-                {
-                    actualVisitDate = actualVisitDate.AddDays(1);
-                }
-
-                // GET SLOTS USED
-                engTimeSlots = App.DB.Scheduler.Scheduler_DayTimeSlots(actualVisitDate, engineerID.ToString());
-                // SLOTS ARE DISPLAY AS COLUMNS IN THIS TABLE THAT WHY WE LOOP THROUGH COLUMNS INSTEAD OF ROWS
-                if (engTimeSlots.Rows.Count > 0)
-                {
-                    for (int colCnt = 0, loopTo = engTimeSlots.Columns.Count - 1; colCnt <= loopTo; colCnt++)
-                    {
-                        // LOOP THOROUGH EACH COLUMNS TRYING TO FIND AVAILABLE CONSECTUTIVE COLUMNS
-                        // EQUAL TO THE NUMBER OF REQUIRED SLOTS
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(engTimeSlots.Rows[0][colCnt], 0, false)))
-                        {
-                            numOfSlotsAvailable.Add(engTimeSlots.Columns[colCnt].ColumnName);
-                            if (numOfSlotsAvailable.Count == numOfSlotsNeeded)
-                            {
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            // NOTHING AVAIALABLE
-                            numOfSlotsAvailable.Clear();
-                        }
-                    }
-                }
-                else
-                {
-                    // IF NO ROW THEN NOTHING USED FOR THAT DAY SO VISIT CAN GO AT THE BEGINNING
-                    numOfSlotsAvailable.Add(App.DB.Manager.Get().WorkingHoursStart);
-                }
-
-                if (numOfSlotsAvailable.Count > 0)
-                {
-                    if (Conversions.ToBoolean(numOfSlotsAvailable.Count == numOfSlotsNeeded | Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
-                    {
-                        // IF THERE ARE ENOUGH AVAILABLE CONSECTUTIVE SLOTS ADD THE START TIME ONTO THE DATE
-
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(numOfSlotsAvailable[0], App.DB.Manager.Get().WorkingHoursStart, false)))
-                        {
-                            startSlotTime = Conversions.ToString(numOfSlotsAvailable[0]);
-                        }
-                        else
-                        {
-                            startSlotTime = Strings.Replace(Conversions.ToString(numOfSlotsAvailable[0]), "T", "").Insert(2, ":");
-                        }
-
-                        actualVisitDate = Conversions.ToDate(Strings.Format(actualVisitDate, "dd/MM/yyyy") + " " + startSlotTime);
-                        match.Add(actualVisitDate);
-                        match.Add(engineerID);
-                        return match;
-                    }
-                }
-            }
-
-            return match;
         }
 
         private void InsertInvoiceToBeRaiseLines(int InvoiceFrequencyID, DateTime StartDate, DateTime EndDate, DateTime FirstInvoiceDate, int InvoiceAddressID, int InvoiceAddressTypeID, int LinkID, int InvoiceType)

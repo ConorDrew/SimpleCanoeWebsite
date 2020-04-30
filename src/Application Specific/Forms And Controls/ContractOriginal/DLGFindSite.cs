@@ -11,8 +11,6 @@ namespace FSM
 {
     public class DLGFindSite : FRMBaseForm, IForm
     {
-        
-
         public DLGFindSite() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -865,9 +863,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -888,8 +883,6 @@ namespace FSM
         {
         }
 
-        
-        
         private System.Data.SqlClient.SqlTransaction _Trans;
 
         public System.Data.SqlClient.SqlTransaction Trans
@@ -1511,9 +1504,6 @@ namespace FSM
                 _EffDate = value;
             }
         }
-
-        
-        
 
         private void SetupDG()
         {
@@ -2569,14 +2559,6 @@ namespace FSM
             dgResults.TableStyles.Add(tStyle);
         }
 
-        
-        
-
-        private void DLGFindRecord_Load(object sender, EventArgs e)
-        {
-            LoadMe(sender, e);
-        }
-
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
             RunFilter();
@@ -2668,9 +2650,6 @@ namespace FSM
                     }
             }
         }
-
-        
-        
 
         private void SelectItem()
         {
@@ -2913,9 +2892,6 @@ namespace FSM
             StockDataview = null;
         }
 
-        
-        
-
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -2937,8 +2913,6 @@ namespace FSM
                 g.DrawString("", DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
             }
         }
-
-        
 
         private void btnFilter_Click(object sender, EventArgs e)
         {

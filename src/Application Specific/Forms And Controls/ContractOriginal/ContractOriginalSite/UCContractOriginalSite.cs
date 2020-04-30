@@ -13,12 +13,8 @@ namespace FSM
 {
     public class UCContractOriginalSite : UCBase, IUserControl
     {
-        
-
         public UCContractOriginalSite() : base()
         {
-            
-            
             base.Load += UCContractSite_Load;
 
             // This call is required by the Windows Form Designer.
@@ -607,7 +603,6 @@ namespace FSM
             {
                 if (_btnAddVisit != null)
                 {
-                    
                     _btnAddVisit.Click -= btnAddVisit_Click;
                 }
 
@@ -1037,9 +1032,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1052,9 +1044,6 @@ namespace FSM
                 return CurrentContractSite;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1338,9 +1327,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupAssetsDataGrid()
         {
@@ -1760,9 +1746,6 @@ namespace FSM
         {
             App.ShowForm(typeof(FRMLogCallout), true, new object[] { SelectedVisitDataRow["JobID"], CurrentContractSite.PropertyID, this });
         }
-
-        
-        
 
         private DataView BuildUpScheduleOfRatesDataview()
         {
@@ -2585,77 +2568,6 @@ namespace FSM
             {
                 App.ShowMessage("Data cannot save : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private ArrayList MatchingEngineer(Entity.Jobs.Job job, DateTime estVisitDate)
-        {
-            var site = new Entity.Sites.Site();
-            int engineerID = 0;
-            int slotDuration = 0; // MINTUES
-            int visitDuration = 0;
-            int numOfSlotsNeeded = 0;
-            var match = new ArrayList();
-            string postcode = "";
-            DataView postcodeEngineers = null;
-            int cntPostcodeEng = 0;
-            int randomNum = 0;
-
-            // SYSTEM NUMBER OF MINUTES IN A SLOTS
-            slotDuration = App.DB.Manager.Get().TimeSlot;
-
-            // VISIT DURATION FOR THIS SITE IN HOURS
-            visitDuration = Conversions.ToInteger(txtVisitDuration.Text); // Combo.GetSelectedItemValue(cboVisitDuration)
-
-            // NUM OF SLOTS NEEDED FOR VISIT
-            if (visitDuration > 0)
-            {
-                numOfSlotsNeeded = (int)(visitDuration / (double)slotDuration);
-            }
-            // ***************************************************************
-
-            // SEE IF THE SITE HAS A DEFAULT ENGINEER
-            site = App.DB.Sites.Get(job.PropertyID);
-            if (site.EngineerID > 0)
-            {
-                // IF THE SITE DOES, ARE THEY AVAILABLE ON THE DAY OR FOLLOWING 4 DAYS ( NOT WEEKENDS)
-                match = CheckAvailability(estVisitDate, site.EngineerID, numOfSlotsNeeded);
-            }
-            // IF A ENG & SLOT IS FOUND, RETURN
-            if (match.Count > 0)
-            {
-                return match;
-            }
-
-            // NO MATCH FOUND FOR SITE ENGINEER
-            // IS THERE A MATCH FOR POSTCODE ENGINEERS
-            postcode = site.Postcode.Replace("-", "");
-            postcode = postcode.Replace(" ", "");
-            postcode = postcode.Substring(0, postcode.Length - 3);
-
-            // GET ALL THE ENGINEERS THAT COVER THAT POSTCODE
-            postcodeEngineers = App.DB.EngineerPostalRegion.EngineerPostalRegion_Get_For_Postcode(postcode);
-            cntPostcodeEng = postcodeEngineers.Table.Rows.Count;
-            if (cntPostcodeEng > 0)
-            {
-                for (int i = 0, loopTo = cntPostcodeEng - 1; i <= loopTo; i++)
-                {
-                    VBMath.Randomize();
-                    randomNum = Conversions.ToInteger(Conversion.Int(postcodeEngineers.Table.Rows.Count * VBMath.Rnd() + 1)) - 1;
-                    match = CheckAvailability(estVisitDate, Conversions.ToInteger(postcodeEngineers.Table.Rows[randomNum]["EngineerID"]), numOfSlotsNeeded);
-
-                    // IF A ENG & SLOT IS FOUND, RETURN
-                    if (match.Count > 0)
-                    {
-                        return match;
-                    }
-                    else
-                    {
-                        postcodeEngineers.Table.Rows.Remove(postcodeEngineers.Table.Rows[randomNum]);
-                    }
-                }
-            }
-
-            return match;
         }
 
         private ArrayList CheckAvailability(DateTime estimatedVisitDate, int engineerID, int numOfSlotsNeeded)
