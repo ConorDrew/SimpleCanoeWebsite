@@ -467,6 +467,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application Framework\Utilities\HelperExtensions.cs" />
+    <Compile Include="Application Importer\DuplicateInvoice.cs" />
     <Compile Include="Application Scheduler\frmVisit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -718,7 +719,6 @@
     <Compile Include="Application Framework\System\SystemData.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Framework\System\TransactionalDatabase.cs" />
     <Compile Include="Application Framework\Utilities\Emails.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1068,7 +1068,6 @@
     <Compile Include="Application Importer\FRMImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Importer\Importer.cs" />
     <Compile Include="Application Importer\ImporterLabelColumn.cs">
       <SubType>Component</SubType>
     </Compile>
