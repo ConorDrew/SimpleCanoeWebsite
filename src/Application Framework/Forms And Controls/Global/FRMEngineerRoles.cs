@@ -1601,6 +1601,7 @@ namespace FSM
             var argc = cboEngineerRole;
             Combo.SetUpCombo(ref argc, App.DB.EngineerRole.GetLookupData().Table, "Id", "Name", Enums.ComboValues.Please_Select);
             var dt = Helper.ToDataTable(App.DB.EngineerRole.GetEngineersAssignedToRole());
+            var i = App.DB.EngineerRole.GetEngineersAssignedToRole();
             var dv = new DataView(dt);
             DvEngineerInRoleList = dv;
             CurrentEngineerRoleLinks = dv;
