@@ -86,13 +86,6 @@ namespace FSM.Entity
                         }
 
                         // IS REF UNIQUE?
-                        if (oContract.ContractID == 0)
-                        {
-                            if (!App.DB.ContractOption3.ContractReference_CheckUnique(oContract.ContractReference, oContract.CustomerID))
-                            {
-                                AddCriticalMessage("* Contract Reference must be unqiue");
-                            }
-                        }
                     }
                 }
 

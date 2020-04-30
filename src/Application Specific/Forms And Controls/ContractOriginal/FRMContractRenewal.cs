@@ -898,21 +898,6 @@ namespace FSM
             }
         }
 
-        private Entity.ContractOption3s.ContractOption3 _OldContractThree;
-
-        private Entity.ContractOption3s.ContractOption3 OldContractThree
-        {
-            get
-            {
-                return _OldContractThree;
-            }
-
-            set
-            {
-                _OldContractThree = value;
-            }
-        }
-
         private DataView _OldSites;
 
         private DataView OldSites
@@ -1211,12 +1196,6 @@ namespace FSM
                         txtNewPrice.Text = Strings.Format(OldContractTwo.ContractPrice * (percent / 100) + OldContractTwo.ContractPrice, "C");
                         break;
                     }
-
-                case Entity.Sys.Enums.QuoteType.Contract_Opt_3:
-                    {
-                        txtNewPrice.Text = Strings.Format(OldContractThree.ContractPrice * (percent / 100) + OldContractThree.ContractPrice, "C");
-                        break;
-                    }
             }
 
             if (percent == 0)
@@ -1314,12 +1293,6 @@ namespace FSM
                     case Entity.Sys.Enums.QuoteType.Contract_Opt_2:
                         {
                             PopulateTwo();
-                            break;
-                        }
-
-                    case Entity.Sys.Enums.QuoteType.Contract_Opt_3:
-                        {
-                            PopulateThree();
                             break;
                         }
                 }
@@ -1442,39 +1415,6 @@ namespace FSM
             {
                 dgInvoiceAddress.Select(dgInvoiceAddress.CurrentRowIndex);
             }
-        }
-
-        private void PopulateThree()
-        {
-            OldContractThree = App.DB.ContractOption3.ContractOption3_Get(ContractID);
-            txtPercentMarkup.Text = 0.ToString();
-            dtpStartDate.Enabled = false;
-            dtpEndDate.Enabled = false;
-            dtpInvoiceDate.Value = DateAndTime.Now;
-            var newSiteTable = new DataTable();
-            newSiteTable.Columns.Add("ContractSiteID");
-            newSiteTable.Columns.Add("Site");
-            newSiteTable.Columns.Add("OrderID");
-            newSiteTable.Columns.Add("StartDate", typeof(DateTime));
-            newSiteTable.Columns.Add("EndDate", typeof(DateTime));
-            newSiteTable.Columns.Add("FirstVisitDate", typeof(DateTime));
-            DataRow newSite;
-            foreach (DataRow drSite in App.DB.ContractOption3Site.ContractOption3Site_GetAll_ForContract(ContractID, OldContractThree.CustomerID).Table.Rows)
-            {
-                if (Entity.Sys.Helper.MakeBooleanValid(drSite["tick"]))
-                {
-                    newSite = newSiteTable.NewRow();
-                    newSite["ContractSiteID"] = drSite["ContractSiteID"];
-                    newSite["Site"] = drSite["Site"];
-                    newSite["OrderID"] = drSite["OrderID"];
-                    newSite["StartDate"] = DateAndTime.Now;
-                    newSite["EndDate"] = DateAndTime.Now.AddYears(1).AddDays(-1);
-                    newSite["FirstVisitDate"] = DateAndTime.Now.AddDays(1);
-                    newSiteTable.Rows.Add(newSite);
-                }
-            }
-
-            OldSites = new DataView(newSiteTable);
         }
 
         private bool SaveOne()

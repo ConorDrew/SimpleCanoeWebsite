@@ -549,7 +549,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Accounts\SunFinance.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Accounts\SunFinanceSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Appointments\Appointment.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Appointments\AppointmentConverter.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Appointments\AppointmentsSQL.cs" />
     <Compile Include="Application Framework\Entities\Management\ManagerSQL.cs">
       <SubType>Code</SubType>
@@ -748,8 +747,6 @@
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Authority\Authority.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Authority\AuthoritySQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Authority\CustomerAuthority.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Authority\SiteAuthority.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\CompanyDetails\CompanyDetails.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\CompanyDetails\CompanyDetailsSql.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\ContactAttempt\ContactAttempt.cs" />
@@ -1152,15 +1149,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Checklist\Area\AreaValidator.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Checklist\CheckList.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Checklist\CheckListAnswer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Checklist\CheckListSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Checklist\Section\Section.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1198,42 +1186,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractManager\ContractManagerSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3Assets\ContractOption3AssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3Assets\ContractOption3SiteAsset.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3Assets\ContractOption3SiteAssetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3SitePPMVisit\ContractOption3SitePPMVisit.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3SitePPMVisit\ContractOption3SitePPMVisitSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3SitePPMVisit\ContractOption3SitePPMVisitValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3Site\ContractOption3Site.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3Site\ContractOption3SiteSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3Site\ContractOption3SiteValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3\ContractOption3.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3\ContractOption3SQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOption3\ContractOption3\ContractOption3Validator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRates.cs" />
