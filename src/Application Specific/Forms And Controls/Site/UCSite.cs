@@ -7609,16 +7609,6 @@ namespace FSM
                 if ((bool)(dtpBuildDate.Value > System.Data.SqlTypes.SqlDateTime.MinValue))
                     CurrentSite.BuildDate = dtpBuildDate.Value;
                 CurrentSite.SetWarrantyPeriodInMonths = Helper.MakeIntegerValid(txtWarrantyPeriod.Text);
-                try
-                {
-                    var ls = new LocationServices.LocationServices();
-                    JObject json = (JObject)ls.GetLongLat(txtPostcode.Text.Trim());
-                    CurrentSite.SetLongitude = Conversions.ToDecimal(json.SelectToken("result.longitude").ToString());
-                    CurrentSite.SetLatitude = Conversions.ToDecimal(json.SelectToken("result.latitude").ToString());
-                }
-                catch (Exception ex)
-                {
-                }
 
                 string siteName = "";
                 if ((Combo.get_GetSelectedItemValue(cboSalutation) ?? "") != "0")

@@ -816,12 +816,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderItem.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderPart.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\UserLevel\UserLevel.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\UserLevel\UserLevelSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Settings\Scheduler\JobTypeColour.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Settings\Scheduler\JobTypeColourSql.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Van\Equipments\EquipmentSql.cs" />
-    <Compile Include="Application Specific\Classes\Global\LocationServices.cs" />
     <Compile Include="Application Specific\Classes\Global\ObjectMap.cs" />
     <Compile Include="Application Specific\Classes\Global\TextClient.cs" />
     <Compile Include="Application Specific\Forms And Controls\ContractOriginal\ContractOriginalSite\DLGSetupVisit.cs">

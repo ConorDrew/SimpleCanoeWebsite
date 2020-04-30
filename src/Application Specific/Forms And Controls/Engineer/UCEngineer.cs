@@ -6778,17 +6778,6 @@ namespace FSM
                     CurrentEngineer.RagDate = DateAndTime.Now;
                 }
 
-                try
-                {
-                    var ls = new LocationServices.LocationServices();
-                    JObject json = (JObject)ls.GetLongLat(txtPostcode.Text);
-                    CurrentEngineer.SetLongitude = json.SelectToken("result.longitude").ToString();
-                    CurrentEngineer.SetLatitude = json.SelectToken("result.latitude").ToString();
-                }
-                catch (Exception ex)
-                {
-                }
-
                 if (txtVisitSpendLimit.Text.Trim().Length > 0)
                     CurrentEngineer.SetVisitSpendLimit = Helper.MakeDoubleValid(txtVisitSpendLimit.Text.Trim());
                 CurrentEngineer.SetEngineerRoleId = Helper.MakeIntegerValid(Combo.get_GetSelectedItemValue(cboEngineerRoleId));
