@@ -114,12 +114,6 @@ namespace FSM.Entity.Sys
             QuoteContractOriginalSite = new QuoteContractOriginalSites.QuoteContractOriginalSiteSQL(this);
             QuoteContractOriginalSiteAsset = new QuoteContractOriginalSiteAssets.QuoteContractOriginalSiteAssetSQL(this);
             QuoteContractOriginalPPMVisits = new QuoteContractOriginalPPMVisits.QuoteContractOriginalPPMVisitSQL(this);
-            ContractAlternative = new ContractsAlternative.ContractAlternativeSQL(this);
-            ContractAlternativeSite = new ContractAlternativeSites.ContractAlternativeSiteSQL(this);
-            ContractAlternativeSiteAsset = new ContractAlternativeSiteAssets.ContractAlternativeSiteAssetSQL(this);
-            ContractAlternativePPMVisit = new ContractAlternativePPMVisits.ContractAlternativePPMVisitSQL(this);
-            ContractAlternativeSiteJobItems = new ContractAlternativeSiteJobItems.ContractAlternativeSiteJobItemsSQL(this);
-            ContractAlternativeSiteJobOfWork = new ContractAlternativeSiteJobOfWorks.ContractAlternativeSiteJobOfWorkSQL(this);
             QuoteContractAlternativePPMVisits = new QuoteContractAlternativePPMVisits.QuoteContractAlternativePPMVisitSQL(this);
             QuoteContractAlternativeSite = new QuoteContractAlternativeSites.QuoteContractAlternativeSiteSQL(this);
             QuoteContractAlternativeSiteAsset = new QuoteContractAlternativeSiteAssets.QuoteContractAlternativeSiteAssetSQL(this);
@@ -345,12 +339,6 @@ namespace FSM.Entity.Sys
         public QuoteContractOriginalSites.QuoteContractOriginalSiteSQL QuoteContractOriginalSite;
         public QuoteContractOriginalSiteAssets.QuoteContractOriginalSiteAssetSQL QuoteContractOriginalSiteAsset;
         public QuoteContractOriginals.QuoteContractOriginalSQL QuoteContractOriginal;
-        public ContractsAlternative.ContractAlternativeSQL ContractAlternative;
-        public ContractAlternativeSites.ContractAlternativeSiteSQL ContractAlternativeSite;
-        public ContractAlternativeSiteAssets.ContractAlternativeSiteAssetSQL ContractAlternativeSiteAsset;
-        public ContractAlternativePPMVisits.ContractAlternativePPMVisitSQL ContractAlternativePPMVisit;
-        public ContractAlternativeSiteJobItems.ContractAlternativeSiteJobItemsSQL ContractAlternativeSiteJobItems;
-        public ContractAlternativeSiteJobOfWorks.ContractAlternativeSiteJobOfWorkSQL ContractAlternativeSiteJobOfWork;
         public QuoteContractAlternativePPMVisits.QuoteContractAlternativePPMVisitSQL QuoteContractAlternativePPMVisits;
         public QuoteContractAlternativeSites.QuoteContractAlternativeSiteSQL QuoteContractAlternativeSite;
         public QuoteContractAlternativeSiteAssets.QuoteContractAlternativeSiteAssetSQL QuoteContractAlternativeSiteAsset;

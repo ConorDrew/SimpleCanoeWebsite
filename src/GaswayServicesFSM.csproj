@@ -1191,60 +1191,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRates.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRatesSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRatesValidator.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativePPMVisit\ContractAlternativePPMVisit.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativePPMVisit\ContractAlternativePPMVisitSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativePPMVisit\ContractAlternativePPMVisitValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteAsset\ContractOriginalSiteAsset.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteAsset\ContractOriginalSiteAssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteAsset\ContractOriginalSiteAssetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteJobItems\ContractAlternativeSiteJobItems.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteJobItems\ContractAlternativeSiteJobItemsSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteJobItems\ContractAlternativeSiteJobItemsValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteJobOfWork\ContractAlternativeSiteJobOfWork.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteJobOfWork\ContractAlternativeSiteJobOfWorkSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSiteJobOfWork\ContractAlternativeSiteJobOfWorkValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSite\ContractAlternativeSite.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSite\ContractAlternativeSiteSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternativeSite\ContractAlternativeSiteValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternative\ContractAlternative.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternative\ContractAlternativeSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsAlternative\ContractAlternative\ContractAlternativeValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalPPMVisit\ContractOriginalPPMVisit.cs">
       <SubType>Code</SubType>
     </Compile>

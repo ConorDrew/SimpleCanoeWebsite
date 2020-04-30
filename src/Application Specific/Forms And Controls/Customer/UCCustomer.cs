@@ -4188,10 +4188,6 @@ namespace FSM
             {
                 deleteContract = DeleteOption1();
             }
-            else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedContractDataRow["ContractType"], Enums.QuoteType.Contract_Opt_2.ToString(), false)))
-            {
-                deleteContract = DeleteOption2();
-            }
 
             if (deleteContract)
             {
@@ -4238,28 +4234,6 @@ namespace FSM
             if (DeleteContract)
             {
                 App.DB.ContractOriginal.Delete(Helper.MakeIntegerValid(SelectedContractDataRow["ContractID"]));
-            }
-
-            return DeleteContract;
-        }
-
-        private bool DeleteOption2()
-        {
-            // DELETE Visit, Jobs - not sync, Job Assets, PPM Visits, Contract Site Assets, Contract Sites
-            var sites = new DataView();
-            sites = App.DB.ContractAlternativeSite.GetAll_ContractID(Conversions.ToInteger(SelectedContractDataRow["ContractID"]), CurrentCustomer.CustomerID);
-            bool DeleteContract = true;
-            foreach (DataRow r in sites.Table.Rows)
-            {
-                if (App.DB.ContractAlternativeSite.Delete(Conversions.ToInteger(r["ContractSiteID"])) > 0)
-                {
-                    DeleteContract = false;
-                }
-            }
-
-            if (DeleteContract)
-            {
-                App.DB.ContractAlternative.Delete(Helper.MakeIntegerValid(SelectedContractDataRow["ContractID"]));
             }
 
             return DeleteContract;
