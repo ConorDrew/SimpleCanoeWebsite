@@ -634,9 +634,6 @@
     <Compile Include="Application Framework\Modules\MouseHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Framework\Modules\VersionChecker.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Framework\Structures\ActiveReminderColourColumn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2612,11 +2609,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -2624,6 +2616,11 @@
     </Compile>
     <Compile Include="Application Framework\Forms And Controls\Global\FRMEngineerRoles.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Application Framework\Forms And Controls\Global\FRMEngineerRoles.resx">
       <DependentUpon>FRMEngineerRoles.cs</DependentUpon>
@@ -2761,12 +2758,10 @@
     <EmbeddedResource Include="Application Specific\Forms And Controls\FleetVan\UCFleetVanType.resx">
       <DependentUpon>UCFleetVanType.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Application Framework\Images\download.png" />
-    <None Include="Application Framework\Images\GaswayHO.jpg" />
     <None Include="Application Framework\Images\RFT.png" />
     <None Include="Application Framework\Images\Logo.ico" />
-    <None Include="Application Framework\Images\fhg_mn0_12.ico" />
     <None Include="Application Framework\Images\Blueflame.png" />
+    <Content Include="Application Specific\Images\van.png" />
     <Content Include="ApplicationSettings_RFTTEST.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -2857,12 +2852,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="fonts\WINGDING.TTF">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="fonts\WINGDNG2.TTF">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="fonts\zapfdingbats.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2882,8 +2871,6 @@
     <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_UpdatePartMapping.sql" />
     <EmbeddedResource Include="Application Framework\Entities\Picklists\Picklists_DeletePartMapping.sql" />
     <EmbeddedResource Include="Application Framework\Entities\Management\Settings_UpdateOverridePassword_Service.sql" />
-    <None Include="Application Framework\Images\Header Cont.jpg" />
-    <None Include="Application Framework\Images\Header.jpg" />
     <None Include="Application Scheduler\Images\Levels.ICO" />
     <None Include="Application Scheduler\Images\PostalRegions.GIF" />
     <None Include="Application Scheduler\Images\Region.ICO" />
@@ -3198,7 +3185,6 @@
       <DependentUpon>UCJobWizard.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Images\GaswayLogo.jpg" />
     <None Include="Application Specific\Images\Invoicing.gif" />
     <None Include="Application Specific\Images\Jobs.gif" />
     <None Include="Application Specific\Images\Reports.gif" />
@@ -3290,7 +3276,6 @@
       <DependentUpon>FRMMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="Application Framework\Images\Logoold.ico" />
     <EmbeddedResource Include="Application Framework\Images\Logo.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

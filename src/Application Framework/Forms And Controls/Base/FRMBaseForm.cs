@@ -174,7 +174,7 @@ namespace FSM
             }
             else if (App.IsGasway)
             {
-                picHeader.Image = My.Resources.Resources.GaswayHO;
+                picHeader.Image = My.Resources.Resources.GW_Logo;
             }
             else if (App.IsBlueflame)
             {
@@ -195,7 +195,7 @@ namespace FSM
             }
             else if (App.IsGasway)
             {
-                picHeader.Image = My.Resources.Resources.GaswayHO;
+                picHeader.Image = My.Resources.Resources.GW_Logo;
             }
             else if (App.IsBlueflame)
             {

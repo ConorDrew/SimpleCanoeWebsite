@@ -399,7 +399,6 @@ namespace FSM
                         frm.ShowDialog();
                         if (frm.DialogResult == DialogResult.Yes)
                         {
-                            VersionChecker.Unlock();
                             App.Login();
                         }
                         else
@@ -409,7 +408,6 @@ namespace FSM
                     }
                     else
                     {
-                        VersionChecker.Unlock();
                         App.Login();
                     }
                 }
