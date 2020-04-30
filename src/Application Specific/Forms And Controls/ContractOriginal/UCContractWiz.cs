@@ -4723,7 +4723,7 @@ namespace FSM
                     string cipherAccount = wrapper.EncryptData(txtAccNumber.Text);
                     if ((b.Text ?? "") == "Create Contract")  // new contract
                     {
-                        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                        
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
                             return default;
@@ -4769,10 +4769,10 @@ namespace FSM
                         return true;
                     }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     else if ((b.Text ?? "") == "Amend Contract") // amending old
                     {
-                        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                        
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
                             return default;
@@ -4984,10 +4984,10 @@ namespace FSM
                         return true;
                     }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     else if ((b.Text ?? "") == "Transfer Contract")
                     {
-                        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                        
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
                             return default;
@@ -5118,10 +5118,10 @@ namespace FSM
                         return true;
                     }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     else if ((b.Text ?? "") == "Renew Contract")
                     {
-                        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                        
                         // INSERT
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
@@ -5212,7 +5212,7 @@ namespace FSM
                         App.ShowMessage("Contract " + lblContractRef.Text + " has been Renewed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
 
-                        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                        
                     }
                 }
                 catch (ValidationException vex)

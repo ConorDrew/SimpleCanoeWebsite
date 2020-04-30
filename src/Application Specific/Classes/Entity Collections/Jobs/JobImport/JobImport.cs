@@ -12,7 +12,7 @@ namespace FSM.Entity.JobImport
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -75,8 +75,8 @@ namespace FSM.Entity.JobImport
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _jobImportId = 0;
 
         public int JobImportID
@@ -280,7 +280,7 @@ namespace FSM.Entity.JobImport
                 _report = value;
             }
         }
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class JobImportType
@@ -292,7 +292,7 @@ namespace FSM.Entity.JobImport
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -355,8 +355,8 @@ namespace FSM.Entity.JobImport
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _jobImportTypeId = 0;
 
         public int JobImportTypeID
@@ -464,6 +464,6 @@ namespace FSM.Entity.JobImport
                 _dataTypeValidator.SetValue(this, "_cycle", value);
             }
         }
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

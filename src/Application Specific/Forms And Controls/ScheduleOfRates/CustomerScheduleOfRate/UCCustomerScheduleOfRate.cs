@@ -13,12 +13,12 @@ namespace FSM
     {
         public UCCustomerScheduleOfRate()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCCustomerScheduleOfRate_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCCustomerScheduleOfRate(Entity.Sys.Enums.TableNames EntityToLinkToIn, int IDToLinkToIn, bool _readOnly = false) : base()
         {
@@ -650,8 +650,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -668,8 +668,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -799,8 +799,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupRatesDataGrid()
         {
@@ -998,8 +998,8 @@ namespace FSM
             Populate(IDToLinkTo);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate(int ID = 0)
         {
@@ -1142,6 +1142,6 @@ namespace FSM
             return default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

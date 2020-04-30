@@ -14,7 +14,7 @@ namespace FSM.Entity.JobImport
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public JobImport JobImport_Insert(JobImport oJobImport)
         {
             _database.ClearParameter();
@@ -138,8 +138,8 @@ namespace FSM.Entity.JobImport
             return Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(_database.ExecuteSP_OBJECT("JobImport_Delete_WithJobType"), 1, false));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public DataView JobImportType_GetAll()
         {
             _database.ClearParameter();
@@ -209,6 +209,6 @@ namespace FSM.Entity.JobImport
             return Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(_database.ExecuteSP_OBJECT("JobImportType_Delete"), 1, false));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

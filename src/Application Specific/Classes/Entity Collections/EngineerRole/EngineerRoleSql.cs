@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 
-// 'Imports System.Linq
 using FSM.Entity.Sys;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;

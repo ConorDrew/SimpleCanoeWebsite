@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataView Contracts_GetAll(DateTime datefrom)
             {
                 _database.ClearParameter();
@@ -64,7 +64,7 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

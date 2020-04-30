@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -78,8 +78,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             private int _VanID = 0;
 
@@ -242,7 +242,7 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_TyreSize", value);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanType
@@ -254,7 +254,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -317,8 +317,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _vanTypeID = 0;
 
             public int VanTypeID
@@ -444,7 +444,7 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_Payload", value);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanEngineer
@@ -456,7 +456,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -519,8 +519,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _vanEngineerID = 0;
 
             public int VanEngineerID
@@ -604,7 +604,7 @@ namespace FSM.Entity
                     _endDate = value;
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanMaintenance
@@ -616,7 +616,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -679,8 +679,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _vanMaintenanceID = 0;
 
             public int VanMaintenanceID
@@ -842,7 +842,7 @@ namespace FSM.Entity
                     _breakdownExpiry = value;
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanFault
@@ -854,7 +854,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -917,8 +917,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _vanFaultID = 0;
 
             public int VanFaultID
@@ -1074,7 +1074,7 @@ namespace FSM.Entity
                     _archive = value;
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanContract
@@ -1086,7 +1086,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -1149,8 +1149,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _vanContractID = 0;
 
             public int VanContractID
@@ -1450,7 +1450,7 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_forecastExcessMileageCost", value);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetEquipment
@@ -1462,7 +1462,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -1525,8 +1525,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _equipmentID = 0;
 
             public int EquipmentID
@@ -1598,7 +1598,7 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_cost", value);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

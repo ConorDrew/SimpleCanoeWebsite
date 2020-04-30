@@ -28,8 +28,8 @@ namespace FSM
             this.trans = trans;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public DataGridComboBoxColumn(bool isGetFrom = false)
         {
@@ -41,7 +41,7 @@ namespace FSM
             myComboBox.Visible = false;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         // This internal combobox is the key component of all this.
         // It will be moved around to the cells that are to be edited
@@ -63,8 +63,8 @@ namespace FSM
             {
                 if (_myComboBox != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _myComboBox.SelectedIndexChanged -= myComboBox_SelectedIndexChanged;
                 }
 
@@ -205,8 +205,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public int ReturnID
         {
@@ -280,8 +280,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected override void Abort(int rowNum)
         {
@@ -401,8 +401,8 @@ namespace FSM
             return number % 2 != 0;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected override object GetColumnValueAtRow(CurrencyManager source, int rowNum)
         {
@@ -515,8 +515,8 @@ namespace FSM
             return default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void NewComboBoxColumn_WidthChanged(object sender, EventArgs e)
 
@@ -527,8 +527,8 @@ namespace FSM
             base.Invalidate();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected override int GetMinimumHeight()
         {
@@ -559,8 +559,8 @@ namespace FSM
             return new Size(myComboBox.Width, GetPreferredHeight(g, value));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum)
 
@@ -622,8 +622,8 @@ namespace FSM
             g.DrawString(displayMember, myComboBox.Font, foreBrush, textRect);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected override void SetDataGridInColumn(DataGrid value)
         {
@@ -644,6 +644,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

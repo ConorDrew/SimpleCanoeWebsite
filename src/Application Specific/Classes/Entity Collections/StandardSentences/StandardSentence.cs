@@ -15,7 +15,7 @@ namespace FSM.Entity
             }
 
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -78,8 +78,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _SentenceID = 0;
 
             public int SentenceID
@@ -131,7 +131,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

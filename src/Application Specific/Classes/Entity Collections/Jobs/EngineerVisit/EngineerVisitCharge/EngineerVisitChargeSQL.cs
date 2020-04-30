@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void EngineerVisitCharge_Delete(int EngineerVisitChargeID)
             {
                 _database.ClearParameter();
@@ -171,8 +171,8 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public void EngineerVisitAdditionalCharge_Delete(int EngineerVisitAdditionalChargeID)
             {
                 _database.ClearParameter();
@@ -198,8 +198,8 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitAdditionalCharge_Insert");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public DataView EngineerVisitScheduleOfRatesCharge_Get_For_EngineerVisitID(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -226,8 +226,8 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitScheduleOfRatesCharge_Delete");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public DataView EngineerVisitPartsAndProductsCharge_Get_For_EngineerVisitID(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -299,8 +299,8 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitPartsCharge_Update_Price");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public DataView EngineerVisitTimeSheetCharges_Get(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -372,7 +372,7 @@ namespace FSM.Entity
                 return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("EngineerVisitTimeSheetCharges_BankHoliday"));
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

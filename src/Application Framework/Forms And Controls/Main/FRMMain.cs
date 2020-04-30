@@ -15,12 +15,12 @@ namespace FSM
 {
     public class FRMMain : Form, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMMain() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMMenu_Load;
             base.Closing += FRMMenu_Closing;
             base.KeyDown += FRMMenu_KeyDown;
@@ -114,7 +114,7 @@ namespace FSM
             {
                 if (_mnuChangeLogin != null)
                 {
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
                     _mnuChangeLogin.Click -= mnuChangeLogin_Click;
                 }
 
@@ -341,7 +341,7 @@ namespace FSM
             {
                 if (_btnCloseMiddle != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _btnCloseMiddle.Click -= btnCloseMiddle_Click;
                 }
 
@@ -790,8 +790,8 @@ namespace FSM
             {
                 if (_mnuCustomers != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _mnuCustomers.Click -= mnuCustomers_Click;
                 }
 
@@ -1571,8 +1571,8 @@ namespace FSM
             this.ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -1598,8 +1598,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private ArrayList _FormButtons = null;
 
         public ArrayList FormButtons
@@ -1949,8 +1949,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void LoopControls(Control controlToLoop)
         {
@@ -3725,6 +3725,6 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

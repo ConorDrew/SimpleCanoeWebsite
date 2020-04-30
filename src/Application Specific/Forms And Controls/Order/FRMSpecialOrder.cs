@@ -13,7 +13,7 @@ namespace FSM
             base.Load += FRMSpecialOrder_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMSpecialOrder(int supplierCode, double price, int quantity) : base()
         {
@@ -155,8 +155,8 @@ namespace FSM
             {
                 if (_btnAddPart != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnAddPart.Click -= btnAddPart_Click;
                 }
 
@@ -576,8 +576,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public IUserControl LoadedControl
         {
@@ -644,6 +644,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

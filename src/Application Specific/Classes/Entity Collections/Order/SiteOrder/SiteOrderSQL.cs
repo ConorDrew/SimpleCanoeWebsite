@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public void Delete(int SiteOrderID)
             {
@@ -139,7 +139,7 @@ namespace FSM.Entity
             }
 
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

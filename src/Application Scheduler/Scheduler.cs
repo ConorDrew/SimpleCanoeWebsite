@@ -16,7 +16,7 @@ namespace FSM
 
     public class Scheduler
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private Form __mdiParent;
 
         private Form _mdiParent
@@ -78,8 +78,8 @@ namespace FSM
         public DataTable DtSummary;
         public int textsize;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public class scheduleComparer : IComparer
         {
@@ -104,7 +104,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         // 'This function gets called when a row is dragged and dropped, forEngineer = 0 when it is dragged onto
         // 'the unscheduled call grid
@@ -207,7 +207,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private DataTable _engineers = null;
 
         public DataTable Engineers
@@ -226,8 +226,8 @@ namespace FSM
         private bool Closing = false;
         private TimeSpan TwoMins = new TimeSpan(0, 2, 0);
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public Scheduler(Form mdiParent)
         {
@@ -788,8 +788,8 @@ namespace FSM
             return dtDay;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private const int radius = 3;
         private Point clickedPoint;
         private bool cellDown = false;
@@ -1482,8 +1482,8 @@ namespace FSM
             return false;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void resetHeaders()
         {
@@ -1561,8 +1561,8 @@ namespace FSM
                 engineerSchedule.ClearSelections();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void ControlResize(object sender, EventArgs e)
         {
@@ -1599,6 +1599,6 @@ namespace FSM
             Application.DoEvents();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

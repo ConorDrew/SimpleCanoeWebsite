@@ -13,7 +13,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataView GetAll()
             {
                 _database.ClearParameter();
@@ -48,7 +48,7 @@ namespace FSM.Entity
                     return null;
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

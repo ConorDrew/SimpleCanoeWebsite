@@ -11,12 +11,12 @@ namespace FSM
 {
     public class FRMStockMove : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMStockMove() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMStockMove_Load;
 
             // This call is required by the Windows Form Designer.
@@ -856,8 +856,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -886,8 +886,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int CurrentQty = 1;
         private DataView _StockDataView = null;
 
@@ -924,8 +924,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupDatagrid()
         {
@@ -1253,8 +1253,8 @@ namespace FSM
             StockDataView.RowFilter = whereClause;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void ShowStock(int WarehouseID, int VanID)
         {
@@ -1429,6 +1429,6 @@ namespace FSM
             App.DB.Location.IPT_Audit_Insert(PartID, ProductID, Conversions.ToInteger(dr["LocationID"]), locationID, qty);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

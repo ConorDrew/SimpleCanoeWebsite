@@ -43,7 +43,7 @@ namespace FSM
             base.Dispose(disposing);
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private TextBox _txtSmokeNo;
 
         internal TextBox txtSmokeNo
@@ -2241,8 +2241,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataTable DtPassFailNa = null;
         private DataTable DtNotTestedPassFail = null;
         private DataTable DtApplianceServiced = null;
@@ -2309,7 +2309,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public void LoadForm(object sender, EventArgs e)
         {

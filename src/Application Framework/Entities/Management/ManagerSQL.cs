@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = databaseIn;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public DataView GetAll()
             {
@@ -92,8 +92,8 @@ namespace FSM.Entity
                 _database.ExecuteCommand_NO_Return("Settings_UpdateOverridePassword_Service.sql");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public DataView GetHistory(int LimitNumber)
             {
@@ -117,8 +117,8 @@ namespace FSM.Entity
                 _database.ExecuteWithOutReturn(Sys.Helper.GetTextResource("History_Delete.sql"));
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public DataView Get_Tables()
             {
@@ -190,8 +190,8 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public DataView Record_Summary(DateTime fromDate, DateTime toDate)
             {
@@ -203,7 +203,7 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

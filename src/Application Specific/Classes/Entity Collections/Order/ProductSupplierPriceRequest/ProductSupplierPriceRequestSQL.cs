@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public void Delete(int ProductSupplierPriceRequestID)
             {
@@ -129,7 +129,7 @@ namespace FSM.Entity
                     withBlock.AddParameter("@SupplierID", oProductSupplierPriceRequest.SupplierID, true);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

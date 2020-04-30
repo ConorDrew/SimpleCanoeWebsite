@@ -11,12 +11,12 @@ namespace FSM
 {
     public class UCProduct : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCProduct() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCProduct_Load;
 
             // This call is required by the Windows Form Designer.
@@ -1117,8 +1117,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -1135,8 +1135,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1266,8 +1266,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupSuppliersDatagrid()
         {
@@ -1427,8 +1427,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void PopulateSuppliers()
         {
@@ -1515,6 +1515,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

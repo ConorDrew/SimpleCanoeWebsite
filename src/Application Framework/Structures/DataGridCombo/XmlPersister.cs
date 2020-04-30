@@ -8,7 +8,7 @@ namespace FSM
 {
     public class XmlPersister
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private static string _defaultfolder = string.Empty;
 
         public static string DefaultFolder
@@ -31,8 +31,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public static bool DefaultListExits(Type objectType)
         {
@@ -118,6 +118,6 @@ namespace FSM
             return default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

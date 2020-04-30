@@ -13,12 +13,12 @@ namespace FSM
 {
     public class FRMContractRenewal : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMContractRenewal() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMContractManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -476,7 +476,7 @@ namespace FSM
             {
                 if (_cboInvoiceFrequencyID != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _cboInvoiceFrequencyID.SelectedIndexChanged -= cboInvoiceFrequencyID_SelectedIndexChanged;
                 }
 
@@ -789,8 +789,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -836,8 +836,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _ContractID;
 
         private int ContractID
@@ -938,8 +938,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FormSetUp()
         {
@@ -1253,8 +1253,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate()
         {
@@ -1406,7 +1406,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         private void ScheduleJobContractOne(Entity.ContractsOriginal.ContractOriginal Contract, Entity.ContractOriginalSites.ContractOriginalSite CurrentContractSite)
         {

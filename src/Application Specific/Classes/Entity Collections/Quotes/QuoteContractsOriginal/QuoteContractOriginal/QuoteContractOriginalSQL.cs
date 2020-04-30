@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataTable VisitFrequency_Get()
             {
                 _database.ClearParameter();
@@ -104,7 +104,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

@@ -19,7 +19,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int EngineerID)
             {
                 _database.ClearParameter();
@@ -453,8 +453,8 @@ namespace FSM.Entity
                 App.DB.ExecuteScalar("DELETE FROM tblEngineerJobSkill Where EngineerID = " + engineerID);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public void SaveDisciplinaryRecords(int engineerID, DataTable t)
             {
                 // delete all first
@@ -482,8 +482,8 @@ namespace FSM.Entity
                 return _database.ExecuteSP_DataTable("Engineer_Disciplinary_Get");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public void SaveEquipmentRecords(int engineerID, DataTable t)
             {
 
@@ -510,7 +510,7 @@ namespace FSM.Entity
                 return _database.ExecuteSP_DataTable("Engineer_Equipment_Get");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

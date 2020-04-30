@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int EngineerVisitAssetWorkSheetID)
             {
                 _database.ClearParameter();
@@ -213,7 +213,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("PrintedGSRLettersInsert");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

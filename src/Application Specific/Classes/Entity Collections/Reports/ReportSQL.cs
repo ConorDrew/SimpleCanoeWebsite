@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataView Reports_ServicingStatistics(string WhereClause, string OrderClause)
             {
                 _database.ClearParameter();
@@ -92,7 +92,7 @@ namespace FSM.Entity
                 var dt = _database.ExecuteSP_DataTable("Reports_BatchVisitCosts");
                 return new DataView(dt);
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

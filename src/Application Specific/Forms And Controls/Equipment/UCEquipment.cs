@@ -11,12 +11,12 @@ namespace FSM
 {
     public class UCEquipment : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCEquipment() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCEqupment_Load;
 
             // This call is required by the Windows Form Designer.
@@ -477,7 +477,7 @@ namespace FSM
             {
                 if (_btnfindEngineer != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _btnfindEngineer.Click -= btnfindEngineer_Click_1;
                 }
 
@@ -1553,8 +1553,8 @@ namespace FSM
 
         private UCDocumentsList DocumentsControl;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -1575,8 +1575,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1684,8 +1684,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupDataGrid()
         {
@@ -1748,8 +1748,8 @@ namespace FSM
         // PartsDataGridView = DB.PartTransaction.GetByVan2(CurrentVan.VanID, True, False, Combo.GetSelectedItemValue(cboPreferredSupplierID))
         // End Sub
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate(int ID = 0)
         {

@@ -10,12 +10,12 @@ namespace FSM
 {
     public class FRMChangeOverridePassword : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMChangeOverridePassword() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMChangeOverridePassword_Load;
 
             // This call is required by the Windows Form Designer.
@@ -404,8 +404,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -511,6 +511,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

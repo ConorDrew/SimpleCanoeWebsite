@@ -18,7 +18,7 @@ namespace FSM
             InitializeComponent();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -43,8 +43,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataTable Avail = new DataTable();
         private DataView AvailView = new DataView();
         private int amtServ = 0; // how many services we need?
@@ -109,8 +109,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupLettersDataGrid()
         {
@@ -235,8 +235,8 @@ namespace FSM
             dgServicesDue.TableStyles.Add(tbStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void btnFindCustomer_Click(object sender, EventArgs e)
         {
@@ -412,8 +412,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void CalcAvail()
         {
@@ -1012,6 +1012,6 @@ namespace FSM
             return true;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

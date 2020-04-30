@@ -9,12 +9,12 @@ namespace FSM
 {
     public class UCSearchJobs : UCBase, ISearchControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCSearchJobs() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCSearchPerformanceSetup_Load;
 
             // This call is required by the Windows Form Designer.
@@ -238,8 +238,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -287,6 +287,6 @@ namespace FSM
             Search();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

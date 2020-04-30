@@ -12,7 +12,7 @@ namespace FSM.Entity.UserAbsence
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -75,8 +75,8 @@ namespace FSM.Entity.UserAbsence
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _UserAbsenceID = 0;
 
         public int UserAbsenceID
@@ -218,6 +218,6 @@ namespace FSM.Entity.UserAbsence
 
 
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

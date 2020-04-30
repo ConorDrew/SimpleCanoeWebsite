@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public void Delete(int InvoiceAddressID)
             {
@@ -171,7 +171,7 @@ namespace FSM.Entity
             }
 
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

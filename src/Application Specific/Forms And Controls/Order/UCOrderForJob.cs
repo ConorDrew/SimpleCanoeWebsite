@@ -10,7 +10,7 @@ namespace FSM
 {
     public class UCOrderForJob : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCOrderForJob() : base()
         {
@@ -205,8 +205,8 @@ namespace FSM
             {
                 if (_btnFindWarehouse != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnFindWarehouse.Click -= btnFindWarehouse_Click;
                 }
 
@@ -366,8 +366,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -383,8 +383,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -452,8 +452,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupVisitsDataGrid()
         {
@@ -594,8 +594,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate(int ID = 0)
         {
@@ -606,6 +606,6 @@ namespace FSM
             return default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

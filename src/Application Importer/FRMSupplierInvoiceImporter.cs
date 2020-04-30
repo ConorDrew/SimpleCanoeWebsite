@@ -20,12 +20,12 @@ namespace FSM
 {
     public class FRMSupplierInvoiceImporter : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMSupplierInvoiceImporter() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             this.Load += FRMSupplierInvoiceImporter_Load;
 
             // This call is required by the Windows Form Designer.
@@ -858,8 +858,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public IUserControl LoadedControl
         {
@@ -869,8 +869,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public FileInfo File { get; set; }
         private List<DuplicateInvoice> DuplicateInvoices { get; set; } = new List<DuplicateInvoice>();
 
@@ -1070,8 +1070,8 @@ namespace FSM
             ValidateAllRecords();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void CreateSupplierInvoice(int validationResult)
         {
@@ -1789,6 +1789,6 @@ namespace FSM
             Cursor.Current = Cursors.Default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

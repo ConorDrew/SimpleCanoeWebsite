@@ -14,7 +14,7 @@ namespace FSM.Entity.EngineerAbsence
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void Delete(int EngineerAbsenceID)
         {
@@ -107,6 +107,6 @@ namespace FSM.Entity.EngineerAbsence
         }
 
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

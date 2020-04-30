@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public object ProductSupplier_Search(string SearchString, int SupplierID = 0)
             {
                 _database.ClearParameter();
@@ -177,7 +177,7 @@ namespace FSM.Entity
             }
 
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

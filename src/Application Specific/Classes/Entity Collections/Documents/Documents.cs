@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,8 +77,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _DocumentID = 0;
 
             public int DocumentID
@@ -271,8 +271,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private string _Type = string.Empty;
 
             public string Type
@@ -318,7 +318,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

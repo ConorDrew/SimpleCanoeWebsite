@@ -10,12 +10,12 @@ namespace FSM
 {
     public class UCInvoiceAddress : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCInvoiceAddress() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCInvoiceAddress_Load;
 
             // This call is required by the Windows Form Designer.
@@ -735,8 +735,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -751,8 +751,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _SiteID = 0;
 
         public int SiteID
@@ -806,8 +806,8 @@ namespace FSM
             LoadForm(sender, e);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate(int ID = 0)
         {
@@ -875,6 +875,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

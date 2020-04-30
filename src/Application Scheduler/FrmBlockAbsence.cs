@@ -21,7 +21,7 @@ namespace FSM
 
         public delegate void UserAbsenceChangedEventHandler();
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private DataView _dvEmployees;
 
         public DataView EmployeesDataView
@@ -47,8 +47,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void setUpDataGrid()
         {
@@ -176,8 +176,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FrmBlockAbsence_Load(object sender, EventArgs e)
         {
@@ -341,6 +341,6 @@ dgEmployees.DataMember];
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

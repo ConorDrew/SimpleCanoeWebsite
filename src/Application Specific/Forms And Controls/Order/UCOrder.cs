@@ -18,7 +18,7 @@ namespace FSM
 {
     public class UCOrder : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCOrder() : base()
         {
@@ -712,7 +712,7 @@ namespace FSM
             {
                 if (_cboPartLocation != null)
                 {
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
                     _cboPartLocation.SelectedIndexChanged -= cboPartLocation_SelectedIndexChanged;
                 }
 
@@ -739,8 +739,8 @@ namespace FSM
             {
                 if (_cboProductLocation != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _cboProductLocation.SelectedIndexChanged -= cboProductLocation_SelectedIndexChanged;
                 }
 
@@ -1239,8 +1239,8 @@ namespace FSM
             {
                 if (_btnItemQtyUpdate != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnItemQtyUpdate.Click -= btnItemRemove_Click;
                 }
 
@@ -2161,8 +2161,8 @@ namespace FSM
             {
                 if (_txtGoodsAmount != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _txtGoodsAmount.LostFocus -= txtGoodsAmount_TextChanged;
                 }
 
@@ -4981,8 +4981,8 @@ namespace FSM
             this.ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -5020,8 +5020,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -5432,8 +5432,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public class ColourColumn : DataGridLabelColumn
         {
@@ -5457,8 +5457,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupCredits()
         {
@@ -8477,9 +8477,9 @@ namespace FSM
             nudItemQty.Value = Conversions.ToInteger(SelectedItemIncludedDataRow["QuantityOnOrder"]);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
+        
 
         public bool ValidateSupplierInvoice(bool Update = false)
         {
@@ -9729,8 +9729,8 @@ namespace FSM
             return cc is object ? cc.CostCentreId : -1;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Email()
         {
@@ -9757,8 +9757,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Print()
         {
@@ -10027,6 +10027,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

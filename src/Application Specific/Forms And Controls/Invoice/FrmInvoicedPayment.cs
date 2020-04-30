@@ -11,12 +11,12 @@ namespace FSM
 {
     public class FrmInvoicedPayment : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FrmInvoicedPayment() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMInvoiceManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -788,8 +788,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -810,8 +810,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private bool _changingAmount = false;
         private int _InvoicedID = 0;
 
@@ -875,8 +875,8 @@ namespace FSM
             MakePayment();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate()
         {
@@ -917,6 +917,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -25,7 +25,7 @@ namespace FSM.Entity.Sites
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public void Delete(int SiteID)
         {
             _database.ClearParameter();
@@ -405,8 +405,8 @@ namespace FSM.Entity.Sites
             return Conversions.ToBoolean(_database.ExecuteSP_ReturnRowsAffected("Site_Update_ContactAlerts") == 1);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public DataView GetSiteNotes(int siteID)
         {
             // 
@@ -445,8 +445,8 @@ namespace FSM.Entity.Sites
             _database.ExecuteSP_NO_Return("SiteNote_Delete");
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public DataView SiteFuel_GetAll_ForSite(int siteID)
         {
             _database.ClearParameter();
@@ -557,8 +557,8 @@ namespace FSM.Entity.Sites
             return new DataView(dt);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public DataView SiteFuelCharge_GetAll()
         {
             _database.ClearParameter();
@@ -567,6 +567,6 @@ namespace FSM.Entity.Sites
             return new DataView(dt);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

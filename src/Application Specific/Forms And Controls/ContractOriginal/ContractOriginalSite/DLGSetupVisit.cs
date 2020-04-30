@@ -10,7 +10,7 @@ namespace FSM
 {
     public class DLGSetupVisit : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public DLGSetupVisit() : base()
         {
@@ -215,9 +215,9 @@ namespace FSM
             {
                 if (_cboFrequency != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
 
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
 
                     _cboFrequency.SelectedIndexChanged -= cboFrequency_SelectedIndexChanged;
                 }
@@ -415,10 +415,10 @@ namespace FSM
             {
                 if (_TextBox1 != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
 
                     _TextBox1.TextChanged -= TextBox1_TextChanged;
                 }
@@ -762,8 +762,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -784,8 +784,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _ID = 0;
 
         public int ID

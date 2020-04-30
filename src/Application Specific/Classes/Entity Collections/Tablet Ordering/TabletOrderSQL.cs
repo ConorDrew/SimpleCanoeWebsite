@@ -12,7 +12,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public int InsertTabletOrderItem(TabletOrderItem oTabletOrder)
             {
                 _database.ClearParameter();
@@ -35,7 +35,7 @@ namespace FSM.Entity
                 return Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("TabletOrderPart_Insert"));
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

@@ -14,13 +14,13 @@ namespace FSM
     {
         public FRMJobCostings()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += LoadMe;
             base.Load += FRMLogCallout_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMJobCostings(Entity.Jobs.Job oJob) : base()
         {
@@ -143,8 +143,8 @@ namespace FSM
             {
                 if (_btnPrintJobCosting != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnPrintJobCosting.Click -= btnPrintJobCosting_Click;
                 }
 
@@ -725,8 +725,8 @@ namespace FSM
             {
                 if (_txtEstLabour != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _txtEstLabour.TextChanged -= txtEstLabour_TextChanged;
                 }
 
@@ -3557,8 +3557,8 @@ namespace FSM
             CalculatePL();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int vatRateID;
         private Entity.VATRatess.VATRates vatRate = new Entity.VATRatess.VATRates();
         private DataView _TimeSheetCharges;
@@ -3656,8 +3656,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupTimeSheetChargeDataGrid()
         {
@@ -3901,8 +3901,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SaveJI()
         {
@@ -3940,8 +3940,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupJobInstall()
         {
@@ -4171,6 +4171,6 @@ namespace FSM
             txtPartPerc.Text = Math.Round(Conversions.ToDouble(txtPartCost.Text) / JI.PaymentTaken * 100, 2).ToString();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

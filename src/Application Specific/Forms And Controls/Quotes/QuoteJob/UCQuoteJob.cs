@@ -15,12 +15,12 @@ namespace FSM
 {
     public class UCQuoteJob : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCQuoteJob() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCQuoteJob_Load;
 
             // This call is required by the Windows Form Designer.
@@ -4934,8 +4934,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -4952,8 +4952,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -5663,8 +5663,8 @@ namespace FSM
             JobItemsDataView.Table.Rows.Add(newRow);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupPartsAndProductsDataGrid()
         {
@@ -5803,8 +5803,8 @@ namespace FSM
             dgScheduleOfRates.TableStyles.Add(tStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void WorkOutGrandTotal()
         {
@@ -6489,6 +6489,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

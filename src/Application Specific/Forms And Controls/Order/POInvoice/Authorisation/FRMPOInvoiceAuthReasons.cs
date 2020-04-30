@@ -28,7 +28,7 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public string _AuthReason;
 
         public string AuthReason
@@ -73,7 +73,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia *//* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -93,7 +93,7 @@ namespace FSM
             DialogResult = DialogResult.Cancel;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         private void AuthReasonOption1_CheckedChanged(object sender, EventArgs e)
         {

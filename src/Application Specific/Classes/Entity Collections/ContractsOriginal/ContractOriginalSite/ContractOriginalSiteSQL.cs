@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public ContractOriginalSite Get(int ContractSiteID)
             {
                 _database.ClearParameter();
@@ -185,7 +185,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

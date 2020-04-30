@@ -9,7 +9,7 @@ namespace FSM
 {
     public class frmSchedulerMain : Form
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public frmSchedulerMain() : base()
         {
@@ -418,7 +418,7 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
         public Scheduler scheduler;
         // Private _fromDate As DateTime
         // Private _toDate As DateTime

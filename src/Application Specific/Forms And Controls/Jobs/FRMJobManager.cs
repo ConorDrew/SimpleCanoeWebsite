@@ -11,12 +11,12 @@ namespace FSM
 {
     public class FRMJobManager : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMJobManager() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMJobManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -1295,8 +1295,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -1324,8 +1324,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int count = 0;
         private DataView _dvJobs;
 
@@ -1425,8 +1425,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupJobsDataGrid()
         {
@@ -1655,8 +1655,8 @@ namespace FSM
             App.ShowForm(typeof(FRMLogCallout), true, new object[] { SelectedJobsDataRow["JobID"], SelectedJobsDataRow["SiteID"], this });
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void PopulateDatagrid(bool withRun)
         {
@@ -1729,6 +1729,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

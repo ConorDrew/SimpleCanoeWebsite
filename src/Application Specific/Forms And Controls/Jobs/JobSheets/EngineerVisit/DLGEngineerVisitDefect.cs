@@ -9,12 +9,12 @@ namespace FSM
 {
     public class DLGEngineerVisitDefect : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public DLGEngineerVisitDefect() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += DLGEngineerVisitDefect_Load;
 
             // This call is required by the Windows Form Designer.
@@ -597,8 +597,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private bool _updating = true;
 
         public bool Updating
@@ -659,8 +659,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void populateDefect()
         {
@@ -746,6 +746,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

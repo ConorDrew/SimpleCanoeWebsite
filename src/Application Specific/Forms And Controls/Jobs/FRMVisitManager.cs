@@ -13,12 +13,12 @@ namespace FSM
 {
     public class FRMVisitManager : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMVisitManager() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMVisitManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -880,7 +880,7 @@ namespace FSM
             {
                 if (_cboOutcome != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _cboOutcome.TextChanged -= cboOutcome_TextChanged;
                     _cboOutcome.SelectedIndexChanged -= cboOutcome_SelectedIndexChanged_1;
                 }
@@ -2429,8 +2429,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -2534,8 +2534,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int count = 0;
         private DataView _dvVisits;
 
@@ -2680,8 +2680,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupVisitDataGrid()
         {
@@ -3136,8 +3136,8 @@ namespace FSM
             PopulateDatagrid(true);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void PopulateDatagrid(bool withRun)
         {

@@ -10,12 +10,12 @@ namespace FSM
     public class UCLiveVisitCost : UCBase
     {
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public UCLiveVisitCost() : base()
         {
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCData_Load;
 
             // This call is required by the Windows Form Designer.
@@ -129,8 +129,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public object LoadedItem
         {
             get
@@ -139,8 +139,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _Data;
 
         public DataView Data
@@ -161,8 +161,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataGridViewCellStyle m_SelectedStyle = new DataGridViewCellStyle();
         private int m_SelectedRow = -1;
 
@@ -240,6 +240,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

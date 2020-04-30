@@ -34,7 +34,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private void AddParametersToCommand(ref FleetVan oFleetVan)
             {
                 {
@@ -196,7 +196,7 @@ namespace FSM.Entity
                 _database.AddParameter("@UserID", App.loggedInUser.UserID, true);
                 _database.ExecuteSP_NO_Return("FleetVanAudit_Insert");
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanTypeSQL
@@ -208,7 +208,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private void AddParametersToCommand(ref FleetVanType oFleetVanType)
             {
                 {
@@ -299,7 +299,7 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanEngineerSQL
@@ -311,7 +311,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private void AddParametersToCommand(ref FleetVanEngineer oFleetVan)
             {
                 {
@@ -450,7 +450,7 @@ namespace FSM.Entity
 
                 return Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(_database.ExecuteSP_OBJECT("FleetVanEngineer_Delete"), 1, false));
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanMaintenanceSQL
@@ -462,7 +462,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private void AddParametersToCommand(ref FleetVanMaintenance oFleetVan)
             {
                 {
@@ -573,7 +573,7 @@ namespace FSM.Entity
                 van.Exists = true;
                 return van;
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanFaultSQL
@@ -585,7 +585,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private void AddParametersToCommand(ref FleetVanFault oFleetVan)
             {
                 {
@@ -792,7 +792,7 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblFleetVanFault.ToString();
                 return new DataView(dt);
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanContractSQL
@@ -804,7 +804,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private void AddParametersToCommand(ref FleetVanContract oFleetVan)
             {
                 {
@@ -952,7 +952,7 @@ namespace FSM.Entity
                 van.Exists = true;
                 return van;
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
 
         }
 
@@ -965,7 +965,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataView GetServices_ByVanId(int vanID)
             {
                 _database.ClearParameter();
@@ -1006,7 +1006,7 @@ namespace FSM.Entity
                 _database.AddParameter("@JobID", jobID);
                 _database.ExecuteSP_NO_Return("FleetVanService_Delete");
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
 
         }
 
@@ -1019,7 +1019,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataView GetAll()
             {
                 _database.ClearParameter();
@@ -1103,7 +1103,7 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblFleetEquipment.ToString();
                 return new DataView(dt);
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
         public class FleetVanEquipmentSQL
@@ -1115,7 +1115,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataView Get(int vanEquipmentID)
             {
                 _database.ClearParameter();
@@ -1164,7 +1164,7 @@ namespace FSM.Entity
                 _database.AddParameter("@VanEquipmentID", vanEquipmentID);
                 _database.ExecuteSP_NO_Return("FleetVanEquipment_Delete");
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

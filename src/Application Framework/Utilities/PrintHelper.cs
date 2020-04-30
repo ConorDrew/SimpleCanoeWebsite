@@ -21,7 +21,7 @@ namespace FSM.Entity
     {
         public class PrintHelper
         {
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             private static Run ParseText(string textualData)
             {
@@ -600,7 +600,7 @@ namespace FSM.Entity
                 return cm * 28.34;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

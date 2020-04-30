@@ -7,7 +7,7 @@ namespace FSM
 {
     public class DataGridSiteFuelColumn : DataGridLabelColumn
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
@@ -51,6 +51,6 @@ namespace FSM
             base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -6,8 +6,6 @@ namespace FSM
 {
     public class SubMenuNode : LinkLabel
     {
-
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         public SubMenuNode(string nameIn)
         {
             LevelNumber = 1;
@@ -48,8 +46,6 @@ namespace FSM
             FormToOpen = formToOpenIn;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private int _LevelNumber = 1;
 
         public int LevelNumber
@@ -144,13 +140,9 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private void ButtonClicked(object sender, EventArgs e)
         {
             Navigation.Sub_Menu(this);
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

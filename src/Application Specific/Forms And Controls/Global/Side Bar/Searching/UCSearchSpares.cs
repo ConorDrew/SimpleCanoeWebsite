@@ -9,7 +9,7 @@ namespace FSM
 {
     public class UCSearchSpares : UCBase, ISearchControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCSearchSpares() : base()
         {
@@ -104,8 +104,8 @@ namespace FSM
             {
                 if (_cboSearchFor != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _cboSearchFor.SelectedIndexChanged -= cboSearchFor_SelectedIndexChanged;
                 }
 
@@ -343,8 +343,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -422,6 +422,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

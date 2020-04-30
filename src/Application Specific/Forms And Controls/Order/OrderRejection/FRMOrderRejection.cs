@@ -8,12 +8,12 @@ namespace FSM
 {
     public class FRMOrderRejection : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMOrderRejection() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMOrderRejection_Load;
 
             // This call is required by the Windows Form Designer.
@@ -177,8 +177,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -201,8 +201,8 @@ namespace FSM
             ID = newID;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private IUserControl TheLoadedControl;
 
         public event ReasonEditedEventHandler ReasonEdited;
@@ -322,6 +322,6 @@ namespace FSM
             ReasonEdited?.Invoke(reason);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

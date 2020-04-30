@@ -44,7 +44,6 @@ namespace FSM
         public static bool IsRFT;
         public static bool IsBlueflame;
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private static int _CurrentCustomerID = 0;
 
         public static int CurrentCustomerID
@@ -174,9 +173,6 @@ namespace FSM
                 return _releaseNoteTextFile;
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         // Starting point of the application
         [STAThread]
@@ -412,16 +408,12 @@ namespace FSM
         // This method is used to return a boolean value for if the override password was entered correctly
         public static bool EnterOverridePassword()
         {
-            /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped ElseDirectiveTrivia */
             return true;
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia */
         }
 
         public static bool EnterOverridePasswordINV()
         {
-            /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped ElseDirectiveTrivia */
             return true;
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia */
         }
 
         public static object FindRecord(Entity.Sys.Enums.TableNames tableToSearchIn, int ForeignKeyFilter = 0, string PartNumber = "", bool ForMassPartEntry = false)
@@ -649,9 +641,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public static DialogResult ShowMessage(string MessageText, MessageBoxButtons MessageBoxButton, MessageBoxIcon MessagesBoxIcon)
         {
             return MessageBox.Show(MessageText, TheSystem.Title, MessageBoxButton, MessagesBoxIcon);
@@ -682,11 +671,8 @@ namespace FSM
             {
                 return;
             }
-            /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         public static bool ControlLoading = false;
         public static bool ControlChanged = false;
 
@@ -752,7 +738,5 @@ namespace FSM
                 ControlChanged = true;
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

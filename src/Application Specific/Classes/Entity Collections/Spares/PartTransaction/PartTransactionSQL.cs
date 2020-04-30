@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public PartTransaction PartTransaction_GetByOrderLocationPart(int OrderLocationPartID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -499,7 +499,7 @@ namespace FSM.Entity
                 _database.AddParameter("@RecQty", MaxValue, true);
                 return Conversions.ToInteger(_database.ExecuteSP_OBJECT("PartLocations_Insert_WithPartLocationReturn"));
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

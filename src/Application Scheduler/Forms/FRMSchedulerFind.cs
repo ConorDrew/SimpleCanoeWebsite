@@ -11,12 +11,12 @@ namespace FSM
 {
     public class FRMSchedulerFind : Form
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMSchedulerFind() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMSchedulerFind_Load;
 
             // This call is required by the Windows Form Designer.
@@ -418,8 +418,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvResults;
 
         private DataView DvResults
@@ -481,8 +481,8 @@ namespace FSM
             ResetForm();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Find()
         {
@@ -599,8 +599,8 @@ namespace FSM
             ClearDg();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupDgSites()
         {
@@ -872,6 +872,6 @@ namespace FSM
             dgResults.TableStyles.Add(dgts);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

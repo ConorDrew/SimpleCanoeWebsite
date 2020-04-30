@@ -14,12 +14,12 @@ namespace FSM
     {
         public FRMViewEngineer()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMEngineer_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMViewEngineer(DataTable dtEngineer) : base()
         {
@@ -477,8 +477,8 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnClose.Click -= btnClose_Click;
                 }
 
@@ -724,8 +724,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void LoadMe(object sender, EventArgs e)
         {
@@ -745,8 +745,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataTable _engineer = null;
 
         public DataTable Engineer
@@ -853,6 +853,6 @@ namespace FSM
             throw new NotImplementedException();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

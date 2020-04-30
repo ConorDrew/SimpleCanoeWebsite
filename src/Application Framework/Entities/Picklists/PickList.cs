@@ -13,7 +13,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public bool IgnoreExceptionsOnSetMethods
             {
@@ -77,8 +77,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _ManagerID = 0;
 
             public int ManagerID
@@ -187,7 +187,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

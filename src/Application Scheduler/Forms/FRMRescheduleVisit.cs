@@ -18,12 +18,12 @@ namespace FSM
     {
         public FRMRescheduleVisit()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMSchedulerFind_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMRescheduleVisit(int engineerVisitId) : base()
         {
@@ -709,8 +709,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Engineer _engineer;
 
         public Engineer Engineer
@@ -795,8 +795,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate()
         {
@@ -910,6 +910,6 @@ namespace FSM
             return hour >= 0 && hour <= 23 && min >= 0 && min <= 59;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

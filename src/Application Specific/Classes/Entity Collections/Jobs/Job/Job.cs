@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -79,8 +79,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private int _JobID = 0;
 
             public int JobID
@@ -438,8 +438,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private ArrayList _assets = new ArrayList();
 
             public ArrayList Assets
@@ -506,7 +506,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

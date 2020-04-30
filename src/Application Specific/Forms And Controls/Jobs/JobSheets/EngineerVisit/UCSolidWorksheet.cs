@@ -42,7 +42,7 @@ namespace FSM
             base.Dispose(disposing);
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private TextBox _txtFlueDraught;
 
         internal TextBox txtFlueDraught
@@ -2063,8 +2063,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataTable DtYesNo = null;
         private DataTable DtPassFail = null;
         private DataTable DtPassFailNA = null;
@@ -2129,7 +2129,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public void LoadForm(object sender, EventArgs e)
         {

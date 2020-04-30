@@ -12,8 +12,8 @@ namespace FSM
     {
         public DLGVisitAssetWorkSheet() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += DLGVisitAssetWorkSheet_Load;
 
             // This call is required by the Windows Form Designer.
@@ -36,7 +36,7 @@ namespace FSM
             base.Dispose(disposing);
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */    // Required by the Windows Form Designer
+            // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
         private Button _btnCancel;
 
@@ -275,8 +275,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private bool StopChangeTestedDD = false;
         private object ChildUserInterface = null;
         private bool _updating = true;
@@ -449,8 +449,8 @@ namespace FSM
             ShowForm();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void ShowForm()
         {
@@ -541,6 +541,6 @@ namespace FSM
             App.ControlLoading = false;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -8,12 +8,12 @@ namespace FSM
 {
     public class FRMSitePopup : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMSitePopup() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             this.Load += FRMSitePopup_Load;
 
             // This call is required by the Windows Form Designer.
@@ -868,8 +868,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -889,8 +889,8 @@ namespace FSM
             // DO NOTHING
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Entity.Sites.Site _currentSite;
 
         public Entity.Sites.Site CurrentSite
@@ -934,8 +934,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate()
         {
@@ -952,6 +952,6 @@ namespace FSM
             txtEmailAddress.Text = CurrentSite.EmailAddress;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

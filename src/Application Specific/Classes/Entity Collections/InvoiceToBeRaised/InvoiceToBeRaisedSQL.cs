@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int InvoiceToBeRaisedID)
             {
                 _database.ClearParameter();
@@ -233,7 +233,7 @@ namespace FSM.Entity
                 return Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(_database.ExecuteSP_OBJECT("InvoicesToBeRaised_Update_PaymentID"), 1, false));
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

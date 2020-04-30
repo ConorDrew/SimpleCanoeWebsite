@@ -9,12 +9,12 @@ namespace FSM
 {
     public class UCSearchCustomers : UCBase, ISearchControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCSearchCustomers() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCSearchSetup_Load;
 
             // This call is required by the Windows Form Designer.
@@ -244,10 +244,10 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
         private ToolTip tt = new ToolTip(); // AMY PUT THIS HERE
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -354,6 +354,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

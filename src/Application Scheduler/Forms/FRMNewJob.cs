@@ -19,7 +19,7 @@ namespace FSM
 {
     public class FRMNewJob : Form
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMNewJob(DateTime visitDate = default, int engineerId = 0) : base()
         {
@@ -313,8 +313,8 @@ namespace FSM
             {
                 if (_btnFindSite != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnFindSite.Click -= btnFindSite_Click;
                 }
 
@@ -1499,8 +1499,8 @@ namespace FSM
             FindUser();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FindSite()
         {
@@ -1778,8 +1778,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupDgJobs()
         {
@@ -1837,6 +1837,6 @@ namespace FSM
             dgJobs.Enabled = false;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

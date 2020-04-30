@@ -12,7 +12,7 @@ namespace FSM
 {
     public class FRMPartsInvoiceImport : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMPartsInvoiceImport() : base()
         {
@@ -286,8 +286,8 @@ namespace FSM
             {
                 if (_cboValidateType != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _cboValidateType.SelectedIndexChanged -= cboValidateType_SelectedIndexChanged;
                 }
 
@@ -390,7 +390,7 @@ namespace FSM
             {
                 if (_Button1 != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _Button1.Click -= Button1_Click;
                 }
 
@@ -639,8 +639,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public IUserControl LoadedControl
         {
@@ -2646,8 +2646,8 @@ namespace FSM
             ValidateAllRecords();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public bool checkArray(string[] var, string Text)
         {

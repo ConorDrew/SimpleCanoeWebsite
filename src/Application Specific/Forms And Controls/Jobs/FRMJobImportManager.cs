@@ -16,7 +16,7 @@ namespace FSM
             InitializeComponent();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         private void LoadMe(object sender, EventArgs e)
         {
@@ -45,8 +45,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvJobs;
         private int jobsPerWeek = 0;
 
@@ -86,8 +86,8 @@ namespace FSM
             public int pmAmount;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupJobDataGrid()
         {
@@ -221,8 +221,8 @@ namespace FSM
             dgJobs.TableStyles.Add(tbStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMJobManager_Load(object sender, EventArgs e)
         {
@@ -430,8 +430,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void PopulateDatagrid()
         {
@@ -636,6 +636,6 @@ namespace FSM
             return maxValues;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

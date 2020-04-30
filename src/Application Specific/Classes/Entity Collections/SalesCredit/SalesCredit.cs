@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public bool IgnoreExceptionsOnSetMethods
             {
@@ -78,8 +78,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             private DateTime _DateCredited = default;
 
@@ -363,7 +363,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

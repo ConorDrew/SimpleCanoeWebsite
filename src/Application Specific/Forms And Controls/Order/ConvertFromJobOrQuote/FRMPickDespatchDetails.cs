@@ -9,12 +9,12 @@ namespace FSM
 {
     public class FRMPickDespatchDetails : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMPickDespatchDetails() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMPickDespatchDetails_Load;
 
             // This call is required by the Windows Form Designer.
@@ -288,8 +288,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -314,8 +314,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Entity.EngineerVisits.EngineerVisit _EngVisit;
 
         public Entity.EngineerVisits.EngineerVisit EngVisit
@@ -391,6 +391,6 @@ namespace FSM
             DialogResult = DialogResult.Cancel;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -10,12 +10,8 @@ namespace FSM
 {
     public class FRMLogin : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public FRMLogin() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
             base.Load += FRMLogin_Load;
             base.Closing += FRMLogin_Closing;
             base.KeyDown += FRMLogin_KeyDown;
@@ -287,14 +283,10 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
 
-            /* TODO ERROR: Skipped IfDirectiveTrivia */
 #if Debug
             txtUserName.Text = "admin";
             switch (true)
@@ -318,7 +310,6 @@ namespace FSM
                     }
             }
 #endif
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia */
         }
 
         public IUserControl LoadedControl
@@ -363,9 +354,6 @@ namespace FSM
         {
             LogMeIn();
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         private void LogMeIn()
         {
@@ -418,7 +406,5 @@ namespace FSM
                 }
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

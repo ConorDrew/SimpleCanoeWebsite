@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int OrderProductID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -157,7 +157,7 @@ namespace FSM.Entity
             }
 
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

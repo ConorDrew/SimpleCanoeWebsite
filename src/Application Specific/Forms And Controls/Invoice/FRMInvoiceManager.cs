@@ -16,7 +16,7 @@ namespace FSM
 {
     public class FRMInvoiceManager : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMInvoiceManager() : base()
         {
@@ -87,8 +87,8 @@ namespace FSM
             {
                 if (_dgInvoices != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _dgInvoices.DoubleClick -= dgInvoices_DoubleClick;
                     _dgInvoices.MouseUp -= dgInvoices_MouseUp;
                 }
@@ -215,7 +215,7 @@ namespace FSM
             {
                 if (_txtPostcode != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _txtPostcode.KeyDown -= txtJobNumber_TextChanged;
                 }
 
@@ -1562,8 +1562,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -1607,8 +1607,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataTable _dtVisit = new DataTable();
 
         public DataTable dtVisitFilters
@@ -1755,8 +1755,8 @@ namespace FSM
 
         public string DDpaidBy = "";
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupInvoiceDataGrid()
         {
@@ -2161,8 +2161,8 @@ namespace FSM
             // {"FromInvoice"}
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void view()
         {

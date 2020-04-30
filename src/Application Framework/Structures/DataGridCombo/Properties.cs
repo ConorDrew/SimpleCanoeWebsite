@@ -6,19 +6,19 @@ namespace FSM
     public class Properties : SimpleObjectArrayByKey
     {
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         // native member declarations
         internal object Parent;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal Properties(object parent)
         {
             Parent = parent;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public new Property AddNew(string name)
         {
             var newItem = new Property(this, name);
@@ -48,19 +48,19 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class Property
     {
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         // native member declarations
         protected internal string name;
         private Properties _container;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal Properties Container
         {
             get
@@ -74,8 +74,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal Property(Properties container, string name)
         {
             // This keeps us from raising property changed events during
@@ -84,19 +84,19 @@ namespace FSM
             this.name = name;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class PersistedProperties : Properties
     {
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         internal PersistedProperties(BindableItem parent) : base(parent)
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal new BindableItem Parent
         {
             get
@@ -110,8 +110,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public new PersistedProperty AddNew(string name, object value)
         {
             var newItem = new PersistedProperty(this, name, value);
@@ -142,8 +142,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal void BeginEdit()
         {
             for (int x = 0, loopTo = Count - 1; x <= loopTo; x++)
@@ -174,21 +174,21 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class PersistedProperty : Property
     {
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         // native member declarations
         private bool _beingConstructed;
         private object _oldValue;
         private object _value;
         internal bool Required = true;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal PersistedProperty(PersistedProperties container, string name, object value) : base(container, name)
         {
             _beingConstructed = true;
@@ -196,8 +196,8 @@ namespace FSM
             _beingConstructed = false;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal new PersistedProperties Container
         {
             get
@@ -211,8 +211,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal string Error
         {
             get
@@ -319,8 +319,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private static bool get_isBoolean(object myValue)
         {
             if (!get_isPrimitive(myValue))
@@ -501,8 +501,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private bool isBoolean
         {
             get
@@ -583,8 +583,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         internal void BeginEdit()
         {
             _oldValue = _value;
@@ -596,6 +596,6 @@ namespace FSM
             Value = _oldValue;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

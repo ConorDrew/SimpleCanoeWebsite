@@ -7,7 +7,7 @@ namespace FSM.Entity
         public class JobLock
         {
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private int _jobLockID = 0;
 
             public int JobLockID
@@ -83,7 +83,7 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

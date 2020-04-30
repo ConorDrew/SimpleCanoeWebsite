@@ -19,7 +19,7 @@ namespace FSM.Entity.Scheduler
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public DataTable getJobsForVisitSummary(DateTime StartDateIN, DateTime EndDateIN)
         {
             var pStartDate = new SqlParameter("@StartDate", Strings.Format(StartDateIN, "dd-MMM-yyyy 00:00:00"));
@@ -484,6 +484,6 @@ namespace FSM.Entity.Scheduler
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

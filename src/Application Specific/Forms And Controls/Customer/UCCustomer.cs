@@ -15,12 +15,12 @@ namespace FSM
 {
     public class UCCustomer : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCCustomer() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCCustomer_Load;
 
             // This call is required by the Windows Form Designer.
@@ -1545,7 +1545,7 @@ namespace FSM
             {
                 if (_btnAdd != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _btnAdd.Click -= btnAdd_Click;
                 }
 
@@ -3666,8 +3666,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -3682,8 +3682,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private UCDocumentsList DocumentsControl;
         private UCQuotesList QuotesControl;
         private UCCustomerScheduleOfRate CustomerScheduleOfRateControl;
@@ -3897,8 +3897,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupDG()
         {
@@ -4214,8 +4214,8 @@ namespace FSM
             Contracts = App.DB.Customer.Customer_Contracts_GetAll(CurrentCustomer.CustomerID);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private bool DeleteOption1()
         {

@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public void DeleteReservedQuoteNumber(int JobNumber)
             {
@@ -453,7 +453,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("QuoteJob_Delete");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

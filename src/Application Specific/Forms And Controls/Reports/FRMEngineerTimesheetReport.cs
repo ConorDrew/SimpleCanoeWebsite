@@ -12,7 +12,7 @@ namespace FSM
 {
     public class FRMEngineerTimesheetReport : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMEngineerTimesheetReport() : base()
         {
@@ -499,8 +499,8 @@ namespace FSM
             {
                 if (_cboDept != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _cboDept.SelectedIndexChanged -= cboDept_Changed;
                 }
 
@@ -816,8 +816,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -847,8 +847,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvTimesheets;
 
         private DataView TimesheetsDataview
@@ -909,8 +909,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupComboBoxes()
         {
@@ -1159,8 +1159,8 @@ dgEngineers.DataMember];
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void PopulateDatagrid()
         {
@@ -2135,6 +2135,6 @@ dgEngineers.DataMember];
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

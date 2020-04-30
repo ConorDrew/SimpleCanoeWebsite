@@ -13,7 +13,7 @@ namespace FSM.Entity.Products
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public void Delete(int ProductID)
         {
             _database.ClearParameter();
@@ -261,6 +261,6 @@ namespace FSM.Entity.Products
             return new DataView(dt);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

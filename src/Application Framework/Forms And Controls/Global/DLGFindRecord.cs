@@ -12,7 +12,7 @@ namespace FSM
 {
     public class DLGFindRecord : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public DLGFindRecord() : base()
         {
@@ -546,8 +546,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -570,8 +570,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private System.Data.SqlClient.SqlTransaction _Trans;
 
         public System.Data.SqlClient.SqlTransaction Trans
@@ -1230,8 +1230,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupDG()
         {
@@ -2534,8 +2534,8 @@ namespace FSM
             dgStock.TableStyles.Add(tStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void DLGFindRecord_Load(object sender, EventArgs e)
         {
@@ -2624,8 +2624,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SelectItem()
         {
@@ -2938,8 +2938,8 @@ namespace FSM
             grpStock.Text = "Stock Locations for : 'No Part Selected'";
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public class ColourColumn : DataGridLabelColumn
         {
@@ -2963,7 +2963,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         private void btnFilter_Click(object sender, EventArgs e)
         {

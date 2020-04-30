@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int CustomerID)
             {
                 _database.ClearParameter();
@@ -498,8 +498,8 @@ namespace FSM.Entity
                 return siteCount;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public CustomerServiceProcess CustomerServiceProcess_Get_ForCustomer(int customerId)
             {
                 _database.ClearParameter();
@@ -581,7 +581,7 @@ namespace FSM.Entity
                 return Conversions.ToBoolean(_database.ExecuteSP_ReturnRowsAffected("CustomerServiceProcess_Delete") == 1);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

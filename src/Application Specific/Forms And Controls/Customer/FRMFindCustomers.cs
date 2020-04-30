@@ -10,7 +10,7 @@ namespace FSM
 {
     public class FRMFindCustomers : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMFindCustomers() : base()
         {
@@ -81,8 +81,8 @@ namespace FSM
             {
                 if (_dgCustomers != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _dgCustomers.MouseUp -= _dgCustomers_MouseUp;
                 }
 
@@ -360,8 +360,8 @@ namespace FSM
             this.ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvCustomers;
 
         public DataView CustomerDataView
@@ -387,8 +387,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetUpDataGrid()
         {
@@ -532,6 +532,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

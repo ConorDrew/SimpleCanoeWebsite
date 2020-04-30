@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public void Delete(int QuoteOrderID)
             {
@@ -186,7 +186,7 @@ namespace FSM.Entity
                     withBlock.AddParameter("@ReasonForReject", oQuoteOrder.ReasonForReject, true);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

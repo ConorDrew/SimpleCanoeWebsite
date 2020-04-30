@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public void Delete(int QuoteOrderProductID)
             {
@@ -108,7 +108,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("QuoteOrderProduct_DeleteForQuoteOrder");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

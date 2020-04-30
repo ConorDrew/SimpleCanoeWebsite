@@ -17,8 +17,6 @@ namespace FSM
 {
     public class UCEngineer : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public UCEngineer() : base()
         {
             base.Load += UCEngineer_Load;
@@ -2606,8 +2604,6 @@ namespace FSM
             {
                 if (_txtPCSearch != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _txtPCSearch.TextChanged -= txtFilter_TextChanged;
                 }
 
@@ -6339,9 +6335,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -6362,9 +6355,6 @@ namespace FSM
                 return CurrentEngineer;
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -6585,9 +6575,6 @@ namespace FSM
             {
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         public void Populate(int ID = 0)
         {
@@ -7019,9 +7006,6 @@ namespace FSM
             Helper.RemoveEventHandlers(dgUnTicked);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public void SetupTrainingQualificationsDataGrid()
         {
             try
@@ -7255,9 +7239,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public void SetupEngineerEquipmentDataGrid()
         {
             try
@@ -7398,9 +7379,6 @@ namespace FSM
                 App.ShowMessage("The following error occurred:" + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         public void SetupDisciplinariesDataGrid()
         {
@@ -7630,9 +7608,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public void SetupAbsenceDataGridGrid()
         {
             SuspendLayout();
@@ -7736,7 +7711,6 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private Engineer _auditor;
 
         public Engineer Auditor
@@ -8122,8 +8096,5 @@ namespace FSM
                 }
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

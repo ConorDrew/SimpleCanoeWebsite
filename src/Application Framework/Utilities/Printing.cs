@@ -25,7 +25,7 @@ namespace FSM.Entity
     {
         public class Printing
         {
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private string details1 = "";
             private string details2 = "";
             private int tableCnt = 1;
@@ -1582,10 +1582,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.ServiceLetterReport:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             string folderName = @"C:\";
                             try
                             {
@@ -1954,10 +1954,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.GSRDue:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             try
                             {
                                 var dtPrinted = new DataTable();
@@ -2084,10 +2084,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.ContractExpiry:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             try
                             {
                                 FRMContractManager fCMngr = (FRMContractManager)((ArrayList)DetailsToPrint)[1];
@@ -2152,10 +2152,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.Invoice:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
                             var arLst = new ArrayList();
@@ -2226,10 +2226,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.SupplierPurchaseOrder:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             ArrayList details = (ArrayList)DetailsToPrint;
                             Sites.Site oSite = null;
                             Warehouses.Warehouse oWarehouse = null;
@@ -2297,10 +2297,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.ContractOption1:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             try
                             {
                                 var folderToSaveTo = new FolderBrowserDialog();
@@ -2342,10 +2342,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.PartCredit:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             try
                             {
                                 var details = new ArrayList();
@@ -2415,10 +2415,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.ProForma:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
                             var job = new Jobs.Job();
@@ -2480,10 +2480,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.ProFormaFromVisit:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             var details = new ArrayList();
                             details = (ArrayList)DetailsToPrint;
                             var job = new Jobs.Job();
@@ -2533,10 +2533,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.AlphaPartCredit:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             try
                             {
                                 var details = new ArrayList();
@@ -2606,10 +2606,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.JobImportLetters:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             try
                             {
                                 var folderToSaveTo = new FolderBrowserDialog();
@@ -2684,10 +2684,10 @@ namespace FSM.Entity
                             break;
                         }
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     case Enums.SystemDocumentType.SalesCredit:
                         {
-                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                            
                             try
                             {
                                 Cursor.Current = Cursors.WaitCursor;
@@ -2718,7 +2718,7 @@ namespace FSM.Entity
                             break;
                         }
 
-                        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                        
                 }
             }
 
@@ -12354,8 +12354,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             private string Finalise(string filepath, bool success, bool withSave = true, bool withKill = true, bool gsr = false)
             {
@@ -13105,7 +13105,7 @@ namespace FSM.Entity
                 Cursor.Current = Cursors.Default;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

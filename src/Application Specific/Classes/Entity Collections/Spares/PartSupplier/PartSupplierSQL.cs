@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public object PartSupplier_FindTabletOrder(string SearchString, int SupplierID = 0)
             {
                 _database.ClearParameter();
@@ -257,7 +257,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("PartSupplier_Update_Preferred");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

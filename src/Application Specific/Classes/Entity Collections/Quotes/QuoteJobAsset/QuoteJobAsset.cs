@@ -13,7 +13,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -43,8 +43,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             private int _QuoteJobAssetID = 0;
 
@@ -102,7 +102,7 @@ namespace FSM.Entity
 
 
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

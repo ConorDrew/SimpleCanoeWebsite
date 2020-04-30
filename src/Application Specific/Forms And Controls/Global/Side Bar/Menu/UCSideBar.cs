@@ -8,7 +8,7 @@ namespace FSM
 {
     public class UCSideBar : UCBase
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCSideBar() : base()
         {
@@ -578,14 +578,14 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void MenuSelectionChanged(Entity.Sys.Enums.MenuTypes MenuType)
         {
             Navigation.Navigate(MenuType);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

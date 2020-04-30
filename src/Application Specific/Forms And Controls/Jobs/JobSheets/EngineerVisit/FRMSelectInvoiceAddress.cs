@@ -17,7 +17,7 @@ namespace FSM
             base.Load += FRMSelectInvoiceAddress_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMSelectInvoiceAddress(int SiteIDIn) : base()
         {
@@ -82,8 +82,8 @@ namespace FSM
             {
                 if (_btnOK != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnOK.Click -= btnOK_Click;
                 }
 
@@ -654,8 +654,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -675,8 +675,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _SiteID = 0;
 
         public int SiteID
@@ -873,8 +873,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupDG()
         {
@@ -1043,6 +1043,6 @@ namespace FSM
             SiteID = SiteID;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

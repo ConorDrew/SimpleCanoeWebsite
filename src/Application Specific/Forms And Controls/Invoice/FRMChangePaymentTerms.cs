@@ -11,7 +11,7 @@ namespace FSM
             InitializeComponent();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         private void LoadMe(object sender, EventArgs e)
         {
@@ -37,8 +37,8 @@ namespace FSM
             ID = newID;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _ID = 0;
 
         public int ID
@@ -54,8 +54,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMChangeInvoicedTotal_Load(object sender, EventArgs e)
         {
@@ -95,7 +95,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         private void cboPaymentTerm_SelectedIndexChanged(object sender, EventArgs e)
         {

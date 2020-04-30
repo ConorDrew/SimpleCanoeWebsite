@@ -70,7 +70,7 @@ namespace FSM
             base.Dispose(disposing);
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private TabPage _tabJobDetails;
 
         internal TabPage tabJobDetails
@@ -206,8 +206,8 @@ namespace FSM
             {
                 if (_txtSearch != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _txtSearch.KeyDown -= txtSearch_TextChanged;
                 }
 
@@ -818,8 +818,8 @@ namespace FSM
             {
                 if (_btnxxSiteNext != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnxxSiteNext.Click -= btnSiteNext_Click;
                 }
 
@@ -972,8 +972,8 @@ namespace FSM
             {
                 if (_cbotypeWiz != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _cbotypeWiz.SelectedIndexChanged -= cbotypeWiz_SelectedIndexChanged;
                 }
 
@@ -1050,8 +1050,8 @@ namespace FSM
             {
                 if (_btnAddMain != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnAddMain.Click -= btnAddMain_Click;
                 }
 
@@ -1598,8 +1598,8 @@ namespace FSM
             {
                 if (_chkRecall != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _chkRecall.CheckedChanged -= chkRecall_CheckedChanged;
                 }
 
@@ -1870,8 +1870,8 @@ namespace FSM
             {
                 if (_cboPriority != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _cboPriority.SelectedIndexChanged -= cboPriority_SelectedIndexChanged;
                 }
 
@@ -2070,8 +2070,8 @@ namespace FSM
             {
                 if (_btnAdditionalPlus != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnAdditionalPlus.Click -= btnAdditionalPlus_Click;
                 }
 
@@ -2244,7 +2244,7 @@ namespace FSM
             {
                 if (_dtpFromDate != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _dtpFromDate.ValueChanged -= dtpFromDate_ValueChanged;
                 }
 
@@ -2271,8 +2271,8 @@ namespace FSM
             {
                 if (_btnOption10 != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnOption10.Click -= btnOption_Click;
                     _btnOption10.Paint -= Button_Paint;
                 }
@@ -3144,8 +3144,8 @@ namespace FSM
             {
                 if (_dgExistingVisits != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _dgExistingVisits.CellClick -= dgExistingVisits_CellClick;
                 }
 
@@ -6290,8 +6290,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -6309,8 +6309,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private bool StopSelect = false;
         private List<string> SkillsList = new List<string>();
         private string PromotionText = "";
@@ -6562,8 +6562,8 @@ namespace FSM
         private Entity.Customers.Customer CurrentCustomer;
         private bool UseContractVisit = false;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupSiteDataGridView()
         {
@@ -6963,8 +6963,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public bool Save()
         {
@@ -11388,7 +11388,7 @@ namespace FSM
             Cursor = Cursors.Default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public double distance(double lat1, double lon1, double lat2, double lon2, char unit)
         {
@@ -11611,7 +11611,7 @@ namespace FSM
             return Conversions.ToDate(Startdate).AddDays(Conversions.ToDouble(count)).ToString();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private int tab = 1;
 
         private void btnxx1_Click(object sender, EventArgs e)

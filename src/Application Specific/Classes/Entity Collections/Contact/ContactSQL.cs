@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int ContactID)
             {
                 _database.ClearParameter();
@@ -149,8 +149,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public DataView Contacts_GetAll_ForLink(int linkId, int linkRef, bool deleted = false)
             {
                 _database.ClearParameter();
@@ -257,7 +257,7 @@ namespace FSM.Entity
                 return Conversions.ToBoolean(_database.ExecuteSP_ReturnRowsAffected("Contacts_Delete") == 1);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

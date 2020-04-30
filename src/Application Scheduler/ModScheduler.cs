@@ -6,7 +6,7 @@ namespace FSM
 {
     static class ModScheduler
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         // Set the format and data
         public static void SetUpSchedulerDataGrid(DataGrid dg, bool captionIsVisible = false)
         {
@@ -71,6 +71,6 @@ namespace FSM
             return DataGridTableStyle1;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

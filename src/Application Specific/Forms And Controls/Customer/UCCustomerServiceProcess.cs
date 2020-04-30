@@ -832,7 +832,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -1212,7 +1212,7 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
         private int _customerId;
 
         public int CustomerId

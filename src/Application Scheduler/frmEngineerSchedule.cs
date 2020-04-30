@@ -22,7 +22,7 @@ namespace FSM
             EngineerScheduleTimer = new Timer();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public frmEngineerSchedule(MouseEventHandler gridMouseDown, MouseEventHandler gridMouseMove, DragEventHandler gridDragOver, DragEventHandler gridDragDrop, MouseEventHandler gridMouseUp, DataRow Engineer, int textsizes) : base()
         {
@@ -1254,8 +1254,8 @@ namespace FSM
             this.ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public class StatusDependentDataGridCell : DataGridLabelColumn
         {
@@ -1439,8 +1439,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private string _currentDays;
         private string _startDate;
         private string _endDate;
@@ -1609,8 +1609,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void setUpDayDg()
         {
@@ -1866,8 +1866,8 @@ namespace FSM
             tsSummary.MappingName = "ScheduleSummary";
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void frmEngineerSchedule_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -1984,8 +1984,8 @@ namespace FSM
             App.ShowForm(typeof(FRMLogCallout), true, new object[] { SelectedDataRow["JobID"], SelectedDataRow["SiteID"], this, null, SelectedDataRow["EngineerVisitID"] });
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Reset()
         {
@@ -2000,7 +2000,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public delegate Hashtable refreshAcceptanceDelegate();
 
@@ -2132,7 +2132,7 @@ namespace FSM
             Application.DoEvents();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public bool TestAcceptance(DataRow testRow)
         {
@@ -2308,7 +2308,7 @@ namespace FSM
             DisplayLastLocation();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         private delegate DataTable refreshSummaryDelegate();
 
@@ -2468,7 +2468,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public void ShowDay(string date)
         {
@@ -2499,8 +2499,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataTable timeSlotDt;
 
         public DataTable DtTimeSlot
@@ -2611,7 +2611,7 @@ namespace FSM
             var oPrint = new Printing(details, "Service Letter", Enums.SystemDocumentType.ServiceLetters);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         private void SetupTimeSheetStatus()
         {

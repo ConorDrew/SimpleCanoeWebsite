@@ -12,7 +12,7 @@ namespace FSM.Entity.EngineerAbsence
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -75,8 +75,8 @@ namespace FSM.Entity.EngineerAbsence
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _EngineerAbsenceID = 0;
 
         public int EngineerAbsenceID
@@ -218,6 +218,6 @@ namespace FSM.Entity.EngineerAbsence
 
 
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

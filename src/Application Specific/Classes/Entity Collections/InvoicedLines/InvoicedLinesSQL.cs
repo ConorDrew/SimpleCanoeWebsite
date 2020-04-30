@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int InvoicedLineID)
             {
                 _database.ClearParameter();
@@ -149,7 +149,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("Invoiced_ChangeTerm");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

@@ -11,7 +11,7 @@ namespace FSM
 {
     public class FRMContactAttempt : Form
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMContactAttempt(Enums.TableNames linkTable, int linkId) : base()
         {
@@ -51,8 +51,8 @@ namespace FSM
             {
                 if (_btnSave != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnSave.Click -= btnSave_Click;
                 }
 
@@ -387,8 +387,8 @@ namespace FSM
             Save();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private bool IsFormValid()
         {
@@ -449,6 +449,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

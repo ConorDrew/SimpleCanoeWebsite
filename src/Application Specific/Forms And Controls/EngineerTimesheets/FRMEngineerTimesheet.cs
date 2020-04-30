@@ -12,7 +12,7 @@ namespace FSM
             InitializeComponent();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -39,8 +39,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Entity.EngineerTimeSheets.EngineerTimeSheet _CurrentTimesheet;
 
         private Entity.EngineerTimeSheets.EngineerTimeSheet CurrentTimesheet
@@ -98,8 +98,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMEngineerTimesheet_Load(object sender, EventArgs e)
         {
@@ -120,8 +120,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate()
         {
@@ -191,6 +191,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

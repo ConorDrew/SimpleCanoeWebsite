@@ -14,7 +14,7 @@ namespace FSM
             HookMouse();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public delegate int CallBack(int nCode, IntPtr wParam, IntPtr lParam);
 
@@ -83,7 +83,7 @@ namespace FSM
             return default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public void Dispose()
         {

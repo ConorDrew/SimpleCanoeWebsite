@@ -5,7 +5,7 @@ namespace FSM
 {
     public class BaseValidator
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         protected ValidatorMessages _validatorMessages;
 
         public ValidatorMessages ValidatorMessages
@@ -37,8 +37,8 @@ namespace FSM
             return msgString;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public BaseValidator()
         {
@@ -55,12 +55,12 @@ namespace FSM
             _validatorMessages.WarningMessages.Add(message);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class ValidationException : Exception
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private BaseValidator m_valid = new BaseValidator();
 
         public BaseValidator Validator
@@ -76,14 +76,14 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public ValidationException(BaseValidator inValidator)
         {
             m_valid = inValidator;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

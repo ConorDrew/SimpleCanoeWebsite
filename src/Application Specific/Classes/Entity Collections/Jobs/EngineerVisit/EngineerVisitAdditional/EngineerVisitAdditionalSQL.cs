@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int EngineerVisitAdditionalID)
             {
                 _database.ClearParameter();
@@ -357,7 +357,7 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
             public static DateTime MakeDateSafe(object myDate)
             {
                 if (string.IsNullOrEmpty(myDate.ToString()))

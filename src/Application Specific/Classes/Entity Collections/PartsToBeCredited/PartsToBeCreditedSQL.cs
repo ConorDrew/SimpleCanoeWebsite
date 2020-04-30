@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public PartsToBeCredited PartsToBeCredited_Get(int PartsToBeCreditedID)
             {
                 _database.ClearParameter();
@@ -252,7 +252,7 @@ namespace FSM.Entity
 
 
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

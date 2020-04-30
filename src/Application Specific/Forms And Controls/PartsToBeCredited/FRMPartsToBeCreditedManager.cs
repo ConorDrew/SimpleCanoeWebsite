@@ -14,7 +14,7 @@ namespace FSM
             InitializeComponent();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -39,8 +39,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvCredits;
 
         private DataView CreditsDataview
@@ -91,8 +91,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupCreditDataGrid()
         {
@@ -183,8 +183,8 @@ namespace FSM
             dgCredits.TableStyles.Add(tbStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMOrderManager_Load(object sender, EventArgs e)
         {
@@ -480,8 +480,8 @@ namespace FSM
             RunFilter();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void PopulateDatagrid()
         {
@@ -602,6 +602,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

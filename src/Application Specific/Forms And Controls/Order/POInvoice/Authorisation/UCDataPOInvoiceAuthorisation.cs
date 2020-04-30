@@ -12,12 +12,12 @@ namespace FSM
 {
     public class UCDataPOInvoiceAuthorisation : UCBase
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCDataPOInvoiceAuthorisation() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             // Private Sub UCData_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
             // End Sub
@@ -63,7 +63,7 @@ namespace FSM
                 {
                     _dgvData.ColumnHeaderMouseClick -= dgvData_ColumnHeaderMouseClick;
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _dgvData.Click -= dgvData_Click;
                 }
 
@@ -109,8 +109,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public object LoadedItem
         {
@@ -120,8 +120,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _Data;
 
         public DataView Data
@@ -174,8 +174,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataGridViewCellStyle m_SelectedStyle = new DataGridViewCellStyle();
         private int m_SelectedRow = -1;
 

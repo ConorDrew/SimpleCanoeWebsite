@@ -13,12 +13,12 @@ namespace FSM
 {
     public class UCVisitBreakdown : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCVisitBreakdown() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCVisitBreakdown_Load;
 
             // This call is required by the Windows Form Designer.
@@ -500,7 +500,7 @@ namespace FSM
             {
                 if (_BtnEstSave != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _BtnEstSave.Click -= btnEstSave_Click;
                 }
 
@@ -1402,8 +1402,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -1419,8 +1419,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1696,8 +1696,8 @@ namespace FSM
             var oPrint = new Printing(details, "Install ", Enums.SystemDocumentType.Install);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupDG()
         {
@@ -1808,8 +1808,8 @@ namespace FSM
             dgPartsAndProducts.TableStyles.Add(tStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate(int ID = 0)
         {

@@ -13,7 +13,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public DataView GetAll_For_ContractSiteID(int ContractSiteID)
             {
                 _database.ClearParameter();
@@ -50,7 +50,7 @@ namespace FSM.Entity
                     withBlock.AddParameter("@JobID", oContractPPMVisit.JobID, true);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

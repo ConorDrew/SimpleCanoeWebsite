@@ -12,12 +12,12 @@ namespace FSM
     {
         public UCQuotesList()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCQuotesList_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCQuotesList(Entity.Sys.Enums.TableNames EntityToLinkToIn, int CustomerIDIn, int SiteIDIn) : base()
         {
@@ -299,8 +299,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event RefreshContractsEventHandler RefreshContracts;
 
@@ -405,8 +405,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupContractsDataGrid()
         {
@@ -537,8 +537,8 @@ namespace FSM
             Populate();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate()
         {
@@ -559,6 +559,6 @@ namespace FSM
             RefreshJobs?.Invoke();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -10,12 +10,12 @@ namespace FSM
 {
     public class FRMReceiveStock : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMReceiveStock() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMReceiveStock_Load;
 
             // This call is required by the Windows Form Designer.
@@ -593,8 +593,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -617,8 +617,8 @@ namespace FSM
             // DO NOTHING
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Entity.Orders.Order _oOrder = null;
 
         public Entity.Orders.Order Order
@@ -871,8 +871,8 @@ namespace FSM
             UpdateOrderItems(Conversions.ToInteger(txtQuantityInput.Text.Trim()));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void UpdateOrderItems(int QuantityInput)
         {
@@ -1084,6 +1084,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

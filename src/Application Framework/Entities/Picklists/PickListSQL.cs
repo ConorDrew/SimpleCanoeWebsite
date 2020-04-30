@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = databaseIn;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public DataView PickListTypes()
             {
@@ -447,7 +447,7 @@ namespace FSM.Entity
                 return Description;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

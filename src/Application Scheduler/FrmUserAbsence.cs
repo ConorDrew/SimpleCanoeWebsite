@@ -11,12 +11,12 @@ namespace FSM
         public FrmUserAbsence()
         {
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FrmUserAbsence_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public FrmUserAbsence(int absenceID = 0) : base()
         {
             base.Load += FrmUserAbsence_Load;
@@ -179,8 +179,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private IUserControl TheLoadedControl;
         private int _absenceID = 0;
 
@@ -216,6 +216,6 @@ namespace FSM
         }
 
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

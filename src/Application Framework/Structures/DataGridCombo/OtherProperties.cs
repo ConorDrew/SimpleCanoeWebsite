@@ -5,14 +5,14 @@ namespace FSM
 {
     public class CalculatedProperties : Properties
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         internal CalculatedProperties(BindableItem parent) : base(parent)
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal new BindableItem Parent
         {
@@ -27,8 +27,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public new CalculatedProperty AddNew(string name)
         {
@@ -83,8 +83,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -92,12 +92,12 @@ namespace FSM
                 this[x].onChildPropertyChanged(sender, e);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class CalculatedProperty : Property
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private BindableItem _Parent;
 
         private BindableItem Parent
@@ -127,16 +127,16 @@ namespace FSM
         internal SimpleStringArray triggers = new SimpleStringArray();
         private object _value;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal CalculatedProperty(CalculatedProperties container, string name) : base(container, name)
         {
             Parent = container.Parent;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal new CalculatedProperties Container
         {
@@ -151,8 +151,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public object Value
         {
@@ -167,8 +167,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -191,19 +191,19 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class CollectionProperties : Properties
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         internal CollectionProperties(BindableCollection parent) : base(parent)
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal new BindableCollection Parent
         {
@@ -218,8 +218,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public new CollectionProperty AddNew(string name)
         {
@@ -274,8 +274,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -289,12 +289,12 @@ namespace FSM
                 this[x].onListChanged();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class CollectionProperty : Property
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         // Indicates to raise the ListChanged event after the PropertyChanged event
         public bool DoListChangedOnPropertyChange = true;
@@ -306,15 +306,15 @@ namespace FSM
         // in this calculated collection property.
         internal SimpleStringArray childTriggers = new SimpleStringArray();
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal CollectionProperty(CollectionProperties container, string name) : base(container, name)
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal new CollectionProperties Container
         {
@@ -329,8 +329,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -357,6 +357,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

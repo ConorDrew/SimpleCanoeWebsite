@@ -10,7 +10,7 @@ namespace FSM
             InitializeComponent();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -31,8 +31,8 @@ namespace FSM
             ID = newID;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _ID = 0;
 
         public int ID
@@ -48,8 +48,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMLastServiceDate_Load(object sender, EventArgs e)
         {
@@ -76,6 +76,6 @@ namespace FSM
             DialogResult = DialogResult.OK;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

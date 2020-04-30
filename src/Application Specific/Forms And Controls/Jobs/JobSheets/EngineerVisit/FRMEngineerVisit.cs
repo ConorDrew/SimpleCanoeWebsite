@@ -20,7 +20,7 @@ namespace FSM
     {
         // SEE LAST REGION FOR ALL CHARGE PAGE CODE - ALP
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMEngineerVisit() : base()
         {
@@ -1774,8 +1774,8 @@ namespace FSM
             {
                 if (_btnAddAdditionalCharge != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnAddAdditionalCharge.Click -= btnAddAdditionalCharge_Click;
                 }
 
@@ -4904,7 +4904,7 @@ namespace FSM
             {
                 if (_btnChangeOutcome != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _btnChangeOutcome.Click -= btnChangeOutcome_Click;
                 }
 
@@ -12331,8 +12331,8 @@ namespace FSM
             this.PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataTable dtEngineerGetAll = App.DB.Engineer.Engineer_GetAll().Table;
         private DataTable dtPassFailNA = App.DB.Picklists.GetAll(Enums.PickListTypes.PassFailNA).Table;
         private DataTable dtYesNoNA = App.DB.Picklists.GetAll(Enums.PickListTypes.YesNoNA).Table;
@@ -12434,11 +12434,11 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private UCDocumentsList DocumentsControl;
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private DataView _VisitDefectDataview;
 
         public DataView VisitDefectDataview
@@ -12474,8 +12474,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _ApplianceWorkSheetDataview;
 
         public DataView ApplianceWorkSheetDataview
@@ -12581,7 +12581,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
         private FRMLogCallout _LogCalloutForm = null;
 
         public FRMLogCallout LogCalloutForm
@@ -12795,8 +12795,8 @@ namespace FSM
         private int loops = 0;
         private bool isSpecialPart = false;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupVisitDefectDataGrid()
         {
@@ -13214,8 +13214,8 @@ namespace FSM
             Helper.RemoveEventHandlers(dgAssets);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMEngineerVisit_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -14187,8 +14187,8 @@ namespace FSM
             lblRechargeTicked.Visible = chkRecharge.Checked;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate()
         {
@@ -14938,9 +14938,9 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
+        
         private DataView _AdditionalCharges;
 
         private DataView AdditionalCharges
@@ -15161,8 +15161,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupAdditionalChargeDataGrid()
         {
@@ -15940,8 +15940,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void InsertCharges(Entity.QuoteJobs.QuoteJob jbQuote)
         {
@@ -17221,9 +17221,9 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
+        
 
         public class AllocatedStatusColourColumn : DataGridLabelColumn
         {
@@ -18350,8 +18350,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _PhotoDataview;
 
         public DataView PhotoDataview

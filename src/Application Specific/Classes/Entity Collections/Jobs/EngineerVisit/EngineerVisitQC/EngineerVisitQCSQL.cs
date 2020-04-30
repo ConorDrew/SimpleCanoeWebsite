@@ -12,7 +12,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public EngineerVisitQC EngineerVisitQC_Get_EngineerVisitID(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -111,7 +111,7 @@ namespace FSM.Entity
                     withBlock.AddParameter("@CustomerSigned", oEngineerVisitQC.CustomerSigned, true);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

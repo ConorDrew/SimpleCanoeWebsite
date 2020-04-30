@@ -12,7 +12,7 @@ namespace FSM
 {
     public class FRMPOInvoiceAuthorisation : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMPOInvoiceAuthorisation() : base()
         {
@@ -123,8 +123,8 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnClose.Click -= btnClose_Click;
                 }
 
@@ -494,8 +494,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public IUserControl LoadedControl
         {
@@ -584,8 +584,8 @@ namespace FSM
             ShowData(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboValidateType)), Department);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void ShowData(int ValidateType = 0, string Department = null)
         {
@@ -619,6 +619,6 @@ namespace FSM
             Application.DoEvents();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

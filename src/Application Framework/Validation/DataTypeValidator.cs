@@ -6,7 +6,7 @@ namespace FSM
 {
     public class DataTypeValidator
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private bool _ignoreExceptionsOnSetMethods = false;
 
         public bool IgnoreExceptionsOnSetMethods
@@ -32,8 +32,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public DataTypeValidator()
         {
@@ -168,6 +168,6 @@ namespace FSM
             _errorTable.Remove(propertyName);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

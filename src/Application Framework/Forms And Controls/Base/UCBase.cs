@@ -9,7 +9,7 @@ namespace FSM
 {
     public class UCBase : UserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCBase() : base()
         {
@@ -51,8 +51,8 @@ namespace FSM
             Name = "CTRLBase";
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private ArrayList _FormButtons = null;
 
         public ArrayList FormButtons
@@ -68,8 +68,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadBaseControl(Control ctrl)
         {
@@ -156,6 +156,6 @@ namespace FSM
             Entity.Sys.Helper.Setup_Button(ref argbtn, ((Button)sender).AccessibleDescription);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

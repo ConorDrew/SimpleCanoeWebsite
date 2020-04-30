@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public QuoteJobAsset Insert(QuoteJobAsset qJobAsset)
             {
                 _database.ClearParameter();
@@ -57,7 +57,7 @@ namespace FSM.Entity
             }
 
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

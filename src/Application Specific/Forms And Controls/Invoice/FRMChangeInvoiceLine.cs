@@ -8,13 +8,13 @@ namespace FSM
 {
     public class FRMChangeInvoiceLine : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMChangeInvoiceLine() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             base.Load += FRMChangeInvoiceLine_Load;
 
             // This call is required by the Windows Form Designer.
@@ -277,8 +277,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -327,6 +327,6 @@ namespace FSM
             DialogResult = DialogResult.Cancel;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

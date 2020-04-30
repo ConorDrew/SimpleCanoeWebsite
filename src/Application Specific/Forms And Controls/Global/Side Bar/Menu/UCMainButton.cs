@@ -10,7 +10,7 @@ namespace FSM
 {
     public class UCMainButton : UCBase
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCMainButton() : base()
         {
@@ -55,8 +55,8 @@ namespace FSM
             {
                 if (_picIcon != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _picIcon.MouseEnter -= CtrlMouseEnter;
                     _picIcon.MouseLeave -= CtrlMouseLeave;
                     _picIcon.Click -= CtrlClick;
@@ -152,13 +152,13 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public event ButtonClickedEventHandler ButtonClicked;
 
         public delegate void ButtonClickedEventHandler(Entity.Sys.Enums.MenuTypes MenuType);
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         [Category("MenuItem")]
         [Description("Menu Caption Text")]
@@ -297,6 +297,6 @@ namespace FSM
             ButtonClicked?.Invoke(MenuType);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

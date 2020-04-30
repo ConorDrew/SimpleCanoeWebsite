@@ -172,7 +172,7 @@ namespace FSM.Entity.Sys
             CompanyDetails = new CompanyDetails.CompanyDetailsSql(this);
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private SqlConnection _paggedQueryConnection = null;
 
         private SqlConnection PaggedQueryConnection
@@ -248,8 +248,8 @@ namespace FSM.Entity.Sys
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public Management.ManagerSQL Manager;
         public PickLists.PickListSQL Picklists;
         public Users.UserSQL User;
@@ -387,8 +387,8 @@ namespace FSM.Entity.Sys
         public Customers.CustomerAlertSql CustomerAlert;
         public CompanyDetails.CompanyDetailsSql CompanyDetails;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private bool OpenConnection()
         {
@@ -1088,7 +1088,7 @@ namespace FSM.Entity.Sys
             // End Try
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public async Task<object> ExecuteAsync(string spName, params SqlParameter[] parameters)
         {
@@ -1105,7 +1105,7 @@ namespace FSM.Entity.Sys
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
+        
     }
 }

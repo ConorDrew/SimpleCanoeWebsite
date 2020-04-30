@@ -12,7 +12,7 @@ namespace FSM.Entity.UserLevels
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public void Insert(int UserID, DataTable t)
         {
 
@@ -55,6 +55,6 @@ namespace FSM.Entity.UserLevels
             return new DataView(dt);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

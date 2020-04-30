@@ -17,7 +17,7 @@ namespace FSM
             base.FormClosing += FRMDuplicateInvoices_FormClosing;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMDuplicateInvoices(List<Importer.DuplicateInvoice> duplicateInvoices) : base()
         {
@@ -111,8 +111,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public IUserControl LoadedControl
         {
@@ -122,8 +122,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -170,6 +170,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

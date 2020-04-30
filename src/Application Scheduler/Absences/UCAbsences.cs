@@ -62,7 +62,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private Enums.UserType _userType = new Enums.UserType();
 
         public Enums.UserType UserType
@@ -143,7 +143,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         public object LoadedItem
         {

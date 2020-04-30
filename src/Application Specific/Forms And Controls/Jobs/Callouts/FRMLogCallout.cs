@@ -12,12 +12,12 @@ namespace FSM
 {
     public class FRMLogCallout : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMLogCallout() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMLogCallout_Load;
 
             // This call is required by the Windows Form Designer.
@@ -362,8 +362,8 @@ namespace FSM
             {
                 if (_dgNotes != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _dgNotes.Click -= dgNotes_Click;
                     _dgNotes.CurrentCellChanged -= dgNotes_Click;
                 }
@@ -2608,8 +2608,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -2713,8 +2713,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private UCDocumentsList DocumentsControl;
 
         // Private CostingsControl As UCJobCostings
@@ -2853,7 +2853,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
         private Entity.JobInstalls.JobInstall _JI;
 
         private Entity.JobInstalls.JobInstall JI
@@ -2871,7 +2871,7 @@ namespace FSM
 
         public int LastViewedEngineerVisitID { get; set; }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void SetupQuoteDGV()
         {
@@ -3110,8 +3110,8 @@ namespace FSM
             cmsView.Show(btnView, new Point(0, 0));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void CloseForm()
         {
@@ -3138,9 +3138,9 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
+        
         private DataView _jobNotes = null;
 
         public DataView JobNotesDataView
@@ -3176,8 +3176,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupNotesDataGrid()
         {
@@ -3282,8 +3282,8 @@ namespace FSM
             ClearNotesFields();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void ClearNotesFields()
         {
@@ -3316,8 +3316,8 @@ namespace FSM
             tpNotes.Text = "Notes (" + JobNotesDataView.Table.Rows.Count + ")";
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
+        
         public bool quotecreated = false;
         public string quoteresult = "";
 
@@ -3608,7 +3608,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private DataView _dvcontactAttempts = null;
 
         public DataView DvContactAttempts
@@ -3723,6 +3723,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -12,12 +12,12 @@ namespace FSM
     {
         public UCDocumentsList()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCDocumentsList_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCDocumentsList(Entity.Sys.Enums.TableNames EntityToLinkToIn, int IDToLinkToIn) : base()
         {
@@ -224,8 +224,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Entity.Sys.Enums.TableNames _EntityToLinkTo;
 
         public Entity.Sys.Enums.TableNames EntityToLinkTo
@@ -315,8 +315,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupDocumentsDataGrid()
         {
@@ -412,8 +412,8 @@ namespace FSM
             App.ShowForm(typeof(FRMDocuments), true, new object[] { (Entity.Sys.Enums.TableNames)Conversions.ToInteger(SelectedDocumentDataRow["TableEnumID"]), Entity.Sys.Helper.MakeIntegerValid(IDToLinkTo), Entity.Sys.Helper.MakeIntegerValid(SelectedDocumentDataRow["DocumentID"]), this });
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate()
         {
@@ -432,6 +432,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

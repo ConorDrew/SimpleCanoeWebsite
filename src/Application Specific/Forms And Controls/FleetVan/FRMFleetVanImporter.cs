@@ -14,7 +14,7 @@ namespace FSM
 {
     public class FRMFleetVanImporter : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMFleetVanImporter() : base()
         {
@@ -327,8 +327,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public IUserControl LoadedControl
         {
@@ -338,8 +338,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private System.IO.FileInfo _file;
 
         public System.IO.FileInfo File
@@ -439,8 +439,8 @@ namespace FSM
             public int Mileage { get; set; }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMImport_Load(object sender, EventArgs e)
         {
@@ -456,8 +456,8 @@ namespace FSM
             Import();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void LoadData()
         {
@@ -815,6 +815,6 @@ namespace FSM
             return dt;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

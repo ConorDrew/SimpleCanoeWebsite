@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int CustomerScheduleOfRateID)
             {
                 _database.ClearParameter();
@@ -192,7 +192,7 @@ namespace FSM.Entity
                 return dt;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

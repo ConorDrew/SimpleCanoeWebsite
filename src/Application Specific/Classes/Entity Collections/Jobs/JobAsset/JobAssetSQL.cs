@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public JobAsset Insert(JobAsset oJobAsset, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -113,7 +113,7 @@ namespace FSM.Entity
                 return assets;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

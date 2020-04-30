@@ -13,7 +13,7 @@ namespace FSM
     public class frmAbsences : FRMBaseForm
     {
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public frmAbsences() : base()
         {
             base.Load += frmHolidays_Load;
@@ -840,8 +840,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvAbsences = new DataView();
 
         public DataView AbsencesDataView
@@ -877,8 +877,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         public event RefreshEngineerAbsencesEventHandler RefreshEngineerAbsences;
 
         public delegate void RefreshEngineerAbsencesEventHandler();
@@ -936,8 +936,8 @@ namespace FSM
             frm.ShowDialog();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private void SetupAbsenceDataGridGrid()
         {
             SuspendLayout();
@@ -1186,7 +1186,7 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
     }
 }

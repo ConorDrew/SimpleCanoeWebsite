@@ -15,8 +15,8 @@ namespace FSM
     {
         public FRMConvertToAnOrder(System.Data.SqlClient.SqlTransaction trans) : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMConvertToAnOrder_Load;
             Trans = trans;
 
@@ -26,7 +26,7 @@ namespace FSM
             // Add any initialization after the InitializeComponent() call
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMConvertToAnOrder() : base()
         {
@@ -1217,8 +1217,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void LoadMe(object sender, EventArgs e)
         {
@@ -1303,8 +1303,8 @@ namespace FSM
             ID = newID;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private System.Data.SqlClient.SqlTransaction _Trans;
 
         public System.Data.SqlClient.SqlTransaction Trans
@@ -1639,8 +1639,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupVisitsDataGrid()
         {
@@ -3492,6 +3492,6 @@ namespace FSM
             throw new NotImplementedException();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

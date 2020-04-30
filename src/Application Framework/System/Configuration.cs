@@ -157,18 +157,18 @@ namespace FSM.Entity
                 return default;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private bool _isDebug = false;
 
             public bool IsDebug
             {
                 get
                 {
-                    /* TODO ERROR: Skipped IfDirectiveTrivia */
+                     
 #if Debug
                     _isDebug = true;
 #endif
-                    /* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                     
                     return _isDebug;
                 }
             }
@@ -182,7 +182,7 @@ namespace FSM.Entity
 #if Release
                     _isRelease = true;
 #endif
-                    /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                       
                     return _isRelease;
                 }
             }
@@ -196,7 +196,7 @@ namespace FSM.Entity
 #if Gasway
                     _isGasway = true;
 #endif
-                    /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                       
                     return _isGasway;
                 }
             }
@@ -210,7 +210,7 @@ namespace FSM.Entity
 #if RFT
                     _isRFT = true;
 #endif
-                    /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                       
                     return _isRFT;
                 }
             }
@@ -224,7 +224,7 @@ namespace FSM.Entity
 #if RFTTEST
                     _isRFTTEST = true;
 #endif
-                    /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                       
                     return _isRFTTEST;
                 }
             }
@@ -238,7 +238,7 @@ namespace FSM.Entity
 #if Blueflame
                     _isBlueflame = true;
 #endif
-                    /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                       
                     return _isBlueflame;
                 }
             }
@@ -252,13 +252,13 @@ namespace FSM.Entity
 #if BlueflameTest
                     _isBlueflameTest = true;
 #endif
-                    /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                       
                     return _isBlueflameTest;
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             private string _DatabaseServer = string.Empty;
 
             public string DatabaseServer
@@ -412,8 +412,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public string SystemVersion
             {
@@ -587,7 +587,7 @@ namespace FSM.Entity
             public string CompanyDomain;
             public string CompanyFullAddress;
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

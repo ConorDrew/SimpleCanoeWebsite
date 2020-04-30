@@ -6,7 +6,7 @@ namespace FSM
 {
     public class DataGridSchedulerColumn : DataGridLabelColumn
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
@@ -53,6 +53,6 @@ namespace FSM
             g.DrawString(str, DataGridTableStyle.DataGrid.Font, strBrush, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

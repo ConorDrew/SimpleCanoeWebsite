@@ -12,7 +12,7 @@ namespace FSM
 {
     public class FRMOrderManager : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMOrderManager() : base()
         {
@@ -885,7 +885,7 @@ namespace FSM
             {
                 if (_btnFilterResults != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _btnFilterResults.Click -= btnFilterResults_Click;
                 }
 
@@ -1439,12 +1439,12 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public class PartsNotReceivedColourColumn : DataGridLabelColumn
         {
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
             {
@@ -1469,11 +1469,11 @@ namespace FSM
                 g.DrawString("", DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -1499,8 +1499,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvOrders;
 
         private DataView OrdersDataview
@@ -1628,8 +1628,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupOrdersDataGrid()
         {
@@ -1811,8 +1811,8 @@ namespace FSM
             dgOrders.TableStyles.Add(tbStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void FRMOrderManager_Load(object sender, EventArgs e)
         {
@@ -2104,8 +2104,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void PopulateDatagrid()
         {

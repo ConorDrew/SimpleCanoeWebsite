@@ -22,7 +22,7 @@ namespace FSM.Entity
     {
         public class Helper
         {
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public static string MakeStringValid(object o)
             {
@@ -380,8 +380,8 @@ namespace FSM.Entity
                 return string.IsNullOrEmpty(Conversions.ToString(value)) | string.IsNullOrWhiteSpace(Conversions.ToString(value));
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             // Set the format and data
             public static void SetUpDataGrid(DataGrid dg, bool captionIsVisible = false)
@@ -453,8 +453,8 @@ namespace FSM.Entity
                 return DataGridTableStyle1;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public static void SetUpDataGridView(DataGridView dgv, bool captionIsVisible = false)
             {
@@ -480,8 +480,8 @@ namespace FSM.Entity
                 // AddHandler dgv.CurrentCellChanged, AddressOf dGrid_Multievents
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public static void ClearGroupBox(GroupBox grp)
             {
@@ -599,8 +599,8 @@ namespace FSM.Entity
                 hoverToolTip.SetToolTip(btn, caption);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public static string HashPassword(string password)
             {

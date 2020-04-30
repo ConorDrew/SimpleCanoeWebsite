@@ -14,7 +14,7 @@ namespace FSM.Entity
             {
                 _database = database;
             }
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void POInvoiceImport_UpdateAuthorised(int ID, bool Authorised, int AuthorisedByUserID, DateTime AuthorisedOn, string AuthReason, string AuthReasonDetail = "")
             {
                 _database.ClearParameter();
@@ -45,7 +45,7 @@ namespace FSM.Entity
                 return Conversions.ToInteger(_database.ExecuteScalar("SELECT COUNT(*) from tblPOInvoiceImport_Orders WHERE RequiresAuthorisation = 1 AND Authorised = 0 AND PODepartment = @PODepartment"));
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

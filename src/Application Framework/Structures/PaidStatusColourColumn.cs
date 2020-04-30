@@ -6,7 +6,7 @@ namespace FSM
 {
     public class PaidStatusColourColumn : DataGridLabelColumn
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
         {
@@ -48,6 +48,6 @@ namespace FSM
             g.DrawString("", DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

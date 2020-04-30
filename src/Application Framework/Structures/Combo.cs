@@ -8,7 +8,7 @@ namespace FSM
 {
     public class Combo
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private string _description = "";
 
         public string Description
@@ -54,8 +54,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public Combo(string descriptionIn, string valueIn, object additionalItemIn = null)
         {
@@ -331,6 +331,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

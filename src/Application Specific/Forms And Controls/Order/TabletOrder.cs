@@ -36,7 +36,7 @@ namespace FSM
             // Add any initialization after the InitializeComponent() call
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public TabletOrder() : base()
         {
@@ -169,8 +169,8 @@ namespace FSM
             {
                 if (_btnCreate != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnCreate.Click -= btnCreate_Click;
                 }
 
@@ -917,8 +917,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -937,8 +937,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupDataTable()
         {
@@ -1167,8 +1167,8 @@ namespace FSM
 
         private int SupplierID = 0;
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private JobNumber _OrderNumber = new JobNumber();
 
         public JobNumber OrderNumber
@@ -1529,6 +1529,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

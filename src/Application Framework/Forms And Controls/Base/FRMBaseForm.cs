@@ -10,7 +10,7 @@ namespace FSM
 {
     public class FRMBaseForm : Form, IBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMBaseForm() : base()
         {
@@ -55,9 +55,9 @@ namespace FSM
             {
                 if (_picHeader != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
+                    
                     _picHeader.MouseHover -= picHeader_MouseHover;
                 }
 
@@ -147,9 +147,9 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
+        
         private ArrayList _FormButtons = null;
 
         public ArrayList FormButtons
@@ -300,8 +300,8 @@ namespace FSM
             Entity.Sys.Helper.Setup_Button(ref argbtn, ((Button)sender).AccessibleDescription);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private object[] _FormParameters = null;
 
         public object[] SetFormParameters
@@ -354,6 +354,6 @@ namespace FSM
             hoverToolTip.SetToolTip(picHeader, App.TheSystem.Description);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

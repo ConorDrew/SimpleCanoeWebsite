@@ -10,12 +10,12 @@ namespace FSM
 {
     public class FRMEngineerRaiseJob : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMEngineerRaiseJob() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMEngineer_Load;
 
             // This call is required by the Windows Form Designer.
@@ -310,6 +310,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

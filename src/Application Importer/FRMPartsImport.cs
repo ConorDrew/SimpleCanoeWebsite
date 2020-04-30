@@ -17,12 +17,12 @@ namespace FSM
 {
     public class FRMPartsImport : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMPartsImport() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             this.Load += FRMPartsImport_Load;
 
             // This call is required by the Windows Form Designer.
@@ -823,8 +823,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public IUserControl LoadedControl
         {
@@ -834,8 +834,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private FileInfo _file;
 
         public FileInfo File
@@ -1102,8 +1102,8 @@ namespace FSM
             Import();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void ShowData()
         {
@@ -1385,6 +1385,6 @@ namespace FSM
             Process.Start("explorer.exe", App.TheSystem.Configuration.DocumentsLocation + "PartsFiles");
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

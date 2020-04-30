@@ -10,12 +10,12 @@ namespace FSM
 {
     public class FRMPartSelectLocation : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMPartSelectLocation() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMSelectLocation_Load;
 
             // This call is required by the Windows Form Designer.
@@ -83,7 +83,7 @@ namespace FSM
                     // Me.DialogResult =DialogResult.OK
                     // End Sub
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _btnOK.Click -= btnOK_Click;
                 }
 
@@ -270,8 +270,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -355,8 +355,8 @@ namespace FSM
             // DO NOTHING
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupLocationsDataGridView()
         {
@@ -495,8 +495,8 @@ namespace FSM
         // Me.dgLocations.TableStyles.Add(tbStyle)
         // End Sub
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         // Private _Locations As DataView = Nothing
         // Public Property Locations() As DataView
         // Get

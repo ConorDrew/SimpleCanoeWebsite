@@ -31,7 +31,7 @@ namespace FSM
             scheduleOwner.Closed += frmVisitClosed;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public frmDetailsPopup(frmEngineerSchedule scheduleOwner) : base()
         {
@@ -253,7 +253,7 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         private bool shiftIsHeldDown
         {
@@ -286,7 +286,7 @@ namespace FSM
             {
                 if (__timer != null)
                 {
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
                     __timer.Tick -= Timer_tick;
                 }
 
@@ -480,8 +480,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         [DllImport("user32")]
         private static extern int WindowFromPoint(int xPoint, int yPoint);
@@ -492,8 +492,8 @@ namespace FSM
         [DllImport("user32")]
         private static extern int GetParent(int hwnd);
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         [DllImport("user32")]
         private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
@@ -570,6 +570,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

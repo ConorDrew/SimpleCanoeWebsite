@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int NoteID)
             {
                 _database.ClearParameter();
@@ -139,7 +139,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("Notes_Update");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

@@ -21,13 +21,13 @@ namespace FSM
     {
         private static MySettings defaultInstance = (MySettings)Synchronized(new MySettings());
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia *//* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia *//* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+           
         public static MySettings Default
         {
             get
             {
 
-                /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                   
                 return defaultInstance;
             }
         }

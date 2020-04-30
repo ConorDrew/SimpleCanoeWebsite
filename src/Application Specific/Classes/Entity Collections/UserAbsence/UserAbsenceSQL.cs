@@ -15,7 +15,7 @@ namespace FSM.Entity.UserAbsence
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void Delete(int UserAbsenceID)
         {
@@ -118,6 +118,6 @@ namespace FSM.Entity.UserAbsence
         }
 
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void DeleteForOrder(int OrderID)
             {
                 _database.ClearParameter();
@@ -239,7 +239,7 @@ namespace FSM.Entity
                     withBlock.AddParameter("@KeyedBy", App.loggedInUser.UserID, true);
                 }
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

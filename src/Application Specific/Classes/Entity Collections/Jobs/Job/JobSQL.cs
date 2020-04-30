@@ -18,7 +18,7 @@ namespace FSM.Entity.Jobs
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void DeleteReservedOrderNumber(int JobNumber, string Prefix)
         {
@@ -1850,8 +1850,8 @@ namespace FSM.Entity.Jobs
             return _currentJob;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public DataView GetJobNotes(int jobID)
         {
@@ -1899,6 +1899,6 @@ namespace FSM.Entity.Jobs
             _database.ExecuteSP_NO_Return("JobNote_Delete");
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

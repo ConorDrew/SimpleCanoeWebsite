@@ -13,7 +13,7 @@ namespace FSM
 {
     public class FrmDisplayEngineers : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FrmDisplayEngineers() : base()
         {
@@ -97,8 +97,8 @@ namespace FSM
             {
                 if (_dgEngineers != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _dgEngineers.Click -= dgEngineers_Click;
                     _dgEngineers.MouseDoubleClick -= dgEngineers_MouseDoubleClick;
                 }
@@ -683,8 +683,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private string engineersPostcodes;
         private List<string> engineersPostcodesList;
         private string engineersQualifications;
@@ -733,8 +733,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetUpDataGrid()
         {
@@ -890,8 +890,8 @@ namespace FSM
             ClearTicks();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Reset_filters()
         {
@@ -1045,6 +1045,6 @@ namespace FSM
             grpMain.Text = "Engineers to Display (" + EngineersDataView.Count + ")";
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

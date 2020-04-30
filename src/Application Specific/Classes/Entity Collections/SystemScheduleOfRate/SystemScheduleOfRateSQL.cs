@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int SystemScheduleOfRateID)
             {
                 _database.ClearParameter();
@@ -154,7 +154,7 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 App.DB.ExecuteScalar("DELETE FROM [tblSOREnginerQual] Where [SystemScheduleOfRateID] = " + sorId);
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

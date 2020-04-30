@@ -16,8 +16,6 @@ namespace FSM
 {
     public class UCSite : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public UCSite() : base()
         {
             base.Load += UCSite_Load;
@@ -1652,8 +1650,6 @@ namespace FSM
             {
                 if (_btnAddContract != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _btnAddContract.Click -= btnAddContract_Click;
                 }
 
@@ -1956,8 +1952,6 @@ namespace FSM
             {
                 if (_dgNotes != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
                     _dgNotes.Click -= dgNotes_Click;
                     _dgNotes.CurrentCellChanged -= dgNotes_Click;
                 }
@@ -2256,8 +2250,6 @@ namespace FSM
             {
                 if (_btnAddModifyPlan != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                     _btnAddModifyPlan.Click -= btnAddModifyPlan_Click;
                 }
 
@@ -5890,9 +5882,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -5931,8 +5920,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private UCDocumentsList DocumentsControl;
         private UCQuotesList QuotesControl;
         private UCCustomerScheduleOfRate CustomerScheduleOfRateControl;
@@ -6285,9 +6272,6 @@ namespace FSM
         }
 
         private bool FlagShown = false;
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         public void SetupContactDataGrid()
         {
@@ -7280,9 +7264,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         private void runFilters()
         {
             if (JobsDataView is object)
@@ -7776,9 +7757,6 @@ namespace FSM
             txtSurname.Text = "VOID";
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private DataView _siteNotes = null;
 
         public DataView SiteNotesDataView
@@ -7822,9 +7800,6 @@ namespace FSM
                 }
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         public void SetupNotesDataGrid()
         {
@@ -7928,9 +7903,6 @@ namespace FSM
 
             ClearNotesFields();
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         private void ClearNotesFields()
         {
@@ -8168,7 +8140,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private DataView _dvSiteFuels = null;
 
         public DataView SiteFuelsDataView
@@ -8345,9 +8316,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
         public void SetupSiteAuthorityAuditDataGrid()
         {
             var tStyle = dgAuthorityAudit.TableStyles[0];
@@ -8467,7 +8435,5 @@ namespace FSM
                 }
             }
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

@@ -10,12 +10,12 @@ namespace FSM
 {
     public class UCStockReplenishmentData : UCBase
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCStockReplenishmentData() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCData_Load;
 
             // This call is required by the Windows Form Designer.
@@ -112,8 +112,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public object LoadedItem
         {
@@ -123,8 +123,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _Data;
 
         public DataView Data
@@ -145,8 +145,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataGridViewCellStyle m_SelectedStyle = new DataGridViewCellStyle();
         private int m_SelectedRow = -1;
 
@@ -365,6 +365,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

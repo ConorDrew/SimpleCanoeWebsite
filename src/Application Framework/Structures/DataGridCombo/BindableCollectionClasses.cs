@@ -8,7 +8,7 @@ namespace FSM
 
     public abstract class BindableCollection : CollectionBase, IBindingList
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         // primitives for IBindingList
         private bool _allowEdit = true;
@@ -45,8 +45,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Add(BindableChildItem item)
         {
@@ -71,8 +71,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -84,8 +84,8 @@ namespace FSM
             propertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public bool AllowEdit
         {
@@ -159,8 +159,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public abstract object AddNew();
 
@@ -189,8 +189,8 @@ namespace FSM
             throw new NotSupportedException();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event ListChangedEventHandler ListChanged;
 
@@ -207,8 +207,8 @@ namespace FSM
             Properties.onListChanged();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected override void OnClearComplete()
         {
@@ -238,12 +238,12 @@ namespace FSM
             onListChanged(ListChangedType.ItemChanged, index);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public abstract class BindableRootCollection : BindableCollection, Interfaces.IPersistable
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         // native member declarations
         private RootObject myRoot = new RootObject();
@@ -252,8 +252,8 @@ namespace FSM
         [System.Xml.Serialization.XmlIgnore()]
         public abstract string DefaultFileNameAndExt { get; }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         [System.Xml.Serialization.XmlIgnore()]
         public string CurrentLocation
@@ -297,8 +297,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected static string defaultPersistFolder
         {
@@ -325,6 +325,6 @@ namespace FSM
             RootObject.Write((Interfaces.IPersistable)item);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

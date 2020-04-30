@@ -11,12 +11,12 @@ namespace FSM
 {
     public class FRMEngineerTimesheets : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMEngineerTimesheets() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMOrderManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -834,8 +834,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -858,8 +858,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private DataView _dvTimesheets;
 
         private DataView TimesheetsDataview
@@ -918,8 +918,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupTimesheetsDataGrid()
         {
@@ -1064,8 +1064,8 @@ namespace FSM
             RunFilter();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void ResetFilters()
         {
@@ -1112,6 +1112,6 @@ namespace FSM
             TimesheetsDataview = App.DB.EngineerTimesheets.GetAll(whereClause, whereClause2);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

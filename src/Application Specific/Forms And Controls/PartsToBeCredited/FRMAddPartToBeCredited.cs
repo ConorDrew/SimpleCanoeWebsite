@@ -16,7 +16,7 @@ namespace FSM
             txtQtyAvailable.Text = qty.ToString();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -35,7 +35,7 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         private void btnOK_Click(object sender, EventArgs e)
         {

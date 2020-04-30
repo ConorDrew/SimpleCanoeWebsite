@@ -11,12 +11,12 @@ namespace FSM
 {
     public class FRMCheckListManager : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMCheckListManager() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMCheckListManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -1057,8 +1057,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -1083,8 +1083,8 @@ namespace FSM
             // DO NOTHING
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private bool SectionSelected = false;
         private bool AreaSelected = false;
         private bool TaskSelected = false;
@@ -1229,8 +1229,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupSectionsDataGrid()
         {
@@ -1829,8 +1829,8 @@ namespace FSM
             SubTaskDataView = App.DB.SubTask.SubTask_Get_For_Task(Conversions.ToInteger(SelectedSubTaskDataRow["TaskID"]));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private bool AddSection()
         {
@@ -2113,6 +2113,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

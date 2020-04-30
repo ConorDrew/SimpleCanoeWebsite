@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int OrderPartID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -171,7 +171,7 @@ namespace FSM.Entity
                 _database.AddParameter("@OrderPartID", OrderPartID, true);
                 _database.ExecuteSP_NO_Return("OrderPart_EngineerReceived");
             }
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

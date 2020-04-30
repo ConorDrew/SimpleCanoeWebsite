@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = databaseIn;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public JobLock Check(int JobID)
             {
                 var oJobLock = new JobLock();
@@ -100,7 +100,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("JobLock_DeleteAll");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

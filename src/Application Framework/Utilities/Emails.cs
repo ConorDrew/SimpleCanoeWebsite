@@ -12,7 +12,7 @@ namespace FSM.Entity
     {
         public class Emails
         {
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             private string _From = "";
 
             public string From
@@ -163,8 +163,8 @@ namespace FSM.Entity
                 }
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public bool Send()
             {
@@ -176,12 +176,12 @@ namespace FSM.Entity
                         var email = new SmtpClient();
                         From = Conversions.ToString(Interaction.IIf(string.IsNullOrEmpty(From), EmailAddress.Gabriel, From));
                         message.From = new MailAddress(From);
-                        /* TODO ERROR: Skipped IfDirectiveTrivia */
+                         
 #if Debug || RFTTEST
                         message.To.Add(EmailAddress.Test);
                         return true;
 #endif
-                        /* TODO ERROR: Skipped ElseDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+                          
                         message.Subject = Subject;
                         message.Body = Body;
                         foreach (string file in Attachments)
@@ -210,7 +210,7 @@ namespace FSM.Entity
                 return default;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

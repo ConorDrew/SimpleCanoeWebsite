@@ -31,7 +31,7 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         private void UCSite_Load(object sender, EventArgs e)
         {
@@ -54,8 +54,8 @@ namespace FSM
             throw new NotImplementedException();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Entity.Sites.Site _osite;
 
         public Entity.Sites.Site CurrentSite
@@ -161,8 +161,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupSiteContactsDataGrid()
         {
@@ -290,8 +290,8 @@ namespace FSM
             dgSiteContacts.TableStyles.Add(tStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void PopulateSiteContactsDataGrid()
         {
@@ -326,8 +326,8 @@ namespace FSM
             btnSaveContact.Text = "Save";
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void btnSaveContact_Click(object sender, EventArgs e)
         {
@@ -433,6 +433,6 @@ namespace FSM
             Clear();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

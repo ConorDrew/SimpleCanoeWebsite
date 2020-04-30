@@ -8,7 +8,7 @@ namespace FSM.Importer
 {
     public class Validator
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private ArrayList _DataToValidate;
         private ArrayList _arrayList;
         private FRMPartsImport _fRMImportNew;
@@ -63,8 +63,8 @@ namespace FSM.Importer
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public Validator(ArrayList DataToValidateIn, ref FRMImport ImportFormIn)
         {
@@ -136,8 +136,8 @@ namespace FSM.Importer
             Errors.Add(string.Format("Error in {0} at row {1}: {2} - {3}", ((DataView)DataToValidate[SheetNumber]).Table.TableName, RowNumber + 1, ColumnName, Message));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private ArrayList ValidateParts(DataView dvParts, int SupplierID)
         {
@@ -323,6 +323,6 @@ namespace FSM.Importer
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -11,12 +11,12 @@ namespace FSM
 {
     public class DLGVisitAdditionalWorkSheet : FRMBaseForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public DLGVisitAdditionalWorkSheet() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += DLGVisitAssetWorkSheet_Load;
 
             // This call is required by the Windows Form Designer.
@@ -1526,7 +1526,7 @@ namespace FSM
             {
                 if (_cboType != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _cboType.SelectedIndexChanged -= cboType_SelectedIndexChanged;
                 }
 
@@ -2510,8 +2510,8 @@ namespace FSM
             PerformLayout();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private bool _updating = true;
 
         public bool Updating

@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public ProductTransaction ProductTransaction_GetByOrderLocationProduct(int OrderLocationProductID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -296,7 +296,7 @@ namespace FSM.Entity
                 _database.AddParameter("@OrderLocationProductID", oProductTransaction.OrderLocationProductID, true);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

@@ -13,12 +13,12 @@ namespace FSM
     {
         public FRMSiteFuel()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += FRMContactInfo_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMSiteFuel(Entity.Sites.Site oSite) : base()
         {
@@ -1382,8 +1382,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -1404,8 +1404,8 @@ namespace FSM
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupSiteFuelDataGrid()
         {
@@ -1488,8 +1488,8 @@ namespace FSM
             dgSiteFuelAudit.TableStyles.Add(tStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private Entity.Sites.Site _osite;
 
         public Entity.Sites.Site CurrentSite
@@ -1807,8 +1807,8 @@ namespace FSM
             ttSiteFuel.Hide(dgSiteFuel);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void PopulateSiteFuelDataGrid()
         {
@@ -1846,6 +1846,6 @@ namespace FSM
             FRMLastServiceDate fLSD = (FRMLastServiceDate)App.ShowForm(typeof(FRMLastServiceDate), true, new object[] { CurrentSite.SiteID });
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

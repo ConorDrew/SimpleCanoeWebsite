@@ -10,11 +10,11 @@ namespace FSM
     {
         public FrmEngineerAbsence()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
             base.Load += FrmEngineerAbsence_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FrmEngineerAbsence(int absenceID = 0) : base()
         {
@@ -177,8 +177,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private IUserControl TheLoadedControl;
         private int _absenceID = 0;
 

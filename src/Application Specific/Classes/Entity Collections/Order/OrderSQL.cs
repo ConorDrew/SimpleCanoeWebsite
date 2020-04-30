@@ -17,7 +17,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public DataView Order_CheckReference(string OrderRef)
             {
@@ -593,7 +593,7 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
 
             public void ReallocateReceivedStock(int LocationID, int StockTransactionType, string Type, int PartProductID, int Quantity, int OrderPartProductID)
             {

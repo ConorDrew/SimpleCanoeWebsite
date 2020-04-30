@@ -14,7 +14,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public QuoteJobItem Insert(QuoteJobItem qJobItem)
             {
                 _database.ClearParameter();
@@ -62,7 +62,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("QuoteJobItem_Delete");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

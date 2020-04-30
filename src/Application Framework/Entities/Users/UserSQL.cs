@@ -18,7 +18,7 @@ namespace FSM.Entity
                 _database = databaseIn;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
 
             public bool Authenticate(string UserName, string Password)
             {
@@ -262,8 +262,8 @@ namespace FSM.Entity
                 _database.ExecuteScalar("UPDATE tblUser Set SchedulerTextSize = " + TextSize + " Where UserID = " + UserID);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
 
             public DataView GetSecurityUserModulesDefaults()
             {
@@ -385,7 +385,7 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("UserAccessAudit_Insert");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

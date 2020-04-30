@@ -19,7 +19,7 @@ namespace FSM
             base.Load += frmVisit_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public frmVisit(int EngineerIDIn, DateTime Date, int SORTotal, int EngineerVisitID, bool isCopyIn) : base()
         {
@@ -1793,7 +1793,7 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
         private bool isCopy = false;
         private frmDetailsPopup _detailPopup;
         private DataTable timeSlotDt;

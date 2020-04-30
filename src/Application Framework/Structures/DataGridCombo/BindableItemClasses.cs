@@ -8,7 +8,7 @@ namespace FSM
 
     public abstract class BindableItem : IEditableObject, IDataErrorInfo
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public BindableItem()
         {
@@ -33,8 +33,8 @@ namespace FSM
 
         // Public MustOverride ReadOnly Property IsRootObject()
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public object get_PropertyValue(string name)
         {
@@ -51,8 +51,8 @@ namespace FSM
             return default;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -87,8 +87,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void BeginEdit()
         {
@@ -115,8 +115,8 @@ namespace FSM
             _isNew = false;
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private string Error
         {
@@ -150,27 +150,27 @@ namespace FSM
             throw new NotImplementedException();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public abstract class BindableChildItem : BindableItem
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public event RemoveMeEventHandler RemoveMe;
 
         public delegate void RemoveMeEventHandler(BindableChildItem item);
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void onRemoveMe()
         {
             RemoveMe?.Invoke(this);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         protected override void CancelEdit()
         {
@@ -181,12 +181,12 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public abstract class BindableRootItem : BindableItem, Interfaces.IPersistable
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         // native member declarations
         private RootObject myRoot = new RootObject();
@@ -196,8 +196,8 @@ namespace FSM
 
         public string DefaultName { get; }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         [System.Xml.Serialization.XmlIgnore()]
         public string CurrentLocation
@@ -241,8 +241,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public static object CreateDefaultList(object item)
         {
@@ -282,6 +282,6 @@ namespace FSM
             RootObject.Write((Interfaces.IPersistable)item);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

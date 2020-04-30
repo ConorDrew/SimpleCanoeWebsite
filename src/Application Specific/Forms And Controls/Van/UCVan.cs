@@ -12,12 +12,12 @@ namespace FSM
 {
     public class UCVan : UCBase, IUserControl
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCVan() : base()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCVan_Load;
 
             // This call is required by the Windows Form Designer.
@@ -524,7 +524,7 @@ namespace FSM
                 {
                     _dgvParts.DoubleClick -= dgvParts_DoubleClick;
 
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                    
                     _dgvParts.CellEndEdit -= dgvParts_CellEndEdit;
                     _dgvParts.ColumnHeaderMouseClick -= dgvParts_ColumnHeaderMouseClick;
                 }
@@ -1583,8 +1583,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -1605,8 +1605,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1972,8 +1972,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate(int ID = 0)
         {

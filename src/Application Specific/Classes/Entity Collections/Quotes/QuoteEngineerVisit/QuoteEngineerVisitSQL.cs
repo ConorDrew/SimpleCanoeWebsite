@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public QuoteEngineerVisit Insert(QuoteEngineerVisit qEngineerVisit)
             {
                 _database.ClearParameter();
@@ -55,7 +55,7 @@ namespace FSM.Entity
                 return engineerVisits;
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

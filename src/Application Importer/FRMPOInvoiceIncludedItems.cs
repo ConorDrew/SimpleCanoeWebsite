@@ -39,7 +39,7 @@ namespace FSM
             DialogResult = DialogResult.Cancel;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         private string _POToShow;
 
         public string POToShow
@@ -124,8 +124,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void SetupDG()
         {
@@ -325,7 +325,7 @@ namespace FSM
             // dgvPOData.Columns(5).ReadOnly = False
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
 
         private void dgvData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {

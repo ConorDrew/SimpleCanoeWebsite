@@ -10,7 +10,7 @@ namespace FSM
 {
     public class FRMChangeVAT : Form
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public FRMChangeVAT(int CurrentRateID, int InvoicedIDin, string InvNumber) : base()
         {
@@ -83,8 +83,8 @@ namespace FSM
             {
                 if (_btnSetRate != null)
                 {
-                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                    /* TODO ERROR: Skipped RegionDirectiveTrivia */
+                    
+                    
                     _btnSetRate.Click -= btnSetRate_Click;
                 }
 
@@ -180,8 +180,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _InvoicedID;
 
         private int InvoicedID
@@ -247,8 +247,8 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupRatesDataGrid()
         {
@@ -277,8 +277,8 @@ namespace FSM
             dgRates.TableStyles.Add(tbStyle);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void Populate(int CurrentRateID)
         {
@@ -296,6 +296,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

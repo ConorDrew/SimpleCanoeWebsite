@@ -10,12 +10,12 @@ namespace FSM
     {
         public UCJobCostings()
         {
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             base.Load += UCJobCost_Load;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public UCJobCostings(int IDToLinkToIn) : base()
         {
@@ -62,8 +62,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private Entity.JobInstalls.JobInstall _JI;
 
@@ -126,8 +126,8 @@ namespace FSM
         // End Get
         // End Property
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         private void SetupDocumentsDataGrid()
         {
@@ -169,13 +169,13 @@ namespace FSM
         // ShowForm(GetType(FRMDocuments), True, New Object() {CType(SelectedDocumentDataRow.Item("TableEnumID"), Entity.Sys.Enums.TableNames), Entity.Sys.Helper.MakeIntegerValid(IDToLinkTo), Entity.Sys.Helper.MakeIntegerValid(SelectedDocumentDataRow.Item("DocumentID")), Me})
         // End Sub
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
 
         public void Populate()
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

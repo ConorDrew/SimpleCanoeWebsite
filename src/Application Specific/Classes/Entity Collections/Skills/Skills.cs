@@ -11,7 +11,7 @@ namespace FSM.Entity.Skills
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -41,7 +41,7 @@ namespace FSM.Entity.Skills
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 
     public class SkillType
@@ -53,7 +53,7 @@ namespace FSM.Entity.Skills
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -116,8 +116,8 @@ namespace FSM.Entity.Skills
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
+        
         private int _skillTypeId = 0;
 
         public int SkillTypeID
@@ -153,6 +153,6 @@ namespace FSM.Entity.Skills
                 _dataTypeValidator.SetValue(this, "_name", value);
             }
         }
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }

@@ -18,7 +18,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void OrderConsolidation_Clear_Orders(int OrderConsolidationID)
             {
                 _database.ClearParameter();
@@ -477,7 +477,7 @@ namespace FSM.Entity
                 return _database.ExecuteSP_DataSet("[Orders_Complete_ByConsolidationOrderID]");
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

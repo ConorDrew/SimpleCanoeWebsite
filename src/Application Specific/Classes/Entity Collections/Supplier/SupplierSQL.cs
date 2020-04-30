@@ -15,7 +15,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public void Delete(int SupplierID)
             {
                 _database.ClearParameter();
@@ -269,7 +269,7 @@ namespace FSM.Entity
                 return Conversions.ToBoolean(hasSecondaryPrice);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
         }
     }
 }

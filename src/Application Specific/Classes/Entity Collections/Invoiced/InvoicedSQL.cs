@@ -18,7 +18,7 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public Invoiced Invoiced_Get(int InvoicedID)
             {
                 _database.ClearParameter();
@@ -218,8 +218,8 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public DataTable GetJobNominalCode_ForSupplierInvoice(int OrderID)
             {
                 _database.ClearParameter();
@@ -228,7 +228,7 @@ namespace FSM.Entity
                 return Results;
             }
 
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
             public async Task MarkInvoiceAsExportedAsync(int invoicedId)
             {
                 var sqlParams = new[] { new SqlParameter("@InvoicedID", invoicedId) };
@@ -259,8 +259,8 @@ namespace FSM.Entity
                 await _database.ExecuteAsync("SalesCredit_Update_AsExported", sqlParams);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped RegionDirectiveTrivia */
+            
+            
             public async Task MarkInvoiceAsNotExportedAsync(int invoicedId)
             {
                 var sqlParams = new[] { new SqlParameter("@InvoicedID", invoicedId) };
@@ -291,8 +291,8 @@ namespace FSM.Entity
                 await _database.ExecuteAsync("SalesCredit_Update_AsNotExported", sqlParams);
             }
 
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+            
+            
         }
     }
 }

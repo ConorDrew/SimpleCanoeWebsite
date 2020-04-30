@@ -15,7 +15,7 @@ namespace FSM.Entity.LetterManager
             _database = database;
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
+        
 
         public DataView GetBucketsL1(DateTime LetterManagerFilterDate, int CustomerID)
         {
@@ -255,6 +255,6 @@ namespace FSM.Entity.LetterManager
             return new DataView(_database.ExecuteSP_DataTable("LetterManager_AddSite_MK3"));
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        
     }
 }
