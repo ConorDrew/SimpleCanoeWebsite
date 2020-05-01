@@ -15,12 +15,8 @@ namespace FSM
 {
     public class FRMMain : Form, IForm
     {
-        
-
         public FRMMain() : base()
         {
-            
-            
             base.Load += FRMMenu_Load;
             base.Closing += FRMMenu_Closing;
             base.KeyDown += FRMMenu_KeyDown;
@@ -53,128 +49,13 @@ namespace FSM
         // Do not modify it using the code editor.
         private MainMenu _MnuMainNav;
 
-        internal MainMenu MnuMainNav
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _MnuMainNav;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_MnuMainNav != null)
-                {
-                }
-
-                _MnuMainNav = value;
-                if (_MnuMainNav != null)
-                {
-                }
-            }
-        }
-
         private MenuItem _mnuFile;
-
-        internal MenuItem mnuFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuFile != null)
-                {
-                }
-
-                _mnuFile = value;
-                if (_mnuFile != null)
-                {
-                }
-            }
-        }
 
         private MenuItem _mnuChangeLogin;
 
-        internal MenuItem mnuChangeLogin
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuChangeLogin;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuChangeLogin != null)
-                {
-                    
-                    _mnuChangeLogin.Click -= mnuChangeLogin_Click;
-                }
-
-                _mnuChangeLogin = value;
-                if (_mnuChangeLogin != null)
-                {
-                    _mnuChangeLogin.Click += mnuChangeLogin_Click;
-                }
-            }
-        }
-
         private MenuItem _MenuItem3;
 
-        internal MenuItem MenuItem3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _MenuItem3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_MenuItem3 != null)
-                {
-                }
-
-                _MenuItem3 = value;
-                if (_MenuItem3 != null)
-                {
-                }
-            }
-        }
-
         private MenuItem _mnuLogout;
-
-        internal MenuItem mnuLogout
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuLogout;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuLogout != null)
-                {
-                    _mnuLogout.Click -= mnuLogout_Click;
-                }
-
-                _mnuLogout = value;
-                if (_mnuLogout != null)
-                {
-                    _mnuLogout.Click += mnuLogout_Click;
-                }
-            }
-        }
 
         private StatusBar _infoBar;
 
@@ -202,55 +83,7 @@ namespace FSM
 
         private MenuItem _mnuSetup;
 
-        internal MenuItem mnuSetup
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuSetup;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuSetup != null)
-                {
-                    _mnuSetup.Click -= mnuSetup_Click;
-                }
-
-                _mnuSetup = value;
-                if (_mnuSetup != null)
-                {
-                    _mnuSetup.Click += mnuSetup_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuReports;
-
-        internal MenuItem mnuReports
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuReports;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuReports != null)
-                {
-                    _mnuReports.Click -= mnuReports_Click;
-                }
-
-                _mnuReports = value;
-                if (_mnuReports != null)
-                {
-                    _mnuReports.Click += mnuReports_Click;
-                }
-            }
-        }
 
         private Panel _pnlMiddle;
 
@@ -280,78 +113,9 @@ namespace FSM
 
         private Panel _pnlButtons;
 
-        internal Panel pnlButtons
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlButtons;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnlButtons != null)
-                {
-                }
-
-                _pnlButtons = value;
-                if (_pnlButtons != null)
-                {
-                }
-            }
-        }
-
         private Panel _pnlMiddleTitle;
 
-        internal Panel pnlMiddleTitle
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlMiddleTitle;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnlMiddleTitle != null)
-                {
-                }
-
-                _pnlMiddleTitle = value;
-                if (_pnlMiddleTitle != null)
-                {
-                }
-            }
-        }
-
         private Button _btnCloseMiddle;
-
-        internal Button btnCloseMiddle
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCloseMiddle;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCloseMiddle != null)
-                {
-                    
-                    _btnCloseMiddle.Click -= btnCloseMiddle_Click;
-                }
-
-                _btnCloseMiddle = value;
-                if (_btnCloseMiddle != null)
-                {
-                    _btnCloseMiddle.Click += btnCloseMiddle_Click;
-                }
-            }
-        }
 
         private DataGrid _dgSearchResults;
 
@@ -385,75 +149,9 @@ namespace FSM
 
         private Splitter _splitLeftAndMiddle;
 
-        internal Splitter splitLeftAndMiddle
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _splitLeftAndMiddle;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_splitLeftAndMiddle != null)
-                {
-                }
-
-                _splitLeftAndMiddle = value;
-                if (_splitLeftAndMiddle != null)
-                {
-                }
-            }
-        }
-
         private Splitter _splitMiddleTop;
 
-        internal Splitter splitMiddleTop
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _splitMiddleTop;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_splitMiddleTop != null)
-                {
-                }
-
-                _splitMiddleTop = value;
-                if (_splitMiddleTop != null)
-                {
-                }
-            }
-        }
-
         private Splitter _splitMiddleBottom;
-
-        internal Splitter splitMiddleBottom
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _splitMiddleBottom;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_splitMiddleBottom != null)
-                {
-                }
-
-                _splitMiddleBottom = value;
-                if (_splitMiddleBottom != null)
-                {
-                }
-            }
-        }
 
         private Panel _pnlLeft;
 
@@ -581,28 +279,6 @@ namespace FSM
 
         private Panel _pnleHeaderRight;
 
-        internal Panel pnleHeaderRight
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnleHeaderRight;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnleHeaderRight != null)
-                {
-                }
-
-                _pnleHeaderRight = value;
-                if (_pnleHeaderRight != null)
-                {
-                }
-            }
-        }
-
         private Label _lblRightTitle;
 
         internal Label lblRightTitle
@@ -629,53 +305,7 @@ namespace FSM
 
         private Button _btnCloseRight;
 
-        internal Button btnCloseRight
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCloseRight;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCloseRight != null)
-                {
-                    _btnCloseRight.Click -= btnCloseRight_Click;
-                }
-
-                _btnCloseRight = value;
-                if (_btnCloseRight != null)
-                {
-                    _btnCloseRight.Click += btnCloseRight_Click;
-                }
-            }
-        }
-
         private Splitter _Splitter1;
-
-        internal Splitter Splitter1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Splitter1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Splitter1 != null)
-                {
-                }
-
-                _Splitter1 = value;
-                if (_Splitter1 != null)
-                {
-                }
-            }
-        }
 
         private Panel _pnlContent;
 
@@ -702,28 +332,6 @@ namespace FSM
         }
 
         private Panel _pnlButtonsRight;
-
-        internal Panel pnlButtonsRight
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlButtonsRight;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnlButtonsRight != null)
-                {
-                }
-
-                _pnlButtonsRight = value;
-                if (_pnlButtonsRight != null)
-                {
-                }
-            }
-        }
 
         private Button _btnSave;
 
@@ -753,185 +361,17 @@ namespace FSM
 
         private Splitter _Splitter2;
 
-        internal Splitter Splitter2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Splitter2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Splitter2 != null)
-                {
-                }
-
-                _Splitter2 = value;
-                if (_Splitter2 != null)
-                {
-                }
-            }
-        }
-
         private MenuItem _mnuCustomers;
-
-        internal MenuItem mnuCustomers
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuCustomers;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuCustomers != null)
-                {
-                    
-                    
-                    _mnuCustomers.Click -= mnuCustomers_Click;
-                }
-
-                _mnuCustomers = value;
-                if (_mnuCustomers != null)
-                {
-                    _mnuCustomers.Click += mnuCustomers_Click;
-                }
-            }
-        }
 
         private MenuItem _mnuSpares;
 
-        internal MenuItem mnuSpares
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuSpares;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuSpares != null)
-                {
-                    _mnuSpares.Click -= mnuSpares_Click;
-                }
-
-                _mnuSpares = value;
-                if (_mnuSpares != null)
-                {
-                    _mnuSpares.Click += mnuSpares_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuStaff;
-
-        internal MenuItem mnuStaff
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuStaff;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuStaff != null)
-                {
-                    _mnuStaff.Click -= mnuStaff_Click;
-                }
-
-                _mnuStaff = value;
-                if (_mnuStaff != null)
-                {
-                    _mnuStaff.Click += mnuStaff_Click;
-                }
-            }
-        }
 
         private MenuItem _mnuJobs;
 
-        internal MenuItem mnuJobs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuJobs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuJobs != null)
-                {
-                    _mnuJobs.Click -= mnuJobs_Click;
-                }
-
-                _mnuJobs = value;
-                if (_mnuJobs != null)
-                {
-                    _mnuJobs.Click += mnuJobs_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuInvoicing;
 
-        internal MenuItem mnuInvoicing
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuInvoicing;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuInvoicing != null)
-                {
-                    _mnuInvoicing.Click -= mnuInvoicing_Click;
-                }
-
-                _mnuInvoicing = value;
-                if (_mnuInvoicing != null)
-                {
-                    _mnuInvoicing.Click += mnuInvoicing_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuScheduler;
-
-        internal MenuItem mnuScheduler
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuScheduler;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuScheduler != null)
-                {
-                    _mnuScheduler.Click -= mnuScheduler_Click;
-                }
-
-                _mnuScheduler = value;
-                if (_mnuScheduler != null)
-                {
-                    _mnuScheduler.Click += mnuScheduler_Click;
-                }
-            }
-        }
 
         private Button _btnHQ;
 
@@ -987,30 +427,6 @@ namespace FSM
 
         private MenuItem _mnuVan;
 
-        internal MenuItem mnuVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuVan != null)
-                {
-                    _mnuVan.Click -= mnuVan_Click;
-                }
-
-                _mnuVan = value;
-                if (_mnuVan != null)
-                {
-                    _mnuVan.Click += mnuVan_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuNpPrint;
 
         internal MenuItem mnuNpPrint
@@ -1037,79 +453,9 @@ namespace FSM
 
         private MenuItem _mnuUpstairs;
 
-        internal MenuItem mnuUpstairs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuUpstairs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuUpstairs != null)
-                {
-                    _mnuUpstairs.Click -= mnuUpstairs_Click;
-                }
-
-                _mnuUpstairs = value;
-                if (_mnuUpstairs != null)
-                {
-                    _mnuUpstairs.Click += mnuUpstairs_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuDownstairs;
 
-        internal MenuItem mnuDownstairs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuDownstairs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuDownstairs != null)
-                {
-                    _mnuDownstairs.Click -= mnuDownstairs_Click;
-                }
-
-                _mnuDownstairs = value;
-                if (_mnuDownstairs != null)
-                {
-                    _mnuDownstairs.Click += mnuDownstairs_Click;
-                }
-            }
-        }
-
         private TableLayoutPanel _ContainerMiddlePanelBtns;
-
-        internal TableLayoutPanel ContainerMiddlePanelBtns
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ContainerMiddlePanelBtns;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ContainerMiddlePanelBtns != null)
-                {
-                }
-
-                _ContainerMiddlePanelBtns = value;
-                if (_ContainerMiddlePanelBtns != null)
-                {
-                }
-            }
-        }
 
         private Splitter _splitMiddleAndRight;
 
@@ -1571,9 +917,6 @@ namespace FSM
             this.ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             var menu = new UCSideBar();
@@ -1598,8 +941,6 @@ namespace FSM
         {
         }
 
-        
-        
         private ArrayList _FormButtons = null;
 
         public ArrayList FormButtons
@@ -1948,9 +1289,6 @@ namespace FSM
                     }
             }
         }
-
-        
-        
 
         private void LoopControls(Control controlToLoop)
         {
@@ -3724,7 +3062,5 @@ namespace FSM
         private void FRMMain_Load(object sender, EventArgs e)
         {
         }
-
-        
     }
 }
