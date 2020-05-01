@@ -58,6 +58,19 @@ namespace FSM.Entity
                 }
             }
 
+            
+            
+
+            private int _ContractSiteAssetID = 0;
+
+            public int ContractSiteAssetID
+            {
+                get
+                {
+                    return _ContractSiteAssetID;
+                }
+            }
+
             public object SetContractSiteAssetID
             {
                 set

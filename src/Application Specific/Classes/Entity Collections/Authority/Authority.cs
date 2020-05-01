@@ -128,6 +128,16 @@ namespace FSM.Entity
                 }
             }
 
+            private int _addedById = 0;
+
+            public int AddedById
+            {
+                get
+                {
+                    return _addedById;
+                }
+            }
+
             public object SetAddedById
             {
                 set

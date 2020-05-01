@@ -43,6 +43,18 @@ namespace FSM.Entity
                 }
             }
 
+            
+            
+            private int _jobContactID = 0;
+
+            public int jobContactID
+            {
+                get
+                {
+                    return _jobContactID;
+                }
+            }
+
             public object SetjobContactID
             {
                 set

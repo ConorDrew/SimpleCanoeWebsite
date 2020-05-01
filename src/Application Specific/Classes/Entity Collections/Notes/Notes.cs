@@ -161,6 +161,16 @@ namespace FSM.Entity
                 }
             }
 
+            private int _UserIDBy = 0;
+
+            public int UserIDBy
+            {
+                get
+                {
+                    return _UserIDBy;
+                }
+            }
+
             public object SetUserIDBy
             {
                 set

@@ -291,6 +291,16 @@ namespace FSM.Entity
                 }
             }
 
+            private int _TaxRateID = 0;
+
+            public int TaxRateID
+            {
+                get
+                {
+                    return _TaxRateID;
+                }
+            }
+
             public object SetTaxRateID
             {
                 set

@@ -420,6 +420,11 @@ namespace FSM.Entity
 
             private string _relationship;
 
+            public int Relationship
+            {
+                get { return Conversions.ToInteger(_relationship); }
+            }
+
             public int SetRelationship
             {
                 set

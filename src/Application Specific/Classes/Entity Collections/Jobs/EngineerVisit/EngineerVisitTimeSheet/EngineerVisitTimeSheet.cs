@@ -76,6 +76,19 @@ namespace FSM.Entity
                 }
             }
 
+            
+            
+
+            private int _EngineerVisitTimeSheetID = 0;
+
+            public int EngineerVisitTimeSheetID
+            {
+                get
+                {
+                    return _EngineerVisitTimeSheetID;
+                }
+            }
+
             public object SetEngineerVisitTimeSheetID
             {
                 set

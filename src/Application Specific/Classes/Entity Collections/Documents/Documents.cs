@@ -217,6 +217,16 @@ namespace FSM.Entity
                 }
             }
 
+            private int _AddedByUserID = 0;
+
+            public int AddedByUserID
+            {
+                get
+                {
+                    return _AddedByUserID;
+                }
+            }
+
             public object SetAddedByUserID
             {
                 set
@@ -237,6 +247,16 @@ namespace FSM.Entity
                 set
                 {
                     _LastUpdatedOn = value;
+                }
+            }
+
+            private int _LastUpdatedByUserID = 0;
+
+            public int LastUpdatedByUserID
+            {
+                get
+                {
+                    return _LastUpdatedByUserID;
                 }
             }
 
