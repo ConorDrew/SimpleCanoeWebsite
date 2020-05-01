@@ -145,30 +145,6 @@ namespace FSM
 
         private Button _btnCreateContract;
 
-        internal Button btnCreateContract
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCreateContract;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCreateContract != null)
-                {
-                    _btnCreateContract.Click -= btnCreateContract_Click;
-                }
-
-                _btnCreateContract = value;
-                if (_btnCreateContract != null)
-                {
-                    _btnCreateContract.Click += btnCreateContract_Click;
-                }
-            }
-        }
-
         private TextBox _txtNewPrice;
 
         internal TextBox txtNewPrice
@@ -194,28 +170,6 @@ namespace FSM
         }
 
         private GroupBox _gpbContract;
-
-        internal GroupBox gpbContract
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbContract;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbContract != null)
-                {
-                }
-
-                _gpbContract = value;
-                if (_gpbContract != null)
-                {
-                }
-            }
-        }
 
         private Label _Label1;
 
@@ -315,28 +269,6 @@ namespace FSM
 
         private GroupBox _gpbSites;
 
-        internal GroupBox gpbSites
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbSites;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbSites != null)
-                {
-                }
-
-                _gpbSites = value;
-                if (_gpbSites != null)
-                {
-                }
-            }
-        }
-
         private Label _Label5;
 
         internal Label Label5
@@ -411,28 +343,6 @@ namespace FSM
 
         private GroupBox _gpbInvoiceAddress;
 
-        internal GroupBox gpbInvoiceAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbInvoiceAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbInvoiceAddress != null)
-                {
-                }
-
-                _gpbInvoiceAddress = value;
-                if (_gpbInvoiceAddress != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgInvoiceAddress;
 
         internal DataGrid dgInvoiceAddress
@@ -484,28 +394,6 @@ namespace FSM
         }
 
         private Label _lblInvoiceFrequencyID;
-
-        internal Label lblInvoiceFrequencyID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblInvoiceFrequencyID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblInvoiceFrequencyID != null)
-                {
-                }
-
-                _lblInvoiceFrequencyID = value;
-                if (_lblInvoiceFrequencyID != null)
-                {
-                }
-            }
-        }
 
         private Button _btnCancel;
 

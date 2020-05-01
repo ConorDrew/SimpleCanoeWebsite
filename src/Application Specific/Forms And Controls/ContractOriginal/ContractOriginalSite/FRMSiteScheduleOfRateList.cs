@@ -13,12 +13,8 @@ namespace FSM
     {
         public FRMSiteScheduleOfRateList()
         {
-            
-            
             base.Load += FRMSystemScheduleOfRate_Load;
         }
-
-        
 
         public FRMSiteScheduleOfRateList(int IDToLinkToIn, ref DataView DataviewToLinkToIn, bool FromQuoteJobIn = false, bool FromJobIn = false) : base()
         {
@@ -55,28 +51,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpSystemScheduleOfRate;
-
-        internal GroupBox grpSystemScheduleOfRate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSystemScheduleOfRate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSystemScheduleOfRate != null)
-                {
-                }
-
-                _grpSystemScheduleOfRate = value;
-                if (_grpSystemScheduleOfRate != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgRates;
 
@@ -158,30 +132,6 @@ namespace FSM
 
         private Button _btnSelectAll;
 
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= btnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += btnSelectAll_Click;
-                }
-            }
-        }
-
         private Label _Label1;
 
         internal Label Label1
@@ -221,7 +171,6 @@ namespace FSM
             {
                 if (_txtSearch != null)
                 {
-                    
                     _txtSearch.KeyUp -= txtSearch_TextChanged;
                 }
 
@@ -234,28 +183,6 @@ namespace FSM
         }
 
         private Label _lblCategory;
-
-        internal Label lblCategory
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCategory;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCategory != null)
-                {
-                }
-
-                _lblCategory = value;
-                if (_lblCategory != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboCategory;
 
@@ -284,30 +211,6 @@ namespace FSM
         }
 
         private Button _btnDeselectAll;
-
-        internal Button btnDeselectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeselectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeselectAll != null)
-                {
-                    _btnDeselectAll.Click -= btnDeselectAll_Click;
-                }
-
-                _btnDeselectAll = value;
-                if (_btnDeselectAll != null)
-                {
-                    _btnDeselectAll.Click += btnDeselectAll_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -451,9 +354,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -475,8 +375,6 @@ namespace FSM
         {
         }
 
-        
-        
         private bool _fromQuoteJob;
 
         public bool FromQuoteJob
@@ -571,9 +469,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupRatesDataGrid()
         {
@@ -706,9 +601,6 @@ namespace FSM
                 Dispose();
             }
         }
-
-        
-        
 
         private void Populate()
         {

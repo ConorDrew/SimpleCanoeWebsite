@@ -227,28 +227,6 @@ namespace FSM
 
         private Panel _Panel1;
 
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label3;
 
         internal Label Label3
@@ -301,219 +279,21 @@ namespace FSM
 
         private Panel _grpDD;
 
-        internal Panel grpDD
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpDD;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpDD != null)
-                {
-                }
-
-                _grpDD = value;
-                if (_grpDD != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtAccName;
-
-        internal TextBox txtAccName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtAccName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtAccName != null)
-                {
-                }
-
-                _txtAccName = value;
-                if (_txtAccName != null)
-                {
-                }
-            }
-        }
 
         private Label _lbl3;
 
-        internal Label lbl3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lbl3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lbl3 != null)
-                {
-                }
-
-                _lbl3 = value;
-                if (_lbl3 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtBankName;
-
-        internal TextBox txtBankName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtBankName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtBankName != null)
-                {
-                }
-
-                _txtBankName = value;
-                if (_txtBankName != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtAccNumber;
 
-        internal TextBox txtAccNumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtAccNumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtAccNumber != null)
-                {
-                }
-
-                _txtAccNumber = value;
-                if (_txtAccNumber != null)
-                {
-                }
-            }
-        }
-
         private Label _lblBankName;
-
-        internal Label lblBankName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblBankName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblBankName != null)
-                {
-                }
-
-                _lblBankName = value;
-                if (_lblBankName != null)
-                {
-                }
-            }
-        }
 
         private Label _lblAccNumber;
 
-        internal Label lblAccNumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAccNumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAccNumber != null)
-                {
-                }
-
-                _lblAccNumber = value;
-                if (_lblAccNumber != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtSortCode;
 
-        internal TextBox txtSortCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtSortCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtSortCode != null)
-                {
-                }
-
-                _txtSortCode = value;
-                if (_txtSortCode != null)
-                {
-                }
-            }
-        }
-
         private Label _lblSortCode;
-
-        internal Label lblSortCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSortCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSortCode != null)
-                {
-                }
-
-                _lblSortCode = value;
-                if (_lblSortCode != null)
-                {
-                }
-            }
-        }
 
         private Label _Label4;
 

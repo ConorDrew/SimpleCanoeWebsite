@@ -10,12 +10,8 @@ namespace FSM
 {
     public class UCContact : UCBase, IUserControl
     {
-        
-
         public UCContact() : base()
         {
-            
-            
             base.Load += UCContact_Load;
 
             // This call is required by the Windows Form Designer.
@@ -48,28 +44,6 @@ namespace FSM
 
         private GroupBox _grpContact;
 
-        internal GroupBox grpContact
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpContact;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpContact != null)
-                {
-                }
-
-                _grpContact = value;
-                if (_grpContact != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtFirstName;
 
         internal TextBox txtFirstName
@@ -95,28 +69,6 @@ namespace FSM
         }
 
         private Label _lblFirstName;
-
-        internal Label lblFirstName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFirstName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFirstName != null)
-                {
-                }
-
-                _lblFirstName = value;
-                if (_lblFirstName != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSurname;
 
@@ -144,28 +96,6 @@ namespace FSM
 
         private Label _lblSurname;
 
-        internal Label lblSurname
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSurname;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSurname != null)
-                {
-                }
-
-                _lblSurname = value;
-                if (_lblSurname != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtTelephoneNum;
 
         internal TextBox txtTelephoneNum
@@ -191,28 +121,6 @@ namespace FSM
         }
 
         private Label _lblTelephoneNum;
-
-        internal Label lblTelephoneNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTelephoneNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTelephoneNum != null)
-                {
-                }
-
-                _lblTelephoneNum = value;
-                if (_lblTelephoneNum != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtEmailAddress;
 
@@ -240,28 +148,6 @@ namespace FSM
 
         private Label _lblEmailAddress;
 
-        internal Label lblEmailAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEmailAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEmailAddress != null)
-                {
-                }
-
-                _lblEmailAddress = value;
-                if (_lblEmailAddress != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtFaxNum;
 
         internal TextBox txtFaxNum
@@ -287,28 +173,6 @@ namespace FSM
         }
 
         private Label _lblFaxNum;
-
-        internal Label lblFaxNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaxNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaxNum != null)
-                {
-                }
-
-                _lblFaxNum = value;
-                if (_lblFaxNum != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtMobileNo;
 
@@ -678,28 +542,6 @@ namespace FSM
 
         private Label _Label7;
 
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label5;
 
         internal Label Label5
@@ -1060,9 +902,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1077,8 +916,6 @@ namespace FSM
             }
         }
 
-        
-        
         private int _SiteID = 0;
 
         public int SiteID
@@ -1168,9 +1005,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupNotesDataGrid()
         {
@@ -1280,9 +1114,6 @@ namespace FSM
             NotesDataView = App.DB.Notes.NotesForContact(CurrentContact.ContactID);
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             if (!(ID == 0))
@@ -1354,7 +1185,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

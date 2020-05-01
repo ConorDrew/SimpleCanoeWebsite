@@ -10,8 +10,6 @@ namespace FSM
 {
     public class DLGSetupVisit : FRMBaseForm, IForm
     {
-        
-
         public DLGSetupVisit() : base()
         {
             base.Load += DLGFindRecord_Load;
@@ -215,10 +213,6 @@ namespace FSM
             {
                 if (_cboFrequency != null)
                 {
-                    
-
-                    
-
                     _cboFrequency.SelectedIndexChanged -= cboFrequency_SelectedIndexChanged;
                 }
 
@@ -415,11 +409,6 @@ namespace FSM
             {
                 if (_TextBox1 != null)
                 {
-                    
-                    
-
-                    
-
                     _TextBox1.TextChanged -= TextBox1_TextChanged;
                 }
 
@@ -432,28 +421,6 @@ namespace FSM
         }
 
         private Label _Label7;
-
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtAdditional;
 
@@ -480,28 +447,6 @@ namespace FSM
         }
 
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboType;
 
@@ -762,9 +707,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -784,8 +726,6 @@ namespace FSM
         {
         }
 
-        
-        
         private int _ID = 0;
 
         public int ID
@@ -818,33 +758,7 @@ namespace FSM
 
         private string _FrequencyID = 0.ToString();
 
-        public string FrequencyID
-        {
-            get
-            {
-                return _FrequencyID;
-            }
-
-            set
-            {
-                _FrequencyID = value;
-            }
-        }
-
         private DateTime _EffDate = DateTime.MinValue;
-
-        public DateTime EffDate
-        {
-            get
-            {
-                return _EffDate;
-            }
-
-            set
-            {
-                _EffDate = value;
-            }
-        }
 
         private void cboFrequency_SelectedIndexChanged(object sender, EventArgs e)
         {

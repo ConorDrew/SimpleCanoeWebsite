@@ -36,77 +36,9 @@ namespace FSM
 
         private GroupBox _grpBxServiceDate;
 
-        internal GroupBox grpBxServiceDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpBxServiceDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpBxServiceDate != null)
-                {
-                }
-
-                _grpBxServiceDate = value;
-                if (_grpBxServiceDate != null)
-                {
-                }
-            }
-        }
-
         private LinkLabel _lnkDownloadExampleTemplate;
 
-        internal LinkLabel lnkDownloadExampleTemplate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lnkDownloadExampleTemplate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lnkDownloadExampleTemplate != null)
-                {
-                    _lnkDownloadExampleTemplate.LinkClicked -= lnkDownloadExampleTemplate_LinkClicked;
-                }
-
-                _lnkDownloadExampleTemplate = value;
-                if (_lnkDownloadExampleTemplate != null)
-                {
-                    _lnkDownloadExampleTemplate.LinkClicked += lnkDownloadExampleTemplate_LinkClicked;
-                }
-            }
-        }
-
         private GroupBox _grpTemplate3;
-
-        internal GroupBox grpTemplate3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpTemplate3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpTemplate3 != null)
-                {
-                }
-
-                _grpTemplate3 = value;
-                if (_grpTemplate3 != null)
-                {
-                }
-            }
-        }
 
         private Button _btnDownloadTemplate3;
 
@@ -188,28 +120,6 @@ namespace FSM
 
         private GroupBox _grpTemplate2;
 
-        internal GroupBox grpTemplate2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpTemplate2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpTemplate2 != null)
-                {
-                }
-
-                _grpTemplate2 = value;
-                if (_grpTemplate2 != null)
-                {
-                }
-            }
-        }
-
         private Button _btnDownloadTemplate2;
 
         internal Button btnDownloadTemplate2
@@ -289,28 +199,6 @@ namespace FSM
         }
 
         private GroupBox _grpTemplate1;
-
-        internal GroupBox grpTemplate1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpTemplate1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpTemplate1 != null)
-                {
-                }
-
-                _grpTemplate1 = value;
-                if (_grpTemplate1 != null)
-                {
-                }
-            }
-        }
 
         private Button _btnDownloadTemplate1;
 
@@ -392,30 +280,6 @@ namespace FSM
 
         private Button _btnDeleteProcess;
 
-        internal Button btnDeleteProcess
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeleteProcess;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeleteProcess != null)
-                {
-                    _btnDeleteProcess.Click -= btnDeleteProcess_Click;
-                }
-
-                _btnDeleteProcess = value;
-                if (_btnDeleteProcess != null)
-                {
-                    _btnDeleteProcess.Click += btnDeleteProcess_Click;
-                }
-            }
-        }
-
         private TextBox _txtAppointment3;
 
         internal TextBox txtAppointment3
@@ -441,28 +305,6 @@ namespace FSM
         }
 
         private Label _lblAppointment3;
-
-        internal Label lblAppointment3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAppointment3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAppointment3 != null)
-                {
-                }
-
-                _lblAppointment3 = value;
-                if (_lblAppointment3 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtAppointment2;
 
@@ -490,28 +332,6 @@ namespace FSM
 
         private Label _lblAppointment2;
 
-        internal Label lblAppointment2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAppointment2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAppointment2 != null)
-                {
-                }
-
-                _lblAppointment2 = value;
-                if (_lblAppointment2 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtAppointment1;
 
         internal TextBox txtAppointment1
@@ -537,28 +357,6 @@ namespace FSM
         }
 
         private Label _lblAppointment1;
-
-        internal Label lblAppointment1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAppointment1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAppointment1 != null)
-                {
-                }
-
-                _lblAppointment1 = value;
-                if (_lblAppointment1 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtLetter3;
 
@@ -586,28 +384,6 @@ namespace FSM
 
         private Label _lblLetter3;
 
-        internal Label lblLetter3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLetter3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLetter3 != null)
-                {
-                }
-
-                _lblLetter3 = value;
-                if (_lblLetter3 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtLetter2;
 
         internal TextBox txtLetter2
@@ -633,28 +409,6 @@ namespace FSM
         }
 
         private Label _lblLetter2;
-
-        internal Label lblLetter2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLetter2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLetter2 != null)
-                {
-                }
-
-                _lblLetter2 = value;
-                if (_lblLetter2 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtLetter1;
 
@@ -682,77 +436,9 @@ namespace FSM
 
         private Label _lblLetter1;
 
-        internal Label lblLetter1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLetter1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLetter1 != null)
-                {
-                }
-
-                _lblLetter1 = value;
-                if (_lblLetter1 != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSaveServiceProcess;
 
-        internal Button btnSaveServiceProcess
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveServiceProcess;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveServiceProcess != null)
-                {
-                    _btnSaveServiceProcess.Click -= btnSaveServiceProcess_Click;
-                }
-
-                _btnSaveServiceProcess = value;
-                if (_btnSaveServiceProcess != null)
-                {
-                    _btnSaveServiceProcess.Click += btnSaveServiceProcess_Click;
-                }
-            }
-        }
-
         private GroupBox _grpPatchCheck;
-
-        internal GroupBox grpPatchCheck
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpPatchCheck;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpPatchCheck != null)
-                {
-                }
-
-                _grpPatchCheck = value;
-                if (_grpPatchCheck != null)
-                {
-                }
-            }
-        }
 
         private Button _btnDownloadPatchCheckTemplate;
 
@@ -831,8 +517,6 @@ namespace FSM
                 }
             }
         }
-
-        
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -1212,7 +896,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
         private int _customerId;
 
         public int CustomerId

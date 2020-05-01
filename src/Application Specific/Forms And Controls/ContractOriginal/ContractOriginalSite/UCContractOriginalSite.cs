@@ -52,28 +52,6 @@ namespace FSM
 
         private GroupBox _grpContractSite;
 
-        internal GroupBox grpContractSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpContractSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpContractSite != null)
-                {
-                }
-
-                _grpContractSite = value;
-                if (_grpContractSite != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpFirstVisitDate;
 
         internal DateTimePicker dtpFirstVisitDate
@@ -100,28 +78,6 @@ namespace FSM
 
         private Label _lblFirstVisitDate;
 
-        internal Label lblFirstVisitDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFirstVisitDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFirstVisitDate != null)
-                {
-                }
-
-                _lblFirstVisitDate = value;
-                if (_lblFirstVisitDate != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboVisitFrequencyID;
 
         internal ComboBox cboVisitFrequencyID
@@ -147,28 +103,6 @@ namespace FSM
         }
 
         private Label _lblVisitFrequencyID;
-
-        internal Label lblVisitFrequencyID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblVisitFrequencyID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblVisitFrequencyID != null)
-                {
-                }
-
-                _lblVisitFrequencyID = value;
-                if (_lblVisitFrequencyID != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSite;
 
@@ -220,28 +154,6 @@ namespace FSM
 
         private GroupBox _grpAssets;
 
-        internal GroupBox grpAssets
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpAssets;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpAssets != null)
-                {
-                }
-
-                _grpAssets = value;
-                if (_grpAssets != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgAssets;
 
         internal DataGrid dgAssets
@@ -269,28 +181,6 @@ namespace FSM
         }
 
         private GroupBox _grpVisits;
-
-        internal GroupBox grpVisits
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVisits;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVisits != null)
-                {
-                }
-
-                _grpVisits = value;
-                if (_grpVisits != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgVisits;
 
@@ -344,79 +234,9 @@ namespace FSM
 
         private GroupBox _grpScheduleOfRates;
 
-        internal GroupBox grpScheduleOfRates
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpScheduleOfRates;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpScheduleOfRates != null)
-                {
-                }
-
-                _grpScheduleOfRates = value;
-                if (_grpScheduleOfRates != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSiteScheduleOfRates;
 
-        internal Button btnSiteScheduleOfRates
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSiteScheduleOfRates;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSiteScheduleOfRates != null)
-                {
-                    _btnSiteScheduleOfRates.Click -= btnSiteScheduleOfRates_Click;
-                }
-
-                _btnSiteScheduleOfRates = value;
-                if (_btnSiteScheduleOfRates != null)
-                {
-                    _btnSiteScheduleOfRates.Click += btnSiteScheduleOfRates_Click;
-                }
-            }
-        }
-
         private Button _btnRemove;
-
-        internal Button btnRemove
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRemove;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRemove != null)
-                {
-                    _btnRemove.Click -= btnRemove_Click;
-                }
-
-                _btnRemove = value;
-                if (_btnRemove != null)
-                {
-                    _btnRemove.Click += btnRemove_Click;
-                }
-            }
-        }
 
         private DataGrid _dgSystemRates;
 
@@ -590,55 +410,7 @@ namespace FSM
 
         private Button _btnAddVisit;
 
-        internal Button btnAddVisit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddVisit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddVisit != null)
-                {
-                    _btnAddVisit.Click -= btnAddVisit_Click;
-                }
-
-                _btnAddVisit = value;
-                if (_btnAddVisit != null)
-                {
-                    _btnAddVisit.Click += btnAddVisit_Click;
-                }
-            }
-        }
-
         private Button _btRemoveVisit;
-
-        internal Button btRemoveVisit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btRemoveVisit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btRemoveVisit != null)
-                {
-                    _btRemoveVisit.Click -= btRemoveVisit_Click;
-                }
-
-                _btRemoveVisit = value;
-                if (_btRemoveVisit != null)
-                {
-                    _btRemoveVisit.Click += btRemoveVisit_Click;
-                }
-            }
-        }
 
         private DataGrid _dgVisitsSetup;
 

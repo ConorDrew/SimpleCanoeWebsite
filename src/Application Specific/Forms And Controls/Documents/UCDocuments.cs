@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCDocuments : UCBase, IUserControl
     {
-        
-
         public UCDocuments() : base()
         {
-            
-            
             base.Load += UCDocuments_Load;
 
             // This call is required by the Windows Form Designer.
@@ -49,28 +45,6 @@ namespace FSM
         // Do not modify it using the code editor.
 
         private GroupBox _grpDocuments;
-
-        internal GroupBox grpDocuments
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpDocuments;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpDocuments != null)
-                {
-                }
-
-                _grpDocuments = value;
-                if (_grpDocuments != null)
-                {
-                }
-            }
-        }
 
         private Label _lblTableEnumID;
 
@@ -121,28 +95,6 @@ namespace FSM
         }
 
         private Label _lblDocumentTypeID;
-
-        internal Label lblDocumentTypeID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDocumentTypeID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDocumentTypeID != null)
-                {
-                }
-
-                _lblDocumentTypeID = value;
-                if (_lblDocumentTypeID != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtName;
 
@@ -218,28 +170,6 @@ namespace FSM
 
         private Label _lblNotes;
 
-        internal Label lblNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNotes != null)
-                {
-                }
-
-                _lblNotes = value;
-                if (_lblNotes != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtLocation;
 
         internal TextBox txtLocation
@@ -265,28 +195,6 @@ namespace FSM
         }
 
         private Label _lblLocation;
-
-        internal Label lblLocation
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLocation;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLocation != null)
-                {
-                }
-
-                _lblLocation = value;
-                if (_lblLocation != null)
-                {
-                }
-            }
-        }
 
         private Button _btnBrowse;
 
@@ -604,9 +512,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -619,9 +524,6 @@ namespace FSM
                 return CurrentDocuments;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -720,9 +622,6 @@ namespace FSM
             StateChanged?.Invoke(CurrentDocuments.DocumentID);
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             if (!(ID == 0))
@@ -785,7 +684,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

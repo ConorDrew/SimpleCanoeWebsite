@@ -15,12 +15,8 @@ namespace FSM
 {
     public class FRMContractManager : FRMBaseForm, IForm
     {
-        
-
         public FRMContractManager() : base()
         {
-            
-            
             base.Load += FRMContractManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -74,30 +70,6 @@ namespace FSM
         }
 
         private Button _btnFindCustomer;
-
-        internal Button btnFindCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click -= btnFindCustomer_Click;
-                }
-
-                _btnFindCustomer = value;
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click += btnFindCustomer_Click;
-                }
-            }
-        }
 
         private TextBox _txtCustomer;
 
@@ -197,28 +169,6 @@ namespace FSM
 
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label6;
 
         internal Label Label6
@@ -269,28 +219,6 @@ namespace FSM
 
         private Label _Label11;
 
-        internal Label Label11
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label11;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label11 != null)
-                {
-                }
-
-                _Label11 = value;
-                if (_Label11 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboStatus;
 
         internal ComboBox cboStatus
@@ -316,30 +244,6 @@ namespace FSM
         }
 
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private Button _btnReset;
 
@@ -368,28 +272,6 @@ namespace FSM
         }
 
         private Label _Label10;
-
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtContractReference;
 
@@ -521,159 +403,15 @@ namespace FSM
 
         private Button _btnRenew;
 
-        internal Button btnRenew
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRenew;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRenew != null)
-                {
-                    _btnRenew.Click -= btnRenew_Click;
-                }
-
-                _btnRenew = value;
-                if (_btnRenew != null)
-                {
-                    _btnRenew.Click += btnRenew_Click;
-                }
-            }
-        }
-
         private Button _btnPrintExpiryLetter;
-
-        internal Button btnPrintExpiryLetter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnPrintExpiryLetter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnPrintExpiryLetter != null)
-                {
-                    _btnPrintExpiryLetter.Click -= btnPrintExpiryLetter_Click;
-                }
-
-                _btnPrintExpiryLetter = value;
-                if (_btnPrintExpiryLetter != null)
-                {
-                    _btnPrintExpiryLetter.Click += btnPrintExpiryLetter_Click;
-                }
-            }
-        }
 
         private Button _btnSelectAll;
 
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= btnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += btnSelectAll_Click;
-                }
-            }
-        }
-
         private Button _btnDeselectAll;
-
-        internal Button btnDeselectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeselectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeselectAll != null)
-                {
-                    _btnDeselectAll.Click -= btnDeselectAll_Click;
-                }
-
-                _btnDeselectAll = value;
-                if (_btnDeselectAll != null)
-                {
-                    _btnDeselectAll.Click += btnDeselectAll_Click;
-                }
-            }
-        }
 
         private Button _btnActivate;
 
-        internal Button btnActivate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnActivate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnActivate != null)
-                {
-                    _btnActivate.Click -= btnActivate_Click;
-                }
-
-                _btnActivate = value;
-                if (_btnActivate != null)
-                {
-                    _btnActivate.Click += btnActivate_Click;
-                }
-            }
-        }
-
         private Button _btnDeActive;
-
-        internal Button btnDeActive
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeActive;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeActive != null)
-                {
-                    _btnDeActive.Click -= btnDeActive_Click;
-                }
-
-                _btnDeActive = value;
-                if (_btnDeActive != null)
-                {
-                    _btnDeActive.Click += btnDeActive_Click;
-                }
-            }
-        }
 
         private CheckBox _cbxCancelledDate;
 
@@ -777,77 +515,9 @@ namespace FSM
 
         private Button _btnResetFilters;
 
-        internal Button btnResetFilters
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnResetFilters;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnResetFilters != null)
-                {
-                }
-
-                _btnResetFilters = value;
-                if (_btnResetFilters != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSearch;
 
-        internal Button btnSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click -= btnSearch_Click;
-                }
-
-                _btnSearch = value;
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click += btnSearch_Click;
-                }
-            }
-        }
-
         private Label _Label13;
-
-        internal Label Label13
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label13;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label13 != null)
-                {
-                }
-
-                _Label13 = value;
-                if (_Label13 != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboRegion;
 
@@ -1433,9 +1103,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             Loading = true;
@@ -1468,8 +1135,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _Contracts;
 
         private DataView Contracts
@@ -1542,9 +1207,6 @@ namespace FSM
                 _Loading = value;
             }
         }
-
-        
-        
 
         private void SetupContractsDataGrid()
         {
@@ -2074,9 +1736,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void PopulateDatagrid()
         {
             try
@@ -2282,7 +1941,5 @@ namespace FSM
             PopulateDatagrid();
             Cursor.Current = Cursors.Default;
         }
-
-        
     }
 }

@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCContractOriginal : UCBase, IUserControl
     {
-        
-
         public UCContractOriginal() : base()
         {
-            
-            
             base.Load += UCContract_Load;
 
             // This call is required by the Windows Form Designer.
@@ -63,28 +59,6 @@ namespace FSM
 
         private GroupBox _grpContract;
 
-        internal GroupBox grpContract
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpContract;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpContract != null)
-                {
-                }
-
-                _grpContract = value;
-                if (_grpContract != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpContractStartDate;
 
         internal DateTimePicker dtpContractStartDate
@@ -111,28 +85,6 @@ namespace FSM
 
         private Label _lblContractStartDate;
 
-        internal Label lblContractStartDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblContractStartDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblContractStartDate != null)
-                {
-                }
-
-                _lblContractStartDate = value;
-                if (_lblContractStartDate != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpContractEndDate;
 
         internal DateTimePicker dtpContractEndDate
@@ -158,28 +110,6 @@ namespace FSM
         }
 
         private Label _lblContractEndDate;
-
-        internal Label lblContractEndDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblContractEndDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblContractEndDate != null)
-                {
-                }
-
-                _lblContractEndDate = value;
-                if (_lblContractEndDate != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboContractStatusID;
 
@@ -209,28 +139,6 @@ namespace FSM
 
         private Label _lblContractStatusID;
 
-        internal Label lblContractStatusID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblContractStatusID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblContractStatusID != null)
-                {
-                }
-
-                _lblContractStatusID = value;
-                if (_lblContractStatusID != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtContractPrice;
 
         internal TextBox txtContractPrice
@@ -259,28 +167,6 @@ namespace FSM
 
         private Label _lblContractPrice;
 
-        internal Label lblContractPrice
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblContractPrice;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblContractPrice != null)
-                {
-                }
-
-                _lblContractPrice = value;
-                if (_lblContractPrice != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboInvoiceFrequencyID;
 
         internal ComboBox cboInvoiceFrequencyID
@@ -296,7 +182,6 @@ namespace FSM
             {
                 if (_cboInvoiceFrequencyID != null)
                 {
-                    
                     _cboInvoiceFrequencyID.SelectedIndexChanged -= cboInvoiceFrequencyID_SelectedIndexChanged;
                 }
 
@@ -309,28 +194,6 @@ namespace FSM
         }
 
         private Label _lblInvoiceFrequencyID;
-
-        internal Label lblInvoiceFrequencyID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblInvoiceFrequencyID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblInvoiceFrequencyID != null)
-                {
-                }
-
-                _lblInvoiceFrequencyID = value;
-                if (_lblInvoiceFrequencyID != null)
-                {
-                }
-            }
-        }
 
         private GroupBox _grpSites;
 
@@ -412,28 +275,6 @@ namespace FSM
 
         private Label _lblFirstInvoiceDate;
 
-        internal Label lblFirstInvoiceDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFirstInvoiceDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFirstInvoiceDate != null)
-                {
-                }
-
-                _lblFirstInvoiceDate = value;
-                if (_lblFirstInvoiceDate != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpFirstInvoiceDate;
 
         internal DateTimePicker dtpFirstInvoiceDate
@@ -510,28 +351,6 @@ namespace FSM
 
         private Label _lblContractType;
 
-        internal Label lblContractType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblContractType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblContractType != null)
-                {
-                }
-
-                _lblContractType = value;
-                if (_lblContractType != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboContractType;
 
         internal ComboBox cboContractType
@@ -560,99 +379,11 @@ namespace FSM
 
         private TabControl _tcBottomSection;
 
-        internal TabControl tcBottomSection
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tcBottomSection;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tcBottomSection != null)
-                {
-                }
-
-                _tcBottomSection = value;
-                if (_tcBottomSection != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabProperties;
-
-        internal TabPage tabProperties
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabProperties;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabProperties != null)
-                {
-                }
-
-                _tabProperties = value;
-                if (_tabProperties != null)
-                {
-                }
-            }
-        }
 
         private TabPage _tabChargeDetails;
 
-        internal TabPage tabChargeDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabChargeDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabChargeDetails != null)
-                {
-                }
-
-                _tabChargeDetails = value;
-                if (_tabChargeDetails != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _gpbChargeDetails;
-
-        internal GroupBox gpbChargeDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbChargeDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbChargeDetails != null)
-                {
-                }
-
-                _gpbChargeDetails = value;
-                if (_gpbChargeDetails != null)
-                {
-                }
-            }
-        }
 
         private RadioButton _rdoCheque;
 
@@ -800,51 +531,7 @@ namespace FSM
 
         private Label _lblBankName;
 
-        internal Label lblBankName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblBankName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblBankName != null)
-                {
-                }
-
-                _lblBankName = value;
-                if (_lblBankName != null)
-                {
-                }
-            }
-        }
-
         private Label _lblAccount;
-
-        internal Label lblAccount
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAccount;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAccount != null)
-                {
-                }
-
-                _lblAccount = value;
-                if (_lblAccount != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkGasSupplyPipework;
 
@@ -992,28 +679,6 @@ namespace FSM
 
         private Label _lblPONumber;
 
-        internal Label lblPONumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPONumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPONumber != null)
-                {
-                }
-
-                _lblPONumber = value;
-                if (_lblPONumber != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtContractReference;
 
         internal TextBox txtContractReference
@@ -1039,28 +704,6 @@ namespace FSM
         }
 
         private Label _lblContractReference;
-
-        internal Label lblContractReference
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblContractReference;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblContractReference != null)
-                {
-                }
-
-                _lblContractReference = value;
-                if (_lblContractReference != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _cboDoNotRenew;
 
@@ -1112,51 +755,7 @@ namespace FSM
 
         private Label _lblDDMSRef;
 
-        internal Label lblDDMSRef
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDDMSRef;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDDMSRef != null)
-                {
-                }
-
-                _lblDDMSRef = value;
-                if (_lblDDMSRef != null)
-                {
-                }
-            }
-        }
-
         private Label _lblDiscount;
-
-        internal Label lblDiscount
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDiscount;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDiscount != null)
-                {
-                }
-
-                _lblDiscount = value;
-                if (_lblDiscount != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboDiscount;
 
@@ -1234,51 +833,7 @@ namespace FSM
 
         private TabPage _tabAdditionalNotes;
 
-        internal TabPage tabAdditionalNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabAdditionalNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabAdditionalNotes != null)
-                {
-                }
-
-                _tabAdditionalNotes = value;
-                if (_tabAdditionalNotes != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _gpbInvoiceInformation;
-
-        internal GroupBox gpbInvoiceInformation
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbInvoiceInformation;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbInvoiceInformation != null)
-                {
-                }
-
-                _gpbInvoiceInformation = value;
-                if (_gpbInvoiceInformation != null)
-                {
-                }
-            }
-        }
 
         private RichTextBox _txtAdditionalInvoiceNotes;
 
@@ -1331,28 +886,6 @@ namespace FSM
         }
 
         private Label _lblInvType;
-
-        internal Label lblInvType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblInvType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblInvType != null)
-                {
-                }
-
-                _lblInvType = value;
-                if (_lblInvType != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboPaidBy;
 
@@ -1430,51 +963,7 @@ namespace FSM
 
         private Label _lblSearchFilter;
 
-        internal Label lblSearchFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSearchFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSearchFilter != null)
-                {
-                }
-
-                _lblSearchFilter = value;
-                if (_lblSearchFilter != null)
-                {
-                }
-            }
-        }
-
         private Label _lblSortCode;
-
-        internal Label lblSortCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSortCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSortCode != null)
-                {
-                }
-
-                _lblSortCode = value;
-                if (_lblSortCode != null)
-                {
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -2150,9 +1639,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -2165,9 +1651,6 @@ namespace FSM
                 return CurrentContract;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -2405,9 +1888,6 @@ namespace FSM
         }
 
         public JobNumber Number = null;
-
-        
-        
 
         public void SetupSitesDataGrid()
         {
@@ -2689,9 +2169,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void Populate(int ID = 0)
         {
