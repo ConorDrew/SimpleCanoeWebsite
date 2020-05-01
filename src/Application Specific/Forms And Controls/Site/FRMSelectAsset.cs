@@ -9,8 +9,6 @@ namespace FSM
 {
     public class FRMSelectAsset : FRMBaseForm, IForm
     {
-        
-
         public FRMSelectAsset() : base()
         {
             base.Load += FRMChooseAsset_Load;
@@ -80,8 +78,6 @@ namespace FSM
             {
                 if (_btnOK != null)
                 {
-                    
-                    
                     _btnOK.Click -= btnOK_Click;
                 }
 
@@ -168,30 +164,6 @@ namespace FSM
         }
 
         private Button _btnNoAsset;
-
-        internal Button btnNoAsset
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnNoAsset;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnNoAsset != null)
-                {
-                    _btnNoAsset.Click -= btnNoAsset_Click;
-                }
-
-                _btnNoAsset = value;
-                if (_btnNoAsset != null)
-                {
-                    _btnNoAsset.Click += btnNoAsset_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -293,9 +265,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -373,8 +342,6 @@ namespace FSM
         {
         }
 
-        
-        
         private int _SiteID;
 
         public int SiteID
@@ -424,9 +391,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupAssetDataGrid()
         {
@@ -567,7 +531,5 @@ namespace FSM
         {
             DialogResult = DialogResult.Yes;
         }
-
-        
     }
 }

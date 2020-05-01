@@ -11,13 +11,9 @@ namespace FSM
     {
         public FRMContactInfo()
         {
-            
-            
             base.Load += FRMContactInfo_Load;
             base.FormClosing += FRMContactInfo_FormClosing;
         }
-
-        
 
         public FRMContactInfo(Entity.Sites.Site oSite) : base()
         {
@@ -74,28 +70,6 @@ namespace FSM
 
         private Label _lblTelephoneNum;
 
-        internal Label lblTelephoneNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTelephoneNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTelephoneNum != null)
-                {
-                }
-
-                _lblTelephoneNum = value;
-                if (_lblTelephoneNum != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtEmailAddress;
 
         internal TextBox txtEmailAddress
@@ -121,28 +95,6 @@ namespace FSM
         }
 
         private Label _lblEmailAddress;
-
-        internal Label lblEmailAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEmailAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEmailAddress != null)
-                {
-                }
-
-                _lblEmailAddress = value;
-                if (_lblEmailAddress != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtFaxNum;
 
@@ -170,28 +122,6 @@ namespace FSM
 
         private Label _lblFaxNum;
 
-        internal Label lblFaxNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaxNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaxNum != null)
-                {
-                }
-
-                _lblFaxNum = value;
-                if (_lblFaxNum != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtHeadOffice;
 
         internal TextBox txtHeadOffice
@@ -217,28 +147,6 @@ namespace FSM
         }
 
         private Label _Label9;
-
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtCustomerName;
 
@@ -363,28 +271,6 @@ namespace FSM
         }
 
         private GroupBox _grpSite;
-
-        internal GroupBox grpSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSite != null)
-                {
-                }
-
-                _grpSite = value;
-                if (_grpSite != null)
-                {
-                }
-            }
-        }
 
         private Button _btnOK;
 
@@ -597,9 +483,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -617,8 +500,6 @@ namespace FSM
         {
         }
 
-        
-        
         private Entity.Sites.Site _osite;
 
         public Entity.Sites.Site CurrentSite
@@ -696,7 +577,5 @@ namespace FSM
                 Interaction.MsgBox(ex.Message);
             }
         }
-
-        
     }
 }

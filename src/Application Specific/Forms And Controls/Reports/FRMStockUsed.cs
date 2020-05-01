@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMStockUsed : FRMBaseForm, IForm
     {
-        
-
         public FRMStockUsed() : base()
         {
-            
-            
             base.Load += FRMStockUsed_Load;
 
             // This call is required by the Windows Form Designer.
@@ -48,51 +44,7 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpFilter;
 
-        internal GroupBox grpFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFilter != null)
-                {
-                }
-
-                _grpFilter = value;
-                if (_grpFilter != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpParts;
-
-        internal GroupBox grpParts
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpParts;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpParts != null)
-                {
-                }
-
-                _grpParts = value;
-                if (_grpParts != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtReference;
 
@@ -145,30 +97,6 @@ namespace FSM
         }
 
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private Button _btnReset;
 
@@ -696,9 +624,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -719,8 +644,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvParts;
 
         private DataView PartsDataview
@@ -755,9 +678,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupDataGrid()
         {
@@ -905,9 +825,6 @@ namespace FSM
             RunFilter();
         }
 
-        
-        
-
         private void PopulateDatagrid()
         {
             try
@@ -1014,7 +931,5 @@ namespace FSM
 
             ExportHelper.Export(exportData, "Stock Used Report", Enums.ExportType.XLS);
         }
-
-        
     }
 }

@@ -12,12 +12,8 @@ namespace FSM
 {
     public class UCVan : UCBase, IUserControl
     {
-        
-
         public UCVan() : base()
         {
-            
-            
             base.Load += UCVan_Load;
 
             // This call is required by the Windows Form Designer.
@@ -49,28 +45,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private TabControl _tcVans;
 
-        internal TabControl tcVans
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tcVans;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tcVans != null)
-                {
-                }
-
-                _tcVans = value;
-                if (_tcVans != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabDetails;
 
         internal TabPage tabDetails
@@ -96,28 +70,6 @@ namespace FSM
         }
 
         private GroupBox _grpVan;
-
-        internal GroupBox grpVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVan != null)
-                {
-                }
-
-                _grpVan = value;
-                if (_grpVan != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtProfile;
 
@@ -145,28 +97,6 @@ namespace FSM
 
         private Label _lblProfile;
 
-        internal Label lblProfile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblProfile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblProfile != null)
-                {
-                }
-
-                _lblProfile = value;
-                if (_lblProfile != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtNotes;
 
         internal TextBox txtNotes
@@ -192,28 +122,6 @@ namespace FSM
         }
 
         private Label _lblNotes;
-
-        internal Label lblNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNotes != null)
-                {
-                }
-
-                _lblNotes = value;
-                if (_lblNotes != null)
-                {
-                }
-            }
-        }
 
         private TabPage _tabStock;
 
@@ -265,28 +173,6 @@ namespace FSM
 
         private GroupBox _GroupBox2;
 
-        internal GroupBox GroupBox2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox2 != null)
-                {
-                }
-
-                _GroupBox2 = value;
-                if (_GroupBox2 != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgProducts;
 
         internal DataGrid dgProducts
@@ -337,77 +223,9 @@ namespace FSM
 
         private Button _btnCopyProfile;
 
-        internal Button btnCopyProfile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCopyProfile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCopyProfile != null)
-                {
-                    _btnCopyProfile.Click -= btnCopyVan_Click;
-                }
-
-                _btnCopyProfile = value;
-                if (_btnCopyProfile != null)
-                {
-                    _btnCopyProfile.Click += btnCopyVan_Click;
-                }
-            }
-        }
-
         private TabPage _tpWarehouses;
 
-        internal TabPage tpWarehouses
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tpWarehouses;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tpWarehouses != null)
-                {
-                }
-
-                _tpWarehouses = value;
-                if (_tpWarehouses != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpWarehouses;
-
-        internal GroupBox grpWarehouses
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpWarehouses;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpWarehouses != null)
-                {
-                }
-
-                _grpWarehouses = value;
-                if (_grpWarehouses != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgWarehouses;
 
@@ -436,28 +254,6 @@ namespace FSM
         }
 
         private GroupBox _GroupBox3;
-
-        internal GroupBox GroupBox3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox3 != null)
-                {
-                }
-
-                _GroupBox3 = value;
-                if (_GroupBox3 != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboPreferredSupplierID;
 
@@ -524,7 +320,6 @@ namespace FSM
                 {
                     _dgvParts.DoubleClick -= dgvParts_DoubleClick;
 
-                    
                     _dgvParts.CellEndEdit -= dgvParts_CellEndEdit;
                     _dgvParts.ColumnHeaderMouseClick -= dgvParts_ColumnHeaderMouseClick;
                 }
@@ -541,133 +336,13 @@ namespace FSM
 
         private Button _btnAddPartStockProfile;
 
-        internal Button btnAddPartStockProfile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddPartStockProfile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddPartStockProfile != null)
-                {
-                    _btnAddPartStockProfile.Click -= btnAddPartVanStock_Click;
-                }
-
-                _btnAddPartStockProfile = value;
-                if (_btnAddPartStockProfile != null)
-                {
-                    _btnAddPartStockProfile.Click += btnAddPartVanStock_Click;
-                }
-            }
-        }
-
         private Button _btnDeletePartStockProfile;
-
-        internal Button btnDeletePartStockProfile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeletePartStockProfile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeletePartStockProfile != null)
-                {
-                    _btnDeletePartStockProfile.Click -= btnDeletePartVanStock_Click;
-                }
-
-                _btnDeletePartStockProfile = value;
-                if (_btnDeletePartStockProfile != null)
-                {
-                    _btnDeletePartStockProfile.Click += btnDeletePartVanStock_Click;
-                }
-            }
-        }
 
         private Button _btnClearVanStockProfile;
 
-        internal Button btnClearVanStockProfile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnClearVanStockProfile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnClearVanStockProfile != null)
-                {
-                    _btnClearVanStockProfile.Click -= btnClearVanStockProfile_Click;
-                }
-
-                _btnClearVanStockProfile = value;
-                if (_btnClearVanStockProfile != null)
-                {
-                    _btnClearVanStockProfile.Click += btnClearVanStockProfile_Click;
-                }
-            }
-        }
-
         private Button _btnExportStockProfile;
 
-        internal Button btnExportStockProfile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportStockProfile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportStockProfile != null)
-                {
-                    _btnExportStockProfile.Click -= btnExportStockProfile_Click;
-                }
-
-                _btnExportStockProfile = value;
-                if (_btnExportStockProfile != null)
-                {
-                    _btnExportStockProfile.Click += btnExportStockProfile_Click;
-                }
-            }
-        }
-
         private Button _btnMerge;
-
-        internal Button btnMerge
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnMerge;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnMerge != null)
-                {
-                    _btnMerge.Click -= btnMergeProfile_Click;
-                }
-
-                _btnMerge = value;
-                if (_btnMerge != null)
-                {
-                    _btnMerge.Click += btnMergeProfile_Click;
-                }
-            }
-        }
 
         private CheckBox _chkSecondaryPrice;
 
@@ -719,75 +394,9 @@ namespace FSM
 
         private TabPage _tabEquipment;
 
-        internal TabPage tabEquipment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabEquipment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabEquipment != null)
-                {
-                }
-
-                _tabEquipment = value;
-                if (_tabEquipment != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpVanEquipment;
 
-        internal GroupBox grpVanEquipment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVanEquipment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVanEquipment != null)
-                {
-                }
-
-                _grpVanEquipment = value;
-                if (_grpVanEquipment != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel2;
-
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtEquipmentTool;
 
@@ -839,55 +448,7 @@ namespace FSM
 
         private Button _btnSaveEquipment;
 
-        internal Button btnSaveEquipment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveEquipment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveEquipment != null)
-                {
-                    _btnSaveEquipment.Click -= btnSaveEquipment_Click;
-                }
-
-                _btnSaveEquipment = value;
-                if (_btnSaveEquipment != null)
-                {
-                    _btnSaveEquipment.Click += btnSaveEquipment_Click;
-                }
-            }
-        }
-
         private Button _btnDeleteEquipment;
-
-        internal Button btnDeleteEquipment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeleteEquipment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeleteEquipment != null)
-                {
-                    _btnDeleteEquipment.Click -= btnDeleteEquipment_Click;
-                }
-
-                _btnDeleteEquipment = value;
-                if (_btnDeleteEquipment != null)
-                {
-                    _btnDeleteEquipment.Click += btnDeleteEquipment_Click;
-                }
-            }
-        }
 
         private DataGrid _dgEquipment;
 
@@ -939,28 +500,6 @@ namespace FSM
 
         private Label _lblCurEngineer;
 
-        internal Label lblCurEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCurEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCurEngineer != null)
-                {
-                }
-
-                _lblCurEngineer = value;
-                if (_lblCurEngineer != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtCurEngineerFleet;
 
         internal TextBox txtCurEngineerFleet
@@ -986,28 +525,6 @@ namespace FSM
         }
 
         private Label _lblCurEngineerFleet;
-
-        internal Label lblCurEngineerFleet
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCurEngineerFleet;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCurEngineerFleet != null)
-                {
-                }
-
-                _lblCurEngineerFleet = value;
-                if (_lblCurEngineerFleet != null)
-                {
-                }
-            }
-        }
 
         private Button _btnEngineerHistory;
 
@@ -1583,9 +1100,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1604,9 +1118,6 @@ namespace FSM
                 return CurrentVan;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1971,9 +1482,6 @@ namespace FSM
                 App.ShowMessage("Cannot change tick state : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
-        
 
         public void Populate(int ID = 0)
         {

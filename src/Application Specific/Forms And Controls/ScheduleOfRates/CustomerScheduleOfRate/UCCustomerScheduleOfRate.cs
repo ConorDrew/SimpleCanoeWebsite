@@ -13,12 +13,8 @@ namespace FSM
     {
         public UCCustomerScheduleOfRate()
         {
-            
-            
             base.Load += UCCustomerScheduleOfRate_Load;
         }
-
-        
 
         public UCCustomerScheduleOfRate(Entity.Sys.Enums.TableNames EntityToLinkToIn, int IDToLinkToIn, bool _readOnly = false) : base()
         {
@@ -104,28 +100,6 @@ namespace FSM
 
         private Label _lblScheduleOfRatesCategoryID;
 
-        internal Label lblScheduleOfRatesCategoryID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblScheduleOfRatesCategoryID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblScheduleOfRatesCategoryID != null)
-                {
-                }
-
-                _lblScheduleOfRatesCategoryID = value;
-                if (_lblScheduleOfRatesCategoryID != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtCode;
 
         internal TextBox txtCode
@@ -151,28 +125,6 @@ namespace FSM
         }
 
         private Label _lblCode;
-
-        internal Label lblCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCode != null)
-                {
-                }
-
-                _lblCode = value;
-                if (_lblCode != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtDescription;
 
@@ -200,28 +152,6 @@ namespace FSM
 
         private Label _lblDescription;
 
-        internal Label lblDescription
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDescription;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDescription != null)
-                {
-                }
-
-                _lblDescription = value;
-                if (_lblDescription != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPrice;
 
         internal TextBox txtPrice
@@ -247,28 +177,6 @@ namespace FSM
         }
 
         private Label _lblPrice;
-
-        internal Label lblPrice
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPrice;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPrice != null)
-                {
-                }
-
-                _lblPrice = value;
-                if (_lblPrice != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgRates;
 
@@ -650,9 +558,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -667,9 +572,6 @@ namespace FSM
                 return default;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -798,9 +700,6 @@ namespace FSM
                 _isReadOnlyMode = value;
             }
         }
-
-        
-        
 
         public void SetupRatesDataGrid()
         {
@@ -998,9 +897,6 @@ namespace FSM
             Populate(IDToLinkTo);
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             RatesDataview = App.DB.CustomerScheduleOfRate.GetAll_For_CustomerID(ID);
@@ -1141,7 +1037,5 @@ namespace FSM
 
             return default;
         }
-
-        
     }
 }

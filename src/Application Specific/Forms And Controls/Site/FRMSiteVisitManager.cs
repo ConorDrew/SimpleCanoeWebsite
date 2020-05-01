@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMSiteVisitManager : FRMBaseForm, IForm
     {
-        
-
         public FRMSiteVisitManager() : base()
         {
-            
-            
             base.Load += FRMVisitManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -192,28 +188,6 @@ namespace FSM
 
         private Label _Label11;
 
-        internal Label Label11
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label11;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label11 != null)
-                {
-                }
-
-                _Label11 = value;
-                if (_Label11 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboType;
 
         internal ComboBox cboType
@@ -240,75 +214,9 @@ namespace FSM
 
         private Label _Label10;
 
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private Label _Label6;
 
@@ -438,28 +346,6 @@ namespace FSM
 
         private GroupBox _grpEngineerVisits;
 
-        internal GroupBox grpEngineerVisits
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineerVisits;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineerVisits != null)
-                {
-                }
-
-                _grpEngineerVisits = value;
-                if (_grpEngineerVisits != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgVisits;
 
         internal DataGrid dgVisits
@@ -488,30 +374,6 @@ namespace FSM
 
         private Button _btnfindEngineer;
 
-        internal Button btnfindEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnfindEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click -= btnfindEngineer_Click;
-                }
-
-                _btnfindEngineer = value;
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click += btnfindEngineer_Click;
-                }
-            }
-        }
-
         private TextBox _txtEngineer;
 
         internal TextBox txtEngineer
@@ -538,28 +400,6 @@ namespace FSM
 
         private Label _Label12;
 
-        internal Label Label12
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label12;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label12 != null)
-                {
-                }
-
-                _Label12 = value;
-                if (_Label12 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboOutcome;
 
         internal ComboBox cboOutcome
@@ -585,30 +425,6 @@ namespace FSM
         }
 
         private Button _btnSearch;
-
-        internal Button btnSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click -= btnSearch_Click;
-                }
-
-                _btnSearch = value;
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click += btnSearch_Click;
-                }
-            }
-        }
 
         private Label _Label5;
 
@@ -922,9 +738,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -958,8 +771,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvVisits;
 
         private DataView VisitsDataview
@@ -1048,9 +859,6 @@ namespace FSM
                 _siteID = value;
             }
         }
-
-        
-        
 
         private void SetupVisitDataGrid()
         {
@@ -1327,9 +1135,6 @@ namespace FSM
             PopulateDatagrid(true);
         }
 
-        
-        
-
         public void PopulateDatagrid(bool withRun)
         {
             try
@@ -1413,7 +1218,5 @@ namespace FSM
                 ExportHelper.Export(VisitsDataview.Table, "SiteReport", Enums.ExportType.XLS);
             }
         }
-
-        
     }
 }

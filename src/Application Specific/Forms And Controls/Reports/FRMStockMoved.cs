@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMStockMoved : FRMBaseForm, IForm
     {
-        
-
         public FRMStockMoved() : base()
         {
-            
-            
             base.Load += FRMStockMoved_Load;
 
             // This call is required by the Windows Form Designer.
@@ -48,51 +44,7 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpFilter;
 
-        internal GroupBox grpFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFilter != null)
-                {
-                }
-
-                _grpFilter = value;
-                if (_grpFilter != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpAudit;
-
-        internal GroupBox grpAudit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpAudit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpAudit != null)
-                {
-                }
-
-                _grpAudit = value;
-                if (_grpAudit != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtReference;
 
@@ -143,30 +95,6 @@ namespace FSM
         }
 
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private TextBox _txtName;
 
@@ -265,28 +193,6 @@ namespace FSM
         }
 
         private RadioButton _radBoth;
-
-        internal RadioButton radBoth
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _radBoth;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_radBoth != null)
-                {
-                }
-
-                _radBoth = value;
-                if (_radBoth != null)
-                {
-                }
-            }
-        }
 
         private RadioButton _radProducts;
 
@@ -414,30 +320,6 @@ namespace FSM
 
         private Button _btnRun;
 
-        internal Button btnRun
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRun;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRun != null)
-                {
-                    _btnRun.Click -= btnRun_Click;
-                }
-
-                _btnRun = value;
-                if (_btnRun != null)
-                {
-                    _btnRun.Click += btnRun_Click;
-                }
-            }
-        }
-
         private ComboBox _cboTo;
 
         internal ComboBox cboTo
@@ -564,75 +446,9 @@ namespace FSM
 
         private Panel _Panel3;
 
-        internal Panel Panel3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel3 != null)
-                {
-                }
-
-                _Panel3 = value;
-                if (_Panel3 != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel2;
 
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel1;
-
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgIPTAudit;
 
@@ -977,9 +793,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1004,8 +817,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _AuditDataview;
 
         private DataView AuditDataview
@@ -1040,9 +851,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupDataGrid()
         {
@@ -1188,9 +996,6 @@ namespace FSM
             Export();
         }
 
-        
-        
-
         private void PopulateDatagrid()
         {
             try
@@ -1263,7 +1068,5 @@ namespace FSM
 
             ExportHelper.Export(exportData, "Stock Moved Report", Enums.ExportType.XLS);
         }
-
-        
     }
 }

@@ -10,12 +10,8 @@ namespace FSM
 {
     public class UCEngineerVan : UCBase, IUserControl
     {
-        
-
         public UCEngineerVan() : base()
         {
-            
-            
             base.Load += UCEngineerVan_Load;
 
             // This call is required by the Windows Form Designer.
@@ -49,28 +45,6 @@ namespace FSM
         // Do not modify it using the code editor.
 
         private GroupBox _grpEngineerVan;
-
-        internal GroupBox grpEngineerVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineerVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineerVan != null)
-                {
-                }
-
-                _grpEngineerVan = value;
-                if (_grpEngineerVan != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboEngineerID;
 
@@ -146,28 +120,6 @@ namespace FSM
 
         private Label _lblStartDateTime;
 
-        internal Label lblStartDateTime
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblStartDateTime;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblStartDateTime != null)
-                {
-                }
-
-                _lblStartDateTime = value;
-                if (_lblStartDateTime != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpEndDateTime;
 
         internal DateTimePicker dtpEndDateTime
@@ -193,28 +145,6 @@ namespace FSM
         }
 
         private Label _lblEndDateTime;
-
-        internal Label lblEndDateTime
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEndDateTime;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEndDateTime != null)
-                {
-                }
-
-                _lblEndDateTime = value;
-                if (_lblEndDateTime != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkUntilFurtherNotice;
 
@@ -347,9 +277,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -362,9 +289,6 @@ namespace FSM
                 return CurrentEngineerVan;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -423,9 +347,6 @@ namespace FSM
         {
             dtpEndDateTime.Enabled = !chkUntilFurtherNotice.Checked;
         }
-
-        
-        
 
         public void Populate(int ID = 0)
         {
@@ -566,7 +487,5 @@ namespace FSM
             {
             }
         }
-
-        
     }
 }

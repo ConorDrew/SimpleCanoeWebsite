@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMLastGSRReport : FRMBaseForm, IForm
     {
-        
-
         public FRMLastGSRReport() : base()
         {
-            
-            
             base.Load += FRMEngineerTimesheetReport_Load;
 
             // This call is required by the Windows Form Designer.
@@ -72,28 +68,6 @@ namespace FSM
 
         private GroupBox _grpJobs;
 
-        internal GroupBox grpJobs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobs != null)
-                {
-                }
-
-                _grpJobs = value;
-                if (_grpJobs != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpTo;
 
         internal DateTimePicker dtpTo
@@ -144,77 +118,9 @@ namespace FSM
 
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
 
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
-
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private Button _btnReset;
 
@@ -244,30 +150,6 @@ namespace FSM
 
         private Button _btnPrintGSRReminders;
 
-        internal Button btnPrintGSRReminders
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnPrintGSRReminders;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnPrintGSRReminders != null)
-                {
-                    _btnPrintGSRReminders.Click -= btnPrintGSRReminders_Click;
-                }
-
-                _btnPrintGSRReminders = value;
-                if (_btnPrintGSRReminders != null)
-                {
-                    _btnPrintGSRReminders.Click += btnPrintGSRReminders_Click;
-                }
-            }
-        }
-
         private ProgressBar _pbStatus;
 
         internal ProgressBar pbStatus
@@ -293,30 +175,6 @@ namespace FSM
         }
 
         private Button _btnFindCustomer;
-
-        internal Button btnFindCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click -= btnFindCustomer_Click;
-                }
-
-                _btnFindCustomer = value;
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click += btnFindCustomer_Click;
-                }
-            }
-        }
 
         private TextBox _txtCustomer;
 
@@ -512,133 +370,13 @@ namespace FSM
 
         private Button _btnFilter;
 
-        internal Button btnFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFilter != null)
-                {
-                    _btnFilter.Click -= btnFilter_Click;
-                }
-
-                _btnFilter = value;
-                if (_btnFilter != null)
-                {
-                    _btnFilter.Click += btnFilter_Click;
-                }
-            }
-        }
-
         private Button _btnUnselect;
-
-        internal Button btnUnselect
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUnselect;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUnselect != null)
-                {
-                    _btnUnselect.Click -= btnUnselect_Click;
-                }
-
-                _btnUnselect = value;
-                if (_btnUnselect != null)
-                {
-                    _btnUnselect.Click += btnUnselect_Click;
-                }
-            }
-        }
 
         private Button _btnSelectAll;
 
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= btnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += btnSelectAll_Click;
-                }
-            }
-        }
-
         private Button _btnEmailNone;
 
-        internal Button btnEmailNone
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnEmailNone;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnEmailNone != null)
-                {
-                    _btnEmailNone.Click -= btnEmailNone_Click;
-                }
-
-                _btnEmailNone = value;
-                if (_btnEmailNone != null)
-                {
-                    _btnEmailNone.Click += btnEmailNone_Click;
-                }
-            }
-        }
-
         private Button _btnEmailAll;
-
-        internal Button btnEmailAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnEmailAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnEmailAll != null)
-                {
-                    _btnEmailAll.Click -= btnEmailAll_Click;
-                }
-
-                _btnEmailAll = value;
-                if (_btnEmailAll != null)
-                {
-                    _btnEmailAll.Click += btnEmailAll_Click;
-                }
-            }
-        }
 
         private DataGrid _dgProductsLastGSR;
 
@@ -986,9 +724,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1013,8 +748,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _ProductsDataview;
 
         private DataView ProductsDataview
@@ -1072,9 +805,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupTimesheetsDataGrid()
         {
@@ -1397,9 +1127,6 @@ namespace FSM
             ProductsDataview.AllowEdit = false;
         }
 
-        
-        
-
         public void PopulateDatagrid()
         {
             try
@@ -1510,7 +1237,5 @@ namespace FSM
 
             Application.DoEvents();
         }
-
-        
     }
 }
