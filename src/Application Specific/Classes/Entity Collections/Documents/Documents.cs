@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,8 +76,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _DocumentID = 0;
 
             public int DocumentID
@@ -220,16 +217,6 @@ namespace FSM.Entity
                 }
             }
 
-            private int _AddedByUserID = 0;
-
-            public int AddedByUserID
-            {
-                get
-                {
-                    return _AddedByUserID;
-                }
-            }
-
             public object SetAddedByUserID
             {
                 set
@@ -253,16 +240,6 @@ namespace FSM.Entity
                 }
             }
 
-            private int _LastUpdatedByUserID = 0;
-
-            public int LastUpdatedByUserID
-            {
-                get
-                {
-                    return _LastUpdatedByUserID;
-                }
-            }
-
             public object SetLastUpdatedByUserID
             {
                 set
@@ -271,8 +248,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private string _Type = string.Empty;
 
             public string Type
@@ -317,8 +292,6 @@ namespace FSM.Entity
                     _LastUpdatedByUserName = value;
                 }
             }
-
-            
         }
     }
 }

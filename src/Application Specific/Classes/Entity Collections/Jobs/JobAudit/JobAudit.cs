@@ -13,7 +13,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -40,18 +39,6 @@ namespace FSM.Entity
                 get
                 {
                     return _dataTypeValidator;
-                }
-            }
-
-            
-            
-            private int _jobAuditID = 0;
-
-            public int JobAuditID
-            {
-                get
-                {
-                    return _jobAuditID;
                 }
             }
 
@@ -98,11 +85,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_actionChange", value);
                 }
             }
-
-
-
-
-            
         }
     }
 }

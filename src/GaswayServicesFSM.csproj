@@ -771,7 +771,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\IBCs\IbcSql.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAdditional\EngineerVisitAdditional.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAdditional\EngineerVisitAdditionalSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAdditional\EngineerVisitAdditionalValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidatorASHP.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidatorComCat.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidatorGas.cs" />
@@ -788,7 +787,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitEngineers\Enums\GetBy.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPhoto\EngineerVisitPhoto.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPhoto\EngineerVisitPhotoSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPhoto\EngineerVisitPhotoValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobContact\JobContact.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobContact\JobContactSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobImport\JobImport.cs" />
@@ -797,7 +795,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\Enums\GetBy.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\JobInstall\JobInstall.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\JobInstall\JobInstallSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\JobInstall\JobInstallValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\LSR\LsrError.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Order\POInvoice\POInvoiceSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\RagRating\RagRatingSql.cs" />
@@ -1195,9 +1192,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSiteAsset\ContractOriginalSiteAssetSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSiteAsset\ContractOriginalSiteAssetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSite\ContractOriginalSite.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1270,9 +1264,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerPostalRegion\EngineerPostalRegionSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\EngineerPostalRegion\EngineerPostalRegionValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerTimeSheet\EngineerTimeSheet.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerTimeSheet\EngineerTimeSheetSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerTimeSheet\EngineerTimeSheetValidator.cs" />
@@ -1300,25 +1291,16 @@
     <Compile Include="Application Specific\Classes\Entity Collections\InvoicedLines\InvoicedLinesSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\InvoicedLines\InvoicedLinesValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Invoiced\Invoiced.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Invoiced\InvoicedSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Invoiced\InvoicedValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\InvoiceToBeRaised\InvoiceToBeRaised.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\InvoiceToBeRaised\InvoiceToBeRaisedSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\InvoiceToBeRaised\InvoiceToBeRaisedValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisit.cs">
@@ -1330,16 +1312,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitCharge\EngineerVisitCharge.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitCharge\EngineerVisitChargeSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitCharge\EngineerVisitChargeValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitDefects\EngineerVisitDefects.cs">
@@ -1353,7 +1329,6 @@
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitNCCGSR\EngineerVisitNCCGSR.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitNCCGSR\EngineerVisitNCCGSRSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitNCCGSR\EngineerVisitNCCGSRValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPartsAndProductsAllocated\EngineerVisitPartProductAllocatedSQL.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1365,7 +1340,6 @@
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitQC\EngineerVisitQC.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitQC\EngineerVisitQCSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitQC\EngineerVisitQCValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitSQL.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1375,9 +1349,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitTimeSheet\EngineerVisitTimeSheetSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitTimeSheet\EngineerVisitTimeSheetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitValidator.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1385,9 +1356,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobAsset\JobAssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobAsset\JobAssetValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobAudit\JobAudit.cs">
