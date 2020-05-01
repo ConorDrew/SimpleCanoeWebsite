@@ -13,12 +13,8 @@ namespace FSM
 {
     public class UCPartPack : UCBase, IUserControl
     {
-        
-
         public UCPartPack() : base()
         {
-            
-            
             base.Load += UCPart_Load;
 
             // This call is required by the Windows Form Designer.
@@ -67,28 +63,6 @@ namespace FSM
 
         private GroupBox _grpPart;
 
-        internal GroupBox grpPart
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpPart;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpPart != null)
-                {
-                }
-
-                _grpPart = value;
-                if (_grpPart != null)
-                {
-                }
-            }
-        }
-
         private Button _btnRemove;
 
         internal Button btnRemove
@@ -130,7 +104,6 @@ namespace FSM
             {
                 if (_btnAdd != null)
                 {
-                    
                     _btnAdd.Click -= btnAdd_Click;
                 }
 
@@ -216,28 +189,6 @@ namespace FSM
 
         private TabControl _TabControl1;
 
-        internal TabControl TabControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabControl1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabControl1 != null)
-                {
-                }
-
-                _TabControl1 = value;
-                if (_TabControl1 != null)
-                {
-                }
-            }
-        }
-
         private DataGridView _dgPackSuppliers;
 
         internal DataGridView dgPackSuppliers
@@ -263,28 +214,6 @@ namespace FSM
         }
 
         private Label _lblPackSuppliers;
-
-        internal Label lblPackSuppliers
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPackSuppliers;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPackSuppliers != null)
-                {
-                }
-
-                _lblPackSuppliers = value;
-                if (_lblPackSuppliers != null)
-                {
-                }
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -434,9 +363,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -451,9 +377,6 @@ namespace FSM
                 return PackID;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -520,9 +443,6 @@ namespace FSM
                 dgPackSuppliers.DataSource = DvPackSuppliers;
             }
         }
-
-        
-        
 
         private void SetupPartPackDatagrid()
         {
@@ -593,9 +513,6 @@ namespace FSM
         {
             LoadForm(sender, e);
         }
-
-        
-        
 
         public void Populate(int ID = 0)
         {

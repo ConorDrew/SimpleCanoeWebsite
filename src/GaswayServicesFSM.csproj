@@ -2010,9 +2010,6 @@
     <Compile Include="Application Specific\Forms And Controls\Order\TabletOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Order\UCStockReplenishmentData.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Order\UCOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2759,9 +2756,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Order\TabletOrder.resx">
       <DependentUpon>TabletOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Order\UCStockReplenishmentData.resx">
-      <DependentUpon>UCStockReplenishmentData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\PartsToBeCredited\FRMAddPartToBeCredited.resx">
       <DependentUpon>FRMAddPartToBeCredited.cs</DependentUpon>

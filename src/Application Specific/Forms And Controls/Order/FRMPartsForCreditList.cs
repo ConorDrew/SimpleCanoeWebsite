@@ -13,12 +13,8 @@ namespace FSM
     {
         public FRMPartsForCreditList()
         {
-            
-            
             base.Load += FRMSystemScheduleOfRate_Load;
         }
-
-        
 
         public FRMPartsForCreditList(int IDToLinkToIn, bool FromQuoteJobIn = false, bool FromJobIn = false) : base()
         {
@@ -296,9 +292,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -318,8 +311,6 @@ namespace FSM
         {
         }
 
-        
-        
         private bool _fromQuoteJob;
 
         public bool FromQuoteJob
@@ -351,19 +342,6 @@ namespace FSM
         }
 
         private DataView _DataViewToLinkTo;
-
-        public DataView DataviewToLinkTo
-        {
-            get
-            {
-                return _DataViewToLinkTo;
-            }
-
-            set
-            {
-                _DataViewToLinkTo = value;
-            }
-        }
 
         private int _IDToLinkTo = 0;
 
@@ -414,9 +392,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupRatesDataGrid()
         {
@@ -541,9 +516,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         private void Populate()
         {
             RatesDataview = App.DB.Order.Order_ItemsGetAll(IDToLinkTo);
@@ -567,7 +539,5 @@ namespace FSM
                 RatesDataview.Table.Clear();
             }
         }
-
-        
     }
 }

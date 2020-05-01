@@ -13,12 +13,8 @@ namespace FSM
     {
         public FRMSalesCredit()
         {
-            
-            
             base.Load += FRMSystemScheduleOfRate_Load;
         }
-
-        
 
         // ("InvoicedID")
         public FRMSalesCredit(DataRow[] IDToLinkToIn, bool FromQuoteJobIn = false, bool FromJobIn = false) : base()
@@ -57,31 +53,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpSystemScheduleOfRate;
-
-        internal GroupBox grpSystemScheduleOfRate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSystemScheduleOfRate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSystemScheduleOfRate != null)
-                {
-                    
-                    _grpSystemScheduleOfRate.Enter -= grpSystemScheduleOfRate_Enter;
-                }
-
-                _grpSystemScheduleOfRate = value;
-                if (_grpSystemScheduleOfRate != null)
-                {
-                    _grpSystemScheduleOfRate.Enter += grpSystemScheduleOfRate_Enter;
-                }
-            }
-        }
 
         private Button _btnAdd;
 
@@ -425,28 +396,6 @@ namespace FSM
 
         private Label _Label7;
 
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _DateTimePicker1;
 
         internal DateTimePicker DateTimePicker1
@@ -497,28 +446,6 @@ namespace FSM
 
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtNominal;
 
         internal TextBox txtNominal
@@ -544,28 +471,6 @@ namespace FSM
         }
 
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private Button _btnCancel;
 
@@ -846,9 +751,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -868,8 +770,6 @@ namespace FSM
         {
         }
 
-        
-        
         private bool _fromQuoteJob;
 
         public bool FromQuoteJob
@@ -901,19 +801,6 @@ namespace FSM
         }
 
         private DataView _DataViewToLinkTo;
-
-        public DataView DataviewToLinkTo
-        {
-            get
-            {
-                return _DataViewToLinkTo;
-            }
-
-            set
-            {
-                _DataViewToLinkTo = value;
-            }
-        }
 
         private DataRow[] _IDToLinkTo = null;
 
@@ -964,9 +851,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupRatesDataGrid()
         {
@@ -1048,9 +932,6 @@ namespace FSM
                 btnAdd.Enabled = true;
             }
         }
-
-        
-        
 
         public void Populate()
         {

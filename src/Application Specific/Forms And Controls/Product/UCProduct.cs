@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCProduct : UCBase, IUserControl
     {
-        
-
         public UCProduct() : base()
         {
-            
-            
             base.Load += UCProduct_Load;
 
             // This call is required by the Windows Form Designer.
@@ -53,28 +49,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private TabControl _TabControl1;
 
-        internal TabControl TabControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabControl1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabControl1 != null)
-                {
-                }
-
-                _TabControl1 = value;
-                if (_TabControl1 != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabMainDetails;
 
         internal TabPage tabMainDetails
@@ -100,28 +74,6 @@ namespace FSM
         }
 
         private GroupBox _grpProduct;
-
-        internal GroupBox grpProduct
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpProduct;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpProduct != null)
-                {
-                }
-
-                _grpProduct = value;
-                if (_grpProduct != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtNumber;
 
@@ -149,28 +101,6 @@ namespace FSM
 
         private Label _lblNumber;
 
-        internal Label lblNumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNumber != null)
-                {
-                }
-
-                _lblNumber = value;
-                if (_lblNumber != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboTypeID;
 
         internal ComboBox cboTypeID
@@ -196,28 +126,6 @@ namespace FSM
         }
 
         private Label _lblTypeID;
-
-        internal Label lblTypeID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTypeID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTypeID != null)
-                {
-                }
-
-                _lblTypeID = value;
-                if (_lblTypeID != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboMakeID;
 
@@ -245,28 +153,6 @@ namespace FSM
 
         private Label _lblMakeID;
 
-        internal Label lblMakeID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMakeID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMakeID != null)
-                {
-                }
-
-                _lblMakeID = value;
-                if (_lblMakeID != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboModelID;
 
         internal ComboBox cboModelID
@@ -292,28 +178,6 @@ namespace FSM
         }
 
         private Label _lblModelID;
-
-        internal Label lblModelID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblModelID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblModelID != null)
-                {
-                }
-
-                _lblModelID = value;
-                if (_lblModelID != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtNotes;
 
@@ -341,51 +205,7 @@ namespace FSM
 
         private Label _lblNotes;
 
-        internal Label lblNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNotes != null)
-                {
-                }
-
-                _lblNotes = value;
-                if (_lblNotes != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabSuppliers;
-
-        internal TabPage tabSuppliers
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabSuppliers;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabSuppliers != null)
-                {
-                }
-
-                _tabSuppliers = value;
-                if (_tabSuppliers != null)
-                {
-                }
-            }
-        }
 
         private Button _btnDelete;
 
@@ -659,75 +479,9 @@ namespace FSM
 
         private TabPage _tabAssociatedParts;
 
-        internal TabPage tabAssociatedParts
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabAssociatedParts;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabAssociatedParts != null)
-                {
-                }
-
-                _tabAssociatedParts = value;
-                if (_tabAssociatedParts != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpSupplier;
 
-        internal GroupBox grpSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSupplier != null)
-                {
-                }
-
-                _grpSupplier = value;
-                if (_grpSupplier != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpAssociatedParts;
-
-        internal GroupBox grpAssociatedParts
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpAssociatedParts;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpAssociatedParts != null)
-                {
-                }
-
-                _grpAssociatedParts = value;
-                if (_grpAssociatedParts != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgAssociatedParts;
 
@@ -1117,9 +871,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1134,9 +885,6 @@ namespace FSM
                 return CurrentProduct;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1265,9 +1013,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupSuppliersDatagrid()
         {
@@ -1427,9 +1172,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void PopulateSuppliers()
         {
             ProductSuppliersDataView = App.DB.ProductSupplier.Get_ByProductID(CurrentProduct.ProductID);
@@ -1514,7 +1256,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

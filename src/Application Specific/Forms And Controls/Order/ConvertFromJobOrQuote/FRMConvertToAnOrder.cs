@@ -15,8 +15,6 @@ namespace FSM
     {
         public FRMConvertToAnOrder(System.Data.SqlClient.SqlTransaction trans) : base()
         {
-            
-            
             base.Load += FRMConvertToAnOrder_Load;
             Trans = trans;
 
@@ -25,8 +23,6 @@ namespace FSM
 
             // Add any initialization after the InitializeComponent() call
         }
-
-        
 
         public FRMConvertToAnOrder() : base()
         {
@@ -212,55 +208,7 @@ namespace FSM
 
         private Button _btnAddProduct;
 
-        internal Button btnAddProduct
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddProduct;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddProduct != null)
-                {
-                    _btnAddProduct.Click -= btnAddProduct_Click;
-                }
-
-                _btnAddProduct = value;
-                if (_btnAddProduct != null)
-                {
-                    _btnAddProduct.Click += btnAddProduct_Click;
-                }
-            }
-        }
-
         private Button _btnAddPart;
-
-        internal Button btnAddPart
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddPart;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddPart != null)
-                {
-                    _btnAddPart.Click -= btnAddPart_Click;
-                }
-
-                _btnAddPart = value;
-                if (_btnAddPart != null)
-                {
-                    _btnAddPart.Click += btnAddPart_Click;
-                }
-            }
-        }
 
         private Label _lblinformation;
 
@@ -412,99 +360,11 @@ namespace FSM
 
         private TabControl _TabControl1;
 
-        internal TabControl TabControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabControl1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabControl1 != null)
-                {
-                }
-
-                _TabControl1 = value;
-                if (_TabControl1 != null)
-                {
-                }
-            }
-        }
-
         private TabPage _TabPage1;
-
-        internal TabPage TabPage1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabPage1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabPage1 != null)
-                {
-                }
-
-                _TabPage1 = value;
-                if (_TabPage1 != null)
-                {
-                }
-            }
-        }
 
         private TabPage _TabPage2;
 
-        internal TabPage TabPage2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabPage2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabPage2 != null)
-                {
-                }
-
-                _TabPage2 = value;
-                if (_TabPage2 != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpCharges;
-
-        internal GroupBox grpCharges
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCharges;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCharges != null)
-                {
-                }
-
-                _grpCharges = value;
-                if (_grpCharges != null)
-                {
-                }
-            }
-        }
 
         private Button _btnDelete;
 
@@ -533,30 +393,6 @@ namespace FSM
         }
 
         private Button _btnChargesSave;
-
-        internal Button btnChargesSave
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnChargesSave;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnChargesSave != null)
-                {
-                    _btnChargesSave.Click -= btnChargesSave_Click;
-                }
-
-                _btnChargesSave = value;
-                if (_btnChargesSave != null)
-                {
-                    _btnChargesSave.Click += btnChargesSave_Click;
-                }
-            }
-        }
 
         private TextBox _txtAmount;
 
@@ -684,53 +520,7 @@ namespace FSM
 
         private Button _btnExport;
 
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
-
         private Label _Label17;
-
-        internal Label Label17
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label17;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label17 != null)
-                {
-                }
-
-                _Label17 = value;
-                if (_Label17 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtDepartment;
 
@@ -781,30 +571,6 @@ namespace FSM
         }
 
         private Button _btnRemove;
-
-        internal Button btnRemove
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRemove;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRemove != null)
-                {
-                    _btnRemove.Click -= btnRemove_Click;
-                }
-
-                _btnRemove = value;
-                if (_btnRemove != null)
-                {
-                    _btnRemove.Click += btnRemove_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -1217,9 +983,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         private void LoadMe(object sender, EventArgs e)
         {
             chkAwaiting.Checked = true;
@@ -1303,8 +1066,6 @@ namespace FSM
             ID = newID;
         }
 
-        
-        
         private System.Data.SqlClient.SqlTransaction _Trans;
 
         public System.Data.SqlClient.SqlTransaction Trans
@@ -1425,21 +1186,6 @@ namespace FSM
                 _EngineerVisitsDataView.AllowEdit = false;
                 _EngineerVisitsDataView.AllowDelete = false;
                 dgEngineerVisits.DataSource = EngineerVisitsDataView;
-            }
-        }
-
-        public DataRow SelectedEngineerVisitDataRow
-        {
-            get
-            {
-                if (!(dgEngineerVisits.CurrentRowIndex == -1))
-                {
-                    return EngineerVisitsDataView[dgEngineerVisits.CurrentRowIndex].Row;
-                }
-                else
-                {
-                    return null;
-                }
             }
         }
 
@@ -1638,9 +1384,6 @@ namespace FSM
                 Combo.SetSelectedComboItem_By_Value(ref argcombo, 0.ToString());
             }
         }
-
-        
-        
 
         public void SetupVisitsDataGrid()
         {
@@ -3491,7 +3234,5 @@ namespace FSM
         {
             throw new NotImplementedException();
         }
-
-        
     }
 }

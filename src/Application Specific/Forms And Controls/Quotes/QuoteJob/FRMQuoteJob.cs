@@ -9,12 +9,8 @@ namespace FSM
 {
     public class FRMQuoteJob : FRMBaseForm, IForm
     {
-        
-
         public FRMQuoteJob() : base()
         {
-            
-            
             base.Load += FRMQuoteJob_Load;
             base.Closing += FRMQuoteJob_Closing;
 
@@ -151,30 +147,6 @@ namespace FSM
 
         private Button _btnViewSite;
 
-        internal Button btnViewSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnViewSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnViewSite != null)
-                {
-                    _btnViewSite.Click -= btnViewSite_Click;
-                }
-
-                _btnViewSite = value;
-                if (_btnViewSite != null)
-                {
-                    _btnViewSite.Click += btnViewSite_Click;
-                }
-            }
-        }
-
         private Button _btnConvert;
 
         internal Button btnConvert
@@ -296,9 +268,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             ((UCQuoteJob)LoadedControl).RefreshButton += ShowButton;
@@ -331,8 +300,6 @@ namespace FSM
             ID = newID;
         }
 
-        
-        
         private IUserControl TheLoadedControl;
         private int _ID = 0;
 
@@ -480,9 +447,6 @@ namespace FSM
             CloseTheForm();
         }
 
-        
-        
-
         private void CloseTheForm()
         {
             if (((UCQuoteJob)TheLoadedControl).QuoteNumberUsed == false)
@@ -498,7 +462,5 @@ namespace FSM
             btnConvert.Text = jobNumber.Length > 0 ? jobNumber : btnConvert.Text;
             btnConvert.Enabled = !(jobNumber.Length > 0);
         }
-
-        
     }
 }

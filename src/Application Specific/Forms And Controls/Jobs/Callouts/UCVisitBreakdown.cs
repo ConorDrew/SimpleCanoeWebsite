@@ -13,12 +13,8 @@ namespace FSM
 {
     public class UCVisitBreakdown : UCBase, IUserControl
     {
-        
-
         public UCVisitBreakdown() : base()
         {
-            
-            
             base.Load += UCVisitBreakdown_Load;
 
             // This call is required by the Windows Form Designer.
@@ -269,51 +265,7 @@ namespace FSM
 
         private TabControl _TabControl1;
 
-        internal TabControl TabControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabControl1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabControl1 != null)
-                {
-                }
-
-                _TabControl1 = value;
-                if (_TabControl1 != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tpVisitDetails;
-
-        internal TabPage tpVisitDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tpVisitDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tpVisitDetails != null)
-                {
-                }
-
-                _tpVisitDetails = value;
-                if (_tpVisitDetails != null)
-                {
-                }
-            }
-        }
 
         private TabPage _tpParts;
 
@@ -437,30 +389,6 @@ namespace FSM
 
         private Button _btnGetOrderRef;
 
-        internal Button btnGetOrderRef
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnGetOrderRef;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnGetOrderRef != null)
-                {
-                    _btnGetOrderRef.Click -= btnGetOrderRef_Click;
-                }
-
-                _btnGetOrderRef = value;
-                if (_btnGetOrderRef != null)
-                {
-                    _btnGetOrderRef.Click += btnGetOrderRef_Click;
-                }
-            }
-        }
-
         private TabPage _EstVisitDate;
 
         internal TabPage EstVisitDate
@@ -500,7 +428,6 @@ namespace FSM
             {
                 if (_BtnEstSave != null)
                 {
-                    
                     _BtnEstSave.Click -= btnEstSave_Click;
                 }
 
@@ -588,28 +515,6 @@ namespace FSM
 
         private Label _Label7;
 
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
-
         private Button _btnMoveParts;
 
         internal Button btnMoveParts
@@ -662,55 +567,7 @@ namespace FSM
 
         private ToolStripMenuItem _EngineerJobSheetToolStripMenuItem;
 
-        internal ToolStripMenuItem EngineerJobSheetToolStripMenuItem
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _EngineerJobSheetToolStripMenuItem;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_EngineerJobSheetToolStripMenuItem != null)
-                {
-                    _EngineerJobSheetToolStripMenuItem.Click -= PrintEngjob;
-                }
-
-                _EngineerJobSheetToolStripMenuItem = value;
-                if (_EngineerJobSheetToolStripMenuItem != null)
-                {
-                    _EngineerJobSheetToolStripMenuItem.Click += PrintEngjob;
-                }
-            }
-        }
-
         private ToolStripMenuItem _ProForrmaToolStripMenuItem;
-
-        internal ToolStripMenuItem ProForrmaToolStripMenuItem
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ProForrmaToolStripMenuItem;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ProForrmaToolStripMenuItem != null)
-                {
-                    _ProForrmaToolStripMenuItem.Click -= ProForrmaToolStripMenuItem_Click;
-                }
-
-                _ProForrmaToolStripMenuItem = value;
-                if (_ProForrmaToolStripMenuItem != null)
-                {
-                    _ProForrmaToolStripMenuItem.Click += ProForrmaToolStripMenuItem_Click;
-                }
-            }
-        }
 
         private ToolStripMenuItem _btnPrintInstall;
 
@@ -815,30 +672,6 @@ namespace FSM
         }
 
         private ToolStripMenuItem _btnPrintJobLetter;
-
-        internal ToolStripMenuItem btnPrintJobLetter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnPrintJobLetter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnPrintJobLetter != null)
-                {
-                    _btnPrintJobLetter.Click -= btnPrintJobLetter_Click;
-                }
-
-                _btnPrintJobLetter = value;
-                if (_btnPrintJobLetter != null)
-                {
-                    _btnPrintJobLetter.Click += btnPrintJobLetter_Click;
-                }
-            }
-        }
 
         private CheckBox _chkSendText;
 
@@ -1402,9 +1235,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1418,9 +1248,6 @@ namespace FSM
                 return EngineerVisit;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1500,19 +1327,6 @@ namespace FSM
         }
 
         private int _PartProductID = 0;
-
-        public int PartProductID
-        {
-            get
-            {
-                return _PartProductID;
-            }
-
-            set
-            {
-                _PartProductID = value;
-            }
-        }
 
         private string _Type = string.Empty;
 
@@ -1696,9 +1510,6 @@ namespace FSM
             var oPrint = new Printing(details, "Install ", Enums.SystemDocumentType.Install);
         }
 
-        
-        
-
         public void SetupDG()
         {
             Helper.SetUpDataGrid(dgPartsAndProducts);
@@ -1807,9 +1618,6 @@ namespace FSM
             tStyle.MappingName = Enums.TableNames.NOT_IN_DATABASE_PartsAndProducts.ToString();
             dgPartsAndProducts.TableStyles.Add(tStyle);
         }
-
-        
-        
 
         public void Populate(int ID = 0)
         {

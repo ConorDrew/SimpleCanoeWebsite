@@ -10,12 +10,8 @@ namespace FSM
 {
     public class UCOrderForVan : UCBase, IUserControl
     {
-        
-
         public UCOrderForVan() : base()
         {
-            
-            
             base.Load += UCOrderForVan_Load;
 
             // This call is required by the Windows Form Designer.
@@ -46,53 +42,7 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpVanDetails;
 
-        internal GroupBox grpVanDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVanDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVanDetails != null)
-                {
-                }
-
-                _grpVanDetails = value;
-                if (_grpVanDetails != null)
-                {
-                }
-            }
-        }
-
         private Button _btnFindVan;
-
-        internal Button btnFindVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindVan != null)
-                {
-                    _btnFindVan.Click -= btnFindVan_Click;
-                }
-
-                _btnFindVan = value;
-                if (_btnFindVan != null)
-                {
-                    _btnFindVan.Click += btnFindVan_Click;
-                }
-            }
-        }
 
         private TextBox _txtVan;
 
@@ -143,30 +93,6 @@ namespace FSM
         }
 
         private Button _btnDeliveryAddress;
-
-        internal Button btnDeliveryAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeliveryAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeliveryAddress != null)
-                {
-                    _btnDeliveryAddress.Click -= btnDeliveryAddress_Click;
-                }
-
-                _btnDeliveryAddress = value;
-                if (_btnDeliveryAddress != null)
-                {
-                    _btnDeliveryAddress.Click += btnDeliveryAddress_Click;
-                }
-            }
-        }
 
         private TextBox _txtDeliveryAddress;
 
@@ -285,9 +211,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -300,9 +223,6 @@ namespace FSM
                 return null;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -383,9 +303,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             // DO NOTHING
@@ -396,7 +313,5 @@ namespace FSM
             return default;
             // DO NOTHING
         }
-
-        
     }
 }

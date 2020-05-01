@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMStockReplenishment : FRMBaseForm, IForm
     {
-        
-
         public FRMStockReplenishment() : base()
         {
-            
-            
             base.Load += FRMStockReplenishment_Load;
 
             // This call is required by the Windows Form Designer.
@@ -98,55 +94,7 @@ namespace FSM
 
         private Button _btnToMinimum;
 
-        internal Button btnToMinimum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnToMinimum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnToMinimum != null)
-                {
-                    _btnToMinimum.Click -= btnToMinimum_Click;
-                }
-
-                _btnToMinimum = value;
-                if (_btnToMinimum != null)
-                {
-                    _btnToMinimum.Click += btnToMinimum_Click;
-                }
-            }
-        }
-
         private Button _btnToRecommended;
-
-        internal Button btnToRecommended
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnToRecommended;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnToRecommended != null)
-                {
-                    _btnToRecommended.Click -= btnToRecommended_Click;
-                }
-
-                _btnToRecommended = value;
-                if (_btnToRecommended != null)
-                {
-                    _btnToRecommended.Click += btnToRecommended_Click;
-                }
-            }
-        }
 
         private CheckBox _chkRecommended;
 
@@ -246,75 +194,9 @@ namespace FSM
 
         private Panel _Panel1;
 
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel2;
 
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel3;
-
-        internal Panel Panel3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel3 != null)
-                {
-                }
-
-                _Panel3 = value;
-                if (_Panel3 != null)
-                {
-                }
-            }
-        }
 
         private Label _Label3;
 
@@ -366,28 +248,6 @@ namespace FSM
 
         private Panel _Panel4;
 
-        internal Panel Panel4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel4 != null)
-                {
-                }
-
-                _Panel4 = value;
-                if (_Panel4 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label5;
 
         internal Label Label5
@@ -414,75 +274,9 @@ namespace FSM
 
         private GroupBox _GroupBox2;
 
-        internal GroupBox GroupBox2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox2 != null)
-                {
-                }
-
-                _GroupBox2 = value;
-                if (_GroupBox2 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
 
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _GroupBox3;
-
-        internal GroupBox GroupBox3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox3 != null)
-                {
-                }
-
-                _GroupBox3 = value;
-                if (_GroupBox3 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtItem;
 
@@ -557,32 +351,6 @@ namespace FSM
         }
 
         private Button _btnRunFilter;
-
-        internal Button btnRunFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRunFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRunFilter != null)
-                {
-                    
-                    
-                    _btnRunFilter.Click -= btnRunFilter_Click;
-                }
-
-                _btnRunFilter = value;
-                if (_btnRunFilter != null)
-                {
-                    _btnRunFilter.Click += btnRunFilter_Click;
-                }
-            }
-        }
 
         private CheckBox _chkIncludeVans;
 
@@ -937,9 +705,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -964,8 +729,6 @@ namespace FSM
             // DO NOTHING
         }
 
-        
-        
         private string lastSelectedType = "";
         private int lastSelectedID = 0;
         private ArrayList warehouses = new ArrayList();
@@ -1004,9 +767,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupStockDatagrid()
         {
@@ -1813,7 +1573,5 @@ namespace FSM
                 }
             }
         }
-
-        
     }
 }

@@ -10,12 +10,8 @@ namespace FSM
 {
     public class FRMPartSelectLocation : FRMBaseForm, IForm
     {
-        
-
         public FRMPartSelectLocation() : base()
         {
-            
-            
             base.Load += FRMSelectLocation_Load;
 
             // This call is required by the Windows Form Designer.
@@ -83,7 +79,6 @@ namespace FSM
                     // Me.DialogResult =DialogResult.OK
                     // End Sub
 
-                    
                     _btnOK.Click -= btnOK_Click;
                 }
 
@@ -270,9 +265,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -354,9 +346,6 @@ namespace FSM
         {
             // DO NOTHING
         }
-
-        
-        
 
         public void SetupLocationsDataGridView()
         {
@@ -495,8 +484,6 @@ namespace FSM
         // Me.dgLocations.TableStyles.Add(tbStyle)
         // End Sub
 
-        
-        
         // Private _Locations As DataView = Nothing
         // Public Property Locations() As DataView
         // Get
@@ -599,14 +586,6 @@ namespace FSM
         }
 
         private int _InPack = 0;
-
-        public int InPack
-        {
-            get
-            {
-                return _InPack;
-            }
-        }
 
         private double _Price = 0.0;
 

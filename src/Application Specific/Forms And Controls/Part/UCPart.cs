@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCPart : UCBase, IUserControl
     {
-        
-
         public UCPart() : base()
         {
-            
-            
             base.Load += UCPart_Load;
 
             // This call is required by the Windows Form Designer.
@@ -61,28 +57,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private TabControl _TabControl1;
 
-        internal TabControl TabControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabControl1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabControl1 != null)
-                {
-                }
-
-                _TabControl1 = value;
-                if (_TabControl1 != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabDetails;
 
         internal TabPage tabDetails
@@ -109,51 +83,7 @@ namespace FSM
 
         private TabPage _tabSuppliers;
 
-        internal TabPage tabSuppliers
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabSuppliers;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabSuppliers != null)
-                {
-                }
-
-                _tabSuppliers = value;
-                if (_tabSuppliers != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpPart;
-
-        internal GroupBox grpPart
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpPart;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpPart != null)
-                {
-                }
-
-                _grpPart = value;
-                if (_grpPart != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSellPrice;
 
@@ -373,28 +303,6 @@ namespace FSM
 
         private Label _lblNotes;
 
-        internal Label lblNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNotes != null)
-                {
-                }
-
-                _lblNotes = value;
-                if (_lblNotes != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgPartSuppliers;
 
         internal DataGrid dgPartSuppliers
@@ -501,28 +409,6 @@ namespace FSM
 
         private Label _Label7;
 
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtReference;
 
         internal TextBox txtReference
@@ -573,51 +459,7 @@ namespace FSM
 
         private TabPage _tpStock;
 
-        internal TabPage tpStock
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tpStock;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tpStock != null)
-                {
-                }
-
-                _tpStock = value;
-                if (_tpStock != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpStock;
-
-        internal GroupBox grpStock
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpStock;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpStock != null)
-                {
-                }
-
-                _grpStock = value;
-                if (_grpStock != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgStock;
 
@@ -669,75 +511,9 @@ namespace FSM
 
         private Label _Label14;
 
-        internal Label Label14
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label14;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label14 != null)
-                {
-                }
-
-                _Label14 = value;
-                if (_Label14 != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tpQuantities;
 
-        internal TabPage tpQuantities
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tpQuantities;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tpQuantities != null)
-                {
-                }
-
-                _tpQuantities = value;
-                if (_tpQuantities != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _GroupBox2;
-
-        internal GroupBox GroupBox2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox2 != null)
-                {
-                }
-
-                _GroupBox2 = value;
-                if (_GroupBox2 != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgQuantities;
 
@@ -860,28 +636,6 @@ namespace FSM
         }
 
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -1301,9 +1055,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1319,9 +1070,6 @@ namespace FSM
                 return CurrentPart;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1507,9 +1255,6 @@ namespace FSM
         // End If
         // End Set
         // End Property
-
-        
-        
 
         public void SetupSuppliersDatagrid()
         {
@@ -1797,9 +1542,6 @@ namespace FSM
         // End If
         // End Sub
 
-        
-        
-
         public void PopulateSuppliers()
         {
             PartSuppliersDataView = App.DB.PartSupplier.Get_ByPartID(CurrentPart.PartID);
@@ -1960,7 +1702,5 @@ namespace FSM
 
             return default;
         }
-
-        
     }
 }

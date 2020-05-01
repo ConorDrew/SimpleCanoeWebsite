@@ -50,28 +50,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private Label _lblFilter;
 
-        internal Label lblFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFilter != null)
-                {
-                }
-
-                _lblFilter = value;
-                if (_lblFilter != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtFilter;
 
         internal TextBox txtFilter
@@ -99,28 +77,6 @@ namespace FSM
         }
 
         private GroupBox _grpResults;
-
-        internal GroupBox grpResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpResults != null)
-                {
-                }
-
-                _grpResults = value;
-                if (_grpResults != null)
-                {
-                }
-            }
-        }
 
         private Button _btnOK;
 
@@ -176,51 +132,7 @@ namespace FSM
 
         private Label _lblPreferredSupplier;
 
-        internal Label lblPreferredSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPreferredSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPreferredSupplier != null)
-                {
-                }
-
-                _lblPreferredSupplier = value;
-                if (_lblPreferredSupplier != null)
-                {
-                }
-            }
-        }
-
         private Panel _pnlGreen;
-
-        internal Panel pnlGreen
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlGreen;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnlGreen != null)
-                {
-                }
-
-                _pnlGreen = value;
-                if (_pnlGreen != null)
-                {
-                }
-            }
-        }
 
         private DataGridView _dgvParts;
 
@@ -247,30 +159,6 @@ namespace FSM
         }
 
         private Button _btnSearch;
-
-        internal Button btnSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click -= btnSearch_Click;
-                }
-
-                _btnSearch = value;
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click += btnSearch_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -612,48 +500,9 @@ namespace FSM
 
         private int _foreignKeyFilter;
 
-        public int ForeignKeyFilter
-        {
-            get
-            {
-                return _foreignKeyFilter;
-            }
-
-            set
-            {
-                _foreignKeyFilter = value;
-            }
-        }
-
         private string _PartNumber;
 
-        public string PartNumber
-        {
-            get
-            {
-                return _PartNumber;
-            }
-
-            set
-            {
-                _PartNumber = value;
-            }
-        }
-
         private bool _ForMassPartEntry = false;
-
-        public bool ForMassPartEntry
-        {
-            get
-            {
-                return _ForMassPartEntry;
-            }
-
-            set
-            {
-                _ForMassPartEntry = value;
-            }
-        }
 
         private DataView _dvRecords;
 

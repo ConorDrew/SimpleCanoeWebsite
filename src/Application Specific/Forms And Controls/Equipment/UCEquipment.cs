@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCEquipment : UCBase, IUserControl
     {
-        
-
         public UCEquipment() : base()
         {
-            
-            
             base.Load += UCEqupment_Load;
 
             // This call is required by the Windows Form Designer.
@@ -52,28 +48,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private TabControl _tcVans;
 
-        internal TabControl tcVans
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tcVans;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tcVans != null)
-                {
-                }
-
-                _tcVans = value;
-                if (_tcVans != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabDetails;
 
         internal TabPage tabDetails
@@ -99,28 +73,6 @@ namespace FSM
         }
 
         private GroupBox _grpVan;
-
-        internal GroupBox grpVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVan != null)
-                {
-                }
-
-                _grpVan = value;
-                if (_grpVan != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtDecription;
 
@@ -148,28 +100,6 @@ namespace FSM
 
         private Label _lblRegistration;
 
-        internal Label lblRegistration
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblRegistration;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblRegistration != null)
-                {
-                }
-
-                _lblRegistration = value;
-                if (_lblRegistration != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtNotes;
 
         internal TextBox txtNotes
@@ -195,28 +125,6 @@ namespace FSM
         }
 
         private Label _lblNotes;
-
-        internal Label lblNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNotes != null)
-                {
-                }
-
-                _lblNotes = value;
-                if (_lblNotes != null)
-                {
-                }
-            }
-        }
 
         private DateTimePicker _dtpCalibrationDate;
 
@@ -246,28 +154,6 @@ namespace FSM
 
         private Label _lblInsuranceDue;
 
-        internal Label lblInsuranceDue
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblInsuranceDue;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblInsuranceDue != null)
-                {
-                }
-
-                _lblInsuranceDue = value;
-                if (_lblInsuranceDue != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpWarrantyExpires;
 
         internal DateTimePicker dtpWarrantyExpires
@@ -294,75 +180,9 @@ namespace FSM
 
         private Label _lblMOTDue;
 
-        internal Label lblMOTDue
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMOTDue;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMOTDue != null)
-                {
-                }
-
-                _lblMOTDue = value;
-                if (_lblMOTDue != null)
-                {
-                }
-            }
-        }
-
         private Label _lblTaxDue;
 
-        internal Label lblTaxDue
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTaxDue;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTaxDue != null)
-                {
-                }
-
-                _lblTaxDue = value;
-                if (_lblTaxDue != null)
-                {
-                }
-            }
-        }
-
         private Label _lblAssetId;
-
-        internal Label lblAssetId
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAssetId;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAssetId != null)
-                {
-                }
-
-                _lblAssetId = value;
-                if (_lblAssetId != null)
-                {
-                }
-            }
-        }
 
         private Label _Label2;
 
@@ -463,31 +283,6 @@ namespace FSM
         }
 
         private Button _btnfindEngineer;
-
-        internal Button btnfindEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnfindEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnfindEngineer != null)
-                {
-                    
-                    _btnfindEngineer.Click -= btnfindEngineer_Click_1;
-                }
-
-                _btnfindEngineer = value;
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click += btnfindEngineer_Click_1;
-                }
-            }
-        }
 
         private TextBox _txtEngineer;
 
@@ -659,28 +454,6 @@ namespace FSM
 
         private TabPage _tabHistory;
 
-        internal TabPage tabHistory
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabHistory;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabHistory != null)
-                {
-                }
-
-                _tabHistory = value;
-                if (_tabHistory != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _GroupBox1;
 
         internal GroupBox GroupBox1
@@ -803,77 +576,9 @@ namespace FSM
 
         private Button _btnUnassign;
 
-        internal Button btnUnassign
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUnassign;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUnassign != null)
-                {
-                    _btnUnassign.Click -= btnUnassign_Click;
-                }
-
-                _btnUnassign = value;
-                if (_btnUnassign != null)
-                {
-                    _btnUnassign.Click += btnUnassign_Click;
-                }
-            }
-        }
-
         private TabPage _tabGenerateWO;
 
-        internal TabPage tabGenerateWO
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabGenerateWO;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabGenerateWO != null)
-                {
-                }
-
-                _tabGenerateWO = value;
-                if (_tabGenerateWO != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpWorkOrder;
-
-        internal GroupBox grpWorkOrder
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpWorkOrder;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpWorkOrder != null)
-                {
-                }
-
-                _grpWorkOrder = value;
-                if (_grpWorkOrder != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtFaults;
 
@@ -901,53 +606,7 @@ namespace FSM
 
         private Label _lblFaults;
 
-        internal Label lblFaults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaults != null)
-                {
-                }
-
-                _lblFaults = value;
-                if (_lblFaults != null)
-                {
-                }
-            }
-        }
-
         private Button _btnGenerate;
-
-        internal Button btnGenerate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnGenerate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnGenerate != null)
-                {
-                    _btnGenerate.Click -= btnGenerate_Click;
-                }
-
-                _btnGenerate = value;
-                if (_btnGenerate != null)
-                {
-                    _btnGenerate.Click += btnGenerate_Click;
-                }
-            }
-        }
 
         private TextBox _txtEmail;
 
@@ -975,53 +634,7 @@ namespace FSM
 
         private Label _lblEmail;
 
-        internal Label lblEmail
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEmail;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEmail != null)
-                {
-                }
-
-                _lblEmail = value;
-                if (_lblEmail != null)
-                {
-                }
-            }
-        }
-
         private Button _btnGenerateAndEmail;
-
-        internal Button btnGenerateAndEmail
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnGenerateAndEmail;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnGenerateAndEmail != null)
-                {
-                    _btnGenerateAndEmail.Click -= btnGenerateAndEmail_Click;
-                }
-
-                _btnGenerateAndEmail = value;
-                if (_btnGenerateAndEmail != null)
-                {
-                    _btnGenerateAndEmail.Click += btnGenerateAndEmail_Click;
-                }
-            }
-        }
 
         private Label _Label6;
 
@@ -1553,9 +1166,6 @@ namespace FSM
 
         private UCDocumentsList DocumentsControl;
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1574,9 +1184,6 @@ namespace FSM
                 return CurrentEquipment;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1684,9 +1291,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         private void SetupDataGrid()
         {
             var tStyle = dgEquipmentAudits.TableStyles[0];
@@ -1747,9 +1351,6 @@ namespace FSM
         // ShowForm(GetType(FRMPart), True, New Object() {Me.dgvParts.CurrentRow.Cells(7).Value, True})
         // PartsDataGridView = DB.PartTransaction.GetByVan2(CurrentVan.VanID, True, False, Combo.GetSelectedItemValue(cboPreferredSupplierID))
         // End Sub
-
-        
-        
 
         public void Populate(int ID = 0)
         {

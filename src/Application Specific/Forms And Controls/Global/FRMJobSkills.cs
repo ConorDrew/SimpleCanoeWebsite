@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMJobSkills : FRMBaseForm, IForm
     {
-        
-
         public FRMJobSkills() : base()
         {
-            
-            
             base.Load += FRMJobLocks_Load;
 
             // This call is required by the Windows Form Designer.
@@ -47,28 +43,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpJobSkills;
-
-        internal GroupBox grpJobSkills
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobSkills;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobSkills != null)
-                {
-                }
-
-                _grpJobSkills = value;
-                if (_grpJobSkills != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgSkills;
 
@@ -146,28 +120,6 @@ namespace FSM
 
         private Label _lblJobType;
 
-        internal Label lblJobType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobType != null)
-                {
-                }
-
-                _lblJobType = value;
-                if (_lblJobType != null)
-                {
-                }
-            }
-        }
-
         private Button _btnAdd;
 
         internal Button btnAdd
@@ -220,77 +172,9 @@ namespace FSM
 
         private Label _lblJobSkill;
 
-        internal Label lblJobSkill
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobSkill;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobSkill != null)
-                {
-                }
-
-                _lblJobSkill = value;
-                if (_lblJobSkill != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpSkillMatrix;
 
-        internal GroupBox grpSkillMatrix
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSkillMatrix;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSkillMatrix != null)
-                {
-                }
-
-                _grpSkillMatrix = value;
-                if (_grpSkillMatrix != null)
-                {
-                }
-            }
-        }
-
         private Button _btnAddTypeSkill;
-
-        internal Button btnAddTypeSkill
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddTypeSkill;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddTypeSkill != null)
-                {
-                    _btnAddTypeSkill.Click -= btnAddTypeSkill_Click;
-                }
-
-                _btnAddTypeSkill = value;
-                if (_btnAddTypeSkill != null)
-                {
-                    _btnAddTypeSkill.Click += btnAddTypeSkill_Click;
-                }
-            }
-        }
 
         private ComboBox _cboTypeSkill;
 
@@ -317,28 +201,6 @@ namespace FSM
         }
 
         private Label _lblTypeSkill;
-
-        internal Label lblTypeSkill
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTypeSkill;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTypeSkill != null)
-                {
-                }
-
-                _lblTypeSkill = value;
-                if (_lblTypeSkill != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboSkillType;
 
@@ -368,53 +230,7 @@ namespace FSM
 
         private Button _btnDeleteTypeSkill;
 
-        internal Button btnDeleteTypeSkill
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeleteTypeSkill;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeleteTypeSkill != null)
-                {
-                    _btnDeleteTypeSkill.Click -= btnDeleteTypeSkill_Click;
-                }
-
-                _btnDeleteTypeSkill = value;
-                if (_btnDeleteTypeSkill != null)
-                {
-                    _btnDeleteTypeSkill.Click += btnDeleteTypeSkill_Click;
-                }
-            }
-        }
-
         private Label _lblSkillType;
-
-        internal Label lblSkillType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSkillType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSkillType != null)
-                {
-                }
-
-                _lblSkillType = value;
-                if (_lblSkillType != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgSkillMatrix;
 
@@ -442,28 +258,6 @@ namespace FSM
 
         private GroupBox _grpJobImportType;
 
-        internal GroupBox grpJobImportType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobImportType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobImportType != null)
-                {
-                }
-
-                _grpJobImportType = value;
-                if (_grpJobImportType != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtSkillTypeName;
 
         internal TextBox txtSkillTypeName
@@ -489,28 +283,6 @@ namespace FSM
         }
 
         private Label _lblSkillTypeName;
-
-        internal Label lblSkillTypeName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSkillTypeName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSkillTypeName != null)
-                {
-                }
-
-                _lblSkillTypeName = value;
-                if (_lblSkillTypeName != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboSkillType1;
 
@@ -538,53 +310,7 @@ namespace FSM
 
         private Label _lblSkillType1;
 
-        internal Label lblSkillType1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSkillType1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSkillType1 != null)
-                {
-                }
-
-                _lblSkillType1 = value;
-                if (_lblSkillType1 != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSaveSkillType;
-
-        internal Button btnSaveSkillType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveSkillType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveSkillType != null)
-                {
-                    _btnSaveSkillType.Click -= btnSaveSkillType_Click;
-                }
-
-                _btnSaveSkillType = value;
-                if (_btnSaveSkillType != null)
-                {
-                    _btnSaveSkillType.Click += btnSaveSkillType_Click;
-                }
-            }
-        }
 
         private Button _btnDelete;
 
@@ -932,9 +658,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -965,8 +688,6 @@ namespace FSM
         {
         }
 
-        
-        
         private Entity.Skills.SkillType _skillType;
 
         public Entity.Skills.SkillType CurrentSkillType
@@ -1056,9 +777,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupDataGrid()
         {
@@ -1324,7 +1042,5 @@ namespace FSM
             cboTypeSkill.DisplayMember = "Skill";
             cboTypeSkill.ValueMember = "SkillID";
         }
-
-        
     }
 }

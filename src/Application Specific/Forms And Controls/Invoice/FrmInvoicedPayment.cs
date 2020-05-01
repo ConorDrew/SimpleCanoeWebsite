@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FrmInvoicedPayment : FRMBaseForm, IForm
     {
-        
-
         public FrmInvoicedPayment() : base()
         {
-            
-            
             base.Load += FRMInvoiceManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -48,125 +44,13 @@ namespace FSM
 
         private GroupBox _gpbPayment;
 
-        internal GroupBox gpbPayment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbPayment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbPayment != null)
-                {
-                }
-
-                _gpbPayment = value;
-                if (_gpbPayment != null)
-                {
-                }
-            }
-        }
-
         private Button _btnPay;
-
-        internal Button btnPay
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnPay;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnPay != null)
-                {
-                    _btnPay.Click -= btnAddPayment_Click;
-                }
-
-                _btnPay = value;
-                if (_btnPay != null)
-                {
-                    _btnPay.Click += btnAddPayment_Click;
-                }
-            }
-        }
 
         private GroupBox _gpbInvoiceInformation;
 
-        internal GroupBox gpbInvoiceInformation
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbInvoiceInformation;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbInvoiceInformation != null)
-                {
-                }
-
-                _gpbInvoiceInformation = value;
-                if (_gpbInvoiceInformation != null)
-                {
-                }
-            }
-        }
-
         private Label _lblCustomer;
 
-        internal Label lblCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomer != null)
-                {
-                }
-
-                _lblCustomer = value;
-                if (_lblCustomer != null)
-                {
-                }
-            }
-        }
-
         private Label _lblInvoiceAddress;
-
-        internal Label lblInvoiceAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblInvoiceAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblInvoiceAddress != null)
-                {
-                }
-
-                _lblInvoiceAddress = value;
-                if (_lblInvoiceAddress != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtCustomer;
 
@@ -266,28 +150,6 @@ namespace FSM
 
         private Label _lblInvoiceTotal;
 
-        internal Label lblInvoiceTotal
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblInvoiceTotal;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblInvoiceTotal != null)
-                {
-                }
-
-                _lblInvoiceTotal = value;
-                if (_lblInvoiceTotal != null)
-                {
-                }
-            }
-        }
-
         private Label _lblInvoice;
 
         internal Label lblInvoice
@@ -362,28 +224,6 @@ namespace FSM
 
         private Label _lblRaisedBy;
 
-        internal Label lblRaisedBy
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblRaisedBy;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblRaisedBy != null)
-                {
-                }
-
-                _lblRaisedBy = value;
-                if (_lblRaisedBy != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboPaidBy;
 
         internal ComboBox cboPaidBy
@@ -409,28 +249,6 @@ namespace FSM
         }
 
         private Label _lblPaidBy;
-
-        internal Label lblPaidBy
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPaidBy;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPaidBy != null)
-                {
-                }
-
-                _lblPaidBy = value;
-                if (_lblPaidBy != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboPaymentTerm;
 
@@ -458,51 +276,7 @@ namespace FSM
 
         private Label _lblPaymentTerm;
 
-        internal Label lblPaymentTerm
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPaymentTerm;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPaymentTerm != null)
-                {
-                }
-
-                _lblPaymentTerm = value;
-                if (_lblPaymentTerm != null)
-                {
-                }
-            }
-        }
-
         private Label _lblAccountNumber;
-
-        internal Label lblAccountNumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAccountNumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAccountNumber != null)
-                {
-                }
-
-                _lblAccountNumber = value;
-                if (_lblAccountNumber != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtAccountNumber;
 
@@ -529,28 +303,6 @@ namespace FSM
         }
 
         private Label _lblRaisedDate;
-
-        internal Label lblRaisedDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblRaisedDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblRaisedDate != null)
-                {
-                }
-
-                _lblRaisedDate = value;
-                if (_lblRaisedDate != null)
-                {
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -788,9 +540,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -810,8 +559,6 @@ namespace FSM
         {
         }
 
-        
-        
         private bool _changingAmount = false;
         private int _InvoicedID = 0;
 
@@ -875,9 +622,6 @@ namespace FSM
             MakePayment();
         }
 
-        
-        
-
         private void Populate()
         {
             txtCustomer.Text = Conversions.ToString(get_GetParameter(1));
@@ -916,7 +660,5 @@ namespace FSM
                 App.ShowMessage("Error processing payment" + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
     }
 }

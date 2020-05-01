@@ -13,12 +13,8 @@ namespace FSM
 {
     public class FRMStockTake : FRMBaseForm, IForm
     {
-        
-
         public FRMStockTake() : base()
         {
-            
-            
             base.Load += FRMStockTake_Load;
 
             // This call is required by the Windows Form Designer.
@@ -52,51 +48,7 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpStockLevels;
 
-        internal GroupBox grpStockLevels
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpStockLevels;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpStockLevels != null)
-                {
-                }
-
-                _grpStockLevels = value;
-                if (_grpStockLevels != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpFilterArea;
-
-        internal GroupBox grpFilterArea
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFilterArea;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFilterArea != null)
-                {
-                }
-
-                _grpFilterArea = value;
-                if (_grpFilterArea != null)
-                {
-                }
-            }
-        }
 
         private RadioButton _radVans;
 
@@ -226,151 +178,15 @@ namespace FSM
 
         private Panel _Panel2;
 
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
-
         private Label _lblShow;
-
-        internal Label lblShow
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblShow;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblShow != null)
-                {
-                }
-
-                _lblShow = value;
-                if (_lblShow != null)
-                {
-                }
-            }
-        }
 
         private Label _lblArrow;
 
-        internal Label lblArrow
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblArrow;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblArrow != null)
-                {
-                }
-
-                _lblArrow = value;
-                if (_lblArrow != null)
-                {
-                }
-            }
-        }
-
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private RadioButton _radBothLocations;
 
-        internal RadioButton radBothLocations
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _radBothLocations;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_radBothLocations != null)
-                {
-                    _radBothLocations.CheckedChanged -= radBothLocations_CheckedChanged;
-                }
-
-                _radBothLocations = value;
-                if (_radBothLocations != null)
-                {
-                    _radBothLocations.CheckedChanged += radBothLocations_CheckedChanged;
-                }
-            }
-        }
-
         private Label _lblBottomInfo;
-
-        internal Label lblBottomInfo
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblBottomInfo;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblBottomInfo != null)
-                {
-                }
-
-                _lblBottomInfo = value;
-                if (_lblBottomInfo != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboCategory;
 
@@ -398,53 +214,7 @@ namespace FSM
 
         private Label _lblCategory;
 
-        internal Label lblCategory
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCategory;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCategory != null)
-                {
-                }
-
-                _lblCategory = value;
-                if (_lblCategory != null)
-                {
-                }
-            }
-        }
-
         private Button _btnRun;
-
-        internal Button btnRun
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRun;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRun != null)
-                {
-                    _btnRun.Click -= btnRun_Click;
-                }
-
-                _btnRun = value;
-                if (_btnRun != null)
-                {
-                    _btnRun.Click += btnRun_Click;
-                }
-            }
-        }
 
         private CheckBox _chkLocations;
 
@@ -498,51 +268,7 @@ namespace FSM
 
         private Label _lblLocationFilter;
 
-        internal Label lblLocationFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLocationFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLocationFilter != null)
-                {
-                }
-
-                _lblLocationFilter = value;
-                if (_lblLocationFilter != null)
-                {
-                }
-            }
-        }
-
         private Label _lblStockValuation;
-
-        internal Label lblStockValuation
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblStockValuation;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblStockValuation != null)
-                {
-                }
-
-                _lblStockValuation = value;
-                if (_lblStockValuation != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkExpectedNotZero;
 
@@ -569,28 +295,6 @@ namespace FSM
         }
 
         private Label _lblPartMpn;
-
-        internal Label lblPartMpn
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPartMpn;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPartMpn != null)
-                {
-                }
-
-                _lblPartMpn = value;
-                if (_lblPartMpn != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtMPN;
 
@@ -643,30 +347,6 @@ namespace FSM
         }
 
         private Button _btnStockReplenishment;
-
-        internal Button btnStockReplenishment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnStockReplenishment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnStockReplenishment != null)
-                {
-                    _btnStockReplenishment.Click -= btnStockReplenishment_Click;
-                }
-
-                _btnStockReplenishment = value;
-                if (_btnStockReplenishment != null)
-                {
-                    _btnStockReplenishment.Click += btnStockReplenishment_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -987,9 +667,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1018,8 +695,6 @@ namespace FSM
             // DO NOTHING
         }
 
-        
-        
         private DataView _StockDataView = null;
 
         public DataView StockDataView
@@ -1054,9 +729,6 @@ namespace FSM
                 _dvStockTakeReason = value;
             }
         }
-
-        
-        
 
         public void StockDgSetup()
         {
@@ -1217,9 +889,6 @@ namespace FSM
                 Populate();
             }
         }
-
-        
-        
 
         private void Filter()
         {
@@ -1426,7 +1095,5 @@ namespace FSM
 
             txtPrice.Text = Math.Round(valuation, 2, MidpointRounding.AwayFromZero).ToString("C");
         }
-
-        
     }
 }

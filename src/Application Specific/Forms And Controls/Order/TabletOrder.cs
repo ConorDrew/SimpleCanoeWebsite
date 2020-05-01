@@ -36,8 +36,6 @@ namespace FSM
             // Add any initialization after the InitializeComponent() call
         }
 
-        
-
         public TabletOrder() : base()
         {
             base.Load += TabletOrder_Load;
@@ -80,30 +78,6 @@ namespace FSM
 
         private Button _btnFindPart;
 
-        internal Button btnFindPart
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindPart;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindPart != null)
-                {
-                    _btnFindPart.Click -= btnFindPart_Click;
-                }
-
-                _btnFindPart = value;
-                if (_btnFindPart != null)
-                {
-                    _btnFindPart.Click += btnFindPart_Click;
-                }
-            }
-        }
-
         private TextBox _txtPartSearch;
 
         internal TextBox txtPartSearch
@@ -132,28 +106,6 @@ namespace FSM
 
         private Label _lblQty;
 
-        internal Label lblQty
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblQty;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblQty != null)
-                {
-                }
-
-                _lblQty = value;
-                if (_lblQty != null)
-                {
-                }
-            }
-        }
-
         private Button _btnCreate;
 
         internal Button btnCreate
@@ -169,8 +121,6 @@ namespace FSM
             {
                 if (_btnCreate != null)
                 {
-                    
-                    
                     _btnCreate.Click -= btnCreate_Click;
                 }
 
@@ -184,51 +134,7 @@ namespace FSM
 
         private Label _lblSearch;
 
-        internal Label lblSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSearch != null)
-                {
-                }
-
-                _lblSearch = value;
-                if (_lblSearch != null)
-                {
-                }
-            }
-        }
-
         private Label _lblSupplier;
-
-        internal Label lblSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSupplier != null)
-                {
-                }
-
-                _lblSupplier = value;
-                if (_lblSupplier != null)
-                {
-                }
-            }
-        }
 
         private NumericUpDown _nudQty;
 
@@ -279,28 +185,6 @@ namespace FSM
         }
 
         private Label _lblTopLabel;
-
-        internal Label lblTopLabel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTopLabel;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTopLabel != null)
-                {
-                }
-
-                _lblTopLabel = value;
-                if (_lblTopLabel != null)
-                {
-                }
-            }
-        }
 
         private Button _btnAddPart;
 
@@ -378,53 +262,7 @@ namespace FSM
 
         private Button _btnBack;
 
-        internal Button btnBack
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnBack;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnBack != null)
-                {
-                    _btnBack.Click -= btnBack_Click;
-                }
-
-                _btnBack = value;
-                if (_btnBack != null)
-                {
-                    _btnBack.Click += btnBack_Click;
-                }
-            }
-        }
-
         private Panel _pnlFilters;
-
-        internal Panel pnlFilters
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlFilters;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnlFilters != null)
-                {
-                }
-
-                _pnlFilters = value;
-                if (_pnlFilters != null)
-                {
-                }
-            }
-        }
 
         private DataGridView _dgvSearch;
 
@@ -480,28 +318,6 @@ namespace FSM
 
         private Label _lblCostCentre;
 
-        internal Label lblCostCentre
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCostCentre;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCostCentre != null)
-                {
-                }
-
-                _lblCostCentre = value;
-                if (_lblCostCentre != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboCostCentre;
 
         internal ComboBox cboCostCentre
@@ -551,28 +367,6 @@ namespace FSM
         }
 
         private Label _lblDate;
-
-        internal Label lblDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDate != null)
-                {
-                }
-
-                _lblDate = value;
-                if (_lblDate != null)
-                {
-                }
-            }
-        }
 
         private DateTimePicker _dtpDatePlaced;
 
@@ -917,9 +711,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -936,9 +727,6 @@ namespace FSM
         public void ResetMe(int newID)
         {
         }
-
-        
-        
 
         private void SetupDataTable()
         {
@@ -1100,28 +888,6 @@ namespace FSM
             }
         }
 
-        public DataRow SelectedPartsRow
-        {
-            get
-            {
-                if (PartsDataView is object)
-                {
-                    if (PartsDataView.Table.Rows.Count > 0)
-                    {
-                        return PartsDataView[dgParts.CurrentRow.Index].Row;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-
-                    return null;
-                }
-
-                return null;
-            }
-        }
-
         private DataView _searchDataView;
 
         private DataView SearchDataView
@@ -1167,8 +933,6 @@ namespace FSM
 
         private int SupplierID = 0;
 
-        
-        
         private JobNumber _OrderNumber = new JobNumber();
 
         public JobNumber OrderNumber
@@ -1528,7 +1292,5 @@ namespace FSM
                 btnFindPart_Click(sender, e);
             }
         }
-
-        
     }
 }

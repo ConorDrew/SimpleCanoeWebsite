@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMStockMove : FRMBaseForm, IForm
     {
-        
-
         public FRMStockMove() : base()
         {
-            
-            
             base.Load += FRMStockMove_Load;
 
             // This call is required by the Windows Form Designer.
@@ -143,51 +139,7 @@ namespace FSM
 
         private GroupBox _grpCurrent;
 
-        internal GroupBox grpCurrent
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCurrent;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCurrent != null)
-                {
-                }
-
-                _grpCurrent = value;
-                if (_grpCurrent != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpNew;
-
-        internal GroupBox grpNew
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpNew;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpNew != null)
-                {
-                }
-
-                _grpNew = value;
-                if (_grpNew != null)
-                {
-                }
-            }
-        }
 
         private RadioButton _radWarehouseNew;
 
@@ -290,28 +242,6 @@ namespace FSM
         }
 
         private GroupBox _grpItems;
-
-        internal GroupBox grpItems
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpItems;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpItems != null)
-                {
-                }
-
-                _grpItems = value;
-                if (_grpItems != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtQuantity;
 
@@ -421,30 +351,6 @@ namespace FSM
 
         private Button _btnMove;
 
-        internal Button btnMove
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnMove;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnMove != null)
-                {
-                    _btnMove.Click -= btnMove_Click;
-                }
-
-                _btnMove = value;
-                if (_btnMove != null)
-                {
-                    _btnMove.Click += btnMove_Click;
-                }
-            }
-        }
-
         private TextBox _txtFilter;
 
         internal TextBox txtFilter
@@ -497,55 +403,7 @@ namespace FSM
 
         private Button _btnSelectAll;
 
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= btnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += btnSelectAll_Click;
-                }
-            }
-        }
-
         private Button _btnDeselectAll;
-
-        internal Button btnDeselectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeselectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeselectAll != null)
-                {
-                    _btnDeselectAll.Click -= btnDeselectAll_Click;
-                }
-
-                _btnDeselectAll = value;
-                if (_btnDeselectAll != null)
-                {
-                    _btnDeselectAll.Click += btnDeselectAll_Click;
-                }
-            }
-        }
 
         private Label _Label4;
 
@@ -856,9 +714,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -886,8 +741,6 @@ namespace FSM
         {
         }
 
-        
-        
         private int CurrentQty = 1;
         private DataView _StockDataView = null;
 
@@ -923,9 +776,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupDatagrid()
         {
@@ -1253,9 +1103,6 @@ namespace FSM
             StockDataView.RowFilter = whereClause;
         }
 
-        
-        
-
         private void ShowStock(int WarehouseID, int VanID)
         {
             var dt = new DataTable();
@@ -1428,7 +1275,5 @@ namespace FSM
 
             App.DB.Location.IPT_Audit_Insert(PartID, ProductID, Conversions.ToInteger(dr["LocationID"]), locationID, qty);
         }
-
-        
     }
 }
