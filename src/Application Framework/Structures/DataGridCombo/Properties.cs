@@ -520,11 +520,6 @@ namespace FSM
             }
         }
 
-        internal void BeginEdit()
-        {
-            _oldValue = _value;
-        }
-
         internal void CancelEdit()
         {
             // by using the accessor, then other pertinant events will be called

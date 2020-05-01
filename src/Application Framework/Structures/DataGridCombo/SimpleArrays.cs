@@ -237,15 +237,4 @@ namespace FSM
             }
         }
     }
-
-    public class SimpleStringArrayOld : SimpleObjectArray
-    {
-        public virtual new string this[int index]
-        {
-            get
-            {
-                return Conversions.ToString(base[index]);
-            }
-        }
-    }
 }

@@ -142,38 +142,6 @@ namespace FSM
             }
         }
 
-        private static DataTable _dtVisit = new DataTable();
-
-        public static DataTable dtVisitFilters
-        {
-            get
-            {
-                if (_dtVisit.Columns.Count == 0)
-                {
-                    _dtVisit.Columns.Add("Field");
-                    _dtVisit.Columns.Add("Value");
-                    _dtVisit.Columns.Add("Type");
-                }
-
-                return _dtVisit;
-            }
-
-            set
-            {
-                _dtVisit = value;
-            }
-        }
-
-        private static string _releaseNoteTextFile;
-
-        public static string ReleaseNoteTextFile
-        {
-            get
-            {
-                return _releaseNoteTextFile;
-            }
-        }
-
         // Starting point of the application
         [STAThread]
         public static void Main()
@@ -211,7 +179,6 @@ namespace FSM
                 if (ShowAppearanceMessage())
                 {
                     DB = new Entity.Sys.Database();
-                    _releaseNoteTextFile = "18.09.25_RN.txt";
                     if (LoginForm is null)
                     {
                         LoginForm = (FRMLogin)Activator.CreateInstance(typeof(FRMLogin));

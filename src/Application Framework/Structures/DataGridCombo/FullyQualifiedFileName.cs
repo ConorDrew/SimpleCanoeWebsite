@@ -2,13 +2,8 @@
 {
     public class FullyQualifiedFileName
     {
-        
-
         // This provides the fully qualified name of the file for persisting operations.
         public string Text = string.Empty;
-
-        
-        
 
         private static string extractExtension(string text)
         {
@@ -104,9 +99,6 @@
             }
         }
 
-        
-        
-
         // Provides a unique name of the object to the user with extension appended
         public string Extension
         {
@@ -134,14 +126,6 @@
             }
         }
 
-        public string FolderAndName
-        {
-            get
-            {
-                return extractFolderAndName(Text);
-            }
-        }
-
         // Provides a unique name of the object to the user with extension appended
         public string Name
         {
@@ -159,7 +143,5 @@
                 return extractNameWithExt(Text);
             }
         }
-
-        
     }
 }

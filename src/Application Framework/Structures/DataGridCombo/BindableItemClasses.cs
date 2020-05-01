@@ -89,14 +89,6 @@ namespace FSM
             PersistedProperties.CancelEdit();
         }
 
-        private string Error
-        {
-            get
-            {
-                return PersistedProperties.Error;
-            }
-        }
-
         string IDataErrorInfo.Error => throw new NotImplementedException();
 
         public string this[string columnName] => throw new NotImplementedException();
