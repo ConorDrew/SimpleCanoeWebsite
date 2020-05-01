@@ -42,6 +42,8 @@ namespace FSM.Entity
                 }
             }
 
+            private int _jobAuditID = 0;
+
             public object SetJobAuditID
             {
                 set

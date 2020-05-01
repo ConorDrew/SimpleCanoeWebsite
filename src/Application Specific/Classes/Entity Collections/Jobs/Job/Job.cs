@@ -16,6 +16,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
+
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,6 +78,8 @@ namespace FSM.Entity
                     _deleted = value;
                 }
             }
+
+
 
             private int _JobID = 0;
 
@@ -180,6 +183,16 @@ namespace FSM.Entity
                 set
                 {
                     _DateCreated = value;
+                }
+            }
+
+            private int _CreatedByUserID = 0;
+
+            public int CreatedByUserID
+            {
+                get
+                {
+                    return _CreatedByUserID;
                 }
             }
 
@@ -425,6 +438,8 @@ namespace FSM.Entity
                 }
             }
 
+
+
             private ArrayList _assets = new ArrayList();
 
             public ArrayList Assets
@@ -490,6 +505,8 @@ namespace FSM.Entity
                     _JobSheets.AllowDelete = false;
                 }
             }
+
+
         }
     }
 }
