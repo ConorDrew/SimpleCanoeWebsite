@@ -14,12 +14,8 @@ namespace FSM
     {
         public FRMViewEngineer()
         {
-            
-            
             base.Load += FRMEngineer_Load;
         }
-
-        
 
         public FRMViewEngineer(DataTable dtEngineer) : base()
         {
@@ -31,28 +27,6 @@ namespace FSM
         }
 
         private GroupBox _grpEngineerInfo;
-
-        internal GroupBox grpEngineerInfo
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineerInfo;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineerInfo != null)
-                {
-                }
-
-                _grpEngineerInfo = value;
-                if (_grpEngineerInfo != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtPhone;
 
@@ -104,123 +78,13 @@ namespace FSM
 
         private Label _lblEngGroup;
 
-        internal Label lblEngGroup
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEngGroup;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEngGroup != null)
-                {
-                }
-
-                _lblEngGroup = value;
-                if (_lblEngGroup != null)
-                {
-                }
-            }
-        }
-
         private Label _lblRegion;
-
-        internal Label lblRegion
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblRegion;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblRegion != null)
-                {
-                }
-
-                _lblRegion = value;
-                if (_lblRegion != null)
-                {
-                }
-            }
-        }
 
         private Label _lblDepartment;
 
-        internal Label lblDepartment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDepartment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDepartment != null)
-                {
-                }
-
-                _lblDepartment = value;
-                if (_lblDepartment != null)
-                {
-                }
-            }
-        }
-
         private Label _lblTelNum;
 
-        internal Label lblTelNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTelNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTelNum != null)
-                {
-                }
-
-                _lblTelNum = value;
-                if (_lblTelNum != null)
-                {
-                }
-            }
-        }
-
         private Label _lblManName;
-
-        internal Label lblManName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblManName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblManName != null)
-                {
-                }
-
-                _lblManName = value;
-                if (_lblManName != null)
-                {
-                }
-            }
-        }
 
         private Label _lblName;
 
@@ -272,28 +136,6 @@ namespace FSM
 
         private GroupBox _grpPostcodes;
 
-        internal GroupBox grpPostcodes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpPostcodes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpPostcodes != null)
-                {
-                }
-
-                _grpPostcodes = value;
-                if (_grpPostcodes != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPostcode;
 
         internal TextBox txtPostcode
@@ -319,28 +161,6 @@ namespace FSM
         }
 
         private GroupBox _grpQualifications;
-
-        internal GroupBox grpQualifications
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpQualifications;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpQualifications != null)
-                {
-                }
-
-                _grpQualifications = value;
-                if (_grpQualifications != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtQual;
 
@@ -477,8 +297,6 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-                    
-                    
                     _btnClose.Click -= btnClose_Click;
                 }
 
@@ -724,9 +542,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         private void LoadMe(object sender, EventArgs e)
         {
             Populate();
@@ -745,8 +560,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataTable _engineer = null;
 
         public DataTable Engineer
@@ -852,7 +665,5 @@ namespace FSM
         {
             throw new NotImplementedException();
         }
-
-        
     }
 }

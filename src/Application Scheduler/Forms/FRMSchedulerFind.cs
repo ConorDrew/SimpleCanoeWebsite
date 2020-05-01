@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMSchedulerFind : Form
     {
-        
-
         public FRMSchedulerFind() : base()
         {
-            
-            
             base.Load += FRMSchedulerFind_Load;
 
             // This call is required by the Windows Form Designer.
@@ -38,28 +34,6 @@ namespace FSM
         }
 
         private GroupBox _grpFind;
-
-        internal GroupBox grpFind
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFind;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFind != null)
-                {
-                }
-
-                _grpFind = value;
-                if (_grpFind != null)
-                {
-                }
-            }
-        }
 
         private RadioButton _rbtnOrder;
 
@@ -192,28 +166,6 @@ namespace FSM
         }
 
         private GroupBox _grpResult;
-
-        internal GroupBox grpResult
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpResult;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpResult != null)
-                {
-                }
-
-                _grpResult = value;
-                if (_grpResult != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgResults;
 
@@ -418,8 +370,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
         private DataView _dvResults;
 
         private DataView DvResults
@@ -480,9 +430,6 @@ namespace FSM
         {
             ResetForm();
         }
-
-        
-        
 
         private void Find()
         {
@@ -598,9 +545,6 @@ namespace FSM
             DvResults = new DataView(new DataTable());
             ClearDg();
         }
-
-        
-        
 
         private void SetupDgSites()
         {
@@ -871,7 +815,5 @@ namespace FSM
             dgts.MappingName = Enums.TableNames.NO_TABLE.ToString();
             dgResults.TableStyles.Add(dgts);
         }
-
-        
     }
 }

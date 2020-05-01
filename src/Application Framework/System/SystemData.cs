@@ -77,26 +77,6 @@ namespace FSM.Entity
                 }
             }
 
-            private const string _Copyright = "FSM";
-
-            public string Copyright
-            {
-                get
-                {
-                    return _Copyright;
-                }
-            }
-
-            private const string _Trademark = "FSM";
-
-            public string Trademark
-            {
-                get
-                {
-                    return _Trademark;
-                }
-            }
-
             public DataTable DLLInformation
             {
                 get
@@ -128,24 +108,6 @@ namespace FSM.Entity
                 get
                 {
                     return _Telephone;
-                }
-            }
-
-            private const string _Fax = "0115 946 0101\"";
-
-            public string Fax
-            {
-                get
-                {
-                    return _Fax;
-                }
-            }
-
-            public string ContactUs
-            {
-                get
-                {
-                    return Address + Constants.vbCrLf + Constants.vbCrLf + Constants.vbCrLf + "Tel : " + Telephone + Constants.vbCrLf + Constants.vbCrLf + Constants.vbCrLf;
                 }
             }
         }

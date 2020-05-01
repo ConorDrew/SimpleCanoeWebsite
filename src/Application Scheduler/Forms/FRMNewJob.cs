@@ -19,8 +19,6 @@ namespace FSM
 {
     public class FRMNewJob : Form
     {
-        
-
         public FRMNewJob(DateTime visitDate = default, int engineerId = 0) : base()
         {
             InitializeComponent();
@@ -56,53 +54,7 @@ namespace FSM
 
         private GroupBox _grpEngineer;
 
-        internal GroupBox grpEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineer != null)
-                {
-                }
-
-                _grpEngineer = value;
-                if (_grpEngineer != null)
-                {
-                }
-            }
-        }
-
         private Button _btnfindEngineer;
-
-        internal Button btnfindEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnfindEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click -= btnfindEngineer_Click;
-                }
-
-                _btnfindEngineer = value;
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click += btnfindEngineer_Click;
-                }
-            }
-        }
 
         private TextBox _txtEngineer;
 
@@ -130,51 +82,7 @@ namespace FSM
 
         private GroupBox _grpVisit;
 
-        internal GroupBox grpVisit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVisit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVisit != null)
-                {
-                }
-
-                _grpVisit = value;
-                if (_grpVisit != null)
-                {
-                }
-            }
-        }
-
         private Label _lblVisitDate;
-
-        internal Label lblVisitDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblVisitDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblVisitDate != null)
-                {
-                }
-
-                _lblVisitDate = value;
-                if (_lblVisitDate != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboAppointment;
 
@@ -202,28 +110,6 @@ namespace FSM
 
         private Label _lblAppointment;
 
-        internal Label lblAppointment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAppointment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAppointment != null)
-                {
-                }
-
-                _lblAppointment = value;
-                if (_lblAppointment != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpVisitDate;
 
         internal DateTimePicker dtpVisitDate
@@ -250,81 +136,9 @@ namespace FSM
 
         private Button _btnCreate;
 
-        internal Button btnCreate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCreate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCreate != null)
-                {
-                    _btnCreate.Click -= btnCreate_Click;
-                }
-
-                _btnCreate = value;
-                if (_btnCreate != null)
-                {
-                    _btnCreate.Click += btnCreate_Click;
-                }
-            }
-        }
-
         private GroupBox _grpSite;
 
-        internal GroupBox grpSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSite != null)
-                {
-                }
-
-                _grpSite = value;
-                if (_grpSite != null)
-                {
-                }
-            }
-        }
-
         private Button _btnFindSite;
-
-        internal Button btnFindSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindSite != null)
-                {
-                    
-                    
-                    _btnFindSite.Click -= btnFindSite_Click;
-                }
-
-                _btnFindSite = value;
-                if (_btnFindSite != null)
-                {
-                    _btnFindSite.Click += btnFindSite_Click;
-                }
-            }
-        }
 
         private TextBox _txtSite;
 
@@ -352,51 +166,7 @@ namespace FSM
 
         private GroupBox _grpJob;
 
-        internal GroupBox grpJob
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJob;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJob != null)
-                {
-                }
-
-                _grpJob = value;
-                if (_grpJob != null)
-                {
-                }
-            }
-        }
-
         private Label _lblNotes;
-
-        internal Label lblNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNotes != null)
-                {
-                }
-
-                _lblNotes = value;
-                if (_lblNotes != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgJobs;
 
@@ -644,30 +414,6 @@ namespace FSM
 
         private Button _btnFindSalesRep;
 
-        internal Button btnFindSalesRep
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindSalesRep;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindSalesRep != null)
-                {
-                    _btnFindSalesRep.Click -= btnFindSalesRep_Click;
-                }
-
-                _btnFindSalesRep = value;
-                if (_btnFindSalesRep != null)
-                {
-                    _btnFindSalesRep.Click += btnFindSalesRep_Click;
-                }
-            }
-        }
-
         private TextBox _txtSalesRep;
 
         internal TextBox txtSalesRep
@@ -867,28 +613,6 @@ namespace FSM
         }
 
         private Label _lblStartTime;
-
-        internal Label lblStartTime
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblStartTime;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblStartTime != null)
-                {
-                }
-
-                _lblStartTime = value;
-                if (_lblStartTime != null)
-                {
-                }
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -1448,7 +1172,6 @@ namespace FSM
         }
 
         private Job Job { get; set; }
-        private EngineerVisit EngineerVisit { get; set; }
         private DateTime VisitStartDate { get; set; }
         private DateTime VisitEndDate { get; set; }
 
@@ -1498,9 +1221,6 @@ namespace FSM
         {
             FindUser();
         }
-
-        
-        
 
         private void FindSite()
         {
@@ -1778,9 +1498,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void SetupDgJobs()
         {
             dgJobs.Enabled = true;
@@ -1836,7 +1553,5 @@ namespace FSM
             dgJobs.TableStyles.Add(dgts);
             dgJobs.Enabled = false;
         }
-
-        
     }
 }

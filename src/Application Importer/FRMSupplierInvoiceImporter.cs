@@ -20,12 +20,8 @@ namespace FSM
 {
     public class FRMSupplierInvoiceImporter : FRMBaseForm
     {
-        
-
         public FRMSupplierInvoiceImporter() : base()
         {
-            
-            
             this.Load += FRMSupplierInvoiceImporter_Load;
 
             // This call is required by the Windows Form Designer.
@@ -57,28 +53,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
-
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
 
         private TabControl _tcData;
 
@@ -154,30 +128,6 @@ namespace FSM
 
         private Button _btnExportResults;
 
-        internal Button btnExportResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click -= btnExportResults_Click;
-                }
-
-                _btnExportResults = value;
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click += btnExportResults_Click;
-                }
-            }
-        }
-
         private ComboBox _cboValidateType;
 
         internal ComboBox cboValidateType
@@ -232,28 +182,6 @@ namespace FSM
 
         private GroupBox _grpCatImport;
 
-        internal GroupBox grpCatImport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCatImport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCatImport != null)
-                {
-                }
-
-                _grpCatImport = value;
-                if (_grpCatImport != null)
-                {
-                }
-            }
-        }
-
         private Label _lbl_Stats;
 
         internal Label lbl_Stats
@@ -279,28 +207,6 @@ namespace FSM
         }
 
         private Label _lblFile;
-
-        internal Label lblFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFile != null)
-                {
-                }
-
-                _lblFile = value;
-                if (_lblFile != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtExcelFile;
 
@@ -430,53 +336,7 @@ namespace FSM
 
         private Label _lblSupplier;
 
-        internal Label lblSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSupplier != null)
-                {
-                }
-
-                _lblSupplier = value;
-                if (_lblSupplier != null)
-                {
-                }
-            }
-        }
-
         private LinkLabel _lblDownloadTemplate;
-
-        internal LinkLabel lblDownloadTemplate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDownloadTemplate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDownloadTemplate != null)
-                {
-                    _lblDownloadTemplate.LinkClicked -= lblDownloadTemplate_LinkClicked;
-                }
-
-                _lblDownloadTemplate = value;
-                if (_lblDownloadTemplate != null)
-                {
-                    _lblDownloadTemplate.LinkClicked += lblDownloadTemplate_LinkClicked;
-                }
-            }
-        }
 
         private TextBox _txtNominal;
 
@@ -504,53 +364,7 @@ namespace FSM
 
         private Label _lblNominal;
 
-        internal Label lblNominal
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNominal;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNominal != null)
-                {
-                }
-
-                _lblNominal = value;
-                if (_lblNominal != null)
-                {
-                }
-            }
-        }
-
         private Button _btnValidateResults;
-
-        internal Button btnValidateResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnValidateResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnValidateResults != null)
-                {
-                    _btnValidateResults.Click -= btnValidateResults_Click;
-                }
-
-                _btnValidateResults = value;
-                if (_btnValidateResults != null)
-                {
-                    _btnValidateResults.Click += btnValidateResults_Click;
-                }
-            }
-        }
 
         private Label _lblProgress;
 
@@ -858,9 +672,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -869,8 +680,6 @@ namespace FSM
             }
         }
 
-        
-        
         public FileInfo File { get; set; }
         private List<DuplicateInvoice> DuplicateInvoices { get; set; } = new List<DuplicateInvoice>();
 
@@ -1069,9 +878,6 @@ namespace FSM
         {
             ValidateAllRecords();
         }
-
-        
-        
 
         private void CreateSupplierInvoice(int validationResult)
         {
@@ -1788,7 +1594,5 @@ namespace FSM
             lblMessages.Visible = true;
             Cursor.Current = Cursors.Default;
         }
-
-        
     }
 }

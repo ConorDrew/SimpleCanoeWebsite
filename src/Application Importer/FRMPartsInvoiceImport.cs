@@ -47,28 +47,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
 
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
-
         private TabControl _tcData;
 
         internal TabControl tcData
@@ -169,105 +147,11 @@ namespace FSM
 
         private LinkLabel _btnExportParts;
 
-        internal LinkLabel btnExportParts
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportParts;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportParts != null)
-                {
-                }
-
-                _btnExportParts = value;
-                if (_btnExportParts != null)
-                {
-                }
-            }
-        }
-
         private Button _btnCheckFiles;
-
-        internal Button btnCheckFiles
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCheckFiles;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCheckFiles != null)
-                {
-                    _btnCheckFiles.Click -= btnCheckFiles_Click;
-                }
-
-                _btnCheckFiles = value;
-                if (_btnCheckFiles != null)
-                {
-                    _btnCheckFiles.Click += btnCheckFiles_Click;
-                }
-            }
-        }
 
         private LinkLabel _llOpenFolder;
 
-        internal LinkLabel llOpenFolder
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _llOpenFolder;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_llOpenFolder != null)
-                {
-                    _llOpenFolder.LinkClicked -= llOpenFolder_LinkClicked;
-                }
-
-                _llOpenFolder = value;
-                if (_llOpenFolder != null)
-                {
-                    _llOpenFolder.LinkClicked += llOpenFolder_LinkClicked;
-                }
-            }
-        }
-
         private Button _btnExportResults;
-
-        internal Button btnExportResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click -= btnExportResults_Click;
-                }
-
-                _btnExportResults = value;
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click += btnExportResults_Click;
-                }
-            }
-        }
 
         private ComboBox _cboValidateType;
 
@@ -323,53 +207,7 @@ namespace FSM
 
         private GroupBox _grpCatImport;
 
-        internal GroupBox grpCatImport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCatImport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCatImport != null)
-                {
-                }
-
-                _grpCatImport = value;
-                if (_grpCatImport != null)
-                {
-                }
-            }
-        }
-
         private Button _btnValidateResults;
-
-        internal Button btnValidateResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnValidateResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnValidateResults != null)
-                {
-                    _btnValidateResults.Click -= btnValidateResults_Click;
-                }
-
-                _btnValidateResults = value;
-                if (_btnValidateResults != null)
-                {
-                    _btnValidateResults.Click += btnValidateResults_Click;
-                }
-            }
-        }
 
         private Button _Button1;
 
@@ -2650,35 +2488,6 @@ namespace FSM
             tcData.TabPages.Add(tp);
             tcData.SelectedIndex = 0;
             MoveProgressOn(true);
-        }
-
-        private void KillInstances(Microsoft.Office.Interop.Excel.Application app)
-        {
-            app.Quit();
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
-            app = null;
-            GC.Collect();
-            var mp = Process.GetProcessesByName("EXCEL");
-            foreach (var p in mp)
-            {
-                try
-                {
-                    if (p.Responding)
-                    {
-                        if (string.IsNullOrEmpty(p.MainWindowTitle))
-                        {
-                            p.Kill();
-                        }
-                    }
-                    else
-                    {
-                        p.Kill();
-                    }
-                }
-                catch
-                {
-                }
-            };
         }
 
         public void MoveProgressOn(bool toMaximum = false)

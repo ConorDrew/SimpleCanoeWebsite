@@ -18,12 +18,8 @@ namespace FSM
     {
         public FRMRescheduleVisit()
         {
-            
-            
             base.Load += FRMSchedulerFind_Load;
         }
-
-        
 
         public FRMRescheduleVisit(int engineerVisitId) : base()
         {
@@ -51,53 +47,7 @@ namespace FSM
 
         private GroupBox _grpEngineer;
 
-        internal GroupBox grpEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineer != null)
-                {
-                }
-
-                _grpEngineer = value;
-                if (_grpEngineer != null)
-                {
-                }
-            }
-        }
-
         private Button _btnfindEngineer;
-
-        internal Button btnfindEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnfindEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click -= btnfindEngineer_Click;
-                }
-
-                _btnfindEngineer = value;
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click += btnfindEngineer_Click;
-                }
-            }
-        }
 
         private TextBox _txtEngineer;
 
@@ -149,51 +99,7 @@ namespace FSM
 
         private GroupBox _grpVisit;
 
-        internal GroupBox grpVisit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVisit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVisit != null)
-                {
-                }
-
-                _grpVisit = value;
-                if (_grpVisit != null)
-                {
-                }
-            }
-        }
-
         private Label _lblVisitDate;
-
-        internal Label lblVisitDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblVisitDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblVisitDate != null)
-                {
-                }
-
-                _lblVisitDate = value;
-                if (_lblVisitDate != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboAppointment;
 
@@ -221,28 +127,6 @@ namespace FSM
 
         private Label _lblAppointment;
 
-        internal Label lblAppointment
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAppointment;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAppointment != null)
-                {
-                }
-
-                _lblAppointment = value;
-                if (_lblAppointment != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpVisitDate;
 
         internal DateTimePicker dtpVisitDate
@@ -268,30 +152,6 @@ namespace FSM
         }
 
         private Button _btnUpdate;
-
-        internal Button btnUpdate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUpdate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUpdate != null)
-                {
-                    _btnUpdate.Click -= btnUpdate_Click;
-                }
-
-                _btnUpdate = value;
-                if (_btnUpdate != null)
-                {
-                    _btnUpdate.Click += btnUpdate_Click;
-                }
-            }
-        }
 
         private TextBox _txtEndTimeMinutes;
 
@@ -468,28 +328,6 @@ namespace FSM
         }
 
         private Label _lblStartTime;
-
-        internal Label lblStartTime
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblStartTime;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblStartTime != null)
-                {
-                }
-
-                _lblStartTime = value;
-                if (_lblStartTime != null)
-                {
-                }
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -709,8 +547,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
         private Engineer _engineer;
 
         public Engineer Engineer
@@ -794,9 +630,6 @@ namespace FSM
                 sequence[Array.IndexOf(sequence, currentBox) - 1].SelectAll();
             }
         }
-
-        
-        
 
         private void Populate()
         {
@@ -909,7 +742,5 @@ namespace FSM
         {
             return hour >= 0 && hour <= 23 && min >= 0 && min <= 59;
         }
-
-        
     }
 }

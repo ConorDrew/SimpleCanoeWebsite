@@ -13,8 +13,6 @@ namespace FSM
 {
     public class FrmDisplayEngineers : FRMBaseForm
     {
-        
-
         public FrmDisplayEngineers() : base()
         {
             base.Load += FrmDisplayEngineers_Load;
@@ -97,8 +95,6 @@ namespace FSM
             {
                 if (_dgEngineers != null)
                 {
-                    
-                    
                     _dgEngineers.Click -= dgEngineers_Click;
                     _dgEngineers.MouseDoubleClick -= dgEngineers_MouseDoubleClick;
                 }
@@ -114,55 +110,7 @@ namespace FSM
 
         private Button _btnClearAll;
 
-        internal Button btnClearAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnClearAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click -= btnClearAll_Click;
-                }
-
-                _btnClearAll = value;
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click += btnClearAll_Click;
-                }
-            }
-        }
-
         private Button _btnSelectAll;
-
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= btnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += btnSelectAll_Click;
-                }
-            }
-        }
 
         private ComboBox _cboEngineerGroup;
 
@@ -191,28 +139,6 @@ namespace FSM
         }
 
         private Label _Label24;
-
-        internal Label Label24
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label24;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label24 != null)
-                {
-                }
-
-                _Label24 = value;
-                if (_Label24 != null)
-                {
-                }
-            }
-        }
 
         private Label _lblEngineerName;
 
@@ -292,28 +218,6 @@ namespace FSM
 
         private Label _lblRegion;
 
-        internal Label lblRegion
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblRegion;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblRegion != null)
-                {
-                }
-
-                _lblRegion = value;
-                if (_lblRegion != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPostcodeFilter;
 
         internal TextBox txtPostcodeFilter
@@ -342,53 +246,7 @@ namespace FSM
 
         private Label _lblPostcode;
 
-        internal Label lblPostcode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPostcode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPostcode != null)
-                {
-                }
-
-                _lblPostcode = value;
-                if (_lblPostcode != null)
-                {
-                }
-            }
-        }
-
         private Button _btnClearFilters;
-
-        internal Button btnClearFilters
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnClearFilters;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnClearFilters != null)
-                {
-                    _btnClearFilters.Click -= btnClearFilters_Click;
-                }
-
-                _btnClearFilters = value;
-                if (_btnClearFilters != null)
-                {
-                    _btnClearFilters.Click += btnClearFilters_Click;
-                }
-            }
-        }
 
         private TextBox _txtQualificationFilter;
 
@@ -683,8 +541,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
         private string engineersPostcodes;
         private List<string> engineersPostcodesList;
         private string engineersQualifications;
@@ -732,9 +588,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetUpDataGrid()
         {
@@ -890,9 +743,6 @@ namespace FSM
             ClearTicks();
         }
 
-        
-        
-
         private void Reset_filters()
         {
             txtPostcodeFilter.Text = "";
@@ -1044,7 +894,5 @@ namespace FSM
             EngineersDataView.RowFilter = filter;
             grpMain.Text = "Engineers to Display (" + EngineersDataView.Count + ")";
         }
-
-        
     }
 }

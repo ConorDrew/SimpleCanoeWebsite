@@ -37,11 +37,6 @@ namespace FSM
         {
             _validatorMessages.CriticalMessages.Add(message);
         }
-
-        public void AddWarningMessage(string message)
-        {
-            _validatorMessages.WarningMessages.Add(message);
-        }
     }
 
     public class ValidationException : Exception

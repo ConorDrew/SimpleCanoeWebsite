@@ -139,30 +139,6 @@ namespace FSM
 
         private Button _btnShowResults;
 
-        internal Button btnShowResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnShowResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnShowResults != null)
-                {
-                    _btnShowResults.Click -= btnShowResults_Click;
-                }
-
-                _btnShowResults = value;
-                if (_btnShowResults != null)
-                {
-                    _btnShowResults.Click += btnShowResults_Click;
-                }
-            }
-        }
-
         private Label _Label3;
 
         internal Label Label3
@@ -433,105 +409,11 @@ namespace FSM
 
         private MenuItem _mnuEngineerAbsence;
 
-        internal MenuItem mnuEngineerAbsence
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuEngineerAbsence;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuEngineerAbsence != null)
-                {
-                    _mnuEngineerAbsence.Click -= mnuEngineerAbsence_Click;
-                }
-
-                _mnuEngineerAbsence = value;
-                if (_mnuEngineerAbsence != null)
-                {
-                    _mnuEngineerAbsence.Click += mnuEngineerAbsence_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuUserAbsence;
-
-        internal MenuItem mnuUserAbsence
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuUserAbsence;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuUserAbsence != null)
-                {
-                    _mnuUserAbsence.Click -= mnuUserAbsence_Click;
-                }
-
-                _mnuUserAbsence = value;
-                if (_mnuUserAbsence != null)
-                {
-                    _mnuUserAbsence.Click += mnuUserAbsence_Click;
-                }
-            }
-        }
 
         private MenuItem _MenuItem2;
 
-        internal MenuItem MenuItem2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _MenuItem2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_MenuItem2 != null)
-                {
-                }
-
-                _MenuItem2 = value;
-                if (_MenuItem2 != null)
-                {
-                }
-            }
-        }
-
         private MenuItem _mnuBlockOfAbsences;
-
-        internal MenuItem mnuBlockOfAbsences
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuBlockOfAbsences;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuBlockOfAbsences != null)
-                {
-                    _mnuBlockOfAbsences.Click -= mnuBlockOfAbsences_Click;
-                }
-
-                _mnuBlockOfAbsences = value;
-                if (_mnuBlockOfAbsences != null)
-                {
-                    _mnuBlockOfAbsences.Click += mnuBlockOfAbsences_Click;
-                }
-            }
-        }
 
         private Button _btnDelete;
 

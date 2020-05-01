@@ -736,9 +736,6 @@
     <Compile Include="Application Framework\Validation\ValidatorMessages.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Importer\UCDataPartsOrderedImport.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Application Scheduler\FRMItemReturn.Designer.cs">
       <DependentUpon>FRMItemReturn.cs</DependentUpon>
     </Compile>
@@ -2656,9 +2653,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Importer\FRMDuplicateInvoices.resx">
       <DependentUpon>FRMDuplicateInvoices.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Importer\UCDataPartsOrderedImport.resx">
-      <DependentUpon>UCDataPartsOrderedImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Importer\UCDataPODuplicateInvoice.resx">
       <DependentUpon>UCDataPODuplicateInvoice.cs</DependentUpon>

@@ -18,12 +18,8 @@ namespace FSM
 {
     public class FRMJobImport : FRMBaseForm
     {
-        
-
         public FRMJobImport() : base()
         {
-            
-            
             this.Load += FRMJobImport_Load;
 
             // This call is required by the Windows Form Designer.
@@ -55,28 +51,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
-
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtExcelFile;
 
@@ -206,28 +180,6 @@ namespace FSM
 
         private Label _lblFile;
 
-        internal Label lblFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFile != null)
-                {
-                }
-
-                _lblFile = value;
-                if (_lblFile != null)
-                {
-                }
-            }
-        }
-
         private Label _lblMessages;
 
         internal Label lblMessages
@@ -277,28 +229,6 @@ namespace FSM
         }
 
         private GroupBox _grpFailedImports;
-
-        internal GroupBox grpFailedImports
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFailedImports;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFailedImports != null)
-                {
-                }
-
-                _grpFailedImports = value;
-                if (_grpFailedImports != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgFailedImports;
 
@@ -351,30 +281,6 @@ namespace FSM
         }
 
         private RadioButton _radBtnJobStatus;
-
-        internal RadioButton radBtnJobStatus
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _radBtnJobStatus;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_radBtnJobStatus != null)
-                {
-                    _radBtnJobStatus.CheckedChanged -= radBtnJob_CheckedChanged;
-                }
-
-                _radBtnJobStatus = value;
-                if (_radBtnJobStatus != null)
-                {
-                    _radBtnJobStatus.CheckedChanged += radBtnJob_CheckedChanged;
-                }
-            }
-        }
 
         private RadioButton _radBtnJob;
 
@@ -1013,9 +919,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -1024,8 +927,6 @@ namespace FSM
             }
         }
 
-        
-        
         private FileInfo _file;
 
         public FileInfo File
@@ -1143,9 +1044,6 @@ namespace FSM
         {
             Export();
         }
-
-        
-        
 
         private void LoadData()
         {
@@ -1726,7 +1624,5 @@ namespace FSM
                 Engineer = App.DB.Engineer.Engineer_Get(ID);
             }
         }
-
-        
     }
 }
