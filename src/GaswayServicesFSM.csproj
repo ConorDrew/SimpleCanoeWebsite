@@ -2552,7 +2552,7 @@
     </Content>
     <None Include="Gabriel.pfx" />
     <Content Include="blueflame.ico" />
-    <Content Include="GenericDocuments\SupplierInvoiceImportTemplate.xlsx">
+    <Content Include="Templates\SupplierInvoiceImportTemplate.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />

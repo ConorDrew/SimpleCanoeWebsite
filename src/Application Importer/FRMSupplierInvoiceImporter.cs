@@ -20,12 +20,8 @@ namespace FSM
 {
     public class FRMSupplierInvoiceImporter : FRMBaseForm
     {
-        
-
         public FRMSupplierInvoiceImporter() : base()
         {
-            
-            
             this.Load += FRMSupplierInvoiceImporter_Load;
 
             // This call is required by the Windows Form Designer.
@@ -858,9 +854,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -869,8 +862,6 @@ namespace FSM
             }
         }
 
-        
-        
         public FileInfo File { get; set; }
         private List<DuplicateInvoice> DuplicateInvoices { get; set; } = new List<DuplicateInvoice>();
 
@@ -1069,9 +1060,6 @@ namespace FSM
         {
             ValidateAllRecords();
         }
-
-        
-        
 
         private void CreateSupplierInvoice(int validationResult)
         {
@@ -1702,7 +1690,7 @@ namespace FSM
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     oExcel = new Microsoft.Office.Interop.Excel.Application();
-                    oExcel.Workbooks.Add(Application.StartupPath + @"\GenericDocuments\SupplierInvoiceImportTemplate.xlsx");
+                    oExcel.Workbooks.Add(Application.StartupPath + @"\Templates\SupplierInvoiceImportTemplate.xlsx");
                     if (System.IO.File.Exists(dlg.SelectedPath + @"\SupplierInvoiceImporter.xlsx"))
                     {
                         System.IO.File.Delete(dlg.SelectedPath + @"\SupplierInvoiceImporter.xlsx");
@@ -1788,7 +1776,5 @@ namespace FSM
             lblMessages.Visible = true;
             Cursor.Current = Cursors.Default;
         }
-
-        
     }
 }
