@@ -17,8 +17,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
-
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -81,8 +79,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _UserID = 0;
 
             public int UserID
@@ -245,24 +241,6 @@ namespace FSM.Entity
                 }
             }
 
-            private int _ManagerUserID = 0;
-
-            public int ManagerUserID
-            {
-                get
-                {
-                    return _ManagerUserID;
-                }
-            }
-
-            public object SetManagerUserID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_ManagerUserID", value);
-                }
-            }
-
             private int _SchedulerTextSize = 0;
 
             public int SchedulerTextSize
@@ -314,8 +292,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private DataView _securityUserModules = null;
 
             public DataView SecurityUserModules
@@ -421,8 +397,6 @@ namespace FSM.Entity
 
                 return access;
             }
-
-            
         }
     }
 }

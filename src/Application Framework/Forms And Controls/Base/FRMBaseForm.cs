@@ -10,8 +10,6 @@ namespace FSM
 {
     public class FRMBaseForm : Form, IBaseForm
     {
-        
-
         public FRMBaseForm() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -55,9 +53,6 @@ namespace FSM
             {
                 if (_picHeader != null)
                 {
-                    
-                    
-                    
                     _picHeader.MouseHover -= picHeader_MouseHover;
                 }
 
@@ -70,28 +65,6 @@ namespace FSM
         }
 
         private PictureBox _picHeaderCont;
-
-        internal PictureBox picHeaderCont
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _picHeaderCont;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_picHeaderCont != null)
-                {
-                }
-
-                _picHeaderCont = value;
-                if (_picHeaderCont != null)
-                {
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -147,9 +120,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-        
         private ArrayList _FormButtons = null;
 
         public ArrayList FormButtons
@@ -300,8 +270,6 @@ namespace FSM
             Entity.Sys.Helper.Setup_Button(ref argbtn, ((Button)sender).AccessibleDescription);
         }
 
-        
-        
         private object[] _FormParameters = null;
 
         public object[] SetFormParameters
@@ -353,7 +321,5 @@ namespace FSM
             var hoverToolTip = new ToolTip();
             hoverToolTip.SetToolTip(picHeader, App.TheSystem.Description);
         }
-
-        
     }
 }

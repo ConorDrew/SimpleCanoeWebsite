@@ -12,8 +12,6 @@ namespace FSM
 {
     public class DLGFindRecord : FRMBaseForm, IForm
     {
-        
-
         public DLGFindRecord() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -280,28 +278,6 @@ namespace FSM
 
         private Panel _Panel1;
 
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
-
         private CheckBox _cbOffice;
 
         internal CheckBox cbOffice
@@ -546,9 +522,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -570,8 +543,6 @@ namespace FSM
         {
         }
 
-        
-        
         private System.Data.SqlClient.SqlTransaction _Trans;
 
         public System.Data.SqlClient.SqlTransaction Trans
@@ -1229,9 +1200,6 @@ namespace FSM
                 _PartsToAdd = value;
             }
         }
-
-        
-        
 
         private void SetupDG()
         {
@@ -2534,9 +2502,6 @@ namespace FSM
             dgStock.TableStyles.Add(tStyle);
         }
 
-        
-        
-
         private void DLGFindRecord_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -2623,9 +2588,6 @@ namespace FSM
                     }
             }
         }
-
-        
-        
 
         private void SelectItem()
         {
@@ -2938,9 +2900,6 @@ namespace FSM
             grpStock.Text = "Stock Locations for : 'No Part Selected'";
         }
 
-        
-        
-
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -2962,8 +2921,6 @@ namespace FSM
                 g.DrawString("", DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
             }
         }
-
-        
 
         private void btnFilter_Click(object sender, EventArgs e)
         {

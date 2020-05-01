@@ -44,75 +44,9 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpLoginDetails;
 
-        internal GroupBox grpLoginDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpLoginDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpLoginDetails != null)
-                {
-                }
-
-                _grpLoginDetails = value;
-                if (_grpLoginDetails != null)
-                {
-                }
-            }
-        }
-
         private Label _Label2;
 
-        internal Label Label2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label2 != null)
-                {
-                }
-
-                _Label2 = value;
-                if (_Label2 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label3;
-
-        internal Label Label3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label3 != null)
-                {
-                }
-
-                _Label3 = value;
-                if (_Label3 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtUserName;
 
@@ -163,30 +97,6 @@ namespace FSM
         }
 
         private Button _btnLogin;
-
-        internal Button btnLogin
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnLogin;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnLogin != null)
-                {
-                    _btnLogin.Click -= btnLogin_Click;
-                }
-
-                _btnLogin = value;
-                if (_btnLogin != null)
-                {
-                    _btnLogin.Click += btnLogin_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()

@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMChangePassword : FRMBaseForm, IForm
     {
-        
-
         public FRMChangePassword() : base()
         {
-            
-            
             base.Load += FRMChangePassword_Load;
 
             // This call is required by the Windows Form Designer.
@@ -47,28 +43,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpNewDetails;
-
-        internal GroupBox grpNewDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpNewDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpNewDetails != null)
-                {
-                }
-
-                _grpNewDetails = value;
-                if (_grpNewDetails != null)
-                {
-                }
-            }
-        }
 
         private Label _Label2;
 
@@ -172,28 +146,6 @@ namespace FSM
 
         private GroupBox _grpCurrentDetails;
 
-        internal GroupBox grpCurrentDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCurrentDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCurrentDetails != null)
-                {
-                }
-
-                _grpCurrentDetails = value;
-                if (_grpCurrentDetails != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPassword;
 
         internal TextBox txtPassword
@@ -222,53 +174,7 @@ namespace FSM
 
         private Label _Label1;
 
-        internal Label Label1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label1 != null)
-                {
-                }
-
-                _Label1 = value;
-                if (_Label1 != null)
-                {
-                }
-            }
-        }
-
         private Button _btnUpdate;
-
-        internal Button btnUpdate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUpdate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUpdate != null)
-                {
-                    _btnUpdate.Click -= btnUpdate_Click;
-                }
-
-                _btnUpdate = value;
-                if (_btnUpdate != null)
-                {
-                    _btnUpdate.Click += btnUpdate_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -412,9 +318,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -434,8 +337,6 @@ namespace FSM
         {
         }
 
-        
-        
         private bool isLoading = true;
 
         private void FRMChangePassword_Load(object sender, EventArgs e)
@@ -613,7 +514,5 @@ namespace FSM
                 btnUpdate_Click(sender, e);
             }
         }
-
-        
     }
 }

@@ -14,12 +14,8 @@ namespace FSM
 {
     public class FRMEngineerRole : FRMBaseForm, IForm
     {
-        
-
         public FRMEngineerRole() : base()
         {
-            
-            
             base.Load += FRMEngineerRole_Load;
 
             // This call is required by the Windows Form Designer.
@@ -73,123 +69,13 @@ namespace FSM
 
         private Panel _Panel1;
 
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
-
         private TabControl _tabEngineerRole;
-
-        internal TabControl tabEngineerRole
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabEngineerRole;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabEngineerRole != null)
-                {
-                }
-
-                _tabEngineerRole = value;
-                if (_tabEngineerRole != null)
-                {
-                }
-            }
-        }
 
         private TabPage _tabPageNewRole;
 
-        internal TabPage tabPageNewRole
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabPageNewRole;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabPageNewRole != null)
-                {
-                }
-
-                _tabPageNewRole = value;
-                if (_tabPageNewRole != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpEngineerRole;
 
-        internal GroupBox grpEngineerRole
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineerRole;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineerRole != null)
-                {
-                }
-
-                _grpEngineerRole = value;
-                if (_grpEngineerRole != null)
-                {
-                }
-            }
-        }
-
         private NumericUpDown _nudHourlyCostToCompany;
-
-        internal NumericUpDown nudHourlyCostToCompany
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _nudHourlyCostToCompany;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_nudHourlyCostToCompany != null)
-                {
-                }
-
-                _nudHourlyCostToCompany = value;
-                if (_nudHourlyCostToCompany != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtDescription;
 
@@ -216,28 +102,6 @@ namespace FSM
         }
 
         private Label _lblDescription;
-
-        internal Label lblDescription
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDescription;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDescription != null)
-                {
-                }
-
-                _lblDescription = value;
-                if (_lblDescription != null)
-                {
-                }
-            }
-        }
 
         private Button _btnSave;
 
@@ -291,28 +155,6 @@ namespace FSM
 
         private Label _lblHourlyCostToCompany;
 
-        internal Label lblHourlyCostToCompany
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblHourlyCostToCompany;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblHourlyCostToCompany != null)
-                {
-                }
-
-                _lblHourlyCostToCompany = value;
-                if (_lblHourlyCostToCompany != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtName;
 
         internal TextBox txtName
@@ -338,28 +180,6 @@ namespace FSM
         }
 
         private GroupBox _grpAssignEngineerRole;
-
-        internal GroupBox grpAssignEngineerRole
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpAssignEngineerRole;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpAssignEngineerRole != null)
-                {
-                }
-
-                _grpAssignEngineerRole = value;
-                if (_grpAssignEngineerRole != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgrdEngineerInRoleList;
 
@@ -389,30 +209,6 @@ namespace FSM
 
         private Button _btnAssign;
 
-        internal Button btnAssign
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAssign;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAssign != null)
-                {
-                    _btnAssign.Click -= btnAssign_Click;
-                }
-
-                _btnAssign = value;
-                if (_btnAssign != null)
-                {
-                    _btnAssign.Click += btnAssign_Click;
-                }
-            }
-        }
-
         private ComboBox _cboEngineerRole;
 
         internal ComboBox cboEngineerRole
@@ -438,28 +234,6 @@ namespace FSM
         }
 
         private Label _lblEngRole;
-
-        internal Label lblEngRole
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEngRole;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEngRole != null)
-                {
-                }
-
-                _lblEngRole = value;
-                if (_lblEngRole != null)
-                {
-                }
-            }
-        }
 
         private Label _lblEngineer;
 
@@ -511,75 +285,9 @@ namespace FSM
 
         private TextBox _txtEngineerName;
 
-        internal TextBox txtEngineerName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtEngineerName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtEngineerName != null)
-                {
-                }
-
-                _txtEngineerName = value;
-                if (_txtEngineerName != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtEngineerId;
 
-        internal TextBox txtEngineerId
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtEngineerId;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtEngineerId != null)
-                {
-                }
-
-                _txtEngineerId = value;
-                if (_txtEngineerId != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpEngRoles;
-
-        internal GroupBox grpEngRoles
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngRoles;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngRoles != null)
-                {
-                }
-
-                _grpEngRoles = value;
-                if (_grpEngRoles != null)
-                {
-                }
-            }
-        }
 
         private Button _btnDelete;
 
@@ -609,30 +317,6 @@ namespace FSM
 
         private Button _btnAddNew;
 
-        internal Button btnAddNew
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddNew;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddNew != null)
-                {
-                    _btnAddNew.Click -= btnAddNew_Click;
-                }
-
-                _btnAddNew = value;
-                if (_btnAddNew != null)
-                {
-                    _btnAddNew.Click += btnAddNew_Click;
-                }
-            }
-        }
-
         private DataGrid _dgrdEngineerRoles;
 
         internal DataGrid dgrdEngineerRoles
@@ -661,53 +345,7 @@ namespace FSM
 
         private GroupBox _grpEngineersAssignedToRole;
 
-        internal GroupBox grpEngineersAssignedToRole
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineersAssignedToRole;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineersAssignedToRole != null)
-                {
-                }
-
-                _grpEngineersAssignedToRole = value;
-                if (_grpEngineersAssignedToRole != null)
-                {
-                }
-            }
-        }
-
         private Button _btnUnassign;
-
-        internal Button btnUnassign
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUnassign;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUnassign != null)
-                {
-                    _btnUnassign.Click -= btnUnassign_Click;
-                }
-
-                _btnUnassign = value;
-                if (_btnUnassign != null)
-                {
-                    _btnUnassign.Click += btnUnassign_Click;
-                }
-            }
-        }
 
         private TextBox _txtHourlyCostToCompany;
 
@@ -737,30 +375,6 @@ namespace FSM
 
         private Button _btnfindEngineer;
 
-        internal Button btnfindEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnfindEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click -= btnfindEngineer_Click;
-                }
-
-                _btnfindEngineer = value;
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click += btnfindEngineer_Click;
-                }
-            }
-        }
-
         private TextBox _txtEngineer;
 
         internal TextBox txtEngineer
@@ -786,28 +400,6 @@ namespace FSM
         }
 
         private TabPage _tabPageAssignRole;
-
-        internal TabPage tabPageAssignRole
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabPageAssignRole;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabPageAssignRole != null)
-                {
-                }
-
-                _tabPageAssignRole = value;
-                if (_tabPageAssignRole != null)
-                {
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -1232,9 +824,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1252,8 +841,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvEngineerRole;
 
         private DataView DvEngineerRole
@@ -1584,9 +1171,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         private void PopulateEngineerRole()
         {
             var dt = Helper.ToDataTable(App.DB.EngineerRole.GetAll());
@@ -1658,9 +1242,6 @@ namespace FSM
                 App.ShowMessage("The operation failed. Error: " + ex.Message.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
-        
 
         private void SetupDgrdEngineerRoles()
         {
@@ -1774,7 +1355,5 @@ namespace FSM
                 Engineer = App.DB.Engineer.Engineer_Get(ID);
             }
         }
-
-        
     }
 }

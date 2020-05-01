@@ -10,12 +10,8 @@ namespace FSM
 {
     public class FRMChangeOverridePassword_Service : FRMBaseForm, IForm
     {
-        
-
         public FRMChangeOverridePassword_Service() : base()
         {
-            
-            
             base.Load += FRMChangeOverridePassword_Load;
 
             // This call is required by the Windows Form Designer.
@@ -46,53 +42,7 @@ namespace FSM
         // Do not modify it using the code editor.
         private Button _btnUpdate;
 
-        internal Button btnUpdate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUpdate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUpdate != null)
-                {
-                    _btnUpdate.Click -= btnUpdate_Click;
-                }
-
-                _btnUpdate = value;
-                if (_btnUpdate != null)
-                {
-                    _btnUpdate.Click += btnUpdate_Click;
-                }
-            }
-        }
-
         private GroupBox _grpNewDetails;
-
-        internal GroupBox grpNewDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpNewDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpNewDetails != null)
-                {
-                }
-
-                _grpNewDetails = value;
-                if (_grpNewDetails != null)
-                {
-                }
-            }
-        }
 
         private Label _Label2;
 
@@ -191,28 +141,6 @@ namespace FSM
         }
 
         private GroupBox _grpCurrentDetails;
-
-        internal GroupBox grpCurrentDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCurrentDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCurrentDetails != null)
-                {
-                }
-
-                _grpCurrentDetails = value;
-                if (_grpCurrentDetails != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtPassword;
 
@@ -403,9 +331,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -509,7 +434,5 @@ namespace FSM
                 txtPassword.Focus();
             }
         }
-
-        
     }
 }

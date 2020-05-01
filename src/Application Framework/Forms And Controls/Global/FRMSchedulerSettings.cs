@@ -16,12 +16,8 @@ namespace FSM
 {
     public class FRMSchedulerSettings : FRMBaseForm, IForm
     {
-        
-
         public FRMSchedulerSettings() : base()
         {
-            
-            
             base.Load += FRMUserSettings_Load;
 
             // This call is required by the Windows Form Designer.
@@ -44,79 +40,9 @@ namespace FSM
 
         private GroupBox _grpJobTypeColours;
 
-        internal GroupBox grpJobTypeColours
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobTypeColours;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobTypeColours != null)
-                {
-                }
-
-                _grpJobTypeColours = value;
-                if (_grpJobTypeColours != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSaveJobColour;
 
-        internal Button btnSaveJobColour
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveJobColour;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveJobColour != null)
-                {
-                    _btnSaveJobColour.Click -= btnSaveJobColour_Click;
-                }
-
-                _btnSaveJobColour = value;
-                if (_btnSaveJobColour != null)
-                {
-                    _btnSaveJobColour.Click += btnSaveJobColour_Click;
-                }
-            }
-        }
-
         private Button _btnDeleteJobColour;
-
-        internal Button btnDeleteJobColour
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeleteJobColour;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeleteJobColour != null)
-                {
-                    _btnDeleteJobColour.Click -= btnDeleteJobColour_Click;
-                }
-
-                _btnDeleteJobColour = value;
-                if (_btnDeleteJobColour != null)
-                {
-                    _btnDeleteJobColour.Click += btnDeleteJobColour_Click;
-                }
-            }
-        }
 
         private ComboBox _cboColour;
 
@@ -146,28 +72,6 @@ namespace FSM
 
         private Label _lblColour;
 
-        internal Label lblColour
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblColour;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblColour != null)
-                {
-                }
-
-                _lblColour = value;
-                if (_lblColour != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboJobType;
 
         internal ComboBox cboJobType
@@ -193,28 +97,6 @@ namespace FSM
         }
 
         private Label _lblJobType;
-
-        internal Label lblJobType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobType != null)
-                {
-                }
-
-                _lblJobType = value;
-                if (_lblJobType != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgJobTypeColours;
 
@@ -412,9 +294,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -432,8 +311,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvJobTypeColour;
 
         private DataView DvJobTypeColour
@@ -511,9 +388,6 @@ namespace FSM
                 Dispose();
             }
         }
-
-        
-        
 
         private void PopulateJobTypeColours()
         {
@@ -602,9 +476,6 @@ namespace FSM
             cboColour.SelectedIndex = 0;
         }
 
-        
-        
-
         private void SetupDgJobColours()
         {
             Helper.SetUpDataGrid(dgJobTypeColours);
@@ -631,7 +502,5 @@ namespace FSM
             dgts.MappingName = "JobTypeColour";
             dgJobTypeColours.TableStyles.Add(dgts);
         }
-
-        
     }
 }

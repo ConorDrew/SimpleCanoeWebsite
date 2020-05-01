@@ -11,8 +11,6 @@ namespace FSM
             InitializeComponent();
         }
 
-        public bool IncDD = true;
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (cbo1.Visible & Conversions.ToDouble(Combo.get_GetSelectedItemValue(cbo1)) == 0)
