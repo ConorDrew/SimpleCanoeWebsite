@@ -2,48 +2,6 @@
 
 namespace FSM.Entity.Skills
 {
-    public class Skill
-    {
-        private DataTypeValidator _dataTypeValidator;
-
-        public Skill()
-        {
-            _dataTypeValidator = new DataTypeValidator();
-        }
-
-        
-        public bool IgnoreExceptionsOnSetMethods
-        {
-            get
-            {
-                return _dataTypeValidator.IgnoreExceptionsOnSetMethods;
-            }
-
-            set
-            {
-                _dataTypeValidator.IgnoreExceptionsOnSetMethods = value;
-            }
-        }
-
-        public Hashtable Errors
-        {
-            get
-            {
-                return _dataTypeValidator.Errors;
-            }
-        }
-
-        public DataTypeValidator DTValidator
-        {
-            get
-            {
-                return _dataTypeValidator;
-            }
-        }
-
-        
-    }
-
     public class SkillType
     {
         private DataTypeValidator _dataTypeValidator;
@@ -53,7 +11,6 @@ namespace FSM.Entity.Skills
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -116,8 +73,6 @@ namespace FSM.Entity.Skills
             }
         }
 
-        
-        
         private int _skillTypeId = 0;
 
         public int SkillTypeID
@@ -153,6 +108,5 @@ namespace FSM.Entity.Skills
                 _dataTypeValidator.SetValue(this, "_name", value);
             }
         }
-        
     }
 }

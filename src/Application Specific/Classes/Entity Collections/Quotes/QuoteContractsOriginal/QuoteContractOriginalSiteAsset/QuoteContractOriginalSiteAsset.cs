@@ -13,7 +13,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -76,45 +75,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
-            private int _QuoteContractSiteAssetID = 0;
-
-            public int QuoteContractSiteAssetID
-            {
-                get
-                {
-                    return _QuoteContractSiteAssetID;
-                }
-            }
-
-            public object SetQuoteContractSiteAssetID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_QuoteContractSiteAssetID", value);
-                }
-            }
-
-            private int _QuoteContractSiteID = 0;
-
-            public int QuoteContractSiteID
-            {
-                get
-                {
-                    return _QuoteContractSiteID;
-                }
-            }
-
-            public object SetQuoteContractSiteID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_QuoteContractSiteID", value);
-                }
-            }
-
             private int _AssetID = 0;
 
             public int AssetID
@@ -132,28 +92,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_AssetID", value);
                 }
             }
-
-            private double _PricePerVisit = 0;
-
-            public double PricePerVisit
-            {
-                get
-                {
-                    return _PricePerVisit;
-                }
-            }
-
-            public object SetPricePerVisit
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_PricePerVisit", value);
-                }
-            }
-
-
-
-            
         }
     }
 }

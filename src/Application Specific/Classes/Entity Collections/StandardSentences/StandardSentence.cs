@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -78,8 +76,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _SentenceID = 0;
 
             public int SentenceID
@@ -115,23 +111,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_Sentence", value);
                 }
             }
-
-            private DateTime _LastChanged = default;
-
-            public DateTime LastChanged
-            {
-                get
-                {
-                    return _LastChanged;
-                }
-
-                set
-                {
-                    _LastChanged = value;
-                }
-            }
-
-            
         }
     }
 }

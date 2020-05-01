@@ -13,7 +13,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -76,45 +75,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
-            private int _QuoteOrderProductID = 0;
-
-            public int QuoteOrderProductID
-            {
-                get
-                {
-                    return _QuoteOrderProductID;
-                }
-            }
-
-            public object SetQuoteOrderProductID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_QuoteOrderProductID", value);
-                }
-            }
-
-            private int _QuoteOrderID = 0;
-
-            public int QuoteOrderID
-            {
-                get
-                {
-                    return _QuoteOrderID;
-                }
-            }
-
-            public object SetQuoteOrderID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_QuoteOrderID", value);
-                }
-            }
-
             private int _ProductID = 0;
 
             public int ProductID
@@ -168,8 +128,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_Price", value);
                 }
             }
-
-            
         }
     }
 }

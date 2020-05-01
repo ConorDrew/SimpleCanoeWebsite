@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -78,9 +77,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
             private int _TabletOrderID = 0;
 
             public int TabletOrderID
@@ -134,98 +130,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_SupplierID", value);
                 }
             }
-
-            private int _SelectedVisitID;
-
-            public string SelectedVisitID
-            {
-                get
-                {
-                    return _SelectedVisitID.ToString();
-                }
-            }
-
-            public object SetSelectedVisitID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_SelectedVisitID", value);
-                }
-            }
-
-            private bool _ForNextVisit;
-
-            public bool ForNextVisit
-            {
-                get
-                {
-                    return _ForNextVisit;
-                }
-            }
-
-            public object SetForNextVisit
-            {
-                set
-                {
-                    _ForNextVisit = Conversions.ToBoolean(value);
-                }
-            }
-
-            private string _Status = string.Empty;
-
-            public string Status
-            {
-                get
-                {
-                    return _Status;
-                }
-            }
-
-            public object SetStatus
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_Status", value);
-                }
-            }
-
-            private DateTime _OrderCreated;
-
-            public DateTime OrderCreated
-            {
-                get
-                {
-                    return _OrderCreated;
-                }
-            }
-
-            public object SetOrderCreated
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_OrderCreated", value);
-                }
-            }
-
-            private DateTime _LastUpdated;
-
-            public DateTime LastUpdated
-            {
-                get
-                {
-                    return _LastUpdated;
-                }
-            }
-
-            public object SetLastUpdated
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_LastUpdated", value);
-                }
-            }
-
-            
         }
     }
 }
