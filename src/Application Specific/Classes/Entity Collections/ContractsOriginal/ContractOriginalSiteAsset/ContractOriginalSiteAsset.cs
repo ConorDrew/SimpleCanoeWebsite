@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -56,19 +55,6 @@ namespace FSM.Entity
                 set
                 {
                     _exists = value;
-                }
-            }
-
-            
-            
-
-            private int _ContractSiteAssetID = 0;
-
-            public int ContractSiteAssetID
-            {
-                get
-                {
-                    return _ContractSiteAssetID;
                 }
             }
 
@@ -187,8 +173,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_Product", value);
                 }
             }
-
-            
         }
     }
 }

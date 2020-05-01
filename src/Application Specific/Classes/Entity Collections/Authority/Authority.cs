@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -78,8 +77,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _authorityId = 0;
 
             public int AuthorityId
@@ -128,16 +125,6 @@ namespace FSM.Entity
                 set
                 {
                     _dateAdded = value;
-                }
-            }
-
-            private int _addedById = 0;
-
-            public int AddedById
-            {
-                get
-                {
-                    return _addedById;
                 }
             }
 
@@ -207,8 +194,6 @@ namespace FSM.Entity
 
                 return changes;
             }
-
-            
         }
     }
 }

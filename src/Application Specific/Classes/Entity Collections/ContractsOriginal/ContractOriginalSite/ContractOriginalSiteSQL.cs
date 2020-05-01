@@ -87,15 +87,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            private object GetContractOriginalSiteScheduleOfRate(int ContractSiteID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ContractSiteID", ContractSiteID, true);
-                var dt = _database.ExecuteSP_DataTable("ContractOriginalSiteScheduleOfRate_Get");
-                dt.TableName = Sys.Enums.TableNames.tblSiteScheduleOfRate.ToString();
-                return new DataView(dt);
-            }
-
             public ContractOriginalSite Insert(ContractOriginalSite oContractSite)
             {
                 _database.ClearParameter();

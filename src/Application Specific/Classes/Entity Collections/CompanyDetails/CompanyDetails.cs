@@ -1,5 +1,4 @@
-﻿
-namespace FSM.Entity.CompanyDetails
+﻿namespace FSM.Entity.CompanyDetails
 {
     public class CompanyDetails
     {
@@ -20,8 +19,6 @@ namespace FSM.Entity.CompanyDetails
         public string Website { get; set; }
         public string Domain { get; set; }
         public string EmailAddress { get; set; }
-        public string SalesEmailAddress { get; set; }
-        public string ContractEmailAddress { get; set; }
         public string SortCode { get; set; }
         public string AccountNumber { get; set; }
         public string CompanyNumber { get; set; }

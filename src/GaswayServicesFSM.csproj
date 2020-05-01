@@ -1183,14 +1183,10 @@
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRates.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRatesSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRatesValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalPPMVisit\ContractOriginalPPMVisit.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalPPMVisit\ContractOriginalPPMVisitSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalPPMVisit\ContractOriginalPPMVisitValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSiteAsset\ContractOriginalSiteAsset.cs">
