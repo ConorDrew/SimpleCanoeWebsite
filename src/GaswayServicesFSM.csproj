@@ -1370,16 +1370,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobItem\JobItemSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobItem\JobItemValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobOfWork\JobOfWork.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobOfWork\JobOfWorkSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobOfWork\JobOfWorkValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\Job.cs">
@@ -1410,16 +1404,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Order\CustomerOrder\CustomerOrderSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\CustomerOrder\CustomerOrderValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\EngineerVisitOrder\EngineerVisitOrder.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\EngineerVisitOrder\EngineerVisitOrderSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\EngineerVisitOrder\EngineerVisitOrderValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\Order.cs">
@@ -1459,9 +1447,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderLocation\OrderLocationSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderLocation\OrderLocationValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderPart\OrderPart.cs">
@@ -1514,9 +1499,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Order\SiteOrder\SiteOrderSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\SiteOrder\SiteOrderValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCredited.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCreditedSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCreditedValidator.cs" />
@@ -1524,9 +1506,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalPPMVisit\QuoteContractOriginalPPMVisitSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalPPMVisit\QuoteContractOriginalPPMVisitValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSiteAsset\QuoteContractOriginalSiteAsset.cs">
@@ -1541,16 +1520,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSite\QuoteContractOriginalSiteSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSite\QuoteContractOriginalSiteValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginal\QuoteContractOriginal.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginal\QuoteContractOriginalSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginal\QuoteContractOriginalValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteEngineerVisit\QuoteEngineerVisit.cs">
