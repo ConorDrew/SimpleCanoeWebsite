@@ -1337,7 +1337,7 @@ namespace FSM
                 foreach (DataRow row in data.Rows)
                 {
                     var dr = dt.NewRow();
-                    if (row["Invoice Number"] == DBNull.Value)
+                    if (string.IsNullOrWhiteSpace(row.GetValue<string>("Invoice Number")))
                     {
                         continue;
                     }
@@ -1346,7 +1346,7 @@ namespace FSM
                         dr["InvoiceNo"] = Helper.MakeStringValid(row["Invoice Number"]).Trim();
                     }
 
-                    if (row["Invoice Date"] == DBNull.Value)
+                    if (string.IsNullOrWhiteSpace(row.GetValue<string>("Invoice Date")))
                     {
                         continue;
                     }
@@ -1355,7 +1355,7 @@ namespace FSM
                         dr["InvoiceDate"] = Helper.MakeStringValid(row["Invoice Date"]);
                     }
 
-                    if (row["Purchase Order Reference"] == DBNull.Value)
+                    if (string.IsNullOrWhiteSpace(row.GetValue<string>("Purchase Order Reference")))
                     {
                         continue;
                     }
@@ -1379,7 +1379,7 @@ namespace FSM
                         dr["UnitPrice"] = Helper.MakeStringValid(row["Unit Price"]).Trim();
                     }
 
-                    if (row["Net Amount"] == DBNull.Value)
+                    if (string.IsNullOrWhiteSpace(row.GetValue<string>("Net Amount")))
                     {
                         continue;
                     }
@@ -1388,7 +1388,7 @@ namespace FSM
                         dr["NetAmount"] = Helper.MakeStringValid(row["Net Amount"]).Trim();
                     }
 
-                    if (row["VAT Amount"] == DBNull.Value)
+                    if (string.IsNullOrWhiteSpace(row.GetValue<string>("VAT Amount")))
                     {
                         continue;
                     }
@@ -1397,7 +1397,7 @@ namespace FSM
                         dr["VATAmount"] = Helper.MakeStringValid(row["VAT Amount"]).Trim();
                     }
 
-                    if (row["Gross Amount"] == DBNull.Value)
+                    if (string.IsNullOrWhiteSpace(row.GetValue<string>("Gross Amount")))
                     {
                         continue;
                     }

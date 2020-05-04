@@ -3368,7 +3368,7 @@ namespace FSM.Entity
                         }
                     }
 
-                ProptMain:
+                    ProptMain:
                     ;
                     if (PM is object)
                     {
@@ -3407,7 +3407,7 @@ namespace FSM.Entity
                         }
                     }
 
-                SaffUnv:
+                    SaffUnv:
                     ;
                     if (SaffUnv is object)
                     {
@@ -3446,7 +3446,7 @@ namespace FSM.Entity
                         }
                     }
 
-                NextLSR:
+                    NextLSR:
                     ;
                     if (isBlank)
                     {
@@ -11533,6 +11533,8 @@ namespace FSM.Entity
                                     PrintHelper.ReplaceText(doc, "[PayerAddress1]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address1"]));
                                     PrintHelper.ReplaceText(doc, "[PayerAddress2]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address2"]));
                                     PrintHelper.ReplaceText(doc, "[PayerAddress3]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address3"]));
+                                    PrintHelper.ReplaceText(doc, "[PayerAddress4]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address4"]));
+                                    PrintHelper.ReplaceText(doc, "[PayerAddress5]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address5"]));
                                     PrintHelper.ReplaceText(doc, "[PayerPostcode]", Helper.FormatPostcode(dtInvoiceDetails.Rows[0]["postcode"]));
                                     PrintHelper.ReplaceText(doc, "[InvoiceNumber]", Helper.MakeStringValid(oCredit.CreditReference));
                                     PrintHelper.ReplaceText(doc, "[RaiseDate]", Conversions.ToString(Helper.MakeDateTimeValid(oCredit.DateCredited.ToString("dd/MM/yyyy"))));
@@ -11650,6 +11652,8 @@ namespace FSM.Entity
                                 PrintHelper.ReplaceText(doc, "[PayerAddress1]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address1"]));
                                 PrintHelper.ReplaceText(doc, "[PayerAddress2]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address2"]));
                                 PrintHelper.ReplaceText(doc, "[PayerAddress3]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address3"]));
+                                PrintHelper.ReplaceText(doc, "[PayerAddress4]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address4"]));
+                                PrintHelper.ReplaceText(doc, "[PayerAddress5]", Helper.MakeStringValid(dtInvoiceDetails.Rows[0]["address5"]));
                                 PrintHelper.ReplaceText(doc, "[PayerPostcode]", Helper.FormatPostcode(dtInvoiceDetails.Rows[0]["postcode"]));
                                 PrintHelper.ReplaceText(doc, "[InvoiceNumber]", invoice.InvoiceNumber);
                                 PrintHelper.ReplaceText(doc, "[RaiseDate]", Helper.MakeDateTimeValid(invoice.RaisedDate).ToString("dd/MM/yyyy"));
@@ -11880,6 +11884,8 @@ namespace FSM.Entity
                             PrintHelper.ReplaceText(doc, "[PayerAddress1]", Helper.MakeStringValid(dr["Payeraddress1"]));
                             PrintHelper.ReplaceText(doc, "[PayerAddress2]", Helper.MakeStringValid(dr["PayerAddress2"]));
                             PrintHelper.ReplaceText(doc, "[PayerAddress3]", Helper.MakeStringValid(dr["PayerAddress3"]));
+                            PrintHelper.ReplaceText(doc, "[PayerAddress4]", Helper.MakeStringValid(dr["PayerAddress4"]));
+                            PrintHelper.ReplaceText(doc, "[PayerAddress5]", Helper.MakeStringValid(dr["PayerAddress5"]));
                             PrintHelper.ReplaceText(doc, "[PayerPostcode]", Helper.FormatPostcode(dr["PayerPostcode"]));
                             PrintHelper.ReplaceText(doc, "[InvoiceNumber]", Helper.MakeStringValid(dr["InvoiceNumber"]));
                             PrintHelper.ReplaceText(doc, "[RaiseDate]", Helper.MakeDateTimeValid(dr["RaiseDate"]).ToString("dd/MM/yyyy"));
