@@ -1,87 +1,12 @@
-# Project Title
+![Image of Apollo](https://cdn.dribbble.com/users/4624817/screenshots/10727387/apollo.png)
+> - Credit: cobatrus from Dribble
 
-One Paragraph of project description goes here
+# Project Apollo
 
-## Getting Started
+Project Apollo is the new field service manager that Flagship group is developing, built from the old project Gabriel that is currently being used in live production, a modern project is born, using the logic and robustness from Gabriel but bringing the technology forwards light-years ahead of the old solution. 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## About
 
-### Prerequisites
+The current solution for flagships repairs system is based from an old legacy system called Gabriel, This system was developed in VB.net and has had many developers over time building upon it, the system is using old/outdated practises, written in a language that isn’t widely used any more. 
+As Gabriel in its current form works, and supports over 400 users over 3 companies, it is robust and well tested, however cracks have been showing for a while, and the scalability is hindered by the current architecture, creating a new project from scratch is a massive undertaking so it was decided the best option was to take the logic and robust-ness from Gabriel and LAUNCH it into the 21st century, working with new technologies, practises and a new team, making sure this product will be Out Of This World, Aiming for the Moon, and delivering a solution that does what Gabriel does, with more features to help users and the companies alike.
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
