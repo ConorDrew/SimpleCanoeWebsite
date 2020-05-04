@@ -19,8 +19,6 @@ namespace FSM
             base.Load += frmVisit_Load;
         }
 
-        
-
         public frmVisit(int EngineerIDIn, DateTime Date, int SORTotal, int EngineerVisitID, bool isCopyIn) : base()
         {
             base.SizeChanged += frmVisit_SizeChanged;
@@ -70,99 +68,11 @@ namespace FSM
 
         private TabControl _tabCtrlVisits;
 
-        internal TabControl tabCtrlVisits
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabCtrlVisits;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabCtrlVisits != null)
-                {
-                }
-
-                _tabCtrlVisits = value;
-                if (_tabCtrlVisits != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabStandardVisit;
-
-        internal TabPage tabStandardVisit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabStandardVisit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabStandardVisit != null)
-                {
-                }
-
-                _tabStandardVisit = value;
-                if (_tabStandardVisit != null)
-                {
-                }
-            }
-        }
 
         private TabPage _tabComplexVisit;
 
-        internal TabPage tabComplexVisit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabComplexVisit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabComplexVisit != null)
-                {
-                }
-
-                _tabComplexVisit = value;
-                if (_tabComplexVisit != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _GroupBox2;
-
-        internal GroupBox GroupBox2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox2 != null)
-                {
-                }
-
-                _GroupBox2 = value;
-                if (_GroupBox2 != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboAppointment;
 
@@ -190,28 +100,6 @@ namespace FSM
 
         private Label _Label12;
 
-        internal Label Label12
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label12;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label12 != null)
-                {
-                }
-
-                _Label12 = value;
-                if (_Label12 != null)
-                {
-                }
-            }
-        }
-
         private Label _lblAMPM;
 
         internal Label lblAMPM
@@ -238,51 +126,7 @@ namespace FSM
 
         private Label _Label11;
 
-        internal Label Label11
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label11;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label11 != null)
-                {
-                }
-
-                _Label11 = value;
-                if (_Label11 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label10;
-
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtEndTimeMinutes;
 
@@ -562,28 +406,6 @@ namespace FSM
 
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label6;
 
         internal Label Label6
@@ -634,51 +456,7 @@ namespace FSM
 
         private Panel _Panel2;
 
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel1;
-
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
 
         private PictureBox _picPlanner;
 
@@ -708,267 +486,25 @@ namespace FSM
 
         private Label _Label7;
 
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel3;
-
-        internal Panel Panel3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel3 != null)
-                {
-                }
-
-                _Panel3 = value;
-                if (_Panel3 != null)
-                {
-                }
-            }
-        }
 
         private Panel _Panel4;
 
-        internal Panel Panel4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel4 != null)
-                {
-                }
-
-                _Panel4 = value;
-                if (_Panel4 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private GroupBox _GroupBox3;
 
-        internal GroupBox GroupBox3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox3 != null)
-                {
-                }
-
-                _GroupBox3 = value;
-                if (_GroupBox3 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label14;
-
-        internal Label Label14
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label14;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label14 != null)
-                {
-                }
-
-                _Label14 = value;
-                if (_Label14 != null)
-                {
-                }
-            }
-        }
 
         private Panel _Panel5;
 
-        internal Panel Panel5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel5 != null)
-                {
-                }
-
-                _Panel5 = value;
-                if (_Panel5 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label16;
-
-        internal Label Label16
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label16;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label16 != null)
-                {
-                }
-
-                _Label16 = value;
-                if (_Label16 != null)
-                {
-                }
-            }
-        }
 
         private Panel _Panel7;
 
-        internal Panel Panel7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel7 != null)
-                {
-                }
-
-                _Panel7 = value;
-                if (_Panel7 != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel8;
 
-        internal Panel Panel8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel8 != null)
-                {
-                }
-
-                _Panel8 = value;
-                if (_Panel8 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label17;
-
-        internal Label Label17
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label17;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label17 != null)
-                {
-                }
-
-                _Label17 = value;
-                if (_Label17 != null)
-                {
-                }
-            }
-        }
 
         private Pabo.Calendar.MonthCalendar _calComplexVisit;
 
@@ -998,105 +534,11 @@ namespace FSM
 
         private GroupBox _GroupBox4;
 
-        internal GroupBox GroupBox4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox4 != null)
-                {
-                }
-
-                _GroupBox4 = value;
-                if (_GroupBox4 != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSaveComplex;
-
-        internal Button btnSaveComplex
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveComplex;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveComplex != null)
-                {
-                    _btnSaveComplex.Click -= BtnSaveComplex_Click;
-                }
-
-                _btnSaveComplex = value;
-                if (_btnSaveComplex != null)
-                {
-                    _btnSaveComplex.Click += BtnSaveComplex_Click;
-                }
-            }
-        }
 
         private Button _btnCancel2;
 
-        internal Button btnCancel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCancel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCancel2 != null)
-                {
-                    _btnCancel2.Click -= btnCancel_Click;
-                }
-
-                _btnCancel2 = value;
-                if (_btnCancel2 != null)
-                {
-                    _btnCancel2.Click += btnCancel_Click;
-                }
-            }
-        }
-
         private Button _btnAdditionalVisit;
-
-        internal Button btnAdditionalVisit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAdditionalVisit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAdditionalVisit != null)
-                {
-                    _btnAdditionalVisit.Click -= btnAdditionalVisit_Click;
-                }
-
-                _btnAdditionalVisit = value;
-                if (_btnAdditionalVisit != null)
-                {
-                    _btnAdditionalVisit.Click += btnAdditionalVisit_Click;
-                }
-            }
-        }
 
         private List<Label> lblStarts;
         private List<DateTimePicker> dtpMulitpleVisitsStart;
@@ -1130,51 +572,7 @@ namespace FSM
 
         private Panel _Panel9;
 
-        internal Panel Panel9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel9 != null)
-                {
-                }
-
-                _Panel9 = value;
-                if (_Panel9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label13;
-
-        internal Label Label13
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label13;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label13 != null)
-                {
-                }
-
-                _Label13 = value;
-                if (_Label13 != null)
-                {
-                }
-            }
-        }
 
         private ToolTip _ttComplexVisits;
 
@@ -1793,7 +1191,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
         private bool isCopy = false;
         private frmDetailsPopup _detailPopup;
         private DataTable timeSlotDt;
@@ -1934,30 +1331,6 @@ namespace FSM
             set
             {
                 _SORMinutes = value;
-            }
-        }
-
-        public bool IsFormDisposed
-        {
-            get
-            {
-                return IsDisposed;
-            }
-        }
-
-        public PictureBox ThePlanner
-        {
-            get
-            {
-                return picPlanner;
-            }
-        }
-
-        public IntPtr TheHandle
-        {
-            get
-            {
-                return Handle;
             }
         }
 

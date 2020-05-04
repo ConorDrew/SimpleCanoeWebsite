@@ -13,12 +13,8 @@ namespace FSM
 {
     public class FRMBatchGSRPrint : FRMBaseForm, IForm
     {
-        
-
         public FRMBatchGSRPrint() : base()
         {
-            
-            
             base.Load += FRMVisitManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -191,28 +187,6 @@ namespace FSM
 
         private Label _Label11;
 
-        internal Label Label11
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label11;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label11 != null)
-                {
-                }
-
-                _Label11 = value;
-                if (_Label11 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboType;
 
         internal ComboBox cboType
@@ -239,75 +213,9 @@ namespace FSM
 
         private Label _Label10;
 
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private Label _Label6;
 
@@ -559,30 +467,6 @@ namespace FSM
 
         private Button _btnFindCustomer;
 
-        internal Button btnFindCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click -= btnFindCustomer_Click;
-                }
-
-                _btnFindCustomer = value;
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click += btnFindCustomer_Click;
-                }
-            }
-        }
-
         private TextBox _txtCustomer;
 
         internal TextBox txtCustomer
@@ -633,28 +517,6 @@ namespace FSM
 
         private Label _Label13;
 
-        internal Label Label13
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label13;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label13 != null)
-                {
-                }
-
-                _Label13 = value;
-                if (_Label13 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboOutcome;
 
         internal ComboBox cboOutcome
@@ -681,107 +543,11 @@ namespace FSM
 
         private Button _btnUnselect;
 
-        internal Button btnUnselect
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUnselect;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUnselect != null)
-                {
-                    _btnUnselect.Click -= btnUnselect_Click;
-                }
-
-                _btnUnselect = value;
-                if (_btnUnselect != null)
-                {
-                    _btnUnselect.Click += btnUnselect_Click;
-                }
-            }
-        }
-
         private Button _btnSelectAll;
-
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= btnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += btnSelectAll_Click;
-                }
-            }
-        }
 
         private Button _btnPrint;
 
-        internal Button btnPrint
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnPrint;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnPrint != null)
-                {
-                    _btnPrint.Click -= btnPrint_Click;
-                }
-
-                _btnPrint = value;
-                if (_btnPrint != null)
-                {
-                    _btnPrint.Click += btnPrint_Click;
-                }
-            }
-        }
-
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private CheckBox _chkPrintHdr;
 
@@ -832,30 +598,6 @@ namespace FSM
         }
 
         private Button _btnShowdata;
-
-        internal Button btnShowdata
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnShowdata;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnShowdata != null)
-                {
-                    _btnShowdata.Click -= btnShowdata_Click;
-                }
-
-                _btnShowdata = value;
-                if (_btnShowdata != null)
-                {
-                    _btnShowdata.Click += btnShowdata_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -1261,9 +1003,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1291,8 +1030,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvVisits;
 
         private DataView VisitsDataview
@@ -1376,9 +1113,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupVisitDataGrid()
         {
@@ -1704,9 +1438,6 @@ namespace FSM
             ExportHelper.Export(dtExport, "Gas Summary Spec", Enums.ExportType.XLS);
         }
 
-        
-        
-
         public void PopulateDatagrid()
         {
             try
@@ -1859,7 +1590,5 @@ namespace FSM
         {
             App.ShowForm(typeof(FRMEngineerVisit), true, new object[] { SelectedVisitDataRow["EngineerVisitID"] });
         }
-
-        
     }
 }

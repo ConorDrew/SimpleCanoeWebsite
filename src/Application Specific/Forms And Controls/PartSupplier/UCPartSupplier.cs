@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCPartSupplier : UCBase, IUserControl
     {
-        
-
         public UCPartSupplier() : base()
         {
-            
-            
             base.Load += UCPartSupplier_Load;
 
             // This call is required by the Windows Form Designer.
@@ -50,28 +46,6 @@ namespace FSM
 
         private GroupBox _grpPartSupplier;
 
-        internal GroupBox grpPartSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpPartSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpPartSupplier != null)
-                {
-                }
-
-                _grpPartSupplier = value;
-                if (_grpPartSupplier != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPartCode;
 
         internal TextBox txtPartCode
@@ -97,28 +71,6 @@ namespace FSM
         }
 
         private Label _lblPartCode;
-
-        internal Label lblPartCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPartCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPartCode != null)
-                {
-                }
-
-                _lblPartCode = value;
-                if (_lblPartCode != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboSupplierID;
 
@@ -148,28 +100,6 @@ namespace FSM
 
         private Label _lblSupplierID;
 
-        internal Label lblSupplierID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSupplierID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSupplierID != null)
-                {
-                }
-
-                _lblSupplierID = value;
-                if (_lblSupplierID != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtQuantityInPack;
 
         internal TextBox txtQuantityInPack
@@ -195,28 +125,6 @@ namespace FSM
         }
 
         private Label _lblQuantityInPack;
-
-        internal Label lblQuantityInPack
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblQuantityInPack;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblQuantityInPack != null)
-                {
-                }
-
-                _lblQuantityInPack = value;
-                if (_lblQuantityInPack != null)
-                {
-                }
-            }
-        }
 
         private Label _Label1;
 
@@ -458,9 +366,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -474,8 +379,6 @@ namespace FSM
             }
         }
 
-        
-        
         private int _PartID = 0;
         private bool _PrimaryUpdate = false;
         private bool _SecondaryUpdate = false;
@@ -536,9 +439,6 @@ namespace FSM
         {
             LoadForm(sender, e);
         }
-
-        
-        
 
         public void Populate(int ID = 0)
         {
@@ -645,7 +545,5 @@ namespace FSM
                 _SecondaryUpdate = true;
             }
         }
-
-        
     }
 }

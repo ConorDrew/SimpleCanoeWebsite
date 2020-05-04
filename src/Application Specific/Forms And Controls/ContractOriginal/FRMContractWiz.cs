@@ -9,12 +9,8 @@ namespace FSM
 {
     public class FRMContractWiz : FRMBaseForm, IForm
     {
-        
-
         public FRMContractWiz() : base()
         {
-            
-            
             base.Load += FRMContract_Load;
             base.Closing += FRMContractOriginal_Closing;
 
@@ -128,31 +124,6 @@ namespace FSM
 
         private Button _btnReprintExpiry;
 
-        public Button btnReprintExpiry
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnReprintExpiry;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnReprintExpiry != null)
-                {
-                    
-                    _btnReprintExpiry.Click -= btnReprintExpiry_Click;
-                }
-
-                _btnReprintExpiry = value;
-                if (_btnReprintExpiry != null)
-                {
-                    _btnReprintExpiry.Click += btnReprintExpiry_Click;
-                }
-            }
-        }
-
         private Panel _pnlMain;
 
         internal Panel pnlMain
@@ -263,9 +234,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -307,8 +275,6 @@ namespace FSM
             ID = newID;
         }
 
-        
-        
         private IUserControl TheLoadedControl;
         private int _ID = 0;
 

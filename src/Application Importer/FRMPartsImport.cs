@@ -17,12 +17,8 @@ namespace FSM
 {
     public class FRMPartsImport : FRMBaseForm
     {
-        
-
         public FRMPartsImport() : base()
         {
-            
-            
             this.Load += FRMPartsImport_Load;
 
             // This call is required by the Windows Form Designer.
@@ -54,28 +50,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
-
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
 
         private TabControl _tcData;
 
@@ -151,55 +125,7 @@ namespace FSM
 
         private LinkLabel _btnExportParts;
 
-        internal LinkLabel btnExportParts
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportParts;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportParts != null)
-                {
-                    _btnExportParts.LinkClicked -= btnExportParts_LinkClicked;
-                }
-
-                _btnExportParts = value;
-                if (_btnExportParts != null)
-                {
-                    _btnExportParts.LinkClicked += btnExportParts_LinkClicked;
-                }
-            }
-        }
-
         private Button _btnExportResults;
-
-        internal Button btnExportResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click -= btnExportResults_Click;
-                }
-
-                _btnExportResults = value;
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click += btnExportResults_Click;
-                }
-            }
-        }
 
         private ComboBox _cboValidateType;
 
@@ -255,28 +181,6 @@ namespace FSM
 
         private GroupBox _grpCatImport;
 
-        internal GroupBox grpCatImport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCatImport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCatImport != null)
-                {
-                }
-
-                _grpCatImport = value;
-                if (_grpCatImport != null)
-                {
-                }
-            }
-        }
-
         private Label _lbl_Stats;
 
         internal Label lbl_Stats
@@ -302,28 +206,6 @@ namespace FSM
         }
 
         private Label _lblFile;
-
-        internal Label lblFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFile != null)
-                {
-                }
-
-                _lblFile = value;
-                if (_lblFile != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtExcelFile;
 
@@ -453,28 +335,6 @@ namespace FSM
 
         private Label _lblSupplier;
 
-        internal Label lblSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSupplier != null)
-                {
-                }
-
-                _lblSupplier = value;
-                if (_lblSupplier != null)
-                {
-                }
-            }
-        }
-
         private CheckBox _chkPFH;
 
         internal CheckBox chkPFH
@@ -500,30 +360,6 @@ namespace FSM
         }
 
         private LinkLabel _llOpenFolder;
-
-        internal LinkLabel llOpenFolder
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _llOpenFolder;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_llOpenFolder != null)
-                {
-                    _llOpenFolder.LinkClicked -= llOpenFolder_LinkClicked;
-                }
-
-                _llOpenFolder = value;
-                if (_llOpenFolder != null)
-                {
-                    _llOpenFolder.LinkClicked += llOpenFolder_LinkClicked;
-                }
-            }
-        }
 
         private Label _lblProgress;
 
@@ -823,9 +659,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -834,8 +667,6 @@ namespace FSM
             }
         }
 
-        
-        
         private FileInfo _file;
 
         public FileInfo File
@@ -1102,9 +933,6 @@ namespace FSM
             Import();
         }
 
-        
-        
-
         public void ShowData()
         {
             tcData.TabPages.Clear();
@@ -1198,7 +1026,7 @@ namespace FSM
 
             Application.DoEvents();
         }
-        
+
         private void Import()
         {
             if (Supplier is null || !Supplier.Exists)
@@ -1305,7 +1133,7 @@ namespace FSM
                     lblMessages.Text = "Adding part " + (i + 1) + " of " + data.Rows.Count + " from file.";
                     lblMessages.Visible = true;
                     dt.Rows.Add(new object[] { supplierId, mpn, description, spn, netPrice, pfhPrice, category });
-                    nextrow:
+                nextrow:
                     ;
                     MoveProgressOn();
                 }
@@ -1384,7 +1212,5 @@ namespace FSM
         {
             Process.Start("explorer.exe", App.TheSystem.Configuration.DocumentsLocation + "PartsFiles");
         }
-
-        
     }
 }

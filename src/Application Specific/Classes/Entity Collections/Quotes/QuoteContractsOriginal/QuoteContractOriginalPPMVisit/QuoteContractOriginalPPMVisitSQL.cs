@@ -13,25 +13,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-            public DataView GetAll_For_QuoteContractSiteID(int QuoteContractSiteID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@QuoteContractSiteID", QuoteContractSiteID, true);
-                var dt = _database.ExecuteSP_DataTable("QuoteContractOriginalPPMVisit_GetAll_For_QuoteContractSiteID");
-                dt.TableName = Sys.Enums.TableNames.tblQuoteContractPPMVisit.ToString();
-                return new DataView(dt);
-            }
-
-            public QuoteContractOriginalPPMVisit Insert(QuoteContractOriginalPPMVisit oQuoteContractPPMVisit)
-            {
-                _database.ClearParameter();
-                AddQuoteContractPPMVisitParametersToCommand(ref oQuoteContractPPMVisit);
-                oQuoteContractPPMVisit.SetQuoteContractPPMVisitID = Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("QuoteContractOriginalPPMVisit_Insert"));
-                oQuoteContractPPMVisit.Exists = true;
-                return oQuoteContractPPMVisit;
-            }
-
             private void AddQuoteContractPPMVisitParametersToCommand(ref QuoteContractOriginalPPMVisit oQuoteContractPPMVisit)
             {
                 {
@@ -40,8 +21,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@EstimatedVisitDate", oQuoteContractPPMVisit.EstimatedVisitDate, true);
                 }
             }
-
-            
         }
     }
 }

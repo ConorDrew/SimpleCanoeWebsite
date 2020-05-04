@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int EngineerVisitDefectID)
             {
                 _database.ClearParameter();
@@ -69,14 +67,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView EngineerVisitDefects_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitDefects_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblEngineerVisitDefects.ToString();
-                return new DataView(dt);
-            }
-
             public EngineerVisitDefects Insert(EngineerVisitDefects oEngineerVisitDefects)
             {
                 _database.ClearParameter();
@@ -108,9 +98,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@EngineerVisitID", oEngineerVisitDefects.EngineerVisitID, true);
                 }
             }
-
-
-            
         }
     }
 }

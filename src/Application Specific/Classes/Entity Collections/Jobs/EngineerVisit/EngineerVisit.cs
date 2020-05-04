@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -79,8 +78,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _EngineerVisitID = 0;
 
             public int EngineerVisitID
@@ -816,21 +813,6 @@ namespace FSM.Entity
                 }
             }
 
-            private EngineerVisitAdditionals.EngineerVisitAdditional _EngineerVisitAdditionalWorksheets = null;
-
-            public EngineerVisitAdditionals.EngineerVisitAdditional EngineerVisitAdditionalWorksheets
-            {
-                get
-                {
-                    return _EngineerVisitAdditionalWorksheets;
-                }
-
-                set
-                {
-                    _EngineerVisitAdditionalWorksheets = value;
-                }
-            }
-
             private bool _Recharge = false;
 
             public bool Recharge
@@ -1028,8 +1010,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_FuelID", value);
                 }
             }
-
-            
         }
     }
 }

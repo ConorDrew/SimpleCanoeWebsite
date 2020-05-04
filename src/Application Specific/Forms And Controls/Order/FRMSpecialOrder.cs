@@ -13,8 +13,6 @@ namespace FSM
             base.Load += FRMSpecialOrder_Load;
         }
 
-        
-
         public FRMSpecialOrder(int supplierCode, double price, int quantity) : base()
         {
             base.Load += FRMSpecialOrder_Load;
@@ -44,28 +42,6 @@ namespace FSM
 
         private GroupBox _gpbSpecialOrder;
 
-        internal GroupBox gpbSpecialOrder
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _gpbSpecialOrder;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_gpbSpecialOrder != null)
-                {
-                }
-
-                _gpbSpecialOrder = value;
-                if (_gpbSpecialOrder != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtQuantity;
 
         internal TextBox txtQuantity
@@ -91,28 +67,6 @@ namespace FSM
         }
 
         private Label _lblQuantity;
-
-        internal Label lblQuantity
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblQuantity;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblQuantity != null)
-                {
-                }
-
-                _lblQuantity = value;
-                if (_lblQuantity != null)
-                {
-                }
-            }
-        }
 
         private Button _btnCancel;
 
@@ -142,32 +96,6 @@ namespace FSM
 
         private Button _btnAddPart;
 
-        internal Button btnAddPart
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddPart;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddPart != null)
-                {
-                    
-                    
-                    _btnAddPart.Click -= btnAddPart_Click;
-                }
-
-                _btnAddPart = value;
-                if (_btnAddPart != null)
-                {
-                    _btnAddPart.Click += btnAddPart_Click;
-                }
-            }
-        }
-
         private TextBox _txtPrice;
 
         internal TextBox txtPrice
@@ -193,28 +121,6 @@ namespace FSM
         }
 
         private Label _lblPrice;
-
-        internal Label lblPrice
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPrice;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPrice != null)
-                {
-                }
-
-                _lblPrice = value;
-                if (_lblPrice != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSupplier;
 
@@ -242,28 +148,6 @@ namespace FSM
 
         private Label _lblSupplier;
 
-        internal Label lblSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSupplier != null)
-                {
-                }
-
-                _lblSupplier = value;
-                if (_lblSupplier != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtSPN;
 
         internal TextBox txtSPN
@@ -290,28 +174,6 @@ namespace FSM
 
         private Label _lblPartCode;
 
-        internal Label lblPartCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPartCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPartCode != null)
-                {
-                }
-
-                _lblPartCode = value;
-                if (_lblPartCode != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPartName;
 
         internal TextBox txtPartName
@@ -337,28 +199,6 @@ namespace FSM
         }
 
         private Label _lblPartName;
-
-        internal Label lblPartName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPartName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPartName != null)
-                {
-                }
-
-                _lblPartName = value;
-                if (_lblPartName != null)
-                {
-                }
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -576,9 +416,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -643,7 +480,5 @@ namespace FSM
                 txtQuantity.Text = Quantity.ToString();
             }
         }
-
-        
     }
 }

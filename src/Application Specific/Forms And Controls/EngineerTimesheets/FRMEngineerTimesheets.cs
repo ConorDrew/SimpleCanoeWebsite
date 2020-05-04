@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMEngineerTimesheets : FRMBaseForm, IForm
     {
-        
-
         public FRMEngineerTimesheets() : base()
         {
-            
-            
             base.Load += FRMOrderManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -70,28 +66,6 @@ namespace FSM
         }
 
         private GroupBox _grpJobs;
-
-        internal GroupBox grpJobs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobs != null)
-                {
-                }
-
-                _grpJobs = value;
-                if (_grpJobs != null)
-                {
-                }
-            }
-        }
 
         private DateTimePicker _dtpTo;
 
@@ -167,75 +141,9 @@ namespace FSM
 
         private Label _Label10;
 
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkDateCreated;
 
@@ -316,28 +224,6 @@ namespace FSM
         }
 
         private Label _lblSearch;
-
-        internal Label lblSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSearch != null)
-                {
-                }
-
-                _lblSearch = value;
-                if (_lblSearch != null)
-                {
-                }
-            }
-        }
 
         private Button _btnFindRecord;
 
@@ -834,9 +720,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -858,8 +741,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvTimesheets;
 
         private DataView TimesheetsDataview
@@ -917,9 +798,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupTimesheetsDataGrid()
         {
@@ -1064,9 +942,6 @@ namespace FSM
             RunFilter();
         }
 
-        
-        
-
         private void ResetFilters()
         {
             var argcombo = cboType;
@@ -1111,7 +986,5 @@ namespace FSM
 
             TimesheetsDataview = App.DB.EngineerTimesheets.GetAll(whereClause, whereClause2);
         }
-
-        
     }
 }

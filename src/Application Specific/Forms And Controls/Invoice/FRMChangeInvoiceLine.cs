@@ -8,13 +8,8 @@ namespace FSM
 {
     public class FRMChangeInvoiceLine : FRMBaseForm, IForm
     {
-        
-
         public FRMChangeInvoiceLine() : base()
         {
-            
-
-            
             base.Load += FRMChangeInvoiceLine_Load;
 
             // This call is required by the Windows Form Designer.
@@ -39,28 +34,6 @@ namespace FSM
         }
 
         private Label _lblAmount;
-
-        internal Label lblAmount
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAmount;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAmount != null)
-                {
-                }
-
-                _lblAmount = value;
-                if (_lblAmount != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtAmount;
 
@@ -87,28 +60,6 @@ namespace FSM
         }
 
         private Label _lblVatRate;
-
-        internal Label lblVatRate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblVatRate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblVatRate != null)
-                {
-                }
-
-                _lblVatRate = value;
-                if (_lblVatRate != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboInvoiceTaxCodeNew;
 
@@ -277,9 +228,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -326,7 +274,5 @@ namespace FSM
         {
             DialogResult = DialogResult.Cancel;
         }
-
-        
     }
 }

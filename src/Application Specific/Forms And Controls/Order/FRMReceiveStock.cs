@@ -10,12 +10,8 @@ namespace FSM
 {
     public class FRMReceiveStock : FRMBaseForm, IForm
     {
-        
-
         public FRMReceiveStock() : base()
         {
-            
-            
             base.Load += FRMReceiveStock_Load;
 
             // This call is required by the Windows Form Designer.
@@ -384,28 +380,6 @@ namespace FSM
 
         private GroupBox _GroupBox2;
 
-        internal GroupBox GroupBox2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox2 != null)
-                {
-                }
-
-                _GroupBox2 = value;
-                if (_GroupBox2 != null)
-                {
-                }
-            }
-        }
-
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
@@ -593,9 +567,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             Order = App.DB.Order.Order_Get(Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0)));
@@ -617,8 +588,6 @@ namespace FSM
             // DO NOTHING
         }
 
-        
-        
         private Entity.Orders.Order _oOrder = null;
 
         public Entity.Orders.Order Order
@@ -871,9 +840,6 @@ namespace FSM
             UpdateOrderItems(Conversions.ToInteger(txtQuantityInput.Text.Trim()));
         }
 
-        
-        
-
         public void UpdateOrderItems(int QuantityInput)
         {
             try
@@ -1083,7 +1049,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

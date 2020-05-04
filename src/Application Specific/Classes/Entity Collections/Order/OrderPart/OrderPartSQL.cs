@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int OrderPartID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -32,13 +31,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 _database.AddParameter("@OrderPartID", OrderPartID, true);
                 _database.ExecuteSP_NO_Return("OrderPart_Delete");
-            }
-
-            public void DeleteForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                _database.ExecuteSP_NO_Return("OrderPart_DeleteForOrder");
             }
 
             public OrderPart OrderPart_Get(int OrderPartID)
@@ -79,14 +71,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public DataView OrderPart_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("OrderPart_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblOrderPart.ToString();
-                return new DataView(dt);
             }
 
             public OrderPart Insert(OrderPart oOrderPart, bool DoConsolidation)
@@ -139,14 +123,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("OrderPart_Update");
             }
 
-            public void MarkOrderQuantityReceived(int OrderPartID, int QuantityReceived)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderPartID", OrderPartID, true);
-                _database.AddParameter("@QuantityReceived", QuantityReceived, true);
-                _database.ExecuteSP_NO_Return("OrderPart_MarkOrderQuantityReceived");
-            }
-
             private void AddOrderPartParametersToCommand(ref OrderPart oOrderPart)
             {
                 {
@@ -171,7 +147,6 @@ namespace FSM.Entity
                 _database.AddParameter("@OrderPartID", OrderPartID, true);
                 _database.ExecuteSP_NO_Return("OrderPart_EngineerReceived");
             }
-            
         }
     }
 }

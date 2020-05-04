@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int ContractOriginalSiteRateID)
             {
                 _database.ClearParameter();
@@ -23,51 +21,11 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("ContractOriginalSiteRates_Delete");
             }
 
-            public ContractOriginalSiteRates ContractOriginalSiteRates_Get(int ContractOriginalSiteRateID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ContractOriginalSiteRateID", ContractOriginalSiteRateID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("ContractOriginalSiteRates_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oContractOriginalSiteRates = new ContractOriginalSiteRates();
-                        oContractOriginalSiteRates.IgnoreExceptionsOnSetMethods = true;
-                        oContractOriginalSiteRates.SetContractOriginalSiteRateID = dt.Rows[0]["ContractOriginalSiteRateID"];
-                        oContractOriginalSiteRates.SetContractSiteID = dt.Rows[0]["ContractSiteID"];
-                        oContractOriginalSiteRates.SetRateID = dt.Rows[0]["RateID"];
-                        oContractOriginalSiteRates.SetQty = dt.Rows[0]["Qty"];
-                        oContractOriginalSiteRates.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oContractOriginalSiteRates.Exists = true;
-                        return oContractOriginalSiteRates;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
             public DataView ContractOriginalSiteRates_GetForContractSite(int ContractSiteID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@ContractSiteID", ContractSiteID);
                 var dt = _database.ExecuteSP_DataTable("ContractOriginalSiteRates_GetForContractSite");
-                dt.TableName = Sys.Enums.TableNames.tblContractOriginalSiteRates.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView ContractOriginalSiteRates_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("ContractOriginalSiteRates_GetAll");
                 dt.TableName = Sys.Enums.TableNames.tblContractOriginalSiteRates.ToString();
                 return new DataView(dt);
             }
@@ -98,9 +56,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@Qty", oContractOriginalSiteRates.Qty, true);
                 }
             }
-
-
-            
         }
     }
 }

@@ -12,7 +12,6 @@ namespace FSM.Entity.JobImport
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -75,8 +74,6 @@ namespace FSM.Entity.JobImport
             }
         }
 
-        
-        
         private int _jobImportId = 0;
 
         public int JobImportID
@@ -153,51 +150,9 @@ namespace FSM.Entity.JobImport
 
         public DateTime DateAdded
         {
-            get
-            {
-                return _dateAdded;
-            }
+            get { return _dateAdded; }
 
-            set
-            {
-                _dateAdded = value;
-            }
-        }
-
-        private int _jobId = 0;
-
-        public int JobID
-        {
-            get
-            {
-                return _jobId;
-            }
-        }
-
-        public object SetJobID
-        {
-            set
-            {
-                _dataTypeValidator.SetValue(this, "_jobId", value);
-            }
-        }
-
-        private string _jobNumber = string.Empty;
-
-        public string JobNumber
-        {
-            get
-            {
-                return _jobNumber;
-            }
-        }
-
-        public object SetJobNumber
-        {
-            set
-            {
-                _dataTypeValidator.SetValue(this, "_jobNumber", value);
-            }
+            set { _dateAdded = value; }
         }
 
         private int _status = 0;
@@ -280,7 +235,6 @@ namespace FSM.Entity.JobImport
                 _report = value;
             }
         }
-        
     }
 
     public class JobImportType
@@ -292,7 +246,6 @@ namespace FSM.Entity.JobImport
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -355,8 +308,6 @@ namespace FSM.Entity.JobImport
             }
         }
 
-        
-        
         private int _jobImportTypeId = 0;
 
         public int JobImportTypeID
@@ -464,6 +415,5 @@ namespace FSM.Entity.JobImport
                 _dataTypeValidator.SetValue(this, "_cycle", value);
             }
         }
-        
     }
 }

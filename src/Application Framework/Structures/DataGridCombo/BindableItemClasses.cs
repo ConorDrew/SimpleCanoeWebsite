@@ -8,8 +8,6 @@ namespace FSM
 
     public abstract class BindableItem : IEditableObject, IDataErrorInfo
     {
-        
-
         public BindableItem()
         {
             PersistedProperties = new PersistedProperties(this);
@@ -33,9 +31,6 @@ namespace FSM
 
         // Public MustOverride ReadOnly Property IsRootObject()
 
-        
-        
-
         public object get_PropertyValue(string name)
         {
             if (PersistedProperties.get_Exists(name))
@@ -50,9 +45,6 @@ namespace FSM
 
             return default;
         }
-
-        
-        
 
         internal void onChildPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -87,18 +79,6 @@ namespace FSM
             }
         }
 
-        
-        
-
-        private void BeginEdit()
-        {
-            if (!_editing)
-            {
-                _editing = true;
-                PersistedProperties.BeginEdit();
-            }
-        }
-
         protected virtual void CancelEdit()
         {
             if (_editing)
@@ -109,31 +89,9 @@ namespace FSM
             PersistedProperties.CancelEdit();
         }
 
-        private void EndEdit()
-        {
-            _editing = false;
-            _isNew = false;
-        }
-
-        
-        
-
-        private string Error
-        {
-            get
-            {
-                return PersistedProperties.Error;
-            }
-        }
-
         string IDataErrorInfo.Error => throw new NotImplementedException();
 
         public string this[string columnName] => throw new NotImplementedException();
-
-        private string get_ErrorInfoItem(string columnName)
-        {
-            return string.Empty;
-        }
 
         void IEditableObject.BeginEdit()
         {
@@ -149,28 +107,18 @@ namespace FSM
         {
             throw new NotImplementedException();
         }
-
-        
     }
 
     public abstract class BindableChildItem : BindableItem
     {
-        
-
         public event RemoveMeEventHandler RemoveMe;
 
         public delegate void RemoveMeEventHandler(BindableChildItem item);
-
-        
-        
 
         private void onRemoveMe()
         {
             RemoveMe?.Invoke(this);
         }
-
-        
-        
 
         protected override void CancelEdit()
         {
@@ -180,14 +128,10 @@ namespace FSM
                 onRemoveMe();
             }
         }
-
-        
     }
 
     public abstract class BindableRootItem : BindableItem, Interfaces.IPersistable
     {
-        
-
         // native member declarations
         private RootObject myRoot = new RootObject();
 
@@ -195,9 +139,6 @@ namespace FSM
         public string DefaultFileNameAndExt => DefaultName;
 
         public string DefaultName { get; }
-
-        
-        
 
         [System.Xml.Serialization.XmlIgnore()]
         public string CurrentLocation
@@ -241,19 +182,6 @@ namespace FSM
             }
         }
 
-        
-        
-
-        public static object CreateDefaultList(object item)
-        {
-            return RootObject.CreateDefaultList((Interfaces.IPersistable)item);
-        }
-
-        public static bool DefaultListExits(Type objectType)
-        {
-            return RootObject.DefaultListExits(objectType);
-        }
-
         public static string defaultPersistFolder
         {
             get
@@ -267,11 +195,6 @@ namespace FSM
             }
         }
 
-        public static object GetDefaultList(Type itemType)
-        {
-            return RootObject.GetDefaultList(itemType);
-        }
-
         public static object Read(string fileName, Type itemType)
         {
             return RootObject.Read(fileName, itemType);
@@ -281,7 +204,5 @@ namespace FSM
         {
             RootObject.Write((Interfaces.IPersistable)item);
         }
-
-        
     }
 }

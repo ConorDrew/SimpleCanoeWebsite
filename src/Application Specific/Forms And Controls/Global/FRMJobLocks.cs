@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMJobLocks : FRMBaseForm, IForm
     {
-        
-
         public FRMJobLocks() : base()
         {
-            
-            
             base.Load += FRMJobLocks_Load;
 
             // This call is required by the Windows Form Designer.
@@ -46,28 +42,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpLocks;
-
-        internal GroupBox grpLocks
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpLocks;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpLocks != null)
-                {
-                }
-
-                _grpLocks = value;
-                if (_grpLocks != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgLocks;
 
@@ -120,30 +94,6 @@ namespace FSM
         }
 
         private Button _btnUnlock;
-
-        internal Button btnUnlock
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUnlock;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUnlock != null)
-                {
-                    _btnUnlock.Click -= btnUnlock_Click;
-                }
-
-                _btnUnlock = value;
-                if (_btnUnlock != null)
-                {
-                    _btnUnlock.Click += btnUnlock_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -226,9 +176,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -248,8 +195,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _Locks;
 
         private DataView Locks
@@ -284,9 +229,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupDataGrid()
         {
@@ -372,7 +314,5 @@ namespace FSM
                 }
             }
         }
-
-        
     }
 }

@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMConsolidation : FRMBaseForm, IForm
     {
-        
-
         public FRMConsolidation() : base()
         {
-            
-            
             base.Load += FRMConsolidation_Load;
 
             // This call is required by the Windows Form Designer.
@@ -175,28 +171,6 @@ namespace FSM
 
         private GroupBox _grpMain;
 
-        internal GroupBox grpMain
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpMain;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpMain != null)
-                {
-                }
-
-                _grpMain = value;
-                if (_grpMain != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtReference;
 
         internal TextBox txtReference
@@ -323,51 +297,7 @@ namespace FSM
 
         private GroupBox _grpOrders;
 
-        internal GroupBox grpOrders
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpOrders;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpOrders != null)
-                {
-                }
-
-                _grpOrders = value;
-                if (_grpOrders != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpItems;
-
-        internal GroupBox grpItems
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpItems;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpItems != null)
-                {
-                }
-
-                _grpItems = value;
-                if (_grpItems != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgOrders;
 
@@ -501,28 +431,6 @@ namespace FSM
 
         private Label _Label17;
 
-        internal Label Label17
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label17;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label17 != null)
-                {
-                }
-
-                _Label17 = value;
-                if (_Label17 != null)
-                {
-                }
-            }
-        }
-
         private CheckBox _cbxReadyToSendToSage;
 
         internal CheckBox cbxReadyToSendToSage
@@ -597,28 +505,6 @@ namespace FSM
 
         private Label _Label16;
 
-        internal Label Label16
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label16;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label16 != null)
-                {
-                }
-
-                _Label16 = value;
-                if (_Label16 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtVAT;
 
         internal TextBox txtVAT
@@ -673,28 +559,6 @@ namespace FSM
 
         private Label _Label14;
 
-        internal Label Label14
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label14;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label14 != null)
-                {
-                }
-
-                _Label14 = value;
-                if (_Label14 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboTaxCode;
 
         internal ComboBox cboTaxCode
@@ -723,51 +587,7 @@ namespace FSM
 
         private Label _Label15;
 
-        internal Label Label15
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label15;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label15 != null)
-                {
-                }
-
-                _Label15 = value;
-                if (_Label15 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label13;
-
-        internal Label Label13
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label13;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label13 != null)
-                {
-                }
-
-                _Label13 = value;
-                if (_Label13 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSupplierInvoiceAmount;
 
@@ -799,51 +619,7 @@ namespace FSM
 
         private Label _Label10;
 
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label9;
-
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkSupInvDateNA;
 
@@ -920,28 +696,6 @@ namespace FSM
         }
 
         private Label _Label11;
-
-        internal Label Label11
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label11;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label11 != null)
-                {
-                }
-
-                _Label11 = value;
-                if (_Label11 != null)
-                {
-                }
-            }
-        }
 
         private Label _lblOrderTotal;
 
@@ -1552,9 +1306,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1573,9 +1324,6 @@ namespace FSM
         {
             // DO NOTHING
         }
-
-        
-        
 
         private void SetupDG()
         {
@@ -1764,8 +1512,6 @@ namespace FSM
             dgItems.TableStyles.Add(tbStyle);
         }
 
-        
-        
         private bool IsLoading = true;
         private Entity.OrderConsolidations.OrderConsolidation _OrderConsolidation;
 
@@ -2360,9 +2106,6 @@ namespace FSM
             Save();
         }
 
-        
-        
-
         private void Populate()
         {
             txtReference.Text = OrderConsolidation.ConsolidationRef;
@@ -2800,7 +2543,5 @@ namespace FSM
                 var oPrint = new Entity.Sys.Printing(details, "SupplierPurchaseOrder", Entity.Sys.Enums.SystemDocumentType.SupplierPurchaseOrder);
             }
         }
-
-        
     }
 }

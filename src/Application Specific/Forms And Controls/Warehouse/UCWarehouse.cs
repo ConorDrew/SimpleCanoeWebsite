@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCWarehouse : UCBase, IUserControl
     {
-        
-
         public UCWarehouse() : base()
         {
-            
-            
             base.Load += UCWarehouse_Load;
 
             // This call is required by the Windows Form Designer.
@@ -47,99 +43,11 @@ namespace FSM
         // Do not modify it using the code editor.
         private TabControl _tcWarehouse;
 
-        internal TabControl tcWarehouse
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tcWarehouse;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tcWarehouse != null)
-                {
-                }
-
-                _tcWarehouse = value;
-                if (_tcWarehouse != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabDetails;
-
-        internal TabPage tabDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabDetails != null)
-                {
-                }
-
-                _tabDetails = value;
-                if (_tabDetails != null)
-                {
-                }
-            }
-        }
 
         private TabPage _tabStock;
 
-        internal TabPage tabStock
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabStock;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabStock != null)
-                {
-                }
-
-                _tabStock = value;
-                if (_tabStock != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpWarehouse;
-
-        internal GroupBox grpWarehouse
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpWarehouse;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpWarehouse != null)
-                {
-                }
-
-                _grpWarehouse = value;
-                if (_grpWarehouse != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtName;
 
@@ -167,28 +75,6 @@ namespace FSM
 
         private Label _lblName;
 
-        internal Label lblName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblName != null)
-                {
-                }
-
-                _lblName = value;
-                if (_lblName != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtSize;
 
         internal TextBox txtSize
@@ -214,28 +100,6 @@ namespace FSM
         }
 
         private Label _lblSize;
-
-        internal Label lblSize
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSize;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSize != null)
-                {
-                }
-
-                _lblSize = value;
-                if (_lblSize != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtNotes;
 
@@ -263,28 +127,6 @@ namespace FSM
 
         private Label _lblNotes;
 
-        internal Label lblNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNotes != null)
-                {
-                }
-
-                _lblNotes = value;
-                if (_lblNotes != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtAddress1;
 
         internal TextBox txtAddress1
@@ -310,28 +152,6 @@ namespace FSM
         }
 
         private Label _lblAddress1;
-
-        internal Label lblAddress1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddress1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddress1 != null)
-                {
-                }
-
-                _lblAddress1 = value;
-                if (_lblAddress1 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtAddress2;
 
@@ -359,28 +179,6 @@ namespace FSM
 
         private Label _lblAddress2;
 
-        internal Label lblAddress2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddress2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddress2 != null)
-                {
-                }
-
-                _lblAddress2 = value;
-                if (_lblAddress2 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtAddress3;
 
         internal TextBox txtAddress3
@@ -406,28 +204,6 @@ namespace FSM
         }
 
         private Label _lblAddress3;
-
-        internal Label lblAddress3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddress3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddress3 != null)
-                {
-                }
-
-                _lblAddress3 = value;
-                if (_lblAddress3 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtAddress4;
 
@@ -455,28 +231,6 @@ namespace FSM
 
         private Label _lblAddress4;
 
-        internal Label lblAddress4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddress4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddress4 != null)
-                {
-                }
-
-                _lblAddress4 = value;
-                if (_lblAddress4 != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtAddress5;
 
         internal TextBox txtAddress5
@@ -502,28 +256,6 @@ namespace FSM
         }
 
         private Label _lblAddress5;
-
-        internal Label lblAddress5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddress5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddress5 != null)
-                {
-                }
-
-                _lblAddress5 = value;
-                if (_lblAddress5 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtPostcode;
 
@@ -551,28 +283,6 @@ namespace FSM
 
         private Label _lblPostcode;
 
-        internal Label lblPostcode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPostcode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPostcode != null)
-                {
-                }
-
-                _lblPostcode = value;
-                if (_lblPostcode != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtTelephoneNum;
 
         internal TextBox txtTelephoneNum
@@ -598,28 +308,6 @@ namespace FSM
         }
 
         private Label _lblTelephoneNum;
-
-        internal Label lblTelephoneNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTelephoneNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTelephoneNum != null)
-                {
-                }
-
-                _lblTelephoneNum = value;
-                if (_lblTelephoneNum != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtFaxNum;
 
@@ -647,28 +335,6 @@ namespace FSM
 
         private Label _lblFaxNum;
 
-        internal Label lblFaxNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaxNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaxNum != null)
-                {
-                }
-
-                _lblFaxNum = value;
-                if (_lblFaxNum != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtEmailAddress;
 
         internal TextBox txtEmailAddress
@@ -694,28 +360,6 @@ namespace FSM
         }
 
         private Label _lblEmailAddress;
-
-        internal Label lblEmailAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEmailAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEmailAddress != null)
-                {
-                }
-
-                _lblEmailAddress = value;
-                if (_lblEmailAddress != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkActive;
 
@@ -767,28 +411,6 @@ namespace FSM
 
         private GroupBox _GroupBox2;
 
-        internal GroupBox GroupBox2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox2 != null)
-                {
-                }
-
-                _GroupBox2 = value;
-                if (_GroupBox2 != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgProducts;
 
         internal DataGrid dgProducts
@@ -815,51 +437,7 @@ namespace FSM
 
         private TabPage _tpVans;
 
-        internal TabPage tpVans
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tpVans;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tpVans != null)
-                {
-                }
-
-                _tpVans = value;
-                if (_tpVans != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpVans;
-
-        internal GroupBox grpVans
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVans;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVans != null)
-                {
-                }
-
-                _grpVans = value;
-                if (_grpVans != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgVans;
 
@@ -1364,9 +942,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1383,8 +958,6 @@ namespace FSM
             }
         }
 
-        
-        
         private DataView m_dTable = null;
 
         public DataView ProductsDataView
@@ -1526,9 +1099,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupProductsDatagrid()
         {
@@ -1706,9 +1276,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
@@ -1790,7 +1357,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

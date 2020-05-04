@@ -17,8 +17,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public DataView Order_CheckReference(string OrderRef)
             {
                 _database.ClearParameter();
@@ -46,15 +44,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataTable OrderItemsForPrint_Get(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("OrderItemsForPrint_Get");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return dt;
-            }
-
             public void Delete(int OrderID)
             {
                 _database.ClearParameter();
@@ -71,13 +60,6 @@ namespace FSM.Entity
                 Command.Connection = trans.Connection;
                 Command.Parameters.Add(new SqlParameter("@OrderID", OrderID));
                 Command.ExecuteNonQuery();
-            }
-
-            public void PermanentDelete(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                _database.ExecuteSP_NO_Return("Order_PermanentDelete");
             }
 
             public Order Order_Get(int OrderID)
@@ -279,15 +261,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView OrderProduct_GetForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("OrderProduct_GetForOrder");
-                dt.TableName = Sys.Enums.TableNames.tblProductSupplier.ToString();
-                return new DataView(dt);
-            }
-
             public DataView Order_GetAll(string SearchCriteria)
             {
                 _database.ClearParameter();
@@ -346,58 +319,12 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView Orders_GetForItem(string Type, int ID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Type", Type, true);
-                _database.AddParameter("@ID", ID, true);
-                var dt = _database.ExecuteSP_DataTable("Orders_GetForItem");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
-            }
-
             public DataView Orders_GetForEngineerVisit(int EngineerVisitID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
                 var dt = _database.ExecuteSP_DataTable("Orders_GetForEngineerVisit");
                 dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView VanParts_GetForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("VanParts_GetForOrder");
-                dt.TableName = Sys.Enums.TableNames.tblPart.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView VanProducts_GetForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("VanProducts_GetForOrder");
-                dt.TableName = Sys.Enums.TableNames.tblProduct.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView WarehouseParts_GetForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("WarehouseParts_GetForOrder");
-                dt.TableName = Sys.Enums.TableNames.tblPart.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView WarehouseProducts_GetForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("WarehouseProducts_GetForOrder");
-                dt.TableName = Sys.Enums.TableNames.tblProduct.ToString();
                 return new DataView(dt);
             }
 
@@ -441,51 +368,6 @@ namespace FSM.Entity
                 oOrder.SetOrderID = Sys.Helper.MakeIntegerValid(Command.ExecuteScalar());
                 oOrder.Exists = true;
                 return oOrder;
-            }
-
-            public DataView Order_GetPartsSummaryForVan(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("Order_GetPartsSummaryForVan");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView Order_GetProductsSummaryForVan(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("Order_GetProductsSummaryForVan");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView Order_GetPartsSummaryForWarehouse(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("Order_GetPartsSummaryForWarehouse");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView Order_GetProductsSummaryForWarehouse(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("Order_GetProductsSummaryForWarehouse");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView Order_SearchList(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("Order_SearchList");
-                dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
-                return new DataView(dt);
             }
 
             public DataView Order_PriceRequests_GetAll(int OrderID)
@@ -569,13 +451,6 @@ namespace FSM.Entity
                 return new DataView(getFroms);
             }
 
-            public string Order_GetEngineerNameFromPO(string PONumber)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@PONumber", PONumber, true);
-                return Conversions.ToString(_database.ExecuteScalar("SELECT TOP (1) tblEngineer.Name FROM tblVan INNER JOIN tblLocations ON tblVan.VanID = tblLocations.VanID INNER JOIN tblEngineerVan ON tblVan.VanID = tblEngineerVan.VanID INNER JOIN tblEngineer ON tblEngineerVan.EngineerID = tblEngineer.EngineerID INNER JOIN tblOrderLocation ON tblLocations.LocationID = tblOrderLocation.LocationID INNER JOIN tblOrder ON tblOrderLocation.OrderID = tblOrder.OrderID WHERE (tblVan.Deleted = 0) AND (tblLocations.Deleted = 0) AND (tblOrder.OrderReference = @PONumber) ORDER BY tblEngineerVan.StartDateTime DESC"));
-            }
-
             public string Order_Get_OrderID_ByRef(string PONumber)
             {
                 _database.ClearParameter();
@@ -591,57 +466,6 @@ namespace FSM.Entity
                 var dt = _database.ExecuteSP_DataTable("Order_Search_Mk1");
                 dt.TableName = Sys.Enums.TableNames.tblOrder.ToString();
                 return new DataView(dt);
-            }
-
-            
-
-            public void ReallocateReceivedStock(int LocationID, int StockTransactionType, string Type, int PartProductID, int Quantity, int OrderPartProductID)
-            {
-                if (LocationID > 0 & StockTransactionType > 0)
-                {
-                    switch (Type)
-                    {
-                        case "Part":
-                            {
-                                var oPartTransaction = new PartTransactions.PartTransaction();
-                                oPartTransaction.SetLocationID = LocationID;
-                                oPartTransaction.SetPartID = PartProductID;
-                                oPartTransaction.SetOrderPartID = OrderPartProductID;
-                                if (Conversions.ToInteger(StockTransactionType) == Conversions.ToInteger(Sys.Enums.Transaction.StockOut))
-                                {
-                                    oPartTransaction.SetAmount = Quantity * -1;
-                                }
-                                else
-                                {
-                                    oPartTransaction.SetAmount = Quantity;
-                                }
-
-                                oPartTransaction.SetTransactionTypeID = StockTransactionType;
-                                App.DB.PartTransaction.Insert(oPartTransaction);
-                                break;
-                            }
-
-                        case "Product":
-                            {
-                                var oProductTransaction = new ProductTransactions.ProductTransaction();
-                                oProductTransaction.SetLocationID = LocationID;
-                                oProductTransaction.SetProductID = PartProductID;
-                                oProductTransaction.SetOrderProductID = OrderPartProductID;
-                                if (Conversions.ToInteger(StockTransactionType) == Conversions.ToInteger(Sys.Enums.Transaction.StockOut))
-                                {
-                                    oProductTransaction.SetAmount = Quantity * -1;
-                                }
-                                else
-                                {
-                                    oProductTransaction.SetAmount = Quantity;
-                                }
-
-                                oProductTransaction.SetTransactionTypeID = StockTransactionType;
-                                App.DB.ProductTransaction.Insert(oProductTransaction);
-                                break;
-                            }
-                    }
-                }
             }
 
             public void AllocatedDistributions(DataTable PartsAndProductsDistribution)
@@ -698,13 +522,6 @@ namespace FSM.Entity
             {
                 _database.ClearParameter();
                 var dt = _database.ExecuteSP_DataTable("OrderStatus_Get_All");
-                return new DataView(dt);
-            }
-
-            public DataView OrderStatus_Get_All_ForOrderManager()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("OrderStatus_Get_All_ForOrderManager");
                 return new DataView(dt);
             }
         }

@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,27 +76,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
-            private int _QuoteContractPPMVisitID = 0;
-
-            public int QuoteContractPPMVisitID
-            {
-                get
-                {
-                    return _QuoteContractPPMVisitID;
-                }
-            }
-
-            public object SetQuoteContractPPMVisitID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_QuoteContractPPMVisitID", value);
-                }
-            }
-
             private int _QuoteContractSiteID = 0;
 
             public int QuoteContractSiteID
@@ -130,10 +108,6 @@ namespace FSM.Entity
                     _EstimatedVisitDate = value;
                 }
             }
-
-
-
-            
         }
     }
 }

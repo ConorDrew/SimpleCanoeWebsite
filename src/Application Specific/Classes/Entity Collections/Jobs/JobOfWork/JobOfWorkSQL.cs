@@ -20,8 +20,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int JobOfWorkID)
             {
                 _database.ClearParameter();
@@ -246,36 +244,6 @@ namespace FSM.Entity
                 return jobOfWork;
             }
 
-            public JobOfWork JobOfWork_Get_As_Object(int jobOfWorkID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@JobOfWorkID", jobOfWorkID, true);
-                var dt = _database.ExecuteSP_DataTable("JobOfWork_Get");
-                JobOfWork jobOfWork = null;
-                if (dt.Rows.Count > 0)
-                {
-                    jobOfWork = new JobOfWork();
-                    {
-                        var withBlock = dt.Rows[0];
-                        jobOfWork.IgnoreExceptionsOnSetMethods = true;
-                        jobOfWork.Exists = true;
-                        jobOfWork.SetJobOfWorkID = withBlock["JobOFWorkID"];
-                        jobOfWork.SetJobID = withBlock["JobID"];
-                        jobOfWork.SetPONumber = withBlock["PONumber"];
-                        jobOfWork.SetDeleted = Conversions.ToBoolean(withBlock["Deleted"]);
-                        jobOfWork.SetStatus = Helper.MakeIntegerValid(withBlock["Status"]);
-                        jobOfWork.SetPriority = Helper.MakeIntegerValid(withBlock["Priority"]);
-                        jobOfWork.PriorityDateSet = Helper.MakeDateTimeValid(withBlock["PriorityDateSet"]);
-                        if (dt.Rows[0].Table.Columns.Contains("QualificationID"))
-                            jobOfWork.SetQualificationID = Helper.MakeIntegerValid(withBlock["QualificationID"]);
-                        jobOfWork.JobItems = _database.JobItems.JobOfWork_Get_For_Job_Of_Work_As_Objects(jobOfWork.JobOfWorkID);
-                        jobOfWork.EngineerVisits = _database.EngineerVisits.EngineerVisits_Get_For_Job_Of_Work_As_Objects_Light(jobOfWork.JobOfWorkID);
-                    }
-                }
-
-                return jobOfWork;
-            }
-
             public ArrayList JobOfWork_Get_For_Job_As_Objects(int JobID, SqlTransaction trans)
             {
                 var jobOfWorks = new ArrayList();
@@ -361,8 +329,6 @@ namespace FSM.Entity
                     return null;
                 }
             }
-
-            
         }
     }
 }

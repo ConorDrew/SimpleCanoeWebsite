@@ -159,35 +159,6 @@ namespace FSM
             return dt;
         }
 
-        public static DataTable Setup_Advanced_Search_Options(Entity.Sys.Enums.MenuTypes MenuType)
-        {
-            var dt = new DataTable();
-            dt.TableName = Entity.Sys.Enums.TableNames.NOT_IN_DATABASE_TBLSearchFor.ToString();
-            dt.Columns.Add(new DataColumn("ValueMember"));
-            dt.Columns.Add(new DataColumn("DisplayMember"));
-            dt.Columns.Add(new DataColumn("Deleted", Type.GetType("System.Boolean")));
-            DataRow newRow;
-            switch (MenuType)
-            {
-                case Entity.Sys.Enums.MenuTypes.Spares:
-                    {
-                        newRow = dt.NewRow();
-                        newRow["ValueMember"] = Conversions.ToInteger(Entity.Sys.Enums.TableNames.tblPart);
-                        newRow["DisplayMember"] = "Part";
-                        newRow["Deleted"] = false;
-                        dt.Rows.Add(newRow);
-                        newRow = dt.NewRow();
-                        newRow["ValueMember"] = Conversions.ToInteger(Entity.Sys.Enums.TableNames.tblProduct);
-                        newRow["DisplayMember"] = "Product";
-                        newRow["Deleted"] = false;
-                        dt.Rows.Add(newRow);
-                        break;
-                    }
-            }
-
-            return dt;
-        }
-
         public static DataTable Setup_Search_Options(Entity.Sys.Enums.MenuTypes MenuType)
         {
             var dt = new DataTable();
@@ -431,21 +402,6 @@ namespace FSM
             }
         }
 
-        public static DataTable ReplenishmentStatusTypes
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.ReplenishmentStatusResults.AmountBelowMinQuantitiesStockOnOrder), "Below Min Quantities - Quantity On Order To Replenish Stock", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.ReplenishmentStatusResults.AmountBelowMinQuantitiesStockRequired), "Below Min Quantities - Order Required To Replenish Stock", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.ReplenishmentStatusResults.NoPreferredSupplierFound), "No Preferred Supplier Found", "0" });
-                return dt;
-            }
-        }
-
         public static DataTable Yes_No
         {
             get
@@ -582,23 +538,6 @@ namespace FSM
             }
         }
 
-        public static DataTable VisitFrequency
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.VisitFrequency.Weekly), Entity.Sys.Enums.VisitFrequency.Weekly.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.VisitFrequency.Monthly), Entity.Sys.Enums.VisitFrequency.Monthly.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.VisitFrequency.Quarterly), Entity.Sys.Enums.VisitFrequency.Quarterly.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.VisitFrequency.Bi_Annually), Entity.Sys.Enums.VisitFrequency.Bi_Annually.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.VisitFrequency.Annually), Entity.Sys.Enums.VisitFrequency.Annually.ToString(), "0" });
-                return dt;
-            }
-        }
-
         public static DataTable ContractStatus
         {
             get
@@ -706,24 +645,6 @@ namespace FSM
             }
         }
 
-        public static DataTable ContractTypes2
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(367), "Silver Star", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(368), "Gold Star", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(369), "Platinum Star", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(68032), "Platinum Immediate", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(68294), "Totally Assured", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(69420), "Preventative Maintenance Contract", "0" });
-                return dt;
-            }
-        }
-
         public static DataTable ReadingType
         {
             get
@@ -790,21 +711,6 @@ namespace FSM
             }
         }
 
-        public static DataTable QuoteContractStatus
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.QuoteContractStatus.Generated), Entity.Sys.Enums.QuoteContractStatus.Generated.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.QuoteContractStatus.Accepted), Entity.Sys.Enums.QuoteContractStatus.Accepted.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.QuoteContractStatus.Rejected), Entity.Sys.Enums.QuoteContractStatus.Rejected.ToString(), "0" });
-                return dt;
-            }
-        }
-
         public static DataTable VisitStatus_For_Selection
         {
             get
@@ -843,35 +749,6 @@ namespace FSM
             }
         }
 
-        public static DataTable JobStatuses
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobStatus.Open), "Open", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobStatus.Complete), "Complete", "0" });
-                return dt;
-            }
-        }
-
-        public static DataTable QuoteStatuses
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.QuoteContractStatus.Generated), "Generated", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.QuoteContractStatus.Accepted), "Accepted", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.QuoteContractStatus.Rejected), "Rejected", "0" });
-                return dt;
-            }
-        }
-
         public static DataTable JobDefinitions
         {
             get
@@ -884,74 +761,6 @@ namespace FSM
                 dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobDefinition.Contract), "Contract", "0" });
                 dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobDefinition.Quoted), "Quoted", "0" });
                 dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobDefinition.Misc), "Misc", "0" });
-                return dt;
-            }
-        }
-
-        public static DataTable VisitDuration
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("VisitDuration"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                var settings = App.DB.Manager.Get();
-                var sd = new DateTime(DateAndTime.Now.Year, DateAndTime.Now.Month, DateAndTime.Now.Day, Conversions.ToInteger(settings.WorkingHoursStart.Trim().Substring(0, 2)), Conversions.ToInteger(settings.WorkingHoursStart.Trim().Substring(3, 2)), 0);
-                var ed = new DateTime(DateAndTime.Now.Year, DateAndTime.Now.Month, DateAndTime.Now.Day, Conversions.ToInteger(settings.WorkingHoursEnd.Trim().Substring(0, 2)), Conversions.ToInteger(settings.WorkingHoursEnd.Trim().Substring(3, 2)), 0);
-                int minutesAdded = 0;
-                while (!(sd >= ed))
-                {
-                    minutesAdded += settings.TimeSlot;
-                    int numberOfHoursToAdd = Conversions.ToInteger(Math.Floor(minutesAdded / (double)60));
-                    int numberOfMinutesToAdd = Conversions.ToInteger(minutesAdded - numberOfHoursToAdd * 60);
-                    string str = "";
-                    switch (numberOfHoursToAdd)
-                    {
-                        case 0:
-                            {
-                                str += "";
-                                break;
-                            }
-
-                        case 1:
-                            {
-                                str += numberOfHoursToAdd + " hr ";
-                                break;
-                            }
-
-                        default:
-                            {
-                                str += numberOfHoursToAdd + " hrs ";
-                                break;
-                            }
-                    }
-
-                    switch (numberOfMinutesToAdd)
-                    {
-                        case 0:
-                            {
-                                str += "";
-                                break;
-                            }
-
-                        case 1:
-                            {
-                                str += numberOfMinutesToAdd + " min";
-                                break;
-                            }
-
-                        default:
-                            {
-                                str += numberOfMinutesToAdd + " mins";
-                                break;
-                            }
-                    }
-
-                    dt.Rows.Add(new string[] { Conversions.ToString(minutesAdded), Conversions.ToString(str), "0" });
-                    sd = sd.AddMinutes(settings.TimeSlot);
-                }
-
                 return dt;
             }
         }
@@ -1084,38 +893,6 @@ namespace FSM
             }
         }
 
-        public static DataTable ChecklistResults
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.ChecklistResults.NOT_SET), "Choose...", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.ChecklistResults.Yes), "Yes", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.ChecklistResults.No), "No", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.ChecklistResults.NA), "N / A", "0" });
-                return dt;
-            }
-        }
-
-        public static DataTable PeriodTypes
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.PeriodType.Days), "Days", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.PeriodType.Weeks), "Weeks", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.PeriodType.Months), "Months", "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.PeriodType.Years), "Years", "0" });
-                return dt;
-            }
-        }
-
         public static DataTable InvoiceStatus
         {
             get
@@ -1171,21 +948,6 @@ namespace FSM
                 dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.PartsToBeCreditedStatus.Credit_Received), "Credit Received", "0" });
                 dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.PartsToBeCreditedStatus.Sent_To_Sage), "Sent To Sage", "0" });
                 dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.PartsToBeCreditedStatus.Credit_Req_Cancelled_By_Engineer), "Credit Req Cancelled By Engineer", "0" });
-                return dt;
-            }
-        }
-
-        public static DataTable JOWStatus
-        {
-            get
-            {
-                var dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ValueMember"));
-                dt.Columns.Add(new DataColumn("DisplayMember"));
-                dt.Columns.Add(new DataColumn("Deleted"));
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobOfWorkStatus.Open), Entity.Sys.Enums.JobOfWorkStatus.Open.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobOfWorkStatus.Closed), Entity.Sys.Enums.JobOfWorkStatus.Closed.ToString(), "0" });
-                dt.Rows.Add(new string[] { Conversions.ToString(Entity.Sys.Enums.JobOfWorkStatus.Complete), Entity.Sys.Enums.JobOfWorkStatus.Complete.ToString(), "0" });
                 return dt;
             }
         }

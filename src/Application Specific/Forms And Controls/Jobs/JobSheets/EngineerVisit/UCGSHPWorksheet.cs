@@ -44,7 +44,6 @@ namespace FSM
             base.Dispose(disposing);
         }
 
-        
         private ComboBox _cboSafety;
 
         internal ComboBox cboSafety
@@ -217,224 +216,29 @@ namespace FSM
 
         private Label _Label46;
 
-        internal Label Label46
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label46;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label46 = value;
-            }
-        }
-
         private Label _Label47;
-
-        internal Label Label47
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label47;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label47 = value;
-            }
-        }
 
         private Label _Label55;
 
-        internal Label Label55
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label55;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label55 = value;
-            }
-        }
-
         private Label _Label56;
-
-        internal Label Label56
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label56;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label56 = value;
-            }
-        }
 
         private Label _Label57;
 
-        internal Label Label57
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label57;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label57 = value;
-            }
-        }
-
         private Label _Label58;
-
-        internal Label Label58
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label58;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label58 = value;
-            }
-        }
 
         private Label _Label59;
 
-        internal Label Label59
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label59;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label59 = value;
-            }
-        }
-
         private Label _Label60;
-
-        internal Label Label60
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label60;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label60 = value;
-            }
-        }
 
         private Label _Label61;
 
-        internal Label Label61
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label61;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label61 = value;
-            }
-        }
-
         private Label _Label62;
-
-        internal Label Label62
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label62;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label62 = value;
-            }
-        }
 
         private Label _Label63;
 
-        internal Label Label63
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label63;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label63 = value;
-            }
-        }
-
         private Label _Label65;
 
-        internal Label Label65
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label65;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label65 = value;
-            }
-        }
-
         private Label _Label66;
-
-        internal Label Label66
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label66;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label66 = value;
-            }
-        }
 
         private ComboBox _cboGlycol;
 
@@ -489,173 +293,23 @@ namespace FSM
 
         private Label _lblNotTested10;
 
-        internal Label lblNotTested10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested10 = value;
-            }
-        }
-
         private Label _lblNotTested9;
-
-        internal Label lblNotTested9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested9 = value;
-            }
-        }
 
         private Label _lblNotTested8;
 
-        internal Label lblNotTested8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested8 = value;
-            }
-        }
-
         private Label _lblNotTested7;
-
-        internal Label lblNotTested7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested7 = value;
-            }
-        }
 
         private Label _lblNotTested6;
 
-        internal Label lblNotTested6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested6 = value;
-            }
-        }
-
         private Label _lblNotTested5;
-
-        internal Label lblNotTested5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested5 = value;
-            }
-        }
 
         private Label _lblNotTested4;
 
-        internal Label lblNotTested4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested4 = value;
-            }
-        }
-
         private Label _lblNotTested3;
-
-        internal Label lblNotTested3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested3 = value;
-            }
-        }
 
         private Label _lblNotTested2;
 
-        internal Label lblNotTested2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested2 = value;
-            }
-        }
-
         private Label _lblNotTested1;
-
-        internal Label lblNotTested1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested1 = value;
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -1079,8 +733,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
         private DataTable DtPassFailNa = null;
         private DataTable DtNotTestedPassFail = null;
         private DataTable DtApplianceServiced = null;
@@ -1147,8 +799,6 @@ namespace FSM
                 throw new NotImplementedException();
             }
         }
-
-        
 
         public void LoadForm(object sender, EventArgs e)
         {

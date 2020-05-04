@@ -142,38 +142,6 @@ namespace FSM
             }
         }
 
-        private static DataTable _dtVisit = new DataTable();
-
-        public static DataTable dtVisitFilters
-        {
-            get
-            {
-                if (_dtVisit.Columns.Count == 0)
-                {
-                    _dtVisit.Columns.Add("Field");
-                    _dtVisit.Columns.Add("Value");
-                    _dtVisit.Columns.Add("Type");
-                }
-
-                return _dtVisit;
-            }
-
-            set
-            {
-                _dtVisit = value;
-            }
-        }
-
-        private static string _releaseNoteTextFile;
-
-        public static string ReleaseNoteTextFile
-        {
-            get
-            {
-                return _releaseNoteTextFile;
-            }
-        }
-
         // Starting point of the application
         [STAThread]
         public static void Main()
@@ -211,7 +179,6 @@ namespace FSM
                 if (ShowAppearanceMessage())
                 {
                     DB = new Entity.Sys.Database();
-                    _releaseNoteTextFile = "18.09.25_RN.txt";
                     if (LoginForm is null)
                     {
                         LoginForm = (FRMLogin)Activator.CreateInstance(typeof(FRMLogin));
@@ -469,31 +436,6 @@ namespace FSM
             dialogue.ShowInTaskbar = false;
             dialogue.ForeignKeyFilter = ForeignKeyFilter;
             dialogue.PartNumber = PartNumber;
-            dialogue.TableToSearch = tableToSearchIn;
-            dialogue.ShowDialog();
-            if (dialogue.DialogResult == DialogResult.OK)
-            {
-                return dialogue.ID;
-            }
-            else
-            {
-                return 0;
-            }
-
-            dialogue.Close();
-        }
-
-        public static int PickPartProductSupplier(Entity.Sys.Enums.TableNames tableToSearchIn, int PartOrProductID)
-        {
-            DLGPickPartProductSupplier dialogue;
-            dialogue = (DLGPickPartProductSupplier)checkIfExists(typeof(DLGPickPartProductSupplier).Name, true);
-            if (dialogue is null)
-            {
-                dialogue = (DLGPickPartProductSupplier)Activator.CreateInstance(typeof(DLGPickPartProductSupplier));
-            }
-            // dialogue.Icon = New Icon(dialogue.GetType(), "Logo.ico")
-            dialogue.ShowInTaskbar = false;
-            dialogue.ID = PartOrProductID;
             dialogue.TableToSearch = tableToSearchIn;
             dialogue.ShowDialog();
             if (dialogue.DialogResult == DialogResult.OK)

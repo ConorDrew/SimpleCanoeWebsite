@@ -21,8 +21,6 @@ namespace FSM.Entity
     {
         public class PrintHelper
         {
-            
-
             private static Run ParseText(string textualData)
             {
                 var newLineArray = new[] { Constants.vbCrLf };
@@ -93,18 +91,6 @@ namespace FSM.Entity
                 {
                     para.RemoveAllChildren();
                     para.Remove();
-                }
-            }
-
-            public static void DeleteTableBookmark(WordprocessingDocument doc, string bookmark)
-            {
-                var t = (from el in doc.MainDocumentPart.RootElement.Descendants<DocumentFormat.OpenXml.Wordprocessing.Table>()
-                         where el.InnerText.ToLower().Contains(bookmark.ToLower())
-                         select el).FirstOrDefault();
-                if (t is object)
-                {
-                    t.RemoveAllChildren();
-                    t.Remove();
                 }
             }
 
@@ -504,35 +490,33 @@ namespace FSM.Entity
                 }
                 if (File.Exists(filePath))
                 {
-                try
-                {
-                    string pass = Helper.CreateRandomPassword(8);
-                    string readOnlyFilePath = filePath.Replace(ext, "_Protected" + ext);
-                    using (var doc = X.DocX.Load(filePath))
+                    try
                     {
-                        var erReadOnly = X.EditRestrictions.readOnly;
-                        doc.AddPasswordProtection(erReadOnly, pass);
-                        doc.SaveAs(readOnlyFilePath);
-                    }
+                        string pass = Helper.CreateRandomPassword(8);
+                        string readOnlyFilePath = filePath.Replace(ext, "_Protected" + ext);
+                        using (var doc = X.DocX.Load(filePath))
+                        {
+                            var erReadOnly = X.EditRestrictions.readOnly;
+                            doc.AddPasswordProtection(erReadOnly, pass);
+                            doc.SaveAs(readOnlyFilePath);
+                        }
 
-                    if (deleteFile)
+                        if (deleteFile)
+                        {
+                            File.Delete(filePath);
+                        }
+
+                        return readOnlyFilePath;
+                    }
+                    catch (Exception ex)
                     {
-                        File.Delete(filePath);
+                        return filePath;
                     }
-
-                    return readOnlyFilePath;
-                }
-                catch (Exception ex)
-                {
-                    return filePath;
-                }
-
                 }
                 else
                 {
                     return filePath;
                 }
-
             }
 
             public static void RemoveSpacingInDoc(string filePath)
@@ -599,8 +583,6 @@ namespace FSM.Entity
             {
                 return cm * 28.34;
             }
-
-            
         }
     }
 }

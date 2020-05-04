@@ -13,7 +13,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -76,8 +75,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _EngineerVisitChargeID = 0;
 
             public int EngineerVisitChargeID
@@ -383,8 +380,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_hasChargeFromJob", value);
                 }
             }
-
-            
         }
     }
 }

@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMJobManager : FRMBaseForm, IForm
     {
-        
-
         public FRMJobManager() : base()
         {
-            
-            
             base.Load += FRMJobManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -63,99 +59,11 @@ namespace FSM
 
         private Panel _pnlFilters;
 
-        internal Panel pnlFilters
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlFilters;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnlFilters != null)
-                {
-                }
-
-                _pnlFilters = value;
-                if (_pnlFilters != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpCustomerSearch;
-
-        internal GroupBox grpCustomerSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCustomerSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCustomerSearch != null)
-                {
-                }
-
-                _grpCustomerSearch = value;
-                if (_grpCustomerSearch != null)
-                {
-                }
-            }
-        }
 
         private Label _lblCustomer;
 
-        internal Label lblCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomer != null)
-                {
-                }
-
-                _lblCustomer = value;
-                if (_lblCustomer != null)
-                {
-                }
-            }
-        }
-
         private Label _lblPostcode;
-
-        internal Label lblPostcode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPostcode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPostcode != null)
-                {
-                }
-
-                _lblPostcode = value;
-                if (_lblPostcode != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtPostcode;
 
@@ -207,30 +115,6 @@ namespace FSM
 
         private Button _btnFindCustomer;
 
-        internal Button btnFindCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click -= btnFindCustomer_Click;
-                }
-
-                _btnFindCustomer = value;
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click += btnFindCustomer_Click;
-                }
-            }
-        }
-
         private Button _btnReset;
 
         internal Button btnReset
@@ -259,53 +143,7 @@ namespace FSM
 
         private Button _btnSearch;
 
-        internal Button btnSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click -= btnSearch_Click;
-                }
-
-                _btnSearch = value;
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click += btnSearch_Click;
-                }
-            }
-        }
-
         private GroupBox _grpMiscSearch;
-
-        internal GroupBox grpMiscSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpMiscSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpMiscSearch != null)
-                {
-                }
-
-                _grpMiscSearch = value;
-                if (_grpMiscSearch != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboStatus;
 
@@ -333,28 +171,6 @@ namespace FSM
 
         private Label _lblVisitStatus;
 
-        internal Label lblVisitStatus
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblVisitStatus;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblVisitStatus != null)
-                {
-                }
-
-                _lblVisitStatus = value;
-                if (_lblVisitStatus != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboType;
 
         internal ComboBox cboType
@@ -380,28 +196,6 @@ namespace FSM
         }
 
         private Label _lblType;
-
-        internal Label lblType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblType != null)
-                {
-                }
-
-                _lblType = value;
-                if (_lblType != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtJobNumber;
 
@@ -429,51 +223,7 @@ namespace FSM
 
         private Label _lblJobNumber;
 
-        internal Label lblJobNumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobNumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobNumber != null)
-                {
-                }
-
-                _lblJobNumber = value;
-                if (_lblJobNumber != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpDateCriteria;
-
-        internal GroupBox grpDateCriteria
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpDateCriteria;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpDateCriteria != null)
-                {
-                }
-
-                _grpDateCriteria = value;
-                if (_grpDateCriteria != null)
-                {
-                }
-            }
-        }
 
         private RadioButton _rdoNoDate;
 
@@ -553,51 +303,7 @@ namespace FSM
 
         private Label _lblDateFrom;
 
-        internal Label lblDateFrom
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDateFrom;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDateFrom != null)
-                {
-                }
-
-                _lblDateFrom = value;
-                if (_lblDateFrom != null)
-                {
-                }
-            }
-        }
-
         private Label _lblDateTo;
-
-        internal Label lblDateTo
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDateTo;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDateTo != null)
-                {
-                }
-
-                _lblDateTo = value;
-                if (_lblDateTo != null)
-                {
-                }
-            }
-        }
 
         private DateTimePicker _dtpTo;
 
@@ -649,28 +355,6 @@ namespace FSM
 
         private Label _lbPoNumber;
 
-        internal Label lbPoNumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lbPoNumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lbPoNumber != null)
-                {
-                }
-
-                _lbPoNumber = value;
-                if (_lbPoNumber != null)
-                {
-                }
-            }
-        }
-
         private CheckBox _chkNotShut;
 
         internal CheckBox chkNotShut
@@ -696,30 +380,6 @@ namespace FSM
         }
 
         private Button _btnFindSite;
-
-        internal Button btnFindSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindSite != null)
-                {
-                    _btnFindSite.Click -= btnFindSite_Click;
-                }
-
-                _btnFindSite = value;
-                if (_btnFindSite != null)
-                {
-                    _btnFindSite.Click += btnFindSite_Click;
-                }
-            }
-        }
 
         private TextBox _txtSite;
 
@@ -747,53 +407,7 @@ namespace FSM
 
         private Label _lblProperty;
 
-        internal Label lblProperty
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblProperty;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblProperty != null)
-                {
-                }
-
-                _lblProperty = value;
-                if (_lblProperty != null)
-                {
-                }
-            }
-        }
-
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private DataGrid _dgJobs;
 
@@ -822,28 +436,6 @@ namespace FSM
         }
 
         private Label _lblRegion;
-
-        internal Label lblRegion
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblRegion;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblRegion != null)
-                {
-                }
-
-                _lblRegion = value;
-                if (_lblRegion != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboRegion;
 
@@ -1295,9 +887,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1324,8 +913,6 @@ namespace FSM
         {
         }
 
-        
-        
         private int count = 0;
         private DataView _dvJobs;
 
@@ -1424,9 +1011,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupJobsDataGrid()
         {
@@ -1655,9 +1239,6 @@ namespace FSM
             App.ShowForm(typeof(FRMLogCallout), true, new object[] { SelectedJobsDataRow["JobID"], SelectedJobsDataRow["SiteID"], this });
         }
 
-        
-        
-
         public void PopulateDatagrid(bool withRun)
         {
             try
@@ -1728,7 +1309,5 @@ namespace FSM
                 Entity.Sys.ExportHelper.Export(JobsDataview.Table, "Job Manager", Entity.Sys.Enums.ExportType.XLS);
             }
         }
-
-        
     }
 }

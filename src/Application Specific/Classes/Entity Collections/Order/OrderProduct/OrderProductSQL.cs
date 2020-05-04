@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int OrderProductID, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -32,13 +31,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 _database.AddParameter("@OrderProductID", OrderProductID, true);
                 _database.ExecuteSP_NO_Return("OrderProduct_Delete");
-            }
-
-            public void DeleteForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                _database.ExecuteSP_NO_Return("OrderProduct_DeleteForOrder");
             }
 
             public OrderProduct OrderProduct_Get(int OrderProductID)
@@ -76,14 +68,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public DataView OrderProduct_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("OrderProduct_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblOrderProduct.ToString();
-                return new DataView(dt);
             }
 
             public OrderProduct Insert(OrderProduct oOrderProduct, bool DoConsolidation, SqlTransaction trans)
@@ -133,14 +117,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("OrderProduct_Update");
             }
 
-            public void MarkOrderQuantityReceived(int OrderProductID, int QuantityReceived)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderProductID", OrderProductID, true);
-                _database.AddParameter("@QuantityReceived", QuantityReceived, true);
-                _database.ExecuteSP_NO_Return("OrderProduct_MarkOrderQuantityReceived");
-            }
-
             private void AddOrderProductParametersToCommand(ref OrderProduct oOrderProduct)
             {
                 {
@@ -155,9 +131,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@DispatchWarehouseID", oOrderProduct.DispatchWarehouseID, true);
                 }
             }
-
-
-            
         }
     }
 }

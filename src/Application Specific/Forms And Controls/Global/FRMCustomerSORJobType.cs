@@ -18,12 +18,8 @@ namespace FSM
 {
     public class FRMCustomerSORJobType : FRMBaseForm, IForm
     {
-        
-
         public FRMCustomerSORJobType() : base()
         {
-            
-            
             base.Load += FRMJobLocks_Load;
 
             // This call is required by the Windows Form Designer.
@@ -52,28 +48,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpLocks;
-
-        internal GroupBox grpLocks
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpLocks;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpLocks != null)
-                {
-                }
-
-                _grpLocks = value;
-                if (_grpLocks != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgSOR;
 
@@ -151,28 +125,6 @@ namespace FSM
 
         private Label _lblCustomerSorJobType;
 
-        internal Label lblCustomerSorJobType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomerSorJobType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomerSorJobType != null)
-                {
-                }
-
-                _lblCustomerSorJobType = value;
-                if (_lblCustomerSorJobType != null)
-                {
-                }
-            }
-        }
-
         private Button _btnAdd;
 
         internal Button btnAdd
@@ -225,28 +177,6 @@ namespace FSM
 
         private Label _lblSor;
 
-        internal Label lblSor
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSor;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSor != null)
-                {
-                }
-
-                _lblSor = value;
-                if (_lblSor != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSave;
 
         internal Button btnSave
@@ -272,28 +202,6 @@ namespace FSM
         }
 
         private Label _lbSorCustomer;
-
-        internal Label lbSorCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lbSorCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lbSorCustomer != null)
-                {
-                }
-
-                _lbSorCustomer = value;
-                if (_lbSorCustomer != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtCustomer;
 
@@ -321,53 +229,7 @@ namespace FSM
 
         private Button _btnFindCustomer;
 
-        internal Button btnFindCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click -= btnFindCustomer_Click;
-                }
-
-                _btnFindCustomer = value;
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click += btnFindCustomer_Click;
-                }
-            }
-        }
-
         private GroupBox _grpCostCentreMatrix;
-
-        internal GroupBox grpCostCentreMatrix
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCostCentreMatrix;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCostCentreMatrix != null)
-                {
-                }
-
-                _grpCostCentreMatrix = value;
-                if (_grpCostCentreMatrix != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboRegion;
 
@@ -443,53 +305,7 @@ namespace FSM
 
         private Button _btnDeleteCCM;
 
-        internal Button btnDeleteCCM
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeleteCCM;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeleteCCM != null)
-                {
-                    _btnDeleteCCM.Click -= btnDeleteCCM_Click;
-                }
-
-                _btnDeleteCCM = value;
-                if (_btnDeleteCCM != null)
-                {
-                    _btnDeleteCCM.Click += btnDeleteCCM_Click;
-                }
-            }
-        }
-
         private Label _lblJobType;
-
-        internal Label lblJobType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobType != null)
-                {
-                }
-
-                _lblJobType = value;
-                if (_lblJobType != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgCostCentreMatrix;
 
@@ -519,30 +335,6 @@ namespace FSM
 
         private Button _btnAddCCM;
 
-        internal Button btnAddCCM
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddCCM;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddCCM != null)
-                {
-                    _btnAddCCM.Click -= btnAddCCM_Click;
-                }
-
-                _btnAddCCM = value;
-                if (_btnAddCCM != null)
-                {
-                    _btnAddCCM.Click += btnAddCCM_Click;
-                }
-            }
-        }
-
         private ComboBox _cboCostCentre;
 
         internal ComboBox cboCostCentre
@@ -568,28 +360,6 @@ namespace FSM
         }
 
         private Label _lblCostCentre;
-
-        internal Label lblCostCentre
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCostCentre;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCostCentre != null)
-                {
-                }
-
-                _lblCostCentre = value;
-                if (_lblCostCentre != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboLinkType;
 
@@ -618,28 +388,6 @@ namespace FSM
         }
 
         private Label _lblLinkType;
-
-        internal Label lblLinkType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLinkType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLinkType != null)
-                {
-                }
-
-                _lblLinkType = value;
-                if (_lblLinkType != null)
-                {
-                }
-            }
-        }
 
         private Label _lblCcCustomer;
 
@@ -740,28 +488,6 @@ namespace FSM
         }
 
         private Label _lblJobSpendLimit;
-
-        internal Label lblJobSpendLimit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobSpendLimit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobSpendLimit != null)
-                {
-                }
-
-                _lblJobSpendLimit = value;
-                if (_lblJobSpendLimit != null)
-                {
-                }
-            }
-        }
 
         private Button _btnReset;
 
@@ -1224,9 +950,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1278,8 +1001,6 @@ namespace FSM
         {
         }
 
-        
-        
         private Customer _theCustomer = new Customer();
 
         public Customer theCustomer
@@ -1397,9 +1118,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupDataGrid()
         {
@@ -1788,7 +1506,5 @@ namespace FSM
         {
             ResetControls();
         }
-
-        
     }
 }

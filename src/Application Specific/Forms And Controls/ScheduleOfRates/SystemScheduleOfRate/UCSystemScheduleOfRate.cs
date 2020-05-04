@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCSystemScheduleOfRate : UCBase, IUserControl
     {
-        
-
         public UCSystemScheduleOfRate() : base()
         {
-            
-            
             base.Load += UCSystemScheduleOfRate_Load;
 
             // This call is required by the Windows Form Designer.
@@ -48,28 +44,6 @@ namespace FSM
 
         private GroupBox _grpSystemScheduleOfRate;
 
-        internal GroupBox grpSystemScheduleOfRate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSystemScheduleOfRate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSystemScheduleOfRate != null)
-                {
-                }
-
-                _grpSystemScheduleOfRate = value;
-                if (_grpSystemScheduleOfRate != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboScheduleOfRatesCategoryID;
 
         internal ComboBox cboScheduleOfRatesCategoryID
@@ -95,28 +69,6 @@ namespace FSM
         }
 
         private Label _lblScheduleOfRatesCategoryID;
-
-        internal Label lblScheduleOfRatesCategoryID
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblScheduleOfRatesCategoryID;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblScheduleOfRatesCategoryID != null)
-                {
-                }
-
-                _lblScheduleOfRatesCategoryID = value;
-                if (_lblScheduleOfRatesCategoryID != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtCode;
 
@@ -144,28 +96,6 @@ namespace FSM
 
         private Label _lblCode;
 
-        internal Label lblCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCode != null)
-                {
-                }
-
-                _lblCode = value;
-                if (_lblCode != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtDescription;
 
         internal TextBox txtDescription
@@ -192,28 +122,6 @@ namespace FSM
 
         private Label _lblDescription;
 
-        internal Label lblDescription
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDescription;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDescription != null)
-                {
-                }
-
-                _lblDescription = value;
-                if (_lblDescription != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPrice;
 
         internal TextBox txtPrice
@@ -239,28 +147,6 @@ namespace FSM
         }
 
         private Label _lblPrice;
-
-        internal Label lblPrice
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPrice;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPrice != null)
-                {
-                }
-
-                _lblPrice = value;
-                if (_lblPrice != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgRates;
 
@@ -366,75 +252,9 @@ namespace FSM
 
         private Label _lblTime;
 
-        internal Label lblTime
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTime;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTime != null)
-                {
-                }
-
-                _lblTime = value;
-                if (_lblTime != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpSOR;
 
-        internal GroupBox grpSOR
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSOR;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSOR != null)
-                {
-                }
-
-                _grpSOR = value;
-                if (_grpSOR != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpJobImportType;
-
-        internal GroupBox grpJobImportType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobImportType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobImportType != null)
-                {
-                }
-
-                _grpJobImportType = value;
-                if (_grpJobImportType != null)
-                {
-                }
-            }
-        }
 
         private Button _btnSave;
 
@@ -464,30 +284,6 @@ namespace FSM
 
         private Button _btnRemoveType;
 
-        internal Button btnRemoveType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRemoveType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRemoveType != null)
-                {
-                    _btnRemoveType.Click -= btnRemoveType_Click;
-                }
-
-                _btnRemoveType = value;
-                if (_btnRemoveType != null)
-                {
-                    _btnRemoveType.Click += btnRemoveType_Click;
-                }
-            }
-        }
-
         private ComboBox _cboJobImportType;
 
         internal ComboBox cboJobImportType
@@ -516,28 +312,6 @@ namespace FSM
 
         private Label _lblJobImportType;
 
-        internal Label lblJobImportType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobImportType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobImportType != null)
-                {
-                }
-
-                _lblJobImportType = value;
-                if (_lblJobImportType != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboJobType;
 
         internal ComboBox cboJobType
@@ -563,28 +337,6 @@ namespace FSM
         }
 
         private Label _lblJobType;
-
-        internal Label lblJobType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobType != null)
-                {
-                }
-
-                _lblJobType = value;
-                if (_lblJobType != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtJobTypeName;
 
@@ -612,53 +364,7 @@ namespace FSM
 
         private Label _lblJobTypeName;
 
-        internal Label lblJobTypeName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobTypeName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobTypeName != null)
-                {
-                }
-
-                _lblJobTypeName = value;
-                if (_lblJobTypeName != null)
-                {
-                }
-            }
-        }
-
         private Button _btnAddNewType;
-
-        internal Button btnAddNewType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddNewType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddNewType != null)
-                {
-                    _btnAddNewType.Click -= btnAddNewType_Click;
-                }
-
-                _btnAddNewType = value;
-                if (_btnAddNewType != null)
-                {
-                    _btnAddNewType.Click += btnAddNewType_Click;
-                }
-            }
-        }
 
         private TextBox _txtCycle;
 
@@ -686,28 +392,6 @@ namespace FSM
 
         private Label _lblCycle;
 
-        internal Label lblCycle
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCycle;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCycle != null)
-                {
-                }
-
-                _lblCycle = value;
-                if (_lblCycle != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboSORJobType;
 
         internal ComboBox cboSORJobType
@@ -734,51 +418,7 @@ namespace FSM
 
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpEngineerSkillSOR;
-
-        internal GroupBox grpEngineerSkillSOR
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineerSkillSOR;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineerSkillSOR != null)
-                {
-                }
-
-                _grpEngineerSkillSOR = value;
-                if (_grpEngineerSkillSOR != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSOR;
 
@@ -806,77 +446,9 @@ namespace FSM
 
         private Label _lblSORName;
 
-        internal Label lblSORName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSORName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSORName != null)
-                {
-                }
-
-                _lblSORName = value;
-                if (_lblSORName != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSaveEngineerQual;
 
-        internal Button btnSaveEngineerQual
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveEngineerQual;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveEngineerQual != null)
-                {
-                    _btnSaveEngineerQual.Click -= btnSaveEngineerQual_Click;
-                }
-
-                _btnSaveEngineerQual = value;
-                if (_btnSaveEngineerQual != null)
-                {
-                    _btnSaveEngineerQual.Click += btnSaveEngineerQual_Click;
-                }
-            }
-        }
-
         private GroupBox _grpEngineerSkills;
-
-        internal GroupBox grpEngineerSkills
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineerSkills;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineerSkills != null)
-                {
-                }
-
-                _grpEngineerSkills = value;
-                if (_grpEngineerSkills != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgEngineerQual;
 
@@ -906,81 +478,9 @@ namespace FSM
 
         private Button _btnFindSOR;
 
-        internal Button btnFindSOR
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindSOR;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindSOR != null)
-                {
-                    _btnFindSOR.Click -= btnFindSOR_Click;
-                }
-
-                _btnFindSOR = value;
-                if (_btnFindSOR != null)
-                {
-                    _btnFindSOR.Click += btnFindSOR_Click;
-                }
-            }
-        }
-
         private Button _btnClearAll;
 
-        internal Button btnClearAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnClearAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click -= btnClearAll_Click;
-                }
-
-                _btnClearAll = value;
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click += btnClearAll_Click;
-                }
-            }
-        }
-
         private Button _btnFindEngineerQual;
-
-        internal Button btnFindEngineerQual
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindEngineerQual;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindEngineerQual != null)
-                {
-                    _btnFindEngineerQual.Click -= btnFindEngineerQual_Click;
-                }
-
-                _btnFindEngineerQual = value;
-                if (_btnFindEngineerQual != null)
-                {
-                    _btnFindEngineerQual.Click += btnFindEngineerQual_Click;
-                }
-            }
-        }
 
         private TextBox _txtEngineerQual;
 
@@ -1007,28 +507,6 @@ namespace FSM
         }
 
         private Label _lblEngineerQual;
-
-        internal Label lblEngineerQual
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEngineerQual;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEngineerQual != null)
-                {
-                }
-
-                _lblEngineerQual = value;
-                if (_lblEngineerQual != null)
-                {
-                }
-            }
-        }
 
         private Button _btnAddUpdate;
 
@@ -1563,9 +1041,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1586,9 +1061,6 @@ namespace FSM
                 throw new NotImplementedException();
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -1765,9 +1237,6 @@ namespace FSM
                 _currentSystemScheduleOfRate = value;
             }
         }
-
-        
-        
 
         public void SetupRatesDataGrid()
         {
@@ -2141,9 +1610,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             RatesDataview = App.DB.SystemScheduleOfRate.SystemScheduleOfRate_GetAll();
@@ -2242,7 +1708,5 @@ namespace FSM
         {
             EngineerQualsDataview = App.DB.SystemScheduleOfRate.SOREnginerQual_Get_ForSOR(ID);
         }
-
-        
     }
 }

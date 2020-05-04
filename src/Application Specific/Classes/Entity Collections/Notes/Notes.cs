@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,9 +76,6 @@ namespace FSM.Entity
                     _deleted = value;
                 }
             }
-
-            
-            
 
             private int _NoteID = 0;
 
@@ -251,7 +247,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_UserIDFor", value);
                 }
             }
-            
         }
     }
 }

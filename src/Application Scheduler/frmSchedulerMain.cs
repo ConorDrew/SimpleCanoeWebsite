@@ -9,8 +9,6 @@ namespace FSM
 {
     public class frmSchedulerMain : Form
     {
-        
-
         public frmSchedulerMain() : base()
         {
             base.Load += frmSchedulerMain_Load;
@@ -69,253 +67,23 @@ namespace FSM
 
         private MenuItem _mnuScheduler;
 
-        internal MenuItem mnuScheduler
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuScheduler;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuScheduler != null)
-                {
-                }
-
-                _mnuScheduler = value;
-                if (_mnuScheduler != null)
-                {
-                }
-            }
-        }
-
         private MenuItem _mnuOpenSchedule;
-
-        internal MenuItem mnuOpenSchedule
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuOpenSchedule;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuOpenSchedule != null)
-                {
-                    _mnuOpenSchedule.Click -= mnuOpenSchedule_Click;
-                }
-
-                _mnuOpenSchedule = value;
-                if (_mnuOpenSchedule != null)
-                {
-                    _mnuOpenSchedule.Click += mnuOpenSchedule_Click;
-                }
-            }
-        }
 
         private MenuItem _mnuResetScheduler;
 
-        internal MenuItem mnuResetScheduler
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuResetScheduler;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuResetScheduler != null)
-                {
-                    _mnuResetScheduler.Click -= mnuResetScheduler_Click;
-                }
-
-                _mnuResetScheduler = value;
-                if (_mnuResetScheduler != null)
-                {
-                    _mnuResetScheduler.Click += mnuResetScheduler_Click;
-                }
-            }
-        }
-
         private MenuItem _mnuCloseScheduler;
-
-        internal MenuItem mnuCloseScheduler
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuCloseScheduler;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuCloseScheduler != null)
-                {
-                    _mnuCloseScheduler.Click -= mnuCloseScheduler_Click;
-                }
-
-                _mnuCloseScheduler = value;
-                if (_mnuCloseScheduler != null)
-                {
-                    _mnuCloseScheduler.Click += mnuCloseScheduler_Click;
-                }
-            }
-        }
 
         private MenuItem _mnuDividerScheduler;
 
-        internal MenuItem mnuDividerScheduler
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuDividerScheduler;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuDividerScheduler != null)
-                {
-                }
-
-                _mnuDividerScheduler = value;
-                if (_mnuDividerScheduler != null)
-                {
-                }
-            }
-        }
-
         private MenuItem _mnuWeekSchedule;
-
-        internal MenuItem mnuWeekSchedule
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuWeekSchedule;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuWeekSchedule != null)
-                {
-                }
-
-                _mnuWeekSchedule = value;
-                if (_mnuWeekSchedule != null)
-                {
-                }
-            }
-        }
 
         private MenuItem _mnuPrintWeek;
 
-        internal MenuItem mnuPrintWeek
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuPrintWeek;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuPrintWeek != null)
-                {
-                    _mnuPrintWeek.Click -= mnuPrintWeek_Click;
-                }
-
-                _mnuPrintWeek = value;
-                if (_mnuPrintWeek != null)
-                {
-                    _mnuPrintWeek.Click += mnuPrintWeek_Click;
-                }
-            }
-        }
-
         private MenuItem _MenuItem1;
-
-        internal MenuItem MenuItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _MenuItem1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_MenuItem1 != null)
-                {
-                }
-
-                _MenuItem1 = value;
-                if (_MenuItem1 != null)
-                {
-                }
-            }
-        }
 
         private MenuItem _MenuItem2;
 
-        internal MenuItem MenuItem2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _MenuItem2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_MenuItem2 != null)
-                {
-                }
-
-                _MenuItem2 = value;
-                if (_MenuItem2 != null)
-                {
-                }
-            }
-        }
-
         private MenuItem _mnuAbsences;
-
-        internal MenuItem mnuAbsences
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuAbsences;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuAbsences != null)
-                {
-                    _mnuAbsences.Click -= mnuAbsences_Click;
-                }
-
-                _mnuAbsences = value;
-                if (_mnuAbsences != null)
-                {
-                    _mnuAbsences.Click += mnuAbsences_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -418,7 +186,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
         public Scheduler scheduler;
         // Private _fromDate As DateTime
         // Private _toDate As DateTime

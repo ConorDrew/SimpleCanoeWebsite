@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMUsers : FRMBaseForm, IForm
     {
-        
-
         public FRMUsers() : base()
         {
-            
-            
             base.Load += FRMUsers_Load;
 
             // This call is required by the Windows Form Designer.
@@ -398,28 +394,6 @@ namespace FSM
         }
 
         private GroupBox _grpUsers;
-
-        internal GroupBox grpUsers
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpUsers;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpUsers != null)
-                {
-                }
-
-                _grpUsers = value;
-                if (_grpUsers != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgUsers;
 
@@ -1081,9 +1055,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1115,8 +1086,6 @@ namespace FSM
         {
         }
 
-        
-        
         private Entity.Sys.Enums.FormState _pageState;
 
         private Entity.Sys.Enums.FormState PageState
@@ -1169,9 +1138,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupUsersAndEngineersDataGrid()
         {
@@ -1291,9 +1257,6 @@ namespace FSM
         {
             PopulateNewSecurityModules();
         }
-
-        
-        
 
         private void SetUpPageState(Entity.Sys.Enums.FormState state)
         {
@@ -1523,9 +1486,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void SetupUserModulesDatagrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgSecurityUserModules);
@@ -1674,7 +1634,5 @@ namespace FSM
                 dgUserRegions[dgUserRegions.CurrentRowIndex, 0] = selected;
             }
         }
-
-        
     }
 }

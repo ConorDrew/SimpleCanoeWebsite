@@ -8,12 +8,8 @@ namespace FSM
 {
     public class FRMPartPack : FRMBaseForm, IForm
     {
-        
-
         public FRMPartPack() : base()
         {
-            
-            
             base.Load += FRMPart_Load;
 
             // This call is required by the Windows Form Designer.
@@ -177,9 +173,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
@@ -209,23 +202,8 @@ namespace FSM
             ID = newID;
         }
 
-        
-        
         private IUserControl TheLoadedControl;
         private bool _UseOverride = true;
-
-        public bool UseOverride
-        {
-            get
-            {
-                return _UseOverride;
-            }
-
-            set
-            {
-                _UseOverride = value;
-            }
-        }
 
         private int _ID = 0;
 
@@ -291,7 +269,5 @@ namespace FSM
                 Dispose();
             }
         }
-
-        
     }
 }

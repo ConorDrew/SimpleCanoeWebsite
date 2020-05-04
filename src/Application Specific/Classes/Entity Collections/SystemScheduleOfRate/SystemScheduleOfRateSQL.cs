@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int SystemScheduleOfRateID)
             {
                 _database.ClearParameter();
@@ -66,15 +65,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView SystemScheduleOfRate_Get_ByJobType(int jobTypeID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@JobTypeID", jobTypeID, true);
-                var dt = _database.ExecuteSP_DataTable("SystemScheduleOfRate_Get_ByJobType");
-                dt.TableName = Sys.Enums.TableNames.tblSystemScheduleOfRate.ToString();
-                return new DataView(dt);
-            }
-
             public DataView SystemScheduleOfRate_Get_ByEngineerQual(int engQualID)
             {
                 _database.ClearParameter();
@@ -99,15 +89,6 @@ namespace FSM.Entity
                 oSystemScheduleOfRate.SetSystemScheduleOfRateID = Sys.Helper.MakeIntegerValid(_database.ExecuteSP_OBJECT("SystemScheduleOfRate_Insert"));
                 oSystemScheduleOfRate.Exists = true;
                 return oSystemScheduleOfRate;
-            }
-
-            public DataView SystemScheduleOfRate_Search(string criteria)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@Criteria", criteria, true);
-                var dt = _database.ExecuteSP_DataTable("SystemScheduleOfRate_Search");
-                dt.TableName = Sys.Enums.TableNames.tblSystemScheduleOfRate.ToString();
-                return new DataView(dt);
             }
 
             public void Update(SystemScheduleOfRate oSystemScheduleOfRate)
@@ -154,7 +135,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 App.DB.ExecuteScalar("DELETE FROM [tblSOREnginerQual] Where [SystemScheduleOfRateID] = " + sorId);
             }
-            
         }
     }
 }

@@ -16,12 +16,8 @@ namespace FSM
 {
     public class UCLogCallout : UCBase, IUserControl
     {
-        
-
         public UCLogCallout() : base()
         {
-            
-            
             base.Load += UCLogCallout_Load;
 
             // This call is required by the Windows Form Designer.
@@ -522,51 +518,7 @@ namespace FSM
 
         private Label _Label7;
 
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtCurrentContract;
 
@@ -641,28 +593,6 @@ namespace FSM
         }
 
         private Label _lblCustomerName;
-
-        internal Label lblCustomerName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomerName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomerName != null)
-                {
-                }
-
-                _lblCustomerName = value;
-                if (_lblCustomerName != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSiteName;
 
@@ -788,28 +718,6 @@ namespace FSM
 
         private Label _Label10;
 
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _gbPaymentType;
 
         internal GroupBox gbPaymentType
@@ -849,7 +757,6 @@ namespace FSM
             {
                 if (_btnfindVan != null)
                 {
-                    
                     _btnfindVan.Click -= btnfindVan_Click;
                 }
 
@@ -937,51 +844,7 @@ namespace FSM
 
         private Label _lblSalesRep;
 
-        internal Label lblSalesRep
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSalesRep;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSalesRep != null)
-                {
-                }
-
-                _lblSalesRep = value;
-                if (_lblSalesRep != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpHeadline;
-
-        internal GroupBox grpHeadline
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpHeadline;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpHeadline != null)
-                {
-                }
-
-                _grpHeadline = value;
-                if (_grpHeadline != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtHeadline;
 
@@ -1008,28 +871,6 @@ namespace FSM
         }
 
         private Label _lblLastContactAttempt;
-
-        internal Label lblLastContactAttempt
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLastContactAttempt;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLastContactAttempt != null)
-                {
-                }
-
-                _lblLastContactAttempt = value;
-                if (_lblLastContactAttempt != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtLastContact;
 
@@ -1652,9 +1493,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -1667,9 +1505,6 @@ namespace FSM
                 return Job;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -2105,9 +1940,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             try
@@ -2321,7 +2153,7 @@ namespace FSM
             {
                 OnForm.MakeReadOnly();
             }
-                        
+
             if (Job.JobID == 0)
             {
                 if (!Helper.IsStringEmpty(Site.ContactAlerts))

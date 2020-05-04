@@ -8,8 +8,6 @@ namespace FSM
 {
     public class UCSideBar : UCBase
     {
-        
-
         public UCSideBar() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -48,21 +46,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private Panel _pnlButtons;
 
-        internal Panel pnlButtons
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlButtons;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _pnlButtons = value;
-            }
-        }
-
         private UCMainButton _btnVan;
 
         internal UCMainButton btnVan
@@ -99,21 +82,6 @@ namespace FSM
 
         private Splitter _Splitter1;
 
-        internal Splitter Splitter1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Splitter1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Splitter1 = value;
-            }
-        }
-
         private Panel _pnlSearch;
 
         internal Panel pnlSearch
@@ -132,21 +100,6 @@ namespace FSM
         }
 
         private Panel _pnlMenu;
-
-        internal Panel pnlMenu
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlMenu;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _pnlMenu = value;
-            }
-        }
 
         private Label _Label1;
 
@@ -578,14 +531,9 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         private void MenuSelectionChanged(Entity.Sys.Enums.MenuTypes MenuType)
         {
             Navigation.Navigate(MenuType);
         }
-
-        
     }
 }

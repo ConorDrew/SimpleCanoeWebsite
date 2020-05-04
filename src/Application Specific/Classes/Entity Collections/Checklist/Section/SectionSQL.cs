@@ -14,43 +14,11 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int SectionID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@SectionID", SectionID, true);
                 _database.ExecuteSP_NO_Return("Section_Delete");
-            }
-
-            public Section Section_Get(int SectionID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@SectionID", SectionID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("Section_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oSection = new Section();
-                        oSection.IgnoreExceptionsOnSetMethods = true;
-                        oSection.SetSectionID = dt.Rows[0]["SectionID"];
-                        oSection.SetDescription = dt.Rows[0]["Description"];
-                        oSection.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oSection.Exists = true;
-                        return oSection;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
             }
 
             public DataView Section_GetAll()
@@ -85,9 +53,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@Description", oSection.Description, true);
                 }
             }
-
-
-            
         }
     }
 }

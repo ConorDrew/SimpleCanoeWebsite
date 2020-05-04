@@ -12,8 +12,6 @@ namespace FSM
 {
     public class FRMOrderManager : FRMBaseForm, IForm
     {
-        
-
         public FRMOrderManager() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -196,28 +194,6 @@ namespace FSM
 
         private Label _Label11;
 
-        internal Label Label11
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label11;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label11 != null)
-                {
-                }
-
-                _Label11 = value;
-                if (_Label11 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboType;
 
         internal ComboBox cboType
@@ -246,75 +222,9 @@ namespace FSM
 
         private Label _Label10;
 
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkDateCreated;
 
@@ -343,30 +253,6 @@ namespace FSM
         }
 
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private Button _btnReset;
 
@@ -822,28 +708,6 @@ namespace FSM
 
         private Label _Label7;
 
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
-
         private CheckBox _chkEngineerNotReceived;
 
         internal CheckBox chkEngineerNotReceived
@@ -872,54 +736,7 @@ namespace FSM
 
         private Button _btnFilterResults;
 
-        internal Button btnFilterResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFilterResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFilterResults != null)
-                {
-                    
-                    _btnFilterResults.Click -= btnFilterResults_Click;
-                }
-
-                _btnFilterResults = value;
-                if (_btnFilterResults != null)
-                {
-                    _btnFilterResults.Click += btnFilterResults_Click;
-                }
-            }
-        }
-
         private Label _Label12;
-
-        internal Label Label12
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label12;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label12 != null)
-                {
-                }
-
-                _Label12 = value;
-                if (_Label12 != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboDepartment;
 
@@ -1439,13 +1256,8 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public class PartsNotReceivedColourColumn : DataGridLabelColumn
         {
-            
-
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
             {
                 base.Paint(g, bounds, source, rowNum, backBrush, foreBrush, alignToRight);
@@ -1468,12 +1280,7 @@ namespace FSM
                 g.FillRectangle(brush, rect);
                 g.DrawString("", DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
             }
-
-            
         }
-
-        
-        
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -1499,8 +1306,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvOrders;
 
         private DataView OrdersDataview
@@ -1627,9 +1432,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupOrdersDataGrid()
         {
@@ -1810,9 +1612,6 @@ namespace FSM
             tbStyle.MappingName = Enums.TableNames.tblOrder.ToString();
             dgOrders.TableStyles.Add(tbStyle);
         }
-
-        
-        
 
         private void FRMOrderManager_Load(object sender, EventArgs e)
         {
@@ -2103,9 +1902,6 @@ namespace FSM
                     }
             }
         }
-
-        
-        
 
         public void PopulateDatagrid()
         {

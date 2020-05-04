@@ -44,7 +44,6 @@ namespace FSM
             base.Dispose(disposing);
         }
 
-        
         private TextBox _txtResults;
 
         internal TextBox txtResults
@@ -81,21 +80,6 @@ namespace FSM
 
         private Label _Label18;
 
-        internal Label Label18
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label18;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label18 = value;
-            }
-        }
-
         private ComboBox _cboServiced;
 
         internal ComboBox cboServiced
@@ -115,37 +99,7 @@ namespace FSM
 
         private Label _Label19;
 
-        internal Label Label19
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label19;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label19 = value;
-            }
-        }
-
         private Label _Label15;
-
-        internal Label Label15
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label15;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label15 = value;
-            }
-        }
 
         private ComboBox _cboSystemOperation;
 
@@ -166,21 +120,6 @@ namespace FSM
 
         private Label _Label8;
 
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label8 = value;
-            }
-        }
-
         private ComboBox _cboInspectPumps;
 
         internal ComboBox cboInspectPumps
@@ -200,21 +139,6 @@ namespace FSM
 
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label9 = value;
-            }
-        }
-
         private ComboBox _cboCleanStrainers;
 
         internal ComboBox cboCleanStrainers
@@ -233,21 +157,6 @@ namespace FSM
         }
 
         private Label _Label10;
-
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _Label10 = value;
-            }
-        }
 
         private ComboBox _cboCleanPortValue;
 
@@ -387,122 +296,17 @@ namespace FSM
 
         private Label _lblNotTested1;
 
-        internal Label lblNotTested1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested1 = value;
-            }
-        }
-
         private Label _lblNotTested2;
-
-        internal Label lblNotTested2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested2 = value;
-            }
-        }
 
         private Label _lblNotTested3;
 
-        internal Label lblNotTested3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested3 = value;
-            }
-        }
-
         private Label _lblNotTested5;
-
-        internal Label lblNotTested5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested5 = value;
-            }
-        }
 
         private Label _lblNotTested4;
 
-        internal Label lblNotTested4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested4 = value;
-            }
-        }
-
         private Label _lblNotTested10;
 
-        internal Label lblNotTested10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested10 = value;
-            }
-        }
-
         private Label _lblNotTested18;
-
-        internal Label lblNotTested18
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNotTested18;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _lblNotTested18 = value;
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -822,8 +626,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
         private DataTable DtPassFailNa = null;
         private DataTable DtNotTestedPassFail = null;
         private DataTable DtApplianceServiced = null;
@@ -890,8 +692,6 @@ namespace FSM
                 throw new NotImplementedException();
             }
         }
-
-        
 
         public void LoadForm(object sender, EventArgs e)
         {

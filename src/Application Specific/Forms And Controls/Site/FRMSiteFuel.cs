@@ -13,12 +13,8 @@ namespace FSM
     {
         public FRMSiteFuel()
         {
-            
-            
             base.Load += FRMContactInfo_Load;
         }
-
-        
 
         public FRMSiteFuel(Entity.Sites.Site oSite) : base()
         {
@@ -50,99 +46,11 @@ namespace FSM
 
         private TabControl _SiteFuelTabControl;
 
-        internal TabControl SiteFuelTabControl
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _SiteFuelTabControl;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_SiteFuelTabControl != null)
-                {
-                }
-
-                _SiteFuelTabControl = value;
-                if (_SiteFuelTabControl != null)
-                {
-                }
-            }
-        }
-
         private TabPage _tabSiteFuel;
-
-        internal TabPage tabSiteFuel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabSiteFuel;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabSiteFuel != null)
-                {
-                }
-
-                _tabSiteFuel = value;
-                if (_tabSiteFuel != null)
-                {
-                }
-            }
-        }
 
         private TabPage _tabAudit;
 
-        internal TabPage tabAudit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _tabAudit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_tabAudit != null)
-                {
-                }
-
-                _tabAudit = value;
-                if (_tabAudit != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpSiteFuels;
-
-        internal GroupBox grpSiteFuels
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSiteFuels;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSiteFuels != null)
-                {
-                }
-
-                _grpSiteFuels = value;
-                if (_grpSiteFuels != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgSiteFuel;
 
@@ -176,103 +84,11 @@ namespace FSM
 
         private Button _btnSaveFuel;
 
-        internal Button btnSaveFuel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveFuel;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveFuel != null)
-                {
-                    _btnSaveFuel.Click -= btnSave_Click;
-                }
-
-                _btnSaveFuel = value;
-                if (_btnSaveFuel != null)
-                {
-                    _btnSaveFuel.Click += btnSave_Click;
-                }
-            }
-        }
-
         private Button _btnDeleteSiteFuel;
-
-        internal Button btnDeleteSiteFuel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDeleteSiteFuel;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDeleteSiteFuel != null)
-                {
-                    _btnDeleteSiteFuel.Click -= btnDeleteSiteFuel_Click;
-                }
-
-                _btnDeleteSiteFuel = value;
-                if (_btnDeleteSiteFuel != null)
-                {
-                    _btnDeleteSiteFuel.Click += btnDeleteSiteFuel_Click;
-                }
-            }
-        }
 
         private GroupBox _grpSiteFuelUpdate;
 
-        internal GroupBox grpSiteFuelUpdate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSiteFuelUpdate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSiteFuelUpdate != null)
-                {
-                }
-
-                _grpSiteFuelUpdate = value;
-                if (_grpSiteFuelUpdate != null)
-                {
-                }
-            }
-        }
-
         private Label _lblFuel;
-
-        internal Label lblFuel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFuel;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFuel != null)
-                {
-                }
-
-                _lblFuel = value;
-                if (_lblFuel != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboFuel;
 
@@ -324,51 +140,7 @@ namespace FSM
 
         private Label _lblLastService;
 
-        internal Label lblLastService
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblLastService;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblLastService != null)
-                {
-                }
-
-                _lblLastService = value;
-                if (_lblLastService != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpSite;
-
-        internal GroupBox grpSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSite != null)
-                {
-                }
-
-                _grpSite = value;
-                if (_grpSite != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtCustomerName;
 
@@ -444,28 +216,6 @@ namespace FSM
 
         private Label _lblCustomer;
 
-        internal Label lblCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomer != null)
-                {
-                }
-
-                _lblCustomer = value;
-                if (_lblCustomer != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtTelephoneNum;
 
         internal TextBox txtTelephoneNum
@@ -491,28 +241,6 @@ namespace FSM
         }
 
         private Label _lblTelephoneNum;
-
-        internal Label lblTelephoneNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTelephoneNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTelephoneNum != null)
-                {
-                }
-
-                _lblTelephoneNum = value;
-                if (_lblTelephoneNum != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtEmailAddress;
 
@@ -540,28 +268,6 @@ namespace FSM
 
         private Label _lblEmailAddress;
 
-        internal Label lblEmailAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEmailAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEmailAddress != null)
-                {
-                }
-
-                _lblEmailAddress = value;
-                if (_lblEmailAddress != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtFaxNum;
 
         internal TextBox txtFaxNum
@@ -587,28 +293,6 @@ namespace FSM
         }
 
         private Label _lblFaxNum;
-
-        internal Label lblFaxNum
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaxNum;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaxNum != null)
-                {
-                }
-
-                _lblFaxNum = value;
-                if (_lblFaxNum != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSite;
 
@@ -636,28 +320,6 @@ namespace FSM
 
         private Label _lblSiteName;
 
-        internal Label lblSiteName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSiteName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSiteName != null)
-                {
-                }
-
-                _lblSiteName = value;
-                if (_lblSiteName != null)
-                {
-                }
-            }
-        }
-
         private ToolTip _ttSiteFuel;
 
         internal ToolTip ttSiteFuel
@@ -683,28 +345,6 @@ namespace FSM
         }
 
         private GroupBox _grpSiteFuelAudit;
-
-        internal GroupBox grpSiteFuelAudit
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpSiteFuelAudit;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpSiteFuelAudit != null)
-                {
-                }
-
-                _grpSiteFuelAudit = value;
-                if (_grpSiteFuelAudit != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgSiteFuelAudit;
 
@@ -756,28 +396,6 @@ namespace FSM
 
         private Label _lblAddedOn;
 
-        internal Label lblAddedOn
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddedOn;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddedOn != null)
-                {
-                }
-
-                _lblAddedOn = value;
-                if (_lblAddedOn != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtAddedByText;
 
         internal TextBox txtAddedByText
@@ -804,51 +422,7 @@ namespace FSM
 
         private Label _lblAddedBy;
 
-        internal Label lblAddedBy
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddedBy;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddedBy != null)
-                {
-                }
-
-                _lblAddedBy = value;
-                if (_lblAddedBy != null)
-                {
-                }
-            }
-        }
-
         private Label _lblChargeType;
-
-        internal Label lblChargeType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblChargeType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblChargeType != null)
-                {
-                }
-
-                _lblChargeType = value;
-                if (_lblChargeType != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboChargeType;
 
@@ -900,53 +474,7 @@ namespace FSM
 
         private Label _lblActualServiceDate;
 
-        internal Label lblActualServiceDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblActualServiceDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblActualServiceDate != null)
-                {
-                }
-
-                _lblActualServiceDate = value;
-                if (_lblActualServiceDate != null)
-                {
-                }
-            }
-        }
-
         private Button _btnUpdateSiteService;
-
-        internal Button btnUpdateSiteService
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnUpdateSiteService;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnUpdateSiteService != null)
-                {
-                    _btnUpdateSiteService.Click -= btnUpdateSiteService_Click;
-                }
-
-                _btnUpdateSiteService = value;
-                if (_btnUpdateSiteService != null)
-                {
-                    _btnUpdateSiteService.Click += btnUpdateSiteService_Click;
-                }
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -1382,9 +910,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -1403,9 +928,6 @@ namespace FSM
         public void ResetMe(int newID)
         {
         }
-
-        
-        
 
         public void SetupSiteFuelDataGrid()
         {
@@ -1488,8 +1010,6 @@ namespace FSM
             dgSiteFuelAudit.TableStyles.Add(tStyle);
         }
 
-        
-        
         private Entity.Sites.Site _osite;
 
         public Entity.Sites.Site CurrentSite
@@ -1807,9 +1327,6 @@ namespace FSM
             ttSiteFuel.Hide(dgSiteFuel);
         }
 
-        
-        
-
         private void PopulateSiteFuelDataGrid()
         {
             try
@@ -1845,7 +1362,5 @@ namespace FSM
 
             FRMLastServiceDate fLSD = (FRMLastServiceDate)App.ShowForm(typeof(FRMLastServiceDate), true, new object[] { CurrentSite.SiteID });
         }
-
-        
     }
 }

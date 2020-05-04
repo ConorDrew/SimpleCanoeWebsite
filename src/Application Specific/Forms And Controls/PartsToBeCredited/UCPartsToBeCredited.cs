@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCPartsToBeCredited : UCBase, IUserControl
     {
-        
-
         public UCPartsToBeCredited() : base()
         {
-            
-            
             base.Load += UCPartsToBeCredited_Load;
 
             // This call is required by the Windows Form Designer.
@@ -40,53 +36,7 @@ namespace FSM
 
         private GroupBox _PartToBeCredited;
 
-        internal GroupBox PartToBeCredited
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _PartToBeCredited;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_PartToBeCredited != null)
-                {
-                }
-
-                _PartToBeCredited = value;
-                if (_PartToBeCredited != null)
-                {
-                }
-            }
-        }
-
         private Button _btnFindPart;
-
-        internal Button btnFindPart
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindPart;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindPart != null)
-                {
-                    _btnFindPart.Click -= btnFindPart_Click;
-                }
-
-                _btnFindPart = value;
-                if (_btnFindPart != null)
-                {
-                    _btnFindPart.Click += btnFindPart_Click;
-                }
-            }
-        }
 
         private TextBox _txtPart;
 
@@ -211,30 +161,6 @@ namespace FSM
         }
 
         private Button _btnFindOrder;
-
-        internal Button btnFindOrder
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindOrder;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindOrder != null)
-                {
-                    _btnFindOrder.Click -= btnFindOrder_Click;
-                }
-
-                _btnFindOrder = value;
-                if (_btnFindOrder != null)
-                {
-                    _btnFindOrder.Click += btnFindOrder_Click;
-                }
-            }
-        }
 
         private TextBox _txtQty;
 
@@ -485,9 +411,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -500,9 +423,6 @@ namespace FSM
                 return CurrentPartsToBeCredited;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -653,9 +573,6 @@ namespace FSM
             FindPart();
         }
 
-        
-        
-
         private void FindPart(string PartNumber = "")
         {
             PartID = Conversions.ToInteger(App.FindRecord(Entity.Sys.Enums.TableNames.tblPart, OrderID, PartNumber));
@@ -746,7 +663,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

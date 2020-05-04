@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -114,9 +113,6 @@ namespace FSM.Entity
                     _dateActioned = value;
                 }
             }
-
-
-            
         }
     }
 }

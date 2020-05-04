@@ -14,12 +14,8 @@ namespace FSM
 {
     public class FRMImport : FRMBaseForm
     {
-        
-
         public FRMImport() : base()
         {
-            
-            
             this.Load += FRMImport_Load;
 
             // This call is required by the Windows Form Designer.
@@ -47,28 +43,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpImporter;
-
-        internal GroupBox grpImporter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpImporter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpImporter != null)
-                {
-                }
-
-                _grpImporter = value;
-                if (_grpImporter != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtFileLocation;
 
@@ -121,30 +95,6 @@ namespace FSM
         }
 
         private LinkLabel _btnTemplateFile;
-
-        internal LinkLabel btnTemplateFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnTemplateFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnTemplateFile != null)
-                {
-                    _btnTemplateFile.LinkClicked -= btnTemplateFile_LinkClicked;
-                }
-
-                _btnTemplateFile = value;
-                if (_btnTemplateFile != null)
-                {
-                    _btnTemplateFile.LinkClicked += btnTemplateFile_LinkClicked;
-                }
-            }
-        }
 
         private Button _btnImport;
 
@@ -224,51 +174,7 @@ namespace FSM
 
         private Label _lblCustomer;
 
-        internal Label lblCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomer != null)
-                {
-                }
-
-                _lblCustomer = value;
-                if (_lblCustomer != null)
-                {
-                }
-            }
-        }
-
         private Label _lblFile;
-
-        internal Label lblFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFile != null)
-                {
-                }
-
-                _lblFile = value;
-                if (_lblFile != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtCustomer;
 
@@ -296,30 +202,6 @@ namespace FSM
 
         private Button _btnFindCustomer;
 
-        internal Button btnFindCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click -= btnSupplier_Click;
-                }
-
-                _btnFindCustomer = value;
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click += btnSupplier_Click;
-                }
-            }
-        }
-
         private Label _lblMessages;
 
         internal Label lblMessages
@@ -345,28 +227,6 @@ namespace FSM
         }
 
         private GroupBox _grpErrors;
-
-        internal GroupBox grpErrors
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpErrors;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpErrors != null)
-                {
-                }
-
-                _grpErrors = value;
-                if (_grpErrors != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgErrors;
 
@@ -630,9 +490,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -641,8 +498,6 @@ namespace FSM
             }
         }
 
-        
-        
         private System.IO.FileInfo _file;
 
         public System.IO.FileInfo File
@@ -752,9 +607,6 @@ namespace FSM
         {
             FindCustomer();
         }
-
-        
-        
 
         private void LoadData()
         {

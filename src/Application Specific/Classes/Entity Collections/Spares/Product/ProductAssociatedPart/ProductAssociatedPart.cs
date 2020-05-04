@@ -13,7 +13,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -76,27 +75,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
-            private int _ProductAssociatedPartID = 0;
-
-            public int ProductAssociatedPartID
-            {
-                get
-                {
-                    return _ProductAssociatedPartID;
-                }
-            }
-
-            public object SetProductAssociatedPartID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_ProductAssociatedPartID", value);
-                }
-            }
-
             private int _ProductID = 0;
 
             public int ProductID
@@ -132,10 +110,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_PartID", value);
                 }
             }
-
-
-
-            
         }
     }
 }

@@ -12,12 +12,8 @@ namespace FSM
 {
     public class UCCalloutBreakdown : UCBase, IUserControl
     {
-        
-
         public UCCalloutBreakdown() : base()
         {
-            
-            
             base.Load += UCCalloutBreakdown_Load;
 
             // This call is required by the Windows Form Designer.
@@ -47,28 +43,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpJobItemsAdded;
-
-        internal GroupBox grpJobItemsAdded
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobItemsAdded;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobItemsAdded != null)
-                {
-                }
-
-                _grpJobItemsAdded = value;
-                if (_grpJobItemsAdded != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgJobItemsAdded;
 
@@ -653,9 +627,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -671,9 +642,6 @@ namespace FSM
                 return JobOfWork;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -891,9 +859,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void SetupJobItemsAddedDataGrid()
         {
             Entity.Sys.Helper.SetUpDataGrid(dgJobItemsAdded);
@@ -921,9 +886,6 @@ namespace FSM
             tStyle.MappingName = "JOB_ITEMS_ADDED";
             dgJobItemsAdded.TableStyles.Add(tStyle);
         }
-
-        
-        
 
         public void Populate(int ID = 0)
         {
@@ -1109,7 +1071,5 @@ namespace FSM
                 btnAddEngineerVisit.Enabled = false;
             }
         }
-
-        
     }
 }

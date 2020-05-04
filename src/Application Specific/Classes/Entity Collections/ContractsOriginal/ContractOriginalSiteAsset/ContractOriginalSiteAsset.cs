@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -187,8 +186,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_Product", value);
                 }
             }
-
-            
         }
     }
 }

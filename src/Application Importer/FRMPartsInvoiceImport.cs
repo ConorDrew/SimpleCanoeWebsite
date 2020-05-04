@@ -12,8 +12,6 @@ namespace FSM
 {
     public class FRMPartsInvoiceImport : FRMBaseForm
     {
-        
-
         public FRMPartsInvoiceImport() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -48,28 +46,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
-
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
 
         private TabControl _tcData;
 
@@ -171,105 +147,11 @@ namespace FSM
 
         private LinkLabel _btnExportParts;
 
-        internal LinkLabel btnExportParts
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportParts;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportParts != null)
-                {
-                }
-
-                _btnExportParts = value;
-                if (_btnExportParts != null)
-                {
-                }
-            }
-        }
-
         private Button _btnCheckFiles;
-
-        internal Button btnCheckFiles
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCheckFiles;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCheckFiles != null)
-                {
-                    _btnCheckFiles.Click -= btnCheckFiles_Click;
-                }
-
-                _btnCheckFiles = value;
-                if (_btnCheckFiles != null)
-                {
-                    _btnCheckFiles.Click += btnCheckFiles_Click;
-                }
-            }
-        }
 
         private LinkLabel _llOpenFolder;
 
-        internal LinkLabel llOpenFolder
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _llOpenFolder;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_llOpenFolder != null)
-                {
-                    _llOpenFolder.LinkClicked -= llOpenFolder_LinkClicked;
-                }
-
-                _llOpenFolder = value;
-                if (_llOpenFolder != null)
-                {
-                    _llOpenFolder.LinkClicked += llOpenFolder_LinkClicked;
-                }
-            }
-        }
-
         private Button _btnExportResults;
-
-        internal Button btnExportResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click -= btnExportResults_Click;
-                }
-
-                _btnExportResults = value;
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click += btnExportResults_Click;
-                }
-            }
-        }
 
         private ComboBox _cboValidateType;
 
@@ -286,8 +168,6 @@ namespace FSM
             {
                 if (_cboValidateType != null)
                 {
-                    
-                    
                     _cboValidateType.SelectedIndexChanged -= cboValidateType_SelectedIndexChanged;
                 }
 
@@ -327,53 +207,7 @@ namespace FSM
 
         private GroupBox _grpCatImport;
 
-        internal GroupBox grpCatImport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCatImport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCatImport != null)
-                {
-                }
-
-                _grpCatImport = value;
-                if (_grpCatImport != null)
-                {
-                }
-            }
-        }
-
         private Button _btnValidateResults;
-
-        internal Button btnValidateResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnValidateResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnValidateResults != null)
-                {
-                    _btnValidateResults.Click -= btnValidateResults_Click;
-                }
-
-                _btnValidateResults = value;
-                if (_btnValidateResults != null)
-                {
-                    _btnValidateResults.Click += btnValidateResults_Click;
-                }
-            }
-        }
 
         private Button _Button1;
 
@@ -390,7 +224,6 @@ namespace FSM
             {
                 if (_Button1 != null)
                 {
-                    
                     _Button1.Click -= Button1_Click;
                 }
 
@@ -638,9 +471,6 @@ namespace FSM
             _grpCatImport.ResumeLayout(false);
             ResumeLayout(false);
         }
-
-        
-        
 
         public IUserControl LoadedControl
         {
@@ -1439,19 +1269,6 @@ namespace FSM
             var argcombo = cboValidateType;
             Combo.SetSelectedComboItem_By_Value(ref argcombo, "0");
             ShowData();
-            lblMessages.Text = "Validation complete.";
-            lblMessages.Visible = true;
-            Cursor.Current = Cursors.Default;
-        }
-
-        public void ValidateCurrentlyDisplayedRecords()
-        {
-            // ShowMessage("Validation can take up to two minutes.  The progress bar at the bottom will not increase during this time.  Please be patient.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            lblMessages.Text = "Now validating records, this can take up to two minutes. Please be patient.";
-            lblMessages.Visible = true;
-            Cursor.Current = Cursors.WaitCursor;
-            App.DB.ImportValidation.POInvoiceImport_ValidateOrders(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboValidateType)));
-            ShowData(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboValidateType)));
             lblMessages.Text = "Validation complete.";
             lblMessages.Visible = true;
             Cursor.Current = Cursors.Default;
@@ -2646,9 +2463,6 @@ namespace FSM
             ValidateAllRecords();
         }
 
-        
-        
-
         public bool checkArray(string[] var, string Text)
         {
             if (Array.IndexOf(var, Text) > -1)
@@ -2676,35 +2490,6 @@ namespace FSM
             MoveProgressOn(true);
         }
 
-        private void KillInstances(Microsoft.Office.Interop.Excel.Application app)
-        {
-            app.Quit();
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
-            app = null;
-            GC.Collect();
-            var mp = Process.GetProcessesByName("EXCEL");
-            foreach (var p in mp)
-            {
-                try
-                {
-                    if (p.Responding)
-                    {
-                        if (string.IsNullOrEmpty(p.MainWindowTitle))
-                        {
-                            p.Kill();
-                        }
-                    }
-                    else
-                    {
-                        p.Kill();
-                    }
-                }
-                catch
-                {
-                }
-            };
-        }
-
         public void MoveProgressOn(bool toMaximum = false)
         {
             if (toMaximum)
@@ -2719,12 +2504,6 @@ namespace FSM
             }
 
             Application.DoEvents();
-        }
-
-        public void SetLastPartAttempted(string PartCode)
-        {
-            lblMessages.Visible = true;
-            lblMessages.Text = PartCode;
         }
 
         private void Button1_Click(object sender, EventArgs e)

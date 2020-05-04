@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public SalesCredit SalesCredit_Get(int SalesCreditID)
             {
                 _database.ClearParameter();
@@ -92,41 +91,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataView PartsToBeCredited_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("PartsToBeCredited_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblPartsToBeCredited.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView PartsToBeCredited_Get_PartsCreditID(int PartCreditID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@PartCreditID", PartCreditID, true);
-                var dt = _database.ExecuteSP_DataTable("PartsToBeCredited_Get_PartsCreditID");
-                dt.TableName = Sys.Enums.TableNames.tblPartsToBeCredited.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView PartsToBeCredited_Get_OrderID(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("PartsToBeCredited_Get_For_Order");
-                dt.TableName = Sys.Enums.TableNames.tblPartsToBeCredited.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView PartsToBeCredited_Get_OrderPartID(int OrderPartID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderPartID", OrderPartID, true);
-                var dt = _database.ExecuteSP_DataTable("PartsToBeCredited_Get_For_OrderPart");
-                dt.TableName = Sys.Enums.TableNames.tblPartsToBeCredited.ToString();
-                return new DataView(dt);
-            }
-
             public SalesCredit Insert(SalesCredit oSalesCredited)
             {
                 _database.ClearParameter();
@@ -154,18 +118,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@AddedBy", oPartsToBeCredited.AddedByUser, true);
                     withBlock.AddParameter("@AccountNumber", oPartsToBeCredited.AccountNumber, true);
                 }
-            }
-
-            public DataView InvoicedLines_GetAll_ByInvoicedID(int InvoicedID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@InvoicedID", InvoicedID, true);
-                _database.AddParameter("@JobInvTypeEnum", Conversions.ToInteger(Sys.Enums.InvoiceType.Visit), true);
-                _database.AddParameter("@OrderInvTypeEnum", Conversions.ToInteger(Sys.Enums.InvoiceType.Order), true);
-                _database.AddParameter("@Contract_Option1Enum", Conversions.ToInteger(Sys.Enums.InvoiceType.Contract_Option1), true);
-                var dt = _database.ExecuteSP_DataTable("InvoicedLines_GetAll_ByInvoicedID_ForCredits");
-                dt.TableName = Sys.Enums.TableNames.tblInvoicedLines.ToString();
-                return new DataView(dt);
             }
 
             public DataView InvoicedLines_GetAll_ByInvoicedIDRows(DataRow[] Invoiced)
@@ -209,8 +161,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblInvoicedLines.ToString();
                 return new DataView(dt);
             }
-
-            
         }
     }
 }

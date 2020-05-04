@@ -22,8 +22,6 @@ namespace FSM
             EngineerScheduleTimer = new Timer();
         }
 
-        
-
         public frmEngineerSchedule(MouseEventHandler gridMouseDown, MouseEventHandler gridMouseMove, DragEventHandler gridDragOver, DragEventHandler gridDragDrop, MouseEventHandler gridMouseUp, DataRow Engineer, int textsizes) : base()
         {
             EngineerScheduleTimer = new Timer();
@@ -99,55 +97,7 @@ namespace FSM
 
         private MenuItem _btnCreateJob;
 
-        internal MenuItem btnCreateJob
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnCreateJob;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnCreateJob != null)
-                {
-                    _btnCreateJob.Click -= btnCreateJob_Click;
-                }
-
-                _btnCreateJob = value;
-                if (_btnCreateJob != null)
-                {
-                    _btnCreateJob.Click += btnCreateJob_Click;
-                }
-            }
-        }
-
         private MenuItem _btnSiteReport;
-
-        internal MenuItem btnSiteReport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSiteReport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSiteReport != null)
-                {
-                    _btnSiteReport.Click -= btnSiteReport_Click;
-                }
-
-                _btnSiteReport = value;
-                if (_btnSiteReport != null)
-                {
-                    _btnSiteReport.Click += btnSiteReport_Click;
-                }
-            }
-        }
 
         private ToolTip _ttStatus;
 
@@ -174,30 +124,6 @@ namespace FSM
         }
 
         private PictureBox _pbInfomation;
-
-        internal PictureBox pbInfomation
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pbInfomation;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pbInfomation != null)
-                {
-                    _pbInfomation.Click -= imgEye_Click;
-                }
-
-                _pbInfomation = value;
-                if (_pbInfomation != null)
-                {
-                    _pbInfomation.Click += imgEye_Click;
-                }
-            }
-        }
 
         private MenuItem _btnTextMessage;
 
@@ -226,28 +152,6 @@ namespace FSM
         }
 
         private MenuItem _MenuItem1;
-
-        internal MenuItem MenuItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _MenuItem1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_MenuItem1 != null)
-                {
-                }
-
-                _MenuItem1 = value;
-                if (_MenuItem1 != null)
-                {
-                }
-            }
-        }
 
         private MenuItem _btnServiceLetter;
 
@@ -406,30 +310,6 @@ namespace FSM
 
         private Splitter _splitEngineer;
 
-        internal Splitter splitEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _splitEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_splitEngineer != null)
-                {
-                    _splitEngineer.SplitterMoved -= splitEngineer_SplitterMoved;
-                }
-
-                _splitEngineer = value;
-                if (_splitEngineer != null)
-                {
-                    _splitEngineer.SplitterMoved += splitEngineer_SplitterMoved;
-                }
-            }
-        }
-
         private DataGrid _dgDaySummary;
 
         internal DataGrid dgDaySummary
@@ -458,53 +338,7 @@ namespace FSM
 
         private ImageList _imgLstIcons;
 
-        internal ImageList imgLstIcons
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _imgLstIcons;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_imgLstIcons != null)
-                {
-                }
-
-                _imgLstIcons = value;
-                if (_imgLstIcons != null)
-                {
-                }
-            }
-        }
-
         private ContextMenu _mnuVisitAction;
-
-        internal ContextMenu mnuVisitAction
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuVisitAction;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuVisitAction != null)
-                {
-                    _mnuVisitAction.Popup -= mnuVisitAction_Popup;
-                }
-
-                _mnuVisitAction = value;
-                if (_mnuVisitAction != null)
-                {
-                    _mnuVisitAction.Popup += mnuVisitAction_Popup;
-                }
-            }
-        }
 
         private MenuItem _btnSendText;
 
@@ -533,28 +367,6 @@ namespace FSM
         }
 
         private ContextMenu _mnuDayAction;
-
-        internal ContextMenu mnuDayAction
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuDayAction;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuDayAction != null)
-                {
-                }
-
-                _mnuDayAction = value;
-                if (_mnuDayAction != null)
-                {
-                }
-            }
-        }
 
         private MenuItem _btnExportJobs;
 
@@ -807,30 +619,6 @@ namespace FSM
         }
 
         private PictureBox _pbClose;
-
-        internal PictureBox pbClose
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pbClose;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pbClose != null)
-                {
-                    _pbClose.Click -= PictureBox1_Click;
-                }
-
-                _pbClose = value;
-                if (_pbClose != null)
-                {
-                    _pbClose.Click += PictureBox1_Click;
-                }
-            }
-        }
 
         private PictureBox _picLevels;
 
@@ -1254,9 +1042,6 @@ namespace FSM
             this.ResumeLayout(false);
         }
 
-        
-        
-
         public class StatusDependentDataGridCell : DataGridLabelColumn
         {
             private bool _Selected = true;
@@ -1439,8 +1224,6 @@ namespace FSM
             }
         }
 
-        
-        
         private string _currentDays;
         private string _startDate;
         private string _endDate;
@@ -1585,22 +1368,6 @@ namespace FSM
             }
         }
 
-        public PictureBox ThePlanner
-        {
-            get
-            {
-                return picPlanner;
-            }
-        }
-
-        public IntPtr TheHandle
-        {
-            get
-            {
-                return Handle;
-            }
-        }
-
         public string MyName
         {
             get
@@ -1608,9 +1375,6 @@ namespace FSM
                 return "frmEngineerSchedule";
             }
         }
-
-        
-        
 
         private void setUpDayDg()
         {
@@ -1866,9 +1630,6 @@ namespace FSM
             tsSummary.MappingName = "ScheduleSummary";
         }
 
-        
-        
-
         private void frmEngineerSchedule_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (_refreshAsyncResult is object)
@@ -1984,9 +1745,6 @@ namespace FSM
             App.ShowForm(typeof(FRMLogCallout), true, new object[] { SelectedDataRow["JobID"], SelectedDataRow["SiteID"], this, null, SelectedDataRow["EngineerVisitID"] });
         }
 
-        
-        
-
         public void Reset()
         {
             _dsEngineerSchedule = new DataSet();
@@ -1999,8 +1757,6 @@ namespace FSM
             {
             }
         }
-
-        
 
         public delegate Hashtable refreshAcceptanceDelegate();
 
@@ -2131,8 +1887,6 @@ namespace FSM
 
             Application.DoEvents();
         }
-
-        
 
         public bool TestAcceptance(DataRow testRow)
         {
@@ -2308,8 +2062,6 @@ namespace FSM
             DisplayLastLocation();
         }
 
-        
-
         private delegate DataTable refreshSummaryDelegate();
 
         private IAsyncResult _refreshSummary;
@@ -2468,8 +2220,6 @@ namespace FSM
             }
         }
 
-        
-
         public void ShowDay(string date)
         {
             dgDay.TableStyles[0].MappingName = date;
@@ -2499,8 +2249,6 @@ namespace FSM
             }
         }
 
-        
-        
         private DataTable timeSlotDt;
 
         public DataTable DtTimeSlot
@@ -2610,8 +2358,6 @@ namespace FSM
             details.Add(dr);
             var oPrint = new Printing(details, "Service Letter", Enums.SystemDocumentType.ServiceLetters);
         }
-
-        
 
         private void SetupTimeSheetStatus()
         {

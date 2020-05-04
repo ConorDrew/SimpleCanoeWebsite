@@ -14,8 +14,6 @@ namespace FSM.Entity.EngineerAbsence
             _database = database;
         }
 
-        
-
         public void Delete(int EngineerAbsenceID)
         {
             _database.ClearParameter();
@@ -46,14 +44,6 @@ namespace FSM.Entity.EngineerAbsence
             {
                 return null;
             }
-        }
-
-        public DataTable EngineerAbsence_GetAll()
-        {
-            DataTable dt;
-            dt = _database.ExecuteSP_DataTable("EngineerAbsence_GetAll");
-            dt.TableName = "tblEngineerAbsence";
-            return dt;
         }
 
         public EngineerAbsence Insert(EngineerAbsence oEngineerAbsence)
@@ -105,8 +95,5 @@ namespace FSM.Entity.EngineerAbsence
             _database.AddParameter("@EngineerID", engineerID);
             return _database.ExecuteSP_DataTable("Engineer_Absences_Get");
         }
-
-
-        
     }
 }

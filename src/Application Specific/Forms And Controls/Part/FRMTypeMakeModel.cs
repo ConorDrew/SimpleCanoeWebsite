@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMTypeMakeModel : FRMBaseForm, IForm
     {
-        
-
         public FRMTypeMakeModel() : base()
         {
-            
-            
             base.Load += FRMManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -46,28 +42,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpItems;
-
-        internal GroupBox grpItems
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpItems;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpItems != null)
-                {
-                }
-
-                _grpItems = value;
-                if (_grpItems != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgManager;
 
@@ -595,9 +569,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -622,8 +593,6 @@ namespace FSM
         {
         }
 
-        
-        
         private Entity.Sys.Enums.FormState _pageState;
 
         private Entity.Sys.Enums.FormState PageState
@@ -688,9 +657,6 @@ namespace FSM
                 _settings = value;
             }
         }
-
-        
-        
 
         private void SetupManagerDataGrid()
         {
@@ -831,9 +797,6 @@ namespace FSM
         {
             Delete();
         }
-
-        
-        
 
         private void PopulateDatagrid(Entity.Sys.Enums.FormState state)
         {
@@ -1013,7 +976,5 @@ namespace FSM
                 App.ShowMessage("Error deleting : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
     }
 }

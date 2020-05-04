@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int AssetID)
             {
                 _database.ClearParameter();
@@ -112,33 +111,11 @@ namespace FSM.Entity
                 }
             }
 
-            public bool Check_Unique_Serial(string Serial, int ID)
-            {
-                int NumberOfAssets = Sys.Helper.MakeIntegerValid(_database.ExecuteScalar("SELECT COUNT(AssetID) as 'NumberOfAssets' " + "FROM tblasset WHERE SerialNum = '" + Serial + "' AND AssetID <> " + ID, false));
-                if (NumberOfAssets == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-
             public DataView Asset_GetAll(int userID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@UserID", userID);
                 var dt = _database.ExecuteSP_DataTable("Asset_GetAll_Mk1");
-                dt.TableName = Sys.Enums.TableNames.tblAsset.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView Asset_GetForCustomer(int CustomerID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@CustomerID", CustomerID, true);
-                var dt = _database.ExecuteSP_DataTable("[Asset_GetForCustomer]");
                 dt.TableName = Sys.Enums.TableNames.tblAsset.ToString();
                 return new DataView(dt);
             }
@@ -244,8 +221,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@TenantsAppliance", oAsset.TenantsAppliance, true);
                 }
             }
-
-            
         }
     }
 }

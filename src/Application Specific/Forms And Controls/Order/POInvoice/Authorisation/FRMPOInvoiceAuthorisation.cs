@@ -12,8 +12,6 @@ namespace FSM
 {
     public class FRMPOInvoiceAuthorisation : FRMBaseForm
     {
-        
-
         public FRMPOInvoiceAuthorisation() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -62,28 +60,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
 
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
-
         private TabControl _tcData;
 
         internal TabControl tcData
@@ -123,8 +99,6 @@ namespace FSM
             {
                 if (_btnClose != null)
                 {
-                    
-                    
                     _btnClose.Click -= btnClose_Click;
                 }
 
@@ -162,53 +136,7 @@ namespace FSM
 
         private Label _lblMessages;
 
-        internal Label lblMessages
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMessages;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMessages != null)
-                {
-                }
-
-                _lblMessages = value;
-                if (_lblMessages != null)
-                {
-                }
-            }
-        }
-
         private Button _btnExportResults;
-
-        internal Button btnExportResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExportResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click -= btnExportResults_Click;
-                }
-
-                _btnExportResults = value;
-                if (_btnExportResults != null)
-                {
-                    _btnExportResults.Click += btnExportResults_Click;
-                }
-            }
-        }
 
         private ComboBox _cboValidateType;
 
@@ -237,28 +165,6 @@ namespace FSM
         }
 
         private GroupBox _grpCatImport;
-
-        internal GroupBox grpCatImport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCatImport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCatImport != null)
-                {
-                }
-
-                _grpCatImport = value;
-                if (_grpCatImport != null)
-                {
-                }
-            }
-        }
 
         private Label _Label1;
 
@@ -494,9 +400,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -584,9 +487,6 @@ namespace FSM
             ShowData(Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboValidateType)), Department);
         }
 
-        
-        
-
         public void ShowData(int ValidateType = 0, string Department = null)
         {
             tcData.TabPages.Clear();
@@ -618,7 +518,5 @@ namespace FSM
 
             Application.DoEvents();
         }
-
-        
     }
 }

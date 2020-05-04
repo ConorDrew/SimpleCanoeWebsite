@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMFleetVanManager : FRMBaseForm
     {
-        
-
         public FRMFleetVanManager() : base()
         {
-            
-            
             this.Load += FRMImport_Load;
 
             // This call is required by the Windows Form Designer.
@@ -48,28 +44,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpFaultsFilter;
-
-        internal GroupBox grpFaultsFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFaultsFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFaultsFilter != null)
-                {
-                }
-
-                _grpFaultsFilter = value;
-                if (_grpFaultsFilter != null)
-                {
-                }
-            }
-        }
 
         private GroupBox _grpFaultDG;
 
@@ -123,28 +97,6 @@ namespace FSM
 
         private GroupBox _grpEngineerFilter;
 
-        internal GroupBox grpEngineerFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpEngineerFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpEngineerFilter != null)
-                {
-                }
-
-                _grpEngineerFilter = value;
-                if (_grpEngineerFilter != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpEngineerHistory;
 
         internal GroupBox grpEngineerHistory
@@ -171,77 +123,9 @@ namespace FSM
 
         private GroupBox _grpFilter;
 
-        internal GroupBox grpFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFilter != null)
-                {
-                }
-
-                _grpFilter = value;
-                if (_grpFilter != null)
-                {
-                }
-            }
-        }
-
         private Label _lblRegistration;
 
-        internal Label lblRegistration
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblRegistration;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblRegistration != null)
-                {
-                }
-
-                _lblRegistration = value;
-                if (_lblRegistration != null)
-                {
-                }
-            }
-        }
-
         private Button _btnfindVan;
-
-        internal Button btnfindVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnfindVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnfindVan != null)
-                {
-                    _btnfindVan.Click -= btnfindVan_Click;
-                }
-
-                _btnfindVan = value;
-                if (_btnfindVan != null)
-                {
-                    _btnfindVan.Click += btnfindVan_Click;
-                }
-            }
-        }
 
         private TextBox _txtVanReg;
 
@@ -293,28 +177,6 @@ namespace FSM
 
         private Label _lblFaultType;
 
-        internal Label lblFaultType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaultType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaultType != null)
-                {
-                }
-
-                _lblFaultType = value;
-                if (_lblFaultType != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpResolvedTo;
 
         internal DateTimePicker dtpResolvedTo
@@ -365,51 +227,7 @@ namespace FSM
 
         private Label _lblResolvedTo;
 
-        internal Label lblResolvedTo
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblResolvedTo;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblResolvedTo != null)
-                {
-                }
-
-                _lblResolvedTo = value;
-                if (_lblResolvedTo != null)
-                {
-                }
-            }
-        }
-
         private Label _lblResolvedFrom;
-
-        internal Label lblResolvedFrom
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblResolvedFrom;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblResolvedFrom != null)
-                {
-                }
-
-                _lblResolvedFrom = value;
-                if (_lblResolvedFrom != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkResolved;
 
@@ -485,51 +303,7 @@ namespace FSM
 
         private Label _lblFaultTo;
 
-        internal Label lblFaultTo
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaultTo;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaultTo != null)
-                {
-                }
-
-                _lblFaultTo = value;
-                if (_lblFaultTo != null)
-                {
-                }
-            }
-        }
-
         private Label _lblFaultFrom;
-
-        internal Label lblFaultFrom
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFaultFrom;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFaultFrom != null)
-                {
-                }
-
-                _lblFaultFrom = value;
-                if (_lblFaultFrom != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkFaultDate;
 
@@ -629,105 +403,11 @@ namespace FSM
 
         private Label _lblEngineerFrom;
 
-        internal Label lblEngineerFrom
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEngineerFrom;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEngineerFrom != null)
-                {
-                }
-
-                _lblEngineerFrom = value;
-                if (_lblEngineerFrom != null)
-                {
-                }
-            }
-        }
-
         private Button _btnSearchFault;
-
-        internal Button btnSearchFault
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSearchFault;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSearchFault != null)
-                {
-                    _btnSearchFault.Click -= btnSearchFault_Click;
-                }
-
-                _btnSearchFault = value;
-                if (_btnSearchFault != null)
-                {
-                    _btnSearchFault.Click += btnSearchFault_Click;
-                }
-            }
-        }
 
         private Button _btnSearchEngineer;
 
-        internal Button btnSearchEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSearchEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSearchEngineer != null)
-                {
-                    _btnSearchEngineer.Click -= btnSearchEngineer_Click;
-                }
-
-                _btnSearchEngineer = value;
-                if (_btnSearchEngineer != null)
-                {
-                    _btnSearchEngineer.Click += btnSearchEngineer_Click;
-                }
-            }
-        }
-
         private Button _btnfindEngineer;
-
-        internal Button btnfindEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnfindEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click -= btnfindEngineer_Click;
-                }
-
-                _btnfindEngineer = value;
-                if (_btnfindEngineer != null)
-                {
-                    _btnfindEngineer.Click += btnfindEngineer_Click;
-                }
-            }
-        }
 
         private TextBox _txtEngineer;
 
@@ -1231,9 +911,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -1242,8 +919,6 @@ namespace FSM
             }
         }
 
-        
-        
         private Entity.FleetVans.FleetVan _currentVan;
 
         public Entity.FleetVans.FleetVan CurrentVan
@@ -1371,9 +1046,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupDGFault()
         {
@@ -1546,9 +1218,6 @@ namespace FSM
             Engineer = null;
         }
 
-        
-        
-
         public void PopulateFaultsDatagrid()
         {
             try
@@ -1613,7 +1282,5 @@ namespace FSM
                 App.ShowMessage("Form cannot setup : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
     }
 }

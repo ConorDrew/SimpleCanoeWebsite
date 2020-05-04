@@ -102,16 +102,6 @@ namespace FSM.Entity
             {
                 _database.ExecuteSP_OBJECT("History_Delete");
             }
-
-            public DataView Record_Summary(DateTime fromDate, DateTime toDate)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@FromDate", Strings.Format(fromDate, "dd-MMMM-yyyy 00:00:00"), true);
-                _database.AddParameter("@ToDate", Strings.Format(toDate, "dd-MMMM-yyyy 23:59:59"), true);
-                var dt = _database.ExecuteSP_DataTable("Report_Record_Summary");
-                dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_TBLSearchResults.ToString();
-                return new DataView(dt);
-            }
         }
     }
 }

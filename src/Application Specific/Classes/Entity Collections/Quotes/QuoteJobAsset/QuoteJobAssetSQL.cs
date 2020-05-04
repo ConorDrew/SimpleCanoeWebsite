@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public QuoteJobAsset Insert(QuoteJobAsset qJobAsset)
             {
                 _database.ClearParameter();
@@ -30,34 +29,6 @@ namespace FSM.Entity
                 _database.AddParameter("@QuoteJobID", QuoteJobID, true);
                 _database.ExecuteSP_OBJECT("QuoteJobAsset_Delete");
             }
-
-            public DataView QuoteJobAsset_Get_For_QuoteJob(int QuoteJobID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@QuoteJobID", QuoteJobID, true);
-                var dt = _database.ExecuteSP_DataTable("QuoteJobAsset_Get_For_QuoteJob");
-                dt.TableName = Sys.Enums.TableNames.tblQuoteJobAssets.ToString();
-                return new DataView(dt);
-            }
-
-            public ArrayList QuoteJobAsset_Get_For_QuoteJob_As_Objects(int QuoteJobID)
-            {
-                var assets = new ArrayList();
-                foreach (DataRow row in QuoteJobAsset_Get_For_QuoteJob(QuoteJobID).Table.Rows)
-                {
-                    var asset = new QuoteJobAsset();
-                    asset.IgnoreExceptionsOnSetMethods = true;
-                    asset.SetQuoteJobAssetID = row["QuoteJobAssetID"];
-                    asset.SetQuoteJobID = row["QuoteJobID"];
-                    asset.SetAssetID = row["AssetID"];
-                    assets.Add(asset);
-                }
-
-                return assets;
-            }
-
-
-            
         }
     }
 }

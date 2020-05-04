@@ -10,12 +10,8 @@ namespace FSM
 {
     public class UCFleetVanType : UCBase, IUserControl
     {
-        
-
         public UCFleetVanType() : base()
         {
-            
-            
             base.Load += UCVan_Load;
 
             // This call is required by the Windows Form Designer.
@@ -37,28 +33,6 @@ namespace FSM
         }
 
         private GroupBox _grpVan;
-
-        internal GroupBox grpVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVan != null)
-                {
-                }
-
-                _grpVan = value;
-                if (_grpVan != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtDateIntervals;
 
@@ -86,28 +60,6 @@ namespace FSM
 
         private Label _lblDateIntervals;
 
-        internal Label lblDateIntervals
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDateIntervals;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDateIntervals != null)
-                {
-                }
-
-                _lblDateIntervals = value;
-                if (_lblDateIntervals != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtModel;
 
         internal TextBox txtModel
@@ -133,28 +85,6 @@ namespace FSM
         }
 
         private Label _lblModel;
-
-        internal Label lblModel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblModel;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblModel != null)
-                {
-                }
-
-                _lblModel = value;
-                if (_lblModel != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtMake;
 
@@ -182,28 +112,6 @@ namespace FSM
 
         private Label _lblMake;
 
-        internal Label lblMake
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMake;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMake != null)
-                {
-                }
-
-                _lblMake = value;
-                if (_lblMake != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtMileageIntervals;
 
         internal TextBox txtMileageIntervals
@@ -229,28 +137,6 @@ namespace FSM
         }
 
         private Label _lblMileageService;
-
-        internal Label lblMileageService
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMileageService;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMileageService != null)
-                {
-                }
-
-                _lblMileageService = value;
-                if (_lblMileageService != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtPayload;
 
@@ -278,28 +164,6 @@ namespace FSM
 
         private Label _lblPayLoad;
 
-        internal Label lblPayLoad
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPayLoad;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPayLoad != null)
-                {
-                }
-
-                _lblPayLoad = value;
-                if (_lblPayLoad != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtGrossVehicleWeight;
 
         internal TextBox txtGrossVehicleWeight
@@ -325,28 +189,6 @@ namespace FSM
         }
 
         private Label _lblGrossVehicleWeight;
-
-        internal Label lblGrossVehicleWeight
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblGrossVehicleWeight;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblGrossVehicleWeight != null)
-                {
-                }
-
-                _lblGrossVehicleWeight = value;
-                if (_lblGrossVehicleWeight != null)
-                {
-                }
-            }
-        }
 
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
@@ -500,9 +342,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -515,9 +354,6 @@ namespace FSM
                 return CurrentVanType;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -553,8 +389,6 @@ namespace FSM
             LoadForm(sender, e);
         }
 
-        
-        
         // Public Sub PopulateQuantities(ByVal VanID As Integer)
         // PartQuantitiesDataview = DB.Part.PartLocations_GetForVanHM(VanID)
         // End Sub
@@ -621,7 +455,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

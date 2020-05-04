@@ -11,12 +11,8 @@ namespace FSM
 {
     public class UCUserQualification : UCBase, IUserControl
     {
-        
-
         public UCUserQualification() : base()
         {
-            
-            
             base.Load += UCUserQualification_Load;
 
             // This call is required by the Windows Form Designer.
@@ -44,28 +40,6 @@ namespace FSM
         }
 
         private GroupBox _grpDetails;
-
-        internal GroupBox grpDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpDetails != null)
-                {
-                }
-
-                _grpDetails = value;
-                if (_grpDetails != null)
-                {
-                }
-            }
-        }
 
         private Label _lblEmail;
 
@@ -855,9 +829,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -871,9 +842,6 @@ namespace FSM
                 return CurrentUser;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -950,9 +918,6 @@ namespace FSM
                 return default;
             }
         }
-
-        
-        
 
         public void SetupTrainingQualificationsDataGrid()
         {
@@ -1146,9 +1111,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             App.ControlLoading = true;
@@ -1224,7 +1186,5 @@ namespace FSM
             {
             }
         }
-
-        
     }
 }

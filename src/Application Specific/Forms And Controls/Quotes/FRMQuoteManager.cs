@@ -11,12 +11,8 @@ namespace FSM
 {
     public class FRMQuoteManager : FRMBaseForm, IForm
     {
-        
-
         public FRMQuoteManager() : base()
         {
-            
-            
             base.Load += FRMQuoteManager_Load;
 
             // This call is required by the Windows Form Designer.
@@ -173,28 +169,6 @@ namespace FSM
 
         private Label _Label11;
 
-        internal Label Label11
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label11;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label11 != null)
-                {
-                }
-
-                _Label11 = value;
-                if (_Label11 != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboType;
 
         internal ComboBox cboType
@@ -223,75 +197,9 @@ namespace FSM
 
         private Label _Label10;
 
-        internal Label Label10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label10 != null)
-                {
-                }
-
-                _Label10 = value;
-                if (_Label10 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private Label _Label6;
 
@@ -342,30 +250,6 @@ namespace FSM
         }
 
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private Button _btnReset;
 
@@ -883,9 +767,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -905,8 +786,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvQuotes;
 
         private DataView QuotesDataview
@@ -987,9 +866,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         private void SetupQuotesDataGrid()
         {
@@ -1210,9 +1086,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void PopulateDatagrid()
         {
             try
@@ -1339,7 +1212,5 @@ namespace FSM
 
             Entity.Sys.ExportHelper.Export(exportData, "Quote List", Entity.Sys.Enums.ExportType.CSV);
         }
-
-        
     }
 }

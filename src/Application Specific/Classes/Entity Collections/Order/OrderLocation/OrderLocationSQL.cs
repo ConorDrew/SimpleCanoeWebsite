@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int OrderLocationID)
             {
                 _database.ClearParameter();
@@ -62,46 +61,6 @@ namespace FSM.Entity
                 }
             }
 
-            public OrderLocation OrderLocation_Get(int OrderLocationID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderLocationID", OrderLocationID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("OrderLocation_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oOrderLocation = new OrderLocation();
-                        oOrderLocation.IgnoreExceptionsOnSetMethods = true;
-                        oOrderLocation.SetOrderLocationID = dt.Rows[0]["OrderLocationID"];
-                        oOrderLocation.SetOrderID = dt.Rows[0]["OrderID"];
-                        oOrderLocation.SetLocationID = dt.Rows[0]["LocationID"];
-                        oOrderLocation.SetDeliveryAddressID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["DeliveryAddressID"]);
-                        oOrderLocation.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oOrderLocation.Exists = true;
-                        return oOrderLocation;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public DataView OrderLocation_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("OrderLocation_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblOrderLocation.ToString();
-                return new DataView(dt);
-            }
-
             public OrderLocation Insert(OrderLocation oOrderLocation, SqlTransaction trans)
             {
                 var Command = new SqlCommand();
@@ -143,8 +102,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@DeliveryAddressID", oOrderLocation.DeliveryAddressID, true);
                 }
             }
-
-            
         }
     }
 }

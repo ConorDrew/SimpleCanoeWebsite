@@ -14,8 +14,6 @@ namespace FSM
 {
     public class FRMFleetVanImporter : FRMBaseForm
     {
-        
-
         public FRMFleetVanImporter() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -45,28 +43,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
-
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtExcelFile;
 
@@ -145,28 +121,6 @@ namespace FSM
         }
 
         private GroupBox _grpFailedImports;
-
-        internal GroupBox grpFailedImports
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFailedImports;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFailedImports != null)
-                {
-                }
-
-                _grpFailedImports = value;
-                if (_grpFailedImports != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgFailedImports;
 
@@ -327,9 +281,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -338,8 +289,6 @@ namespace FSM
             }
         }
 
-        
-        
         private System.IO.FileInfo _file;
 
         public System.IO.FileInfo File
@@ -439,13 +388,6 @@ namespace FSM
             public int Mileage { get; set; }
         }
 
-        
-        
-
-        private void FRMImport_Load(object sender, EventArgs e)
-        {
-        }
-
         private void btnFindExcelFile_Click(object sender, EventArgs e)
         {
             LoadData();
@@ -455,9 +397,6 @@ namespace FSM
         {
             Import();
         }
-
-        
-        
 
         private void LoadData()
         {
@@ -814,7 +753,5 @@ namespace FSM
 
             return dt;
         }
-
-        
     }
 }

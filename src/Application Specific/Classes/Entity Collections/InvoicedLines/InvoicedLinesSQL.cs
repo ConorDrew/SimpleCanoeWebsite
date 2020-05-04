@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int InvoicedLineID)
             {
                 _database.ClearParameter();
@@ -52,14 +51,6 @@ namespace FSM.Entity
                 {
                     return null;
                 }
-            }
-
-            public DataView InvoicedLines_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("InvoicedLines_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblInvoicedLines.ToString();
-                return new DataView(dt);
             }
 
             public DataView InvoicedLines_GetAll_ByInvoiceToBeRaisedID(int InvoiceToBeRaisedID)
@@ -148,8 +139,6 @@ namespace FSM.Entity
                 _database.AddParameter("@UserID", App.loggedInUser.UserID, true);
                 _database.ExecuteSP_NO_Return("Invoiced_ChangeTerm");
             }
-
-            
         }
     }
 }

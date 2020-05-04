@@ -8,12 +8,8 @@ namespace FSM
 {
     public class FRMJobWizard : FRMBaseForm, IForm
     {
-        
-
         public FRMJobWizard() : base()
         {
-            
-            
             base.Load += FRMSite_Load;
 
             // This call is required by the Windows Form Designer.
@@ -74,31 +70,6 @@ namespace FSM
 
         private Button _btnPrivateNotes;
 
-        internal Button btnPrivateNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnPrivateNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnPrivateNotes != null)
-                {
-                    
-                    _btnPrivateNotes.Click -= btnReset_Click;
-                }
-
-                _btnPrivateNotes = value;
-                if (_btnPrivateNotes != null)
-                {
-                    _btnPrivateNotes.Click += btnReset_Click;
-                }
-            }
-        }
-
         private Button _btnReset;
 
         internal Button btnReset
@@ -126,30 +97,6 @@ namespace FSM
         }
 
         private Button _btnSaveProg;
-
-        internal Button btnSaveProg
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSaveProg;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSaveProg != null)
-                {
-                    _btnSaveProg.Click -= Button1_Click;
-                }
-
-                _btnSaveProg = value;
-                if (_btnSaveProg != null)
-                {
-                    _btnSaveProg.Click += Button1_Click;
-                }
-            }
-        }
 
         private Panel _pnlMain;
 
@@ -258,9 +205,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             ID = Entity.Sys.Helper.MakeIntegerValid(get_GetParameter(0));
@@ -295,8 +239,6 @@ namespace FSM
             ID = newID;
         }
 
-        
-        
         private IUserControl TheLoadedControl;
         private int _ID = 0;
 

@@ -16,7 +16,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int PartID)
             {
                 _database.ClearParameter();
@@ -321,28 +320,6 @@ namespace FSM.Entity
                 }
             }
 
-            public DataSet Stock_Valuation(int CategoryID, int WarehouseID, int VanID, string FilterString, bool ExactMatch)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@CategoryID", CategoryID, true);
-                _database.AddParameter("@WarehouseID", WarehouseID, true);
-                _database.AddParameter("@VanID", VanID, true);
-                _database.AddParameter("@FilterString", FilterString, true);
-                if (ExactMatch)
-                {
-                    _database.AddParameter("@ExactMatch", "Y", true);
-                }
-                else
-                {
-                    _database.AddParameter("@ExactMatch", "N", true);
-                }
-
-                _database.AddParameter("@PartsToBeCreditedStatus_Awaiting", Conversions.ToInteger(Sys.Enums.PartsToBeCreditedStatus.Awaiting_Part_Return), true);
-                _database.AddParameter("@OrderType_Van", Conversions.ToInteger(Sys.Enums.OrderType.StockProfile), true);
-                _database.AddParameter("@DownloadedVisitStatus", Conversions.ToInteger(Sys.Enums.VisitStatus.Downloaded), true);
-                return _database.ExecuteSP_DataSet("Stock_Valuation_Report");
-            }
-
             public DataView Stock_Used()
             {
                 _database.ClearParameter();
@@ -378,26 +355,11 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView Stock_Quantities()
-            {
-                _database.ClearParameter();
-                return new DataView(_database.ExecuteSP_DataTable("Stock_Quantities"));
-            }
-
             public DataView Part_Locations_Get(int PartID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@PartID", PartID, true);
                 var dt = _database.ExecuteSP_DataTable("PartLocations_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblPartLocations.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView PartLocations_GetForVanHM(int LocationID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@LocationID", LocationID, true);
-                var dt = _database.ExecuteSP_DataTable("PartLocations_GetForVanHM");
                 dt.TableName = Sys.Enums.TableNames.tblPartLocations.ToString();
                 return new DataView(dt);
             }
@@ -506,8 +468,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblLocations.ToString();
                 return new DataView(dt);
             }
-
-            
         }
     }
 }

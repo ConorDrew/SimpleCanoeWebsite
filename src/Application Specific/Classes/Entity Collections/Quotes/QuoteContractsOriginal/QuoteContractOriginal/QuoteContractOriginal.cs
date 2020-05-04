@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,27 +76,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
-            private int _QuoteContractID = 0;
-
-            public int QuoteContractID
-            {
-                get
-                {
-                    return _QuoteContractID;
-                }
-            }
-
-            public object SetQuoteContractID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_QuoteContractID", value);
-                }
-            }
-
             private int _CustomerID = 0;
 
             public int CustomerID
@@ -131,21 +109,6 @@ namespace FSM.Entity
                 set
                 {
                     _dataTypeValidator.SetValue(this, "_QuoteContractReference", value);
-                }
-            }
-
-            private DateTime _QuoteContractDate = default;
-
-            public DateTime QuoteContractDate
-            {
-                get
-                {
-                    return _QuoteContractDate;
-                }
-
-                set
-                {
-                    _QuoteContractDate = value;
                 }
             }
 
@@ -250,8 +213,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_ReasonForRejectID", value);
                 }
             }
-
-            
         }
     }
 }

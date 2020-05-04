@@ -16,8 +16,6 @@ namespace FSM
             InitializeComponent();
         }
 
-        
-
         private void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -41,12 +39,6 @@ namespace FSM
             }
         }
 
-        private void ResetMe(int newID)
-        {
-        }
-
-        
-        
         private DataView _dvJobs;
         private int jobsPerWeek = 0;
 
@@ -85,9 +77,6 @@ namespace FSM
             public int amAmount;
             public int pmAmount;
         }
-
-        
-        
 
         private void SetupJobDataGrid()
         {
@@ -220,9 +209,6 @@ namespace FSM
             tbStyle.MappingName = Enums.TableNames.tblJob.ToString();
             dgJobs.TableStyles.Add(tbStyle);
         }
-
-        
-        
 
         private void FRMJobManager_Load(object sender, EventArgs e)
         {
@@ -430,9 +416,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void PopulateDatagrid()
         {
             try
@@ -635,7 +618,5 @@ namespace FSM
             maxValues.pmAmount = maxPm;
             return maxValues;
         }
-
-        
     }
 }

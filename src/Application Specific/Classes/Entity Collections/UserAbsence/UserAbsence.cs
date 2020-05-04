@@ -12,7 +12,6 @@ namespace FSM.Entity.UserAbsence
             _dataTypeValidator = new DataTypeValidator();
         }
 
-        
         public bool IgnoreExceptionsOnSetMethods
         {
             get
@@ -75,8 +74,6 @@ namespace FSM.Entity.UserAbsence
             }
         }
 
-        
-        
         private int _UserAbsenceID = 0;
 
         public int UserAbsenceID
@@ -161,42 +158,6 @@ namespace FSM.Entity.UserAbsence
             }
         }
 
-        private int _MorningSlots = 0;
-
-        public int MorningSlots
-        {
-            get
-            {
-                return _MorningSlots;
-            }
-        }
-
-        public object SetMorningSlots
-        {
-            set
-            {
-                _dataTypeValidator.SetValue(this, "_MorningSlots", value);
-            }
-        }
-
-        private int _AfternoonSlots = 0;
-
-        public int AfternoonSlots
-        {
-            get
-            {
-                return _AfternoonSlots;
-            }
-        }
-
-        public object SetAfternoonSlots
-        {
-            set
-            {
-                _dataTypeValidator.SetValue(this, "_AfternoonSlots", value);
-            }
-        }
-
         private string _Comments = string.Empty;
 
         public string Comments
@@ -214,10 +175,5 @@ namespace FSM.Entity.UserAbsence
                 _dataTypeValidator.SetValue(this, "_Comments", value);
             }
         }
-
-
-
-
-        
     }
 }

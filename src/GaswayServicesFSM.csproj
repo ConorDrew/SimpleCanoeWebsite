@@ -734,9 +734,6 @@
     <Compile Include="Application Framework\Validation\ValidatorMessages.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Importer\UCDataPartsOrderedImport.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Application Scheduler\FRMItemReturn.Designer.cs">
       <DependentUpon>FRMItemReturn.cs</DependentUpon>
     </Compile>
@@ -772,7 +769,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\IBCs\IbcSql.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAdditional\EngineerVisitAdditional.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAdditional\EngineerVisitAdditionalSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAdditional\EngineerVisitAdditionalValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidatorASHP.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidatorComCat.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidatorGas.cs" />
@@ -789,7 +785,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitEngineers\Enums\GetBy.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPhoto\EngineerVisitPhoto.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPhoto\EngineerVisitPhotoSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPhoto\EngineerVisitPhotoValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobContact\JobContact.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobContact\JobContactSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobImport\JobImport.cs" />
@@ -798,22 +793,17 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\Enums\GetBy.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\JobInstall\JobInstall.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\JobInstall\JobInstallSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\JobInstall\JobInstallValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\LSR\LsrError.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Order\POInvoice\POInvoiceSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\RagRating\RagRatingSql.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\SalesCredit\SalesCredit.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\SalesCredit\SalesCreditSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\SalesCredit\SalesValidator.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Reports\ReportSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Scheduler\HeartBeat.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Skills\Skills.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Skills\SkillsSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Audit\StockTakeAudit.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Audit\StockTakeAuditSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderItem.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderPart.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Tablet Ordering\TabletOrderSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\UserLevel\UserLevelSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Settings\Scheduler\JobTypeColour.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Settings\Scheduler\JobTypeColourSql.cs" />
@@ -1186,23 +1176,16 @@
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRates.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRatesSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractOriginalSiteRates\ContractOriginalSiteRatesValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalPPMVisit\ContractOriginalPPMVisit.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalPPMVisit\ContractOriginalPPMVisitSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalPPMVisit\ContractOriginalPPMVisitValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSiteAsset\ContractOriginalSiteAsset.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSiteAsset\ContractOriginalSiteAssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSiteAsset\ContractOriginalSiteAssetValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\ContractsOriginal\ContractOriginalSite\ContractOriginalSite.cs">
@@ -1277,9 +1260,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerPostalRegion\EngineerPostalRegionSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\EngineerPostalRegion\EngineerPostalRegionValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerTimeSheet\EngineerTimeSheet.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerTimeSheet\EngineerTimeSheetSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\EngineerTimeSheet\EngineerTimeSheetValidator.cs" />
@@ -1307,25 +1287,16 @@
     <Compile Include="Application Specific\Classes\Entity Collections\InvoicedLines\InvoicedLinesSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\InvoicedLines\InvoicedLinesValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Invoiced\Invoiced.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Invoiced\InvoicedSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Invoiced\InvoicedValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\InvoiceToBeRaised\InvoiceToBeRaised.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\InvoiceToBeRaised\InvoiceToBeRaisedSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\InvoiceToBeRaised\InvoiceToBeRaisedValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisit.cs">
@@ -1337,16 +1308,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitAssetWorkSheet\EngineerVisitAssetWorkSheetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitCharge\EngineerVisitCharge.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitCharge\EngineerVisitChargeSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitCharge\EngineerVisitChargeValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitDefects\EngineerVisitDefects.cs">
@@ -1360,7 +1325,6 @@
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitNCCGSR\EngineerVisitNCCGSR.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitNCCGSR\EngineerVisitNCCGSRSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitNCCGSR\EngineerVisitNCCGSRValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitPartsAndProductsAllocated\EngineerVisitPartProductAllocatedSQL.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1372,7 +1336,6 @@
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitQC\EngineerVisitQC.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitQC\EngineerVisitQCSQL.cs" />
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitQC\EngineerVisitQCValidator.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitSQL.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1382,9 +1345,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitTimeSheet\EngineerVisitTimeSheetSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitTimeSheet\EngineerVisitTimeSheetValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\EngineerVisit\EngineerVisitValidator.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1392,9 +1352,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobAsset\JobAssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobAsset\JobAssetValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobAudit\JobAudit.cs">
@@ -1409,16 +1366,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobItem\JobItemSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobItem\JobItemValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobOfWork\JobOfWork.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobOfWork\JobOfWorkSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Jobs\JobOfWork\JobOfWorkValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Jobs\Job\Job.cs">
@@ -1449,16 +1400,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Order\CustomerOrder\CustomerOrderSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\CustomerOrder\CustomerOrderValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\EngineerVisitOrder\EngineerVisitOrder.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\EngineerVisitOrder\EngineerVisitOrderSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\EngineerVisitOrder\EngineerVisitOrderValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\Order.cs">
@@ -1498,9 +1443,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderLocation\OrderLocationSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderLocation\OrderLocationValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderPart\OrderPart.cs">
@@ -1553,9 +1495,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Order\SiteOrder\SiteOrderSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Order\SiteOrder\SiteOrderValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCredited.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCreditedSQL.cs" />
     <Compile Include="Application Specific\Classes\Entity Collections\PartsToBeCredited\PartsToBeCreditedValidator.cs" />
@@ -1565,16 +1504,7 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalPPMVisit\QuoteContractOriginalPPMVisitSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalPPMVisit\QuoteContractOriginalPPMVisitValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSiteAsset\QuoteContractOriginalSiteAsset.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSiteAsset\QuoteContractOriginalSiteAssetSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSiteAsset\QuoteContractOriginalSiteAssetValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSite\QuoteContractOriginalSite.cs">
@@ -1583,16 +1513,10 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSite\QuoteContractOriginalSiteSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginalSite\QuoteContractOriginalSiteValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginal\QuoteContractOriginal.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginal\QuoteContractOriginalSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteContractsOriginal\QuoteContractOriginal\QuoteContractOriginalValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteEngineerVisit\QuoteEngineerVisit.cs">
@@ -1646,25 +1570,7 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderPart\QuoteOrderPart.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderPart\QuoteOrderPartSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderPart\QuoteOrderPartValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderProduct\QuoteOrderProduct.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderProduct\QuoteOrderProductSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderProduct\QuoteOrderProductValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuoteOrder\QuoteOrderValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Quotes\QuotesSQL.cs">
@@ -1682,9 +1588,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Site\SiteCustomerAudit\SiteCustomerAuditSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Site\SiteCustomerAudit\SiteCustomerAuditValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Site\SiteSQL.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1695,9 +1598,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Locations\LocationsSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Spares\Locations\LocationsValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\PartSupplier\PartSupplier.cs">
@@ -1713,9 +1613,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\PartTransaction\PartTransactionSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Spares\PartTransaction\PartTransactionValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Part\Part.cs">
@@ -1742,9 +1639,6 @@
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\ProductTransaction\ProductTransactionSQL.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Spares\ProductTransaction\ProductTransactionValidator.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Product\Product.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1752,9 +1646,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Product\ProductAssociatedPart\ProductAssociatedPartSQL.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Classes\Entity Collections\Spares\Product\ProductAssociatedPart\ProductAssociatedPartValidator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\Spares\Product\ProductSQL.cs">
@@ -2117,9 +2008,6 @@
     <Compile Include="Application Specific\Forms And Controls\Order\TabletOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Order\UCStockReplenishmentData.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Application Specific\Forms And Controls\Order\UCOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2248,9 +2136,6 @@
     </Compile>
     <Compile Include="Application Specific\Forms And Controls\Reports\FRMEngineerTimesheetReport.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Specific\Forms And Controls\Reports\UCLiveVisitCost.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Application Specific\Forms And Controls\ScheduleOfRates\CustomerScheduleOfRate\FRMCustomerScheduleOfRate.cs">
       <SubType>Form</SubType>
@@ -2669,9 +2554,6 @@
     <EmbeddedResource Include="Application Importer\FRMDuplicateInvoices.resx">
       <DependentUpon>FRMDuplicateInvoices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Importer\UCDataPartsOrderedImport.resx">
-      <DependentUpon>UCDataPartsOrderedImport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Importer\UCDataPODuplicateInvoice.resx">
       <DependentUpon>UCDataPODuplicateInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -2870,9 +2752,6 @@
     <EmbeddedResource Include="Application Specific\Forms And Controls\Order\TabletOrder.resx">
       <DependentUpon>TabletOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Order\UCStockReplenishmentData.resx">
-      <DependentUpon>UCStockReplenishmentData.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\PartsToBeCredited\FRMAddPartToBeCredited.resx">
       <DependentUpon>FRMAddPartToBeCredited.cs</DependentUpon>
     </EmbeddedResource>
@@ -2918,9 +2797,6 @@
     <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\FRMLastGSRReport.resx">
       <DependentUpon>FRMLastGSRReport.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Specific\Forms And Controls\Reports\UCLiveVisitCost.resx">
-      <DependentUpon>UCLiveVisitCost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Specific\Forms And Controls\Site\FRMPrivNotes.resx">
       <DependentUpon>FRMPrivNotes.cs</DependentUpon>
@@ -3918,7 +3794,9 @@
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Application Specific\Classes\Entity Collections\Reports\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

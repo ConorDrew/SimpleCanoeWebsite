@@ -37,103 +37,11 @@ namespace FSM
 
         private Label _lblFromDate;
 
-        internal Label lblFromDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFromDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFromDate != null)
-                {
-                }
-
-                _lblFromDate = value;
-                if (_lblFromDate != null)
-                {
-                }
-            }
-        }
-
         private Label _lblTo;
-
-        internal Label lblTo
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTo;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTo != null)
-                {
-                }
-
-                _lblTo = value;
-                if (_lblTo != null)
-                {
-                }
-            }
-        }
 
         private Button _btnGo;
 
-        internal Button btnGo
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnGo;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnGo != null)
-                {
-                    _btnGo.Click -= btnGo_Click;
-                }
-
-                _btnGo = value;
-                if (_btnGo != null)
-                {
-                    _btnGo.Click += btnGo_Click;
-                }
-            }
-        }
-
         private Button _btnAbsenceLegend;
-
-        internal Button btnAbsenceLegend
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAbsenceLegend;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAbsenceLegend != null)
-                {
-                    _btnAbsenceLegend.Click -= btnAbsenceLegend_Click;
-                }
-
-                _btnAbsenceLegend = value;
-                if (_btnAbsenceLegend != null)
-                {
-                    _btnAbsenceLegend.Click += btnAbsenceLegend_Click;
-                }
-            }
-        }
 
         private Button _btnBack;
 
@@ -237,30 +145,6 @@ namespace FSM
 
         private Button _btnTextApply;
 
-        internal Button btnTextApply
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnTextApply;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnTextApply != null)
-                {
-                    _btnTextApply.Click -= btnTextApply_Click;
-                }
-
-                _btnTextApply = value;
-                if (_btnTextApply != null)
-                {
-                    _btnTextApply.Click += btnTextApply_Click;
-                }
-            }
-        }
-
         private Button _btnFind;
 
         internal Button btnFind
@@ -289,55 +173,7 @@ namespace FSM
 
         private Button _btnNewJob;
 
-        internal Button btnNewJob
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnNewJob;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnNewJob != null)
-                {
-                    _btnNewJob.Click -= btnNewJob_Click;
-                }
-
-                _btnNewJob = value;
-                if (_btnNewJob != null)
-                {
-                    _btnNewJob.Click += btnNewJob_Click;
-                }
-            }
-        }
-
         private Button _btnRefresh;
-
-        internal Button btnRefresh
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRefresh;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRefresh != null)
-                {
-                    _btnRefresh.Click -= btnRefresh_Click;
-                }
-
-                _btnRefresh = value;
-                if (_btnRefresh != null)
-                {
-                    _btnRefresh.Click += btnRefresh_Click;
-                }
-            }
-        }
 
         public pnlScheduleControl() : base()
         {
@@ -552,30 +388,6 @@ namespace FSM
         }
 
         private Button _btnDisplayEngineers;
-
-        internal Button btnDisplayEngineers
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnDisplayEngineers;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnDisplayEngineers != null)
-                {
-                    _btnDisplayEngineers.Click -= btnDisplayEngineers_Click;
-                }
-
-                _btnDisplayEngineers = value;
-                if (_btnDisplayEngineers != null)
-                {
-                    _btnDisplayEngineers.Click += btnDisplayEngineers_Click;
-                }
-            }
-        }
 
         private void InitializeComponent()
         {

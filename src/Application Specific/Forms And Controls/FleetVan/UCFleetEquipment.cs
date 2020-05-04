@@ -10,12 +10,8 @@ namespace FSM
 {
     public class UCFleetEquipment : UCBase, IUserControl
     {
-        
-
         public UCFleetEquipment() : base()
         {
-            
-            
             base.Load += UCVan_Load;
 
             // This call is required by the Windows Form Designer.
@@ -37,28 +33,6 @@ namespace FSM
         }
 
         private GroupBox _grpVan;
-
-        internal GroupBox grpVan
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpVan;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpVan != null)
-                {
-                }
-
-                _grpVan = value;
-                if (_grpVan != null)
-                {
-                }
-            }
-        }
 
         private Label _lblName;
 
@@ -110,28 +84,6 @@ namespace FSM
 
         private Label _lblCost;
 
-        internal Label lblCost
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCost;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCost != null)
-                {
-                }
-
-                _lblCost = value;
-                if (_lblCost != null)
-                {
-                }
-            }
-        }
-
         private RichTextBox _txtDescription;
 
         internal RichTextBox txtDescription
@@ -157,28 +109,6 @@ namespace FSM
         }
 
         private Label _lblDescription;
-
-        internal Label lblDescription
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDescription;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDescription != null)
-                {
-                }
-
-                _lblDescription = value;
-                if (_lblDescription != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtName;
 
@@ -296,9 +226,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -311,9 +238,6 @@ namespace FSM
                 return CurrentEquipment;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -348,8 +272,6 @@ namespace FSM
             LoadForm(sender, e);
         }
 
-        
-        
         // Public Sub PopulateQuantities(ByVal VanID As Integer)
         // PartQuantitiesDataview = DB.Part.PartLocations_GetForVanHM(VanID)
         // End Sub
@@ -410,7 +332,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

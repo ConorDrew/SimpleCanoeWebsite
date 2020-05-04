@@ -10,8 +10,6 @@ namespace FSM
 {
     public class FRMFindCustomers : FRMBaseForm
     {
-        
-
         public FRMFindCustomers() : base()
         {
             base.Load += FrmDisplayEngineers_Load;
@@ -44,28 +42,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private GroupBox _grpCustomers;
 
-        internal GroupBox grpCustomers
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCustomers;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCustomers != null)
-                {
-                }
-
-                _grpCustomers = value;
-                if (_grpCustomers != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgCustomers;
 
         internal DataGrid dgCustomers
@@ -81,8 +57,6 @@ namespace FSM
             {
                 if (_dgCustomers != null)
                 {
-                    
-                    
                     _dgCustomers.MouseUp -= _dgCustomers_MouseUp;
                 }
 
@@ -96,79 +70,9 @@ namespace FSM
 
         private Button _btnClearAll;
 
-        internal Button btnClearAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnClearAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click -= BtnClearAll_Click;
-                }
-
-                _btnClearAll = value;
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click += BtnClearAll_Click;
-                }
-            }
-        }
-
         private Button _btnSelectAll;
 
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= BtnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += BtnSelectAll_Click;
-                }
-            }
-        }
-
         private Label _lblCustomerName;
-
-        internal Label lblCustomerName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomerName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomerName != null)
-                {
-                }
-
-                _lblCustomerName = value;
-                if (_lblCustomerName != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtFilter;
 
@@ -360,8 +264,6 @@ namespace FSM
             this.ResumeLayout(false);
         }
 
-        
-        
         private DataView _dvCustomers;
 
         public DataView CustomerDataView
@@ -386,9 +288,6 @@ namespace FSM
                 dgCustomers.DataSource = CustomerDataView;
             }
         }
-
-        
-        
 
         private void SetUpDataGrid()
         {
@@ -531,7 +430,5 @@ namespace FSM
                 }
             }
         }
-
-        
     }
 }

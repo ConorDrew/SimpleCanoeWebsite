@@ -18,12 +18,8 @@ namespace FSM
 {
     public class FRMBulkJobCreation : FRMBaseForm
     {
-        
-
         public FRMBulkJobCreation() : base()
         {
-            
-            
             this.Load += FRMBulkJobCreation_Load;
 
             // This call is required by the Windows Form Designer.
@@ -55,28 +51,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpExcelFile;
-
-        internal GroupBox grpExcelFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpExcelFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpExcelFile != null)
-                {
-                }
-
-                _grpExcelFile = value;
-                if (_grpExcelFile != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtExcelFile;
 
@@ -206,28 +180,6 @@ namespace FSM
 
         private Label _lblFile;
 
-        internal Label lblFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFile != null)
-                {
-                }
-
-                _lblFile = value;
-                if (_lblFile != null)
-                {
-                }
-            }
-        }
-
         private Label _lblMessages;
 
         internal Label lblMessages
@@ -277,28 +229,6 @@ namespace FSM
         }
 
         private GroupBox _grpFailedImports;
-
-        internal GroupBox grpFailedImports
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpFailedImports;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpFailedImports != null)
-                {
-                }
-
-                _grpFailedImports = value;
-                if (_grpFailedImports != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgFailedImports;
 
@@ -352,28 +282,6 @@ namespace FSM
 
         private Label _lblJobType;
 
-        internal Label lblJobType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblJobType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblJobType != null)
-                {
-                }
-
-                _lblJobType = value;
-                if (_lblJobType != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtCustomer;
 
         internal TextBox txtCustomer
@@ -400,77 +308,9 @@ namespace FSM
 
         private Button _btnFindCustomer;
 
-        internal Button btnFindCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click -= btnFindCustomer_Click;
-                }
-
-                _btnFindCustomer = value;
-                if (_btnFindCustomer != null)
-                {
-                    _btnFindCustomer.Click += btnFindCustomer_Click;
-                }
-            }
-        }
-
         private Label _lblCustomer;
 
-        internal Label lblCustomer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblCustomer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblCustomer != null)
-                {
-                }
-
-                _lblCustomer = value;
-                if (_lblCustomer != null)
-                {
-                }
-            }
-        }
-
         private Label _lblVisitDate;
-
-        internal Label lblVisitDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblVisitDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblVisitDate != null)
-                {
-                }
-
-                _lblVisitDate = value;
-                if (_lblVisitDate != null)
-                {
-                }
-            }
-        }
 
         private DateTimePicker _dtpVisitDate;
 
@@ -522,53 +362,7 @@ namespace FSM
 
         private Button _btnFindEngineer;
 
-        internal Button btnFindEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindEngineer != null)
-                {
-                    _btnFindEngineer.Click -= btnFindEngineer_Click;
-                }
-
-                _btnFindEngineer = value;
-                if (_btnFindEngineer != null)
-                {
-                    _btnFindEngineer.Click += btnFindEngineer_Click;
-                }
-            }
-        }
-
         private Label _lblEngineer;
-
-        internal Label lblEngineer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblEngineer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblEngineer != null)
-                {
-                }
-
-                _lblEngineer = value;
-                if (_lblEngineer != null)
-                {
-                }
-            }
-        }
 
         private RichTextBox _txtNotes;
 
@@ -595,28 +389,6 @@ namespace FSM
         }
 
         private Label _lblVisitNotes;
-
-        internal Label lblVisitNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblVisitNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblVisitNotes != null)
-                {
-                }
-
-                _lblVisitNotes = value;
-                if (_lblVisitNotes != null)
-                {
-                }
-            }
-        }
 
         private Label _lblProgress;
 
@@ -960,9 +732,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public IUserControl LoadedControl
         {
             get
@@ -971,8 +740,6 @@ namespace FSM
             }
         }
 
-        
-        
         private FileInfo _file;
 
         public FileInfo File
@@ -1089,9 +856,6 @@ namespace FSM
         {
             Export();
         }
-
-        
-        
 
         private void LoadData()
         {
@@ -1265,7 +1029,7 @@ namespace FSM
                     CreateJob(site);
                 }
 
-                nextrow:
+            nextrow:
                 ;
                 MoveProgressOn();
             }
@@ -1401,7 +1165,5 @@ namespace FSM
                 Engineer = App.DB.Engineer.Engineer_Get(ID);
             }
         }
-
-        
     }
 }

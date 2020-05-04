@@ -16,7 +16,7 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
+
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -79,8 +79,8 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
+
+
             private int _JobID = 0;
 
             public int JobID
@@ -438,8 +438,8 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
+
+
             private ArrayList _assets = new ArrayList();
 
             public ArrayList Assets
@@ -506,7 +506,7 @@ namespace FSM.Entity
                 }
             }
 
-            
+
         }
     }
 }

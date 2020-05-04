@@ -15,8 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int VanID, bool DeleteFromWarehouses = false)
             {
                 if (DeleteFromWarehouses)
@@ -701,20 +699,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public string Van_GetDepartment(int VanID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@VanID", VanID);
-
-                // Get the datatable from the database store in dt
-                return Conversions.ToString(_database.ExecuteScalar("SELECT tblEngineer.Department FROM tblVan INNER JOIN tblEngineerVan ON tblVan.VanID = tblEngineerVan.VanID INNER JOIN tblEngineer ON tblEngineerVan.EngineerID = tblEngineer.EngineerID WHERE (tblVan.VanID = @VanID) AND (tblVan.Deleted = 0) AND (tblEngineerVan.Deleted = 0)"));
-            }
-
-            // Public Sub Van_ClearObject(ByVal oVan As Entity.Vans.Van)
-            // oVan.SetDeleted = Nothing
-            // oVan.s()
-            // End Sub
-
             public Van CopyVan(Van oVan, string CopiedVanReg, DataView LocationsDataView, bool InsertFromWarehouses)
             {
                 if (InsertFromWarehouses)
@@ -882,8 +866,6 @@ namespace FSM.Entity
 
                 return returnVan;
             }
-
-            
         }
     }
 }

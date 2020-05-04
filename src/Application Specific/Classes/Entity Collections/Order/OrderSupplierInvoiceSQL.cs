@@ -15,14 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-            public void DeleteForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                _database.ExecuteSP_NO_Return("Order_DeleteSupplierInvoicesForOrder");
-            }
-
             public void Delete(int SupplierInvoiceID)
             {
                 _database.ClearParameter();
@@ -239,7 +231,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@KeyedBy", App.loggedInUser.UserID, true);
                 }
             }
-            
         }
     }
 }

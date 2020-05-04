@@ -12,12 +12,8 @@ namespace FSM
     {
         public UCQuotesList()
         {
-            
-            
             base.Load += UCQuotesList_Load;
         }
-
-        
 
         public UCQuotesList(Entity.Sys.Enums.TableNames EntityToLinkToIn, int CustomerIDIn, int SiteIDIn) : base()
         {
@@ -120,28 +116,6 @@ namespace FSM
 
         private GroupBox _grpQuotes;
 
-        internal GroupBox grpQuotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpQuotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpQuotes != null)
-                {
-                }
-
-                _grpQuotes = value;
-                if (_grpQuotes != null)
-                {
-                }
-            }
-        }
-
         private DataGrid _dgQuotes;
 
         internal DataGrid dgQuotes
@@ -193,30 +167,6 @@ namespace FSM
         }
 
         private MenuItem _mnuJobQuote;
-
-        internal MenuItem mnuJobQuote
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuJobQuote;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_mnuJobQuote != null)
-                {
-                    _mnuJobQuote.Click -= mnuJobQuote_Click;
-                }
-
-                _mnuJobQuote = value;
-                if (_mnuJobQuote != null)
-                {
-                    _mnuJobQuote.Click += mnuJobQuote_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -298,9 +248,6 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)_dgQuotes).EndInit();
             ResumeLayout(false);
         }
-
-        
-        
 
         public event RefreshContractsEventHandler RefreshContracts;
 
@@ -404,9 +351,6 @@ namespace FSM
                 _SelectedSiteID = value;
             }
         }
-
-        
-        
 
         private void SetupContractsDataGrid()
         {
@@ -537,9 +481,6 @@ namespace FSM
             Populate();
         }
 
-        
-        
-
         private void Populate()
         {
             if (EntityToLinkTo == Entity.Sys.Enums.TableNames.tblCustomer)
@@ -558,7 +499,5 @@ namespace FSM
             RefreshContracts?.Invoke();
             RefreshJobs?.Invoke();
         }
-
-        
     }
 }

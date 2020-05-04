@@ -14,8 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
-
             public void Delete(int SubTaskID)
             {
                 _database.ClearParameter();
@@ -23,51 +21,11 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("SubTask_Delete");
             }
 
-            public SubTask SubTask_Get(int SubTaskID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@SubTaskID", SubTaskID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("SubTask_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oSubTask = new SubTask();
-                        oSubTask.IgnoreExceptionsOnSetMethods = true;
-                        oSubTask.SetSubTaskID = dt.Rows[0]["SubTaskID"];
-                        oSubTask.SetTaskID = dt.Rows[0]["TaskID"];
-                        oSubTask.SetDescription = dt.Rows[0]["Description"];
-                        oSubTask.SetOrderNumber = dt.Rows[0]["OrderNumber"];
-                        oSubTask.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
-                        oSubTask.Exists = true;
-                        return oSubTask;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
             public DataView SubTask_Get_For_Task(int TaskID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@TaskID", TaskID, true);
                 var dt = _database.ExecuteSP_DataTable("SubTask_Get_For_Task");
-                dt.TableName = Sys.Enums.TableNames.tblSubTask.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView SubTask_GetAll()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("SubTask_GetAll");
                 dt.TableName = Sys.Enums.TableNames.tblSubTask.ToString();
                 return new DataView(dt);
             }
@@ -129,8 +87,6 @@ namespace FSM.Entity
                     return nextID + 1;
                 }
             }
-
-            
         }
     }
 }

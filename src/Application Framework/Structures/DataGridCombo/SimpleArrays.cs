@@ -9,44 +9,6 @@ namespace FSM
     {
         internal bool[] array;
 
-        public virtual void AddNew(bool item)
-        {
-            int redimNumber;
-            if (Information.IsNothing(array))
-            {
-                redimNumber = 0;
-            }
-            else
-            {
-                redimNumber = array.GetUpperBound(0) + 1;
-            }
-
-            var oldArray = array;
-            array = new bool[redimNumber + 1];
-            if (oldArray is object)
-                Array.Copy(oldArray, array, Math.Min(redimNumber + 1, oldArray.Length));
-            array[redimNumber] = item;
-        }
-
-        public bool get_Exists(bool item)
-        {
-            if (array is object)
-            {
-                if (Array.IndexOf(array, item) > -1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         public int Count
         {
             get
@@ -140,27 +102,6 @@ namespace FSM
             if (oldArray is object)
                 Array.Copy(oldArray, array, Math.Min(redimNumber + 1, oldArray.Length));
             array[redimNumber] = item;
-        }
-
-        public bool get_Exists(object item)
-        {
-            if (array is object)
-            {
-                for (int x = 0, loopTo = array.Length - 1; x <= loopTo; x += 1)
-                    Debug.WriteLine(array[x].ToString());
-                if (Array.IndexOf(array, item) > -1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
         }
 
         public int Count
@@ -293,22 +234,6 @@ namespace FSM
                 {
                     return 0;
                 }
-            }
-        }
-    }
-
-    public class SimpleStringArrayOld : SimpleObjectArray
-    {
-        public virtual new void AddNew(string @string)
-        {
-            base.AddNew(@string);
-        }
-
-        public virtual new string this[int index]
-        {
-            get
-            {
-                return Conversions.ToString(base[index]);
             }
         }
     }

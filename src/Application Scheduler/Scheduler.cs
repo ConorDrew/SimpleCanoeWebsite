@@ -16,7 +16,6 @@ namespace FSM
 
     public class Scheduler
     {
-        
         private Form __mdiParent;
 
         private Form _mdiParent
@@ -75,11 +74,7 @@ namespace FSM
         public DateTime FromDate = DateAndTime.Now;
         public DateTime ToDate = DateAndTime.Now.AddDays(10);
         private int _OldEngineerVisitID = 0;
-        public DataTable DtSummary;
         public int textsize;
-
-        
-        
 
         public class scheduleComparer : IComparer
         {
@@ -103,8 +98,6 @@ namespace FSM
                 return default;
             }
         }
-
-        
 
         // 'This function gets called when a row is dragged and dropped, forEngineer = 0 when it is dragged onto
         // 'the unscheduled call grid
@@ -207,7 +200,6 @@ namespace FSM
             }
         }
 
-        
         private DataTable _engineers = null;
 
         public DataTable Engineers
@@ -225,9 +217,6 @@ namespace FSM
 
         private bool Closing = false;
         private TimeSpan TwoMins = new TimeSpan(0, 2, 0);
-
-        
-        
 
         public Scheduler(Form mdiParent)
         {
@@ -788,8 +777,6 @@ namespace FSM
             return dtDay;
         }
 
-        
-        
         private const int radius = 3;
         private Point clickedPoint;
         private bool cellDown = false;
@@ -1482,9 +1469,6 @@ namespace FSM
             return false;
         }
 
-        
-        
-
         private void resetHeaders()
         {
             foreach (frmEngineerSchedule engineerSchedule in _engineerSchedules.ToArray(typeof(frmEngineerSchedule)))
@@ -1561,9 +1545,6 @@ namespace FSM
                 engineerSchedule.ClearSelections();
         }
 
-        
-        
-
         private void ControlResize(object sender, EventArgs e)
         {
             orderScheduleWindows();
@@ -1598,7 +1579,5 @@ namespace FSM
             _unscheduledCalls.Resize += ControlResize;
             Application.DoEvents();
         }
-
-        
     }
 }

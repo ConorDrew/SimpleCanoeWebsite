@@ -12,8 +12,6 @@ namespace FSM
     {
         public DLGVisitAssetWorkSheet() : base()
         {
-            
-            
             base.Load += DLGVisitAssetWorkSheet_Load;
 
             // This call is required by the Windows Form Designer.
@@ -36,8 +34,9 @@ namespace FSM
             base.Dispose(disposing);
         }
 
-            // Required by the Windows Form Designer
+        // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
+
         private Button _btnCancel;
 
         internal Button btnCancel
@@ -117,28 +116,6 @@ namespace FSM
         }
 
         private Label _lblReading;
-
-        internal Label lblReading
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblReading;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblReading != null)
-                {
-                }
-
-                _lblReading = value;
-                if (_lblReading != null)
-                {
-                }
-            }
-        }
 
         private Panel _pnlUCView;
 
@@ -275,8 +252,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
         private bool StopChangeTestedDD = false;
         private object ChildUserInterface = null;
         private bool _updating = true;
@@ -449,9 +424,6 @@ namespace FSM
             ShowForm();
         }
 
-        
-        
-
         private void ShowForm()
         {
             var switchExpr = Conversions.ToInteger(Combo.get_GetSelectedItemValue(ddReading));
@@ -540,7 +512,5 @@ namespace FSM
 
             App.ControlLoading = false;
         }
-
-        
     }
 }

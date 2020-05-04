@@ -17,8 +17,6 @@ namespace FSM
             base.Load += FRMSelectInvoiceAddress_Load;
         }
 
-        
-
         public FRMSelectInvoiceAddress(int SiteIDIn) : base()
         {
             base.Load += FRMSelectInvoiceAddress_Load;
@@ -82,8 +80,6 @@ namespace FSM
             {
                 if (_btnOK != null)
                 {
-                    
-                    
                     _btnOK.Click -= btnOK_Click;
                 }
 
@@ -96,28 +92,6 @@ namespace FSM
         }
 
         private GroupBox _grpHO;
-
-        internal GroupBox grpHO
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpHO;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpHO != null)
-                {
-                }
-
-                _grpHO = value;
-                if (_grpHO != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkHO;
 
@@ -169,28 +143,6 @@ namespace FSM
 
         private GroupBox _grpProperty;
 
-        internal GroupBox grpProperty
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpProperty;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpProperty != null)
-                {
-                }
-
-                _grpProperty = value;
-                if (_grpProperty != null)
-                {
-                }
-            }
-        }
-
         private CheckBox _chkProperty;
 
         internal CheckBox chkProperty
@@ -240,28 +192,6 @@ namespace FSM
         }
 
         private GroupBox _grpInvoiceAddress;
-
-        internal GroupBox grpInvoiceAddress
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpInvoiceAddress;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpInvoiceAddress != null)
-                {
-                }
-
-                _grpInvoiceAddress = value;
-                if (_grpInvoiceAddress != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkInvoiceAddress;
 
@@ -338,28 +268,6 @@ namespace FSM
         }
 
         private GroupBox _grpDept;
-
-        internal GroupBox grpDept
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpDept;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpDept != null)
-                {
-                }
-
-                _grpDept = value;
-                if (_grpDept != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkDept;
 
@@ -654,9 +562,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -675,8 +580,6 @@ namespace FSM
         {
         }
 
-        
-        
         private int _SiteID = 0;
 
         public int SiteID
@@ -873,9 +776,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         private void SetupDG()
         {
             Helper.SetUpDataGrid(dgInvoiceAddresses);
@@ -1042,7 +942,5 @@ namespace FSM
             App.ShowForm(typeof(FRMInvoiceAddress), true, new object[] { 0, SiteID, this });
             SiteID = SiteID;
         }
-
-        
     }
 }

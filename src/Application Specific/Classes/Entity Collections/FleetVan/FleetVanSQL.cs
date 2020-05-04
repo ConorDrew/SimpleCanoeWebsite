@@ -34,7 +34,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             private void AddParametersToCommand(ref FleetVan oFleetVan)
             {
                 {
@@ -196,7 +195,6 @@ namespace FSM.Entity
                 _database.AddParameter("@UserID", App.loggedInUser.UserID, true);
                 _database.ExecuteSP_NO_Return("FleetVanAudit_Insert");
             }
-            
         }
 
         public class FleetVanTypeSQL
@@ -208,7 +206,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             private void AddParametersToCommand(ref FleetVanType oFleetVanType)
             {
                 {
@@ -298,8 +295,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblFleetVanType.ToString();
                 return new DataView(dt);
             }
-
-            
         }
 
         public class FleetVanEngineerSQL
@@ -311,7 +306,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             private void AddParametersToCommand(ref FleetVanEngineer oFleetVan)
             {
                 {
@@ -450,7 +444,6 @@ namespace FSM.Entity
 
                 return Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(_database.ExecuteSP_OBJECT("FleetVanEngineer_Delete"), 1, false));
             }
-            
         }
 
         public class FleetVanMaintenanceSQL
@@ -462,7 +455,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             private void AddParametersToCommand(ref FleetVanMaintenance oFleetVan)
             {
                 {
@@ -573,7 +565,6 @@ namespace FSM.Entity
                 van.Exists = true;
                 return van;
             }
-            
         }
 
         public class FleetVanFaultSQL
@@ -585,7 +576,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             private void AddParametersToCommand(ref FleetVanFault oFleetVan)
             {
                 {
@@ -623,14 +613,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView GetAll_Unresolved()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("FleetVanFault_GetAll_Unresolved");
-                dt.TableName = Sys.Enums.TableNames.tblFleetVanFault.ToString();
-                return new DataView(dt);
-            }
-
             public DataView GetAll_Unresolved_WithNoJob()
             {
                 _database.ClearParameter();
@@ -655,46 +637,6 @@ namespace FSM.Entity
 
                 // Get the datatable from the database store in dt
                 var dt = _database.ExecuteSP_DataTable("FleetVanFault_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oVan = new FleetVanFault();
-                        oVan.IgnoreExceptionsOnSetMethods = true;
-                        oVan.SetVanFaultID = dt.Rows[0]["VanFaultID"];
-                        oVan.SetVanID = dt.Rows[0]["VanID"];
-                        oVan.SetFaultTypeID = dt.Rows[0]["FaultType"];
-                        oVan.FaultDate = Sys.Helper.MakeDateTimeValid(dt.Rows[0]["FaultDate"]);
-                        if (dt.Rows[0]["ResolvedDate"] != DBNull.Value)
-                        {
-                            oVan.ResolvedDate = Sys.Helper.MakeDateTimeValid(dt.Rows[0]["ResolvedDate"]);
-                        }
-
-                        oVan.SetEngineerNotes = dt.Rows[0]["EngineerNotes"];
-                        oVan.SetNotes = dt.Rows[0]["Notes"];
-                        oVan.SetJobID = dt.Rows[0]["JobID"];
-                        oVan.SetArchive = Conversions.ToBoolean(dt.Rows[0]["Archive"]);
-                        oVan.Exists = true;
-                        return oVan;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public FleetVanFault Get_ByVanID(int vanID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@VanID", vanID);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("FleetVanFault_Get_ForVan");
                 if (dt is object)
                 {
                     if (dt.Rows.Count > 0)
@@ -792,7 +734,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblFleetVanFault.ToString();
                 return new DataView(dt);
             }
-            
         }
 
         public class FleetVanContractSQL
@@ -804,7 +745,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             private void AddParametersToCommand(ref FleetVanContract oFleetVan)
             {
                 {
@@ -836,14 +776,6 @@ namespace FSM.Entity
             {
                 _database.ClearParameter();
                 var dt = _database.ExecuteSP_DataTable("FleetVanContract_GetAll");
-                dt.TableName = Sys.Enums.TableNames.tblFleetVanContract.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView GetAll_Active()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("FleetVanContract_GetAll_Active");
                 dt.TableName = Sys.Enums.TableNames.tblFleetVanContract.ToString();
                 return new DataView(dt);
             }
@@ -952,8 +884,6 @@ namespace FSM.Entity
                 van.Exists = true;
                 return van;
             }
-            
-
         }
 
         public class FleetVanServiceSQL
@@ -965,7 +895,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public DataView GetServices_ByVanId(int vanID)
             {
                 _database.ClearParameter();
@@ -1006,8 +935,6 @@ namespace FSM.Entity
                 _database.AddParameter("@JobID", jobID);
                 _database.ExecuteSP_NO_Return("FleetVanService_Delete");
             }
-            
-
         }
 
         public class FleetEquipmentSQL
@@ -1019,7 +946,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public DataView GetAll()
             {
                 _database.ClearParameter();
@@ -1103,7 +1029,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.tblFleetEquipment.ToString();
                 return new DataView(dt);
             }
-            
         }
 
         public class FleetVanEquipmentSQL
@@ -1115,7 +1040,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public DataView Get(int vanEquipmentID)
             {
                 _database.ClearParameter();
@@ -1164,7 +1088,6 @@ namespace FSM.Entity
                 _database.AddParameter("@VanEquipmentID", vanEquipmentID);
                 _database.ExecuteSP_NO_Return("FleetVanEquipment_Delete");
             }
-            
         }
     }
 }

@@ -18,7 +18,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public Invoiced Invoiced_Get(int InvoicedID)
             {
                 _database.ClearParameter();
@@ -26,40 +25,6 @@ namespace FSM.Entity
 
                 // Get the datatable from the database store in dt
                 var dt = _database.ExecuteSP_DataTable("Invoiced_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oInvoiced = new Invoiced();
-                        oInvoiced.IgnoreExceptionsOnSetMethods = true;
-                        oInvoiced.SetInvoicedID = dt.Rows[0]["InvoicedID"];
-                        oInvoiced.RaisedDate = Conversions.ToDate(dt.Rows[0]["RaisedDate"]);
-                        oInvoiced.SetInvoiceNumber = dt.Rows[0]["InvoiceNumber"];
-                        oInvoiced.SetRaisedByUserID = dt.Rows[0]["RaisedByUserID"];
-                        oInvoiced.SetVATRateID = dt.Rows[0]["VATRateID"];
-                        oInvoiced.SetPaidByID = dt.Rows[0]["PaidByID"];
-                        oInvoiced.SetAdhocInvoiceType = dt.Rows[0]["AdhocInvoiceType"];
-                        oInvoiced.Exists = true;
-                        return oInvoiced;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public Invoiced Invoiced_Get_ByInvoiceNumber(int invoiceNumber)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@InvoicedNumber", invoiceNumber);
-
-                // Get the datatable from the database store in dt
-                var dt = _database.ExecuteSP_DataTable("Invoiced_Get_InvoiceNumber");
                 if (dt is object)
                 {
                     if (dt.Rows.Count > 0)
@@ -168,32 +133,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            public DataView InvoiceDetails_Get_InvoicedNumber(int InvoicedID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@InvoiceEnumVal", Conversions.ToInteger(Sys.Enums.InvoiceAddressType.Invoice), true);
-                _database.AddParameter("@JobInvTypeEnum", Conversions.ToInteger(Sys.Enums.InvoiceType.Visit), true);
-                _database.AddParameter("@OrderInvTypeEnum", Conversions.ToInteger(Sys.Enums.InvoiceType.Order), true);
-                _database.AddParameter("@Contract_Option1Enum", Conversions.ToInteger(Sys.Enums.InvoiceType.Contract_Option1), true);
-                _database.AddParameter("@Contract_Option2Enum", Conversions.ToInteger(Sys.Enums.InvoiceType.Contract_Option2), true);
-                _database.AddParameter("@Contract_Option3Enum", Conversions.ToInteger(Sys.Enums.InvoiceType.Contract_Option3), true);
-                _database.AddParameter("@InvoicedNumber", InvoicedID, true);
-                var dt = _database.ExecuteSP_DataTable("InvoiceDetails_Get_InvoicedNumber");
-                dt.TableName = Sys.Enums.TableNames.tblInvoiced.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView Invoiced_GetContractOpt3_Jobs(int InvoicedID, int ContractSiteID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@ContractOpt3Enum", Conversions.ToInteger(Sys.Enums.InvoiceType.Contract_Option3), true);
-                _database.AddParameter("@InvoicedID", InvoicedID, true);
-                _database.AddParameter("@ContractSiteID", ContractSiteID, true);
-                var dt = _database.ExecuteSP_DataTable("Invoiced_GetContractOpt3_Jobs");
-                dt.TableName = Sys.Enums.TableNames.tblInvoiced.ToString();
-                return new DataView(dt);
-            }
-
             public string Invoice_GetAdditionalNotes(int InvoicedID)
             {
                 _database.ClearParameter();
@@ -218,8 +157,6 @@ namespace FSM.Entity
                 return new DataView(dt);
             }
 
-            
-            
             public DataTable GetJobNominalCode_ForSupplierInvoice(int OrderID)
             {
                 _database.ClearParameter();
@@ -228,7 +165,6 @@ namespace FSM.Entity
                 return Results;
             }
 
-            
             public async Task MarkInvoiceAsExportedAsync(int invoicedId)
             {
                 var sqlParams = new[] { new SqlParameter("@InvoicedID", invoicedId) };
@@ -259,8 +195,6 @@ namespace FSM.Entity
                 await _database.ExecuteAsync("SalesCredit_Update_AsExported", sqlParams);
             }
 
-            
-            
             public async Task MarkInvoiceAsNotExportedAsync(int invoicedId)
             {
                 var sqlParams = new[] { new SqlParameter("@InvoicedID", invoicedId) };
@@ -290,9 +224,6 @@ namespace FSM.Entity
                 var sqlParams = new[] { new SqlParameter("@SalesCreditID", salesCreditId) };
                 await _database.ExecuteAsync("SalesCredit_Update_AsNotExported", sqlParams);
             }
-
-            
-            
         }
     }
 }

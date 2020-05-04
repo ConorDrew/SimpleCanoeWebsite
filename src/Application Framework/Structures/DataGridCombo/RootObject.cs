@@ -6,8 +6,6 @@ namespace FSM
 
     internal class RootObject
     {
-        
-
         // native member declarations
         [System.Xml.Serialization.XmlIgnore()]
         internal FullyQualifiedFileName Filename = new FullyQualifiedFileName();
@@ -15,16 +13,10 @@ namespace FSM
         [System.Xml.Serialization.XmlIgnore()]
         internal bool HasBeenPersisted = false;
 
-        
-        
-
         public RootObject()
         {
             CurrentLocation = DefaultPersistFolder;
         }
-
-        
-        
 
         [System.Xml.Serialization.XmlIgnore()]
         internal string CurrentLocation
@@ -54,20 +46,6 @@ namespace FSM
             }
         }
 
-        
-        
-
-        internal static Interfaces.IPersistable CreateDefaultList(Interfaces.IPersistable item)
-        {
-            XmlPersister.Write(item);
-            return item;
-        }
-
-        internal static bool DefaultListExits(Type objectType)
-        {
-            return XmlPersister.DefaultListExits(objectType);
-        }
-
         internal static string DefaultPersistFolder
         {
             get
@@ -81,11 +59,6 @@ namespace FSM
             }
         }
 
-        internal static Interfaces.IPersistable GetDefaultList(Type itemType)
-        {
-            return XmlPersister.GetDefaultList(itemType);
-        }
-
         internal static Interfaces.IPersistable Read(string filename, Type itemType)
         {
             return XmlPersister.Read(filename, itemType);
@@ -95,7 +68,5 @@ namespace FSM
         {
             XmlPersister.Write(item);
         }
-
-        
     }
 }

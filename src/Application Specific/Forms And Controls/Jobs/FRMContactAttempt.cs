@@ -11,8 +11,6 @@ namespace FSM
 {
     public class FRMContactAttempt : Form
     {
-        
-
         public FRMContactAttempt(Enums.TableNames linkTable, int linkId) : base()
         {
             InitializeComponent();
@@ -51,8 +49,6 @@ namespace FSM
             {
                 if (_btnSave != null)
                 {
-                    
-                    
                     _btnSave.Click -= btnSave_Click;
                 }
 
@@ -65,28 +61,6 @@ namespace FSM
         }
 
         private Label _lblContactMethod;
-
-        internal Label lblContactMethod
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblContactMethod;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblContactMethod != null)
-                {
-                }
-
-                _lblContactMethod = value;
-                if (_lblContactMethod != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboMethod;
 
@@ -114,28 +88,6 @@ namespace FSM
 
         private Label _lblDate;
 
-        internal Label lblDate
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDate;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDate != null)
-                {
-                }
-
-                _lblDate = value;
-                if (_lblDate != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpDate;
 
         internal DateTimePicker dtpDate
@@ -162,28 +114,6 @@ namespace FSM
 
         private Label _lblTime;
 
-        internal Label lblTime
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblTime;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblTime != null)
-                {
-                }
-
-                _lblTime = value;
-                if (_lblTime != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpTime;
 
         internal DateTimePicker dtpTime
@@ -209,28 +139,6 @@ namespace FSM
         }
 
         private Label _lblNote;
-
-        internal Label lblNote
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblNote;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblNote != null)
-                {
-                }
-
-                _lblNote = value;
-                if (_lblNote != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtNote;
 
@@ -387,9 +295,6 @@ namespace FSM
             Save();
         }
 
-        
-        
-
         private bool IsFormValid()
         {
             if (Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboMethod)) == 0)
@@ -448,7 +353,5 @@ namespace FSM
                 App.ShowMessage(ex.Message + " - " + ex.StackTrace, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
     }
 }

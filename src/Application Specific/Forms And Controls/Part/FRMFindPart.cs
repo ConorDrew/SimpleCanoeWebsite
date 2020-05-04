@@ -10,8 +10,6 @@ namespace FSM
 {
     public class FRMFindPart : FRMBaseForm, IForm
     {
-        
-
         public FRMFindPart() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -52,28 +50,6 @@ namespace FSM
         // Do not modify it using the code editor.
         private Label _lblFilter;
 
-        internal Label lblFilter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblFilter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblFilter != null)
-                {
-                }
-
-                _lblFilter = value;
-                if (_lblFilter != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtFilter;
 
         internal TextBox txtFilter
@@ -101,28 +77,6 @@ namespace FSM
         }
 
         private GroupBox _grpResults;
-
-        internal GroupBox grpResults
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpResults;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpResults != null)
-                {
-                }
-
-                _grpResults = value;
-                if (_grpResults != null)
-                {
-                }
-            }
-        }
 
         private Button _btnOK;
 
@@ -178,51 +132,7 @@ namespace FSM
 
         private Label _lblPreferredSupplier;
 
-        internal Label lblPreferredSupplier
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPreferredSupplier;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPreferredSupplier != null)
-                {
-                }
-
-                _lblPreferredSupplier = value;
-                if (_lblPreferredSupplier != null)
-                {
-                }
-            }
-        }
-
         private Panel _pnlGreen;
-
-        internal Panel pnlGreen
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _pnlGreen;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_pnlGreen != null)
-                {
-                }
-
-                _pnlGreen = value;
-                if (_pnlGreen != null)
-                {
-                }
-            }
-        }
 
         private DataGridView _dgvParts;
 
@@ -249,30 +159,6 @@ namespace FSM
         }
 
         private Button _btnSearch;
-
-        internal Button btnSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click -= btnSearch_Click;
-                }
-
-                _btnSearch = value;
-                if (_btnSearch != null)
-                {
-                    _btnSearch.Click += btnSearch_Click;
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -414,9 +300,6 @@ namespace FSM
             PerformLayout();
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -436,8 +319,6 @@ namespace FSM
         {
         }
 
-        
-        
         private System.Data.SqlClient.SqlTransaction _Trans;
 
         public System.Data.SqlClient.SqlTransaction Trans
@@ -619,48 +500,9 @@ namespace FSM
 
         private int _foreignKeyFilter;
 
-        public int ForeignKeyFilter
-        {
-            get
-            {
-                return _foreignKeyFilter;
-            }
-
-            set
-            {
-                _foreignKeyFilter = value;
-            }
-        }
-
         private string _PartNumber;
 
-        public string PartNumber
-        {
-            get
-            {
-                return _PartNumber;
-            }
-
-            set
-            {
-                _PartNumber = value;
-            }
-        }
-
         private bool _ForMassPartEntry = false;
-
-        public bool ForMassPartEntry
-        {
-            get
-            {
-                return _ForMassPartEntry;
-            }
-
-            set
-            {
-                _ForMassPartEntry = value;
-            }
-        }
 
         private DataView _dvRecords;
 
@@ -755,9 +597,6 @@ namespace FSM
 
         private DataGridViewSelectedRowCollection old;
 
-        
-        
-
         private void DLGFindRecord_Load(object sender, EventArgs e)
         {
             LoadMe(sender, e);
@@ -773,18 +612,10 @@ namespace FSM
             DialogResult = DialogResult.Cancel;
         }
 
-        public void DBParts()
-        {
-            Records = (DataView)App.DB.PartSupplier.PartSupplier_Search(txtFilter.Text);
-        }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             SelectItem();
         }
-
-        
-        
 
         private void SelectItem()
         {
@@ -867,9 +698,6 @@ namespace FSM
             Records.RowFilter = whereClause;
         }
 
-        
-        
-
         public class ColourColumn : DataGridLabelColumn
         {
             protected override void Paint(Graphics g, Rectangle bounds, CurrencyManager source, int rowNum, Brush backBrush, Brush foreBrush, bool alignToRight)
@@ -891,8 +719,6 @@ namespace FSM
                 g.DrawString("", DataGridTableStyle.DataGrid.Font, Brushes.MidnightBlue, RectangleF.FromLTRB(rect.X, rect.Y, rect.Right, rect.Bottom));
             }
         }
-
-        
 
         private void btnFilter_Click(object sender, EventArgs e)
         {

@@ -12,8 +12,6 @@ namespace FSM
 {
     public class FRMEngineerTimesheetReport : FRMBaseForm, IForm
     {
-        
-
         public FRMEngineerTimesheetReport() : base()
         {
             base.Load += FRMEngineerTimesheetReport_Load;
@@ -85,28 +83,6 @@ namespace FSM
         }
 
         private GroupBox _grpJobs;
-
-        internal GroupBox grpJobs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJobs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJobs != null)
-                {
-                }
-
-                _grpJobs = value;
-                if (_grpJobs != null)
-                {
-                }
-            }
-        }
 
         private DateTimePicker _dtpTo;
 
@@ -182,51 +158,7 @@ namespace FSM
 
         private Label _Label9;
 
-        internal Label Label9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label9 != null)
-                {
-                }
-
-                _Label9 = value;
-                if (_Label9 != null)
-                {
-                }
-            }
-        }
-
         private Label _Label8;
-
-        internal Label Label8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label8 != null)
-                {
-                }
-
-                _Label8 = value;
-                if (_Label8 != null)
-                {
-                }
-            }
-        }
 
         private Label _Label6;
 
@@ -253,30 +185,6 @@ namespace FSM
         }
 
         private Button _btnExport;
-
-        internal Button btnExport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnExport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnExport != null)
-                {
-                    _btnExport.Click -= btnExport_Click;
-                }
-
-                _btnExport = value;
-                if (_btnExport != null)
-                {
-                    _btnExport.Click += btnExport_Click;
-                }
-            }
-        }
 
         private Button _btnReset;
 
@@ -330,30 +238,6 @@ namespace FSM
 
         private Button _btnRunReport;
 
-        internal Button btnRunReport
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnRunReport;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnRunReport != null)
-                {
-                    _btnRunReport.Click -= btnRunReport_Click;
-                }
-
-                _btnRunReport = value;
-                if (_btnRunReport != null)
-                {
-                    _btnRunReport.Click += btnRunReport_Click;
-                }
-            }
-        }
-
         private DataGrid _dgEngineers;
 
         internal DataGrid dgEngineers
@@ -384,105 +268,11 @@ namespace FSM
 
         private Button _btnClearAll;
 
-        internal Button btnClearAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnClearAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click -= btnClearAll_Click;
-                }
-
-                _btnClearAll = value;
-                if (_btnClearAll != null)
-                {
-                    _btnClearAll.Click += btnClearAll_Click;
-                }
-            }
-        }
-
         private Button _btnSelectAll;
-
-        internal Button btnSelectAll
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSelectAll;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click -= btnSelectAll_Click;
-                }
-
-                _btnSelectAll = value;
-                if (_btnSelectAll != null)
-                {
-                    _btnSelectAll.Click += btnSelectAll_Click;
-                }
-            }
-        }
 
         private Button _btnSummary;
 
-        internal Button btnSummary
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnSummary;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnSummary != null)
-                {
-                    _btnSummary.Click -= btnSummary_Click;
-                }
-
-                _btnSummary = value;
-                if (_btnSummary != null)
-                {
-                    _btnSummary.Click += btnSummary_Click;
-                }
-            }
-        }
-
         private Label _lblDept;
-
-        internal Label lblDept
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblDept;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblDept != null)
-                {
-                }
-
-                _lblDept = value;
-                if (_lblDept != null)
-                {
-                }
-            }
-        }
 
         private ComboBox _cboDept;
 
@@ -499,8 +289,6 @@ namespace FSM
             {
                 if (_cboDept != null)
                 {
-                    
-                    
                     _cboDept.SelectedIndexChanged -= cboDept_Changed;
                 }
 
@@ -816,9 +604,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -847,8 +632,6 @@ namespace FSM
         {
         }
 
-        
-        
         private DataView _dvTimesheets;
 
         private DataView TimesheetsDataview
@@ -908,9 +691,6 @@ namespace FSM
                 dgEngineers.DataSource = EngineersDataView;
             }
         }
-
-        
-        
 
         private void SetupComboBoxes()
         {
@@ -1158,9 +938,6 @@ dgEngineers.DataMember];
                 }
             }
         }
-
-        
-        
 
         public void PopulateDatagrid()
         {
@@ -2134,7 +1911,5 @@ dgEngineers.DataMember];
                 return Math.Floor(Minutes / (decimal)60) + ":" + Minutes % 60;
             }
         }
-
-        
     }
 }

@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public DataView EngineerVisitPartsAndProductsUsed_Get_For_EngineerVisitID(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -24,22 +23,6 @@ namespace FSM.Entity
                 dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_PartsAndProducts.ToString();
                 int c = dt.Constraints.Count;
                 return new DataView(dt);
-            }
-
-            public DataView EngineerVisitPartsAndProductsNeeded_Get_For_EngineerVisitID(int EngineerVisitID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitPartsAndProductsNeeded_Get_For_EngineerVisitID");
-                dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_PartsAndProducts.ToString();
-                return new DataView(dt);
-            }
-
-            public void PartsUsed_Delete(int EngineerVisitID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
-                _database.ExecuteSP_NO_Return("EngineerVisitPartsUsed_Delete");
             }
 
             public void PartsUsed_Insert(EngineerVisitPartsAndProducts oEngineerVisitPartsAndProducts)
@@ -64,13 +47,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitPartsUsed_Insert");
             }
 
-            public void ProductsUsed_Delete(int EngineerVisitID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
-                _database.ExecuteSP_NO_Return("EngineerVisitProductsUsed_Delete");
-            }
-
             public void ProductsUsed_Insert(EngineerVisitPartsAndProducts oEngineerVisitPartsAndProducts)
             {
                 _database.ClearParameter();
@@ -88,15 +64,6 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitPartsNeeded_Delete");
             }
 
-            public void PartsNeeded_Insert(EngineerVisitPartsAndProducts oEngineerVisitPartsAndProducts)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", oEngineerVisitPartsAndProducts.EngineerVisitID, true);
-                _database.AddParameter("@PartID", oEngineerVisitPartsAndProducts.PartOrProductID, true);
-                _database.AddParameter("@Quantity", oEngineerVisitPartsAndProducts.Quantity, true);
-                _database.ExecuteSP_NO_Return("EngineerVisitPartsNeeded_Insert");
-            }
-
             public void ProductsNeeded_Delete(int EngineerVisitID)
             {
                 _database.ClearParameter();
@@ -104,28 +71,11 @@ namespace FSM.Entity
                 _database.ExecuteSP_NO_Return("EngineerVisitProductsNeeded_Delete");
             }
 
-            public void ProductsNeeded_Insert(EngineerVisitPartsAndProducts oEngineerVisitPartsAndProducts)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@EngineerVisitID", oEngineerVisitPartsAndProducts.EngineerVisitID, true);
-                _database.AddParameter("@ProductID", oEngineerVisitPartsAndProducts.PartOrProductID, true);
-                _database.AddParameter("@Quantity", oEngineerVisitPartsAndProducts.Quantity, true);
-                _database.ExecuteSP_NO_Return("EngineerVisitProductsNeeded_Insert");
-            }
-
             public DataView EngineerVisitPartsAndProductsDistributed_GetAll_For_Engineer_Visit(int EngineerVisitID)
             {
                 _database.ClearParameter();
                 _database.AddParameter("@EngineerVisitID", EngineerVisitID, true);
                 var dt = _database.ExecuteSP_DataTable("EngineerVisitPartsAndProductsDistributed_GetAll_For_Engineer_Visit");
-                dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_PartsAndProductsDistributed.ToString();
-                return new DataView(dt);
-            }
-
-            public DataView EngineerVisitPartsAndProductsDistributed_GetAll_For_Distribution()
-            {
-                _database.ClearParameter();
-                var dt = _database.ExecuteSP_DataTable("EngineerVisitPartsAndProductsDistributed_GetAll_For_Distribution");
                 dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_PartsAndProductsDistributed.ToString();
                 return new DataView(dt);
             }
@@ -206,8 +156,6 @@ namespace FSM.Entity
                 var dt = _database.ExecuteSP_DataTable("EngineerVisitParts_Get_CurrentCost_ByJobID");
                 return new DataView(dt);
             }
-
-            
         }
     }
 }

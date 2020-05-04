@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,8 +76,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _ContactID = 0;
 
             public int ContactID
@@ -425,10 +422,7 @@ namespace FSM.Entity
 
             public int Relationship
             {
-                get
-                {
-                    return Conversions.ToInteger(_relationship);
-                }
+                get { return Conversions.ToInteger(_relationship); }
             }
 
             public int SetRelationship
@@ -510,8 +504,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_Postcode", value);
                 }
             }
-
-            
         }
     }
 }

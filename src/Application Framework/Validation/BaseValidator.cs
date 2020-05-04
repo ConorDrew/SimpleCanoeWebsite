@@ -5,7 +5,6 @@ namespace FSM
 {
     public class BaseValidator
     {
-        
         protected ValidatorMessages _validatorMessages;
 
         public ValidatorMessages ValidatorMessages
@@ -29,17 +28,6 @@ namespace FSM
             return msgString;
         }
 
-        public string WarningMessageString()
-        {
-            string msgString = "";
-            foreach (string s in _validatorMessages.WarningMessages)
-                msgString += s + Constants.vbCrLf;
-            return msgString;
-        }
-
-        
-        
-
         public BaseValidator()
         {
             _validatorMessages = new ValidatorMessages();
@@ -49,18 +37,10 @@ namespace FSM
         {
             _validatorMessages.CriticalMessages.Add(message);
         }
-
-        public void AddWarningMessage(string message)
-        {
-            _validatorMessages.WarningMessages.Add(message);
-        }
-
-        
     }
 
     public class ValidationException : Exception
     {
-        
         private BaseValidator m_valid = new BaseValidator();
 
         public BaseValidator Validator
@@ -76,14 +56,9 @@ namespace FSM
             }
         }
 
-        
-        
-
         public ValidationException(BaseValidator inValidator)
         {
             m_valid = inValidator;
         }
-
-        
     }
 }

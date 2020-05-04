@@ -46,19 +46,6 @@ namespace FSM.Importer.Validation
             }
         }
 
-        public int Parts_PreImportData(int SupplierID, string PartCode, string Description, string Category, string SupplierPartCode, double SupplierPrice)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@SupplierID", SupplierID, true);
-            _database.AddParameter("@PartCode", PartCode, true);
-            _database.AddParameter("@Description", Description, true);
-            _database.AddParameter("@Category", Category, true);
-            _database.AddParameter("@SupplierPartCode", SupplierPartCode, true);
-            _database.AddParameter("@SupplierPrice", SupplierPrice, true);
-            _database.ExecuteSP_NO_Return("Part_PreImportInsert");
-            return Conversions.ToInteger(_database.ExecuteScalar("SELECT COUNT(*) FROM tblPartsPreImport", false));
-        }
-
         public DataView Parts_GetPreImportData(int ValidateType = 0)
         {
             _database.ClearParameter();
@@ -131,36 +118,12 @@ namespace FSM.Importer.Validation
             _database.ExecuteSP_NO_Return("Parts_PreImportChange");
         }
 
-        public void Parts_UpdatePart(int ImportID, string ImportDescription, string ExistingSPC)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ImportID", ImportID, true);
-            _database.AddParameter("@ImportDesc", ImportDescription, true);
-            _database.AddParameter("@NewExistingSPC", ExistingSPC, true);
-            _database.AddParameter("@UserID", App.loggedInUser.UserID, true);
-            _database.ExecuteSP_NO_Return("Parts_PreImportUpdatePart");
-        }
-
         public DataTable Parts_PreImportStats()
         {
             _database.ClearParameter();
             var dt = _database.ExecuteSP_DataTable("Parts_PreImportStats");
             dt.TableName = "Parts_PreImportStats";
             return dt;
-        }
-
-        public void POInvoice_ClearImportTables()
-        {
-            _database.ClearParameter();
-            _database.ExecuteSP_NO_Return("POInvoiceImport_ClearImportTables");
-        }
-
-        public void POInvoiceImport_ClearRecordFromImportTables(string PurchaseOrderNo, string InvoiceNo)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@PurchaseOrderNo", PurchaseOrderNo, true);
-            _database.AddParameter("@InvoiceNo", InvoiceNo, true);
-            _database.ExecuteSP_NO_Return("POInvoiceImport_ClearRecordFromImportTables");
         }
 
         public int POInvoiceImport_InsertOrder(string InvoiceNo, DateTime InvoiceDate, string PurchaseOrderNo, int SupplierID, string OrderType, string nominalCode = null)
@@ -330,13 +293,6 @@ namespace FSM.Importer.Validation
             return new DataView(dt);
         }
 
-        public void POInvoiceImport_AddSupplierInvoiceDetailToPO(string PurchaseOrderNo)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@PurchaseOrderNo", PurchaseOrderNo, true);
-            _database.ExecuteSP_NO_Return("Parts_PreImportValidate");
-        }
-
         public void POInvoiceImport_UpdateValidationType(int ID, int ValidateResult = 0)
         {
             _database.ClearParameter();
@@ -351,30 +307,6 @@ namespace FSM.Importer.Validation
             _database.AddParameter("@ID", ID, true);
             _database.AddParameter("@Failed", Failed, true);
             _database.ExecuteSP_NO_Return("POInvoiceImport_UpdateFailedPart");
-        }
-
-        public void POInvoiceImport_UpdatePartQty(int PartID, int PartQty)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ID", PartID, true);
-            _database.AddParameter("@Quantity", PartQty, true);
-            _database.ExecuteSP_NO_Return("POInvoiceImport_UpdatePartQty");
-        }
-
-        public void POInvoiceImport_UpdatePartUnitPrice(int PartID, double PartUnitPrice)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ID", PartID, true);
-            _database.AddParameter("@UnitPrice", PartUnitPrice, true);
-            _database.ExecuteSP_NO_Return("POInvoiceImport_UpdatePartUnitPrice");
-        }
-
-        public void POInvoiceImport_UpdateOrderTotalsAfterPartChange(string PurchaseOrderNo, string InvoiceNo)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@PurchaseOrderNo", PurchaseOrderNo, true);
-            _database.AddParameter("@InvoiceNo", InvoiceNo, true);
-            _database.ExecuteSP_NO_Return("POInvoiceImport_UpdateOrderTotalsAfterPartChange");
         }
 
         //
@@ -419,100 +351,12 @@ namespace FSM.Importer.Validation
             return Conversions.ToInteger(_database.ExecuteScalar("SELECT OrderStatusID FROM tblOrder WHERE (OrderID = @OrderID)", false));
         }
 
-        public void PartsOrderedImport_ClearImportTable()
-        {
-            _database.ClearParameter();
-            _database.ExecuteSP_NO_Return("PartsOrderedImport_ClearImportTable");
-        }
-
-        public int Parts_CheckPartsOrderedImportCount()
-        {
-            _database.ClearParameter();
-            return Conversions.ToInteger(_database.ExecuteScalar("SELECT COUNT(*) FROM tblPartsOrderedImport", false));
-        }
-
-        public int PartsOrderedImport_CheckImportExists(string InvoiceNo, DateTime InvoiceDate, string PurchaseOrderNo, string SupplierPartCode, string Description, int Quantity)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@SupplierOrderNumber", InvoiceNo, true);
-            _database.AddParameter("@OrderDate", InvoiceDate, true);
-            _database.AddParameter("@PurchaseOrderNumber", PurchaseOrderNo, true);
-            _database.AddParameter("@SupplierPartCode", SupplierPartCode, true);
-            _database.AddParameter("@Description", Description, true);
-            _database.AddParameter("@Quantity", Quantity, true);
-            return Conversions.ToInteger(_database.ExecuteScalar("SELECT COUNT(*) AS Expr1 FROM tblPartsOrderedImport WHERE (SupplierOrderNumber = @SupplierOrderNumber) AND (OrderDate = @OrderDate) AND (PurchaseOrderNumber = @PurchaseOrderNumber) AND (SupplierPartCode = @SupplierPartCode) AND (Description = @Description) AND (Quantity = @Quantity)", false));
-        }
-
-        public void PartsOrderedImport_InsertPart(string SupplierOrderNumber, DateTime OrderDate, string PurchaseOrderNumber, string SupplierPartCode, string Description, int Quantity, int SupplierID, int ImportedByUserID)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@SupplierOrderNumber", SupplierOrderNumber, true);
-            _database.AddParameter("@OrderDate", OrderDate, true);
-            _database.AddParameter("@PurchaseOrderNumber", PurchaseOrderNumber, true);
-            _database.AddParameter("@SupplierPartCode", SupplierPartCode, true);
-            _database.AddParameter("@Description", Description, true);
-            _database.AddParameter("@Quantity", Quantity, true);
-            _database.AddParameter("@SupplierID", SupplierID, true);
-            _database.AddParameter("@ImportedByUserID", ImportedByUserID, true);
-            _database.ExecuteSP_NO_Return("PartsOrderedImport_InsertPart");
-        }
-
-        public DataView PartsOrderedImport_GetAllUnprocessedParts()
-        {
-            _database.ClearParameter();
-            var dt = _database.ExecuteSP_DataTable("PartsOrderedImport_GetAllUnprocessedParts");
-            dt.TableName = "tblPartsOrderedImport";
-            return new DataView(dt);
-        }
-
-        public DataView PartsOrderedImport_RevalidateRecords(int ValidateType)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ValidateType", ValidateType, true);
-            var dt = _database.ExecuteSP_DataTable("PartsOrderedImport_ReValidateRecords");
-            dt.TableName = "tblPartsOrderedImport";
-            return new DataView(dt);
-        }
-
-        public int PartsOrderedImport_ValidatePart(int SupplierID, string PartCode)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@SupplierID", SupplierID, true);
-            _database.AddParameter("@PartCode", PartCode, true);
-            return Conversions.ToInteger(_database.ExecuteScalar("SELECT COUNT(*)	FROM tblPart INNER JOIN tblPartSupplier ON tblPart.PartID = tblPartSupplier.PartID WHERE (tblPart.Deleted IS NULL OR tblPart.Deleted = 0) AND (tblPartSupplier.SupplierID = @SupplierID) AND (tblPartSupplier.PartCode = @PartCode)", false));
-        }
-
-        public void PartsOrderedImport_UpdateProcessed(int ID, bool Processed)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ID", ID, true);
-            _database.AddParameter("@Processed", Processed, true);
-            _database.ExecuteSP_NO_Return("PartsOrderedImport_UpdateProcessed");
-        }
-
         public void PartsOrderedImport_UpdateExclude(int ID, bool Exclude)
         {
             _database.ClearParameter();
             _database.AddParameter("@ID", ID, true);
             _database.AddParameter("@Exclude", Exclude, true);
             _database.ExecuteSP_NO_Return("PartsOrderedImport_UpdateExclude");
-        }
-
-        public void PartsOrderedImport_UpdateValidateType(int ID, int ValidateType)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ID", ID, true);
-            _database.AddParameter("@ValidateType", ValidateType, true);
-            _database.ExecuteSP_NO_Return("PartsOrderedImport_UpdateValidateType");
-        }
-
-        public DataView PartsOrderedImport_ShowData(int ValidateResult = 0)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ValidateType", ValidateResult, true);
-            var dt = _database.ExecuteSP_DataTable("PartsOrderedImport_ShowData");
-            dt.TableName = "PartsOrderedImport";
-            return new DataView(dt);
         }
 
         public void PartsOrderedImport_UpdatePurchaseOrderNumber(int ImportID, string PurchaseOrderNumber)
@@ -531,82 +375,12 @@ namespace FSM.Importer.Validation
             _database.ExecuteSP_NO_Return("PartsOrderedImport_UpdateSupplierPartCode");
         }
 
-        public int PartsOrderedImport_GetPartID(int SupplierID, string PartCode)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@SupplierID", SupplierID, true);
-            _database.AddParameter("@PartCode", PartCode, true);
-            return Conversions.ToInteger(_database.ExecuteScalar("SELECT tblPart.PartID FROM tblPart INNER JOIN tblPartSupplier ON tblPart.PartID = tblPartSupplier.PartID WHERE (tblPart.Deleted IS NULL OR tblPart.Deleted = 0) AND (tblPartSupplier.SupplierID = @SupplierID) AND (tblPartSupplier.PartCode = @PartCode) GROUP BY tblPart.PartID", false));
-        }
-
         public void PartsOrderedImport_UpdateDelete(int ID, bool ToBeDeleted)
         {
             _database.ClearParameter();
             _database.AddParameter("@ID", ID, true);
             _database.AddParameter("@ToBeDeleted", ToBeDeleted, true);
             _database.ExecuteSP_NO_Return("PartsOrderedImport_UpdateDelete");
-        }
-
-        public void PartsOrderedImport_ClearRecordFromImportTables(int ID)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ID", ID, true);
-            _database.ExecuteSP_NO_Return("PartsOrderedImport_ClearRecordFromImportTables");
-        }
-
-        public int Parts_CheckPartsInvoiceImportCount()
-        {
-            _database.ClearParameter();
-            return Conversions.ToInteger(_database.ExecuteScalar("SELECT COUNT(*) FROM tblPartsInvoiceImport", false));
-        }
-
-        public void Parts_PartsInvoiceImportData(string InvoiceNo, DateTime InvoiceDate, string PurchaseOrderNo, string Engineer, string SiteAddress, string OrderType, string SupplierPartCode, string Description, int Quantity, double UnitPrice, double NetAmount, double VATAmount, double GrossAmount)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@InvoiceNo", InvoiceNo, true);
-            _database.AddParameter("@InvoiceDate", InvoiceDate, true);
-            _database.AddParameter("@PurchaseOrderNo", PurchaseOrderNo, true);
-            _database.AddParameter("@Engineer", Engineer, true);
-            _database.AddParameter("@SiteAddress", SiteAddress, true);
-            _database.AddParameter("@OrderType", OrderType, true);
-            _database.AddParameter("@SupplierPartCode", SupplierPartCode, true);
-            _database.AddParameter("@Description", Description, true);
-            _database.AddParameter("@Quantity", Quantity, true);
-            _database.AddParameter("@UnitPrice", UnitPrice, true);
-            _database.AddParameter("@NetAmount", NetAmount, true);
-            _database.AddParameter("@VATAmount", VATAmount, true);
-            _database.AddParameter("@GrossAmount", GrossAmount, true);
-            _database.ExecuteSP_NO_Return("Parts_PartsInvoiceImport_Insert");
-        }
-
-        public DataView Parts_PartsInvoiceImport_ShowResults(int ValidateResult = 0)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ValidateResult", ValidateResult, true);
-            var dt = _database.ExecuteSP_DataTable("Parts_PartsInvoiceImport_ShowResults");
-            dt.TableName = "Parts_PartsInvoiceImport_ShowResults";
-            return new DataView(dt);
-        }
-
-        public int Parts_ClearPartsInvoiceImportTable()
-        {
-            _database.ClearParameter();
-            return Conversions.ToInteger(_database.ExecuteScalar("DELETE FROM tblPartsInvoiceImport"));
-        }
-
-        public void Parts_PartsInvoiceImport_UpdateExclude(int ID, bool Exclude)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ID", ID, true);
-            _database.AddParameter("@Exclude", Exclude, true);
-            _database.ExecuteSP_NO_Return("Parts_PartsInvoiceImport_UpdateExclude");
-        }
-
-        public void Parts_PartsInvoiceImport_ValidateImportData(int ValidateType = 0)
-        {
-            _database.ClearParameter();
-            _database.AddParameter("@ValidateType", ValidateType, true);
-            _database.ExecuteSP_NO_Return("Parts_PartsInvoiceImport_Validate");
         }
 
         public void BulkInsert(DataTable dt)

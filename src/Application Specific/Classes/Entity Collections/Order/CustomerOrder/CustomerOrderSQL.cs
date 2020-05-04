@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _database = database;
             }
 
-            
             public void Delete(int CustomerOrderID)
             {
                 _database.ClearParameter();
@@ -27,15 +26,6 @@ namespace FSM.Entity
                 _database.ClearParameter();
                 _database.AddParameter("@OrderID", OrderID, true);
                 _database.ExecuteSP_NO_Return("CustomerOrder_DeleteForOrder");
-            }
-
-            public DataView CustomerOrder_GetForOrder(int OrderID)
-            {
-                _database.ClearParameter();
-                _database.AddParameter("@OrderID", OrderID, true);
-                var dt = _database.ExecuteSP_DataTable("CustomerOrder_GetForOrder");
-                dt.TableName = Sys.Enums.TableNames.tblCustomer.ToString();
-                return new DataView(dt);
             }
 
             public CustomerOrder Insert(CustomerOrder oCustomerOrder)
@@ -77,8 +67,6 @@ namespace FSM.Entity
                     withBlock.AddParameter("@CustomerID", oCustomerOrder.CustomerID, true);
                 }
             }
-
-            
         }
     }
 }

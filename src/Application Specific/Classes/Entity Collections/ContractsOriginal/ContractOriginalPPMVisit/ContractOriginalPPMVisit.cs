@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -59,18 +58,7 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
             private int _ContractPPMVisitID = 0;
-
-            public int ContractPPMVisitID
-            {
-                get
-                {
-                    return _ContractPPMVisitID;
-                }
-            }
 
             public object SetContractPPMVisitID
             {
@@ -130,10 +118,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_JobID", value);
                 }
             }
-
-
-
-            
         }
     }
 }

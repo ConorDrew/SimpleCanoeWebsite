@@ -82,53 +82,7 @@ namespace FSM
 
         private Button _btnNew;
 
-        internal Button btnNew
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnNew;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnNew != null)
-                {
-                    _btnNew.Click -= Button1_Click;
-                }
-
-                _btnNew = value;
-                if (_btnNew != null)
-                {
-                    _btnNew.Click += Button1_Click;
-                }
-            }
-        }
-
         private Label _Label7;
-
-        internal Label Label7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Label7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Label7 != null)
-                {
-                }
-
-                _Label7 = value;
-                if (_Label7 != null)
-                {
-                }
-            }
-        }
 
         private Button _BtnCancel;
 
@@ -156,51 +110,7 @@ namespace FSM
 
         private Label _lblReference;
 
-        internal Label lblReference
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblReference;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblReference != null)
-                {
-                }
-
-                _lblReference = value;
-                if (_lblReference != null)
-                {
-                }
-            }
-        }
-
         private Label _lblMonthly;
-
-        internal Label lblMonthly
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMonthly;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMonthly != null)
-                {
-                }
-
-                _lblMonthly = value;
-                if (_lblMonthly != null)
-                {
-                }
-            }
-        }
 
         private Panel _grpPromo;
 
@@ -227,30 +137,6 @@ namespace FSM
         }
 
         private Button _btnPromoOK;
-
-        internal Button btnPromoOK
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnPromoOK;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnPromoOK != null)
-                {
-                    _btnPromoOK.Click -= btnPromoOK_Click;
-                }
-
-                _btnPromoOK = value;
-                if (_btnPromoOK != null)
-                {
-                    _btnPromoOK.Click += btnPromoOK_Click;
-                }
-            }
-        }
 
         private ComboBox _cboPromotion;
 
@@ -279,28 +165,6 @@ namespace FSM
         }
 
         private Label _lblPromotionalOffer;
-
-        internal Label lblPromotionalOffer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPromotionalOffer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPromotionalOffer != null)
-                {
-                }
-
-                _lblPromotionalOffer = value;
-                if (_lblPromotionalOffer != null)
-                {
-                }
-            }
-        }
 
         private Panel _grpContractType;
 
@@ -402,28 +266,6 @@ namespace FSM
 
         private Label _lblConType;
 
-        internal Label lblConType
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblConType;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblConType != null)
-                {
-                }
-
-                _lblConType = value;
-                if (_lblConType != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboReasonID;
 
         internal ComboBox cboReasonID
@@ -524,131 +366,13 @@ namespace FSM
 
         private Button _btnMinusSecond;
 
-        internal Button btnMinusSecond
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnMinusSecond;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnMinusSecond != null)
-                {
-                    _btnMinusSecond.Click -= btnMinusSecond_Click;
-                }
-
-                _btnMinusSecond = value;
-                if (_btnMinusSecond != null)
-                {
-                    _btnMinusSecond.Click += btnMinusSecond_Click;
-                }
-            }
-        }
-
         private Button _btnMinusMain;
-
-        internal Button btnMinusMain
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnMinusMain;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnMinusMain != null)
-                {
-                    _btnMinusMain.Click -= btnMinusMain_Click;
-                }
-
-                _btnMinusMain = value;
-                if (_btnMinusMain != null)
-                {
-                    _btnMinusMain.Click += btnMinusMain_Click;
-                }
-            }
-        }
 
         private Button _btnAddSecond;
 
-        internal Button btnAddSecond
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddSecond;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddSecond != null)
-                {
-                    _btnAddSecond.Click -= btnAddSecond_Click;
-                }
-
-                _btnAddSecond = value;
-                if (_btnAddSecond != null)
-                {
-                    _btnAddSecond.Click += btnAddSecond_Click;
-                }
-            }
-        }
-
         private Button _btnAddMain;
 
-        internal Button btnAddMain
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAddMain;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAddMain != null)
-                {
-                    _btnAddMain.Click -= btnAddMain_Click;
-                }
-
-                _btnAddMain = value;
-                if (_btnAddMain != null)
-                {
-                    _btnAddMain.Click += btnAddMain_Click;
-                }
-            }
-        }
-
         private Label _LblSecondApps2;
-
-        internal Label LblSecondApps2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LblSecondApps2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LblSecondApps2 != null)
-                {
-                }
-
-                _LblSecondApps2 = value;
-                if (_LblSecondApps2 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSecondryCount;
 
@@ -702,101 +426,11 @@ namespace FSM
 
         private Label _lblSecondOR;
 
-        internal Label lblSecondOR
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSecondOR;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSecondOR != null)
-                {
-                }
-
-                _lblSecondOR = value;
-                if (_lblSecondOR != null)
-                {
-                }
-            }
-        }
-
         private Button _btnAppsOK;
-
-        internal Button btnAppsOK
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAppsOK;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAppsOK != null)
-                {
-                    _btnAppsOK.Click -= btnAppsOK_Click;
-                }
-
-                _btnAppsOK = value;
-                if (_btnAppsOK != null)
-                {
-                    _btnAppsOK.Click += btnAppsOK_Click;
-                }
-            }
-        }
 
         private Label _lblAdditionalApps;
 
-        internal Label lblAdditionalApps
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAdditionalApps;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAdditionalApps != null)
-                {
-                }
-
-                _lblAdditionalApps = value;
-                if (_lblAdditionalApps != null)
-                {
-                }
-            }
-        }
-
         private Label _lblMainApps2;
-
-        internal Label lblMainApps2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMainApps2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMainApps2 != null)
-                {
-                }
-
-                _lblMainApps2 = value;
-                if (_lblMainApps2 != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtMainAppCount;
 
@@ -850,75 +484,9 @@ namespace FSM
 
         private Label _lblMainOR;
 
-        internal Label lblMainOR
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMainOR;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMainOR != null)
-                {
-                }
-
-                _lblMainOR = value;
-                if (_lblMainOR != null)
-                {
-                }
-            }
-        }
-
         private Label _lblMainApps;
 
-        internal Label lblMainApps
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblMainApps;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblMainApps != null)
-                {
-                }
-
-                _lblMainApps = value;
-                if (_lblMainApps != null)
-                {
-                }
-            }
-        }
-
         private Label _lblAppsCovered;
-
-        internal Label lblAppsCovered
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAppsCovered;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAppsCovered != null)
-                {
-                }
-
-                _lblAppsCovered = value;
-                if (_lblAppsCovered != null)
-                {
-                }
-            }
-        }
 
         private Panel _grpContractPeriod;
 
@@ -1022,28 +590,6 @@ namespace FSM
 
         private Label _lblConPeriod;
 
-        internal Label lblConPeriod
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblConPeriod;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblConPeriod != null)
-                {
-                }
-
-                _lblConPeriod = value;
-                if (_lblConPeriod != null)
-                {
-                }
-            }
-        }
-
         private DateTimePicker _dtpContractStartDate;
 
         internal DateTimePicker dtpContractStartDate
@@ -1118,53 +664,7 @@ namespace FSM
 
         private Button _btnAdditionalOK;
 
-        internal Button btnAdditionalOK
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnAdditionalOK;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnAdditionalOK != null)
-                {
-                    _btnAdditionalOK.Click -= btnAdditionalOK_Click;
-                }
-
-                _btnAdditionalOK = value;
-                if (_btnAdditionalOK != null)
-                {
-                    _btnAdditionalOK.Click += btnAdditionalOK_Click;
-                }
-            }
-        }
-
         private Label _lblAdditionalOptions;
-
-        internal Label lblAdditionalOptions
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAdditionalOptions;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAdditionalOptions != null)
-                {
-                }
-
-                _lblAdditionalOptions = value;
-                if (_lblAdditionalOptions != null)
-                {
-                }
-            }
-        }
 
         private CheckBox _chkPlumbingDrainage;
 
@@ -1296,28 +796,6 @@ namespace FSM
 
         private Label _lblPaymentMethod;
 
-        internal Label lblPaymentMethod
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPaymentMethod;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPaymentMethod != null)
-                {
-                }
-
-                _lblPaymentMethod = value;
-                if (_lblPaymentMethod != null)
-                {
-                }
-            }
-        }
-
         private ComboBox _cboPaymentType;
 
         internal ComboBox cboPaymentType
@@ -1370,51 +848,7 @@ namespace FSM
 
         private Label _lblPayer;
 
-        internal Label lblPayer
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPayer;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPayer != null)
-                {
-                }
-
-                _lblPayer = value;
-                if (_lblPayer != null)
-                {
-                }
-            }
-        }
-
         private Label _lblPayersDetail;
-
-        internal Label lblPayersDetail
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPayersDetail;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPayersDetail != null)
-                {
-                }
-
-                _lblPayersDetail = value;
-                if (_lblPayersDetail != null)
-                {
-                }
-            }
-        }
 
         private Panel _grpAdditionalDetails;
 
@@ -1466,28 +900,6 @@ namespace FSM
 
         private Label _lblServiceNotes;
 
-        internal Label lblServiceNotes
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblServiceNotes;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblServiceNotes != null)
-                {
-                }
-
-                _lblServiceNotes = value;
-                if (_lblServiceNotes != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtPONumber;
 
         internal TextBox txtPONumber
@@ -1514,51 +926,7 @@ namespace FSM
 
         private Label _lblPO;
 
-        internal Label lblPO
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPO;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPO != null)
-                {
-                }
-
-                _lblPO = value;
-                if (_lblPO != null)
-                {
-                }
-            }
-        }
-
         private Label _lblAddDetails;
-
-        internal Label lblAddDetails
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAddDetails;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAddDetails != null)
-                {
-                }
-
-                _lblAddDetails = value;
-                if (_lblAddDetails != null)
-                {
-                }
-            }
-        }
 
         private DataGridView _DgMain;
 
@@ -1852,51 +1220,7 @@ namespace FSM
 
         private Panel _Panel1;
 
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
-
         private Label _lblPaidBy;
-
-        internal Label lblPaidBy
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblPaidBy;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblPaidBy != null)
-                {
-                }
-
-                _lblPaidBy = value;
-                if (_lblPaidBy != null)
-                {
-                }
-            }
-        }
 
         private Panel _grpDD;
 
@@ -1972,51 +1296,7 @@ namespace FSM
 
         private Label _lblBankName;
 
-        internal Label lblBankName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblBankName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblBankName != null)
-                {
-                }
-
-                _lblBankName = value;
-                if (_lblBankName != null)
-                {
-                }
-            }
-        }
-
         private Label _lblAccNumber;
-
-        internal Label lblAccNumber
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblAccNumber;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblAccNumber != null)
-                {
-                }
-
-                _lblAccNumber = value;
-                if (_lblAccNumber != null)
-                {
-                }
-            }
-        }
 
         private TextBox _txtSortCode;
 
@@ -2044,51 +1324,7 @@ namespace FSM
 
         private Label _lblSortCode;
 
-        internal Label lblSortCode
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSortCode;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSortCode != null)
-                {
-                }
-
-                _lblSortCode = value;
-                if (_lblSortCode != null)
-                {
-                }
-            }
-        }
-
         private Panel _Panel2;
-
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
 
         private Button _btnRenew;
 
@@ -2141,28 +1377,6 @@ namespace FSM
         }
 
         private Label _lbl3;
-
-        internal Label lbl3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lbl3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lbl3 != null)
-                {
-                }
-
-                _lbl3 = value;
-                if (_lbl3 != null)
-                {
-                }
-            }
-        }
 
         private Label _lblRenewed;
 
@@ -2317,28 +1531,6 @@ namespace FSM
         // Do not modify it using the code editor.
 
         private GroupBox _grpContract;
-
-        internal GroupBox grpContract
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpContract;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpContract != null)
-                {
-                }
-
-                _grpContract = value;
-                if (_grpContract != null)
-                {
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -4723,7 +3915,6 @@ namespace FSM
                     string cipherAccount = wrapper.EncryptData(txtAccNumber.Text);
                     if ((b.Text ?? "") == "Create Contract")  // new contract
                     {
-                        
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
                             return default;
@@ -4768,11 +3959,8 @@ namespace FSM
                         App.ShowMessage("Contract " + lblContractRef.Text + " has been created.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
                     }
-
-                    
                     else if ((b.Text ?? "") == "Amend Contract") // amending old
                     {
-                        
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
                             return default;
@@ -4983,11 +4171,8 @@ namespace FSM
 
                         return true;
                     }
-
-                    
                     else if ((b.Text ?? "") == "Transfer Contract")
                     {
-                        
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
                             return default;
@@ -5117,11 +4302,8 @@ namespace FSM
                         App.ShowMessage("Contract " + lblContractRef.Text + " has been Transfered.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
                     }
-
-                    
                     else if ((b.Text ?? "") == "Renew Contract")
                     {
-                        
                         // INSERT
                         if (App.ShowMessage("Are you sure you want to save?" + Constants.vbCrLf + "Information cannot be altered after save and jobs will be created", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                         {
@@ -5211,8 +4393,6 @@ namespace FSM
                         b.Enabled = false;
                         App.ShowMessage("Contract " + lblContractRef.Text + " has been Renewed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
-
-                        
                     }
                 }
                 catch (ValidationException vex)

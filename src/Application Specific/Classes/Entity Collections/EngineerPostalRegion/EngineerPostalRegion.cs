@@ -13,7 +13,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -76,27 +75,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
-
-            private int _EngineerPostalRegionID = 0;
-
-            public int EngineerPostalRegionID
-            {
-                get
-                {
-                    return _EngineerPostalRegionID;
-                }
-            }
-
-            public object SetEngineerPostalRegionID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_EngineerPostalRegionID", value);
-                }
-            }
-
             private int _EngineerID = 0;
 
             public int EngineerID
@@ -114,31 +92,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_EngineerID", value);
                 }
             }
-
-            private int _PostalRegionID = 0;
-
-            public int PostalRegionID
-            {
-                get
-                {
-                    return _PostalRegionID;
-                }
-            }
-
-            public object SetPostalRegionID
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_PostalRegionID", value);
-                }
-            }
-
-
-
-
-
-
-            
         }
     }
 }

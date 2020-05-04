@@ -10,8 +10,6 @@ namespace FSM
 {
     public class UCOrderForJob : UCBase, IUserControl
     {
-        
-
         public UCOrderForJob() : base()
         {
             base.Load += UCOrderForJob_Load;
@@ -43,28 +41,6 @@ namespace FSM
         // It can be modified using the Windows Form Designer.
         // Do not modify it using the code editor.
         private GroupBox _grpJob;
-
-        internal GroupBox grpJob
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpJob;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpJob != null)
-                {
-                }
-
-                _grpJob = value;
-                if (_grpJob != null)
-                {
-                }
-            }
-        }
 
         private DataGrid _dgEngineerVisits;
 
@@ -144,103 +120,11 @@ namespace FSM
 
         private GroupBox _grpWarehouse;
 
-        internal GroupBox grpWarehouse
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpWarehouse;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpWarehouse != null)
-                {
-                }
-
-                _grpWarehouse = value;
-                if (_grpWarehouse != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtWarehouse;
-
-        internal TextBox txtWarehouse
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _txtWarehouse;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_txtWarehouse != null)
-                {
-                }
-
-                _txtWarehouse = value;
-                if (_txtWarehouse != null)
-                {
-                }
-            }
-        }
 
         private Button _btnFindWarehouse;
 
-        internal Button btnFindWarehouse
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _btnFindWarehouse;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_btnFindWarehouse != null)
-                {
-                    
-                    
-                    _btnFindWarehouse.Click -= btnFindWarehouse_Click;
-                }
-
-                _btnFindWarehouse = value;
-                if (_btnFindWarehouse != null)
-                {
-                    _btnFindWarehouse.Click += btnFindWarehouse_Click;
-                }
-            }
-        }
-
         private GroupBox _grpCustomerSearch;
-
-        internal GroupBox grpCustomerSearch
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _grpCustomerSearch;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_grpCustomerSearch != null)
-                {
-                }
-
-                _grpCustomerSearch = value;
-                if (_grpCustomerSearch != null)
-                {
-                }
-            }
-        }
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
@@ -366,9 +250,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadForm(object sender, EventArgs e)
         {
             LoadBaseControl(this);
@@ -382,9 +263,6 @@ namespace FSM
                 return null;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -451,9 +329,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupVisitsDataGrid()
         {
@@ -594,9 +469,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
         }
@@ -605,7 +477,5 @@ namespace FSM
         {
             return default;
         }
-
-        
     }
 }

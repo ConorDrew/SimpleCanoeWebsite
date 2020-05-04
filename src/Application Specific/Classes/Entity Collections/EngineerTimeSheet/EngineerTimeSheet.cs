@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,8 +76,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _EngineerTimeSheetID = 0;
 
             public int EngineerTimeSheetID
@@ -198,44 +195,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_EngineerVisitID", value);
                 }
             }
-
-            private string _AppointmentTime = string.Empty;
-
-            public string AppointmentTime
-            {
-                get
-                {
-                    return _AppointmentTime;
-                }
-            }
-
-            public object SetAppointmentTime
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_AppointmentTime", value);
-                }
-            }
-
-            private string _TimeSheetType = string.Empty;
-
-            public string TimeSheetType
-            {
-                get
-                {
-                    return _TimeSheetType;
-                }
-            }
-
-            public object SetTimeSheetType
-            {
-                set
-                {
-                    _dataTypeValidator.SetValue(this, "_TimeSheetType", value);
-                }
-            }
-
-            
         }
     }
 }
