@@ -141,30 +141,6 @@ namespace FSM
             }
         }
 
-        private FSMDataSetTableAdapters.Customer_Get_ForSiteIDTableAdapter _Customer_Get_ForSiteIDTableAdapter1;
-
-        internal FSMDataSetTableAdapters.Customer_Get_ForSiteIDTableAdapter Customer_Get_ForSiteIDTableAdapter1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Customer_Get_ForSiteIDTableAdapter1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Customer_Get_ForSiteIDTableAdapter1 != null)
-                {
-                }
-
-                _Customer_Get_ForSiteIDTableAdapter1 = value;
-                if (_Customer_Get_ForSiteIDTableAdapter1 != null)
-                {
-                }
-            }
-        }
-
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
@@ -172,7 +148,6 @@ namespace FSM
             _btnCancel.Click += new EventHandler(btnCancel_Click);
             _btnSave = new Button();
             _btnSave.Click += new EventHandler(btnSave_Click);
-            _Customer_Get_ForSiteIDTableAdapter1 = new FSMDataSetTableAdapters.Customer_Get_ForSiteIDTableAdapter();
             _ddReading = new ComboBox();
             _ddReading.SelectedIndexChanged += new EventHandler(ddReading_SelectedIndexChanged);
             _lblReading = new Label();
@@ -198,10 +173,6 @@ namespace FSM
             _btnSave.TabIndex = 39;
             _btnSave.Text = "Save";
             _btnSave.UseVisualStyleBackColor = true;
-            //
-            // Customer_Get_ForSiteIDTableAdapter1
-            //
-            _Customer_Get_ForSiteIDTableAdapter1.ClearBeforeFill = true;
             //
             // ddReading
             //

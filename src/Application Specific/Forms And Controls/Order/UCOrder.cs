@@ -1547,30 +1547,6 @@ namespace FSM
 
         private BindingSource _FSMDataSetBindingSource;
 
-        private FSMDataSet _FSMDataSet;
-
-        internal FSMDataSet FSMDataSet
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _FSMDataSet;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_FSMDataSet != null)
-                {
-                }
-
-                _FSMDataSet = value;
-                if (_FSMDataSet != null)
-                {
-                }
-            }
-        }
-
         private Button _btnAddSupplierInvoice;
 
         internal Button btnAddSupplierInvoice
@@ -2550,7 +2526,6 @@ namespace FSM
             this._lblGoodsTotal = new System.Windows.Forms.Label();
             this._Label17 = new System.Windows.Forms.Label();
             this._FSMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._FSMDataSet = new FSM.FSMDataSet();
             this._grpOrder.SuspendLayout();
             this._tcOrderDetails.SuspendLayout();
             this._tabDetails.SuspendLayout();
@@ -2578,7 +2553,6 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)(this._dgCredits)).BeginInit();
             this._GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._FSMDataSet)).BeginInit();
             this.SuspendLayout();
             //
             // _grpOrder
@@ -4057,13 +4031,7 @@ namespace FSM
             //
             // _FSMDataSetBindingSource
             //
-            this._FSMDataSetBindingSource.DataSource = this._FSMDataSet;
             this._FSMDataSetBindingSource.Position = 0;
-            //
-            // _FSMDataSet
-            //
-            this._FSMDataSet.DataSetName = "FSMDataSet";
-            this._FSMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             //
             // UCOrder
             //
@@ -4106,7 +4074,6 @@ namespace FSM
             this._GroupBox1.ResumeLayout(false);
             this._GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._FSMDataSet)).EndInit();
             this.ResumeLayout(false);
         }
 

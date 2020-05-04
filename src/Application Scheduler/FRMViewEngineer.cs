@@ -110,30 +110,6 @@ namespace FSM
             }
         }
 
-        private FSMDataSetTableAdapters.Customer_Get_ForSiteIDTableAdapter _Customer_Get_ForSiteIDTableAdapter1;
-
-        internal FSMDataSetTableAdapters.Customer_Get_ForSiteIDTableAdapter Customer_Get_ForSiteIDTableAdapter1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Customer_Get_ForSiteIDTableAdapter1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Customer_Get_ForSiteIDTableAdapter1 != null)
-                {
-                }
-
-                _Customer_Get_ForSiteIDTableAdapter1 = value;
-                if (_Customer_Get_ForSiteIDTableAdapter1 != null)
-                {
-                }
-            }
-        }
-
         private GroupBox _grpPostcodes;
 
         private TextBox _txtPostcode;
@@ -327,7 +303,6 @@ namespace FSM
             _lblTelNum = new Label();
             _lblManName = new Label();
             _lblName = new Label();
-            _Customer_Get_ForSiteIDTableAdapter1 = new FSMDataSetTableAdapters.Customer_Get_ForSiteIDTableAdapter();
             _grpPostcodes = new GroupBox();
             _txtPostcode = new TextBox();
             _grpQualifications = new GroupBox();
@@ -462,10 +437,6 @@ namespace FSM
             _lblName.Size = new Size(45, 13);
             _lblName.TabIndex = 0;
             _lblName.Text = "Name:";
-            //
-            // Customer_Get_ForSiteIDTableAdapter1
-            //
-            _Customer_Get_ForSiteIDTableAdapter1.ClearBeforeFill = true;
             //
             // grpPostcodes
             //

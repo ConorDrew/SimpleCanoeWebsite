@@ -14,7 +14,7 @@
     <ApplicationIcon>flagship.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>FSM</AssemblyName>
+    <AssemblyName>Apollo</AssemblyName>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
@@ -69,8 +69,7 @@
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>
-    </DefineConstants>
+    <DefineConstants>Debug</DefineConstants>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <DebugSymbols>true</DebugSymbols>
@@ -2260,14 +2259,6 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GaswayServicesFSMDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GaswayServicesFSMDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GaswayServicesFSMDataSet1.cs">
-      <DependentUpon>GaswayServicesFSMDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -2844,17 +2835,6 @@
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="GaswayServicesFSMDataSet1.xsc">
-      <DependentUpon>GaswayServicesFSMDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="GaswayServicesFSMDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GaswayServicesFSMDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GaswayServicesFSMDataSet1.xss">
-      <DependentUpon>GaswayServicesFSMDataSet1.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest">
       <SubType>Designer</SubType>
