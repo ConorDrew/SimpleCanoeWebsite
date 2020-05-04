@@ -1775,8 +1775,6 @@ namespace FSM
                 {
                     dgInvoiceAddress.CurrentRowIndex = 0;
                 }
-
-                dgInvoiceAddress.Select(dgInvoiceAddress.CurrentRowIndex);
             }
         }
 
