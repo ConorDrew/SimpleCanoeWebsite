@@ -553,7 +553,7 @@ namespace FSM
 
         private void Populate()
         {
-            Text = Conversions.ToString("Viewing Engineer : " + (DataTable)Engineer.Rows[0]["Name"]);
+            Text = Conversions.ToString("Viewing Engineer : " + Engineer.Rows[0]["Name"]);
             if (!Information.IsDBNull(Engineer.Rows[0]["Name"]))
             {
                 txtName.Text = Conversions.ToString(Engineer.Rows[0]["Name"]);
