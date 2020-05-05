@@ -1091,7 +1091,7 @@ dgEngineers.DataMember];
                 var drRw = dtTimes.Select(Conversions.ToString(Conversions.ToString("Engineer='" + SelectedJobDataRow["Engineer"] + "' AND Day='" + Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + "' AND Type='") + SelectedJobDataRow["TimeSheetType"] + "'"));
                 if (drRw.Length > 0)
                 {
-                    drRw[0]["Time"] = (long)drRw[0]["Time"] + DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(SelectedJobDataRow["StartDateTime"]), Helper.MakeDateTimeValid(SelectedJobDataRow["EndDateTime"]));
+                    drRw[0]["Time"] = Convert.ToDecimal(drRw[0]["Time"]) + DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(SelectedJobDataRow["StartDateTime"]), Helper.MakeDateTimeValid(SelectedJobDataRow["EndDateTime"]));
                 }
                 else
                 {
@@ -1142,12 +1142,12 @@ dgEngineers.DataMember];
                 }
                 else
                 {
-                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["StartDay"] > (DateTime)SelectedJobDataRow["StartDateTime"]))
+                    if (Convert.ToDateTime(drStartEnd[0]["StartDay"]) > Convert.ToDateTime(SelectedJobDataRow["StartDateTime"]))
                     {
                         drStartEnd[0]["StartDay"] = SelectedJobDataRow["StartDateTime"];
                     }
 
-                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["EndDay"] < (DateTime)SelectedJobDataRow["EndDateTime"]))
+                    if (Convert.ToDateTime(drStartEnd[0]["EndDay"]) < Convert.ToDateTime(SelectedJobDataRow["EndDateTime"]))
                     {
                         drStartEnd[0]["EndDay"] = SelectedJobDataRow["EndDateTime"];
                     }
@@ -1251,7 +1251,7 @@ dgEngineers.DataMember];
                                 {
                                     if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                                     {
-                                        allTotal += (int)al["Time"];
+                                        allTotal += Convert.ToInt32(al["Time"]);
                                     }
                                 }
 
@@ -1286,7 +1286,8 @@ dgEngineers.DataMember];
                         {
                             int total = 0;
                             for (int l = 0, loopTo2 = rSel.Length - 1; l <= loopTo2; l++)
-                                total += (int)rSel[l]["Time"];
+                                total += Convert.ToInt32(rSel[l]["Time"]);
+
                             extraRw[cnt] += formatTime(total);
                         }
                         else
@@ -1392,7 +1393,7 @@ dgEngineers.DataMember];
                         {
                             if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                             {
-                                allTotal += (int)al["Time"];
+                                allTotal += Convert.ToInt32(al["Time"]);
                             }
                         }
 
@@ -1427,7 +1428,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo3 = rSel.Length - 1; l <= loopTo3; l++)
-                        total += (int)rSel[l]["Time"];
+                        total += Convert.ToInt32(rSel[l]["Time"]);
                     extraRw[cnt] += formatTime(total);
                 }
                 else
@@ -1472,7 +1473,7 @@ dgEngineers.DataMember];
                     {
                         int total = 0;
                         for (int l = 0, loopTo4 = rSel.Length - 1; l <= loopTo4; l++)
-                            total += (int)rSel[l]["Time"];
+                            total += Convert.ToInt32(rSel[l]["Time"]);
                         extraRw[cnt] = formatTime(total);
                     }
                     else
@@ -1495,7 +1496,7 @@ dgEngineers.DataMember];
                 int totalUnallocated = 0;
                 var drDayUnallocated = dtUnallocated.Select("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "'");
                 for (int b = 0, loopTo5 = drDayUnallocated.Length - 1; b <= loopTo5; b++)
-                    totalUnallocated += (int)drDayUnallocated[b]["Time"];
+                    totalUnallocated += Convert.ToInt32(drDayUnallocated[b]["Time"]);
                 extraRw[cnt] = formatTime(totalUnallocated);
                 cnt += 1;
             }
@@ -1512,7 +1513,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo6 = rSel.Length - 1; l <= loopTo6; l++)
-                        total += (int)rSel[l]["Time"];
+                        total += Convert.ToInt32(rSel[l]["Time"]);
                     extraRw[cnt] = formatTime(total);
                 }
                 else
@@ -1531,7 +1532,7 @@ dgEngineers.DataMember];
             extraRw = exportData.NewRow();
             exportData.Rows.Add(extraRw);
             i += 1;
-            Entity.Sys.ExportHelper.Export(exportData, "Timesheet " + Strings.Format(dtpFrom.Value, "dd-MM-yy") + " - " + Strings.Format(dtpTo.Value, "dd-MM-yy"), Entity.Sys.Enums.ExportType.CSV);
+            Entity.Sys.ExportHelper.Export(exportData, "Timesheet " + Strings.Format(dtpFrom.Value, "dd-MM-yy") + " - " + Strings.Format(dtpTo.Value, "dd-MM-yy"), Entity.Sys.Enums.ExportType.XLS);
         }
 
         public void ExportSummary(string Department = null)
@@ -1616,7 +1617,7 @@ dgEngineers.DataMember];
                 var drRw = dtTimes.Select(Conversions.ToString(Conversions.ToString("Engineer='" + SelectedJobDataRow["Engineer"] + "' AND Day='" + Strings.Format(SelectedJobDataRow["StartDateTime"], "dd/MM/yyyy") + "' AND Type='") + SelectedJobDataRow["TimeSheetType"] + "'"));
                 if (drRw.Length > 0)
                 {
-                    drRw[0]["Time"] = (long)drRw[0]["Time"] + DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(SelectedJobDataRow["StartDateTime"]), Helper.MakeDateTimeValid(SelectedJobDataRow["EndDateTime"]));
+                    drRw[0]["Time"] = Convert.ToDecimal(drRw[0]["Time"]) + DateAndTime.DateDiff(DateInterval.Minute, Helper.MakeDateTimeValid(SelectedJobDataRow["StartDateTime"]), Helper.MakeDateTimeValid(SelectedJobDataRow["EndDateTime"]));
                 }
                 else
                 {
@@ -1667,12 +1668,12 @@ dgEngineers.DataMember];
                 }
                 else
                 {
-                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["StartDay"] > (DateTime)SelectedJobDataRow["StartDateTime"]))
+                    if (Convert.ToDateTime(drStartEnd[0]["StartDay"]) > Convert.ToDateTime(SelectedJobDataRow["StartDateTime"]))
                     {
                         drStartEnd[0]["StartDay"] = SelectedJobDataRow["StartDateTime"];
                     }
 
-                    if (Conversions.ToBoolean((DateTime)drStartEnd[0]["EndDay"] < (DateTime)SelectedJobDataRow["EndDateTime"]))
+                    if (Convert.ToDateTime(drStartEnd[0]["EndDay"]) < Convert.ToDateTime(SelectedJobDataRow["EndDateTime"]))
                     {
                         drStartEnd[0]["EndDay"] = SelectedJobDataRow["EndDateTime"];
                     }
@@ -1699,7 +1700,7 @@ dgEngineers.DataMember];
                             rSel = dtTimes.Select("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "' AND Engineer='" + lastEngineer + "' AND Type='" + dr["Name"].ToString() + "'");
                             if (rSel.Length > 0)
                             {
-                                MinsTally += (int)rSel[0]["Time"];
+                                MinsTally += Convert.ToInt32(rSel[0]["Time"]);
                             }
                         }
 
@@ -1721,7 +1722,7 @@ dgEngineers.DataMember];
                                 {
                                     if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                                     {
-                                        allTotal += (int)al["Time"];
+                                        allTotal += Convert.ToInt32(al["Time"]);
                                     }
                                 }
 
@@ -1748,7 +1749,7 @@ dgEngineers.DataMember];
                         {
                             int total = 0;
                             for (int l = 0, loopTo2 = rSel.Length - 1; l <= loopTo2; l++)
-                                total += (int)rSel[l]["Time"];
+                                total += Convert.ToInt32(rSel[l]["Time"]);
                             MinsTally += total;
                         }
                     }
@@ -1777,7 +1778,7 @@ dgEngineers.DataMember];
                     rSel = dtTimes.Select(Conversions.ToString("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "' AND Engineer='" + SelectedJobDataRow["Engineer"] + "' AND Type='" + dr["Name"].ToString() + "'"));
                     if (rSel.Length > 0)
                     {
-                        MinsTally += (int)rSel[0]["Time"];
+                        MinsTally += Convert.ToInt32(rSel[0]["Time"]);
                     }
                 }
 
@@ -1799,7 +1800,7 @@ dgEngineers.DataMember];
                         {
                             if (Conversions.ToBoolean(!Operators.ConditionalCompareObjectEqual(al["Type"], "Total Hours > 17:00", false)))
                             {
-                                allTotal += (int)al["Time"];
+                                allTotal += Convert.ToInt32(al["Time"]);
                             }
                         }
 
@@ -1826,7 +1827,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo3 = rSel.Length - 1; l <= loopTo3; l++)
-                        total += (int)rSel[l]["Time"];
+                        total += Convert.ToInt32(rSel[l]["Time"]);
                     MinsTally += total;
                 }
             }
@@ -1848,7 +1849,7 @@ dgEngineers.DataMember];
                     {
                         int total = 0;
                         for (int l = 0, loopTo4 = rSel.Length - 1; l <= loopTo4; l++)
-                            total += (int)rSel[l]["Time"];
+                            total += Convert.ToInt32(rSel[l]["Time"]);
                         MinsTally += total;
                     }
                 }
@@ -1863,7 +1864,7 @@ dgEngineers.DataMember];
                 int totalUnallocated = 0;
                 var drDayUnallocated = dtUnallocated.Select("Day='" + Strings.Format(theDay["Day"], "dd/MM/yyyy") + "'");
                 for (int b = 0, loopTo5 = drDayUnallocated.Length - 1; b <= loopTo5; b++)
-                    totalUnallocated += (int)drDayUnallocated[b]["Time"];
+                    totalUnallocated += Convert.ToInt32(drDayUnallocated[b]["Time"]);
                 MinsTally += totalUnallocated;
             }
 
@@ -1877,7 +1878,7 @@ dgEngineers.DataMember];
                 {
                     int total = 0;
                     for (int l = 0, loopTo6 = rSel.Length - 1; l <= loopTo6; l++)
-                        total += (int)rSel[l]["Time"];
+                        total += Convert.ToInt32(rSel[l]["Time"]);
                     MinsTally += total;
                 }
             }
