@@ -352,8 +352,11 @@ namespace FSM
             var dtContracts = App.DB.ContractOriginal.ProcessContract(ID);
 
             if (dtContracts.Rows.Count < 1)
+            {
                 App.ShowMessage("Contract is not assigned to any properties, unable to print", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return;
+
+            }
             var details = new ArrayList() { dtContracts };
             var oPrint = new Entity.Sys.Printing(details, ((UCContractOriginal)LoadedControl).CurrentContract.ContractReference.Trim() + " ", Entity.Sys.Enums.SystemDocumentType.ContractOption1);
         }
