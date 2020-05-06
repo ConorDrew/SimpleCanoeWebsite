@@ -672,32 +672,6 @@ namespace FSM
 
         private Button _btnDeleteContract;
 
-        private ContextMenu _cmnuContractOptions;
-
-        internal ContextMenu cmnuContractOptions
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _cmnuContractOptions;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_cmnuContractOptions != null)
-                {
-                }
-
-                _cmnuContractOptions = value;
-                if (_cmnuContractOptions != null)
-                {
-                }
-            }
-        }
-
-        private MenuItem _mnuContractOpt1;
-
         private CheckBox _chbAcceptChargeChanges;
 
         internal CheckBox chbAcceptChargeChanges
@@ -1655,1202 +1629,1214 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            _grpCustomer = new GroupBox();
-            _chkIsPFH = new CheckBox();
-            _cbIsOutOfScope = new CheckBox();
-            _btnExportSites = new Button();
-            _btnExportSites.Click += new EventHandler(btnExportSites_Click);
-            _chkMOTService = new CheckBox();
-            _txtAlertEmail = new TextBox();
-            _Label13 = new Label();
-            _txtServWinter = new TextBox();
-            _txtServSummer = new TextBox();
-            _Label12 = new Label();
-            _chkSuperBooking = new CheckBox();
-            _cboTerms = new ComboBox();
-            _Label9 = new Label();
-            _cboDepartment = new ComboBox();
-            _Label8 = new Label();
-            _txtNominal = new TextBox();
-            _Label7 = new Label();
-            _chkJobPriorityRequired = new CheckBox();
-            _chkPONumReq = new CheckBox();
-            _btnSelectLogoImage = new Button();
-            _btnSelectLogoImage.Click += new EventHandler(btnSelectLogoImage_Click);
-            _picLogo = new PictureBox();
-            _Label6 = new Label();
-            _cboType = new ComboBox();
-            _Label2 = new Label();
-            _txtName = new TextBox();
-            _lblName = new Label();
-            _cboRegionID = new ComboBox();
-            _lblRegionID = new Label();
-            _txtNotes = new TextBox();
-            _lblNotes = new Label();
-            _txtAccountNumber = new TextBox();
-            _lblAccountNumber = new Label();
-            _cboStatus = new ComboBox();
-            _lblStatus = new Label();
-            _TabControl1 = new TabControl();
-            _tabMainDetails = new TabPage();
-            _tabContracts = new TabPage();
-            _pnlContracts = new Panel();
-            _gpbContracts = new GroupBox();
-            _btnDeleteContract = new Button();
-            _btnDeleteContract.Click += new EventHandler(btnDeleteContract_Click);
-            _dgContracts = new DataGrid();
-            _dgContracts.DoubleClick += new EventHandler(dgContracts_DoubleClick);
-            _btnAddContract = new Button();
-            _btnAddContract.Click += new EventHandler(btnAddContract_Click);
-            _tabCharges = new TabPage();
-            _grbCharges = new GroupBox();
-            _txtSpendLimit = new TextBox();
-            _lblJobSpendLimit = new Label();
-            _txtMainContractorDiscount = new TextBox();
-            _Label5 = new Label();
-            _chbAcceptChargeChanges = new CheckBox();
-            _Label3 = new Label();
-            _txtRatesMarkup = new TextBox();
-            _Label4 = new Label();
-            _Label1 = new Label();
-            _txtMileageRate = new TextBox();
-            _txtPartsMarkup = new TextBox();
-            _pnlCharges = new Panel();
-            _tabDocuments = new TabPage();
-            _pnlDocuments = new Panel();
-            _tabQuotes = new TabPage();
-            _pnlQuotes = new Panel();
-            _tabPriority = new TabPage();
-            _dgvPriority = new DataGridView();
-            _Label11 = new Label();
-            _dgRequirements = new DataGrid();
-            _dgRequirements.MouseUp += new MouseEventHandler(dgRequirement_MouseUp);
-            _Label10 = new Label();
-            _tabParts = new TabPage();
-            _Label14 = new Label();
-            _txtPartSearch = new TextBox();
-            _txtPartSearch.TextChanged += new EventHandler(txtPartSearch_Change);
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _btnAdd = new Button();
-            _btnAdd.Click += new EventHandler(btnAdd_Click);
-            _dgvParts = new DataGridView();
-            _tabServiceDates = new TabPage();
-            _tabCreation = new TabPage();
-            _btnEngDelete = new Button();
-            _btnEngDelete.Click += new EventHandler(btnEngDelete_Click);
-            _btnEngAdd = new Button();
-            _btnEngAdd.Click += new EventHandler(btnEngAdd_Click);
-            _dgRaiseEng = new DataGridView();
-            _dgRaiseEng.CellDoubleClick += new DataGridViewCellEventHandler(dgRaiseEng_CellContentClick);
-            _tabAuthority = new TabPage();
-            _grpAudit = new GroupBox();
-            _dgAuthorityAudit = new DataGrid();
-            _gpCustAuth = new GroupBox();
-            _btnSaveAuth = new Button();
-            _btnSaveAuth.Click += new EventHandler(btnSaveAuth_Click);
-            _txtCustAuthority = new TextBox();
-            _tabAlerts = new TabPage();
-            _grpCustomerAlerts = new GroupBox();
-            _grpSite = new GroupBox();
-            _btnAddCustomerAlert = new Button();
-            _btnAddCustomerAlert.Click += new EventHandler(btnAddCustomerAlert_Click);
-            _btnDeleteCustomerAlert = new Button();
-            _btnDeleteCustomerAlert.Click += new EventHandler(btnDeleteCustomerAlert_Click);
-            _txtCustomerAlertEmailAddress = new TextBox();
-            _lblEmailAddressMsg = new Label();
-            _btnSaveCustomerAlert = new Button();
-            _btnSaveCustomerAlert.Click += new EventHandler(btnSaveCustomerAlert_Click);
-            _cboAlertType = new ComboBox();
-            _lblCustomerAlertEmailAddress = new Label();
-            _lblAlertType = new Label();
-            _dgCustomerAlerts = new DataGrid();
-            _dgCustomerAlerts.Click += new EventHandler(dgCustomerAlerts_Click);
-            _cmnuContractOptions = new ContextMenu();
-            _mnuContractOpt1 = new MenuItem();
-            _mnuContractOpt1.Click += new EventHandler(mnuContractOpt1_Click);
-            _tt = new ToolTip(components);
-            _pnlServiceProcess = new Panel();
-            _grpCustomer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_picLogo).BeginInit();
-            _TabControl1.SuspendLayout();
-            _tabMainDetails.SuspendLayout();
-            _tabContracts.SuspendLayout();
-            _pnlContracts.SuspendLayout();
-            _gpbContracts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgContracts).BeginInit();
-            _tabCharges.SuspendLayout();
-            _grbCharges.SuspendLayout();
-            _tabDocuments.SuspendLayout();
-            _tabQuotes.SuspendLayout();
-            _tabPriority.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvPriority).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgRequirements).BeginInit();
-            _tabParts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvParts).BeginInit();
-            _tabServiceDates.SuspendLayout();
-            _tabCreation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgRaiseEng).BeginInit();
-            _tabAuthority.SuspendLayout();
-            _grpAudit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAuthorityAudit).BeginInit();
-            _gpCustAuth.SuspendLayout();
-            _tabAlerts.SuspendLayout();
-            _grpCustomerAlerts.SuspendLayout();
-            _grpSite.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCustomerAlerts).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this._grpCustomer = new System.Windows.Forms.GroupBox();
+            this._chkIsPFH = new System.Windows.Forms.CheckBox();
+            this._cbIsOutOfScope = new System.Windows.Forms.CheckBox();
+            this._btnExportSites = new System.Windows.Forms.Button();
+            this._chkMOTService = new System.Windows.Forms.CheckBox();
+            this._txtAlertEmail = new System.Windows.Forms.TextBox();
+            this._Label13 = new System.Windows.Forms.Label();
+            this._txtServWinter = new System.Windows.Forms.TextBox();
+            this._txtServSummer = new System.Windows.Forms.TextBox();
+            this._Label12 = new System.Windows.Forms.Label();
+            this._chkSuperBooking = new System.Windows.Forms.CheckBox();
+            this._cboTerms = new System.Windows.Forms.ComboBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._cboDepartment = new System.Windows.Forms.ComboBox();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._txtNominal = new System.Windows.Forms.TextBox();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._chkJobPriorityRequired = new System.Windows.Forms.CheckBox();
+            this._chkPONumReq = new System.Windows.Forms.CheckBox();
+            this._btnSelectLogoImage = new System.Windows.Forms.Button();
+            this._picLogo = new System.Windows.Forms.PictureBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._lblName = new System.Windows.Forms.Label();
+            this._cboRegionID = new System.Windows.Forms.ComboBox();
+            this._lblRegionID = new System.Windows.Forms.Label();
+            this._txtNotes = new System.Windows.Forms.TextBox();
+            this._lblNotes = new System.Windows.Forms.Label();
+            this._txtAccountNumber = new System.Windows.Forms.TextBox();
+            this._lblAccountNumber = new System.Windows.Forms.Label();
+            this._cboStatus = new System.Windows.Forms.ComboBox();
+            this._lblStatus = new System.Windows.Forms.Label();
+            this._TabControl1 = new System.Windows.Forms.TabControl();
+            this._tabMainDetails = new System.Windows.Forms.TabPage();
+            this._tabContracts = new System.Windows.Forms.TabPage();
+            this._pnlContracts = new System.Windows.Forms.Panel();
+            this._gpbContracts = new System.Windows.Forms.GroupBox();
+            this._btnDeleteContract = new System.Windows.Forms.Button();
+            this._dgContracts = new System.Windows.Forms.DataGrid();
+            this._btnAddContract = new System.Windows.Forms.Button();
+            this._tabCharges = new System.Windows.Forms.TabPage();
+            this._grbCharges = new System.Windows.Forms.GroupBox();
+            this._txtSpendLimit = new System.Windows.Forms.TextBox();
+            this._lblJobSpendLimit = new System.Windows.Forms.Label();
+            this._txtMainContractorDiscount = new System.Windows.Forms.TextBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._chbAcceptChargeChanges = new System.Windows.Forms.CheckBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtRatesMarkup = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtMileageRate = new System.Windows.Forms.TextBox();
+            this._txtPartsMarkup = new System.Windows.Forms.TextBox();
+            this._pnlCharges = new System.Windows.Forms.Panel();
+            this._tabDocuments = new System.Windows.Forms.TabPage();
+            this._pnlDocuments = new System.Windows.Forms.Panel();
+            this._tabQuotes = new System.Windows.Forms.TabPage();
+            this._pnlQuotes = new System.Windows.Forms.Panel();
+            this._tabPriority = new System.Windows.Forms.TabPage();
+            this._dgvPriority = new System.Windows.Forms.DataGridView();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._dgRequirements = new System.Windows.Forms.DataGrid();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._tabParts = new System.Windows.Forms.TabPage();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._txtPartSearch = new System.Windows.Forms.TextBox();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this._dgvParts = new System.Windows.Forms.DataGridView();
+            this._tabServiceDates = new System.Windows.Forms.TabPage();
+            this._pnlServiceProcess = new System.Windows.Forms.Panel();
+            this._tabCreation = new System.Windows.Forms.TabPage();
+            this._btnEngDelete = new System.Windows.Forms.Button();
+            this._btnEngAdd = new System.Windows.Forms.Button();
+            this._dgRaiseEng = new System.Windows.Forms.DataGridView();
+            this._tabAuthority = new System.Windows.Forms.TabPage();
+            this._grpAudit = new System.Windows.Forms.GroupBox();
+            this._dgAuthorityAudit = new System.Windows.Forms.DataGrid();
+            this._gpCustAuth = new System.Windows.Forms.GroupBox();
+            this._btnSaveAuth = new System.Windows.Forms.Button();
+            this._txtCustAuthority = new System.Windows.Forms.TextBox();
+            this._tabAlerts = new System.Windows.Forms.TabPage();
+            this._grpCustomerAlerts = new System.Windows.Forms.GroupBox();
+            this._grpSite = new System.Windows.Forms.GroupBox();
+            this._btnAddCustomerAlert = new System.Windows.Forms.Button();
+            this._btnDeleteCustomerAlert = new System.Windows.Forms.Button();
+            this._txtCustomerAlertEmailAddress = new System.Windows.Forms.TextBox();
+            this._lblEmailAddressMsg = new System.Windows.Forms.Label();
+            this._btnSaveCustomerAlert = new System.Windows.Forms.Button();
+            this._cboAlertType = new System.Windows.Forms.ComboBox();
+            this._lblCustomerAlertEmailAddress = new System.Windows.Forms.Label();
+            this._lblAlertType = new System.Windows.Forms.Label();
+            this._dgCustomerAlerts = new System.Windows.Forms.DataGrid();
+            this._tt = new System.Windows.Forms.ToolTip(this.components);
+            this._grpCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._picLogo)).BeginInit();
+            this._TabControl1.SuspendLayout();
+            this._tabMainDetails.SuspendLayout();
+            this._tabContracts.SuspendLayout();
+            this._pnlContracts.SuspendLayout();
+            this._gpbContracts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgContracts)).BeginInit();
+            this._tabCharges.SuspendLayout();
+            this._grbCharges.SuspendLayout();
+            this._tabDocuments.SuspendLayout();
+            this._tabQuotes.SuspendLayout();
+            this._tabPriority.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPriority)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgRequirements)).BeginInit();
+            this._tabParts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvParts)).BeginInit();
+            this._tabServiceDates.SuspendLayout();
+            this._tabCreation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgRaiseEng)).BeginInit();
+            this._tabAuthority.SuspendLayout();
+            this._grpAudit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAuthorityAudit)).BeginInit();
+            this._gpCustAuth.SuspendLayout();
+            this._tabAlerts.SuspendLayout();
+            this._grpCustomerAlerts.SuspendLayout();
+            this._grpSite.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCustomerAlerts)).BeginInit();
+            this.SuspendLayout();
             //
-            // grpCustomer
+            // _grpCustomer
             //
-            _grpCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            this._grpCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpCustomer.Controls.Add(this._chkIsPFH);
+            this._grpCustomer.Controls.Add(this._cbIsOutOfScope);
+            this._grpCustomer.Controls.Add(this._btnExportSites);
+            this._grpCustomer.Controls.Add(this._chkMOTService);
+            this._grpCustomer.Controls.Add(this._txtAlertEmail);
+            this._grpCustomer.Controls.Add(this._Label13);
+            this._grpCustomer.Controls.Add(this._txtServWinter);
+            this._grpCustomer.Controls.Add(this._txtServSummer);
+            this._grpCustomer.Controls.Add(this._Label12);
+            this._grpCustomer.Controls.Add(this._chkSuperBooking);
+            this._grpCustomer.Controls.Add(this._cboTerms);
+            this._grpCustomer.Controls.Add(this._Label9);
+            this._grpCustomer.Controls.Add(this._cboDepartment);
+            this._grpCustomer.Controls.Add(this._Label8);
+            this._grpCustomer.Controls.Add(this._txtNominal);
+            this._grpCustomer.Controls.Add(this._Label7);
+            this._grpCustomer.Controls.Add(this._chkJobPriorityRequired);
+            this._grpCustomer.Controls.Add(this._chkPONumReq);
+            this._grpCustomer.Controls.Add(this._btnSelectLogoImage);
+            this._grpCustomer.Controls.Add(this._picLogo);
+            this._grpCustomer.Controls.Add(this._Label6);
+            this._grpCustomer.Controls.Add(this._cboType);
+            this._grpCustomer.Controls.Add(this._Label2);
+            this._grpCustomer.Controls.Add(this._txtName);
+            this._grpCustomer.Controls.Add(this._lblName);
+            this._grpCustomer.Controls.Add(this._cboRegionID);
+            this._grpCustomer.Controls.Add(this._lblRegionID);
+            this._grpCustomer.Controls.Add(this._txtNotes);
+            this._grpCustomer.Controls.Add(this._lblNotes);
+            this._grpCustomer.Controls.Add(this._txtAccountNumber);
+            this._grpCustomer.Controls.Add(this._lblAccountNumber);
+            this._grpCustomer.Controls.Add(this._cboStatus);
+            this._grpCustomer.Controls.Add(this._lblStatus);
+            this._grpCustomer.Location = new System.Drawing.Point(9, 8);
+            this._grpCustomer.Name = "_grpCustomer";
+            this._grpCustomer.Size = new System.Drawing.Size(629, 558);
+            this._grpCustomer.TabIndex = 0;
+            this._grpCustomer.TabStop = false;
+            this._grpCustomer.Text = "Details";
+            //
+            // _chkIsPFH
+            //
+            this._chkIsPFH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkIsPFH.AutoSize = true;
+            this._chkIsPFH.Location = new System.Drawing.Point(555, 353);
+            this._chkIsPFH.Name = "_chkIsPFH";
+            this._chkIsPFH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._chkIsPFH.Size = new System.Drawing.Size(62, 17);
+            this._chkIsPFH.TabIndex = 58;
+            this._chkIsPFH.Text = "Is PFH";
+            this._chkIsPFH.UseVisualStyleBackColor = true;
+            //
+            // _cbIsOutOfScope
+            //
+            this._cbIsOutOfScope.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._cbIsOutOfScope.AutoSize = true;
+            this._cbIsOutOfScope.Location = new System.Drawing.Point(516, 376);
+            this._cbIsOutOfScope.Name = "_cbIsOutOfScope";
+            this._cbIsOutOfScope.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._cbIsOutOfScope.Size = new System.Drawing.Size(102, 17);
+            this._cbIsOutOfScope.TabIndex = 57;
+            this._cbIsOutOfScope.Text = "Out Of Scope";
+            this._cbIsOutOfScope.UseVisualStyleBackColor = true;
+            //
+            // _btnExportSites
+            //
+            this._btnExportSites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExportSites.Location = new System.Drawing.Point(6, 527);
+            this._btnExportSites.Name = "_btnExportSites";
+            this._btnExportSites.Size = new System.Drawing.Size(103, 25);
+            this._btnExportSites.TabIndex = 56;
+            this._btnExportSites.Text = "Export Sites";
+            this._btnExportSites.Click += new System.EventHandler(this.btnExportSites_Click);
+            //
+            // _chkMOTService
+            //
+            this._chkMOTService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkMOTService.AutoSize = true;
+            this._chkMOTService.Location = new System.Drawing.Point(479, 398);
+            this._chkMOTService.Name = "_chkMOTService";
+            this._chkMOTService.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._chkMOTService.Size = new System.Drawing.Size(139, 17);
+            this._chkMOTService.TabIndex = 55;
+            this._chkMOTService.Text = "M.O.T Style Service";
+            this._chkMOTService.UseVisualStyleBackColor = true;
+            //
+            // _txtAlertEmail
+            //
+            this._txtAlertEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAlertEmail.Location = new System.Drawing.Point(120, 261);
+            this._txtAlertEmail.MaxLength = 255;
+            this._txtAlertEmail.Name = "_txtAlertEmail";
+            this._txtAlertEmail.Size = new System.Drawing.Size(498, 21);
+            this._txtAlertEmail.TabIndex = 54;
+            this._txtAlertEmail.Tag = "Customer.Name";
+            //
+            // _Label13
+            //
+            this._Label13.Location = new System.Drawing.Point(8, 264);
+            this._Label13.Name = "_Label13";
+            this._Label13.Size = new System.Drawing.Size(89, 20);
+            this._Label13.TabIndex = 53;
+            this._Label13.Text = "Alert Email";
+            //
+            // _txtServWinter
+            //
+            this._txtServWinter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtServWinter.Location = new System.Drawing.Point(540, 520);
+            this._txtServWinter.MaxLength = 50;
+            this._txtServWinter.Name = "_txtServWinter";
+            this._txtServWinter.Size = new System.Drawing.Size(77, 21);
+            this._txtServWinter.TabIndex = 52;
+            this._txtServWinter.Tag = " ";
+            //
+            // _txtServSummer
+            //
+            this._txtServSummer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtServSummer.Location = new System.Drawing.Point(415, 520);
+            this._txtServSummer.MaxLength = 50;
+            this._txtServSummer.Name = "_txtServSummer";
+            this._txtServSummer.Size = new System.Drawing.Size(77, 21);
+            this._txtServSummer.TabIndex = 51;
+            this._txtServSummer.Tag = " ";
+            //
+            // _Label12
+            //
+            this._Label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label12.Location = new System.Drawing.Point(270, 514);
+            this._Label12.Name = "_Label12";
+            this._Label12.Size = new System.Drawing.Size(113, 27);
+            this._Label12.TabIndex = 50;
+            this._Label12.Text = "Summer/Winter Servicing P/Month";
+            //
+            // _chkSuperBooking
+            //
+            this._chkSuperBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkSuperBooking.AutoSize = true;
+            this._chkSuperBooking.Location = new System.Drawing.Point(444, 464);
+            this._chkSuperBooking.Name = "_chkSuperBooking";
+            this._chkSuperBooking.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._chkSuperBooking.Size = new System.Drawing.Size(174, 17);
+            this._chkSuperBooking.TabIndex = 49;
+            this._chkSuperBooking.Text = "Coordinator Booking Only";
+            this._chkSuperBooking.UseVisualStyleBackColor = true;
+            //
+            // _cboTerms
+            //
+            this._cboTerms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboTerms.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboTerms.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboTerms.Location = new System.Drawing.Point(120, 227);
+            this._cboTerms.Name = "_cboTerms";
+            this._cboTerms.Size = new System.Drawing.Size(498, 21);
+            this._cboTerms.TabIndex = 48;
+            this._cboTerms.Tag = "Customer.Status";
+            //
+            // _Label9
+            //
+            this._Label9.Location = new System.Drawing.Point(8, 226);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(103, 20);
+            this._Label9.TabIndex = 47;
+            this._Label9.Text = "Terms";
+            //
+            // _cboDepartment
+            //
+            this._cboDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboDepartment.Location = new System.Drawing.Point(415, 488);
+            this._cboDepartment.Name = "_cboDepartment";
+            this._cboDepartment.Size = new System.Drawing.Size(203, 21);
+            this._cboDepartment.TabIndex = 46;
+            this._cboDepartment.Tag = "Customer.TypeID";
+            //
+            // _Label8
+            //
+            this._Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label8.Location = new System.Drawing.Point(270, 491);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(139, 23);
+            this._Label8.TabIndex = 45;
+            this._Label8.Text = "Override Department";
+            //
+            // _txtNominal
+            //
+            this._txtNominal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNominal.Location = new System.Drawing.Point(120, 193);
+            this._txtNominal.MaxLength = 50;
+            this._txtNominal.Name = "_txtNominal";
+            this._txtNominal.Size = new System.Drawing.Size(498, 21);
+            this._txtNominal.TabIndex = 11;
+            this._txtNominal.Tag = " ";
+            //
+            // _Label7
+            //
+            this._Label7.Location = new System.Drawing.Point(8, 196);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(103, 20);
+            this._Label7.TabIndex = 10;
+            this._Label7.Text = "Nominal Code";
+            //
+            // _chkJobPriorityRequired
+            //
+            this._chkJobPriorityRequired.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkJobPriorityRequired.AutoSize = true;
+            this._chkJobPriorityRequired.Location = new System.Drawing.Point(473, 442);
+            this._chkJobPriorityRequired.Name = "_chkJobPriorityRequired";
+            this._chkJobPriorityRequired.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._chkJobPriorityRequired.Size = new System.Drawing.Size(145, 17);
+            this._chkJobPriorityRequired.TabIndex = 17;
+            this._chkJobPriorityRequired.Text = "Job Priority Required";
+            this._chkJobPriorityRequired.UseVisualStyleBackColor = true;
+            //
+            // _chkPONumReq
+            //
+            this._chkPONumReq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkPONumReq.AutoSize = true;
+            this._chkPONumReq.Location = new System.Drawing.Point(472, 420);
+            this._chkPONumReq.Name = "_chkPONumReq";
+            this._chkPONumReq.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._chkPONumReq.Size = new System.Drawing.Size(146, 17);
+            this._chkPONumReq.TabIndex = 16;
+            this._chkPONumReq.Text = "PO Number Required";
+            this._chkPONumReq.UseVisualStyleBackColor = true;
+            //
+            // _btnSelectLogoImage
+            //
+            this._btnSelectLogoImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSelectLogoImage.Location = new System.Drawing.Point(263, 416);
+            this._btnSelectLogoImage.Name = "_btnSelectLogoImage";
+            this._btnSelectLogoImage.Size = new System.Drawing.Size(31, 23);
+            this._btnSelectLogoImage.TabIndex = 15;
+            this._btnSelectLogoImage.Text = "...";
+            this._btnSelectLogoImage.UseVisualStyleBackColor = true;
+            this._btnSelectLogoImage.Click += new System.EventHandler(this.btnSelectLogoImage_Click);
+            //
+            // _picLogo
+            //
+            this._picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._picLogo.BackColor = System.Drawing.Color.White;
+            this._picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._picLogo.Location = new System.Drawing.Point(120, 417);
+            this._picLogo.Name = "_picLogo";
+            this._picLogo.Size = new System.Drawing.Size(135, 135);
+            this._picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picLogo.TabIndex = 44;
+            this._picLogo.TabStop = false;
+            //
+            // _Label6
+            //
+            this._Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label6.Location = new System.Drawing.Point(8, 423);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(62, 20);
+            this._Label6.TabIndex = 14;
+            this._Label6.Text = "Logo";
+            //
+            // _cboType
+            //
+            this._cboType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(120, 57);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(498, 21);
+            this._cboType.TabIndex = 3;
+            this._cboType.Tag = "Customer.TypeID";
+            //
+            // _Label2
+            //
+            this._Label2.Location = new System.Drawing.Point(8, 60);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(66, 23);
+            this._Label2.TabIndex = 2;
+            this._Label2.Text = "Type";
+            //
+            // _txtName
+            //
+            this._txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtName.Location = new System.Drawing.Point(120, 23);
+            this._txtName.MaxLength = 255;
+            this._txtName.Name = "_txtName";
+            this._txtName.Size = new System.Drawing.Size(498, 21);
+            this._txtName.TabIndex = 1;
+            this._txtName.Tag = "Customer.Name";
+            //
+            // _lblName
+            //
+            this._lblName.Location = new System.Drawing.Point(8, 26);
+            this._lblName.Name = "_lblName";
+            this._lblName.Size = new System.Drawing.Size(53, 20);
+            this._lblName.TabIndex = 0;
+            this._lblName.Text = "Name";
+            //
+            // _cboRegionID
+            //
+            this._cboRegionID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboRegionID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboRegionID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboRegionID.Location = new System.Drawing.Point(120, 91);
+            this._cboRegionID.Name = "_cboRegionID";
+            this._cboRegionID.Size = new System.Drawing.Size(498, 21);
+            this._cboRegionID.TabIndex = 5;
+            this._cboRegionID.Tag = "Customer.RegionID";
+            //
+            // _lblRegionID
+            //
+            this._lblRegionID.Location = new System.Drawing.Point(8, 94);
+            this._lblRegionID.Name = "_lblRegionID";
+            this._lblRegionID.Size = new System.Drawing.Size(55, 20);
+            this._lblRegionID.TabIndex = 4;
+            this._lblRegionID.Text = "Region ";
+            //
+            // _txtNotes
+            //
+            this._txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNotes.Location = new System.Drawing.Point(120, 295);
+            this._txtNotes.Multiline = true;
+            this._txtNotes.Name = "_txtNotes";
+            this._txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtNotes.Size = new System.Drawing.Size(497, 50);
+            this._txtNotes.TabIndex = 13;
+            this._txtNotes.Tag = "Customer.Notes";
+            //
+            // _lblNotes
+            //
+            this._lblNotes.Location = new System.Drawing.Point(8, 298);
+            this._lblNotes.Name = "_lblNotes";
+            this._lblNotes.Size = new System.Drawing.Size(62, 20);
+            this._lblNotes.TabIndex = 12;
+            this._lblNotes.Text = "Notes";
+            //
+            // _txtAccountNumber
+            //
+            this._txtAccountNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAccountNumber.Location = new System.Drawing.Point(120, 125);
+            this._txtAccountNumber.MaxLength = 50;
+            this._txtAccountNumber.Name = "_txtAccountNumber";
+            this._txtAccountNumber.Size = new System.Drawing.Size(498, 21);
+            this._txtAccountNumber.TabIndex = 7;
+            this._txtAccountNumber.Tag = "Customer.AccountNumber";
+            //
+            // _lblAccountNumber
+            //
+            this._lblAccountNumber.Location = new System.Drawing.Point(8, 128);
+            this._lblAccountNumber.Name = "_lblAccountNumber";
+            this._lblAccountNumber.Size = new System.Drawing.Size(103, 20);
+            this._lblAccountNumber.TabIndex = 6;
+            this._lblAccountNumber.Text = "Account Number";
+            //
+            // _cboStatus
+            //
+            this._cboStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStatus.Location = new System.Drawing.Point(120, 159);
+            this._cboStatus.Name = "_cboStatus";
+            this._cboStatus.Size = new System.Drawing.Size(498, 21);
+            this._cboStatus.TabIndex = 9;
+            this._cboStatus.Tag = "Customer.Status";
+            //
+            // _lblStatus
+            //
+            this._lblStatus.Location = new System.Drawing.Point(8, 162);
+            this._lblStatus.Name = "_lblStatus";
+            this._lblStatus.Size = new System.Drawing.Size(65, 20);
+            this._lblStatus.TabIndex = 8;
+            this._lblStatus.Text = "Status";
+            //
+            // _TabControl1
+            //
+            this._TabControl1.Controls.Add(this._tabMainDetails);
+            this._TabControl1.Controls.Add(this._tabContracts);
+            this._TabControl1.Controls.Add(this._tabCharges);
+            this._TabControl1.Controls.Add(this._tabDocuments);
+            this._TabControl1.Controls.Add(this._tabQuotes);
+            this._TabControl1.Controls.Add(this._tabPriority);
+            this._TabControl1.Controls.Add(this._tabParts);
+            this._TabControl1.Controls.Add(this._tabServiceDates);
+            this._TabControl1.Controls.Add(this._tabCreation);
+            this._TabControl1.Controls.Add(this._tabAuthority);
+            this._TabControl1.Controls.Add(this._tabAlerts);
+            this._TabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._TabControl1.Location = new System.Drawing.Point(0, 0);
+            this._TabControl1.Name = "_TabControl1";
+            this._TabControl1.SelectedIndex = 0;
+            this._TabControl1.Size = new System.Drawing.Size(653, 600);
+            this._TabControl1.TabIndex = 0;
+            //
+            // _tabMainDetails
+            //
+            this._tabMainDetails.Controls.Add(this._grpCustomer);
+            this._tabMainDetails.Location = new System.Drawing.Point(4, 22);
+            this._tabMainDetails.Name = "_tabMainDetails";
+            this._tabMainDetails.Size = new System.Drawing.Size(645, 574);
+            this._tabMainDetails.TabIndex = 0;
+            this._tabMainDetails.Text = "Main Details";
+            //
+            // _tabContracts
+            //
+            this._tabContracts.Controls.Add(this._pnlContracts);
+            this._tabContracts.Location = new System.Drawing.Point(4, 22);
+            this._tabContracts.Name = "_tabContracts";
+            this._tabContracts.Size = new System.Drawing.Size(645, 574);
+            this._tabContracts.TabIndex = 4;
+            this._tabContracts.Text = "Contracts";
+            //
+            // _pnlContracts
+            //
+            this._pnlContracts.Controls.Add(this._gpbContracts);
+            this._pnlContracts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlContracts.Location = new System.Drawing.Point(0, 0);
+            this._pnlContracts.Name = "_pnlContracts";
+            this._pnlContracts.Size = new System.Drawing.Size(645, 574);
+            this._pnlContracts.TabIndex = 1;
+            //
+            // _gpbContracts
+            //
+            this._gpbContracts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbContracts.Controls.Add(this._btnDeleteContract);
+            this._gpbContracts.Controls.Add(this._dgContracts);
+            this._gpbContracts.Controls.Add(this._btnAddContract);
+            this._gpbContracts.Location = new System.Drawing.Point(8, 8);
+            this._gpbContracts.Name = "_gpbContracts";
+            this._gpbContracts.Size = new System.Drawing.Size(632, 555);
+            this._gpbContracts.TabIndex = 0;
+            this._gpbContracts.TabStop = false;
+            this._gpbContracts.Text = "Contract - Double click to view";
+            //
+            // _btnDeleteContract
+            //
+            this._btnDeleteContract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDeleteContract.Location = new System.Drawing.Point(549, 523);
+            this._btnDeleteContract.Name = "_btnDeleteContract";
+            this._btnDeleteContract.Size = new System.Drawing.Size(75, 23);
+            this._btnDeleteContract.TabIndex = 2;
+            this._btnDeleteContract.Text = "Delete";
+            this._btnDeleteContract.Click += new System.EventHandler(this.btnDeleteContract_Click);
+            //
+            // _dgContracts
+            //
+            this._dgContracts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgContracts.DataMember = "";
+            this._dgContracts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgContracts.Location = new System.Drawing.Point(8, 16);
+            this._dgContracts.Name = "_dgContracts";
+            this._dgContracts.Size = new System.Drawing.Size(616, 499);
+            this._dgContracts.TabIndex = 1;
+            this._dgContracts.DoubleClick += new System.EventHandler(this.dgContracts_DoubleClick);
+            //
+            // _btnAddContract
+            //
+            this._btnAddContract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddContract.Location = new System.Drawing.Point(8, 523);
+            this._btnAddContract.Name = "_btnAddContract";
+            this._btnAddContract.Size = new System.Drawing.Size(75, 23);
+            this._btnAddContract.TabIndex = 0;
+            this._btnAddContract.Text = "Add";
+            this._btnAddContract.UseVisualStyleBackColor = true;
+            this._btnAddContract.Click += new System.EventHandler(this.btnAddContract_Click);
+            //
+            // _tabCharges
+            //
+            this._tabCharges.Controls.Add(this._grbCharges);
+            this._tabCharges.Location = new System.Drawing.Point(4, 22);
+            this._tabCharges.Name = "_tabCharges";
+            this._tabCharges.Size = new System.Drawing.Size(645, 574);
+            this._tabCharges.TabIndex = 7;
+            this._tabCharges.Text = "Charges";
+            //
+            // _grbCharges
+            //
+            this._grbCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grbCharges.Controls.Add(this._txtSpendLimit);
+            this._grbCharges.Controls.Add(this._lblJobSpendLimit);
+            this._grbCharges.Controls.Add(this._txtMainContractorDiscount);
+            this._grbCharges.Controls.Add(this._Label5);
+            this._grbCharges.Controls.Add(this._chbAcceptChargeChanges);
+            this._grbCharges.Controls.Add(this._Label3);
+            this._grbCharges.Controls.Add(this._txtRatesMarkup);
+            this._grbCharges.Controls.Add(this._Label4);
+            this._grbCharges.Controls.Add(this._Label1);
+            this._grbCharges.Controls.Add(this._txtMileageRate);
+            this._grbCharges.Controls.Add(this._txtPartsMarkup);
+            this._grbCharges.Controls.Add(this._pnlCharges);
+            this._grbCharges.Location = new System.Drawing.Point(8, 0);
+            this._grbCharges.Name = "_grbCharges";
+            this._grbCharges.Size = new System.Drawing.Size(633, 571);
+            this._grbCharges.TabIndex = 0;
+            this._grbCharges.TabStop = false;
+            this._grbCharges.Text = "Charges";
+            //
+            // _txtSpendLimit
+            //
+            this._txtSpendLimit.Location = new System.Drawing.Point(122, 70);
+            this._txtSpendLimit.Name = "_txtSpendLimit";
+            this._txtSpendLimit.Size = new System.Drawing.Size(64, 21);
+            this._txtSpendLimit.TabIndex = 78;
+            //
+            // _lblJobSpendLimit
+            //
+            this._lblJobSpendLimit.AutoSize = true;
+            this._lblJobSpendLimit.Location = new System.Drawing.Point(8, 73);
+            this._lblJobSpendLimit.Name = "_lblJobSpendLimit";
+            this._lblJobSpendLimit.Size = new System.Drawing.Size(108, 13);
+            this._lblJobSpendLimit.TabIndex = 77;
+            this._lblJobSpendLimit.Text = "Job Spend Limit £";
+            //
+            // _txtMainContractorDiscount
+            //
+            this._txtMainContractorDiscount.Location = new System.Drawing.Point(461, 72);
+            this._txtMainContractorDiscount.Name = "_txtMainContractorDiscount";
+            this._txtMainContractorDiscount.Size = new System.Drawing.Size(64, 21);
+            this._txtMainContractorDiscount.TabIndex = 8;
+            //
+            // _Label5
+            //
+            this._Label5.Location = new System.Drawing.Point(278, 73);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(176, 21);
+            this._Label5.TabIndex = 7;
+            this._Label5.Text = "Main Contractor Discount %";
+            //
+            // _chbAcceptChargeChanges
+            //
+            this._chbAcceptChargeChanges.BackColor = System.Drawing.SystemColors.Info;
+            this._chbAcceptChargeChanges.Location = new System.Drawing.Point(8, 16);
+            this._chbAcceptChargeChanges.Name = "_chbAcceptChargeChanges";
+            this._chbAcceptChargeChanges.Size = new System.Drawing.Size(480, 24);
+            this._chbAcceptChargeChanges.TabIndex = 0;
+            this._chbAcceptChargeChanges.Text = "Always accept changes to default charges made at system level";
+            this._chbAcceptChargeChanges.UseVisualStyleBackColor = false;
+            //
+            // _Label3
+            //
+            this._Label3.Location = new System.Drawing.Point(368, 48);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(93, 21);
+            this._Label3.TabIndex = 5;
+            this._Label3.Text = "Rates Markup";
+            //
+            // _txtRatesMarkup
+            //
+            this._txtRatesMarkup.Location = new System.Drawing.Point(461, 48);
+            this._txtRatesMarkup.Name = "_txtRatesMarkup";
+            this._txtRatesMarkup.Size = new System.Drawing.Size(64, 21);
+            this._txtRatesMarkup.TabIndex = 6;
+            //
+            // _Label4
+            //
+            this._Label4.Location = new System.Drawing.Point(8, 48);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(97, 21);
+            this._Label4.TabIndex = 1;
+            this._Label4.Text = "Labour Markup";
+            //
+            // _Label1
+            //
+            this._Label1.Location = new System.Drawing.Point(210, 48);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(90, 21);
+            this._Label1.TabIndex = 3;
+            this._Label1.Text = "Parts Markup";
+            //
+            // _txtMileageRate
+            //
+            this._txtMileageRate.Location = new System.Drawing.Point(122, 48);
+            this._txtMileageRate.Name = "_txtMileageRate";
+            this._txtMileageRate.Size = new System.Drawing.Size(64, 21);
+            this._txtMileageRate.TabIndex = 2;
+            //
+            // _txtPartsMarkup
+            //
+            this._txtPartsMarkup.Location = new System.Drawing.Point(301, 48);
+            this._txtPartsMarkup.Name = "_txtPartsMarkup";
+            this._txtPartsMarkup.Size = new System.Drawing.Size(62, 21);
+            this._txtPartsMarkup.TabIndex = 4;
+            //
+            // _pnlCharges
+            //
+            this._pnlCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlCharges.Location = new System.Drawing.Point(8, 97);
+            this._pnlCharges.Name = "_pnlCharges";
+            this._pnlCharges.Size = new System.Drawing.Size(617, 466);
+            this._pnlCharges.TabIndex = 9;
+            //
+            // _tabDocuments
+            //
+            this._tabDocuments.Controls.Add(this._pnlDocuments);
+            this._tabDocuments.Location = new System.Drawing.Point(4, 22);
+            this._tabDocuments.Name = "_tabDocuments";
+            this._tabDocuments.Size = new System.Drawing.Size(645, 574);
+            this._tabDocuments.TabIndex = 2;
+            this._tabDocuments.Text = "Documents";
+            //
+            // _pnlDocuments
+            //
+            this._pnlDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlDocuments.Location = new System.Drawing.Point(0, 0);
+            this._pnlDocuments.Name = "_pnlDocuments";
+            this._pnlDocuments.Size = new System.Drawing.Size(645, 574);
+            this._pnlDocuments.TabIndex = 1;
+            //
+            // _tabQuotes
+            //
+            this._tabQuotes.Controls.Add(this._pnlQuotes);
+            this._tabQuotes.Location = new System.Drawing.Point(4, 22);
+            this._tabQuotes.Name = "_tabQuotes";
+            this._tabQuotes.Size = new System.Drawing.Size(645, 574);
+            this._tabQuotes.TabIndex = 5;
+            this._tabQuotes.Text = "Quotes";
+            //
+            // _pnlQuotes
+            //
+            this._pnlQuotes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlQuotes.Location = new System.Drawing.Point(0, 0);
+            this._pnlQuotes.Name = "_pnlQuotes";
+            this._pnlQuotes.Size = new System.Drawing.Size(645, 574);
+            this._pnlQuotes.TabIndex = 1;
+            //
+            // _tabPriority
+            //
+            this._tabPriority.Controls.Add(this._dgvPriority);
+            this._tabPriority.Controls.Add(this._Label11);
+            this._tabPriority.Controls.Add(this._dgRequirements);
+            this._tabPriority.Controls.Add(this._Label10);
+            this._tabPriority.Location = new System.Drawing.Point(4, 22);
+            this._tabPriority.Name = "_tabPriority";
+            this._tabPriority.Size = new System.Drawing.Size(645, 574);
+            this._tabPriority.TabIndex = 8;
+            this._tabPriority.Text = "Priorities / Requirements";
+            this._tabPriority.UseVisualStyleBackColor = true;
+            //
+            // _dgvPriority
+            //
+            this._dgvPriority.AllowUserToAddRows = false;
+            this._dgvPriority.AllowUserToDeleteRows = false;
+            this._dgvPriority.AllowUserToResizeColumns = false;
+            this._dgvPriority.AllowUserToResizeRows = false;
+            this._dgvPriority.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvPriority.Location = new System.Drawing.Point(37, 70);
+            this._dgvPriority.MultiSelect = false;
+            this._dgvPriority.Name = "_dgvPriority";
+            this._dgvPriority.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._dgvPriority.Size = new System.Drawing.Size(456, 170);
+            this._dgvPriority.TabIndex = 10;
+            //
+            // _Label11
+            //
+            this._Label11.Location = new System.Drawing.Point(34, 294);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(103, 20);
+            this._Label11.TabIndex = 9;
+            this._Label11.Text = "Requirements";
+            //
+            // _dgRequirements
+            //
+            this._dgRequirements.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgRequirements.DataMember = "";
+            this._dgRequirements.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgRequirements.Location = new System.Drawing.Point(37, 317);
+            this._dgRequirements.Name = "_dgRequirements";
+            this._dgRequirements.Size = new System.Drawing.Size(592, 196);
+            this._dgRequirements.TabIndex = 8;
+            this._dgRequirements.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgRequirement_MouseUp);
+            //
+            // _Label10
+            //
+            this._Label10.Location = new System.Drawing.Point(34, 47);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(103, 20);
+            this._Label10.TabIndex = 7;
+            this._Label10.Text = "Priorities";
+            //
+            // _tabParts
+            //
+            this._tabParts.Controls.Add(this._Label14);
+            this._tabParts.Controls.Add(this._txtPartSearch);
+            this._tabParts.Controls.Add(this._btnDelete);
+            this._tabParts.Controls.Add(this._btnAdd);
+            this._tabParts.Controls.Add(this._dgvParts);
+            this._tabParts.Location = new System.Drawing.Point(4, 22);
+            this._tabParts.Name = "_tabParts";
+            this._tabParts.Size = new System.Drawing.Size(645, 574);
+            this._tabParts.TabIndex = 9;
+            this._tabParts.Text = "Associated Supplier Parts";
+            this._tabParts.UseVisualStyleBackColor = true;
+            //
+            // _Label14
+            //
+            this._Label14.AutoSize = true;
+            this._Label14.Location = new System.Drawing.Point(3, 34);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(47, 13);
+            this._Label14.TabIndex = 4;
+            this._Label14.Text = "Search";
+            //
+            // _txtPartSearch
+            //
+            this._txtPartSearch.Location = new System.Drawing.Point(82, 31);
+            this._txtPartSearch.Name = "_txtPartSearch";
+            this._txtPartSearch.Size = new System.Drawing.Size(560, 21);
+            this._txtPartSearch.TabIndex = 3;
+            this._txtPartSearch.TextChanged += new System.EventHandler(this.txtPartSearch_Change);
+            //
+            // _btnDelete
+            //
+            this._btnDelete.Location = new System.Drawing.Point(58, 408);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(61, 23);
+            this._btnDelete.TabIndex = 2;
+            this._btnDelete.Text = "Delete";
+            this._btnDelete.UseVisualStyleBackColor = true;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            //
+            // _btnAdd
+            //
+            this._btnAdd.Location = new System.Drawing.Point(532, 406);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(65, 25);
+            this._btnAdd.TabIndex = 1;
+            this._btnAdd.Text = "Add";
+            this._btnAdd.UseVisualStyleBackColor = true;
+            this._btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            //
+            // _dgvParts
+            //
+            this._dgvParts.AllowUserToAddRows = false;
+            this._dgvParts.AllowUserToDeleteRows = false;
+            this._dgvParts.AllowUserToOrderColumns = true;
+            this._dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvParts.Location = new System.Drawing.Point(3, 62);
+            this._dgvParts.Name = "_dgvParts";
+            this._dgvParts.ReadOnly = true;
+            this._dgvParts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._dgvParts.ShowCellErrors = false;
+            this._dgvParts.Size = new System.Drawing.Size(639, 340);
+            this._dgvParts.TabIndex = 0;
+            //
+            // _tabServiceDates
+            //
+            this._tabServiceDates.BackColor = System.Drawing.SystemColors.Control;
+            this._tabServiceDates.Controls.Add(this._pnlServiceProcess);
+            this._tabServiceDates.Location = new System.Drawing.Point(4, 22);
+            this._tabServiceDates.Name = "_tabServiceDates";
+            this._tabServiceDates.Size = new System.Drawing.Size(645, 574);
+            this._tabServiceDates.TabIndex = 10;
+            this._tabServiceDates.Text = "Service Dates";
+            //
+            // _pnlServiceProcess
+            //
+            this._pnlServiceProcess.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlServiceProcess.Location = new System.Drawing.Point(0, 0);
+            this._pnlServiceProcess.Name = "_pnlServiceProcess";
+            this._pnlServiceProcess.Size = new System.Drawing.Size(645, 574);
+            this._pnlServiceProcess.TabIndex = 2;
+            //
+            // _tabCreation
+            //
+            this._tabCreation.Controls.Add(this._btnEngDelete);
+            this._tabCreation.Controls.Add(this._btnEngAdd);
+            this._tabCreation.Controls.Add(this._dgRaiseEng);
+            this._tabCreation.Location = new System.Drawing.Point(4, 22);
+            this._tabCreation.Name = "_tabCreation";
+            this._tabCreation.Size = new System.Drawing.Size(645, 574);
+            this._tabCreation.TabIndex = 10;
+            this._tabCreation.Text = "Engineer Job Creation";
+            this._tabCreation.UseVisualStyleBackColor = true;
+            //
+            // _btnEngDelete
+            //
+            this._btnEngDelete.Location = new System.Drawing.Point(58, 429);
+            this._btnEngDelete.Name = "_btnEngDelete";
+            this._btnEngDelete.Size = new System.Drawing.Size(61, 23);
+            this._btnEngDelete.TabIndex = 5;
+            this._btnEngDelete.Text = "Delete";
+            this._btnEngDelete.UseVisualStyleBackColor = true;
+            this._btnEngDelete.Click += new System.EventHandler(this.btnEngDelete_Click);
+            //
+            // _btnEngAdd
+            //
+            this._btnEngAdd.Location = new System.Drawing.Point(384, 429);
+            this._btnEngAdd.Name = "_btnEngAdd";
+            this._btnEngAdd.Size = new System.Drawing.Size(65, 25);
+            this._btnEngAdd.TabIndex = 4;
+            this._btnEngAdd.Text = "Add";
+            this._btnEngAdd.UseVisualStyleBackColor = true;
+            this._btnEngAdd.Click += new System.EventHandler(this.btnEngAdd_Click);
+            //
+            // _dgRaiseEng
+            //
+            this._dgRaiseEng.AllowUserToAddRows = false;
+            this._dgRaiseEng.AllowUserToDeleteRows = false;
+            this._dgRaiseEng.AllowUserToOrderColumns = true;
+            this._dgRaiseEng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgRaiseEng.Location = new System.Drawing.Point(3, 83);
+            this._dgRaiseEng.Name = "_dgRaiseEng";
+            this._dgRaiseEng.ReadOnly = true;
+            this._dgRaiseEng.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._dgRaiseEng.ShowCellErrors = false;
+            this._dgRaiseEng.Size = new System.Drawing.Size(503, 340);
+            this._dgRaiseEng.TabIndex = 3;
+            this._dgRaiseEng.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRaiseEng_CellContentClick);
+            //
+            // _tabAuthority
+            //
+            this._tabAuthority.Controls.Add(this._grpAudit);
+            this._tabAuthority.Controls.Add(this._gpCustAuth);
+            this._tabAuthority.Location = new System.Drawing.Point(4, 22);
+            this._tabAuthority.Name = "_tabAuthority";
+            this._tabAuthority.Size = new System.Drawing.Size(645, 574);
+            this._tabAuthority.TabIndex = 11;
+            this._tabAuthority.Text = "Authority";
+            this._tabAuthority.UseVisualStyleBackColor = true;
+            //
+            // _grpAudit
+            //
+            this._grpAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpAudit.Controls.Add(this._dgAuthorityAudit);
+            this._grpAudit.Location = new System.Drawing.Point(3, 236);
+            this._grpAudit.Name = "_grpAudit";
+            this._grpAudit.Size = new System.Drawing.Size(639, 335);
+            this._grpAudit.TabIndex = 38;
+            this._grpAudit.TabStop = false;
+            this._grpAudit.Text = "Audit";
+            //
+            // _dgAuthorityAudit
+            //
+            this._dgAuthorityAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAuthorityAudit.DataMember = "";
+            this._dgAuthorityAudit.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgAuthorityAudit.Location = new System.Drawing.Point(6, 20);
+            this._dgAuthorityAudit.Name = "_dgAuthorityAudit";
+            this._dgAuthorityAudit.Size = new System.Drawing.Size(627, 309);
+            this._dgAuthorityAudit.TabIndex = 1;
+            //
+            // _gpCustAuth
+            //
+            this._gpCustAuth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpCustAuth.Controls.Add(this._btnSaveAuth);
+            this._gpCustAuth.Controls.Add(this._txtCustAuthority);
+            this._gpCustAuth.Location = new System.Drawing.Point(3, 3);
+            this._gpCustAuth.Name = "_gpCustAuth";
+            this._gpCustAuth.Size = new System.Drawing.Size(639, 227);
+            this._gpCustAuth.TabIndex = 37;
+            this._gpCustAuth.TabStop = false;
+            this._gpCustAuth.Text = "Customer";
+            //
+            // _btnSaveAuth
+            //
+            this._btnSaveAuth.AccessibleDescription = "";
+            this._btnSaveAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSaveAuth.Location = new System.Drawing.Point(548, 191);
+            this._btnSaveAuth.Name = "_btnSaveAuth";
+            this._btnSaveAuth.Size = new System.Drawing.Size(85, 23);
+            this._btnSaveAuth.TabIndex = 4;
+            this._btnSaveAuth.Text = "Save";
+            this._btnSaveAuth.Click += new System.EventHandler(this.btnSaveAuth_Click);
+            //
+            // _txtCustAuthority
+            //
+            this._txtCustAuthority.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustAuthority.Location = new System.Drawing.Point(6, 20);
+            this._txtCustAuthority.Multiline = true;
+            this._txtCustAuthority.Name = "_txtCustAuthority";
+            this._txtCustAuthority.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this._txtCustAuthority.Size = new System.Drawing.Size(627, 156);
+            this._txtCustAuthority.TabIndex = 0;
+            //
+            // _tabAlerts
+            //
+            this._tabAlerts.Controls.Add(this._grpCustomerAlerts);
+            this._tabAlerts.Location = new System.Drawing.Point(4, 22);
+            this._tabAlerts.Name = "_tabAlerts";
+            this._tabAlerts.Size = new System.Drawing.Size(645, 574);
+            this._tabAlerts.TabIndex = 12;
+            this._tabAlerts.Text = "Alerts";
+            this._tabAlerts.UseVisualStyleBackColor = true;
+            //
+            // _grpCustomerAlerts
+            //
+            this._grpCustomerAlerts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpCustomerAlerts.Controls.Add(this._grpSite);
+            this._grpCustomerAlerts.Controls.Add(this._dgCustomerAlerts);
+            this._grpCustomerAlerts.Location = new System.Drawing.Point(13, 14);
+            this._grpCustomerAlerts.Margin = new System.Windows.Forms.Padding(0);
+            this._grpCustomerAlerts.Name = "_grpCustomerAlerts";
+            this._grpCustomerAlerts.Padding = new System.Windows.Forms.Padding(0);
+            this._grpCustomerAlerts.Size = new System.Drawing.Size(620, 547);
+            this._grpCustomerAlerts.TabIndex = 15;
+            this._grpCustomerAlerts.TabStop = false;
+            this._grpCustomerAlerts.Text = "Alerts";
+            //
+            // _grpSite
+            //
+            this._grpSite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpSite.Controls.Add(this._btnAddCustomerAlert);
+            this._grpSite.Controls.Add(this._btnDeleteCustomerAlert);
+            this._grpSite.Controls.Add(this._txtCustomerAlertEmailAddress);
+            this._grpSite.Controls.Add(this._lblEmailAddressMsg);
+            this._grpSite.Controls.Add(this._btnSaveCustomerAlert);
+            this._grpSite.Controls.Add(this._cboAlertType);
+            this._grpSite.Controls.Add(this._lblCustomerAlertEmailAddress);
+            this._grpSite.Controls.Add(this._lblAlertType);
+            this._grpSite.Location = new System.Drawing.Point(14, 287);
+            this._grpSite.Name = "_grpSite";
+            this._grpSite.Size = new System.Drawing.Size(592, 248);
+            this._grpSite.TabIndex = 115;
+            this._grpSite.TabStop = false;
+            this._grpSite.Text = "Alert";
+            //
+            // _btnAddCustomerAlert
+            //
+            this._btnAddCustomerAlert.AccessibleDescription = "";
+            this._btnAddCustomerAlert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddCustomerAlert.Location = new System.Drawing.Point(555, 18);
+            this._btnAddCustomerAlert.Name = "_btnAddCustomerAlert";
+            this._btnAddCustomerAlert.Size = new System.Drawing.Size(31, 28);
+            this._btnAddCustomerAlert.TabIndex = 131;
+            this._btnAddCustomerAlert.Text = "+";
+            this._tt.SetToolTip(this._btnAddCustomerAlert, "Add new alert");
+            this._btnAddCustomerAlert.Click += new System.EventHandler(this.btnAddCustomerAlert_Click);
+            //
+            // _btnDeleteCustomerAlert
+            //
+            this._btnDeleteCustomerAlert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnDeleteCustomerAlert.Location = new System.Drawing.Point(9, 210);
+            this._btnDeleteCustomerAlert.Name = "_btnDeleteCustomerAlert";
+            this._btnDeleteCustomerAlert.Size = new System.Drawing.Size(81, 23);
+            this._btnDeleteCustomerAlert.TabIndex = 130;
+            this._btnDeleteCustomerAlert.Text = "Delete";
+            this._btnDeleteCustomerAlert.Visible = false;
+            this._btnDeleteCustomerAlert.Click += new System.EventHandler(this.btnDeleteCustomerAlert_Click);
+            //
+            // _txtCustomerAlertEmailAddress
+            //
+            this._txtCustomerAlertEmailAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomerAlertEmailAddress.Location = new System.Drawing.Point(9, 131);
+            this._txtCustomerAlertEmailAddress.Multiline = true;
+            this._txtCustomerAlertEmailAddress.Name = "_txtCustomerAlertEmailAddress";
+            this._txtCustomerAlertEmailAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtCustomerAlertEmailAddress.Size = new System.Drawing.Size(577, 62);
+            this._txtCustomerAlertEmailAddress.TabIndex = 129;
+            this._txtCustomerAlertEmailAddress.Tag = "Customer.Notes";
+            //
+            // _lblEmailAddressMsg
+            //
+            this._lblEmailAddressMsg.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblEmailAddressMsg.Location = new System.Drawing.Point(6, 63);
+            this._lblEmailAddressMsg.Name = "_lblEmailAddressMsg";
+            this._lblEmailAddressMsg.Size = new System.Drawing.Size(566, 29);
+            this._lblEmailAddressMsg.TabIndex = 128;
+            this._lblEmailAddressMsg.Text = "Please seperate each email address with a semi-colon;";
+            //
+            // _btnSaveCustomerAlert
+            //
+            this._btnSaveCustomerAlert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSaveCustomerAlert.Location = new System.Drawing.Point(505, 210);
+            this._btnSaveCustomerAlert.Name = "_btnSaveCustomerAlert";
+            this._btnSaveCustomerAlert.Size = new System.Drawing.Size(81, 23);
+            this._btnSaveCustomerAlert.TabIndex = 127;
+            this._btnSaveCustomerAlert.Text = "Save";
+            this._btnSaveCustomerAlert.Click += new System.EventHandler(this.btnSaveCustomerAlert_Click);
+            //
+            // _cboAlertType
+            //
+            this._cboAlertType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboAlertType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboAlertType.Location = new System.Drawing.Point(117, 20);
+            this._cboAlertType.Name = "_cboAlertType";
+            this._cboAlertType.Size = new System.Drawing.Size(161, 21);
+            this._cboAlertType.TabIndex = 126;
+            this._cboAlertType.Tag = "";
+            //
+            // _lblCustomerAlertEmailAddress
+            //
+            this._lblCustomerAlertEmailAddress.Location = new System.Drawing.Point(6, 105);
+            this._lblCustomerAlertEmailAddress.Name = "_lblCustomerAlertEmailAddress";
+            this._lblCustomerAlertEmailAddress.Size = new System.Drawing.Size(112, 23);
+            this._lblCustomerAlertEmailAddress.TabIndex = 125;
+            this._lblCustomerAlertEmailAddress.Text = "Email Address(s):";
+            //
+            // _lblAlertType
+            //
+            this._lblAlertType.Location = new System.Drawing.Point(6, 23);
+            this._lblAlertType.Name = "_lblAlertType";
+            this._lblAlertType.Size = new System.Drawing.Size(80, 23);
+            this._lblAlertType.TabIndex = 123;
+            this._lblAlertType.Text = "Alert Type:";
+            //
+            // _dgCustomerAlerts
+            //
+            this._dgCustomerAlerts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgCustomerAlerts.DataMember = "";
+            this._dgCustomerAlerts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgCustomerAlerts.Location = new System.Drawing.Point(14, 19);
+            this._dgCustomerAlerts.Name = "_dgCustomerAlerts";
+            this._dgCustomerAlerts.Size = new System.Drawing.Size(592, 262);
+            this._dgCustomerAlerts.TabIndex = 11;
+            this._dgCustomerAlerts.Click += new System.EventHandler(this.dgCustomerAlerts_Click);
 
-            _grpCustomer.Controls.Add(_chkIsPFH);
-            _grpCustomer.Controls.Add(_cbIsOutOfScope);
-            _grpCustomer.Controls.Add(_btnExportSites);
-            _grpCustomer.Controls.Add(_chkMOTService);
-            _grpCustomer.Controls.Add(_txtAlertEmail);
-            _grpCustomer.Controls.Add(_Label13);
-            _grpCustomer.Controls.Add(_txtServWinter);
-            _grpCustomer.Controls.Add(_txtServSummer);
-            _grpCustomer.Controls.Add(_Label12);
-            _grpCustomer.Controls.Add(_chkSuperBooking);
-            _grpCustomer.Controls.Add(_cboTerms);
-            _grpCustomer.Controls.Add(_Label9);
-            _grpCustomer.Controls.Add(_cboDepartment);
-            _grpCustomer.Controls.Add(_Label8);
-            _grpCustomer.Controls.Add(_txtNominal);
-            _grpCustomer.Controls.Add(_Label7);
-            _grpCustomer.Controls.Add(_chkJobPriorityRequired);
-            _grpCustomer.Controls.Add(_chkPONumReq);
-            _grpCustomer.Controls.Add(_btnSelectLogoImage);
-            _grpCustomer.Controls.Add(_picLogo);
-            _grpCustomer.Controls.Add(_Label6);
-            _grpCustomer.Controls.Add(_cboType);
-            _grpCustomer.Controls.Add(_Label2);
-            _grpCustomer.Controls.Add(_txtName);
-            _grpCustomer.Controls.Add(_lblName);
-            _grpCustomer.Controls.Add(_cboRegionID);
-            _grpCustomer.Controls.Add(_lblRegionID);
-            _grpCustomer.Controls.Add(_txtNotes);
-            _grpCustomer.Controls.Add(_lblNotes);
-            _grpCustomer.Controls.Add(_txtAccountNumber);
-            _grpCustomer.Controls.Add(_lblAccountNumber);
-            _grpCustomer.Controls.Add(_cboStatus);
-            _grpCustomer.Controls.Add(_lblStatus);
-            _grpCustomer.Location = new Point(9, 8);
-            _grpCustomer.Name = "grpCustomer";
-            _grpCustomer.Size = new Size(629, 558);
-            _grpCustomer.TabIndex = 0;
-            _grpCustomer.TabStop = false;
-            _grpCustomer.Text = "Details";
-            //
-            // chkIsPFH
-            //
-            _chkIsPFH.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _chkIsPFH.AutoSize = true;
-            _chkIsPFH.Location = new Point(555, 353);
-            _chkIsPFH.Name = "chkIsPFH";
-            _chkIsPFH.RightToLeft = RightToLeft.Yes;
-            _chkIsPFH.Size = new Size(62, 17);
-            _chkIsPFH.TabIndex = 58;
-            _chkIsPFH.Text = "Is PFH";
-            _chkIsPFH.UseVisualStyleBackColor = true;
-            //
-            // cbIsOutOfScope
-            //
-            _cbIsOutOfScope.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _cbIsOutOfScope.AutoSize = true;
-            _cbIsOutOfScope.Location = new Point(516, 376);
-            _cbIsOutOfScope.Name = "cbIsOutOfScope";
-            _cbIsOutOfScope.RightToLeft = RightToLeft.Yes;
-            _cbIsOutOfScope.Size = new Size(102, 17);
-            _cbIsOutOfScope.TabIndex = 57;
-            _cbIsOutOfScope.Text = "Out Of Scope";
-            _cbIsOutOfScope.UseVisualStyleBackColor = true;
-            //
-            // btnExportSites
-            //
-            _btnExportSites.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExportSites.Location = new Point(6, 527);
-            _btnExportSites.Name = "btnExportSites";
-            _btnExportSites.Size = new Size(103, 25);
-            _btnExportSites.TabIndex = 56;
-            _btnExportSites.Text = "Export Sites";
-            //
-            // chkMOTService
-            //
-            _chkMOTService.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _chkMOTService.AutoSize = true;
-            _chkMOTService.Location = new Point(479, 398);
-            _chkMOTService.Name = "chkMOTService";
-            _chkMOTService.RightToLeft = RightToLeft.Yes;
-            _chkMOTService.Size = new Size(139, 17);
-            _chkMOTService.TabIndex = 55;
-            _chkMOTService.Text = "M.O.T Style Service";
-            _chkMOTService.UseVisualStyleBackColor = true;
-            //
-            // txtAlertEmail
-            //
-            _txtAlertEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAlertEmail.Location = new Point(120, 261);
-            _txtAlertEmail.MaxLength = 255;
-            _txtAlertEmail.Name = "txtAlertEmail";
-            _txtAlertEmail.Size = new Size(498, 21);
-            _txtAlertEmail.TabIndex = 54;
-            _txtAlertEmail.Tag = "Customer.Name";
-            //
-            // Label13
-            //
-            _Label13.Location = new Point(8, 264);
-            _Label13.Name = "Label13";
-            _Label13.Size = new Size(89, 20);
-            _Label13.TabIndex = 53;
-            _Label13.Text = "Alert Email";
-            //
-            // txtServWinter
-            //
-            _txtServWinter.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtServWinter.Location = new Point(540, 520);
-            _txtServWinter.MaxLength = 50;
-            _txtServWinter.Name = "txtServWinter";
-            _txtServWinter.Size = new Size(77, 21);
-            _txtServWinter.TabIndex = 52;
-            _txtServWinter.Tag = " ";
-            //
-            // txtServSummer
-            //
-            _txtServSummer.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtServSummer.Location = new Point(415, 520);
-            _txtServSummer.MaxLength = 50;
-            _txtServSummer.Name = "txtServSummer";
-            _txtServSummer.Size = new Size(77, 21);
-            _txtServSummer.TabIndex = 51;
-            _txtServSummer.Tag = " ";
-            //
-            // Label12
-            //
-            _Label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label12.Location = new Point(270, 514);
-            _Label12.Name = "Label12";
-            _Label12.Size = new Size(113, 27);
-            _Label12.TabIndex = 50;
-            _Label12.Text = "Summer/Winter Servicing P/Month";
-            //
-            // chkSuperBooking
-            //
-            _chkSuperBooking.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _chkSuperBooking.AutoSize = true;
-            _chkSuperBooking.Location = new Point(444, 464);
-            _chkSuperBooking.Name = "chkSuperBooking";
-            _chkSuperBooking.RightToLeft = RightToLeft.Yes;
-            _chkSuperBooking.Size = new Size(174, 17);
-            _chkSuperBooking.TabIndex = 49;
-            _chkSuperBooking.Text = "Coordinator Booking Only";
-            _chkSuperBooking.UseVisualStyleBackColor = true;
-            //
-            // cboTerms
-            //
-            _cboTerms.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboTerms.Cursor = Cursors.Hand;
-            _cboTerms.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboTerms.Location = new Point(120, 227);
-            _cboTerms.Name = "cboTerms";
-            _cboTerms.Size = new Size(498, 21);
-            _cboTerms.TabIndex = 48;
-            _cboTerms.Tag = "Customer.Status";
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(8, 226);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(103, 20);
-            _Label9.TabIndex = 47;
-            _Label9.Text = "Terms";
-            //
-            // cboDepartment
-            //
-            _cboDepartment.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _cboDepartment.Cursor = Cursors.Hand;
-            _cboDepartment.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboDepartment.Location = new Point(415, 488);
-            _cboDepartment.Name = "cboDepartment";
-            _cboDepartment.Size = new Size(203, 21);
-            _cboDepartment.TabIndex = 46;
-            _cboDepartment.Tag = "Customer.TypeID";
-            //
-            // Label8
-            //
-            _Label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label8.Location = new Point(270, 491);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(139, 23);
-            _Label8.TabIndex = 45;
-            _Label8.Text = "Override Department";
-            //
-            // txtNominal
-            //
-            _txtNominal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtNominal.Location = new Point(120, 193);
-            _txtNominal.MaxLength = 50;
-            _txtNominal.Name = "txtNominal";
-            _txtNominal.Size = new Size(498, 21);
-            _txtNominal.TabIndex = 11;
-            _txtNominal.Tag = " ";
-            //
-            // Label7
-            //
-            _Label7.Location = new Point(8, 196);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(103, 20);
-            _Label7.TabIndex = 10;
-            _Label7.Text = "Nominal Code";
-            //
-            // chkJobPriorityRequired
-            //
-            _chkJobPriorityRequired.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _chkJobPriorityRequired.AutoSize = true;
-            _chkJobPriorityRequired.Location = new Point(473, 442);
-            _chkJobPriorityRequired.Name = "chkJobPriorityRequired";
-            _chkJobPriorityRequired.RightToLeft = RightToLeft.Yes;
-            _chkJobPriorityRequired.Size = new Size(145, 17);
-            _chkJobPriorityRequired.TabIndex = 17;
-            _chkJobPriorityRequired.Text = "Job Priority Required";
-            _chkJobPriorityRequired.UseVisualStyleBackColor = true;
-            //
-            // chkPONumReq
-            //
-            _chkPONumReq.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _chkPONumReq.AutoSize = true;
-            _chkPONumReq.Location = new Point(472, 420);
-            _chkPONumReq.Name = "chkPONumReq";
-            _chkPONumReq.RightToLeft = RightToLeft.Yes;
-            _chkPONumReq.Size = new Size(146, 17);
-            _chkPONumReq.TabIndex = 16;
-            _chkPONumReq.Text = "PO Number Required";
-            _chkPONumReq.UseVisualStyleBackColor = true;
-            //
-            // btnSelectLogoImage
-            //
-            _btnSelectLogoImage.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSelectLogoImage.Location = new Point(263, 416);
-            _btnSelectLogoImage.Name = "btnSelectLogoImage";
-            _btnSelectLogoImage.Size = new Size(31, 23);
-            _btnSelectLogoImage.TabIndex = 15;
-            _btnSelectLogoImage.Text = "...";
-            _btnSelectLogoImage.UseVisualStyleBackColor = true;
-            //
-            // picLogo
-            //
-            _picLogo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _picLogo.BackColor = Color.White;
-            _picLogo.BorderStyle = BorderStyle.FixedSingle;
-            _picLogo.Location = new Point(120, 417);
-            _picLogo.Name = "picLogo";
-            _picLogo.Size = new Size(135, 135);
-            _picLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picLogo.TabIndex = 44;
-            _picLogo.TabStop = false;
-            //
-            // Label6
-            //
-            _Label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label6.Location = new Point(8, 423);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(62, 20);
-            _Label6.TabIndex = 14;
-            _Label6.Text = "Logo";
-            //
-            // cboType
-            //
-            _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboType.Cursor = Cursors.Hand;
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(120, 57);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(498, 21);
-            _cboType.TabIndex = 3;
-            _cboType.Tag = "Customer.TypeID";
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 60);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(66, 23);
-            _Label2.TabIndex = 2;
-            _Label2.Text = "Type";
-            //
-            // txtName
-            //
-            _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtName.Location = new Point(120, 23);
-            _txtName.MaxLength = 255;
-            _txtName.Name = "txtName";
-            _txtName.Size = new Size(498, 21);
-            _txtName.TabIndex = 1;
-            _txtName.Tag = "Customer.Name";
-            //
-            // lblName
-            //
-            _lblName.Location = new Point(8, 26);
-            _lblName.Name = "lblName";
-            _lblName.Size = new Size(53, 20);
-            _lblName.TabIndex = 0;
-            _lblName.Text = "Name";
-            //
-            // cboRegionID
-            //
-            _cboRegionID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboRegionID.Cursor = Cursors.Hand;
-            _cboRegionID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboRegionID.Location = new Point(120, 91);
-            _cboRegionID.Name = "cboRegionID";
-            _cboRegionID.Size = new Size(498, 21);
-            _cboRegionID.TabIndex = 5;
-            _cboRegionID.Tag = "Customer.RegionID";
-            //
-            // lblRegionID
-            //
-            _lblRegionID.Location = new Point(8, 94);
-            _lblRegionID.Name = "lblRegionID";
-            _lblRegionID.Size = new Size(55, 20);
-            _lblRegionID.TabIndex = 4;
-            _lblRegionID.Text = "Region ";
-            //
-            // txtNotes
-            //
-            _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtNotes.Location = new Point(120, 295);
-            _txtNotes.Multiline = true;
-            _txtNotes.Name = "txtNotes";
-            _txtNotes.ScrollBars = ScrollBars.Vertical;
-            _txtNotes.Size = new Size(497, 50);
-            _txtNotes.TabIndex = 13;
-            _txtNotes.Tag = "Customer.Notes";
-            //
-            // lblNotes
-            //
-            _lblNotes.Location = new Point(8, 298);
-            _lblNotes.Name = "lblNotes";
-            _lblNotes.Size = new Size(62, 20);
-            _lblNotes.TabIndex = 12;
-            _lblNotes.Text = "Notes";
-            //
-            // txtAccountNumber
-            //
-            _txtAccountNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAccountNumber.Location = new Point(120, 125);
-            _txtAccountNumber.MaxLength = 50;
-            _txtAccountNumber.Name = "txtAccountNumber";
-            _txtAccountNumber.Size = new Size(498, 21);
-            _txtAccountNumber.TabIndex = 7;
-            _txtAccountNumber.Tag = "Customer.AccountNumber";
-            //
-            // lblAccountNumber
-            //
-            _lblAccountNumber.Location = new Point(8, 128);
-            _lblAccountNumber.Name = "lblAccountNumber";
-            _lblAccountNumber.Size = new Size(103, 20);
-            _lblAccountNumber.TabIndex = 6;
-            _lblAccountNumber.Text = "Account Number";
-            //
-            // cboStatus
-            //
-            _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboStatus.Cursor = Cursors.Hand;
-            _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStatus.Location = new Point(120, 159);
-            _cboStatus.Name = "cboStatus";
-            _cboStatus.Size = new Size(498, 21);
-            _cboStatus.TabIndex = 9;
-            _cboStatus.Tag = "Customer.Status";
-            //
-            // lblStatus
-            //
-            _lblStatus.Location = new Point(8, 162);
-            _lblStatus.Name = "lblStatus";
-            _lblStatus.Size = new Size(65, 20);
-            _lblStatus.TabIndex = 8;
-            _lblStatus.Text = "Status";
-            //
-            // TabControl1
-            //
-            _TabControl1.Controls.Add(_tabMainDetails);
-            _TabControl1.Controls.Add(_tabContracts);
-            _TabControl1.Controls.Add(_tabCharges);
-            _TabControl1.Controls.Add(_tabDocuments);
-            _TabControl1.Controls.Add(_tabQuotes);
-            _TabControl1.Controls.Add(_tabPriority);
-            _TabControl1.Controls.Add(_tabParts);
-            _TabControl1.Controls.Add(_tabServiceDates);
-            _TabControl1.Controls.Add(_tabCreation);
-            _TabControl1.Controls.Add(_tabAuthority);
-            _TabControl1.Controls.Add(_tabAlerts);
-            _TabControl1.Dock = DockStyle.Fill;
-            _TabControl1.Location = new Point(0, 0);
-            _TabControl1.Name = "TabControl1";
-            _TabControl1.SelectedIndex = 0;
-            _TabControl1.Size = new Size(653, 600);
-            _TabControl1.TabIndex = 0;
-            //
-            // tabMainDetails
-            //
-            _tabMainDetails.Controls.Add(_grpCustomer);
-            _tabMainDetails.Location = new Point(4, 22);
-            _tabMainDetails.Name = "tabMainDetails";
-            _tabMainDetails.Size = new Size(645, 574);
-            _tabMainDetails.TabIndex = 0;
-            _tabMainDetails.Text = "Main Details";
-            //
-            // tabContracts
-            //
-            _tabContracts.Controls.Add(_pnlContracts);
-            _tabContracts.Location = new Point(4, 22);
-            _tabContracts.Name = "tabContracts";
-            _tabContracts.Size = new Size(645, 574);
-            _tabContracts.TabIndex = 4;
-            _tabContracts.Text = "Contracts";
-            //
-            // pnlContracts
-            //
-            _pnlContracts.Controls.Add(_gpbContracts);
-            _pnlContracts.Dock = DockStyle.Fill;
-            _pnlContracts.Location = new Point(0, 0);
-            _pnlContracts.Name = "pnlContracts";
-            _pnlContracts.Size = new Size(645, 574);
-            _pnlContracts.TabIndex = 1;
-            //
-            // gpbContracts
-            //
-            _gpbContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gpbContracts.Controls.Add(_btnDeleteContract);
-            _gpbContracts.Controls.Add(_dgContracts);
-            _gpbContracts.Controls.Add(_btnAddContract);
-            _gpbContracts.Location = new Point(8, 8);
-            _gpbContracts.Name = "gpbContracts";
-            _gpbContracts.Size = new Size(632, 555);
-            _gpbContracts.TabIndex = 0;
-            _gpbContracts.TabStop = false;
-            _gpbContracts.Text = "Contract - Double click to view";
-            //
-            // btnDeleteContract
-            //
-            _btnDeleteContract.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDeleteContract.Location = new Point(549, 523);
-            _btnDeleteContract.Name = "btnDeleteContract";
-            _btnDeleteContract.Size = new Size(75, 23);
-            _btnDeleteContract.TabIndex = 2;
-            _btnDeleteContract.Text = "Delete";
-            //
-            // dgContracts
-            //
-            _dgContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgContracts.DataMember = "";
-            _dgContracts.HeaderForeColor = SystemColors.ControlText;
-            _dgContracts.Location = new Point(8, 16);
-            _dgContracts.Name = "dgContracts";
-            _dgContracts.Size = new Size(616, 499);
-            _dgContracts.TabIndex = 1;
-            //
-            // btnAddContract
-            //
-            _btnAddContract.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddContract.Location = new Point(8, 523);
-            _btnAddContract.Name = "btnAddContract";
-            _btnAddContract.Size = new Size(75, 23);
-            _btnAddContract.TabIndex = 0;
-            _btnAddContract.Text = "Add";
-            _btnAddContract.UseVisualStyleBackColor = true;
-            //
-            // tabCharges
-            //
-            _tabCharges.Controls.Add(_grbCharges);
-            _tabCharges.Location = new Point(4, 22);
-            _tabCharges.Name = "tabCharges";
-            _tabCharges.Size = new Size(645, 574);
-            _tabCharges.TabIndex = 7;
-            _tabCharges.Text = "Charges";
-            //
-            // grbCharges
-            //
-            _grbCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grbCharges.Controls.Add(_txtSpendLimit);
-            _grbCharges.Controls.Add(_lblJobSpendLimit);
-            _grbCharges.Controls.Add(_txtMainContractorDiscount);
-            _grbCharges.Controls.Add(_Label5);
-            _grbCharges.Controls.Add(_chbAcceptChargeChanges);
-            _grbCharges.Controls.Add(_Label3);
-            _grbCharges.Controls.Add(_txtRatesMarkup);
-            _grbCharges.Controls.Add(_Label4);
-            _grbCharges.Controls.Add(_Label1);
-            _grbCharges.Controls.Add(_txtMileageRate);
-            _grbCharges.Controls.Add(_txtPartsMarkup);
-            _grbCharges.Controls.Add(_pnlCharges);
-            _grbCharges.Location = new Point(8, 0);
-            _grbCharges.Name = "grbCharges";
-            _grbCharges.Size = new Size(633, 571);
-            _grbCharges.TabIndex = 0;
-            _grbCharges.TabStop = false;
-            _grbCharges.Text = "Charges";
-            //
-            // txtSpendLimit
-            //
-            _txtSpendLimit.Location = new Point(122, 70);
-            _txtSpendLimit.Name = "txtSpendLimit";
-            _txtSpendLimit.Size = new Size(64, 21);
-            _txtSpendLimit.TabIndex = 78;
-            //
-            // lblJobSpendLimit
-            //
-            _lblJobSpendLimit.AutoSize = true;
-            _lblJobSpendLimit.Location = new Point(8, 73);
-            _lblJobSpendLimit.Name = "lblJobSpendLimit";
-            _lblJobSpendLimit.Size = new Size(108, 13);
-            _lblJobSpendLimit.TabIndex = 77;
-            _lblJobSpendLimit.Text = "Job Spend Limit £";
-            //
-            // txtMainContractorDiscount
-            //
-            _txtMainContractorDiscount.Location = new Point(461, 72);
-            _txtMainContractorDiscount.Name = "txtMainContractorDiscount";
-            _txtMainContractorDiscount.Size = new Size(64, 21);
-            _txtMainContractorDiscount.TabIndex = 8;
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(278, 73);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(176, 21);
-            _Label5.TabIndex = 7;
-            _Label5.Text = "Main Contractor Discount %";
-            //
-            // chbAcceptChargeChanges
-            //
-            _chbAcceptChargeChanges.BackColor = SystemColors.Info;
-            _chbAcceptChargeChanges.Location = new Point(8, 16);
-            _chbAcceptChargeChanges.Name = "chbAcceptChargeChanges";
-            _chbAcceptChargeChanges.Size = new Size(480, 24);
-            _chbAcceptChargeChanges.TabIndex = 0;
-            _chbAcceptChargeChanges.Text = "Always accept changes to default charges made at system level";
-            _chbAcceptChargeChanges.UseVisualStyleBackColor = false;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(368, 48);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(93, 21);
-            _Label3.TabIndex = 5;
-            _Label3.Text = "Rates Markup";
-            //
-            // txtRatesMarkup
-            //
-            _txtRatesMarkup.Location = new Point(461, 48);
-            _txtRatesMarkup.Name = "txtRatesMarkup";
-            _txtRatesMarkup.Size = new Size(64, 21);
-            _txtRatesMarkup.TabIndex = 6;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(8, 48);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(97, 21);
-            _Label4.TabIndex = 1;
-            _Label4.Text = "Labour Markup";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(210, 48);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(90, 21);
-            _Label1.TabIndex = 3;
-            _Label1.Text = "Parts Markup";
-            //
-            // txtMileageRate
-            //
-            _txtMileageRate.Location = new Point(122, 48);
-            _txtMileageRate.Name = "txtMileageRate";
-            _txtMileageRate.Size = new Size(64, 21);
-            _txtMileageRate.TabIndex = 2;
-            //
-            // txtPartsMarkup
-            //
-            _txtPartsMarkup.Location = new Point(301, 48);
-            _txtPartsMarkup.Name = "txtPartsMarkup";
-            _txtPartsMarkup.Size = new Size(62, 21);
-            _txtPartsMarkup.TabIndex = 4;
-            //
-            // pnlCharges
-            //
-            _pnlCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlCharges.Location = new Point(8, 97);
-            _pnlCharges.Name = "pnlCharges";
-            _pnlCharges.Size = new Size(617, 466);
-            _pnlCharges.TabIndex = 9;
-            //
-            // tabDocuments
-            //
-            _tabDocuments.Controls.Add(_pnlDocuments);
-            _tabDocuments.Location = new Point(4, 22);
-            _tabDocuments.Name = "tabDocuments";
-            _tabDocuments.Size = new Size(645, 574);
-            _tabDocuments.TabIndex = 2;
-            _tabDocuments.Text = "Documents";
-            //
-            // pnlDocuments
-            //
-            _pnlDocuments.Dock = DockStyle.Fill;
-            _pnlDocuments.Location = new Point(0, 0);
-            _pnlDocuments.Name = "pnlDocuments";
-            _pnlDocuments.Size = new Size(645, 574);
-            _pnlDocuments.TabIndex = 1;
-            //
-            // tabQuotes
-            //
-            _tabQuotes.Controls.Add(_pnlQuotes);
-            _tabQuotes.Location = new Point(4, 22);
-            _tabQuotes.Name = "tabQuotes";
-            _tabQuotes.Size = new Size(645, 574);
-            _tabQuotes.TabIndex = 5;
-            _tabQuotes.Text = "Quotes";
-            //
-            // pnlQuotes
-            //
-            _pnlQuotes.Dock = DockStyle.Fill;
-            _pnlQuotes.Location = new Point(0, 0);
-            _pnlQuotes.Name = "pnlQuotes";
-            _pnlQuotes.Size = new Size(645, 574);
-            _pnlQuotes.TabIndex = 1;
-            //
-            // tabPriority
-            //
-            _tabPriority.Controls.Add(_dgvPriority);
-            _tabPriority.Controls.Add(_Label11);
-            _tabPriority.Controls.Add(_dgRequirements);
-            _tabPriority.Controls.Add(_Label10);
-            _tabPriority.Location = new Point(4, 22);
-            _tabPriority.Name = "tabPriority";
-            _tabPriority.Size = new Size(645, 574);
-            _tabPriority.TabIndex = 8;
-            _tabPriority.Text = "Priorities / Requirements";
-            _tabPriority.UseVisualStyleBackColor = true;
-            //
-            // dgvPriority
-            //
-            _dgvPriority.AllowUserToAddRows = false;
-            _dgvPriority.AllowUserToDeleteRows = false;
-            _dgvPriority.AllowUserToResizeColumns = false;
-            _dgvPriority.AllowUserToResizeRows = false;
-            _dgvPriority.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvPriority.Location = new Point(37, 70);
-            _dgvPriority.MultiSelect = false;
-            _dgvPriority.Name = "dgvPriority";
-            _dgvPriority.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dgvPriority.Size = new Size(456, 170);
-            _dgvPriority.TabIndex = 10;
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(34, 294);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(103, 20);
-            _Label11.TabIndex = 9;
-            _Label11.Text = "Requirements";
-            //
-            // dgRequirements
-            //
-            _dgRequirements.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgRequirements.DataMember = "";
-            _dgRequirements.HeaderForeColor = SystemColors.ControlText;
-            _dgRequirements.Location = new Point(37, 317);
-            _dgRequirements.Name = "dgRequirements";
-            _dgRequirements.Size = new Size(592, 196);
-            _dgRequirements.TabIndex = 8;
-            //
-            // Label10
-            //
-            _Label10.Location = new Point(34, 47);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(103, 20);
-            _Label10.TabIndex = 7;
-            _Label10.Text = "Priorities";
-            //
-            // tabParts
-            //
-            _tabParts.Controls.Add(_Label14);
-            _tabParts.Controls.Add(_txtPartSearch);
-            _tabParts.Controls.Add(_btnDelete);
-            _tabParts.Controls.Add(_btnAdd);
-            _tabParts.Controls.Add(_dgvParts);
-            _tabParts.Location = new Point(4, 22);
-            _tabParts.Name = "tabParts";
-            _tabParts.Size = new Size(645, 574);
-            _tabParts.TabIndex = 9;
-            _tabParts.Text = "Associated Supplier Parts";
-            _tabParts.UseVisualStyleBackColor = true;
-            //
-            // Label14
-            //
-            _Label14.AutoSize = true;
-            _Label14.Location = new Point(3, 34);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(47, 13);
-            _Label14.TabIndex = 4;
-            _Label14.Text = "Search";
-            //
-            // txtPartSearch
-            //
-            _txtPartSearch.Location = new Point(82, 31);
-            _txtPartSearch.Name = "txtPartSearch";
-            _txtPartSearch.Size = new Size(560, 21);
-            _txtPartSearch.TabIndex = 3;
-            //
-            // btnDelete
-            //
-            _btnDelete.Location = new Point(58, 408);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(61, 23);
-            _btnDelete.TabIndex = 2;
-            _btnDelete.Text = "Delete";
-            _btnDelete.UseVisualStyleBackColor = true;
-            //
-            // btnAdd
-            //
-            _btnAdd.Location = new Point(532, 406);
-            _btnAdd.Name = "btnAdd";
-            _btnAdd.Size = new Size(65, 25);
-            _btnAdd.TabIndex = 1;
-            _btnAdd.Text = "Add";
-            _btnAdd.UseVisualStyleBackColor = true;
-            //
-            // dgvParts
-            //
-            _dgvParts.AllowUserToAddRows = false;
-            _dgvParts.AllowUserToDeleteRows = false;
-            _dgvParts.AllowUserToOrderColumns = true;
-            _dgvParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvParts.Location = new Point(3, 62);
-            _dgvParts.Name = "dgvParts";
-            _dgvParts.ReadOnly = true;
-            _dgvParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dgvParts.ShowCellErrors = false;
-            _dgvParts.Size = new Size(639, 340);
-            _dgvParts.TabIndex = 0;
-            //
-            // tabServiceDates
-            //
-            _tabServiceDates.BackColor = SystemColors.Control;
-            _tabServiceDates.Controls.Add(_pnlServiceProcess);
-            _tabServiceDates.Location = new Point(4, 22);
-            _tabServiceDates.Name = "tabServiceDates";
-            _tabServiceDates.Size = new Size(645, 574);
-            _tabServiceDates.TabIndex = 10;
-            _tabServiceDates.Text = "Service Dates";
-            //
-            // tabCreation
-            //
-            _tabCreation.Controls.Add(_btnEngDelete);
-            _tabCreation.Controls.Add(_btnEngAdd);
-            _tabCreation.Controls.Add(_dgRaiseEng);
-            _tabCreation.Location = new Point(4, 22);
-            _tabCreation.Name = "tabCreation";
-            _tabCreation.Size = new Size(645, 574);
-            _tabCreation.TabIndex = 10;
-            _tabCreation.Text = "Engineer Job Creation";
-            _tabCreation.UseVisualStyleBackColor = true;
-            //
-            // btnEngDelete
-            //
-            _btnEngDelete.Location = new Point(58, 429);
-            _btnEngDelete.Name = "btnEngDelete";
-            _btnEngDelete.Size = new Size(61, 23);
-            _btnEngDelete.TabIndex = 5;
-            _btnEngDelete.Text = "Delete";
-            _btnEngDelete.UseVisualStyleBackColor = true;
-            //
-            // btnEngAdd
-            //
-            _btnEngAdd.Location = new Point(384, 429);
-            _btnEngAdd.Name = "btnEngAdd";
-            _btnEngAdd.Size = new Size(65, 25);
-            _btnEngAdd.TabIndex = 4;
-            _btnEngAdd.Text = "Add";
-            _btnEngAdd.UseVisualStyleBackColor = true;
-            //
-            // dgRaiseEng
-            //
-            _dgRaiseEng.AllowUserToAddRows = false;
-            _dgRaiseEng.AllowUserToDeleteRows = false;
-            _dgRaiseEng.AllowUserToOrderColumns = true;
-            _dgRaiseEng.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgRaiseEng.Location = new Point(3, 83);
-            _dgRaiseEng.Name = "dgRaiseEng";
-            _dgRaiseEng.ReadOnly = true;
-            _dgRaiseEng.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dgRaiseEng.ShowCellErrors = false;
-            _dgRaiseEng.Size = new Size(503, 340);
-            _dgRaiseEng.TabIndex = 3;
-            //
-            // tabAuthority
-            //
-            _tabAuthority.Controls.Add(_grpAudit);
-            _tabAuthority.Controls.Add(_gpCustAuth);
-            _tabAuthority.Location = new Point(4, 22);
-            _tabAuthority.Name = "tabAuthority";
-            _tabAuthority.Size = new Size(645, 574);
-            _tabAuthority.TabIndex = 11;
-            _tabAuthority.Text = "Authority";
-            _tabAuthority.UseVisualStyleBackColor = true;
-            //
-            // grpAudit
-            //
-            _grpAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpAudit.Controls.Add(_dgAuthorityAudit);
-            _grpAudit.Location = new Point(3, 236);
-            _grpAudit.Name = "grpAudit";
-            _grpAudit.Size = new Size(639, 335);
-            _grpAudit.TabIndex = 38;
-            _grpAudit.TabStop = false;
-            _grpAudit.Text = "Audit";
-            //
-            // dgAuthorityAudit
-            //
-            _dgAuthorityAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAuthorityAudit.DataMember = "";
-            _dgAuthorityAudit.HeaderForeColor = SystemColors.ControlText;
-            _dgAuthorityAudit.Location = new Point(6, 20);
-            _dgAuthorityAudit.Name = "dgAuthorityAudit";
-            _dgAuthorityAudit.Size = new Size(627, 309);
-            _dgAuthorityAudit.TabIndex = 1;
-            //
-            // gpCustAuth
-            //
-            _gpCustAuth.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _gpCustAuth.Controls.Add(_btnSaveAuth);
-            _gpCustAuth.Controls.Add(_txtCustAuthority);
-            _gpCustAuth.Location = new Point(3, 3);
-            _gpCustAuth.Name = "gpCustAuth";
-            _gpCustAuth.Size = new Size(639, 227);
-            _gpCustAuth.TabIndex = 37;
-            _gpCustAuth.TabStop = false;
-            _gpCustAuth.Text = "Customer";
-            //
-            // btnSaveAuth
-            //
-            _btnSaveAuth.AccessibleDescription = "";
-            _btnSaveAuth.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSaveAuth.Location = new Point(548, 191);
-            _btnSaveAuth.Name = "btnSaveAuth";
-            _btnSaveAuth.Size = new Size(85, 23);
-            _btnSaveAuth.TabIndex = 4;
-            _btnSaveAuth.Text = "Save";
-            //
-            // txtCustAuthority
-            //
-            _txtCustAuthority.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtCustAuthority.Location = new Point(6, 20);
-            _txtCustAuthority.Multiline = true;
-            _txtCustAuthority.Name = "txtCustAuthority";
-            _txtCustAuthority.ScrollBars = ScrollBars.Both;
-            _txtCustAuthority.Size = new Size(627, 156);
-            _txtCustAuthority.TabIndex = 0;
-            //
-            // tabAlerts
-            //
-            _tabAlerts.Controls.Add(_grpCustomerAlerts);
-            _tabAlerts.Location = new Point(4, 22);
-            _tabAlerts.Name = "tabAlerts";
-            _tabAlerts.Size = new Size(645, 574);
-            _tabAlerts.TabIndex = 12;
-            _tabAlerts.Text = "Alerts";
-            _tabAlerts.UseVisualStyleBackColor = true;
-            //
-            // grpCustomerAlerts
-            //
-            _grpCustomerAlerts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpCustomerAlerts.Controls.Add(_grpSite);
-            _grpCustomerAlerts.Controls.Add(_dgCustomerAlerts);
-            _grpCustomerAlerts.Location = new Point(13, 14);
-            _grpCustomerAlerts.Margin = new Padding(0);
-            _grpCustomerAlerts.Name = "grpCustomerAlerts";
-            _grpCustomerAlerts.Padding = new Padding(0);
-            _grpCustomerAlerts.Size = new Size(620, 547);
-            _grpCustomerAlerts.TabIndex = 15;
-            _grpCustomerAlerts.TabStop = false;
-            _grpCustomerAlerts.Text = "Alerts";
-            //
-            // grpSite
-            //
-            _grpSite.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _grpSite.Controls.Add(_btnAddCustomerAlert);
-            _grpSite.Controls.Add(_btnDeleteCustomerAlert);
-            _grpSite.Controls.Add(_txtCustomerAlertEmailAddress);
-            _grpSite.Controls.Add(_lblEmailAddressMsg);
-            _grpSite.Controls.Add(_btnSaveCustomerAlert);
-            _grpSite.Controls.Add(_cboAlertType);
-            _grpSite.Controls.Add(_lblCustomerAlertEmailAddress);
-            _grpSite.Controls.Add(_lblAlertType);
-            _grpSite.Location = new Point(14, 287);
-            _grpSite.Name = "grpSite";
-            _grpSite.Size = new Size(592, 248);
-            _grpSite.TabIndex = 115;
-            _grpSite.TabStop = false;
-            _grpSite.Text = "Alert";
-            //
-            // btnAddCustomerAlert
-            //
-            _btnAddCustomerAlert.AccessibleDescription = "";
-            _btnAddCustomerAlert.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAddCustomerAlert.Location = new Point(555, 18);
-            _btnAddCustomerAlert.Name = "btnAddCustomerAlert";
-            _btnAddCustomerAlert.Size = new Size(31, 28);
-            _btnAddCustomerAlert.TabIndex = 131;
-            _btnAddCustomerAlert.Text = "+";
-            _tt.SetToolTip(_btnAddCustomerAlert, "Add new alert");
-            //
-            // btnDeleteCustomerAlert
-            //
-            _btnDeleteCustomerAlert.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnDeleteCustomerAlert.Location = new Point(9, 210);
-            _btnDeleteCustomerAlert.Name = "btnDeleteCustomerAlert";
-            _btnDeleteCustomerAlert.Size = new Size(81, 23);
-            _btnDeleteCustomerAlert.TabIndex = 130;
-            _btnDeleteCustomerAlert.Text = "Delete";
-            _btnDeleteCustomerAlert.Visible = false;
-            //
-            // txtCustomerAlertEmailAddress
-            //
-            _txtCustomerAlertEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtCustomerAlertEmailAddress.Location = new Point(9, 131);
-            _txtCustomerAlertEmailAddress.Multiline = true;
-            _txtCustomerAlertEmailAddress.Name = "txtCustomerAlertEmailAddress";
-            _txtCustomerAlertEmailAddress.ScrollBars = ScrollBars.Vertical;
-            _txtCustomerAlertEmailAddress.Size = new Size(577, 62);
-            _txtCustomerAlertEmailAddress.TabIndex = 129;
-            _txtCustomerAlertEmailAddress.Tag = "Customer.Notes";
-            //
-            // lblEmailAddressMsg
-            //
-            _lblEmailAddressMsg.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblEmailAddressMsg.Location = new Point(6, 63);
-            _lblEmailAddressMsg.Name = "lblEmailAddressMsg";
-            _lblEmailAddressMsg.Size = new Size(566, 29);
-            _lblEmailAddressMsg.TabIndex = 128;
-            _lblEmailAddressMsg.Text = "Please seperate each email address with a semi-colon;";
-            //
-            // btnSaveCustomerAlert
-            //
-            _btnSaveCustomerAlert.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSaveCustomerAlert.Location = new Point(505, 210);
-            _btnSaveCustomerAlert.Name = "btnSaveCustomerAlert";
-            _btnSaveCustomerAlert.Size = new Size(81, 23);
-            _btnSaveCustomerAlert.TabIndex = 127;
-            _btnSaveCustomerAlert.Text = "Save";
-            //
-            // cboAlertType
-            //
-            _cboAlertType.Cursor = Cursors.Hand;
-            _cboAlertType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboAlertType.Location = new Point(117, 20);
-            _cboAlertType.Name = "cboAlertType";
-            _cboAlertType.Size = new Size(161, 21);
-            _cboAlertType.TabIndex = 126;
-            _cboAlertType.Tag = "";
-            //
-            // lblCustomerAlertEmailAddress
-            //
-            _lblCustomerAlertEmailAddress.Location = new Point(6, 105);
-            _lblCustomerAlertEmailAddress.Name = "lblCustomerAlertEmailAddress";
-            _lblCustomerAlertEmailAddress.Size = new Size(112, 23);
-            _lblCustomerAlertEmailAddress.TabIndex = 125;
-            _lblCustomerAlertEmailAddress.Text = "Email Address(s):";
-            //
-            // lblAlertType
-            //
-            _lblAlertType.Location = new Point(6, 23);
-            _lblAlertType.Name = "lblAlertType";
-            _lblAlertType.Size = new Size(80, 23);
-            _lblAlertType.TabIndex = 123;
-            _lblAlertType.Text = "Alert Type:";
-            //
-            // dgCustomerAlerts
-            //
-            _dgCustomerAlerts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgCustomerAlerts.DataMember = "";
-            _dgCustomerAlerts.HeaderForeColor = SystemColors.ControlText;
-            _dgCustomerAlerts.Location = new Point(14, 19);
-            _dgCustomerAlerts.Name = "dgCustomerAlerts";
-            _dgCustomerAlerts.Size = new Size(592, 262);
-            _dgCustomerAlerts.TabIndex = 11;
-            //
-            // cmnuContractOptions
-            //
-            _cmnuContractOptions.MenuItems.AddRange(new MenuItem[] { _mnuContractOpt1 });
-            //
-            // mnuContractOpt1
-            //
-            _mnuContractOpt1.Index = 0;
-            _mnuContractOpt1.Text = "Contract Opt. 1";
-            //
-            // pnlServiceProcess
-            //
-            _pnlServiceProcess.Dock = DockStyle.Fill;
-            _pnlServiceProcess.Location = new Point(0, 0);
-            _pnlServiceProcess.Name = "pnlServiceProcess";
-            _pnlServiceProcess.Size = new Size(645, 574);
-            _pnlServiceProcess.TabIndex = 2;
             //
             // UCCustomer
             //
-            Controls.Add(_TabControl1);
-            Name = "UCCustomer";
-            Size = new Size(653, 600);
-            _grpCustomer.ResumeLayout(false);
-            _grpCustomer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_picLogo).EndInit();
-            _TabControl1.ResumeLayout(false);
-            _tabMainDetails.ResumeLayout(false);
-            _tabContracts.ResumeLayout(false);
-            _pnlContracts.ResumeLayout(false);
-            _gpbContracts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgContracts).EndInit();
-            _tabCharges.ResumeLayout(false);
-            _grbCharges.ResumeLayout(false);
-            _grbCharges.PerformLayout();
-            _tabDocuments.ResumeLayout(false);
-            _tabQuotes.ResumeLayout(false);
-            _tabPriority.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgvPriority).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgRequirements).EndInit();
-            _tabParts.ResumeLayout(false);
-            _tabParts.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvParts).EndInit();
-            _tabServiceDates.ResumeLayout(false);
-            _tabCreation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgRaiseEng).EndInit();
-            _tabAuthority.ResumeLayout(false);
-            _grpAudit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgAuthorityAudit).EndInit();
-            _gpCustAuth.ResumeLayout(false);
-            _gpCustAuth.PerformLayout();
-            _tabAlerts.ResumeLayout(false);
-            _grpCustomerAlerts.ResumeLayout(false);
-            _grpSite.ResumeLayout(false);
-            _grpSite.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCustomerAlerts).EndInit();
-            ResumeLayout(false);
+            this.Controls.Add(this._TabControl1);
+            this.Name = "UCCustomer";
+            this.Size = new System.Drawing.Size(653, 600);
+            this._grpCustomer.ResumeLayout(false);
+            this._grpCustomer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._picLogo)).EndInit();
+            this._TabControl1.ResumeLayout(false);
+            this._tabMainDetails.ResumeLayout(false);
+            this._tabContracts.ResumeLayout(false);
+            this._pnlContracts.ResumeLayout(false);
+            this._gpbContracts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgContracts)).EndInit();
+            this._tabCharges.ResumeLayout(false);
+            this._grbCharges.ResumeLayout(false);
+            this._grbCharges.PerformLayout();
+            this._tabDocuments.ResumeLayout(false);
+            this._tabQuotes.ResumeLayout(false);
+            this._tabPriority.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPriority)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgRequirements)).EndInit();
+            this._tabParts.ResumeLayout(false);
+            this._tabParts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvParts)).EndInit();
+            this._tabServiceDates.ResumeLayout(false);
+            this._tabCreation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgRaiseEng)).EndInit();
+            this._tabAuthority.ResumeLayout(false);
+            this._grpAudit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgAuthorityAudit)).EndInit();
+            this._gpCustAuth.ResumeLayout(false);
+            this._gpCustAuth.PerformLayout();
+            this._tabAlerts.ResumeLayout(false);
+            this._grpCustomerAlerts.ResumeLayout(false);
+            this._grpSite.ResumeLayout(false);
+            this._grpSite.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCustomerAlerts)).EndInit();
+            this.ResumeLayout(false);
         }
 
         public void LoadForm(object sender, EventArgs e)
@@ -3340,11 +3326,6 @@ namespace FSM
         }
 
         private void btnAddContract_Click(object sender, EventArgs e)
-        {
-            cmnuContractOptions.Show(btnAddContract, new Point(0, -30));
-        }
-
-        private void mnuContractOpt1_Click(object sender, EventArgs e)
         {
             App.ShowForm(typeof(FRMContractOriginal), true, new object[] { 0, Helper.MakeIntegerValid(CurrentCustomer.CustomerID) });
             Contracts = App.DB.Customer.Customer_Contracts_GetAll(CurrentCustomer.CustomerID);
