@@ -1,4 +1,4 @@
-![Image of Apollo](https://cdn.dribbble.com/users/4624817/screenshots/10727387/apollo.png)
+![Image of Apollo](https://github.com/FlagshipGroup/Apollo.FSM/blob/master/Project%20Apollo%20Logo.jpg)
 > - Credit: cobatrus from Dribble
 
 # Project Apollo
