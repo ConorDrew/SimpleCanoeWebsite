@@ -1734,7 +1734,8 @@ namespace FSM
                     foreach (DataRow dr in Visits2.Table.Rows)
                     {
                         ii += 1;
-                        App.DB.ContractVisits.Delete(Conversions.ToInteger(dr["ContractVisitID"]));
+
+                        App.DB.ContractVisits.Delete((dr["ContractVisitID"] != System.DBNull.Value) ? Conversions.ToInteger(dr["ContractVisitID"]) : 0);
                         int r = Conversions.ToInteger(App.DB.ExecuteScalar(Conversions.ToString("SELECT COUNT(*) FROM tblContractVisits WHERE ContractVisitID = " + dr["ContractVisitID"])));
                         if (r > 0) //
                         {
@@ -1744,7 +1745,8 @@ namespace FSM
                         else
                         {
                             // it has been removed so please remove ppm
-                            App.DB.ContractOriginalSite.Delete_Visits(Conversions.ToInteger(dr["ContractSiteID"]));
+
+                            App.DB.ContractOriginalSite.Delete_Visits((dr["ContractSiteID"] != System.DBNull.Value) ? Conversions.ToInteger(dr["ContractSiteID"]) : 0);
                             // then re add the visit
                             ScheduleSingleRow(dr);
                         }
@@ -1906,7 +1908,7 @@ namespace FSM
                     }
                 }
 
-                DateTime estVisitDate = Conversions.ToDate(dtpFirstVisitDate.Value.Date + " 09:00:00");
+                DateTime estVisitDate = Conversions.ToDate(dtpFirstVisitDate.Value.Date.AddHours(9));
                 string jobSummary = string.Empty;
                 int rateCount = 0;
                 foreach (DataRow rateRow in CurrentContractSite.ContractSiteScheduleOfRates.Table.Rows)
@@ -2107,7 +2109,7 @@ namespace FSM
                 int numOfVisits = 0;
                 int visitFreqInMonths = 0;
                 int visitFreqIndays = 0;
-                DateTime estVisitDate = Conversions.ToDate(DateAndTime.Today.Date + " 09:00:00");
+                DateTime estVisitDate = Conversions.ToDate(DateAndTime.Today.Date.AddHours(9));
                 Enums.VisitFrequency visitFrequency = (Enums.VisitFrequency)Conversions.ToInteger(dr["FrequencyID"]);
                 switch (visitFrequency)
                 {
