@@ -9,12 +9,8 @@ namespace FSM
 {
     public class FRMContractOriginal : FRMBaseForm, IForm
     {
-        
-
         public FRMContractOriginal() : base()
         {
-            
-            
             base.Load += FRMContract_Load;
             base.Closing += FRMContractOriginal_Closing;
 
@@ -218,9 +214,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             LoadForm(sender, e, this);
@@ -266,8 +259,6 @@ namespace FSM
             ID = newID;
         }
 
-        
-        
         private IUserControl TheLoadedControl;
         private int _ID = 0;
 
@@ -359,8 +350,10 @@ namespace FSM
         private void btnPrint_Click(object sender, EventArgs e)
         {
             var dtContracts = App.DB.ContractOriginal.ProcessContract(ID);
-            if (dtContracts is null)
-                return;
+
+            if (dtContracts.Rows.Count < 1)
+                App.ShowMessage("Contract is not assigned to any properties, unable to print", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
             var details = new ArrayList() { dtContracts };
             var oPrint = new Entity.Sys.Printing(details, ((UCContractOriginal)LoadedControl).CurrentContract.ContractReference.Trim() + " ", Entity.Sys.Enums.SystemDocumentType.ContractOption1);
         }
@@ -373,7 +366,5 @@ namespace FSM
                 ((FRMContractManager)get_GetParameter(2)).PopulateDatagrid();
             }
         }
-
-        
     }
 }
