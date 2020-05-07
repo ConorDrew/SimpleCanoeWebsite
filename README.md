@@ -1,5 +1,4 @@
 ![Image of Apollo](https://github.com/FlagshipGroup/Apollo.FSM/blob/master/Project%20Apollo%20Logo.jpg)
-> - Credit: cobatrus from Dribble
 
 # Project Apollo
 
