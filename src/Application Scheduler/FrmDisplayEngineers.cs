@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace FSM
 {
-    public class FrmDisplayEngineers : FRMBaseForm
+    public class FrmDisplayEngineers : FRMBaseForm, IForm
     {
         public FrmDisplayEngineers() : base()
         {
@@ -683,10 +683,7 @@ namespace FSM
 
         private void FrmDisplayEngineers_Load(object sender, EventArgs e)
         {
-            LoadForm(this);
-            SetUpDataGrid();
-            txtNameFilter.Select();
-            Populate();
+            LoadMe(sender, e);
         }
 
         private void cboEngineerGroup_SelectedIndexChanged(object sender, EventArgs e)
@@ -893,6 +890,20 @@ namespace FSM
             string filter = "Name LIKE '%" + Helper.RemoveSpecialCharacters(txtNameFilter.Text) + "%'" + regionFilter + postcodeFilter + qualificationsFilter + engineerGroup;
             EngineersDataView.RowFilter = filter;
             grpMain.Text = "Engineers to Display (" + EngineersDataView.Count + ")";
+        }
+
+        public void LoadMe(object sender, EventArgs e)
+        {
+            LoadForm(sender, e, this);
+            SetUpDataGrid();
+            txtNameFilter.Select();
+            Populate();
+        }
+
+        public IUserControl LoadedControl { get; }
+
+        public void ResetMe(int newID)
+        {
         }
     }
 }

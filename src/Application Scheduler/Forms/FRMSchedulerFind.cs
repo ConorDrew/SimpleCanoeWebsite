@@ -9,7 +9,7 @@ using FSM.Entity.Sys;
 
 namespace FSM
 {
-    public class FRMSchedulerFind : Form
+    public class FRMSchedulerFind : FRMBaseForm, IForm
     {
         public FRMSchedulerFind() : base()
         {
@@ -225,147 +225,150 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpFind = new GroupBox();
-            _rbtnCustomer = new RadioButton();
-            _rbtnCustomer.CheckedChanged += new EventHandler(rbtn_CheckedChanged);
-            _rbtnOrder = new RadioButton();
-            _rbtnOrder.CheckedChanged += new EventHandler(rbtn_CheckedChanged);
-            _rbtnJob = new RadioButton();
-            _rbtnJob.CheckedChanged += new EventHandler(rbtn_CheckedChanged);
-            _rbtnSite = new RadioButton();
-            _rbtnSite.CheckedChanged += new EventHandler(rbtn_CheckedChanged);
-            _btnFind = new Button();
-            _btnFind.Click += new EventHandler(btnFind_Click);
-            _txtFilter = new TextBox();
-            _txtFilter.KeyUp += new KeyEventHandler(txtFilter_KeyUp);
-            _grpResult = new GroupBox();
-            _dgResults = new DataGrid();
-            _dgResults.DoubleClick += new EventHandler(dgResults_DoubleClick);
+            _grpFind = new System.Windows.Forms.GroupBox();
+            _rbtnCustomer = new System.Windows.Forms.RadioButton();
+            _rbtnOrder = new System.Windows.Forms.RadioButton();
+            _rbtnJob = new System.Windows.Forms.RadioButton();
+            _rbtnSite = new System.Windows.Forms.RadioButton();
+            _btnFind = new System.Windows.Forms.Button();
+            _txtFilter = new System.Windows.Forms.TextBox();
+            _grpResult = new System.Windows.Forms.GroupBox();
+            _dgResults = new System.Windows.Forms.DataGrid();
             _grpFind.SuspendLayout();
             _grpResult.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgResults).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgResults)).BeginInit();
             SuspendLayout();
             //
-            // grpFind
+            // _grpFind
             //
-            _grpFind.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpFind.Controls.Add(_rbtnCustomer);
-            _grpFind.Controls.Add(_rbtnOrder);
-            _grpFind.Controls.Add(_rbtnJob);
-            _grpFind.Controls.Add(_rbtnSite);
-            _grpFind.Location = new Point(12, 12);
-            _grpFind.Name = "grpFind";
-            _grpFind.Size = new Size(97, 400);
+            _grpFind.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            _grpFind.Controls.Add(this._rbtnCustomer);
+            _grpFind.Controls.Add(this._rbtnOrder);
+            _grpFind.Controls.Add(this._rbtnJob);
+            _grpFind.Controls.Add(this._rbtnSite);
+            _grpFind.Location = new System.Drawing.Point(14, 13);
+            _grpFind.Name = "_grpFind";
+            _grpFind.Size = new System.Drawing.Size(117, 398);
             _grpFind.TabIndex = 0;
             _grpFind.TabStop = false;
             _grpFind.Text = "Find";
             //
-            // rbtnCustomer
+            // _rbtnCustomer
             //
             _rbtnCustomer.AutoSize = true;
-            _rbtnCustomer.Location = new Point(11, 79);
-            _rbtnCustomer.Name = "rbtnCustomer";
-            _rbtnCustomer.Size = new Size(69, 17);
+            _rbtnCustomer.Location = new System.Drawing.Point(13, 85);
+            _rbtnCustomer.Name = "_rbtnCustomer";
+            _rbtnCustomer.Size = new System.Drawing.Size(81, 17);
             _rbtnCustomer.TabIndex = 4;
             _rbtnCustomer.Text = "Customer";
             _rbtnCustomer.UseVisualStyleBackColor = true;
+            _rbtnCustomer.CheckedChanged += new System.EventHandler(this.rbtn_CheckedChanged);
             //
-            // rbtnOrder
+            // _rbtnOrder
             //
             _rbtnOrder.AutoSize = true;
-            _rbtnOrder.Location = new Point(11, 109);
-            _rbtnOrder.Name = "rbtnOrder";
-            _rbtnOrder.Size = new Size(51, 17);
+            _rbtnOrder.Location = new System.Drawing.Point(13, 117);
+            _rbtnOrder.Name = "_rbtnOrder";
+            _rbtnOrder.Size = new System.Drawing.Size(58, 17);
             _rbtnOrder.TabIndex = 3;
             _rbtnOrder.Text = "Order";
             _rbtnOrder.UseVisualStyleBackColor = true;
             _rbtnOrder.Visible = false;
+            _rbtnOrder.CheckedChanged += new System.EventHandler(this.rbtn_CheckedChanged);
             //
-            // rbtnJob
+            // _rbtnJob
             //
             _rbtnJob.AutoSize = true;
-            _rbtnJob.Location = new Point(11, 49);
-            _rbtnJob.Name = "rbtnJob";
-            _rbtnJob.Size = new Size(42, 17);
+            _rbtnJob.Location = new System.Drawing.Point(13, 53);
+            _rbtnJob.Name = "_rbtnJob";
+            _rbtnJob.Size = new System.Drawing.Size(44, 17);
             _rbtnJob.TabIndex = 2;
             _rbtnJob.Text = "Job";
             _rbtnJob.UseVisualStyleBackColor = true;
+            _rbtnJob.CheckedChanged += new System.EventHandler(this.rbtn_CheckedChanged);
             //
-            // rbtnSite
+            // _rbtnSite
             //
             _rbtnSite.AutoSize = true;
             _rbtnSite.Checked = true;
-            _rbtnSite.Location = new Point(10, 19);
-            _rbtnSite.Name = "rbtnSite";
-            _rbtnSite.Size = new Size(43, 17);
+            _rbtnSite.Location = new System.Drawing.Point(12, 20);
+            _rbtnSite.Name = "_rbtnSite";
+            _rbtnSite.Size = new System.Drawing.Size(47, 17);
             _rbtnSite.TabIndex = 1;
             _rbtnSite.TabStop = true;
             _rbtnSite.Text = "Site";
             _rbtnSite.UseVisualStyleBackColor = true;
+            _rbtnSite.CheckedChanged += new System.EventHandler(this.rbtn_CheckedChanged);
             //
-            // btnFind
+            // _btnFind
             //
             _btnFind.AccessibleDescription = "";
-            _btnFind.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFind.Cursor = Cursors.Hand;
-            _btnFind.FlatStyle = FlatStyle.System;
-            _btnFind.Location = new Point(667, 18);
-            _btnFind.Name = "btnFind";
-            _btnFind.Size = new Size(48, 23);
+            _btnFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            _btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            _btnFind.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            _btnFind.Location = new System.Drawing.Point(655, 19);
+            _btnFind.Name = "_btnFind";
+            _btnFind.Size = new System.Drawing.Size(58, 25);
             _btnFind.TabIndex = 5;
             _btnFind.Text = "Find";
+            _btnFind.Click += new System.EventHandler(this.btnFind_Click);
             //
-            // txtFilter
+            // _txtFilter
             //
-            _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtFilter.Location = new Point(115, 20);
+            _txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            _txtFilter.Location = new System.Drawing.Point(138, 22);
             _txtFilter.MaxLength = 25;
-            _txtFilter.Name = "txtFilter";
-            _txtFilter.Size = new Size(546, 20);
+            _txtFilter.Name = "_txtFilter";
+            _txtFilter.Size = new System.Drawing.Size(510, 21);
             _txtFilter.TabIndex = 4;
+            _txtFilter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFilter_KeyUp);
             //
-            // grpResult
+            // _grpResult
             //
-            _grpResult.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpResult.Controls.Add(_dgResults);
-            _grpResult.Location = new Point(115, 46);
-            _grpResult.Name = "grpResult";
-            _grpResult.Size = new Size(600, 366);
+            _grpResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            _grpResult.Controls.Add(this._dgResults);
+            _grpResult.Location = new System.Drawing.Point(138, 50);
+            _grpResult.Name = "_grpResult";
+            _grpResult.Size = new System.Drawing.Size(575, 361);
             _grpResult.TabIndex = 4;
             _grpResult.TabStop = false;
             _grpResult.Text = "Result - Double Click to Open";
             //
-            // dgResults
+            // _dgResults
             //
-            _dgResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
+            this._dgResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             _dgResults.DataMember = "";
-            _dgResults.HeaderForeColor = SystemColors.ControlText;
-            _dgResults.Location = new Point(6, 19);
-            _dgResults.Name = "dgResults";
-            _dgResults.Size = new Size(588, 341);
+            _dgResults.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            _dgResults.Location = new System.Drawing.Point(7, 20);
+            _dgResults.Name = "_dgResults";
+            _dgResults.Size = new System.Drawing.Size(561, 335);
             _dgResults.TabIndex = 12;
+            _dgResults.DoubleClick += new System.EventHandler(this.dgResults_DoubleClick);
             //
             // FRMSchedulerFind
             //
-            AutoScaleBaseSize = new Size(5, 13);
-            BackColor = Color.White;
-            ClientSize = new Size(727, 424);
-            Controls.Add(_grpResult);
-            Controls.Add(_btnFind);
-            Controls.Add(_txtFilter);
-            Controls.Add(_grpFind);
+            AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(727, 424);
+            Controls.Add(this._grpResult);
+            Controls.Add(this._btnFind);
+            Controls.Add(this._txtFilter);
+            Controls.Add(this._grpFind);
             MaximizeBox = false;
-            MaximumSize = new Size(1000, 1000);
+            MaximumSize = new System.Drawing.Size(1200, 1077);
             MinimizeBox = false;
             Name = "FRMSchedulerFind";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "Find";
             _grpFind.ResumeLayout(false);
             _grpFind.PerformLayout();
             _grpResult.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgResults).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgResults)).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -404,8 +407,7 @@ namespace FSM
 
         private void FRMSchedulerFind_Load(object sender, EventArgs e)
         {
-            var _ssmList = new List<Enums.SecuritySystemModules>() { Enums.SecuritySystemModules.CreatePO, Enums.SecuritySystemModules.EditPO };
-            rbtnOrder.Visible = App.loggedInUser.HasAccessToMulitpleModules(_ssmList);
+            LoadMe(sender, e);
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -814,6 +816,19 @@ namespace FSM
             dgts.ReadOnly = true;
             dgts.MappingName = Enums.TableNames.NO_TABLE.ToString();
             dgResults.TableStyles.Add(dgts);
+        }
+
+        public void LoadMe(object sender, EventArgs e)
+        {
+            LoadForm(sender, e, this);
+            var _ssmList = new List<Enums.SecuritySystemModules>() { Enums.SecuritySystemModules.CreatePO, Enums.SecuritySystemModules.EditPO };
+            rbtnOrder.Visible = App.loggedInUser.HasAccessToMulitpleModules(_ssmList);
+        }
+
+        public IUserControl LoadedControl { get; }
+
+        public void ResetMe(int newID)
+        {
         }
     }
 }

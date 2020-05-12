@@ -6,15 +6,12 @@ using System.Windows.Forms;
 
 namespace FSM
 {
-    public class FrmEngineerAbsence : FRMBaseForm
+    public class FrmEngineerAbsence : FRMBaseForm, IForm
     {
         public FrmEngineerAbsence()
         {
-            
             base.Load += FrmEngineerAbsence_Load;
         }
-
-        
 
         public FrmEngineerAbsence(int absenceID = 0) : base()
         {
@@ -177,8 +174,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
         private IUserControl TheLoadedControl;
         private int _absenceID = 0;
 
@@ -197,7 +192,7 @@ namespace FSM
 
         private void FrmEngineerAbsence_Load(object sender, EventArgs e)
         {
-            LoadForm(this);
+            LoadMe(sender, e);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -211,6 +206,17 @@ namespace FSM
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public void LoadMe(object sender, EventArgs e)
+        {
+            LoadForm(sender, e, this);
+        }
+
+        public IUserControl LoadedControl { get; }
+
+        public void ResetMe(int newID)
+        {
         }
     }
 }

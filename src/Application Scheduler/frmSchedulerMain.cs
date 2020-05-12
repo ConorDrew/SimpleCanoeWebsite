@@ -46,10 +46,7 @@ namespace FSM
         internal MainMenu mnuMain
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _mnuMain;
-            }
+            get { return _mnuMain; }
 
             [MethodImpl(MethodImplOptions.Synchronized)]
             set
@@ -88,102 +85,118 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSchedulerMain));
-            _mnuMain = new MainMenu(components);
-            _mnuScheduler = new MenuItem();
-            _mnuOpenSchedule = new MenuItem();
-            _mnuOpenSchedule.Click += new EventHandler(mnuOpenSchedule_Click);
-            _mnuResetScheduler = new MenuItem();
-            _mnuResetScheduler.Click += new EventHandler(mnuResetScheduler_Click);
-            _mnuDividerScheduler = new MenuItem();
-            _mnuCloseScheduler = new MenuItem();
-            _mnuCloseScheduler.Click += new EventHandler(mnuCloseScheduler_Click);
-            _mnuAbsences = new MenuItem();
-            _mnuAbsences.Click += new EventHandler(mnuAbsences_Click);
-            _mnuWeekSchedule = new MenuItem();
-            _mnuPrintWeek = new MenuItem();
-            _mnuPrintWeek.Click += new EventHandler(mnuPrintWeek_Click);
-            _MenuItem1 = new MenuItem();
-            _MenuItem2 = new MenuItem();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(frmSchedulerMain));
+            this._mnuMain = new System.Windows.Forms.MainMenu(this.components);
+            this._mnuScheduler = new System.Windows.Forms.MenuItem();
+            this._mnuOpenSchedule = new System.Windows.Forms.MenuItem();
+            this._mnuResetScheduler = new System.Windows.Forms.MenuItem();
+            this._mnuDividerScheduler = new System.Windows.Forms.MenuItem();
+            this._mnuCloseScheduler = new System.Windows.Forms.MenuItem();
+            this._mnuAbsences = new System.Windows.Forms.MenuItem();
+            this._mnuWeekSchedule = new System.Windows.Forms.MenuItem();
+            this._mnuPrintWeek = new System.Windows.Forms.MenuItem();
+            this._MenuItem1 = new System.Windows.Forms.MenuItem();
+            this._MenuItem2 = new System.Windows.Forms.MenuItem();
+            this.SuspendLayout();
             //
-            // mnuMain
+            // _mnuMain
             //
-            _mnuMain.MenuItems.AddRange(new MenuItem[] { _mnuScheduler, _mnuAbsences, _mnuWeekSchedule, _MenuItem2 });
+            this._mnuMain.MenuItems.AddRange(new System.Windows.Forms.MenuItem[]
+            {
+                this._mnuScheduler,
+                this._mnuAbsences,
+                this._mnuWeekSchedule,
+                this._MenuItem2
+            });
             //
-            // mnuScheduler
+            // _mnuScheduler
             //
-            _mnuScheduler.Index = 0;
-            _mnuScheduler.MenuItems.AddRange(new MenuItem[] { _mnuOpenSchedule, _mnuResetScheduler, _mnuDividerScheduler, _mnuCloseScheduler });
-            _mnuScheduler.Text = "&Scheduler";
+            this._mnuScheduler.Index = 0;
+            this._mnuScheduler.MenuItems.AddRange(new System.Windows.Forms.MenuItem[]
+            {
+                this._mnuOpenSchedule,
+                this._mnuResetScheduler,
+                this._mnuDividerScheduler,
+                this._mnuCloseScheduler
+            });
+            this._mnuScheduler.Text = "&Scheduler";
             //
-            // mnuOpenSchedule
+            // _mnuOpenSchedule
             //
-            _mnuOpenSchedule.Index = 0;
-            _mnuOpenSchedule.Shortcut = Shortcut.F2;
-            _mnuOpenSchedule.Text = "&Open";
+            this._mnuOpenSchedule.Index = 0;
+            this._mnuOpenSchedule.Shortcut = System.Windows.Forms.Shortcut.F2;
+            this._mnuOpenSchedule.Text = "&Open";
+            this._mnuOpenSchedule.Click += new System.EventHandler(this.mnuOpenSchedule_Click);
             //
-            // mnuResetScheduler
+            // _mnuResetScheduler
             //
-            _mnuResetScheduler.Index = 1;
-            _mnuResetScheduler.Shortcut = Shortcut.F3;
-            _mnuResetScheduler.Text = "&Reset";
+            this._mnuResetScheduler.Index = 1;
+            this._mnuResetScheduler.Shortcut = System.Windows.Forms.Shortcut.F3;
+            this._mnuResetScheduler.Text = "&Reset";
+            this._mnuResetScheduler.Click += new System.EventHandler(this.mnuResetScheduler_Click);
             //
-            // mnuDividerScheduler
+            // _mnuDividerScheduler
             //
-            _mnuDividerScheduler.Index = 2;
-            _mnuDividerScheduler.Text = "-";
+            this._mnuDividerScheduler.Index = 2;
+            this._mnuDividerScheduler.Text = "-";
             //
-            // mnuCloseScheduler
+            // _mnuCloseScheduler
             //
-            _mnuCloseScheduler.Index = 3;
-            _mnuCloseScheduler.Text = "&Close";
+            this._mnuCloseScheduler.Index = 3;
+            this._mnuCloseScheduler.Text = "&Close";
+            this._mnuCloseScheduler.Click += new System.EventHandler(this.mnuCloseScheduler_Click);
             //
-            // mnuAbsences
+            // _mnuAbsences
             //
-            _mnuAbsences.Index = 1;
-            _mnuAbsences.Text = "&Absences";
+            this._mnuAbsences.Index = 1;
+            this._mnuAbsences.Text = "&Absences";
+            this._mnuAbsences.Click += new System.EventHandler(this.mnuAbsences_Click);
             //
-            // mnuWeekSchedule
+            // _mnuWeekSchedule
             //
-            _mnuWeekSchedule.Index = 2;
-            _mnuWeekSchedule.MenuItems.AddRange(new MenuItem[] { _mnuPrintWeek, _MenuItem1 });
-            _mnuWeekSchedule.Text = "&Week Schedule";
-            _mnuWeekSchedule.Visible = false;
+            this._mnuWeekSchedule.Index = 2;
+            this._mnuWeekSchedule.MenuItems.AddRange(new System.Windows.Forms.MenuItem[]
+            {
+                this._mnuPrintWeek,
+                this._MenuItem1
+            });
+            this._mnuWeekSchedule.Text = "&Week Schedule";
+            this._mnuWeekSchedule.Visible = false;
             //
-            // mnuPrintWeek
+            // _mnuPrintWeek
             //
-            _mnuPrintWeek.Index = 0;
-            _mnuPrintWeek.Text = "&Print";
+            this._mnuPrintWeek.Index = 0;
+            this._mnuPrintWeek.Text = "&Print";
+            this._mnuPrintWeek.Click += new System.EventHandler(this.mnuPrintWeek_Click);
             //
-            // MenuItem1
+            // _MenuItem1
             //
-            _MenuItem1.Index = 1;
-            _MenuItem1.Text = "frmVisit";
-            _MenuItem1.Visible = false;
+            this._MenuItem1.Index = 1;
+            this._MenuItem1.Text = "frmVisit";
+            this._MenuItem1.Visible = false;
             //
-            // MenuItem2
+            // _MenuItem2
             //
-            _MenuItem2.Index = 3;
-            _MenuItem2.Text = "Development";
-            _MenuItem2.Visible = false;
+            this._MenuItem2.Index = 3;
+            this._MenuItem2.Text = "Development";
+            this._MenuItem2.Visible = false;
             //
             // frmSchedulerMain
             //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(744, 371);
-            Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            IsMdiContainer = true;
-            Menu = _mnuMain;
-            MinimumSize = new Size(752, 405);
-            Name = "frmSchedulerMain";
-            ShowIcon = false;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Scheduler";
-            WindowState = FormWindowState.Maximized;
-            ResumeLayout(false);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.AutoScroll = false;
+            this.ClientSize = new System.Drawing.Size(744, 371);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
+            this.Menu = this._mnuMain;
+            this.MinimumSize = new System.Drawing.Size(752, 405);
+            this.Name = "frmSchedulerMain";
+            this.ShowIcon = false;
+            this.Text = "Scheduler";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.ResumeLayout(false);
         }
 
         public Scheduler scheduler;
@@ -201,6 +214,7 @@ namespace FSM
 
         private void frmSchedulerMain_Load(object sender, EventArgs e)
         {
+            UpdateMessage();
             scheduler = new Scheduler(this);
             scheduler.Open();
         }
@@ -236,6 +250,11 @@ namespace FSM
         {
             e.Cancel = true;
             scheduler.close();
+        }
+
+        public void UpdateMessage()
+        {
+            Text = App.TheSystem.Configuration.CompanyName + " " + Text;
         }
     }
 }

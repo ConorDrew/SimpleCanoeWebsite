@@ -12,12 +12,8 @@ namespace FSM
 {
     public class FRMLogCallout : FRMBaseForm, IForm
     {
-        
-
         public FRMLogCallout() : base()
         {
-            
-            
             base.Load += FRMLogCallout_Load;
 
             // This call is required by the Windows Form Designer.
@@ -277,7 +273,6 @@ namespace FSM
 
         private GroupBox _grpAssets;
 
-
         private TabPage _tpNotes;
 
         internal TabPage tpNotes
@@ -341,8 +336,6 @@ namespace FSM
             {
                 if (_dgNotes != null)
                 {
-                    
-                    
                     _dgNotes.Click -= dgNotes_Click;
                     _dgNotes.CurrentCellChanged -= dgNotes_Click;
                 }
@@ -556,7 +549,6 @@ namespace FSM
 
         private GroupBox _GroupBox2;
 
-
         private ContextMenuStrip _cmsView;
 
         internal ContextMenuStrip cmsView
@@ -583,9 +575,7 @@ namespace FSM
 
         private ToolStripMenuItem _PropertyToolStripMenuItem;
 
-
         private ToolStripMenuItem _CustomerToolStripMenuItem;
-
 
         private ToolStripMenuItem _AuditTrailToolStripMenuItem;
 
@@ -719,7 +709,6 @@ namespace FSM
 
         private ToolStripMenuItem _HistoryToolStripMenuItem;
 
-
         private GroupBox _GroupBox1;
 
         internal GroupBox GroupBox1
@@ -798,7 +787,6 @@ namespace FSM
 
         private Panel _Panel1;
 
-
         private CheckBox _chkExcludeVat;
 
         internal CheckBox chkExcludeVat
@@ -849,9 +837,7 @@ namespace FSM
 
         private Label _lblVAT;
 
-
         private GroupBox _GroupBox3;
-
 
         private RadioButton _rbStandard;
 
@@ -879,7 +865,6 @@ namespace FSM
 
         private RadioButton _rbSite;
 
-
         private TextBox _txtPartQty;
 
         internal TextBox txtPartQty
@@ -905,7 +890,6 @@ namespace FSM
         }
 
         private Label _Label46;
-
 
         private DataGridView _dgvQuote;
 
@@ -957,9 +941,7 @@ namespace FSM
 
         private Button _btnQuoteAdd;
 
-
         private Label _Label45;
-
 
         private TextBox _txtLabourQty;
 
@@ -986,7 +968,6 @@ namespace FSM
         }
 
         private Label _Label44;
-
 
         private Button _btnReset;
 
@@ -1142,7 +1123,6 @@ namespace FSM
 
         private Label _lbltc1;
 
-
         private TextBox _txtPartNumber;
 
         internal TextBox txtPartNumber
@@ -1169,7 +1149,6 @@ namespace FSM
 
         private Label _lblnumber1;
 
-
         private TextBox _txtPartName;
 
         internal TextBox txtPartName
@@ -1195,7 +1174,6 @@ namespace FSM
         }
 
         private Label _lblpart1;
-
 
         private TextBox _txtClaimLimit;
 
@@ -1247,7 +1225,6 @@ namespace FSM
 
         private GroupBox _grpContactAttemptDetails;
 
-
         private TextBox _txtContactAttemptDetails;
 
         internal TextBox txtContactAttemptDetails
@@ -1274,9 +1251,7 @@ namespace FSM
 
         private Label _lblContactNotes;
 
-
         private GroupBox _grpContactAttempts;
-
 
         private DataGrid _dgContactAttempts;
 
@@ -1357,852 +1332,864 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _TabControl1 = new TabControl();
-            _tpMain = new TabPage();
-            _tpAssets = new TabPage();
-            _grpAssets = new GroupBox();
-            _dgAssets = new DataGrid();
-            _dgAssets.Click += new EventHandler(dgAssets_Click);
-            _btnAddAppliance = new Button();
-            _btnAddAppliance.Click += new EventHandler(btnAddAppliance_Click);
-            _tpDocuments = new TabPage();
-            _tbquote = new TabPage();
-            _GroupBox2 = new GroupBox();
-            _GroupBox1 = new GroupBox();
-            _rdoAXA = new RadioButton();
-            _rdoAXA.CheckedChanged += new EventHandler(rdoCust_CheckedChanged);
-            _rdoPOC = new RadioButton();
-            _rdoPOC.CheckedChanged += new EventHandler(rdoCust_CheckedChanged);
-            _Panel1 = new Panel();
-            _txtClaimLimit = new TextBox();
-            _lblClaimLimit = new Label();
-            _chkExcludeVat = new CheckBox();
-            _cboVATRate = new ComboBox();
-            _lblVAT = new Label();
-            _GroupBox3 = new GroupBox();
-            _rbStandard = new RadioButton();
-            _rbSite = new RadioButton();
-            _txtPartQty = new TextBox();
-            _Label46 = new Label();
-            _dgvQuote = new DataGridView();
-            _cboLabour = new ComboBox();
-            _btnQuoteAdd = new Button();
-            _btnQuoteAdd.Click += new EventHandler(BtnQuoteAdd_Click);
-            _Label45 = new Label();
-            _txtLabourQty = new TextBox();
-            _Label44 = new Label();
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _btnaddtonotes = new Button();
-            _btnaddtonotes.Click += new EventHandler(btnaddtonotes_Click);
-            _btnEmail = new Button();
-            _btnEmail.Click += new EventHandler(btnEmail_Click);
-            _btncalc = new Button();
-            _btncalc.Click += new EventHandler(btncalc_Click);
-            _tbresult = new TextBox();
-            _txtPartRate = new TextBox();
-            _lbltc1 = new Label();
-            _txtPartNumber = new TextBox();
-            _lblnumber1 = new Label();
-            _txtPartName = new TextBox();
-            _lblpart1 = new Label();
-            _tpNotes = new TabPage();
-            _gpbNotesDetails = new GroupBox();
-            _txtNoteID = new TextBox();
-            _btnSaveNote = new Button();
-            _btnSaveNote.Click += new EventHandler(btnSaveNote_Click);
-            _txtNotes = new TextBox();
-            _Label1 = new Label();
-            _gpbNotes = new GroupBox();
-            _btnDeleteNote = new Button();
-            _btnDeleteNote.Click += new EventHandler(btnDeleteNote_Click);
-            _dgNotes = new DataGrid();
-            _dgNotes.Click += new EventHandler(dgNotes_Click);
-            _dgNotes.CurrentCellChanged += new EventHandler(dgNotes_Click);
-            _dgNotes.Click += new EventHandler(dgNotes_Click);
-            _dgNotes.CurrentCellChanged += new EventHandler(dgNotes_Click);
-            _btnAddNote = new Button();
-            _btnAddNote.Click += new EventHandler(btnAddNote_Click);
-            _tpContactAttempts = new TabPage();
-            _grpContactAttemptDetails = new GroupBox();
-            _txtContactAttemptDetails = new TextBox();
-            _lblContactNotes = new Label();
-            _grpContactAttempts = new GroupBox();
-            _dgContactAttempts = new DataGrid();
-            _dgContactAttempts.Click += new EventHandler(dgContactAttempts_Click);
-            _btnAddAttempt = new Button();
-            _btnAddAttempt.Click += new EventHandler(btnAddAttempt_Click);
-            _btnView = new Button();
-            _btnView.Click += new EventHandler(btnView_Click);
-            _cmsView = new ContextMenuStrip(components);
-            _PropertyToolStripMenuItem = new ToolStripMenuItem();
-            _PropertyToolStripMenuItem.Click += new EventHandler(PropertyToolStripMenuItem_Click);
-            _CustomerToolStripMenuItem = new ToolStripMenuItem();
-            _CustomerToolStripMenuItem.Click += new EventHandler(CustomerToolStripMenuItem_Click);
-            _AuditTrailToolStripMenuItem = new ToolStripMenuItem();
-            _AuditTrailToolStripMenuItem.Click += new EventHandler(AuditTrailToolStripMenuItem_Click);
-            _OrdersToolStripMenuItem = new ToolStripMenuItem();
-            _OrdersToolStripMenuItem.Click += new EventHandler(OrdersToolStripMenuItem_Click);
-            _InvoiceToolStripMenuItem = new ToolStripMenuItem();
-            _InvoiceToolStripMenuItem.Click += new EventHandler(InvoiceToolStripMenuItem_Click);
-            _QuoteToolStripMenuItem = new ToolStripMenuItem();
-            _QuoteToolStripMenuItem.Click += new EventHandler(QuoteToolStripMenuItem_Click);
-            _CostingsToolStripMenuItem = new ToolStripMenuItem();
-            _CostingsToolStripMenuItem.Click += new EventHandler(CostingsToolStripMenuItem_Click);
-            _HistoryToolStripMenuItem = new ToolStripMenuItem();
-            _HistoryToolStripMenuItem.Click += new EventHandler(HistoryToolStripMenuItem_Click);
-            _TabControl1.SuspendLayout();
-            _tpAssets.SuspendLayout();
-            _grpAssets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAssets).BeginInit();
-            _tbquote.SuspendLayout();
-            _GroupBox2.SuspendLayout();
-            _GroupBox1.SuspendLayout();
-            _Panel1.SuspendLayout();
-            _GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvQuote).BeginInit();
-            _tpNotes.SuspendLayout();
-            _gpbNotesDetails.SuspendLayout();
-            _gpbNotes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgNotes).BeginInit();
-            _tpContactAttempts.SuspendLayout();
-            _grpContactAttemptDetails.SuspendLayout();
-            _grpContactAttempts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgContactAttempts).BeginInit();
-            _cmsView.SuspendLayout();
-            SuspendLayout();
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(70, 664);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 23);
-            _btnClose.TabIndex = 16;
-            _btnClose.Text = "Close";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Location = new Point(8, 664);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 23);
-            _btnSave.TabIndex = 15;
-            _btnSave.Text = "Save";
-            //
-            // TabControl1
-            //
-            _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _TabControl1.Controls.Add(_tpMain);
-            _TabControl1.Controls.Add(_tpAssets);
-            _TabControl1.Controls.Add(_tpDocuments);
-            _TabControl1.Controls.Add(_tbquote);
-            _TabControl1.Controls.Add(_tpNotes);
-            _TabControl1.Controls.Add(_tpContactAttempts);
-            _TabControl1.Location = new Point(0, 31);
-            _TabControl1.Name = "TabControl1";
-            _TabControl1.SelectedIndex = 0;
-            _TabControl1.Size = new Size(1184, 627);
-            _TabControl1.TabIndex = 23;
-            //
-            // tpMain
-            //
-            _tpMain.Location = new Point(4, 22);
-            _tpMain.Name = "tpMain";
-            _tpMain.Padding = new Padding(3);
-            _tpMain.Size = new Size(1176, 601);
-            _tpMain.TabIndex = 0;
-            _tpMain.Text = "Main Details";
-            _tpMain.UseVisualStyleBackColor = true;
-            //
-            // tpAssets
-            //
-            _tpAssets.Controls.Add(_grpAssets);
-            _tpAssets.Location = new Point(4, 22);
-            _tpAssets.Name = "tpAssets";
-            _tpAssets.Padding = new Padding(3);
-            _tpAssets.Size = new Size(1176, 601);
-            _tpAssets.TabIndex = 2;
-            _tpAssets.Text = "Appliances";
-            _tpAssets.UseVisualStyleBackColor = true;
-            //
-            // grpAssets
-            //
-            _grpAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpAssets.Controls.Add(_dgAssets);
-            _grpAssets.Controls.Add(_btnAddAppliance);
-            _grpAssets.Location = new Point(6, 6);
-            _grpAssets.Name = "grpAssets";
-            _grpAssets.Size = new Size(1162, 596);
-            _grpAssets.TabIndex = 29;
-            _grpAssets.TabStop = false;
-            _grpAssets.Text = "Select those related to the job";
-            //
-            // dgAssets
-            //
-            _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAssets.DataMember = "";
-            _dgAssets.HeaderForeColor = SystemColors.ControlText;
-            _dgAssets.Location = new Point(6, 20);
-            _dgAssets.Name = "dgAssets";
-            _dgAssets.Size = new Size(1150, 541);
-            _dgAssets.TabIndex = 1;
-            //
-            // btnAddAppliance
-            //
-            _btnAddAppliance.AccessibleDescription = "Add Job Of Work";
-            _btnAddAppliance.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddAppliance.Location = new Point(6, 567);
-            _btnAddAppliance.Name = "btnAddAppliance";
-            _btnAddAppliance.Size = new Size(155, 23);
-            _btnAddAppliance.TabIndex = 28;
-            _btnAddAppliance.Text = "New Appliance";
-            //
-            // tpDocuments
-            //
-            _tpDocuments.Location = new Point(4, 22);
-            _tpDocuments.Name = "tpDocuments";
-            _tpDocuments.Padding = new Padding(3);
-            _tpDocuments.Size = new Size(1176, 601);
-            _tpDocuments.TabIndex = 1;
-            _tpDocuments.Text = "Documents";
-            _tpDocuments.UseVisualStyleBackColor = true;
-            //
-            // tbquote
-            //
-            _tbquote.Controls.Add(_GroupBox2);
-            _tbquote.Location = new Point(4, 22);
-            _tbquote.Name = "tbquote";
-            _tbquote.Padding = new Padding(3);
-            _tbquote.Size = new Size(1176, 601);
-            _tbquote.TabIndex = 7;
-            _tbquote.Text = "Quote Calc";
-            _tbquote.UseVisualStyleBackColor = true;
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Controls.Add(_GroupBox1);
-            _GroupBox2.Controls.Add(_Panel1);
-            _GroupBox2.Dock = DockStyle.Fill;
-            _GroupBox2.Location = new Point(3, 3);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(1170, 595);
-            _GroupBox2.TabIndex = 0;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Quote Calculator";
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Controls.Add(_rdoAXA);
-            _GroupBox1.Controls.Add(_rdoPOC);
-            _GroupBox1.Location = new Point(55, 26);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(121, 45);
-            _GroupBox1.TabIndex = 82;
-            _GroupBox1.TabStop = false;
-            //
-            // rdoAXA
-            //
-            _rdoAXA.AutoSize = true;
-            _rdoAXA.Location = new Point(65, 17);
-            _rdoAXA.Name = "rdoAXA";
-            _rdoAXA.Size = new Size(49, 17);
-            _rdoAXA.TabIndex = 1;
-            _rdoAXA.Text = "AXA";
-            _rdoAXA.UseVisualStyleBackColor = true;
-            //
-            // rdoPOC
-            //
-            _rdoPOC.AutoSize = true;
-            _rdoPOC.Checked = true;
-            _rdoPOC.Location = new Point(6, 17);
-            _rdoPOC.Name = "rdoPOC";
-            _rdoPOC.Size = new Size(50, 17);
-            _rdoPOC.TabIndex = 0;
-            _rdoPOC.TabStop = true;
-            _rdoPOC.Text = "POC";
-            _rdoPOC.UseVisualStyleBackColor = true;
-            //
-            // Panel1
-            //
-            _Panel1.Controls.Add(_txtClaimLimit);
-            _Panel1.Controls.Add(_lblClaimLimit);
-            _Panel1.Controls.Add(_chkExcludeVat);
-            _Panel1.Controls.Add(_cboVATRate);
-            _Panel1.Controls.Add(_lblVAT);
-            _Panel1.Controls.Add(_GroupBox3);
-            _Panel1.Controls.Add(_txtPartQty);
-            _Panel1.Controls.Add(_Label46);
-            _Panel1.Controls.Add(_dgvQuote);
-            _Panel1.Controls.Add(_cboLabour);
-            _Panel1.Controls.Add(_btnQuoteAdd);
-            _Panel1.Controls.Add(_Label45);
-            _Panel1.Controls.Add(_txtLabourQty);
-            _Panel1.Controls.Add(_Label44);
-            _Panel1.Controls.Add(_btnReset);
-            _Panel1.Controls.Add(_btnaddtonotes);
-            _Panel1.Controls.Add(_btnEmail);
-            _Panel1.Controls.Add(_btncalc);
-            _Panel1.Controls.Add(_tbresult);
-            _Panel1.Controls.Add(_txtPartRate);
-            _Panel1.Controls.Add(_lbltc1);
-            _Panel1.Controls.Add(_txtPartNumber);
-            _Panel1.Controls.Add(_lblnumber1);
-            _Panel1.Controls.Add(_txtPartName);
-            _Panel1.Controls.Add(_lblpart1);
-            _Panel1.Dock = DockStyle.Fill;
-            _Panel1.Location = new Point(3, 17);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(1164, 575);
-            _Panel1.TabIndex = 1;
-            //
-            // txtClaimLimit
-            //
-            _txtClaimLimit.Location = new Point(585, 62);
-            _txtClaimLimit.Name = "txtClaimLimit";
-            _txtClaimLimit.Size = new Size(121, 21);
-            _txtClaimLimit.TabIndex = 83;
-            _txtClaimLimit.Visible = false;
-            //
-            // lblClaimLimit
-            //
-            _lblClaimLimit.AutoSize = true;
-            _lblClaimLimit.Location = new Point(505, 65);
-            _lblClaimLimit.Name = "lblClaimLimit";
-            _lblClaimLimit.Size = new Size(71, 13);
-            _lblClaimLimit.TabIndex = 82;
-            _lblClaimLimit.Text = "Claim Limit";
-            _lblClaimLimit.Visible = false;
-            //
-            // chkExcludeVat
-            //
-            _chkExcludeVat.AutoSize = true;
-            _chkExcludeVat.Location = new Point(425, 505);
-            _chkExcludeVat.Name = "chkExcludeVat";
-            _chkExcludeVat.Size = new Size(103, 17);
-            _chkExcludeVat.TabIndex = 81;
-            _chkExcludeVat.Text = "Exclude V.A.T";
-            _chkExcludeVat.UseVisualStyleBackColor = true;
-            //
-            // cboVATRate
-            //
-            _cboVATRate.FormattingEnabled = true;
-            _cboVATRate.Location = new Point(499, 528);
-            _cboVATRate.Name = "cboVATRate";
-            _cboVATRate.Size = new Size(109, 21);
-            _cboVATRate.TabIndex = 79;
-            //
-            // lblVAT
-            //
-            _lblVAT.Location = new Point(422, 529);
-            _lblVAT.Name = "lblVAT";
-            _lblVAT.Size = new Size(68, 17);
-            _lblVAT.TabIndex = 80;
-            _lblVAT.Text = "VAT Rate";
-            _lblVAT.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // GroupBox3
-            //
-            _GroupBox3.Controls.Add(_rbStandard);
-            _GroupBox3.Controls.Add(_rbSite);
-            _GroupBox3.Location = new Point(48, 491);
-            _GroupBox3.Name = "GroupBox3";
-            _GroupBox3.Size = new Size(343, 45);
-            _GroupBox3.TabIndex = 77;
-            _GroupBox3.TabStop = false;
-            //
-            // rbStandard
-            //
-            _rbStandard.AutoSize = true;
-            _rbStandard.Checked = true;
-            _rbStandard.Location = new Point(207, 16);
-            _rbStandard.Name = "rbStandard";
-            _rbStandard.Size = new Size(121, 17);
-            _rbStandard.TabIndex = 1;
-            _rbStandard.TabStop = true;
-            _rbStandard.Text = "Markup standard";
-            _rbStandard.UseVisualStyleBackColor = true;
-            //
-            // rbSite
-            //
-            _rbSite.AutoSize = true;
-            _rbSite.Location = new Point(6, 17);
-            _rbSite.Name = "rbSite";
-            _rbSite.Size = new Size(185, 17);
-            _rbSite.TabIndex = 0;
-            _rbSite.Text = "Markup parts using site rate";
-            _rbSite.UseVisualStyleBackColor = true;
-            //
-            // txtPartQty
-            //
-            _txtPartQty.Location = new Point(659, 89);
-            _txtPartQty.Name = "txtPartQty";
-            _txtPartQty.Size = new Size(48, 21);
-            _txtPartQty.TabIndex = 76;
-            _txtPartQty.Text = "0";
-            //
-            // Label46
-            //
-            _Label46.AutoSize = true;
-            _Label46.Location = new Point(629, 92);
-            _Label46.Name = "Label46";
-            _Label46.Size = new Size(27, 13);
-            _Label46.TabIndex = 75;
-            _Label46.Text = "Qty";
-            //
-            // dgvQuote
-            //
-            _dgvQuote.AllowUserToAddRows = false;
-            _dgvQuote.AllowUserToResizeColumns = false;
-            _dgvQuote.AllowUserToResizeRows = false;
-            _dgvQuote.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvQuote.Location = new Point(48, 124);
-            _dgvQuote.Name = "dgvQuote";
-            _dgvQuote.Size = new Size(811, 210);
-            _dgvQuote.TabIndex = 74;
-            //
-            // cboLabour
-            //
-            _cboLabour.FormattingEnabled = true;
-            _cboLabour.Location = new Point(125, 62);
-            _cboLabour.Name = "cboLabour";
-            _cboLabour.Size = new Size(294, 21);
-            _cboLabour.TabIndex = 73;
-            //
-            // btnQuoteAdd
-            //
-            _btnQuoteAdd.Location = new Point(820, 65);
-            _btnQuoteAdd.Name = "btnQuoteAdd";
-            _btnQuoteAdd.Size = new Size(39, 47);
-            _btnQuoteAdd.TabIndex = 72;
-            _btnQuoteAdd.Text = "Add";
-            _btnQuoteAdd.UseVisualStyleBackColor = true;
-            //
-            // Label45
-            //
-            _Label45.AutoSize = true;
-            _Label45.Location = new Point(45, 65);
-            _Label45.Name = "Label45";
-            _Label45.Size = new Size(77, 13);
-            _Label45.TabIndex = 71;
-            _Label45.Text = "Labour Type";
-            //
-            // txtLabourQty
-            //
-            _txtLabourQty.Location = new Point(449, 62);
-            _txtLabourQty.Name = "txtLabourQty";
-            _txtLabourQty.Size = new Size(29, 21);
-            _txtLabourQty.TabIndex = 70;
-            _txtLabourQty.Text = "0";
-            //
-            // Label44
-            //
-            _Label44.AutoSize = true;
-            _Label44.Location = new Point(427, 65);
-            _Label44.Name = "Label44";
-            _Label44.Size = new Size(15, 13);
-            _Label44.TabIndex = 69;
-            _Label44.Text = "X";
-            //
-            // btnReset
-            //
-            _btnReset.Location = new Point(614, 526);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(110, 23);
-            _btnReset.TabIndex = 68;
-            _btnReset.Text = "Reset";
-            _btnReset.UseVisualStyleBackColor = true;
-            //
-            // btnaddtonotes
-            //
-            _btnaddtonotes.Enabled = false;
-            _btnaddtonotes.Location = new Point(730, 499);
-            _btnaddtonotes.Name = "btnaddtonotes";
-            _btnaddtonotes.Size = new Size(130, 23);
-            _btnaddtonotes.TabIndex = 67;
-            _btnaddtonotes.Text = "Add Quote to Notes";
-            _btnaddtonotes.UseVisualStyleBackColor = true;
-            //
-            // btnEmail
-            //
-            _btnEmail.Enabled = false;
-            _btnEmail.Location = new Point(730, 526);
-            _btnEmail.Name = "btnEmail";
-            _btnEmail.Size = new Size(130, 23);
-            _btnEmail.TabIndex = 66;
-            _btnEmail.Text = "Email Quote";
-            _btnEmail.UseVisualStyleBackColor = true;
-            //
-            // btncalc
-            //
-            _btncalc.Location = new Point(614, 499);
-            _btncalc.Name = "btncalc";
-            _btncalc.Size = new Size(110, 23);
-            _btncalc.TabIndex = 65;
-            _btncalc.Text = "Generate Quote";
-            _btncalc.UseVisualStyleBackColor = true;
-            //
-            // tbresult
-            //
-            _tbresult.Location = new Point(48, 357);
-            _tbresult.Multiline = true;
-            _tbresult.Name = "tbresult";
-            _tbresult.ReadOnly = true;
-            _tbresult.RightToLeft = RightToLeft.No;
-            _tbresult.Size = new Size(812, 128);
-            _tbresult.TabIndex = 64;
-            _tbresult.Text = "Please enter details above. Quote will appear here";
-            //
-            // txtPartRate
-            //
-            _txtPartRate.Location = new Point(558, 89);
-            _txtPartRate.Name = "txtPartRate";
-            _txtPartRate.Size = new Size(55, 21);
-            _txtPartRate.TabIndex = 5;
-            //
-            // lbltc1
-            //
-            _lbltc1.AutoSize = true;
-            _lbltc1.Location = new Point(456, 92);
-            _lbltc1.Name = "lbltc1";
-            _lbltc1.Size = new Size(96, 13);
-            _lbltc1.TabIndex = 4;
-            _lbltc1.Text = "Part Trade Cost";
-            //
-            // txtPartNumber
-            //
-            _txtPartNumber.Location = new Point(349, 89);
-            _txtPartNumber.Name = "txtPartNumber";
-            _txtPartNumber.Size = new Size(89, 21);
-            _txtPartNumber.TabIndex = 3;
-            //
-            // lblnumber1
-            //
-            _lblnumber1.AutoSize = true;
-            _lblnumber1.Location = new Point(264, 92);
-            _lblnumber1.Name = "lblnumber1";
-            _lblnumber1.Size = new Size(79, 13);
-            _lblnumber1.TabIndex = 2;
-            _lblnumber1.Text = "Part Number";
-            //
-            // txtPartName
-            //
-            _txtPartName.Location = new Point(125, 89);
-            _txtPartName.Name = "txtPartName";
-            _txtPartName.Size = new Size(121, 21);
-            _txtPartName.TabIndex = 1;
-            //
-            // lblpart1
-            //
-            _lblpart1.AutoSize = true;
-            _lblpart1.Location = new Point(45, 92);
-            _lblpart1.Name = "lblpart1";
-            _lblpart1.Size = new Size(67, 13);
-            _lblpart1.TabIndex = 0;
-            _lblpart1.Text = "Part Name";
-            //
-            // tpNotes
-            //
-            _tpNotes.Controls.Add(_gpbNotesDetails);
-            _tpNotes.Controls.Add(_gpbNotes);
-            _tpNotes.Location = new Point(4, 22);
-            _tpNotes.Name = "tpNotes";
-            _tpNotes.Size = new Size(1176, 601);
-            _tpNotes.TabIndex = 4;
-            _tpNotes.Text = "Notes";
-            _tpNotes.UseVisualStyleBackColor = true;
-            //
-            // gpbNotesDetails
-            //
-            _gpbNotesDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _gpbNotesDetails.Controls.Add(_txtNoteID);
-            _gpbNotesDetails.Controls.Add(_btnSaveNote);
-            _gpbNotesDetails.Controls.Add(_txtNotes);
-            _gpbNotesDetails.Controls.Add(_Label1);
-            _gpbNotesDetails.Location = new Point(791, 6);
-            _gpbNotesDetails.Name = "gpbNotesDetails";
-            _gpbNotesDetails.Size = new Size(377, 596);
-            _gpbNotesDetails.TabIndex = 33;
-            _gpbNotesDetails.TabStop = false;
-            _gpbNotesDetails.Text = "Details";
-            //
-            // txtNoteID
-            //
-            _txtNoteID.Location = new Point(66, 14);
-            _txtNoteID.Name = "txtNoteID";
-            _txtNoteID.Size = new Size(100, 21);
-            _txtNoteID.TabIndex = 36;
-            _txtNoteID.TabStop = false;
-            _txtNoteID.Visible = false;
-            //
-            // btnSaveNote
-            //
-            _btnSaveNote.AccessibleDescription = "";
-            _btnSaveNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSaveNote.Location = new Point(292, 567);
-            _btnSaveNote.Name = "btnSaveNote";
-            _btnSaveNote.Size = new Size(79, 23);
-            _btnSaveNote.TabIndex = 1;
-            _btnSaveNote.Text = "Save";
-            //
-            // txtNotes
-            //
-            _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtNotes.Location = new Point(6, 37);
-            _txtNotes.Multiline = true;
-            _txtNotes.Name = "txtNotes";
-            _txtNotes.Size = new Size(365, 524);
-            _txtNotes.TabIndex = 0;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(3, 20);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(88, 23);
-            _Label1.TabIndex = 34;
-            _Label1.Text = "Notes:";
-            //
-            // gpbNotes
-            //
-            _gpbNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gpbNotes.Controls.Add(_btnDeleteNote);
-            _gpbNotes.Controls.Add(_dgNotes);
-            _gpbNotes.Controls.Add(_btnAddNote);
-            _gpbNotes.Location = new Point(7, 6);
-            _gpbNotes.Name = "gpbNotes";
-            _gpbNotes.Size = new Size(773, 596);
-            _gpbNotes.TabIndex = 30;
-            _gpbNotes.TabStop = false;
-            _gpbNotes.Text = "Notes";
-            //
-            // btnDeleteNote
-            //
-            _btnDeleteNote.AccessibleDescription = "";
-            _btnDeleteNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnDeleteNote.Location = new Point(95, 567);
-            _btnDeleteNote.Name = "btnDeleteNote";
-            _btnDeleteNote.Size = new Size(85, 23);
-            _btnDeleteNote.TabIndex = 3;
-            _btnDeleteNote.Text = "Delete";
-            _btnDeleteNote.Visible = false;
-            //
-            // dgNotes
-            //
-            _dgNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgNotes.DataMember = "";
-            _dgNotes.HeaderForeColor = SystemColors.ControlText;
-            _dgNotes.Location = new Point(6, 20);
-            _dgNotes.Name = "dgNotes";
-            _dgNotes.Size = new Size(761, 541);
-            _dgNotes.TabIndex = 1;
-            //
-            // btnAddNote
-            //
-            _btnAddNote.AccessibleDescription = "";
-            _btnAddNote.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddNote.Location = new Point(6, 567);
-            _btnAddNote.Name = "btnAddNote";
-            _btnAddNote.Size = new Size(85, 23);
-            _btnAddNote.TabIndex = 2;
-            _btnAddNote.Text = "Add";
-            //
-            // tpContactAttempts
-            //
-            _tpContactAttempts.Controls.Add(_grpContactAttemptDetails);
-            _tpContactAttempts.Controls.Add(_grpContactAttempts);
-            _tpContactAttempts.Location = new Point(4, 22);
-            _tpContactAttempts.Name = "tpContactAttempts";
-            _tpContactAttempts.Size = new Size(1176, 601);
-            _tpContactAttempts.TabIndex = 8;
-            _tpContactAttempts.Text = "Contact Attempts";
-            _tpContactAttempts.UseVisualStyleBackColor = true;
-            //
-            // grpContactAttemptDetails
-            //
-            _grpContactAttemptDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _grpContactAttemptDetails.Controls.Add(_txtContactAttemptDetails);
-            _grpContactAttemptDetails.Controls.Add(_lblContactNotes);
-            _grpContactAttemptDetails.Location = new Point(792, 2);
-            _grpContactAttemptDetails.Name = "grpContactAttemptDetails";
-            _grpContactAttemptDetails.Size = new Size(377, 596);
-            _grpContactAttemptDetails.TabIndex = 35;
-            _grpContactAttemptDetails.TabStop = false;
-            _grpContactAttemptDetails.Text = "Details";
-            //
-            // txtContactAttemptDetails
-            //
-            _txtContactAttemptDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtContactAttemptDetails.Location = new Point(6, 37);
-            _txtContactAttemptDetails.Multiline = true;
-            _txtContactAttemptDetails.Name = "txtContactAttemptDetails";
-            _txtContactAttemptDetails.ReadOnly = true;
-            _txtContactAttemptDetails.Size = new Size(365, 553);
-            _txtContactAttemptDetails.TabIndex = 0;
-            //
-            // lblContactNotes
-            //
-            _lblContactNotes.Location = new Point(3, 20);
-            _lblContactNotes.Name = "lblContactNotes";
-            _lblContactNotes.Size = new Size(88, 23);
-            _lblContactNotes.TabIndex = 34;
-            _lblContactNotes.Text = "Notes:";
-            //
-            // grpContactAttempts
-            //
-            _grpContactAttempts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpContactAttempts.Controls.Add(_dgContactAttempts);
-            _grpContactAttempts.Controls.Add(_btnAddAttempt);
-            _grpContactAttempts.Location = new Point(8, 2);
-            _grpContactAttempts.Name = "grpContactAttempts";
-            _grpContactAttempts.Size = new Size(773, 596);
-            _grpContactAttempts.TabIndex = 34;
-            _grpContactAttempts.TabStop = false;
-            _grpContactAttempts.Text = "Attempts";
-            //
-            // dgContactAttempts
-            //
-            _dgContactAttempts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgContactAttempts.DataMember = "";
-            _dgContactAttempts.HeaderForeColor = SystemColors.ControlText;
-            _dgContactAttempts.Location = new Point(6, 20);
-            _dgContactAttempts.Name = "dgContactAttempts";
-            _dgContactAttempts.Size = new Size(761, 541);
-            _dgContactAttempts.TabIndex = 1;
-            //
-            // btnAddAttempt
-            //
-            _btnAddAttempt.AccessibleDescription = "";
-            _btnAddAttempt.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddAttempt.Location = new Point(6, 567);
-            _btnAddAttempt.Name = "btnAddAttempt";
-            _btnAddAttempt.Size = new Size(85, 23);
-            _btnAddAttempt.TabIndex = 2;
-            _btnAddAttempt.Text = "Add";
-            //
-            // btnView
-            //
-            _btnView.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnView.Location = new Point(132, 664);
-            _btnView.Name = "btnView";
-            _btnView.Size = new Size(99, 23);
-            _btnView.TabIndex = 24;
-            _btnView.Text = "View...";
-            //
-            // cmsView
-            //
-            _cmsView.Items.AddRange(new ToolStripItem[] { _PropertyToolStripMenuItem, _CustomerToolStripMenuItem, _AuditTrailToolStripMenuItem, _OrdersToolStripMenuItem, _InvoiceToolStripMenuItem, _QuoteToolStripMenuItem, _CostingsToolStripMenuItem, _HistoryToolStripMenuItem });
-            _cmsView.Name = "cmsView";
-            _cmsView.Size = new Size(128, 180);
-            //
-            // PropertyToolStripMenuItem
-            //
-            _PropertyToolStripMenuItem.Name = "PropertyToolStripMenuItem";
-            _PropertyToolStripMenuItem.Size = new Size(127, 22);
-            _PropertyToolStripMenuItem.Text = "Property";
-            //
-            // CustomerToolStripMenuItem
-            //
-            _CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem";
-            _CustomerToolStripMenuItem.Size = new Size(127, 22);
-            _CustomerToolStripMenuItem.Text = "Customer";
-            //
-            // AuditTrailToolStripMenuItem
-            //
-            _AuditTrailToolStripMenuItem.Name = "AuditTrailToolStripMenuItem";
-            _AuditTrailToolStripMenuItem.Size = new Size(127, 22);
-            _AuditTrailToolStripMenuItem.Text = "Audit Trail";
-            //
-            // OrdersToolStripMenuItem
-            //
-            _OrdersToolStripMenuItem.Name = "OrdersToolStripMenuItem";
-            _OrdersToolStripMenuItem.Size = new Size(127, 22);
-            _OrdersToolStripMenuItem.Text = "Orders";
-            //
-            // InvoiceToolStripMenuItem
-            //
-            _InvoiceToolStripMenuItem.Name = "InvoiceToolStripMenuItem";
-            _InvoiceToolStripMenuItem.Size = new Size(127, 22);
-            _InvoiceToolStripMenuItem.Text = "Invoice";
-            //
-            // QuoteToolStripMenuItem
-            //
-            _QuoteToolStripMenuItem.Name = "QuoteToolStripMenuItem";
-            _QuoteToolStripMenuItem.Size = new Size(127, 22);
-            _QuoteToolStripMenuItem.Text = "Quote";
-            //
-            // CostingsToolStripMenuItem
-            //
-            _CostingsToolStripMenuItem.Name = "CostingsToolStripMenuItem";
-            _CostingsToolStripMenuItem.Size = new Size(127, 22);
-            _CostingsToolStripMenuItem.Text = "Costings";
-            //
-            // HistoryToolStripMenuItem
-            //
-            _HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem";
-            _HistoryToolStripMenuItem.Size = new Size(127, 22);
-            _HistoryToolStripMenuItem.Text = "History";
-            //
+            this.components = new System.ComponentModel.Container();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._TabControl1 = new System.Windows.Forms.TabControl();
+            this._tpMain = new System.Windows.Forms.TabPage();
+            this._tpAssets = new System.Windows.Forms.TabPage();
+            this._grpAssets = new System.Windows.Forms.GroupBox();
+            this._dgAssets = new System.Windows.Forms.DataGrid();
+            this._btnAddAppliance = new System.Windows.Forms.Button();
+            this._tpDocuments = new System.Windows.Forms.TabPage();
+            this._tbquote = new System.Windows.Forms.TabPage();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._rdoAXA = new System.Windows.Forms.RadioButton();
+            this._rdoPOC = new System.Windows.Forms.RadioButton();
+            this._Panel1 = new System.Windows.Forms.Panel();
+            this._txtClaimLimit = new System.Windows.Forms.TextBox();
+            this._lblClaimLimit = new System.Windows.Forms.Label();
+            this._chkExcludeVat = new System.Windows.Forms.CheckBox();
+            this._cboVATRate = new System.Windows.Forms.ComboBox();
+            this._lblVAT = new System.Windows.Forms.Label();
+            this._GroupBox3 = new System.Windows.Forms.GroupBox();
+            this._rbStandard = new System.Windows.Forms.RadioButton();
+            this._rbSite = new System.Windows.Forms.RadioButton();
+            this._txtPartQty = new System.Windows.Forms.TextBox();
+            this._Label46 = new System.Windows.Forms.Label();
+            this._dgvQuote = new System.Windows.Forms.DataGridView();
+            this._cboLabour = new System.Windows.Forms.ComboBox();
+            this._btnQuoteAdd = new System.Windows.Forms.Button();
+            this._Label45 = new System.Windows.Forms.Label();
+            this._txtLabourQty = new System.Windows.Forms.TextBox();
+            this._Label44 = new System.Windows.Forms.Label();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._btnaddtonotes = new System.Windows.Forms.Button();
+            this._btnEmail = new System.Windows.Forms.Button();
+            this._btncalc = new System.Windows.Forms.Button();
+            this._tbresult = new System.Windows.Forms.TextBox();
+            this._txtPartRate = new System.Windows.Forms.TextBox();
+            this._lbltc1 = new System.Windows.Forms.Label();
+            this._txtPartNumber = new System.Windows.Forms.TextBox();
+            this._lblnumber1 = new System.Windows.Forms.Label();
+            this._txtPartName = new System.Windows.Forms.TextBox();
+            this._lblpart1 = new System.Windows.Forms.Label();
+            this._tpNotes = new System.Windows.Forms.TabPage();
+            this._gpbNotesDetails = new System.Windows.Forms.GroupBox();
+            this._txtNoteID = new System.Windows.Forms.TextBox();
+            this._btnSaveNote = new System.Windows.Forms.Button();
+            this._txtNotes = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._gpbNotes = new System.Windows.Forms.GroupBox();
+            this._btnDeleteNote = new System.Windows.Forms.Button();
+            this._dgNotes = new System.Windows.Forms.DataGrid();
+            this._btnAddNote = new System.Windows.Forms.Button();
+            this._tpContactAttempts = new System.Windows.Forms.TabPage();
+            this._grpContactAttemptDetails = new System.Windows.Forms.GroupBox();
+            this._txtContactAttemptDetails = new System.Windows.Forms.TextBox();
+            this._lblContactNotes = new System.Windows.Forms.Label();
+            this._grpContactAttempts = new System.Windows.Forms.GroupBox();
+            this._dgContactAttempts = new System.Windows.Forms.DataGrid();
+            this._btnAddAttempt = new System.Windows.Forms.Button();
+            this._btnView = new System.Windows.Forms.Button();
+            this._cmsView = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._PropertyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._CustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._AuditTrailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._OrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._InvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._QuoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._CostingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._HistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._TabControl1.SuspendLayout();
+            this._tpAssets.SuspendLayout();
+            this._grpAssets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).BeginInit();
+            this._tbquote.SuspendLayout();
+            this._GroupBox2.SuspendLayout();
+            this._GroupBox1.SuspendLayout();
+            this._Panel1.SuspendLayout();
+            this._GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvQuote)).BeginInit();
+            this._tpNotes.SuspendLayout();
+            this._gpbNotesDetails.SuspendLayout();
+            this._gpbNotes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgNotes)).BeginInit();
+            this._tpContactAttempts.SuspendLayout();
+            this._grpContactAttemptDetails.SuspendLayout();
+            this._grpContactAttempts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgContactAttempts)).BeginInit();
+            this._cmsView.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(70, 698);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 23);
+            this._btnClose.TabIndex = 16;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Location = new System.Drawing.Point(8, 698);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 23);
+            this._btnSave.TabIndex = 15;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _TabControl1
+            // 
+            this._TabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._TabControl1.Controls.Add(this._tpMain);
+            this._TabControl1.Controls.Add(this._tpAssets);
+            this._TabControl1.Controls.Add(this._tpDocuments);
+            this._TabControl1.Controls.Add(this._tbquote);
+            this._TabControl1.Controls.Add(this._tpNotes);
+            this._TabControl1.Controls.Add(this._tpContactAttempts);
+            this._TabControl1.Location = new System.Drawing.Point(0, 31);
+            this._TabControl1.Name = "_TabControl1";
+            this._TabControl1.SelectedIndex = 0;
+            this._TabControl1.Size = new System.Drawing.Size(1200, 661);
+            this._TabControl1.TabIndex = 23;
+            // 
+            // _tpMain
+            // 
+            this._tpMain.Location = new System.Drawing.Point(4, 22);
+            this._tpMain.Name = "_tpMain";
+            this._tpMain.Padding = new System.Windows.Forms.Padding(3);
+            this._tpMain.Size = new System.Drawing.Size(1192, 635);
+            this._tpMain.TabIndex = 0;
+            this._tpMain.Text = "Main Details";
+            this._tpMain.UseVisualStyleBackColor = true;
+            // 
+            // _tpAssets
+            // 
+            this._tpAssets.Controls.Add(this._grpAssets);
+            this._tpAssets.Location = new System.Drawing.Point(4, 22);
+            this._tpAssets.Name = "_tpAssets";
+            this._tpAssets.Padding = new System.Windows.Forms.Padding(3);
+            this._tpAssets.Size = new System.Drawing.Size(1176, 601);
+            this._tpAssets.TabIndex = 2;
+            this._tpAssets.Text = "Appliances";
+            this._tpAssets.UseVisualStyleBackColor = true;
+            // 
+            // _grpAssets
+            // 
+            this._grpAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpAssets.Controls.Add(this._dgAssets);
+            this._grpAssets.Controls.Add(this._btnAddAppliance);
+            this._grpAssets.Location = new System.Drawing.Point(6, 6);
+            this._grpAssets.Name = "_grpAssets";
+            this._grpAssets.Size = new System.Drawing.Size(1162, 596);
+            this._grpAssets.TabIndex = 29;
+            this._grpAssets.TabStop = false;
+            this._grpAssets.Text = "Select those related to the job";
+            // 
+            // _dgAssets
+            // 
+            this._dgAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAssets.DataMember = "";
+            this._dgAssets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgAssets.Location = new System.Drawing.Point(6, 20);
+            this._dgAssets.Name = "_dgAssets";
+            this._dgAssets.Size = new System.Drawing.Size(1150, 541);
+            this._dgAssets.TabIndex = 1;
+            this._dgAssets.Click += new System.EventHandler(this.dgAssets_Click);
+            // 
+            // _btnAddAppliance
+            // 
+            this._btnAddAppliance.AccessibleDescription = "Add Job Of Work";
+            this._btnAddAppliance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddAppliance.Location = new System.Drawing.Point(6, 567);
+            this._btnAddAppliance.Name = "_btnAddAppliance";
+            this._btnAddAppliance.Size = new System.Drawing.Size(155, 23);
+            this._btnAddAppliance.TabIndex = 28;
+            this._btnAddAppliance.Text = "New Appliance";
+            this._btnAddAppliance.Click += new System.EventHandler(this.btnAddAppliance_Click);
+            // 
+            // _tpDocuments
+            // 
+            this._tpDocuments.Location = new System.Drawing.Point(4, 22);
+            this._tpDocuments.Name = "_tpDocuments";
+            this._tpDocuments.Padding = new System.Windows.Forms.Padding(3);
+            this._tpDocuments.Size = new System.Drawing.Size(1176, 601);
+            this._tpDocuments.TabIndex = 1;
+            this._tpDocuments.Text = "Documents";
+            this._tpDocuments.UseVisualStyleBackColor = true;
+            // 
+            // _tbquote
+            // 
+            this._tbquote.Controls.Add(this._GroupBox2);
+            this._tbquote.Location = new System.Drawing.Point(4, 22);
+            this._tbquote.Name = "_tbquote";
+            this._tbquote.Padding = new System.Windows.Forms.Padding(3);
+            this._tbquote.Size = new System.Drawing.Size(1176, 601);
+            this._tbquote.TabIndex = 7;
+            this._tbquote.Text = "Quote Calc";
+            this._tbquote.UseVisualStyleBackColor = true;
+            // 
+            // _GroupBox2
+            // 
+            this._GroupBox2.Controls.Add(this._GroupBox1);
+            this._GroupBox2.Controls.Add(this._Panel1);
+            this._GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._GroupBox2.Location = new System.Drawing.Point(3, 3);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(1170, 595);
+            this._GroupBox2.TabIndex = 0;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Quote Calculator";
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Controls.Add(this._rdoAXA);
+            this._GroupBox1.Controls.Add(this._rdoPOC);
+            this._GroupBox1.Location = new System.Drawing.Point(55, 26);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(121, 45);
+            this._GroupBox1.TabIndex = 82;
+            this._GroupBox1.TabStop = false;
+            // 
+            // _rdoAXA
+            // 
+            this._rdoAXA.AutoSize = true;
+            this._rdoAXA.Location = new System.Drawing.Point(65, 17);
+            this._rdoAXA.Name = "_rdoAXA";
+            this._rdoAXA.Size = new System.Drawing.Size(49, 17);
+            this._rdoAXA.TabIndex = 1;
+            this._rdoAXA.Text = "AXA";
+            this._rdoAXA.UseVisualStyleBackColor = true;
+            this._rdoAXA.CheckedChanged += new System.EventHandler(this.rdoCust_CheckedChanged);
+            // 
+            // _rdoPOC
+            // 
+            this._rdoPOC.AutoSize = true;
+            this._rdoPOC.Checked = true;
+            this._rdoPOC.Location = new System.Drawing.Point(6, 17);
+            this._rdoPOC.Name = "_rdoPOC";
+            this._rdoPOC.Size = new System.Drawing.Size(50, 17);
+            this._rdoPOC.TabIndex = 0;
+            this._rdoPOC.TabStop = true;
+            this._rdoPOC.Text = "POC";
+            this._rdoPOC.UseVisualStyleBackColor = true;
+            this._rdoPOC.CheckedChanged += new System.EventHandler(this.rdoCust_CheckedChanged);
+            // 
+            // _Panel1
+            // 
+            this._Panel1.Controls.Add(this._txtClaimLimit);
+            this._Panel1.Controls.Add(this._lblClaimLimit);
+            this._Panel1.Controls.Add(this._chkExcludeVat);
+            this._Panel1.Controls.Add(this._cboVATRate);
+            this._Panel1.Controls.Add(this._lblVAT);
+            this._Panel1.Controls.Add(this._GroupBox3);
+            this._Panel1.Controls.Add(this._txtPartQty);
+            this._Panel1.Controls.Add(this._Label46);
+            this._Panel1.Controls.Add(this._dgvQuote);
+            this._Panel1.Controls.Add(this._cboLabour);
+            this._Panel1.Controls.Add(this._btnQuoteAdd);
+            this._Panel1.Controls.Add(this._Label45);
+            this._Panel1.Controls.Add(this._txtLabourQty);
+            this._Panel1.Controls.Add(this._Label44);
+            this._Panel1.Controls.Add(this._btnReset);
+            this._Panel1.Controls.Add(this._btnaddtonotes);
+            this._Panel1.Controls.Add(this._btnEmail);
+            this._Panel1.Controls.Add(this._btncalc);
+            this._Panel1.Controls.Add(this._tbresult);
+            this._Panel1.Controls.Add(this._txtPartRate);
+            this._Panel1.Controls.Add(this._lbltc1);
+            this._Panel1.Controls.Add(this._txtPartNumber);
+            this._Panel1.Controls.Add(this._lblnumber1);
+            this._Panel1.Controls.Add(this._txtPartName);
+            this._Panel1.Controls.Add(this._lblpart1);
+            this._Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._Panel1.Location = new System.Drawing.Point(3, 17);
+            this._Panel1.Name = "_Panel1";
+            this._Panel1.Size = new System.Drawing.Size(1164, 575);
+            this._Panel1.TabIndex = 1;
+            // 
+            // _txtClaimLimit
+            // 
+            this._txtClaimLimit.Location = new System.Drawing.Point(585, 62);
+            this._txtClaimLimit.Name = "_txtClaimLimit";
+            this._txtClaimLimit.Size = new System.Drawing.Size(121, 21);
+            this._txtClaimLimit.TabIndex = 83;
+            this._txtClaimLimit.Visible = false;
+            // 
+            // _lblClaimLimit
+            // 
+            this._lblClaimLimit.AutoSize = true;
+            this._lblClaimLimit.Location = new System.Drawing.Point(505, 65);
+            this._lblClaimLimit.Name = "_lblClaimLimit";
+            this._lblClaimLimit.Size = new System.Drawing.Size(71, 13);
+            this._lblClaimLimit.TabIndex = 82;
+            this._lblClaimLimit.Text = "Claim Limit";
+            this._lblClaimLimit.Visible = false;
+            // 
+            // _chkExcludeVat
+            // 
+            this._chkExcludeVat.AutoSize = true;
+            this._chkExcludeVat.Location = new System.Drawing.Point(425, 505);
+            this._chkExcludeVat.Name = "_chkExcludeVat";
+            this._chkExcludeVat.Size = new System.Drawing.Size(103, 17);
+            this._chkExcludeVat.TabIndex = 81;
+            this._chkExcludeVat.Text = "Exclude V.A.T";
+            this._chkExcludeVat.UseVisualStyleBackColor = true;
+            // 
+            // _cboVATRate
+            // 
+            this._cboVATRate.FormattingEnabled = true;
+            this._cboVATRate.Location = new System.Drawing.Point(499, 528);
+            this._cboVATRate.Name = "_cboVATRate";
+            this._cboVATRate.Size = new System.Drawing.Size(109, 21);
+            this._cboVATRate.TabIndex = 79;
+            // 
+            // _lblVAT
+            // 
+            this._lblVAT.Location = new System.Drawing.Point(422, 529);
+            this._lblVAT.Name = "_lblVAT";
+            this._lblVAT.Size = new System.Drawing.Size(68, 17);
+            this._lblVAT.TabIndex = 80;
+            this._lblVAT.Text = "VAT Rate";
+            this._lblVAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _GroupBox3
+            // 
+            this._GroupBox3.Controls.Add(this._rbStandard);
+            this._GroupBox3.Controls.Add(this._rbSite);
+            this._GroupBox3.Location = new System.Drawing.Point(48, 491);
+            this._GroupBox3.Name = "_GroupBox3";
+            this._GroupBox3.Size = new System.Drawing.Size(343, 45);
+            this._GroupBox3.TabIndex = 77;
+            this._GroupBox3.TabStop = false;
+            // 
+            // _rbStandard
+            // 
+            this._rbStandard.AutoSize = true;
+            this._rbStandard.Checked = true;
+            this._rbStandard.Location = new System.Drawing.Point(207, 16);
+            this._rbStandard.Name = "_rbStandard";
+            this._rbStandard.Size = new System.Drawing.Size(121, 17);
+            this._rbStandard.TabIndex = 1;
+            this._rbStandard.TabStop = true;
+            this._rbStandard.Text = "Markup standard";
+            this._rbStandard.UseVisualStyleBackColor = true;
+            // 
+            // _rbSite
+            // 
+            this._rbSite.AutoSize = true;
+            this._rbSite.Location = new System.Drawing.Point(6, 17);
+            this._rbSite.Name = "_rbSite";
+            this._rbSite.Size = new System.Drawing.Size(185, 17);
+            this._rbSite.TabIndex = 0;
+            this._rbSite.Text = "Markup parts using site rate";
+            this._rbSite.UseVisualStyleBackColor = true;
+            // 
+            // _txtPartQty
+            // 
+            this._txtPartQty.Location = new System.Drawing.Point(659, 89);
+            this._txtPartQty.Name = "_txtPartQty";
+            this._txtPartQty.Size = new System.Drawing.Size(48, 21);
+            this._txtPartQty.TabIndex = 76;
+            this._txtPartQty.Text = "0";
+            // 
+            // _Label46
+            // 
+            this._Label46.AutoSize = true;
+            this._Label46.Location = new System.Drawing.Point(629, 92);
+            this._Label46.Name = "_Label46";
+            this._Label46.Size = new System.Drawing.Size(27, 13);
+            this._Label46.TabIndex = 75;
+            this._Label46.Text = "Qty";
+            // 
+            // _dgvQuote
+            // 
+            this._dgvQuote.AllowUserToAddRows = false;
+            this._dgvQuote.AllowUserToResizeColumns = false;
+            this._dgvQuote.AllowUserToResizeRows = false;
+            this._dgvQuote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvQuote.Location = new System.Drawing.Point(48, 124);
+            this._dgvQuote.Name = "_dgvQuote";
+            this._dgvQuote.Size = new System.Drawing.Size(811, 210);
+            this._dgvQuote.TabIndex = 74;
+            // 
+            // _cboLabour
+            // 
+            this._cboLabour.FormattingEnabled = true;
+            this._cboLabour.Location = new System.Drawing.Point(125, 62);
+            this._cboLabour.Name = "_cboLabour";
+            this._cboLabour.Size = new System.Drawing.Size(294, 21);
+            this._cboLabour.TabIndex = 73;
+            // 
+            // _btnQuoteAdd
+            // 
+            this._btnQuoteAdd.Location = new System.Drawing.Point(820, 65);
+            this._btnQuoteAdd.Name = "_btnQuoteAdd";
+            this._btnQuoteAdd.Size = new System.Drawing.Size(39, 47);
+            this._btnQuoteAdd.TabIndex = 72;
+            this._btnQuoteAdd.Text = "Add";
+            this._btnQuoteAdd.UseVisualStyleBackColor = true;
+            this._btnQuoteAdd.Click += new System.EventHandler(this.BtnQuoteAdd_Click);
+            // 
+            // _Label45
+            // 
+            this._Label45.AutoSize = true;
+            this._Label45.Location = new System.Drawing.Point(45, 65);
+            this._Label45.Name = "_Label45";
+            this._Label45.Size = new System.Drawing.Size(77, 13);
+            this._Label45.TabIndex = 71;
+            this._Label45.Text = "Labour Type";
+            // 
+            // _txtLabourQty
+            // 
+            this._txtLabourQty.Location = new System.Drawing.Point(449, 62);
+            this._txtLabourQty.Name = "_txtLabourQty";
+            this._txtLabourQty.Size = new System.Drawing.Size(29, 21);
+            this._txtLabourQty.TabIndex = 70;
+            this._txtLabourQty.Text = "0";
+            // 
+            // _Label44
+            // 
+            this._Label44.AutoSize = true;
+            this._Label44.Location = new System.Drawing.Point(427, 65);
+            this._Label44.Name = "_Label44";
+            this._Label44.Size = new System.Drawing.Size(15, 13);
+            this._Label44.TabIndex = 69;
+            this._Label44.Text = "X";
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Location = new System.Drawing.Point(614, 526);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(110, 23);
+            this._btnReset.TabIndex = 68;
+            this._btnReset.Text = "Reset";
+            this._btnReset.UseVisualStyleBackColor = true;
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // _btnaddtonotes
+            // 
+            this._btnaddtonotes.Enabled = false;
+            this._btnaddtonotes.Location = new System.Drawing.Point(730, 499);
+            this._btnaddtonotes.Name = "_btnaddtonotes";
+            this._btnaddtonotes.Size = new System.Drawing.Size(130, 23);
+            this._btnaddtonotes.TabIndex = 67;
+            this._btnaddtonotes.Text = "Add Quote to Notes";
+            this._btnaddtonotes.UseVisualStyleBackColor = true;
+            this._btnaddtonotes.Click += new System.EventHandler(this.btnaddtonotes_Click);
+            // 
+            // _btnEmail
+            // 
+            this._btnEmail.Enabled = false;
+            this._btnEmail.Location = new System.Drawing.Point(730, 526);
+            this._btnEmail.Name = "_btnEmail";
+            this._btnEmail.Size = new System.Drawing.Size(130, 23);
+            this._btnEmail.TabIndex = 66;
+            this._btnEmail.Text = "Email Quote";
+            this._btnEmail.UseVisualStyleBackColor = true;
+            this._btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+            // 
+            // _btncalc
+            // 
+            this._btncalc.Location = new System.Drawing.Point(614, 499);
+            this._btncalc.Name = "_btncalc";
+            this._btncalc.Size = new System.Drawing.Size(110, 23);
+            this._btncalc.TabIndex = 65;
+            this._btncalc.Text = "Generate Quote";
+            this._btncalc.UseVisualStyleBackColor = true;
+            this._btncalc.Click += new System.EventHandler(this.btncalc_Click);
+            // 
+            // _tbresult
+            // 
+            this._tbresult.Location = new System.Drawing.Point(48, 357);
+            this._tbresult.Multiline = true;
+            this._tbresult.Name = "_tbresult";
+            this._tbresult.ReadOnly = true;
+            this._tbresult.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._tbresult.Size = new System.Drawing.Size(812, 128);
+            this._tbresult.TabIndex = 64;
+            this._tbresult.Text = "Please enter details above. Quote will appear here";
+            // 
+            // _txtPartRate
+            // 
+            this._txtPartRate.Location = new System.Drawing.Point(558, 89);
+            this._txtPartRate.Name = "_txtPartRate";
+            this._txtPartRate.Size = new System.Drawing.Size(55, 21);
+            this._txtPartRate.TabIndex = 5;
+            // 
+            // _lbltc1
+            // 
+            this._lbltc1.AutoSize = true;
+            this._lbltc1.Location = new System.Drawing.Point(456, 92);
+            this._lbltc1.Name = "_lbltc1";
+            this._lbltc1.Size = new System.Drawing.Size(96, 13);
+            this._lbltc1.TabIndex = 4;
+            this._lbltc1.Text = "Part Trade Cost";
+            // 
+            // _txtPartNumber
+            // 
+            this._txtPartNumber.Location = new System.Drawing.Point(349, 89);
+            this._txtPartNumber.Name = "_txtPartNumber";
+            this._txtPartNumber.Size = new System.Drawing.Size(89, 21);
+            this._txtPartNumber.TabIndex = 3;
+            // 
+            // _lblnumber1
+            // 
+            this._lblnumber1.AutoSize = true;
+            this._lblnumber1.Location = new System.Drawing.Point(264, 92);
+            this._lblnumber1.Name = "_lblnumber1";
+            this._lblnumber1.Size = new System.Drawing.Size(79, 13);
+            this._lblnumber1.TabIndex = 2;
+            this._lblnumber1.Text = "Part Number";
+            // 
+            // _txtPartName
+            // 
+            this._txtPartName.Location = new System.Drawing.Point(125, 89);
+            this._txtPartName.Name = "_txtPartName";
+            this._txtPartName.Size = new System.Drawing.Size(121, 21);
+            this._txtPartName.TabIndex = 1;
+            // 
+            // _lblpart1
+            // 
+            this._lblpart1.AutoSize = true;
+            this._lblpart1.Location = new System.Drawing.Point(45, 92);
+            this._lblpart1.Name = "_lblpart1";
+            this._lblpart1.Size = new System.Drawing.Size(67, 13);
+            this._lblpart1.TabIndex = 0;
+            this._lblpart1.Text = "Part Name";
+            // 
+            // _tpNotes
+            // 
+            this._tpNotes.Controls.Add(this._gpbNotesDetails);
+            this._tpNotes.Controls.Add(this._gpbNotes);
+            this._tpNotes.Location = new System.Drawing.Point(4, 22);
+            this._tpNotes.Name = "_tpNotes";
+            this._tpNotes.Size = new System.Drawing.Size(1176, 601);
+            this._tpNotes.TabIndex = 4;
+            this._tpNotes.Text = "Notes";
+            this._tpNotes.UseVisualStyleBackColor = true;
+            // 
+            // _gpbNotesDetails
+            // 
+            this._gpbNotesDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbNotesDetails.Controls.Add(this._txtNoteID);
+            this._gpbNotesDetails.Controls.Add(this._btnSaveNote);
+            this._gpbNotesDetails.Controls.Add(this._txtNotes);
+            this._gpbNotesDetails.Controls.Add(this._Label1);
+            this._gpbNotesDetails.Location = new System.Drawing.Point(791, 6);
+            this._gpbNotesDetails.Name = "_gpbNotesDetails";
+            this._gpbNotesDetails.Size = new System.Drawing.Size(377, 596);
+            this._gpbNotesDetails.TabIndex = 33;
+            this._gpbNotesDetails.TabStop = false;
+            this._gpbNotesDetails.Text = "Details";
+            // 
+            // _txtNoteID
+            // 
+            this._txtNoteID.Location = new System.Drawing.Point(66, 14);
+            this._txtNoteID.Name = "_txtNoteID";
+            this._txtNoteID.Size = new System.Drawing.Size(100, 21);
+            this._txtNoteID.TabIndex = 36;
+            this._txtNoteID.TabStop = false;
+            this._txtNoteID.Visible = false;
+            // 
+            // _btnSaveNote
+            // 
+            this._btnSaveNote.AccessibleDescription = "";
+            this._btnSaveNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSaveNote.Location = new System.Drawing.Point(292, 567);
+            this._btnSaveNote.Name = "_btnSaveNote";
+            this._btnSaveNote.Size = new System.Drawing.Size(79, 23);
+            this._btnSaveNote.TabIndex = 1;
+            this._btnSaveNote.Text = "Save";
+            this._btnSaveNote.Click += new System.EventHandler(this.btnSaveNote_Click);
+            // 
+            // _txtNotes
+            // 
+            this._txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNotes.Location = new System.Drawing.Point(6, 37);
+            this._txtNotes.Multiline = true;
+            this._txtNotes.Name = "_txtNotes";
+            this._txtNotes.Size = new System.Drawing.Size(365, 524);
+            this._txtNotes.TabIndex = 0;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(3, 20);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(88, 23);
+            this._Label1.TabIndex = 34;
+            this._Label1.Text = "Notes:";
+            // 
+            // _gpbNotes
+            // 
+            this._gpbNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbNotes.Controls.Add(this._btnDeleteNote);
+            this._gpbNotes.Controls.Add(this._dgNotes);
+            this._gpbNotes.Controls.Add(this._btnAddNote);
+            this._gpbNotes.Location = new System.Drawing.Point(7, 6);
+            this._gpbNotes.Name = "_gpbNotes";
+            this._gpbNotes.Size = new System.Drawing.Size(773, 596);
+            this._gpbNotes.TabIndex = 30;
+            this._gpbNotes.TabStop = false;
+            this._gpbNotes.Text = "Notes";
+            // 
+            // _btnDeleteNote
+            // 
+            this._btnDeleteNote.AccessibleDescription = "";
+            this._btnDeleteNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnDeleteNote.Location = new System.Drawing.Point(95, 567);
+            this._btnDeleteNote.Name = "_btnDeleteNote";
+            this._btnDeleteNote.Size = new System.Drawing.Size(85, 23);
+            this._btnDeleteNote.TabIndex = 3;
+            this._btnDeleteNote.Text = "Delete";
+            this._btnDeleteNote.Visible = false;
+            this._btnDeleteNote.Click += new System.EventHandler(this.btnDeleteNote_Click);
+            // 
+            // _dgNotes
+            // 
+            this._dgNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgNotes.DataMember = "";
+            this._dgNotes.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgNotes.Location = new System.Drawing.Point(6, 20);
+            this._dgNotes.Name = "_dgNotes";
+            this._dgNotes.Size = new System.Drawing.Size(761, 541);
+            this._dgNotes.TabIndex = 1;
+            this._dgNotes.CurrentCellChanged += new System.EventHandler(this.dgNotes_Click);
+            this._dgNotes.Click += new System.EventHandler(this.dgNotes_Click);
+            // 
+            // _btnAddNote
+            // 
+            this._btnAddNote.AccessibleDescription = "";
+            this._btnAddNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddNote.Location = new System.Drawing.Point(6, 567);
+            this._btnAddNote.Name = "_btnAddNote";
+            this._btnAddNote.Size = new System.Drawing.Size(85, 23);
+            this._btnAddNote.TabIndex = 2;
+            this._btnAddNote.Text = "Add";
+            this._btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
+            // 
+            // _tpContactAttempts
+            // 
+            this._tpContactAttempts.Controls.Add(this._grpContactAttemptDetails);
+            this._tpContactAttempts.Controls.Add(this._grpContactAttempts);
+            this._tpContactAttempts.Location = new System.Drawing.Point(4, 22);
+            this._tpContactAttempts.Name = "_tpContactAttempts";
+            this._tpContactAttempts.Size = new System.Drawing.Size(1176, 601);
+            this._tpContactAttempts.TabIndex = 8;
+            this._tpContactAttempts.Text = "Contact Attempts";
+            this._tpContactAttempts.UseVisualStyleBackColor = true;
+            // 
+            // _grpContactAttemptDetails
+            // 
+            this._grpContactAttemptDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpContactAttemptDetails.Controls.Add(this._txtContactAttemptDetails);
+            this._grpContactAttemptDetails.Controls.Add(this._lblContactNotes);
+            this._grpContactAttemptDetails.Location = new System.Drawing.Point(792, 2);
+            this._grpContactAttemptDetails.Name = "_grpContactAttemptDetails";
+            this._grpContactAttemptDetails.Size = new System.Drawing.Size(377, 596);
+            this._grpContactAttemptDetails.TabIndex = 35;
+            this._grpContactAttemptDetails.TabStop = false;
+            this._grpContactAttemptDetails.Text = "Details";
+            // 
+            // _txtContactAttemptDetails
+            // 
+            this._txtContactAttemptDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtContactAttemptDetails.Location = new System.Drawing.Point(6, 37);
+            this._txtContactAttemptDetails.Multiline = true;
+            this._txtContactAttemptDetails.Name = "_txtContactAttemptDetails";
+            this._txtContactAttemptDetails.ReadOnly = true;
+            this._txtContactAttemptDetails.Size = new System.Drawing.Size(365, 553);
+            this._txtContactAttemptDetails.TabIndex = 0;
+            // 
+            // _lblContactNotes
+            // 
+            this._lblContactNotes.Location = new System.Drawing.Point(3, 20);
+            this._lblContactNotes.Name = "_lblContactNotes";
+            this._lblContactNotes.Size = new System.Drawing.Size(88, 23);
+            this._lblContactNotes.TabIndex = 34;
+            this._lblContactNotes.Text = "Notes:";
+            // 
+            // _grpContactAttempts
+            // 
+            this._grpContactAttempts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpContactAttempts.Controls.Add(this._dgContactAttempts);
+            this._grpContactAttempts.Controls.Add(this._btnAddAttempt);
+            this._grpContactAttempts.Location = new System.Drawing.Point(8, 2);
+            this._grpContactAttempts.Name = "_grpContactAttempts";
+            this._grpContactAttempts.Size = new System.Drawing.Size(773, 596);
+            this._grpContactAttempts.TabIndex = 34;
+            this._grpContactAttempts.TabStop = false;
+            this._grpContactAttempts.Text = "Attempts";
+            // 
+            // _dgContactAttempts
+            // 
+            this._dgContactAttempts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgContactAttempts.DataMember = "";
+            this._dgContactAttempts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgContactAttempts.Location = new System.Drawing.Point(6, 20);
+            this._dgContactAttempts.Name = "_dgContactAttempts";
+            this._dgContactAttempts.Size = new System.Drawing.Size(761, 541);
+            this._dgContactAttempts.TabIndex = 1;
+            this._dgContactAttempts.Click += new System.EventHandler(this.dgContactAttempts_Click);
+            // 
+            // _btnAddAttempt
+            // 
+            this._btnAddAttempt.AccessibleDescription = "";
+            this._btnAddAttempt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddAttempt.Location = new System.Drawing.Point(6, 567);
+            this._btnAddAttempt.Name = "_btnAddAttempt";
+            this._btnAddAttempt.Size = new System.Drawing.Size(85, 23);
+            this._btnAddAttempt.TabIndex = 2;
+            this._btnAddAttempt.Text = "Add";
+            this._btnAddAttempt.Click += new System.EventHandler(this.btnAddAttempt_Click);
+            // 
+            // _btnView
+            // 
+            this._btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnView.Location = new System.Drawing.Point(132, 698);
+            this._btnView.Name = "_btnView";
+            this._btnView.Size = new System.Drawing.Size(99, 23);
+            this._btnView.TabIndex = 24;
+            this._btnView.Text = "View...";
+            this._btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // _cmsView
+            // 
+            this._cmsView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._PropertyToolStripMenuItem,
+            this._CustomerToolStripMenuItem,
+            this._AuditTrailToolStripMenuItem,
+            this._OrdersToolStripMenuItem,
+            this._InvoiceToolStripMenuItem,
+            this._QuoteToolStripMenuItem,
+            this._CostingsToolStripMenuItem,
+            this._HistoryToolStripMenuItem});
+            this._cmsView.Name = "cmsView";
+            this._cmsView.Size = new System.Drawing.Size(128, 180);
+            // 
+            // _PropertyToolStripMenuItem
+            // 
+            this._PropertyToolStripMenuItem.Name = "_PropertyToolStripMenuItem";
+            this._PropertyToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._PropertyToolStripMenuItem.Text = "Property";
+            this._PropertyToolStripMenuItem.Click += new System.EventHandler(this.PropertyToolStripMenuItem_Click);
+            // 
+            // _CustomerToolStripMenuItem
+            // 
+            this._CustomerToolStripMenuItem.Name = "_CustomerToolStripMenuItem";
+            this._CustomerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._CustomerToolStripMenuItem.Text = "Customer";
+            this._CustomerToolStripMenuItem.Click += new System.EventHandler(this.CustomerToolStripMenuItem_Click);
+            // 
+            // _AuditTrailToolStripMenuItem
+            // 
+            this._AuditTrailToolStripMenuItem.Name = "_AuditTrailToolStripMenuItem";
+            this._AuditTrailToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._AuditTrailToolStripMenuItem.Text = "Audit Trail";
+            this._AuditTrailToolStripMenuItem.Click += new System.EventHandler(this.AuditTrailToolStripMenuItem_Click);
+            // 
+            // _OrdersToolStripMenuItem
+            // 
+            this._OrdersToolStripMenuItem.Name = "_OrdersToolStripMenuItem";
+            this._OrdersToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._OrdersToolStripMenuItem.Text = "Orders";
+            this._OrdersToolStripMenuItem.Click += new System.EventHandler(this.OrdersToolStripMenuItem_Click);
+            // 
+            // _InvoiceToolStripMenuItem
+            // 
+            this._InvoiceToolStripMenuItem.Name = "_InvoiceToolStripMenuItem";
+            this._InvoiceToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._InvoiceToolStripMenuItem.Text = "Invoice";
+            this._InvoiceToolStripMenuItem.Click += new System.EventHandler(this.InvoiceToolStripMenuItem_Click);
+            // 
+            // _QuoteToolStripMenuItem
+            // 
+            this._QuoteToolStripMenuItem.Name = "_QuoteToolStripMenuItem";
+            this._QuoteToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._QuoteToolStripMenuItem.Text = "Quote";
+            this._QuoteToolStripMenuItem.Click += new System.EventHandler(this.QuoteToolStripMenuItem_Click);
+            // 
+            // _CostingsToolStripMenuItem
+            // 
+            this._CostingsToolStripMenuItem.Name = "_CostingsToolStripMenuItem";
+            this._CostingsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._CostingsToolStripMenuItem.Text = "Costings";
+            this._CostingsToolStripMenuItem.Click += new System.EventHandler(this.CostingsToolStripMenuItem_Click);
+            // 
+            // _HistoryToolStripMenuItem
+            // 
+            this._HistoryToolStripMenuItem.Name = "_HistoryToolStripMenuItem";
+            this._HistoryToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this._HistoryToolStripMenuItem.Text = "History";
+            this._HistoryToolStripMenuItem.Click += new System.EventHandler(this.HistoryToolStripMenuItem_Click);
+            // 
             // FRMLogCallout
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1184, 690);
-            ControlBox = false;
-            Controls.Add(_btnView);
-            Controls.Add(_TabControl1);
-            Controls.Add(_btnClose);
-            Controls.Add(_btnSave);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(1200, 724);
-            Name = "FRMLogCallout";
-            Text = "Job";
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_TabControl1, 0);
-            Controls.SetChildIndex(_btnView, 0);
-            _TabControl1.ResumeLayout(false);
-            _tpAssets.ResumeLayout(false);
-            _grpAssets.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgAssets).EndInit();
-            _tbquote.ResumeLayout(false);
-            _GroupBox2.ResumeLayout(false);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            _Panel1.ResumeLayout(false);
-            _Panel1.PerformLayout();
-            _GroupBox3.ResumeLayout(false);
-            _GroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvQuote).EndInit();
-            _tpNotes.ResumeLayout(false);
-            _gpbNotesDetails.ResumeLayout(false);
-            _gpbNotesDetails.PerformLayout();
-            _gpbNotes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgNotes).EndInit();
-            _tpContactAttempts.ResumeLayout(false);
-            _grpContactAttemptDetails.ResumeLayout(false);
-            _grpContactAttemptDetails.PerformLayout();
-            _grpContactAttempts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgContactAttempts).EndInit();
-            _cmsView.ResumeLayout(false);
-            ResumeLayout(false);
-        }
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1200, 724);
+            this.ControlBox = false;
+            this.Controls.Add(this._btnView);
+            this.Controls.Add(this._TabControl1);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._btnSave);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1200, 724);
+            this.Name = "FRMLogCallout";
+            this.Text = "Job";
+            this._TabControl1.ResumeLayout(false);
+            this._tpAssets.ResumeLayout(false);
+            this._grpAssets.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).EndInit();
+            this._tbquote.ResumeLayout(false);
+            this._GroupBox2.ResumeLayout(false);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this._Panel1.ResumeLayout(false);
+            this._Panel1.PerformLayout();
+            this._GroupBox3.ResumeLayout(false);
+            this._GroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvQuote)).EndInit();
+            this._tpNotes.ResumeLayout(false);
+            this._gpbNotesDetails.ResumeLayout(false);
+            this._gpbNotesDetails.PerformLayout();
+            this._gpbNotes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgNotes)).EndInit();
+            this._tpContactAttempts.ResumeLayout(false);
+            this._grpContactAttemptDetails.ResumeLayout(false);
+            this._grpContactAttemptDetails.PerformLayout();
+            this._grpContactAttempts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgContactAttempts)).EndInit();
+            this._cmsView.ResumeLayout(false);
+            this.ResumeLayout(false);
 
-        
-        
+        }
 
         public void LoadMe(object sender, EventArgs e)
         {
@@ -2306,8 +2293,6 @@ namespace FSM
             }
         }
 
-        
-        
         private UCDocumentsList DocumentsControl;
 
         // Private CostingsControl As UCJobCostings
@@ -2446,7 +2431,6 @@ namespace FSM
             }
         }
 
-        
         private Entity.JobInstalls.JobInstall _JI;
 
         private Entity.JobInstalls.JobInstall JI
@@ -2461,9 +2445,6 @@ namespace FSM
                 _JI = value;
             }
         }
-
-
-        
 
         public void SetupQuoteDGV()
         {
@@ -2702,9 +2683,6 @@ namespace FSM
             cmsView.Show(btnView, new Point(0, 0));
         }
 
-        
-        
-
         public void CloseForm()
         {
             if (((UCLogCallout)TheLoadedControl).Job.JobID == 0)
@@ -2730,9 +2708,6 @@ namespace FSM
             }
         }
 
-        
-        
-        
         private DataView _jobNotes = null;
 
         public DataView JobNotesDataView
@@ -2767,9 +2742,6 @@ namespace FSM
                 }
             }
         }
-
-        
-        
 
         public void SetupNotesDataGrid()
         {
@@ -2874,9 +2846,6 @@ namespace FSM
             ClearNotesFields();
         }
 
-        
-        
-
         private void ClearNotesFields()
         {
             txtNoteID.Text = "";
@@ -2908,8 +2877,6 @@ namespace FSM
             tpNotes.Text = "Notes (" + JobNotesDataView.Table.Rows.Count + ")";
         }
 
-        
-        
         public bool quotecreated = false;
         public string quoteresult = "";
 
@@ -3200,7 +3167,6 @@ namespace FSM
             }
         }
 
-        
         private DataView _dvcontactAttempts = null;
 
         public DataView DvContactAttempts
@@ -3314,7 +3280,5 @@ namespace FSM
                 txtContactAttemptDetails.Text += Constants.vbCrLf + Constants.vbCrLf + "Note: " + DrSelectedContactAttempt["Notes"];
             }
         }
-
-        
     }
 }

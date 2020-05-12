@@ -35,89 +35,67 @@ namespace FSM
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
 
-        // NOTE: The following procedure is required by the Windows Form Designer
-        // It can be modified using the Windows Form Designer.
-        // Do not modify it using the code editor.
-        private PictureBox _picHeader;
+        //internal PictureBox picHeader
+        //{
+        //    [MethodImpl(MethodImplOptions.Synchronized)]
+        //    get
+        //    {
+        //        return _picHeader;
+        //    }
 
-        internal PictureBox picHeader
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _picHeader;
-            }
+        //    [MethodImpl(MethodImplOptions.Synchronized)]
+        //    set
+        //    {
+        //        if (_picHeader != null)
+        //        {
+        //            _picHeader.MouseHover -= picHeader_MouseHover;
+        //        }
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_picHeader != null)
-                {
-                    _picHeader.MouseHover -= picHeader_MouseHover;
-                }
-
-                _picHeader = value;
-                if (_picHeader != null)
-                {
-                    _picHeader.MouseHover += picHeader_MouseHover;
-                }
-            }
-        }
+        //        _picHeader = value;
+        //        if (_picHeader != null)
+        //        {
+        //            _picHeader.MouseHover += picHeader_MouseHover;
+        //        }
+        //    }
+        //}
 
         private PictureBox _picHeaderCont;
 
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMBaseForm));
-            _picHeader = new PictureBox();
-            _picHeader.MouseHover += new EventHandler(picHeader_MouseHover);
-            _picHeaderCont = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)_picHeader).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_picHeaderCont).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMBaseForm));
+            this._picHeaderCont = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this._picHeaderCont)).BeginInit();
+            this.SuspendLayout();
             //
-            // picHeader
+            // _picHeaderCont
             //
-            _picHeader.Location = new Point(0, 0);
-            _picHeader.Margin = new Padding(0, 0, 3, 0);
-            _picHeader.Name = "picHeader";
-            _picHeader.Padding = new Padding(5, 0, 0, 0);
-            _picHeader.Size = new Size(55, 50);
-            _picHeader.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picHeader.TabIndex = 0;
-            _picHeader.TabStop = false;
-            //
-            // picHeaderCont
-            //
-            _picHeaderCont.Dock = DockStyle.Top;
-            _picHeaderCont.Location = new Point(0, 0);
-            _picHeaderCont.Margin = new Padding(3, 0, 3, 3);
-            _picHeaderCont.Name = "picHeaderCont";
-            _picHeaderCont.Size = new Size(528, 45);
-            _picHeaderCont.SizeMode = PictureBoxSizeMode.StretchImage;
-            _picHeaderCont.TabIndex = 1;
-            _picHeaderCont.TabStop = false;
+            this._picHeaderCont.Dock = System.Windows.Forms.DockStyle.Top;
+            this._picHeaderCont.Location = new System.Drawing.Point(0, 0);
+            this._picHeaderCont.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this._picHeaderCont.Name = "_picHeaderCont";
+            this._picHeaderCont.Size = new System.Drawing.Size(528, 45);
+            this._picHeaderCont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this._picHeaderCont.TabIndex = 1;
+            this._picHeaderCont.TabStop = false;
             //
             // FRMBaseForm
             //
-            AutoScaleBaseSize = new Size(6, 14);
-            AutoScroll = true;
-            BackColor = Color.White;
-            ClientSize = new Size(528, 382);
-            Controls.Add(_picHeader);
-            Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            KeyPreview = true;
-            Name = "FRMBaseForm";
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            SizeGripStyle = SizeGripStyle.Hide;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Field Service Management";
-            ((System.ComponentModel.ISupportInitialize)_picHeader).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_picHeaderCont).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(528, 382);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
+            this.Name = "FRMBaseForm";
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Field Service Management";
+            ((System.ComponentModel.ISupportInitialize)(this._picHeaderCont)).EndInit();
+            this.ResumeLayout(false);
         }
 
         private ArrayList _FormButtons = null;
@@ -140,15 +118,15 @@ namespace FSM
             _FormButtons = new ArrayList();
             if (App.IsRFT)
             {
-                picHeader.Image = My.Resources.Resources.RFT;
+                this.Icon = new Icon("Resources\\rft_logo.ico");
             }
             else if (App.IsGasway)
             {
-                picHeader.Image = My.Resources.Resources.GW_Logo;
+                this.Icon = new Icon("Resources\\GW_Icon.ico");
             }
             else if (App.IsBlueflame)
             {
-                picHeader.Image = My.Resources.Resources.Blueflame;
+                this.Icon = new Icon("Resources\\Blueflame_Icon.ico");
             }
 
             LoopControls((Control)frm);
@@ -161,18 +139,18 @@ namespace FSM
             _FormButtons = new ArrayList();
             if (App.IsRFT)
             {
-                picHeader.Image = My.Resources.Resources.RFT;
+                this.Icon = new Icon("Resources\\rft_logo.ico");
             }
             else if (App.IsGasway)
             {
-                picHeader.Image = My.Resources.Resources.GW_Logo;
+                this.Icon = new Icon("Resources\\GW_Icon.ico");
             }
             else if (App.IsBlueflame)
             {
-                picHeader.Image = My.Resources.Resources.Blueflame;
+                this.Icon = new Icon("Resources\\Blueflame_Icon.ico");
             }
 
-            LoopControls(frm);
+            LoopControls((Control)frm);
             SetupButtonMouseOvers();
         }
 
@@ -316,10 +294,10 @@ namespace FSM
             }
         }
 
-        public void picHeader_MouseHover(object sender, EventArgs e)
-        {
-            var hoverToolTip = new ToolTip();
-            hoverToolTip.SetToolTip(picHeader, App.TheSystem.Description);
-        }
+        //public void picHeader_MouseHover(object sender, EventArgs e)
+        //{
+        //    var hoverToolTip = new ToolTip();
+        //    hoverToolTip.SetToolTip(picHeader, App.TheSystem.Description);
+        //}
     }
 }

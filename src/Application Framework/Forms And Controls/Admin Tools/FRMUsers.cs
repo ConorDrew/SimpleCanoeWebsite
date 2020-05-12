@@ -17,14 +17,7 @@ namespace FSM
 
             // This call is required by the Windows Form Designer.
             InitializeComponent();
-            if ((App.loggedInUser.Fullname ?? "") == "Hayleigh Mann")
-            {
-                btnPopulateNewSecurityModules.Visible = true;
-            }
-            else
-            {
-                btnPopulateNewSecurityModules.Visible = false;
-            }
+            btnPopulateNewSecurityModules.Visible = false;
 
             // Add any initialization after the InitializeComponent() call
         }
