@@ -986,8 +986,8 @@ namespace FSM
                 }
                 catch (Exception ex)
                 {
-                    return false;
                     App.ShowMessage(ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
                 }
                 finally
                 {
