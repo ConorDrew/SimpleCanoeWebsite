@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Microsoft.VisualBasic.CompilerServices;
 
 namespace FSM.Entity
@@ -14,7 +15,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -76,9 +76,6 @@ namespace FSM.Entity
                     _deleted = value;
                 }
             }
-
-            
-            
 
             private int _PartsToBeCreditedID = 0;
 
@@ -278,8 +275,131 @@ namespace FSM.Entity
                 }
             }
 
+            private int _CreditRef = 0;
 
-            
+            public int CreditRef
+            {
+                get
+                {
+                    return _CreditRef;
+                }
+            }
+
+            public object SetCreditRef
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_CreditRef", value);
+                }
+            }
+
+            private int _ExtraRef = 0;
+
+            public int ExtraRef
+            {
+                get
+                {
+                    return _ExtraRef;
+                }
+            }
+
+            public object SetExtraRef
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_ExtraRef", value);
+                }
+            }
+
+            private string _NominalCode;
+
+            public string NominalCode
+            {
+                get
+                {
+                    return _NominalCode;
+                }
+            }
+
+            public object SetNominalCode
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_NominalCode", value);
+                }
+            }
+
+            private int _TaxCodeID = 0;
+
+            public int TaxCodeID
+            {
+                get
+                {
+                    return _TaxCodeID;
+                }
+            }
+
+            public object SetTaxCodeID
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_TaxCodeID", value);
+                }
+            }
+
+            private double _AmountRecieved = 0;
+
+            public double AmountRecieved
+            {
+                get
+                {
+                    return _AmountRecieved;
+                }
+            }
+
+            public object SetAmountRecieved
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_AmountRecieved", value);
+                }
+            }
+
+            private DateTime _DateExportedToSage = default;
+
+            public DateTime DateExportedToSage
+            {
+                get
+                {
+                    return _DateExportedToSage;
+                }
+            }
+
+            public object SetDateExportedToSage
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_DateExportedToSage", value);
+                }
+            }
+
+            private DateTime _DateReceived = default;
+
+            public DateTime DateReceived
+            {
+                get
+                {
+                    return _DateReceived;
+                }
+            }
+
+            public object SetDateReceived
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_DateReceived", value);
+                }
+            }
         }
     }
 }

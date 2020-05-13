@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.CompilerServices;
 using System.Data;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.Logical;
 
 namespace FSM.Entity
 {
@@ -242,11 +243,19 @@ namespace FSM.Entity
                 row["DisplayMember"] = "Product Makes";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Models);
                 row["DisplayMember"] = "Product Models";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
+                row = dt.NewRow();
+                row["ValueMember"] = Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.NominalCodes);
+                row["DisplayMember"] = "Nominal Codes";
+                row["Deleted"] = false;
+                dt.Rows.Add(row);
+
                 dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_TBLPickListTypes.ToString();
                 return new DataView(dt);
             }

@@ -10,12 +10,8 @@ namespace FSM
 {
     public class UCOrderForCustomer : UCBase, IUserControl
     {
-        
-
         public UCOrderForCustomer() : base()
         {
-            
-            
             base.Load += UCOrderForCustomer_Load;
 
             // This call is required by the Windows Form Designer.
@@ -489,6 +485,9 @@ namespace FSM
         }
 
         private TextBox _txtInvoiceAddress;
+        internal Button btnFindEngineer;
+        internal TextBox txtEngineer;
+        internal Label _lblEngineer;
 
         internal TextBox txtInvoiceAddress
         {
@@ -539,270 +538,316 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _btnFindWarehouse = new Button();
-            _btnFindWarehouse.Click += new EventHandler(btnFindWarehouse_Click);
-            _txtWarehouse = new TextBox();
-            _Label4 = new Label();
-            _btnFindSite = new Button();
-            _btnFindSite.Click += new EventHandler(btnFindSite_Click);
-            _txtSite = new TextBox();
-            _Label1 = new Label();
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnFindCustomer_Click);
-            _txtCustomer = new TextBox();
-            _Label3 = new Label();
-            _lblSpecial = new Label();
-            _txtSpecialInstructions = new TextBox();
-            _cboUsers = new ComboBox();
-            _Label13 = new Label();
-            _btnFindContact = new Button();
-            _btnFindContact.Click += new EventHandler(btnFindContact_Click);
-            _txtContact = new TextBox();
-            _Label14 = new Label();
-            _btnFindInvoiceAddress = new Button();
-            _btnFindInvoiceAddress.Click += new EventHandler(btnFindInvoiceAddress_Click);
-            _txtInvoiceAddress = new TextBox();
-            _Label15 = new Label();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFindEngineer = new System.Windows.Forms.Button();
+            this.txtEngineer = new System.Windows.Forms.TextBox();
+            this._lblEngineer = new System.Windows.Forms.Label();
+            this._lblSpecial = new System.Windows.Forms.Label();
+            this._txtSpecialInstructions = new System.Windows.Forms.TextBox();
+            this._cboUsers = new System.Windows.Forms.ComboBox();
+            this._Label13 = new System.Windows.Forms.Label();
+            this._btnFindContact = new System.Windows.Forms.Button();
+            this._txtContact = new System.Windows.Forms.TextBox();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._btnFindInvoiceAddress = new System.Windows.Forms.Button();
+            this._txtInvoiceAddress = new System.Windows.Forms.TextBox();
+            this._Label15 = new System.Windows.Forms.Label();
+            this._btnFindWarehouse = new System.Windows.Forms.Button();
+            this._txtWarehouse = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._btnFindSite = new System.Windows.Forms.Button();
+            this._txtSite = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             //
-            // GroupBox1
+            // _GroupBox1
             //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_lblSpecial);
-            _GroupBox1.Controls.Add(_txtSpecialInstructions);
-            _GroupBox1.Controls.Add(_cboUsers);
-            _GroupBox1.Controls.Add(_Label13);
-            _GroupBox1.Controls.Add(_btnFindContact);
-            _GroupBox1.Controls.Add(_txtContact);
-            _GroupBox1.Controls.Add(_Label14);
-            _GroupBox1.Controls.Add(_btnFindInvoiceAddress);
-            _GroupBox1.Controls.Add(_txtInvoiceAddress);
-            _GroupBox1.Controls.Add(_Label15);
-            _GroupBox1.Controls.Add(_btnFindWarehouse);
-            _GroupBox1.Controls.Add(_txtWarehouse);
-            _GroupBox1.Controls.Add(_Label4);
-            _GroupBox1.Controls.Add(_btnFindSite);
-            _GroupBox1.Controls.Add(_txtSite);
-            _GroupBox1.Controls.Add(_Label1);
-            _GroupBox1.Controls.Add(_btnFindCustomer);
-            _GroupBox1.Controls.Add(_txtCustomer);
-            _GroupBox1.Controls.Add(_Label3);
-            _GroupBox1.Location = new Point(4, 8);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(576, 392);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Customer Details";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this.btnFindEngineer);
+            this._GroupBox1.Controls.Add(this.txtEngineer);
+            this._GroupBox1.Controls.Add(this._lblEngineer);
+            this._GroupBox1.Controls.Add(this._lblSpecial);
+            this._GroupBox1.Controls.Add(this._txtSpecialInstructions);
+            this._GroupBox1.Controls.Add(this._cboUsers);
+            this._GroupBox1.Controls.Add(this._Label13);
+            this._GroupBox1.Controls.Add(this._btnFindContact);
+            this._GroupBox1.Controls.Add(this._txtContact);
+            this._GroupBox1.Controls.Add(this._Label14);
+            this._GroupBox1.Controls.Add(this._btnFindInvoiceAddress);
+            this._GroupBox1.Controls.Add(this._txtInvoiceAddress);
+            this._GroupBox1.Controls.Add(this._Label15);
+            this._GroupBox1.Controls.Add(this._btnFindWarehouse);
+            this._GroupBox1.Controls.Add(this._txtWarehouse);
+            this._GroupBox1.Controls.Add(this._Label4);
+            this._GroupBox1.Controls.Add(this._btnFindSite);
+            this._GroupBox1.Controls.Add(this._txtSite);
+            this._GroupBox1.Controls.Add(this._Label1);
+            this._GroupBox1.Controls.Add(this._btnFindCustomer);
+            this._GroupBox1.Controls.Add(this._txtCustomer);
+            this._GroupBox1.Controls.Add(this._Label3);
+            this._GroupBox1.Location = new System.Drawing.Point(4, 8);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(576, 392);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Customer Details";
             //
-            // btnFindWarehouse
+            // btnFindEngineer
             //
-            _btnFindWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindWarehouse.BackColor = Color.White;
-            _btnFindWarehouse.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindWarehouse.Location = new Point(528, 133);
-            _btnFindWarehouse.Name = "btnFindWarehouse";
-            _btnFindWarehouse.Size = new Size(32, 23);
-            _btnFindWarehouse.TabIndex = 6;
-            _btnFindWarehouse.Text = "...";
+            this.btnFindEngineer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFindEngineer.BackColor = System.Drawing.Color.White;
+            this.btnFindEngineer.Enabled = false;
+            this.btnFindEngineer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindEngineer.Location = new System.Drawing.Point(528, 176);
+            this.btnFindEngineer.Name = "btnFindEngineer";
+            this.btnFindEngineer.Size = new System.Drawing.Size(32, 24);
+            this.btnFindEngineer.TabIndex = 123;
+            this.btnFindEngineer.Text = "...";
+            this.btnFindEngineer.UseVisualStyleBackColor = false;
+            this.btnFindEngineer.Click += new System.EventHandler(this.btnFindEngineer_Click);
             //
-            // txtWarehouse
+            // txtEngineer
             //
-            _txtWarehouse.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtWarehouse.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtWarehouse.Location = new Point(128, 133);
-            _txtWarehouse.Name = "txtWarehouse";
-            _txtWarehouse.ReadOnly = true;
-            _txtWarehouse.Size = new Size(392, 21);
-            _txtWarehouse.TabIndex = 5;
-            _txtWarehouse.Text = "";
+            this.txtEngineer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEngineer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEngineer.Location = new System.Drawing.Point(126, 179);
+            this.txtEngineer.Name = "txtEngineer";
+            this.txtEngineer.ReadOnly = true;
+            this.txtEngineer.Size = new System.Drawing.Size(394, 21);
+            this.txtEngineer.TabIndex = 122;
             //
-            // Label4
+            // _lblEngineer
             //
-            _Label4.BackColor = Color.White;
-            _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label4.Location = new Point(8, 128);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(72, 20);
-            _Label4.TabIndex = 51;
-            _Label4.Text = "Warehouse";
+            this._lblEngineer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblEngineer.Location = new System.Drawing.Point(8, 182);
+            this._lblEngineer.Name = "_lblEngineer";
+            this._lblEngineer.Size = new System.Drawing.Size(64, 24);
+            this._lblEngineer.TabIndex = 121;
+            this._lblEngineer.Text = "Engineer";
             //
-            // btnFindSite
+            // _lblSpecial
             //
-            _btnFindSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindSite.BackColor = Color.White;
-            _btnFindSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindSite.Location = new Point(528, 97);
-            _btnFindSite.Name = "btnFindSite";
-            _btnFindSite.Size = new Size(32, 23);
-            _btnFindSite.TabIndex = 4;
-            _btnFindSite.Text = "...";
+            this._lblSpecial.Location = new System.Drawing.Point(8, 280);
+            this._lblSpecial.Name = "_lblSpecial";
+            this._lblSpecial.Size = new System.Drawing.Size(120, 40);
+            this._lblSpecial.TabIndex = 119;
+            this._lblSpecial.Text = "Special Instructions";
             //
-            // txtSite
+            // _txtSpecialInstructions
             //
-            _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtSite.Location = new Point(128, 97);
-            _txtSite.Name = "txtSite";
-            _txtSite.ReadOnly = true;
-            _txtSite.Size = new Size(392, 21);
-            _txtSite.TabIndex = 3;
-            _txtSite.Text = "";
+            this._txtSpecialInstructions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSpecialInstructions.Location = new System.Drawing.Point(128, 280);
+            this._txtSpecialInstructions.Multiline = true;
+            this._txtSpecialInstructions.Name = "_txtSpecialInstructions";
+            this._txtSpecialInstructions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtSpecialInstructions.Size = new System.Drawing.Size(392, 66);
+            this._txtSpecialInstructions.TabIndex = 118;
             //
-            // Label1
+            // _cboUsers
             //
-            _Label1.BackColor = Color.White;
-            _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label1.Location = new Point(8, 96);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(72, 20);
-            _Label1.TabIndex = 47;
-            _Label1.Text = "Property";
+            this._cboUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboUsers.Location = new System.Drawing.Point(128, 232);
+            this._cboUsers.Name = "_cboUsers";
+            this._cboUsers.Size = new System.Drawing.Size(392, 21);
+            this._cboUsers.TabIndex = 114;
             //
-            // btnFindCustomer
+            // _Label13
             //
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.BackColor = Color.White;
-            _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindCustomer.Location = new Point(528, 25);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 2;
-            _btnFindCustomer.Text = "...";
+            this._Label13.Location = new System.Drawing.Point(8, 230);
+            this._Label13.Name = "_Label13";
+            this._Label13.Size = new System.Drawing.Size(112, 24);
+            this._Label13.TabIndex = 117;
+            this._Label13.Text = "Co-ordinator";
             //
-            // txtCustomer
+            // _btnFindContact
             //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtCustomer.Location = new Point(8, 25);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(512, 21);
-            _txtCustomer.TabIndex = 1;
-            _txtCustomer.Text = "";
+            this._btnFindContact.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindContact.BackColor = System.Drawing.Color.White;
+            this._btnFindContact.Enabled = false;
+            this._btnFindContact.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindContact.Location = new System.Drawing.Point(528, 206);
+            this._btnFindContact.Name = "_btnFindContact";
+            this._btnFindContact.Size = new System.Drawing.Size(32, 24);
+            this._btnFindContact.TabIndex = 113;
+            this._btnFindContact.Text = "...";
+            this._btnFindContact.UseVisualStyleBackColor = false;
+            this._btnFindContact.Click += new System.EventHandler(this.btnFindContact_Click);
             //
-            // Label3
+            // _txtContact
             //
-            _Label3.ForeColor = SystemColors.ControlText;
-            _Label3.Location = new Point(8, 56);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(560, 23);
-            _Label3.TabIndex = 41;
-            _Label3.Text = "Please select a property to deliver to.  If property is currently unknown, select a wareh" + "ouse to deliver to.";
+            this._txtContact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtContact.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtContact.Location = new System.Drawing.Point(128, 208);
+            this._txtContact.Name = "_txtContact";
+            this._txtContact.ReadOnly = true;
+            this._txtContact.Size = new System.Drawing.Size(392, 21);
+            this._txtContact.TabIndex = 112;
             //
-            // lblSpecial
+            // _Label14
             //
-            _lblSpecial.Location = new Point(8, 280);
-            _lblSpecial.Name = "lblSpecial";
-            _lblSpecial.Size = new Size(120, 40);
-            _lblSpecial.TabIndex = 119;
-            _lblSpecial.Text = "Special Instructions";
+            this._Label14.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label14.Location = new System.Drawing.Point(8, 206);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(64, 24);
+            this._Label14.TabIndex = 116;
+            this._Label14.Text = "Contact";
             //
-            // txtSpecialInstructions
+            // _btnFindInvoiceAddress
             //
-            _txtSpecialInstructions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtSpecialInstructions.Location = new Point(128, 280);
-            _txtSpecialInstructions.Multiline = true;
-            _txtSpecialInstructions.Name = "txtSpecialInstructions";
-            _txtSpecialInstructions.ScrollBars = ScrollBars.Vertical;
-            _txtSpecialInstructions.Size = new Size(392, 66);
-            _txtSpecialInstructions.TabIndex = 118;
-            _txtSpecialInstructions.Text = "";
+            this._btnFindInvoiceAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindInvoiceAddress.BackColor = System.Drawing.Color.White;
+            this._btnFindInvoiceAddress.Enabled = false;
+            this._btnFindInvoiceAddress.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindInvoiceAddress.Location = new System.Drawing.Point(528, 254);
+            this._btnFindInvoiceAddress.Name = "_btnFindInvoiceAddress";
+            this._btnFindInvoiceAddress.Size = new System.Drawing.Size(32, 24);
+            this._btnFindInvoiceAddress.TabIndex = 111;
+            this._btnFindInvoiceAddress.Text = "...";
+            this._btnFindInvoiceAddress.UseVisualStyleBackColor = false;
+            this._btnFindInvoiceAddress.Click += new System.EventHandler(this.btnFindInvoiceAddress_Click);
             //
-            // cboUsers
+            // _txtInvoiceAddress
             //
-            _cboUsers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboUsers.Location = new Point(128, 232);
-            _cboUsers.Name = "cboUsers";
-            _cboUsers.Size = new Size(392, 21);
-            _cboUsers.TabIndex = 114;
+            this._txtInvoiceAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtInvoiceAddress.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtInvoiceAddress.Location = new System.Drawing.Point(128, 256);
+            this._txtInvoiceAddress.Name = "_txtInvoiceAddress";
+            this._txtInvoiceAddress.ReadOnly = true;
+            this._txtInvoiceAddress.Size = new System.Drawing.Size(392, 21);
+            this._txtInvoiceAddress.TabIndex = 110;
             //
-            // Label13
+            // _Label15
             //
-            _Label13.Location = new Point(8, 230);
-            _Label13.Name = "Label13";
-            _Label13.Size = new Size(112, 24);
-            _Label13.TabIndex = 117;
-            _Label13.Text = "Co-ordinator";
+            this._Label15.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label15.Location = new System.Drawing.Point(8, 254);
+            this._Label15.Name = "_Label15";
+            this._Label15.Size = new System.Drawing.Size(104, 24);
+            this._Label15.TabIndex = 115;
+            this._Label15.Text = "Invoice Address";
             //
-            // btnFindContact
+            // _btnFindWarehouse
             //
-            _btnFindContact.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindContact.BackColor = Color.White;
-            _btnFindContact.Enabled = false;
-            _btnFindContact.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindContact.Location = new Point(528, 206);
-            _btnFindContact.Name = "btnFindContact";
-            _btnFindContact.Size = new Size(32, 24);
-            _btnFindContact.TabIndex = 113;
-            _btnFindContact.Text = "...";
+            this._btnFindWarehouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindWarehouse.BackColor = System.Drawing.Color.White;
+            this._btnFindWarehouse.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindWarehouse.Location = new System.Drawing.Point(528, 133);
+            this._btnFindWarehouse.Name = "_btnFindWarehouse";
+            this._btnFindWarehouse.Size = new System.Drawing.Size(32, 23);
+            this._btnFindWarehouse.TabIndex = 6;
+            this._btnFindWarehouse.Text = "...";
+            this._btnFindWarehouse.UseVisualStyleBackColor = false;
+            this._btnFindWarehouse.Click += new System.EventHandler(this.btnFindWarehouse_Click);
             //
-            // txtContact
+            // _txtWarehouse
             //
-            _txtContact.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtContact.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtContact.Location = new Point(128, 208);
-            _txtContact.Name = "txtContact";
-            _txtContact.ReadOnly = true;
-            _txtContact.Size = new Size(392, 21);
-            _txtContact.TabIndex = 112;
-            _txtContact.Text = "";
+            this._txtWarehouse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtWarehouse.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtWarehouse.Location = new System.Drawing.Point(128, 133);
+            this._txtWarehouse.Name = "_txtWarehouse";
+            this._txtWarehouse.ReadOnly = true;
+            this._txtWarehouse.Size = new System.Drawing.Size(392, 21);
+            this._txtWarehouse.TabIndex = 5;
             //
-            // Label14
+            // _Label4
             //
-            _Label14.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label14.Location = new Point(8, 206);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(64, 24);
-            _Label14.TabIndex = 116;
-            _Label14.Text = "Contact";
+            this._Label4.BackColor = System.Drawing.Color.White;
+            this._Label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label4.Location = new System.Drawing.Point(8, 128);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(72, 20);
+            this._Label4.TabIndex = 51;
+            this._Label4.Text = "Warehouse";
             //
-            // btnFindInvoiceAddress
+            // _btnFindSite
             //
-            _btnFindInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindInvoiceAddress.BackColor = Color.White;
-            _btnFindInvoiceAddress.Enabled = false;
-            _btnFindInvoiceAddress.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindInvoiceAddress.Location = new Point(528, 254);
-            _btnFindInvoiceAddress.Name = "btnFindInvoiceAddress";
-            _btnFindInvoiceAddress.Size = new Size(32, 24);
-            _btnFindInvoiceAddress.TabIndex = 111;
-            _btnFindInvoiceAddress.Text = "...";
+            this._btnFindSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindSite.BackColor = System.Drawing.Color.White;
+            this._btnFindSite.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindSite.Location = new System.Drawing.Point(528, 97);
+            this._btnFindSite.Name = "_btnFindSite";
+            this._btnFindSite.Size = new System.Drawing.Size(32, 23);
+            this._btnFindSite.TabIndex = 4;
+            this._btnFindSite.Text = "...";
+            this._btnFindSite.UseVisualStyleBackColor = false;
+            this._btnFindSite.Click += new System.EventHandler(this.btnFindSite_Click);
             //
-            // txtInvoiceAddress
+            // _txtSite
             //
-            _txtInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtInvoiceAddress.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtInvoiceAddress.Location = new Point(128, 256);
-            _txtInvoiceAddress.Name = "txtInvoiceAddress";
-            _txtInvoiceAddress.ReadOnly = true;
-            _txtInvoiceAddress.Size = new Size(392, 21);
-            _txtInvoiceAddress.TabIndex = 110;
-            _txtInvoiceAddress.Text = "";
+            this._txtSite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSite.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtSite.Location = new System.Drawing.Point(128, 97);
+            this._txtSite.Name = "_txtSite";
+            this._txtSite.ReadOnly = true;
+            this._txtSite.Size = new System.Drawing.Size(392, 21);
+            this._txtSite.TabIndex = 3;
             //
-            // Label15
+            // _Label1
             //
-            _Label15.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label15.Location = new Point(8, 254);
-            _Label15.Name = "Label15";
-            _Label15.Size = new Size(104, 24);
-            _Label15.TabIndex = 115;
-            _Label15.Text = "Invoice Address";
+            this._Label1.BackColor = System.Drawing.Color.White;
+            this._Label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label1.Location = new System.Drawing.Point(8, 96);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(72, 20);
+            this._Label1.TabIndex = 47;
+            this._Label1.Text = "Property";
+            //
+            // _btnFindCustomer
+            //
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.BackColor = System.Drawing.Color.White;
+            this._btnFindCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(528, 25);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 2;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = false;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
+            //
+            // _txtCustomer
+            //
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtCustomer.Location = new System.Drawing.Point(8, 25);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(512, 21);
+            this._txtCustomer.TabIndex = 1;
+            //
+            // _Label3
+            //
+            this._Label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._Label3.Location = new System.Drawing.Point(8, 56);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(560, 23);
+            this._Label3.TabIndex = 41;
+            this._Label3.Text = "Please select a property to deliver to.  If property is currently unknown, select" +
+    " a warehouse to deliver to.";
             //
             // UCOrderForCustomer
             //
-            Controls.Add(_GroupBox1);
-            Name = "UCOrderForCustomer";
-            Size = new Size(592, 408);
-            _GroupBox1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "UCOrderForCustomer";
+            this.Size = new System.Drawing.Size(592, 408);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
         }
-
-        
-        
 
         public void LoadForm(object sender, EventArgs e)
         {
@@ -818,9 +863,6 @@ namespace FSM
                 return null;
             }
         }
-
-        
-        
 
         public event IUserControl.RecordsChangedEventHandler RecordsChanged;
 
@@ -869,6 +911,7 @@ namespace FSM
                     txtSite.Text = theProperty.Address1 + ", " + theProperty.Address2 + ", " + theProperty.Postcode;
                     btnFindInvoiceAddress.Enabled = true;
                     btnFindContact.Enabled = true;
+                    btnFindEngineer.Enabled = true;
                     InvoiceAddress = null;
                     Contact = null;
                     Warehouse = null;
@@ -948,6 +991,29 @@ namespace FSM
             }
         }
 
+        private FSM.Entity.Engineers.Engineer _engineer = new FSM.Entity.Engineers.Engineer();
+
+        public FSM.Entity.Engineers.Engineer Engineer
+        {
+            get
+            {
+                return _engineer;
+            }
+
+            set
+            {
+                _engineer = value;
+                if (Engineer is object)
+                {
+                    txtEngineer.Text = Engineer.Name;
+                }
+                else
+                {
+                    txtEngineer.Text = "";
+                }
+            }
+        }
+
         private void UCOrderForCustomer_Load(object sender, EventArgs e)
         {
             LoadForm(sender, e);
@@ -1012,9 +1078,6 @@ namespace FSM
             }
         }
 
-        
-        
-
         public void Populate(int ID = 0)
         {
             // DO NOTHING
@@ -1026,6 +1089,13 @@ namespace FSM
             // DO NOTHING
         }
 
-        
+        private void btnFindEngineer_Click(object sender, EventArgs e)
+        {
+            int ID = Conversions.ToInteger(FSM.App.FindRecord(FSM.Entity.Sys.Enums.TableNames.tblEngineer));
+            if (!(ID == 0))
+            {
+                Engineer = FSM.App.DB.Engineer.Engineer_Get(ID);
+            }
+        }
     }
 }

@@ -14,7 +14,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -77,8 +76,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _OrderID = 0;
 
             public int OrderID
@@ -304,6 +301,24 @@ namespace FSM.Entity
                 }
             }
 
+            private int _allocatedToEngineer = 0;
+
+            public int AllocatedToEngineer
+            {
+                get
+                {
+                    return _allocatedToEngineer;
+                }
+            }
+
+            public object SetAllocatedToEngineer
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_allocatedToEngineer", value);
+                }
+            }
+
             private int _invoiceAddressID = 0;
 
             public int InvoiceAddressID
@@ -394,21 +409,21 @@ namespace FSM.Entity
                 }
             }
 
-            private string _NominalCode = "";
+            private string _Region = null;
 
-            public string NominalCode
+            public string Region
             {
                 get
                 {
-                    return _NominalCode;
+                    return _Region;
                 }
             }
 
-            public object SetNominalCode
+            public object SetRegion
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_NominalCode", value);
+                    _dataTypeValidator.SetValue(this, "_Region", value);
                 }
             }
 
@@ -555,8 +570,6 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_reason", value);
                 }
             }
-
-            
         }
     }
 }

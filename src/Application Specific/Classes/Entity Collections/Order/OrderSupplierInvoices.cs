@@ -15,7 +15,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -78,8 +77,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _InvoiceID = 0;
 
             public int InvoiceID
@@ -185,6 +182,24 @@ namespace FSM.Entity
                 set
                 {
                     _dataTypeValidator.SetValue(this, "_VATAmount", value);
+                }
+            }
+
+            private double _InvoiceAmount;
+
+            public double InvoiceAmount
+            {
+                get
+                {
+                    return _InvoiceAmount;
+                }
+            }
+
+            public object SetInvoiceAmount
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_InvoiceAmount", value);
                 }
             }
 
@@ -328,7 +343,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _DateExported = Conversions.ToDate(value);
+                    _dataTypeValidator.SetValue(this, "_DateExported", value);
                 }
             }
 
@@ -349,7 +364,42 @@ namespace FSM.Entity
                     _dataTypeValidator.SetValue(this, "_KeyedBy", value);
                 }
             }
-            
+
+            private bool _RequresAuth;
+
+            public bool RequresAuth
+            {
+                get
+                {
+                    return _RequresAuth;
+                }
+            }
+
+            public object SetRequresAuth
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_RequresAuth", value);
+                }
+            }
+
+            private bool _Authorised;
+
+            public bool Authorised
+            {
+                get
+                {
+                    return _Authorised;
+                }
+            }
+
+            public object SetAuthorised
+            {
+                set
+                {
+                    _dataTypeValidator.SetValue(this, "_Authorised", value);
+                }
+            }
         }
     }
 }

@@ -13,7 +13,6 @@ namespace FSM.Entity
                 _dataTypeValidator = new DataTypeValidator();
             }
 
-            
             public bool IgnoreExceptionsOnSetMethods
             {
                 get
@@ -76,8 +75,6 @@ namespace FSM.Entity
                 }
             }
 
-            
-            
             private int _PartID = 0;
 
             public int PartID
@@ -492,7 +489,23 @@ namespace FSM.Entity
                 }
             }
 
-            
+            private string _nominalID;
+
+            public string NominalID
+            {
+                get
+                {
+                    return _nominalID;
+                }
+            }
+
+            public string SetNominalID
+            {
+                set
+                {
+                    _nominalID = value;
+                }
+            }
         }
     }
 }

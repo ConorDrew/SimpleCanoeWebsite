@@ -62,6 +62,7 @@ namespace FSM.Entity.Sys
             Contact = new Contacts.ContactSQL(this);
             EngineerPostalRegion = new EngineerPostalRegions.EngineerPostalRegionSQL(this);
             Order = new Orders.OrderSQL(this);
+            OrderAudits = new Entity.OrderAuditSQL(this);
             SupplierInvoices = new Orders.SupplierInvoiceSQL(this);
             OrderPart = new OrderParts.OrderPartSQL(this);
             OrderProduct = new OrderProducts.OrderProductSQL(this);
@@ -269,6 +270,7 @@ namespace FSM.Entity.Sys
         public Contacts.ContactSQL Contact;
         public EngineerPostalRegions.EngineerPostalRegionSQL EngineerPostalRegion;
         public Orders.OrderSQL Order;
+        public OrderAuditSQL OrderAudits;
         public Orders.SupplierInvoiceSQL SupplierInvoices;
         public OrderProducts.OrderProductSQL OrderProduct;
         public OrderParts.OrderPartSQL OrderPart;

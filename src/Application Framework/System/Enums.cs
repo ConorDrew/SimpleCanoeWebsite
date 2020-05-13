@@ -178,7 +178,8 @@
                 tblSiteFuel = 163,
                 tblAuthority = 164,
                 tblUserQualification = 165,
-                tblEngineerRole = 166
+                tblEngineerRole = 166,
+                tblOrderAudit = 167
             }
 
             public enum FormState
@@ -249,7 +250,8 @@
                 SocialHousingSecurity = 40,
                 NeopostPrint = 41,
                 CustomerCharges = 42,
-                AccountPeriod = 43
+                AccountPeriod = 43,
+                CreateCustomerPO = 44
             }
 
             public enum AdditionalChecksTypes
@@ -402,6 +404,7 @@
                 Department = 113,
                 SubTaxRate = 118,
                 AlertTypes = 119,
+                NominalCodes = 120,
                 AccomType = 121,
                 Relationship = 122
             }
@@ -1197,6 +1200,19 @@
                 ELEC = 69789,
                 ADDAPP = 69923,
                 BDOWNPLUSOIL = 71116
+            }
+
+            public enum OrderAuditReason
+            {
+                StatusChanged = 1,
+                PartsAdded = 2,
+                PartsChanged = 3,
+                DocumentChanged = 4,
+                SupplierInvoiceAdded = 5,
+                SupplierInvoiceUpdated = 6,
+                SupplierInvoiceDeleted = 7,
+                CreditAdded = 8,
+                CreditDeleted = 9,
             }
         }
     }

@@ -113,6 +113,7 @@ namespace FSM.Entity
                         oPart.SetFuelID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["FuelID"]);
                         oPart.SetMakeID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["MakeID"]);
                         oPart.SetIsSpecialPart = Conversions.ToBoolean(dt.Rows[0]["IsSpecialPart"]);
+                        oPart.SetNominalID = Sys.Helper.MakeStringValid(dt.Rows[0]["NominalID"]);
                         oPart.Exists = true;
                         return oPart;
                     }
@@ -317,6 +318,7 @@ namespace FSM.Entity
                     withBlock.AddParameter("@Equipment", oPart.Equipment, true);
                     withBlock.AddParameter("@FuelID", oPart.FuelID, true);
                     withBlock.AddParameter("@MakeID", oPart.MakeID, true);
+                    withBlock.AddParameter("@NominalID", oPart.NominalID, true);
                 }
             }
 

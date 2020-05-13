@@ -55,11 +55,6 @@ namespace FSM.Entity
                         AddCriticalMessage("Supplier Invoice Date Missing");
                     }
 
-                    if (oOrder.NominalCode.Trim().Length == 0)
-                    {
-                        AddCriticalMessage("Nominal Code Missing");
-                    }
-
                     if (oOrder.DepartmentRef.Trim().Length == 0)
                     {
                         AddCriticalMessage("Department Reference Missing");

@@ -10,12 +10,8 @@ namespace FSM
 {
     public class FRMAddtoOrder : FRMBaseForm, IForm
     {
-        
-
         public FRMAddtoOrder() : base()
         {
-            
-            
             base.Load += FRMAddtoOrder_Load;
 
             // This call is required by the Windows Form Designer.
@@ -779,9 +775,6 @@ namespace FSM
             ResumeLayout(false);
         }
 
-        
-        
-
         public void LoadMe(object sender, EventArgs e)
         {
             oOrder = (Entity.Orders.Order)get_GetParameter(0);
@@ -825,8 +818,6 @@ namespace FSM
             // DO NOTHING
         }
 
-        
-        
         private Entity.Orders.Order _oOrder;
 
         private Entity.Orders.Order oOrder
@@ -936,7 +927,14 @@ namespace FSM
                     PartSupplier = App.DB.PartSupplier.Insert(PartSupplier);
                     OrderPart.SetBuyPrice = PartSupplier.Price;
                     OrderPart.SetPartSupplierID = PartSupplier.PartSupplierID;
+
+                    var oOrderAudit = new FSM.Entity.OrderAudit();
+                    oOrderAudit.SetOrderID = oOrder.OrderID;
+                    oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                    oOrderAudit.SetDescription = "PartID " + PartSupplier.PartID + " Quantity " + OrderPart.Quantity + " Price " + OrderPart.BuyPrice + " From supplier " + OrderPart.PartSupplierID;
+
                     App.DB.OrderPart.Insert(OrderPart, !oOrder.DoNotConsolidated);
+                    App.DB.OrderAudits.Insert(oOrderAudit);
                     App.DB.PartPriceRequest.Complete(PriceRequestID);
                 }
 
@@ -957,7 +955,12 @@ namespace FSM
                     ProductSupplier = App.DB.ProductSupplier.Insert(ProductSupplier);
                     OrderProduct.SetBuyPrice = ProductSupplier.Price;
                     OrderProduct.SetProductSupplierID = ProductSupplier.ProductSupplierID;
+                    var oOrderAudit = new FSM.Entity.OrderAudit();
+                    oOrderAudit.SetOrderID = oOrder.OrderID;
+                    oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                    oOrderAudit.SetDescription = "PartID " + PartSupplier.PartID + " Quantity " + OrderProduct.Quantity + " Price " + OrderProduct.BuyPrice + " From supplier " + PartSupplier.PartSupplierID;
                     App.DB.OrderProduct.Insert(OrderProduct, true);
+                    App.DB.OrderAudits.Insert(oOrderAudit);
                     App.DB.ProductPriceRequest.Complete(PriceRequestID);
                 }
 
@@ -985,7 +988,5 @@ namespace FSM
                 Cursor = Cursors.Default;
             }
         }
-
-        
     }
 }

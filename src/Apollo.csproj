@@ -471,6 +471,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Specific\Classes\Entity Collections\JobNumber\JobNumber.cs" />
+    <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderAudit.cs" />
+    <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderAuditSQL.cs" />
+    <Compile Include="Application Specific\Classes\Entity Collections\Order\OrderNominal.cs" />
+    <Compile Include="Application Specific\Forms And Controls\Order\FRMOrderAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Specific\Forms And Controls\Order\FRMOrderAudit.Designer.cs">
+      <DependentUpon>FRMOrderAudit.cs</DependentUpon>
+    </Compile>
     <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />

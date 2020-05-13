@@ -25,12 +25,6 @@ namespace FSM
             Combo.SetUpCombo(ref argc2, App.DB.Picklists.GetAll((Entity.Sys.Enums.PickListTypes)25).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable);
             var argc3 = cboManufacturer;
             Combo.SetUpCombo(ref argc3, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.Makes).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable);
-            // Combo.SetUpCombo(Me.cboWarehouse, DB.Warehouse.Warehouse_GetAll().Table, "WarehouseID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable)
-            // Combo.SetUpCombo(Me.choShelf, DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.PartShelfReferences).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable)
-            // 'Combo.SetUpCombo(Me.cboBinID, DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.PartBinReferences).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable)
-            // Combo.SetUpCombo(Me.cboWarehouseAlternative, DB.Warehouse.Warehouse_GetAll().Table, "WarehouseID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable)
-            // Combo.SetUpCombo(Me.cboShelfAlternatuve, DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.PartShelfReferences).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable)
-            // Combo.SetUpCombo(Me.cboBinAlternatuve, DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.PartBinReferences).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable)
 
             // Add any initialization after the InitializeComponent() call
         }
@@ -612,6 +606,8 @@ namespace FSM
         }
 
         private Label _Label6;
+        internal ComboBox cboNominals;
+        internal Label lblNominal;
 
         internal Label Label6
         {
@@ -640,419 +636,457 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _TabControl1 = new TabControl();
-            _tabDetails = new TabPage();
-            _grpPart = new GroupBox();
-            _cboFuel = new ComboBox();
-            _Label5 = new Label();
-            _chkEndFlagged = new CheckBox();
-            _Label14 = new Label();
-            _Label8 = new Label();
-            _cboCategory = new ComboBox();
-            _Label7 = new Label();
-            _txtReference = new TextBox();
-            _txtSellPrice = new TextBox();
-            _Label4 = new Label();
-            _cboUnitType = new ComboBox();
-            _Label3 = new Label();
-            _Label2 = new Label();
-            _Label1 = new Label();
-            _txtName = new TextBox();
-            _txtNumber = new TextBox();
-            _txtNotes = new TextBox();
-            _lblNotes = new Label();
-            _tabSuppliers = new TabPage();
-            _GroupBox1 = new GroupBox();
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _btnAdd = new Button();
-            _btnAdd.Click += new EventHandler(btnAdd_Click);
-            _dgPartSuppliers = new DataGrid();
-            _dgPartSuppliers.MouseUp += new MouseEventHandler(dgPartSuppliers_MouseUp);
-            _dgPartSuppliers.DoubleClick += new EventHandler(dgPartSuppliers_DoubleClick);
-            _tpQuantities = new TabPage();
-            _GroupBox2 = new GroupBox();
-            _dgQuantities = new DataGrid();
-            _tpStock = new TabPage();
-            _grpStock = new GroupBox();
-            _dgStock = new DataGrid();
-            _Label6 = new Label();
-            _cboManufacturer = new ComboBox();
-            _TabControl1.SuspendLayout();
-            _tabDetails.SuspendLayout();
-            _grpPart.SuspendLayout();
-            _tabSuppliers.SuspendLayout();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgPartSuppliers).BeginInit();
-            _tpQuantities.SuspendLayout();
-            _GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgQuantities).BeginInit();
-            _tpStock.SuspendLayout();
-            _grpStock.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgStock).BeginInit();
-            SuspendLayout();
-            //
-            // TabControl1
-            //
-            _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _TabControl1.Controls.Add(_tabDetails);
-            _TabControl1.Controls.Add(_tabSuppliers);
-            _TabControl1.Controls.Add(_tpQuantities);
-            _TabControl1.Controls.Add(_tpStock);
-            _TabControl1.Location = new Point(1, 5);
-            _TabControl1.Name = "TabControl1";
-            _TabControl1.SelectedIndex = 0;
-            _TabControl1.Size = new Size(632, 638);
-            _TabControl1.TabIndex = 0;
-            //
-            // tabDetails
-            //
-            _tabDetails.Controls.Add(_grpPart);
-            _tabDetails.Location = new Point(4, 22);
-            _tabDetails.Name = "tabDetails";
-            _tabDetails.Size = new Size(624, 612);
-            _tabDetails.TabIndex = 0;
-            _tabDetails.Text = "Main Details";
-            //
-            // grpPart
-            //
-            _grpPart.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpPart.Controls.Add(_cboManufacturer);
-            _grpPart.Controls.Add(_Label6);
-            _grpPart.Controls.Add(_cboFuel);
-            _grpPart.Controls.Add(_Label5);
-            _grpPart.Controls.Add(_chkEndFlagged);
-            _grpPart.Controls.Add(_Label14);
-            _grpPart.Controls.Add(_Label8);
-            _grpPart.Controls.Add(_cboCategory);
-            _grpPart.Controls.Add(_Label7);
-            _grpPart.Controls.Add(_txtReference);
-            _grpPart.Controls.Add(_txtSellPrice);
-            _grpPart.Controls.Add(_Label4);
-            _grpPart.Controls.Add(_cboUnitType);
-            _grpPart.Controls.Add(_Label3);
-            _grpPart.Controls.Add(_Label2);
-            _grpPart.Controls.Add(_Label1);
-            _grpPart.Controls.Add(_txtName);
-            _grpPart.Controls.Add(_txtNumber);
-            _grpPart.Controls.Add(_txtNotes);
-            _grpPart.Controls.Add(_lblNotes);
-            _grpPart.Location = new Point(8, 8);
-            _grpPart.Name = "grpPart";
-            _grpPart.Size = new Size(609, 595);
-            _grpPart.TabIndex = 0;
-            _grpPart.TabStop = false;
-            _grpPart.Text = "Main Details";
-            //
-            // cboFuel
-            //
-            _cboFuel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboFuel.Location = new Point(160, 213);
-            _cboFuel.Name = "cboFuel";
-            _cboFuel.Size = new Size(436, 21);
-            _cboFuel.TabIndex = 57;
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(8, 212);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(62, 23);
-            _Label5.TabIndex = 58;
-            _Label5.Text = "Fuel";
-            //
-            // chkEndFlagged
-            //
-            _chkEndFlagged.Location = new Point(160, 356);
-            _chkEndFlagged.Name = "chkEndFlagged";
-            _chkEndFlagged.Size = new Size(92, 24);
-            _chkEndFlagged.TabIndex = 17;
-            _chkEndFlagged.UseVisualStyleBackColor = true;
-            //
-            // Label14
-            //
-            _Label14.Location = new Point(8, 356);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(152, 24);
-            _Label14.TabIndex = 56;
-            _Label14.Text = "End Flagged";
-            //
-            // Label8
-            //
-            _Label8.Location = new Point(8, 56);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(64, 21);
-            _Label8.TabIndex = 44;
-            _Label8.Text = "Category";
-            //
-            // cboCategory
-            //
-            _cboCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboCategory.Location = new Point(160, 57);
-            _cboCategory.Name = "cboCategory";
-            _cboCategory.Size = new Size(436, 21);
-            _cboCategory.TabIndex = 1;
-            //
-            // Label7
-            //
-            _Label7.Location = new Point(8, 120);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(109, 21);
-            _Label7.TabIndex = 42;
-            _Label7.Text = "Reference (GPN)";
-            //
-            // txtReference
-            //
-            _txtReference.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtReference.Location = new Point(160, 120);
-            _txtReference.MaxLength = 100;
-            _txtReference.Name = "txtReference";
-            _txtReference.Size = new Size(436, 21);
-            _txtReference.TabIndex = 3;
-            _txtReference.Tag = "Part.Reference";
-            //
-            // txtSellPrice
-            //
-            _txtSellPrice.Location = new Point(160, 324);
-            _txtSellPrice.Name = "txtSellPrice";
-            _txtSellPrice.Size = new Size(104, 21);
-            _txtSellPrice.TabIndex = 13;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(8, 323);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(63, 23);
-            _Label4.TabIndex = 36;
-            _Label4.Text = "Sell Price";
-            //
-            // cboUnitType
-            //
-            _cboUnitType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboUnitType.Location = new Point(160, 153);
-            _cboUnitType.Name = "cboUnitType";
-            _cboUnitType.Size = new Size(436, 21);
-            _cboUnitType.TabIndex = 4;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 152);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(62, 23);
-            _Label3.TabIndex = 34;
-            _Label3.Text = "Unit Type";
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(57, 21);
-            _Label2.TabIndex = 33;
-            _Label2.Text = "Name";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 88);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(100, 21);
-            _Label1.TabIndex = 32;
-            _Label1.Text = "Number (MPN)";
-            //
-            // txtName
-            //
-            _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtName.Location = new Point(160, 26);
-            _txtName.MaxLength = 255;
-            _txtName.Name = "txtName";
-            _txtName.Size = new Size(436, 21);
-            _txtName.TabIndex = 0;
-            _txtName.Tag = "Part.Name";
-            //
-            // txtNumber
-            //
-            _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtNumber.Location = new Point(160, 89);
-            _txtNumber.MaxLength = 100;
-            _txtNumber.Name = "txtNumber";
-            _txtNumber.Size = new Size(436, 21);
-            _txtNumber.TabIndex = 2;
-            _txtNumber.Tag = "Part.Number";
-            //
-            // txtNotes
-            //
-            _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtNotes.Location = new Point(160, 413);
-            _txtNotes.Multiline = true;
-            _txtNotes.Name = "txtNotes";
-            _txtNotes.ScrollBars = ScrollBars.Vertical;
-            _txtNotes.Size = new Size(436, 176);
-            _txtNotes.TabIndex = 19;
-            _txtNotes.Tag = "Part.Notes";
-            //
-            // lblNotes
-            //
-            _lblNotes.Location = new Point(8, 413);
-            _lblNotes.Name = "lblNotes";
-            _lblNotes.Size = new Size(57, 21);
-            _lblNotes.TabIndex = 31;
-            _lblNotes.Text = "Notes";
-            //
-            // tabSuppliers
-            //
-            _tabSuppliers.Controls.Add(_GroupBox1);
-            _tabSuppliers.Location = new Point(4, 22);
-            _tabSuppliers.Name = "tabSuppliers";
-            _tabSuppliers.Size = new Size(624, 612);
-            _tabSuppliers.TabIndex = 1;
-            _tabSuppliers.Text = "Suppliers";
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_btnDelete);
-            _GroupBox1.Controls.Add(_btnAdd);
-            _GroupBox1.Controls.Add(_dgPartSuppliers);
-            _GroupBox1.Location = new Point(8, 8);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(609, 595);
-            _GroupBox1.TabIndex = 1;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Suppliers of this part";
-            //
-            // btnDelete
-            //
-            _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDelete.Location = new Point(537, 563);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(64, 23);
-            _btnDelete.TabIndex = 3;
-            _btnDelete.Text = "Remove";
-            //
-            // btnAdd
-            //
-            _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAdd.Location = new Point(8, 563);
-            _btnAdd.Name = "btnAdd";
-            _btnAdd.Size = new Size(64, 23);
-            _btnAdd.TabIndex = 2;
-            _btnAdd.Text = "Add";
-            //
-            // dgPartSuppliers
-            //
-            _dgPartSuppliers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _dgPartSuppliers.DataMember = "";
-            _dgPartSuppliers.HeaderForeColor = SystemColors.ControlText;
-            _dgPartSuppliers.Location = new Point(8, 27);
-            _dgPartSuppliers.Name = "dgPartSuppliers";
-            _dgPartSuppliers.Size = new Size(593, 530);
-            _dgPartSuppliers.TabIndex = 1;
-            //
-            // tpQuantities
-            //
-            _tpQuantities.Controls.Add(_GroupBox2);
-            _tpQuantities.Location = new Point(4, 22);
-            _tpQuantities.Name = "tpQuantities";
-            _tpQuantities.Padding = new Padding(3);
-            _tpQuantities.Size = new Size(624, 612);
-            _tpQuantities.TabIndex = 3;
-            _tpQuantities.Text = "Min / Max Quantities";
-            _tpQuantities.UseVisualStyleBackColor = true;
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox2.Controls.Add(_dgQuantities);
-            _GroupBox2.Location = new Point(8, 9);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(609, 595);
-            _GroupBox2.TabIndex = 3;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Min /Max quantities held per location";
-            //
-            // dgQuantities
-            //
-            _dgQuantities.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgQuantities.DataMember = "";
-            _dgQuantities.HeaderForeColor = SystemColors.ControlText;
-            _dgQuantities.Location = new Point(8, 20);
-            _dgQuantities.Name = "dgQuantities";
-            _dgQuantities.Size = new Size(593, 569);
-            _dgQuantities.TabIndex = 1;
-            //
-            // tpStock
-            //
-            _tpStock.Controls.Add(_grpStock);
-            _tpStock.Location = new Point(4, 22);
-            _tpStock.Name = "tpStock";
-            _tpStock.Padding = new Padding(3);
-            _tpStock.Size = new Size(624, 612);
-            _tpStock.TabIndex = 2;
-            _tpStock.Text = "Stock Locations";
-            _tpStock.UseVisualStyleBackColor = true;
-            //
-            // grpStock
-            //
-            _grpStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpStock.Controls.Add(_dgStock);
-            _grpStock.Location = new Point(8, 9);
-            _grpStock.Name = "grpStock";
-            _grpStock.Size = new Size(609, 595);
-            _grpStock.TabIndex = 2;
-            _grpStock.TabStop = false;
-            _grpStock.Text = "Locations of this part";
-            //
-            // dgStock
-            //
-            _dgStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgStock.DataMember = "";
-            _dgStock.HeaderForeColor = SystemColors.ControlText;
-            _dgStock.Location = new Point(8, 20);
-            _dgStock.Name = "dgStock";
-            _dgStock.Size = new Size(593, 569);
-            _dgStock.TabIndex = 1;
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(8, 181);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(121, 21);
-            _Label6.TabIndex = 60;
-            _Label6.Text = "Manufacturer";
-            //
-            // cboManufacturer
-            //
-            _cboManufacturer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboManufacturer.Location = new Point(160, 183);
-            _cboManufacturer.Name = "cboManufacturer";
-            _cboManufacturer.Size = new Size(436, 21);
-            _cboManufacturer.TabIndex = 61;
+            this._TabControl1 = new System.Windows.Forms.TabControl();
+            this._tabDetails = new System.Windows.Forms.TabPage();
+            this._grpPart = new System.Windows.Forms.GroupBox();
+            this._cboManufacturer = new System.Windows.Forms.ComboBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._cboFuel = new System.Windows.Forms.ComboBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._chkEndFlagged = new System.Windows.Forms.CheckBox();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._cboCategory = new System.Windows.Forms.ComboBox();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._txtReference = new System.Windows.Forms.TextBox();
+            this._txtSellPrice = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._cboUnitType = new System.Windows.Forms.ComboBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._txtNumber = new System.Windows.Forms.TextBox();
+            this._txtNotes = new System.Windows.Forms.TextBox();
+            this._lblNotes = new System.Windows.Forms.Label();
+            this._tabSuppliers = new System.Windows.Forms.TabPage();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this._dgPartSuppliers = new System.Windows.Forms.DataGrid();
+            this._tpQuantities = new System.Windows.Forms.TabPage();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._dgQuantities = new System.Windows.Forms.DataGrid();
+            this._tpStock = new System.Windows.Forms.TabPage();
+            this._grpStock = new System.Windows.Forms.GroupBox();
+            this._dgStock = new System.Windows.Forms.DataGrid();
+            this.cboNominals = new System.Windows.Forms.ComboBox();
+            this.lblNominal = new System.Windows.Forms.Label();
+            this._TabControl1.SuspendLayout();
+            this._tabDetails.SuspendLayout();
+            this._grpPart.SuspendLayout();
+            this._tabSuppliers.SuspendLayout();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartSuppliers)).BeginInit();
+            this._tpQuantities.SuspendLayout();
+            this._GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgQuantities)).BeginInit();
+            this._tpStock.SuspendLayout();
+            this._grpStock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgStock)).BeginInit();
+            this.SuspendLayout();
+            //
+            // _TabControl1
+            //
+            this._TabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._TabControl1.Controls.Add(this._tabDetails);
+            this._TabControl1.Controls.Add(this._tabSuppliers);
+            this._TabControl1.Controls.Add(this._tpQuantities);
+            this._TabControl1.Controls.Add(this._tpStock);
+            this._TabControl1.Location = new System.Drawing.Point(1, 5);
+            this._TabControl1.Name = "_TabControl1";
+            this._TabControl1.SelectedIndex = 0;
+            this._TabControl1.Size = new System.Drawing.Size(632, 638);
+            this._TabControl1.TabIndex = 0;
+            //
+            // _tabDetails
+            //
+            this._tabDetails.Controls.Add(this._grpPart);
+            this._tabDetails.Location = new System.Drawing.Point(4, 22);
+            this._tabDetails.Name = "_tabDetails";
+            this._tabDetails.Size = new System.Drawing.Size(624, 612);
+            this._tabDetails.TabIndex = 0;
+            this._tabDetails.Text = "Main Details";
+            //
+            // _grpPart
+            //
+            this._grpPart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpPart.Controls.Add(this.cboNominals);
+            this._grpPart.Controls.Add(this.lblNominal);
+            this._grpPart.Controls.Add(this._cboManufacturer);
+            this._grpPart.Controls.Add(this._Label6);
+            this._grpPart.Controls.Add(this._cboFuel);
+            this._grpPart.Controls.Add(this._Label5);
+            this._grpPart.Controls.Add(this._chkEndFlagged);
+            this._grpPart.Controls.Add(this._Label14);
+            this._grpPart.Controls.Add(this._Label8);
+            this._grpPart.Controls.Add(this._cboCategory);
+            this._grpPart.Controls.Add(this._Label7);
+            this._grpPart.Controls.Add(this._txtReference);
+            this._grpPart.Controls.Add(this._txtSellPrice);
+            this._grpPart.Controls.Add(this._Label4);
+            this._grpPart.Controls.Add(this._cboUnitType);
+            this._grpPart.Controls.Add(this._Label3);
+            this._grpPart.Controls.Add(this._Label2);
+            this._grpPart.Controls.Add(this._Label1);
+            this._grpPart.Controls.Add(this._txtName);
+            this._grpPart.Controls.Add(this._txtNumber);
+            this._grpPart.Controls.Add(this._txtNotes);
+            this._grpPart.Controls.Add(this._lblNotes);
+            this._grpPart.Location = new System.Drawing.Point(8, 8);
+            this._grpPart.Name = "_grpPart";
+            this._grpPart.Size = new System.Drawing.Size(609, 595);
+            this._grpPart.TabIndex = 0;
+            this._grpPart.TabStop = false;
+            this._grpPart.Text = "Main Details";
+            //
+            // _cboManufacturer
+            //
+            this._cboManufacturer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboManufacturer.Location = new System.Drawing.Point(160, 183);
+            this._cboManufacturer.Name = "_cboManufacturer";
+            this._cboManufacturer.Size = new System.Drawing.Size(436, 21);
+            this._cboManufacturer.TabIndex = 61;
+            //
+            // _Label6
+            //
+            this._Label6.Location = new System.Drawing.Point(8, 181);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(121, 21);
+            this._Label6.TabIndex = 60;
+            this._Label6.Text = "Manufacturer";
+            //
+            // _cboFuel
+            //
+            this._cboFuel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboFuel.Location = new System.Drawing.Point(160, 213);
+            this._cboFuel.Name = "_cboFuel";
+            this._cboFuel.Size = new System.Drawing.Size(436, 21);
+            this._cboFuel.TabIndex = 57;
+            //
+            // _Label5
+            //
+            this._Label5.Location = new System.Drawing.Point(8, 212);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(62, 23);
+            this._Label5.TabIndex = 58;
+            this._Label5.Text = "Fuel";
+            //
+            // _chkEndFlagged
+            //
+            this._chkEndFlagged.Location = new System.Drawing.Point(160, 356);
+            this._chkEndFlagged.Name = "_chkEndFlagged";
+            this._chkEndFlagged.Size = new System.Drawing.Size(92, 24);
+            this._chkEndFlagged.TabIndex = 17;
+            this._chkEndFlagged.UseVisualStyleBackColor = true;
+            //
+            // _Label14
+            //
+            this._Label14.Location = new System.Drawing.Point(8, 356);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(152, 24);
+            this._Label14.TabIndex = 56;
+            this._Label14.Text = "End Flagged";
+            //
+            // _Label8
+            //
+            this._Label8.Location = new System.Drawing.Point(8, 56);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(64, 21);
+            this._Label8.TabIndex = 44;
+            this._Label8.Text = "Category";
+            //
+            // _cboCategory
+            //
+            this._cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboCategory.Location = new System.Drawing.Point(160, 57);
+            this._cboCategory.Name = "_cboCategory";
+            this._cboCategory.Size = new System.Drawing.Size(436, 21);
+            this._cboCategory.TabIndex = 1;
+            //
+            // _Label7
+            //
+            this._Label7.Location = new System.Drawing.Point(8, 120);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(109, 21);
+            this._Label7.TabIndex = 42;
+            this._Label7.Text = "Reference (GPN)";
+            //
+            // _txtReference
+            //
+            this._txtReference.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtReference.Location = new System.Drawing.Point(160, 120);
+            this._txtReference.MaxLength = 100;
+            this._txtReference.Name = "_txtReference";
+            this._txtReference.Size = new System.Drawing.Size(436, 21);
+            this._txtReference.TabIndex = 3;
+            this._txtReference.Tag = "Part.Reference";
+            //
+            // _txtSellPrice
+            //
+            this._txtSellPrice.Location = new System.Drawing.Point(160, 324);
+            this._txtSellPrice.Name = "_txtSellPrice";
+            this._txtSellPrice.Size = new System.Drawing.Size(104, 21);
+            this._txtSellPrice.TabIndex = 13;
+            //
+            // _Label4
+            //
+            this._Label4.Location = new System.Drawing.Point(8, 323);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(63, 23);
+            this._Label4.TabIndex = 36;
+            this._Label4.Text = "Sell Price";
+            //
+            // _cboUnitType
+            //
+            this._cboUnitType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboUnitType.Location = new System.Drawing.Point(160, 153);
+            this._cboUnitType.Name = "_cboUnitType";
+            this._cboUnitType.Size = new System.Drawing.Size(436, 21);
+            this._cboUnitType.TabIndex = 4;
+            //
+            // _Label3
+            //
+            this._Label3.Location = new System.Drawing.Point(8, 152);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(62, 23);
+            this._Label3.TabIndex = 34;
+            this._Label3.Text = "Unit Type";
+            //
+            // _Label2
+            //
+            this._Label2.Location = new System.Drawing.Point(8, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(57, 21);
+            this._Label2.TabIndex = 33;
+            this._Label2.Text = "Name";
+            //
+            // _Label1
+            //
+            this._Label1.Location = new System.Drawing.Point(8, 88);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(100, 21);
+            this._Label1.TabIndex = 32;
+            this._Label1.Text = "Number (MPN)";
+            //
+            // _txtName
+            //
+            this._txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtName.Location = new System.Drawing.Point(160, 26);
+            this._txtName.MaxLength = 255;
+            this._txtName.Name = "_txtName";
+            this._txtName.Size = new System.Drawing.Size(436, 21);
+            this._txtName.TabIndex = 0;
+            this._txtName.Tag = "Part.Name";
+            //
+            // _txtNumber
+            //
+            this._txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNumber.Location = new System.Drawing.Point(160, 89);
+            this._txtNumber.MaxLength = 100;
+            this._txtNumber.Name = "_txtNumber";
+            this._txtNumber.Size = new System.Drawing.Size(436, 21);
+            this._txtNumber.TabIndex = 2;
+            this._txtNumber.Tag = "Part.Number";
+            //
+            // _txtNotes
+            //
+            this._txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNotes.Location = new System.Drawing.Point(160, 413);
+            this._txtNotes.Multiline = true;
+            this._txtNotes.Name = "_txtNotes";
+            this._txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtNotes.Size = new System.Drawing.Size(436, 176);
+            this._txtNotes.TabIndex = 19;
+            this._txtNotes.Tag = "Part.Notes";
+            //
+            // _lblNotes
+            //
+            this._lblNotes.Location = new System.Drawing.Point(8, 413);
+            this._lblNotes.Name = "_lblNotes";
+            this._lblNotes.Size = new System.Drawing.Size(57, 21);
+            this._lblNotes.TabIndex = 31;
+            this._lblNotes.Text = "Notes";
+            //
+            // _tabSuppliers
+            //
+            this._tabSuppliers.Controls.Add(this._GroupBox1);
+            this._tabSuppliers.Location = new System.Drawing.Point(4, 22);
+            this._tabSuppliers.Name = "_tabSuppliers";
+            this._tabSuppliers.Size = new System.Drawing.Size(624, 612);
+            this._tabSuppliers.TabIndex = 1;
+            this._tabSuppliers.Text = "Suppliers";
+            //
+            // _GroupBox1
+            //
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._btnDelete);
+            this._GroupBox1.Controls.Add(this._btnAdd);
+            this._GroupBox1.Controls.Add(this._dgPartSuppliers);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 8);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(609, 595);
+            this._GroupBox1.TabIndex = 1;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Suppliers of this part";
+            //
+            // _btnDelete
+            //
+            this._btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDelete.Location = new System.Drawing.Point(537, 563);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(64, 23);
+            this._btnDelete.TabIndex = 3;
+            this._btnDelete.Text = "Remove";
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            //
+            // _btnAdd
+            //
+            this._btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAdd.Location = new System.Drawing.Point(8, 563);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(64, 23);
+            this._btnAdd.TabIndex = 2;
+            this._btnAdd.Text = "Add";
+            this._btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            //
+            // _dgPartSuppliers
+            //
+            this._dgPartSuppliers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartSuppliers.DataMember = "";
+            this._dgPartSuppliers.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgPartSuppliers.Location = new System.Drawing.Point(8, 27);
+            this._dgPartSuppliers.Name = "_dgPartSuppliers";
+            this._dgPartSuppliers.Size = new System.Drawing.Size(593, 530);
+            this._dgPartSuppliers.TabIndex = 1;
+            this._dgPartSuppliers.DoubleClick += new System.EventHandler(this.dgPartSuppliers_DoubleClick);
+            this._dgPartSuppliers.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgPartSuppliers_MouseUp);
+            //
+            // _tpQuantities
+            //
+            this._tpQuantities.Controls.Add(this._GroupBox2);
+            this._tpQuantities.Location = new System.Drawing.Point(4, 22);
+            this._tpQuantities.Name = "_tpQuantities";
+            this._tpQuantities.Padding = new System.Windows.Forms.Padding(3);
+            this._tpQuantities.Size = new System.Drawing.Size(624, 612);
+            this._tpQuantities.TabIndex = 3;
+            this._tpQuantities.Text = "Min / Max Quantities";
+            this._tpQuantities.UseVisualStyleBackColor = true;
+            //
+            // _GroupBox2
+            //
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox2.Controls.Add(this._dgQuantities);
+            this._GroupBox2.Location = new System.Drawing.Point(8, 9);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(609, 595);
+            this._GroupBox2.TabIndex = 3;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Min /Max quantities held per location";
+            //
+            // _dgQuantities
+            //
+            this._dgQuantities.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgQuantities.DataMember = "";
+            this._dgQuantities.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgQuantities.Location = new System.Drawing.Point(8, 20);
+            this._dgQuantities.Name = "_dgQuantities";
+            this._dgQuantities.Size = new System.Drawing.Size(593, 569);
+            this._dgQuantities.TabIndex = 1;
+            //
+            // _tpStock
+            //
+            this._tpStock.Controls.Add(this._grpStock);
+            this._tpStock.Location = new System.Drawing.Point(4, 22);
+            this._tpStock.Name = "_tpStock";
+            this._tpStock.Padding = new System.Windows.Forms.Padding(3);
+            this._tpStock.Size = new System.Drawing.Size(624, 612);
+            this._tpStock.TabIndex = 2;
+            this._tpStock.Text = "Stock Locations";
+            this._tpStock.UseVisualStyleBackColor = true;
+            //
+            // _grpStock
+            //
+            this._grpStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpStock.Controls.Add(this._dgStock);
+            this._grpStock.Location = new System.Drawing.Point(8, 9);
+            this._grpStock.Name = "_grpStock";
+            this._grpStock.Size = new System.Drawing.Size(609, 595);
+            this._grpStock.TabIndex = 2;
+            this._grpStock.TabStop = false;
+            this._grpStock.Text = "Locations of this part";
+            //
+            // _dgStock
+            //
+            this._dgStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgStock.DataMember = "";
+            this._dgStock.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgStock.Location = new System.Drawing.Point(8, 20);
+            this._dgStock.Name = "_dgStock";
+            this._dgStock.Size = new System.Drawing.Size(593, 569);
+            this._dgStock.TabIndex = 1;
+            //
+            // cboNominals
+            //
+            this.cboNominals.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboNominals.Location = new System.Drawing.Point(160, 244);
+            this.cboNominals.Name = "cboNominals";
+            this.cboNominals.Size = new System.Drawing.Size(436, 21);
+            this.cboNominals.TabIndex = 66;
+            //
+            // lblNominal
+            //
+            this.lblNominal.AutoSize = true;
+            this.lblNominal.Location = new System.Drawing.Point(8, 247);
+            this.lblNominal.Name = "lblNominal";
+            this.lblNominal.Size = new System.Drawing.Size(53, 13);
+            this.lblNominal.TabIndex = 65;
+            this.lblNominal.Text = "Nominal";
             //
             // UCPart
             //
-            Controls.Add(_TabControl1);
-            Name = "UCPart";
-            Size = new Size(640, 648);
-            _TabControl1.ResumeLayout(false);
-            _tabDetails.ResumeLayout(false);
-            _grpPart.ResumeLayout(false);
-            _grpPart.PerformLayout();
-            _tabSuppliers.ResumeLayout(false);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgPartSuppliers).EndInit();
-            _tpQuantities.ResumeLayout(false);
-            _GroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgQuantities).EndInit();
-            _tpStock.ResumeLayout(false);
-            _grpStock.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgStock).EndInit();
-            ResumeLayout(false);
+            this.Controls.Add(this._TabControl1);
+            this.Name = "UCPart";
+            this.Size = new System.Drawing.Size(640, 648);
+            this._TabControl1.ResumeLayout(false);
+            this._tabDetails.ResumeLayout(false);
+            this._grpPart.ResumeLayout(false);
+            this._grpPart.PerformLayout();
+            this._tabSuppliers.ResumeLayout(false);
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartSuppliers)).EndInit();
+            this._tpQuantities.ResumeLayout(false);
+            this._GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgQuantities)).EndInit();
+            this._tpStock.ResumeLayout(false);
+            this._grpStock.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgStock)).EndInit();
+            this.ResumeLayout(false);
         }
 
         public void LoadForm(object sender, EventArgs e)
@@ -1223,38 +1257,6 @@ namespace FSM
                 }
             }
         }
-
-        // Private _Bin As Entity.PickLists.PickList
-        // Public Property Bin() As Entity.PickLists.PickList
-        // Get
-        // Return _Bin
-        // End Get
-        // Set(ByVal Value As Entity.PickLists.PickList)
-        // _Bin = Value
-
-        // If Bin Is Nothing Then
-        // Me.txtBin.Text = "Not Applicable"
-        // Else
-        // Me.txtBin.Text = Bin.Name
-        // End If
-        // End Set
-        // End Property
-
-        // Private _BinAlternative As Entity.PickLists.PickList
-        // Public Property BinAlternative() As Entity.PickLists.PickList
-        // Get
-        // Return _BinAlternative
-        // End Get
-        // Set(ByVal Value As Entity.PickLists.PickList)
-        // _BinAlternative = Value
-
-        // If BinAlternative Is Nothing Then
-        // Me.txtBinAlternative.Text = "Not Applicable"
-        // Else
-        // Me.txtBinAlternative.Text = BinAlternative.Name
-        // End If
-        // End Set
-        // End Property
 
         public void SetupSuppliersDatagrid()
         {
@@ -1496,16 +1498,8 @@ namespace FSM
             ssm2 = Entity.Sys.Enums.SecuritySystemModules.CreateParts;
             if (App.loggedInUser.HasAccessToModule(ssm) == true | App.loggedInUser.HasAccessToModule(ssm2) == true)
             {
-                // If EnterOverridePassword() = True Then
-                // Check if part is on an order i.e in tblOrderPart
                 int OrderedCount = Conversions.ToInteger(App.DB.ExecuteScalar(Conversions.ToString("SELECT COUNT(*) AS Expr1 FROM tblOrderPart WHERE (PartSupplierID = " + SelectedPartSupplierDataRow["PartSupplierID"] + ") AND (EngineerReceivedOn IS NULL) AND (Deleted = 0)")));
-                // If OrderedCount > 0 Then
-                // If ShowMessage("This part has been ordered and not received by an engineer and therefore cannot be deleted", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.OK Then
-                // Exit Sub
-                // Else
-                // Exit Sub
-                // End If
-                // End If
+
                 if (App.ShowMessage("Are you sure you want to delete the selected record?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
@@ -1523,24 +1517,6 @@ namespace FSM
                 return;
             }
         }
-
-        // Private Sub btnBin_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        // Dim ID As Integer = FindRecord(Entity.Sys.Enums.TableNames.NOT_IN_DATABASE_tblPicklists_BIN)
-        // If ID = 0 Then
-        // Bin = Nothing
-        // Else
-        // Bin = DB.Picklists.Get_One_As_Object(ID)
-        // End If
-        // End Sub
-
-        // Private Sub btnBinAlternative_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        // Dim ID As Integer = FindRecord(Entity.Sys.Enums.TableNames.NOT_IN_DATABASE_tblPicklists_BIN)
-        // If ID = 0 Then
-        // BinAlternative = Nothing
-        // Else
-        // BinAlternative = DB.Picklists.Get_One_As_Object(ID)
-        // End If
-        // End Sub
 
         public void PopulateSuppliers()
         {
@@ -1569,9 +1545,7 @@ namespace FSM
             txtNumber.Text = CurrentPart.Number;
             txtReference.Text = CurrentPart.Reference;
             txtNotes.Text = CurrentPart.Notes;
-            // Me.txtMinimumQuantity.Text = CurrentPart.MinimumQuantity
-            // Me.txtRecommendedQuantity.Text = CurrentPart.RecommendedQuantity
-            // Me.txtWarehouseQuantity.Text = CurrentPart.WarehouseQuantity
+
             txtSellPrice.Text = CurrentPart.SellPrice.ToString();
             var argcombo = cboUnitType;
             Combo.SetSelectedComboItem_By_Value(ref argcombo, CurrentPart.UnitTypeID.ToString());
@@ -1581,22 +1555,9 @@ namespace FSM
             Combo.SetSelectedComboItem_By_Value(ref argcombo2, CurrentPart.FuelID.ToString());
             var argcombo3 = cboManufacturer;
             Combo.SetSelectedComboItem_By_Value(ref argcombo3, CurrentPart.MakeID.ToString());
-            // Combo.SetSel  Combo.SetSelectedComboItem_By_Value(Me.cboCategory, CurrentPart.CategoryID)ectedComboItem_By_Value(Me.cboWarehouse, CurrentPart.WarehouseID)
-            // Combo.SetSelectedComboItem_By_Value(Me.choShelf, CurrentPart.ShelfID)
-            // If CurrentPart.BinID = 0 Then
-            // Bin = Nothing
-            // Else
-            // Bin = DB.Picklists.Get_One_As_Object(CurrentPart.BinID)
-            // End If
-            // Combo.SetSelectedComboItem_By_Value(Me.cboBinID, CurrentPart.BinID)
-            // Combo.SetSelectedComboItem_By_Value(Me.cboWarehouseAlternative, CurrentPart.WarehouseIDAlternative)
-            // Combo.SetSelectedComboItem_By_Value(Me.cboShelfAlternatuve, CurrentPart.ShelfIDAlternative)
-            // If CurrentPart.BinIDAlternative = 0 Then
-            // BinAlternative = Nothing
-            // Else
-            // BinAlternative = DB.Picklists.Get_One_As_Object(CurrentPart.BinIDAlternative)
-            // End If
-            // Combo.SetSelectedComboItem_By_Value(Me.cboBinAlternatuve, CurrentPart.BinIDAlternative)
+            var argcombo4 = cboNominals;
+            Combo.SetSelectedComboItem_By_Value(ref argcombo4, CurrentPart.NominalID.ToString());
+
             chkEndFlagged.Checked = CurrentPart.EndFlagged;
             // Me.chkEquipment.Checked = CurrentPart.Equipment
             App.AddChangeHandlers(this);
@@ -1635,27 +1596,10 @@ namespace FSM
                     CurrentPart.SetNotes = txtNotes.Text.Trim();
                     CurrentPart.SetUnitTypeID = Combo.get_GetSelectedItemValue(cboUnitType);
                     CurrentPart.SetSellPrice = txtSellPrice.Text.Trim();
-                    // CurrentPart.SetMinimumQuantity = Me.txtMinimumQuantity.Text.Trim
-                    // CurrentPart.SetRecommendedQuantity = Me.txtRecommendedQuantity.Text.Trim
                     CurrentPart.SetCategoryID = Combo.get_GetSelectedItemValue(cboCategory);
                     CurrentPart.SetMakeID = Combo.get_GetSelectedItemValue(cboManufacturer);
                     CurrentPart.SetFuelID = Combo.get_GetSelectedItemValue(cboFuel);
-                    // CurrentPart.SetWarehouseID = Combo.GetSelectedItemValue(Me.cboWarehouse)
-                    // CurrentPart.SetShelfID = Combo.GetSelectedItemValue(Me.choShelf)
-                    // If Bin Is Nothing Then
-                    // CurrentPart.SetBinID = 0
-                    // Else
-                    // CurrentPart.SetBinID = Bin.ManagerID
-                    // End If
-                    // CurrentPart.SetBinID = Combo.GetSelectedItemValue(Me.cboBinID)
-                    // CurrentPart.SetWarehouseIDAlternative = Combo.GetSelectedItemValue(Me.cboWarehouseAlternative)
-                    // CurrentPart.SetShelfIDAlternative = Combo.GetSelectedItemValue(Me.cboShelfAlternatuve)
-                    // If BinAlternative Is Nothing Then
-                    // CurrentPart.SetBinIDAlternative = 0
-                    // Else
-                    // CurrentPart.SetBinIDAlternative = BinAlternative.ManagerID
-                    // End If
-                    // CurrentPart.SetBinIDAlternative = Combo.GetSelectedItemValue(Me.cboBinAlternatuve)
+                    CurrentPart.SetNominalID = FSM.Combo.get_GetSelectedItemValue(cboNominals);
                     CurrentPart.SetEndFlagged = chkEndFlagged.Checked;
 
                     // CurrentPart.SetEquipment = Me.chkEquipment.Checked

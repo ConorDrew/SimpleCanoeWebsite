@@ -108,11 +108,14 @@ namespace FSM.Entity
                         oOrder.SetSpecialInstructions = Sys.Helper.MakeStringValid(dt.Rows[0]["SpecialInstructions"]);
                         oOrder.SetContactID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["ContactID"]);
                         oOrder.SetInvoiceAddressID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["InvoiceAddressID"]);
+                        if (dt.Columns.Contains("AllocatedToEngineer"))
+                            oOrder.SetAllocatedToEngineer = Entity.Sys.Helper.MakeIntegerValid(dt.Rows[0]["AllocatedToEngineer"]);
                         oOrder.SetAllocatedToUser = Sys.Helper.MakeIntegerValid(dt.Rows[0]["AllocatedToUser"]);
                         oOrder.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
                         oOrder.SetInvoiced = Conversions.ToBoolean(dt.Rows[0]["Invoiced"]);
                         oOrder.SetExportedToSage = Conversions.ToBoolean(dt.Rows[0]["ExportedToSage"]);
-                        oOrder.SetNominalCode = Sys.Helper.MakeStringValid(dt.Rows[0]["NominalCode"]);
+                        if (dt.Columns.Contains("Region"))
+                            oOrder.SetRegion = Entity.Sys.Helper.MakeStringValid(dt.Rows[0]["Region"]);
                         oOrder.SetDepartmentRef = Sys.Helper.MakeStringValid(dt.Rows[0]["DepartmentRef"]);
                         oOrder.SetExtraRef = Sys.Helper.MakeStringValid(dt.Rows[0]["ExtraRef"]);
                         oOrder.SetTaxCodeID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["TaxCodeID"]);
@@ -189,7 +192,7 @@ namespace FSM.Entity
                         oOrder.SetDeleted = Conversions.ToBoolean(dt.Rows[0]["Deleted"]);
                         oOrder.SetInvoiced = Conversions.ToBoolean(dt.Rows[0]["Invoiced"]);
                         oOrder.SetExportedToSage = Conversions.ToBoolean(dt.Rows[0]["ExportedToSage"]);
-                        oOrder.SetNominalCode = Sys.Helper.MakeStringValid(dt.Rows[0]["NominalCode"]);
+                        oOrder.SetRegion = Entity.Sys.Helper.MakeStringValid(dt.Rows[0]["Region"]);
                         oOrder.SetDepartmentRef = Sys.Helper.MakeStringValid(dt.Rows[0]["DepartmentRef"]);
                         oOrder.SetExtraRef = Sys.Helper.MakeStringValid(dt.Rows[0]["ExtraRef"]);
                         oOrder.SetTaxCodeID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["TaxCodeID"]);
@@ -365,6 +368,14 @@ namespace FSM.Entity
                 Command.Parameters.AddWithValue("@AllocatedToUser", oOrder.AllocatedToUser);
                 Command.Parameters.AddWithValue("@DepartmentRef", oOrder.DepartmentRef);
                 Command.Parameters.AddWithValue("@DoNotConsolidated", oOrder.DoNotConsolidated);
+                if (oOrder.Region == default)
+                {
+                    Command.Parameters.AddWithValue("@Region", DBNull.Value);
+                }
+                else
+                {
+                    Command.Parameters.AddWithValue("@Region", oOrder.Region);
+                }
                 oOrder.SetOrderID = Sys.Helper.MakeIntegerValid(Command.ExecuteScalar());
                 oOrder.Exists = true;
                 return oOrder;
@@ -419,7 +430,19 @@ namespace FSM.Entity
                     withBlock.AddParameter("@ContactID", oOrder.ContactID, true);
                     withBlock.AddParameter("@InvoiceAddressID", oOrder.InvoiceAddressID, true);
                     withBlock.AddParameter("@AllocatedToUser", oOrder.AllocatedToUser, true);
+                    withBlock.AddParameter("@AllocatedToEngineer", oOrder.AllocatedToEngineer, true);
+
                     withBlock.AddParameter("@DepartmentRef", oOrder.DepartmentRef, true);
+
+                    if (oOrder.Region == default)
+
+                    {
+                        withBlock.AddParameter("@Region", DBNull.Value, true);
+                    }
+                    else
+                    {
+                        withBlock.AddParameter("@Region", oOrder.Region, true);
+                    }
                     withBlock.AddParameter("@DoNotConsolidated", oOrder.DoNotConsolidated, true);
                 }
             }
