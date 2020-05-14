@@ -27,201 +27,247 @@ namespace FSM.Entity
                 row["DisplayMember"] = "Regions";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.CustomerTypes);
                 row["DisplayMember"] = "Customer Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.JobTypes);
                 row["DisplayMember"] = "Job Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Types);
                 row["DisplayMember"] = "Product Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Makes);
                 row["DisplayMember"] = "Product Makes";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Models);
                 row["DisplayMember"] = "Product Models";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.PartCategories);
                 row["DisplayMember"] = "Part Categories";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.UnitTypes);
                 row["DisplayMember"] = "Unit Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.OrderChargeTypes);
                 row["DisplayMember"] = "Charge Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Engineer_Levels);
                 row["DisplayMember"] = "Engineer Levels/Qualifications";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.EngineerGroup);
                 row["DisplayMember"] = "Engineer Groups";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.NoteCategory);
                 row["DisplayMember"] = "Note Categories";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.DocumentTypes);
                 row["DisplayMember"] = "Document Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.QuoteRejectionReasons);
                 row["DisplayMember"] = "Rejection Reasons";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.TimeSheetTypes);
                 row["DisplayMember"] = "Timesheet Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.ScheduleRatesCategories);
                 row["DisplayMember"] = "Scheduled Rates Categories";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.PayGrades);
                 row["DisplayMember"] = "Pay Grades";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.DisciplinaryStatus);
                 row["DisplayMember"] = "Disciplinary Statuses";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.PartShelfReferences);
                 row["DisplayMember"] = "Part Shelf References";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.PartBinReferences);
                 row["DisplayMember"] = "Part Bin References";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.SourceOfCustomer);
                 row["DisplayMember"] = "Source Of Customer";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.VATCodes);
                 row["DisplayMember"] = "VAT Codes";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.ContractTypes);
                 row["DisplayMember"] = "Contract Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.ReasonsForContact);
                 row["DisplayMember"] = "Reasons For Contact";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.JOWPriority);
                 row["DisplayMember"] = "Job Of Work Priorities";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.HeatingSystemType);
                 row["DisplayMember"] = "Heating System Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.CylinderType);
                 row["DisplayMember"] = "Cylinder Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Jacket);
                 row["DisplayMember"] = "Jackets";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.CertificateType);
                 row["DisplayMember"] = "Certificate Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.CancellationReasons);
                 row["DisplayMember"] = "Cancellation Reasons";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.ContractPricing);
                 row["DisplayMember"] = "Renewal Prices";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.FTFCodes);
                 row["DisplayMember"] = "FTFCodes";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.CoverPlanDiscounts);
                 row["DisplayMember"] = "CoverPlan Discounts";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.EquipmentType);
                 row["DisplayMember"] = "Equipment Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.EquipmentStatus);
                 row["DisplayMember"] = "Equipment Status";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.SalesNominal);
                 row["DisplayMember"] = "Sales Nominal For Region";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.PurchaseNominal);
                 row["DisplayMember"] = "Purchase Nominal For Region";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Department);
                 row["DisplayMember"] = "Departments";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.InvoiceTerms);
                 row["DisplayMember"] = "Invoice Terms";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.PriceList);
                 row["DisplayMember"] = "Price List";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
+                row = dt.NewRow();
+                row["ValueMember"] = Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.NominalCodes);
+                row["DisplayMember"] = "Nominal Codes";
+                row["Deleted"] = false;
+                dt.Rows.Add(row);
+
                 dt.TableName = Sys.Enums.TableNames.NOT_IN_DATABASE_TBLPickListTypes.ToString();
                 return new DataView(dt);
             }
@@ -233,11 +279,13 @@ namespace FSM.Entity
                 dt.Columns.Add(new DataColumn("DisplayMember"));
                 dt.Columns.Add(new DataColumn("Deleted"));
                 DataRow row;
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Types);
                 row["DisplayMember"] = "Product Types";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
+
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Makes);
                 row["DisplayMember"] = "Product Makes";
@@ -247,12 +295,6 @@ namespace FSM.Entity
                 row = dt.NewRow();
                 row["ValueMember"] = Conversions.ToInteger(Sys.Enums.PickListTypes.Models);
                 row["DisplayMember"] = "Product Models";
-                row["Deleted"] = false;
-                dt.Rows.Add(row);
-
-                row = dt.NewRow();
-                row["ValueMember"] = Conversions.ToInteger(Entity.Sys.Enums.PickListTypes.NominalCodes);
-                row["DisplayMember"] = "Nominal Codes";
                 row["Deleted"] = false;
                 dt.Rows.Add(row);
 
