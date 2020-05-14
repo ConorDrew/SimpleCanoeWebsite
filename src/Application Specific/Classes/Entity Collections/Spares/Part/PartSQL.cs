@@ -113,7 +113,8 @@ namespace FSM.Entity
                         oPart.SetFuelID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["FuelID"]);
                         oPart.SetMakeID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["MakeID"]);
                         oPart.SetIsSpecialPart = Conversions.ToBoolean(dt.Rows[0]["IsSpecialPart"]);
-                        oPart.SetNominalID = Sys.Helper.MakeStringValid(dt.Rows[0]["NominalID"]);
+                        if (dt.Columns.Contains("NominalID"))
+                            oPart.SetNominalID = Sys.Helper.MakeStringValid(dt.Rows[0]["NominalID"]);
                         oPart.Exists = true;
                         return oPart;
                     }

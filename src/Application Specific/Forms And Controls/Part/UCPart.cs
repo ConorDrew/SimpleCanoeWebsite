@@ -26,6 +26,9 @@ namespace FSM
             var argc3 = cboManufacturer;
             Combo.SetUpCombo(ref argc3, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.Makes).Table, "ManagerID", "Name", Entity.Sys.Enums.ComboValues.Not_Applicable);
 
+            var argc4 = cboNominals;
+            Combo.SetUpCombo(ref argc4, App.DB.Picklists.GetAll(Entity.Sys.Enums.PickListTypes.NominalCodes).Table, "ManagerID", "Description", Entity.Sys.Enums.ComboValues.Please_Select);
+
             // Add any initialization after the InitializeComponent() call
         }
 
@@ -1559,7 +1562,7 @@ namespace FSM
             Combo.SetSelectedComboItem_By_Value(ref argcombo4, CurrentPart.NominalID.ToString());
 
             chkEndFlagged.Checked = CurrentPart.EndFlagged;
-            // Me.chkEquipment.Checked = CurrentPart.Equipment
+
             App.AddChangeHandlers(this);
             App.ControlChanged = false;
             App.ControlLoading = false;
@@ -1599,10 +1602,9 @@ namespace FSM
                     CurrentPart.SetCategoryID = Combo.get_GetSelectedItemValue(cboCategory);
                     CurrentPart.SetMakeID = Combo.get_GetSelectedItemValue(cboManufacturer);
                     CurrentPart.SetFuelID = Combo.get_GetSelectedItemValue(cboFuel);
-                    CurrentPart.SetNominalID = FSM.Combo.get_GetSelectedItemValue(cboNominals);
+                    CurrentPart.SetNominalID = Combo.get_GetSelectedItemValue(cboNominals);
                     CurrentPart.SetEndFlagged = chkEndFlagged.Checked;
 
-                    // CurrentPart.SetEquipment = Me.chkEquipment.Checked
 
                     var cV = new Entity.Parts.PartValidator();
                     cV.Validate(CurrentPart);
@@ -1617,11 +1619,6 @@ namespace FSM
                         CurrentPart = App.DB.Part.Insert(CurrentPart);
                     }
 
-                    if (FromOrder == false)
-                    {
-                        // RaiseEvent RecordsChanged(DB.Part.Part_GetAll(), Entity.Sys.Enums.PageViewing.Part, True, False, "")    --- RD
-                        // MainForm.RefreshEntity(CurrentPart.PartID)
-                    }
 
                     StateChanged?.Invoke(CurrentPart.PartID);
                     return true;

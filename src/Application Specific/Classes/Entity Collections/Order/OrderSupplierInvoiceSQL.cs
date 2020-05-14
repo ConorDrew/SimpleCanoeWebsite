@@ -49,7 +49,7 @@ namespace FSM.Entity
                             oSupplierInvoice.SetReadyToSendToSage = dt.Rows[0]["ReadyToSendToSage"];
                             oSupplierInvoice.SetSentToSage = dt.Rows[0]["SentToSage"];
                             oSupplierInvoice.SetOldSystemInvoice = dt.Rows[0]["OldSystemInvoice"];
-                            oSupplierInvoice.SetDateExported = dt.Rows[0]["DateExported"].ToString();
+                            oSupplierInvoice.SetDateExported = dt.Rows[0]["DateExported"];
                             oSupplierInvoice.SetKeyedBy = dt.Rows[0]["KeyedBy"];
                             oSupplierInvoice.SetRequresAuth = dt.Rows[0]["RequiresAuthorisation"];
                             oSupplierInvoice.SetAuthorised = dt.Rows[0]["Authorised"];
