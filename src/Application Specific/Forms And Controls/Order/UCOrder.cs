@@ -2581,11 +2581,11 @@ namespace FSM
             this._GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // _grpOrder
-            //
-            this._grpOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._grpOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpOrder.Controls.Add(this.btnViewAudit);
             this._grpOrder.Controls.Add(this._btnApproveOrder);
@@ -2616,9 +2616,9 @@ namespace FSM
             this._grpOrder.TabIndex = 1;
             this._grpOrder.TabStop = false;
             this._grpOrder.Text = "Main Details";
-            //
+            // 
             // btnViewAudit
-            //
+            // 
             this.btnViewAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnViewAudit.Location = new System.Drawing.Point(993, 93);
             this.btnViewAudit.Name = "btnViewAudit";
@@ -2626,9 +2626,9 @@ namespace FSM
             this.btnViewAudit.TabIndex = 130;
             this.btnViewAudit.Text = "Audit Trail";
             this.btnViewAudit.Click += new System.EventHandler(this.btnViewAudit_Click);
-            //
+            // 
             // _btnApproveOrder
-            //
+            // 
             this._btnApproveOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnApproveOrder.Location = new System.Drawing.Point(1286, 17);
             this._btnApproveOrder.Name = "_btnApproveOrder";
@@ -2637,9 +2637,9 @@ namespace FSM
             this._btnApproveOrder.Text = "Approve Order";
             this._btnApproveOrder.Visible = false;
             this._btnApproveOrder.Click += new System.EventHandler(this.btnApproveOrder_Click);
-            //
+            // 
             // _btnUpdateOrderRef
-            //
+            // 
             this._btnUpdateOrderRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnUpdateOrderRef.Location = new System.Drawing.Point(1095, 17);
             this._btnUpdateOrderRef.Name = "_btnUpdateOrderRef";
@@ -2648,17 +2648,17 @@ namespace FSM
             this._btnUpdateOrderRef.Text = "Change Order Ref";
             this._btnUpdateOrderRef.Visible = false;
             this._btnUpdateOrderRef.Click += new System.EventHandler(this.btnUpdateOrderRef_Click);
-            //
+            // 
             // _cboDept
-            //
+            // 
             this._cboDept.FormattingEnabled = true;
             this._cboDept.Location = new System.Drawing.Point(80, 94);
             this._cboDept.Name = "_cboDept";
             this._cboDept.Size = new System.Drawing.Size(170, 21);
             this._cboDept.TabIndex = 124;
-            //
+            // 
             // _lblOrderBalance
-            //
+            // 
             this._lblOrderBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderBalance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblOrderBalance.Location = new System.Drawing.Point(1550, 107);
@@ -2667,9 +2667,9 @@ namespace FSM
             this._lblOrderBalance.TabIndex = 84;
             this._lblOrderBalance.Text = "£0.00";
             this._lblOrderBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            //
+            // 
             // _lblOrderBalanceLabel
-            //
+            // 
             this._lblOrderBalanceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderBalanceLabel.AutoSize = true;
             this._lblOrderBalanceLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2679,9 +2679,9 @@ namespace FSM
             this._lblOrderBalanceLabel.TabIndex = 85;
             this._lblOrderBalanceLabel.Text = "Unallocated : ";
             this._lblOrderBalanceLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            //
+            // 
             // _chkRevertStatus
-            //
+            // 
             this._chkRevertStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._chkRevertStatus.AutoSize = true;
             this._chkRevertStatus.Location = new System.Drawing.Point(1095, 97);
@@ -2691,9 +2691,9 @@ namespace FSM
             this._chkRevertStatus.Text = "Revert to Awaiting Confirmation";
             this._chkRevertStatus.UseVisualStyleBackColor = true;
             this._chkRevertStatus.Visible = false;
-            //
+            // 
             // _lblOrderTotalLabel
-            //
+            // 
             this._lblOrderTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderTotalLabel.AutoSize = true;
             this._lblOrderTotalLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2703,9 +2703,9 @@ namespace FSM
             this._lblOrderTotalLabel.TabIndex = 77;
             this._lblOrderTotalLabel.Text = "Purchase Order Total : ";
             this._lblOrderTotalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            //
+            // 
             // _lblOrderTotal
-            //
+            // 
             this._lblOrderTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderTotal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblOrderTotal.Location = new System.Drawing.Point(1596, 12);
@@ -2714,9 +2714,9 @@ namespace FSM
             this._lblOrderTotal.TabIndex = 76;
             this._lblOrderTotal.Text = "£0.00";
             this._lblOrderTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            //
+            // 
             // _chkDoNotConsolidate
-            //
+            // 
             this._chkDoNotConsolidate.AutoSize = true;
             this._chkDoNotConsolidate.Location = new System.Drawing.Point(256, 97);
             this._chkDoNotConsolidate.Name = "_chkDoNotConsolidate";
@@ -2725,9 +2725,9 @@ namespace FSM
             this._chkDoNotConsolidate.Text = "Do Not Consolidate";
             this._chkDoNotConsolidate.UseVisualStyleBackColor = true;
             this._chkDoNotConsolidate.Visible = false;
-            //
+            // 
             // _chkDeadlineNA
-            //
+            // 
             this._chkDeadlineNA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._chkDeadlineNA.Location = new System.Drawing.Point(1212, 66);
             this._chkDeadlineNA.Name = "_chkDeadlineNA";
@@ -2735,64 +2735,64 @@ namespace FSM
             this._chkDeadlineNA.TabIndex = 4;
             this._chkDeadlineNA.Text = "N/A";
             this._chkDeadlineNA.CheckedChanged += new System.EventHandler(this.chkDeadlineNA_CheckedChanged);
-            //
+            // 
             // _dtpDeliveryDeadline
-            //
+            // 
             this._dtpDeliveryDeadline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._dtpDeliveryDeadline.Location = new System.Drawing.Point(1263, 66);
             this._dtpDeliveryDeadline.Name = "_dtpDeliveryDeadline";
             this._dtpDeliveryDeadline.Size = new System.Drawing.Size(144, 21);
             this._dtpDeliveryDeadline.TabIndex = 5;
             this._dtpDeliveryDeadline.Tag = "Order.DatePlaced";
-            //
+            // 
             // _Label6
-            //
+            // 
             this._Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Label6.Location = new System.Drawing.Point(1090, 70);
             this._Label6.Name = "_Label6";
             this._Label6.Size = new System.Drawing.Size(114, 23);
             this._Label6.TabIndex = 42;
             this._Label6.Text = "Delivery Deadline";
-            //
+            // 
             // _cboOrderStatus
-            //
-            this._cboOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._cboOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._cboOrderStatus.Location = new System.Drawing.Point(80, 43);
             this._cboOrderStatus.Name = "_cboOrderStatus";
             this._cboOrderStatus.Size = new System.Drawing.Size(1007, 21);
             this._cboOrderStatus.TabIndex = 2;
             this._cboOrderStatus.SelectedIndexChanged += new System.EventHandler(this.cboOrderStatus_SelectedIndexChanged);
-            //
+            // 
             // _Label19
-            //
+            // 
             this._Label19.Location = new System.Drawing.Point(6, 43);
             this._Label19.Name = "_Label19";
             this._Label19.Size = new System.Drawing.Size(48, 23);
             this._Label19.TabIndex = 33;
             this._Label19.Text = "Status";
-            //
+            // 
             // _dtpDatePlaced
-            //
-            this._dtpDatePlaced.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._dtpDatePlaced.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dtpDatePlaced.Location = new System.Drawing.Point(80, 67);
             this._dtpDatePlaced.Name = "_dtpDatePlaced";
             this._dtpDatePlaced.Size = new System.Drawing.Size(1007, 21);
             this._dtpDatePlaced.TabIndex = 3;
             this._dtpDatePlaced.Tag = "Order.DatePlaced";
-            //
+            // 
             // _lblDatePlaced
-            //
+            // 
             this._lblDatePlaced.Location = new System.Drawing.Point(6, 67);
             this._lblDatePlaced.Name = "_lblDatePlaced";
             this._lblDatePlaced.Size = new System.Drawing.Size(79, 20);
             this._lblDatePlaced.TabIndex = 31;
             this._lblDatePlaced.Text = "Date Placed";
-            //
+            // 
             // _txtOrderReference
-            //
-            this._txtOrderReference.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._txtOrderReference.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtOrderReference.Location = new System.Drawing.Point(80, 19);
             this._txtOrderReference.MaxLength = 100;
@@ -2802,19 +2802,19 @@ namespace FSM
             this._txtOrderReference.TabIndex = 1;
             this._txtOrderReference.Tag = "Order.OrderReference";
             this._txtOrderReference.Visible = false;
-            //
+            // 
             // _lblOrderReference
-            //
+            // 
             this._lblOrderReference.Location = new System.Drawing.Point(6, 19);
             this._lblOrderReference.Name = "_lblOrderReference";
             this._lblOrderReference.Size = new System.Drawing.Size(66, 20);
             this._lblOrderReference.TabIndex = 31;
             this._lblOrderReference.Text = "Order Ref";
-            //
+            // 
             // _tcOrderDetails
-            //
-            this._tcOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._tcOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._tcOrderDetails.Controls.Add(this._tabDetails);
             this._tcOrderDetails.Controls.Add(this._tabParts);
@@ -2830,9 +2830,9 @@ namespace FSM
             this._tcOrderDetails.Size = new System.Drawing.Size(1669, 728);
             this._tcOrderDetails.TabIndex = 6;
             this._tcOrderDetails.SelectedIndexChanged += new System.EventHandler(this.tcOrderDetails_SelectedIndexChanged);
-            //
+            // 
             // _tabDetails
-            //
+            // 
             this._tabDetails.Controls.Add(this._btnRelatedJob);
             this._tabDetails.Controls.Add(this._pnlDetails);
             this._tabDetails.Controls.Add(this._lblOrderTypeID);
@@ -2843,9 +2843,9 @@ namespace FSM
             this._tabDetails.Size = new System.Drawing.Size(1661, 702);
             this._tabDetails.TabIndex = 0;
             this._tabDetails.Text = "Order Details";
-            //
+            // 
             // _btnRelatedJob
-            //
+            // 
             this._btnRelatedJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnRelatedJob.Enabled = false;
             this._btnRelatedJob.Location = new System.Drawing.Point(1356, 7);
@@ -2854,28 +2854,28 @@ namespace FSM
             this._btnRelatedJob.TabIndex = 32;
             this._btnRelatedJob.Text = "View Related Job";
             this._btnRelatedJob.Click += new System.EventHandler(this.btnRelatedJob_Click);
-            //
+            // 
             // _pnlDetails
-            //
-            this._pnlDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._pnlDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._pnlDetails.Location = new System.Drawing.Point(0, 40);
             this._pnlDetails.Name = "_pnlDetails";
             this._pnlDetails.Size = new System.Drawing.Size(1658, 653);
             this._pnlDetails.TabIndex = 9;
-            //
+            // 
             // _lblOrderTypeID
-            //
+            // 
             this._lblOrderTypeID.Location = new System.Drawing.Point(8, 8);
             this._lblOrderTypeID.Name = "_lblOrderTypeID";
             this._lblOrderTypeID.Size = new System.Drawing.Size(64, 20);
             this._lblOrderTypeID.TabIndex = 31;
             this._lblOrderTypeID.Text = "Order For";
-            //
+            // 
             // _cboOrderTypeID
-            //
-            this._cboOrderTypeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._cboOrderTypeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._cboOrderTypeID.Cursor = System.Windows.Forms.Cursors.Hand;
             this._cboOrderTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -2885,9 +2885,9 @@ namespace FSM
             this._cboOrderTypeID.TabIndex = 7;
             this._cboOrderTypeID.Tag = "Order.OrderTypeID";
             this._cboOrderTypeID.SelectedIndexChanged += new System.EventHandler(this.cboOrderTypeID_SelectedIndexChanged);
-            //
+            // 
             // _btnCharges
-            //
+            // 
             this._btnCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCharges.Location = new System.Drawing.Point(1482, 7);
             this._btnCharges.Name = "_btnCharges";
@@ -2895,9 +2895,9 @@ namespace FSM
             this._btnCharges.TabIndex = 8;
             this._btnCharges.Text = "Manage Additional Charges";
             this._btnCharges.Click += new System.EventHandler(this.btnCharges_Click);
-            //
+            // 
             // _tabParts
-            //
+            // 
             this._tabParts.Controls.Add(this._grpPartSearch);
             this._tabParts.Controls.Add(this._grpAvailableParts);
             this._tabParts.Location = new System.Drawing.Point(4, 22);
@@ -2905,10 +2905,10 @@ namespace FSM
             this._tabParts.Size = new System.Drawing.Size(1661, 702);
             this._tabParts.TabIndex = 2;
             this._tabParts.Text = "Parts Available";
-            //
+            // 
             // _grpPartSearch
-            //
-            this._grpPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._grpPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpPartSearch.Controls.Add(this._btnAddNewPart);
             this._grpPartSearch.Controls.Add(this._cboPartLocation);
@@ -2920,9 +2920,9 @@ namespace FSM
             this._grpPartSearch.TabIndex = 13;
             this._grpPartSearch.TabStop = false;
             this._grpPartSearch.Text = "Part Search From";
-            //
+            // 
             // _btnAddNewPart
-            //
+            // 
             this._btnAddNewPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnAddNewPart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._btnAddNewPart.Location = new System.Drawing.Point(1573, 24);
@@ -2931,17 +2931,17 @@ namespace FSM
             this._btnAddNewPart.TabIndex = 4;
             this._btnAddNewPart.Text = "New Part";
             this._btnAddNewPart.Click += new System.EventHandler(this.btnAddNewPart_Click);
-            //
+            // 
             // _cboPartLocation
-            //
+            // 
             this._cboPartLocation.Location = new System.Drawing.Point(8, 24);
             this._cboPartLocation.Name = "_cboPartLocation";
             this._cboPartLocation.Size = new System.Drawing.Size(152, 21);
             this._cboPartLocation.TabIndex = 1;
             this._cboPartLocation.SelectedIndexChanged += new System.EventHandler(this.cboPartLocation_SelectedIndexChanged);
-            //
+            // 
             // _btnPartSearch
-            //
+            // 
             this._btnPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnPartSearch.Enabled = false;
             this._btnPartSearch.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2951,21 +2951,21 @@ namespace FSM
             this._btnPartSearch.TabIndex = 3;
             this._btnPartSearch.Text = "Find";
             this._btnPartSearch.Click += new System.EventHandler(this.btnPartSearch_Click);
-            //
+            // 
             // _txtPartSearch
-            //
-            this._txtPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._txtPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtPartSearch.Location = new System.Drawing.Point(168, 24);
             this._txtPartSearch.Name = "_txtPartSearch";
             this._txtPartSearch.Size = new System.Drawing.Size(1325, 21);
             this._txtPartSearch.TabIndex = 2;
             this._txtPartSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPartSearch_KeyDown);
-            //
+            // 
             // _grpAvailableParts
-            //
-            this._grpAvailableParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._grpAvailableParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpAvailableParts.Controls.Add(this._btnCreatePartRequest);
             this._grpAvailableParts.Controls.Add(this._Label7);
@@ -2980,10 +2980,10 @@ namespace FSM
             this._grpAvailableParts.TabIndex = 14;
             this._grpAvailableParts.TabStop = false;
             this._grpAvailableParts.Text = "Available Parts && Packs";
-            //
+            // 
             // _btnCreatePartRequest
-            //
-            this._btnCreatePartRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._btnCreatePartRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreatePartRequest.Location = new System.Drawing.Point(935, 592);
             this._btnCreatePartRequest.Name = "_btnCreatePartRequest";
@@ -2991,45 +2991,45 @@ namespace FSM
             this._btnCreatePartRequest.TabIndex = 10;
             this._btnCreatePartRequest.Text = "Part Price Request";
             this._btnCreatePartRequest.Click += new System.EventHandler(this.btnCreatePartRequest_Click);
-            //
+            // 
             // _Label7
-            //
+            // 
             this._Label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label7.Location = new System.Drawing.Point(8, 598);
             this._Label7.Name = "_Label7";
             this._Label7.Size = new System.Drawing.Size(40, 13);
             this._Label7.TabIndex = 23;
             this._Label7.Text = "Qty";
-            //
+            // 
             // _txtPartBuyPrice
-            //
+            // 
             this._txtPartBuyPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtPartBuyPrice.Location = new System.Drawing.Point(248, 594);
             this._txtPartBuyPrice.Name = "_txtPartBuyPrice";
             this._txtPartBuyPrice.Size = new System.Drawing.Size(112, 21);
             this._txtPartBuyPrice.TabIndex = 7;
-            //
+            // 
             // _Label3
-            //
+            // 
             this._Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label3.Location = new System.Drawing.Point(176, 598);
             this._Label3.Name = "_Label3";
             this._Label3.Size = new System.Drawing.Size(64, 13);
             this._Label3.TabIndex = 14;
             this._Label3.Text = "Buy Price";
-            //
+            // 
             // _txtPartQuantity
-            //
+            // 
             this._txtPartQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtPartQuantity.Location = new System.Drawing.Point(56, 594);
             this._txtPartQuantity.Name = "_txtPartQuantity";
             this._txtPartQuantity.Size = new System.Drawing.Size(112, 21);
             this._txtPartQuantity.TabIndex = 6;
-            //
+            // 
             // _dgParts
-            //
-            this._dgParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._dgParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgParts.DataMember = "";
             this._dgParts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3040,9 +3040,9 @@ namespace FSM
             this._dgParts.CurrentCellChanged += new System.EventHandler(this.dgParts_Click);
             this._dgParts.Click += new System.EventHandler(this.dgParts_Click);
             this._dgParts.DoubleClick += new System.EventHandler(this.dgParts_DoubleClick);
-            //
+            // 
             // _btnAddPart
-            //
+            // 
             this._btnAddPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnAddPart.Location = new System.Drawing.Point(378, 592);
             this._btnAddPart.Name = "_btnAddPart";
@@ -3050,9 +3050,9 @@ namespace FSM
             this._btnAddPart.TabIndex = 9;
             this._btnAddPart.Text = "Add";
             this._btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
-            //
+            // 
             // _tabProducts
-            //
+            // 
             this._tabProducts.Controls.Add(this._grpProductsAvailable);
             this._tabProducts.Controls.Add(this._grpProductSearch);
             this._tabProducts.Location = new System.Drawing.Point(4, 22);
@@ -3060,11 +3060,11 @@ namespace FSM
             this._tabProducts.Size = new System.Drawing.Size(1661, 702);
             this._tabProducts.TabIndex = 1;
             this._tabProducts.Text = "Products Available";
-            //
+            // 
             // _grpProductsAvailable
-            //
-            this._grpProductsAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._grpProductsAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpProductsAvailable.Controls.Add(this._btnCreateProductPriceRequest);
             this._grpProductsAvailable.Controls.Add(this._txtProductSellPrice);
@@ -3081,10 +3081,10 @@ namespace FSM
             this._grpProductsAvailable.TabIndex = 10;
             this._grpProductsAvailable.TabStop = false;
             this._grpProductsAvailable.Text = "Available Products ";
-            //
+            // 
             // _btnCreateProductPriceRequest
-            //
-            this._btnCreateProductPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._btnCreateProductPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreateProductPriceRequest.Location = new System.Drawing.Point(616, 592);
             this._btnCreateProductPriceRequest.Name = "_btnCreateProductPriceRequest";
@@ -3092,62 +3092,62 @@ namespace FSM
             this._btnCreateProductPriceRequest.TabIndex = 10;
             this._btnCreateProductPriceRequest.Text = "Product Price Request";
             this._btnCreateProductPriceRequest.Click += new System.EventHandler(this.btnCreateProductPriceRequest_Click);
-            //
+            // 
             // _txtProductSellPrice
-            //
+            // 
             this._txtProductSellPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtProductSellPrice.Location = new System.Drawing.Point(432, 594);
             this._txtProductSellPrice.Name = "_txtProductSellPrice";
             this._txtProductSellPrice.Size = new System.Drawing.Size(112, 21);
             this._txtProductSellPrice.TabIndex = 8;
-            //
+            // 
             // _Label5
-            //
+            // 
             this._Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label5.Location = new System.Drawing.Point(368, 598);
             this._Label5.Name = "_Label5";
             this._Label5.Size = new System.Drawing.Size(64, 13);
             this._Label5.TabIndex = 18;
             this._Label5.Text = "Sell Price";
-            //
+            // 
             // _txtProductBuyPrice
-            //
+            // 
             this._txtProductBuyPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtProductBuyPrice.Location = new System.Drawing.Point(232, 594);
             this._txtProductBuyPrice.Name = "_txtProductBuyPrice";
             this._txtProductBuyPrice.Size = new System.Drawing.Size(112, 21);
             this._txtProductBuyPrice.TabIndex = 7;
-            //
+            // 
             // _Label4
-            //
+            // 
             this._Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label4.Location = new System.Drawing.Point(168, 598);
             this._Label4.Name = "_Label4";
             this._Label4.Size = new System.Drawing.Size(64, 13);
             this._Label4.TabIndex = 16;
             this._Label4.Text = "Buy Price";
-            //
+            // 
             // _Label1
-            //
+            // 
             this._Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label1.Location = new System.Drawing.Point(8, 598);
             this._Label1.Name = "_Label1";
             this._Label1.Size = new System.Drawing.Size(40, 13);
             this._Label1.TabIndex = 15;
             this._Label1.Text = "Qty";
-            //
+            // 
             // _txtProductQuantity
-            //
+            // 
             this._txtProductQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtProductQuantity.Location = new System.Drawing.Point(48, 594);
             this._txtProductQuantity.Name = "_txtProductQuantity";
             this._txtProductQuantity.Size = new System.Drawing.Size(112, 21);
             this._txtProductQuantity.TabIndex = 6;
-            //
+            // 
             // _dgProduct
-            //
-            this._dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgProduct.DataMember = "";
             this._dgProduct.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3158,9 +3158,9 @@ namespace FSM
             this._dgProduct.CurrentCellChanged += new System.EventHandler(this.dgProduct_Click);
             this._dgProduct.Click += new System.EventHandler(this.dgProduct_Click);
             this._dgProduct.DoubleClick += new System.EventHandler(this.dgProduct_DoubleClick);
-            //
+            // 
             // _btnAddProduct
-            //
+            // 
             this._btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnAddProduct.Location = new System.Drawing.Point(552, 592);
             this._btnAddProduct.Name = "_btnAddProduct";
@@ -3168,10 +3168,10 @@ namespace FSM
             this._btnAddProduct.TabIndex = 9;
             this._btnAddProduct.Text = "Add ";
             this._btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            //
+            // 
             // _grpProductSearch
-            //
-            this._grpProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._grpProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpProductSearch.Controls.Add(this._btnAddNewProduct);
             this._grpProductSearch.Controls.Add(this._cboProductLocation);
@@ -3183,9 +3183,9 @@ namespace FSM
             this._grpProductSearch.TabIndex = 9;
             this._grpProductSearch.TabStop = false;
             this._grpProductSearch.Text = "Product Search From";
-            //
+            // 
             // _btnAddNewProduct
-            //
+            // 
             this._btnAddNewProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnAddNewProduct.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._btnAddNewProduct.Location = new System.Drawing.Point(1545, 24);
@@ -3194,17 +3194,17 @@ namespace FSM
             this._btnAddNewProduct.TabIndex = 4;
             this._btnAddNewProduct.Text = "New Product";
             this._btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
-            //
+            // 
             // _cboProductLocation
-            //
+            // 
             this._cboProductLocation.Location = new System.Drawing.Point(8, 24);
             this._cboProductLocation.Name = "_cboProductLocation";
             this._cboProductLocation.Size = new System.Drawing.Size(152, 21);
             this._cboProductLocation.TabIndex = 1;
             this._cboProductLocation.SelectedIndexChanged += new System.EventHandler(this.cboProductLocation_SelectedIndexChanged);
-            //
+            // 
             // _btnProductSearch
-            //
+            // 
             this._btnProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnProductSearch.Enabled = false;
             this._btnProductSearch.Location = new System.Drawing.Point(1483, 24);
@@ -3213,30 +3213,30 @@ namespace FSM
             this._btnProductSearch.TabIndex = 3;
             this._btnProductSearch.Text = "Find";
             this._btnProductSearch.Click += new System.EventHandler(this.btnProductSearch_Click);
-            //
+            // 
             // _txtProductSearch
-            //
-            this._txtProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._txtProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtProductSearch.Location = new System.Drawing.Point(168, 24);
             this._txtProductSearch.Name = "_txtProductSearch";
             this._txtProductSearch.Size = new System.Drawing.Size(1309, 21);
             this._txtProductSearch.TabIndex = 2;
             this._txtProductSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductSearch_KeyDown);
-            //
+            // 
             // _tabItemsIncluded
-            //
+            // 
             this._tabItemsIncluded.Controls.Add(this._GroupBox3);
             this._tabItemsIncluded.Location = new System.Drawing.Point(4, 22);
             this._tabItemsIncluded.Name = "_tabItemsIncluded";
             this._tabItemsIncluded.Size = new System.Drawing.Size(1661, 702);
             this._tabItemsIncluded.TabIndex = 8;
             this._tabItemsIncluded.Text = "Items Included";
-            //
+            // 
             // _GroupBox3
-            //
-            this._GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox3.Controls.Add(this._nudItemQty);
             this._GroupBox3.Controls.Add(this._btnEngineerReceived);
@@ -3250,9 +3250,9 @@ namespace FSM
             this._GroupBox3.TabIndex = 0;
             this._GroupBox3.TabStop = false;
             this._GroupBox3.Text = "Double click to mark as received";
-            //
+            // 
             // _nudItemQty
-            //
+            // 
             this._nudItemQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._nudItemQty.Location = new System.Drawing.Point(70, 656);
             this._nudItemQty.Maximum = new decimal(new int[] {
@@ -3268,9 +3268,9 @@ namespace FSM
             0,
             0,
             0});
-            //
+            // 
             // _btnEngineerReceived
-            //
+            // 
             this._btnEngineerReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnEngineerReceived.Location = new System.Drawing.Point(1401, 657);
             this._btnEngineerReceived.Name = "_btnEngineerReceived";
@@ -3279,9 +3279,9 @@ namespace FSM
             this._btnEngineerReceived.Text = "Engineer Received";
             this._btnEngineerReceived.UseVisualStyleBackColor = true;
             this._btnEngineerReceived.Click += new System.EventHandler(this.btnEngineerReceived_Click);
-            //
+            // 
             // _btnReceiveAll
-            //
+            // 
             this._btnReceiveAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnReceiveAll.Location = new System.Drawing.Point(1541, 657);
             this._btnReceiveAll.Name = "_btnReceiveAll";
@@ -3290,18 +3290,18 @@ namespace FSM
             this._btnReceiveAll.Text = "Receive All";
             this._btnReceiveAll.UseVisualStyleBackColor = true;
             this._btnReceiveAll.Click += new System.EventHandler(this.btnReceiveAll_Click);
-            //
+            // 
             // _lblItemQty
-            //
+            // 
             this._lblItemQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblItemQty.Location = new System.Drawing.Point(8, 658);
             this._lblItemQty.Name = "_lblItemQty";
             this._lblItemQty.Size = new System.Drawing.Size(56, 21);
             this._lblItemQty.TabIndex = 10;
             this._lblItemQty.Text = "Quantity";
-            //
+            // 
             // _btnItemQtyUpdate
-            //
+            // 
             this._btnItemQtyUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnItemQtyUpdate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._btnItemQtyUpdate.Location = new System.Drawing.Point(149, 654);
@@ -3310,11 +3310,11 @@ namespace FSM
             this._btnItemQtyUpdate.TabIndex = 3;
             this._btnItemQtyUpdate.Text = "Update";
             this._btnItemQtyUpdate.Click += new System.EventHandler(this.btnItemRemove_Click);
-            //
+            // 
             // _dgItemsIncluded
-            //
-            this._dgItemsIncluded.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._dgItemsIncluded.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgItemsIncluded.DataMember = "";
             this._dgItemsIncluded.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3323,21 +3323,21 @@ namespace FSM
             this._dgItemsIncluded.Size = new System.Drawing.Size(1634, 631);
             this._dgItemsIncluded.TabIndex = 1;
             this._dgItemsIncluded.Click += new System.EventHandler(this.dgItemsIncluded_Click);
-            this._dgItemsIncluded.DoubleClick += new System.EventHandler(this.dgProduct_Click);
-            //
+            this._dgItemsIncluded.DoubleClick += new System.EventHandler(this.dgItemsIncluded_DoubleClick);
+            // 
             // _tabPartPriceReq
-            //
+            // 
             this._tabPartPriceReq.Controls.Add(this._GroupBox2);
             this._tabPartPriceReq.Location = new System.Drawing.Point(4, 22);
             this._tabPartPriceReq.Name = "_tabPartPriceReq";
             this._tabPartPriceReq.Size = new System.Drawing.Size(1661, 702);
             this._tabPartPriceReq.TabIndex = 7;
             this._tabPartPriceReq.Text = "Price Requests";
-            //
+            // 
             // _GroupBox2
-            //
-            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox2.Controls.Add(this._btnUpdatePartPriceRequest);
             this._GroupBox2.Controls.Add(this._dgPriceRequests);
@@ -3347,9 +3347,9 @@ namespace FSM
             this._GroupBox2.TabIndex = 1;
             this._GroupBox2.TabStop = false;
             this._GroupBox2.Text = "Price requests for parts and products";
-            //
+            // 
             // _btnUpdatePartPriceRequest
-            //
+            // 
             this._btnUpdatePartPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnUpdatePartPriceRequest.Location = new System.Drawing.Point(8, 658);
             this._btnUpdatePartPriceRequest.Name = "_btnUpdatePartPriceRequest";
@@ -3357,11 +3357,11 @@ namespace FSM
             this._btnUpdatePartPriceRequest.TabIndex = 2;
             this._btnUpdatePartPriceRequest.Text = "Update";
             this._btnUpdatePartPriceRequest.Click += new System.EventHandler(this.btnUpdatePartPriceRequest_Click);
-            //
+            // 
             // _dgPriceRequests
-            //
-            this._dgPriceRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._dgPriceRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgPriceRequests.DataMember = "";
             this._dgPriceRequests.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3371,9 +3371,9 @@ namespace FSM
             this._dgPriceRequests.TabIndex = 1;
             this._dgPriceRequests.CurrentCellChanged += new System.EventHandler(this.dgPriceRequests_Click);
             this._dgPriceRequests.Click += new System.EventHandler(this.dgPriceRequests_Click);
-            //
+            // 
             // _tabDocuments
-            //
+            // 
             this._tabDocuments.Controls.Add(this._pnlDocuments);
             this._tabDocuments.Controls.Add(this._btnEmail);
             this._tabDocuments.Controls.Add(this._cboPrintType);
@@ -3384,19 +3384,19 @@ namespace FSM
             this._tabDocuments.Size = new System.Drawing.Size(1661, 702);
             this._tabDocuments.TabIndex = 9;
             this._tabDocuments.Text = "Documents";
-            //
+            // 
             // _pnlDocuments
-            //
-            this._pnlDocuments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._pnlDocuments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._pnlDocuments.Location = new System.Drawing.Point(8, 40);
             this._pnlDocuments.Name = "_pnlDocuments";
             this._pnlDocuments.Size = new System.Drawing.Size(1650, 653);
             this._pnlDocuments.TabIndex = 4;
-            //
+            // 
             // _btnEmail
-            //
+            // 
             this._btnEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnEmail.Location = new System.Drawing.Point(1194, 8);
             this._btnEmail.Name = "_btnEmail";
@@ -3405,18 +3405,18 @@ namespace FSM
             this._btnEmail.Text = "Send Via Email";
             this._btnEmail.Visible = false;
             this._btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
-            //
+            // 
             // _cboPrintType
-            //
-            this._cboPrintType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._cboPrintType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._cboPrintType.Location = new System.Drawing.Point(8, 8);
             this._cboPrintType.Name = "_cboPrintType";
             this._cboPrintType.Size = new System.Drawing.Size(1090, 21);
             this._cboPrintType.TabIndex = 1;
-            //
+            // 
             // _btnPrint
-            //
+            // 
             this._btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnPrint.Location = new System.Drawing.Point(1106, 8);
             this._btnPrint.Name = "_btnPrint";
@@ -3424,9 +3424,9 @@ namespace FSM
             this._btnPrint.TabIndex = 2;
             this._btnPrint.Text = "Print";
             this._btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            //
+            // 
             // _Label8
-            //
+            // 
             this._Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Label8.Location = new System.Drawing.Point(1170, 12);
             this._Label8.Name = "_Label8";
@@ -3434,20 +3434,20 @@ namespace FSM
             this._Label8.TabIndex = 45;
             this._Label8.Text = "or";
             this._Label8.Visible = false;
-            //
+            // 
             // _tabInvoices
-            //
+            // 
             this._tabInvoices.Controls.Add(this._grpReceivedInvoices);
             this._tabInvoices.Location = new System.Drawing.Point(4, 22);
             this._tabInvoices.Name = "_tabInvoices";
             this._tabInvoices.Size = new System.Drawing.Size(1661, 702);
             this._tabInvoices.TabIndex = 10;
             this._tabInvoices.Text = "Supplier Invoices";
-            //
+            // 
             // _grpReceivedInvoices
-            //
-            this._grpReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._grpReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpReceivedInvoices.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this._grpReceivedInvoices.Controls.Add(this.dgvGlobalNominals);
@@ -3478,9 +3478,9 @@ namespace FSM
             this._grpReceivedInvoices.TabIndex = 0;
             this._grpReceivedInvoices.TabStop = false;
             this._grpReceivedInvoices.Text = "Received Invoices";
-            //
+            // 
             // dgvGlobalNominals
-            //
+            // 
             this.dgvGlobalNominals.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3489,7 +3489,7 @@ namespace FSM
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvGlobalNominals.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvGlobalNominals.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.dgvGlobalNominals.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGlobalNominals.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGlobalNominals.BackgroundColor = System.Drawing.Color.White;
@@ -3523,9 +3523,9 @@ namespace FSM
             this.dgvGlobalNominals.Size = new System.Drawing.Size(572, 617);
             this.dgvGlobalNominals.TabIndex = 126;
             this.dgvGlobalNominals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGlobalNominals_CellClick);
-            //
+            // 
             // _btnDeleteSupplierInvoice
-            //
+            // 
             this._btnDeleteSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnDeleteSupplierInvoice.Location = new System.Drawing.Point(1468, 668);
             this._btnDeleteSupplierInvoice.Name = "_btnDeleteSupplierInvoice";
@@ -3534,9 +3534,9 @@ namespace FSM
             this._btnDeleteSupplierInvoice.Text = "Delete";
             this._btnDeleteSupplierInvoice.Visible = false;
             this._btnDeleteSupplierInvoice.Click += new System.EventHandler(this.btnDeleteSupplierInvoice_Click);
-            //
+            // 
             // _btnUpdateSupplierInvoice
-            //
+            // 
             this._btnUpdateSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnUpdateSupplierInvoice.Location = new System.Drawing.Point(1530, 668);
             this._btnUpdateSupplierInvoice.Name = "_btnUpdateSupplierInvoice";
@@ -3545,17 +3545,17 @@ namespace FSM
             this._btnUpdateSupplierInvoice.Text = "Update";
             this._btnUpdateSupplierInvoice.Visible = false;
             this._btnUpdateSupplierInvoice.Click += new System.EventHandler(this.btnUpdateSupplierInvoice_Click);
-            //
+            // 
             // _txtTotalAmount
-            //
+            // 
             this._txtTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtTotalAmount.Location = new System.Drawing.Point(547, 669);
             this._txtTotalAmount.Name = "_txtTotalAmount";
             this._txtTotalAmount.Size = new System.Drawing.Size(100, 21);
             this._txtTotalAmount.TabIndex = 109;
-            //
+            // 
             // _lblTotalValue
-            //
+            // 
             this._lblTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblTotalValue.AutoSize = true;
             this._lblTotalValue.Location = new System.Drawing.Point(485, 672);
@@ -3563,18 +3563,18 @@ namespace FSM
             this._lblTotalValue.Size = new System.Drawing.Size(55, 13);
             this._lblTotalValue.TabIndex = 28;
             this._lblTotalValue.Text = "Total (£)";
-            //
+            // 
             // _txtVATAmount
-            //
+            // 
             this._txtVATAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtVATAmount.Location = new System.Drawing.Point(379, 669);
             this._txtVATAmount.Name = "_txtVATAmount";
             this._txtVATAmount.Size = new System.Drawing.Size(100, 21);
             this._txtVATAmount.TabIndex = 108;
             this._txtVATAmount.LostFocus += new System.EventHandler(this.txtVATAmount_LostFocus);
-            //
+            // 
             // _txtNominalCodeNew
-            //
+            // 
             this._txtNominalCodeNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtNominalCodeNew.Location = new System.Drawing.Point(633, 640);
             this._txtNominalCodeNew.MaxLength = 100;
@@ -3582,18 +3582,18 @@ namespace FSM
             this._txtNominalCodeNew.Size = new System.Drawing.Size(70, 21);
             this._txtNominalCodeNew.TabIndex = 105;
             this._txtNominalCodeNew.Tag = "Order.SupplierInvoiceReference";
-            //
+            // 
             // _Label16
-            //
+            // 
             this._Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label16.Location = new System.Drawing.Point(568, 643);
             this._Label16.Name = "_Label16";
             this._Label16.Size = new System.Drawing.Size(70, 20);
             this._Label16.TabIndex = 65;
             this._Label16.Text = "Nominal";
-            //
+            // 
             // _lblVatValue
-            //
+            // 
             this._lblVatValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblVatValue.AutoSize = true;
             this._lblVatValue.Location = new System.Drawing.Point(322, 672);
@@ -3601,18 +3601,18 @@ namespace FSM
             this._lblVatValue.Size = new System.Drawing.Size(50, 13);
             this._lblVatValue.TabIndex = 26;
             this._lblVatValue.Text = "VAT (£)";
-            //
+            // 
             // _txtGoodsAmount
-            //
+            // 
             this._txtGoodsAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtGoodsAmount.Location = new System.Drawing.Point(76, 669);
             this._txtGoodsAmount.Name = "_txtGoodsAmount";
             this._txtGoodsAmount.Size = new System.Drawing.Size(100, 21);
             this._txtGoodsAmount.TabIndex = 106;
             this._txtGoodsAmount.LostFocus += new System.EventHandler(this.txtGoodsAmount_TextChanged);
-            //
+            // 
             // _cboInvoiceTaxCodeNew
-            //
+            // 
             this._cboInvoiceTaxCodeNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._cboInvoiceTaxCodeNew.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cboInvoiceTaxCodeNew.Location = new System.Drawing.Point(258, 669);
@@ -3620,9 +3620,9 @@ namespace FSM
             this._cboInvoiceTaxCodeNew.Size = new System.Drawing.Size(58, 21);
             this._cboInvoiceTaxCodeNew.TabIndex = 107;
             this._cboInvoiceTaxCodeNew.SelectedIndexChanged += new System.EventHandler(this.cboTaxCode_SelectedIndexChanged);
-            //
+            // 
             // _txtExtraReferenceNew
-            //
+            // 
             this._txtExtraReferenceNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtExtraReferenceNew.Location = new System.Drawing.Point(493, 640);
             this._txtExtraReferenceNew.MaxLength = 100;
@@ -3630,18 +3630,18 @@ namespace FSM
             this._txtExtraReferenceNew.Size = new System.Drawing.Size(70, 21);
             this._txtExtraReferenceNew.TabIndex = 104;
             this._txtExtraReferenceNew.Tag = "Order.SupplierInvoiceReference";
-            //
+            // 
             // _Label13
-            //
+            // 
             this._Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label13.Location = new System.Drawing.Point(182, 672);
             this._Label13.Name = "_Label13";
             this._Label13.Size = new System.Drawing.Size(70, 20);
             this._Label13.TabIndex = 59;
             this._Label13.Text = "Tax Code";
-            //
+            // 
             // _lblGoodsValue
-            //
+            // 
             this._lblGoodsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblGoodsValue.AutoSize = true;
             this._lblGoodsValue.Location = new System.Drawing.Point(6, 672);
@@ -3649,18 +3649,18 @@ namespace FSM
             this._lblGoodsValue.Size = new System.Drawing.Size(64, 13);
             this._lblGoodsValue.TabIndex = 24;
             this._lblGoodsValue.Text = "Goods (£)";
-            //
+            // 
             // _Label15
-            //
+            // 
             this._Label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label15.Location = new System.Drawing.Point(435, 643);
             this._Label15.Name = "_Label15";
             this._Label15.Size = new System.Drawing.Size(56, 20);
             this._Label15.TabIndex = 63;
             this._Label15.Text = "Ex Ref.";
-            //
+            // 
             // _lblInvoiceDate
-            //
+            // 
             this._lblInvoiceDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblInvoiceDate.AutoSize = true;
             this._lblInvoiceDate.Location = new System.Drawing.Point(6, 643);
@@ -3668,17 +3668,17 @@ namespace FSM
             this._lblInvoiceDate.Size = new System.Drawing.Size(80, 13);
             this._lblInvoiceDate.TabIndex = 1;
             this._lblInvoiceDate.Text = "Invoice Date";
-            //
+            // 
             // _txtSupplierInvoiceRefNew
-            //
+            // 
             this._txtSupplierInvoiceRefNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtSupplierInvoiceRefNew.Location = new System.Drawing.Point(329, 640);
             this._txtSupplierInvoiceRefNew.Name = "_txtSupplierInvoiceRefNew";
             this._txtSupplierInvoiceRefNew.Size = new System.Drawing.Size(100, 21);
             this._txtSupplierInvoiceRefNew.TabIndex = 103;
-            //
+            // 
             // _lblSupplierRef
-            //
+            // 
             this._lblSupplierRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblSupplierRef.AutoSize = true;
             this._lblSupplierRef.Location = new System.Drawing.Point(242, 643);
@@ -3686,9 +3686,9 @@ namespace FSM
             this._lblSupplierRef.Size = new System.Drawing.Size(75, 13);
             this._lblSupplierRef.TabIndex = 1;
             this._lblSupplierRef.Text = "Invoice Ref.";
-            //
+            // 
             // _btnAddSupplierInvoice
-            //
+            // 
             this._btnAddSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnAddSupplierInvoice.Location = new System.Drawing.Point(1592, 668);
             this._btnAddSupplierInvoice.Name = "_btnAddSupplierInvoice";
@@ -3696,9 +3696,9 @@ namespace FSM
             this._btnAddSupplierInvoice.TabIndex = 123;
             this._btnAddSupplierInvoice.Text = "Add ";
             this._btnAddSupplierInvoice.Click += new System.EventHandler(this.btnAddSupplierInvoice_Click);
-            //
+            // 
             // _dgvReceivedInvoices
-            //
+            // 
             this._dgvReceivedInvoices.AllowUserToAddRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3707,8 +3707,8 @@ namespace FSM
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this._dgvReceivedInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this._dgvReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this._dgvReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgvReceivedInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this._dgvReceivedInvoices.BackgroundColor = System.Drawing.Color.White;
@@ -3742,18 +3742,18 @@ namespace FSM
             this._dgvReceivedInvoices.Size = new System.Drawing.Size(1065, 617);
             this._dgvReceivedInvoices.TabIndex = 0;
             this._dgvReceivedInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceivedInvoices_CellClick);
-            //
+            // 
             // _dtpSupplierInvoiceDateNew
-            //
+            // 
             this._dtpSupplierInvoiceDateNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._dtpSupplierInvoiceDateNew.Location = new System.Drawing.Point(92, 640);
             this._dtpSupplierInvoiceDateNew.Name = "_dtpSupplierInvoiceDateNew";
             this._dtpSupplierInvoiceDateNew.Size = new System.Drawing.Size(144, 21);
             this._dtpSupplierInvoiceDateNew.TabIndex = 101;
             this._dtpSupplierInvoiceDateNew.Tag = "Order.SupplierInvoiceDate";
-            //
+            // 
             // _cboReadySageNew
-            //
+            // 
             this._cboReadySageNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._cboReadySageNew.Location = new System.Drawing.Point(653, 667);
             this._cboReadySageNew.Name = "_cboReadySageNew";
@@ -3761,9 +3761,9 @@ namespace FSM
             this._cboReadySageNew.Size = new System.Drawing.Size(247, 24);
             this._cboReadySageNew.TabIndex = 110;
             this._cboReadySageNew.Text = "Ready to send to Accounts Package";
-            //
+            // 
             // _TabPage1
-            //
+            // 
             this._TabPage1.Controls.Add(this._GroupBox4);
             this._TabPage1.Location = new System.Drawing.Point(4, 22);
             this._TabPage1.Name = "_TabPage1";
@@ -3771,11 +3771,11 @@ namespace FSM
             this._TabPage1.TabIndex = 11;
             this._TabPage1.Text = "Credits";
             this._TabPage1.UseVisualStyleBackColor = true;
-            //
+            // 
             // _GroupBox4
-            //
-            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this._GroupBox4.Controls.Add(this._Button1);
@@ -3804,9 +3804,9 @@ namespace FSM
             this._GroupBox4.TabIndex = 1;
             this._GroupBox4.TabStop = false;
             this._GroupBox4.Text = "Part Credits";
-            //
+            // 
             // _Button1
-            //
+            // 
             this._Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._Button1.Location = new System.Drawing.Point(1360, 668);
             this._Button1.Name = "_Button1";
@@ -3814,9 +3814,9 @@ namespace FSM
             this._Button1.TabIndex = 127;
             this._Button1.Text = "Convert to Van stock";
             this._Button1.Click += new System.EventHandler(this.Button1_Click);
-            //
+            // 
             // _CheckBox1
-            //
+            // 
             this._CheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._CheckBox1.Location = new System.Drawing.Point(-20, 641);
             this._CheckBox1.Name = "_CheckBox1";
@@ -3824,9 +3824,9 @@ namespace FSM
             this._CheckBox1.Size = new System.Drawing.Size(141, 24);
             this._CheckBox1.TabIndex = 126;
             this._CheckBox1.Text = "Credit Recieved";
-            //
+            // 
             // _txtCreditExRef
-            //
+            // 
             this._txtCreditExRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditExRef.Location = new System.Drawing.Point(1118, 668);
             this._txtCreditExRef.MaxLength = 100;
@@ -3834,18 +3834,18 @@ namespace FSM
             this._txtCreditExRef.Size = new System.Drawing.Size(70, 21);
             this._txtCreditExRef.TabIndex = 125;
             this._txtCreditExRef.Tag = "Order.SupplierInvoiceReference";
-            //
+            // 
             // _Label21
-            //
+            // 
             this._Label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label21.Location = new System.Drawing.Point(1073, 671);
             this._Label21.Name = "_Label21";
             this._Label21.Size = new System.Drawing.Size(56, 20);
             this._Label21.TabIndex = 124;
             this._Label21.Text = "Ex Ref.";
-            //
+            // 
             // _btnCreditDelete
-            //
+            // 
             this._btnCreditDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreditDelete.Location = new System.Drawing.Point(1521, 668);
             this._btnCreditDelete.Name = "_btnCreditDelete";
@@ -3854,17 +3854,17 @@ namespace FSM
             this._btnCreditDelete.Text = "Delete";
             this._btnCreditDelete.Visible = false;
             this._btnCreditDelete.Click += new System.EventHandler(this.btnDeleteCredit_Click);
-            //
+            // 
             // _txtCreditTotal
-            //
+            // 
             this._txtCreditTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditTotal.Location = new System.Drawing.Point(539, 671);
             this._txtCreditTotal.Name = "_txtCreditTotal";
             this._txtCreditTotal.Size = new System.Drawing.Size(68, 21);
             this._txtCreditTotal.TabIndex = 109;
-            //
+            // 
             // _Label9
-            //
+            // 
             this._Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label9.AutoSize = true;
             this._Label9.Location = new System.Drawing.Point(467, 674);
@@ -3872,18 +3872,18 @@ namespace FSM
             this._Label9.Size = new System.Drawing.Size(55, 13);
             this._Label9.TabIndex = 28;
             this._Label9.Text = "Total (£)";
-            //
+            // 
             // _txtCreditVAT
-            //
+            // 
             this._txtCreditVAT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditVAT.Location = new System.Drawing.Point(372, 670);
             this._txtCreditVAT.Name = "_txtCreditVAT";
             this._txtCreditVAT.Size = new System.Drawing.Size(68, 21);
             this._txtCreditVAT.TabIndex = 108;
             this._txtCreditVAT.LostFocus += new System.EventHandler(this.txtCreditVAT__LostFocus);
-            //
+            // 
             // _txtCreditNominal
-            //
+            // 
             this._txtCreditNominal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditNominal.Location = new System.Drawing.Point(1000, 668);
             this._txtCreditNominal.MaxLength = 100;
@@ -3891,18 +3891,18 @@ namespace FSM
             this._txtCreditNominal.Size = new System.Drawing.Size(70, 21);
             this._txtCreditNominal.TabIndex = 105;
             this._txtCreditNominal.Tag = "Order.SupplierInvoiceReference";
-            //
+            // 
             // _Label10
-            //
+            // 
             this._Label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label10.Location = new System.Drawing.Point(947, 671);
             this._Label10.Name = "_Label10";
             this._Label10.Size = new System.Drawing.Size(70, 20);
             this._Label10.TabIndex = 65;
             this._Label10.Text = "Nominal";
-            //
+            // 
             // _Label14
-            //
+            // 
             this._Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label14.AutoSize = true;
             this._Label14.Location = new System.Drawing.Point(309, 673);
@@ -3910,18 +3910,18 @@ namespace FSM
             this._Label14.Size = new System.Drawing.Size(50, 13);
             this._Label14.TabIndex = 26;
             this._Label14.Text = "VAT (£)";
-            //
+            // 
             // _txtCreditGoods
-            //
+            // 
             this._txtCreditGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditGoods.Location = new System.Drawing.Point(95, 669);
             this._txtCreditGoods.Name = "_txtCreditGoods";
             this._txtCreditGoods.Size = new System.Drawing.Size(54, 21);
             this._txtCreditGoods.TabIndex = 106;
             this._txtCreditGoods.LostFocus += new System.EventHandler(this.txtCreditAmount_TextChanged);
-            //
+            // 
             // _cboCreditTax
-            //
+            // 
             this._cboCreditTax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._cboCreditTax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cboCreditTax.Location = new System.Drawing.Point(238, 669);
@@ -3929,18 +3929,18 @@ namespace FSM
             this._cboCreditTax.Size = new System.Drawing.Size(46, 21);
             this._cboCreditTax.TabIndex = 107;
             this._cboCreditTax.SelectedIndexChanged += new System.EventHandler(this.cboCreditTaxCode_SelectedIndexChanged);
-            //
+            // 
             // _Label18
-            //
+            // 
             this._Label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label18.Location = new System.Drawing.Point(168, 671);
             this._Label18.Name = "_Label18";
             this._Label18.Size = new System.Drawing.Size(70, 20);
             this._Label18.TabIndex = 59;
             this._Label18.Text = "Tax Code";
-            //
+            // 
             // _Label20
-            //
+            // 
             this._Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label20.AutoSize = true;
             this._Label20.Location = new System.Drawing.Point(6, 672);
@@ -3948,17 +3948,17 @@ namespace FSM
             this._Label20.Size = new System.Drawing.Size(86, 13);
             this._Label20.TabIndex = 24;
             this._Label20.Text = "Credit Net (£)";
-            //
+            // 
             // _txtCreditRef
-            //
+            // 
             this._txtCreditRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditRef.Location = new System.Drawing.Point(871, 668);
             this._txtCreditRef.Name = "_txtCreditRef";
             this._txtCreditRef.Size = new System.Drawing.Size(70, 21);
             this._txtCreditRef.TabIndex = 103;
-            //
+            // 
             // _Label23
-            //
+            // 
             this._Label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label23.AutoSize = true;
             this._Label23.Location = new System.Drawing.Point(801, 673);
@@ -3966,9 +3966,9 @@ namespace FSM
             this._Label23.Size = new System.Drawing.Size(68, 13);
             this._Label23.TabIndex = 1;
             this._Label23.Text = "Credit Ref.";
-            //
+            // 
             // _btnCreditAdd
-            //
+            // 
             this._btnCreditAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreditAdd.Location = new System.Drawing.Point(1592, 668);
             this._btnCreditAdd.Name = "_btnCreditAdd";
@@ -3976,9 +3976,9 @@ namespace FSM
             this._btnCreditAdd.TabIndex = 123;
             this._btnCreditAdd.Text = "Add ";
             this._btnCreditAdd.Click += new System.EventHandler(this.btnCreditAdd_Click);
-            //
+            // 
             // _dgCredits
-            //
+            // 
             this._dgCredits.AllowUserToAddRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3987,8 +3987,8 @@ namespace FSM
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this._dgCredits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this._dgCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this._dgCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgCredits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this._dgCredits.BackgroundColor = System.Drawing.Color.White;
@@ -4022,20 +4022,20 @@ namespace FSM
             this._dgCredits.Size = new System.Drawing.Size(1645, 617);
             this._dgCredits.TabIndex = 0;
             this._dgCredits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCredits_CellClick);
-            //
+            // 
             // _dtpCreditDate
-            //
+            // 
             this._dtpCreditDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._dtpCreditDate.Location = new System.Drawing.Point(128, 642);
             this._dtpCreditDate.Name = "_dtpCreditDate";
             this._dtpCreditDate.Size = new System.Drawing.Size(142, 21);
             this._dtpCreditDate.TabIndex = 101;
             this._dtpCreditDate.Tag = "Order.SupplierInvoiceDate";
-            //
+            // 
             // _lblOrderStatus
-            //
-            this._lblOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._lblOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this._lblOrderStatus.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4044,9 +4044,9 @@ namespace FSM
             this._lblOrderStatus.Size = new System.Drawing.Size(1510, 353);
             this._lblOrderStatus.TabIndex = 0;
             this._lblOrderStatus.Click += new System.EventHandler(this.lblOrderStatus_Click);
-            //
+            // 
             // _GroupBox1
-            //
+            // 
             this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox1.Controls.Add(this._lblCredits);
             this._GroupBox1.Controls.Add(this._Label25);
@@ -4058,9 +4058,9 @@ namespace FSM
             this._GroupBox1.TabIndex = 76;
             this._GroupBox1.TabStop = false;
             this._GroupBox1.Text = "Supplier Invoice Totals";
-            //
+            // 
             // _lblCredits
-            //
+            // 
             this._lblCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblCredits.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblCredits.Location = new System.Drawing.Point(138, 37);
@@ -4069,9 +4069,9 @@ namespace FSM
             this._lblCredits.TabIndex = 80;
             this._lblCredits.Text = "£0.00";
             this._lblCredits.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            //
+            // 
             // _Label25
-            //
+            // 
             this._Label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Label25.AutoSize = true;
             this._Label25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4081,9 +4081,9 @@ namespace FSM
             this._Label25.TabIndex = 81;
             this._Label25.Text = "Supplier Credits : ";
             this._Label25.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            //
+            // 
             // _lblSupplierGoods
-            //
+            // 
             this._lblSupplierGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblSupplierGoods.AutoSize = true;
             this._lblSupplierGoods.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4093,9 +4093,9 @@ namespace FSM
             this._lblSupplierGoods.TabIndex = 73;
             this._lblSupplierGoods.Text = "Supplier Invoices : ";
             this._lblSupplierGoods.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            //
+            // 
             // _lblGoodsTotal
-            //
+            // 
             this._lblGoodsTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblGoodsTotal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblGoodsTotal.Location = new System.Drawing.Point(138, 17);
@@ -4104,17 +4104,17 @@ namespace FSM
             this._lblGoodsTotal.TabIndex = 70;
             this._lblGoodsTotal.Text = "£0.00";
             this._lblGoodsTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            //
+            // 
             // _Label17
-            //
+            // 
             this._Label17.Location = new System.Drawing.Point(6, 97);
             this._Label17.Name = "_Label17";
             this._Label17.Size = new System.Drawing.Size(79, 20);
             this._Label17.TabIndex = 68;
             this._Label17.Text = "Cost Centre";
-            //
+            // 
             // UCOrder
-            //
+            // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this._grpOrder);
             this.Name = "UCOrder";
@@ -4156,6 +4156,7 @@ namespace FSM
             this._GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         public void LoadForm(object sender, EventArgs e)
@@ -4498,7 +4499,7 @@ namespace FSM
             set
             {
                 _nominalsDataView = value;
-                _nominalsDataView.Table.TableName = FSM.Entity.Sys.Enums.TableNames.tblPart.ToString();
+                _nominalsDataView.Table.TableName = Enums.TableNames.tblPart.ToString();
                 _nominalsDataView.AllowNew = false;
                 _nominalsDataView.AllowEdit = false;
                 _nominalsDataView.AllowDelete = false;
@@ -4568,8 +4569,10 @@ namespace FSM
                 {
                     OrderNumberUsed = false;
                     _OrderNumber.OrderNumber = OrderNumber.Number.ToString();
+
                     while (OrderNumber.OrderNumber.Length < 5)
                         _OrderNumber.OrderNumber = "0" + OrderNumber.OrderNumber;
+
                     string typePrefix = "";
                     var switchExpr = (Enums.OrderType)Conversions.ToInteger(Combo.get_GetSelectedItemValue(cboOrderTypeID));
                     switch (switchExpr)
@@ -4601,6 +4604,7 @@ namespace FSM
 
                     string userPrefix = "";
                     var username = App.loggedInUser.Fullname.Split(' ');
+
                     foreach (string s in username)
                         userPrefix += s.Substring(0, 1);
                     _OrderNumber.OrderNumber = userPrefix + typePrefix + OrderNumber.OrderNumber;
@@ -4654,6 +4658,7 @@ namespace FSM
             CreditInvoiceDate.HeaderText = "Credit Created";
             CreditInvoiceDate.DataPropertyName = "DateCreated";
             CreditInvoiceDate.SortMode = DataGridViewColumnSortMode.Automatic;
+
             dgCredits.Columns.Add(CreditInvoiceDate);
             var CreditInvoiceID = new DataGridViewTextBoxColumn();
             CreditInvoiceID.FillWeight = 75;
@@ -4661,6 +4666,7 @@ namespace FSM
             CreditInvoiceID.Name = "PartNumber";
             CreditInvoiceID.DataPropertyName = "PartNumber";
             CreditInvoiceID.SortMode = DataGridViewColumnSortMode.NotSortable;
+
             dgCredits.Columns.Add(CreditInvoiceID);
             var CreditInvoiceAmount = new DataGridViewTextBoxColumn();
             CreditInvoiceAmount.FillWeight = 150;
@@ -4669,6 +4675,7 @@ namespace FSM
             CreditInvoiceAmount.DataPropertyName = "PartName";
             CreditInvoiceAmount.SortMode = DataGridViewColumnSortMode.NotSortable;
             // CreditInvoiceAmount.DefaultCellStyle.Format = "c"
+
             dgCredits.Columns.Add(CreditInvoiceAmount);
             var CreditGoodsAmount = new DataGridViewTextBoxColumn();
             CreditGoodsAmount.FillWeight = 30;
@@ -4677,6 +4684,7 @@ namespace FSM
             CreditGoodsAmount.DataPropertyName = "Qty";
             CreditGoodsAmount.SortMode = DataGridViewColumnSortMode.NotSortable;
             // CreditGoodsAmount.DefaultCellStyle.Format = "c"
+
             dgCredits.Columns.Add(CreditGoodsAmount);
             var CreditVATAmount = new DataGridViewTextBoxColumn();
             CreditVATAmount.FillWeight = 50;
@@ -4684,12 +4692,14 @@ namespace FSM
             CreditVATAmount.DataPropertyName = "Total";
             CreditVATAmount.SortMode = DataGridViewColumnSortMode.NotSortable;
             CreditVATAmount.DefaultCellStyle.Format = "c";
+
             dgCredits.Columns.Add(CreditVATAmount);
             var CreditInvoiceReference = new DataGridViewTextBoxColumn();
             CreditInvoiceReference.FillWeight = 75;
             CreditInvoiceReference.HeaderText = "Return Ref.";
             CreditInvoiceReference.DataPropertyName = "ReturnRef";
             CreditInvoiceReference.SortMode = DataGridViewColumnSortMode.NotSortable;
+
             dgCredits.Columns.Add(CreditInvoiceReference);
             var CreditInvoiceReference2 = new DataGridViewTextBoxColumn();
             CreditInvoiceReference2.FillWeight = 75;
@@ -4698,18 +4708,21 @@ namespace FSM
             CreditInvoiceReference2.Name = "DatePartReturned";
             CreditInvoiceReference2.DataPropertyName = "DatePartReturned";
             CreditInvoiceReference2.SortMode = DataGridViewColumnSortMode.NotSortable;
+
             dgCredits.Columns.Add(CreditInvoiceReference2);
             var CreditInvoiceReference3 = new DataGridViewTextBoxColumn();
             CreditInvoiceReference3.FillWeight = 150;
             CreditInvoiceReference3.HeaderText = "Engineer Returning";
             CreditInvoiceReference3.DataPropertyName = "Engineer";
             CreditInvoiceReference3.SortMode = DataGridViewColumnSortMode.NotSortable;
+
             dgCredits.Columns.Add(CreditInvoiceReference3);
             var CreditInvoiceReference4 = new DataGridViewTextBoxColumn();
             CreditInvoiceReference4.FillWeight = 75;
             CreditInvoiceReference4.HeaderText = "Supplier Credit Ref";
             CreditInvoiceReference4.DataPropertyName = "SupplierCreditRef";
             CreditInvoiceReference4.SortMode = DataGridViewColumnSortMode.NotSortable;
+
             dgCredits.Columns.Add(CreditInvoiceReference4);
             var CreditInvoiceReference5 = new DataGridViewTextBoxColumn();
             CreditInvoiceReference5.FillWeight = 75;
@@ -4718,6 +4731,7 @@ namespace FSM
             CreditInvoiceReference5.DataPropertyName = "DateReceived";
             CreditInvoiceReference5.Name = "DateReceived";
             CreditInvoiceReference5.SortMode = DataGridViewColumnSortMode.NotSortable;
+
             dgCredits.Columns.Add(CreditInvoiceReference5);
             var CreditAmount = new DataGridViewTextBoxColumn();
             CreditAmount.FillWeight = 30;
@@ -4726,6 +4740,7 @@ namespace FSM
             CreditAmount.DataPropertyName = "AmountReceived";
             CreditAmount.SortMode = DataGridViewColumnSortMode.NotSortable;
             CreditAmount.DefaultCellStyle.Format = "c";
+
             dgCredits.Columns.Add(CreditAmount);
             var CreditPartsID = new DataGridViewTextBoxColumn();
             CreditPartsID.FillWeight = 1;
@@ -4735,6 +4750,7 @@ namespace FSM
             CreditPartsID.Name = "PartCreditsID";
             CreditPartsID.SortMode = DataGridViewColumnSortMode.NotSortable;
             // CreditGoodsAmount.DefaultCellStyle.Format = "c"
+
             dgCredits.Columns.Add(CreditPartsID);
             var CreditPartsIDs = new DataGridViewTextBoxColumn();
             CreditPartsIDs.FillWeight = 1;
@@ -4744,6 +4760,7 @@ namespace FSM
             CreditPartsIDs.Name = "PartID";
             CreditPartsIDs.SortMode = DataGridViewColumnSortMode.NotSortable;
             // CreditGoodsAmount.DefaultCellStyle.Format = "c"
+
             dgCredits.Columns.Add(CreditPartsIDs);
             var CreditPartsIDss = new DataGridViewTextBoxColumn();
             CreditPartsIDss.FillWeight = 1;
@@ -4753,6 +4770,7 @@ namespace FSM
             CreditPartsIDss.Name = "OrderPartID";
             CreditPartsIDss.SortMode = DataGridViewColumnSortMode.NotSortable;
             // CreditGoodsAmount.DefaultCellStyle.Format = "c"
+
             dgCredits.Columns.Add(CreditPartsIDss);
             var PartsToBeCreditedID = new DataGridViewTextBoxColumn();
             PartsToBeCreditedID.FillWeight = 1;
@@ -4762,6 +4780,7 @@ namespace FSM
             PartsToBeCreditedID.Name = "PartsToBeCreditedID";
             PartsToBeCreditedID.SortMode = DataGridViewColumnSortMode.NotSortable;
             // CreditGoodsAmount.DefaultCellStyle.Format = "c"
+
             dgCredits.Columns.Add(PartsToBeCreditedID);
             var CreditPartsIDsss = new DataGridViewTextBoxColumn();
             CreditPartsIDsss.FillWeight = 1;
@@ -4840,6 +4859,7 @@ namespace FSM
             Helper.SetUpDataGrid(dgItemsIncluded);
             var tStyle = dgItemsIncluded.TableStyles[0];
             tStyle.GridColumnStyles.Clear();
+
             var SupplierName = new DataGridLabelColumn();
             SupplierName.Format = "";
             SupplierName.FormatInfo = null;
@@ -4849,6 +4869,7 @@ namespace FSM
             SupplierName.Width = 100;
             SupplierName.NullText = "N/A";
             tStyle.GridColumnStyles.Add(SupplierName);
+
             var WarehouseName = new DataGridLabelColumn();
             WarehouseName.Format = "";
             WarehouseName.FormatInfo = null;
@@ -4858,6 +4879,7 @@ namespace FSM
             WarehouseName.Width = 100;
             WarehouseName.NullText = "N/A";
             tStyle.GridColumnStyles.Add(WarehouseName);
+
             var VanReg = new DataGridLabelColumn();
             VanReg.Format = "";
             VanReg.FormatInfo = null;
@@ -4867,6 +4889,7 @@ namespace FSM
             VanReg.Width = 100;
             VanReg.NullText = "N/A";
             tStyle.GridColumnStyles.Add(VanReg);
+
             var ProductName = new DataGridLabelColumn();
             ProductName.Format = "";
             ProductName.FormatInfo = null;
@@ -4876,6 +4899,7 @@ namespace FSM
             ProductName.Width = 150;
             ProductName.NullText = "";
             tStyle.GridColumnStyles.Add(ProductName);
+
             var ProductCode = new DataGridLabelColumn();
             ProductCode.Format = "";
             ProductCode.FormatInfo = null;
@@ -4885,6 +4909,7 @@ namespace FSM
             ProductCode.Width = 100;
             ProductCode.NullText = "";
             tStyle.GridColumnStyles.Add(ProductCode);
+
             var SuppProductCode = new DataGridLabelColumn();
             SuppProductCode.Format = "";
             SuppProductCode.FormatInfo = null;
@@ -4894,6 +4919,7 @@ namespace FSM
             SuppProductCode.Width = 100;
             SuppProductCode.NullText = "";
             tStyle.GridColumnStyles.Add(SuppProductCode);
+
             var BuyPrice = new DataGridLabelColumn();
             BuyPrice.Format = "C";
             BuyPrice.FormatInfo = null;
@@ -4903,6 +4929,7 @@ namespace FSM
             BuyPrice.Width = 85;
             BuyPrice.NullText = "";
             tStyle.GridColumnStyles.Add(BuyPrice);
+
             var Price = new DataGridLabelColumn();
             Price.Format = "C";
             Price.FormatInfo = null;
@@ -4912,6 +4939,7 @@ namespace FSM
             Price.Width = 85;
             Price.NullText = "";
             tStyle.GridColumnStyles.Add(Price);
+
             var QuantityInPack = new DataGridLabelColumn();
             QuantityInPack.Format = "";
             QuantityInPack.FormatInfo = null;
@@ -4921,6 +4949,7 @@ namespace FSM
             QuantityInPack.Width = 100;
             QuantityInPack.NullText = "";
             tStyle.GridColumnStyles.Add(QuantityInPack);
+
             var QuantityOnOrder = new DataGridLabelColumn();
             QuantityOnOrder.Format = "";
             QuantityOnOrder.FormatInfo = null;
@@ -4930,6 +4959,7 @@ namespace FSM
             QuantityOnOrder.Width = 100;
             QuantityOnOrder.NullText = "";
             tStyle.GridColumnStyles.Add(QuantityOnOrder);
+
             var QuantityReceived = new DataGridLabelColumn();
             QuantityReceived.Format = "";
             QuantityReceived.FormatInfo = null;
@@ -4939,6 +4969,7 @@ namespace FSM
             QuantityReceived.Width = 100;
             QuantityReceived.NullText = "";
             tStyle.GridColumnStyles.Add(QuantityReceived);
+
             if (CurrentOrder is object)
             {
                 if (CurrentOrder.Exists)
@@ -4952,6 +4983,7 @@ namespace FSM
                     WithVan.Width = 110;
                     WithVan.NullText = "";
                     tStyle.GridColumnStyles.Add(WithVan);
+
                     var WithEngineer = new DataGridLabelColumn();
                     WithEngineer.Format = "dd/MM/yyyy HH:mm:ss";
                     WithEngineer.FormatInfo = null;
@@ -4964,7 +4996,7 @@ namespace FSM
                 }
             }
 
-            var NominalName = new FSM.DataGridLabelColumn();
+            var NominalName = new DataGridLabelColumn();
             NominalName.Format = "";
             NominalName.FormatInfo = null;
             NominalName.HeaderText = "Nominal Code";
@@ -4974,7 +5006,7 @@ namespace FSM
             NominalName.NullText = "";
             tStyle.GridColumnStyles.Add(NominalName);
 
-            var NominalFriendly = new FSM.DataGridLabelColumn();
+            var NominalFriendly = new DataGridLabelColumn();
             NominalFriendly.Format = "";
             NominalFriendly.FormatInfo = null;
             NominalFriendly.HeaderText = "Nominal Friendly Name";
@@ -4994,6 +5026,7 @@ namespace FSM
             Helper.SetUpDataGrid(dgParts);
             var tStyle = dgParts.TableStyles[0];
             tStyle.GridColumnStyles.Clear();
+
             var Preferred = new ColourColumn();
             Preferred.Format = "";
             Preferred.FormatInfo = null;
@@ -5003,6 +5036,7 @@ namespace FSM
             Preferred.Width = 25;
             Preferred.NullText = "";
             tStyle.GridColumnStyles.Add(Preferred);
+
             var SupplierName = new DataGridLabelColumn();
             SupplierName.Format = "";
             SupplierName.FormatInfo = null;
@@ -5012,6 +5046,7 @@ namespace FSM
             SupplierName.Width = 100;
             SupplierName.NullText = "No Supplier Assigned";
             tStyle.GridColumnStyles.Add(SupplierName);
+
             var EngineerName = new DataGridLabelColumn();
             EngineerName.Format = "";
             EngineerName.FormatInfo = null;
@@ -5021,6 +5056,7 @@ namespace FSM
             EngineerName.Width = 100;
             EngineerName.NullText = "";
             tStyle.GridColumnStyles.Add(EngineerName);
+
             var VanRegistration = new DataGridLabelColumn();
             VanRegistration.Format = "";
             VanRegistration.FormatInfo = null;
@@ -5030,6 +5066,7 @@ namespace FSM
             VanRegistration.Width = 130;
             VanRegistration.NullText = "";
             tStyle.GridColumnStyles.Add(VanRegistration);
+
             var warehouseName = new DataGridLabelColumn();
             warehouseName.Format = "";
             warehouseName.FormatInfo = null;
@@ -5039,6 +5076,7 @@ namespace FSM
             warehouseName.Width = 120;
             warehouseName.NullText = "";
             tStyle.GridColumnStyles.Add(warehouseName);
+
             var address1 = new DataGridLabelColumn();
             address1.Format = "";
             address1.FormatInfo = null;
@@ -5048,6 +5086,7 @@ namespace FSM
             address1.Width = 120;
             address1.NullText = "";
             tStyle.GridColumnStyles.Add(address1);
+
             var postcode = new DataGridLabelColumn();
             postcode.Format = "";
             postcode.FormatInfo = null;
@@ -5057,6 +5096,7 @@ namespace FSM
             postcode.Width = 120;
             postcode.NullText = "";
             tStyle.GridColumnStyles.Add(postcode);
+
             var PartName = new DataGridLabelColumn();
             PartName.Format = "";
             PartName.FormatInfo = null;
@@ -5066,6 +5106,7 @@ namespace FSM
             PartName.Width = 250;
             PartName.NullText = "";
             tStyle.GridColumnStyles.Add(PartName);
+
             var Price = new DataGridLabelColumn();
             Price.Format = "C";
             Price.FormatInfo = null;
@@ -5075,6 +5116,7 @@ namespace FSM
             Price.Width = 85;
             Price.NullText = "£0.00";
             tStyle.GridColumnStyles.Add(Price);
+
             var PartNumber = new DataGridLabelColumn();
             PartNumber.Format = "";
             PartNumber.FormatInfo = null;
@@ -5084,6 +5126,7 @@ namespace FSM
             PartNumber.Width = 100;
             PartNumber.NullText = "";
             tStyle.GridColumnStyles.Add(PartNumber);
+
             var PartCode = new DataGridLabelColumn();
             PartCode.Format = "";
             PartCode.FormatInfo = null;
@@ -5093,6 +5136,7 @@ namespace FSM
             PartCode.Width = 130;
             PartCode.NullText = "";
             tStyle.GridColumnStyles.Add(PartCode);
+
             var QuantityInPack = new DataGridLabelColumn();
             QuantityInPack.Format = "";
             QuantityInPack.FormatInfo = null;
@@ -5102,6 +5146,7 @@ namespace FSM
             QuantityInPack.Width = 120;
             QuantityInPack.NullText = "";
             tStyle.GridColumnStyles.Add(QuantityInPack);
+
             var PartReference = new DataGridLabelColumn();
             PartReference.Format = "";
             PartReference.FormatInfo = null;
@@ -5111,6 +5156,7 @@ namespace FSM
             PartReference.Width = 100;
             PartReference.NullText = "";
             tStyle.GridColumnStyles.Add(PartReference);
+
             var SellPrice = new DataGridLabelColumn();
             SellPrice.Format = "C";
             SellPrice.FormatInfo = null;
@@ -5120,6 +5166,7 @@ namespace FSM
             SellPrice.Width = 85;
             SellPrice.NullText = "";
             tStyle.GridColumnStyles.Add(SellPrice);
+
             var Amount = new DataGridLabelColumn();
             Amount.Format = "";
             Amount.FormatInfo = null;
@@ -5130,7 +5177,7 @@ namespace FSM
             Amount.NullText = "";
             tStyle.GridColumnStyles.Add(Amount);
 
-            var NominalName = new FSM.DataGridLabelColumn();
+            var NominalName = new DataGridLabelColumn();
             NominalName.Format = "";
             NominalName.FormatInfo = null;
             NominalName.HeaderText = "Nominal Code";
@@ -5140,7 +5187,7 @@ namespace FSM
             NominalName.NullText = "";
             tStyle.GridColumnStyles.Add(NominalName);
 
-            var NominalFriendly = new FSM.DataGridLabelColumn();
+            var NominalFriendly = new DataGridLabelColumn();
             NominalFriendly.Format = "";
             NominalFriendly.FormatInfo = null;
             NominalFriendly.HeaderText = "Nominal Friendly Name";
@@ -5159,6 +5206,7 @@ namespace FSM
             Helper.SetUpDataGrid(dgProduct);
             var tStyle = dgProduct.TableStyles[0];
             tStyle.GridColumnStyles.Clear();
+
             var warehouseName = new DataGridLabelColumn();
             warehouseName.Format = "";
             warehouseName.FormatInfo = null;
@@ -5168,6 +5216,7 @@ namespace FSM
             warehouseName.Width = 120;
             warehouseName.NullText = "";
             tStyle.GridColumnStyles.Add(warehouseName);
+
             var address1 = new DataGridLabelColumn();
             address1.Format = "";
             address1.FormatInfo = null;
@@ -5177,6 +5226,7 @@ namespace FSM
             address1.Width = 120;
             address1.NullText = "";
             tStyle.GridColumnStyles.Add(address1);
+
             var postcode = new DataGridLabelColumn();
             postcode.Format = "";
             postcode.FormatInfo = null;
@@ -5186,6 +5236,7 @@ namespace FSM
             postcode.Width = 120;
             postcode.NullText = "";
             tStyle.GridColumnStyles.Add(postcode);
+
             var SupplierName = new DataGridLabelColumn();
             SupplierName.Format = "";
             SupplierName.FormatInfo = null;
@@ -5195,6 +5246,7 @@ namespace FSM
             SupplierName.Width = 100;
             SupplierName.NullText = "No Supplier Assigned";
             tStyle.GridColumnStyles.Add(SupplierName);
+
             var EngineerName = new DataGridLabelColumn();
             EngineerName.Format = "";
             EngineerName.FormatInfo = null;
@@ -5204,6 +5256,7 @@ namespace FSM
             EngineerName.Width = 100;
             EngineerName.NullText = "";
             tStyle.GridColumnStyles.Add(EngineerName);
+
             var VanRegistration = new DataGridLabelColumn();
             VanRegistration.Format = "";
             VanRegistration.FormatInfo = null;
@@ -5213,6 +5266,7 @@ namespace FSM
             VanRegistration.Width = 130;
             VanRegistration.NullText = "";
             tStyle.GridColumnStyles.Add(VanRegistration);
+
             var ProductName = new DataGridLabelColumn();
             ProductName.Format = "";
             ProductName.FormatInfo = null;
@@ -5222,6 +5276,7 @@ namespace FSM
             ProductName.Width = 100;
             ProductName.NullText = "";
             tStyle.GridColumnStyles.Add(ProductName);
+
             var ProductCode = new DataGridLabelColumn();
             ProductCode.Format = "";
             ProductCode.FormatInfo = null;
@@ -5231,6 +5286,7 @@ namespace FSM
             ProductCode.Width = 130;
             ProductCode.NullText = "";
             tStyle.GridColumnStyles.Add(ProductCode);
+
             var ProductNumber = new DataGridLabelColumn();
             ProductNumber.Format = "";
             ProductNumber.FormatInfo = null;
@@ -5240,6 +5296,7 @@ namespace FSM
             ProductNumber.Width = 100;
             ProductNumber.NullText = "";
             tStyle.GridColumnStyles.Add(ProductNumber);
+
             var ProductReference = new DataGridLabelColumn();
             ProductReference.Format = "";
             ProductReference.FormatInfo = null;
@@ -5249,6 +5306,7 @@ namespace FSM
             ProductReference.Width = 120;
             ProductReference.NullText = "";
             tStyle.GridColumnStyles.Add(ProductReference);
+
             var Price = new DataGridLabelColumn();
             Price.Format = "C";
             Price.FormatInfo = null;
@@ -5258,6 +5316,7 @@ namespace FSM
             Price.Width = 85;
             Price.NullText = "";
             tStyle.GridColumnStyles.Add(Price);
+
             var SellPrice = new DataGridLabelColumn();
             SellPrice.Format = "C";
             SellPrice.FormatInfo = null;
@@ -5267,6 +5326,7 @@ namespace FSM
             SellPrice.Width = 85;
             SellPrice.NullText = "";
             tStyle.GridColumnStyles.Add(SellPrice);
+
             var QuantityInPack = new DataGridLabelColumn();
             QuantityInPack.Format = "";
             QuantityInPack.FormatInfo = null;
@@ -5276,6 +5336,7 @@ namespace FSM
             QuantityInPack.Width = 120;
             QuantityInPack.NullText = "";
             tStyle.GridColumnStyles.Add(QuantityInPack);
+
             var Amount = new DataGridLabelColumn();
             Amount.Format = "";
             Amount.FormatInfo = null;
@@ -5283,6 +5344,7 @@ namespace FSM
             Amount.MappingName = "Amount";
             Amount.ReadOnly = true;
             Amount.Width = 85;
+
             Amount.NullText = "";
             tStyle.GridColumnStyles.Add(Amount);
             tStyle.ReadOnly = true;
@@ -5295,6 +5357,7 @@ namespace FSM
             Helper.SetUpDataGrid(dgPriceRequests);
             var tStyle = dgPriceRequests.TableStyles[0];
             tStyle.GridColumnStyles.Clear();
+
             var Type = new DataGridLabelColumn();
             Type.Format = "";
             Type.FormatInfo = null;
@@ -5304,6 +5367,7 @@ namespace FSM
             Type.Width = 75;
             Type.NullText = "";
             tStyle.GridColumnStyles.Add(Type);
+
             var SupplierName = new DataGridLabelColumn();
             SupplierName.Format = "";
             SupplierName.FormatInfo = null;
@@ -5313,6 +5377,7 @@ namespace FSM
             SupplierName.Width = 150;
             SupplierName.NullText = "";
             tStyle.GridColumnStyles.Add(SupplierName);
+
             var Postcode = new DataGridLabelColumn();
             Postcode.Format = "";
             Postcode.FormatInfo = null;
@@ -5322,6 +5387,7 @@ namespace FSM
             Postcode.Width = 150;
             Postcode.NullText = "";
             tStyle.GridColumnStyles.Add(Postcode);
+
             var TelephoneNum = new DataGridLabelColumn();
             TelephoneNum.Format = "";
             TelephoneNum.FormatInfo = null;
@@ -5331,6 +5397,7 @@ namespace FSM
             TelephoneNum.Width = 150;
             TelephoneNum.NullText = "";
             tStyle.GridColumnStyles.Add(TelephoneNum);
+
             var partName = new DataGridLabelColumn();
             partName.Format = "";
             partName.FormatInfo = null;
@@ -5340,6 +5407,7 @@ namespace FSM
             partName.Width = 150;
             partName.NullText = "";
             tStyle.GridColumnStyles.Add(partName);
+
             var ProductName = new DataGridLabelColumn();
             ProductName.Format = "";
             ProductName.FormatInfo = null;
@@ -5349,6 +5417,7 @@ namespace FSM
             ProductName.Width = 150;
             ProductName.NullText = "";
             tStyle.GridColumnStyles.Add(ProductName);
+
             var Amount = new DataGridLabelColumn();
             Amount.Format = "";
             Amount.FormatInfo = null;
@@ -5357,6 +5426,7 @@ namespace FSM
             Amount.ReadOnly = true;
             Amount.Width = 110;
             Amount.NullText = "";
+
             tStyle.GridColumnStyles.Add(Amount);
             tStyle.ReadOnly = true;
             tStyle.MappingName = Enums.TableNames.NOT_IN_DATABASE_PriceRequests.ToString();
@@ -5506,14 +5576,17 @@ namespace FSM
                                         {
                                             var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderProduct.OrderID);
                                             var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
+
                                             oProductTransaction.SetLocationID = oOrderLocation.LocationID;
                                             oProductTransaction.SetProductID = oProductSupplier.ProductID;
                                             oProductTransaction.SetOrderProductID = OrderProduct.OrderProductID;
                                             oProductTransaction.SetAmount = quantityInput * oProductSupplier.QuantityInPack;
                                             oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+
                                             oOrderAudit.SetDescription = "Product transaction to warehouse productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
+
                                             App.DB.ProductTransaction.Insert(oProductTransaction);
-                                            oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
                                             break;
                                         }
                                 }
@@ -5524,17 +5597,17 @@ namespace FSM
                         case "OrderPart":
                             {
                                 var OrderPart = new Entity.OrderParts.OrderPart();
-                                var oOrderAudit = new FSM.Entity.OrderAudit();
+                                var oOrderAudit = new Entity.OrderAudit();
 
                                 oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsChanged);
+                                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
 
                                 OrderPart = App.DB.OrderPart.OrderPart_Get(Conversions.ToInteger(itemRow["ID"]));
                                 OrderPart.SetQuantityReceived = OrderPart.QuantityReceived + quantityInput;
                                 oOrderAudit.SetDescription = Conversions.ToString("Recieved Part " + SelectedPartDataRow["PartName"] + " Quantity ") + OrderPart.QuantityReceived;
 
                                 App.DB.OrderPart.Update(OrderPart);
-                                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
                                 var switchExpr2 = CurrentOrder.OrderTypeID;
                                 switch (switchExpr2)
@@ -5544,15 +5617,17 @@ namespace FSM
                                             var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderPart.OrderID);
                                             var oPartSupplier = App.DB.PartSupplier.PartSupplier_Get(OrderPart.PartSupplierID);
                                             var oPartTransaction = new Entity.PartTransactions.PartTransaction();
+
                                             oPartTransaction.SetLocationID = oOrderLocation.LocationID;
                                             oPartTransaction.SetPartID = oPartSupplier.PartID;
                                             oPartTransaction.SetOrderPartID = OrderPart.OrderPartID;
                                             oPartTransaction.SetAmount = quantityInput * oPartSupplier.QuantityInPack;
                                             oPartTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+
                                             oOrderAudit.SetDescription = Conversions.ToString(Conversions.ToString("Part transaction to warehouse Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oPartTransaction.Amount + " Transaction type ") + oPartTransaction.TransactionTypeID;
 
                                             App.DB.PartTransaction.Insert(oPartTransaction);
-                                            oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
                                             break;
                                         }
@@ -5569,11 +5644,11 @@ namespace FSM
                                 oProductTransaction.SetAmount = oProductTransaction.Amount + quantityInput;
                                 App.DB.ProductTransaction.Update(oProductTransaction);
 
-                                var oOrderAudit = new FSM.Entity.OrderAudit();
+                                var oOrderAudit = new Entity.OrderAudit();
                                 oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsChanged);
+                                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
                                 oOrderAudit.SetDescription = "Recieved ProductID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount;
-                                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
                                 oProductTransaction.SetLocationID = OrderLocationProduct.LocationID;
                                 oProductTransaction.SetProductID = OrderLocationProduct.ProductID;
@@ -5583,7 +5658,7 @@ namespace FSM
                                 App.DB.ProductTransaction.Insert(oProductTransaction);
 
                                 oOrderAudit.SetDescription = "Product transaction productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
-                                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
                                 OrderLocationProduct.SetQuantityReceived = OrderLocationProduct.QuantityReceived + quantityInput;
                                 App.DB.OrderLocationProduct.Update(OrderLocationProduct);
@@ -5603,7 +5678,7 @@ namespace FSM
                                             App.DB.ProductTransaction.Insert(oProductTransaction);
 
                                             oOrderAudit.SetDescription = "Product transaction to warehouse productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
-                                            oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
                                             break;
                                         }
                                 }
@@ -5618,11 +5693,11 @@ namespace FSM
                                 oPartTransaction.SetAmount = oPartTransaction.Amount + quantityInput;
                                 App.DB.PartTransaction.Update(oPartTransaction);
 
-                                var oOrderAudit = new FSM.Entity.OrderAudit();
+                                var oOrderAudit = new Entity.OrderAudit();
                                 oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsChanged);
+                                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
                                 oOrderAudit.SetDescription = Conversions.ToString("Recieved Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oPartTransaction.Amount;
-                                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
                                 oPartTransaction.SetLocationID = OrderLocationPart.LocationID;
                                 oPartTransaction.SetPartID = OrderLocationPart.PartID;
@@ -5632,7 +5707,7 @@ namespace FSM
                                 App.DB.PartTransaction.Insert(oPartTransaction);
 
                                 oOrderAudit.SetDescription = Conversions.ToString(Conversions.ToString("Part transaction Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oPartTransaction.Amount + " Transaction type ") + oPartTransaction.TransactionTypeID;
-                                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
                                 OrderLocationPart.SetQuantityReceived = OrderLocationPart.QuantityReceived + quantityInput;
                                 App.DB.OrderLocationPart.Update(OrderLocationPart);
@@ -5651,7 +5726,7 @@ namespace FSM
                                             App.DB.PartTransaction.Insert(oPartTransaction);
 
                                             oOrderAudit.SetDescription = Conversions.ToString(Conversions.ToString("Part transaction Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oPartTransaction.Amount + " Transaction type ") + oPartTransaction.TransactionTypeID;
-                                            oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                                            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
                                             break;
                                         }
                                 }
@@ -5708,24 +5783,6 @@ namespace FSM
         {
             var oJob = App.DB.Job.Job_Get_For_An_EngineerVisit_ID(PassedID);
             App.ShowForm(typeof(FRMLogCallout), true, new object[] { oJob.JobID, oJob.PropertyID, this, null, PassedID });
-        }
-
-        private void UCOrder_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (tcOrderDetails.SelectedIndex == 1) // parts
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    PartSearch();
-                }
-            }
-            else if (tcOrderDetails.SelectedIndex == 2) // products
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    ProductSearch();
-                }
-            }
         }
 
         private void UCOrder_Load(object sender, EventArgs e)
@@ -6070,14 +6127,17 @@ namespace FSM
                                         {
                                             dv.RowFilter = "OrderStatusID='" + CurrentOrder.OrderStatusID + "'";
                                             string previousStatus = Conversions.ToString(dv[0]["Name"]);
+
                                             oOrderAudit.SetOrderID = CurrentOrder.OrderID;
                                             oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.StatusChanged);
                                             oOrderAudit.SetDescription = "Order Status changed from " + previousStatus + " to " + Enums.OrderStatus.Cancelled.ToString() + " Reason " + Reason;
+
                                             App.DB.OrderAudits.Insert(oOrderAudit);
                                         }
 
                                         App.DB.PartTransaction.DeleteForOrder(CurrentOrder.OrderID);
                                         App.DB.ProductTransaction.DeleteForOrder(CurrentOrder.OrderID);
+
                                         CurrentOrder.SetReasonForReject = Reason;
                                         CurrentOrder.SetOrderStatusID = Conversions.ToInteger(Enums.OrderStatus.Cancelled);
                                     }
@@ -6194,21 +6254,26 @@ namespace FSM
                 if (supplierID != 0)
                 {
                     Cursor = Cursors.WaitCursor;
-                    var oPartPriceRequest = new FSM.Entity.PartSupplierPriceRequests.PartSupplierPriceRequest();
+                    var oPartPriceRequest = new Entity.PartSupplierPriceRequests.PartSupplierPriceRequest();
+
                     oPartPriceRequest.IgnoreExceptionsOnSetMethods = true;
                     oPartPriceRequest.SetPartID = SelectedPartDataRow["PartID"];
                     oPartPriceRequest.SetQuantityInPack = txtPartQuantity.Text.Trim();
                     oPartPriceRequest.SetOrderID = CurrentOrder.OrderID;
                     oPartPriceRequest.SetSupplierID = supplierID;
                     oPartPriceRequest.SetComplete = 0;
+
                     var val = new Entity.PartSupplierPriceRequests.PartSupplierPriceRequestValidator();
                     val.Validate(oPartPriceRequest);
                     var oOrderAudit = new Entity.OrderAudit();
+
                     oOrderAudit.SetOrderID = CurrentOrder.OrderID;
                     oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
                     oOrderAudit.SetDescription = Conversions.ToString(Conversions.ToString("Part requestion for Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oPartPriceRequest.QuantityInPack + " From supplier ") + oPartPriceRequest.SupplierID;
+
                     App.DB.PartPriceRequest.InsertForOrder(oPartPriceRequest);
                     App.DB.OrderAudits.Insert(oOrderAudit);
+
                     RefreshDataGrids();
                     PartSearch();
                     ProductSearch();
@@ -6239,22 +6304,25 @@ namespace FSM
                 {
                     Cursor = Cursors.WaitCursor;
                     var oProductPriceRequest = new Entity.ProductSupplierPriceRequests.ProductSupplierPriceRequest();
+
                     oProductPriceRequest.IgnoreExceptionsOnSetMethods = true;
                     oProductPriceRequest.SetProductID = SelectedProductDataRow["ProductID"];
                     oProductPriceRequest.SetQuantityInPack = txtProductQuantity.Text.Trim();
                     oProductPriceRequest.SetOrderID = CurrentOrder.OrderID;
                     oProductPriceRequest.SetSupplierID = supplierID;
                     oProductPriceRequest.SetComplete = 0;
+
                     var val = new Entity.ProductSupplierPriceRequests.ProductSupplierPriceRequestValidator();
                     val.Validate(oProductPriceRequest);
 
-                    var oOrderAudit = new FSM.Entity.OrderAudit();
+                    var oOrderAudit = new Entity.OrderAudit();
                     oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                    oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsChanged);
+                    oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
                     oOrderAudit.SetDescription = Conversions.ToString(Conversions.ToString("Part requestion for Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oProductPriceRequest.QuantityInPack + " From supplier ") + oProductPriceRequest.SupplierID;
 
                     App.DB.ProductPriceRequest.InsertForOrder(oProductPriceRequest);
-                    FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                    App.DB.OrderAudits.Insert(oOrderAudit);
+
                     PartSearch();
                     ProductSearch();
                     RefreshDataGrids();
@@ -6303,6 +6371,7 @@ namespace FSM
                 oPartSupplier.SetPartID = SelectedPriceRequestDataRow["PartProductID"];
                 oPartSupplier.SetSupplierID = SelectedPriceRequestDataRow["SupplierID"];
                 oPartSupplier.SetQuantityInPack = SelectedPriceRequestDataRow["QuantityInPack"];
+
                 App.ShowForm(typeof(FRMAddtoOrder), true, new object[] { CurrentOrder, oPartSupplier, null, SelectedPriceRequestDataRow["ID"] });
             }
             else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedPriceRequestDataRow["Type"], "Product", false)))
@@ -6311,6 +6380,7 @@ namespace FSM
                 oProductSupplier.SetProductID = SelectedPriceRequestDataRow["PartProductID"];
                 oProductSupplier.SetSupplierID = SelectedPriceRequestDataRow["SupplierID"];
                 oProductSupplier.SetQuantityInPack = SelectedPriceRequestDataRow["QuantityInPack"];
+
                 App.ShowForm(typeof(FRMAddtoOrder), true, new object[] { CurrentOrder, null, oProductSupplier, SelectedPriceRequestDataRow["ID"] });
             }
 
@@ -6335,9 +6405,10 @@ namespace FSM
             {
                 btnUpdateSupplierInvoice.Visible = true;
                 btnDeleteSupplierInvoice.Visible = true;
+
                 int SupplierInvoiceID = Conversions.ToInteger(dgvReceivedInvoices["SupplierInvoiceID", dgvReceivedInvoices.CurrentRow.Index].Value);
-                var oSupplierInvoice = new FSM.Entity.Orders.SupplierInvoice();
-                oSupplierInvoice = FSM.App.DB.SupplierInvoices.Order_GetSupplierInvoice(SupplierInvoiceID);
+                var oSupplierInvoice = new Entity.Orders.SupplierInvoice();
+                oSupplierInvoice = App.DB.SupplierInvoices.Order_GetSupplierInvoice(SupplierInvoiceID);
                 if (oSupplierInvoice.InvoiceDate == default)
                 {
                     dtpSupplierInvoiceDateNew.Value = DateAndTime.Now;
@@ -6354,10 +6425,11 @@ namespace FSM
                 cboReadySageNew.Checked = oSupplierInvoice.ReadyToSendToSage;
                 txtVATAmount.Text = Strings.Format(oSupplierInvoice.VATAmount, "C");
                 txtGoodsAmount.Text = Strings.Format(oSupplierInvoice.InvoiceAmount, "C");
+
                 if (!Information.IsDBNull(oSupplierInvoice.TaxCodeID))
                 {
                     var argcombo = cboInvoiceTaxCodeNew;
-                    FSM.Combo.SetSelectedComboItem_By_Value(ref argcombo, oSupplierInvoice.TaxCodeID.ToString());
+                    Combo.SetSelectedComboItem_By_Value(ref argcombo, oSupplierInvoice.TaxCodeID.ToString());
                     cboInvoiceTaxCodeNew = argcombo;
                 }
 
@@ -6372,6 +6444,7 @@ namespace FSM
 
                 btnAddSupplierInvoice.Text = "New";
                 CheckSendToAccounts();
+
                 if (oSupplierInvoice.SentToSage == true)
                 {
                     dtpSupplierInvoiceDateNew.Enabled = false;
@@ -6412,8 +6485,9 @@ namespace FSM
             {
                 int CreditID = Conversions.ToInteger(dgCredits["PartCreditsID", dgCredits.CurrentRow.Index].Value);
                 var dt = App.DB.PartsToBeCredited.PartsToBeCredited_Get_Parts_For_CreditID(CreditID).Table;
-                var oPartsToBeCredted = new FSM.Entity.PartsToBeCrediteds.PartsToBeCredited();
-                oPartsToBeCredted = FSM.App.DB.PartsToBeCredited.PartsToBeCredited_Get_Parts_For_CreditIDEntity(CreditID);
+                var oPartsToBeCredted = new Entity.PartsToBeCrediteds.PartsToBeCredited();
+
+                oPartsToBeCredted = App.DB.PartsToBeCredited.PartsToBeCredited_Get_Parts_For_CreditIDEntity(CreditID);
                 if (oPartsToBeCredted.DateReceived == default)
                 {
                     dtpCreditDate.Value = DateAndTime.Now;
@@ -6429,7 +6503,7 @@ namespace FSM
                 if (!Information.IsDBNull(oPartsToBeCredted.TaxCodeID))
                 {
                     var argcombo = cboCreditTax;
-                    FSM.Combo.SetSelectedComboItem_By_Value(ref argcombo, oPartsToBeCredted.TaxCodeID.ToString());
+                    Combo.SetSelectedComboItem_By_Value(ref argcombo, oPartsToBeCredted.TaxCodeID.ToString());
                     cboCreditTax = argcombo;
                 }
 
@@ -6483,8 +6557,10 @@ namespace FSM
                 txtGoodsAmount.Text = null;
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
+
                 var argcombo = cboInvoiceTaxCodeNew;
                 Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+
                 cboReadySageNew.Checked = false;
                 dtpSupplierInvoiceDateNew.Enabled = true;
                 txtSupplierInvoiceRefNew.ReadOnly = false;
@@ -6514,11 +6590,11 @@ namespace FSM
                 oSupplierInvoice.SetDateExported = null;
                 oSupplierInvoice.SetKeyedBy = App.loggedInUser.UserID;
 
-                var oOrderAudit = new FSM.Entity.OrderAudit();
+                var oOrderAudit = new Entity.OrderAudit();
                 oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.SupplierInvoiceAdded);
+                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.SupplierInvoiceAdded);
                 oOrderAudit.SetDescription = "Invoice Ref.  " + oSupplierInvoice.InvoiceReference + " Invoice Date " + oSupplierInvoice.InvoiceDate + " Goods amount " + oSupplierInvoice.GoodsAmount + " Tax code " + oSupplierInvoice.TaxCodeID + " Nominal " + oSupplierInvoice.NominalCode;
-                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
                 try
                 {
                     App.DB.SupplierInvoices.Insert(oSupplierInvoice);
@@ -6536,8 +6612,10 @@ namespace FSM
                 txtGoodsAmount.Text = null;
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
+
                 var argcombo1 = cboInvoiceTaxCodeNew;
                 Combo.SetSelectedComboItem_By_Value(ref argcombo1, null);
+
                 cboInvoiceTaxCodeNew = argcombo1;
             }
         }
@@ -6554,8 +6632,10 @@ namespace FSM
                 txtCreditGoods.Text = null;
                 txtCreditVAT.Text = null;
                 txtCreditTotal.Text = null;
+
                 var argcombo = cboCreditTax;
                 Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+
                 dtpCreditDate.Enabled = true;
                 txtCreditRef.ReadOnly = false;
                 txtCreditExRef.ReadOnly = false;
@@ -6591,9 +6671,9 @@ namespace FSM
                         oCredit.SetPartOrderID = r["ID"];  // orderpartid
                         dtc = App.DB.PartsToBeCredited.PartsToBeCredited_Get_OrderPartID(Conversions.ToInteger(r["ID"])).Table;
 
-                        var oOrderAudit = new FSM.Entity.OrderAudit();
+                        var oOrderAudit = new Entity.OrderAudit();
                         oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                        oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.CreditAdded);
+                        oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.CreditAdded);
                         oOrderAudit.SetDescription = "Part product ID " + oCredit.PartID + " Quantity " + oCredit.Qty + " Credit recieved " + oCredit.CreditReceived + " Supplier ID" + oCredit.SupplierID;
 
                         if (dtc.Rows.Count > 0 && !Information.IsDBNull(dtc.Rows[0]["CreditReceived"])) // Update  there are rows but we havent allocated the credit yet
@@ -6606,7 +6686,7 @@ namespace FSM
                             oCredit = App.DB.PartsToBeCredited.Insert(oCredit);
                         }
 
-                        oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                        oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
                     }
 
                     if (dtc.Rows.Count == 0 || !Information.IsDBNull(dtc.Rows[0]["CreditReceived"]))  // if there are no credits against this order for this part or there is but already has a credit allocated - add a new line
@@ -6644,8 +6724,12 @@ namespace FSM
                 oSupplierInvoice.SetOldSystemInvoice = 0;
                 oSupplierInvoice.SetDateExported = null;
                 oSupplierInvoice.SetKeyedBy = App.loggedInUser.UserID;
+
                 int SupplierInvoiceID = Conversions.ToInteger(dgvReceivedInvoices["SupplierInvoiceID", dgvReceivedInvoices.CurrentRow.Index].Value);
                 oSupplierInvoice.SetInvoiceID = SupplierInvoiceID;
+
+                SupplierInvoiceUpdateAuditCheck(oSupplierInvoice);
+
                 try
                 {
                     App.DB.SupplierInvoices.Update(oSupplierInvoice);
@@ -6662,23 +6746,26 @@ namespace FSM
                 txtGoodsAmount.Text = null;
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
+
                 var argcombo = cboInvoiceTaxCodeNew;
                 Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+
                 cboInvoiceTaxCodeNew = argcombo;
                 cboReadySageNew.Checked = false;
+
                 RefreshDataGrids();
                 PopulateOrderTotal();
             }
         }
 
-        private void SupplierInvoiceUpdateAuditCheck(FSM.Entity.Orders.SupplierInvoice SupplierInvoice)
+        private void SupplierInvoiceUpdateAuditCheck(Entity.Orders.SupplierInvoice SupplierInvoice)
         {
-            var PreviousSupplierInvoice = new FSM.Entity.Orders.SupplierInvoice();
-            PreviousSupplierInvoice = FSM.App.DB.SupplierInvoices.Order_GetSupplierInvoice(SupplierInvoice.InvoiceID);
-            var oOrderAudit = new FSM.Entity.OrderAudit();
+            var PreviousSupplierInvoice = new Entity.Orders.SupplierInvoice();
+            PreviousSupplierInvoice = App.DB.SupplierInvoices.Order_GetSupplierInvoice(SupplierInvoice.InvoiceID);
+            var oOrderAudit = new Entity.OrderAudit();
             var listOfDescriptions = new List<string>();
             oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-            oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.SupplierInvoiceUpdated);
+            oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.SupplierInvoiceUpdated);
             if (SupplierInvoice.InvoiceDate != PreviousSupplierInvoice.InvoiceDate)
             {
                 listOfDescriptions.Add("Invoice Date changed from " + PreviousSupplierInvoice.InvoiceDate + " To " + SupplierInvoice.InvoiceDate);
@@ -6711,8 +6798,8 @@ namespace FSM
 
             if (SupplierInvoice.TaxCodeID != PreviousSupplierInvoice.TaxCodeID)
             {
-                string NewTaxCode = FSM.App.DB.Picklists.Get_One_As_Object(SupplierInvoice.TaxCodeID).Name;
-                string previousTaxCode = FSM.App.DB.Picklists.Get_One_As_Object(PreviousSupplierInvoice.TaxCodeID).Name;
+                string NewTaxCode = App.DB.Picklists.Get_One_As_Object(SupplierInvoice.TaxCodeID).Name;
+                string previousTaxCode = App.DB.Picklists.Get_One_As_Object(PreviousSupplierInvoice.TaxCodeID).Name;
                 listOfDescriptions.Add("Tax Code changed from " + previousTaxCode + " To " + NewTaxCode);
             }
 
@@ -6729,22 +6816,24 @@ namespace FSM
             foreach (string description in listOfDescriptions)
             {
                 oOrderAudit.SetDescription = description;
-                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
             }
         }
 
         private void btnDeleteSupplierInvoice_Click(object sender, EventArgs e)
         {
-            if (FSM.App.loggedInUser.HasAccessToModule(FSM.Entity.Sys.Enums.SecuritySystemModules.EditPO) == true)
+            if (App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.EditPO) == true)
             {
                 int SupplierInvoiceID = Conversions.ToInteger(dgvReceivedInvoices["SupplierInvoiceID", dgvReceivedInvoices.CurrentRow.Index].Value);
-                FSM.App.DB.SupplierInvoices.Delete(SupplierInvoiceID);
+                App.DB.SupplierInvoices.Delete(SupplierInvoiceID);
                 string SupplierInvoiceName = Conversions.ToString(dgvReceivedInvoices["SupplierInvoiceReference", dgvReceivedInvoices.CurrentRow.Index].Value);
-                var oOrderAudit = new FSM.Entity.OrderAudit();
+
+                var oOrderAudit = new Entity.OrderAudit();
                 oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.SupplierInvoiceDeleted);
+                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.SupplierInvoiceDeleted);
                 oOrderAudit.SetDescription = "Invoice reference:  " + SupplierInvoiceName + " Deleted";
-                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
+
                 dtpSupplierInvoiceDateNew.Value = DateAndTime.Now;
                 txtSupplierInvoiceRefNew.Text = null;
                 txtExtraReferenceNew.Text = null;
@@ -6752,17 +6841,21 @@ namespace FSM
                 txtGoodsAmount.Text = null;
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
+
                 var argcombo = cboInvoiceTaxCodeNew;
-                FSM.Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+                Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+
                 cboInvoiceTaxCodeNew = argcombo;
                 cboReadySageNew.Checked = false;
+
                 RefreshDataGrids();
                 PopulateOrderTotal();
+
                 btnAddSupplierInvoice.Text = "Add";
             }
             else
             {
-                FSM.App.ShowMessage("Error! You don't have permission to delete this invoice.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                App.ShowMessage("Error! You don't have permission to delete this invoice.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -6786,22 +6879,22 @@ namespace FSM
                 OrderPartID = Conversions.ToInteger(dgCredits["OrderPartID", dgCredits.CurrentRow.Index].Value);
             }
 
-            var oOrderAudit = new FSM.Entity.OrderAudit();
+            var oOrderAudit = new Entity.OrderAudit();
             oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-            oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.CreditDeleted);
+            oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.CreditDeleted);
             oOrderAudit.SetDescription = "Part product ID " + OrderPartID + " deleted";
             if (CreditID > 0)
             {
-                FSM.App.DB.PartsToBeCredited.Delete(CreditID);
+                App.DB.PartsToBeCredited.Delete(CreditID);
             }
             else if (OrderPartID > 0)
             {
-                FSM.App.DB.ExecuteScalar("Delete From tblPartstobeCredited where OrderPartID = " + OrderPartID);
-                FSM.App.DB.ExecuteScalar("Delete From tblPArtDistributed Where OrderPartID = " + OrderPartID);
-                FSM.App.DB.ExecuteScalar("UPDATE tblEngineerVisitPartAllocated SET CreditRequested = 0,CreditQty = 0 WHERE ORDERPARTID = " + OrderPartID);
+                App.DB.ExecuteScalar("Delete From tblPartstobeCredited where OrderPartID = " + OrderPartID);
+                App.DB.ExecuteScalar("Delete From tblPArtDistributed Where OrderPartID = " + OrderPartID);
+                App.DB.ExecuteScalar("UPDATE tblEngineerVisitPartAllocated SET CreditRequested = 0,CreditQty = 0 WHERE ORDERPARTID = " + OrderPartID);
             }
 
-            FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+            App.DB.OrderAudits.Insert(oOrderAudit);
             dtpCreditDate.Value = DateAndTime.Now;
             txtCreditRef.Text = null;
             txtCreditExRef.Text = null;
@@ -6810,7 +6903,7 @@ namespace FSM
             txtCreditVAT.Text = null;
             txtCreditTotal.Text = null;
             var argcombo = cboCreditTax;
-            FSM.Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+            Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
             cboCreditTax = argcombo;
             RefreshDataGrids();
             PopulateOrderTotal();
@@ -6917,7 +7010,7 @@ namespace FSM
         private void AddPartToOrder()
         {
             var oOrderPart = new Entity.OrderParts.OrderPart();
-            var oOrderAuditPart = new FSM.Entity.OrderAudit();
+            var oOrderAuditPart = new Entity.OrderAudit();
             oOrderPart.IgnoreExceptionsOnSetMethods = true;
             oOrderPart.SetOrderID = CurrentOrder.OrderID;
             oOrderPart.SetPartSupplierID = SelectedPartDataRow["PartSupplierID"];
@@ -6993,9 +7086,9 @@ namespace FSM
             oOrderPart = App.DB.OrderPart.Insert(oOrderPart, !CurrentOrder.DoNotConsolidated);
 
             oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-            oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+            oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsAdded);
             oOrderAuditPart.SetDescription = Conversions.ToString(Conversions.ToString("Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oOrderPart.Quantity + " Price ") + oOrderPart.BuyPrice;
-            oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+            oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
             if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.Job)
             {
@@ -7032,11 +7125,11 @@ namespace FSM
                 val.Validate(oOrderPart);
                 oOrderPart = App.DB.OrderPart.Insert(oOrderPart, !CurrentOrder.DoNotConsolidated);
 
-                var oOrderAuditPart = new FSM.Entity.OrderAudit();
+                var oOrderAuditPart = new Entity.OrderAudit();
                 oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsAdded);
                 oOrderAuditPart.SetDescription = Conversions.ToString(Conversions.ToString("Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oOrderPart.Quantity + " Price ") + oOrderPart.BuyPrice;
-                oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
                 if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.Job)
                 {
@@ -7059,7 +7152,7 @@ namespace FSM
                 ssm2 = Enums.SecuritySystemModules.EditPO;
                 if (App.loggedInUser.HasAccessToModule(ssm) == true | App.loggedInUser.HasAccessToModule(ssm2) == true)
                 {
-                    var oOrderAuditPart = new FSM.Entity.OrderAudit();
+                    var oOrderAuditPart = new Entity.OrderAudit();
                     var switchExpr = Combo.get_GetSelectedItemValue(cboPartLocation);
                     switch (switchExpr)
                     {
@@ -7092,9 +7185,9 @@ namespace FSM
                                 oOrderLocationPart = App.DB.OrderLocationPart.Insert(oOrderLocationPart, true);
 
                                 oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsAdded);
                                 oOrderAuditPart.SetDescription = Conversions.ToString("Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oOrderLocationPart.Quantity;
-                                oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+                                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
                                 if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.Job)
                                 {
@@ -7111,9 +7204,9 @@ namespace FSM
                                 oPartTransaction = App.DB.PartTransaction.Insert(oPartTransaction);
 
                                 oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsAdded);
                                 oOrderAuditPart.SetDescription = Conversions.ToString("Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oOrderLocationPart.Quantity;
-                                oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+                                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
                                 LocationUsedID = oOrderLocationPart.LocationID;
                                 SupplierUsedID = 0;
@@ -7134,9 +7227,9 @@ namespace FSM
                                 oOrderLocationPart = App.DB.OrderLocationPart.Insert(oOrderLocationPart, true);
 
                                 oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsAdded);
                                 oOrderAuditPart.SetDescription = Conversions.ToString("Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oOrderLocationPart.Quantity;
-                                oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+                                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
                                 if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.Job)
                                 {
@@ -7153,9 +7246,9 @@ namespace FSM
                                 oPartTransaction = App.DB.PartTransaction.Insert(oPartTransaction);
 
                                 oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsAdded);
                                 oOrderAuditPart.SetDescription = Conversions.ToString("Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oOrderLocationPart.Quantity;
-                                oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+                                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
                                 LocationUsedID = oOrderLocationPart.LocationID;
                                 SupplierUsedID = 0;
@@ -7557,11 +7650,11 @@ namespace FSM
                                 var oOrderProduct = new Entity.OrderProducts.OrderProduct();
                                 oOrderProduct = App.DB.OrderProduct.OrderProduct_Get(Conversions.ToInteger(SelectedItemIncludedDataRow["ID"]));
 
-                                var oOrderAuditPart = new FSM.Entity.OrderAudit();
+                                var oOrderAuditPart = new Entity.OrderAudit();
                                 oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsChanged);
+                                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
                                 oOrderAuditPart.SetDescription = "ProductID " + oOrderProduct.OrderProductID + " Quantity " + oOrderProduct.Quantity;
-                                oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+                                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
                                 if (nudItemQty.Value == 0)
                                 {
@@ -7581,9 +7674,9 @@ namespace FSM
                                 var oOrderPart = new Entity.OrderParts.OrderPart();
                                 oOrderPart = App.DB.OrderPart.OrderPart_Get(Conversions.ToInteger(SelectedItemIncludedDataRow["ID"]));
 
-                                var oOrderAuditPart = new FSM.Entity.OrderAudit();
+                                var oOrderAuditPart = new Entity.OrderAudit();
                                 oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAuditPart.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsChanged);
+                                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
                                 oOrderAuditPart.SetDescription = Conversions.ToString("Part " + SelectedItemIncludedDataRow["Name"] + " Quantity ") + oOrderPart.Quantity;
 
                                 if (nudItemQty.Value == 0)
@@ -7602,7 +7695,7 @@ namespace FSM
                                     App.DB.EngineerVisitPartProductAllocated.EngineerVisitPartAllocated_RemoveFromOrder(Conversions.ToInteger(Enums.LocationType.Supplier), oOrderPart.OrderPartID);
                                 }
 
-                                oOrderAuditPart = FSM.App.DB.OrderAudits.Insert(oOrderAuditPart);
+                                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
                                 break;
                             }
@@ -8097,7 +8190,7 @@ namespace FSM
                         ucCustomerOrder.cboUsers = argcombo3;
 
                         ucCustomerOrder.txtSpecialInstructions.Text = CurrentOrder.SpecialInstructions;
-                        ucCustomerOrder.Engineer = FSM.App.DB.Engineer.Engineer_Get(CurrentOrder.AllocatedToEngineer);
+                        ucCustomerOrder.Engineer = App.DB.Engineer.Engineer_Get(CurrentOrder.AllocatedToEngineer);
 
                         btnRelatedJob.Enabled = false;
                         break;
@@ -8186,7 +8279,7 @@ namespace FSM
             PoTotal = 0;
             foreach (DataRow row in ItemsIncludedDataView.Table.Rows)
                 PoTotal += (decimal)row["BuyPrice"] * (int)row["QuantityOnOrder"];
-            foreach (DataRow row in FSM.App.DB.OrderCharge.OrderCharge_GetForOrder(CurrentOrder.OrderID).Table.Rows)
+            foreach (DataRow row in App.DB.OrderCharge.OrderCharge_GetForOrder(CurrentOrder.OrderID).Table.Rows)
                 PoTotal += (decimal)row["Amount"];
             lblOrderTotal.Text = Strings.Format(PoTotal, "C");
             decimal GoodsTotal = 0;
@@ -8236,17 +8329,17 @@ namespace FSM
 
         private void PopulateGlobalNominal()
         {
-            var nominals = new List<FSM.Orders.OrderNominal>();
+            var nominals = new List<Orders.OrderNominal>();
             foreach (DataRow row in ItemsIncludedDataView.Table.Rows)
             {
-                var tempNominalObject = new FSM.Orders.OrderNominal();
-                tempNominalObject.NominalCode = FSM.Entity.Sys.Helper.MakeStringValid(row["NominalName"]);
+                var tempNominalObject = new Orders.OrderNominal();
+                tempNominalObject.NominalCode = Helper.MakeStringValid(row["NominalName"]);
                 if (string.IsNullOrEmpty(tempNominalObject.NominalCode))
                 {
                     tempNominalObject.NominalCode = UnknownNominalCode;
                 }
 
-                tempNominalObject.FriendlyName = FSM.Entity.Sys.Helper.MakeStringValid(row["FriendlyName"]);
+                tempNominalObject.FriendlyName = Helper.MakeStringValid(row["FriendlyName"]);
                 if (string.IsNullOrEmpty(tempNominalObject.FriendlyName))
                 {
                     tempNominalObject.FriendlyName = UnknownNominalCode;
@@ -8257,7 +8350,7 @@ namespace FSM
                 if (nominals.Count > 0)
                 {
                     bool isInList = false;
-                    foreach (FSM.Orders.OrderNominal nominal in nominals)
+                    foreach (Orders.OrderNominal nominal in nominals)
                     {
                         if ((nominal.NominalCode ?? "") == (tempNominalObject.NominalCode ?? ""))
                         {
@@ -8280,7 +8373,7 @@ namespace FSM
 
             foreach (DataGridViewRow row in dgvReceivedInvoices.Rows)
             {
-                foreach (FSM.Orders.OrderNominal nominal in nominals)
+                foreach (Orders.OrderNominal nominal in nominals)
                 {
                     if ((row.Cells["NominalCode"].Value.ToString() ?? "") == (nominal.NominalCode ?? ""))
                     {
@@ -8296,7 +8389,7 @@ namespace FSM
                 if (Conversions.ToDouble(row.Cells["InvoicedTotal"].Value.ToString()) < Conversions.ToDouble(row.Cells["Total"].Value.ToString()))
                 {
                     row.Cells["InvoicedTotal"].Style.ForeColor = Color.Red;
-                } 
+                }
                 else if (Conversions.ToDouble(row.Cells["InvoicedTotal"].Value.ToString()) > Conversions.ToDouble(row.Cells["Total"].Value.ToString()))
                 {
                     row.Cells["InvoicedTotal"].Style.ForeColor = Color.DarkOrange;
@@ -8306,8 +8399,6 @@ namespace FSM
                     row.Cells["InvoicedTotal"].Style.ForeColor = Color.Green;
                 }
             }
-
-            
         }
 
         private void dgvGlobalNominals_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -8380,6 +8471,7 @@ namespace FSM
             cboProductLocation.Enabled = false;
             dgParts.Enabled = false;
             dgProduct.Enabled = false;
+
             var switchExpr = CurrentOrder.OrderStatusID;
             switch (switchExpr)
             {
@@ -8661,7 +8753,7 @@ namespace FSM
 
                     if (Helper.MakeIntegerValid(Combo.get_GetSelectedItemValue(cboOrderStatus)) == Conversions.ToInteger(Enums.OrderStatus.Confirmed))
                     {
-                        if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboOrderTypeID)) == (double)Enums.OrderType.Customer && FSM.App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.CreateCustomerPO) == false)
+                        if (Conversions.ToDouble(Combo.get_GetSelectedItemValue(cboOrderTypeID)) == (double)Enums.OrderType.Customer && App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.CreateCustomerPO) == false)
                         {
                             App.ShowMessage("You don't have permisson to place a customer order without approval!" + Constants.vbCrLf + Constants.vbCrLf + "Please note that this order is now currently awaiting approval!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             oOrder.SetOrderStatusID = Conversions.ToInteger(Enums.OrderStatus.AwaitingApproval);
@@ -8777,8 +8869,8 @@ namespace FSM
                                 oOrder.SetOrderStatusID = 1;
                                 // LoadForm(Me, System.EventArgs)
 
-                                FSM.App.DB.Order.Update(oOrder);
-                                FSM.My.MyProject.Forms.FRMOrder.ResetMe(oOrder.OrderID);
+                                App.DB.Order.Update(oOrder);
+                                My.MyProject.Forms.FRMOrder.ResetMe(oOrder.OrderID);
                                 cboPartLocation.Enabled = true;
                                 txtPartSearch.Enabled = true;
                                 btnPartSearch.Enabled = true;
@@ -8802,7 +8894,7 @@ namespace FSM
                                 App.DB.Order.Update(oOrder);
                             }
                         }
-                        FSM.App.DB.Order.Update(oOrder);
+                        App.DB.Order.Update(oOrder);
                     }
 
                     StatusAuditCheck(oOrder);
@@ -8836,9 +8928,9 @@ namespace FSM
             }
         }
 
-        private void StatusAuditCheck(FSM.Entity.Orders.Order oOrder)
+        private void StatusAuditCheck(Entity.Orders.Order oOrder)
         {
-            var oOrderAudit = new FSM.Entity.OrderAudit();
+            var oOrderAudit = new Entity.OrderAudit();
             var listOfDescriptions = new List<string>();
             oOrderAudit.SetOrderID = CurrentOrder.OrderID;
             oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.StatusChanged);
@@ -8851,15 +8943,15 @@ namespace FSM
 
             if (oOrder.AllocatedToUser != CurrentOrder.AllocatedToUser)
             {
-                string oldUserName = CurrentOrder.AllocatedToUser > 0 ? FSM.App.DB.User.Get(CurrentOrder.AllocatedToUser).Fullname : "No User set";
-                string newUserName = oOrder.AllocatedToUser > 0 ? FSM.App.DB.User.Get(oOrder.AllocatedToUser).Fullname : "No User set";
+                string oldUserName = CurrentOrder.AllocatedToUser > 0 ? App.DB.User.Get(CurrentOrder.AllocatedToUser).Fullname : "No User set";
+                string newUserName = oOrder.AllocatedToUser > 0 ? App.DB.User.Get(oOrder.AllocatedToUser).Fullname : "No User set";
                 listOfDescriptions.Add("Allocated to user changed from " + oldUserName + " To " + newUserName);
             }
 
             if (oOrder.ContactID != CurrentOrder.ContactID)
             {
-                string oldContactName = CurrentOrder.ContactID > 0 ? FSM.App.DB.Contact.Contact_Get(CurrentOrder.ContactID).FirstName : "No Contact set";
-                string newContactName = oOrder.ContactID > 0 ? FSM.App.DB.Contact.Contact_Get(oOrder.ContactID).FirstName : "No Contact set";
+                string oldContactName = CurrentOrder.ContactID > 0 ? App.DB.Contact.Contact_Get(CurrentOrder.ContactID).FirstName : "No Contact set";
+                string newContactName = oOrder.ContactID > 0 ? App.DB.Contact.Contact_Get(oOrder.ContactID).FirstName : "No Contact set";
                 listOfDescriptions.Add("Contact changed from " + oldContactName + " To " + newContactName);
             }
 
@@ -8885,7 +8977,7 @@ namespace FSM
 
             if (oOrder.OrderStatusID != CurrentOrder.OrderStatusID)
             {
-                var dv = FSM.App.DB.Order.OrderStatus_Get_All();
+                var dv = App.DB.Order.OrderStatus_Get_All();
                 if (dv.Count > 0)
                 {
                     dv.RowFilter = "OrderStatusID='" + CurrentOrder.OrderStatusID + "'";
@@ -8909,18 +9001,18 @@ namespace FSM
             foreach (string description in listOfDescriptions)
             {
                 oOrderAudit.SetDescription = description;
-                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
             }
         }
 
-        private void NewOrderAudit(FSM.Entity.Orders.Order oOrder)
+        private void NewOrderAudit(Entity.Orders.Order oOrder)
         {
-            var oOrderAudit = new FSM.Entity.OrderAudit();
+            var oOrderAudit = new Entity.OrderAudit();
             var listOfDescriptions = new List<string>();
             oOrderAudit.SetOrderID = oOrder.OrderID;
             oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.StatusChanged);
-            int orderType = Helper.MakeIntegerValid(FSM.Combo.get_GetSelectedItemValue(cboOrderTypeID));
-            listOfDescriptions.Add("New " + Enum.GetName(typeof(Enums.OrderType), orderType) + " Order set up by " + FSM.App.loggedInUser.Username);
+            int orderType = Helper.MakeIntegerValid(Combo.get_GetSelectedItemValue(cboOrderTypeID));
+            listOfDescriptions.Add("New " + Enum.GetName(typeof(Enums.OrderType), orderType) + " Order set up by " + App.loggedInUser.Username);
             listOfDescriptions.Add("Date placed set to " + oOrder.DatePlaced);
             listOfDescriptions.Add("Delivery deadline set to " + oOrder.DeliveryDeadline);
             if ((oOrder.DepartmentRef ?? "") != "-1")
@@ -8931,19 +9023,19 @@ namespace FSM
             {
                 if (oOrder.AllocatedToEngineer > 0)
                 {
-                    string engineerName = FSM.App.DB.Engineer.Engineer_Get(oOrder.AllocatedToEngineer).Name;
+                    string engineerName = App.DB.Engineer.Engineer_Get(oOrder.AllocatedToEngineer).Name;
                     listOfDescriptions.Add("Engineer set to " + engineerName);
                 }
 
                 if (oOrder.AllocatedToUser > 0)
                 {
-                    string usersName = FSM.App.DB.User.Get(oOrder.AllocatedToUser).Fullname;
+                    string usersName = App.DB.User.Get(oOrder.AllocatedToUser).Fullname;
                     listOfDescriptions.Add("User set to " + usersName);
                 }
 
                 if (oOrder.ContactID > 0)
                 {
-                    string contactName = FSM.App.DB.Contact.Contact_Get(oOrder.ContactID).FirstName;
+                    string contactName = App.DB.Contact.Contact_Get(oOrder.ContactID).FirstName;
                     listOfDescriptions.Add("Contact name set to " + contactName);
                 }
 
@@ -8956,7 +9048,7 @@ namespace FSM
             foreach (string description in listOfDescriptions)
             {
                 oOrderAudit.SetDescription = description;
-                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
             }
         }
 
@@ -9354,12 +9446,6 @@ namespace FSM
             Populate(CurrentOrder.OrderID);
         }
 
-        public int GetCostCentre(Job job, Site site)
-        {
-            var cc = App.DB.CostCentre.Get((int)job?.JobTypeID, (int)site?.CustomerID, Entity.CostCentres.Enums.GetBy.JobTypeIdAndCutomerId)?.FirstOrDefault();
-            return cc is object ? cc.CostCentreId : -1;
-        }
-
         private void Email()
         {
             if (CurrentOrder.Exists == true)
@@ -9624,11 +9710,11 @@ namespace FSM
                 email.Send();
                 txtOrderReference.ReadOnly = true;
                 txtOrderReference.Enabled = false;
-                var oOrderAudit = new FSM.Entity.OrderAudit();
+                var oOrderAudit = new Entity.OrderAudit();
                 oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.StatusChanged);
+                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.StatusChanged);
                 oOrderAudit.SetDescription = "Purchase Order Changed from " + CurrentOrder.OrderReference + " to " + txtOrderReference.Text;
-                oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
             }
         }
 
@@ -9654,20 +9740,20 @@ namespace FSM
                     App.DB.Order.Update(CurrentOrder);
                     Populate();
 
-                    var oOrderAudit = new FSM.Entity.OrderAudit();
+                    var oOrderAudit = new Entity.OrderAudit();
                     oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                    oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.StatusChanged);
+                    oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.StatusChanged);
                     oOrderAudit.SetDescription = "Order has been approved for the reason of " + Reason;
-                    oOrderAudit = FSM.App.DB.OrderAudits.Insert(oOrderAudit);
+                    oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
                 }
             }
         }
 
         private void CheckSendToAccounts()
         {
-            if (FSM.Entity.Sys.Helper.MakeDoubleValid(lblOrderBalance.Text) != FSM.Entity.Sys.Helper.MakeDoubleValid(txtGoodsAmount.Text))
+            if (Helper.MakeDoubleValid(lblOrderBalance.Text) != Helper.MakeDoubleValid(txtGoodsAmount.Text))
             {
-                if (FSM.App.loggedInUser.HasAccessToModule(FSM.Entity.Sys.Enums.SecuritySystemModules.POAuthorisation) == false)
+                if (App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.POAuthorisation) == false)
                 {
                     cboReadySageNew.Enabled = false;
                     cboReadySageNew.Checked = false;
@@ -9681,7 +9767,7 @@ namespace FSM
 
         private void btnViewAudit_Click(object sender, EventArgs e)
         {
-            FSM.App.ShowForm(typeof(FSM.FRMOrderAudit), true, new object[] { CurrentOrder.OrderID });
+            App.ShowForm(typeof(FRMOrderAudit), true, new object[] { CurrentOrder.OrderID });
         }
     }
 }
