@@ -35,30 +35,6 @@ namespace FSM
         // Required by the Windows Form Designer
         private System.ComponentModel.IContainer components;
 
-        //internal PictureBox picHeader
-        //{
-        //    [MethodImpl(MethodImplOptions.Synchronized)]
-        //    get
-        //    {
-        //        return _picHeader;
-        //    }
-
-        //    [MethodImpl(MethodImplOptions.Synchronized)]
-        //    set
-        //    {
-        //        if (_picHeader != null)
-        //        {
-        //            _picHeader.MouseHover -= picHeader_MouseHover;
-        //        }
-
-        //        _picHeader = value;
-        //        if (_picHeader != null)
-        //        {
-        //            _picHeader.MouseHover += picHeader_MouseHover;
-        //        }
-        //    }
-        //}
-
         private PictureBox _picHeaderCont;
 
         [DebuggerStepThrough()]
@@ -118,15 +94,15 @@ namespace FSM
             _FormButtons = new ArrayList();
             if (App.IsRFT)
             {
-                this.Icon = new Icon("Resources\\rft_logo.ico");
+                this.Icon = new Icon("Resources\\RFT_ico.ico");
             }
             else if (App.IsGasway)
             {
-                this.Icon = new Icon("Resources\\GW_Icon.ico");
+                this.Icon = new Icon("Resources\\Gasway_ico.ico");
             }
             else if (App.IsBlueflame)
             {
-                this.Icon = new Icon("Resources\\Blueflame_Icon.ico");
+                this.Icon = new Icon("Resources\\Blueflame_ico.ico");
             }
 
             LoopControls((Control)frm);
@@ -293,11 +269,5 @@ namespace FSM
                 return _FormParameters.Length;
             }
         }
-
-        //public void picHeader_MouseHover(object sender, EventArgs e)
-        //{
-        //    var hoverToolTip = new ToolTip();
-        //    hoverToolTip.SetToolTip(picHeader, App.TheSystem.Description);
-        //}
     }
 }

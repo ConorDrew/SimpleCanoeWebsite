@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnVan.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnVan.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk0SUgAAAAAAADYAAAAoAAAA4QAAAB8AAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAAsZSWsZSW
         sZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSW
@@ -473,7 +473,7 @@
         5OPj5OPj5OPjAA==
 </value>
   </data>
-  <data name="btnVan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnVan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAeRJREFUSEtjGAWDDrCwsLCxsrJyoGFOYjATExMb1BjygLCwcJiRkdF/crC+vv4r
@@ -487,7 +487,7 @@
         qFCBcskGQDNYocxRMNgAAwMAz3Zx4oj52bEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnReports.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnReports.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk0SUgAAAAAAADYAAAAoAAAA4QAAAB8AAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAAsZSWsZSW
         sZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSW
@@ -842,7 +842,7 @@
         5OPj5OPj5OPjAA==
 </value>
   </data>
-  <data name="btnReports.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnReports.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIcAAAAAAAAAMwAAZgAAmQAAzAAA/wAzAAAzMwAzZgAzmQAzzAAz/wBmAABmMwBmZgBm
         mQBmzABm/wCZAACZMwCZZgCZmQCZzACZ/wDMAADMMwDMZgDMmQDMzADM/wD/AAD/MwD/ZgD/mQD/zAD/
@@ -863,7 +863,7 @@
         MGJCgwEBADs=
 </value>
   </data>
-  <data name="btnInvoicing.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnInvoicing.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk0SUgAAAAAAADYAAAAoAAAA4QAAAB8AAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAAsZSWsZSW
         sZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSW
@@ -1218,7 +1218,7 @@
         5OPj5OPj5OPjAA==
 </value>
   </data>
-  <data name="btnInvoicing.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnInvoicing.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhDwANAIMAACByICozJ0hJO19hVaWlHJCQV5KVka6xqvPz887OzQAAAAAAAAAAAAAAAAAAAAAA
         ACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAIACwAAAAADwANAAAIVwADCBxIsGAAAAASKFy4EKHAhAsH
@@ -1226,7 +1226,7 @@
         owiGJpAZEAA7
 </value>
   </data>
-  <data name="btnJobs.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnJobs.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk0SUgAAAAAAADYAAAAoAAAA4QAAAB8AAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAAsZSWsZSW
         sZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSW
@@ -1581,14 +1581,14 @@
         5OPj5OPj5OPjAA==
 </value>
   </data>
-  <data name="btnJobs.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnJobs.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhDwANAIMAAKSkp7q60rS0vMXFxdbW1snJ3t3d6P///+/v9VVVegAAAAAAAAAAAAAAAAAAAAAA
         ACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAHACwAAAAADwANAAAIPQATCBx4oKBBgwkOCjyosGFChgcS
         LhxIESHDhwUXRoxY0aLEixw5EqSIUWHJjSRFpoR4EmXFli03XiQ5MCAAOw==
 </value>
   </data>
-  <data name="btnStaff.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnStaff.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk0SUgAAAAAAADYAAAAoAAAA4QAAAB8AAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAAsZSWsZSW
         sZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSW
@@ -1943,7 +1943,7 @@
         5OPj5OPj5OPjAA==
 </value>
   </data>
-  <data name="btnStaff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnStaff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAkElEQVQ4T62OCw6DMAxDe/TevORny01h
@@ -1952,7 +1952,7 @@
         AR+qc1N+e+9xAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnSpares.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnSpares.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk0SUgAAAAAAADYAAAAoAAAA4QAAAB8AAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAAsZSWsZSW
         sZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSW
@@ -2307,7 +2307,7 @@
         5OPj5OPj5OPjAA==
 </value>
   </data>
-  <data name="btnSpares.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnSpares.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAfElEQVQ4T6WOiQ3AIAwDMzqjsRmVQ0LN
@@ -2316,7 +2316,7 @@
         gg==
 </value>
   </data>
-  <data name="btnCustomer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnCustomer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk0SUgAAAAAAADYAAAAoAAAA4QAAAB8AAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAAsZSWsZSW
         sZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSWsZSW
@@ -2671,7 +2671,7 @@
         5OPj5OPj5OPjAA==
 </value>
   </data>
-  <data name="btnCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_btnCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIQAABBCizhWhjlcjyBOkCJSlyZVli1VkyhWmjZemjlimD5hmUJehEdkjVJnh1twkVl1
         mWFxikpwoE1fu26BzJWgr4aW1LnB0/X2+tHW4QAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBF
@@ -2680,7 +2680,7 @@
         CCCglKlAolApDBhQ9QLPhBEpJBXq9aZJDEgBdG3ps6VFtWTZwgSJdmvXnmbzCgwIADs=
 </value>
   </data>
-  <data name="pnlHeader.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="_pnlHeader.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
         JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy

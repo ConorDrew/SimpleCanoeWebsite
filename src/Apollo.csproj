@@ -2437,13 +2437,13 @@
     </Content>
     <None Include="Gabriel.pfx" />
     <Content Include="blueflame.ico" />
-    <Content Include="Resources\Blueflame_Icon.ico">
+    <Content Include="Resources\Blueflame_ico.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\GW_Icon.ico">
+    <Content Include="Resources\Gasway_ico.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\rft_logo.ico">
+    <Content Include="Resources\RFT_ico.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Templates\SupplierInvoiceImportTemplate.xlsx">

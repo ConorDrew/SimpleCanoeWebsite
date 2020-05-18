@@ -274,261 +274,261 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSideBar));
-            _pnlButtons = new Panel();
-            _btnVan = new UCMainButton();
-            _btnReports = new UCMainButton();
-            _btnInvoicing = new UCMainButton();
-            _btnJobs = new UCMainButton();
-            _btnStaff = new UCMainButton();
-            _btnSpares = new UCMainButton();
-            _btnCustomer = new UCMainButton();
-            _Splitter1 = new Splitter();
-            _pnlSearch = new Panel();
-            _pnlMenu = new Panel();
-            _pnlSubMenu = new Panel();
-            _Label1 = new Label();
-            _pnlHeader = new Panel();
-            _Label2 = new Label();
-            _lblTitle = new Label();
-            _pnlButtons.SuspendLayout();
-            _pnlMenu.SuspendLayout();
-            _pnlHeader.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSideBar));
+            this._pnlButtons = new System.Windows.Forms.Panel();
+            this._btnVan = new FSM.UCMainButton();
+            this._btnReports = new FSM.UCMainButton();
+            this._btnInvoicing = new FSM.UCMainButton();
+            this._btnJobs = new FSM.UCMainButton();
+            this._btnStaff = new FSM.UCMainButton();
+            this._btnSpares = new FSM.UCMainButton();
+            this._btnCustomer = new FSM.UCMainButton();
+            this._Splitter1 = new System.Windows.Forms.Splitter();
+            this._pnlSearch = new System.Windows.Forms.Panel();
+            this._pnlMenu = new System.Windows.Forms.Panel();
+            this._pnlSubMenu = new System.Windows.Forms.Panel();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._pnlHeader = new System.Windows.Forms.Panel();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._lblTitle = new System.Windows.Forms.Label();
+            this._pnlButtons.SuspendLayout();
+            this._pnlMenu.SuspendLayout();
+            this._pnlHeader.SuspendLayout();
+            this.SuspendLayout();
             //
-            // pnlButtons
+            // _pnlButtons
             //
-            _pnlButtons.Controls.Add(_btnVan);
-            _pnlButtons.Controls.Add(_btnReports);
-            _pnlButtons.Controls.Add(_btnInvoicing);
-            _pnlButtons.Controls.Add(_btnJobs);
-            _pnlButtons.Controls.Add(_btnStaff);
-            _pnlButtons.Controls.Add(_btnSpares);
-            _pnlButtons.Controls.Add(_btnCustomer);
-            _pnlButtons.Dock = DockStyle.Bottom;
-            _pnlButtons.Location = new Point(0, 430);
-            _pnlButtons.Name = "pnlButtons";
-            _pnlButtons.Size = new Size(160, 224);
-            _pnlButtons.TabIndex = 1;
+            this._pnlButtons.Controls.Add(this._btnVan);
+            this._pnlButtons.Controls.Add(this._btnReports);
+            this._pnlButtons.Controls.Add(this._btnInvoicing);
+            this._pnlButtons.Controls.Add(this._btnJobs);
+            this._pnlButtons.Controls.Add(this._btnStaff);
+            this._pnlButtons.Controls.Add(this._btnSpares);
+            this._pnlButtons.Controls.Add(this._btnCustomer);
+            this._pnlButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this._pnlButtons.Location = new System.Drawing.Point(0, 430);
+            this._pnlButtons.Name = "_pnlButtons";
+            this._pnlButtons.Size = new System.Drawing.Size(160, 224);
+            this._pnlButtons.TabIndex = 1;
             //
-            // btnVan
+            // _btnVan
             //
-            _btnVan.AutoScroll = true;
-            _btnVan.BackColor = Color.White;
-            _btnVan.BackgroundImage = (Image)resources.GetObject("btnVan.BackgroundImage");
-            _btnVan.Caption = "Fleet";
-            _btnVan.Dock = DockStyle.Top;
-            _btnVan.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnVan.FormButtons = null;
-            _btnVan.IAmSelected = false;
-            _btnVan.Image = (Image)resources.GetObject("btnVan.Image");
-            _btnVan.Location = new Point(0, 192);
-            _btnVan.MenuType = Entity.Sys.Enums.MenuTypes.FleetVan;
-            _btnVan.Name = "btnVan";
-            _btnVan.Size = new Size(160, 32);
-            _btnVan.TabIndex = 8;
+            this._btnVan.AutoScroll = true;
+            this._btnVan.BackColor = System.Drawing.Color.White;
+            this._btnVan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnVan.BackgroundImage")));
+            this._btnVan.Caption = "Fleet";
+            this._btnVan.Dock = System.Windows.Forms.DockStyle.Top;
+            this._btnVan.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnVan.FormButtons = null;
+            this._btnVan.IAmSelected = false;
+            this._btnVan.Image = ((System.Drawing.Image)(resources.GetObject("_btnVan.Image")));
+            this._btnVan.Location = new System.Drawing.Point(0, 192);
+            this._btnVan.MenuType = FSM.Entity.Sys.Enums.MenuTypes.FleetVan;
+            this._btnVan.Name = "_btnVan";
+            this._btnVan.Size = new System.Drawing.Size(160, 32);
+            this._btnVan.TabIndex = 8;
             //
-            // btnReports
+            // _btnReports
             //
-            _btnReports.AutoScroll = true;
-            _btnReports.BackColor = Color.White;
-            _btnReports.BackgroundImage = (Image)resources.GetObject("btnReports.BackgroundImage");
-            _btnReports.Caption = "Reports";
-            _btnReports.Dock = DockStyle.Top;
-            _btnReports.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnReports.FormButtons = null;
-            _btnReports.IAmSelected = false;
-            _btnReports.Image = (Image)resources.GetObject("btnReports.Image");
-            _btnReports.Location = new Point(0, 160);
-            _btnReports.MenuType = Entity.Sys.Enums.MenuTypes.Reports;
-            _btnReports.Name = "btnReports";
-            _btnReports.Size = new Size(160, 32);
-            _btnReports.TabIndex = 7;
+            this._btnReports.AutoScroll = true;
+            this._btnReports.BackColor = System.Drawing.Color.White;
+            this._btnReports.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnReports.BackgroundImage")));
+            this._btnReports.Caption = "Reports";
+            this._btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this._btnReports.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnReports.FormButtons = null;
+            this._btnReports.IAmSelected = false;
+            this._btnReports.Image = ((System.Drawing.Image)(resources.GetObject("_btnReports.Image")));
+            this._btnReports.Location = new System.Drawing.Point(0, 160);
+            this._btnReports.MenuType = FSM.Entity.Sys.Enums.MenuTypes.Reports;
+            this._btnReports.Name = "_btnReports";
+            this._btnReports.Size = new System.Drawing.Size(160, 32);
+            this._btnReports.TabIndex = 7;
             //
-            // btnInvoicing
+            // _btnInvoicing
             //
-            _btnInvoicing.AutoScroll = true;
-            _btnInvoicing.BackColor = Color.White;
-            _btnInvoicing.BackgroundImage = (Image)resources.GetObject("btnInvoicing.BackgroundImage");
-            _btnInvoicing.Caption = "Invoicing";
-            _btnInvoicing.Dock = DockStyle.Top;
-            _btnInvoicing.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnInvoicing.FormButtons = null;
-            _btnInvoicing.IAmSelected = false;
-            _btnInvoicing.Image = (Image)resources.GetObject("btnInvoicing.Image");
-            _btnInvoicing.Location = new Point(0, 128);
-            _btnInvoicing.MenuType = Entity.Sys.Enums.MenuTypes.Invoicing;
-            _btnInvoicing.Name = "btnInvoicing";
-            _btnInvoicing.Size = new Size(160, 32);
-            _btnInvoicing.TabIndex = 6;
+            this._btnInvoicing.AutoScroll = true;
+            this._btnInvoicing.BackColor = System.Drawing.Color.White;
+            this._btnInvoicing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnInvoicing.BackgroundImage")));
+            this._btnInvoicing.Caption = "Invoicing";
+            this._btnInvoicing.Dock = System.Windows.Forms.DockStyle.Top;
+            this._btnInvoicing.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnInvoicing.FormButtons = null;
+            this._btnInvoicing.IAmSelected = false;
+            this._btnInvoicing.Image = ((System.Drawing.Image)(resources.GetObject("_btnInvoicing.Image")));
+            this._btnInvoicing.Location = new System.Drawing.Point(0, 128);
+            this._btnInvoicing.MenuType = FSM.Entity.Sys.Enums.MenuTypes.Invoicing;
+            this._btnInvoicing.Name = "_btnInvoicing";
+            this._btnInvoicing.Size = new System.Drawing.Size(160, 32);
+            this._btnInvoicing.TabIndex = 6;
             //
-            // btnJobs
+            // _btnJobs
             //
-            _btnJobs.AutoScroll = true;
-            _btnJobs.BackColor = Color.White;
-            _btnJobs.BackgroundImage = (Image)resources.GetObject("btnJobs.BackgroundImage");
-            _btnJobs.Caption = "Jobs";
-            _btnJobs.Dock = DockStyle.Top;
-            _btnJobs.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnJobs.FormButtons = null;
-            _btnJobs.IAmSelected = false;
-            _btnJobs.Image = (Image)resources.GetObject("btnJobs.Image");
-            _btnJobs.Location = new Point(0, 96);
-            _btnJobs.MenuType = Entity.Sys.Enums.MenuTypes.Jobs;
-            _btnJobs.Name = "btnJobs";
-            _btnJobs.Size = new Size(160, 32);
-            _btnJobs.TabIndex = 5;
+            this._btnJobs.AutoScroll = true;
+            this._btnJobs.BackColor = System.Drawing.Color.White;
+            this._btnJobs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnJobs.BackgroundImage")));
+            this._btnJobs.Caption = "Jobs";
+            this._btnJobs.Dock = System.Windows.Forms.DockStyle.Top;
+            this._btnJobs.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnJobs.FormButtons = null;
+            this._btnJobs.IAmSelected = false;
+            this._btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("_btnJobs.Image")));
+            this._btnJobs.Location = new System.Drawing.Point(0, 96);
+            this._btnJobs.MenuType = FSM.Entity.Sys.Enums.MenuTypes.Jobs;
+            this._btnJobs.Name = "_btnJobs";
+            this._btnJobs.Size = new System.Drawing.Size(160, 32);
+            this._btnJobs.TabIndex = 5;
             //
-            // btnStaff
+            // _btnStaff
             //
-            _btnStaff.AutoScroll = true;
-            _btnStaff.BackColor = Color.White;
-            _btnStaff.BackgroundImage = (Image)resources.GetObject("btnStaff.BackgroundImage");
-            _btnStaff.Caption = "Staff";
-            _btnStaff.Dock = DockStyle.Top;
-            _btnStaff.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnStaff.FormButtons = null;
-            _btnStaff.IAmSelected = false;
-            _btnStaff.Image = (Image)resources.GetObject("btnStaff.Image");
-            _btnStaff.Location = new Point(0, 64);
-            _btnStaff.MenuType = Entity.Sys.Enums.MenuTypes.Staff;
-            _btnStaff.Name = "btnStaff";
-            _btnStaff.Size = new Size(160, 32);
-            _btnStaff.TabIndex = 4;
+            this._btnStaff.AutoScroll = true;
+            this._btnStaff.BackColor = System.Drawing.Color.White;
+            this._btnStaff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnStaff.BackgroundImage")));
+            this._btnStaff.Caption = "Staff";
+            this._btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
+            this._btnStaff.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnStaff.FormButtons = null;
+            this._btnStaff.IAmSelected = false;
+            this._btnStaff.Image = ((System.Drawing.Image)(resources.GetObject("_btnStaff.Image")));
+            this._btnStaff.Location = new System.Drawing.Point(0, 64);
+            this._btnStaff.MenuType = FSM.Entity.Sys.Enums.MenuTypes.Staff;
+            this._btnStaff.Name = "_btnStaff";
+            this._btnStaff.Size = new System.Drawing.Size(160, 32);
+            this._btnStaff.TabIndex = 4;
             //
-            // btnSpares
+            // _btnSpares
             //
-            _btnSpares.AutoScroll = true;
-            _btnSpares.BackColor = Color.White;
-            _btnSpares.BackgroundImage = (Image)resources.GetObject("btnSpares.BackgroundImage");
-            _btnSpares.Caption = "Spares";
-            _btnSpares.Dock = DockStyle.Top;
-            _btnSpares.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnSpares.FormButtons = null;
-            _btnSpares.IAmSelected = false;
-            _btnSpares.Image = (Image)resources.GetObject("btnSpares.Image");
-            _btnSpares.Location = new Point(0, 32);
-            _btnSpares.MenuType = Entity.Sys.Enums.MenuTypes.Spares;
-            _btnSpares.Name = "btnSpares";
-            _btnSpares.Size = new Size(160, 32);
-            _btnSpares.TabIndex = 3;
+            this._btnSpares.AutoScroll = true;
+            this._btnSpares.BackColor = System.Drawing.Color.White;
+            this._btnSpares.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnSpares.BackgroundImage")));
+            this._btnSpares.Caption = "Spares";
+            this._btnSpares.Dock = System.Windows.Forms.DockStyle.Top;
+            this._btnSpares.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnSpares.FormButtons = null;
+            this._btnSpares.IAmSelected = false;
+            this._btnSpares.Image = ((System.Drawing.Image)(resources.GetObject("_btnSpares.Image")));
+            this._btnSpares.Location = new System.Drawing.Point(0, 32);
+            this._btnSpares.MenuType = FSM.Entity.Sys.Enums.MenuTypes.Spares;
+            this._btnSpares.Name = "_btnSpares";
+            this._btnSpares.Size = new System.Drawing.Size(160, 32);
+            this._btnSpares.TabIndex = 3;
             //
-            // btnCustomer
+            // _btnCustomer
             //
-            _btnCustomer.AutoScroll = true;
-            _btnCustomer.BackColor = Color.White;
-            _btnCustomer.BackgroundImage = (Image)resources.GetObject("btnCustomer.BackgroundImage");
-            _btnCustomer.Caption = "Customers";
-            _btnCustomer.Dock = DockStyle.Top;
-            _btnCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnCustomer.FormButtons = null;
-            _btnCustomer.IAmSelected = false;
-            _btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
-            _btnCustomer.Location = new Point(0, 0);
-            _btnCustomer.MenuType = Entity.Sys.Enums.MenuTypes.Customers;
-            _btnCustomer.Name = "btnCustomer";
-            _btnCustomer.Size = new Size(160, 32);
-            _btnCustomer.TabIndex = 0;
+            this._btnCustomer.AutoScroll = true;
+            this._btnCustomer.BackColor = System.Drawing.Color.White;
+            this._btnCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnCustomer.BackgroundImage")));
+            this._btnCustomer.Caption = "Customers";
+            this._btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this._btnCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnCustomer.FormButtons = null;
+            this._btnCustomer.IAmSelected = false;
+            this._btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("_btnCustomer.Image")));
+            this._btnCustomer.Location = new System.Drawing.Point(0, 0);
+            this._btnCustomer.MenuType = FSM.Entity.Sys.Enums.MenuTypes.Customers;
+            this._btnCustomer.Name = "_btnCustomer";
+            this._btnCustomer.Size = new System.Drawing.Size(160, 32);
+            this._btnCustomer.TabIndex = 0;
             //
-            // Splitter1
+            // _Splitter1
             //
-            _Splitter1.BackColor = Color.Silver;
-            _Splitter1.Dock = DockStyle.Bottom;
-            _Splitter1.Enabled = false;
-            _Splitter1.Location = new Point(0, 425);
-            _Splitter1.Name = "Splitter1";
-            _Splitter1.Size = new Size(160, 5);
-            _Splitter1.TabIndex = 2;
-            _Splitter1.TabStop = false;
+            this._Splitter1.BackColor = System.Drawing.Color.Silver;
+            this._Splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this._Splitter1.Enabled = false;
+            this._Splitter1.Location = new System.Drawing.Point(0, 425);
+            this._Splitter1.Name = "_Splitter1";
+            this._Splitter1.Size = new System.Drawing.Size(160, 5);
+            this._Splitter1.TabIndex = 2;
+            this._Splitter1.TabStop = false;
             //
-            // pnlSearch
+            // _pnlSearch
             //
-            _pnlSearch.Dock = DockStyle.Bottom;
-            _pnlSearch.Location = new Point(0, 273);
-            _pnlSearch.Name = "pnlSearch";
-            _pnlSearch.Size = new Size(160, 152);
-            _pnlSearch.TabIndex = 3;
+            this._pnlSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this._pnlSearch.Location = new System.Drawing.Point(0, 273);
+            this._pnlSearch.Name = "_pnlSearch";
+            this._pnlSearch.Size = new System.Drawing.Size(160, 152);
+            this._pnlSearch.TabIndex = 3;
             //
-            // pnlMenu
+            // _pnlMenu
             //
-            _pnlMenu.Controls.Add(_pnlSubMenu);
-            _pnlMenu.Controls.Add(_Label1);
-            _pnlMenu.Controls.Add(_pnlHeader);
-            _pnlMenu.Dock = DockStyle.Fill;
-            _pnlMenu.Location = new Point(0, 0);
-            _pnlMenu.Name = "pnlMenu";
-            _pnlMenu.Size = new Size(160, 273);
-            _pnlMenu.TabIndex = 4;
+            this._pnlMenu.Controls.Add(this._pnlSubMenu);
+            this._pnlMenu.Controls.Add(this._Label1);
+            this._pnlMenu.Controls.Add(this._pnlHeader);
+            this._pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this._pnlMenu.Name = "_pnlMenu";
+            this._pnlMenu.Size = new System.Drawing.Size(160, 273);
+            this._pnlMenu.TabIndex = 4;
             //
-            // pnlSubMenu
+            // _pnlSubMenu
             //
-            _pnlSubMenu.AutoScroll = true;
-            _pnlSubMenu.Dock = DockStyle.Fill;
-            _pnlSubMenu.Location = new Point(0, 50);
-            _pnlSubMenu.Name = "pnlSubMenu";
-            _pnlSubMenu.Size = new Size(160, 223);
-            _pnlSubMenu.TabIndex = 6;
+            this._pnlSubMenu.AutoScroll = true;
+            this._pnlSubMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlSubMenu.Location = new System.Drawing.Point(0, 50);
+            this._pnlSubMenu.Name = "_pnlSubMenu";
+            this._pnlSubMenu.Size = new System.Drawing.Size(160, 223);
+            this._pnlSubMenu.TabIndex = 6;
             //
-            // Label1
+            // _Label1
             //
-            _Label1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
-            _Label1.Dock = DockStyle.Top;
-            _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label1.ForeColor = Color.DimGray;
-            _Label1.Location = new Point(0, 34);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(160, 16);
-            _Label1.TabIndex = 5;
-            _Label1.Text = "Please select option";
+            this._Label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._Label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this._Label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label1.ForeColor = System.Drawing.Color.DimGray;
+            this._Label1.Location = new System.Drawing.Point(0, 34);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(160, 16);
+            this._Label1.TabIndex = 5;
+            this._Label1.Text = "Please select option";
             //
-            // pnlHeader
+            // _pnlHeader
             //
-            _pnlHeader.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
-            _pnlHeader.BackgroundImage = (Image)resources.GetObject("pnlHeader.BackgroundImage");
-            _pnlHeader.Controls.Add(_Label2);
-            _pnlHeader.Controls.Add(_lblTitle);
-            _pnlHeader.Dock = DockStyle.Top;
-            _pnlHeader.Location = new Point(0, 0);
-            _pnlHeader.Name = "pnlHeader";
-            _pnlHeader.Size = new Size(160, 34);
-            _pnlHeader.TabIndex = 4;
+            this._pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._pnlHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_pnlHeader.BackgroundImage")));
+            this._pnlHeader.Controls.Add(this._Label2);
+            this._pnlHeader.Controls.Add(this._lblTitle);
+            this._pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this._pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this._pnlHeader.Name = "_pnlHeader";
+            this._pnlHeader.Size = new System.Drawing.Size(160, 34);
+            this._pnlHeader.TabIndex = 4;
             //
-            // Label2
+            // _Label2
             //
-            _Label2.BackColor = Color.Transparent;
-            _Label2.Font = new Font("Verdana", 11.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label2.ForeColor = Color.White;
-            _Label2.Location = new Point(0, 0);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(32, 32);
-            _Label2.TabIndex = 29;
-            _Label2.Text = ">>";
-            _Label2.TextAlign = ContentAlignment.MiddleLeft;
+            this._Label2.BackColor = System.Drawing.Color.Transparent;
+            this._Label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label2.ForeColor = System.Drawing.Color.White;
+            this._Label2.Location = new System.Drawing.Point(0, 0);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(32, 32);
+            this._Label2.TabIndex = 29;
+            this._Label2.Text = ">>";
+            this._Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             //
-            // lblTitle
+            // _lblTitle
             //
-            _lblTitle.BackColor = Color.Transparent;
-            _lblTitle.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblTitle.ForeColor = Color.White;
-            _lblTitle.Location = new Point(32, 0);
-            _lblTitle.Name = "lblTitle";
-            _lblTitle.Size = new Size(128, 32);
-            _lblTitle.TabIndex = 28;
-            _lblTitle.Text = "HOME";
-            _lblTitle.TextAlign = ContentAlignment.MiddleLeft;
+            this._lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this._lblTitle.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblTitle.ForeColor = System.Drawing.Color.White;
+            this._lblTitle.Location = new System.Drawing.Point(32, 0);
+            this._lblTitle.Name = "_lblTitle";
+            this._lblTitle.Size = new System.Drawing.Size(128, 32);
+            this._lblTitle.TabIndex = 28;
+            this._lblTitle.Text = "HOME";
+            this._lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             //
             // UCSideBar
             //
-            Controls.Add(_pnlMenu);
-            Controls.Add(_pnlSearch);
-            Controls.Add(_Splitter1);
-            Controls.Add(_pnlButtons);
-            Name = "UCSideBar";
-            Size = new Size(160, 654);
-            _pnlButtons.ResumeLayout(false);
-            _pnlMenu.ResumeLayout(false);
-            _pnlHeader.ResumeLayout(false);
-            ResumeLayout(false);
+            this.Controls.Add(this._pnlMenu);
+            this.Controls.Add(this._pnlSearch);
+            this.Controls.Add(this._Splitter1);
+            this.Controls.Add(this._pnlButtons);
+            this.Name = "UCSideBar";
+            this.Size = new System.Drawing.Size(160, 654);
+            this._pnlButtons.ResumeLayout(false);
+            this._pnlMenu.ResumeLayout(false);
+            this._pnlHeader.ResumeLayout(false);
+            this.ResumeLayout(false);
         }
 
         private void MenuSelectionChanged(Entity.Sys.Enums.MenuTypes MenuType)

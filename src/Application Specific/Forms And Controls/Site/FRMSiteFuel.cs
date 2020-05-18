@@ -168,28 +168,6 @@ namespace FSM
 
         private Label _lblSite;
 
-        internal Label lblSite
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _lblSite;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_lblSite != null)
-                {
-                }
-
-                _lblSite = value;
-                if (_lblSite != null)
-                {
-                }
-            }
-        }
-
         private TextBox _txtSiteName;
 
         internal TextBox txtSiteName
@@ -530,9 +508,9 @@ namespace FSM
             this._grpSiteFuelAudit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dgSiteFuelAudit)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // _SiteFuelTabControl
-            // 
+            //
             this._SiteFuelTabControl.Controls.Add(this._tabSiteFuel);
             this._SiteFuelTabControl.Controls.Add(this._tabAudit);
             this._SiteFuelTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -541,9 +519,9 @@ namespace FSM
             this._SiteFuelTabControl.SelectedIndex = 0;
             this._SiteFuelTabControl.Size = new System.Drawing.Size(800, 557);
             this._SiteFuelTabControl.TabIndex = 2;
-            // 
+            //
             // _tabSiteFuel
-            // 
+            //
             this._tabSiteFuel.Controls.Add(this._grpSiteFuels);
             this._tabSiteFuel.Location = new System.Drawing.Point(4, 22);
             this._tabSiteFuel.Name = "_tabSiteFuel";
@@ -552,11 +530,11 @@ namespace FSM
             this._tabSiteFuel.TabIndex = 0;
             this._tabSiteFuel.Text = "Site Fuels";
             this._tabSiteFuel.UseVisualStyleBackColor = true;
-            // 
+            //
             // _grpSiteFuels
-            // 
-            this._grpSiteFuels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpSiteFuels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpSiteFuels.Controls.Add(this._grpSite);
             this._grpSiteFuels.Controls.Add(this._grpSiteFuelUpdate);
@@ -569,9 +547,9 @@ namespace FSM
             this._grpSiteFuels.TabIndex = 14;
             this._grpSiteFuels.TabStop = false;
             this._grpSiteFuels.Text = "Site Fuel";
-            // 
+            //
             // _grpSite
-            // 
+            //
             this._grpSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._grpSite.Controls.Add(this._btnUpdateSiteService);
             this._grpSite.Controls.Add(this._txtSite);
@@ -592,66 +570,66 @@ namespace FSM
             this._grpSite.TabIndex = 115;
             this._grpSite.TabStop = false;
             this._grpSite.Text = "Site ";
-            // 
+            //
             // _btnUpdateSiteService
-            // 
+            //
             this._btnUpdateSiteService.Location = new System.Drawing.Point(139, 196);
             this._btnUpdateSiteService.Name = "_btnUpdateSiteService";
             this._btnUpdateSiteService.Size = new System.Drawing.Size(139, 23);
             this._btnUpdateSiteService.TabIndex = 126;
             this._btnUpdateSiteService.Text = "Update Site Service";
             this._btnUpdateSiteService.Click += new System.EventHandler(this.btnUpdateSiteService_Click);
-            // 
+            //
             // _txtSite
-            // 
+            //
             this._txtSite.Location = new System.Drawing.Point(117, 48);
             this._txtSite.Name = "_txtSite";
             this._txtSite.ReadOnly = true;
             this._txtSite.Size = new System.Drawing.Size(161, 21);
             this._txtSite.TabIndex = 121;
-            // 
+            //
             // _lblSiteName
-            // 
+            //
             this._lblSiteName.Location = new System.Drawing.Point(8, 51);
             this._lblSiteName.Name = "_lblSiteName";
             this._lblSiteName.Size = new System.Drawing.Size(80, 23);
             this._lblSiteName.TabIndex = 125;
             this._lblSiteName.Text = "Name:";
-            // 
+            //
             // _txtCustomerName
-            // 
+            //
             this._txtCustomerName.Location = new System.Drawing.Point(117, 20);
             this._txtCustomerName.Name = "_txtCustomerName";
             this._txtCustomerName.ReadOnly = true;
             this._txtCustomerName.Size = new System.Drawing.Size(161, 21);
             this._txtCustomerName.TabIndex = 120;
-            // 
+            //
             // _lblSite
-            // 
+            //
             this._lblSite.Location = new System.Drawing.Point(8, 79);
             this._lblSite.Name = "_lblSite";
             this._lblSite.Size = new System.Drawing.Size(80, 23);
             this._lblSite.TabIndex = 124;
             this._lblSite.Text = "Property:";
-            // 
+            //
             // _txtSiteName
-            // 
+            //
             this._txtSiteName.Location = new System.Drawing.Point(117, 76);
             this._txtSiteName.Name = "_txtSiteName";
             this._txtSiteName.ReadOnly = true;
             this._txtSiteName.Size = new System.Drawing.Size(161, 21);
             this._txtSiteName.TabIndex = 122;
-            // 
+            //
             // _lblCustomer
-            // 
+            //
             this._lblCustomer.Location = new System.Drawing.Point(6, 23);
             this._lblCustomer.Name = "_lblCustomer";
             this._lblCustomer.Size = new System.Drawing.Size(80, 23);
             this._lblCustomer.TabIndex = 123;
             this._lblCustomer.Text = "Customer:";
-            // 
+            //
             // _txtTelephoneNum
-            // 
+            //
             this._txtTelephoneNum.Location = new System.Drawing.Point(117, 104);
             this._txtTelephoneNum.MaxLength = 50;
             this._txtTelephoneNum.Name = "_txtTelephoneNum";
@@ -659,17 +637,17 @@ namespace FSM
             this._txtTelephoneNum.Size = new System.Drawing.Size(161, 21);
             this._txtTelephoneNum.TabIndex = 114;
             this._txtTelephoneNum.Tag = "Site.TelephoneNum";
-            // 
+            //
             // _lblTelephoneNum
-            // 
+            //
             this._lblTelephoneNum.Location = new System.Drawing.Point(8, 107);
             this._lblTelephoneNum.Name = "_lblTelephoneNum";
             this._lblTelephoneNum.Size = new System.Drawing.Size(48, 20);
             this._lblTelephoneNum.TabIndex = 119;
             this._lblTelephoneNum.Text = "Tel";
-            // 
+            //
             // _txtEmailAddress
-            // 
+            //
             this._txtEmailAddress.Location = new System.Drawing.Point(117, 160);
             this._txtEmailAddress.MaxLength = 100;
             this._txtEmailAddress.Name = "_txtEmailAddress";
@@ -677,17 +655,17 @@ namespace FSM
             this._txtEmailAddress.Size = new System.Drawing.Size(161, 21);
             this._txtEmailAddress.TabIndex = 116;
             this._txtEmailAddress.Tag = "Site.EmailAddress";
-            // 
+            //
             // _lblEmailAddress
-            // 
+            //
             this._lblEmailAddress.Location = new System.Drawing.Point(8, 163);
             this._lblEmailAddress.Name = "_lblEmailAddress";
             this._lblEmailAddress.Size = new System.Drawing.Size(98, 20);
             this._lblEmailAddress.TabIndex = 118;
             this._lblEmailAddress.Text = "Email Address";
-            // 
+            //
             // _txtFaxNum
-            // 
+            //
             this._txtFaxNum.Location = new System.Drawing.Point(117, 132);
             this._txtFaxNum.MaxLength = 50;
             this._txtFaxNum.Name = "_txtFaxNum";
@@ -695,17 +673,17 @@ namespace FSM
             this._txtFaxNum.Size = new System.Drawing.Size(161, 21);
             this._txtFaxNum.TabIndex = 115;
             this._txtFaxNum.Tag = "Site.FaxNum";
-            // 
+            //
             // _lblFaxNum
-            // 
+            //
             this._lblFaxNum.Location = new System.Drawing.Point(8, 135);
             this._lblFaxNum.Name = "_lblFaxNum";
             this._lblFaxNum.Size = new System.Drawing.Size(50, 20);
             this._lblFaxNum.TabIndex = 117;
             this._lblFaxNum.Text = "Mobile";
-            // 
+            //
             // _grpSiteFuelUpdate
-            // 
+            //
             this._grpSiteFuelUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._grpSiteFuelUpdate.Controls.Add(this._dtpActualServiceDate);
             this._grpSiteFuelUpdate.Controls.Add(this._lblActualServiceDate);
@@ -727,125 +705,125 @@ namespace FSM
             this._grpSiteFuelUpdate.TabIndex = 12;
             this._grpSiteFuelUpdate.TabStop = false;
             this._grpSiteFuelUpdate.Text = "Fuel";
-            // 
+            //
             // _dtpActualServiceDate
-            // 
+            //
             this._dtpActualServiceDate.Location = new System.Drawing.Point(142, 119);
             this._dtpActualServiceDate.Name = "_dtpActualServiceDate";
             this._dtpActualServiceDate.Size = new System.Drawing.Size(139, 21);
             this._dtpActualServiceDate.TabIndex = 133;
-            // 
+            //
             // _lblActualServiceDate
-            // 
+            //
             this._lblActualServiceDate.Location = new System.Drawing.Point(6, 125);
             this._lblActualServiceDate.Name = "_lblActualServiceDate";
             this._lblActualServiceDate.Size = new System.Drawing.Size(124, 20);
             this._lblActualServiceDate.TabIndex = 132;
             this._lblActualServiceDate.Text = "Service Date";
-            // 
+            //
             // _lblChargeType
-            // 
+            //
             this._lblChargeType.AutoSize = true;
             this._lblChargeType.Location = new System.Drawing.Point(6, 56);
             this._lblChargeType.Name = "_lblChargeType";
             this._lblChargeType.Size = new System.Drawing.Size(49, 13);
             this._lblChargeType.TabIndex = 131;
             this._lblChargeType.Text = "Charge";
-            // 
+            //
             // _cboChargeType
-            // 
+            //
             this._cboChargeType.FormattingEnabled = true;
             this._cboChargeType.Location = new System.Drawing.Point(72, 53);
             this._cboChargeType.Name = "_cboChargeType";
             this._cboChargeType.Size = new System.Drawing.Size(209, 21);
             this._cboChargeType.TabIndex = 130;
-            // 
+            //
             // _txtAddedOn
-            // 
+            //
             this._txtAddedOn.Location = new System.Drawing.Point(120, 185);
             this._txtAddedOn.Name = "_txtAddedOn";
             this._txtAddedOn.ReadOnly = true;
             this._txtAddedOn.Size = new System.Drawing.Size(161, 21);
             this._txtAddedOn.TabIndex = 128;
-            // 
+            //
             // _lblAddedOn
-            // 
+            //
             this._lblAddedOn.Location = new System.Drawing.Point(8, 188);
             this._lblAddedOn.Name = "_lblAddedOn";
             this._lblAddedOn.Size = new System.Drawing.Size(80, 23);
             this._lblAddedOn.TabIndex = 129;
             this._lblAddedOn.Text = "Added On:";
-            // 
+            //
             // _txtAddedByText
-            // 
+            //
             this._txtAddedByText.Location = new System.Drawing.Point(120, 152);
             this._txtAddedByText.Name = "_txtAddedByText";
             this._txtAddedByText.ReadOnly = true;
             this._txtAddedByText.Size = new System.Drawing.Size(161, 21);
             this._txtAddedByText.TabIndex = 126;
-            // 
+            //
             // _lblAddedBy
-            // 
+            //
             this._lblAddedBy.Location = new System.Drawing.Point(6, 155);
             this._lblAddedBy.Name = "_lblAddedBy";
             this._lblAddedBy.Size = new System.Drawing.Size(80, 23);
             this._lblAddedBy.TabIndex = 127;
             this._lblAddedBy.Text = "Added By:";
-            // 
+            //
             // _dtpLastServiceDate
-            // 
+            //
             this._dtpLastServiceDate.Location = new System.Drawing.Point(142, 86);
             this._dtpLastServiceDate.Name = "_dtpLastServiceDate";
             this._dtpLastServiceDate.Size = new System.Drawing.Size(139, 21);
             this._dtpLastServiceDate.TabIndex = 57;
-            // 
+            //
             // _lblLastService
-            // 
+            //
             this._lblLastService.Location = new System.Drawing.Point(6, 92);
             this._lblLastService.Name = "_lblLastService";
             this._lblLastService.Size = new System.Drawing.Size(114, 20);
             this._lblLastService.TabIndex = 56;
             this._lblLastService.Text = "Service Due Date";
-            // 
+            //
             // _lblFuel
-            // 
+            //
             this._lblFuel.AutoSize = true;
             this._lblFuel.Location = new System.Drawing.Point(8, 23);
             this._lblFuel.Name = "_lblFuel";
             this._lblFuel.Size = new System.Drawing.Size(30, 13);
             this._lblFuel.TabIndex = 55;
             this._lblFuel.Text = "Fuel";
-            // 
+            //
             // _cboFuel
-            // 
+            //
             this._cboFuel.FormattingEnabled = true;
             this._cboFuel.Location = new System.Drawing.Point(72, 20);
             this._cboFuel.Name = "_cboFuel";
             this._cboFuel.Size = new System.Drawing.Size(209, 21);
             this._cboFuel.TabIndex = 54;
-            // 
+            //
             // _btnSaveFuel
-            // 
+            //
             this._btnSaveFuel.Location = new System.Drawing.Point(191, 233);
             this._btnSaveFuel.Name = "_btnSaveFuel";
             this._btnSaveFuel.Size = new System.Drawing.Size(90, 23);
             this._btnSaveFuel.TabIndex = 9;
             this._btnSaveFuel.Text = "Save";
             this._btnSaveFuel.Click += new System.EventHandler(this.btnSave_Click);
-            // 
+            //
             // _btnDeleteSiteFuel
-            // 
+            //
             this._btnDeleteSiteFuel.Location = new System.Drawing.Point(9, 233);
             this._btnDeleteSiteFuel.Name = "_btnDeleteSiteFuel";
             this._btnDeleteSiteFuel.Size = new System.Drawing.Size(90, 23);
             this._btnDeleteSiteFuel.TabIndex = 10;
             this._btnDeleteSiteFuel.Text = "Delete";
             this._btnDeleteSiteFuel.Click += new System.EventHandler(this.btnDeleteSiteFuel_Click);
-            // 
+            //
             // _dgSiteFuel
-            // 
-            this._dgSiteFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgSiteFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgSiteFuel.DataMember = "";
             this._dgSiteFuel.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -856,9 +834,9 @@ namespace FSM
             this._dgSiteFuel.Click += new System.EventHandler(this.dgSiteFuel_Click);
             this._dgSiteFuel.Leave += new System.EventHandler(this.dgSiteFuel_Leave);
             this._dgSiteFuel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgSiteFuel_MouseUp);
-            // 
+            //
             // _tabAudit
-            // 
+            //
             this._tabAudit.Controls.Add(this._grpSiteFuelAudit);
             this._tabAudit.Location = new System.Drawing.Point(4, 22);
             this._tabAudit.Name = "_tabAudit";
@@ -867,9 +845,9 @@ namespace FSM
             this._tabAudit.TabIndex = 1;
             this._tabAudit.Text = "Audit";
             this._tabAudit.UseVisualStyleBackColor = true;
-            // 
+            //
             // _grpSiteFuelAudit
-            // 
+            //
             this._grpSiteFuelAudit.Controls.Add(this._dgSiteFuelAudit);
             this._grpSiteFuelAudit.Dock = System.Windows.Forms.DockStyle.Fill;
             this._grpSiteFuelAudit.Location = new System.Drawing.Point(3, 3);
@@ -878,9 +856,9 @@ namespace FSM
             this._grpSiteFuelAudit.TabIndex = 5;
             this._grpSiteFuelAudit.TabStop = false;
             this._grpSiteFuelAudit.Text = "Site Fuel Audit";
-            // 
+            //
             // _dgSiteFuelAudit
-            // 
+            //
             this._dgSiteFuelAudit.DataMember = "";
             this._dgSiteFuelAudit.Dock = System.Windows.Forms.DockStyle.Fill;
             this._dgSiteFuelAudit.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -888,9 +866,9 @@ namespace FSM
             this._dgSiteFuelAudit.Name = "_dgSiteFuelAudit";
             this._dgSiteFuelAudit.Size = new System.Drawing.Size(780, 505);
             this._dgSiteFuelAudit.TabIndex = 15;
-            // 
+            //
             // FRMSiteFuel
-            // 
+            //
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.ClientSize = new System.Drawing.Size(800, 557);
             this.Controls.Add(this._SiteFuelTabControl);
@@ -910,7 +888,6 @@ namespace FSM
             this._grpSiteFuelAudit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._dgSiteFuelAudit)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         public void LoadMe(object sender, EventArgs e)

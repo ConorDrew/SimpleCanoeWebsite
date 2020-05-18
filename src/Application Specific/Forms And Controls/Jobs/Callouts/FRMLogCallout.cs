@@ -1422,9 +1422,9 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)(this._dgContactAttempts)).BeginInit();
             this._cmsView.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // _btnClose
-            // 
+            //
             this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnClose.Location = new System.Drawing.Point(70, 698);
             this._btnClose.Name = "_btnClose";
@@ -1432,9 +1432,9 @@ namespace FSM
             this._btnClose.TabIndex = 16;
             this._btnClose.Text = "Close";
             this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
+            //
             // _btnSave
-            // 
+            //
             this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnSave.Location = new System.Drawing.Point(8, 698);
             this._btnSave.Name = "_btnSave";
@@ -1442,11 +1442,11 @@ namespace FSM
             this._btnSave.TabIndex = 15;
             this._btnSave.Text = "Save";
             this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
+            //
             // _TabControl1
-            // 
-            this._TabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._TabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._TabControl1.Controls.Add(this._tpMain);
             this._TabControl1.Controls.Add(this._tpAssets);
@@ -1454,106 +1454,106 @@ namespace FSM
             this._TabControl1.Controls.Add(this._tbquote);
             this._TabControl1.Controls.Add(this._tpNotes);
             this._TabControl1.Controls.Add(this._tpContactAttempts);
-            this._TabControl1.Location = new System.Drawing.Point(0, 31);
+            this._TabControl1.Location = new System.Drawing.Point(0, 12);
             this._TabControl1.Name = "_TabControl1";
             this._TabControl1.SelectedIndex = 0;
-            this._TabControl1.Size = new System.Drawing.Size(1200, 661);
+            this._TabControl1.Size = new System.Drawing.Size(1200, 680);
             this._TabControl1.TabIndex = 23;
-            // 
+            //
             // _tpMain
-            // 
+            //
             this._tpMain.Location = new System.Drawing.Point(4, 22);
             this._tpMain.Name = "_tpMain";
             this._tpMain.Padding = new System.Windows.Forms.Padding(3);
-            this._tpMain.Size = new System.Drawing.Size(1192, 635);
+            this._tpMain.Size = new System.Drawing.Size(1192, 654);
             this._tpMain.TabIndex = 0;
             this._tpMain.Text = "Main Details";
             this._tpMain.UseVisualStyleBackColor = true;
-            // 
+            //
             // _tpAssets
-            // 
+            //
             this._tpAssets.Controls.Add(this._grpAssets);
             this._tpAssets.Location = new System.Drawing.Point(4, 22);
             this._tpAssets.Name = "_tpAssets";
             this._tpAssets.Padding = new System.Windows.Forms.Padding(3);
-            this._tpAssets.Size = new System.Drawing.Size(1176, 601);
+            this._tpAssets.Size = new System.Drawing.Size(1192, 654);
             this._tpAssets.TabIndex = 2;
             this._tpAssets.Text = "Appliances";
             this._tpAssets.UseVisualStyleBackColor = true;
-            // 
+            //
             // _grpAssets
-            // 
-            this._grpAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpAssets.Controls.Add(this._dgAssets);
             this._grpAssets.Controls.Add(this._btnAddAppliance);
             this._grpAssets.Location = new System.Drawing.Point(6, 6);
             this._grpAssets.Name = "_grpAssets";
-            this._grpAssets.Size = new System.Drawing.Size(1162, 596);
+            this._grpAssets.Size = new System.Drawing.Size(1178, 649);
             this._grpAssets.TabIndex = 29;
             this._grpAssets.TabStop = false;
             this._grpAssets.Text = "Select those related to the job";
-            // 
+            //
             // _dgAssets
-            // 
-            this._dgAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgAssets.DataMember = "";
             this._dgAssets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgAssets.Location = new System.Drawing.Point(6, 20);
             this._dgAssets.Name = "_dgAssets";
-            this._dgAssets.Size = new System.Drawing.Size(1150, 541);
+            this._dgAssets.Size = new System.Drawing.Size(1166, 594);
             this._dgAssets.TabIndex = 1;
             this._dgAssets.Click += new System.EventHandler(this.dgAssets_Click);
-            // 
+            //
             // _btnAddAppliance
-            // 
+            //
             this._btnAddAppliance.AccessibleDescription = "Add Job Of Work";
             this._btnAddAppliance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._btnAddAppliance.Location = new System.Drawing.Point(6, 567);
+            this._btnAddAppliance.Location = new System.Drawing.Point(6, 620);
             this._btnAddAppliance.Name = "_btnAddAppliance";
             this._btnAddAppliance.Size = new System.Drawing.Size(155, 23);
             this._btnAddAppliance.TabIndex = 28;
             this._btnAddAppliance.Text = "New Appliance";
             this._btnAddAppliance.Click += new System.EventHandler(this.btnAddAppliance_Click);
-            // 
+            //
             // _tpDocuments
-            // 
+            //
             this._tpDocuments.Location = new System.Drawing.Point(4, 22);
             this._tpDocuments.Name = "_tpDocuments";
             this._tpDocuments.Padding = new System.Windows.Forms.Padding(3);
-            this._tpDocuments.Size = new System.Drawing.Size(1176, 601);
+            this._tpDocuments.Size = new System.Drawing.Size(1192, 654);
             this._tpDocuments.TabIndex = 1;
             this._tpDocuments.Text = "Documents";
             this._tpDocuments.UseVisualStyleBackColor = true;
-            // 
+            //
             // _tbquote
-            // 
+            //
             this._tbquote.Controls.Add(this._GroupBox2);
             this._tbquote.Location = new System.Drawing.Point(4, 22);
             this._tbquote.Name = "_tbquote";
             this._tbquote.Padding = new System.Windows.Forms.Padding(3);
-            this._tbquote.Size = new System.Drawing.Size(1176, 601);
+            this._tbquote.Size = new System.Drawing.Size(1192, 654);
             this._tbquote.TabIndex = 7;
             this._tbquote.Text = "Quote Calc";
             this._tbquote.UseVisualStyleBackColor = true;
-            // 
+            //
             // _GroupBox2
-            // 
+            //
             this._GroupBox2.Controls.Add(this._GroupBox1);
             this._GroupBox2.Controls.Add(this._Panel1);
             this._GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this._GroupBox2.Location = new System.Drawing.Point(3, 3);
             this._GroupBox2.Name = "_GroupBox2";
-            this._GroupBox2.Size = new System.Drawing.Size(1170, 595);
+            this._GroupBox2.Size = new System.Drawing.Size(1186, 648);
             this._GroupBox2.TabIndex = 0;
             this._GroupBox2.TabStop = false;
             this._GroupBox2.Text = "Quote Calculator";
-            // 
+            //
             // _GroupBox1
-            // 
+            //
             this._GroupBox1.Controls.Add(this._rdoAXA);
             this._GroupBox1.Controls.Add(this._rdoPOC);
             this._GroupBox1.Location = new System.Drawing.Point(55, 26);
@@ -1561,9 +1561,9 @@ namespace FSM
             this._GroupBox1.Size = new System.Drawing.Size(121, 45);
             this._GroupBox1.TabIndex = 82;
             this._GroupBox1.TabStop = false;
-            // 
+            //
             // _rdoAXA
-            // 
+            //
             this._rdoAXA.AutoSize = true;
             this._rdoAXA.Location = new System.Drawing.Point(65, 17);
             this._rdoAXA.Name = "_rdoAXA";
@@ -1572,9 +1572,9 @@ namespace FSM
             this._rdoAXA.Text = "AXA";
             this._rdoAXA.UseVisualStyleBackColor = true;
             this._rdoAXA.CheckedChanged += new System.EventHandler(this.rdoCust_CheckedChanged);
-            // 
+            //
             // _rdoPOC
-            // 
+            //
             this._rdoPOC.AutoSize = true;
             this._rdoPOC.Checked = true;
             this._rdoPOC.Location = new System.Drawing.Point(6, 17);
@@ -1585,9 +1585,9 @@ namespace FSM
             this._rdoPOC.Text = "POC";
             this._rdoPOC.UseVisualStyleBackColor = true;
             this._rdoPOC.CheckedChanged += new System.EventHandler(this.rdoCust_CheckedChanged);
-            // 
+            //
             // _Panel1
-            // 
+            //
             this._Panel1.Controls.Add(this._txtClaimLimit);
             this._Panel1.Controls.Add(this._lblClaimLimit);
             this._Panel1.Controls.Add(this._chkExcludeVat);
@@ -1616,19 +1616,19 @@ namespace FSM
             this._Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this._Panel1.Location = new System.Drawing.Point(3, 17);
             this._Panel1.Name = "_Panel1";
-            this._Panel1.Size = new System.Drawing.Size(1164, 575);
+            this._Panel1.Size = new System.Drawing.Size(1180, 628);
             this._Panel1.TabIndex = 1;
-            // 
+            //
             // _txtClaimLimit
-            // 
+            //
             this._txtClaimLimit.Location = new System.Drawing.Point(585, 62);
             this._txtClaimLimit.Name = "_txtClaimLimit";
             this._txtClaimLimit.Size = new System.Drawing.Size(121, 21);
             this._txtClaimLimit.TabIndex = 83;
             this._txtClaimLimit.Visible = false;
-            // 
+            //
             // _lblClaimLimit
-            // 
+            //
             this._lblClaimLimit.AutoSize = true;
             this._lblClaimLimit.Location = new System.Drawing.Point(505, 65);
             this._lblClaimLimit.Name = "_lblClaimLimit";
@@ -1636,9 +1636,9 @@ namespace FSM
             this._lblClaimLimit.TabIndex = 82;
             this._lblClaimLimit.Text = "Claim Limit";
             this._lblClaimLimit.Visible = false;
-            // 
+            //
             // _chkExcludeVat
-            // 
+            //
             this._chkExcludeVat.AutoSize = true;
             this._chkExcludeVat.Location = new System.Drawing.Point(425, 505);
             this._chkExcludeVat.Name = "_chkExcludeVat";
@@ -1646,26 +1646,26 @@ namespace FSM
             this._chkExcludeVat.TabIndex = 81;
             this._chkExcludeVat.Text = "Exclude V.A.T";
             this._chkExcludeVat.UseVisualStyleBackColor = true;
-            // 
+            //
             // _cboVATRate
-            // 
+            //
             this._cboVATRate.FormattingEnabled = true;
             this._cboVATRate.Location = new System.Drawing.Point(499, 528);
             this._cboVATRate.Name = "_cboVATRate";
             this._cboVATRate.Size = new System.Drawing.Size(109, 21);
             this._cboVATRate.TabIndex = 79;
-            // 
+            //
             // _lblVAT
-            // 
+            //
             this._lblVAT.Location = new System.Drawing.Point(422, 529);
             this._lblVAT.Name = "_lblVAT";
             this._lblVAT.Size = new System.Drawing.Size(68, 17);
             this._lblVAT.TabIndex = 80;
             this._lblVAT.Text = "VAT Rate";
             this._lblVAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
+            //
             // _GroupBox3
-            // 
+            //
             this._GroupBox3.Controls.Add(this._rbStandard);
             this._GroupBox3.Controls.Add(this._rbSite);
             this._GroupBox3.Location = new System.Drawing.Point(48, 491);
@@ -1673,9 +1673,9 @@ namespace FSM
             this._GroupBox3.Size = new System.Drawing.Size(343, 45);
             this._GroupBox3.TabIndex = 77;
             this._GroupBox3.TabStop = false;
-            // 
+            //
             // _rbStandard
-            // 
+            //
             this._rbStandard.AutoSize = true;
             this._rbStandard.Checked = true;
             this._rbStandard.Location = new System.Drawing.Point(207, 16);
@@ -1685,9 +1685,9 @@ namespace FSM
             this._rbStandard.TabStop = true;
             this._rbStandard.Text = "Markup standard";
             this._rbStandard.UseVisualStyleBackColor = true;
-            // 
+            //
             // _rbSite
-            // 
+            //
             this._rbSite.AutoSize = true;
             this._rbSite.Location = new System.Drawing.Point(6, 17);
             this._rbSite.Name = "_rbSite";
@@ -1695,26 +1695,26 @@ namespace FSM
             this._rbSite.TabIndex = 0;
             this._rbSite.Text = "Markup parts using site rate";
             this._rbSite.UseVisualStyleBackColor = true;
-            // 
+            //
             // _txtPartQty
-            // 
+            //
             this._txtPartQty.Location = new System.Drawing.Point(659, 89);
             this._txtPartQty.Name = "_txtPartQty";
             this._txtPartQty.Size = new System.Drawing.Size(48, 21);
             this._txtPartQty.TabIndex = 76;
             this._txtPartQty.Text = "0";
-            // 
+            //
             // _Label46
-            // 
+            //
             this._Label46.AutoSize = true;
             this._Label46.Location = new System.Drawing.Point(629, 92);
             this._Label46.Name = "_Label46";
             this._Label46.Size = new System.Drawing.Size(27, 13);
             this._Label46.TabIndex = 75;
             this._Label46.Text = "Qty";
-            // 
+            //
             // _dgvQuote
-            // 
+            //
             this._dgvQuote.AllowUserToAddRows = false;
             this._dgvQuote.AllowUserToResizeColumns = false;
             this._dgvQuote.AllowUserToResizeRows = false;
@@ -1723,17 +1723,17 @@ namespace FSM
             this._dgvQuote.Name = "_dgvQuote";
             this._dgvQuote.Size = new System.Drawing.Size(811, 210);
             this._dgvQuote.TabIndex = 74;
-            // 
+            //
             // _cboLabour
-            // 
+            //
             this._cboLabour.FormattingEnabled = true;
             this._cboLabour.Location = new System.Drawing.Point(125, 62);
             this._cboLabour.Name = "_cboLabour";
             this._cboLabour.Size = new System.Drawing.Size(294, 21);
             this._cboLabour.TabIndex = 73;
-            // 
+            //
             // _btnQuoteAdd
-            // 
+            //
             this._btnQuoteAdd.Location = new System.Drawing.Point(820, 65);
             this._btnQuoteAdd.Name = "_btnQuoteAdd";
             this._btnQuoteAdd.Size = new System.Drawing.Size(39, 47);
@@ -1741,35 +1741,35 @@ namespace FSM
             this._btnQuoteAdd.Text = "Add";
             this._btnQuoteAdd.UseVisualStyleBackColor = true;
             this._btnQuoteAdd.Click += new System.EventHandler(this.BtnQuoteAdd_Click);
-            // 
+            //
             // _Label45
-            // 
+            //
             this._Label45.AutoSize = true;
             this._Label45.Location = new System.Drawing.Point(45, 65);
             this._Label45.Name = "_Label45";
             this._Label45.Size = new System.Drawing.Size(77, 13);
             this._Label45.TabIndex = 71;
             this._Label45.Text = "Labour Type";
-            // 
+            //
             // _txtLabourQty
-            // 
+            //
             this._txtLabourQty.Location = new System.Drawing.Point(449, 62);
             this._txtLabourQty.Name = "_txtLabourQty";
             this._txtLabourQty.Size = new System.Drawing.Size(29, 21);
             this._txtLabourQty.TabIndex = 70;
             this._txtLabourQty.Text = "0";
-            // 
+            //
             // _Label44
-            // 
+            //
             this._Label44.AutoSize = true;
             this._Label44.Location = new System.Drawing.Point(427, 65);
             this._Label44.Name = "_Label44";
             this._Label44.Size = new System.Drawing.Size(15, 13);
             this._Label44.TabIndex = 69;
             this._Label44.Text = "X";
-            // 
+            //
             // _btnReset
-            // 
+            //
             this._btnReset.Location = new System.Drawing.Point(614, 526);
             this._btnReset.Name = "_btnReset";
             this._btnReset.Size = new System.Drawing.Size(110, 23);
@@ -1777,9 +1777,9 @@ namespace FSM
             this._btnReset.Text = "Reset";
             this._btnReset.UseVisualStyleBackColor = true;
             this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
+            //
             // _btnaddtonotes
-            // 
+            //
             this._btnaddtonotes.Enabled = false;
             this._btnaddtonotes.Location = new System.Drawing.Point(730, 499);
             this._btnaddtonotes.Name = "_btnaddtonotes";
@@ -1788,9 +1788,9 @@ namespace FSM
             this._btnaddtonotes.Text = "Add Quote to Notes";
             this._btnaddtonotes.UseVisualStyleBackColor = true;
             this._btnaddtonotes.Click += new System.EventHandler(this.btnaddtonotes_Click);
-            // 
+            //
             // _btnEmail
-            // 
+            //
             this._btnEmail.Enabled = false;
             this._btnEmail.Location = new System.Drawing.Point(730, 526);
             this._btnEmail.Name = "_btnEmail";
@@ -1799,9 +1799,9 @@ namespace FSM
             this._btnEmail.Text = "Email Quote";
             this._btnEmail.UseVisualStyleBackColor = true;
             this._btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
-            // 
+            //
             // _btncalc
-            // 
+            //
             this._btncalc.Location = new System.Drawing.Point(614, 499);
             this._btncalc.Name = "_btncalc";
             this._btncalc.Size = new System.Drawing.Size(110, 23);
@@ -1809,9 +1809,9 @@ namespace FSM
             this._btncalc.Text = "Generate Quote";
             this._btncalc.UseVisualStyleBackColor = true;
             this._btncalc.Click += new System.EventHandler(this.btncalc_Click);
-            // 
+            //
             // _tbresult
-            // 
+            //
             this._tbresult.Location = new System.Drawing.Point(48, 357);
             this._tbresult.Multiline = true;
             this._tbresult.Name = "_tbresult";
@@ -1820,256 +1820,256 @@ namespace FSM
             this._tbresult.Size = new System.Drawing.Size(812, 128);
             this._tbresult.TabIndex = 64;
             this._tbresult.Text = "Please enter details above. Quote will appear here";
-            // 
+            //
             // _txtPartRate
-            // 
+            //
             this._txtPartRate.Location = new System.Drawing.Point(558, 89);
             this._txtPartRate.Name = "_txtPartRate";
             this._txtPartRate.Size = new System.Drawing.Size(55, 21);
             this._txtPartRate.TabIndex = 5;
-            // 
+            //
             // _lbltc1
-            // 
+            //
             this._lbltc1.AutoSize = true;
             this._lbltc1.Location = new System.Drawing.Point(456, 92);
             this._lbltc1.Name = "_lbltc1";
             this._lbltc1.Size = new System.Drawing.Size(96, 13);
             this._lbltc1.TabIndex = 4;
             this._lbltc1.Text = "Part Trade Cost";
-            // 
+            //
             // _txtPartNumber
-            // 
+            //
             this._txtPartNumber.Location = new System.Drawing.Point(349, 89);
             this._txtPartNumber.Name = "_txtPartNumber";
             this._txtPartNumber.Size = new System.Drawing.Size(89, 21);
             this._txtPartNumber.TabIndex = 3;
-            // 
+            //
             // _lblnumber1
-            // 
+            //
             this._lblnumber1.AutoSize = true;
             this._lblnumber1.Location = new System.Drawing.Point(264, 92);
             this._lblnumber1.Name = "_lblnumber1";
             this._lblnumber1.Size = new System.Drawing.Size(79, 13);
             this._lblnumber1.TabIndex = 2;
             this._lblnumber1.Text = "Part Number";
-            // 
+            //
             // _txtPartName
-            // 
+            //
             this._txtPartName.Location = new System.Drawing.Point(125, 89);
             this._txtPartName.Name = "_txtPartName";
             this._txtPartName.Size = new System.Drawing.Size(121, 21);
             this._txtPartName.TabIndex = 1;
-            // 
+            //
             // _lblpart1
-            // 
+            //
             this._lblpart1.AutoSize = true;
             this._lblpart1.Location = new System.Drawing.Point(45, 92);
             this._lblpart1.Name = "_lblpart1";
             this._lblpart1.Size = new System.Drawing.Size(67, 13);
             this._lblpart1.TabIndex = 0;
             this._lblpart1.Text = "Part Name";
-            // 
+            //
             // _tpNotes
-            // 
+            //
             this._tpNotes.Controls.Add(this._gpbNotesDetails);
             this._tpNotes.Controls.Add(this._gpbNotes);
             this._tpNotes.Location = new System.Drawing.Point(4, 22);
             this._tpNotes.Name = "_tpNotes";
-            this._tpNotes.Size = new System.Drawing.Size(1176, 601);
+            this._tpNotes.Size = new System.Drawing.Size(1192, 654);
             this._tpNotes.TabIndex = 4;
             this._tpNotes.Text = "Notes";
             this._tpNotes.UseVisualStyleBackColor = true;
-            // 
+            //
             // _gpbNotesDetails
-            // 
-            this._gpbNotesDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            //
+            this._gpbNotesDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._gpbNotesDetails.Controls.Add(this._txtNoteID);
             this._gpbNotesDetails.Controls.Add(this._btnSaveNote);
             this._gpbNotesDetails.Controls.Add(this._txtNotes);
             this._gpbNotesDetails.Controls.Add(this._Label1);
-            this._gpbNotesDetails.Location = new System.Drawing.Point(791, 6);
+            this._gpbNotesDetails.Location = new System.Drawing.Point(807, 6);
             this._gpbNotesDetails.Name = "_gpbNotesDetails";
-            this._gpbNotesDetails.Size = new System.Drawing.Size(377, 596);
+            this._gpbNotesDetails.Size = new System.Drawing.Size(377, 649);
             this._gpbNotesDetails.TabIndex = 33;
             this._gpbNotesDetails.TabStop = false;
             this._gpbNotesDetails.Text = "Details";
-            // 
+            //
             // _txtNoteID
-            // 
+            //
             this._txtNoteID.Location = new System.Drawing.Point(66, 14);
             this._txtNoteID.Name = "_txtNoteID";
             this._txtNoteID.Size = new System.Drawing.Size(100, 21);
             this._txtNoteID.TabIndex = 36;
             this._txtNoteID.TabStop = false;
             this._txtNoteID.Visible = false;
-            // 
+            //
             // _btnSaveNote
-            // 
+            //
             this._btnSaveNote.AccessibleDescription = "";
             this._btnSaveNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._btnSaveNote.Location = new System.Drawing.Point(292, 567);
+            this._btnSaveNote.Location = new System.Drawing.Point(292, 620);
             this._btnSaveNote.Name = "_btnSaveNote";
             this._btnSaveNote.Size = new System.Drawing.Size(79, 23);
             this._btnSaveNote.TabIndex = 1;
             this._btnSaveNote.Text = "Save";
             this._btnSaveNote.Click += new System.EventHandler(this.btnSaveNote_Click);
-            // 
+            //
             // _txtNotes
-            // 
-            this._txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtNotes.Location = new System.Drawing.Point(6, 37);
             this._txtNotes.Multiline = true;
             this._txtNotes.Name = "_txtNotes";
-            this._txtNotes.Size = new System.Drawing.Size(365, 524);
+            this._txtNotes.Size = new System.Drawing.Size(365, 577);
             this._txtNotes.TabIndex = 0;
-            // 
+            //
             // _Label1
-            // 
+            //
             this._Label1.Location = new System.Drawing.Point(3, 20);
             this._Label1.Name = "_Label1";
             this._Label1.Size = new System.Drawing.Size(88, 23);
             this._Label1.TabIndex = 34;
             this._Label1.Text = "Notes:";
-            // 
+            //
             // _gpbNotes
-            // 
-            this._gpbNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._gpbNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._gpbNotes.Controls.Add(this._btnDeleteNote);
             this._gpbNotes.Controls.Add(this._dgNotes);
             this._gpbNotes.Controls.Add(this._btnAddNote);
             this._gpbNotes.Location = new System.Drawing.Point(7, 6);
             this._gpbNotes.Name = "_gpbNotes";
-            this._gpbNotes.Size = new System.Drawing.Size(773, 596);
+            this._gpbNotes.Size = new System.Drawing.Size(789, 649);
             this._gpbNotes.TabIndex = 30;
             this._gpbNotes.TabStop = false;
             this._gpbNotes.Text = "Notes";
-            // 
+            //
             // _btnDeleteNote
-            // 
+            //
             this._btnDeleteNote.AccessibleDescription = "";
             this._btnDeleteNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._btnDeleteNote.Location = new System.Drawing.Point(95, 567);
+            this._btnDeleteNote.Location = new System.Drawing.Point(95, 620);
             this._btnDeleteNote.Name = "_btnDeleteNote";
             this._btnDeleteNote.Size = new System.Drawing.Size(85, 23);
             this._btnDeleteNote.TabIndex = 3;
             this._btnDeleteNote.Text = "Delete";
             this._btnDeleteNote.Visible = false;
             this._btnDeleteNote.Click += new System.EventHandler(this.btnDeleteNote_Click);
-            // 
+            //
             // _dgNotes
-            // 
-            this._dgNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgNotes.DataMember = "";
             this._dgNotes.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgNotes.Location = new System.Drawing.Point(6, 20);
             this._dgNotes.Name = "_dgNotes";
-            this._dgNotes.Size = new System.Drawing.Size(761, 541);
+            this._dgNotes.Size = new System.Drawing.Size(777, 594);
             this._dgNotes.TabIndex = 1;
             this._dgNotes.CurrentCellChanged += new System.EventHandler(this.dgNotes_Click);
             this._dgNotes.Click += new System.EventHandler(this.dgNotes_Click);
-            // 
+            //
             // _btnAddNote
-            // 
+            //
             this._btnAddNote.AccessibleDescription = "";
             this._btnAddNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._btnAddNote.Location = new System.Drawing.Point(6, 567);
+            this._btnAddNote.Location = new System.Drawing.Point(6, 620);
             this._btnAddNote.Name = "_btnAddNote";
             this._btnAddNote.Size = new System.Drawing.Size(85, 23);
             this._btnAddNote.TabIndex = 2;
             this._btnAddNote.Text = "Add";
             this._btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
-            // 
+            //
             // _tpContactAttempts
-            // 
+            //
             this._tpContactAttempts.Controls.Add(this._grpContactAttemptDetails);
             this._tpContactAttempts.Controls.Add(this._grpContactAttempts);
             this._tpContactAttempts.Location = new System.Drawing.Point(4, 22);
             this._tpContactAttempts.Name = "_tpContactAttempts";
-            this._tpContactAttempts.Size = new System.Drawing.Size(1176, 601);
+            this._tpContactAttempts.Size = new System.Drawing.Size(1192, 654);
             this._tpContactAttempts.TabIndex = 8;
             this._tpContactAttempts.Text = "Contact Attempts";
             this._tpContactAttempts.UseVisualStyleBackColor = true;
-            // 
+            //
             // _grpContactAttemptDetails
-            // 
-            this._grpContactAttemptDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            //
+            this._grpContactAttemptDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpContactAttemptDetails.Controls.Add(this._txtContactAttemptDetails);
             this._grpContactAttemptDetails.Controls.Add(this._lblContactNotes);
-            this._grpContactAttemptDetails.Location = new System.Drawing.Point(792, 2);
+            this._grpContactAttemptDetails.Location = new System.Drawing.Point(808, 2);
             this._grpContactAttemptDetails.Name = "_grpContactAttemptDetails";
-            this._grpContactAttemptDetails.Size = new System.Drawing.Size(377, 596);
+            this._grpContactAttemptDetails.Size = new System.Drawing.Size(377, 649);
             this._grpContactAttemptDetails.TabIndex = 35;
             this._grpContactAttemptDetails.TabStop = false;
             this._grpContactAttemptDetails.Text = "Details";
-            // 
+            //
             // _txtContactAttemptDetails
-            // 
-            this._txtContactAttemptDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._txtContactAttemptDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtContactAttemptDetails.Location = new System.Drawing.Point(6, 37);
             this._txtContactAttemptDetails.Multiline = true;
             this._txtContactAttemptDetails.Name = "_txtContactAttemptDetails";
             this._txtContactAttemptDetails.ReadOnly = true;
-            this._txtContactAttemptDetails.Size = new System.Drawing.Size(365, 553);
+            this._txtContactAttemptDetails.Size = new System.Drawing.Size(365, 606);
             this._txtContactAttemptDetails.TabIndex = 0;
-            // 
+            //
             // _lblContactNotes
-            // 
+            //
             this._lblContactNotes.Location = new System.Drawing.Point(3, 20);
             this._lblContactNotes.Name = "_lblContactNotes";
             this._lblContactNotes.Size = new System.Drawing.Size(88, 23);
             this._lblContactNotes.TabIndex = 34;
             this._lblContactNotes.Text = "Notes:";
-            // 
+            //
             // _grpContactAttempts
-            // 
-            this._grpContactAttempts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpContactAttempts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpContactAttempts.Controls.Add(this._dgContactAttempts);
             this._grpContactAttempts.Controls.Add(this._btnAddAttempt);
             this._grpContactAttempts.Location = new System.Drawing.Point(8, 2);
             this._grpContactAttempts.Name = "_grpContactAttempts";
-            this._grpContactAttempts.Size = new System.Drawing.Size(773, 596);
+            this._grpContactAttempts.Size = new System.Drawing.Size(789, 649);
             this._grpContactAttempts.TabIndex = 34;
             this._grpContactAttempts.TabStop = false;
             this._grpContactAttempts.Text = "Attempts";
-            // 
+            //
             // _dgContactAttempts
-            // 
-            this._dgContactAttempts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgContactAttempts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgContactAttempts.DataMember = "";
             this._dgContactAttempts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
             this._dgContactAttempts.Location = new System.Drawing.Point(6, 20);
             this._dgContactAttempts.Name = "_dgContactAttempts";
-            this._dgContactAttempts.Size = new System.Drawing.Size(761, 541);
+            this._dgContactAttempts.Size = new System.Drawing.Size(777, 594);
             this._dgContactAttempts.TabIndex = 1;
             this._dgContactAttempts.Click += new System.EventHandler(this.dgContactAttempts_Click);
-            // 
+            //
             // _btnAddAttempt
-            // 
+            //
             this._btnAddAttempt.AccessibleDescription = "";
             this._btnAddAttempt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._btnAddAttempt.Location = new System.Drawing.Point(6, 567);
+            this._btnAddAttempt.Location = new System.Drawing.Point(6, 620);
             this._btnAddAttempt.Name = "_btnAddAttempt";
             this._btnAddAttempt.Size = new System.Drawing.Size(85, 23);
             this._btnAddAttempt.TabIndex = 2;
             this._btnAddAttempt.Text = "Add";
             this._btnAddAttempt.Click += new System.EventHandler(this.btnAddAttempt_Click);
-            // 
+            //
             // _btnView
-            // 
+            //
             this._btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnView.Location = new System.Drawing.Point(132, 698);
             this._btnView.Name = "_btnView";
@@ -2077,9 +2077,9 @@ namespace FSM
             this._btnView.TabIndex = 24;
             this._btnView.Text = "View...";
             this._btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
+            //
             // _cmsView
-            // 
+            //
             this._cmsView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._PropertyToolStripMenuItem,
             this._CustomerToolStripMenuItem,
@@ -2091,73 +2091,71 @@ namespace FSM
             this._HistoryToolStripMenuItem});
             this._cmsView.Name = "cmsView";
             this._cmsView.Size = new System.Drawing.Size(128, 180);
-            // 
+            //
             // _PropertyToolStripMenuItem
-            // 
+            //
             this._PropertyToolStripMenuItem.Name = "_PropertyToolStripMenuItem";
             this._PropertyToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._PropertyToolStripMenuItem.Text = "Property";
             this._PropertyToolStripMenuItem.Click += new System.EventHandler(this.PropertyToolStripMenuItem_Click);
-            // 
+            //
             // _CustomerToolStripMenuItem
-            // 
+            //
             this._CustomerToolStripMenuItem.Name = "_CustomerToolStripMenuItem";
             this._CustomerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._CustomerToolStripMenuItem.Text = "Customer";
             this._CustomerToolStripMenuItem.Click += new System.EventHandler(this.CustomerToolStripMenuItem_Click);
-            // 
+            //
             // _AuditTrailToolStripMenuItem
-            // 
+            //
             this._AuditTrailToolStripMenuItem.Name = "_AuditTrailToolStripMenuItem";
             this._AuditTrailToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._AuditTrailToolStripMenuItem.Text = "Audit Trail";
             this._AuditTrailToolStripMenuItem.Click += new System.EventHandler(this.AuditTrailToolStripMenuItem_Click);
-            // 
+            //
             // _OrdersToolStripMenuItem
-            // 
+            //
             this._OrdersToolStripMenuItem.Name = "_OrdersToolStripMenuItem";
             this._OrdersToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._OrdersToolStripMenuItem.Text = "Orders";
             this._OrdersToolStripMenuItem.Click += new System.EventHandler(this.OrdersToolStripMenuItem_Click);
-            // 
+            //
             // _InvoiceToolStripMenuItem
-            // 
+            //
             this._InvoiceToolStripMenuItem.Name = "_InvoiceToolStripMenuItem";
             this._InvoiceToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._InvoiceToolStripMenuItem.Text = "Invoice";
             this._InvoiceToolStripMenuItem.Click += new System.EventHandler(this.InvoiceToolStripMenuItem_Click);
-            // 
+            //
             // _QuoteToolStripMenuItem
-            // 
+            //
             this._QuoteToolStripMenuItem.Name = "_QuoteToolStripMenuItem";
             this._QuoteToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._QuoteToolStripMenuItem.Text = "Quote";
             this._QuoteToolStripMenuItem.Click += new System.EventHandler(this.QuoteToolStripMenuItem_Click);
-            // 
+            //
             // _CostingsToolStripMenuItem
-            // 
+            //
             this._CostingsToolStripMenuItem.Name = "_CostingsToolStripMenuItem";
             this._CostingsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._CostingsToolStripMenuItem.Text = "Costings";
             this._CostingsToolStripMenuItem.Click += new System.EventHandler(this.CostingsToolStripMenuItem_Click);
-            // 
+            //
             // _HistoryToolStripMenuItem
-            // 
+            //
             this._HistoryToolStripMenuItem.Name = "_HistoryToolStripMenuItem";
             this._HistoryToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this._HistoryToolStripMenuItem.Text = "History";
             this._HistoryToolStripMenuItem.Click += new System.EventHandler(this.HistoryToolStripMenuItem_Click);
-            // 
+            //
             // FRMLogCallout
-            // 
+            //
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.ClientSize = new System.Drawing.Size(1200, 724);
-            this.ControlBox = false;
             this.Controls.Add(this._btnView);
             this.Controls.Add(this._TabControl1);
             this.Controls.Add(this._btnClose);
             this.Controls.Add(this._btnSave);
-            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1200, 724);
@@ -2188,7 +2186,6 @@ namespace FSM
             ((System.ComponentModel.ISupportInitialize)(this._dgContactAttempts)).EndInit();
             this._cmsView.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         public void LoadMe(object sender, EventArgs e)
