@@ -23,33 +23,20 @@ namespace FSM
         {
             // This call is required by the Windows Form Designer.
             InitializeComponent();
-            var argc = cboOrderTypeID;
-            Combo.SetUpCombo(ref argc, DynamicDataTables.OrderType, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
-            var argc1 = cboPartLocation;
-            Combo.SetUpCombo(ref argc1, DynamicDataTables.LocationType, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
-            var argc2 = cboProductLocation;
-            Combo.SetUpCombo(ref argc2, DynamicDataTables.LocationType, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
-            var argc3 = cboOrderStatus;
-            Combo.SetUpCombo(ref argc3, App.DB.Order.OrderStatus_Get_All().Table, "OrderStatusID", "Name");
-            var argc4 = cboInvoiceTaxCodeNew;
-            Combo.SetUpCombo(ref argc4, App.DB.Picklists.GetAll(Enums.PickListTypes.VATCodes).Table, "ManagerID", "Name", Enums.ComboValues.Dashes);
-            var argc5 = cboCreditTax;
-            Combo.SetUpCombo(ref argc5, App.DB.Picklists.GetAll(Enums.PickListTypes.VATCodes).Table, "ManagerID", "Name", Enums.ComboValues.Dashes);
-            switch (true)
-            {
-                case object _ when App.IsGasway:
-                    {
-                        var argc6 = cboDept;
-                        Combo.SetUpCombo(ref argc6, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Name", Enums.ComboValues.Please_Select_Negative);
-                        break;
-                    }
+            Combo.SetUpCombo(ref _cboOrderTypeID, DynamicDataTables.OrderType, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
+            Combo.SetUpCombo(ref _cboPartLocation, DynamicDataTables.LocationType, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
+            Combo.SetUpCombo(ref _cboProductLocation, DynamicDataTables.LocationType, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
+            Combo.SetUpCombo(ref _cboOrderStatus, App.DB.Order.OrderStatus_Get_All().Table, "OrderStatusID", "Name");
+            Combo.SetUpCombo(ref _cboInvoiceTaxCodeNew, App.DB.Picklists.GetAll(Enums.PickListTypes.VATCodes).Table, "ManagerID", "Name", Enums.ComboValues.Dashes);
+            Combo.SetUpCombo(ref _cboCreditTax, App.DB.Picklists.GetAll(Enums.PickListTypes.VATCodes).Table, "ManagerID", "Name", Enums.ComboValues.Dashes);
 
-                default:
-                    {
-                        var argc7 = cboDept;
-                        Combo.SetUpCombo(ref argc7, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Description", Enums.ComboValues.Please_Select_Negative);
-                        break;
-                    }
+            if (App.IsGasway)
+            {
+                Combo.SetUpCombo(ref _cboDept, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Name", Enums.ComboValues.Please_Select_Negative);
+            }
+            else
+            {
+                Combo.SetUpCombo(ref _cboDept, App.DB.Picklists.GetAll(Enums.PickListTypes.Department).Table, "Name", "Description", Enums.ComboValues.Please_Select_Negative);
             }
 
             chkDoNotConsolidate.Checked = true;
@@ -4236,34 +4223,21 @@ namespace FSM
                     btnEngineerReceived.Visible = false;
                     OrderNumber = App.DB.Job.GetNextJobNumber(Enums.JobDefinition.ORDER);
                     cboOrderStatus.Enabled = false;
-                    // Me.txtOrderReference.Enabled = True
-                    // Me.dtpDatePlaced.Enabled = True
                     cboOrderTypeID.Enabled = true;
-                    // Me.dtpDeliveryDeadline.Enabled = True
-                    // Me.chkDeadlineNA.Enabled = True
                     cboPrintType.Enabled = false;
                     btnPrint.Enabled = false;
                     btnEmail.Enabled = false;
                     btnCharges.Enabled = false;
-                    var argcombo = cboOrderStatus;
-                    Combo.SetSelectedComboItem_By_Value(ref argcombo, Conversions.ToString(Enums.OrderStatus.AwaitingConfirmation));
+                    Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, Conversions.ToString(Enums.OrderStatus.AwaitingConfirmation));
                     lblOrderStatus.Text = "SAVE BASE ORDER DETAILS BEFORE MANAGING ITEMS";
                     lblOrderStatus.Visible = true;
                     EnableTabs(false);
-                    var argc = cboPrintType;
-                    Combo.SetUpCombo(ref argc, null, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
+                    Combo.SetUpCombo(ref _cboPrintType, null, "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
                 }
-
-                // Me.lblGoodsValue.Text = Format(0, "C")
-                // Me.lblVATTotal.Text = Format(0, "C")
                 else
                 {
                     cboOrderStatus.Enabled = true;
-                    // Me.txtOrderReference.Enabled = False
-                    // Me.dtpDatePlaced.Enabled = False
                     cboOrderTypeID.Enabled = false;
-                    // Me.dtpDeliveryDeadline.Enabled = False
-                    // Me.chkDeadlineNA.Enabled = False
                     cboPrintType.Enabled = true;
                     btnPrint.Enabled = true;
                     btnEmail.Enabled = true;
@@ -4271,8 +4245,7 @@ namespace FSM
                     pnlDocuments.Controls.Clear();
                     DocumentsControl = new UCDocumentsList(Enums.TableNames.tblOrder, CurrentOrder.OrderID);
                     pnlDocuments.Controls.Add(DocumentsControl);
-                    var argc1 = cboPrintType;
-                    Combo.SetUpCombo(ref argc1, DynamicDataTables.get_SystemDocumentTypes((Enums.OrderType)CurrentOrder.OrderTypeID), "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
+                    Combo.SetUpCombo(ref _cboPrintType, DynamicDataTables.get_SystemDocumentTypes((Enums.OrderType)CurrentOrder.OrderTypeID), "ValueMember", "DisplayMember", Enums.ComboValues.Please_Select);
                     Populate();
                     EnableTabs(true);
                 }
@@ -5982,15 +5955,13 @@ namespace FSM
                             {
                                 App.ShowMessage("Department Reference Missing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 IsLoading = true;
-                                var argcombo1 = cboOrderStatus;
-                                Combo.SetSelectedComboItem_By_Value(ref argcombo1, CurrentOrder.OrderStatusID.ToString());
+                                Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                 IsLoading = false;
                             }
                             else if (App.ShowMessage("Are you sure you want to confirm order? No changes can be made to the order once it has been confirmed.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                             {
                                 IsLoading = true;
-                                var argcombo2 = cboOrderStatus;
-                                Combo.SetSelectedComboItem_By_Value(ref argcombo2, CurrentOrder.OrderStatusID.ToString());
+                                Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                 IsLoading = false;
                                 return;
                             }
@@ -5998,8 +5969,7 @@ namespace FSM
                             {
                                 App.ShowMessage("There are no items included on this order, Order cannot be marked as confirmed until items added", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 IsLoading = true;
-                                var argcombo3 = cboOrderStatus;
-                                Combo.SetSelectedComboItem_By_Value(ref argcombo3, CurrentOrder.OrderStatusID.ToString());
+                                Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                 IsLoading = false;
                                 return;
                             }
@@ -6008,8 +5978,7 @@ namespace FSM
                                 if (App.ShowMessage("This order will be removed from the consolidation, are you sure you wish to confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                                 {
                                     IsLoading = true;
-                                    var argcombo4 = cboOrderStatus;
-                                    Combo.SetSelectedComboItem_By_Value(ref argcombo4, CurrentOrder.OrderStatusID.ToString());
+                                    Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                     IsLoading = false;
                                     return;
                                 }
@@ -6101,8 +6070,7 @@ namespace FSM
                                     {
                                         App.ShowMessage("You can not cancel this order as Invoices have been received", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                                         IsLoading = true;
-                                        var argcombo5 = cboOrderStatus;
-                                        Combo.SetSelectedComboItem_By_Value(ref argcombo5, CurrentOrder.OrderStatusID.ToString());
+                                        Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                         IsLoading = false;
                                         return;
                                     }
@@ -6110,8 +6078,7 @@ namespace FSM
                                     if (Reason.Trim().Length == 0)
                                     {
                                         IsLoading = true;
-                                        var argcombo6 = cboOrderStatus;
-                                        Combo.SetSelectedComboItem_By_Value(ref argcombo6, CurrentOrder.OrderStatusID.ToString());
+                                        Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                         IsLoading = false;
                                         return;
                                     }
@@ -6148,8 +6115,7 @@ namespace FSM
                                 else
                                 {
                                     IsLoading = true;
-                                    var argcombo7 = cboOrderStatus;
-                                    Combo.SetSelectedComboItem_By_Value(ref argcombo7, CurrentOrder.OrderStatusID.ToString());
+                                    Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                     IsLoading = false;
                                     return;
                                 }
@@ -6165,16 +6131,14 @@ namespace FSM
                             {
                                 App.ShowMessage("Department Reference Missing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 IsLoading = true;
-                                var argcombo8 = cboOrderStatus;
-                                Combo.SetSelectedComboItem_By_Value(ref argcombo8, CurrentOrder.OrderStatusID.ToString());
+                                Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                 IsLoading = false;
                             }
                             else if (CurrentOrder.OrderStatusID == (int)Enums.OrderStatus.AwaitingConfirmation)
                             {
                                 App.ShowMessage("You cannot complete an order manually.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 IsLoading = true;
-                                var argcombo9 = cboOrderStatus;
-                                Combo.SetSelectedComboItem_By_Value(ref argcombo9, CurrentOrder.OrderStatusID.ToString());
+                                Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                                 IsLoading = false;
                                 return;
                             }
@@ -6433,9 +6397,7 @@ namespace FSM
 
                 if (!Information.IsDBNull(oSupplierInvoice.TaxCodeID))
                 {
-                    var argcombo = cboInvoiceTaxCodeNew;
-                    Combo.SetSelectedComboItem_By_Value(ref argcombo, oSupplierInvoice.TaxCodeID.ToString());
-                    cboInvoiceTaxCodeNew = argcombo;
+                    Combo.SetSelectedComboItem_By_Value(ref _cboInvoiceTaxCodeNew, oSupplierInvoice.TaxCodeID.ToString());
                 }
 
                 if (oSupplierInvoice.RequresAuth == true & oSupplierInvoice.Authorised == true | oSupplierInvoice.RequresAuth == false)
@@ -6502,9 +6464,7 @@ namespace FSM
                 txtCreditNominal.Text = oPartsToBeCredted.NominalCode;
                 if (!Information.IsDBNull(oPartsToBeCredted.TaxCodeID))
                 {
-                    var argcombo = cboCreditTax;
-                    Combo.SetSelectedComboItem_By_Value(ref argcombo, oPartsToBeCredted.TaxCodeID.ToString());
-                    cboCreditTax = argcombo;
+                    Combo.SetSelectedComboItem_By_Value(ref _cboCreditTax, oPartsToBeCredted.TaxCodeID.ToString());
                 }
 
                 cboCreditTax.SelectedValue = oPartsToBeCredted.TaxCodeID;
@@ -6558,8 +6518,7 @@ namespace FSM
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
 
-                var argcombo = cboInvoiceTaxCodeNew;
-                Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+                Combo.SetSelectedComboItem_By_Value(ref _cboInvoiceTaxCodeNew, null);
 
                 cboReadySageNew.Checked = false;
                 dtpSupplierInvoiceDateNew.Enabled = true;
@@ -6613,10 +6572,7 @@ namespace FSM
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
 
-                var argcombo1 = cboInvoiceTaxCodeNew;
-                Combo.SetSelectedComboItem_By_Value(ref argcombo1, null);
-
-                cboInvoiceTaxCodeNew = argcombo1;
+                Combo.SetSelectedComboItem_By_Value(ref _cboInvoiceTaxCodeNew, null);
             }
         }
 
@@ -6633,8 +6589,7 @@ namespace FSM
                 txtCreditVAT.Text = null;
                 txtCreditTotal.Text = null;
 
-                var argcombo = cboCreditTax;
-                Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+                Combo.SetSelectedComboItem_By_Value(ref _cboCreditTax, null);
 
                 dtpCreditDate.Enabled = true;
                 txtCreditRef.ReadOnly = false;
@@ -6747,10 +6702,8 @@ namespace FSM
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
 
-                var argcombo = cboInvoiceTaxCodeNew;
-                Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+                Combo.SetSelectedComboItem_By_Value(ref _cboInvoiceTaxCodeNew, null);
 
-                cboInvoiceTaxCodeNew = argcombo;
                 cboReadySageNew.Checked = false;
 
                 RefreshDataGrids();
@@ -6842,10 +6795,8 @@ namespace FSM
                 txtVATAmount.Text = null;
                 txtTotalAmount.Text = null;
 
-                var argcombo = cboInvoiceTaxCodeNew;
-                Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
+                Combo.SetSelectedComboItem_By_Value(ref _cboInvoiceTaxCodeNew, null);
 
-                cboInvoiceTaxCodeNew = argcombo;
                 cboReadySageNew.Checked = false;
 
                 RefreshDataGrids();
@@ -6902,9 +6853,7 @@ namespace FSM
             txtCreditGoods.Text = null;
             txtCreditVAT.Text = null;
             txtCreditTotal.Text = null;
-            var argcombo = cboCreditTax;
-            Combo.SetSelectedComboItem_By_Value(ref argcombo, null);
-            cboCreditTax = argcombo;
+            Combo.SetSelectedComboItem_By_Value(ref _cboCreditTax, null);
             RefreshDataGrids();
             PopulateOrderTotal();
         }
@@ -7057,8 +7006,7 @@ namespace FSM
             {
                 if (App.ShowMessage("There is stock available in a warehouse, would you like to still order from supplier?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
-                    var argcombo = cboPartLocation;
-                    Combo.SetSelectedComboItem_By_Value(ref argcombo, Conversions.ToInteger(Enums.LocationType.Warehouse).ToString());
+                    Combo.SetSelectedComboItem_By_Value(ref _cboPartLocation, Conversions.ToInteger(Enums.LocationType.Warehouse).ToString());
                     PartSearch();
                     int index = 0;
                     foreach (DataRow row in PartsDataView.Table.Rows)
@@ -7457,8 +7405,7 @@ namespace FSM
                                 {
                                     if (App.ShowMessage("There is stock available in a warehouse, would you like to still order from supplier?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                                     {
-                                        var argcombo = cboProductLocation;
-                                        Combo.SetSelectedComboItem_By_Value(ref argcombo, Conversions.ToInteger(Enums.LocationType.Warehouse).ToString());
+                                        Combo.SetSelectedComboItem_By_Value(ref _cboProductLocation, Conversions.ToInteger(Enums.LocationType.Warehouse).ToString());
                                         ProductSearch();
                                         int index = 0;
                                         foreach (DataRow row in ProductsDataView.Table.Rows)
@@ -8106,16 +8053,10 @@ namespace FSM
             }
 
             var argcombo = cboDept;
-            Combo.SetSelectedComboItem_By_Value(ref argcombo, CurrentOrder.DepartmentRef);
-            cboDept = argcombo;
+            Combo.SetSelectedComboItem_By_Value(ref _cboDept, CurrentOrder.DepartmentRef);
+            Combo.SetSelectedComboItem_By_Value(ref _cboOrderTypeID, CurrentOrder.OrderTypeID.ToString());
 
-            var argcombo1 = cboOrderTypeID;
-            Combo.SetSelectedComboItem_By_Value(ref argcombo1, CurrentOrder.OrderTypeID.ToString());
-            cboOrderTypeID = argcombo1;
-
-            var argcombo2 = cboOrderStatus;
-            Combo.SetSelectedComboItem_By_Value(ref argcombo2, CurrentOrder.OrderStatusID.ToString());
-            cboOrderStatus = argcombo2;
+            Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
 
             chkDoNotConsolidate.Checked = CurrentOrder.DoNotConsolidated;
             var switchExpr = CurrentOrder.OrderStatusID;
@@ -9728,9 +9669,7 @@ namespace FSM
                 if (Reason.Trim().Length == 0)
                 {
                     IsLoading = true;
-                    var argcombo = cboOrderStatus;
-                    Combo.SetSelectedComboItem_By_Value(ref argcombo, CurrentOrder.OrderStatusID.ToString());
-                    cboOrderStatus = argcombo;
+                    Combo.SetSelectedComboItem_By_Value(ref _cboOrderStatus, CurrentOrder.OrderStatusID.ToString());
                     IsLoading = false;
                     return;
                 }
