@@ -14287,7 +14287,7 @@ namespace FSM
                 var drPre = dt.Select("Preferred=1");
                 if (drPre.Length > 0)
                 {
-                    return Helper.MakeDoubleValid((double)drPre[0]["Price"] * Helper.MakeDoubleValid(dr["Quantity"]));
+                    return Helper.MakeDoubleValid((decimal)drPre[0]["Price"]) * Helper.MakeDoubleValid(dr["Quantity"]);
                 }
 
                 double lowest = 0;
@@ -14296,7 +14296,7 @@ namespace FSM
                     lowest = Helper.MakeDoubleValid(dt.Rows[0]["Price"]);
                     foreach (DataRow r in dt.Rows)
                     {
-                        if (Convert.ToBoolean((double)r["Price"] < lowest))
+                        if (Convert.ToBoolean((decimal)r["Price"] < (decimal)lowest))
                         {
                             lowest = Helper.MakeDoubleValid(r["Price"]);
                         }
