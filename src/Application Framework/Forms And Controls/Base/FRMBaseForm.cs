@@ -92,6 +92,24 @@ namespace FSM
         public void LoadForm(object sender, EventArgs e, IForm frm)
         {
             _FormButtons = new ArrayList();
+            SetUpImages();
+
+            LoopControls((Control)frm);
+            SetupButtonMouseOvers();
+        }
+
+        // Added to allow forms that do not implement IForm
+        public void LoadForm(Form frm)
+        {
+            _FormButtons = new ArrayList();
+            SetUpImages();
+
+            LoopControls((Control)frm);
+            SetupButtonMouseOvers();
+        }
+
+        public void SetUpImages()
+        {
             if (App.IsRFT)
             {
                 this.Icon = new Icon("Resources\\RFT_ico.ico");
@@ -104,30 +122,6 @@ namespace FSM
             {
                 this.Icon = new Icon("Resources\\Blueflame_ico.ico");
             }
-
-            LoopControls((Control)frm);
-            SetupButtonMouseOvers();
-        }
-
-        // Added to allow forms that do not implement IForm
-        public void LoadForm(Form frm)
-        {
-            _FormButtons = new ArrayList();
-            if (App.IsRFT)
-            {
-                this.Icon = new Icon("Resources\\rft_logo.ico");
-            }
-            else if (App.IsGasway)
-            {
-                this.Icon = new Icon("Resources\\GW_Icon.ico");
-            }
-            else if (App.IsBlueflame)
-            {
-                this.Icon = new Icon("Resources\\Blueflame_Icon.ico");
-            }
-
-            LoopControls((Control)frm);
-            SetupButtonMouseOvers();
         }
 
         public void LoopControls(Control controlToLoop)
