@@ -90,7 +90,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_OrderID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_OrderID), value);
                 }
             }
 
@@ -123,7 +123,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_OrderTypeID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_OrderTypeID), value);
                 }
             }
 
@@ -141,7 +141,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_OrderReference", value);
+                    _dataTypeValidator.SetValue(this, nameof(_OrderReference), value);
                 }
             }
 
@@ -159,7 +159,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_UserID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_UserID), value);
                 }
             }
 
@@ -177,7 +177,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_OrderStatusID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_OrderStatusID), value);
                 }
             }
 
@@ -195,7 +195,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_ReasonForReject", value);
+                    _dataTypeValidator.SetValue(this, nameof(_ReasonForReject), value);
                 }
             }
 
@@ -228,7 +228,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_sentToSage", value);
+                    _dataTypeValidator.SetValue(this, nameof(_sentToSage), value);
                 }
             }
 
@@ -261,7 +261,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_supplierInvoiceAmount", value);
+                    _dataTypeValidator.SetValue(this, nameof(_supplierInvoiceAmount), value);
                 }
             }
 
@@ -279,7 +279,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_supplierInvoiceReference", value);
+                    _dataTypeValidator.SetValue(this, nameof(_supplierInvoiceReference), value);
                 }
             }
 
@@ -297,7 +297,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_allocatedToUser", value);
+                    _dataTypeValidator.SetValue(this, nameof(_allocatedToUser), value);
                 }
             }
 
@@ -315,7 +315,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_allocatedToEngineer", value);
+                    _dataTypeValidator.SetValue(this, nameof(_allocatedToEngineer), value);
                 }
             }
 
@@ -333,7 +333,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_invoiceAddressID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_invoiceAddressID), value);
                 }
             }
 
@@ -351,7 +351,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_contactID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_contactID), value);
                 }
             }
 
@@ -369,7 +369,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_specialInstructions", value);
+                    _dataTypeValidator.SetValue(this, nameof(_specialInstructions), value);
                 }
             }
 
@@ -423,7 +423,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_Region", value);
+                    _dataTypeValidator.SetValue(this, nameof(_Region), value);
                 }
             }
 
@@ -441,7 +441,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_DepartmentRef", value);
+                    _dataTypeValidator.SetValue(this, nameof(_DepartmentRef), value);
                 }
             }
 
@@ -459,7 +459,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_ExtraRef", value);
+                    _dataTypeValidator.SetValue(this, nameof(_ExtraRef), value);
                 }
             }
 
@@ -477,7 +477,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_TaxCodeID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_TaxCodeID), value);
                 }
             }
 
@@ -513,7 +513,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_OrderConsolidationID", value);
+                    _dataTypeValidator.SetValue(this, nameof(_OrderConsolidationID), value);
                 }
             }
 
@@ -531,7 +531,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_VATAmount", value);
+                    _dataTypeValidator.SetValue(this, nameof(_VATAmount), value);
                 }
             }
 
@@ -549,7 +549,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_DoNotConsolidated", value);
+                    _dataTypeValidator.SetValue(this, nameof(_DoNotConsolidated), value);
                 }
             }
 
@@ -567,7 +567,7 @@ namespace FSM.Entity
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_reason", value);
+                    _dataTypeValidator.SetValue(this, nameof(_reason), value);
                 }
             }
         }
