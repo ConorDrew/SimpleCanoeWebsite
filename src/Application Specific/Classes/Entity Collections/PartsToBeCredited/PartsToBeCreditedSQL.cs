@@ -21,33 +21,26 @@ namespace FSM.Entity
 
                 // Get the datatable from the database store in dt
                 var dt = _database.ExecuteSP_DataTable("PartsToBeCredited_Get");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oPartsToBeCredited = new PartsToBeCredited();
-                        oPartsToBeCredited.IgnoreExceptionsOnSetMethods = true;
-                        oPartsToBeCredited.SetPartsToBeCreditedID = dt.Rows[0]["PartsToBeCreditedID"];
-                        oPartsToBeCredited.SetOrderID = dt.Rows[0]["OrderID"];
-                        oPartsToBeCredited.SetSupplierID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["SupplierID"]);
-                        oPartsToBeCredited.SetPartID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["PartID"]);
-                        oPartsToBeCredited.SetQty = dt.Rows[0]["Qty"];
-                        oPartsToBeCredited.SetManuallyAdded = Sys.Helper.MakeBooleanValid(dt.Rows[0]["ManuallyAdded"]);
-                        oPartsToBeCredited.SetStatusID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["StatusID"]);
-                        oPartsToBeCredited.SetCreditReceived = Sys.Helper.MakeDoubleValid(dt.Rows[0]["CreditReceived"]);
-                        oPartsToBeCredited.SetOrderReference = Sys.Helper.MakeStringValid(dt.Rows[0]["OrderReference"]);
-                        oPartsToBeCredited.Exists = true;
-                        return oPartsToBeCredited;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
+                if (dt is null)
                     return null;
-                }
+
+                if (dt.Rows.Count == 0)
+                    return null;
+
+                var oPartsToBeCredited = new PartsToBeCredited();
+                oPartsToBeCredited.IgnoreExceptionsOnSetMethods = true;
+                oPartsToBeCredited.SetPartsToBeCreditedID = dt.Rows[0]["PartsToBeCreditedID"];
+                oPartsToBeCredited.SetOrderID = dt.Rows[0]["OrderID"];
+                oPartsToBeCredited.SetSupplierID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["SupplierID"]);
+                oPartsToBeCredited.SetPartID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["PartID"]);
+                oPartsToBeCredited.SetQty = dt.Rows[0]["Qty"];
+                oPartsToBeCredited.SetManuallyAdded = Sys.Helper.MakeBooleanValid(dt.Rows[0]["ManuallyAdded"]);
+                oPartsToBeCredited.SetStatusID = Sys.Helper.MakeIntegerValid(dt.Rows[0]["StatusID"]);
+                oPartsToBeCredited.SetCreditReceived = Sys.Helper.MakeDoubleValid(dt.Rows[0]["CreditReceived"]);
+                oPartsToBeCredited.SetOrderReference = Sys.Helper.MakeStringValid(dt.Rows[0]["OrderReference"]);
+                oPartsToBeCredited.Exists = true;
+
+                return oPartsToBeCredited;
             }
 
             public DataView PartsToBeCredited_GetAll()
@@ -191,41 +184,34 @@ namespace FSM.Entity
 
                 // Get the datatable from the database store in dt
                 var dt = _database.ExecuteSP_DataTable("PartsToBeCredited_Get_For_CreditID");
-                if (dt is object)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        var oPartsToBeCredited = new PartsToBeCrediteds.PartsToBeCredited();
-                        oPartsToBeCredited.IgnoreExceptionsOnSetMethods = true;
-                        oPartsToBeCredited.SetPartsToBeCreditedID = dt.Rows[0]["PartsToBeCreditedID"];
-                        oPartsToBeCredited.SetCreditRef = dt.Rows[0]["SupplierCreditRef"];
-                        oPartsToBeCredited.SetExtraRef = dt.Rows[0]["ExtraRef"];
-                        oPartsToBeCredited.SetNominalCode = dt.Rows[0]["NominalCode"];
-                        oPartsToBeCredited.SetTaxCodeID = dt.Rows[0]["TaxCodeID"];
-                        oPartsToBeCredited.SetAmountRecieved = dt.Rows[0]["AmountReceived"];
-                        oPartsToBeCredited.SetDateExportedToSage = dt.Rows[0]["DateExportedToSage"].ToString();
-                        oPartsToBeCredited.SetDateReceived = dt.Rows[0]["DateReceived"].ToString();
-                        oPartsToBeCredited.SetPartsToBeCreditedID = dt.Rows[0]["PartsToBeCreditedID"];
-                        oPartsToBeCredited.SetOrderID = dt.Rows[0]["OrderID"];
-                        oPartsToBeCredited.SetSupplierID = Entity.Sys.Helper.MakeIntegerValid(dt.Rows[0]["SupplierID"]);
-                        oPartsToBeCredited.SetPartID = Entity.Sys.Helper.MakeIntegerValid(dt.Rows[0]["PartID"]);
-                        oPartsToBeCredited.SetQty = dt.Rows[0]["Qty"];
-                        oPartsToBeCredited.SetManuallyAdded = Entity.Sys.Helper.MakeBooleanValid(dt.Rows[0]["ManuallyAdded"]);
-                        oPartsToBeCredited.SetStatusID = Entity.Sys.Helper.MakeIntegerValid(dt.Rows[0]["StatusID"]);
-                        oPartsToBeCredited.SetCreditReceived = Entity.Sys.Helper.MakeDoubleValid(dt.Rows[0]["CreditReceived"]);
-                        oPartsToBeCredited.SetOrderReference = Entity.Sys.Helper.MakeStringValid(dt.Rows[0]["OrderReference"]);
-                        oPartsToBeCredited.Exists = true;
-                        return oPartsToBeCredited;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
+                if (dt is null)
                     return null;
-                }
+
+                if (dt.Rows.Count == 0)
+                    return null;
+
+                var oPartsToBeCredited = new PartsToBeCrediteds.PartsToBeCredited();
+                oPartsToBeCredited.IgnoreExceptionsOnSetMethods = true;
+                oPartsToBeCredited.SetPartsToBeCreditedID = dt.Rows[0]["PartsToBeCreditedID"];
+                oPartsToBeCredited.SetCreditRef = dt.Rows[0]["SupplierCreditRef"];
+                oPartsToBeCredited.SetExtraRef = dt.Rows[0]["ExtraRef"];
+                oPartsToBeCredited.SetNominalCode = dt.Rows[0]["NominalCode"];
+                oPartsToBeCredited.SetTaxCodeID = dt.Rows[0]["TaxCodeID"];
+                oPartsToBeCredited.SetAmountReceived = dt.Rows[0]["AmountReceived"];
+                oPartsToBeCredited.SetDateExportedToSage = dt.Rows[0]["DateExportedToSage"].ToString();
+                oPartsToBeCredited.SetDateReceived = dt.Rows[0]["DateReceived"].ToString();
+                oPartsToBeCredited.SetPartsToBeCreditedID = dt.Rows[0]["PartsToBeCreditedID"];
+                oPartsToBeCredited.SetOrderID = dt.Rows[0]["OrderID"];
+                oPartsToBeCredited.SetSupplierID = Entity.Sys.Helper.MakeIntegerValid(dt.Rows[0]["SupplierID"]);
+                oPartsToBeCredited.SetPartID = Entity.Sys.Helper.MakeIntegerValid(dt.Rows[0]["PartID"]);
+                oPartsToBeCredited.SetQty = dt.Rows[0]["Qty"];
+                oPartsToBeCredited.SetManuallyAdded = Entity.Sys.Helper.MakeBooleanValid(dt.Rows[0]["ManuallyAdded"]);
+                oPartsToBeCredited.SetStatusID = Entity.Sys.Helper.MakeIntegerValid(dt.Rows[0]["StatusID"]);
+                oPartsToBeCredited.SetCreditReceived = Entity.Sys.Helper.MakeDoubleValid(dt.Rows[0]["CreditReceived"]);
+                oPartsToBeCredited.SetOrderReference = Entity.Sys.Helper.MakeStringValid(dt.Rows[0]["OrderReference"]);
+                oPartsToBeCredited.Exists = true;
+
+                return oPartsToBeCredited;
             }
 
             public int PartsToBeCredited_Insert(int SupplierID, int OrderID, int PartID, int Quantity, string OrderRef, int EngineerID, int OrderPArtID)

@@ -347,21 +347,21 @@ namespace FSM.Entity
                 }
             }
 
-            private double _AmountRecieved = 0;
+            private double _AmountReceived = 0;
 
-            public double AmountRecieved
+            public double AmountReceived
             {
                 get
                 {
-                    return _AmountRecieved;
+                    return _AmountReceived;
                 }
             }
 
-            public object SetAmountRecieved
+            public object SetAmountReceived
             {
                 set
                 {
-                    _dataTypeValidator.SetValue(this, "_AmountRecieved", value);
+                    _dataTypeValidator.SetValue(this, "_AmountReceived", value);
                 }
             }
 

@@ -940,28 +940,29 @@ namespace FSM
 
                 if (ProductSupplier is object)
                 {
-                    ProductSupplier.IgnoreExceptionsOnSetMethods = true;
-                    ProductSupplier.SetPrice = txtBuyPrice.Text.Trim();
-                    ProductSupplier.SetProductCode = txtSupplierCode.Text.Trim();
-                    var val = new Entity.ProductSuppliers.ProductSupplierValidator();
-                    val.Validate(ProductSupplier);
-                    var OrderProduct = new Entity.OrderProducts.OrderProduct();
-                    OrderProduct.IgnoreExceptionsOnSetMethods = true;
-                    OrderProduct.SetSellPrice = txtSellPrice.Text.Trim();
-                    OrderProduct.SetQuantity = txtAmount.Text.Trim();
-                    OrderProduct.SetOrderID = oOrder.OrderID;
-                    var val2 = new Entity.OrderProducts.OrderProductValidator();
-                    val2.Validate(OrderProduct);
-                    ProductSupplier = App.DB.ProductSupplier.Insert(ProductSupplier);
-                    OrderProduct.SetBuyPrice = ProductSupplier.Price;
-                    OrderProduct.SetProductSupplierID = ProductSupplier.ProductSupplierID;
-                    var oOrderAudit = new FSM.Entity.OrderAudit();
-                    oOrderAudit.SetOrderID = oOrder.OrderID;
-                    oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
-                    oOrderAudit.SetDescription = "PartID " + PartSupplier.PartID + " Quantity " + OrderProduct.Quantity + " Price " + OrderProduct.BuyPrice + " From supplier " + PartSupplier.PartSupplierID;
-                    App.DB.OrderProduct.Insert(OrderProduct, true);
-                    App.DB.OrderAudits.Insert(oOrderAudit);
-                    App.DB.ProductPriceRequest.Complete(PriceRequestID);
+                    //ProductSupplier.IgnoreExceptionsOnSetMethods = true;
+                    //ProductSupplier.SetPrice = txtBuyPrice.Text.Trim();
+                    //ProductSupplier.SetProductCode = txtSupplierCode.Text.Trim();
+                    //var val = new Entity.ProductSuppliers.ProductSupplierValidator();
+                    //val.Validate(ProductSupplier);
+                    //var OrderProduct = new Entity.OrderProducts.OrderProduct();
+                    //OrderProduct.IgnoreExceptionsOnSetMethods = true;
+                    //OrderProduct.SetSellPrice = txtSellPrice.Text.Trim();
+                    //OrderProduct.SetQuantity = txtAmount.Text.Trim();
+                    //OrderProduct.SetOrderID = oOrder.OrderID;
+                    //var val2 = new Entity.OrderProducts.OrderProductValidator();
+                    //val2.Validate(OrderProduct);
+                    //ProductSupplier = App.DB.ProductSupplier.Insert(ProductSupplier);
+                    //OrderProduct.SetBuyPrice = ProductSupplier.Price;
+                    //OrderProduct.SetProductSupplierID = ProductSupplier.ProductSupplierID;
+                    //var oOrderAudit = new FSM.Entity.OrderAudit();
+                    //oOrderAudit.SetOrderID = oOrder.OrderID;
+                    //oOrderAudit.SetReason = FSM.Entity.Sys.Helper.MakeIntegerValid(FSM.Entity.Sys.Enums.OrderAuditReason.PartsAdded);
+                    //oOrderAudit.SetDescription = "PartID " + PartSupplier.PartID + " Quantity " + OrderProduct.Quantity + " Price " + OrderProduct.BuyPrice + " From supplier " + PartSupplier.PartSupplierID;
+                    //App.DB.OrderProduct.Insert(OrderProduct, true);
+                    //App.DB.OrderAudits.Insert(oOrderAudit);
+                    //App.DB.ProductPriceRequest.Complete(PriceRequestID);
+                    throw new NotImplementedException("Products are not used anymore.");
                 }
 
                 if (Modal)

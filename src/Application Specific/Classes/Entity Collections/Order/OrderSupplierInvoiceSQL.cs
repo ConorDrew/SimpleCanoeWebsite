@@ -24,48 +24,38 @@ namespace FSM.Entity
 
             public Orders.SupplierInvoice Order_GetSupplierInvoice(int SupplierInvoiceID)
             {
-                {
-                    _database.ClearParameter();
-                    _database.AddParameter("@SupplierInvoiceID", SupplierInvoiceID, true);
-                    // Get the datatable from the database store in dt
-                    var dt = _database.ExecuteSP_DataTable("Order_GetSupplierInvoice");
-                    //dt.TableName = Sys.Enums.TableNames.tblOrderSupplierInvoices.ToString();
-                    if (dt is object)
-                    {
-                        if (dt.Rows.Count > 0)
-                        {
-                            var oSupplierInvoice = new Orders.SupplierInvoice();
-                            oSupplierInvoice.IgnoreExceptionsOnSetMethods = true;
-                            oSupplierInvoice.SetInvoiceID = dt.Rows[0]["SupplierInvoiceID"];
-                            oSupplierInvoice.SetOrderID = dt.Rows[0]["OrderID"];
-                            oSupplierInvoice.SetInvoiceReference = dt.Rows[0]["SupplierInvoiceReference"];
-                            oSupplierInvoice.SetInvoiceDate = dt.Rows[0]["SupplierInvoiceDate"];
-                            oSupplierInvoice.SetGoodsAmount = dt.Rows[0]["SupplierGoodsAmount"];
-                            oSupplierInvoice.SetVATAmount = dt.Rows[0]["SupplierVATAmount"];
-                            oSupplierInvoice.SetInvoiceAmount = dt.Rows[0]["SupplierInvoiceAmount"];
-                            oSupplierInvoice.SetTaxCodeID = dt.Rows[0]["TaxCodeID"];
-                            oSupplierInvoice.SetNominalCode = dt.Rows[0]["NominalCode"];
-                            oSupplierInvoice.SetExtraRef = dt.Rows[0]["ExtraRef"];
-                            oSupplierInvoice.SetReadyToSendToSage = dt.Rows[0]["ReadyToSendToSage"];
-                            oSupplierInvoice.SetSentToSage = dt.Rows[0]["SentToSage"];
-                            oSupplierInvoice.SetOldSystemInvoice = dt.Rows[0]["OldSystemInvoice"];
-                            oSupplierInvoice.SetDateExported = dt.Rows[0]["DateExported"];
-                            oSupplierInvoice.SetKeyedBy = dt.Rows[0]["KeyedBy"];
-                            oSupplierInvoice.SetRequresAuth = dt.Rows[0]["RequiresAuthorisation"];
-                            oSupplierInvoice.SetAuthorised = dt.Rows[0]["Authorised"];
-                            oSupplierInvoice.Exists = true;
-                            return oSupplierInvoice;
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
+                _database.ClearParameter();
+                _database.AddParameter("@SupplierInvoiceID", SupplierInvoiceID, true);
+                // Get the datatable from the database store in dt
+                var dt = _database.ExecuteSP_DataTable("Order_GetSupplierInvoice");
+
+                if (dt == null)
+                    return null;
+
+                if (dt.Rows.Count == 0)
+                    return null;
+
+                var oSupplierInvoice = new Orders.SupplierInvoice();
+                oSupplierInvoice.IgnoreExceptionsOnSetMethods = true;
+                oSupplierInvoice.SetInvoiceID = dt.Rows[0]["SupplierInvoiceID"];
+                oSupplierInvoice.SetOrderID = dt.Rows[0]["OrderID"];
+                oSupplierInvoice.SetInvoiceReference = dt.Rows[0]["SupplierInvoiceReference"];
+                oSupplierInvoice.SetInvoiceDate = dt.Rows[0]["SupplierInvoiceDate"];
+                oSupplierInvoice.SetGoodsAmount = dt.Rows[0]["SupplierGoodsAmount"];
+                oSupplierInvoice.SetVATAmount = dt.Rows[0]["SupplierVATAmount"];
+                oSupplierInvoice.SetInvoiceAmount = dt.Rows[0]["SupplierInvoiceAmount"];
+                oSupplierInvoice.SetTaxCodeID = dt.Rows[0]["TaxCodeID"];
+                oSupplierInvoice.SetNominalCode = dt.Rows[0]["NominalCode"];
+                oSupplierInvoice.SetExtraRef = dt.Rows[0]["ExtraRef"];
+                oSupplierInvoice.SetReadyToSendToSage = dt.Rows[0]["ReadyToSendToSage"];
+                oSupplierInvoice.SetSentToSage = dt.Rows[0]["SentToSage"];
+                oSupplierInvoice.SetOldSystemInvoice = dt.Rows[0]["OldSystemInvoice"];
+                oSupplierInvoice.SetDateExported = dt.Rows[0]["DateExported"];
+                oSupplierInvoice.SetKeyedBy = dt.Rows[0]["KeyedBy"];
+                oSupplierInvoice.SetRequresAuth = dt.Rows[0]["RequiresAuthorisation"];
+                oSupplierInvoice.SetAuthorised = dt.Rows[0]["Authorised"];
+                oSupplierInvoice.Exists = true;
+                return oSupplierInvoice;
             }
 
             public DataView Order_GetSupplierInvoices(int OrderID)

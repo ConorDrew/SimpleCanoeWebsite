@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Management.Automation.Language;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
@@ -8,8 +9,7 @@ namespace FSM
 {
     public partial class FRMOrderAudit : FRMBaseForm, IForm
     {
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-
+        private const int ORDER_ID = 0;
         public FRMOrderAudit() : base()
         {
             // This call is required by the Windows Form Designer.
@@ -43,16 +43,16 @@ namespace FSM
         {
             get
             {
+                throw new NotImplementedException();
                 return null;
             }
         }
 
         public void ResetMe(int newID)
         {
+            throw new NotImplementedException();
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private DataView _dvOrderAudits;
 
         private DataView OrderAuditsDataview
@@ -88,8 +88,6 @@ namespace FSM
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         private void SetupOrderAuditDataGrid()
         {
@@ -143,14 +141,12 @@ namespace FSM
             LoadMe(sender, e);
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
 
         public void PopulateDatagrid()
         {
             try
             {
-                OrderAuditsDataview = FSM.App.DB.OrderAudits.Get_For_Job(Conversions.ToInteger(base.get_GetParameter(0)));
+                OrderAuditsDataview = FSM.App.DB.OrderAudits.Get_For_Job(Conversions.ToInteger(base.get_GetParameter(ORDER_ID)));
             }
             catch (Exception ex)
             {
@@ -162,7 +158,5 @@ namespace FSM
         {
             base.Close();
         }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

@@ -82,7 +82,7 @@ namespace FSM
 
         private DateTimePicker _dtpDatePlaced;
 
-        private const String UnknownNominalCode = "UNKNOWN";
+        private const String UNKNOWN_NOMINAL_CODE = "UNKNOWN";
 
         internal DateTimePicker dtpDatePlaced
         {
@@ -2581,11 +2581,11 @@ namespace FSM
             this._GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // _grpOrder
-            // 
-            this._grpOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpOrder.Controls.Add(this.btnViewAudit);
             this._grpOrder.Controls.Add(this._btnApproveOrder);
@@ -2616,9 +2616,9 @@ namespace FSM
             this._grpOrder.TabIndex = 1;
             this._grpOrder.TabStop = false;
             this._grpOrder.Text = "Main Details";
-            // 
+            //
             // btnViewAudit
-            // 
+            //
             this.btnViewAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnViewAudit.Location = new System.Drawing.Point(993, 93);
             this.btnViewAudit.Name = "btnViewAudit";
@@ -2626,9 +2626,9 @@ namespace FSM
             this.btnViewAudit.TabIndex = 130;
             this.btnViewAudit.Text = "Audit Trail";
             this.btnViewAudit.Click += new System.EventHandler(this.btnViewAudit_Click);
-            // 
+            //
             // _btnApproveOrder
-            // 
+            //
             this._btnApproveOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnApproveOrder.Location = new System.Drawing.Point(1286, 17);
             this._btnApproveOrder.Name = "_btnApproveOrder";
@@ -2637,9 +2637,9 @@ namespace FSM
             this._btnApproveOrder.Text = "Approve Order";
             this._btnApproveOrder.Visible = false;
             this._btnApproveOrder.Click += new System.EventHandler(this.btnApproveOrder_Click);
-            // 
+            //
             // _btnUpdateOrderRef
-            // 
+            //
             this._btnUpdateOrderRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnUpdateOrderRef.Location = new System.Drawing.Point(1095, 17);
             this._btnUpdateOrderRef.Name = "_btnUpdateOrderRef";
@@ -2648,17 +2648,17 @@ namespace FSM
             this._btnUpdateOrderRef.Text = "Change Order Ref";
             this._btnUpdateOrderRef.Visible = false;
             this._btnUpdateOrderRef.Click += new System.EventHandler(this.btnUpdateOrderRef_Click);
-            // 
+            //
             // _cboDept
-            // 
+            //
             this._cboDept.FormattingEnabled = true;
             this._cboDept.Location = new System.Drawing.Point(80, 94);
             this._cboDept.Name = "_cboDept";
             this._cboDept.Size = new System.Drawing.Size(170, 21);
             this._cboDept.TabIndex = 124;
-            // 
+            //
             // _lblOrderBalance
-            // 
+            //
             this._lblOrderBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderBalance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblOrderBalance.Location = new System.Drawing.Point(1550, 107);
@@ -2667,9 +2667,9 @@ namespace FSM
             this._lblOrderBalance.TabIndex = 84;
             this._lblOrderBalance.Text = "£0.00";
             this._lblOrderBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
+            //
             // _lblOrderBalanceLabel
-            // 
+            //
             this._lblOrderBalanceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderBalanceLabel.AutoSize = true;
             this._lblOrderBalanceLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2679,9 +2679,9 @@ namespace FSM
             this._lblOrderBalanceLabel.TabIndex = 85;
             this._lblOrderBalanceLabel.Text = "Unallocated : ";
             this._lblOrderBalanceLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
+            //
             // _chkRevertStatus
-            // 
+            //
             this._chkRevertStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._chkRevertStatus.AutoSize = true;
             this._chkRevertStatus.Location = new System.Drawing.Point(1095, 97);
@@ -2691,9 +2691,9 @@ namespace FSM
             this._chkRevertStatus.Text = "Revert to Awaiting Confirmation";
             this._chkRevertStatus.UseVisualStyleBackColor = true;
             this._chkRevertStatus.Visible = false;
-            // 
+            //
             // _lblOrderTotalLabel
-            // 
+            //
             this._lblOrderTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderTotalLabel.AutoSize = true;
             this._lblOrderTotalLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2703,9 +2703,9 @@ namespace FSM
             this._lblOrderTotalLabel.TabIndex = 77;
             this._lblOrderTotalLabel.Text = "Purchase Order Total : ";
             this._lblOrderTotalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
+            //
             // _lblOrderTotal
-            // 
+            //
             this._lblOrderTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderTotal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblOrderTotal.Location = new System.Drawing.Point(1596, 12);
@@ -2714,9 +2714,9 @@ namespace FSM
             this._lblOrderTotal.TabIndex = 76;
             this._lblOrderTotal.Text = "£0.00";
             this._lblOrderTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
+            //
             // _chkDoNotConsolidate
-            // 
+            //
             this._chkDoNotConsolidate.AutoSize = true;
             this._chkDoNotConsolidate.Location = new System.Drawing.Point(256, 97);
             this._chkDoNotConsolidate.Name = "_chkDoNotConsolidate";
@@ -2725,9 +2725,9 @@ namespace FSM
             this._chkDoNotConsolidate.Text = "Do Not Consolidate";
             this._chkDoNotConsolidate.UseVisualStyleBackColor = true;
             this._chkDoNotConsolidate.Visible = false;
-            // 
+            //
             // _chkDeadlineNA
-            // 
+            //
             this._chkDeadlineNA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._chkDeadlineNA.Location = new System.Drawing.Point(1212, 66);
             this._chkDeadlineNA.Name = "_chkDeadlineNA";
@@ -2735,64 +2735,64 @@ namespace FSM
             this._chkDeadlineNA.TabIndex = 4;
             this._chkDeadlineNA.Text = "N/A";
             this._chkDeadlineNA.CheckedChanged += new System.EventHandler(this.chkDeadlineNA_CheckedChanged);
-            // 
+            //
             // _dtpDeliveryDeadline
-            // 
+            //
             this._dtpDeliveryDeadline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._dtpDeliveryDeadline.Location = new System.Drawing.Point(1263, 66);
             this._dtpDeliveryDeadline.Name = "_dtpDeliveryDeadline";
             this._dtpDeliveryDeadline.Size = new System.Drawing.Size(144, 21);
             this._dtpDeliveryDeadline.TabIndex = 5;
             this._dtpDeliveryDeadline.Tag = "Order.DatePlaced";
-            // 
+            //
             // _Label6
-            // 
+            //
             this._Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Label6.Location = new System.Drawing.Point(1090, 70);
             this._Label6.Name = "_Label6";
             this._Label6.Size = new System.Drawing.Size(114, 23);
             this._Label6.TabIndex = 42;
             this._Label6.Text = "Delivery Deadline";
-            // 
+            //
             // _cboOrderStatus
-            // 
-            this._cboOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._cboOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._cboOrderStatus.Location = new System.Drawing.Point(80, 43);
             this._cboOrderStatus.Name = "_cboOrderStatus";
             this._cboOrderStatus.Size = new System.Drawing.Size(1007, 21);
             this._cboOrderStatus.TabIndex = 2;
             this._cboOrderStatus.SelectedIndexChanged += new System.EventHandler(this.cboOrderStatus_SelectedIndexChanged);
-            // 
+            //
             // _Label19
-            // 
+            //
             this._Label19.Location = new System.Drawing.Point(6, 43);
             this._Label19.Name = "_Label19";
             this._Label19.Size = new System.Drawing.Size(48, 23);
             this._Label19.TabIndex = 33;
             this._Label19.Text = "Status";
-            // 
+            //
             // _dtpDatePlaced
-            // 
-            this._dtpDatePlaced.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dtpDatePlaced.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dtpDatePlaced.Location = new System.Drawing.Point(80, 67);
             this._dtpDatePlaced.Name = "_dtpDatePlaced";
             this._dtpDatePlaced.Size = new System.Drawing.Size(1007, 21);
             this._dtpDatePlaced.TabIndex = 3;
             this._dtpDatePlaced.Tag = "Order.DatePlaced";
-            // 
+            //
             // _lblDatePlaced
-            // 
+            //
             this._lblDatePlaced.Location = new System.Drawing.Point(6, 67);
             this._lblDatePlaced.Name = "_lblDatePlaced";
             this._lblDatePlaced.Size = new System.Drawing.Size(79, 20);
             this._lblDatePlaced.TabIndex = 31;
             this._lblDatePlaced.Text = "Date Placed";
-            // 
+            //
             // _txtOrderReference
-            // 
-            this._txtOrderReference.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._txtOrderReference.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtOrderReference.Location = new System.Drawing.Point(80, 19);
             this._txtOrderReference.MaxLength = 100;
@@ -2802,19 +2802,19 @@ namespace FSM
             this._txtOrderReference.TabIndex = 1;
             this._txtOrderReference.Tag = "Order.OrderReference";
             this._txtOrderReference.Visible = false;
-            // 
+            //
             // _lblOrderReference
-            // 
+            //
             this._lblOrderReference.Location = new System.Drawing.Point(6, 19);
             this._lblOrderReference.Name = "_lblOrderReference";
             this._lblOrderReference.Size = new System.Drawing.Size(66, 20);
             this._lblOrderReference.TabIndex = 31;
             this._lblOrderReference.Text = "Order Ref";
-            // 
+            //
             // _tcOrderDetails
-            // 
-            this._tcOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._tcOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._tcOrderDetails.Controls.Add(this._tabDetails);
             this._tcOrderDetails.Controls.Add(this._tabParts);
@@ -2830,9 +2830,9 @@ namespace FSM
             this._tcOrderDetails.Size = new System.Drawing.Size(1669, 728);
             this._tcOrderDetails.TabIndex = 6;
             this._tcOrderDetails.SelectedIndexChanged += new System.EventHandler(this.tcOrderDetails_SelectedIndexChanged);
-            // 
+            //
             // _tabDetails
-            // 
+            //
             this._tabDetails.Controls.Add(this._btnRelatedJob);
             this._tabDetails.Controls.Add(this._pnlDetails);
             this._tabDetails.Controls.Add(this._lblOrderTypeID);
@@ -2843,9 +2843,9 @@ namespace FSM
             this._tabDetails.Size = new System.Drawing.Size(1661, 702);
             this._tabDetails.TabIndex = 0;
             this._tabDetails.Text = "Order Details";
-            // 
+            //
             // _btnRelatedJob
-            // 
+            //
             this._btnRelatedJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnRelatedJob.Enabled = false;
             this._btnRelatedJob.Location = new System.Drawing.Point(1356, 7);
@@ -2854,28 +2854,28 @@ namespace FSM
             this._btnRelatedJob.TabIndex = 32;
             this._btnRelatedJob.Text = "View Related Job";
             this._btnRelatedJob.Click += new System.EventHandler(this.btnRelatedJob_Click);
-            // 
+            //
             // _pnlDetails
-            // 
-            this._pnlDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._pnlDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._pnlDetails.Location = new System.Drawing.Point(0, 40);
             this._pnlDetails.Name = "_pnlDetails";
             this._pnlDetails.Size = new System.Drawing.Size(1658, 653);
             this._pnlDetails.TabIndex = 9;
-            // 
+            //
             // _lblOrderTypeID
-            // 
+            //
             this._lblOrderTypeID.Location = new System.Drawing.Point(8, 8);
             this._lblOrderTypeID.Name = "_lblOrderTypeID";
             this._lblOrderTypeID.Size = new System.Drawing.Size(64, 20);
             this._lblOrderTypeID.TabIndex = 31;
             this._lblOrderTypeID.Text = "Order For";
-            // 
+            //
             // _cboOrderTypeID
-            // 
-            this._cboOrderTypeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._cboOrderTypeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._cboOrderTypeID.Cursor = System.Windows.Forms.Cursors.Hand;
             this._cboOrderTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -2885,9 +2885,9 @@ namespace FSM
             this._cboOrderTypeID.TabIndex = 7;
             this._cboOrderTypeID.Tag = "Order.OrderTypeID";
             this._cboOrderTypeID.SelectedIndexChanged += new System.EventHandler(this.cboOrderTypeID_SelectedIndexChanged);
-            // 
+            //
             // _btnCharges
-            // 
+            //
             this._btnCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCharges.Location = new System.Drawing.Point(1482, 7);
             this._btnCharges.Name = "_btnCharges";
@@ -2895,9 +2895,9 @@ namespace FSM
             this._btnCharges.TabIndex = 8;
             this._btnCharges.Text = "Manage Additional Charges";
             this._btnCharges.Click += new System.EventHandler(this.btnCharges_Click);
-            // 
+            //
             // _tabParts
-            // 
+            //
             this._tabParts.Controls.Add(this._grpPartSearch);
             this._tabParts.Controls.Add(this._grpAvailableParts);
             this._tabParts.Location = new System.Drawing.Point(4, 22);
@@ -2905,10 +2905,10 @@ namespace FSM
             this._tabParts.Size = new System.Drawing.Size(1661, 702);
             this._tabParts.TabIndex = 2;
             this._tabParts.Text = "Parts Available";
-            // 
+            //
             // _grpPartSearch
-            // 
-            this._grpPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpPartSearch.Controls.Add(this._btnAddNewPart);
             this._grpPartSearch.Controls.Add(this._cboPartLocation);
@@ -2920,9 +2920,9 @@ namespace FSM
             this._grpPartSearch.TabIndex = 13;
             this._grpPartSearch.TabStop = false;
             this._grpPartSearch.Text = "Part Search From";
-            // 
+            //
             // _btnAddNewPart
-            // 
+            //
             this._btnAddNewPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnAddNewPart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._btnAddNewPart.Location = new System.Drawing.Point(1573, 24);
@@ -2931,17 +2931,17 @@ namespace FSM
             this._btnAddNewPart.TabIndex = 4;
             this._btnAddNewPart.Text = "New Part";
             this._btnAddNewPart.Click += new System.EventHandler(this.btnAddNewPart_Click);
-            // 
+            //
             // _cboPartLocation
-            // 
+            //
             this._cboPartLocation.Location = new System.Drawing.Point(8, 24);
             this._cboPartLocation.Name = "_cboPartLocation";
             this._cboPartLocation.Size = new System.Drawing.Size(152, 21);
             this._cboPartLocation.TabIndex = 1;
             this._cboPartLocation.SelectedIndexChanged += new System.EventHandler(this.cboPartLocation_SelectedIndexChanged);
-            // 
+            //
             // _btnPartSearch
-            // 
+            //
             this._btnPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnPartSearch.Enabled = false;
             this._btnPartSearch.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2951,21 +2951,21 @@ namespace FSM
             this._btnPartSearch.TabIndex = 3;
             this._btnPartSearch.Text = "Find";
             this._btnPartSearch.Click += new System.EventHandler(this.btnPartSearch_Click);
-            // 
+            //
             // _txtPartSearch
-            // 
-            this._txtPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._txtPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtPartSearch.Location = new System.Drawing.Point(168, 24);
             this._txtPartSearch.Name = "_txtPartSearch";
             this._txtPartSearch.Size = new System.Drawing.Size(1325, 21);
             this._txtPartSearch.TabIndex = 2;
             this._txtPartSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPartSearch_KeyDown);
-            // 
+            //
             // _grpAvailableParts
-            // 
-            this._grpAvailableParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpAvailableParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpAvailableParts.Controls.Add(this._btnCreatePartRequest);
             this._grpAvailableParts.Controls.Add(this._Label7);
@@ -2980,10 +2980,10 @@ namespace FSM
             this._grpAvailableParts.TabIndex = 14;
             this._grpAvailableParts.TabStop = false;
             this._grpAvailableParts.Text = "Available Parts && Packs";
-            // 
+            //
             // _btnCreatePartRequest
-            // 
-            this._btnCreatePartRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._btnCreatePartRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreatePartRequest.Location = new System.Drawing.Point(935, 592);
             this._btnCreatePartRequest.Name = "_btnCreatePartRequest";
@@ -2991,45 +2991,45 @@ namespace FSM
             this._btnCreatePartRequest.TabIndex = 10;
             this._btnCreatePartRequest.Text = "Part Price Request";
             this._btnCreatePartRequest.Click += new System.EventHandler(this.btnCreatePartRequest_Click);
-            // 
+            //
             // _Label7
-            // 
+            //
             this._Label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label7.Location = new System.Drawing.Point(8, 598);
             this._Label7.Name = "_Label7";
             this._Label7.Size = new System.Drawing.Size(40, 13);
             this._Label7.TabIndex = 23;
             this._Label7.Text = "Qty";
-            // 
+            //
             // _txtPartBuyPrice
-            // 
+            //
             this._txtPartBuyPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtPartBuyPrice.Location = new System.Drawing.Point(248, 594);
             this._txtPartBuyPrice.Name = "_txtPartBuyPrice";
             this._txtPartBuyPrice.Size = new System.Drawing.Size(112, 21);
             this._txtPartBuyPrice.TabIndex = 7;
-            // 
+            //
             // _Label3
-            // 
+            //
             this._Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label3.Location = new System.Drawing.Point(176, 598);
             this._Label3.Name = "_Label3";
             this._Label3.Size = new System.Drawing.Size(64, 13);
             this._Label3.TabIndex = 14;
             this._Label3.Text = "Buy Price";
-            // 
+            //
             // _txtPartQuantity
-            // 
+            //
             this._txtPartQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtPartQuantity.Location = new System.Drawing.Point(56, 594);
             this._txtPartQuantity.Name = "_txtPartQuantity";
             this._txtPartQuantity.Size = new System.Drawing.Size(112, 21);
             this._txtPartQuantity.TabIndex = 6;
-            // 
+            //
             // _dgParts
-            // 
-            this._dgParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgParts.DataMember = "";
             this._dgParts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3040,9 +3040,9 @@ namespace FSM
             this._dgParts.CurrentCellChanged += new System.EventHandler(this.dgParts_Click);
             this._dgParts.Click += new System.EventHandler(this.dgParts_Click);
             this._dgParts.DoubleClick += new System.EventHandler(this.dgParts_DoubleClick);
-            // 
+            //
             // _btnAddPart
-            // 
+            //
             this._btnAddPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnAddPart.Location = new System.Drawing.Point(378, 592);
             this._btnAddPart.Name = "_btnAddPart";
@@ -3050,9 +3050,9 @@ namespace FSM
             this._btnAddPart.TabIndex = 9;
             this._btnAddPart.Text = "Add";
             this._btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
-            // 
+            //
             // _tabProducts
-            // 
+            //
             this._tabProducts.Controls.Add(this._grpProductsAvailable);
             this._tabProducts.Controls.Add(this._grpProductSearch);
             this._tabProducts.Location = new System.Drawing.Point(4, 22);
@@ -3060,11 +3060,11 @@ namespace FSM
             this._tabProducts.Size = new System.Drawing.Size(1661, 702);
             this._tabProducts.TabIndex = 1;
             this._tabProducts.Text = "Products Available";
-            // 
+            //
             // _grpProductsAvailable
-            // 
-            this._grpProductsAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpProductsAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpProductsAvailable.Controls.Add(this._btnCreateProductPriceRequest);
             this._grpProductsAvailable.Controls.Add(this._txtProductSellPrice);
@@ -3081,10 +3081,10 @@ namespace FSM
             this._grpProductsAvailable.TabIndex = 10;
             this._grpProductsAvailable.TabStop = false;
             this._grpProductsAvailable.Text = "Available Products ";
-            // 
+            //
             // _btnCreateProductPriceRequest
-            // 
-            this._btnCreateProductPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._btnCreateProductPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreateProductPriceRequest.Location = new System.Drawing.Point(616, 592);
             this._btnCreateProductPriceRequest.Name = "_btnCreateProductPriceRequest";
@@ -3092,62 +3092,62 @@ namespace FSM
             this._btnCreateProductPriceRequest.TabIndex = 10;
             this._btnCreateProductPriceRequest.Text = "Product Price Request";
             this._btnCreateProductPriceRequest.Click += new System.EventHandler(this.btnCreateProductPriceRequest_Click);
-            // 
+            //
             // _txtProductSellPrice
-            // 
+            //
             this._txtProductSellPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtProductSellPrice.Location = new System.Drawing.Point(432, 594);
             this._txtProductSellPrice.Name = "_txtProductSellPrice";
             this._txtProductSellPrice.Size = new System.Drawing.Size(112, 21);
             this._txtProductSellPrice.TabIndex = 8;
-            // 
+            //
             // _Label5
-            // 
+            //
             this._Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label5.Location = new System.Drawing.Point(368, 598);
             this._Label5.Name = "_Label5";
             this._Label5.Size = new System.Drawing.Size(64, 13);
             this._Label5.TabIndex = 18;
             this._Label5.Text = "Sell Price";
-            // 
+            //
             // _txtProductBuyPrice
-            // 
+            //
             this._txtProductBuyPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtProductBuyPrice.Location = new System.Drawing.Point(232, 594);
             this._txtProductBuyPrice.Name = "_txtProductBuyPrice";
             this._txtProductBuyPrice.Size = new System.Drawing.Size(112, 21);
             this._txtProductBuyPrice.TabIndex = 7;
-            // 
+            //
             // _Label4
-            // 
+            //
             this._Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label4.Location = new System.Drawing.Point(168, 598);
             this._Label4.Name = "_Label4";
             this._Label4.Size = new System.Drawing.Size(64, 13);
             this._Label4.TabIndex = 16;
             this._Label4.Text = "Buy Price";
-            // 
+            //
             // _Label1
-            // 
+            //
             this._Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label1.Location = new System.Drawing.Point(8, 598);
             this._Label1.Name = "_Label1";
             this._Label1.Size = new System.Drawing.Size(40, 13);
             this._Label1.TabIndex = 15;
             this._Label1.Text = "Qty";
-            // 
+            //
             // _txtProductQuantity
-            // 
+            //
             this._txtProductQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtProductQuantity.Location = new System.Drawing.Point(48, 594);
             this._txtProductQuantity.Name = "_txtProductQuantity";
             this._txtProductQuantity.Size = new System.Drawing.Size(112, 21);
             this._txtProductQuantity.TabIndex = 6;
-            // 
+            //
             // _dgProduct
-            // 
-            this._dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgProduct.DataMember = "";
             this._dgProduct.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3158,9 +3158,9 @@ namespace FSM
             this._dgProduct.CurrentCellChanged += new System.EventHandler(this.dgProduct_Click);
             this._dgProduct.Click += new System.EventHandler(this.dgProduct_Click);
             this._dgProduct.DoubleClick += new System.EventHandler(this.dgProduct_DoubleClick);
-            // 
+            //
             // _btnAddProduct
-            // 
+            //
             this._btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnAddProduct.Location = new System.Drawing.Point(552, 592);
             this._btnAddProduct.Name = "_btnAddProduct";
@@ -3168,10 +3168,10 @@ namespace FSM
             this._btnAddProduct.TabIndex = 9;
             this._btnAddProduct.Text = "Add ";
             this._btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
+            //
             // _grpProductSearch
-            // 
-            this._grpProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpProductSearch.Controls.Add(this._btnAddNewProduct);
             this._grpProductSearch.Controls.Add(this._cboProductLocation);
@@ -3183,9 +3183,9 @@ namespace FSM
             this._grpProductSearch.TabIndex = 9;
             this._grpProductSearch.TabStop = false;
             this._grpProductSearch.Text = "Product Search From";
-            // 
+            //
             // _btnAddNewProduct
-            // 
+            //
             this._btnAddNewProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnAddNewProduct.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._btnAddNewProduct.Location = new System.Drawing.Point(1545, 24);
@@ -3194,17 +3194,17 @@ namespace FSM
             this._btnAddNewProduct.TabIndex = 4;
             this._btnAddNewProduct.Text = "New Product";
             this._btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
-            // 
+            //
             // _cboProductLocation
-            // 
+            //
             this._cboProductLocation.Location = new System.Drawing.Point(8, 24);
             this._cboProductLocation.Name = "_cboProductLocation";
             this._cboProductLocation.Size = new System.Drawing.Size(152, 21);
             this._cboProductLocation.TabIndex = 1;
             this._cboProductLocation.SelectedIndexChanged += new System.EventHandler(this.cboProductLocation_SelectedIndexChanged);
-            // 
+            //
             // _btnProductSearch
-            // 
+            //
             this._btnProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnProductSearch.Enabled = false;
             this._btnProductSearch.Location = new System.Drawing.Point(1483, 24);
@@ -3213,30 +3213,30 @@ namespace FSM
             this._btnProductSearch.TabIndex = 3;
             this._btnProductSearch.Text = "Find";
             this._btnProductSearch.Click += new System.EventHandler(this.btnProductSearch_Click);
-            // 
+            //
             // _txtProductSearch
-            // 
-            this._txtProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._txtProductSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtProductSearch.Location = new System.Drawing.Point(168, 24);
             this._txtProductSearch.Name = "_txtProductSearch";
             this._txtProductSearch.Size = new System.Drawing.Size(1309, 21);
             this._txtProductSearch.TabIndex = 2;
             this._txtProductSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductSearch_KeyDown);
-            // 
+            //
             // _tabItemsIncluded
-            // 
+            //
             this._tabItemsIncluded.Controls.Add(this._GroupBox3);
             this._tabItemsIncluded.Location = new System.Drawing.Point(4, 22);
             this._tabItemsIncluded.Name = "_tabItemsIncluded";
             this._tabItemsIncluded.Size = new System.Drawing.Size(1661, 702);
             this._tabItemsIncluded.TabIndex = 8;
             this._tabItemsIncluded.Text = "Items Included";
-            // 
+            //
             // _GroupBox3
-            // 
-            this._GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox3.Controls.Add(this._nudItemQty);
             this._GroupBox3.Controls.Add(this._btnEngineerReceived);
@@ -3250,9 +3250,9 @@ namespace FSM
             this._GroupBox3.TabIndex = 0;
             this._GroupBox3.TabStop = false;
             this._GroupBox3.Text = "Double click to mark as received";
-            // 
+            //
             // _nudItemQty
-            // 
+            //
             this._nudItemQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._nudItemQty.Location = new System.Drawing.Point(70, 656);
             this._nudItemQty.Maximum = new decimal(new int[] {
@@ -3268,9 +3268,9 @@ namespace FSM
             0,
             0,
             0});
-            // 
+            //
             // _btnEngineerReceived
-            // 
+            //
             this._btnEngineerReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnEngineerReceived.Location = new System.Drawing.Point(1401, 657);
             this._btnEngineerReceived.Name = "_btnEngineerReceived";
@@ -3279,9 +3279,9 @@ namespace FSM
             this._btnEngineerReceived.Text = "Engineer Received";
             this._btnEngineerReceived.UseVisualStyleBackColor = true;
             this._btnEngineerReceived.Click += new System.EventHandler(this.btnEngineerReceived_Click);
-            // 
+            //
             // _btnReceiveAll
-            // 
+            //
             this._btnReceiveAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnReceiveAll.Location = new System.Drawing.Point(1541, 657);
             this._btnReceiveAll.Name = "_btnReceiveAll";
@@ -3290,18 +3290,18 @@ namespace FSM
             this._btnReceiveAll.Text = "Receive All";
             this._btnReceiveAll.UseVisualStyleBackColor = true;
             this._btnReceiveAll.Click += new System.EventHandler(this.btnReceiveAll_Click);
-            // 
+            //
             // _lblItemQty
-            // 
+            //
             this._lblItemQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblItemQty.Location = new System.Drawing.Point(8, 658);
             this._lblItemQty.Name = "_lblItemQty";
             this._lblItemQty.Size = new System.Drawing.Size(56, 21);
             this._lblItemQty.TabIndex = 10;
             this._lblItemQty.Text = "Quantity";
-            // 
+            //
             // _btnItemQtyUpdate
-            // 
+            //
             this._btnItemQtyUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnItemQtyUpdate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._btnItemQtyUpdate.Location = new System.Drawing.Point(149, 654);
@@ -3310,11 +3310,11 @@ namespace FSM
             this._btnItemQtyUpdate.TabIndex = 3;
             this._btnItemQtyUpdate.Text = "Update";
             this._btnItemQtyUpdate.Click += new System.EventHandler(this.btnItemRemove_Click);
-            // 
+            //
             // _dgItemsIncluded
-            // 
-            this._dgItemsIncluded.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgItemsIncluded.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgItemsIncluded.DataMember = "";
             this._dgItemsIncluded.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3324,20 +3324,20 @@ namespace FSM
             this._dgItemsIncluded.TabIndex = 1;
             this._dgItemsIncluded.Click += new System.EventHandler(this.dgItemsIncluded_Click);
             this._dgItemsIncluded.DoubleClick += new System.EventHandler(this.dgItemsIncluded_DoubleClick);
-            // 
+            //
             // _tabPartPriceReq
-            // 
+            //
             this._tabPartPriceReq.Controls.Add(this._GroupBox2);
             this._tabPartPriceReq.Location = new System.Drawing.Point(4, 22);
             this._tabPartPriceReq.Name = "_tabPartPriceReq";
             this._tabPartPriceReq.Size = new System.Drawing.Size(1661, 702);
             this._tabPartPriceReq.TabIndex = 7;
             this._tabPartPriceReq.Text = "Price Requests";
-            // 
+            //
             // _GroupBox2
-            // 
-            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox2.Controls.Add(this._btnUpdatePartPriceRequest);
             this._GroupBox2.Controls.Add(this._dgPriceRequests);
@@ -3347,9 +3347,9 @@ namespace FSM
             this._GroupBox2.TabIndex = 1;
             this._GroupBox2.TabStop = false;
             this._GroupBox2.Text = "Price requests for parts and products";
-            // 
+            //
             // _btnUpdatePartPriceRequest
-            // 
+            //
             this._btnUpdatePartPriceRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnUpdatePartPriceRequest.Location = new System.Drawing.Point(8, 658);
             this._btnUpdatePartPriceRequest.Name = "_btnUpdatePartPriceRequest";
@@ -3357,11 +3357,11 @@ namespace FSM
             this._btnUpdatePartPriceRequest.TabIndex = 2;
             this._btnUpdatePartPriceRequest.Text = "Update";
             this._btnUpdatePartPriceRequest.Click += new System.EventHandler(this.btnUpdatePartPriceRequest_Click);
-            // 
+            //
             // _dgPriceRequests
-            // 
-            this._dgPriceRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._dgPriceRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgPriceRequests.DataMember = "";
             this._dgPriceRequests.HeaderForeColor = System.Drawing.SystemColors.ControlText;
@@ -3371,9 +3371,9 @@ namespace FSM
             this._dgPriceRequests.TabIndex = 1;
             this._dgPriceRequests.CurrentCellChanged += new System.EventHandler(this.dgPriceRequests_Click);
             this._dgPriceRequests.Click += new System.EventHandler(this.dgPriceRequests_Click);
-            // 
+            //
             // _tabDocuments
-            // 
+            //
             this._tabDocuments.Controls.Add(this._pnlDocuments);
             this._tabDocuments.Controls.Add(this._btnEmail);
             this._tabDocuments.Controls.Add(this._cboPrintType);
@@ -3384,19 +3384,19 @@ namespace FSM
             this._tabDocuments.Size = new System.Drawing.Size(1661, 702);
             this._tabDocuments.TabIndex = 9;
             this._tabDocuments.Text = "Documents";
-            // 
+            //
             // _pnlDocuments
-            // 
-            this._pnlDocuments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._pnlDocuments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._pnlDocuments.Location = new System.Drawing.Point(8, 40);
             this._pnlDocuments.Name = "_pnlDocuments";
             this._pnlDocuments.Size = new System.Drawing.Size(1650, 653);
             this._pnlDocuments.TabIndex = 4;
-            // 
+            //
             // _btnEmail
-            // 
+            //
             this._btnEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnEmail.Location = new System.Drawing.Point(1194, 8);
             this._btnEmail.Name = "_btnEmail";
@@ -3405,18 +3405,18 @@ namespace FSM
             this._btnEmail.Text = "Send Via Email";
             this._btnEmail.Visible = false;
             this._btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
-            // 
+            //
             // _cboPrintType
-            // 
-            this._cboPrintType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._cboPrintType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._cboPrintType.Location = new System.Drawing.Point(8, 8);
             this._cboPrintType.Name = "_cboPrintType";
             this._cboPrintType.Size = new System.Drawing.Size(1090, 21);
             this._cboPrintType.TabIndex = 1;
-            // 
+            //
             // _btnPrint
-            // 
+            //
             this._btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnPrint.Location = new System.Drawing.Point(1106, 8);
             this._btnPrint.Name = "_btnPrint";
@@ -3424,9 +3424,9 @@ namespace FSM
             this._btnPrint.TabIndex = 2;
             this._btnPrint.Text = "Print";
             this._btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
+            //
             // _Label8
-            // 
+            //
             this._Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Label8.Location = new System.Drawing.Point(1170, 12);
             this._Label8.Name = "_Label8";
@@ -3434,20 +3434,20 @@ namespace FSM
             this._Label8.TabIndex = 45;
             this._Label8.Text = "or";
             this._Label8.Visible = false;
-            // 
+            //
             // _tabInvoices
-            // 
+            //
             this._tabInvoices.Controls.Add(this._grpReceivedInvoices);
             this._tabInvoices.Location = new System.Drawing.Point(4, 22);
             this._tabInvoices.Name = "_tabInvoices";
             this._tabInvoices.Size = new System.Drawing.Size(1661, 702);
             this._tabInvoices.TabIndex = 10;
             this._tabInvoices.Text = "Supplier Invoices";
-            // 
+            //
             // _grpReceivedInvoices
-            // 
-            this._grpReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._grpReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpReceivedInvoices.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this._grpReceivedInvoices.Controls.Add(this.dgvGlobalNominals);
@@ -3478,9 +3478,9 @@ namespace FSM
             this._grpReceivedInvoices.TabIndex = 0;
             this._grpReceivedInvoices.TabStop = false;
             this._grpReceivedInvoices.Text = "Received Invoices";
-            // 
+            //
             // dgvGlobalNominals
-            // 
+            //
             this.dgvGlobalNominals.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3489,7 +3489,7 @@ namespace FSM
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvGlobalNominals.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvGlobalNominals.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvGlobalNominals.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGlobalNominals.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGlobalNominals.BackgroundColor = System.Drawing.Color.White;
@@ -3523,9 +3523,9 @@ namespace FSM
             this.dgvGlobalNominals.Size = new System.Drawing.Size(572, 617);
             this.dgvGlobalNominals.TabIndex = 126;
             this.dgvGlobalNominals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGlobalNominals_CellClick);
-            // 
+            //
             // _btnDeleteSupplierInvoice
-            // 
+            //
             this._btnDeleteSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnDeleteSupplierInvoice.Location = new System.Drawing.Point(1468, 668);
             this._btnDeleteSupplierInvoice.Name = "_btnDeleteSupplierInvoice";
@@ -3534,9 +3534,9 @@ namespace FSM
             this._btnDeleteSupplierInvoice.Text = "Delete";
             this._btnDeleteSupplierInvoice.Visible = false;
             this._btnDeleteSupplierInvoice.Click += new System.EventHandler(this.btnDeleteSupplierInvoice_Click);
-            // 
+            //
             // _btnUpdateSupplierInvoice
-            // 
+            //
             this._btnUpdateSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnUpdateSupplierInvoice.Location = new System.Drawing.Point(1530, 668);
             this._btnUpdateSupplierInvoice.Name = "_btnUpdateSupplierInvoice";
@@ -3545,17 +3545,17 @@ namespace FSM
             this._btnUpdateSupplierInvoice.Text = "Update";
             this._btnUpdateSupplierInvoice.Visible = false;
             this._btnUpdateSupplierInvoice.Click += new System.EventHandler(this.btnUpdateSupplierInvoice_Click);
-            // 
+            //
             // _txtTotalAmount
-            // 
+            //
             this._txtTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtTotalAmount.Location = new System.Drawing.Point(547, 669);
             this._txtTotalAmount.Name = "_txtTotalAmount";
             this._txtTotalAmount.Size = new System.Drawing.Size(100, 21);
             this._txtTotalAmount.TabIndex = 109;
-            // 
+            //
             // _lblTotalValue
-            // 
+            //
             this._lblTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblTotalValue.AutoSize = true;
             this._lblTotalValue.Location = new System.Drawing.Point(485, 672);
@@ -3563,18 +3563,18 @@ namespace FSM
             this._lblTotalValue.Size = new System.Drawing.Size(55, 13);
             this._lblTotalValue.TabIndex = 28;
             this._lblTotalValue.Text = "Total (£)";
-            // 
+            //
             // _txtVATAmount
-            // 
+            //
             this._txtVATAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtVATAmount.Location = new System.Drawing.Point(379, 669);
             this._txtVATAmount.Name = "_txtVATAmount";
             this._txtVATAmount.Size = new System.Drawing.Size(100, 21);
             this._txtVATAmount.TabIndex = 108;
             this._txtVATAmount.LostFocus += new System.EventHandler(this.txtVATAmount_LostFocus);
-            // 
+            //
             // _txtNominalCodeNew
-            // 
+            //
             this._txtNominalCodeNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtNominalCodeNew.Location = new System.Drawing.Point(633, 640);
             this._txtNominalCodeNew.MaxLength = 100;
@@ -3582,18 +3582,18 @@ namespace FSM
             this._txtNominalCodeNew.Size = new System.Drawing.Size(70, 21);
             this._txtNominalCodeNew.TabIndex = 105;
             this._txtNominalCodeNew.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // _Label16
-            // 
+            //
             this._Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label16.Location = new System.Drawing.Point(568, 643);
             this._Label16.Name = "_Label16";
             this._Label16.Size = new System.Drawing.Size(70, 20);
             this._Label16.TabIndex = 65;
             this._Label16.Text = "Nominal";
-            // 
+            //
             // _lblVatValue
-            // 
+            //
             this._lblVatValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblVatValue.AutoSize = true;
             this._lblVatValue.Location = new System.Drawing.Point(322, 672);
@@ -3601,18 +3601,18 @@ namespace FSM
             this._lblVatValue.Size = new System.Drawing.Size(50, 13);
             this._lblVatValue.TabIndex = 26;
             this._lblVatValue.Text = "VAT (£)";
-            // 
+            //
             // _txtGoodsAmount
-            // 
+            //
             this._txtGoodsAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtGoodsAmount.Location = new System.Drawing.Point(76, 669);
             this._txtGoodsAmount.Name = "_txtGoodsAmount";
             this._txtGoodsAmount.Size = new System.Drawing.Size(100, 21);
             this._txtGoodsAmount.TabIndex = 106;
             this._txtGoodsAmount.LostFocus += new System.EventHandler(this.txtGoodsAmount_TextChanged);
-            // 
+            //
             // _cboInvoiceTaxCodeNew
-            // 
+            //
             this._cboInvoiceTaxCodeNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._cboInvoiceTaxCodeNew.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cboInvoiceTaxCodeNew.Location = new System.Drawing.Point(258, 669);
@@ -3620,9 +3620,9 @@ namespace FSM
             this._cboInvoiceTaxCodeNew.Size = new System.Drawing.Size(58, 21);
             this._cboInvoiceTaxCodeNew.TabIndex = 107;
             this._cboInvoiceTaxCodeNew.SelectedIndexChanged += new System.EventHandler(this.cboTaxCode_SelectedIndexChanged);
-            // 
+            //
             // _txtExtraReferenceNew
-            // 
+            //
             this._txtExtraReferenceNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtExtraReferenceNew.Location = new System.Drawing.Point(493, 640);
             this._txtExtraReferenceNew.MaxLength = 100;
@@ -3630,18 +3630,18 @@ namespace FSM
             this._txtExtraReferenceNew.Size = new System.Drawing.Size(70, 21);
             this._txtExtraReferenceNew.TabIndex = 104;
             this._txtExtraReferenceNew.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // _Label13
-            // 
+            //
             this._Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label13.Location = new System.Drawing.Point(182, 672);
             this._Label13.Name = "_Label13";
             this._Label13.Size = new System.Drawing.Size(70, 20);
             this._Label13.TabIndex = 59;
             this._Label13.Text = "Tax Code";
-            // 
+            //
             // _lblGoodsValue
-            // 
+            //
             this._lblGoodsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblGoodsValue.AutoSize = true;
             this._lblGoodsValue.Location = new System.Drawing.Point(6, 672);
@@ -3649,18 +3649,18 @@ namespace FSM
             this._lblGoodsValue.Size = new System.Drawing.Size(64, 13);
             this._lblGoodsValue.TabIndex = 24;
             this._lblGoodsValue.Text = "Goods (£)";
-            // 
+            //
             // _Label15
-            // 
+            //
             this._Label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label15.Location = new System.Drawing.Point(435, 643);
             this._Label15.Name = "_Label15";
             this._Label15.Size = new System.Drawing.Size(56, 20);
             this._Label15.TabIndex = 63;
             this._Label15.Text = "Ex Ref.";
-            // 
+            //
             // _lblInvoiceDate
-            // 
+            //
             this._lblInvoiceDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblInvoiceDate.AutoSize = true;
             this._lblInvoiceDate.Location = new System.Drawing.Point(6, 643);
@@ -3668,17 +3668,17 @@ namespace FSM
             this._lblInvoiceDate.Size = new System.Drawing.Size(80, 13);
             this._lblInvoiceDate.TabIndex = 1;
             this._lblInvoiceDate.Text = "Invoice Date";
-            // 
+            //
             // _txtSupplierInvoiceRefNew
-            // 
+            //
             this._txtSupplierInvoiceRefNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtSupplierInvoiceRefNew.Location = new System.Drawing.Point(329, 640);
             this._txtSupplierInvoiceRefNew.Name = "_txtSupplierInvoiceRefNew";
             this._txtSupplierInvoiceRefNew.Size = new System.Drawing.Size(100, 21);
             this._txtSupplierInvoiceRefNew.TabIndex = 103;
-            // 
+            //
             // _lblSupplierRef
-            // 
+            //
             this._lblSupplierRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lblSupplierRef.AutoSize = true;
             this._lblSupplierRef.Location = new System.Drawing.Point(242, 643);
@@ -3686,9 +3686,9 @@ namespace FSM
             this._lblSupplierRef.Size = new System.Drawing.Size(75, 13);
             this._lblSupplierRef.TabIndex = 1;
             this._lblSupplierRef.Text = "Invoice Ref.";
-            // 
+            //
             // _btnAddSupplierInvoice
-            // 
+            //
             this._btnAddSupplierInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnAddSupplierInvoice.Location = new System.Drawing.Point(1592, 668);
             this._btnAddSupplierInvoice.Name = "_btnAddSupplierInvoice";
@@ -3696,9 +3696,9 @@ namespace FSM
             this._btnAddSupplierInvoice.TabIndex = 123;
             this._btnAddSupplierInvoice.Text = "Add ";
             this._btnAddSupplierInvoice.Click += new System.EventHandler(this.btnAddSupplierInvoice_Click);
-            // 
+            //
             // _dgvReceivedInvoices
-            // 
+            //
             this._dgvReceivedInvoices.AllowUserToAddRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3707,8 +3707,8 @@ namespace FSM
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this._dgvReceivedInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this._dgvReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this._dgvReceivedInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgvReceivedInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this._dgvReceivedInvoices.BackgroundColor = System.Drawing.Color.White;
@@ -3742,18 +3742,18 @@ namespace FSM
             this._dgvReceivedInvoices.Size = new System.Drawing.Size(1065, 617);
             this._dgvReceivedInvoices.TabIndex = 0;
             this._dgvReceivedInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceivedInvoices_CellClick);
-            // 
+            //
             // _dtpSupplierInvoiceDateNew
-            // 
+            //
             this._dtpSupplierInvoiceDateNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._dtpSupplierInvoiceDateNew.Location = new System.Drawing.Point(92, 640);
             this._dtpSupplierInvoiceDateNew.Name = "_dtpSupplierInvoiceDateNew";
             this._dtpSupplierInvoiceDateNew.Size = new System.Drawing.Size(144, 21);
             this._dtpSupplierInvoiceDateNew.TabIndex = 101;
             this._dtpSupplierInvoiceDateNew.Tag = "Order.SupplierInvoiceDate";
-            // 
+            //
             // _cboReadySageNew
-            // 
+            //
             this._cboReadySageNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._cboReadySageNew.Location = new System.Drawing.Point(653, 667);
             this._cboReadySageNew.Name = "_cboReadySageNew";
@@ -3761,9 +3761,9 @@ namespace FSM
             this._cboReadySageNew.Size = new System.Drawing.Size(247, 24);
             this._cboReadySageNew.TabIndex = 110;
             this._cboReadySageNew.Text = "Ready to send to Accounts Package";
-            // 
+            //
             // _TabPage1
-            // 
+            //
             this._TabPage1.Controls.Add(this._GroupBox4);
             this._TabPage1.Location = new System.Drawing.Point(4, 22);
             this._TabPage1.Name = "_TabPage1";
@@ -3771,11 +3771,11 @@ namespace FSM
             this._TabPage1.TabIndex = 11;
             this._TabPage1.Text = "Credits";
             this._TabPage1.UseVisualStyleBackColor = true;
-            // 
+            //
             // _GroupBox4
-            // 
-            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this._GroupBox4.Controls.Add(this._Button1);
@@ -3804,9 +3804,9 @@ namespace FSM
             this._GroupBox4.TabIndex = 1;
             this._GroupBox4.TabStop = false;
             this._GroupBox4.Text = "Part Credits";
-            // 
+            //
             // _Button1
-            // 
+            //
             this._Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._Button1.Location = new System.Drawing.Point(1360, 668);
             this._Button1.Name = "_Button1";
@@ -3814,19 +3814,19 @@ namespace FSM
             this._Button1.TabIndex = 127;
             this._Button1.Text = "Convert to Van stock";
             this._Button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
+            //
             // _CheckBox1
-            // 
+            //
             this._CheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._CheckBox1.Location = new System.Drawing.Point(-20, 641);
             this._CheckBox1.Name = "_CheckBox1";
             this._CheckBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._CheckBox1.Size = new System.Drawing.Size(141, 24);
             this._CheckBox1.TabIndex = 126;
-            this._CheckBox1.Text = "Credit Recieved";
-            // 
+            this._CheckBox1.Text = "Credit Received";
+            //
             // _txtCreditExRef
-            // 
+            //
             this._txtCreditExRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditExRef.Location = new System.Drawing.Point(1118, 668);
             this._txtCreditExRef.MaxLength = 100;
@@ -3834,18 +3834,18 @@ namespace FSM
             this._txtCreditExRef.Size = new System.Drawing.Size(70, 21);
             this._txtCreditExRef.TabIndex = 125;
             this._txtCreditExRef.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // _Label21
-            // 
+            //
             this._Label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label21.Location = new System.Drawing.Point(1073, 671);
             this._Label21.Name = "_Label21";
             this._Label21.Size = new System.Drawing.Size(56, 20);
             this._Label21.TabIndex = 124;
             this._Label21.Text = "Ex Ref.";
-            // 
+            //
             // _btnCreditDelete
-            // 
+            //
             this._btnCreditDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreditDelete.Location = new System.Drawing.Point(1521, 668);
             this._btnCreditDelete.Name = "_btnCreditDelete";
@@ -3854,17 +3854,17 @@ namespace FSM
             this._btnCreditDelete.Text = "Delete";
             this._btnCreditDelete.Visible = false;
             this._btnCreditDelete.Click += new System.EventHandler(this.btnDeleteCredit_Click);
-            // 
+            //
             // _txtCreditTotal
-            // 
+            //
             this._txtCreditTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditTotal.Location = new System.Drawing.Point(539, 671);
             this._txtCreditTotal.Name = "_txtCreditTotal";
             this._txtCreditTotal.Size = new System.Drawing.Size(68, 21);
             this._txtCreditTotal.TabIndex = 109;
-            // 
+            //
             // _Label9
-            // 
+            //
             this._Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label9.AutoSize = true;
             this._Label9.Location = new System.Drawing.Point(467, 674);
@@ -3872,18 +3872,18 @@ namespace FSM
             this._Label9.Size = new System.Drawing.Size(55, 13);
             this._Label9.TabIndex = 28;
             this._Label9.Text = "Total (£)";
-            // 
+            //
             // _txtCreditVAT
-            // 
+            //
             this._txtCreditVAT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditVAT.Location = new System.Drawing.Point(372, 670);
             this._txtCreditVAT.Name = "_txtCreditVAT";
             this._txtCreditVAT.Size = new System.Drawing.Size(68, 21);
             this._txtCreditVAT.TabIndex = 108;
             this._txtCreditVAT.LostFocus += new System.EventHandler(this.txtCreditVAT__LostFocus);
-            // 
+            //
             // _txtCreditNominal
-            // 
+            //
             this._txtCreditNominal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditNominal.Location = new System.Drawing.Point(1000, 668);
             this._txtCreditNominal.MaxLength = 100;
@@ -3891,18 +3891,18 @@ namespace FSM
             this._txtCreditNominal.Size = new System.Drawing.Size(70, 21);
             this._txtCreditNominal.TabIndex = 105;
             this._txtCreditNominal.Tag = "Order.SupplierInvoiceReference";
-            // 
+            //
             // _Label10
-            // 
+            //
             this._Label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label10.Location = new System.Drawing.Point(947, 671);
             this._Label10.Name = "_Label10";
             this._Label10.Size = new System.Drawing.Size(70, 20);
             this._Label10.TabIndex = 65;
             this._Label10.Text = "Nominal";
-            // 
+            //
             // _Label14
-            // 
+            //
             this._Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label14.AutoSize = true;
             this._Label14.Location = new System.Drawing.Point(309, 673);
@@ -3910,18 +3910,18 @@ namespace FSM
             this._Label14.Size = new System.Drawing.Size(50, 13);
             this._Label14.TabIndex = 26;
             this._Label14.Text = "VAT (£)";
-            // 
+            //
             // _txtCreditGoods
-            // 
+            //
             this._txtCreditGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditGoods.Location = new System.Drawing.Point(95, 669);
             this._txtCreditGoods.Name = "_txtCreditGoods";
             this._txtCreditGoods.Size = new System.Drawing.Size(54, 21);
             this._txtCreditGoods.TabIndex = 106;
             this._txtCreditGoods.LostFocus += new System.EventHandler(this.txtCreditAmount_TextChanged);
-            // 
+            //
             // _cboCreditTax
-            // 
+            //
             this._cboCreditTax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._cboCreditTax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cboCreditTax.Location = new System.Drawing.Point(238, 669);
@@ -3929,18 +3929,18 @@ namespace FSM
             this._cboCreditTax.Size = new System.Drawing.Size(46, 21);
             this._cboCreditTax.TabIndex = 107;
             this._cboCreditTax.SelectedIndexChanged += new System.EventHandler(this.cboCreditTaxCode_SelectedIndexChanged);
-            // 
+            //
             // _Label18
-            // 
+            //
             this._Label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label18.Location = new System.Drawing.Point(168, 671);
             this._Label18.Name = "_Label18";
             this._Label18.Size = new System.Drawing.Size(70, 20);
             this._Label18.TabIndex = 59;
             this._Label18.Text = "Tax Code";
-            // 
+            //
             // _Label20
-            // 
+            //
             this._Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label20.AutoSize = true;
             this._Label20.Location = new System.Drawing.Point(6, 672);
@@ -3948,17 +3948,17 @@ namespace FSM
             this._Label20.Size = new System.Drawing.Size(86, 13);
             this._Label20.TabIndex = 24;
             this._Label20.Text = "Credit Net (£)";
-            // 
+            //
             // _txtCreditRef
-            // 
+            //
             this._txtCreditRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._txtCreditRef.Location = new System.Drawing.Point(871, 668);
             this._txtCreditRef.Name = "_txtCreditRef";
             this._txtCreditRef.Size = new System.Drawing.Size(70, 21);
             this._txtCreditRef.TabIndex = 103;
-            // 
+            //
             // _Label23
-            // 
+            //
             this._Label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._Label23.AutoSize = true;
             this._Label23.Location = new System.Drawing.Point(801, 673);
@@ -3966,9 +3966,9 @@ namespace FSM
             this._Label23.Size = new System.Drawing.Size(68, 13);
             this._Label23.TabIndex = 1;
             this._Label23.Text = "Credit Ref.";
-            // 
+            //
             // _btnCreditAdd
-            // 
+            //
             this._btnCreditAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnCreditAdd.Location = new System.Drawing.Point(1592, 668);
             this._btnCreditAdd.Name = "_btnCreditAdd";
@@ -3976,9 +3976,9 @@ namespace FSM
             this._btnCreditAdd.TabIndex = 123;
             this._btnCreditAdd.Text = "Add ";
             this._btnCreditAdd.Click += new System.EventHandler(this.btnCreditAdd_Click);
-            // 
+            //
             // _dgCredits
-            // 
+            //
             this._dgCredits.AllowUserToAddRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3987,8 +3987,8 @@ namespace FSM
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this._dgCredits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this._dgCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this._dgCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgCredits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this._dgCredits.BackgroundColor = System.Drawing.Color.White;
@@ -4022,20 +4022,20 @@ namespace FSM
             this._dgCredits.Size = new System.Drawing.Size(1645, 617);
             this._dgCredits.TabIndex = 0;
             this._dgCredits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCredits_CellClick);
-            // 
+            //
             // _dtpCreditDate
-            // 
+            //
             this._dtpCreditDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._dtpCreditDate.Location = new System.Drawing.Point(128, 642);
             this._dtpCreditDate.Name = "_dtpCreditDate";
             this._dtpCreditDate.Size = new System.Drawing.Size(142, 21);
             this._dtpCreditDate.TabIndex = 101;
             this._dtpCreditDate.Tag = "Order.SupplierInvoiceDate";
-            // 
+            //
             // _lblOrderStatus
-            // 
-            this._lblOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this._lblOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this._lblOrderStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this._lblOrderStatus.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4044,9 +4044,9 @@ namespace FSM
             this._lblOrderStatus.Size = new System.Drawing.Size(1510, 353);
             this._lblOrderStatus.TabIndex = 0;
             this._lblOrderStatus.Click += new System.EventHandler(this.lblOrderStatus_Click);
-            // 
+            //
             // _GroupBox1
-            // 
+            //
             this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._GroupBox1.Controls.Add(this._lblCredits);
             this._GroupBox1.Controls.Add(this._Label25);
@@ -4058,9 +4058,9 @@ namespace FSM
             this._GroupBox1.TabIndex = 76;
             this._GroupBox1.TabStop = false;
             this._GroupBox1.Text = "Supplier Invoice Totals";
-            // 
+            //
             // _lblCredits
-            // 
+            //
             this._lblCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblCredits.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblCredits.Location = new System.Drawing.Point(138, 37);
@@ -4069,9 +4069,9 @@ namespace FSM
             this._lblCredits.TabIndex = 80;
             this._lblCredits.Text = "£0.00";
             this._lblCredits.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
+            //
             // _Label25
-            // 
+            //
             this._Label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Label25.AutoSize = true;
             this._Label25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4081,9 +4081,9 @@ namespace FSM
             this._Label25.TabIndex = 81;
             this._Label25.Text = "Supplier Credits : ";
             this._Label25.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
+            //
             // _lblSupplierGoods
-            // 
+            //
             this._lblSupplierGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblSupplierGoods.AutoSize = true;
             this._lblSupplierGoods.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4093,9 +4093,9 @@ namespace FSM
             this._lblSupplierGoods.TabIndex = 73;
             this._lblSupplierGoods.Text = "Supplier Invoices : ";
             this._lblSupplierGoods.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
+            //
             // _lblGoodsTotal
-            // 
+            //
             this._lblGoodsTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblGoodsTotal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblGoodsTotal.Location = new System.Drawing.Point(138, 17);
@@ -4104,17 +4104,17 @@ namespace FSM
             this._lblGoodsTotal.TabIndex = 70;
             this._lblGoodsTotal.Text = "£0.00";
             this._lblGoodsTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
+            //
             // _Label17
-            // 
+            //
             this._Label17.Location = new System.Drawing.Point(6, 97);
             this._Label17.Name = "_Label17";
             this._Label17.Size = new System.Drawing.Size(79, 20);
             this._Label17.TabIndex = 68;
             this._Label17.Text = "Cost Centre";
-            // 
+            //
             // UCOrder
-            // 
+            //
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this._grpOrder);
             this.Name = "UCOrder";
@@ -4156,7 +4156,6 @@ namespace FSM
             this._GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._FSMDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         public void LoadForm(object sender, EventArgs e)
@@ -4727,7 +4726,7 @@ namespace FSM
             var CreditInvoiceReference5 = new DataGridViewTextBoxColumn();
             CreditInvoiceReference5.FillWeight = 75;
             CreditInvoiceReference5.DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
-            CreditInvoiceReference5.HeaderText = "Date Credit Recieved";
+            CreditInvoiceReference5.HeaderText = "Date Credit Received";
             CreditInvoiceReference5.DataPropertyName = "DateReceived";
             CreditInvoiceReference5.Name = "DateReceived";
             CreditInvoiceReference5.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -5553,43 +5552,45 @@ namespace FSM
                     {
                         case "OrderProduct":
                             {
-                                var OrderProduct = new Entity.OrderProducts.OrderProduct();
-                                var oProduct = new Entity.Products.Product();
-                                var oOrderAudit = new Entity.OrderAudit();
+                                //var OrderProduct = new Entity.OrderProducts.OrderProduct();
+                                //var oProduct = new Entity.Products.Product();
+                                //var oOrderAudit = new Entity.OrderAudit();
 
-                                oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
+                                //oOrderAudit.SetOrderID = CurrentOrder.OrderID;
+                                //oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
 
-                                OrderProduct = App.DB.OrderProduct.OrderProduct_Get(Conversions.ToInteger(itemRow["ID"]));
-                                var oProductSupplier = App.DB.ProductSupplier.ProductSupplier_Get(OrderProduct.ProductSupplierID);
-                                oProduct = App.DB.Product.Product_Get(oProductSupplier.ProductID);
+                                //OrderProduct = App.DB.OrderProduct.OrderProduct_Get(Conversions.ToInteger(itemRow["ID"]));
+                                //var oProductSupplier = App.DB.ProductSupplier.ProductSupplier_Get(OrderProduct.ProductSupplierID);
+                                //oProduct = App.DB.Product.Product_Get(oProductSupplier.ProductID);
 
-                                OrderProduct.SetQuantityReceived = OrderProduct.QuantityReceived + quantityInput;
-                                oOrderAudit.SetDescription = "Recieved ProductID " + oProductSupplier.ProductID + " Quantity " + OrderProduct.QuantityReceived;
+                                //OrderProduct.SetQuantityReceived = OrderProduct.QuantityReceived + quantityInput;
+                                //oOrderAudit.SetDescription = "Received ProductID " + oProductSupplier.ProductID + " Quantity " + OrderProduct.QuantityReceived;
 
-                                App.DB.OrderProduct.Update(OrderProduct);
-                                var switchExpr1 = CurrentOrder.OrderTypeID;
-                                switch (switchExpr1)
-                                {
-                                    // DO NOTHING - THIS WILL BE DONE ON THE PDA
-                                    case (int)(Enums.OrderType.Warehouse):
-                                        {
-                                            var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderProduct.OrderID);
-                                            var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
+                                //App.DB.OrderProduct.Update(OrderProduct);
+                                //var switchExpr1 = CurrentOrder.OrderTypeID;
+                                //switch (switchExpr1)
+                                //{
+                                //    // DO NOTHING - THIS WILL BE DONE ON THE PDA
+                                //    case (int)(Enums.OrderType.Warehouse):
+                                //        {
+                                //            var oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderProduct.OrderID);
+                                //            var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
 
-                                            oProductTransaction.SetLocationID = oOrderLocation.LocationID;
-                                            oProductTransaction.SetProductID = oProductSupplier.ProductID;
-                                            oProductTransaction.SetOrderProductID = OrderProduct.OrderProductID;
-                                            oProductTransaction.SetAmount = quantityInput * oProductSupplier.QuantityInPack;
-                                            oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                //            oProductTransaction.SetLocationID = oOrderLocation.LocationID;
+                                //            oProductTransaction.SetProductID = oProductSupplier.ProductID;
+                                //            oProductTransaction.SetOrderProductID = OrderProduct.OrderProductID;
+                                //            oProductTransaction.SetAmount = quantityInput * oProductSupplier.QuantityInPack;
+                                //            oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
 
-                                            oOrderAudit.SetDescription = "Product transaction to warehouse productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
+                                //            oOrderAudit.SetDescription = "Product transaction to warehouse productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
 
-                                            App.DB.ProductTransaction.Insert(oProductTransaction);
-                                            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
-                                            break;
-                                        }
-                                }
+                                //            App.DB.ProductTransaction.Insert(oProductTransaction);
+                                //            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
+                                //            break;
+                                //        }
+                                //}
+
+                                throw new NotImplementedException("Product not used.");
 
                                 break;
                             }
@@ -5604,7 +5605,7 @@ namespace FSM
 
                                 OrderPart = App.DB.OrderPart.OrderPart_Get(Conversions.ToInteger(itemRow["ID"]));
                                 OrderPart.SetQuantityReceived = OrderPart.QuantityReceived + quantityInput;
-                                oOrderAudit.SetDescription = Conversions.ToString("Recieved Part " + SelectedPartDataRow["PartName"] + " Quantity ") + OrderPart.QuantityReceived;
+                                oOrderAudit.SetDescription = Conversions.ToString("Received Part " + SelectedPartDataRow["PartName"] + " Quantity ") + OrderPart.QuantityReceived;
 
                                 App.DB.OrderPart.Update(OrderPart);
                                 oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
@@ -5638,50 +5639,52 @@ namespace FSM
 
                         case "OrderLocationProduct":
                             {
-                                var OrderLocationProduct = App.DB.OrderLocationProduct.OrderLocationProduct_Get(Conversions.ToInteger(itemRow["ID"]));
-                                var oProductTransaction = App.DB.ProductTransaction.ProductTransaction_GetByOrderLocationProduct(OrderLocationProduct.OrderLocationProductID);
+                                //var OrderLocationProduct = App.DB.OrderLocationProduct.OrderLocationProduct_Get(Conversions.ToInteger(itemRow["ID"]));
+                                //var oProductTransaction = App.DB.ProductTransaction.ProductTransaction_GetByOrderLocationProduct(OrderLocationProduct.OrderLocationProductID);
 
-                                oProductTransaction.SetAmount = oProductTransaction.Amount + quantityInput;
-                                App.DB.ProductTransaction.Update(oProductTransaction);
+                                //oProductTransaction.SetAmount = oProductTransaction.Amount + quantityInput;
+                                //App.DB.ProductTransaction.Update(oProductTransaction);
 
-                                var oOrderAudit = new Entity.OrderAudit();
-                                oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
-                                oOrderAudit.SetDescription = "Recieved ProductID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount;
-                                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
+                                //var oOrderAudit = new Entity.OrderAudit();
+                                //oOrderAudit.SetOrderID = CurrentOrder.OrderID;
+                                //oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
+                                //oOrderAudit.SetDescription = "Received ProductID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount;
+                                //oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
-                                oProductTransaction.SetLocationID = OrderLocationProduct.LocationID;
-                                oProductTransaction.SetProductID = OrderLocationProduct.ProductID;
-                                oProductTransaction.SetOrderLocationProductID = OrderLocationProduct.OrderLocationProductID;
-                                oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockOut);
-                                oProductTransaction.SetAmount = -quantityInput;
-                                App.DB.ProductTransaction.Insert(oProductTransaction);
+                                //oProductTransaction.SetLocationID = OrderLocationProduct.LocationID;
+                                //oProductTransaction.SetProductID = OrderLocationProduct.ProductID;
+                                //oProductTransaction.SetOrderLocationProductID = OrderLocationProduct.OrderLocationProductID;
+                                //oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockOut);
+                                //oProductTransaction.SetAmount = -quantityInput;
+                                //App.DB.ProductTransaction.Insert(oProductTransaction);
 
-                                oOrderAudit.SetDescription = "Product transaction productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
-                                oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
+                                //oOrderAudit.SetDescription = "Product transaction productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
+                                //oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
-                                OrderLocationProduct.SetQuantityReceived = OrderLocationProduct.QuantityReceived + quantityInput;
-                                App.DB.OrderLocationProduct.Update(OrderLocationProduct);
+                                //OrderLocationProduct.SetQuantityReceived = OrderLocationProduct.QuantityReceived + quantityInput;
+                                //App.DB.OrderLocationProduct.Update(OrderLocationProduct);
 
-                                var switchExpr3 = CurrentOrder.OrderTypeID;
-                                switch (switchExpr3)
-                                {
-                                    case (int)(Enums.OrderType.Warehouse):
-                                        {
-                                            Entity.OrderLocations.OrderLocation oOrderLocation;
-                                            oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationProduct.OrderID);
-                                            oProductTransaction.SetLocationID = oOrderLocation.LocationID;
-                                            oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
-                                            oProductTransaction.SetOrderLocationProductID = OrderLocationProduct.OrderLocationProductID;
-                                            oProductTransaction.SetAmount = quantityInput;
-                                            oProductTransaction.SetProductID = OrderLocationProduct.ProductID;
-                                            App.DB.ProductTransaction.Insert(oProductTransaction);
+                                //var switchExpr3 = CurrentOrder.OrderTypeID;
+                                //switch (switchExpr3)
+                                //{
+                                //    case (int)(Enums.OrderType.Warehouse):
+                                //        {
+                                //            Entity.OrderLocations.OrderLocation oOrderLocation;
+                                //            oOrderLocation = App.DB.OrderLocation.OrderLocation_GetForOrder(OrderLocationProduct.OrderID);
+                                //            oProductTransaction.SetLocationID = oOrderLocation.LocationID;
+                                //            oProductTransaction.SetTransactionTypeID = Conversions.ToInteger(Enums.Transaction.StockIn);
+                                //            oProductTransaction.SetOrderLocationProductID = OrderLocationProduct.OrderLocationProductID;
+                                //            oProductTransaction.SetAmount = quantityInput;
+                                //            oProductTransaction.SetProductID = OrderLocationProduct.ProductID;
+                                //            App.DB.ProductTransaction.Insert(oProductTransaction);
 
-                                            oOrderAudit.SetDescription = "Product transaction to warehouse productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
-                                            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
-                                            break;
-                                        }
-                                }
+                                //            oOrderAudit.SetDescription = "Product transaction to warehouse productID " + oProductTransaction.ProductID + " Quantity " + oProductTransaction.Amount + " Transaction type " + oProductTransaction.TransactionTypeID;
+                                //            oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
+                                //            break;
+                                //        }
+                                //}
+
+                                throw new NotImplementedException("Product not used.");
 
                                 break;
                             }
@@ -5696,7 +5699,7 @@ namespace FSM
                                 var oOrderAudit = new Entity.OrderAudit();
                                 oOrderAudit.SetOrderID = CurrentOrder.OrderID;
                                 oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
-                                oOrderAudit.SetDescription = Conversions.ToString("Recieved Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oPartTransaction.Amount;
+                                oOrderAudit.SetDescription = Conversions.ToString("Received Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oPartTransaction.Amount;
                                 oOrderAudit = App.DB.OrderAudits.Insert(oOrderAudit);
 
                                 oPartTransaction.SetLocationID = OrderLocationPart.LocationID;
@@ -6297,51 +6300,53 @@ namespace FSM
 
         private void btnCreateProductPriceRequest_Click(object sender, EventArgs e)
         {
-            int supplierID = Conversions.ToInteger(App.FindRecord(Enums.TableNames.tblSupplier));
-            try
-            {
-                if (supplierID != 0)
-                {
-                    Cursor = Cursors.WaitCursor;
-                    var oProductPriceRequest = new Entity.ProductSupplierPriceRequests.ProductSupplierPriceRequest();
+            //int supplierID = Conversions.ToInteger(App.FindRecord(Enums.TableNames.tblSupplier));
+            //try
+            //{
+            //    if (supplierID != 0)
+            //    {
+            //        Cursor = Cursors.WaitCursor;
+            //        var oProductPriceRequest = new Entity.ProductSupplierPriceRequests.ProductSupplierPriceRequest();
 
-                    oProductPriceRequest.IgnoreExceptionsOnSetMethods = true;
-                    oProductPriceRequest.SetProductID = SelectedProductDataRow["ProductID"];
-                    oProductPriceRequest.SetQuantityInPack = txtProductQuantity.Text.Trim();
-                    oProductPriceRequest.SetOrderID = CurrentOrder.OrderID;
-                    oProductPriceRequest.SetSupplierID = supplierID;
-                    oProductPriceRequest.SetComplete = 0;
+            //        oProductPriceRequest.IgnoreExceptionsOnSetMethods = true;
+            //        oProductPriceRequest.SetProductID = SelectedProductDataRow["ProductID"];
+            //        oProductPriceRequest.SetQuantityInPack = txtProductQuantity.Text.Trim();
+            //        oProductPriceRequest.SetOrderID = CurrentOrder.OrderID;
+            //        oProductPriceRequest.SetSupplierID = supplierID;
+            //        oProductPriceRequest.SetComplete = 0;
 
-                    var val = new Entity.ProductSupplierPriceRequests.ProductSupplierPriceRequestValidator();
-                    val.Validate(oProductPriceRequest);
+            //        var val = new Entity.ProductSupplierPriceRequests.ProductSupplierPriceRequestValidator();
+            //        val.Validate(oProductPriceRequest);
 
-                    var oOrderAudit = new Entity.OrderAudit();
-                    oOrderAudit.SetOrderID = CurrentOrder.OrderID;
-                    oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
-                    oOrderAudit.SetDescription = Conversions.ToString(Conversions.ToString("Part requestion for Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oProductPriceRequest.QuantityInPack + " From supplier ") + oProductPriceRequest.SupplierID;
+            //        var oOrderAudit = new Entity.OrderAudit();
+            //        oOrderAudit.SetOrderID = CurrentOrder.OrderID;
+            //        oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
+            //        oOrderAudit.SetDescription = Conversions.ToString(Conversions.ToString("Part requestion for Part " + SelectedPartDataRow["PartName"] + " Quantity ") + oProductPriceRequest.QuantityInPack + " From supplier ") + oProductPriceRequest.SupplierID;
 
-                    App.DB.ProductPriceRequest.InsertForOrder(oProductPriceRequest);
-                    App.DB.OrderAudits.Insert(oOrderAudit);
+            //        App.DB.ProductPriceRequest.InsertForOrder(oProductPriceRequest);
+            //        App.DB.OrderAudits.Insert(oOrderAudit);
 
-                    PartSearch();
-                    ProductSearch();
-                    RefreshDataGrids();
-                }
-            }
-            catch (ValidationException vex)
-            {
-                string msg = "Please correct the following errors: " + Constants.vbNewLine + "{0}{1}";
-                msg = string.Format(msg, Constants.vbNewLine, vex.Validator.CriticalMessagesString());
-                App.ShowMessage(msg, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            catch (Exception ex)
-            {
-                App.ShowMessage("Data cannot save : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Cursor = Cursors.Default;
-            }
+            //        PartSearch();
+            //        ProductSearch();
+            //        RefreshDataGrids();
+            //    }
+            //}
+            //catch (ValidationException vex)
+            //{
+            //    string msg = "Please correct the following errors: " + Constants.vbNewLine + "{0}{1}";
+            //    msg = string.Format(msg, Constants.vbNewLine, vex.Validator.CriticalMessagesString());
+            //    App.ShowMessage(msg, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
+            //catch (Exception ex)
+            //{
+            //    App.ShowMessage("Data cannot save : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    Cursor = Cursors.Default;
+            //}
+
+            throw new NotImplementedException("Products not used.");
         }
 
         private void dgPriceRequests_Click(object sender, EventArgs e)
@@ -6376,12 +6381,13 @@ namespace FSM
             }
             else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(SelectedPriceRequestDataRow["Type"], "Product", false)))
             {
-                var oProductSupplier = new Entity.ProductSuppliers.ProductSupplier();
-                oProductSupplier.SetProductID = SelectedPriceRequestDataRow["PartProductID"];
-                oProductSupplier.SetSupplierID = SelectedPriceRequestDataRow["SupplierID"];
-                oProductSupplier.SetQuantityInPack = SelectedPriceRequestDataRow["QuantityInPack"];
+                //var oProductSupplier = new Entity.ProductSuppliers.ProductSupplier();
+                //oProductSupplier.SetProductID = SelectedPriceRequestDataRow["PartProductID"];
+                //oProductSupplier.SetSupplierID = SelectedPriceRequestDataRow["SupplierID"];
+                //oProductSupplier.SetQuantityInPack = SelectedPriceRequestDataRow["QuantityInPack"];
 
-                App.ShowForm(typeof(FRMAddtoOrder), true, new object[] { CurrentOrder, null, oProductSupplier, SelectedPriceRequestDataRow["ID"] });
+                //App.ShowForm(typeof(FRMAddtoOrder), true, new object[] { CurrentOrder, null, oProductSupplier, SelectedPriceRequestDataRow["ID"] });
+                throw new NotImplementedException("Product not used.");
             }
 
             RefreshDataGrids();
@@ -6407,8 +6413,7 @@ namespace FSM
                 btnDeleteSupplierInvoice.Visible = true;
 
                 int SupplierInvoiceID = Conversions.ToInteger(dgvReceivedInvoices["SupplierInvoiceID", dgvReceivedInvoices.CurrentRow.Index].Value);
-                var oSupplierInvoice = new Entity.Orders.SupplierInvoice();
-                oSupplierInvoice = App.DB.SupplierInvoices.Order_GetSupplierInvoice(SupplierInvoiceID);
+                var oSupplierInvoice = App.DB.SupplierInvoices.Order_GetSupplierInvoice(SupplierInvoiceID);
                 if (oSupplierInvoice.InvoiceDate == default)
                 {
                     dtpSupplierInvoiceDateNew.Value = DateAndTime.Now;
@@ -6478,16 +6483,11 @@ namespace FSM
         {
             btnCreditAdd.Visible = true;
             btnCreditDelete.Visible = true;
-            if (dgCredits["DateReceived", dgCredits.CurrentRow.Index].Value.ToString().Length == 0)
-            {
-            }
-            else
+            if (dgCredits["DateReceived", dgCredits.CurrentRow.Index].Value.ToString().Length != 0)
             {
                 int CreditID = Conversions.ToInteger(dgCredits["PartCreditsID", dgCredits.CurrentRow.Index].Value);
                 var dt = App.DB.PartsToBeCredited.PartsToBeCredited_Get_Parts_For_CreditID(CreditID).Table;
-                var oPartsToBeCredted = new Entity.PartsToBeCrediteds.PartsToBeCredited();
-
-                oPartsToBeCredted = App.DB.PartsToBeCredited.PartsToBeCredited_Get_Parts_For_CreditIDEntity(CreditID);
+                var oPartsToBeCredted = App.DB.PartsToBeCredited.PartsToBeCredited_Get_Parts_For_CreditIDEntity(CreditID);
                 if (oPartsToBeCredted.DateReceived == default)
                 {
                     dtpCreditDate.Value = DateAndTime.Now;
@@ -6508,7 +6508,7 @@ namespace FSM
                 }
 
                 cboCreditTax.SelectedValue = oPartsToBeCredted.TaxCodeID;
-                txtCreditGoods.Text = Strings.Format(oPartsToBeCredted.AmountRecieved, "C");
+                txtCreditGoods.Text = Strings.Format(oPartsToBeCredted.AmountReceived, "C");
                 Calculate_Tax2();
                 if (Information.IsDBNull(dt.Rows[0]["DateExportedToSage"]) == false)
                 {
@@ -6674,7 +6674,7 @@ namespace FSM
                         var oOrderAudit = new Entity.OrderAudit();
                         oOrderAudit.SetOrderID = CurrentOrder.OrderID;
                         oOrderAudit.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.CreditAdded);
-                        oOrderAudit.SetDescription = "Part product ID " + oCredit.PartID + " Quantity " + oCredit.Qty + " Credit recieved " + oCredit.CreditReceived + " Supplier ID" + oCredit.SupplierID;
+                        oOrderAudit.SetDescription = "Part product ID " + oCredit.PartID + " Quantity " + oCredit.Qty + " Credit Received " + oCredit.CreditReceived + " Supplier ID" + oCredit.SupplierID;
 
                         if (dtc.Rows.Count > 0 && !Information.IsDBNull(dtc.Rows[0]["CreditReceived"])) // Update  there are rows but we havent allocated the credit yet
                         {
@@ -7316,93 +7316,95 @@ namespace FSM
 
         private void dgProduct_Click(object sender, EventArgs e)
         {
-            UpdateProductSearchOptions();
-            if (SelectedProductDataRow is null)
-            {
-                return;
-            }
+            //UpdateProductSearchOptions();
+            //if (SelectedProductDataRow is null)
+            //{
+            //    return;
+            //}
 
-            var switchExpr = Combo.get_GetSelectedItemValue(cboProductLocation);
-            switch (switchExpr)
-            {
-                case var @case when @case == Conversions.ToString(Enums.LocationType.Van):
-                    {
-                        txtProductQuantity.Text = 1.ToString();
-                        txtProductQuantity.ReadOnly = false;
-                        txtProductBuyPrice.Text = "N/A";
-                        txtProductBuyPrice.ReadOnly = true;
-                        if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.StockProfile | CurrentOrder.OrderTypeID == (int)Enums.OrderType.Warehouse)
-                        {
-                            txtProductSellPrice.Text = "N/A";
-                            txtProductSellPrice.ReadOnly = true;
-                        }
-                        else
-                        {
-                            txtProductSellPrice.Text = Strings.Format(SelectedProductDataRow["SellPrice"], "F");
-                            txtProductSellPrice.ReadOnly = false;
-                        }
+            //var switchExpr = Combo.get_GetSelectedItemValue(cboProductLocation);
+            //switch (switchExpr)
+            //{
+            //    case var @case when @case == Conversions.ToString(Enums.LocationType.Van):
+            //        {
+            //            txtProductQuantity.Text = 1.ToString();
+            //            txtProductQuantity.ReadOnly = false;
+            //            txtProductBuyPrice.Text = "N/A";
+            //            txtProductBuyPrice.ReadOnly = true;
+            //            if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.StockProfile | CurrentOrder.OrderTypeID == (int)Enums.OrderType.Warehouse)
+            //            {
+            //                txtProductSellPrice.Text = "N/A";
+            //                txtProductSellPrice.ReadOnly = true;
+            //            }
+            //            else
+            //            {
+            //                txtProductSellPrice.Text = Strings.Format(SelectedProductDataRow["SellPrice"], "F");
+            //                txtProductSellPrice.ReadOnly = false;
+            //            }
 
-                        btnAddProduct.Enabled = true;
-                        btnCreateProductPriceRequest.Enabled = false;
-                        break;
-                    }
+            //            btnAddProduct.Enabled = true;
+            //            btnCreateProductPriceRequest.Enabled = false;
+            //            break;
+            //        }
 
-                case var case1 when case1 == Conversions.ToString(Enums.LocationType.Warehouse):
-                    {
-                        txtProductQuantity.Text = 1.ToString();
-                        txtProductQuantity.ReadOnly = false;
-                        txtProductBuyPrice.Text = "N/A";
-                        txtProductBuyPrice.ReadOnly = true;
-                        if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.StockProfile | CurrentOrder.OrderTypeID == (int)Enums.OrderType.Warehouse)
-                        {
-                            txtProductSellPrice.Text = "N/A";
-                            txtProductSellPrice.ReadOnly = true;
-                        }
-                        else
-                        {
-                            txtProductSellPrice.Text = Strings.Format(SelectedProductDataRow["SellPrice"], "F");
-                            txtProductSellPrice.ReadOnly = false;
-                        }
+            //    case var case1 when case1 == Conversions.ToString(Enums.LocationType.Warehouse):
+            //        {
+            //            txtProductQuantity.Text = 1.ToString();
+            //            txtProductQuantity.ReadOnly = false;
+            //            txtProductBuyPrice.Text = "N/A";
+            //            txtProductBuyPrice.ReadOnly = true;
+            //            if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.StockProfile | CurrentOrder.OrderTypeID == (int)Enums.OrderType.Warehouse)
+            //            {
+            //                txtProductSellPrice.Text = "N/A";
+            //                txtProductSellPrice.ReadOnly = true;
+            //            }
+            //            else
+            //            {
+            //                txtProductSellPrice.Text = Strings.Format(SelectedProductDataRow["SellPrice"], "F");
+            //                txtProductSellPrice.ReadOnly = false;
+            //            }
 
-                        btnAddProduct.Enabled = true;
-                        btnCreateProductPriceRequest.Enabled = false;
-                        break;
-                    }
+            //            btnAddProduct.Enabled = true;
+            //            btnCreateProductPriceRequest.Enabled = false;
+            //            break;
+            //        }
 
-                case var case2 when case2 == Conversions.ToString(Enums.LocationType.Supplier):
-                    {
-                        txtProductQuantity.Text = "1";
-                        txtProductQuantity.ReadOnly = false;
-                        if (Information.IsDBNull(SelectedProductDataRow["SupplierID"]))
-                        {
-                            txtProductBuyPrice.Text = "N/A";
-                            txtProductBuyPrice.ReadOnly = true;
-                            txtProductSellPrice.Text = "N/A";
-                            txtProductSellPrice.ReadOnly = true;
-                            btnAddProduct.Enabled = false;
-                        }
-                        else
-                        {
-                            txtProductBuyPrice.Text = Strings.Format(SelectedProductDataRow["Price"], "F");
-                            txtProductBuyPrice.ReadOnly = false;
-                            if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.StockProfile | CurrentOrder.OrderTypeID == (int)Enums.OrderType.Warehouse)
-                            {
-                                txtProductSellPrice.Text = "N/A";
-                                txtProductSellPrice.ReadOnly = true;
-                            }
-                            else
-                            {
-                                txtProductSellPrice.Text = "";
-                                txtProductSellPrice.ReadOnly = false;
-                            }
+            //    case var case2 when case2 == Conversions.ToString(Enums.LocationType.Supplier):
+            //        {
+            //            txtProductQuantity.Text = "1";
+            //            txtProductQuantity.ReadOnly = false;
+            //            if (Information.IsDBNull(SelectedProductDataRow["SupplierID"]))
+            //            {
+            //                txtProductBuyPrice.Text = "N/A";
+            //                txtProductBuyPrice.ReadOnly = true;
+            //                txtProductSellPrice.Text = "N/A";
+            //                txtProductSellPrice.ReadOnly = true;
+            //                btnAddProduct.Enabled = false;
+            //            }
+            //            else
+            //            {
+            //                txtProductBuyPrice.Text = Strings.Format(SelectedProductDataRow["Price"], "F");
+            //                txtProductBuyPrice.ReadOnly = false;
+            //                if (CurrentOrder.OrderTypeID == (int)Enums.OrderType.StockProfile | CurrentOrder.OrderTypeID == (int)Enums.OrderType.Warehouse)
+            //                {
+            //                    txtProductSellPrice.Text = "N/A";
+            //                    txtProductSellPrice.ReadOnly = true;
+            //                }
+            //                else
+            //                {
+            //                    txtProductSellPrice.Text = "";
+            //                    txtProductSellPrice.ReadOnly = false;
+            //                }
 
-                            btnAddProduct.Enabled = true;
-                        }
+            //                btnAddProduct.Enabled = true;
+            //            }
 
-                        btnCreateProductPriceRequest.Enabled = true;
-                        break;
-                    }
-            }
+            //            btnCreateProductPriceRequest.Enabled = true;
+            //            break;
+            //        }
+            //}
+
+            throw new NotImplementedException("Products not used");
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -7647,24 +7649,26 @@ namespace FSM
                     {
                         case "OrderProduct":
                             {
-                                var oOrderProduct = new Entity.OrderProducts.OrderProduct();
-                                oOrderProduct = App.DB.OrderProduct.OrderProduct_Get(Conversions.ToInteger(SelectedItemIncludedDataRow["ID"]));
+                                //var oOrderProduct = new Entity.OrderProducts.OrderProduct();
+                                //oOrderProduct = App.DB.OrderProduct.OrderProduct_Get(Conversions.ToInteger(SelectedItemIncludedDataRow["ID"]));
 
-                                var oOrderAuditPart = new Entity.OrderAudit();
-                                oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
-                                oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
-                                oOrderAuditPart.SetDescription = "ProductID " + oOrderProduct.OrderProductID + " Quantity " + oOrderProduct.Quantity;
-                                oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
+                                //var oOrderAuditPart = new Entity.OrderAudit();
+                                //oOrderAuditPart.SetOrderID = CurrentOrder.OrderID;
+                                //oOrderAuditPart.SetReason = Helper.MakeIntegerValid(Enums.OrderAuditReason.PartsChanged);
+                                //oOrderAuditPart.SetDescription = "ProductID " + oOrderProduct.OrderProductID + " Quantity " + oOrderProduct.Quantity;
+                                //oOrderAuditPart = App.DB.OrderAudits.Insert(oOrderAuditPart);
 
-                                if (nudItemQty.Value == 0)
-                                {
-                                    App.DB.OrderProduct.Delete(oOrderProduct.OrderProductID);
-                                }
-                                else
-                                {
-                                    oOrderProduct.SetQuantity = nudItemQty.Value;
-                                    App.DB.OrderProduct.Update(oOrderProduct);
-                                }
+                                //if (nudItemQty.Value == 0)
+                                //{
+                                //    App.DB.OrderProduct.Delete(oOrderProduct.OrderProductID);
+                                //}
+                                //else
+                                //{
+                                //    oOrderProduct.SetQuantity = nudItemQty.Value;
+                                //    App.DB.OrderProduct.Update(oOrderProduct);
+                                //}
+
+                                throw new NotImplementedException();
 
                                 break;
                             }
@@ -7701,26 +7705,28 @@ namespace FSM
                             }
                         case "OrderLocationProduct":
                             {
-                                var oOrderLocationProduct = new Entity.OrderLocationProduct.OrderLocationProduct();
-                                oOrderLocationProduct = App.DB.OrderLocationProduct.OrderLocationProduct_Get(Conversions.ToInteger(SelectedItemIncludedDataRow["ID"]));
-                                var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
-                                oProductTransaction = App.DB.ProductTransaction.ProductTransaction_GetByOrderLocationProduct(oOrderLocationProduct.OrderLocationProductID);
-                                if (nudItemQty.Value == 0)
-                                {
-                                    App.DB.OrderLocationProduct.Delete(oOrderLocationProduct.OrderLocationProductID);
-                                    App.DB.ProductTransaction.Delete(oProductTransaction.ProductTransactionID);
-                                }
-                                else
-                                {
-                                    oOrderLocationProduct.SetQuantity = nudItemQty.Value;
-                                    App.DB.OrderLocationProduct.Update(oOrderLocationProduct);
-                                    oProductTransaction.SetAmount = nudItemQty.Value;
-                                    App.DB.ProductTransaction.Update(oProductTransaction);
-                                }
-                                if (CurrentOrder.OrderTypeID == Conversions.ToInteger(Enums.OrderType.Job))
-                                {
-                                    App.DB.EngineerVisitPartProductAllocated.EngineerVisitProductAllocated_Delete(Conversions.ToInteger(Enums.LocationType.Warehouse), oOrderLocationProduct.OrderLocationProductID);
-                                }
+                                //var oOrderLocationProduct = new Entity.OrderLocationProduct.OrderLocationProduct();
+                                //oOrderLocationProduct = App.DB.OrderLocationProduct.OrderLocationProduct_Get(Conversions.ToInteger(SelectedItemIncludedDataRow["ID"]));
+                                //var oProductTransaction = new Entity.ProductTransactions.ProductTransaction();
+                                //oProductTransaction = App.DB.ProductTransaction.ProductTransaction_GetByOrderLocationProduct(oOrderLocationProduct.OrderLocationProductID);
+                                //if (nudItemQty.Value == 0)
+                                //{
+                                //    App.DB.OrderLocationProduct.Delete(oOrderLocationProduct.OrderLocationProductID);
+                                //    App.DB.ProductTransaction.Delete(oProductTransaction.ProductTransactionID);
+                                //}
+                                //else
+                                //{
+                                //    oOrderLocationProduct.SetQuantity = nudItemQty.Value;
+                                //    App.DB.OrderLocationProduct.Update(oOrderLocationProduct);
+                                //    oProductTransaction.SetAmount = nudItemQty.Value;
+                                //    App.DB.ProductTransaction.Update(oProductTransaction);
+                                //}
+                                //if (CurrentOrder.OrderTypeID == Conversions.ToInteger(Enums.OrderType.Job))
+                                //{
+                                //    App.DB.EngineerVisitPartProductAllocated.EngineerVisitProductAllocated_Delete(Conversions.ToInteger(Enums.LocationType.Warehouse), oOrderLocationProduct.OrderLocationProductID);
+                                //}
+
+                                throw new NotImplementedException();
 
                                 break;
                             }
@@ -7729,8 +7735,7 @@ namespace FSM
                             {
                                 var oOrderLocationPart = new Entity.OrderLocationPart.OrderLocationPart();
                                 oOrderLocationPart = App.DB.OrderLocationPart.OrderLocationPart_Get(Conversions.ToInteger(SelectedItemIncludedDataRow["ID"]));
-                                var oPartTransaction = new Entity.PartTransactions.PartTransaction();
-                                oPartTransaction = App.DB.PartTransaction.PartTransaction_GetByOrderLocationPart(oOrderLocationPart.OrderLocationPartID);
+                                var oPartTransaction = App.DB.PartTransaction.PartTransaction_GetByOrderLocationPart(oOrderLocationPart.OrderLocationPartID);
                                 if (nudItemQty.Value == 0)
                                 {
                                     App.DB.OrderLocationPart.Delete(oOrderLocationPart.OrderLocationPartID);
@@ -7965,31 +7970,31 @@ namespace FSM
         {
             string Errors = "Please correct the following error(s):" + Constants.vbNewLine;
             bool NoError = true;
-            if (txtSupplierInvoiceRefNew.Text == String.Empty)
+            if (String.IsNullOrWhiteSpace(txtSupplierInvoiceRefNew.Text))
             {
                 Errors += "- 'Invoice Ref' cannot be empty." + Constants.vbNewLine;
                 NoError = false;
             }
 
-            if (txtNominalCodeNew.Text == String.Empty)
+            if (String.IsNullOrWhiteSpace(txtNominalCodeNew.Text))
             {
                 Errors += "- 'Nominal Code' cannot be empty." + Constants.vbNewLine;
                 NoError = false;
             }
 
-            if (txtGoodsAmount.Text == String.Empty | (Strings.Format(txtGoodsAmount.Text, "C") ?? "") == "£0.00")
+            if (String.IsNullOrWhiteSpace(txtGoodsAmount.Text) | (Strings.Format(txtGoodsAmount.Text, "C") ?? "") == "£0.00")
             {
                 Errors += "- 'Goods' cannot be empty and must not equals 0." + Constants.vbNewLine;
                 NoError = false;
             }
 
-            if (txtVATAmount.Text == String.Empty)
+            if (String.IsNullOrWhiteSpace(txtVATAmount.Text))
             {
                 Errors += "- 'VAT' cannot be empty." + Constants.vbNewLine;
                 NoError = false;
             }
 
-            if (txtTotalAmount.Text == String.Empty | (Strings.Format(txtTotalAmount.Text, "C") ?? "") == "£0.00")
+            if (String.IsNullOrWhiteSpace(txtTotalAmount.Text) | (Strings.Format(txtTotalAmount.Text, "C") ?? "") == "£0.00")
             {
                 Errors += "- 'Total' cannot be empty and must not equals 0." + Constants.vbNewLine;
                 NoError = false;
@@ -8171,8 +8176,7 @@ namespace FSM
                 case (int)Enums.OrderType.Customer:
                     {
                         ucCustomerOrder.Customer = App.DB.Customer.Customer_GetForOrder(CurrentOrder.OrderID);
-                        var oSiteOrder = new Entity.SiteOrders.SiteOrder();
-                        oSiteOrder = App.DB.SiteOrder.SiteOrder_GetForOrder(CurrentOrder.OrderID);
+                        var oSiteOrder = App.DB.SiteOrder.SiteOrder_GetForOrder(CurrentOrder.OrderID);
                         if (oSiteOrder is null)
                         {
                             ucCustomerOrder.Warehouse = App.DB.Warehouse.Warehouse_GetByLocationID(App.DB.OrderLocation.OrderLocation_GetForOrder(CurrentOrder.OrderID).LocationID);
@@ -8334,15 +8338,11 @@ namespace FSM
             {
                 var tempNominalObject = new Orders.OrderNominal();
                 tempNominalObject.NominalCode = Helper.MakeStringValid(row["NominalName"]);
+                tempNominalObject.FriendlyName = Helper.MakeStringValid(row["FriendlyName"]);
                 if (string.IsNullOrEmpty(tempNominalObject.NominalCode))
                 {
-                    tempNominalObject.NominalCode = UnknownNominalCode;
-                }
-
-                tempNominalObject.FriendlyName = Helper.MakeStringValid(row["FriendlyName"]);
-                if (string.IsNullOrEmpty(tempNominalObject.FriendlyName))
-                {
-                    tempNominalObject.FriendlyName = UnknownNominalCode;
+                    tempNominalObject.NominalCode = UNKNOWN_NOMINAL_CODE;
+                    tempNominalObject.FriendlyName = UNKNOWN_NOMINAL_CODE;
                 }
 
                 tempNominalObject.Quantity = Conversions.ToInteger(row["QuantityOnOrder"]);
@@ -9156,103 +9156,103 @@ namespace FSM
 
         private void ProductSearch()
         {
-            var switchExpr = Combo.get_GetSelectedItemValue(cboProductLocation);
-            switch (switchExpr)
-            {
-                case var @case when @case == 0.ToString():
-                    {
-                        break;
-                    }
-                // do nothing
-                case var case1 when case1 == Conversions.ToString(Enums.LocationType.Supplier):
-                    {
-                        if (LocationUsedID == 0)
-                        {
-                            ProductsDataView = (DataView)App.DB.ProductSupplier.ProductSupplier_Search(txtProductSearch.Text, SupplierUsedID);
-                        }
-                        else
-                        {
-                            App.ShowMessage("A warehouse/van has been ordered from so no supplier orders can be added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+            //var switchExpr = Combo.get_GetSelectedItemValue(cboProductLocation);
+            //switch (switchExpr)
+            //{
+            //    case var @case when @case == 0.ToString():
+            //        {
+            //            break;
+            //        }
+            //    // do nothing
+            //    case var case1 when case1 == Conversions.ToString(Enums.LocationType.Supplier):
+            //        {
+            //            if (LocationUsedID == 0)
+            //            {
+            //                ProductsDataView = (DataView)App.DB.ProductSupplier.ProductSupplier_Search(txtProductSearch.Text, SupplierUsedID);
+            //            }
+            //            else
+            //            {
+            //                App.ShowMessage("A warehouse/van has been ordered from so no supplier orders can be added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
 
-                        break;
-                    }
+            //            break;
+            //        }
 
-                case var case2 when case2 == Conversions.ToString(Enums.LocationType.Van):
-                    {
-                        if (SupplierUsedID == 0)
-                        {
-                            ProductsDataView = App.DB.ProductTransaction.SearchByVan(txtProductSearch.Text, LocationUsedID);
-                        }
-                        else
-                        {
-                            App.ShowMessage("A supplier has been ordered from so no stock profile orders can be added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+            //    case var case2 when case2 == Conversions.ToString(Enums.LocationType.Van):
+            //        {
+            //            if (SupplierUsedID == 0)
+            //            {
+            //                ProductsDataView = App.DB.ProductTransaction.SearchByVan(txtProductSearch.Text, LocationUsedID);
+            //            }
+            //            else
+            //            {
+            //                App.ShowMessage("A supplier has been ordered from so no stock profile orders can be added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
 
-                        break;
-                    }
+            //            break;
+            //        }
 
-                case var case3 when case3 == Conversions.ToString(Enums.LocationType.Warehouse):
-                    {
-                        if (SupplierUsedID == 0)
-                        {
-                            ProductsDataView = App.DB.ProductTransaction.SearchByWarehouse(txtProductSearch.Text, LocationUsedID);
-                        }
-                        else
-                        {
-                            App.ShowMessage("A supplier has been ordered from so no warehouse orders can be added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+            //    case var case3 when case3 == Conversions.ToString(Enums.LocationType.Warehouse):
+            //        {
+            //            if (SupplierUsedID == 0)
+            //            {
+            //                ProductsDataView = App.DB.ProductTransaction.SearchByWarehouse(txtProductSearch.Text, LocationUsedID);
+            //            }
+            //            else
+            //            {
+            //                App.ShowMessage("A supplier has been ordered from so no warehouse orders can be added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
 
-                        break;
-                    }
-            }
+            //            break;
+            //        }
+            //}
 
-            UpdateProductSearchOptions();
+            //UpdateProductSearchOptions();
         }
 
         private void UpdateProductSearchOptions()
         {
-            var switchExpr = Combo.get_GetSelectedItemValue(cboProductLocation);
-            switch (switchExpr)
-            {
-                case var @case when @case == 0.ToString():
-                    {
-                        grpProductSearch.Text = "Product Search From";
-                        btnProductSearch.Enabled = false;
-                        break;
-                    }
+            //var switchExpr = Combo.get_GetSelectedItemValue(cboProductLocation);
+            //switch (switchExpr)
+            //{
+            //    case var @case when @case == 0.ToString():
+            //        {
+            //            grpProductSearch.Text = "Product Search From";
+            //            btnProductSearch.Enabled = false;
+            //            break;
+            //        }
 
-                case var case1 when case1 == Conversions.ToString(Enums.LocationType.Supplier):
-                    {
-                        btnProductSearch.Enabled = true;
-                        grpProductSearch.Text = "Search takes place on Product Number, Model, Make, Type  and Supplier Code";
-                        break;
-                    }
+            //    case var case1 when case1 == Conversions.ToString(Enums.LocationType.Supplier):
+            //        {
+            //            btnProductSearch.Enabled = true;
+            //            grpProductSearch.Text = "Search takes place on Product Number, Model, Make, Type  and Supplier Code";
+            //            break;
+            //        }
 
-                case var case2 when case2 == Conversions.ToString(Enums.LocationType.Van):
-                    {
-                        btnProductSearch.Enabled = true;
-                        grpProductSearch.Text = "Search takes place on Product Number, Model, Make, Type, Engineer Name and stock profile";
-                        break;
-                    }
+            //    case var case2 when case2 == Conversions.ToString(Enums.LocationType.Van):
+            //        {
+            //            btnProductSearch.Enabled = true;
+            //            grpProductSearch.Text = "Search takes place on Product Number, Model, Make, Type, Engineer Name and stock profile";
+            //            break;
+            //        }
 
-                case var case3 when case3 == Conversions.ToString(Enums.LocationType.Warehouse):
-                    {
-                        btnProductSearch.Enabled = true;
-                        grpProductSearch.Text = "Search takes place on Product Number, Model, Make, Type and Warehouse Name";
-                        break;
-                    }
-            }
+            //    case var case3 when case3 == Conversions.ToString(Enums.LocationType.Warehouse):
+            //        {
+            //            btnProductSearch.Enabled = true;
+            //            grpProductSearch.Text = "Search takes place on Product Number, Model, Make, Type and Warehouse Name";
+            //            break;
+            //        }
+            //}
 
-            // Me.txtProductSearch.Text = ""
-            txtProductQuantity.Text = "";
-            txtProductQuantity.ReadOnly = true;
-            txtProductBuyPrice.Text = "";
-            txtProductBuyPrice.ReadOnly = true;
-            txtProductSellPrice.Text = "";
-            txtProductSellPrice.ReadOnly = true;
-            btnAddProduct.Enabled = false;
-            btnCreateProductPriceRequest.Enabled = false;
+            //// Me.txtProductSearch.Text = ""
+            //txtProductQuantity.Text = "";
+            //txtProductQuantity.ReadOnly = true;
+            //txtProductBuyPrice.Text = "";
+            //txtProductBuyPrice.ReadOnly = true;
+            //txtProductSellPrice.Text = "";
+            //txtProductSellPrice.ReadOnly = true;
+            //btnAddProduct.Enabled = false;
+            //btnCreateProductPriceRequest.Enabled = false;
         }
 
         private void Calculate_Tax()
