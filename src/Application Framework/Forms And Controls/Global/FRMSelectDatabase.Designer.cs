@@ -63,7 +63,7 @@ namespace FSM
             this._GroupBox1.Controls.Add(this._cboDatabase);
             this._GroupBox1.Location = new System.Drawing.Point(12, 12);
             this._GroupBox1.Name = "_GroupBox1";
-            this._GroupBox1.Size = new System.Drawing.Size(356, 121);
+            this._GroupBox1.Size = new System.Drawing.Size(356, 98);
             this._GroupBox1.TabIndex = 2;
             this._GroupBox1.TabStop = false;
             this._GroupBox1.Text = "Please Select The Database.";
@@ -87,7 +87,7 @@ namespace FSM
             // 
             // FRMSelectDatabase
             // 
-            this.ClientSize = new System.Drawing.Size(380, 145);
+            this.ClientSize = new System.Drawing.Size(380, 122);
             this.ControlBox = false;
             this.Controls.Add(this._GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
