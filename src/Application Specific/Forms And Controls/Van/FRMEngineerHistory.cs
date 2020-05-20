@@ -122,60 +122,62 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpHistory = new GroupBox();
-            _btnAdd = new Button();
-            _btnAdd.Click += new EventHandler(btnAdd_Click);
-            _dgHistory = new DataGrid();
-            _dgHistory.DoubleClick += new EventHandler(dgHistory_DoubleClick);
-            _grpHistory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgHistory).BeginInit();
-            SuspendLayout();
-            //
-            // grpHistory
-            //
-            _grpHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpHistory.Controls.Add(_btnAdd);
-            _grpHistory.Controls.Add(_dgHistory);
-            _grpHistory.Location = new Point(8, 40);
-            _grpHistory.Name = "grpHistory";
-            _grpHistory.Size = new Size(856, 440);
-            _grpHistory.TabIndex = 1;
-            _grpHistory.TabStop = false;
-            _grpHistory.Text = "Double Click To View / Edit";
-            //
-            // btnAdd
-            //
-            _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAdd.Location = new Point(8, 408);
-            _btnAdd.Name = "btnAdd";
-            _btnAdd.Size = new Size(64, 23);
-            _btnAdd.TabIndex = 2;
-            _btnAdd.Text = "Add";
-            //
-            // dgHistory
-            //
-            _dgHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgHistory.DataMember = "";
-            _dgHistory.HeaderForeColor = SystemColors.ControlText;
-            _dgHistory.Location = new Point(8, 26);
-            _dgHistory.Name = "dgHistory";
-            _dgHistory.Size = new Size(840, 374);
-            _dgHistory.TabIndex = 1;
-            //
+            this._grpHistory = new System.Windows.Forms.GroupBox();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this._dgHistory = new System.Windows.Forms.DataGrid();
+            this._grpHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgHistory)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpHistory
+            // 
+            this._grpHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpHistory.Controls.Add(this._btnAdd);
+            this._grpHistory.Controls.Add(this._dgHistory);
+            this._grpHistory.Location = new System.Drawing.Point(8, 12);
+            this._grpHistory.Name = "_grpHistory";
+            this._grpHistory.Size = new System.Drawing.Size(856, 468);
+            this._grpHistory.TabIndex = 1;
+            this._grpHistory.TabStop = false;
+            this._grpHistory.Text = "Double Click To View / Edit";
+            // 
+            // _btnAdd
+            // 
+            this._btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAdd.Location = new System.Drawing.Point(8, 436);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(64, 23);
+            this._btnAdd.TabIndex = 2;
+            this._btnAdd.Text = "Add";
+            this._btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // _dgHistory
+            // 
+            this._dgHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgHistory.DataMember = "";
+            this._dgHistory.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgHistory.Location = new System.Drawing.Point(8, 26);
+            this._dgHistory.Name = "_dgHistory";
+            this._dgHistory.Size = new System.Drawing.Size(840, 402);
+            this._dgHistory.TabIndex = 1;
+            this._dgHistory.DoubleClick += new System.EventHandler(this.dgHistory_DoubleClick);
+            // 
             // FRMEngineerHistory
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(872, 486);
-            Controls.Add(_grpHistory);
-            MinimumSize = new Size(880, 520);
-            Name = "FRMEngineerHistory";
-            Text = "Engineer History For Profile : {0}";
-            Controls.SetChildIndex(_grpHistory, 0);
-            _grpHistory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgHistory).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(872, 486);
+            this.Controls.Add(this._grpHistory);
+            this.MinimumSize = new System.Drawing.Size(880, 520);
+            this.Name = "FRMEngineerHistory";
+            this.Text = "Engineer History For Profile : {0}";
+            this._grpHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgHistory)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

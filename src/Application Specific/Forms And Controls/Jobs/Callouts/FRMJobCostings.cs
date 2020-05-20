@@ -1389,1149 +1389,1150 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _TabControl1 = new TabControl();
-            _tpJobCostings = new TabPage();
-            _grpTotalCostings = new GroupBox();
-            _Label41 = new Label();
-            _txtSorTotal = new TextBox();
-            _Label32 = new Label();
-            _Label33 = new Label();
-            _txtProfitPerc = new TextBox();
-            _TxtProfitPounds = new TextBox();
-            _lbl5 = new Label();
-            _Label34 = new Label();
-            _txtSales = new TextBox();
-            _txtCosts = new TextBox();
-            _grpPartCostings = new GroupBox();
-            _Label43 = new Label();
-            _txtPartPerc = new TextBox();
-            _Label42 = new Label();
-            _txtLabourPerc = new TextBox();
-            _dgScheduleOfRateCharges = new DataGrid();
-            _dgPartsProductCharging = new DataGrid();
-            _Label40 = new Label();
-            _TextBox2 = new TextBox();
-            _Label39 = new Label();
-            _txtSORSales = new TextBox();
-            _dgTimesheetCharges = new DataGrid();
-            _Label35 = new Label();
-            _Label36 = new Label();
-            _Label37 = new Label();
-            _Label38 = new Label();
-            _lbl1 = new Label();
-            _txtPartCost = new TextBox();
-            _txtLabourCost = new TextBox();
-            _tpInstall = new TabPage();
-            _GroupBox1 = new GroupBox();
-            _txtManual = new TextBox();
-            _txtManual.KeyUp += new KeyEventHandler(txtManual_TextChanged);
-            _Label31 = new Label();
-            _txtEstSub = new TextBox();
-            _txtEstSub.TextChanged += new EventHandler(txtEstSub_TextChanged);
-            _txtActSub = new TextBox();
-            _Label29 = new Label();
-            _Label30 = new Label();
-            _Label28 = new Label();
-            _Label27 = new Label();
-            _txtSupplierInv = new TextBox();
-            _Label26 = new Label();
-            _Label25 = new Label();
-            _Label24 = new Label();
-            _Label23 = new Label();
-            _txtEstElec = new TextBox();
-            _txtEstElec.TextChanged += new EventHandler(txtEstElectrical_TextChanged);
-            _txtActElec = new TextBox();
-            _Label21 = new Label();
-            _Label22 = new Label();
-            _txtQuotedGross = new TextBox();
-            _txtQuotedGross.KeyUp += new KeyEventHandler(txtQuotedGross_TextChanged);
-            _txtDepositGross = new TextBox();
-            _txtDepositGross.KeyUp += new KeyEventHandler(txtDepositGross_TextChanged);
-            _txtQuoted = new TextBox();
-            _txtQuoted.KeyUp += new KeyEventHandler(TextBox1_TextChanged);
-            _lblQuoted = new Label();
-            _txtProfitActPerc = new TextBox();
-            _Label18 = new Label();
-            _txtProfitEstPerc = new TextBox();
-            _Label16 = new Label();
-            _txtProfitActMoney = new TextBox();
-            _Label15 = new Label();
-            _txtProfitEstMoney = new TextBox();
-            _Label14 = new Label();
-            _txtTotalEst = new TextBox();
-            _txtTotalAct = new TextBox();
-            _Label12 = new Label();
-            _Label13 = new Label();
-            _txtEstLabour = new TextBox();
-            _txtEstLabour.TextChanged += new EventHandler(txtEstLabour_TextChanged);
-            _txtActLabour = new TextBox();
-            _Label5 = new Label();
-            _Label17 = new Label();
-            _txtPartEst = new TextBox();
-            _txtPartEst.TextChanged += new EventHandler(txtPartEst_TextChanged);
-            _txtPartAct = new TextBox();
-            _Label19 = new Label();
-            _Label20 = new Label();
-            _Label11 = new Label();
-            _cboPaperwork = new ComboBox();
-            _Label10 = new Label();
-            _cboQC = new ComboBox();
-            _txtPayment = new TextBox();
-            _txtPayment.TextChanged += new EventHandler(txtPayment_TextChanged);
-            _Label9 = new Label();
-            _Label8 = new Label();
-            _cboFurtherWorks = new ComboBox();
-            _Label7 = new Label();
-            _cboExtraLabour = new ComboBox();
-            _txtPO = new TextBox();
-            _Label6 = new Label();
-            _Label4 = new Label();
-            _cboCalledSuper = new ComboBox();
-            _Label3 = new Label();
-            _cboSurveyed = new ComboBox();
-            _txtDeposit = new TextBox();
-            _txtDeposit.KeyUp += new KeyEventHandler(txtDeposit_TextChanged);
-            _Label2 = new Label();
-            _btnPrintJobCosting = new Button();
-            _btnPrintJobCosting.Click += new EventHandler(btnPrintJobCosting_Click);
-            _TabControl1.SuspendLayout();
-            _tpJobCostings.SuspendLayout();
-            _grpTotalCostings.SuspendLayout();
-            _grpPartCostings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgScheduleOfRateCharges).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsProductCharging).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgTimesheetCharges).BeginInit();
-            _tpInstall.SuspendLayout();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(70, 664);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 23);
-            _btnClose.TabIndex = 16;
-            _btnClose.Text = "Close";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Location = new Point(8, 664);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 23);
-            _btnSave.TabIndex = 15;
-            _btnSave.Text = "Save";
-            //
-            // TabControl1
-            //
-            _TabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _TabControl1.Controls.Add(_tpJobCostings);
-            _TabControl1.Controls.Add(_tpInstall);
-            _TabControl1.Location = new Point(0, 31);
-            _TabControl1.Name = "TabControl1";
-            _TabControl1.SelectedIndex = 0;
-            _TabControl1.Size = new Size(942, 627);
-            _TabControl1.TabIndex = 23;
-            //
-            // tpJobCostings
-            //
-            _tpJobCostings.Controls.Add(_grpTotalCostings);
-            _tpJobCostings.Controls.Add(_grpPartCostings);
-            _tpJobCostings.Location = new Point(4, 22);
-            _tpJobCostings.Name = "tpJobCostings";
-            _tpJobCostings.Padding = new Padding(3);
-            _tpJobCostings.Size = new Size(934, 601);
-            _tpJobCostings.TabIndex = 5;
-            _tpJobCostings.Text = "Job Costings";
-            _tpJobCostings.UseVisualStyleBackColor = true;
-            //
-            // grpTotalCostings
-            //
-            _grpTotalCostings.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _grpTotalCostings.Controls.Add(_Label41);
-            _grpTotalCostings.Controls.Add(_txtSorTotal);
-            _grpTotalCostings.Controls.Add(_Label32);
-            _grpTotalCostings.Controls.Add(_Label33);
-            _grpTotalCostings.Controls.Add(_txtProfitPerc);
-            _grpTotalCostings.Controls.Add(_TxtProfitPounds);
-            _grpTotalCostings.Controls.Add(_lbl5);
-            _grpTotalCostings.Controls.Add(_Label34);
-            _grpTotalCostings.Controls.Add(_txtSales);
-            _grpTotalCostings.Controls.Add(_txtCosts);
-            _grpTotalCostings.Location = new Point(4, 477);
-            _grpTotalCostings.Name = "grpTotalCostings";
-            _grpTotalCostings.Size = new Size(928, 80);
-            _grpTotalCostings.TabIndex = 7;
-            _grpTotalCostings.TabStop = false;
-            //
-            // Label41
-            //
-            _Label41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label41.AutoSize = true;
-            _Label41.Location = new Point(510, 11);
-            _Label41.Name = "Label41";
-            _Label41.Size = new Size(67, 13);
-            _Label41.TabIndex = 13;
-            _Label41.Text = "SOR Sales";
-            //
-            // txtSorTotal
-            //
-            _txtSorTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtSorTotal.Location = new Point(500, 30);
-            _txtSorTotal.Name = "txtSorTotal";
-            _txtSorTotal.Size = new Size(100, 21);
-            _txtSorTotal.TabIndex = 14;
-            //
-            // Label32
-            //
-            _Label32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label32.AutoSize = true;
-            _Label32.Location = new Point(748, 47);
-            _Label32.Name = "Label32";
-            _Label32.Size = new Size(53, 13);
-            _Label32.TabIndex = 11;
-            _Label32.Text = "Profit %";
-            //
-            // Label33
-            //
-            _Label33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label33.AutoSize = true;
-            _Label33.Location = new Point(748, 20);
-            _Label33.Name = "Label33";
-            _Label33.Size = new Size(48, 13);
-            _Label33.TabIndex = 9;
-            _Label33.Text = "Profit £";
-            //
-            // txtProfitPerc
-            //
-            _txtProfitPerc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtProfitPerc.Location = new Point(806, 41);
-            _txtProfitPerc.Name = "txtProfitPerc";
-            _txtProfitPerc.Size = new Size(100, 21);
-            _txtProfitPerc.TabIndex = 12;
-            //
-            // TxtProfitPounds
-            //
-            _TxtProfitPounds.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TxtProfitPounds.Location = new Point(806, 14);
-            _TxtProfitPounds.Name = "TxtProfitPounds";
-            _TxtProfitPounds.Size = new Size(100, 21);
-            _TxtProfitPounds.TabIndex = 10;
-            //
-            // lbl5
-            //
-            _lbl5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lbl5.AutoSize = true;
-            _lbl5.Location = new Point(632, 11);
-            _lbl5.Name = "lbl5";
-            _lbl5.Size = new Size(74, 13);
-            _lbl5.TabIndex = 7;
-            _lbl5.Text = "Other Sales";
-            //
-            // Label34
-            //
-            _Label34.AutoSize = true;
-            _Label34.Location = new Point(36, 11);
-            _Label34.Name = "Label34";
-            _Label34.Size = new Size(39, 13);
-            _Label34.TabIndex = 3;
-            _Label34.Text = "Costs";
-            //
-            // txtSales
-            //
-            _txtSales.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtSales.Location = new Point(622, 30);
-            _txtSales.Name = "txtSales";
-            _txtSales.Size = new Size(100, 21);
-            _txtSales.TabIndex = 8;
-            //
-            // txtCosts
-            //
-            _txtCosts.Location = new Point(9, 30);
-            _txtCosts.Name = "txtCosts";
-            _txtCosts.Size = new Size(100, 21);
-            _txtCosts.TabIndex = 6;
-            //
-            // grpPartCostings
-            //
-            _grpPartCostings.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpPartCostings.BackColor = Color.White;
-            _grpPartCostings.Controls.Add(_Label43);
-            _grpPartCostings.Controls.Add(_txtPartPerc);
-            _grpPartCostings.Controls.Add(_Label42);
-            _grpPartCostings.Controls.Add(_txtLabourPerc);
-            _grpPartCostings.Controls.Add(_dgScheduleOfRateCharges);
-            _grpPartCostings.Controls.Add(_dgPartsProductCharging);
-            _grpPartCostings.Controls.Add(_Label40);
-            _grpPartCostings.Controls.Add(_TextBox2);
-            _grpPartCostings.Controls.Add(_Label39);
-            _grpPartCostings.Controls.Add(_txtSORSales);
-            _grpPartCostings.Controls.Add(_dgTimesheetCharges);
-            _grpPartCostings.Controls.Add(_Label35);
-            _grpPartCostings.Controls.Add(_Label36);
-            _grpPartCostings.Controls.Add(_Label37);
-            _grpPartCostings.Controls.Add(_Label38);
-            _grpPartCostings.Controls.Add(_lbl1);
-            _grpPartCostings.Controls.Add(_txtPartCost);
-            _grpPartCostings.Controls.Add(_txtLabourCost);
-            _grpPartCostings.Location = new Point(4, 3);
-            _grpPartCostings.Name = "grpPartCostings";
-            _grpPartCostings.Size = new Size(928, 468);
-            _grpPartCostings.TabIndex = 6;
-            _grpPartCostings.TabStop = false;
-            _grpPartCostings.Text = "Job Profit/Loss";
-            //
-            // Label43
-            //
-            _Label43.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label43.AutoSize = true;
-            _Label43.Location = new Point(824, 408);
-            _Label43.Name = "Label43";
-            _Label43.Size = new Size(46, 13);
-            _Label43.TabIndex = 24;
-            _Label43.Text = "Part %";
-            //
-            // txtPartPerc
-            //
-            _txtPartPerc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtPartPerc.Location = new Point(806, 427);
-            _txtPartPerc.Name = "txtPartPerc";
-            _txtPartPerc.Size = new Size(100, 21);
-            _txtPartPerc.TabIndex = 23;
-            //
-            // Label42
-            //
-            _Label42.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label42.AutoSize = true;
-            _Label42.Location = new Point(817, 255);
-            _Label42.Name = "Label42";
-            _Label42.Size = new Size(62, 13);
-            _Label42.TabIndex = 22;
-            _Label42.Text = "Labour %";
-            //
-            // txtLabourPerc
-            //
-            _txtLabourPerc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtLabourPerc.Location = new Point(806, 276);
-            _txtLabourPerc.Name = "txtLabourPerc";
-            _txtLabourPerc.Size = new Size(100, 21);
-            _txtLabourPerc.TabIndex = 21;
-            //
-            // dgScheduleOfRateCharges
-            //
-            _dgScheduleOfRateCharges.DataMember = "";
-            _dgScheduleOfRateCharges.HeaderForeColor = SystemColors.ControlText;
-            _dgScheduleOfRateCharges.Location = new Point(9, 35);
-            _dgScheduleOfRateCharges.Name = "dgScheduleOfRateCharges";
-            _dgScheduleOfRateCharges.Size = new Size(779, 118);
-            _dgScheduleOfRateCharges.TabIndex = 20;
-            //
-            // dgPartsProductCharging
-            //
-            _dgPartsProductCharging.DataMember = "";
-            _dgPartsProductCharging.HeaderForeColor = SystemColors.ControlText;
-            _dgPartsProductCharging.Location = new Point(9, 348);
-            _dgPartsProductCharging.Name = "dgPartsProductCharging";
-            _dgPartsProductCharging.Size = new Size(779, 100);
-            _dgPartsProductCharging.TabIndex = 19;
-            //
-            // Label40
-            //
-            _Label40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label40.AutoSize = true;
-            _Label40.Location = new Point(817, 33);
-            _Label40.Name = "Label40";
-            _Label40.Size = new Size(53, 13);
-            _Label40.TabIndex = 18;
-            _Label40.Text = "SOR Est";
-            _Label40.Visible = false;
-            //
-            // TextBox2
-            //
-            _TextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TextBox2.Location = new Point(806, 54);
-            _TextBox2.Name = "TextBox2";
-            _TextBox2.Size = new Size(100, 21);
-            _TextBox2.TabIndex = 17;
-            _TextBox2.Visible = false;
-            //
-            // Label39
-            //
-            _Label39.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label39.AutoSize = true;
-            _Label39.Location = new Point(817, 111);
-            _Label39.Name = "Label39";
-            _Label39.Size = new Size(67, 13);
-            _Label39.TabIndex = 16;
-            _Label39.Text = "SOR Sales";
-            //
-            // txtSORSales
-            //
-            _txtSORSales.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtSORSales.Location = new Point(806, 132);
-            _txtSORSales.Name = "txtSORSales";
-            _txtSORSales.Size = new Size(100, 21);
-            _txtSORSales.TabIndex = 15;
-            //
-            // dgTimesheetCharges
-            //
-            _dgTimesheetCharges.DataMember = "";
-            _dgTimesheetCharges.HeaderForeColor = SystemColors.ControlText;
-            _dgTimesheetCharges.Location = new Point(9, 205);
-            _dgTimesheetCharges.Name = "dgTimesheetCharges";
-            _dgTimesheetCharges.Size = new Size(779, 92);
-            _dgTimesheetCharges.TabIndex = 14;
-            //
-            // Label35
-            //
-            _Label35.AutoSize = true;
-            _Label35.Location = new Point(6, 19);
-            _Label35.Name = "Label35";
-            _Label35.Size = new Size(87, 13);
-            _Label35.TabIndex = 13;
-            _Label35.Text = "SOR's Applied";
-            //
-            // Label36
-            //
-            _Label36.AutoSize = true;
-            _Label36.Location = new Point(6, 332);
-            _Label36.Name = "Label36";
-            _Label36.Size = new Size(72, 13);
-            _Label36.TabIndex = 11;
-            _Label36.Text = "Parts Costs";
-            //
-            // Label37
-            //
-            _Label37.AutoSize = true;
-            _Label37.Location = new Point(6, 189);
-            _Label37.Name = "Label37";
-            _Label37.Size = new Size(82, 13);
-            _Label37.TabIndex = 9;
-            _Label37.Text = "Labour Costs";
-            //
-            // Label38
-            //
-            _Label38.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label38.AutoSize = true;
-            _Label38.Location = new Point(824, 353);
-            _Label38.Name = "Label38";
-            _Label38.Size = new Size(66, 13);
-            _Label38.TabIndex = 2;
-            _Label38.Text = "Part Costs";
-            //
-            // lbl1
-            //
-            _lbl1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lbl1.AutoSize = true;
-            _lbl1.Location = new Point(817, 205);
-            _lbl1.Name = "lbl1";
-            _lbl1.Size = new Size(82, 13);
-            _lbl1.TabIndex = 1;
-            _lbl1.Text = "Labour Costs";
-            //
-            // txtPartCost
-            //
-            _txtPartCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtPartCost.Location = new Point(806, 372);
-            _txtPartCost.Name = "txtPartCost";
-            _txtPartCost.Size = new Size(100, 21);
-            _txtPartCost.TabIndex = 1;
-            //
-            // txtLabourCost
-            //
-            _txtLabourCost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtLabourCost.Location = new Point(806, 226);
-            _txtLabourCost.Name = "txtLabourCost";
-            _txtLabourCost.Size = new Size(100, 21);
-            _txtLabourCost.TabIndex = 0;
-            //
-            // tpInstall
-            //
-            _tpInstall.Controls.Add(_GroupBox1);
-            _tpInstall.Location = new Point(4, 22);
-            _tpInstall.Name = "tpInstall";
-            _tpInstall.Size = new Size(934, 601);
-            _tpInstall.TabIndex = 6;
-            _tpInstall.Text = "Installation Data";
-            _tpInstall.UseVisualStyleBackColor = true;
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _GroupBox1.Controls.Add(_txtManual);
-            _GroupBox1.Controls.Add(_Label31);
-            _GroupBox1.Controls.Add(_txtEstSub);
-            _GroupBox1.Controls.Add(_txtActSub);
-            _GroupBox1.Controls.Add(_Label29);
-            _GroupBox1.Controls.Add(_Label30);
-            _GroupBox1.Controls.Add(_Label28);
-            _GroupBox1.Controls.Add(_Label27);
-            _GroupBox1.Controls.Add(_txtSupplierInv);
-            _GroupBox1.Controls.Add(_Label26);
-            _GroupBox1.Controls.Add(_Label25);
-            _GroupBox1.Controls.Add(_Label24);
-            _GroupBox1.Controls.Add(_Label23);
-            _GroupBox1.Controls.Add(_txtEstElec);
-            _GroupBox1.Controls.Add(_txtActElec);
-            _GroupBox1.Controls.Add(_Label21);
-            _GroupBox1.Controls.Add(_Label22);
-            _GroupBox1.Controls.Add(_txtQuotedGross);
-            _GroupBox1.Controls.Add(_txtDepositGross);
-            _GroupBox1.Controls.Add(_txtQuoted);
-            _GroupBox1.Controls.Add(_lblQuoted);
-            _GroupBox1.Controls.Add(_txtProfitActPerc);
-            _GroupBox1.Controls.Add(_Label18);
-            _GroupBox1.Controls.Add(_txtProfitEstPerc);
-            _GroupBox1.Controls.Add(_Label16);
-            _GroupBox1.Controls.Add(_txtProfitActMoney);
-            _GroupBox1.Controls.Add(_Label15);
-            _GroupBox1.Controls.Add(_txtProfitEstMoney);
-            _GroupBox1.Controls.Add(_Label14);
-            _GroupBox1.Controls.Add(_txtTotalEst);
-            _GroupBox1.Controls.Add(_txtTotalAct);
-            _GroupBox1.Controls.Add(_Label12);
-            _GroupBox1.Controls.Add(_Label13);
-            _GroupBox1.Controls.Add(_txtEstLabour);
-            _GroupBox1.Controls.Add(_txtActLabour);
-            _GroupBox1.Controls.Add(_Label5);
-            _GroupBox1.Controls.Add(_Label17);
-            _GroupBox1.Controls.Add(_txtPartEst);
-            _GroupBox1.Controls.Add(_txtPartAct);
-            _GroupBox1.Controls.Add(_Label19);
-            _GroupBox1.Controls.Add(_Label20);
-            _GroupBox1.Controls.Add(_Label11);
-            _GroupBox1.Controls.Add(_cboPaperwork);
-            _GroupBox1.Controls.Add(_Label10);
-            _GroupBox1.Controls.Add(_cboQC);
-            _GroupBox1.Controls.Add(_txtPayment);
-            _GroupBox1.Controls.Add(_Label9);
-            _GroupBox1.Controls.Add(_Label8);
-            _GroupBox1.Controls.Add(_cboFurtherWorks);
-            _GroupBox1.Controls.Add(_Label7);
-            _GroupBox1.Controls.Add(_cboExtraLabour);
-            _GroupBox1.Controls.Add(_txtPO);
-            _GroupBox1.Controls.Add(_Label6);
-            _GroupBox1.Controls.Add(_Label4);
-            _GroupBox1.Controls.Add(_cboCalledSuper);
-            _GroupBox1.Controls.Add(_Label3);
-            _GroupBox1.Controls.Add(_cboSurveyed);
-            _GroupBox1.Controls.Add(_txtDeposit);
-            _GroupBox1.Controls.Add(_Label2);
-            _GroupBox1.Location = new Point(0, 3);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(926, 599);
-            _GroupBox1.TabIndex = 34;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Details";
-            //
-            // txtManual
-            //
-            _txtManual.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtManual.Location = new Point(668, 353);
-            _txtManual.Name = "txtManual";
-            _txtManual.Size = new Size(214, 21);
-            _txtManual.TabIndex = 112;
-            _txtManual.TabStop = false;
-            _txtManual.Text = "0";
-            _txtManual.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label31
-            //
-            _Label31.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label31.Location = new Point(500, 356);
-            _Label31.Name = "Label31";
-            _Label31.Size = new Size(147, 23);
-            _Label31.TabIndex = 111;
-            _Label31.Text = "Manual Adjustment";
-            //
-            // txtEstSub
-            //
-            _txtEstSub.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtEstSub.Location = new Point(668, 276);
-            _txtEstSub.Name = "txtEstSub";
-            _txtEstSub.Size = new Size(214, 21);
-            _txtEstSub.TabIndex = 110;
-            _txtEstSub.TabStop = false;
-            _txtEstSub.Text = "0";
-            _txtEstSub.TextAlign = HorizontalAlignment.Center;
-            //
-            // txtActSub
-            //
-            _txtActSub.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtActSub.Location = new Point(668, 306);
-            _txtActSub.Name = "txtActSub";
-            _txtActSub.ReadOnly = true;
-            _txtActSub.Size = new Size(214, 21);
-            _txtActSub.TabIndex = 109;
-            _txtActSub.TabStop = false;
-            _txtActSub.Text = "0";
-            _txtActSub.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label29
-            //
-            _Label29.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label29.Location = new Point(500, 279);
-            _Label29.Name = "Label29";
-            _Label29.Size = new Size(147, 23);
-            _Label29.TabIndex = 108;
-            _Label29.Text = "Est SubContractor Cost";
-            //
-            // Label30
-            //
-            _Label30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label30.Location = new Point(500, 309);
-            _Label30.Name = "Label30";
-            _Label30.Size = new Size(147, 23);
-            _Label30.TabIndex = 107;
-            _Label30.Text = "Act SubContractor Cost";
-            //
-            // Label28
-            //
-            _Label28.Location = new Point(683, 65);
-            _Label28.Name = "Label28";
-            _Label28.Size = new Size(86, 19);
-            _Label28.TabIndex = 106;
-            _Label28.Text = "PO Value";
-            //
-            // Label27
-            //
-            _Label27.Location = new Point(796, 62);
-            _Label27.Name = "Label27";
-            _Label27.Size = new Size(86, 19);
-            _Label27.TabIndex = 105;
-            _Label27.Text = "Supplier Inv";
-            //
-            // txtSupplierInv
-            //
-            _txtSupplierInv.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtSupplierInv.Location = new Point(781, 84);
-            _txtSupplierInv.Name = "txtSupplierInv";
-            _txtSupplierInv.ReadOnly = true;
-            _txtSupplierInv.Size = new Size(101, 21);
-            _txtSupplierInv.TabIndex = 104;
-            _txtSupplierInv.TabStop = false;
-            _txtSupplierInv.Text = "0";
-            _txtSupplierInv.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label26
-            //
-            _Label26.Location = new Point(223, 122);
-            _Label26.Name = "Label26";
-            _Label26.Size = new Size(61, 18);
-            _Label26.TabIndex = 103;
-            _Label26.Text = "Nett";
-            //
-            // Label25
-            //
-            _Label25.Location = new Point(223, 63);
-            _Label25.Name = "Label25";
-            _Label25.Size = new Size(61, 14);
-            _Label25.TabIndex = 102;
-            _Label25.Text = "Nett";
-            //
-            // Label24
-            //
-            _Label24.Location = new Point(323, 62);
-            _Label24.Name = "Label24";
-            _Label24.Size = new Size(61, 19);
-            _Label24.TabIndex = 101;
-            _Label24.Text = "Gross";
-            //
-            // Label23
-            //
-            _Label23.Location = new Point(323, 122);
-            _Label23.Name = "Label23";
-            _Label23.Size = new Size(61, 18);
-            _Label23.TabIndex = 100;
-            _Label23.Text = "Gross";
-            //
-            // txtEstElec
-            //
-            _txtEstElec.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtEstElec.Location = new Point(668, 127);
-            _txtEstElec.Name = "txtEstElec";
-            _txtEstElec.Size = new Size(214, 21);
-            _txtEstElec.TabIndex = 99;
-            _txtEstElec.TabStop = false;
-            _txtEstElec.Text = "0";
-            _txtEstElec.TextAlign = HorizontalAlignment.Center;
-            //
-            // txtActElec
-            //
-            _txtActElec.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtActElec.Location = new Point(668, 157);
-            _txtActElec.Name = "txtActElec";
-            _txtActElec.ReadOnly = true;
-            _txtActElec.Size = new Size(214, 21);
-            _txtActElec.TabIndex = 98;
-            _txtActElec.TabStop = false;
-            _txtActElec.Text = "0";
-            _txtActElec.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label21
-            //
-            _Label21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label21.Location = new Point(500, 133);
-            _Label21.Name = "Label21";
-            _Label21.Size = new Size(116, 23);
-            _Label21.TabIndex = 97;
-            _Label21.Text = "Est Electrical Cost";
-            //
-            // Label22
-            //
-            _Label22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label22.Location = new Point(500, 163);
-            _Label22.Name = "Label22";
-            _Label22.Size = new Size(131, 23);
-            _Label22.TabIndex = 96;
-            _Label22.Text = "Act Electrical Cost";
-            //
-            // txtQuotedGross
-            //
-            _txtQuotedGross.Location = new Point(304, 84);
-            _txtQuotedGross.Name = "txtQuotedGross";
-            _txtQuotedGross.Size = new Size(97, 21);
-            _txtQuotedGross.TabIndex = 95;
-            _txtQuotedGross.TabStop = false;
-            _txtQuotedGross.Text = "0";
-            _txtQuotedGross.TextAlign = HorizontalAlignment.Center;
-            //
-            // txtDepositGross
-            //
-            _txtDepositGross.Location = new Point(304, 141);
-            _txtDepositGross.Name = "txtDepositGross";
-            _txtDepositGross.Size = new Size(97, 21);
-            _txtDepositGross.TabIndex = 94;
-            _txtDepositGross.TabStop = false;
-            _txtDepositGross.Text = "0";
-            _txtDepositGross.TextAlign = HorizontalAlignment.Center;
-            //
-            // txtQuoted
-            //
-            _txtQuoted.Location = new Point(187, 84);
-            _txtQuoted.Name = "txtQuoted";
-            _txtQuoted.Size = new Size(97, 21);
-            _txtQuoted.TabIndex = 93;
-            _txtQuoted.TabStop = false;
-            _txtQuoted.Text = "0";
-            _txtQuoted.TextAlign = HorizontalAlignment.Center;
-            //
-            // lblQuoted
-            //
-            _lblQuoted.Location = new Point(17, 90);
-            _lblQuoted.Name = "lblQuoted";
-            _lblQuoted.Size = new Size(121, 23);
-            _lblQuoted.TabIndex = 92;
-            _lblQuoted.Text = "Amount Quoted";
-            //
-            // txtProfitActPerc
-            //
-            _txtProfitActPerc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtProfitActPerc.Location = new Point(670, 551);
-            _txtProfitActPerc.Name = "txtProfitActPerc";
-            _txtProfitActPerc.ReadOnly = true;
-            _txtProfitActPerc.Size = new Size(214, 21);
-            _txtProfitActPerc.TabIndex = 91;
-            _txtProfitActPerc.TabStop = false;
-            _txtProfitActPerc.Text = "0";
-            _txtProfitActPerc.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label18
-            //
-            _Label18.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label18.Location = new Point(500, 554);
-            _Label18.Name = "Label18";
-            _Label18.Size = new Size(116, 23);
-            _Label18.TabIndex = 90;
-            _Label18.Text = "Act Profit %";
-            //
-            // txtProfitEstPerc
-            //
-            _txtProfitEstPerc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtProfitEstPerc.Location = new Point(670, 524);
-            _txtProfitEstPerc.Name = "txtProfitEstPerc";
-            _txtProfitEstPerc.ReadOnly = true;
-            _txtProfitEstPerc.Size = new Size(214, 21);
-            _txtProfitEstPerc.TabIndex = 89;
-            _txtProfitEstPerc.TabStop = false;
-            _txtProfitEstPerc.Text = "0";
-            _txtProfitEstPerc.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label16
-            //
-            _Label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label16.Location = new Point(500, 527);
-            _Label16.Name = "Label16";
-            _Label16.Size = new Size(116, 23);
-            _Label16.TabIndex = 88;
-            _Label16.Text = "Est Profit %";
-            //
-            // txtProfitActMoney
-            //
-            _txtProfitActMoney.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtProfitActMoney.Location = new Point(670, 485);
-            _txtProfitActMoney.Name = "txtProfitActMoney";
-            _txtProfitActMoney.ReadOnly = true;
-            _txtProfitActMoney.Size = new Size(214, 21);
-            _txtProfitActMoney.TabIndex = 87;
-            _txtProfitActMoney.TabStop = false;
-            _txtProfitActMoney.Text = "0";
-            _txtProfitActMoney.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label15
-            //
-            _Label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label15.Location = new Point(500, 488);
-            _Label15.Name = "Label15";
-            _Label15.Size = new Size(116, 23);
-            _Label15.TabIndex = 86;
-            _Label15.Text = "Act Profit £";
-            //
-            // txtProfitEstMoney
-            //
-            _txtProfitEstMoney.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtProfitEstMoney.Location = new Point(670, 458);
-            _txtProfitEstMoney.Name = "txtProfitEstMoney";
-            _txtProfitEstMoney.ReadOnly = true;
-            _txtProfitEstMoney.Size = new Size(214, 21);
-            _txtProfitEstMoney.TabIndex = 85;
-            _txtProfitEstMoney.TabStop = false;
-            _txtProfitEstMoney.Text = "0";
-            _txtProfitEstMoney.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label14
-            //
-            _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label14.Location = new Point(500, 461);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(116, 23);
-            _Label14.TabIndex = 84;
-            _Label14.Text = "Est Profit £";
-            //
-            // txtTotalEst
-            //
-            _txtTotalEst.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtTotalEst.Location = new Point(670, 396);
-            _txtTotalEst.Name = "txtTotalEst";
-            _txtTotalEst.ReadOnly = true;
-            _txtTotalEst.Size = new Size(214, 21);
-            _txtTotalEst.TabIndex = 83;
-            _txtTotalEst.TabStop = false;
-            _txtTotalEst.Text = "0";
-            _txtTotalEst.TextAlign = HorizontalAlignment.Center;
-            //
-            // txtTotalAct
-            //
-            _txtTotalAct.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtTotalAct.Location = new Point(670, 426);
-            _txtTotalAct.Name = "txtTotalAct";
-            _txtTotalAct.ReadOnly = true;
-            _txtTotalAct.Size = new Size(214, 21);
-            _txtTotalAct.TabIndex = 82;
-            _txtTotalAct.TabStop = false;
-            _txtTotalAct.Text = "0";
-            _txtTotalAct.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label12
-            //
-            _Label12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label12.Location = new Point(502, 397);
-            _Label12.Name = "Label12";
-            _Label12.Size = new Size(116, 23);
-            _Label12.TabIndex = 81;
-            _Label12.Text = "Est Total Cost";
-            //
-            // Label13
-            //
-            _Label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label13.Location = new Point(502, 427);
-            _Label13.Name = "Label13";
-            _Label13.Size = new Size(116, 23);
-            _Label13.TabIndex = 80;
-            _Label13.Text = "Act total Cost";
-            //
-            // txtEstLabour
-            //
-            _txtEstLabour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtEstLabour.Location = new Point(668, 201);
-            _txtEstLabour.Name = "txtEstLabour";
-            _txtEstLabour.Size = new Size(214, 21);
-            _txtEstLabour.TabIndex = 79;
-            _txtEstLabour.TabStop = false;
-            _txtEstLabour.Text = "0";
-            _txtEstLabour.TextAlign = HorizontalAlignment.Center;
-            //
-            // txtActLabour
-            //
-            _txtActLabour.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtActLabour.Location = new Point(668, 231);
-            _txtActLabour.Name = "txtActLabour";
-            _txtActLabour.ReadOnly = true;
-            _txtActLabour.Size = new Size(214, 21);
-            _txtActLabour.TabIndex = 78;
-            _txtActLabour.TabStop = false;
-            _txtActLabour.Text = "0";
-            _txtActLabour.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label5
-            //
-            _Label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label5.Location = new Point(500, 204);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(116, 23);
-            _Label5.TabIndex = 77;
-            _Label5.Text = "Est Labour Cost";
-            //
-            // Label17
-            //
-            _Label17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label17.Location = new Point(500, 234);
-            _Label17.Name = "Label17";
-            _Label17.Size = new Size(116, 23);
-            _Label17.TabIndex = 76;
-            _Label17.Text = "Act Labour Cost";
-            //
-            // txtPartEst
-            //
-            _txtPartEst.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtPartEst.Location = new Point(670, 37);
-            _txtPartEst.Name = "txtPartEst";
-            _txtPartEst.Size = new Size(214, 21);
-            _txtPartEst.TabIndex = 75;
-            _txtPartEst.TabStop = false;
-            _txtPartEst.Text = "0";
-            _txtPartEst.TextAlign = HorizontalAlignment.Center;
-            //
-            // txtPartAct
-            //
-            _txtPartAct.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtPartAct.Location = new Point(670, 84);
-            _txtPartAct.Name = "txtPartAct";
-            _txtPartAct.ReadOnly = true;
-            _txtPartAct.Size = new Size(99, 21);
-            _txtPartAct.TabIndex = 64;
-            _txtPartAct.TabStop = false;
-            _txtPartAct.Text = "0";
-            _txtPartAct.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label19
-            //
-            _Label19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label19.Location = new Point(500, 40);
-            _Label19.Name = "Label19";
-            _Label19.Size = new Size(88, 23);
-            _Label19.TabIndex = 60;
-            _Label19.Text = "Est Part Cost";
-            //
-            // Label20
-            //
-            _Label20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label20.Location = new Point(498, 87);
-            _Label20.Name = "Label20";
-            _Label20.Size = new Size(88, 23);
-            _Label20.TabIndex = 57;
-            _Label20.Text = "Act Part Cost";
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(17, 342);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(134, 23);
-            _Label11.TabIndex = 56;
-            _Label11.Text = "Paperwork Returned";
-            //
-            // cboPaperwork
-            //
-            _cboPaperwork.FormattingEnabled = true;
-            _cboPaperwork.Location = new Point(187, 336);
-            _cboPaperwork.Name = "cboPaperwork";
-            _cboPaperwork.Size = new Size(214, 21);
-            _cboPaperwork.TabIndex = 55;
-            //
-            // Label10
-            //
-            _Label10.Location = new Point(17, 307);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(134, 23);
-            _Label10.TabIndex = 54;
-            _Label10.Text = "QC Carried Out";
-            //
-            // cboQC
-            //
-            _cboQC.FormattingEnabled = true;
-            _cboQC.Location = new Point(187, 304);
-            _cboQC.Name = "cboQC";
-            _cboQC.Size = new Size(214, 21);
-            _cboQC.TabIndex = 53;
-            //
-            // txtPayment
-            //
-            _txtPayment.ImeMode = ImeMode.NoControl;
-            _txtPayment.Location = new Point(187, 276);
-            _txtPayment.Name = "txtPayment";
-            _txtPayment.ReadOnly = true;
-            _txtPayment.Size = new Size(214, 21);
-            _txtPayment.TabIndex = 51;
-            _txtPayment.TabStop = false;
-            _txtPayment.Text = "0";
-            _txtPayment.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(17, 282);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(134, 23);
-            _Label9.TabIndex = 50;
-            _Label9.Text = "Payment Taken";
-            //
-            // Label8
-            //
-            _Label8.Location = new Point(17, 255);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(134, 23);
-            _Label8.TabIndex = 48;
-            _Label8.Text = "Further Works Noted";
-            //
-            // cboFurtherWorks
-            //
-            _cboFurtherWorks.FormattingEnabled = true;
-            _cboFurtherWorks.Location = new Point(187, 249);
-            _cboFurtherWorks.Name = "cboFurtherWorks";
-            _cboFurtherWorks.Size = new Size(214, 21);
-            _cboFurtherWorks.TabIndex = 47;
-            //
-            // Label7
-            //
-            _Label7.Location = new Point(17, 228);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(134, 23);
-            _Label7.TabIndex = 46;
-            _Label7.Text = "Extra Labour Noted";
-            //
-            // cboExtraLabour
-            //
-            _cboExtraLabour.FormattingEnabled = true;
-            _cboExtraLabour.Location = new Point(187, 222);
-            _cboExtraLabour.Name = "cboExtraLabour";
-            _cboExtraLabour.Size = new Size(214, 21);
-            _cboExtraLabour.TabIndex = 45;
-            //
-            // txtPO
-            //
-            _txtPO.Location = new Point(187, 168);
-            _txtPO.Name = "txtPO";
-            _txtPO.ReadOnly = true;
-            _txtPO.Size = new Size(214, 21);
-            _txtPO.TabIndex = 44;
-            _txtPO.TabStop = false;
-            _txtPO.Text = "0";
-            _txtPO.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(17, 174);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 23);
-            _Label6.TabIndex = 43;
-            _Label6.Text = "PO Status";
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(17, 201);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(134, 23);
-            _Label4.TabIndex = 40;
-            _Label4.Text = "Eng Called Supervisor";
-            //
-            // cboCalledSuper
-            //
-            _cboCalledSuper.FormattingEnabled = true;
-            _cboCalledSuper.Location = new Point(187, 195);
-            _cboCalledSuper.Name = "cboCalledSuper";
-            _cboCalledSuper.Size = new Size(214, 21);
-            _cboCalledSuper.TabIndex = 39;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(20, 35);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(88, 23);
-            _Label3.TabIndex = 38;
-            _Label3.Text = "Surveyed by";
-            //
-            // cboSurveyed
-            //
-            _cboSurveyed.FormattingEnabled = true;
-            _cboSurveyed.Location = new Point(187, 32);
-            _cboSurveyed.Name = "cboSurveyed";
-            _cboSurveyed.Size = new Size(214, 21);
-            _cboSurveyed.TabIndex = 37;
-            //
-            // txtDeposit
-            //
-            _txtDeposit.Location = new Point(187, 141);
-            _txtDeposit.Name = "txtDeposit";
-            _txtDeposit.Size = new Size(97, 21);
-            _txtDeposit.TabIndex = 36;
-            _txtDeposit.TabStop = false;
-            _txtDeposit.Text = "0";
-            _txtDeposit.TextAlign = HorizontalAlignment.Center;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(17, 147);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(88, 23);
-            _Label2.TabIndex = 34;
-            _Label2.Text = "Deposit Taken";
-            //
-            // btnPrintJobCosting
-            //
-            _btnPrintJobCosting.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPrintJobCosting.Location = new Point(822, 664);
-            _btnPrintJobCosting.Name = "btnPrintJobCosting";
-            _btnPrintJobCosting.Size = new Size(114, 23);
-            _btnPrintJobCosting.TabIndex = 25;
-            _btnPrintJobCosting.Text = "Print Job Costing";
-            _btnPrintJobCosting.UseVisualStyleBackColor = true;
-            //
+            this._btnClose = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._TabControl1 = new System.Windows.Forms.TabControl();
+            this._tpJobCostings = new System.Windows.Forms.TabPage();
+            this._grpTotalCostings = new System.Windows.Forms.GroupBox();
+            this._Label41 = new System.Windows.Forms.Label();
+            this._txtSorTotal = new System.Windows.Forms.TextBox();
+            this._Label32 = new System.Windows.Forms.Label();
+            this._Label33 = new System.Windows.Forms.Label();
+            this._txtProfitPerc = new System.Windows.Forms.TextBox();
+            this._TxtProfitPounds = new System.Windows.Forms.TextBox();
+            this._lbl5 = new System.Windows.Forms.Label();
+            this._Label34 = new System.Windows.Forms.Label();
+            this._txtSales = new System.Windows.Forms.TextBox();
+            this._txtCosts = new System.Windows.Forms.TextBox();
+            this._grpPartCostings = new System.Windows.Forms.GroupBox();
+            this._Label43 = new System.Windows.Forms.Label();
+            this._txtPartPerc = new System.Windows.Forms.TextBox();
+            this._Label42 = new System.Windows.Forms.Label();
+            this._txtLabourPerc = new System.Windows.Forms.TextBox();
+            this._dgScheduleOfRateCharges = new System.Windows.Forms.DataGrid();
+            this._dgPartsProductCharging = new System.Windows.Forms.DataGrid();
+            this._Label40 = new System.Windows.Forms.Label();
+            this._TextBox2 = new System.Windows.Forms.TextBox();
+            this._Label39 = new System.Windows.Forms.Label();
+            this._txtSORSales = new System.Windows.Forms.TextBox();
+            this._dgTimesheetCharges = new System.Windows.Forms.DataGrid();
+            this._Label35 = new System.Windows.Forms.Label();
+            this._Label36 = new System.Windows.Forms.Label();
+            this._Label37 = new System.Windows.Forms.Label();
+            this._Label38 = new System.Windows.Forms.Label();
+            this._lbl1 = new System.Windows.Forms.Label();
+            this._txtPartCost = new System.Windows.Forms.TextBox();
+            this._txtLabourCost = new System.Windows.Forms.TextBox();
+            this._tpInstall = new System.Windows.Forms.TabPage();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._txtManual = new System.Windows.Forms.TextBox();
+            this._Label31 = new System.Windows.Forms.Label();
+            this._txtEstSub = new System.Windows.Forms.TextBox();
+            this._txtActSub = new System.Windows.Forms.TextBox();
+            this._Label29 = new System.Windows.Forms.Label();
+            this._Label30 = new System.Windows.Forms.Label();
+            this._Label28 = new System.Windows.Forms.Label();
+            this._Label27 = new System.Windows.Forms.Label();
+            this._txtSupplierInv = new System.Windows.Forms.TextBox();
+            this._Label26 = new System.Windows.Forms.Label();
+            this._Label25 = new System.Windows.Forms.Label();
+            this._Label24 = new System.Windows.Forms.Label();
+            this._Label23 = new System.Windows.Forms.Label();
+            this._txtEstElec = new System.Windows.Forms.TextBox();
+            this._txtActElec = new System.Windows.Forms.TextBox();
+            this._Label21 = new System.Windows.Forms.Label();
+            this._Label22 = new System.Windows.Forms.Label();
+            this._txtQuotedGross = new System.Windows.Forms.TextBox();
+            this._txtDepositGross = new System.Windows.Forms.TextBox();
+            this._txtQuoted = new System.Windows.Forms.TextBox();
+            this._lblQuoted = new System.Windows.Forms.Label();
+            this._txtProfitActPerc = new System.Windows.Forms.TextBox();
+            this._Label18 = new System.Windows.Forms.Label();
+            this._txtProfitEstPerc = new System.Windows.Forms.TextBox();
+            this._Label16 = new System.Windows.Forms.Label();
+            this._txtProfitActMoney = new System.Windows.Forms.TextBox();
+            this._Label15 = new System.Windows.Forms.Label();
+            this._txtProfitEstMoney = new System.Windows.Forms.TextBox();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._txtTotalEst = new System.Windows.Forms.TextBox();
+            this._txtTotalAct = new System.Windows.Forms.TextBox();
+            this._Label12 = new System.Windows.Forms.Label();
+            this._Label13 = new System.Windows.Forms.Label();
+            this._txtEstLabour = new System.Windows.Forms.TextBox();
+            this._txtActLabour = new System.Windows.Forms.TextBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._Label17 = new System.Windows.Forms.Label();
+            this._txtPartEst = new System.Windows.Forms.TextBox();
+            this._txtPartAct = new System.Windows.Forms.TextBox();
+            this._Label19 = new System.Windows.Forms.Label();
+            this._Label20 = new System.Windows.Forms.Label();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._cboPaperwork = new System.Windows.Forms.ComboBox();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._cboQC = new System.Windows.Forms.ComboBox();
+            this._txtPayment = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._cboFurtherWorks = new System.Windows.Forms.ComboBox();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._cboExtraLabour = new System.Windows.Forms.ComboBox();
+            this._txtPO = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._cboCalledSuper = new System.Windows.Forms.ComboBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._cboSurveyed = new System.Windows.Forms.ComboBox();
+            this._txtDeposit = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnPrintJobCosting = new System.Windows.Forms.Button();
+            this._TabControl1.SuspendLayout();
+            this._tpJobCostings.SuspendLayout();
+            this._grpTotalCostings.SuspendLayout();
+            this._grpPartCostings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgScheduleOfRateCharges)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductCharging)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheetCharges)).BeginInit();
+            this._tpInstall.SuspendLayout();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(70, 664);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 23);
+            this._btnClose.TabIndex = 16;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Location = new System.Drawing.Point(8, 664);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 23);
+            this._btnSave.TabIndex = 15;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _TabControl1
+            // 
+            this._TabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._TabControl1.Controls.Add(this._tpJobCostings);
+            this._TabControl1.Controls.Add(this._tpInstall);
+            this._TabControl1.Location = new System.Drawing.Point(0, 12);
+            this._TabControl1.Name = "_TabControl1";
+            this._TabControl1.SelectedIndex = 0;
+            this._TabControl1.Size = new System.Drawing.Size(942, 646);
+            this._TabControl1.TabIndex = 23;
+            // 
+            // _tpJobCostings
+            // 
+            this._tpJobCostings.Controls.Add(this._grpTotalCostings);
+            this._tpJobCostings.Controls.Add(this._grpPartCostings);
+            this._tpJobCostings.Location = new System.Drawing.Point(4, 22);
+            this._tpJobCostings.Name = "_tpJobCostings";
+            this._tpJobCostings.Padding = new System.Windows.Forms.Padding(3);
+            this._tpJobCostings.Size = new System.Drawing.Size(934, 620);
+            this._tpJobCostings.TabIndex = 5;
+            this._tpJobCostings.Text = "Job Costings";
+            this._tpJobCostings.UseVisualStyleBackColor = true;
+            // 
+            // _grpTotalCostings
+            // 
+            this._grpTotalCostings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpTotalCostings.Controls.Add(this._Label41);
+            this._grpTotalCostings.Controls.Add(this._txtSorTotal);
+            this._grpTotalCostings.Controls.Add(this._Label32);
+            this._grpTotalCostings.Controls.Add(this._Label33);
+            this._grpTotalCostings.Controls.Add(this._txtProfitPerc);
+            this._grpTotalCostings.Controls.Add(this._TxtProfitPounds);
+            this._grpTotalCostings.Controls.Add(this._lbl5);
+            this._grpTotalCostings.Controls.Add(this._Label34);
+            this._grpTotalCostings.Controls.Add(this._txtSales);
+            this._grpTotalCostings.Controls.Add(this._txtCosts);
+            this._grpTotalCostings.Location = new System.Drawing.Point(4, 496);
+            this._grpTotalCostings.Name = "_grpTotalCostings";
+            this._grpTotalCostings.Size = new System.Drawing.Size(928, 80);
+            this._grpTotalCostings.TabIndex = 7;
+            this._grpTotalCostings.TabStop = false;
+            // 
+            // _Label41
+            // 
+            this._Label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label41.AutoSize = true;
+            this._Label41.Location = new System.Drawing.Point(510, 11);
+            this._Label41.Name = "_Label41";
+            this._Label41.Size = new System.Drawing.Size(67, 13);
+            this._Label41.TabIndex = 13;
+            this._Label41.Text = "SOR Sales";
+            // 
+            // _txtSorTotal
+            // 
+            this._txtSorTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSorTotal.Location = new System.Drawing.Point(500, 30);
+            this._txtSorTotal.Name = "_txtSorTotal";
+            this._txtSorTotal.Size = new System.Drawing.Size(100, 21);
+            this._txtSorTotal.TabIndex = 14;
+            // 
+            // _Label32
+            // 
+            this._Label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label32.AutoSize = true;
+            this._Label32.Location = new System.Drawing.Point(748, 47);
+            this._Label32.Name = "_Label32";
+            this._Label32.Size = new System.Drawing.Size(53, 13);
+            this._Label32.TabIndex = 11;
+            this._Label32.Text = "Profit %";
+            // 
+            // _Label33
+            // 
+            this._Label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label33.AutoSize = true;
+            this._Label33.Location = new System.Drawing.Point(748, 20);
+            this._Label33.Name = "_Label33";
+            this._Label33.Size = new System.Drawing.Size(48, 13);
+            this._Label33.TabIndex = 9;
+            this._Label33.Text = "Profit £";
+            // 
+            // _txtProfitPerc
+            // 
+            this._txtProfitPerc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtProfitPerc.Location = new System.Drawing.Point(806, 41);
+            this._txtProfitPerc.Name = "_txtProfitPerc";
+            this._txtProfitPerc.Size = new System.Drawing.Size(100, 21);
+            this._txtProfitPerc.TabIndex = 12;
+            // 
+            // _TxtProfitPounds
+            // 
+            this._TxtProfitPounds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._TxtProfitPounds.Location = new System.Drawing.Point(806, 14);
+            this._TxtProfitPounds.Name = "_TxtProfitPounds";
+            this._TxtProfitPounds.Size = new System.Drawing.Size(100, 21);
+            this._TxtProfitPounds.TabIndex = 10;
+            // 
+            // _lbl5
+            // 
+            this._lbl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lbl5.AutoSize = true;
+            this._lbl5.Location = new System.Drawing.Point(632, 11);
+            this._lbl5.Name = "_lbl5";
+            this._lbl5.Size = new System.Drawing.Size(74, 13);
+            this._lbl5.TabIndex = 7;
+            this._lbl5.Text = "Other Sales";
+            // 
+            // _Label34
+            // 
+            this._Label34.AutoSize = true;
+            this._Label34.Location = new System.Drawing.Point(36, 11);
+            this._Label34.Name = "_Label34";
+            this._Label34.Size = new System.Drawing.Size(39, 13);
+            this._Label34.TabIndex = 3;
+            this._Label34.Text = "Costs";
+            // 
+            // _txtSales
+            // 
+            this._txtSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSales.Location = new System.Drawing.Point(622, 30);
+            this._txtSales.Name = "_txtSales";
+            this._txtSales.Size = new System.Drawing.Size(100, 21);
+            this._txtSales.TabIndex = 8;
+            // 
+            // _txtCosts
+            // 
+            this._txtCosts.Location = new System.Drawing.Point(9, 30);
+            this._txtCosts.Name = "_txtCosts";
+            this._txtCosts.Size = new System.Drawing.Size(100, 21);
+            this._txtCosts.TabIndex = 6;
+            // 
+            // _grpPartCostings
+            // 
+            this._grpPartCostings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpPartCostings.BackColor = System.Drawing.Color.White;
+            this._grpPartCostings.Controls.Add(this._Label43);
+            this._grpPartCostings.Controls.Add(this._txtPartPerc);
+            this._grpPartCostings.Controls.Add(this._Label42);
+            this._grpPartCostings.Controls.Add(this._txtLabourPerc);
+            this._grpPartCostings.Controls.Add(this._dgScheduleOfRateCharges);
+            this._grpPartCostings.Controls.Add(this._dgPartsProductCharging);
+            this._grpPartCostings.Controls.Add(this._Label40);
+            this._grpPartCostings.Controls.Add(this._TextBox2);
+            this._grpPartCostings.Controls.Add(this._Label39);
+            this._grpPartCostings.Controls.Add(this._txtSORSales);
+            this._grpPartCostings.Controls.Add(this._dgTimesheetCharges);
+            this._grpPartCostings.Controls.Add(this._Label35);
+            this._grpPartCostings.Controls.Add(this._Label36);
+            this._grpPartCostings.Controls.Add(this._Label37);
+            this._grpPartCostings.Controls.Add(this._Label38);
+            this._grpPartCostings.Controls.Add(this._lbl1);
+            this._grpPartCostings.Controls.Add(this._txtPartCost);
+            this._grpPartCostings.Controls.Add(this._txtLabourCost);
+            this._grpPartCostings.Location = new System.Drawing.Point(4, 3);
+            this._grpPartCostings.Name = "_grpPartCostings";
+            this._grpPartCostings.Size = new System.Drawing.Size(928, 468);
+            this._grpPartCostings.TabIndex = 6;
+            this._grpPartCostings.TabStop = false;
+            this._grpPartCostings.Text = "Job Profit/Loss";
+            // 
+            // _Label43
+            // 
+            this._Label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label43.AutoSize = true;
+            this._Label43.Location = new System.Drawing.Point(824, 408);
+            this._Label43.Name = "_Label43";
+            this._Label43.Size = new System.Drawing.Size(46, 13);
+            this._Label43.TabIndex = 24;
+            this._Label43.Text = "Part %";
+            // 
+            // _txtPartPerc
+            // 
+            this._txtPartPerc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartPerc.Location = new System.Drawing.Point(806, 427);
+            this._txtPartPerc.Name = "_txtPartPerc";
+            this._txtPartPerc.Size = new System.Drawing.Size(100, 21);
+            this._txtPartPerc.TabIndex = 23;
+            // 
+            // _Label42
+            // 
+            this._Label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label42.AutoSize = true;
+            this._Label42.Location = new System.Drawing.Point(817, 255);
+            this._Label42.Name = "_Label42";
+            this._Label42.Size = new System.Drawing.Size(62, 13);
+            this._Label42.TabIndex = 22;
+            this._Label42.Text = "Labour %";
+            // 
+            // _txtLabourPerc
+            // 
+            this._txtLabourPerc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtLabourPerc.Location = new System.Drawing.Point(806, 276);
+            this._txtLabourPerc.Name = "_txtLabourPerc";
+            this._txtLabourPerc.Size = new System.Drawing.Size(100, 21);
+            this._txtLabourPerc.TabIndex = 21;
+            // 
+            // _dgScheduleOfRateCharges
+            // 
+            this._dgScheduleOfRateCharges.DataMember = "";
+            this._dgScheduleOfRateCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgScheduleOfRateCharges.Location = new System.Drawing.Point(9, 35);
+            this._dgScheduleOfRateCharges.Name = "_dgScheduleOfRateCharges";
+            this._dgScheduleOfRateCharges.Size = new System.Drawing.Size(779, 118);
+            this._dgScheduleOfRateCharges.TabIndex = 20;
+            // 
+            // _dgPartsProductCharging
+            // 
+            this._dgPartsProductCharging.DataMember = "";
+            this._dgPartsProductCharging.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgPartsProductCharging.Location = new System.Drawing.Point(9, 348);
+            this._dgPartsProductCharging.Name = "_dgPartsProductCharging";
+            this._dgPartsProductCharging.Size = new System.Drawing.Size(779, 100);
+            this._dgPartsProductCharging.TabIndex = 19;
+            // 
+            // _Label40
+            // 
+            this._Label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label40.AutoSize = true;
+            this._Label40.Location = new System.Drawing.Point(817, 33);
+            this._Label40.Name = "_Label40";
+            this._Label40.Size = new System.Drawing.Size(53, 13);
+            this._Label40.TabIndex = 18;
+            this._Label40.Text = "SOR Est";
+            this._Label40.Visible = false;
+            // 
+            // _TextBox2
+            // 
+            this._TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._TextBox2.Location = new System.Drawing.Point(806, 54);
+            this._TextBox2.Name = "_TextBox2";
+            this._TextBox2.Size = new System.Drawing.Size(100, 21);
+            this._TextBox2.TabIndex = 17;
+            this._TextBox2.Visible = false;
+            // 
+            // _Label39
+            // 
+            this._Label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label39.AutoSize = true;
+            this._Label39.Location = new System.Drawing.Point(817, 111);
+            this._Label39.Name = "_Label39";
+            this._Label39.Size = new System.Drawing.Size(67, 13);
+            this._Label39.TabIndex = 16;
+            this._Label39.Text = "SOR Sales";
+            // 
+            // _txtSORSales
+            // 
+            this._txtSORSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSORSales.Location = new System.Drawing.Point(806, 132);
+            this._txtSORSales.Name = "_txtSORSales";
+            this._txtSORSales.Size = new System.Drawing.Size(100, 21);
+            this._txtSORSales.TabIndex = 15;
+            // 
+            // _dgTimesheetCharges
+            // 
+            this._dgTimesheetCharges.DataMember = "";
+            this._dgTimesheetCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgTimesheetCharges.Location = new System.Drawing.Point(9, 205);
+            this._dgTimesheetCharges.Name = "_dgTimesheetCharges";
+            this._dgTimesheetCharges.Size = new System.Drawing.Size(779, 92);
+            this._dgTimesheetCharges.TabIndex = 14;
+            // 
+            // _Label35
+            // 
+            this._Label35.AutoSize = true;
+            this._Label35.Location = new System.Drawing.Point(6, 19);
+            this._Label35.Name = "_Label35";
+            this._Label35.Size = new System.Drawing.Size(87, 13);
+            this._Label35.TabIndex = 13;
+            this._Label35.Text = "SOR\'s Applied";
+            // 
+            // _Label36
+            // 
+            this._Label36.AutoSize = true;
+            this._Label36.Location = new System.Drawing.Point(6, 332);
+            this._Label36.Name = "_Label36";
+            this._Label36.Size = new System.Drawing.Size(72, 13);
+            this._Label36.TabIndex = 11;
+            this._Label36.Text = "Parts Costs";
+            // 
+            // _Label37
+            // 
+            this._Label37.AutoSize = true;
+            this._Label37.Location = new System.Drawing.Point(6, 189);
+            this._Label37.Name = "_Label37";
+            this._Label37.Size = new System.Drawing.Size(82, 13);
+            this._Label37.TabIndex = 9;
+            this._Label37.Text = "Labour Costs";
+            // 
+            // _Label38
+            // 
+            this._Label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label38.AutoSize = true;
+            this._Label38.Location = new System.Drawing.Point(824, 353);
+            this._Label38.Name = "_Label38";
+            this._Label38.Size = new System.Drawing.Size(66, 13);
+            this._Label38.TabIndex = 2;
+            this._Label38.Text = "Part Costs";
+            // 
+            // _lbl1
+            // 
+            this._lbl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lbl1.AutoSize = true;
+            this._lbl1.Location = new System.Drawing.Point(817, 205);
+            this._lbl1.Name = "_lbl1";
+            this._lbl1.Size = new System.Drawing.Size(82, 13);
+            this._lbl1.TabIndex = 1;
+            this._lbl1.Text = "Labour Costs";
+            // 
+            // _txtPartCost
+            // 
+            this._txtPartCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartCost.Location = new System.Drawing.Point(806, 372);
+            this._txtPartCost.Name = "_txtPartCost";
+            this._txtPartCost.Size = new System.Drawing.Size(100, 21);
+            this._txtPartCost.TabIndex = 1;
+            // 
+            // _txtLabourCost
+            // 
+            this._txtLabourCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtLabourCost.Location = new System.Drawing.Point(806, 226);
+            this._txtLabourCost.Name = "_txtLabourCost";
+            this._txtLabourCost.Size = new System.Drawing.Size(100, 21);
+            this._txtLabourCost.TabIndex = 0;
+            // 
+            // _tpInstall
+            // 
+            this._tpInstall.Controls.Add(this._GroupBox1);
+            this._tpInstall.Location = new System.Drawing.Point(4, 22);
+            this._tpInstall.Name = "_tpInstall";
+            this._tpInstall.Size = new System.Drawing.Size(934, 601);
+            this._tpInstall.TabIndex = 6;
+            this._tpInstall.Text = "Installation Data";
+            this._tpInstall.UseVisualStyleBackColor = true;
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._txtManual);
+            this._GroupBox1.Controls.Add(this._Label31);
+            this._GroupBox1.Controls.Add(this._txtEstSub);
+            this._GroupBox1.Controls.Add(this._txtActSub);
+            this._GroupBox1.Controls.Add(this._Label29);
+            this._GroupBox1.Controls.Add(this._Label30);
+            this._GroupBox1.Controls.Add(this._Label28);
+            this._GroupBox1.Controls.Add(this._Label27);
+            this._GroupBox1.Controls.Add(this._txtSupplierInv);
+            this._GroupBox1.Controls.Add(this._Label26);
+            this._GroupBox1.Controls.Add(this._Label25);
+            this._GroupBox1.Controls.Add(this._Label24);
+            this._GroupBox1.Controls.Add(this._Label23);
+            this._GroupBox1.Controls.Add(this._txtEstElec);
+            this._GroupBox1.Controls.Add(this._txtActElec);
+            this._GroupBox1.Controls.Add(this._Label21);
+            this._GroupBox1.Controls.Add(this._Label22);
+            this._GroupBox1.Controls.Add(this._txtQuotedGross);
+            this._GroupBox1.Controls.Add(this._txtDepositGross);
+            this._GroupBox1.Controls.Add(this._txtQuoted);
+            this._GroupBox1.Controls.Add(this._lblQuoted);
+            this._GroupBox1.Controls.Add(this._txtProfitActPerc);
+            this._GroupBox1.Controls.Add(this._Label18);
+            this._GroupBox1.Controls.Add(this._txtProfitEstPerc);
+            this._GroupBox1.Controls.Add(this._Label16);
+            this._GroupBox1.Controls.Add(this._txtProfitActMoney);
+            this._GroupBox1.Controls.Add(this._Label15);
+            this._GroupBox1.Controls.Add(this._txtProfitEstMoney);
+            this._GroupBox1.Controls.Add(this._Label14);
+            this._GroupBox1.Controls.Add(this._txtTotalEst);
+            this._GroupBox1.Controls.Add(this._txtTotalAct);
+            this._GroupBox1.Controls.Add(this._Label12);
+            this._GroupBox1.Controls.Add(this._Label13);
+            this._GroupBox1.Controls.Add(this._txtEstLabour);
+            this._GroupBox1.Controls.Add(this._txtActLabour);
+            this._GroupBox1.Controls.Add(this._Label5);
+            this._GroupBox1.Controls.Add(this._Label17);
+            this._GroupBox1.Controls.Add(this._txtPartEst);
+            this._GroupBox1.Controls.Add(this._txtPartAct);
+            this._GroupBox1.Controls.Add(this._Label19);
+            this._GroupBox1.Controls.Add(this._Label20);
+            this._GroupBox1.Controls.Add(this._Label11);
+            this._GroupBox1.Controls.Add(this._cboPaperwork);
+            this._GroupBox1.Controls.Add(this._Label10);
+            this._GroupBox1.Controls.Add(this._cboQC);
+            this._GroupBox1.Controls.Add(this._txtPayment);
+            this._GroupBox1.Controls.Add(this._Label9);
+            this._GroupBox1.Controls.Add(this._Label8);
+            this._GroupBox1.Controls.Add(this._cboFurtherWorks);
+            this._GroupBox1.Controls.Add(this._Label7);
+            this._GroupBox1.Controls.Add(this._cboExtraLabour);
+            this._GroupBox1.Controls.Add(this._txtPO);
+            this._GroupBox1.Controls.Add(this._Label6);
+            this._GroupBox1.Controls.Add(this._Label4);
+            this._GroupBox1.Controls.Add(this._cboCalledSuper);
+            this._GroupBox1.Controls.Add(this._Label3);
+            this._GroupBox1.Controls.Add(this._cboSurveyed);
+            this._GroupBox1.Controls.Add(this._txtDeposit);
+            this._GroupBox1.Controls.Add(this._Label2);
+            this._GroupBox1.Location = new System.Drawing.Point(0, 3);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(926, 599);
+            this._GroupBox1.TabIndex = 34;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Details";
+            // 
+            // _txtManual
+            // 
+            this._txtManual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtManual.Location = new System.Drawing.Point(668, 353);
+            this._txtManual.Name = "_txtManual";
+            this._txtManual.Size = new System.Drawing.Size(214, 21);
+            this._txtManual.TabIndex = 112;
+            this._txtManual.TabStop = false;
+            this._txtManual.Text = "0";
+            this._txtManual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtManual.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtManual_TextChanged);
+            // 
+            // _Label31
+            // 
+            this._Label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label31.Location = new System.Drawing.Point(500, 356);
+            this._Label31.Name = "_Label31";
+            this._Label31.Size = new System.Drawing.Size(147, 23);
+            this._Label31.TabIndex = 111;
+            this._Label31.Text = "Manual Adjustment";
+            // 
+            // _txtEstSub
+            // 
+            this._txtEstSub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtEstSub.Location = new System.Drawing.Point(668, 276);
+            this._txtEstSub.Name = "_txtEstSub";
+            this._txtEstSub.Size = new System.Drawing.Size(214, 21);
+            this._txtEstSub.TabIndex = 110;
+            this._txtEstSub.TabStop = false;
+            this._txtEstSub.Text = "0";
+            this._txtEstSub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtEstSub.TextChanged += new System.EventHandler(this.txtEstSub_TextChanged);
+            // 
+            // _txtActSub
+            // 
+            this._txtActSub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtActSub.Location = new System.Drawing.Point(668, 306);
+            this._txtActSub.Name = "_txtActSub";
+            this._txtActSub.ReadOnly = true;
+            this._txtActSub.Size = new System.Drawing.Size(214, 21);
+            this._txtActSub.TabIndex = 109;
+            this._txtActSub.TabStop = false;
+            this._txtActSub.Text = "0";
+            this._txtActSub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label29
+            // 
+            this._Label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label29.Location = new System.Drawing.Point(500, 279);
+            this._Label29.Name = "_Label29";
+            this._Label29.Size = new System.Drawing.Size(147, 23);
+            this._Label29.TabIndex = 108;
+            this._Label29.Text = "Est SubContractor Cost";
+            // 
+            // _Label30
+            // 
+            this._Label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label30.Location = new System.Drawing.Point(500, 309);
+            this._Label30.Name = "_Label30";
+            this._Label30.Size = new System.Drawing.Size(147, 23);
+            this._Label30.TabIndex = 107;
+            this._Label30.Text = "Act SubContractor Cost";
+            // 
+            // _Label28
+            // 
+            this._Label28.Location = new System.Drawing.Point(683, 65);
+            this._Label28.Name = "_Label28";
+            this._Label28.Size = new System.Drawing.Size(86, 19);
+            this._Label28.TabIndex = 106;
+            this._Label28.Text = "PO Value";
+            // 
+            // _Label27
+            // 
+            this._Label27.Location = new System.Drawing.Point(796, 62);
+            this._Label27.Name = "_Label27";
+            this._Label27.Size = new System.Drawing.Size(86, 19);
+            this._Label27.TabIndex = 105;
+            this._Label27.Text = "Supplier Inv";
+            // 
+            // _txtSupplierInv
+            // 
+            this._txtSupplierInv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSupplierInv.Location = new System.Drawing.Point(781, 84);
+            this._txtSupplierInv.Name = "_txtSupplierInv";
+            this._txtSupplierInv.ReadOnly = true;
+            this._txtSupplierInv.Size = new System.Drawing.Size(101, 21);
+            this._txtSupplierInv.TabIndex = 104;
+            this._txtSupplierInv.TabStop = false;
+            this._txtSupplierInv.Text = "0";
+            this._txtSupplierInv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label26
+            // 
+            this._Label26.Location = new System.Drawing.Point(223, 122);
+            this._Label26.Name = "_Label26";
+            this._Label26.Size = new System.Drawing.Size(61, 18);
+            this._Label26.TabIndex = 103;
+            this._Label26.Text = "Nett";
+            // 
+            // _Label25
+            // 
+            this._Label25.Location = new System.Drawing.Point(223, 63);
+            this._Label25.Name = "_Label25";
+            this._Label25.Size = new System.Drawing.Size(61, 14);
+            this._Label25.TabIndex = 102;
+            this._Label25.Text = "Nett";
+            // 
+            // _Label24
+            // 
+            this._Label24.Location = new System.Drawing.Point(323, 62);
+            this._Label24.Name = "_Label24";
+            this._Label24.Size = new System.Drawing.Size(61, 19);
+            this._Label24.TabIndex = 101;
+            this._Label24.Text = "Gross";
+            // 
+            // _Label23
+            // 
+            this._Label23.Location = new System.Drawing.Point(323, 122);
+            this._Label23.Name = "_Label23";
+            this._Label23.Size = new System.Drawing.Size(61, 18);
+            this._Label23.TabIndex = 100;
+            this._Label23.Text = "Gross";
+            // 
+            // _txtEstElec
+            // 
+            this._txtEstElec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtEstElec.Location = new System.Drawing.Point(668, 127);
+            this._txtEstElec.Name = "_txtEstElec";
+            this._txtEstElec.Size = new System.Drawing.Size(214, 21);
+            this._txtEstElec.TabIndex = 99;
+            this._txtEstElec.TabStop = false;
+            this._txtEstElec.Text = "0";
+            this._txtEstElec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtEstElec.TextChanged += new System.EventHandler(this.txtEstElectrical_TextChanged);
+            // 
+            // _txtActElec
+            // 
+            this._txtActElec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtActElec.Location = new System.Drawing.Point(668, 157);
+            this._txtActElec.Name = "_txtActElec";
+            this._txtActElec.ReadOnly = true;
+            this._txtActElec.Size = new System.Drawing.Size(214, 21);
+            this._txtActElec.TabIndex = 98;
+            this._txtActElec.TabStop = false;
+            this._txtActElec.Text = "0";
+            this._txtActElec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label21
+            // 
+            this._Label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label21.Location = new System.Drawing.Point(500, 133);
+            this._Label21.Name = "_Label21";
+            this._Label21.Size = new System.Drawing.Size(116, 23);
+            this._Label21.TabIndex = 97;
+            this._Label21.Text = "Est Electrical Cost";
+            // 
+            // _Label22
+            // 
+            this._Label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label22.Location = new System.Drawing.Point(500, 163);
+            this._Label22.Name = "_Label22";
+            this._Label22.Size = new System.Drawing.Size(131, 23);
+            this._Label22.TabIndex = 96;
+            this._Label22.Text = "Act Electrical Cost";
+            // 
+            // _txtQuotedGross
+            // 
+            this._txtQuotedGross.Location = new System.Drawing.Point(304, 84);
+            this._txtQuotedGross.Name = "_txtQuotedGross";
+            this._txtQuotedGross.Size = new System.Drawing.Size(97, 21);
+            this._txtQuotedGross.TabIndex = 95;
+            this._txtQuotedGross.TabStop = false;
+            this._txtQuotedGross.Text = "0";
+            this._txtQuotedGross.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtQuotedGross.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtQuotedGross_TextChanged);
+            // 
+            // _txtDepositGross
+            // 
+            this._txtDepositGross.Location = new System.Drawing.Point(304, 141);
+            this._txtDepositGross.Name = "_txtDepositGross";
+            this._txtDepositGross.Size = new System.Drawing.Size(97, 21);
+            this._txtDepositGross.TabIndex = 94;
+            this._txtDepositGross.TabStop = false;
+            this._txtDepositGross.Text = "0";
+            this._txtDepositGross.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtDepositGross.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDepositGross_TextChanged);
+            // 
+            // _txtQuoted
+            // 
+            this._txtQuoted.Location = new System.Drawing.Point(187, 84);
+            this._txtQuoted.Name = "_txtQuoted";
+            this._txtQuoted.Size = new System.Drawing.Size(97, 21);
+            this._txtQuoted.TabIndex = 93;
+            this._txtQuoted.TabStop = false;
+            this._txtQuoted.Text = "0";
+            this._txtQuoted.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtQuoted.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox1_TextChanged);
+            // 
+            // _lblQuoted
+            // 
+            this._lblQuoted.Location = new System.Drawing.Point(17, 90);
+            this._lblQuoted.Name = "_lblQuoted";
+            this._lblQuoted.Size = new System.Drawing.Size(121, 23);
+            this._lblQuoted.TabIndex = 92;
+            this._lblQuoted.Text = "Amount Quoted";
+            // 
+            // _txtProfitActPerc
+            // 
+            this._txtProfitActPerc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtProfitActPerc.Location = new System.Drawing.Point(670, 551);
+            this._txtProfitActPerc.Name = "_txtProfitActPerc";
+            this._txtProfitActPerc.ReadOnly = true;
+            this._txtProfitActPerc.Size = new System.Drawing.Size(214, 21);
+            this._txtProfitActPerc.TabIndex = 91;
+            this._txtProfitActPerc.TabStop = false;
+            this._txtProfitActPerc.Text = "0";
+            this._txtProfitActPerc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label18
+            // 
+            this._Label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label18.Location = new System.Drawing.Point(500, 554);
+            this._Label18.Name = "_Label18";
+            this._Label18.Size = new System.Drawing.Size(116, 23);
+            this._Label18.TabIndex = 90;
+            this._Label18.Text = "Act Profit %";
+            // 
+            // _txtProfitEstPerc
+            // 
+            this._txtProfitEstPerc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtProfitEstPerc.Location = new System.Drawing.Point(670, 524);
+            this._txtProfitEstPerc.Name = "_txtProfitEstPerc";
+            this._txtProfitEstPerc.ReadOnly = true;
+            this._txtProfitEstPerc.Size = new System.Drawing.Size(214, 21);
+            this._txtProfitEstPerc.TabIndex = 89;
+            this._txtProfitEstPerc.TabStop = false;
+            this._txtProfitEstPerc.Text = "0";
+            this._txtProfitEstPerc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label16
+            // 
+            this._Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label16.Location = new System.Drawing.Point(500, 527);
+            this._Label16.Name = "_Label16";
+            this._Label16.Size = new System.Drawing.Size(116, 23);
+            this._Label16.TabIndex = 88;
+            this._Label16.Text = "Est Profit %";
+            // 
+            // _txtProfitActMoney
+            // 
+            this._txtProfitActMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtProfitActMoney.Location = new System.Drawing.Point(670, 485);
+            this._txtProfitActMoney.Name = "_txtProfitActMoney";
+            this._txtProfitActMoney.ReadOnly = true;
+            this._txtProfitActMoney.Size = new System.Drawing.Size(214, 21);
+            this._txtProfitActMoney.TabIndex = 87;
+            this._txtProfitActMoney.TabStop = false;
+            this._txtProfitActMoney.Text = "0";
+            this._txtProfitActMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label15
+            // 
+            this._Label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label15.Location = new System.Drawing.Point(500, 488);
+            this._Label15.Name = "_Label15";
+            this._Label15.Size = new System.Drawing.Size(116, 23);
+            this._Label15.TabIndex = 86;
+            this._Label15.Text = "Act Profit £";
+            // 
+            // _txtProfitEstMoney
+            // 
+            this._txtProfitEstMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtProfitEstMoney.Location = new System.Drawing.Point(670, 458);
+            this._txtProfitEstMoney.Name = "_txtProfitEstMoney";
+            this._txtProfitEstMoney.ReadOnly = true;
+            this._txtProfitEstMoney.Size = new System.Drawing.Size(214, 21);
+            this._txtProfitEstMoney.TabIndex = 85;
+            this._txtProfitEstMoney.TabStop = false;
+            this._txtProfitEstMoney.Text = "0";
+            this._txtProfitEstMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label14
+            // 
+            this._Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label14.Location = new System.Drawing.Point(500, 461);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(116, 23);
+            this._Label14.TabIndex = 84;
+            this._Label14.Text = "Est Profit £";
+            // 
+            // _txtTotalEst
+            // 
+            this._txtTotalEst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTotalEst.Location = new System.Drawing.Point(670, 396);
+            this._txtTotalEst.Name = "_txtTotalEst";
+            this._txtTotalEst.ReadOnly = true;
+            this._txtTotalEst.Size = new System.Drawing.Size(214, 21);
+            this._txtTotalEst.TabIndex = 83;
+            this._txtTotalEst.TabStop = false;
+            this._txtTotalEst.Text = "0";
+            this._txtTotalEst.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _txtTotalAct
+            // 
+            this._txtTotalAct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTotalAct.Location = new System.Drawing.Point(670, 426);
+            this._txtTotalAct.Name = "_txtTotalAct";
+            this._txtTotalAct.ReadOnly = true;
+            this._txtTotalAct.Size = new System.Drawing.Size(214, 21);
+            this._txtTotalAct.TabIndex = 82;
+            this._txtTotalAct.TabStop = false;
+            this._txtTotalAct.Text = "0";
+            this._txtTotalAct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label12
+            // 
+            this._Label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label12.Location = new System.Drawing.Point(502, 397);
+            this._Label12.Name = "_Label12";
+            this._Label12.Size = new System.Drawing.Size(116, 23);
+            this._Label12.TabIndex = 81;
+            this._Label12.Text = "Est Total Cost";
+            // 
+            // _Label13
+            // 
+            this._Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label13.Location = new System.Drawing.Point(502, 427);
+            this._Label13.Name = "_Label13";
+            this._Label13.Size = new System.Drawing.Size(116, 23);
+            this._Label13.TabIndex = 80;
+            this._Label13.Text = "Act total Cost";
+            // 
+            // _txtEstLabour
+            // 
+            this._txtEstLabour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtEstLabour.Location = new System.Drawing.Point(668, 201);
+            this._txtEstLabour.Name = "_txtEstLabour";
+            this._txtEstLabour.Size = new System.Drawing.Size(214, 21);
+            this._txtEstLabour.TabIndex = 79;
+            this._txtEstLabour.TabStop = false;
+            this._txtEstLabour.Text = "0";
+            this._txtEstLabour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtEstLabour.TextChanged += new System.EventHandler(this.txtEstLabour_TextChanged);
+            // 
+            // _txtActLabour
+            // 
+            this._txtActLabour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtActLabour.Location = new System.Drawing.Point(668, 231);
+            this._txtActLabour.Name = "_txtActLabour";
+            this._txtActLabour.ReadOnly = true;
+            this._txtActLabour.Size = new System.Drawing.Size(214, 21);
+            this._txtActLabour.TabIndex = 78;
+            this._txtActLabour.TabStop = false;
+            this._txtActLabour.Text = "0";
+            this._txtActLabour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label5
+            // 
+            this._Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label5.Location = new System.Drawing.Point(500, 204);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(116, 23);
+            this._Label5.TabIndex = 77;
+            this._Label5.Text = "Est Labour Cost";
+            // 
+            // _Label17
+            // 
+            this._Label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label17.Location = new System.Drawing.Point(500, 234);
+            this._Label17.Name = "_Label17";
+            this._Label17.Size = new System.Drawing.Size(116, 23);
+            this._Label17.TabIndex = 76;
+            this._Label17.Text = "Act Labour Cost";
+            // 
+            // _txtPartEst
+            // 
+            this._txtPartEst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartEst.Location = new System.Drawing.Point(670, 37);
+            this._txtPartEst.Name = "_txtPartEst";
+            this._txtPartEst.Size = new System.Drawing.Size(214, 21);
+            this._txtPartEst.TabIndex = 75;
+            this._txtPartEst.TabStop = false;
+            this._txtPartEst.Text = "0";
+            this._txtPartEst.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtPartEst.TextChanged += new System.EventHandler(this.txtPartEst_TextChanged);
+            // 
+            // _txtPartAct
+            // 
+            this._txtPartAct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartAct.Location = new System.Drawing.Point(670, 84);
+            this._txtPartAct.Name = "_txtPartAct";
+            this._txtPartAct.ReadOnly = true;
+            this._txtPartAct.Size = new System.Drawing.Size(99, 21);
+            this._txtPartAct.TabIndex = 64;
+            this._txtPartAct.TabStop = false;
+            this._txtPartAct.Text = "0";
+            this._txtPartAct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label19
+            // 
+            this._Label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label19.Location = new System.Drawing.Point(500, 40);
+            this._Label19.Name = "_Label19";
+            this._Label19.Size = new System.Drawing.Size(88, 23);
+            this._Label19.TabIndex = 60;
+            this._Label19.Text = "Est Part Cost";
+            // 
+            // _Label20
+            // 
+            this._Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label20.Location = new System.Drawing.Point(498, 87);
+            this._Label20.Name = "_Label20";
+            this._Label20.Size = new System.Drawing.Size(88, 23);
+            this._Label20.TabIndex = 57;
+            this._Label20.Text = "Act Part Cost";
+            // 
+            // _Label11
+            // 
+            this._Label11.Location = new System.Drawing.Point(17, 342);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(134, 23);
+            this._Label11.TabIndex = 56;
+            this._Label11.Text = "Paperwork Returned";
+            // 
+            // _cboPaperwork
+            // 
+            this._cboPaperwork.FormattingEnabled = true;
+            this._cboPaperwork.Location = new System.Drawing.Point(187, 336);
+            this._cboPaperwork.Name = "_cboPaperwork";
+            this._cboPaperwork.Size = new System.Drawing.Size(214, 21);
+            this._cboPaperwork.TabIndex = 55;
+            // 
+            // _Label10
+            // 
+            this._Label10.Location = new System.Drawing.Point(17, 307);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(134, 23);
+            this._Label10.TabIndex = 54;
+            this._Label10.Text = "QC Carried Out";
+            // 
+            // _cboQC
+            // 
+            this._cboQC.FormattingEnabled = true;
+            this._cboQC.Location = new System.Drawing.Point(187, 304);
+            this._cboQC.Name = "_cboQC";
+            this._cboQC.Size = new System.Drawing.Size(214, 21);
+            this._cboQC.TabIndex = 53;
+            // 
+            // _txtPayment
+            // 
+            this._txtPayment.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this._txtPayment.Location = new System.Drawing.Point(187, 276);
+            this._txtPayment.Name = "_txtPayment";
+            this._txtPayment.ReadOnly = true;
+            this._txtPayment.Size = new System.Drawing.Size(214, 21);
+            this._txtPayment.TabIndex = 51;
+            this._txtPayment.TabStop = false;
+            this._txtPayment.Text = "0";
+            this._txtPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtPayment.TextChanged += new System.EventHandler(this.txtPayment_TextChanged);
+            // 
+            // _Label9
+            // 
+            this._Label9.Location = new System.Drawing.Point(17, 282);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(134, 23);
+            this._Label9.TabIndex = 50;
+            this._Label9.Text = "Payment Taken";
+            // 
+            // _Label8
+            // 
+            this._Label8.Location = new System.Drawing.Point(17, 255);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(134, 23);
+            this._Label8.TabIndex = 48;
+            this._Label8.Text = "Further Works Noted";
+            // 
+            // _cboFurtherWorks
+            // 
+            this._cboFurtherWorks.FormattingEnabled = true;
+            this._cboFurtherWorks.Location = new System.Drawing.Point(187, 249);
+            this._cboFurtherWorks.Name = "_cboFurtherWorks";
+            this._cboFurtherWorks.Size = new System.Drawing.Size(214, 21);
+            this._cboFurtherWorks.TabIndex = 47;
+            // 
+            // _Label7
+            // 
+            this._Label7.Location = new System.Drawing.Point(17, 228);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(134, 23);
+            this._Label7.TabIndex = 46;
+            this._Label7.Text = "Extra Labour Noted";
+            // 
+            // _cboExtraLabour
+            // 
+            this._cboExtraLabour.FormattingEnabled = true;
+            this._cboExtraLabour.Location = new System.Drawing.Point(187, 222);
+            this._cboExtraLabour.Name = "_cboExtraLabour";
+            this._cboExtraLabour.Size = new System.Drawing.Size(214, 21);
+            this._cboExtraLabour.TabIndex = 45;
+            // 
+            // _txtPO
+            // 
+            this._txtPO.Location = new System.Drawing.Point(187, 168);
+            this._txtPO.Name = "_txtPO";
+            this._txtPO.ReadOnly = true;
+            this._txtPO.Size = new System.Drawing.Size(214, 21);
+            this._txtPO.TabIndex = 44;
+            this._txtPO.TabStop = false;
+            this._txtPO.Text = "0";
+            this._txtPO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(17, 174);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 23);
+            this._Label6.TabIndex = 43;
+            this._Label6.Text = "PO Status";
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(17, 201);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(134, 23);
+            this._Label4.TabIndex = 40;
+            this._Label4.Text = "Eng Called Supervisor";
+            // 
+            // _cboCalledSuper
+            // 
+            this._cboCalledSuper.FormattingEnabled = true;
+            this._cboCalledSuper.Location = new System.Drawing.Point(187, 195);
+            this._cboCalledSuper.Name = "_cboCalledSuper";
+            this._cboCalledSuper.Size = new System.Drawing.Size(214, 21);
+            this._cboCalledSuper.TabIndex = 39;
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(20, 35);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(88, 23);
+            this._Label3.TabIndex = 38;
+            this._Label3.Text = "Surveyed by";
+            // 
+            // _cboSurveyed
+            // 
+            this._cboSurveyed.FormattingEnabled = true;
+            this._cboSurveyed.Location = new System.Drawing.Point(187, 32);
+            this._cboSurveyed.Name = "_cboSurveyed";
+            this._cboSurveyed.Size = new System.Drawing.Size(214, 21);
+            this._cboSurveyed.TabIndex = 37;
+            // 
+            // _txtDeposit
+            // 
+            this._txtDeposit.Location = new System.Drawing.Point(187, 141);
+            this._txtDeposit.Name = "_txtDeposit";
+            this._txtDeposit.Size = new System.Drawing.Size(97, 21);
+            this._txtDeposit.TabIndex = 36;
+            this._txtDeposit.TabStop = false;
+            this._txtDeposit.Text = "0";
+            this._txtDeposit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this._txtDeposit.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDeposit_TextChanged);
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(17, 147);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(88, 23);
+            this._Label2.TabIndex = 34;
+            this._Label2.Text = "Deposit Taken";
+            // 
+            // _btnPrintJobCosting
+            // 
+            this._btnPrintJobCosting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrintJobCosting.Location = new System.Drawing.Point(822, 664);
+            this._btnPrintJobCosting.Name = "_btnPrintJobCosting";
+            this._btnPrintJobCosting.Size = new System.Drawing.Size(114, 23);
+            this._btnPrintJobCosting.TabIndex = 25;
+            this._btnPrintJobCosting.Text = "Print Job Costing";
+            this._btnPrintJobCosting.UseVisualStyleBackColor = true;
+            this._btnPrintJobCosting.Click += new System.EventHandler(this.btnPrintJobCosting_Click);
+            // 
             // FRMJobCostings
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(942, 690);
-            ControlBox = false;
-            Controls.Add(_btnPrintJobCosting);
-            Controls.Add(_TabControl1);
-            Controls.Add(_btnClose);
-            Controls.Add(_btnSave);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(950, 724);
-            Name = "FRMJobCostings";
-            Text = "Job";
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_TabControl1, 0);
-            Controls.SetChildIndex(_btnPrintJobCosting, 0);
-            _TabControl1.ResumeLayout(false);
-            _tpJobCostings.ResumeLayout(false);
-            _grpTotalCostings.ResumeLayout(false);
-            _grpTotalCostings.PerformLayout();
-            _grpPartCostings.ResumeLayout(false);
-            _grpPartCostings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgScheduleOfRateCharges).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsProductCharging).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgTimesheetCharges).EndInit();
-            _tpInstall.ResumeLayout(false);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(942, 690);
+            this.ControlBox = false;
+            this.Controls.Add(this._btnPrintJobCosting);
+            this.Controls.Add(this._TabControl1);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._btnSave);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(950, 724);
+            this.Name = "FRMJobCostings";
+            this.Text = "Job";
+            this._TabControl1.ResumeLayout(false);
+            this._tpJobCostings.ResumeLayout(false);
+            this._grpTotalCostings.ResumeLayout(false);
+            this._grpTotalCostings.PerformLayout();
+            this._grpPartCostings.ResumeLayout(false);
+            this._grpPartCostings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgScheduleOfRateCharges)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsProductCharging)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheetCharges)).EndInit();
+            this._tpInstall.ResumeLayout(false);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private void LoadMe(object sender, EventArgs e)

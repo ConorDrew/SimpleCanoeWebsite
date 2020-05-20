@@ -307,237 +307,236 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _gpbPayment = new GroupBox();
-            _lblAccountNumber = new Label();
-            _txtAccountNumber = new TextBox();
-            _cboPaidBy = new ComboBox();
-            _lblPaidBy = new Label();
-            _cboPaymentTerm = new ComboBox();
-            _lblPaymentTerm = new Label();
-            _btnPay = new Button();
-            _btnPay.Click += new EventHandler(btnAddPayment_Click);
-            _gpbInvoiceInformation = new GroupBox();
-            _txtRaisedBy = new TextBox();
-            _txtRaisedDate = new TextBox();
-            _lblRaisedBy = new Label();
-            _lblRaisedDate = new Label();
-            _txtInvAmount = new TextBox();
-            _txtInvNumber = new TextBox();
-            _lblInvoiceTotal = new Label();
-            _lblInvoice = new Label();
-            _txtInvoiceAddress = new TextBox();
-            _txtCustomer = new TextBox();
-            _lblInvoiceAddress = new Label();
-            _lblCustomer = new Label();
-            _gpbPayment.SuspendLayout();
-            _gpbInvoiceInformation.SuspendLayout();
-            SuspendLayout();
-            //
-            // gpbPayment
-            //
-            _gpbPayment.Controls.Add(_lblAccountNumber);
-            _gpbPayment.Controls.Add(_txtAccountNumber);
-            _gpbPayment.Controls.Add(_cboPaidBy);
-            _gpbPayment.Controls.Add(_lblPaidBy);
-            _gpbPayment.Controls.Add(_cboPaymentTerm);
-            _gpbPayment.Controls.Add(_lblPaymentTerm);
-            _gpbPayment.Controls.Add(_btnPay);
-            _gpbPayment.Location = new Point(8, 170);
-            _gpbPayment.Name = "gpbPayment";
-            _gpbPayment.Size = new Size(436, 153);
-            _gpbPayment.TabIndex = 1;
-            _gpbPayment.TabStop = false;
-            _gpbPayment.Text = "Payment";
-            //
-            // lblAccountNumber
-            //
-            _lblAccountNumber.Location = new Point(8, 84);
-            _lblAccountNumber.Name = "lblAccountNumber";
-            _lblAccountNumber.Size = new Size(136, 23);
-            _lblAccountNumber.TabIndex = 16;
-            _lblAccountNumber.Text = "Account Number";
-            //
-            // txtAccountNumber
-            //
-            _txtAccountNumber.Location = new Point(145, 81);
-            _txtAccountNumber.Name = "txtAccountNumber";
-            _txtAccountNumber.Size = new Size(279, 21);
-            _txtAccountNumber.TabIndex = 15;
-            //
-            // cboPaidBy
-            //
-            _cboPaidBy.FormattingEnabled = true;
-            _cboPaidBy.Location = new Point(145, 54);
-            _cboPaidBy.Name = "cboPaidBy";
-            _cboPaidBy.Size = new Size(279, 21);
-            _cboPaidBy.TabIndex = 14;
-            //
-            // lblPaidBy
-            //
-            _lblPaidBy.AutoSize = true;
-            _lblPaidBy.Location = new Point(9, 54);
-            _lblPaidBy.Name = "lblPaidBy";
-            _lblPaidBy.Size = new Size(50, 13);
-            _lblPaidBy.TabIndex = 13;
-            _lblPaidBy.Text = "Paid By";
-            //
-            // cboPaymentTerm
-            //
-            _cboPaymentTerm.FormattingEnabled = true;
-            _cboPaymentTerm.Location = new Point(145, 24);
-            _cboPaymentTerm.Name = "cboPaymentTerm";
-            _cboPaymentTerm.Size = new Size(279, 21);
-            _cboPaymentTerm.TabIndex = 12;
-            //
-            // lblPaymentTerm
-            //
-            _lblPaymentTerm.AutoSize = true;
-            _lblPaymentTerm.Location = new Point(8, 24);
-            _lblPaymentTerm.Name = "lblPaymentTerm";
-            _lblPaymentTerm.Size = new Size(90, 13);
-            _lblPaymentTerm.TabIndex = 11;
-            _lblPaymentTerm.Text = "Payment Term";
-            //
-            // btnPay
-            //
-            _btnPay.Location = new Point(349, 114);
-            _btnPay.Name = "btnPay";
-            _btnPay.Size = new Size(75, 23);
-            _btnPay.TabIndex = 6;
-            _btnPay.Text = "Pay";
-            //
-            // gpbInvoiceInformation
-            //
-            _gpbInvoiceInformation.Controls.Add(_txtRaisedBy);
-            _gpbInvoiceInformation.Controls.Add(_txtRaisedDate);
-            _gpbInvoiceInformation.Controls.Add(_lblRaisedBy);
-            _gpbInvoiceInformation.Controls.Add(_lblRaisedDate);
-            _gpbInvoiceInformation.Controls.Add(_txtInvAmount);
-            _gpbInvoiceInformation.Controls.Add(_txtInvNumber);
-            _gpbInvoiceInformation.Controls.Add(_lblInvoiceTotal);
-            _gpbInvoiceInformation.Controls.Add(_lblInvoice);
-            _gpbInvoiceInformation.Controls.Add(_txtInvoiceAddress);
-            _gpbInvoiceInformation.Controls.Add(_txtCustomer);
-            _gpbInvoiceInformation.Controls.Add(_lblInvoiceAddress);
-            _gpbInvoiceInformation.Controls.Add(_lblCustomer);
-            _gpbInvoiceInformation.Location = new Point(8, 32);
-            _gpbInvoiceInformation.Name = "gpbInvoiceInformation";
-            _gpbInvoiceInformation.Size = new Size(436, 132);
-            _gpbInvoiceInformation.TabIndex = 2;
-            _gpbInvoiceInformation.TabStop = false;
-            _gpbInvoiceInformation.Text = "Invoice Information";
-            //
-            // txtRaisedBy
-            //
-            _txtRaisedBy.Location = new Point(312, 94);
-            _txtRaisedBy.Name = "txtRaisedBy";
-            _txtRaisedBy.ReadOnly = true;
-            _txtRaisedBy.Size = new Size(112, 21);
-            _txtRaisedBy.TabIndex = 11;
-            //
-            // txtRaisedDate
-            //
-            _txtRaisedDate.Location = new Point(312, 70);
-            _txtRaisedDate.Name = "txtRaisedDate";
-            _txtRaisedDate.ReadOnly = true;
-            _txtRaisedDate.Size = new Size(112, 21);
-            _txtRaisedDate.TabIndex = 10;
-            //
-            // lblRaisedBy
-            //
-            _lblRaisedBy.Location = new Point(232, 94);
-            _lblRaisedBy.Name = "lblRaisedBy";
-            _lblRaisedBy.Size = new Size(80, 23);
-            _lblRaisedBy.TabIndex = 9;
-            _lblRaisedBy.Text = "Raised By";
-            //
-            // lblRaisedDate
-            //
-            _lblRaisedDate.Location = new Point(232, 70);
-            _lblRaisedDate.Name = "lblRaisedDate";
-            _lblRaisedDate.Size = new Size(80, 23);
-            _lblRaisedDate.TabIndex = 8;
-            _lblRaisedDate.Text = "Raised Date";
-            //
-            // txtInvAmount
-            //
-            _txtInvAmount.Location = new Point(112, 94);
-            _txtInvAmount.Name = "txtInvAmount";
-            _txtInvAmount.ReadOnly = true;
-            _txtInvAmount.Size = new Size(112, 21);
-            _txtInvAmount.TabIndex = 7;
-            //
-            // txtInvNumber
-            //
-            _txtInvNumber.Location = new Point(112, 70);
-            _txtInvNumber.Name = "txtInvNumber";
-            _txtInvNumber.ReadOnly = true;
-            _txtInvNumber.Size = new Size(112, 21);
-            _txtInvNumber.TabIndex = 6;
-            //
-            // lblInvoiceTotal
-            //
-            _lblInvoiceTotal.Location = new Point(8, 94);
-            _lblInvoiceTotal.Name = "lblInvoiceTotal";
-            _lblInvoiceTotal.Size = new Size(96, 23);
-            _lblInvoiceTotal.TabIndex = 5;
-            _lblInvoiceTotal.Text = "Invoice Total";
-            //
-            // lblInvoice
-            //
-            _lblInvoice.Location = new Point(8, 70);
-            _lblInvoice.Name = "lblInvoice";
-            _lblInvoice.Size = new Size(101, 23);
-            _lblInvoice.TabIndex = 4;
-            _lblInvoice.Text = "Invoice Number";
-            //
-            // txtInvoiceAddress
-            //
-            _txtInvoiceAddress.Location = new Point(112, 40);
-            _txtInvoiceAddress.Name = "txtInvoiceAddress";
-            _txtInvoiceAddress.ReadOnly = true;
-            _txtInvoiceAddress.Size = new Size(312, 21);
-            _txtInvoiceAddress.TabIndex = 3;
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Location = new Point(112, 16);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(312, 21);
-            _txtCustomer.TabIndex = 2;
-            //
-            // lblInvoiceAddress
-            //
-            _lblInvoiceAddress.Location = new Point(8, 40);
-            _lblInvoiceAddress.Name = "lblInvoiceAddress";
-            _lblInvoiceAddress.Size = new Size(100, 23);
-            _lblInvoiceAddress.TabIndex = 1;
-            _lblInvoiceAddress.Text = "Invoice Address";
-            //
-            // lblCustomer
-            //
-            _lblCustomer.Location = new Point(8, 16);
-            _lblCustomer.Name = "lblCustomer";
-            _lblCustomer.Size = new Size(100, 23);
-            _lblCustomer.TabIndex = 0;
-            _lblCustomer.Text = "Customer";
-            //
+            this._gpbPayment = new System.Windows.Forms.GroupBox();
+            this._lblAccountNumber = new System.Windows.Forms.Label();
+            this._txtAccountNumber = new System.Windows.Forms.TextBox();
+            this._cboPaidBy = new System.Windows.Forms.ComboBox();
+            this._lblPaidBy = new System.Windows.Forms.Label();
+            this._cboPaymentTerm = new System.Windows.Forms.ComboBox();
+            this._lblPaymentTerm = new System.Windows.Forms.Label();
+            this._btnPay = new System.Windows.Forms.Button();
+            this._gpbInvoiceInformation = new System.Windows.Forms.GroupBox();
+            this._txtRaisedBy = new System.Windows.Forms.TextBox();
+            this._txtRaisedDate = new System.Windows.Forms.TextBox();
+            this._lblRaisedBy = new System.Windows.Forms.Label();
+            this._lblRaisedDate = new System.Windows.Forms.Label();
+            this._txtInvAmount = new System.Windows.Forms.TextBox();
+            this._txtInvNumber = new System.Windows.Forms.TextBox();
+            this._lblInvoiceTotal = new System.Windows.Forms.Label();
+            this._lblInvoice = new System.Windows.Forms.Label();
+            this._txtInvoiceAddress = new System.Windows.Forms.TextBox();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._lblInvoiceAddress = new System.Windows.Forms.Label();
+            this._lblCustomer = new System.Windows.Forms.Label();
+            this._gpbPayment.SuspendLayout();
+            this._gpbInvoiceInformation.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _gpbPayment
+            // 
+            this._gpbPayment.Controls.Add(this._lblAccountNumber);
+            this._gpbPayment.Controls.Add(this._txtAccountNumber);
+            this._gpbPayment.Controls.Add(this._cboPaidBy);
+            this._gpbPayment.Controls.Add(this._lblPaidBy);
+            this._gpbPayment.Controls.Add(this._cboPaymentTerm);
+            this._gpbPayment.Controls.Add(this._lblPaymentTerm);
+            this._gpbPayment.Controls.Add(this._btnPay);
+            this._gpbPayment.Location = new System.Drawing.Point(8, 150);
+            this._gpbPayment.Name = "_gpbPayment";
+            this._gpbPayment.Size = new System.Drawing.Size(436, 173);
+            this._gpbPayment.TabIndex = 1;
+            this._gpbPayment.TabStop = false;
+            this._gpbPayment.Text = "Payment";
+            // 
+            // _lblAccountNumber
+            // 
+            this._lblAccountNumber.Location = new System.Drawing.Point(8, 84);
+            this._lblAccountNumber.Name = "_lblAccountNumber";
+            this._lblAccountNumber.Size = new System.Drawing.Size(136, 23);
+            this._lblAccountNumber.TabIndex = 16;
+            this._lblAccountNumber.Text = "Account Number";
+            // 
+            // _txtAccountNumber
+            // 
+            this._txtAccountNumber.Location = new System.Drawing.Point(145, 81);
+            this._txtAccountNumber.Name = "_txtAccountNumber";
+            this._txtAccountNumber.Size = new System.Drawing.Size(279, 21);
+            this._txtAccountNumber.TabIndex = 15;
+            // 
+            // _cboPaidBy
+            // 
+            this._cboPaidBy.FormattingEnabled = true;
+            this._cboPaidBy.Location = new System.Drawing.Point(145, 54);
+            this._cboPaidBy.Name = "_cboPaidBy";
+            this._cboPaidBy.Size = new System.Drawing.Size(279, 21);
+            this._cboPaidBy.TabIndex = 14;
+            // 
+            // _lblPaidBy
+            // 
+            this._lblPaidBy.AutoSize = true;
+            this._lblPaidBy.Location = new System.Drawing.Point(9, 54);
+            this._lblPaidBy.Name = "_lblPaidBy";
+            this._lblPaidBy.Size = new System.Drawing.Size(50, 13);
+            this._lblPaidBy.TabIndex = 13;
+            this._lblPaidBy.Text = "Paid By";
+            // 
+            // _cboPaymentTerm
+            // 
+            this._cboPaymentTerm.FormattingEnabled = true;
+            this._cboPaymentTerm.Location = new System.Drawing.Point(145, 24);
+            this._cboPaymentTerm.Name = "_cboPaymentTerm";
+            this._cboPaymentTerm.Size = new System.Drawing.Size(279, 21);
+            this._cboPaymentTerm.TabIndex = 12;
+            // 
+            // _lblPaymentTerm
+            // 
+            this._lblPaymentTerm.AutoSize = true;
+            this._lblPaymentTerm.Location = new System.Drawing.Point(8, 24);
+            this._lblPaymentTerm.Name = "_lblPaymentTerm";
+            this._lblPaymentTerm.Size = new System.Drawing.Size(90, 13);
+            this._lblPaymentTerm.TabIndex = 11;
+            this._lblPaymentTerm.Text = "Payment Term";
+            // 
+            // _btnPay
+            // 
+            this._btnPay.Location = new System.Drawing.Point(349, 114);
+            this._btnPay.Name = "_btnPay";
+            this._btnPay.Size = new System.Drawing.Size(75, 23);
+            this._btnPay.TabIndex = 6;
+            this._btnPay.Text = "Pay";
+            this._btnPay.Click += new System.EventHandler(this.btnAddPayment_Click);
+            // 
+            // _gpbInvoiceInformation
+            // 
+            this._gpbInvoiceInformation.Controls.Add(this._txtRaisedBy);
+            this._gpbInvoiceInformation.Controls.Add(this._txtRaisedDate);
+            this._gpbInvoiceInformation.Controls.Add(this._lblRaisedBy);
+            this._gpbInvoiceInformation.Controls.Add(this._lblRaisedDate);
+            this._gpbInvoiceInformation.Controls.Add(this._txtInvAmount);
+            this._gpbInvoiceInformation.Controls.Add(this._txtInvNumber);
+            this._gpbInvoiceInformation.Controls.Add(this._lblInvoiceTotal);
+            this._gpbInvoiceInformation.Controls.Add(this._lblInvoice);
+            this._gpbInvoiceInformation.Controls.Add(this._txtInvoiceAddress);
+            this._gpbInvoiceInformation.Controls.Add(this._txtCustomer);
+            this._gpbInvoiceInformation.Controls.Add(this._lblInvoiceAddress);
+            this._gpbInvoiceInformation.Controls.Add(this._lblCustomer);
+            this._gpbInvoiceInformation.Location = new System.Drawing.Point(8, 12);
+            this._gpbInvoiceInformation.Name = "_gpbInvoiceInformation";
+            this._gpbInvoiceInformation.Size = new System.Drawing.Size(436, 132);
+            this._gpbInvoiceInformation.TabIndex = 2;
+            this._gpbInvoiceInformation.TabStop = false;
+            this._gpbInvoiceInformation.Text = "Invoice Information";
+            // 
+            // _txtRaisedBy
+            // 
+            this._txtRaisedBy.Location = new System.Drawing.Point(312, 94);
+            this._txtRaisedBy.Name = "_txtRaisedBy";
+            this._txtRaisedBy.ReadOnly = true;
+            this._txtRaisedBy.Size = new System.Drawing.Size(112, 21);
+            this._txtRaisedBy.TabIndex = 11;
+            // 
+            // _txtRaisedDate
+            // 
+            this._txtRaisedDate.Location = new System.Drawing.Point(312, 70);
+            this._txtRaisedDate.Name = "_txtRaisedDate";
+            this._txtRaisedDate.ReadOnly = true;
+            this._txtRaisedDate.Size = new System.Drawing.Size(112, 21);
+            this._txtRaisedDate.TabIndex = 10;
+            // 
+            // _lblRaisedBy
+            // 
+            this._lblRaisedBy.Location = new System.Drawing.Point(232, 94);
+            this._lblRaisedBy.Name = "_lblRaisedBy";
+            this._lblRaisedBy.Size = new System.Drawing.Size(80, 23);
+            this._lblRaisedBy.TabIndex = 9;
+            this._lblRaisedBy.Text = "Raised By";
+            // 
+            // _lblRaisedDate
+            // 
+            this._lblRaisedDate.Location = new System.Drawing.Point(232, 70);
+            this._lblRaisedDate.Name = "_lblRaisedDate";
+            this._lblRaisedDate.Size = new System.Drawing.Size(80, 23);
+            this._lblRaisedDate.TabIndex = 8;
+            this._lblRaisedDate.Text = "Raised Date";
+            // 
+            // _txtInvAmount
+            // 
+            this._txtInvAmount.Location = new System.Drawing.Point(112, 94);
+            this._txtInvAmount.Name = "_txtInvAmount";
+            this._txtInvAmount.ReadOnly = true;
+            this._txtInvAmount.Size = new System.Drawing.Size(112, 21);
+            this._txtInvAmount.TabIndex = 7;
+            // 
+            // _txtInvNumber
+            // 
+            this._txtInvNumber.Location = new System.Drawing.Point(112, 70);
+            this._txtInvNumber.Name = "_txtInvNumber";
+            this._txtInvNumber.ReadOnly = true;
+            this._txtInvNumber.Size = new System.Drawing.Size(112, 21);
+            this._txtInvNumber.TabIndex = 6;
+            // 
+            // _lblInvoiceTotal
+            // 
+            this._lblInvoiceTotal.Location = new System.Drawing.Point(8, 94);
+            this._lblInvoiceTotal.Name = "_lblInvoiceTotal";
+            this._lblInvoiceTotal.Size = new System.Drawing.Size(96, 23);
+            this._lblInvoiceTotal.TabIndex = 5;
+            this._lblInvoiceTotal.Text = "Invoice Total";
+            // 
+            // _lblInvoice
+            // 
+            this._lblInvoice.Location = new System.Drawing.Point(8, 70);
+            this._lblInvoice.Name = "_lblInvoice";
+            this._lblInvoice.Size = new System.Drawing.Size(101, 23);
+            this._lblInvoice.TabIndex = 4;
+            this._lblInvoice.Text = "Invoice Number";
+            // 
+            // _txtInvoiceAddress
+            // 
+            this._txtInvoiceAddress.Location = new System.Drawing.Point(112, 40);
+            this._txtInvoiceAddress.Name = "_txtInvoiceAddress";
+            this._txtInvoiceAddress.ReadOnly = true;
+            this._txtInvoiceAddress.Size = new System.Drawing.Size(312, 21);
+            this._txtInvoiceAddress.TabIndex = 3;
+            // 
+            // _txtCustomer
+            // 
+            this._txtCustomer.Location = new System.Drawing.Point(112, 16);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(312, 21);
+            this._txtCustomer.TabIndex = 2;
+            // 
+            // _lblInvoiceAddress
+            // 
+            this._lblInvoiceAddress.Location = new System.Drawing.Point(8, 40);
+            this._lblInvoiceAddress.Name = "_lblInvoiceAddress";
+            this._lblInvoiceAddress.Size = new System.Drawing.Size(100, 23);
+            this._lblInvoiceAddress.TabIndex = 1;
+            this._lblInvoiceAddress.Text = "Invoice Address";
+            // 
+            // _lblCustomer
+            // 
+            this._lblCustomer.Location = new System.Drawing.Point(8, 16);
+            this._lblCustomer.Name = "_lblCustomer";
+            this._lblCustomer.Size = new System.Drawing.Size(100, 23);
+            this._lblCustomer.TabIndex = 0;
+            this._lblCustomer.Text = "Customer";
+            // 
             // FrmInvoicedPayment
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(451, 334);
-            Controls.Add(_gpbInvoiceInformation);
-            Controls.Add(_gpbPayment);
-            Name = "FrmInvoicedPayment";
-            Text = "Invoice Payment";
-            Controls.SetChildIndex(_gpbPayment, 0);
-            Controls.SetChildIndex(_gpbInvoiceInformation, 0);
-            _gpbPayment.ResumeLayout(false);
-            _gpbPayment.PerformLayout();
-            _gpbInvoiceInformation.ResumeLayout(false);
-            _gpbInvoiceInformation.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(451, 334);
+            this.Controls.Add(this._gpbInvoiceInformation);
+            this.Controls.Add(this._gpbPayment);
+            this.Name = "FrmInvoicedPayment";
+            this.Text = "Invoice Payment";
+            this._gpbPayment.ResumeLayout(false);
+            this._gpbPayment.PerformLayout();
+            this._gpbInvoiceInformation.ResumeLayout(false);
+            this._gpbInvoiceInformation.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

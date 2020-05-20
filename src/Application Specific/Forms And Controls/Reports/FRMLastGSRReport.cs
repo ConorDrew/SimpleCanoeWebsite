@@ -407,321 +407,317 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJobs = new GroupBox();
-            _dgProductsLastGSR = new DataGrid();
-            _dgProductsLastGSR.MouseUp += new MouseEventHandler(dg_MouseUp);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpFilter = new GroupBox();
-            _btnFilter = new Button();
-            _btnFilter.Click += new EventHandler(btnFilter_Click);
-            _cboRegion = new ComboBox();
-            _Label2 = new Label();
-            _cboContract = new ComboBox();
-            _Label1 = new Label();
-            _chkIncludeTenantsAssets = new CheckBox();
-            _chkNotPrinted = new CheckBox();
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnFindCustomer_Click);
-            _txtCustomer = new TextBox();
-            _Label4 = new Label();
-            _dtpTo = new DateTimePicker();
-            _dtpFrom = new DateTimePicker();
-            _Label9 = new Label();
-            _Label8 = new Label();
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _btnPrintGSRReminders = new Button();
-            _btnPrintGSRReminders.Click += new EventHandler(btnPrintGSRReminders_Click);
-            _pbStatus = new ProgressBar();
-            _btnUnselect = new Button();
-            _btnUnselect.Click += new EventHandler(btnUnselect_Click);
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnEmailNone = new Button();
-            _btnEmailNone.Click += new EventHandler(btnEmailNone_Click);
-            _btnEmailAll = new Button();
-            _btnEmailAll.Click += new EventHandler(btnEmailAll_Click);
-            _grpJobs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgProductsLastGSR).BeginInit();
-            _grpFilter.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpJobs
-            //
-            _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpJobs.Controls.Add(_dgProductsLastGSR);
-            _grpJobs.Location = new Point(8, 185);
-            _grpJobs.Name = "grpJobs";
-            _grpJobs.Size = new Size(1172, 271);
-            _grpJobs.TabIndex = 1;
-            _grpJobs.TabStop = false;
-            _grpJobs.Text = "Service Reminders";
-            //
-            // dgProductsLastGSR
-            //
-            _dgProductsLastGSR.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgProductsLastGSR.DataMember = "";
-            _dgProductsLastGSR.HeaderForeColor = SystemColors.ControlText;
-            _dgProductsLastGSR.Location = new Point(8, 19);
-            _dgProductsLastGSR.Name = "dgProductsLastGSR";
-            _dgProductsLastGSR.Size = new Size(1156, 244);
-            _dgProductsLastGSR.TabIndex = 0;
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 464);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 2;
-            _btnExport.Text = "Export";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_btnFilter);
-            _grpFilter.Controls.Add(_cboRegion);
-            _grpFilter.Controls.Add(_Label2);
-            _grpFilter.Controls.Add(_cboContract);
-            _grpFilter.Controls.Add(_Label1);
-            _grpFilter.Controls.Add(_chkIncludeTenantsAssets);
-            _grpFilter.Controls.Add(_chkNotPrinted);
-            _grpFilter.Controls.Add(_btnFindCustomer);
-            _grpFilter.Controls.Add(_txtCustomer);
-            _grpFilter.Controls.Add(_Label4);
-            _grpFilter.Controls.Add(_dtpTo);
-            _grpFilter.Controls.Add(_dtpFrom);
-            _grpFilter.Controls.Add(_Label9);
-            _grpFilter.Controls.Add(_Label8);
-            _grpFilter.Location = new Point(8, 32);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(1172, 115);
-            _grpFilter.TabIndex = 0;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // btnFilter
-            //
-            _btnFilter.AccessibleDescription = "";
-            _btnFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFilter.Location = new Point(1031, 75);
-            _btnFilter.Name = "btnFilter";
-            _btnFilter.Size = new Size(126, 23);
-            _btnFilter.TabIndex = 15;
-            _btnFilter.Text = "Run Filter";
-            //
-            // cboRegion
-            //
-            _cboRegion.FormattingEnabled = true;
-            _cboRegion.Location = new Point(310, 73);
-            _cboRegion.Name = "cboRegion";
-            _cboRegion.Size = new Size(144, 21);
-            _cboRegion.TabIndex = 14;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(248, 75);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(57, 17);
-            _Label2.TabIndex = 13;
-            _Label2.Text = "Region";
-            //
-            // cboContract
-            //
-            _cboContract.FormattingEnabled = true;
-            _cboContract.Location = new Point(85, 71);
-            _cboContract.Name = "cboContract";
-            _cboContract.Size = new Size(144, 21);
-            _cboContract.TabIndex = 9;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 73);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(64, 16);
-            _Label1.TabIndex = 8;
-            _Label1.Text = "Contract";
-            //
-            // chkIncludeTenantsAssets
-            //
-            _chkIncludeTenantsAssets.AutoSize = true;
-            _chkIncludeTenantsAssets.Location = new Point(487, 21);
-            _chkIncludeTenantsAssets.Name = "chkIncludeTenantsAssets";
-            _chkIncludeTenantsAssets.Size = new Size(157, 17);
-            _chkIncludeTenantsAssets.TabIndex = 11;
-            _chkIncludeTenantsAssets.Text = "Include Tenants Assets";
-            _chkIncludeTenantsAssets.UseVisualStyleBackColor = true;
-            //
-            // chkNotPrinted
-            //
-            _chkNotPrinted.AutoSize = true;
-            _chkNotPrinted.Location = new Point(664, 23);
-            _chkNotPrinted.Name = "chkNotPrinted";
-            _chkNotPrinted.Size = new Size(66, 17);
-            _chkNotPrinted.TabIndex = 12;
-            _chkNotPrinted.Text = "Printed";
-            _chkNotPrinted.UseVisualStyleBackColor = true;
-            //
-            // btnFindCustomer
-            //
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.BackColor = Color.White;
-            _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindCustomer.Location = new Point(1125, 44);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 7;
-            _btnFindCustomer.Text = "...";
-            _btnFindCustomer.UseVisualStyleBackColor = false;
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtCustomer.Location = new Point(85, 46);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(1034, 21);
-            _txtCustomer.TabIndex = 6;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(8, 49);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 16);
-            _Label4.TabIndex = 5;
-            _Label4.Text = "Customer";
-            //
-            // dtpTo
-            //
-            _dtpTo.Location = new Point(310, 20);
-            _dtpTo.Name = "dtpTo";
-            _dtpTo.Size = new Size(144, 21);
-            _dtpTo.TabIndex = 3;
-            //
-            // dtpFrom
-            //
-            _dtpFrom.Location = new Point(85, 20);
-            _dtpFrom.Name = "dtpFrom";
-            _dtpFrom.Size = new Size(144, 21);
-            _dtpFrom.TabIndex = 1;
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(273, 21);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(24, 16);
-            _Label9.TabIndex = 2;
-            _Label9.Text = "To";
-            //
-            // Label8
-            //
-            _Label8.Location = new Point(8, 22);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(88, 16);
-            _Label8.TabIndex = 0;
-            _Label8.Text = "Date From";
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(72, 464);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 3;
-            _btnReset.Text = "Reset";
-            //
-            // btnPrintGSRReminders
-            //
-            _btnPrintGSRReminders.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPrintGSRReminders.Location = new Point(1039, 464);
-            _btnPrintGSRReminders.Name = "btnPrintGSRReminders";
-            _btnPrintGSRReminders.Size = new Size(141, 23);
-            _btnPrintGSRReminders.TabIndex = 5;
-            _btnPrintGSRReminders.Text = "Print GSR Reminders";
-            _btnPrintGSRReminders.UseVisualStyleBackColor = true;
-            //
-            // pbStatus
-            //
-            _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _pbStatus.Location = new Point(134, 464);
-            _pbStatus.Name = "pbStatus";
-            _pbStatus.Size = new Size(899, 23);
-            _pbStatus.TabIndex = 4;
-            //
-            // btnUnselect
-            //
-            _btnUnselect.Location = new Point(137, 156);
-            _btnUnselect.Name = "btnUnselect";
-            _btnUnselect.Size = new Size(96, 23);
-            _btnUnselect.TabIndex = 9;
-            _btnUnselect.Text = "Unselect All";
-            _btnUnselect.UseVisualStyleBackColor = true;
-            //
-            // btnSelectAll
-            //
-            _btnSelectAll.Location = new Point(12, 156);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(119, 23);
-            _btnSelectAll.TabIndex = 8;
-            _btnSelectAll.Text = "Select All";
-            _btnSelectAll.UseVisualStyleBackColor = true;
-            //
-            // btnEmailNone
-            //
-            _btnEmailNone.Location = new Point(373, 156);
-            _btnEmailNone.Name = "btnEmailNone";
-            _btnEmailNone.Size = new Size(96, 23);
-            _btnEmailNone.TabIndex = 11;
-            _btnEmailNone.Text = "Email None";
-            _btnEmailNone.UseVisualStyleBackColor = true;
-            //
-            // btnEmailAll
-            //
-            _btnEmailAll.Location = new Point(248, 156);
-            _btnEmailAll.Name = "btnEmailAll";
-            _btnEmailAll.Size = new Size(119, 23);
-            _btnEmailAll.TabIndex = 10;
-            _btnEmailAll.Text = "Email All";
-            _btnEmailAll.UseVisualStyleBackColor = true;
-            //
+            this._grpJobs = new System.Windows.Forms.GroupBox();
+            this._dgProductsLastGSR = new System.Windows.Forms.DataGrid();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._btnFilter = new System.Windows.Forms.Button();
+            this._cboRegion = new System.Windows.Forms.ComboBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._cboContract = new System.Windows.Forms.ComboBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._chkIncludeTenantsAssets = new System.Windows.Forms.CheckBox();
+            this._chkNotPrinted = new System.Windows.Forms.CheckBox();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._dtpTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._btnPrintGSRReminders = new System.Windows.Forms.Button();
+            this._pbStatus = new System.Windows.Forms.ProgressBar();
+            this._btnUnselect = new System.Windows.Forms.Button();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnEmailNone = new System.Windows.Forms.Button();
+            this._btnEmailAll = new System.Windows.Forms.Button();
+            this._grpJobs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgProductsLastGSR)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpJobs
+            // 
+            this._grpJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobs.Controls.Add(this._dgProductsLastGSR);
+            this._grpJobs.Location = new System.Drawing.Point(8, 165);
+            this._grpJobs.Name = "_grpJobs";
+            this._grpJobs.Size = new System.Drawing.Size(1172, 291);
+            this._grpJobs.TabIndex = 1;
+            this._grpJobs.TabStop = false;
+            this._grpJobs.Text = "Service Reminders";
+            // 
+            // _dgProductsLastGSR
+            // 
+            this._dgProductsLastGSR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgProductsLastGSR.DataMember = "";
+            this._dgProductsLastGSR.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgProductsLastGSR.Location = new System.Drawing.Point(8, 19);
+            this._dgProductsLastGSR.Name = "_dgProductsLastGSR";
+            this._dgProductsLastGSR.Size = new System.Drawing.Size(1156, 264);
+            this._dgProductsLastGSR.TabIndex = 0;
+            this._dgProductsLastGSR.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dg_MouseUp);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 464);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 2;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._btnFilter);
+            this._grpFilter.Controls.Add(this._cboRegion);
+            this._grpFilter.Controls.Add(this._Label2);
+            this._grpFilter.Controls.Add(this._cboContract);
+            this._grpFilter.Controls.Add(this._Label1);
+            this._grpFilter.Controls.Add(this._chkIncludeTenantsAssets);
+            this._grpFilter.Controls.Add(this._chkNotPrinted);
+            this._grpFilter.Controls.Add(this._btnFindCustomer);
+            this._grpFilter.Controls.Add(this._txtCustomer);
+            this._grpFilter.Controls.Add(this._Label4);
+            this._grpFilter.Controls.Add(this._dtpTo);
+            this._grpFilter.Controls.Add(this._dtpFrom);
+            this._grpFilter.Controls.Add(this._Label9);
+            this._grpFilter.Controls.Add(this._Label8);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(1172, 115);
+            this._grpFilter.TabIndex = 0;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _btnFilter
+            // 
+            this._btnFilter.AccessibleDescription = "";
+            this._btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFilter.Location = new System.Drawing.Point(1031, 75);
+            this._btnFilter.Name = "_btnFilter";
+            this._btnFilter.Size = new System.Drawing.Size(126, 23);
+            this._btnFilter.TabIndex = 15;
+            this._btnFilter.Text = "Run Filter";
+            this._btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // _cboRegion
+            // 
+            this._cboRegion.FormattingEnabled = true;
+            this._cboRegion.Location = new System.Drawing.Point(310, 73);
+            this._cboRegion.Name = "_cboRegion";
+            this._cboRegion.Size = new System.Drawing.Size(144, 21);
+            this._cboRegion.TabIndex = 14;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(248, 75);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(57, 17);
+            this._Label2.TabIndex = 13;
+            this._Label2.Text = "Region";
+            // 
+            // _cboContract
+            // 
+            this._cboContract.FormattingEnabled = true;
+            this._cboContract.Location = new System.Drawing.Point(85, 71);
+            this._cboContract.Name = "_cboContract";
+            this._cboContract.Size = new System.Drawing.Size(144, 21);
+            this._cboContract.TabIndex = 9;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 73);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(64, 16);
+            this._Label1.TabIndex = 8;
+            this._Label1.Text = "Contract";
+            // 
+            // _chkIncludeTenantsAssets
+            // 
+            this._chkIncludeTenantsAssets.AutoSize = true;
+            this._chkIncludeTenantsAssets.Location = new System.Drawing.Point(487, 21);
+            this._chkIncludeTenantsAssets.Name = "_chkIncludeTenantsAssets";
+            this._chkIncludeTenantsAssets.Size = new System.Drawing.Size(157, 17);
+            this._chkIncludeTenantsAssets.TabIndex = 11;
+            this._chkIncludeTenantsAssets.Text = "Include Tenants Assets";
+            this._chkIncludeTenantsAssets.UseVisualStyleBackColor = true;
+            // 
+            // _chkNotPrinted
+            // 
+            this._chkNotPrinted.AutoSize = true;
+            this._chkNotPrinted.Location = new System.Drawing.Point(664, 23);
+            this._chkNotPrinted.Name = "_chkNotPrinted";
+            this._chkNotPrinted.Size = new System.Drawing.Size(66, 17);
+            this._chkNotPrinted.TabIndex = 12;
+            this._chkNotPrinted.Text = "Printed";
+            this._chkNotPrinted.UseVisualStyleBackColor = true;
+            // 
+            // _btnFindCustomer
+            // 
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.BackColor = System.Drawing.Color.White;
+            this._btnFindCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(1125, 44);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 7;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = false;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
+            // 
+            // _txtCustomer
+            // 
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtCustomer.Location = new System.Drawing.Point(85, 46);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(1034, 21);
+            this._txtCustomer.TabIndex = 6;
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(8, 49);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 16);
+            this._Label4.TabIndex = 5;
+            this._Label4.Text = "Customer";
+            // 
+            // _dtpTo
+            // 
+            this._dtpTo.Location = new System.Drawing.Point(310, 20);
+            this._dtpTo.Name = "_dtpTo";
+            this._dtpTo.Size = new System.Drawing.Size(144, 21);
+            this._dtpTo.TabIndex = 3;
+            // 
+            // _dtpFrom
+            // 
+            this._dtpFrom.Location = new System.Drawing.Point(85, 20);
+            this._dtpFrom.Name = "_dtpFrom";
+            this._dtpFrom.Size = new System.Drawing.Size(144, 21);
+            this._dtpFrom.TabIndex = 1;
+            // 
+            // _Label9
+            // 
+            this._Label9.Location = new System.Drawing.Point(273, 21);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(24, 16);
+            this._Label9.TabIndex = 2;
+            this._Label9.Text = "To";
+            // 
+            // _Label8
+            // 
+            this._Label8.Location = new System.Drawing.Point(8, 22);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(88, 16);
+            this._Label8.TabIndex = 0;
+            this._Label8.Text = "Date From";
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(72, 464);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 3;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // _btnPrintGSRReminders
+            // 
+            this._btnPrintGSRReminders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrintGSRReminders.Location = new System.Drawing.Point(1039, 464);
+            this._btnPrintGSRReminders.Name = "_btnPrintGSRReminders";
+            this._btnPrintGSRReminders.Size = new System.Drawing.Size(141, 23);
+            this._btnPrintGSRReminders.TabIndex = 5;
+            this._btnPrintGSRReminders.Text = "Print GSR Reminders";
+            this._btnPrintGSRReminders.UseVisualStyleBackColor = true;
+            this._btnPrintGSRReminders.Click += new System.EventHandler(this.btnPrintGSRReminders_Click);
+            // 
+            // _pbStatus
+            // 
+            this._pbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbStatus.Location = new System.Drawing.Point(134, 464);
+            this._pbStatus.Name = "_pbStatus";
+            this._pbStatus.Size = new System.Drawing.Size(899, 23);
+            this._pbStatus.TabIndex = 4;
+            // 
+            // _btnUnselect
+            // 
+            this._btnUnselect.Location = new System.Drawing.Point(137, 136);
+            this._btnUnselect.Name = "_btnUnselect";
+            this._btnUnselect.Size = new System.Drawing.Size(96, 23);
+            this._btnUnselect.TabIndex = 9;
+            this._btnUnselect.Text = "Unselect All";
+            this._btnUnselect.UseVisualStyleBackColor = true;
+            this._btnUnselect.Click += new System.EventHandler(this.btnUnselect_Click);
+            // 
+            // _btnSelectAll
+            // 
+            this._btnSelectAll.Location = new System.Drawing.Point(12, 136);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(119, 23);
+            this._btnSelectAll.TabIndex = 8;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // _btnEmailNone
+            // 
+            this._btnEmailNone.Location = new System.Drawing.Point(373, 136);
+            this._btnEmailNone.Name = "_btnEmailNone";
+            this._btnEmailNone.Size = new System.Drawing.Size(96, 23);
+            this._btnEmailNone.TabIndex = 11;
+            this._btnEmailNone.Text = "Email None";
+            this._btnEmailNone.UseVisualStyleBackColor = true;
+            this._btnEmailNone.Click += new System.EventHandler(this.btnEmailNone_Click);
+            // 
+            // _btnEmailAll
+            // 
+            this._btnEmailAll.Location = new System.Drawing.Point(248, 136);
+            this._btnEmailAll.Name = "_btnEmailAll";
+            this._btnEmailAll.Size = new System.Drawing.Size(119, 23);
+            this._btnEmailAll.TabIndex = 10;
+            this._btnEmailAll.Text = "Email All";
+            this._btnEmailAll.UseVisualStyleBackColor = true;
+            this._btnEmailAll.Click += new System.EventHandler(this.btnEmailAll_Click);
+            // 
             // FRMLastGSRReport
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1188, 494);
-            Controls.Add(_btnEmailNone);
-            Controls.Add(_btnEmailAll);
-            Controls.Add(_btnUnselect);
-            Controls.Add(_btnSelectAll);
-            Controls.Add(_pbStatus);
-            Controls.Add(_btnPrintGSRReminders);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpJobs);
-            Controls.Add(_btnReset);
-            MinimumSize = new Size(808, 528);
-            Name = "FRMLastGSRReport";
-            Text = "Product Last GSR Report";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpJobs, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            Controls.SetChildIndex(_btnPrintGSRReminders, 0);
-            Controls.SetChildIndex(_pbStatus, 0);
-            Controls.SetChildIndex(_btnSelectAll, 0);
-            Controls.SetChildIndex(_btnUnselect, 0);
-            Controls.SetChildIndex(_btnEmailAll, 0);
-            Controls.SetChildIndex(_btnEmailNone, 0);
-            _grpJobs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgProductsLastGSR).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1188, 494);
+            this.Controls.Add(this._btnEmailNone);
+            this.Controls.Add(this._btnEmailAll);
+            this.Controls.Add(this._btnUnselect);
+            this.Controls.Add(this._btnSelectAll);
+            this.Controls.Add(this._pbStatus);
+            this.Controls.Add(this._btnPrintGSRReminders);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpJobs);
+            this.Controls.Add(this._btnReset);
+            this.MinimumSize = new System.Drawing.Size(808, 528);
+            this.Name = "FRMLastGSRReport";
+            this.Text = "Product Last GSR Report";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpJobs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgProductsLastGSR)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

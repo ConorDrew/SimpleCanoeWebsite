@@ -37,106 +37,103 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _dgvData = new DataGridView();
-            _dgvData.CellValueChanged += new DataGridViewCellEventHandler(dgvData_CellValueChanged);
-            _dgvData.Click += new EventHandler(dgvData_Click);
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _GroupBox2 = new GroupBox();
-            _dgvPOData = new DataGridView();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvData).BeginInit();
-            _GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvPOData).BeginInit();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dgvData = new System.Windows.Forms.DataGridView();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._dgvPOData = new System.Windows.Forms.DataGridView();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvData)).BeginInit();
+            this._GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPOData)).BeginInit();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Controls.Add(_dgvData);
-            _GroupBox1.Location = new Point(12, 313);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(1073, 287);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "INVOICE Included Items";
+            this._GroupBox1.Controls.Add(this._dgvData);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 285);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(1073, 315);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "INVOICE Included Items";
             // 
-            // dgvData
+            // _dgvData
             // 
-            _dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvData.Location = new Point(6, 20);
-            _dgvData.Name = "dgvData";
-            _dgvData.Size = new Size(1061, 261);
-            _dgvData.TabIndex = 0;
+            this._dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvData.Location = new System.Drawing.Point(6, 20);
+            this._dgvData.Name = "_dgvData";
+            this._dgvData.Size = new System.Drawing.Size(1061, 289);
+            this._dgvData.TabIndex = 0;
+            this._dgvData.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellValueChanged);
+            this._dgvData.Click += new System.EventHandler(this.dgvData_Click);
             // 
-            // btnOK
+            // _btnOK
             // 
-            _btnOK.Location = new Point(1010, 606);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(75, 23);
-            _btnOK.TabIndex = 3;
-            _btnOK.Text = "OK";
-            _btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Location = new System.Drawing.Point(1010, 606);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 3;
+            this._btnOK.Text = "OK";
+            this._btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // btnCancel
+            // _btnCancel
             // 
-            _btnCancel.Location = new Point(929, 606);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(75, 23);
-            _btnCancel.TabIndex = 4;
-            _btnCancel.Text = "Cancel";
-            _btnCancel.UseVisualStyleBackColor = true;
-            _btnCancel.Visible = false;
+            this._btnCancel.Location = new System.Drawing.Point(929, 606);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 4;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Visible = false;
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // GroupBox2
+            // _GroupBox2
             // 
-            _GroupBox2.AutoSize = true;
-            _GroupBox2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            _GroupBox2.Controls.Add(_dgvPOData);
-            _GroupBox2.Location = new Point(13, 39);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(1072, 267);
-            _GroupBox2.TabIndex = 5;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "PURCHASE ORDER Included Items";
+            this._GroupBox2.AutoSize = true;
+            this._GroupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this._GroupBox2.Controls.Add(this._dgvPOData);
+            this._GroupBox2.Location = new System.Drawing.Point(13, 12);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(1072, 267);
+            this._GroupBox2.TabIndex = 5;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "PURCHASE ORDER Included Items";
             // 
-            // dgvPOData
+            // _dgvPOData
             // 
-            _dgvPOData.AllowUserToAddRows = false;
-            _dgvPOData.AllowUserToDeleteRows = false;
-            _dgvPOData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvPOData.Location = new Point(7, 21);
-            _dgvPOData.Name = "dgvPOData";
-            _dgvPOData.ReadOnly = true;
-            _dgvPOData.Size = new Size(1059, 226);
-            _dgvPOData.TabIndex = 0;
+            this._dgvPOData.AllowUserToAddRows = false;
+            this._dgvPOData.AllowUserToDeleteRows = false;
+            this._dgvPOData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvPOData.Location = new System.Drawing.Point(7, 21);
+            this._dgvPOData.Name = "_dgvPOData";
+            this._dgvPOData.ReadOnly = true;
+            this._dgvPOData.Size = new System.Drawing.Size(1059, 226);
+            this._dgvPOData.TabIndex = 0;
             // 
             // FRMPOInvoiceIncludedItems
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1097, 641);
-            Controls.Add(_GroupBox2);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            Controls.Add(_GroupBox1);
-            MinimumSize = new Size(820, 420);
-            Name = "FRMPOInvoiceIncludedItems";
-            SizeGripStyle = SizeGripStyle.Show;
-            Text = "PO Invoice Included Items";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_GroupBox2, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgvData).EndInit();
-            _GroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgvPOData).EndInit();
-            Load += new EventHandler(FRMPOInvoiceIncludedItems_Load);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1097, 641);
+            this.Controls.Add(this._GroupBox2);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.Controls.Add(this._GroupBox1);
+            this.MinimumSize = new System.Drawing.Size(820, 420);
+            this.Name = "FRMPOInvoiceIncludedItems";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Text = "PO Invoice Included Items";
+            this.Load += new System.EventHandler(this.FRMPOInvoiceIncludedItems_Load);
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgvData)).EndInit();
+            this._GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPOData)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         private GroupBox _GroupBox1;

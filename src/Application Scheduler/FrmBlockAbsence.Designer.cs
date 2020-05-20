@@ -37,323 +37,327 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _txtEndTimeMinutes = new TextBox();
-            _txtEndTimeHours = new TextBox();
-            _txtStartTimeMinutes = new TextBox();
-            _txtStartTimeHours = new TextBox();
-            _txtStartTimeHours.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
-            _Label4 = new Label();
-            _Label3 = new Label();
-            _lblType = new Label();
-            _cboType = new ComboBox();
-            _dtTo = new DateTimePicker();
-            _dtFrom = new DateTimePicker();
-            _txtComments = new TextBox();
-            _lblToDate = new Label();
-            _lblFromDate = new Label();
-            _lblComments = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _gbEmployees = new GroupBox();
-            _cboEmployeeGroup = new ComboBox();
-            _cboEmployeeGroup.SelectedIndexChanged += new EventHandler(cboEmployeeGroup_SelectedIndexChanged);
-            _Label24 = new Label();
-            _btnClearAll = new Button();
-            _btnClearAll.Click += new EventHandler(btnClearAll_Click);
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _dgEmployees = new DataGrid();
-            _dgEmployees.Click += new EventHandler(dgEmployees_Clicks);
-            _dgEmployees.DoubleClick += new EventHandler(dgEmployees_Clicks);
-            _dgEmployees.Click += new EventHandler(dgEmployees_Clicks);
-            _dgEmployees.DoubleClick += new EventHandler(dgEmployees_Clicks);
-            _GroupBox1.SuspendLayout();
-            _gbEmployees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEmployees).BeginInit();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._txtEndTimeMinutes = new System.Windows.Forms.TextBox();
+            this._txtEndTimeHours = new System.Windows.Forms.TextBox();
+            this._txtStartTimeMinutes = new System.Windows.Forms.TextBox();
+            this._txtStartTimeHours = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._lblType = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._dtTo = new System.Windows.Forms.DateTimePicker();
+            this._dtFrom = new System.Windows.Forms.DateTimePicker();
+            this._txtComments = new System.Windows.Forms.TextBox();
+            this._lblToDate = new System.Windows.Forms.Label();
+            this._lblFromDate = new System.Windows.Forms.Label();
+            this._lblComments = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._gbEmployees = new System.Windows.Forms.GroupBox();
+            this._cboEmployeeGroup = new System.Windows.Forms.ComboBox();
+            this._Label24 = new System.Windows.Forms.Label();
+            this._btnClearAll = new System.Windows.Forms.Button();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._dgEmployees = new System.Windows.Forms.DataGrid();
+            this._GroupBox1.SuspendLayout();
+            this._gbEmployees.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEmployees)).BeginInit();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox1.Controls.Add(_txtEndTimeMinutes);
-            _GroupBox1.Controls.Add(_txtEndTimeHours);
-            _GroupBox1.Controls.Add(_txtStartTimeMinutes);
-            _GroupBox1.Controls.Add(_txtStartTimeHours);
-            _GroupBox1.Controls.Add(_Label4);
-            _GroupBox1.Controls.Add(_Label3);
-            _GroupBox1.Controls.Add(_lblType);
-            _GroupBox1.Controls.Add(_cboType);
-            _GroupBox1.Controls.Add(_dtTo);
-            _GroupBox1.Controls.Add(_dtFrom);
-            _GroupBox1.Controls.Add(_txtComments);
-            _GroupBox1.Controls.Add(_lblToDate);
-            _GroupBox1.Controls.Add(_lblFromDate);
-            _GroupBox1.Controls.Add(_lblComments);
-            _GroupBox1.Font = new Font("Verdana", 8.0F);
-            _GroupBox1.Location = new Point(12, 371);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(624, 153);
-            _GroupBox1.TabIndex = 26;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Absence Details";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._txtEndTimeMinutes);
+            this._GroupBox1.Controls.Add(this._txtEndTimeHours);
+            this._GroupBox1.Controls.Add(this._txtStartTimeMinutes);
+            this._GroupBox1.Controls.Add(this._txtStartTimeHours);
+            this._GroupBox1.Controls.Add(this._Label4);
+            this._GroupBox1.Controls.Add(this._Label3);
+            this._GroupBox1.Controls.Add(this._lblType);
+            this._GroupBox1.Controls.Add(this._cboType);
+            this._GroupBox1.Controls.Add(this._dtTo);
+            this._GroupBox1.Controls.Add(this._dtFrom);
+            this._GroupBox1.Controls.Add(this._txtComments);
+            this._GroupBox1.Controls.Add(this._lblToDate);
+            this._GroupBox1.Controls.Add(this._lblFromDate);
+            this._GroupBox1.Controls.Add(this._lblComments);
+            this._GroupBox1.Font = new System.Drawing.Font("Verdana", 8F);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 371);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(624, 153);
+            this._GroupBox1.TabIndex = 26;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Absence Details";
             // 
-            // txtEndTimeMinutes
+            // _txtEndTimeMinutes
             // 
-            _txtEndTimeMinutes.Location = new Point(288, 88);
-            _txtEndTimeMinutes.Name = "txtEndTimeMinutes";
-            _txtEndTimeMinutes.Size = new Size(24, 20);
-            _txtEndTimeMinutes.TabIndex = 53;
+            this._txtEndTimeMinutes.Location = new System.Drawing.Point(288, 88);
+            this._txtEndTimeMinutes.Name = "_txtEndTimeMinutes";
+            this._txtEndTimeMinutes.Size = new System.Drawing.Size(24, 20);
+            this._txtEndTimeMinutes.TabIndex = 53;
             // 
-            // txtEndTimeHours
+            // _txtEndTimeHours
             // 
-            _txtEndTimeHours.Location = new Point(256, 88);
-            _txtEndTimeHours.Name = "txtEndTimeHours";
-            _txtEndTimeHours.Size = new Size(24, 20);
-            _txtEndTimeHours.TabIndex = 52;
+            this._txtEndTimeHours.Location = new System.Drawing.Point(256, 88);
+            this._txtEndTimeHours.Name = "_txtEndTimeHours";
+            this._txtEndTimeHours.Size = new System.Drawing.Size(24, 20);
+            this._txtEndTimeHours.TabIndex = 52;
             // 
-            // txtStartTimeMinutes
+            // _txtStartTimeMinutes
             // 
-            _txtStartTimeMinutes.Location = new Point(288, 56);
-            _txtStartTimeMinutes.Name = "txtStartTimeMinutes";
-            _txtStartTimeMinutes.Size = new Size(24, 20);
-            _txtStartTimeMinutes.TabIndex = 51;
+            this._txtStartTimeMinutes.Location = new System.Drawing.Point(288, 56);
+            this._txtStartTimeMinutes.Name = "_txtStartTimeMinutes";
+            this._txtStartTimeMinutes.Size = new System.Drawing.Size(24, 20);
+            this._txtStartTimeMinutes.TabIndex = 51;
             // 
-            // txtStartTimeHours
+            // _txtStartTimeHours
             // 
-            _txtStartTimeHours.Location = new Point(256, 56);
-            _txtStartTimeHours.Name = "txtStartTimeHours";
-            _txtStartTimeHours.Size = new Size(24, 20);
-            _txtStartTimeHours.TabIndex = 50;
+            this._txtStartTimeHours.Location = new System.Drawing.Point(256, 56);
+            this._txtStartTimeHours.Name = "_txtStartTimeHours";
+            this._txtStartTimeHours.Size = new System.Drawing.Size(24, 20);
+            this._txtStartTimeHours.TabIndex = 50;
+            this._txtStartTimeHours.TextChanged += new System.EventHandler(this.txtEndTimeHours_TextChanged);
             // 
-            // Label4
+            // _Label4
             // 
-            _Label4.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label4.Location = new Point(280, 88);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(8, 17);
-            _Label4.TabIndex = 49;
-            _Label4.Text = ":";
+            this._Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label4.Location = new System.Drawing.Point(280, 88);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(8, 17);
+            this._Label4.TabIndex = 49;
+            this._Label4.Text = ":";
             // 
-            // Label3
+            // _Label3
             // 
-            _Label3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label3.Location = new Point(280, 56);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(8, 17);
-            _Label3.TabIndex = 48;
-            _Label3.Text = ":";
+            this._Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label3.Location = new System.Drawing.Point(280, 56);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(8, 17);
+            this._Label3.TabIndex = 48;
+            this._Label3.Text = ":";
             // 
-            // lblType
+            // _lblType
             // 
-            _lblType.Font = new Font("Verdana", 8.0F);
-            _lblType.Location = new Point(8, 24);
-            _lblType.Name = "lblType";
-            _lblType.Size = new Size(70, 17);
-            _lblType.TabIndex = 37;
-            _lblType.Text = "Type";
+            this._lblType.Font = new System.Drawing.Font("Verdana", 8F);
+            this._lblType.Location = new System.Drawing.Point(8, 24);
+            this._lblType.Name = "_lblType";
+            this._lblType.Size = new System.Drawing.Size(70, 17);
+            this._lblType.TabIndex = 37;
+            this._lblType.Text = "Type";
             // 
-            // cboType
+            // _cboType
             // 
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Font = new Font("Verdana", 8.0F);
-            _cboType.ItemHeight = 13;
-            _cboType.Items.AddRange(new object[] { "Holiday", "Sickness", "Other" });
-            _cboType.Location = new Point(80, 24);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(232, 21);
-            _cboType.TabIndex = 2;
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Font = new System.Drawing.Font("Verdana", 8F);
+            this._cboType.ItemHeight = 13;
+            this._cboType.Items.AddRange(new object[] {
+            "Holiday",
+            "Sickness",
+            "Other"});
+            this._cboType.Location = new System.Drawing.Point(80, 24);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(232, 21);
+            this._cboType.TabIndex = 2;
             // 
-            // dtTo
+            // _dtTo
             // 
-            _dtTo.Font = new Font("Verdana", 8.0F);
-            _dtTo.Location = new Point(80, 88);
-            _dtTo.Name = "dtTo";
-            _dtTo.Size = new Size(173, 20);
-            _dtTo.TabIndex = 6;
+            this._dtTo.Font = new System.Drawing.Font("Verdana", 8F);
+            this._dtTo.Location = new System.Drawing.Point(80, 88);
+            this._dtTo.Name = "_dtTo";
+            this._dtTo.Size = new System.Drawing.Size(173, 20);
+            this._dtTo.TabIndex = 6;
             // 
-            // dtFrom
+            // _dtFrom
             // 
-            _dtFrom.Font = new Font("Verdana", 8.0F);
-            _dtFrom.Location = new Point(80, 56);
-            _dtFrom.Name = "dtFrom";
-            _dtFrom.Size = new Size(172, 20);
-            _dtFrom.TabIndex = 3;
+            this._dtFrom.Font = new System.Drawing.Font("Verdana", 8F);
+            this._dtFrom.Location = new System.Drawing.Point(80, 56);
+            this._dtFrom.Name = "_dtFrom";
+            this._dtFrom.Size = new System.Drawing.Size(172, 20);
+            this._dtFrom.TabIndex = 3;
             // 
-            // txtComments
+            // _txtComments
             // 
-            _txtComments.Font = new Font("Verdana", 8.0F);
-            _txtComments.Location = new Point(320, 43);
-            _txtComments.Multiline = true;
-            _txtComments.Name = "txtComments";
-            _txtComments.ScrollBars = ScrollBars.Both;
-            _txtComments.Size = new Size(296, 96);
-            _txtComments.TabIndex = 9;
+            this._txtComments.Font = new System.Drawing.Font("Verdana", 8F);
+            this._txtComments.Location = new System.Drawing.Point(320, 43);
+            this._txtComments.Multiline = true;
+            this._txtComments.Name = "_txtComments";
+            this._txtComments.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this._txtComments.Size = new System.Drawing.Size(296, 96);
+            this._txtComments.TabIndex = 9;
             // 
-            // lblToDate
+            // _lblToDate
             // 
-            _lblToDate.Font = new Font("Verdana", 8.0F);
-            _lblToDate.Location = new Point(8, 88);
-            _lblToDate.Name = "lblToDate";
-            _lblToDate.Size = new Size(46, 18);
-            _lblToDate.TabIndex = 20;
-            _lblToDate.Text = "To";
+            this._lblToDate.Font = new System.Drawing.Font("Verdana", 8F);
+            this._lblToDate.Location = new System.Drawing.Point(8, 88);
+            this._lblToDate.Name = "_lblToDate";
+            this._lblToDate.Size = new System.Drawing.Size(46, 18);
+            this._lblToDate.TabIndex = 20;
+            this._lblToDate.Text = "To";
             // 
-            // lblFromDate
+            // _lblFromDate
             // 
-            _lblFromDate.Font = new Font("Verdana", 8.0F);
-            _lblFromDate.Location = new Point(8, 56);
-            _lblFromDate.Name = "lblFromDate";
-            _lblFromDate.Size = new Size(69, 18);
-            _lblFromDate.TabIndex = 19;
-            _lblFromDate.Text = "From";
+            this._lblFromDate.Font = new System.Drawing.Font("Verdana", 8F);
+            this._lblFromDate.Location = new System.Drawing.Point(8, 56);
+            this._lblFromDate.Name = "_lblFromDate";
+            this._lblFromDate.Size = new System.Drawing.Size(69, 18);
+            this._lblFromDate.TabIndex = 19;
+            this._lblFromDate.Text = "From";
             // 
-            // lblComments
+            // _lblComments
             // 
-            _lblComments.Font = new Font("Verdana", 8.0F);
-            _lblComments.Location = new Point(320, 22);
-            _lblComments.Name = "lblComments";
-            _lblComments.Size = new Size(72, 17);
-            _lblComments.TabIndex = 23;
-            _lblComments.Text = "Comments";
+            this._lblComments.Font = new System.Drawing.Font("Verdana", 8F);
+            this._lblComments.Location = new System.Drawing.Point(320, 22);
+            this._lblComments.Name = "_lblComments";
+            this._lblComments.Size = new System.Drawing.Size(72, 17);
+            this._lblComments.TabIndex = 23;
+            this._lblComments.Text = "Comments";
             // 
-            // btnSave
+            // _btnSave
             // 
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.UseVisualStyleBackColor = true;
-            _btnSave.Font = new Font("Verdana", 8.0F);
-            _btnSave.Location = new Point(572, 529);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(64, 23);
-            _btnSave.TabIndex = 27;
-            _btnSave.Text = "Save";
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnSave.Location = new System.Drawing.Point(572, 529);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(64, 23);
+            this._btnSave.TabIndex = 27;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnCancel
+            // _btnCancel
             // 
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.UseVisualStyleBackColor = true;
-            _btnCancel.Font = new Font("Verdana", 8.0F);
-            _btnCancel.Location = new Point(4, 529);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(64, 23);
-            _btnCancel.TabIndex = 28;
-            _btnCancel.Text = "Cancel";
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnCancel.Location = new System.Drawing.Point(4, 529);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(64, 23);
+            this._btnCancel.TabIndex = 28;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // gbEmployees
+            // _gbEmployees
             // 
-            _gbEmployees.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gbEmployees.Controls.Add(_cboEmployeeGroup);
-            _gbEmployees.Controls.Add(_Label24);
-            _gbEmployees.Controls.Add(_btnClearAll);
-            _gbEmployees.Controls.Add(_btnSelectAll);
-            _gbEmployees.Controls.Add(_dgEmployees);
-            _gbEmployees.Font = new Font("Verdana", 8.0F);
-            _gbEmployees.Location = new Point(12, 38);
-            _gbEmployees.Name = "gbEmployees";
-            _gbEmployees.Size = new Size(624, 327);
-            _gbEmployees.TabIndex = 29;
-            _gbEmployees.TabStop = false;
-            _gbEmployees.Text = "Employees";
+            this._gbEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gbEmployees.Controls.Add(this._cboEmployeeGroup);
+            this._gbEmployees.Controls.Add(this._Label24);
+            this._gbEmployees.Controls.Add(this._btnClearAll);
+            this._gbEmployees.Controls.Add(this._btnSelectAll);
+            this._gbEmployees.Controls.Add(this._dgEmployees);
+            this._gbEmployees.Font = new System.Drawing.Font("Verdana", 8F);
+            this._gbEmployees.Location = new System.Drawing.Point(12, 12);
+            this._gbEmployees.Name = "_gbEmployees";
+            this._gbEmployees.Size = new System.Drawing.Size(624, 353);
+            this._gbEmployees.TabIndex = 29;
+            this._gbEmployees.TabStop = false;
+            this._gbEmployees.Text = "Employees";
             // 
-            // cboEmployeeGroup
+            // _cboEmployeeGroup
             // 
-            _cboEmployeeGroup.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboEmployeeGroup.Cursor = Cursors.Hand;
-            _cboEmployeeGroup.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboEmployeeGroup.Items.AddRange(new object[] { "Engineers", "Users" });
-            _cboEmployeeGroup.Location = new Point(118, 14);
-            _cboEmployeeGroup.Name = "cboEmployeeGroup";
-            _cboEmployeeGroup.Size = new Size(322, 21);
-            _cboEmployeeGroup.TabIndex = 46;
-            _cboEmployeeGroup.Tag = "";
+            this._cboEmployeeGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboEmployeeGroup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboEmployeeGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboEmployeeGroup.Items.AddRange(new object[] {
+            "Engineers",
+            "Users"});
+            this._cboEmployeeGroup.Location = new System.Drawing.Point(118, 14);
+            this._cboEmployeeGroup.Name = "_cboEmployeeGroup";
+            this._cboEmployeeGroup.Size = new System.Drawing.Size(322, 21);
+            this._cboEmployeeGroup.TabIndex = 46;
+            this._cboEmployeeGroup.Tag = "";
+            this._cboEmployeeGroup.SelectedIndexChanged += new System.EventHandler(this.cboEmployeeGroup_SelectedIndexChanged);
             // 
-            // Label24
+            // _Label24
             // 
-            _Label24.Location = new Point(6, 16);
-            _Label24.Name = "Label24";
-            _Label24.Size = new Size(105, 20);
-            _Label24.TabIndex = 47;
-            _Label24.Text = "Employee Group";
+            this._Label24.Location = new System.Drawing.Point(6, 16);
+            this._Label24.Name = "_Label24";
+            this._Label24.Size = new System.Drawing.Size(105, 20);
+            this._Label24.TabIndex = 47;
+            this._Label24.Text = "Employee Group";
             // 
-            // btnClearAll
+            // _btnClearAll
             // 
-            _btnClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClearAll.UseVisualStyleBackColor = true;
-            _btnClearAll.Font = new Font("Verdana", 8.0F);
-            _btnClearAll.Location = new Point(80, 293);
-            _btnClearAll.Name = "btnClearAll";
-            _btnClearAll.Size = new Size(64, 23);
-            _btnClearAll.TabIndex = 3;
-            _btnClearAll.Text = "Clear All";
+            this._btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClearAll.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnClearAll.Location = new System.Drawing.Point(80, 319);
+            this._btnClearAll.Name = "_btnClearAll";
+            this._btnClearAll.Size = new System.Drawing.Size(64, 23);
+            this._btnClearAll.TabIndex = 3;
+            this._btnClearAll.Text = "Clear All";
+            this._btnClearAll.UseVisualStyleBackColor = true;
+            this._btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
-            // btnSelectAll
+            // _btnSelectAll
             // 
-            _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSelectAll.UseVisualStyleBackColor = true;
-            _btnSelectAll.Font = new Font("Verdana", 8.0F);
-            _btnSelectAll.Location = new Point(10, 293);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(64, 23);
-            _btnSelectAll.TabIndex = 2;
-            _btnSelectAll.Text = "Select All";
+            this._btnSelectAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSelectAll.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnSelectAll.Location = new System.Drawing.Point(10, 319);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(64, 23);
+            this._btnSelectAll.TabIndex = 2;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
             // 
-            // dgEmployees
+            // _dgEmployees
             // 
-            _dgEmployees.AllowNavigation = false;
-            _dgEmployees.AlternatingBackColor = Color.GhostWhite;
-            _dgEmployees.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgEmployees.BackgroundColor = Color.White;
-            _dgEmployees.BorderStyle = BorderStyle.FixedSingle;
-            _dgEmployees.CaptionBackColor = Color.RoyalBlue;
-            _dgEmployees.CaptionForeColor = Color.White;
-            _dgEmployees.CaptionText = "Engineers";
-            _dgEmployees.CaptionVisible = false;
-            _dgEmployees.DataMember = "";
-            _dgEmployees.Font = new Font("Verdana", 8.0F);
-            _dgEmployees.ForeColor = Color.MidnightBlue;
-            _dgEmployees.GridLineColor = Color.RoyalBlue;
-            _dgEmployees.HeaderBackColor = Color.MidnightBlue;
-            _dgEmployees.HeaderFont = new Font("Tahoma", 8.0F, FontStyle.Bold);
-            _dgEmployees.HeaderForeColor = Color.Lavender;
-            _dgEmployees.LinkColor = Color.Teal;
-            _dgEmployees.Location = new Point(10, 41);
-            _dgEmployees.Name = "dgEmployees";
-            _dgEmployees.ParentRowsBackColor = Color.Lavender;
-            _dgEmployees.ParentRowsForeColor = Color.MidnightBlue;
-            _dgEmployees.ParentRowsVisible = false;
-            _dgEmployees.RowHeadersVisible = false;
-            _dgEmployees.SelectionBackColor = Color.Teal;
-            _dgEmployees.SelectionForeColor = Color.PaleGreen;
-            _dgEmployees.Size = new Size(605, 243);
-            _dgEmployees.TabIndex = 1;
+            this._dgEmployees.AllowNavigation = false;
+            this._dgEmployees.AlternatingBackColor = System.Drawing.Color.GhostWhite;
+            this._dgEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgEmployees.BackgroundColor = System.Drawing.Color.White;
+            this._dgEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._dgEmployees.CaptionBackColor = System.Drawing.Color.RoyalBlue;
+            this._dgEmployees.CaptionForeColor = System.Drawing.Color.White;
+            this._dgEmployees.CaptionText = "Engineers";
+            this._dgEmployees.CaptionVisible = false;
+            this._dgEmployees.DataMember = "";
+            this._dgEmployees.Font = new System.Drawing.Font("Verdana", 8F);
+            this._dgEmployees.ForeColor = System.Drawing.Color.MidnightBlue;
+            this._dgEmployees.GridLineColor = System.Drawing.Color.RoyalBlue;
+            this._dgEmployees.HeaderBackColor = System.Drawing.Color.MidnightBlue;
+            this._dgEmployees.HeaderFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this._dgEmployees.HeaderForeColor = System.Drawing.Color.Lavender;
+            this._dgEmployees.LinkColor = System.Drawing.Color.Teal;
+            this._dgEmployees.Location = new System.Drawing.Point(10, 41);
+            this._dgEmployees.Name = "_dgEmployees";
+            this._dgEmployees.ParentRowsBackColor = System.Drawing.Color.Lavender;
+            this._dgEmployees.ParentRowsForeColor = System.Drawing.Color.MidnightBlue;
+            this._dgEmployees.ParentRowsVisible = false;
+            this._dgEmployees.RowHeadersVisible = false;
+            this._dgEmployees.SelectionBackColor = System.Drawing.Color.Teal;
+            this._dgEmployees.SelectionForeColor = System.Drawing.Color.PaleGreen;
+            this._dgEmployees.Size = new System.Drawing.Size(605, 269);
+            this._dgEmployees.TabIndex = 1;
+            this._dgEmployees.Click += new System.EventHandler(this.dgEmployees_Clicks);
+            this._dgEmployees.DoubleClick += new System.EventHandler(this.dgEmployees_Clicks);
             // 
             // FrmBlockAbsence
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(648, 558);
-            Controls.Add(_gbEmployees);
-            Controls.Add(_btnSave);
-            Controls.Add(_btnCancel);
-            Controls.Add(_GroupBox1);
-            MaximizeBox = false;
-            MinimumSize = new Size(656, 592);
-            Name = "FrmBlockAbsence";
-            Text = "Block Absences";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_gbEmployees, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            _gbEmployees.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgEmployees).EndInit();
-            Load += new EventHandler(FrmBlockAbsence_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(648, 558);
+            this.Controls.Add(this._gbEmployees);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._GroupBox1);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(656, 592);
+            this.Name = "FrmBlockAbsence";
+            this.Text = "Block Absences";
+            this.Load += new System.EventHandler(this.FrmBlockAbsence_Load);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this._gbEmployees.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgEmployees)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _GroupBox1;

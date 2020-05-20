@@ -401,314 +401,316 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnFindPart = new Button();
-            _btnFindPart.Click += new EventHandler(btnFindPart_Click);
-            _txtPartSearch = new TextBox();
-            _txtPartSearch.KeyDown += new KeyEventHandler(txtPartSearch_KeyDown);
-            _lblQty = new Label();
-            _btnCreate = new Button();
-            _btnCreate.Click += new EventHandler(btnCreate_Click);
-            _lblSearch = new Label();
-            _lblSupplier = new Label();
-            _nudQty = new NumericUpDown();
-            _dgParts = new DataGridView();
-            _lblTopLabel = new Label();
-            _btnAddPart = new Button();
-            _btnAddPart.Click += new EventHandler(btnAddPart_Click);
-            _rbNo = new RadioButton();
-            _rbYes = new RadioButton();
-            _btnBack = new Button();
-            _btnBack.Click += new EventHandler(btnBack_Click);
-            _pnlFilters = new Panel();
-            _dtpDatePlaced = new DateTimePicker();
-            _lblDate = new Label();
-            _cboCostCentre = new ComboBox();
-            _lblCostCentre = new Label();
-            _txtSupplier = new TextBox();
-            _dgvSearch = new DataGridView();
-            _dgvSearch.CellClick += new DataGridViewCellEventHandler(DataGridView1_CellContentClick);
-            _dgvSearch.CellDoubleClick += new DataGridViewCellEventHandler(btnAddPart_Click);
-            _txtNewOrderNumber = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)_nudQty).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgParts).BeginInit();
-            _pnlFilters.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvSearch).BeginInit();
-            SuspendLayout();
-            //
-            // btnFindPart
-            //
-            _btnFindPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnFindPart.Location = new Point(856, 105);
-            _btnFindPart.Name = "btnFindPart";
-            _btnFindPart.Size = new Size(145, 34);
-            _btnFindPart.TabIndex = 13;
-            _btnFindPart.Text = "Find";
-            _btnFindPart.UseVisualStyleBackColor = true;
-            //
-            // txtPartSearch
-            //
-            _txtPartSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPartSearch.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtPartSearch.Location = new Point(321, 62);
-            _txtPartSearch.Name = "txtPartSearch";
-            _txtPartSearch.Size = new Size(680, 29);
-            _txtPartSearch.TabIndex = 2;
-            //
-            // lblQty
-            //
-            _lblQty.Font = new Font("Verdana", 9.0F);
-            _lblQty.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblQty.Location = new Point(4, 67);
-            _lblQty.Name = "lblQty";
-            _lblQty.Size = new Size(120, 21);
-            _lblQty.TabIndex = 19;
-            _lblQty.Text = "Qty";
-            //
-            // btnCreate
-            //
-            _btnCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnCreate.Font = new Font("Verdana", 9.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnCreate.Location = new Point(857, 552);
-            _btnCreate.Name = "btnCreate";
-            _btnCreate.Size = new Size(146, 40);
-            _btnCreate.TabIndex = 130;
-            _btnCreate.Text = "Create Order";
-            _btnCreate.UseVisualStyleBackColor = true;
-            //
-            // lblSearch
-            //
-            _lblSearch.Font = new Font("Verdana", 9.0F);
-            _lblSearch.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblSearch.Location = new Point(249, 67);
-            _lblSearch.Name = "lblSearch";
-            _lblSearch.Size = new Size(67, 21);
-            _lblSearch.TabIndex = 20;
-            _lblSearch.Text = "Search";
-            //
-            // lblSupplier
-            //
-            _lblSupplier.Font = new Font("Verdana", 9.0F);
-            _lblSupplier.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblSupplier.Location = new Point(4, 22);
-            _lblSupplier.Name = "lblSupplier";
-            _lblSupplier.Size = new Size(120, 21);
-            _lblSupplier.TabIndex = 18;
-            _lblSupplier.Text = "Supplier";
-            //
-            // nudQty
-            //
-            _nudQty.BackColor = Color.White;
-            _nudQty.Font = new Font("Verdana", 16.0F);
-            _nudQty.Location = new Point(130, 61);
-            _nudQty.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            _nudQty.Name = "nudQty";
-            _nudQty.Size = new Size(112, 33);
-            _nudQty.TabIndex = 9;
-            _nudQty.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            //
-            // dgParts
-            //
-            _dgParts.AllowUserToAddRows = false;
-            _dgParts.AllowUserToDeleteRows = false;
-            _dgParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgParts.Location = new Point(13, 413);
-            _dgParts.Name = "dgParts";
-            _dgParts.Size = new Size(990, 133);
-            _dgParts.TabIndex = 133;
-            //
-            // lblTopLabel
-            //
-            _lblTopLabel.AutoSize = true;
-            _lblTopLabel.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblTopLabel.Location = new Point(17, 50);
-            _lblTopLabel.Name = "lblTopLabel";
-            _lblTopLabel.Size = new Size(539, 24);
-            _lblTopLabel.TabIndex = 132;
-            _lblTopLabel.Text = "Are these parts to be fitted on this visit?  (NO creates a new visit)";
-            //
-            // btnAddPart
-            //
-            _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddPart.Enabled = false;
-            _btnAddPart.Location = new Point(857, 372);
-            _btnAddPart.Name = "btnAddPart";
-            _btnAddPart.Size = new Size(146, 34);
-            _btnAddPart.TabIndex = 124;
-            _btnAddPart.Text = "Add";
-            _btnAddPart.UseVisualStyleBackColor = true;
-            //
-            // rbNo
-            //
-            _rbNo.AutoSize = true;
-            _rbNo.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _rbNo.Location = new Point(949, 49);
-            _rbNo.Name = "rbNo";
-            _rbNo.Size = new Size(53, 28);
-            _rbNo.TabIndex = 127;
-            _rbNo.TabStop = true;
-            _rbNo.Text = "No";
-            _rbNo.UseVisualStyleBackColor = true;
-            //
-            // rbYes
-            //
-            _rbYes.AutoSize = true;
-            _rbYes.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _rbYes.Location = new Point(836, 50);
-            _rbYes.Name = "rbYes";
-            _rbYes.Size = new Size(60, 28);
-            _rbYes.TabIndex = 126;
-            _rbYes.TabStop = true;
-            _rbYes.Text = "Yes";
-            _rbYes.UseVisualStyleBackColor = true;
-            //
-            // btnBack
-            //
-            _btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnBack.Font = new Font("Verdana", 9.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnBack.Location = new Point(12, 552);
-            _btnBack.Name = "btnBack";
-            _btnBack.Size = new Size(146, 40);
-            _btnBack.TabIndex = 125;
-            _btnBack.Text = "Close";
-            _btnBack.UseVisualStyleBackColor = true;
-            //
-            // pnlFilters
-            //
-            _pnlFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _pnlFilters.BackColor = SystemColors.Info;
-            _pnlFilters.Controls.Add(_dtpDatePlaced);
-            _pnlFilters.Controls.Add(_lblDate);
-            _pnlFilters.Controls.Add(_cboCostCentre);
-            _pnlFilters.Controls.Add(_lblCostCentre);
-            _pnlFilters.Controls.Add(_txtSupplier);
-            _pnlFilters.Controls.Add(_lblSearch);
-            _pnlFilters.Controls.Add(_lblSupplier);
-            _pnlFilters.Controls.Add(_btnFindPart);
-            _pnlFilters.Controls.Add(_txtPartSearch);
-            _pnlFilters.Controls.Add(_nudQty);
-            _pnlFilters.Controls.Add(_lblQty);
-            _pnlFilters.Location = new Point(1, 91);
-            _pnlFilters.Name = "pnlFilters";
-            _pnlFilters.Size = new Size(1013, 145);
-            _pnlFilters.TabIndex = 123;
-            //
-            // dtpDatePlaced
-            //
-            _dtpDatePlaced.Location = new Point(130, 105);
-            _dtpDatePlaced.Name = "dtpDatePlaced";
-            _dtpDatePlaced.Size = new Size(702, 21);
-            _dtpDatePlaced.TabIndex = 25;
-            //
-            // lblDate
-            //
-            _lblDate.Font = new Font("Verdana", 9.0F);
-            _lblDate.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblDate.Location = new Point(4, 110);
-            _lblDate.Name = "lblDate";
-            _lblDate.Size = new Size(120, 21);
-            _lblDate.TabIndex = 24;
-            _lblDate.Text = "Date Placed";
-            //
-            // cboCostCentre
-            //
-            _cboCostCentre.FormattingEnabled = true;
-            _cboCostCentre.Location = new Point(764, 29);
-            _cboCostCentre.Name = "cboCostCentre";
-            _cboCostCentre.Size = new Size(237, 21);
-            _cboCostCentre.TabIndex = 23;
-            //
-            // lblCostCentre
-            //
-            _lblCostCentre.Font = new Font("Verdana", 9.0F);
-            _lblCostCentre.ForeColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblCostCentre.Location = new Point(761, 12);
-            _lblCostCentre.Name = "lblCostCentre";
-            _lblCostCentre.Size = new Size(89, 21);
-            _lblCostCentre.TabIndex = 22;
-            _lblCostCentre.Text = "Cost Centre:";
-            //
-            // txtSupplier
-            //
-            _txtSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSupplier.Font = new Font("Microsoft Sans Serif", 14.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtSupplier.Location = new Point(130, 21);
-            _txtSupplier.Name = "txtSupplier";
-            _txtSupplier.ReadOnly = true;
-            _txtSupplier.Size = new Size(625, 29);
-            _txtSupplier.TabIndex = 21;
-            //
-            // dgvSearch
-            //
-            _dgvSearch.AllowUserToAddRows = false;
-            _dgvSearch.AllowUserToDeleteRows = false;
-            _dgvSearch.AllowUserToResizeRows = false;
-            _dgvSearch.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvSearch.EditMode = DataGridViewEditMode.EditProgrammatically;
-            _dgvSearch.Location = new Point(12, 242);
-            _dgvSearch.MultiSelect = false;
-            _dgvSearch.Name = "dgvSearch";
-            _dgvSearch.ReadOnly = true;
-            _dgvSearch.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            _dgvSearch.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dgvSearch.ShowCellErrors = false;
-            _dgvSearch.ShowCellToolTips = false;
-            _dgvSearch.ShowEditingIcon = false;
-            _dgvSearch.ShowRowErrors = false;
-            _dgvSearch.Size = new Size(839, 165);
-            _dgvSearch.TabIndex = 134;
-            //
-            // txtNewOrderNumber
-            //
-            _txtNewOrderNumber.BackColor = Color.White;
-            _txtNewOrderNumber.BorderStyle = BorderStyle.None;
-            _txtNewOrderNumber.Font = new Font("Verdana", 12.0F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtNewOrderNumber.ForeColor = Color.Red;
-            _txtNewOrderNumber.Location = new Point(243, 563);
-            _txtNewOrderNumber.Name = "txtNewOrderNumber";
-            _txtNewOrderNumber.ReadOnly = true;
-            _txtNewOrderNumber.Size = new Size(543, 20);
-            _txtNewOrderNumber.TabIndex = 135;
-            _txtNewOrderNumber.Text = "Your order number will be displayed here once created.";
-            _txtNewOrderNumber.TextAlign = HorizontalAlignment.Center;
-            //
+            this._btnFindPart = new System.Windows.Forms.Button();
+            this._txtPartSearch = new System.Windows.Forms.TextBox();
+            this._lblQty = new System.Windows.Forms.Label();
+            this._btnCreate = new System.Windows.Forms.Button();
+            this._lblSearch = new System.Windows.Forms.Label();
+            this._lblSupplier = new System.Windows.Forms.Label();
+            this._nudQty = new System.Windows.Forms.NumericUpDown();
+            this._dgParts = new System.Windows.Forms.DataGridView();
+            this._lblTopLabel = new System.Windows.Forms.Label();
+            this._btnAddPart = new System.Windows.Forms.Button();
+            this._rbNo = new System.Windows.Forms.RadioButton();
+            this._rbYes = new System.Windows.Forms.RadioButton();
+            this._btnBack = new System.Windows.Forms.Button();
+            this._pnlFilters = new System.Windows.Forms.Panel();
+            this._dtpDatePlaced = new System.Windows.Forms.DateTimePicker();
+            this._lblDate = new System.Windows.Forms.Label();
+            this._cboCostCentre = new System.Windows.Forms.ComboBox();
+            this._lblCostCentre = new System.Windows.Forms.Label();
+            this._txtSupplier = new System.Windows.Forms.TextBox();
+            this._dgvSearch = new System.Windows.Forms.DataGridView();
+            this._txtNewOrderNumber = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this._nudQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgParts)).BeginInit();
+            this._pnlFilters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvSearch)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _btnFindPart
+            // 
+            this._btnFindPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindPart.Location = new System.Drawing.Point(856, 105);
+            this._btnFindPart.Name = "_btnFindPart";
+            this._btnFindPart.Size = new System.Drawing.Size(145, 34);
+            this._btnFindPart.TabIndex = 13;
+            this._btnFindPart.Text = "Find";
+            this._btnFindPart.UseVisualStyleBackColor = true;
+            this._btnFindPart.Click += new System.EventHandler(this.btnFindPart_Click);
+            // 
+            // _txtPartSearch
+            // 
+            this._txtPartSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPartSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtPartSearch.Location = new System.Drawing.Point(321, 62);
+            this._txtPartSearch.Name = "_txtPartSearch";
+            this._txtPartSearch.Size = new System.Drawing.Size(680, 29);
+            this._txtPartSearch.TabIndex = 2;
+            this._txtPartSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPartSearch_KeyDown);
+            // 
+            // _lblQty
+            // 
+            this._lblQty.Font = new System.Drawing.Font("Verdana", 9F);
+            this._lblQty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this._lblQty.Location = new System.Drawing.Point(4, 67);
+            this._lblQty.Name = "_lblQty";
+            this._lblQty.Size = new System.Drawing.Size(120, 21);
+            this._lblQty.TabIndex = 19;
+            this._lblQty.Text = "Qty";
+            // 
+            // _btnCreate
+            // 
+            this._btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreate.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnCreate.Location = new System.Drawing.Point(856, 558);
+            this._btnCreate.Name = "_btnCreate";
+            this._btnCreate.Size = new System.Drawing.Size(146, 40);
+            this._btnCreate.TabIndex = 130;
+            this._btnCreate.Text = "Create Order";
+            this._btnCreate.UseVisualStyleBackColor = true;
+            this._btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // _lblSearch
+            // 
+            this._lblSearch.Font = new System.Drawing.Font("Verdana", 9F);
+            this._lblSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this._lblSearch.Location = new System.Drawing.Point(249, 67);
+            this._lblSearch.Name = "_lblSearch";
+            this._lblSearch.Size = new System.Drawing.Size(67, 21);
+            this._lblSearch.TabIndex = 20;
+            this._lblSearch.Text = "Search";
+            // 
+            // _lblSupplier
+            // 
+            this._lblSupplier.Font = new System.Drawing.Font("Verdana", 9F);
+            this._lblSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this._lblSupplier.Location = new System.Drawing.Point(4, 22);
+            this._lblSupplier.Name = "_lblSupplier";
+            this._lblSupplier.Size = new System.Drawing.Size(120, 21);
+            this._lblSupplier.TabIndex = 18;
+            this._lblSupplier.Text = "Supplier";
+            // 
+            // _nudQty
+            // 
+            this._nudQty.BackColor = System.Drawing.Color.White;
+            this._nudQty.Font = new System.Drawing.Font("Verdana", 16F);
+            this._nudQty.Location = new System.Drawing.Point(130, 61);
+            this._nudQty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this._nudQty.Name = "_nudQty";
+            this._nudQty.Size = new System.Drawing.Size(112, 33);
+            this._nudQty.TabIndex = 9;
+            this._nudQty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // _dgParts
+            // 
+            this._dgParts.AllowUserToAddRows = false;
+            this._dgParts.AllowUserToDeleteRows = false;
+            this._dgParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgParts.Location = new System.Drawing.Point(12, 373);
+            this._dgParts.Name = "_dgParts";
+            this._dgParts.Size = new System.Drawing.Size(990, 179);
+            this._dgParts.TabIndex = 133;
+            // 
+            // _lblTopLabel
+            // 
+            this._lblTopLabel.AutoSize = true;
+            this._lblTopLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblTopLabel.Location = new System.Drawing.Point(16, 10);
+            this._lblTopLabel.Name = "_lblTopLabel";
+            this._lblTopLabel.Size = new System.Drawing.Size(539, 24);
+            this._lblTopLabel.TabIndex = 132;
+            this._lblTopLabel.Text = "Are these parts to be fitted on this visit?  (NO creates a new visit)";
+            // 
+            // _btnAddPart
+            // 
+            this._btnAddPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddPart.Enabled = false;
+            this._btnAddPart.Location = new System.Drawing.Point(856, 332);
+            this._btnAddPart.Name = "_btnAddPart";
+            this._btnAddPart.Size = new System.Drawing.Size(146, 34);
+            this._btnAddPart.TabIndex = 124;
+            this._btnAddPart.Text = "Add";
+            this._btnAddPart.UseVisualStyleBackColor = true;
+            this._btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
+            // 
+            // _rbNo
+            // 
+            this._rbNo.AutoSize = true;
+            this._rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._rbNo.Location = new System.Drawing.Point(948, 9);
+            this._rbNo.Name = "_rbNo";
+            this._rbNo.Size = new System.Drawing.Size(53, 28);
+            this._rbNo.TabIndex = 127;
+            this._rbNo.TabStop = true;
+            this._rbNo.Text = "No";
+            this._rbNo.UseVisualStyleBackColor = true;
+            // 
+            // _rbYes
+            // 
+            this._rbYes.AutoSize = true;
+            this._rbYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._rbYes.Location = new System.Drawing.Point(835, 10);
+            this._rbYes.Name = "_rbYes";
+            this._rbYes.Size = new System.Drawing.Size(60, 28);
+            this._rbYes.TabIndex = 126;
+            this._rbYes.TabStop = true;
+            this._rbYes.Text = "Yes";
+            this._rbYes.UseVisualStyleBackColor = true;
+            // 
+            // _btnBack
+            // 
+            this._btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnBack.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnBack.Location = new System.Drawing.Point(11, 558);
+            this._btnBack.Name = "_btnBack";
+            this._btnBack.Size = new System.Drawing.Size(146, 40);
+            this._btnBack.TabIndex = 125;
+            this._btnBack.Text = "Close";
+            this._btnBack.UseVisualStyleBackColor = true;
+            this._btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // _pnlFilters
+            // 
+            this._pnlFilters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlFilters.BackColor = System.Drawing.SystemColors.Info;
+            this._pnlFilters.Controls.Add(this._dtpDatePlaced);
+            this._pnlFilters.Controls.Add(this._lblDate);
+            this._pnlFilters.Controls.Add(this._cboCostCentre);
+            this._pnlFilters.Controls.Add(this._lblCostCentre);
+            this._pnlFilters.Controls.Add(this._txtSupplier);
+            this._pnlFilters.Controls.Add(this._lblSearch);
+            this._pnlFilters.Controls.Add(this._lblSupplier);
+            this._pnlFilters.Controls.Add(this._btnFindPart);
+            this._pnlFilters.Controls.Add(this._txtPartSearch);
+            this._pnlFilters.Controls.Add(this._nudQty);
+            this._pnlFilters.Controls.Add(this._lblQty);
+            this._pnlFilters.Location = new System.Drawing.Point(0, 51);
+            this._pnlFilters.Name = "_pnlFilters";
+            this._pnlFilters.Size = new System.Drawing.Size(1013, 145);
+            this._pnlFilters.TabIndex = 123;
+            // 
+            // _dtpDatePlaced
+            // 
+            this._dtpDatePlaced.Location = new System.Drawing.Point(130, 105);
+            this._dtpDatePlaced.Name = "_dtpDatePlaced";
+            this._dtpDatePlaced.Size = new System.Drawing.Size(702, 21);
+            this._dtpDatePlaced.TabIndex = 25;
+            // 
+            // _lblDate
+            // 
+            this._lblDate.Font = new System.Drawing.Font("Verdana", 9F);
+            this._lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this._lblDate.Location = new System.Drawing.Point(4, 110);
+            this._lblDate.Name = "_lblDate";
+            this._lblDate.Size = new System.Drawing.Size(120, 21);
+            this._lblDate.TabIndex = 24;
+            this._lblDate.Text = "Date Placed";
+            // 
+            // _cboCostCentre
+            // 
+            this._cboCostCentre.FormattingEnabled = true;
+            this._cboCostCentre.Location = new System.Drawing.Point(764, 29);
+            this._cboCostCentre.Name = "_cboCostCentre";
+            this._cboCostCentre.Size = new System.Drawing.Size(237, 21);
+            this._cboCostCentre.TabIndex = 23;
+            // 
+            // _lblCostCentre
+            // 
+            this._lblCostCentre.Font = new System.Drawing.Font("Verdana", 9F);
+            this._lblCostCentre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this._lblCostCentre.Location = new System.Drawing.Point(761, 12);
+            this._lblCostCentre.Name = "_lblCostCentre";
+            this._lblCostCentre.Size = new System.Drawing.Size(89, 21);
+            this._lblCostCentre.TabIndex = 22;
+            this._lblCostCentre.Text = "Cost Centre:";
+            // 
+            // _txtSupplier
+            // 
+            this._txtSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtSupplier.Location = new System.Drawing.Point(130, 21);
+            this._txtSupplier.Name = "_txtSupplier";
+            this._txtSupplier.ReadOnly = true;
+            this._txtSupplier.Size = new System.Drawing.Size(625, 29);
+            this._txtSupplier.TabIndex = 21;
+            // 
+            // _dgvSearch
+            // 
+            this._dgvSearch.AllowUserToAddRows = false;
+            this._dgvSearch.AllowUserToDeleteRows = false;
+            this._dgvSearch.AllowUserToResizeRows = false;
+            this._dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvSearch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this._dgvSearch.Location = new System.Drawing.Point(11, 202);
+            this._dgvSearch.MultiSelect = false;
+            this._dgvSearch.Name = "_dgvSearch";
+            this._dgvSearch.ReadOnly = true;
+            this._dgvSearch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this._dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._dgvSearch.ShowCellErrors = false;
+            this._dgvSearch.ShowCellToolTips = false;
+            this._dgvSearch.ShowEditingIcon = false;
+            this._dgvSearch.ShowRowErrors = false;
+            this._dgvSearch.Size = new System.Drawing.Size(839, 165);
+            this._dgvSearch.TabIndex = 134;
+            this._dgvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this._dgvSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnAddPart_Click);
+            // 
+            // _txtNewOrderNumber
+            // 
+            this._txtNewOrderNumber.BackColor = System.Drawing.Color.White;
+            this._txtNewOrderNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtNewOrderNumber.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtNewOrderNumber.ForeColor = System.Drawing.Color.Red;
+            this._txtNewOrderNumber.Location = new System.Drawing.Point(242, 569);
+            this._txtNewOrderNumber.Name = "_txtNewOrderNumber";
+            this._txtNewOrderNumber.ReadOnly = true;
+            this._txtNewOrderNumber.Size = new System.Drawing.Size(543, 20);
+            this._txtNewOrderNumber.TabIndex = 135;
+            this._txtNewOrderNumber.Text = "Your order number will be displayed here once created.";
+            this._txtNewOrderNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // TabletOrder
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1014, 608);
-            ControlBox = false;
-            Controls.Add(_txtNewOrderNumber);
-            Controls.Add(_dgvSearch);
-            Controls.Add(_btnCreate);
-            Controls.Add(_dgParts);
-            Controls.Add(_lblTopLabel);
-            Controls.Add(_btnAddPart);
-            Controls.Add(_rbNo);
-            Controls.Add(_rbYes);
-            Controls.Add(_btnBack);
-            Controls.Add(_pnlFilters);
-            MaximizeBox = false;
-            MaximumSize = new Size(1030, 647);
-            MinimizeBox = false;
-            MinimumSize = new Size(1030, 647);
-            Name = "TabletOrder";
-            Text = "Part Search";
-            Controls.SetChildIndex(_pnlFilters, 0);
-            Controls.SetChildIndex(_btnBack, 0);
-            Controls.SetChildIndex(_rbYes, 0);
-            Controls.SetChildIndex(_rbNo, 0);
-            Controls.SetChildIndex(_btnAddPart, 0);
-            Controls.SetChildIndex(_lblTopLabel, 0);
-            Controls.SetChildIndex(_dgParts, 0);
-            Controls.SetChildIndex(_btnCreate, 0);
-            Controls.SetChildIndex(_dgvSearch, 0);
-            Controls.SetChildIndex(_txtNewOrderNumber, 0);
-            ((System.ComponentModel.ISupportInitialize)_nudQty).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgParts).EndInit();
-            _pnlFilters.ResumeLayout(false);
-            _pnlFilters.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvSearch).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1014, 608);
+            this.ControlBox = false;
+            this.Controls.Add(this._txtNewOrderNumber);
+            this.Controls.Add(this._dgvSearch);
+            this.Controls.Add(this._btnCreate);
+            this.Controls.Add(this._dgParts);
+            this.Controls.Add(this._lblTopLabel);
+            this.Controls.Add(this._btnAddPart);
+            this.Controls.Add(this._rbNo);
+            this.Controls.Add(this._rbYes);
+            this.Controls.Add(this._btnBack);
+            this.Controls.Add(this._pnlFilters);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1030, 647);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1030, 647);
+            this.Name = "TabletOrder";
+            this.Text = "Part Search";
+            ((System.ComponentModel.ISupportInitialize)(this._nudQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgParts)).EndInit();
+            this._pnlFilters.ResumeLayout(false);
+            this._pnlFilters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvSearch)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         public void LoadMe(object sender, EventArgs e)

@@ -351,320 +351,320 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _dgStock = new DataGrid();
-            _grpStockLevels = new GroupBox();
-            _txtPrice = new TextBox();
-            _lblStockValuation = new Label();
-            _txtLocationFilter = new TextBox();
-            _txtLocationFilter.TextChanged += new EventHandler(txtLocationFilter_TextChanged);
-            _lblLocationFilter = new Label();
-            _grpFilterArea = new GroupBox();
-            _txtMPN = new TextBox();
-            _txtMPN.KeyDown += new KeyEventHandler(txtMPN_TextChanged);
-            _lblPartMpn = new Label();
-            _chkExpectedNotZero = new CheckBox();
-            _chkLocations = new CheckBox();
-            _btnRun = new Button();
-            _btnRun.Click += new EventHandler(btnRun_Click);
-            _cboCategory = new ComboBox();
-            _lblCategory = new Label();
-            _Panel2 = new Panel();
-            _radBothLocations = new RadioButton();
-            _radBothLocations.CheckedChanged += new EventHandler(radBothLocations_CheckedChanged);
-            _radWarehouses = new RadioButton();
-            _radWarehouses.CheckedChanged += new EventHandler(radWarehouses_CheckedChanged);
-            _radVans = new RadioButton();
-            _radVans.CheckedChanged += new EventHandler(radVans_CheckedChanged);
-            _lblArrow = new Label();
-            _cboFilter = new ComboBox();
-            _lblShow = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _lblBottomInfo = new Label();
-            _btnStockReplenishment = new Button();
-            _btnStockReplenishment.Click += new EventHandler(btnStockReplenishment_Click);
-            ((System.ComponentModel.ISupportInitialize)_dgStock).BeginInit();
-            _grpStockLevels.SuspendLayout();
-            _grpFilterArea.SuspendLayout();
-            _Panel2.SuspendLayout();
-            SuspendLayout();
-            //
-            // dgStock
-            //
-            _dgStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgStock.DataMember = "";
-            _dgStock.HeaderForeColor = SystemColors.ControlText;
-            _dgStock.Location = new Point(10, 45);
-            _dgStock.Name = "dgStock";
-            _dgStock.Size = new Size(884, 296);
-            _dgStock.TabIndex = 8;
-            //
-            // grpStockLevels
-            //
-            _grpStockLevels.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpStockLevels.Controls.Add(_txtPrice);
-            _grpStockLevels.Controls.Add(_lblStockValuation);
-            _grpStockLevels.Controls.Add(_txtLocationFilter);
-            _grpStockLevels.Controls.Add(_lblLocationFilter);
-            _grpStockLevels.Controls.Add(_dgStock);
-            _grpStockLevels.Location = new Point(8, 160);
-            _grpStockLevels.Name = "grpStockLevels";
-            _grpStockLevels.Size = new Size(903, 349);
-            _grpStockLevels.TabIndex = 1;
-            _grpStockLevels.TabStop = false;
-            _grpStockLevels.Text = "Current Stock Levels";
-            //
-            // txtPrice
-            //
-            _txtPrice.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtPrice.Location = new Point(764, 13);
-            _txtPrice.Name = "txtPrice";
-            _txtPrice.ReadOnly = true;
-            _txtPrice.Size = new Size(130, 21);
-            _txtPrice.TabIndex = 16;
-            //
-            // lblStockValuation
-            //
-            _lblStockValuation.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblStockValuation.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblStockValuation.Location = new Point(652, 16);
-            _lblStockValuation.Name = "lblStockValuation";
-            _lblStockValuation.Size = new Size(118, 22);
-            _lblStockValuation.TabIndex = 14;
-            _lblStockValuation.Text = "Stock Valuation";
-            //
-            // txtLocationFilter
-            //
-            _txtLocationFilter.Location = new Point(100, 17);
-            _txtLocationFilter.Name = "txtLocationFilter";
-            _txtLocationFilter.Size = new Size(214, 21);
-            _txtLocationFilter.TabIndex = 11;
-            //
-            // lblLocationFilter
-            //
-            _lblLocationFilter.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblLocationFilter.Location = new Point(7, 20);
-            _lblLocationFilter.Name = "lblLocationFilter";
-            _lblLocationFilter.Size = new Size(105, 22);
-            _lblLocationFilter.TabIndex = 9;
-            _lblLocationFilter.Text = "Location filter";
-            //
-            // grpFilterArea
-            //
-            _grpFilterArea.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilterArea.Controls.Add(_txtMPN);
-            _grpFilterArea.Controls.Add(_lblPartMpn);
-            _grpFilterArea.Controls.Add(_chkExpectedNotZero);
-            _grpFilterArea.Controls.Add(_chkLocations);
-            _grpFilterArea.Controls.Add(_btnRun);
-            _grpFilterArea.Controls.Add(_cboCategory);
-            _grpFilterArea.Controls.Add(_lblCategory);
-            _grpFilterArea.Controls.Add(_Panel2);
-            _grpFilterArea.Controls.Add(_lblShow);
-            _grpFilterArea.Location = new Point(8, 48);
-            _grpFilterArea.Name = "grpFilterArea";
-            _grpFilterArea.Size = new Size(903, 106);
-            _grpFilterArea.TabIndex = 2;
-            _grpFilterArea.TabStop = false;
-            _grpFilterArea.Text = "Filters";
-            //
-            // txtMPN
-            //
-            _txtMPN.Location = new Point(72, 79);
-            _txtMPN.Name = "txtMPN";
-            _txtMPN.Size = new Size(244, 21);
-            _txtMPN.TabIndex = 14;
-            //
-            // lblPartMpn
-            //
-            _lblPartMpn.AutoSize = true;
-            _lblPartMpn.Location = new Point(9, 82);
-            _lblPartMpn.Name = "lblPartMpn";
-            _lblPartMpn.Size = new Size(58, 13);
-            _lblPartMpn.TabIndex = 13;
-            _lblPartMpn.Text = "Part MPN";
-            //
-            // chkExpectedNotZero
-            //
-            _chkExpectedNotZero.AutoSize = true;
-            _chkExpectedNotZero.Location = new Point(334, 77);
-            _chkExpectedNotZero.Name = "chkExpectedNotZero";
-            _chkExpectedNotZero.Size = new Size(259, 17);
-            _chkExpectedNotZero.TabIndex = 12;
-            _chkExpectedNotZero.Text = "Only show parts where expected is not 0";
-            _chkExpectedNotZero.UseVisualStyleBackColor = true;
-            //
-            // chkLocations
-            //
-            _chkLocations.AutoSize = true;
-            _chkLocations.Checked = true;
-            _chkLocations.CheckState = CheckState.Checked;
-            _chkLocations.Location = new Point(334, 57);
-            _chkLocations.Name = "chkLocations";
-            _chkLocations.Size = new Size(225, 17);
-            _chkLocations.TabIndex = 11;
-            _chkLocations.Text = "Only show parts with a location set";
-            _chkLocations.UseVisualStyleBackColor = true;
-            //
-            // btnRun
-            //
-            _btnRun.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRun.Location = new Point(840, 78);
-            _btnRun.Name = "btnRun";
-            _btnRun.Size = new Size(56, 25);
-            _btnRun.TabIndex = 10;
-            _btnRun.Text = "Run";
-            //
-            // cboCategory
-            //
-            _cboCategory.Location = new Point(72, 53);
-            _cboCategory.Name = "cboCategory";
-            _cboCategory.Size = new Size(244, 21);
-            _cboCategory.TabIndex = 9;
-            //
-            // lblCategory
-            //
-            _lblCategory.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblCategory.Location = new Point(9, 51);
-            _lblCategory.Name = "lblCategory";
-            _lblCategory.Size = new Size(64, 22);
-            _lblCategory.TabIndex = 8;
-            _lblCategory.Text = "Category";
-            //
-            // Panel2
-            //
-            _Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _Panel2.Controls.Add(_radBothLocations);
-            _Panel2.Controls.Add(_radWarehouses);
-            _Panel2.Controls.Add(_radVans);
-            _Panel2.Controls.Add(_lblArrow);
-            _Panel2.Controls.Add(_cboFilter);
-            _Panel2.Location = new Point(62, 14);
-            _Panel2.Name = "Panel2";
-            _Panel2.Size = new Size(835, 32);
-            _Panel2.TabIndex = 6;
-            //
-            // radBothLocations
-            //
-            _radBothLocations.Checked = true;
-            _radBothLocations.Location = new Point(216, 6);
-            _radBothLocations.Name = "radBothLocations";
-            _radBothLocations.Size = new Size(56, 26);
-            _radBothLocations.TabIndex = 6;
-            _radBothLocations.TabStop = true;
-            _radBothLocations.Text = "Both";
-            //
-            // radWarehouses
-            //
-            _radWarehouses.Location = new Point(8, 6);
-            _radWarehouses.Name = "radWarehouses";
-            _radWarehouses.Size = new Size(96, 26);
-            _radWarehouses.TabIndex = 4;
-            _radWarehouses.Text = "Warehouses";
-            //
-            // radVans
-            //
-            _radVans.Location = new Point(110, 6);
-            _radVans.Name = "radVans";
-            _radVans.Size = new Size(97, 26);
-            _radVans.TabIndex = 5;
-            _radVans.Text = "Stock Profile";
-            //
-            // lblArrow
-            //
-            _lblArrow.Location = new Point(267, 10);
-            _lblArrow.Name = "lblArrow";
-            _lblArrow.Size = new Size(24, 23);
-            _lblArrow.TabIndex = 7;
-            _lblArrow.Text = ">";
-            //
-            // cboFilter
-            //
-            _cboFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboFilter.Location = new Point(293, 8);
-            _cboFilter.Name = "cboFilter";
-            _cboFilter.Size = new Size(534, 21);
-            _cboFilter.TabIndex = 7;
-            //
-            // lblShow
-            //
-            _lblShow.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblShow.Location = new Point(8, 24);
-            _lblShow.Name = "lblShow";
-            _lblShow.Size = new Size(48, 22);
-            _lblShow.TabIndex = 7;
-            _lblShow.Text = "Show";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.Location = new Point(855, 520);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 25);
-            _btnSave.TabIndex = 3;
-            _btnSave.Text = "Save";
-            //
-            // btnExport
-            //
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 520);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 25);
-            _btnExport.TabIndex = 9;
-            _btnExport.Text = "Export";
-            //
-            // lblBottomInfo
-            //
-            _lblBottomInfo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblBottomInfo.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblBottomInfo.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblBottomInfo.Location = new Point(180, 520);
-            _lblBottomInfo.Name = "lblBottomInfo";
-            _lblBottomInfo.Size = new Size(675, 23);
-            _lblBottomInfo.TabIndex = 5;
-            _lblBottomInfo.Text = "Use last columns to enter ACTUAL STOCK AMOUNT AND REASON then click save";
-            _lblBottomInfo.TextAlign = ContentAlignment.MiddleCenter;
-            //
-            // btnStockReplenishment
-            //
-            _btnStockReplenishment.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnStockReplenishment.Location = new Point(72, 520);
-            _btnStockReplenishment.Name = "btnStockReplenishment";
-            _btnStockReplenishment.Size = new Size(184, 25);
-            _btnStockReplenishment.TabIndex = 10;
-            _btnStockReplenishment.Text = "Manage Stock Replenishment";
-            //
+            this._dgStock = new System.Windows.Forms.DataGrid();
+            this._grpStockLevels = new System.Windows.Forms.GroupBox();
+            this._txtPrice = new System.Windows.Forms.TextBox();
+            this._lblStockValuation = new System.Windows.Forms.Label();
+            this._txtLocationFilter = new System.Windows.Forms.TextBox();
+            this._lblLocationFilter = new System.Windows.Forms.Label();
+            this._grpFilterArea = new System.Windows.Forms.GroupBox();
+            this._txtMPN = new System.Windows.Forms.TextBox();
+            this._lblPartMpn = new System.Windows.Forms.Label();
+            this._chkExpectedNotZero = new System.Windows.Forms.CheckBox();
+            this._chkLocations = new System.Windows.Forms.CheckBox();
+            this._btnRun = new System.Windows.Forms.Button();
+            this._cboCategory = new System.Windows.Forms.ComboBox();
+            this._lblCategory = new System.Windows.Forms.Label();
+            this._Panel2 = new System.Windows.Forms.Panel();
+            this._radBothLocations = new System.Windows.Forms.RadioButton();
+            this._radWarehouses = new System.Windows.Forms.RadioButton();
+            this._radVans = new System.Windows.Forms.RadioButton();
+            this._lblArrow = new System.Windows.Forms.Label();
+            this._cboFilter = new System.Windows.Forms.ComboBox();
+            this._lblShow = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._lblBottomInfo = new System.Windows.Forms.Label();
+            this._btnStockReplenishment = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this._dgStock)).BeginInit();
+            this._grpStockLevels.SuspendLayout();
+            this._grpFilterArea.SuspendLayout();
+            this._Panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _dgStock
+            // 
+            this._dgStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgStock.DataMember = "";
+            this._dgStock.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgStock.Location = new System.Drawing.Point(10, 45);
+            this._dgStock.Name = "_dgStock";
+            this._dgStock.Size = new System.Drawing.Size(884, 332);
+            this._dgStock.TabIndex = 8;
+            // 
+            // _grpStockLevels
+            // 
+            this._grpStockLevels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpStockLevels.Controls.Add(this._txtPrice);
+            this._grpStockLevels.Controls.Add(this._lblStockValuation);
+            this._grpStockLevels.Controls.Add(this._txtLocationFilter);
+            this._grpStockLevels.Controls.Add(this._lblLocationFilter);
+            this._grpStockLevels.Controls.Add(this._dgStock);
+            this._grpStockLevels.Location = new System.Drawing.Point(8, 124);
+            this._grpStockLevels.Name = "_grpStockLevels";
+            this._grpStockLevels.Size = new System.Drawing.Size(903, 385);
+            this._grpStockLevels.TabIndex = 1;
+            this._grpStockLevels.TabStop = false;
+            this._grpStockLevels.Text = "Current Stock Levels";
+            // 
+            // _txtPrice
+            // 
+            this._txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPrice.Location = new System.Drawing.Point(764, 13);
+            this._txtPrice.Name = "_txtPrice";
+            this._txtPrice.ReadOnly = true;
+            this._txtPrice.Size = new System.Drawing.Size(130, 21);
+            this._txtPrice.TabIndex = 16;
+            // 
+            // _lblStockValuation
+            // 
+            this._lblStockValuation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblStockValuation.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblStockValuation.Location = new System.Drawing.Point(652, 16);
+            this._lblStockValuation.Name = "_lblStockValuation";
+            this._lblStockValuation.Size = new System.Drawing.Size(118, 22);
+            this._lblStockValuation.TabIndex = 14;
+            this._lblStockValuation.Text = "Stock Valuation";
+            // 
+            // _txtLocationFilter
+            // 
+            this._txtLocationFilter.Location = new System.Drawing.Point(100, 17);
+            this._txtLocationFilter.Name = "_txtLocationFilter";
+            this._txtLocationFilter.Size = new System.Drawing.Size(214, 21);
+            this._txtLocationFilter.TabIndex = 11;
+            this._txtLocationFilter.TextChanged += new System.EventHandler(this.txtLocationFilter_TextChanged);
+            // 
+            // _lblLocationFilter
+            // 
+            this._lblLocationFilter.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblLocationFilter.Location = new System.Drawing.Point(7, 20);
+            this._lblLocationFilter.Name = "_lblLocationFilter";
+            this._lblLocationFilter.Size = new System.Drawing.Size(105, 22);
+            this._lblLocationFilter.TabIndex = 9;
+            this._lblLocationFilter.Text = "Location filter";
+            // 
+            // _grpFilterArea
+            // 
+            this._grpFilterArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilterArea.Controls.Add(this._txtMPN);
+            this._grpFilterArea.Controls.Add(this._lblPartMpn);
+            this._grpFilterArea.Controls.Add(this._chkExpectedNotZero);
+            this._grpFilterArea.Controls.Add(this._chkLocations);
+            this._grpFilterArea.Controls.Add(this._btnRun);
+            this._grpFilterArea.Controls.Add(this._cboCategory);
+            this._grpFilterArea.Controls.Add(this._lblCategory);
+            this._grpFilterArea.Controls.Add(this._Panel2);
+            this._grpFilterArea.Controls.Add(this._lblShow);
+            this._grpFilterArea.Location = new System.Drawing.Point(8, 12);
+            this._grpFilterArea.Name = "_grpFilterArea";
+            this._grpFilterArea.Size = new System.Drawing.Size(903, 106);
+            this._grpFilterArea.TabIndex = 2;
+            this._grpFilterArea.TabStop = false;
+            this._grpFilterArea.Text = "Filters";
+            // 
+            // _txtMPN
+            // 
+            this._txtMPN.Location = new System.Drawing.Point(72, 79);
+            this._txtMPN.Name = "_txtMPN";
+            this._txtMPN.Size = new System.Drawing.Size(244, 21);
+            this._txtMPN.TabIndex = 14;
+            this._txtMPN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMPN_TextChanged);
+            // 
+            // _lblPartMpn
+            // 
+            this._lblPartMpn.AutoSize = true;
+            this._lblPartMpn.Location = new System.Drawing.Point(9, 82);
+            this._lblPartMpn.Name = "_lblPartMpn";
+            this._lblPartMpn.Size = new System.Drawing.Size(58, 13);
+            this._lblPartMpn.TabIndex = 13;
+            this._lblPartMpn.Text = "Part MPN";
+            // 
+            // _chkExpectedNotZero
+            // 
+            this._chkExpectedNotZero.AutoSize = true;
+            this._chkExpectedNotZero.Location = new System.Drawing.Point(334, 77);
+            this._chkExpectedNotZero.Name = "_chkExpectedNotZero";
+            this._chkExpectedNotZero.Size = new System.Drawing.Size(259, 17);
+            this._chkExpectedNotZero.TabIndex = 12;
+            this._chkExpectedNotZero.Text = "Only show parts where expected is not 0";
+            this._chkExpectedNotZero.UseVisualStyleBackColor = true;
+            // 
+            // _chkLocations
+            // 
+            this._chkLocations.AutoSize = true;
+            this._chkLocations.Checked = true;
+            this._chkLocations.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._chkLocations.Location = new System.Drawing.Point(334, 57);
+            this._chkLocations.Name = "_chkLocations";
+            this._chkLocations.Size = new System.Drawing.Size(225, 17);
+            this._chkLocations.TabIndex = 11;
+            this._chkLocations.Text = "Only show parts with a location set";
+            this._chkLocations.UseVisualStyleBackColor = true;
+            // 
+            // _btnRun
+            // 
+            this._btnRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRun.Location = new System.Drawing.Point(840, 78);
+            this._btnRun.Name = "_btnRun";
+            this._btnRun.Size = new System.Drawing.Size(56, 25);
+            this._btnRun.TabIndex = 10;
+            this._btnRun.Text = "Run";
+            this._btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // _cboCategory
+            // 
+            this._cboCategory.Location = new System.Drawing.Point(72, 53);
+            this._cboCategory.Name = "_cboCategory";
+            this._cboCategory.Size = new System.Drawing.Size(244, 21);
+            this._cboCategory.TabIndex = 9;
+            // 
+            // _lblCategory
+            // 
+            this._lblCategory.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblCategory.Location = new System.Drawing.Point(9, 51);
+            this._lblCategory.Name = "_lblCategory";
+            this._lblCategory.Size = new System.Drawing.Size(64, 22);
+            this._lblCategory.TabIndex = 8;
+            this._lblCategory.Text = "Category";
+            // 
+            // _Panel2
+            // 
+            this._Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._Panel2.Controls.Add(this._radBothLocations);
+            this._Panel2.Controls.Add(this._radWarehouses);
+            this._Panel2.Controls.Add(this._radVans);
+            this._Panel2.Controls.Add(this._lblArrow);
+            this._Panel2.Controls.Add(this._cboFilter);
+            this._Panel2.Location = new System.Drawing.Point(62, 14);
+            this._Panel2.Name = "_Panel2";
+            this._Panel2.Size = new System.Drawing.Size(835, 32);
+            this._Panel2.TabIndex = 6;
+            // 
+            // _radBothLocations
+            // 
+            this._radBothLocations.Checked = true;
+            this._radBothLocations.Location = new System.Drawing.Point(216, 6);
+            this._radBothLocations.Name = "_radBothLocations";
+            this._radBothLocations.Size = new System.Drawing.Size(56, 26);
+            this._radBothLocations.TabIndex = 6;
+            this._radBothLocations.TabStop = true;
+            this._radBothLocations.Text = "Both";
+            this._radBothLocations.CheckedChanged += new System.EventHandler(this.radBothLocations_CheckedChanged);
+            // 
+            // _radWarehouses
+            // 
+            this._radWarehouses.Location = new System.Drawing.Point(8, 6);
+            this._radWarehouses.Name = "_radWarehouses";
+            this._radWarehouses.Size = new System.Drawing.Size(96, 26);
+            this._radWarehouses.TabIndex = 4;
+            this._radWarehouses.Text = "Warehouses";
+            this._radWarehouses.CheckedChanged += new System.EventHandler(this.radWarehouses_CheckedChanged);
+            // 
+            // _radVans
+            // 
+            this._radVans.Location = new System.Drawing.Point(110, 6);
+            this._radVans.Name = "_radVans";
+            this._radVans.Size = new System.Drawing.Size(97, 26);
+            this._radVans.TabIndex = 5;
+            this._radVans.Text = "Stock Profile";
+            this._radVans.CheckedChanged += new System.EventHandler(this.radVans_CheckedChanged);
+            // 
+            // _lblArrow
+            // 
+            this._lblArrow.Location = new System.Drawing.Point(267, 10);
+            this._lblArrow.Name = "_lblArrow";
+            this._lblArrow.Size = new System.Drawing.Size(24, 23);
+            this._lblArrow.TabIndex = 7;
+            this._lblArrow.Text = ">";
+            // 
+            // _cboFilter
+            // 
+            this._cboFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboFilter.Location = new System.Drawing.Point(293, 8);
+            this._cboFilter.Name = "_cboFilter";
+            this._cboFilter.Size = new System.Drawing.Size(534, 21);
+            this._cboFilter.TabIndex = 7;
+            // 
+            // _lblShow
+            // 
+            this._lblShow.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblShow.Location = new System.Drawing.Point(8, 24);
+            this._lblShow.Name = "_lblShow";
+            this._lblShow.Size = new System.Drawing.Size(48, 22);
+            this._lblShow.TabIndex = 7;
+            this._lblShow.Text = "Show";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Location = new System.Drawing.Point(855, 520);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 25);
+            this._btnSave.TabIndex = 3;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 520);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 25);
+            this._btnExport.TabIndex = 9;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _lblBottomInfo
+            // 
+            this._lblBottomInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblBottomInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this._lblBottomInfo.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblBottomInfo.Location = new System.Drawing.Point(180, 520);
+            this._lblBottomInfo.Name = "_lblBottomInfo";
+            this._lblBottomInfo.Size = new System.Drawing.Size(675, 23);
+            this._lblBottomInfo.TabIndex = 5;
+            this._lblBottomInfo.Text = "Use last columns to enter ACTUAL STOCK AMOUNT AND REASON then click save";
+            this._lblBottomInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _btnStockReplenishment
+            // 
+            this._btnStockReplenishment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnStockReplenishment.Location = new System.Drawing.Point(72, 520);
+            this._btnStockReplenishment.Name = "_btnStockReplenishment";
+            this._btnStockReplenishment.Size = new System.Drawing.Size(184, 25);
+            this._btnStockReplenishment.TabIndex = 10;
+            this._btnStockReplenishment.Text = "Manage Stock Replenishment";
+            this._btnStockReplenishment.Click += new System.EventHandler(this.btnStockReplenishment_Click);
+            // 
             // FRMStockTake
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(919, 550);
-            Controls.Add(_btnStockReplenishment);
-            Controls.Add(_lblBottomInfo);
-            Controls.Add(_btnExport);
-            Controls.Add(_btnSave);
-            Controls.Add(_grpFilterArea);
-            Controls.Add(_grpStockLevels);
-            MinimumSize = new Size(860, 584);
-            Name = "FRMStockTake";
-            Text = "Stock Take";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpStockLevels, 0);
-            Controls.SetChildIndex(_grpFilterArea, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_lblBottomInfo, 0);
-            Controls.SetChildIndex(_btnStockReplenishment, 0);
-            ((System.ComponentModel.ISupportInitialize)_dgStock).EndInit();
-            _grpStockLevels.ResumeLayout(false);
-            _grpStockLevels.PerformLayout();
-            _grpFilterArea.ResumeLayout(false);
-            _grpFilterArea.PerformLayout();
-            _Panel2.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(919, 550);
+            this.Controls.Add(this._btnStockReplenishment);
+            this.Controls.Add(this._lblBottomInfo);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._grpFilterArea);
+            this.Controls.Add(this._grpStockLevels);
+            this.MinimumSize = new System.Drawing.Size(860, 584);
+            this.Name = "FRMStockTake";
+            this.Text = "Stock Take";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this._dgStock)).EndInit();
+            this._grpStockLevels.ResumeLayout(false);
+            this._grpStockLevels.PerformLayout();
+            this._grpFilterArea.ResumeLayout(false);
+            this._grpFilterArea.PerformLayout();
+            this._Panel2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

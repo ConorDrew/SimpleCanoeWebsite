@@ -210,94 +210,98 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpSystemScheduleOfRate = new GroupBox();
-            _btnDeselectAll = new Button();
-            _btnDeselectAll.Click += new EventHandler(btnDeselectAll_Click);
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _btnAdd = new Button();
-            _btnAdd.Click += new EventHandler(btnAdd_Click);
-            _dgRates = new DataGrid();
-            _dgRates.Click += new EventHandler(dgRates_Click);
-            _grpSystemScheduleOfRate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgRates).BeginInit();
-            SuspendLayout();
-            //
-            // grpSystemScheduleOfRate
-            //
-            _grpSystemScheduleOfRate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpSystemScheduleOfRate.Controls.Add(_btnDeselectAll);
-            _grpSystemScheduleOfRate.Controls.Add(_btnSelectAll);
-            _grpSystemScheduleOfRate.Controls.Add(_btnCancel);
-            _grpSystemScheduleOfRate.Controls.Add(_btnAdd);
-            _grpSystemScheduleOfRate.Controls.Add(_dgRates);
-            _grpSystemScheduleOfRate.Location = new Point(8, 32);
-            _grpSystemScheduleOfRate.Name = "grpSystemScheduleOfRate";
-            _grpSystemScheduleOfRate.Size = new Size(632, 432);
-            _grpSystemScheduleOfRate.TabIndex = 2;
-            _grpSystemScheduleOfRate.TabStop = false;
-            _grpSystemScheduleOfRate.Text = "Main Details";
-            //
-            // btnDeselectAll
-            //
-            _btnDeselectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnDeselectAll.Location = new Point(112, 360);
-            _btnDeselectAll.Name = "btnDeselectAll";
-            _btnDeselectAll.Size = new Size(96, 23);
-            _btnDeselectAll.TabIndex = 36;
-            _btnDeselectAll.Text = "Deselect All";
-            //
-            // btnSelectAll
-            //
-            _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSelectAll.Location = new Point(8, 360);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(96, 23);
-            _btnSelectAll.TabIndex = 35;
-            _btnSelectAll.Text = "Select All";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(8, 400);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.TabIndex = 34;
-            _btnCancel.Text = "Cancel";
-            //
-            // btnAdd
-            //
-            _btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAdd.Location = new Point(544, 400);
-            _btnAdd.Name = "btnAdd";
-            _btnAdd.TabIndex = 33;
-            _btnAdd.Text = "Add";
-            //
-            // dgRates
-            //
-            _dgRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgRates.DataMember = "";
-            _dgRates.HeaderForeColor = SystemColors.ControlText;
-            _dgRates.Location = new Point(8, 19);
-            _dgRates.Name = "dgRates";
-            _dgRates.Size = new Size(618, 333);
-            _dgRates.TabIndex = 32;
-            //
+            this._grpSystemScheduleOfRate = new System.Windows.Forms.GroupBox();
+            this._btnDeselectAll = new System.Windows.Forms.Button();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this._dgRates = new System.Windows.Forms.DataGrid();
+            this._grpSystemScheduleOfRate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgRates)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpSystemScheduleOfRate
+            // 
+            this._grpSystemScheduleOfRate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpSystemScheduleOfRate.Controls.Add(this._btnDeselectAll);
+            this._grpSystemScheduleOfRate.Controls.Add(this._btnSelectAll);
+            this._grpSystemScheduleOfRate.Controls.Add(this._btnCancel);
+            this._grpSystemScheduleOfRate.Controls.Add(this._btnAdd);
+            this._grpSystemScheduleOfRate.Controls.Add(this._dgRates);
+            this._grpSystemScheduleOfRate.Location = new System.Drawing.Point(8, 12);
+            this._grpSystemScheduleOfRate.Name = "_grpSystemScheduleOfRate";
+            this._grpSystemScheduleOfRate.Size = new System.Drawing.Size(632, 452);
+            this._grpSystemScheduleOfRate.TabIndex = 2;
+            this._grpSystemScheduleOfRate.TabStop = false;
+            this._grpSystemScheduleOfRate.Text = "Main Details";
+            // 
+            // _btnDeselectAll
+            // 
+            this._btnDeselectAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnDeselectAll.Location = new System.Drawing.Point(112, 380);
+            this._btnDeselectAll.Name = "_btnDeselectAll";
+            this._btnDeselectAll.Size = new System.Drawing.Size(96, 23);
+            this._btnDeselectAll.TabIndex = 36;
+            this._btnDeselectAll.Text = "Deselect All";
+            this._btnDeselectAll.Click += new System.EventHandler(this.btnDeselectAll_Click);
+            // 
+            // _btnSelectAll
+            // 
+            this._btnSelectAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSelectAll.Location = new System.Drawing.Point(8, 380);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(96, 23);
+            this._btnSelectAll.TabIndex = 35;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(8, 420);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 34;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _btnAdd
+            // 
+            this._btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAdd.Location = new System.Drawing.Point(544, 420);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(75, 23);
+            this._btnAdd.TabIndex = 33;
+            this._btnAdd.Text = "Add";
+            this._btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // _dgRates
+            // 
+            this._dgRates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgRates.DataMember = "";
+            this._dgRates.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgRates.Location = new System.Drawing.Point(8, 19);
+            this._dgRates.Name = "_dgRates";
+            this._dgRates.Size = new System.Drawing.Size(618, 353);
+            this._dgRates.TabIndex = 32;
+            this._dgRates.Click += new System.EventHandler(this.dgRates_Click);
+            // 
             // FRMSystemScheduleOfRateList
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(648, 470);
-            Controls.Add(_grpSystemScheduleOfRate);
-            MinimumSize = new Size(656, 504);
-            Name = "FRMSystemScheduleOfRateList";
-            Text = "System Schedule Of Rates List";
-            Controls.SetChildIndex(_grpSystemScheduleOfRate, 0);
-            _grpSystemScheduleOfRate.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgRates).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(648, 470);
+            this.Controls.Add(this._grpSystemScheduleOfRate);
+            this.MinimumSize = new System.Drawing.Size(656, 504);
+            this.Name = "FRMSystemScheduleOfRateList";
+            this.Text = "System Schedule Of Rates List";
+            this._grpSystemScheduleOfRate.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgRates)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

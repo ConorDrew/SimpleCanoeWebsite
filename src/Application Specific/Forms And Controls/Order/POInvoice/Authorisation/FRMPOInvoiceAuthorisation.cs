@@ -243,161 +243,164 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpExcelFile = new GroupBox();
-            _btnExportResults = new Button();
-            _btnExportResults.Click += new EventHandler(btnExportResults_Click);
-            _tcData = new TabControl();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pbStatus = new ProgressBar();
-            _lblProgress = new Label();
-            _lblMessages = new Label();
-            _cboValidateType = new ComboBox();
-            _cboValidateType.SelectionChangeCommitted += new EventHandler(SelectionChangeCommitted);
-            _grpCatImport = new GroupBox();
-            _Label1 = new Label();
-            _cboDepartment = new ComboBox();
-            _cboDepartment.SelectionChangeCommitted += new EventHandler(SelectionChangeCommitted);
-            _grpExcelFile.SuspendLayout();
-            _grpCatImport.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpExcelFile
-            //
-            _grpExcelFile.Controls.Add(_btnExportResults);
-            _grpExcelFile.Location = new Point(8, 40);
-            _grpExcelFile.Name = "grpExcelFile";
-            _grpExcelFile.Size = new Size(231, 57);
-            _grpExcelFile.TabIndex = 3;
-            _grpExcelFile.TabStop = false;
-            _grpExcelFile.Text = "Initial Import";
-            //
-            // btnExportResults
-            //
-            _btnExportResults.Location = new Point(6, 19);
-            _btnExportResults.Name = "btnExportResults";
-            _btnExportResults.Size = new Size(106, 23);
-            _btnExportResults.TabIndex = 5;
-            _btnExportResults.Text = "Export Results";
-            _btnExportResults.UseVisualStyleBackColor = true;
-            //
-            // tcData
-            //
-            _tcData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _tcData.Location = new Point(8, 103);
-            _tcData.Name = "tcData";
-            _tcData.SelectedIndex = 0;
-            _tcData.Size = new Size(1053, 483);
-            _tcData.TabIndex = 8;
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnClose.Location = new Point(1005, 621);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 23);
-            _btnClose.TabIndex = 9;
-            _btnClose.Text = "Close";
-            _btnClose.UseVisualStyleBackColor = true;
-            //
-            // pbStatus
-            //
-            _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _pbStatus.Location = new Point(8, 621);
-            _pbStatus.Name = "pbStatus";
-            _pbStatus.Size = new Size(941, 23);
-            _pbStatus.Step = 1;
-            _pbStatus.TabIndex = 10;
-            //
-            // lblProgress
-            //
-            _lblProgress.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblProgress.Location = new Point(957, 624);
-            _lblProgress.Name = "lblProgress";
-            _lblProgress.Size = new Size(40, 16);
-            _lblProgress.TabIndex = 11;
-            _lblProgress.Text = "0%";
-            _lblProgress.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // lblMessages
-            //
-            _lblMessages.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _lblMessages.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblMessages.ForeColor = Color.Red;
-            _lblMessages.Location = new Point(5, 594);
-            _lblMessages.Name = "lblMessages";
-            _lblMessages.Size = new Size(1057, 19);
-            _lblMessages.TabIndex = 12;
-            _lblMessages.TextAlign = ContentAlignment.MiddleLeft;
-            _lblMessages.Visible = false;
-            //
-            // cboValidateType
-            //
-            _cboValidateType.FormattingEnabled = true;
-            _cboValidateType.Location = new Point(6, 21);
-            _cboValidateType.Name = "cboValidateType";
-            _cboValidateType.Size = new Size(365, 21);
-            _cboValidateType.TabIndex = 1;
-            //
-            // grpCatImport
-            //
-            _grpCatImport.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpCatImport.Controls.Add(_Label1);
-            _grpCatImport.Controls.Add(_cboDepartment);
-            _grpCatImport.Controls.Add(_cboValidateType);
-            _grpCatImport.Location = new Point(245, 40);
-            _grpCatImport.Name = "grpCatImport";
-            _grpCatImport.Size = new Size(816, 57);
-            _grpCatImport.TabIndex = 6;
-            _grpCatImport.TabStop = false;
-            _grpCatImport.Text = "Category Processing";
-            //
-            // Label1
-            //
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(377, 24);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(85, 13);
-            _Label1.TabIndex = 3;
-            _Label1.Text = "Cost Centre :";
-            _Label1.TextAlign = ContentAlignment.MiddleCenter;
-            //
-            // cboDepartment
-            //
-            _cboDepartment.FormattingEnabled = true;
-            _cboDepartment.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            _cboDepartment.Location = new Point(467, 21);
-            _cboDepartment.Name = "cboDepartment";
-            _cboDepartment.Size = new Size(199, 21);
-            _cboDepartment.TabIndex = 2;
-            //
+            this._grpExcelFile = new System.Windows.Forms.GroupBox();
+            this._btnExportResults = new System.Windows.Forms.Button();
+            this._tcData = new System.Windows.Forms.TabControl();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pbStatus = new System.Windows.Forms.ProgressBar();
+            this._lblProgress = new System.Windows.Forms.Label();
+            this._lblMessages = new System.Windows.Forms.Label();
+            this._cboValidateType = new System.Windows.Forms.ComboBox();
+            this._grpCatImport = new System.Windows.Forms.GroupBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._cboDepartment = new System.Windows.Forms.ComboBox();
+            this._grpExcelFile.SuspendLayout();
+            this._grpCatImport.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpExcelFile
+            // 
+            this._grpExcelFile.Controls.Add(this._btnExportResults);
+            this._grpExcelFile.Location = new System.Drawing.Point(8, 11);
+            this._grpExcelFile.Name = "_grpExcelFile";
+            this._grpExcelFile.Size = new System.Drawing.Size(259, 57);
+            this._grpExcelFile.TabIndex = 3;
+            this._grpExcelFile.TabStop = false;
+            this._grpExcelFile.Text = "Initial Import";
+            // 
+            // _btnExportResults
+            // 
+            this._btnExportResults.Location = new System.Drawing.Point(6, 19);
+            this._btnExportResults.Name = "_btnExportResults";
+            this._btnExportResults.Size = new System.Drawing.Size(106, 23);
+            this._btnExportResults.TabIndex = 5;
+            this._btnExportResults.Text = "Export Results";
+            this._btnExportResults.UseVisualStyleBackColor = true;
+            this._btnExportResults.Click += new System.EventHandler(this.btnExportResults_Click);
+            // 
+            // _tcData
+            // 
+            this._tcData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._tcData.Location = new System.Drawing.Point(8, 74);
+            this._tcData.Name = "_tcData";
+            this._tcData.SelectedIndex = 0;
+            this._tcData.Size = new System.Drawing.Size(1081, 517);
+            this._tcData.TabIndex = 8;
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnClose.Location = new System.Drawing.Point(1005, 621);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 23);
+            this._btnClose.TabIndex = 9;
+            this._btnClose.Text = "Close";
+            this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pbStatus
+            // 
+            this._pbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbStatus.Location = new System.Drawing.Point(8, 621);
+            this._pbStatus.Name = "_pbStatus";
+            this._pbStatus.Size = new System.Drawing.Size(941, 23);
+            this._pbStatus.Step = 1;
+            this._pbStatus.TabIndex = 10;
+            // 
+            // _lblProgress
+            // 
+            this._lblProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblProgress.Location = new System.Drawing.Point(957, 624);
+            this._lblProgress.Name = "_lblProgress";
+            this._lblProgress.Size = new System.Drawing.Size(40, 16);
+            this._lblProgress.TabIndex = 11;
+            this._lblProgress.Text = "0%";
+            this._lblProgress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _lblMessages
+            // 
+            this._lblMessages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblMessages.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblMessages.ForeColor = System.Drawing.Color.Red;
+            this._lblMessages.Location = new System.Drawing.Point(5, 594);
+            this._lblMessages.Name = "_lblMessages";
+            this._lblMessages.Size = new System.Drawing.Size(1057, 19);
+            this._lblMessages.TabIndex = 12;
+            this._lblMessages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblMessages.Visible = false;
+            // 
+            // _cboValidateType
+            // 
+            this._cboValidateType.FormattingEnabled = true;
+            this._cboValidateType.Location = new System.Drawing.Point(6, 21);
+            this._cboValidateType.Name = "_cboValidateType";
+            this._cboValidateType.Size = new System.Drawing.Size(365, 21);
+            this._cboValidateType.TabIndex = 1;
+            this._cboValidateType.SelectionChangeCommitted += new System.EventHandler(this.SelectionChangeCommitted);
+            // 
+            // _grpCatImport
+            // 
+            this._grpCatImport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpCatImport.Controls.Add(this._Label1);
+            this._grpCatImport.Controls.Add(this._cboDepartment);
+            this._grpCatImport.Controls.Add(this._cboValidateType);
+            this._grpCatImport.Location = new System.Drawing.Point(245, 11);
+            this._grpCatImport.Name = "_grpCatImport";
+            this._grpCatImport.Size = new System.Drawing.Size(844, 57);
+            this._grpCatImport.TabIndex = 6;
+            this._grpCatImport.TabStop = false;
+            this._grpCatImport.Text = "Category Processing";
+            // 
+            // _Label1
+            // 
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(377, 24);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(85, 13);
+            this._Label1.TabIndex = 3;
+            this._Label1.Text = "Cost Centre :";
+            this._Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _cboDepartment
+            // 
+            this._cboDepartment.FormattingEnabled = true;
+            this._cboDepartment.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this._cboDepartment.Location = new System.Drawing.Point(467, 21);
+            this._cboDepartment.Name = "_cboDepartment";
+            this._cboDepartment.Size = new System.Drawing.Size(199, 21);
+            this._cboDepartment.TabIndex = 2;
+            this._cboDepartment.SelectionChangeCommitted += new System.EventHandler(this.SelectionChangeCommitted);
+            // 
             // FRMPOInvoiceAuthorisation
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1101, 654);
-            Controls.Add(_grpCatImport);
-            Controls.Add(_lblMessages);
-            Controls.Add(_lblProgress);
-            Controls.Add(_pbStatus);
-            Controls.Add(_btnClose);
-            Controls.Add(_tcData);
-            Controls.Add(_grpExcelFile);
-            MinimumSize = new Size(920, 688);
-            Name = "FRMPOInvoiceAuthorisation";
-            Text = "PO Invoice Authorisation";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpExcelFile, 0);
-            Controls.SetChildIndex(_tcData, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_pbStatus, 0);
-            Controls.SetChildIndex(_lblProgress, 0);
-            Controls.SetChildIndex(_lblMessages, 0);
-            Controls.SetChildIndex(_grpCatImport, 0);
-            _grpExcelFile.ResumeLayout(false);
-            _grpCatImport.ResumeLayout(false);
-            _grpCatImport.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1101, 654);
+            this.Controls.Add(this._grpCatImport);
+            this.Controls.Add(this._lblMessages);
+            this.Controls.Add(this._lblProgress);
+            this.Controls.Add(this._pbStatus);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._tcData);
+            this.Controls.Add(this._grpExcelFile);
+            this.MinimumSize = new System.Drawing.Size(920, 688);
+            this.Name = "FRMPOInvoiceAuthorisation";
+            this.Text = "PO Invoice Authorisation";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpExcelFile.ResumeLayout(false);
+            this._grpCatImport.ResumeLayout(false);
+            this._grpCatImport.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public IUserControl LoadedControl

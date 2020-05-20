@@ -817,443 +817,443 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJobs = new GroupBox();
-            _dgOrders = new DataGrid();
-            _dgOrders.DoubleClick += new EventHandler(dgOrders_DoubleClick);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpFilter = new GroupBox();
-            _chkOutstanding = new CheckBox();
-            _chkOutstanding.CheckedChanged += new EventHandler(chkOutstanding_CheckedChanged);
-            _Label12 = new Label();
-            _cboDepartment = new ComboBox();
-            _btnFilterResults = new Button();
-            _btnFilterResults.Click += new EventHandler(btnFilterResults_Click);
-            _chkEngineerNotReceived = new CheckBox();
-            _chkEngineerNotReceived.CheckedChanged += new EventHandler(chkEngineerNotReceived_CheckedChanged);
-            _txtContains = new TextBox();
-            _txtContains.TextChanged += new EventHandler(txtContains_TextChanged);
-            _Label7 = new Label();
-            _txtConsolidationRef = new TextBox();
-            _txtConsolidationRef.TextChanged += new EventHandler(txtConsolidationRef_TextChanged);
-            _Label6 = new Label();
-            _Label5 = new Label();
-            _cboSupplierInvoiceSent = new ComboBox();
-            //_cboSupplierInvoiceSent.SelectedIndexChanged += new EventHandler(cboSupplierInvoiceSent_SelectedIndexChanged);
-            _dtpDeliveryDeadlineTo = new DateTimePicker();
-            _dtpDeliveryDeadlineTo.ValueChanged += new EventHandler(dtpDeliveryDeadlineTo_ValueChanged);
-            _dtpDeliveryDeadlineFrom = new DateTimePicker();
-            _dtpDeliveryDeadlineFrom.ValueChanged += new EventHandler(dtpDeliveryDeadlineFrom_ValueChanged);
-            _Label2 = new Label();
-            _Label3 = new Label();
-            _cboSupplier = new ComboBox();
-            //_cboSupplier.SelectedIndexChanged += new EventHandler(cboSupplier_SelectedIndexChanged);
-            _Label1 = new Label();
-            _btnFindRecord = new Button();
-            _btnFindRecord.Click += new EventHandler(btnFindRecord_Click);
-            _txtSearch = new TextBox();
-            _Label4 = new Label();
-            _dtpTo = new DateTimePicker();
-            _dtpTo.ValueChanged += new EventHandler(dtpTo_ValueChanged);
-            _dtpFrom = new DateTimePicker();
-            _dtpFrom.ValueChanged += new EventHandler(dtpFrom_ValueChanged);
-            _txtOrderRef = new TextBox();
-            _txtOrderRef.KeyDown += new KeyEventHandler(txtOrderRef_TextChanged);
-            _Label9 = new Label();
-            _Label8 = new Label();
-            _chkDateCreated = new CheckBox();
-            _chkDateCreated.CheckedChanged += new EventHandler(chkDateCreated_CheckedChanged);
-            _lblSearch = new Label();
-            _Label10 = new Label();
-            _cboType = new ComboBox();
-            //_cboType.SelectedIndexChanged += new EventHandler(cboType_SelectedIndexChanged);
-            _Label11 = new Label();
-            _cboStatus = new ComboBox();
-            //_cboStatus.SelectedIndexChanged += new EventHandler(cboStatus_SelectedIndexChanged);
-            _chkDeliveryDeadline = new CheckBox();
-            _chkDeliveryDeadline.CheckedChanged += new EventHandler(chkDeliveryDeadline_CheckedChanged);
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _grpJobs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgOrders).BeginInit();
-            _grpFilter.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpJobs
-            //
-            _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpJobs.Controls.Add(_dgOrders);
-            _grpJobs.Location = new Point(8, 321);
-            _grpJobs.Name = "grpJobs";
-            _grpJobs.Size = new Size(1360, 260);
-            _grpJobs.TabIndex = 1;
-            _grpJobs.TabStop = false;
-            _grpJobs.Text = "Results (awaiting search) - Double Click To View / Edit";
-            //
-            // dgOrders
-            //
-            _dgOrders.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgOrders.DataMember = "";
-            _dgOrders.HeaderForeColor = SystemColors.ControlText;
-            _dgOrders.Location = new Point(8, 30);
-            _dgOrders.Name = "dgOrders";
-            _dgOrders.Size = new Size(1344, 222);
-            _dgOrders.TabIndex = 11;
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 589);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 2;
-            _btnExport.Text = "Export";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_chkOutstanding);
-            _grpFilter.Controls.Add(_Label12);
-            _grpFilter.Controls.Add(_cboDepartment);
-            _grpFilter.Controls.Add(_btnFilterResults);
-            _grpFilter.Controls.Add(_chkEngineerNotReceived);
-            _grpFilter.Controls.Add(_txtContains);
-            _grpFilter.Controls.Add(_Label7);
-            _grpFilter.Controls.Add(_txtConsolidationRef);
-            _grpFilter.Controls.Add(_Label6);
-            _grpFilter.Controls.Add(_Label5);
-            _grpFilter.Controls.Add(_cboSupplierInvoiceSent);
-            _grpFilter.Controls.Add(_dtpDeliveryDeadlineTo);
-            _grpFilter.Controls.Add(_dtpDeliveryDeadlineFrom);
-            _grpFilter.Controls.Add(_Label2);
-            _grpFilter.Controls.Add(_Label3);
-            _grpFilter.Controls.Add(_cboSupplier);
-            _grpFilter.Controls.Add(_Label1);
-            _grpFilter.Controls.Add(_btnFindRecord);
-            _grpFilter.Controls.Add(_txtSearch);
-            _grpFilter.Controls.Add(_Label4);
-            _grpFilter.Controls.Add(_dtpTo);
-            _grpFilter.Controls.Add(_dtpFrom);
-            _grpFilter.Controls.Add(_txtOrderRef);
-            _grpFilter.Controls.Add(_Label9);
-            _grpFilter.Controls.Add(_Label8);
-            _grpFilter.Controls.Add(_chkDateCreated);
-            _grpFilter.Controls.Add(_lblSearch);
-            _grpFilter.Controls.Add(_Label10);
-            _grpFilter.Controls.Add(_cboType);
-            _grpFilter.Controls.Add(_Label11);
-            _grpFilter.Controls.Add(_cboStatus);
-            _grpFilter.Controls.Add(_chkDeliveryDeadline);
-            _grpFilter.Location = new Point(8, 40);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(1360, 275);
-            _grpFilter.TabIndex = 0;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // chkOutstanding
-            //
-            _chkOutstanding.Cursor = Cursors.Hand;
-            _chkOutstanding.Location = new Point(420, 122);
-            _chkOutstanding.Name = "chkOutstanding";
-            _chkOutstanding.Size = new Size(221, 24);
-            _chkOutstanding.TabIndex = 34;
-            _chkOutstanding.Text = "PO not reconciled (outstanding)";
-            _chkOutstanding.UseVisualStyleBackColor = true;
-            //
-            // Label12
-            //
-            _Label12.Location = new Point(13, 249);
-            _Label12.Name = "Label12";
-            _Label12.Size = new Size(117, 20);
-            _Label12.TabIndex = 33;
-            _Label12.Text = "Cost Centre";
-            //
-            // cboDepartment
-            //
-            _cboDepartment.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboDepartment.Location = new Point(136, 247);
-            _cboDepartment.Name = "cboDepartment";
-            _cboDepartment.Size = new Size(142, 21);
-            _cboDepartment.TabIndex = 32;
-            //
-            // btnFilterResults
-            //
-            _btnFilterResults.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFilterResults.Location = new Point(1243, 244);
-            _btnFilterResults.Name = "btnFilterResults";
-            _btnFilterResults.Size = new Size(109, 23);
-            _btnFilterResults.TabIndex = 31;
-            _btnFilterResults.Text = "Filter Results";
-            _btnFilterResults.UseVisualStyleBackColor = true;
-            //
-            // chkEngineerNotReceived
-            //
-            _chkEngineerNotReceived.Cursor = Cursors.Hand;
-            _chkEngineerNotReceived.Location = new Point(289, 123);
-            _chkEngineerNotReceived.Name = "chkEngineerNotReceived";
-            _chkEngineerNotReceived.Size = new Size(141, 24);
-            _chkEngineerNotReceived.TabIndex = 7;
-            _chkEngineerNotReceived.Text = "Eng Not Received";
-            _chkEngineerNotReceived.UseVisualStyleBackColor = true;
-            //
-            // txtContains
-            //
-            _txtContains.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtContains.Location = new Point(624, 92);
-            _txtContains.MaxLength = 100;
-            _txtContains.Name = "txtContains";
-            _txtContains.Size = new Size(727, 21);
-            _txtContains.TabIndex = 5;
-            //
-            // Label7
-            //
-            _Label7.Location = new Point(523, 92);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(118, 23);
-            _Label7.TabIndex = 30;
-            _Label7.Text = "Order Contains";
-            //
-            // txtConsolidationRef
-            //
-            _txtConsolidationRef.Location = new Point(395, 92);
-            _txtConsolidationRef.Name = "txtConsolidationRef";
-            _txtConsolidationRef.Size = new Size(122, 21);
-            _txtConsolidationRef.TabIndex = 4;
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(284, 95);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(124, 20);
-            _Label6.TabIndex = 28;
-            _Label6.Text = "Consolidation Ref";
-            //
-            // Label5
-            //
-            _Label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label5.Location = new Point(974, 123);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(266, 23);
-            _Label5.TabIndex = 27;
-            _Label5.Text = "Supplier Invoice Sent to Accounts Package";
-            //
-            // cboSupplierInvoiceSent
-            //
-            _cboSupplierInvoiceSent.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _cboSupplierInvoiceSent.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboSupplierInvoiceSent.Location = new Point(1242, 121);
-            _cboSupplierInvoiceSent.Name = "cboSupplierInvoiceSent";
-            _cboSupplierInvoiceSent.Size = new Size(110, 21);
-            _cboSupplierInvoiceSent.TabIndex = 8;
-            //
-            // dtpDeliveryDeadlineTo
-            //
-            _dtpDeliveryDeadlineTo.Location = new Point(596, 216);
-            _dtpDeliveryDeadlineTo.Name = "dtpDeliveryDeadlineTo";
-            _dtpDeliveryDeadlineTo.Size = new Size(224, 21);
-            _dtpDeliveryDeadlineTo.TabIndex = 15;
-            //
-            // dtpDeliveryDeadlineFrom
-            //
-            _dtpDeliveryDeadlineFrom.Location = new Point(596, 184);
-            _dtpDeliveryDeadlineFrom.Name = "dtpDeliveryDeadlineFrom";
-            _dtpDeliveryDeadlineFrom.Size = new Size(224, 21);
-            _dtpDeliveryDeadlineFrom.TabIndex = 14;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(548, 216);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(48, 16);
-            _Label2.TabIndex = 24;
-            _Label2.Text = "To";
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(548, 184);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(48, 16);
-            _Label3.TabIndex = 21;
-            _Label3.Text = "From";
-            //
-            // cboSupplier
-            //
-            _cboSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboSupplier.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboSupplier.Location = new Point(136, 152);
-            _cboSupplier.Name = "cboSupplier";
-            _cboSupplier.Size = new Size(1216, 21);
-            _cboSupplier.TabIndex = 9;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(16, 152);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(100, 23);
-            _Label1.TabIndex = 18;
-            _Label1.Text = "Supplier";
-            //
-            // btnFindRecord
-            //
-            _btnFindRecord.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindRecord.BackColor = Color.White;
-            _btnFindRecord.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindRecord.Location = new Point(1320, 58);
-            _btnFindRecord.Name = "btnFindRecord";
-            _btnFindRecord.Size = new Size(32, 23);
-            _btnFindRecord.TabIndex = 2;
-            _btnFindRecord.Text = "...";
-            _btnFindRecord.UseVisualStyleBackColor = false;
-            //
-            // txtSearch
-            //
-            _txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSearch.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtSearch.Location = new Point(136, 60);
-            _txtSearch.Name = "txtSearch";
-            _txtSearch.ReadOnly = true;
-            _txtSearch.Size = new Size(1176, 21);
-            _txtSearch.TabIndex = 1;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(16, 89);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(72, 20);
-            _Label4.TabIndex = 15;
-            _Label4.Text = "Order Ref";
-            //
-            // dtpTo
-            //
-            _dtpTo.Location = new Point(183, 216);
-            _dtpTo.Name = "dtpTo";
-            _dtpTo.Size = new Size(224, 21);
-            _dtpTo.TabIndex = 12;
-            //
-            // dtpFrom
-            //
-            _dtpFrom.Location = new Point(183, 184);
-            _dtpFrom.Name = "dtpFrom";
-            _dtpFrom.Size = new Size(224, 21);
-            _dtpFrom.TabIndex = 11;
-            //
-            // txtOrderRef
-            //
-            _txtOrderRef.Location = new Point(136, 92);
-            _txtOrderRef.Name = "txtOrderRef";
-            _txtOrderRef.Size = new Size(142, 21);
-            _txtOrderRef.TabIndex = 3;
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(135, 216);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(48, 16);
-            _Label9.TabIndex = 10;
-            _Label9.Text = "To";
-            //
-            // Label8
-            //
-            _Label8.Location = new Point(135, 184);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(48, 16);
-            _Label8.TabIndex = 9;
-            _Label8.Text = "From";
-            //
-            // chkDateCreated
-            //
-            _chkDateCreated.Cursor = Cursors.Hand;
-            _chkDateCreated.Location = new Point(16, 184);
-            _chkDateCreated.Name = "chkDateCreated";
-            _chkDateCreated.Size = new Size(104, 24);
-            _chkDateCreated.TabIndex = 10;
-            _chkDateCreated.Text = "Date Placed";
-            _chkDateCreated.UseVisualStyleBackColor = true;
-            //
-            // lblSearch
-            //
-            _lblSearch.Location = new Point(16, 56);
-            _lblSearch.Name = "lblSearch";
-            _lblSearch.Size = new Size(112, 20);
-            _lblSearch.TabIndex = 2;
-            //
-            // Label10
-            //
-            _Label10.Location = new Point(16, 32);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(48, 20);
-            _Label10.TabIndex = 4;
-            _Label10.Text = "Type";
-            //
-            // cboType
-            //
-            _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(136, 29);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(1216, 21);
-            _cboType.TabIndex = 0;
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(16, 121);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(48, 20);
-            _Label11.TabIndex = 5;
-            _Label11.Text = "Status";
-            //
-            // cboStatus
-            //
-            _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStatus.Location = new Point(136, 124);
-            _cboStatus.Name = "cboStatus";
-            _cboStatus.Size = new Size(142, 21);
-            _cboStatus.TabIndex = 6;
-            //
-            // chkDeliveryDeadline
-            //
-            _chkDeliveryDeadline.Cursor = Cursors.Hand;
-            _chkDeliveryDeadline.Location = new Point(420, 184);
-            _chkDeliveryDeadline.Name = "chkDeliveryDeadline";
-            _chkDeliveryDeadline.Size = new Size(132, 24);
-            _chkDeliveryDeadline.TabIndex = 13;
-            _chkDeliveryDeadline.Text = "Delivery Deadline";
-            _chkDeliveryDeadline.UseVisualStyleBackColor = true;
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(72, 589);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 3;
-            _btnReset.Text = "Reset";
-            //
+            this._grpJobs = new System.Windows.Forms.GroupBox();
+            this._dgOrders = new System.Windows.Forms.DataGrid();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._chkOutstanding = new System.Windows.Forms.CheckBox();
+            this._Label12 = new System.Windows.Forms.Label();
+            this._cboDepartment = new System.Windows.Forms.ComboBox();
+            this._btnFilterResults = new System.Windows.Forms.Button();
+            this._chkEngineerNotReceived = new System.Windows.Forms.CheckBox();
+            this._txtContains = new System.Windows.Forms.TextBox();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._txtConsolidationRef = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._cboSupplierInvoiceSent = new System.Windows.Forms.ComboBox();
+            this._dtpDeliveryDeadlineTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpDeliveryDeadlineFrom = new System.Windows.Forms.DateTimePicker();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._cboSupplier = new System.Windows.Forms.ComboBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnFindRecord = new System.Windows.Forms.Button();
+            this._txtSearch = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._dtpTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this._txtOrderRef = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._chkDateCreated = new System.Windows.Forms.CheckBox();
+            this._lblSearch = new System.Windows.Forms.Label();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._cboStatus = new System.Windows.Forms.ComboBox();
+            this._chkDeliveryDeadline = new System.Windows.Forms.CheckBox();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._grpJobs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgOrders)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpJobs
+            // 
+            this._grpJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobs.Controls.Add(this._dgOrders);
+            this._grpJobs.Location = new System.Drawing.Point(8, 294);
+            this._grpJobs.Name = "_grpJobs";
+            this._grpJobs.Size = new System.Drawing.Size(1360, 287);
+            this._grpJobs.TabIndex = 1;
+            this._grpJobs.TabStop = false;
+            this._grpJobs.Text = "Results (awaiting search) - Double Click To View / Edit";
+            // 
+            // _dgOrders
+            // 
+            this._dgOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgOrders.DataMember = "";
+            this._dgOrders.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgOrders.Location = new System.Drawing.Point(8, 30);
+            this._dgOrders.Name = "_dgOrders";
+            this._dgOrders.Size = new System.Drawing.Size(1344, 249);
+            this._dgOrders.TabIndex = 11;
+            this._dgOrders.DoubleClick += new System.EventHandler(this.dgOrders_DoubleClick);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 589);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 2;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._chkOutstanding);
+            this._grpFilter.Controls.Add(this._Label12);
+            this._grpFilter.Controls.Add(this._cboDepartment);
+            this._grpFilter.Controls.Add(this._btnFilterResults);
+            this._grpFilter.Controls.Add(this._chkEngineerNotReceived);
+            this._grpFilter.Controls.Add(this._txtContains);
+            this._grpFilter.Controls.Add(this._Label7);
+            this._grpFilter.Controls.Add(this._txtConsolidationRef);
+            this._grpFilter.Controls.Add(this._Label6);
+            this._grpFilter.Controls.Add(this._Label5);
+            this._grpFilter.Controls.Add(this._cboSupplierInvoiceSent);
+            this._grpFilter.Controls.Add(this._dtpDeliveryDeadlineTo);
+            this._grpFilter.Controls.Add(this._dtpDeliveryDeadlineFrom);
+            this._grpFilter.Controls.Add(this._Label2);
+            this._grpFilter.Controls.Add(this._Label3);
+            this._grpFilter.Controls.Add(this._cboSupplier);
+            this._grpFilter.Controls.Add(this._Label1);
+            this._grpFilter.Controls.Add(this._btnFindRecord);
+            this._grpFilter.Controls.Add(this._txtSearch);
+            this._grpFilter.Controls.Add(this._Label4);
+            this._grpFilter.Controls.Add(this._dtpTo);
+            this._grpFilter.Controls.Add(this._dtpFrom);
+            this._grpFilter.Controls.Add(this._txtOrderRef);
+            this._grpFilter.Controls.Add(this._Label9);
+            this._grpFilter.Controls.Add(this._Label8);
+            this._grpFilter.Controls.Add(this._chkDateCreated);
+            this._grpFilter.Controls.Add(this._lblSearch);
+            this._grpFilter.Controls.Add(this._Label10);
+            this._grpFilter.Controls.Add(this._cboType);
+            this._grpFilter.Controls.Add(this._Label11);
+            this._grpFilter.Controls.Add(this._cboStatus);
+            this._grpFilter.Controls.Add(this._chkDeliveryDeadline);
+            this._grpFilter.Location = new System.Drawing.Point(8, 13);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(1360, 275);
+            this._grpFilter.TabIndex = 0;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _chkOutstanding
+            // 
+            this._chkOutstanding.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkOutstanding.Location = new System.Drawing.Point(420, 122);
+            this._chkOutstanding.Name = "_chkOutstanding";
+            this._chkOutstanding.Size = new System.Drawing.Size(221, 24);
+            this._chkOutstanding.TabIndex = 34;
+            this._chkOutstanding.Text = "PO not reconciled (outstanding)";
+            this._chkOutstanding.UseVisualStyleBackColor = true;
+            this._chkOutstanding.CheckedChanged += new System.EventHandler(this.chkOutstanding_CheckedChanged);
+            // 
+            // _Label12
+            // 
+            this._Label12.Location = new System.Drawing.Point(13, 249);
+            this._Label12.Name = "_Label12";
+            this._Label12.Size = new System.Drawing.Size(117, 20);
+            this._Label12.TabIndex = 33;
+            this._Label12.Text = "Cost Centre";
+            // 
+            // _cboDepartment
+            // 
+            this._cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboDepartment.Location = new System.Drawing.Point(136, 247);
+            this._cboDepartment.Name = "_cboDepartment";
+            this._cboDepartment.Size = new System.Drawing.Size(142, 21);
+            this._cboDepartment.TabIndex = 32;
+            // 
+            // _btnFilterResults
+            // 
+            this._btnFilterResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFilterResults.Location = new System.Drawing.Point(1243, 244);
+            this._btnFilterResults.Name = "_btnFilterResults";
+            this._btnFilterResults.Size = new System.Drawing.Size(109, 23);
+            this._btnFilterResults.TabIndex = 31;
+            this._btnFilterResults.Text = "Filter Results";
+            this._btnFilterResults.UseVisualStyleBackColor = true;
+            this._btnFilterResults.Click += new System.EventHandler(this.btnFilterResults_Click);
+            // 
+            // _chkEngineerNotReceived
+            // 
+            this._chkEngineerNotReceived.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkEngineerNotReceived.Location = new System.Drawing.Point(289, 123);
+            this._chkEngineerNotReceived.Name = "_chkEngineerNotReceived";
+            this._chkEngineerNotReceived.Size = new System.Drawing.Size(141, 24);
+            this._chkEngineerNotReceived.TabIndex = 7;
+            this._chkEngineerNotReceived.Text = "Eng Not Received";
+            this._chkEngineerNotReceived.UseVisualStyleBackColor = true;
+            this._chkEngineerNotReceived.CheckedChanged += new System.EventHandler(this.chkEngineerNotReceived_CheckedChanged);
+            // 
+            // _txtContains
+            // 
+            this._txtContains.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtContains.Location = new System.Drawing.Point(624, 92);
+            this._txtContains.MaxLength = 100;
+            this._txtContains.Name = "_txtContains";
+            this._txtContains.Size = new System.Drawing.Size(727, 21);
+            this._txtContains.TabIndex = 5;
+            this._txtContains.TextChanged += new System.EventHandler(this.txtContains_TextChanged);
+            // 
+            // _Label7
+            // 
+            this._Label7.Location = new System.Drawing.Point(523, 92);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(118, 23);
+            this._Label7.TabIndex = 30;
+            this._Label7.Text = "Order Contains";
+            // 
+            // _txtConsolidationRef
+            // 
+            this._txtConsolidationRef.Location = new System.Drawing.Point(395, 92);
+            this._txtConsolidationRef.Name = "_txtConsolidationRef";
+            this._txtConsolidationRef.Size = new System.Drawing.Size(122, 21);
+            this._txtConsolidationRef.TabIndex = 4;
+            this._txtConsolidationRef.TextChanged += new System.EventHandler(this.txtConsolidationRef_TextChanged);
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(284, 95);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(124, 20);
+            this._Label6.TabIndex = 28;
+            this._Label6.Text = "Consolidation Ref";
+            // 
+            // _Label5
+            // 
+            this._Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label5.Location = new System.Drawing.Point(974, 123);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(266, 23);
+            this._Label5.TabIndex = 27;
+            this._Label5.Text = "Supplier Invoice Sent to Accounts Package";
+            // 
+            // _cboSupplierInvoiceSent
+            // 
+            this._cboSupplierInvoiceSent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboSupplierInvoiceSent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboSupplierInvoiceSent.Location = new System.Drawing.Point(1242, 121);
+            this._cboSupplierInvoiceSent.Name = "_cboSupplierInvoiceSent";
+            this._cboSupplierInvoiceSent.Size = new System.Drawing.Size(110, 21);
+            this._cboSupplierInvoiceSent.TabIndex = 8;
+            // 
+            // _dtpDeliveryDeadlineTo
+            // 
+            this._dtpDeliveryDeadlineTo.Location = new System.Drawing.Point(596, 216);
+            this._dtpDeliveryDeadlineTo.Name = "_dtpDeliveryDeadlineTo";
+            this._dtpDeliveryDeadlineTo.Size = new System.Drawing.Size(224, 21);
+            this._dtpDeliveryDeadlineTo.TabIndex = 15;
+            this._dtpDeliveryDeadlineTo.ValueChanged += new System.EventHandler(this.dtpDeliveryDeadlineTo_ValueChanged);
+            // 
+            // _dtpDeliveryDeadlineFrom
+            // 
+            this._dtpDeliveryDeadlineFrom.Location = new System.Drawing.Point(596, 184);
+            this._dtpDeliveryDeadlineFrom.Name = "_dtpDeliveryDeadlineFrom";
+            this._dtpDeliveryDeadlineFrom.Size = new System.Drawing.Size(224, 21);
+            this._dtpDeliveryDeadlineFrom.TabIndex = 14;
+            this._dtpDeliveryDeadlineFrom.ValueChanged += new System.EventHandler(this.dtpDeliveryDeadlineFrom_ValueChanged);
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(548, 216);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(48, 16);
+            this._Label2.TabIndex = 24;
+            this._Label2.Text = "To";
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(548, 184);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(48, 16);
+            this._Label3.TabIndex = 21;
+            this._Label3.Text = "From";
+            // 
+            // _cboSupplier
+            // 
+            this._cboSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboSupplier.Location = new System.Drawing.Point(136, 152);
+            this._cboSupplier.Name = "_cboSupplier";
+            this._cboSupplier.Size = new System.Drawing.Size(1216, 21);
+            this._cboSupplier.TabIndex = 9;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(16, 152);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(100, 23);
+            this._Label1.TabIndex = 18;
+            this._Label1.Text = "Supplier";
+            // 
+            // _btnFindRecord
+            // 
+            this._btnFindRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindRecord.BackColor = System.Drawing.Color.White;
+            this._btnFindRecord.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindRecord.Location = new System.Drawing.Point(1320, 58);
+            this._btnFindRecord.Name = "_btnFindRecord";
+            this._btnFindRecord.Size = new System.Drawing.Size(32, 23);
+            this._btnFindRecord.TabIndex = 2;
+            this._btnFindRecord.Text = "...";
+            this._btnFindRecord.UseVisualStyleBackColor = false;
+            this._btnFindRecord.Click += new System.EventHandler(this.btnFindRecord_Click);
+            // 
+            // _txtSearch
+            // 
+            this._txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSearch.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtSearch.Location = new System.Drawing.Point(136, 60);
+            this._txtSearch.Name = "_txtSearch";
+            this._txtSearch.ReadOnly = true;
+            this._txtSearch.Size = new System.Drawing.Size(1176, 21);
+            this._txtSearch.TabIndex = 1;
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(16, 89);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(72, 20);
+            this._Label4.TabIndex = 15;
+            this._Label4.Text = "Order Ref";
+            // 
+            // _dtpTo
+            // 
+            this._dtpTo.Location = new System.Drawing.Point(183, 216);
+            this._dtpTo.Name = "_dtpTo";
+            this._dtpTo.Size = new System.Drawing.Size(224, 21);
+            this._dtpTo.TabIndex = 12;
+            this._dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
+            // 
+            // _dtpFrom
+            // 
+            this._dtpFrom.Location = new System.Drawing.Point(183, 184);
+            this._dtpFrom.Name = "_dtpFrom";
+            this._dtpFrom.Size = new System.Drawing.Size(224, 21);
+            this._dtpFrom.TabIndex = 11;
+            this._dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
+            // 
+            // _txtOrderRef
+            // 
+            this._txtOrderRef.Location = new System.Drawing.Point(136, 92);
+            this._txtOrderRef.Name = "_txtOrderRef";
+            this._txtOrderRef.Size = new System.Drawing.Size(142, 21);
+            this._txtOrderRef.TabIndex = 3;
+            this._txtOrderRef.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrderRef_TextChanged);
+            // 
+            // _Label9
+            // 
+            this._Label9.Location = new System.Drawing.Point(135, 216);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(48, 16);
+            this._Label9.TabIndex = 10;
+            this._Label9.Text = "To";
+            // 
+            // _Label8
+            // 
+            this._Label8.Location = new System.Drawing.Point(135, 184);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(48, 16);
+            this._Label8.TabIndex = 9;
+            this._Label8.Text = "From";
+            // 
+            // _chkDateCreated
+            // 
+            this._chkDateCreated.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkDateCreated.Location = new System.Drawing.Point(16, 184);
+            this._chkDateCreated.Name = "_chkDateCreated";
+            this._chkDateCreated.Size = new System.Drawing.Size(104, 24);
+            this._chkDateCreated.TabIndex = 10;
+            this._chkDateCreated.Text = "Date Placed";
+            this._chkDateCreated.UseVisualStyleBackColor = true;
+            this._chkDateCreated.CheckedChanged += new System.EventHandler(this.chkDateCreated_CheckedChanged);
+            // 
+            // _lblSearch
+            // 
+            this._lblSearch.Location = new System.Drawing.Point(16, 56);
+            this._lblSearch.Name = "_lblSearch";
+            this._lblSearch.Size = new System.Drawing.Size(112, 20);
+            this._lblSearch.TabIndex = 2;
+            // 
+            // _Label10
+            // 
+            this._Label10.Location = new System.Drawing.Point(16, 32);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(48, 20);
+            this._Label10.TabIndex = 4;
+            this._Label10.Text = "Type";
+            // 
+            // _cboType
+            // 
+            this._cboType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(136, 29);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(1216, 21);
+            this._cboType.TabIndex = 0;
+            // 
+            // _Label11
+            // 
+            this._Label11.Location = new System.Drawing.Point(16, 121);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(48, 20);
+            this._Label11.TabIndex = 5;
+            this._Label11.Text = "Status";
+            // 
+            // _cboStatus
+            // 
+            this._cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStatus.Location = new System.Drawing.Point(136, 124);
+            this._cboStatus.Name = "_cboStatus";
+            this._cboStatus.Size = new System.Drawing.Size(142, 21);
+            this._cboStatus.TabIndex = 6;
+            // 
+            // _chkDeliveryDeadline
+            // 
+            this._chkDeliveryDeadline.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkDeliveryDeadline.Location = new System.Drawing.Point(420, 184);
+            this._chkDeliveryDeadline.Name = "_chkDeliveryDeadline";
+            this._chkDeliveryDeadline.Size = new System.Drawing.Size(132, 24);
+            this._chkDeliveryDeadline.TabIndex = 13;
+            this._chkDeliveryDeadline.Text = "Delivery Deadline";
+            this._chkDeliveryDeadline.UseVisualStyleBackColor = true;
+            this._chkDeliveryDeadline.CheckedChanged += new System.EventHandler(this.chkDeliveryDeadline_CheckedChanged);
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(72, 589);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 3;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // FRMOrderManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1376, 619);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpJobs);
-            Controls.Add(_btnReset);
-            MinimumSize = new Size(852, 592);
-            Name = "FRMOrderManager";
-            Text = "Order Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpJobs, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            _grpJobs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgOrders).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1376, 619);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpJobs);
+            this.Controls.Add(this._btnReset);
+            this.MinimumSize = new System.Drawing.Size(852, 592);
+            this.Name = "FRMOrderManager";
+            this.Text = "Order Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpJobs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgOrders)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public class PartsNotReceivedColourColumn : DataGridLabelColumn

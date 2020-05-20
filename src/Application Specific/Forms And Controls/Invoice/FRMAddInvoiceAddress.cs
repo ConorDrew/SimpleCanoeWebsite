@@ -171,78 +171,82 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _gpbSelectInvoiceAddress = new GroupBox();
-            _dgInvoiceAddresses = new DataGrid();
-            _lblInvoiceAddress = new Label();
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _gpbSelectInvoiceAddress.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).BeginInit();
-            SuspendLayout();
-            //
-            // gpbSelectInvoiceAddress
-            //
-            _gpbSelectInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gpbSelectInvoiceAddress.Controls.Add(_btnCancel);
-            _gpbSelectInvoiceAddress.Controls.Add(_dgInvoiceAddresses);
-            _gpbSelectInvoiceAddress.Controls.Add(_lblInvoiceAddress);
-            _gpbSelectInvoiceAddress.Controls.Add(_btnOK);
-            _gpbSelectInvoiceAddress.Location = new Point(8, 40);
-            _gpbSelectInvoiceAddress.Name = "gpbSelectInvoiceAddress";
-            _gpbSelectInvoiceAddress.Size = new Size(512, 328);
-            _gpbSelectInvoiceAddress.TabIndex = 3;
-            _gpbSelectInvoiceAddress.TabStop = false;
-            _gpbSelectInvoiceAddress.Text = "Select Invoice Address";
-            //
-            // dgInvoiceAddresses
-            //
-            _dgInvoiceAddresses.DataMember = "";
-            _dgInvoiceAddresses.HeaderForeColor = SystemColors.ControlText;
-            _dgInvoiceAddresses.Location = new Point(16, 48);
-            _dgInvoiceAddresses.Name = "dgInvoiceAddresses";
-            _dgInvoiceAddresses.Size = new Size(488, 240);
-            _dgInvoiceAddresses.TabIndex = 7;
-            //
-            // lblInvoiceAddress
-            //
-            _lblInvoiceAddress.Location = new Point(16, 24);
-            _lblInvoiceAddress.Name = "lblInvoiceAddress";
-            _lblInvoiceAddress.TabIndex = 8;
-            _lblInvoiceAddress.Text = "Invoice Address";
-            //
-            // btnOK
-            //
-            _btnOK.UseVisualStyleBackColor = true;
-            _btnOK.Location = new Point(424, 296);
-            _btnOK.Name = "btnOK";
-            _btnOK.TabIndex = 3;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.UseVisualStyleBackColor = true;
-            _btnCancel.Location = new Point(16, 296);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.TabIndex = 9;
-            _btnCancel.Text = "Cancel";
-            //
+            this._gpbSelectInvoiceAddress = new System.Windows.Forms.GroupBox();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._dgInvoiceAddresses = new System.Windows.Forms.DataGrid();
+            this._lblInvoiceAddress = new System.Windows.Forms.Label();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._gpbSelectInvoiceAddress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddresses)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _gpbSelectInvoiceAddress
+            // 
+            this._gpbSelectInvoiceAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbSelectInvoiceAddress.Controls.Add(this._btnCancel);
+            this._gpbSelectInvoiceAddress.Controls.Add(this._dgInvoiceAddresses);
+            this._gpbSelectInvoiceAddress.Controls.Add(this._lblInvoiceAddress);
+            this._gpbSelectInvoiceAddress.Controls.Add(this._btnOK);
+            this._gpbSelectInvoiceAddress.Location = new System.Drawing.Point(8, 12);
+            this._gpbSelectInvoiceAddress.Name = "_gpbSelectInvoiceAddress";
+            this._gpbSelectInvoiceAddress.Size = new System.Drawing.Size(512, 356);
+            this._gpbSelectInvoiceAddress.TabIndex = 3;
+            this._gpbSelectInvoiceAddress.TabStop = false;
+            this._gpbSelectInvoiceAddress.Text = "Select Invoice Address";
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Location = new System.Drawing.Point(16, 296);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 9;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _dgInvoiceAddresses
+            // 
+            this._dgInvoiceAddresses.DataMember = "";
+            this._dgInvoiceAddresses.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgInvoiceAddresses.Location = new System.Drawing.Point(16, 48);
+            this._dgInvoiceAddresses.Name = "_dgInvoiceAddresses";
+            this._dgInvoiceAddresses.Size = new System.Drawing.Size(488, 240);
+            this._dgInvoiceAddresses.TabIndex = 7;
+            // 
+            // _lblInvoiceAddress
+            // 
+            this._lblInvoiceAddress.Location = new System.Drawing.Point(16, 24);
+            this._lblInvoiceAddress.Name = "_lblInvoiceAddress";
+            this._lblInvoiceAddress.Size = new System.Drawing.Size(100, 23);
+            this._lblInvoiceAddress.TabIndex = 8;
+            this._lblInvoiceAddress.Text = "Invoice Address";
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Location = new System.Drawing.Point(424, 296);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 3;
+            this._btnOK.Text = "OK";
+            this._btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // FRMAddInvoiceAddress
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(528, 382);
-            ControlBox = false;
-            Controls.Add(_gpbSelectInvoiceAddress);
-            MaximumSize = new Size(536, 416);
-            MinimumSize = new Size(536, 416);
-            Name = "FRMAddInvoiceAddress";
-            Text = "Select Invoice Address";
-            Controls.SetChildIndex(_gpbSelectInvoiceAddress, 0);
-            _gpbSelectInvoiceAddress.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(520, 377);
+            this.ControlBox = false;
+            this.Controls.Add(this._gpbSelectInvoiceAddress);
+            this.MaximumSize = new System.Drawing.Size(536, 416);
+            this.MinimumSize = new System.Drawing.Size(536, 416);
+            this.Name = "FRMAddInvoiceAddress";
+            this.Text = "Select Invoice Address";
+            this._gpbSelectInvoiceAddress.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddresses)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

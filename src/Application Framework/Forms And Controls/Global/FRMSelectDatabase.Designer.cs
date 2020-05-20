@@ -48,54 +48,55 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _cboDatabase = new ComboBox();
-            _btnOk = new Button();
-            _btnOk.Click += new EventHandler(btnOk_Click);
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._btnOk = new System.Windows.Forms.Button();
+            this._cboDatabase = new System.Windows.Forms.ComboBox();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_btnOk);
-            _GroupBox1.Controls.Add(_cboDatabase);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(356, 95);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Please Select The Database.";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._btnOk);
+            this._GroupBox1.Controls.Add(this._cboDatabase);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(356, 121);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Please Select The Database.";
             // 
-            // cboDatabase
+            // _btnOk
             // 
-            _cboDatabase.FormattingEnabled = true;
-            _cboDatabase.Location = new Point(6, 29);
-            _cboDatabase.Name = "cboDatabase";
-            _cboDatabase.Size = new Size(340, 21);
-            _cboDatabase.TabIndex = 0;
+            this._btnOk.Location = new System.Drawing.Point(271, 66);
+            this._btnOk.Name = "_btnOk";
+            this._btnOk.Size = new System.Drawing.Size(75, 23);
+            this._btnOk.TabIndex = 15;
+            this._btnOk.Text = "OK";
+            this._btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // btnOk
+            // _cboDatabase
             // 
-            _btnOk.Location = new Point(271, 66);
-            _btnOk.Name = "btnOk";
-            _btnOk.Size = new Size(75, 23);
-            _btnOk.TabIndex = 15;
-            _btnOk.Text = "OK";
+            this._cboDatabase.FormattingEnabled = true;
+            this._cboDatabase.Location = new System.Drawing.Point(6, 29);
+            this._cboDatabase.Name = "_cboDatabase";
+            this._cboDatabase.Size = new System.Drawing.Size(340, 21);
+            this._cboDatabase.TabIndex = 0;
             // 
             // FRMSelectDatabase
             // 
-            ClientSize = new Size(380, 145);
-            ControlBox = false;
-            Controls.Add(_GroupBox1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            Name = "FRMSelectDatabase";
-            ShowInTaskbar = true;
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            Load += new EventHandler(FRMSelectDatabase_Load);
-            ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(380, 145);
+            this.ControlBox = false;
+            this.Controls.Add(this._GroupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "FRMSelectDatabase";
+            this.ShowInTaskbar = true;
+            this.Load += new System.EventHandler(this.FRMSelectDatabase_Load);
+            this._GroupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _GroupBox1;

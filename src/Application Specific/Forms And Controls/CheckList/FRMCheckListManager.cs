@@ -708,353 +708,361 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpSections = new GroupBox();
-            _txtSection = new TextBox();
-            _btnUpdateSection = new Button();
-            _btnUpdateSection.Click += new EventHandler(btnUpdateSection_Click);
-            _btnRemoveSection = new Button();
-            _btnRemoveSection.Click += new EventHandler(btnRemoveSection_Click);
-            _dgSection = new DataGrid();
-            _dgSection.Click += new EventHandler(dgSection_Click);
-            _grpAreas = new GroupBox();
-            _btnMoveDownArea = new Button();
-            _btnMoveDownArea.Click += new EventHandler(btnMoveDownArea_Click);
-            _btnMoveUpArea = new Button();
-            _btnMoveUpArea.Click += new EventHandler(btnMoveUpArea_Click);
-            _txtArea = new TextBox();
-            _btnUpdateArea = new Button();
-            _btnUpdateArea.Click += new EventHandler(btnUpdateArea_Click);
-            _btnRemoveArea = new Button();
-            _btnRemoveArea.Click += new EventHandler(btnRemoveArea_Click);
-            _dgArea = new DataGrid();
-            _dgArea.Click += new EventHandler(dgArea_Click);
-            _grpTasks = new GroupBox();
-            _btnMoveDownTask = new Button();
-            _btnMoveDownTask.Click += new EventHandler(btnMoveDownTask_Click);
-            _btnMoveUpTask = new Button();
-            _btnMoveUpTask.Click += new EventHandler(btnMoveUpTask_Click);
-            _txtTasks = new TextBox();
-            _btnUpdateTask = new Button();
-            _btnUpdateTask.Click += new EventHandler(btnUpdateTask_Click);
-            _btnRemoveTask = new Button();
-            _btnRemoveTask.Click += new EventHandler(btnRemoveTask_Click);
-            _dgTask = new DataGrid();
-            _dgTask.Click += new EventHandler(dgTask_Click);
-            _grpSubTask = new GroupBox();
-            _btnMoveDownSubTask = new Button();
-            _btnMoveDownSubTask.Click += new EventHandler(btnMoveDownSubTask_Click);
-            _btnMoveUpSubTask = new Button();
-            _btnMoveUpSubTask.Click += new EventHandler(btnMoveUpSubTask_Click);
-            _txtSubTasks = new TextBox();
-            _btnUpdateSubTask = new Button();
-            _btnUpdateSubTask.Click += new EventHandler(btnUpdateSubTask_Click);
-            _btnRemoveSubTask = new Button();
-            _btnRemoveSubTask.Click += new EventHandler(btnRemoveSubTask_Click);
-            _dgSubTask = new DataGrid();
-            _dgSubTask.Click += new EventHandler(dgSubTask_Click);
-            _grpSections.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSection).BeginInit();
-            _grpAreas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgArea).BeginInit();
-            _grpTasks.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgTask).BeginInit();
-            _grpSubTask.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSubTask).BeginInit();
-            SuspendLayout();
-            //
-            // grpSections
-            //
-            _grpSections.Controls.Add(_txtSection);
-            _grpSections.Controls.Add(_btnUpdateSection);
-            _grpSections.Controls.Add(_btnRemoveSection);
-            _grpSections.Controls.Add(_dgSection);
-            _grpSections.Location = new Point(16, 40);
-            _grpSections.Name = "grpSections";
-            _grpSections.Size = new Size(400, 272);
-            _grpSections.TabIndex = 2;
-            _grpSections.TabStop = false;
-            _grpSections.Text = "Sections";
-            //
-            // txtSection
-            //
-            _txtSection.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSection.Location = new Point(8, 240);
-            _txtSection.Name = "txtSection";
-            _txtSection.Size = new Size(240, 21);
-            _txtSection.TabIndex = 2;
-            _txtSection.Text = "";
-            //
-            // btnUpdateSection
-            //
-            _btnUpdateSection.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnUpdateSection.Location = new Point(256, 240);
-            _btnUpdateSection.Name = "btnUpdateSection";
-            _btnUpdateSection.Size = new Size(64, 24);
-            _btnUpdateSection.TabIndex = 3;
-            _btnUpdateSection.Text = "Add";
-            //
-            // btnRemoveSection
-            //
-            _btnRemoveSection.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRemoveSection.Location = new Point(328, 240);
-            _btnRemoveSection.Name = "btnRemoveSection";
-            _btnRemoveSection.Size = new Size(64, 24);
-            _btnRemoveSection.TabIndex = 4;
-            _btnRemoveSection.Text = "Remove";
-            //
-            // dgSection
-            //
-            _dgSection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgSection.DataMember = "";
-            _dgSection.HeaderForeColor = SystemColors.ControlText;
-            _dgSection.Location = new Point(8, 20);
-            _dgSection.Name = "dgSection";
-            _dgSection.Size = new Size(384, 212);
-            _dgSection.TabIndex = 1;
-            //
-            // grpAreas
-            //
-            _grpAreas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpAreas.Controls.Add(_btnMoveDownArea);
-            _grpAreas.Controls.Add(_btnMoveUpArea);
-            _grpAreas.Controls.Add(_txtArea);
-            _grpAreas.Controls.Add(_btnUpdateArea);
-            _grpAreas.Controls.Add(_btnRemoveArea);
-            _grpAreas.Controls.Add(_dgArea);
-            _grpAreas.Location = new Point(16, 320);
-            _grpAreas.Name = "grpAreas";
-            _grpAreas.Size = new Size(400, 224);
-            _grpAreas.TabIndex = 3;
-            _grpAreas.TabStop = false;
-            _grpAreas.Text = "Areas For Section ";
-            //
-            // btnMoveDownArea
-            //
-            _btnMoveDownArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMoveDownArea.Location = new Point(368, 128);
-            _btnMoveDownArea.Name = "btnMoveDownArea";
-            _btnMoveDownArea.Size = new Size(24, 23);
-            _btnMoveDownArea.TabIndex = 9;
-            _btnMoveDownArea.Text = @"/\";
-            //
-            // btnMoveUpArea
-            //
-            _btnMoveUpArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMoveUpArea.Location = new Point(368, 160);
-            _btnMoveUpArea.Name = "btnMoveUpArea";
-            _btnMoveUpArea.Size = new Size(24, 23);
-            _btnMoveUpArea.TabIndex = 10;
-            _btnMoveUpArea.Text = @"\/";
-            //
-            // txtArea
-            //
-            _txtArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _txtArea.Location = new Point(8, 192);
-            _txtArea.Name = "txtArea";
-            _txtArea.Size = new Size(240, 21);
-            _txtArea.TabIndex = 6;
-            _txtArea.Text = "";
-            //
-            // btnUpdateArea
-            //
-            _btnUpdateArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnUpdateArea.Location = new Point(256, 192);
-            _btnUpdateArea.Name = "btnUpdateArea";
-            _btnUpdateArea.Size = new Size(64, 24);
-            _btnUpdateArea.TabIndex = 7;
-            _btnUpdateArea.Text = "Add";
-            //
-            // btnRemoveArea
-            //
-            _btnRemoveArea.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRemoveArea.Location = new Point(328, 193);
-            _btnRemoveArea.Name = "btnRemoveArea";
-            _btnRemoveArea.Size = new Size(64, 24);
-            _btnRemoveArea.TabIndex = 8;
-            _btnRemoveArea.Text = "Remove";
-            //
-            // dgArea
-            //
-            _dgArea.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgArea.DataMember = "";
-            _dgArea.HeaderForeColor = SystemColors.ControlText;
-            _dgArea.Location = new Point(8, 26);
-            _dgArea.Name = "dgArea";
-            _dgArea.Size = new Size(352, 158);
-            _dgArea.TabIndex = 5;
-            //
-            // grpTasks
-            //
-            _grpTasks.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpTasks.Controls.Add(_btnMoveDownTask);
-            _grpTasks.Controls.Add(_btnMoveUpTask);
-            _grpTasks.Controls.Add(_txtTasks);
-            _grpTasks.Controls.Add(_btnUpdateTask);
-            _grpTasks.Controls.Add(_btnRemoveTask);
-            _grpTasks.Controls.Add(_dgTask);
-            _grpTasks.Location = new Point(424, 40);
-            _grpTasks.Name = "grpTasks";
-            _grpTasks.Size = new Size(368, 272);
-            _grpTasks.TabIndex = 4;
-            _grpTasks.TabStop = false;
-            _grpTasks.Text = "Tasks For Area";
-            //
-            // btnMoveDownTask
-            //
-            _btnMoveDownTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMoveDownTask.Location = new Point(336, 176);
-            _btnMoveDownTask.Name = "btnMoveDownTask";
-            _btnMoveDownTask.Size = new Size(24, 23);
-            _btnMoveDownTask.TabIndex = 15;
-            _btnMoveDownTask.Text = @"/\";
-            //
-            // btnMoveUpTask
-            //
-            _btnMoveUpTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMoveUpTask.Location = new Point(336, 208);
-            _btnMoveUpTask.Name = "btnMoveUpTask";
-            _btnMoveUpTask.Size = new Size(24, 23);
-            _btnMoveUpTask.TabIndex = 16;
-            _btnMoveUpTask.Text = @"\/";
-            //
-            // txtTasks
-            //
-            _txtTasks.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _txtTasks.Location = new Point(8, 240);
-            _txtTasks.Name = "txtTasks";
-            _txtTasks.Size = new Size(208, 21);
-            _txtTasks.TabIndex = 12;
-            _txtTasks.Text = "";
-            //
-            // btnUpdateTask
-            //
-            _btnUpdateTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnUpdateTask.Location = new Point(224, 240);
-            _btnUpdateTask.Name = "btnUpdateTask";
-            _btnUpdateTask.Size = new Size(64, 24);
-            _btnUpdateTask.TabIndex = 13;
-            _btnUpdateTask.Text = "Add";
-            //
-            // btnRemoveTask
-            //
-            _btnRemoveTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRemoveTask.Location = new Point(296, 241);
-            _btnRemoveTask.Name = "btnRemoveTask";
-            _btnRemoveTask.Size = new Size(64, 24);
-            _btnRemoveTask.TabIndex = 14;
-            _btnRemoveTask.Text = "Remove";
-            //
-            // dgTask
-            //
-            _dgTask.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgTask.DataMember = "";
-            _dgTask.HeaderForeColor = SystemColors.ControlText;
-            _dgTask.Location = new Point(8, 20);
-            _dgTask.Name = "dgTask";
-            _dgTask.Size = new Size(320, 212);
-            _dgTask.TabIndex = 11;
-            //
-            // grpSubTask
-            //
-            _grpSubTask.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpSubTask.Controls.Add(_btnMoveDownSubTask);
-            _grpSubTask.Controls.Add(_btnMoveUpSubTask);
-            _grpSubTask.Controls.Add(_txtSubTasks);
-            _grpSubTask.Controls.Add(_btnUpdateSubTask);
-            _grpSubTask.Controls.Add(_btnRemoveSubTask);
-            _grpSubTask.Controls.Add(_dgSubTask);
-            _grpSubTask.Location = new Point(424, 320);
-            _grpSubTask.Name = "grpSubTask";
-            _grpSubTask.Size = new Size(368, 224);
-            _grpSubTask.TabIndex = 5;
-            _grpSubTask.TabStop = false;
-            _grpSubTask.Text = "Sub Tasks For Task";
-            //
-            // btnMoveDownSubTask
-            //
-            _btnMoveDownSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMoveDownSubTask.Location = new Point(336, 128);
-            _btnMoveDownSubTask.Name = "btnMoveDownSubTask";
-            _btnMoveDownSubTask.Size = new Size(24, 23);
-            _btnMoveDownSubTask.TabIndex = 21;
-            _btnMoveDownSubTask.Text = @"/\";
-            //
-            // btnMoveUpSubTask
-            //
-            _btnMoveUpSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMoveUpSubTask.Location = new Point(336, 160);
-            _btnMoveUpSubTask.Name = "btnMoveUpSubTask";
-            _btnMoveUpSubTask.Size = new Size(24, 23);
-            _btnMoveUpSubTask.TabIndex = 22;
-            _btnMoveUpSubTask.Text = @"\/";
-            //
-            // txtSubTasks
-            //
-            _txtSubTasks.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSubTasks.Location = new Point(8, 192);
-            _txtSubTasks.Name = "txtSubTasks";
-            _txtSubTasks.Size = new Size(208, 21);
-            _txtSubTasks.TabIndex = 18;
-            _txtSubTasks.Text = "";
-            //
-            // btnUpdateSubTask
-            //
-            _btnUpdateSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnUpdateSubTask.Location = new Point(224, 192);
-            _btnUpdateSubTask.Name = "btnUpdateSubTask";
-            _btnUpdateSubTask.Size = new Size(64, 24);
-            _btnUpdateSubTask.TabIndex = 19;
-            _btnUpdateSubTask.Text = "Add";
-            //
-            // btnRemoveSubTask
-            //
-            _btnRemoveSubTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRemoveSubTask.Location = new Point(296, 192);
-            _btnRemoveSubTask.Name = "btnRemoveSubTask";
-            _btnRemoveSubTask.Size = new Size(64, 24);
-            _btnRemoveSubTask.TabIndex = 20;
-            _btnRemoveSubTask.Text = "Remove";
-            //
-            // dgSubTask
-            //
-            _dgSubTask.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgSubTask.DataMember = "";
-            _dgSubTask.HeaderForeColor = SystemColors.ControlText;
-            _dgSubTask.Location = new Point(8, 26);
-            _dgSubTask.Name = "dgSubTask";
-            _dgSubTask.Size = new Size(320, 158);
-            _dgSubTask.TabIndex = 17;
-            //
+            this._grpSections = new System.Windows.Forms.GroupBox();
+            this._txtSection = new System.Windows.Forms.TextBox();
+            this._btnUpdateSection = new System.Windows.Forms.Button();
+            this._btnRemoveSection = new System.Windows.Forms.Button();
+            this._dgSection = new System.Windows.Forms.DataGrid();
+            this._grpAreas = new System.Windows.Forms.GroupBox();
+            this._btnMoveDownArea = new System.Windows.Forms.Button();
+            this._btnMoveUpArea = new System.Windows.Forms.Button();
+            this._txtArea = new System.Windows.Forms.TextBox();
+            this._btnUpdateArea = new System.Windows.Forms.Button();
+            this._btnRemoveArea = new System.Windows.Forms.Button();
+            this._dgArea = new System.Windows.Forms.DataGrid();
+            this._grpTasks = new System.Windows.Forms.GroupBox();
+            this._btnMoveDownTask = new System.Windows.Forms.Button();
+            this._btnMoveUpTask = new System.Windows.Forms.Button();
+            this._txtTasks = new System.Windows.Forms.TextBox();
+            this._btnUpdateTask = new System.Windows.Forms.Button();
+            this._btnRemoveTask = new System.Windows.Forms.Button();
+            this._dgTask = new System.Windows.Forms.DataGrid();
+            this._grpSubTask = new System.Windows.Forms.GroupBox();
+            this._btnMoveDownSubTask = new System.Windows.Forms.Button();
+            this._btnMoveUpSubTask = new System.Windows.Forms.Button();
+            this._txtSubTasks = new System.Windows.Forms.TextBox();
+            this._btnUpdateSubTask = new System.Windows.Forms.Button();
+            this._btnRemoveSubTask = new System.Windows.Forms.Button();
+            this._dgSubTask = new System.Windows.Forms.DataGrid();
+            this._grpSections.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSection)).BeginInit();
+            this._grpAreas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgArea)).BeginInit();
+            this._grpTasks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTask)).BeginInit();
+            this._grpSubTask.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSubTask)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpSections
+            // 
+            this._grpSections.Controls.Add(this._txtSection);
+            this._grpSections.Controls.Add(this._btnUpdateSection);
+            this._grpSections.Controls.Add(this._btnRemoveSection);
+            this._grpSections.Controls.Add(this._dgSection);
+            this._grpSections.Location = new System.Drawing.Point(16, 12);
+            this._grpSections.Name = "_grpSections";
+            this._grpSections.Size = new System.Drawing.Size(400, 300);
+            this._grpSections.TabIndex = 2;
+            this._grpSections.TabStop = false;
+            this._grpSections.Text = "Sections";
+            // 
+            // _txtSection
+            // 
+            this._txtSection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSection.Location = new System.Drawing.Point(8, 268);
+            this._txtSection.Name = "_txtSection";
+            this._txtSection.Size = new System.Drawing.Size(240, 21);
+            this._txtSection.TabIndex = 2;
+            // 
+            // _btnUpdateSection
+            // 
+            this._btnUpdateSection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnUpdateSection.Location = new System.Drawing.Point(256, 268);
+            this._btnUpdateSection.Name = "_btnUpdateSection";
+            this._btnUpdateSection.Size = new System.Drawing.Size(64, 24);
+            this._btnUpdateSection.TabIndex = 3;
+            this._btnUpdateSection.Text = "Add";
+            this._btnUpdateSection.Click += new System.EventHandler(this.btnUpdateSection_Click);
+            // 
+            // _btnRemoveSection
+            // 
+            this._btnRemoveSection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemoveSection.Location = new System.Drawing.Point(328, 268);
+            this._btnRemoveSection.Name = "_btnRemoveSection";
+            this._btnRemoveSection.Size = new System.Drawing.Size(64, 24);
+            this._btnRemoveSection.TabIndex = 4;
+            this._btnRemoveSection.Text = "Remove";
+            this._btnRemoveSection.Click += new System.EventHandler(this.btnRemoveSection_Click);
+            // 
+            // _dgSection
+            // 
+            this._dgSection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgSection.DataMember = "";
+            this._dgSection.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSection.Location = new System.Drawing.Point(8, 20);
+            this._dgSection.Name = "_dgSection";
+            this._dgSection.Size = new System.Drawing.Size(384, 240);
+            this._dgSection.TabIndex = 1;
+            this._dgSection.Click += new System.EventHandler(this.dgSection_Click);
+            // 
+            // _grpAreas
+            // 
+            this._grpAreas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpAreas.Controls.Add(this._btnMoveDownArea);
+            this._grpAreas.Controls.Add(this._btnMoveUpArea);
+            this._grpAreas.Controls.Add(this._txtArea);
+            this._grpAreas.Controls.Add(this._btnUpdateArea);
+            this._grpAreas.Controls.Add(this._btnRemoveArea);
+            this._grpAreas.Controls.Add(this._dgArea);
+            this._grpAreas.Location = new System.Drawing.Point(16, 320);
+            this._grpAreas.Name = "_grpAreas";
+            this._grpAreas.Size = new System.Drawing.Size(400, 224);
+            this._grpAreas.TabIndex = 3;
+            this._grpAreas.TabStop = false;
+            this._grpAreas.Text = "Areas For Section ";
+            // 
+            // _btnMoveDownArea
+            // 
+            this._btnMoveDownArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMoveDownArea.Location = new System.Drawing.Point(368, 128);
+            this._btnMoveDownArea.Name = "_btnMoveDownArea";
+            this._btnMoveDownArea.Size = new System.Drawing.Size(24, 23);
+            this._btnMoveDownArea.TabIndex = 9;
+            this._btnMoveDownArea.Text = "/\\";
+            this._btnMoveDownArea.Click += new System.EventHandler(this.btnMoveDownArea_Click);
+            // 
+            // _btnMoveUpArea
+            // 
+            this._btnMoveUpArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMoveUpArea.Location = new System.Drawing.Point(368, 160);
+            this._btnMoveUpArea.Name = "_btnMoveUpArea";
+            this._btnMoveUpArea.Size = new System.Drawing.Size(24, 23);
+            this._btnMoveUpArea.TabIndex = 10;
+            this._btnMoveUpArea.Text = "\\/";
+            this._btnMoveUpArea.Click += new System.EventHandler(this.btnMoveUpArea_Click);
+            // 
+            // _txtArea
+            // 
+            this._txtArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtArea.Location = new System.Drawing.Point(8, 192);
+            this._txtArea.Name = "_txtArea";
+            this._txtArea.Size = new System.Drawing.Size(240, 21);
+            this._txtArea.TabIndex = 6;
+            // 
+            // _btnUpdateArea
+            // 
+            this._btnUpdateArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnUpdateArea.Location = new System.Drawing.Point(256, 192);
+            this._btnUpdateArea.Name = "_btnUpdateArea";
+            this._btnUpdateArea.Size = new System.Drawing.Size(64, 24);
+            this._btnUpdateArea.TabIndex = 7;
+            this._btnUpdateArea.Text = "Add";
+            this._btnUpdateArea.Click += new System.EventHandler(this.btnUpdateArea_Click);
+            // 
+            // _btnRemoveArea
+            // 
+            this._btnRemoveArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemoveArea.Location = new System.Drawing.Point(328, 193);
+            this._btnRemoveArea.Name = "_btnRemoveArea";
+            this._btnRemoveArea.Size = new System.Drawing.Size(64, 24);
+            this._btnRemoveArea.TabIndex = 8;
+            this._btnRemoveArea.Text = "Remove";
+            this._btnRemoveArea.Click += new System.EventHandler(this.btnRemoveArea_Click);
+            // 
+            // _dgArea
+            // 
+            this._dgArea.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgArea.DataMember = "";
+            this._dgArea.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgArea.Location = new System.Drawing.Point(8, 26);
+            this._dgArea.Name = "_dgArea";
+            this._dgArea.Size = new System.Drawing.Size(352, 158);
+            this._dgArea.TabIndex = 5;
+            this._dgArea.Click += new System.EventHandler(this.dgArea_Click);
+            // 
+            // _grpTasks
+            // 
+            this._grpTasks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpTasks.Controls.Add(this._btnMoveDownTask);
+            this._grpTasks.Controls.Add(this._btnMoveUpTask);
+            this._grpTasks.Controls.Add(this._txtTasks);
+            this._grpTasks.Controls.Add(this._btnUpdateTask);
+            this._grpTasks.Controls.Add(this._btnRemoveTask);
+            this._grpTasks.Controls.Add(this._dgTask);
+            this._grpTasks.Location = new System.Drawing.Point(424, 12);
+            this._grpTasks.Name = "_grpTasks";
+            this._grpTasks.Size = new System.Drawing.Size(368, 300);
+            this._grpTasks.TabIndex = 4;
+            this._grpTasks.TabStop = false;
+            this._grpTasks.Text = "Tasks For Area";
+            // 
+            // _btnMoveDownTask
+            // 
+            this._btnMoveDownTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMoveDownTask.Location = new System.Drawing.Point(336, 204);
+            this._btnMoveDownTask.Name = "_btnMoveDownTask";
+            this._btnMoveDownTask.Size = new System.Drawing.Size(24, 23);
+            this._btnMoveDownTask.TabIndex = 15;
+            this._btnMoveDownTask.Text = "/\\";
+            this._btnMoveDownTask.Click += new System.EventHandler(this.btnMoveDownTask_Click);
+            // 
+            // _btnMoveUpTask
+            // 
+            this._btnMoveUpTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMoveUpTask.Location = new System.Drawing.Point(336, 236);
+            this._btnMoveUpTask.Name = "_btnMoveUpTask";
+            this._btnMoveUpTask.Size = new System.Drawing.Size(24, 23);
+            this._btnMoveUpTask.TabIndex = 16;
+            this._btnMoveUpTask.Text = "\\/";
+            this._btnMoveUpTask.Click += new System.EventHandler(this.btnMoveUpTask_Click);
+            // 
+            // _txtTasks
+            // 
+            this._txtTasks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTasks.Location = new System.Drawing.Point(8, 268);
+            this._txtTasks.Name = "_txtTasks";
+            this._txtTasks.Size = new System.Drawing.Size(208, 21);
+            this._txtTasks.TabIndex = 12;
+            // 
+            // _btnUpdateTask
+            // 
+            this._btnUpdateTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnUpdateTask.Location = new System.Drawing.Point(224, 268);
+            this._btnUpdateTask.Name = "_btnUpdateTask";
+            this._btnUpdateTask.Size = new System.Drawing.Size(64, 24);
+            this._btnUpdateTask.TabIndex = 13;
+            this._btnUpdateTask.Text = "Add";
+            this._btnUpdateTask.Click += new System.EventHandler(this.btnUpdateTask_Click);
+            // 
+            // _btnRemoveTask
+            // 
+            this._btnRemoveTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemoveTask.Location = new System.Drawing.Point(296, 269);
+            this._btnRemoveTask.Name = "_btnRemoveTask";
+            this._btnRemoveTask.Size = new System.Drawing.Size(64, 24);
+            this._btnRemoveTask.TabIndex = 14;
+            this._btnRemoveTask.Text = "Remove";
+            this._btnRemoveTask.Click += new System.EventHandler(this.btnRemoveTask_Click);
+            // 
+            // _dgTask
+            // 
+            this._dgTask.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgTask.DataMember = "";
+            this._dgTask.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgTask.Location = new System.Drawing.Point(8, 20);
+            this._dgTask.Name = "_dgTask";
+            this._dgTask.Size = new System.Drawing.Size(320, 240);
+            this._dgTask.TabIndex = 11;
+            this._dgTask.Click += new System.EventHandler(this.dgTask_Click);
+            // 
+            // _grpSubTask
+            // 
+            this._grpSubTask.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpSubTask.Controls.Add(this._btnMoveDownSubTask);
+            this._grpSubTask.Controls.Add(this._btnMoveUpSubTask);
+            this._grpSubTask.Controls.Add(this._txtSubTasks);
+            this._grpSubTask.Controls.Add(this._btnUpdateSubTask);
+            this._grpSubTask.Controls.Add(this._btnRemoveSubTask);
+            this._grpSubTask.Controls.Add(this._dgSubTask);
+            this._grpSubTask.Location = new System.Drawing.Point(424, 320);
+            this._grpSubTask.Name = "_grpSubTask";
+            this._grpSubTask.Size = new System.Drawing.Size(368, 224);
+            this._grpSubTask.TabIndex = 5;
+            this._grpSubTask.TabStop = false;
+            this._grpSubTask.Text = "Sub Tasks For Task";
+            // 
+            // _btnMoveDownSubTask
+            // 
+            this._btnMoveDownSubTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMoveDownSubTask.Location = new System.Drawing.Point(336, 128);
+            this._btnMoveDownSubTask.Name = "_btnMoveDownSubTask";
+            this._btnMoveDownSubTask.Size = new System.Drawing.Size(24, 23);
+            this._btnMoveDownSubTask.TabIndex = 21;
+            this._btnMoveDownSubTask.Text = "/\\";
+            this._btnMoveDownSubTask.Click += new System.EventHandler(this.btnMoveDownSubTask_Click);
+            // 
+            // _btnMoveUpSubTask
+            // 
+            this._btnMoveUpSubTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMoveUpSubTask.Location = new System.Drawing.Point(336, 160);
+            this._btnMoveUpSubTask.Name = "_btnMoveUpSubTask";
+            this._btnMoveUpSubTask.Size = new System.Drawing.Size(24, 23);
+            this._btnMoveUpSubTask.TabIndex = 22;
+            this._btnMoveUpSubTask.Text = "\\/";
+            this._btnMoveUpSubTask.Click += new System.EventHandler(this.btnMoveUpSubTask_Click);
+            // 
+            // _txtSubTasks
+            // 
+            this._txtSubTasks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSubTasks.Location = new System.Drawing.Point(8, 192);
+            this._txtSubTasks.Name = "_txtSubTasks";
+            this._txtSubTasks.Size = new System.Drawing.Size(208, 21);
+            this._txtSubTasks.TabIndex = 18;
+            // 
+            // _btnUpdateSubTask
+            // 
+            this._btnUpdateSubTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnUpdateSubTask.Location = new System.Drawing.Point(224, 192);
+            this._btnUpdateSubTask.Name = "_btnUpdateSubTask";
+            this._btnUpdateSubTask.Size = new System.Drawing.Size(64, 24);
+            this._btnUpdateSubTask.TabIndex = 19;
+            this._btnUpdateSubTask.Text = "Add";
+            this._btnUpdateSubTask.Click += new System.EventHandler(this.btnUpdateSubTask_Click);
+            // 
+            // _btnRemoveSubTask
+            // 
+            this._btnRemoveSubTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemoveSubTask.Location = new System.Drawing.Point(296, 192);
+            this._btnRemoveSubTask.Name = "_btnRemoveSubTask";
+            this._btnRemoveSubTask.Size = new System.Drawing.Size(64, 24);
+            this._btnRemoveSubTask.TabIndex = 20;
+            this._btnRemoveSubTask.Text = "Remove";
+            this._btnRemoveSubTask.Click += new System.EventHandler(this.btnRemoveSubTask_Click);
+            // 
+            // _dgSubTask
+            // 
+            this._dgSubTask.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgSubTask.DataMember = "";
+            this._dgSubTask.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSubTask.Location = new System.Drawing.Point(8, 26);
+            this._dgSubTask.Name = "_dgSubTask";
+            this._dgSubTask.Size = new System.Drawing.Size(320, 158);
+            this._dgSubTask.TabIndex = 17;
+            this._dgSubTask.Click += new System.EventHandler(this.dgSubTask_Click);
+            // 
             // FRMCheckListManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(800, 558);
-            Controls.Add(_grpSubTask);
-            Controls.Add(_grpTasks);
-            Controls.Add(_grpAreas);
-            Controls.Add(_grpSections);
-            MinimumSize = new Size(808, 592);
-            Name = "FRMCheckListManager";
-            Text = "CheckList Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpSections, 0);
-            Controls.SetChildIndex(_grpAreas, 0);
-            Controls.SetChildIndex(_grpTasks, 0);
-            Controls.SetChildIndex(_grpSubTask, 0);
-            _grpSections.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgSection).EndInit();
-            _grpAreas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgArea).EndInit();
-            _grpTasks.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgTask).EndInit();
-            _grpSubTask.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgSubTask).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this._grpSubTask);
+            this.Controls.Add(this._grpTasks);
+            this.Controls.Add(this._grpAreas);
+            this.Controls.Add(this._grpSections);
+            this.MinimumSize = new System.Drawing.Size(808, 592);
+            this.Name = "FRMCheckListManager";
+            this.Text = "CheckList Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpSections.ResumeLayout(false);
+            this._grpSections.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSection)).EndInit();
+            this._grpAreas.ResumeLayout(false);
+            this._grpAreas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgArea)).EndInit();
+            this._grpTasks.ResumeLayout(false);
+            this._grpTasks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTask)).EndInit();
+            this._grpSubTask.ResumeLayout(false);
+            this._grpSubTask.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSubTask)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

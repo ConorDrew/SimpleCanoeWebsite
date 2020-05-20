@@ -98,82 +98,82 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpLocks = new GroupBox();
-            _dgLocks = new DataGrid();
-            _btnUnlock = new Button();
-            _btnUnlock.Click += new EventHandler(btnUnlock_Click);
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _grpLocks.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgLocks).BeginInit();
-            SuspendLayout();
-            //
-            // grpLocks
-            //
-            _grpLocks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpLocks.Controls.Add(_dgLocks);
-            _grpLocks.Location = new Point(8, 40);
-            _grpLocks.Name = "grpLocks";
-            _grpLocks.Size = new Size(769, 405);
-            _grpLocks.TabIndex = 1;
-            _grpLocks.TabStop = false;
-            _grpLocks.Text = "Highlight job to release and click 'Unlock'";
-            //
-            // dgLocks
-            //
-            _dgLocks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgLocks.DataMember = "";
-            _dgLocks.HeaderForeColor = SystemColors.ControlText;
-            _dgLocks.Location = new Point(8, 20);
-            _dgLocks.Name = "dgLocks";
-            _dgLocks.Size = new Size(753, 377);
-            _dgLocks.TabIndex = 1;
-            //
-            // btnUnlock
-            //
-            _btnUnlock.AccessibleDescription = "Save item";
-            _btnUnlock.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnUnlock.Cursor = Cursors.Hand;
-            _btnUnlock.UseVisualStyleBackColor = true;
-            _btnUnlock.ImageIndex = 1;
-            _btnUnlock.Location = new Point(721, 451);
-            _btnUnlock.Name = "btnUnlock";
-            _btnUnlock.Size = new Size(56, 23);
-            _btnUnlock.TabIndex = 2;
-            _btnUnlock.Text = "Unlock";
-            //
-            // btnClose
-            //
-            _btnClose.AccessibleDescription = "Save item";
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Cursor = Cursors.Hand;
-            _btnClose.UseVisualStyleBackColor = true;
-            _btnClose.ImageIndex = 1;
-            _btnClose.Location = new Point(8, 451);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 23);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
+            this._grpLocks = new System.Windows.Forms.GroupBox();
+            this._dgLocks = new System.Windows.Forms.DataGrid();
+            this._btnUnlock = new System.Windows.Forms.Button();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._grpLocks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgLocks)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpLocks
+            // 
+            this._grpLocks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpLocks.Controls.Add(this._dgLocks);
+            this._grpLocks.Location = new System.Drawing.Point(8, 12);
+            this._grpLocks.Name = "_grpLocks";
+            this._grpLocks.Size = new System.Drawing.Size(769, 433);
+            this._grpLocks.TabIndex = 1;
+            this._grpLocks.TabStop = false;
+            this._grpLocks.Text = "Highlight job to release and click \'Unlock\'";
+            // 
+            // _dgLocks
+            // 
+            this._dgLocks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgLocks.DataMember = "";
+            this._dgLocks.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgLocks.Location = new System.Drawing.Point(8, 20);
+            this._dgLocks.Name = "_dgLocks";
+            this._dgLocks.Size = new System.Drawing.Size(753, 405);
+            this._dgLocks.TabIndex = 1;
+            // 
+            // _btnUnlock
+            // 
+            this._btnUnlock.AccessibleDescription = "Save item";
+            this._btnUnlock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnUnlock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnUnlock.ImageIndex = 1;
+            this._btnUnlock.Location = new System.Drawing.Point(721, 451);
+            this._btnUnlock.Name = "_btnUnlock";
+            this._btnUnlock.Size = new System.Drawing.Size(56, 23);
+            this._btnUnlock.TabIndex = 2;
+            this._btnUnlock.Text = "Unlock";
+            this._btnUnlock.UseVisualStyleBackColor = true;
+            this._btnUnlock.Click += new System.EventHandler(this.btnUnlock_Click);
+            // 
+            // _btnClose
+            // 
+            this._btnClose.AccessibleDescription = "Save item";
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnClose.ImageIndex = 1;
+            this._btnClose.Location = new System.Drawing.Point(8, 451);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 23);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FRMJobLocks
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(785, 486);
-            Controls.Add(_btnClose);
-            Controls.Add(_grpLocks);
-            Controls.Add(_btnUnlock);
-            MinimumSize = new Size(793, 520);
-            Name = "FRMJobLocks";
-            Text = "Job Locks";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnUnlock, 0);
-            Controls.SetChildIndex(_grpLocks, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            _grpLocks.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgLocks).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(785, 486);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._grpLocks);
+            this.Controls.Add(this._btnUnlock);
+            this.MinimumSize = new System.Drawing.Size(793, 520);
+            this.Name = "FRMJobLocks";
+            this.Text = "Job Locks";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpLocks.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgLocks)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

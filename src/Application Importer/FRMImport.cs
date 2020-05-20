@@ -279,215 +279,215 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpImporter = new GroupBox();
-            _lblFile = new Label();
-            _txtCustomer = new TextBox();
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnSupplier_Click);
-            _lblCustomer = new Label();
-            _btnImport = new Button();
-            _btnImport.Click += new EventHandler(btnImport_Click);
-            _btnFindFile = new Button();
-            _btnFindFile.Click += new EventHandler(btnFindFile_Click);
-            _txtFileLocation = new TextBox();
-            _btnTemplateFile = new LinkLabel();
-            _btnTemplateFile.LinkClicked += new LinkLabelLinkClickedEventHandler(btnTemplateFile_LinkClicked);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnClose_Click);
-            _pbStatus = new ProgressBar();
-            _lblProgress = new Label();
-            _lblMessages = new Label();
-            _grpErrors = new GroupBox();
-            _dgErrors = new DataGrid();
-            _grpImporter.SuspendLayout();
-            _grpErrors.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgErrors).BeginInit();
-            SuspendLayout();
-            //
-            // grpImporter
-            //
-            _grpImporter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpImporter.Controls.Add(_lblFile);
-            _grpImporter.Controls.Add(_txtCustomer);
-            _grpImporter.Controls.Add(_btnFindCustomer);
-            _grpImporter.Controls.Add(_lblCustomer);
-            _grpImporter.Controls.Add(_btnImport);
-            _grpImporter.Controls.Add(_btnFindFile);
-            _grpImporter.Controls.Add(_txtFileLocation);
-            _grpImporter.Location = new Point(8, 40);
-            _grpImporter.Name = "grpImporter";
-            _grpImporter.Size = new Size(896, 115);
-            _grpImporter.TabIndex = 3;
-            _grpImporter.TabStop = false;
-            _grpImporter.Text = "Import";
-            //
-            // lblFile
-            //
-            _lblFile.AutoSize = true;
-            _lblFile.Location = new Point(6, 52);
-            _lblFile.Name = "lblFile";
-            _lblFile.Size = new Size(31, 13);
-            _lblFile.TabIndex = 13;
-            _lblFile.Text = "File:";
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Location = new Point(86, 20);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(766, 21);
-            _txtCustomer.TabIndex = 12;
-            //
-            // btnFindCustomer
-            //
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.Location = new Point(858, 20);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 11;
-            _btnFindCustomer.Text = "...";
-            _btnFindCustomer.UseVisualStyleBackColor = true;
-            //
-            // lblCustomer
-            //
-            _lblCustomer.AutoSize = true;
-            _lblCustomer.Location = new Point(6, 23);
-            _lblCustomer.Name = "lblCustomer";
-            _lblCustomer.Size = new Size(68, 13);
-            _lblCustomer.TabIndex = 9;
-            _lblCustomer.Text = "Customer:";
-            //
-            // btnImport
-            //
-            _btnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnImport.Enabled = false;
-            _btnImport.Location = new Point(826, 84);
-            _btnImport.Name = "btnImport";
-            _btnImport.Size = new Size(64, 23);
-            _btnImport.TabIndex = 7;
-            _btnImport.Text = "Import";
-            _btnImport.UseVisualStyleBackColor = true;
-            //
-            // btnFindFile
-            //
-            _btnFindFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindFile.Location = new Point(858, 49);
-            _btnFindFile.Name = "btnFindFile";
-            _btnFindFile.Size = new Size(32, 23);
-            _btnFindFile.TabIndex = 5;
-            _btnFindFile.Text = "...";
-            _btnFindFile.UseVisualStyleBackColor = true;
-            //
-            // txtFileLocation
-            //
-            _txtFileLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtFileLocation.Location = new Point(86, 49);
-            _txtFileLocation.Name = "txtFileLocation";
-            _txtFileLocation.ReadOnly = true;
-            _txtFileLocation.Size = new Size(766, 21);
-            _txtFileLocation.TabIndex = 4;
-            //
-            // btnTemplateFile
-            //
-            _btnTemplateFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnTemplateFile.Location = new Point(816, 8);
-            _btnTemplateFile.Name = "btnTemplateFile";
-            _btnTemplateFile.Size = new Size(88, 23);
-            _btnTemplateFile.TabIndex = 1;
-            _btnTemplateFile.TabStop = true;
-            _btnTemplateFile.Text = "Template File";
-            //
-            // btnExport
-            //
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnExport.Location = new Point(848, 624);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 9;
-            _btnExport.Text = "Export";
-            _btnExport.UseVisualStyleBackColor = true;
-            //
-            // pbStatus
-            //
-            _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _pbStatus.Location = new Point(8, 624);
-            _pbStatus.Name = "pbStatus";
-            _pbStatus.Size = new Size(784, 23);
-            _pbStatus.Step = 1;
-            _pbStatus.TabIndex = 10;
-            //
-            // lblProgress
-            //
-            _lblProgress.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblProgress.Location = new Point(800, 627);
-            _lblProgress.Name = "lblProgress";
-            _lblProgress.Size = new Size(40, 16);
-            _lblProgress.TabIndex = 11;
-            _lblProgress.Text = "0%";
-            _lblProgress.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // lblMessages
-            //
-            _lblMessages.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _lblMessages.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblMessages.ForeColor = Color.Red;
-            _lblMessages.Location = new Point(5, 595);
-            _lblMessages.Name = "lblMessages";
-            _lblMessages.Size = new Size(900, 19);
-            _lblMessages.TabIndex = 12;
-            _lblMessages.TextAlign = ContentAlignment.MiddleLeft;
-            _lblMessages.Visible = false;
-            //
-            // grpErrors
-            //
-            _grpErrors.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpErrors.Controls.Add(_dgErrors);
-            _grpErrors.Location = new Point(8, 161);
-            _grpErrors.Name = "grpErrors";
-            _grpErrors.Size = new Size(896, 453);
-            _grpErrors.TabIndex = 14;
-            _grpErrors.TabStop = false;
-            _grpErrors.Text = "Errors";
-            //
-            // dgErrors
-            //
-            _dgErrors.DataMember = "";
-            _dgErrors.Dock = DockStyle.Fill;
-            _dgErrors.HeaderForeColor = SystemColors.ControlText;
-            _dgErrors.Location = new Point(3, 17);
-            _dgErrors.Name = "dgErrors";
-            _dgErrors.Size = new Size(890, 433);
-            _dgErrors.TabIndex = 2;
-            //
+            this._grpImporter = new System.Windows.Forms.GroupBox();
+            this._lblFile = new System.Windows.Forms.Label();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._lblCustomer = new System.Windows.Forms.Label();
+            this._btnImport = new System.Windows.Forms.Button();
+            this._btnFindFile = new System.Windows.Forms.Button();
+            this._txtFileLocation = new System.Windows.Forms.TextBox();
+            this._btnTemplateFile = new System.Windows.Forms.LinkLabel();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._pbStatus = new System.Windows.Forms.ProgressBar();
+            this._lblProgress = new System.Windows.Forms.Label();
+            this._lblMessages = new System.Windows.Forms.Label();
+            this._grpErrors = new System.Windows.Forms.GroupBox();
+            this._dgErrors = new System.Windows.Forms.DataGrid();
+            this._grpImporter.SuspendLayout();
+            this._grpErrors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgErrors)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpImporter
+            // 
+            this._grpImporter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpImporter.Controls.Add(this._lblFile);
+            this._grpImporter.Controls.Add(this._txtCustomer);
+            this._grpImporter.Controls.Add(this._btnFindCustomer);
+            this._grpImporter.Controls.Add(this._lblCustomer);
+            this._grpImporter.Controls.Add(this._btnImport);
+            this._grpImporter.Controls.Add(this._btnTemplateFile);
+            this._grpImporter.Controls.Add(this._btnFindFile);
+            this._grpImporter.Controls.Add(this._txtFileLocation);
+            this._grpImporter.Location = new System.Drawing.Point(8, 12);
+            this._grpImporter.Name = "_grpImporter";
+            this._grpImporter.Size = new System.Drawing.Size(896, 143);
+            this._grpImporter.TabIndex = 3;
+            this._grpImporter.TabStop = false;
+            this._grpImporter.Text = "Import";
+            // 
+            // _lblFile
+            // 
+            this._lblFile.AutoSize = true;
+            this._lblFile.Location = new System.Drawing.Point(6, 74);
+            this._lblFile.Name = "_lblFile";
+            this._lblFile.Size = new System.Drawing.Size(31, 13);
+            this._lblFile.TabIndex = 13;
+            this._lblFile.Text = "File:";
+            // 
+            // _txtCustomer
+            // 
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Location = new System.Drawing.Point(86, 42);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(766, 21);
+            this._txtCustomer.TabIndex = 12;
+            // 
+            // _btnFindCustomer
+            // 
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(858, 42);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 11;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = true;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnSupplier_Click);
+            // 
+            // _lblCustomer
+            // 
+            this._lblCustomer.AutoSize = true;
+            this._lblCustomer.Location = new System.Drawing.Point(6, 45);
+            this._lblCustomer.Name = "_lblCustomer";
+            this._lblCustomer.Size = new System.Drawing.Size(68, 13);
+            this._lblCustomer.TabIndex = 9;
+            this._lblCustomer.Text = "Customer:";
+            // 
+            // _btnImport
+            // 
+            this._btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnImport.Enabled = false;
+            this._btnImport.Location = new System.Drawing.Point(826, 106);
+            this._btnImport.Name = "_btnImport";
+            this._btnImport.Size = new System.Drawing.Size(64, 23);
+            this._btnImport.TabIndex = 7;
+            this._btnImport.Text = "Import";
+            this._btnImport.UseVisualStyleBackColor = true;
+            this._btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // _btnFindFile
+            // 
+            this._btnFindFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindFile.Location = new System.Drawing.Point(858, 71);
+            this._btnFindFile.Name = "_btnFindFile";
+            this._btnFindFile.Size = new System.Drawing.Size(32, 23);
+            this._btnFindFile.TabIndex = 5;
+            this._btnFindFile.Text = "...";
+            this._btnFindFile.UseVisualStyleBackColor = true;
+            this._btnFindFile.Click += new System.EventHandler(this.btnFindFile_Click);
+            // 
+            // _txtFileLocation
+            // 
+            this._txtFileLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtFileLocation.Location = new System.Drawing.Point(86, 71);
+            this._txtFileLocation.Name = "_txtFileLocation";
+            this._txtFileLocation.ReadOnly = true;
+            this._txtFileLocation.Size = new System.Drawing.Size(766, 21);
+            this._txtFileLocation.TabIndex = 4;
+            // 
+            // _btnTemplateFile
+            // 
+            this._btnTemplateFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnTemplateFile.Location = new System.Drawing.Point(802, 16);
+            this._btnTemplateFile.Name = "_btnTemplateFile";
+            this._btnTemplateFile.Size = new System.Drawing.Size(88, 23);
+            this._btnTemplateFile.TabIndex = 1;
+            this._btnTemplateFile.TabStop = true;
+            this._btnTemplateFile.Text = "Template File";
+            this._btnTemplateFile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnTemplateFile_LinkClicked);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnExport.Location = new System.Drawing.Point(848, 624);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 9;
+            this._btnExport.Text = "Export";
+            this._btnExport.UseVisualStyleBackColor = true;
+            this._btnExport.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pbStatus
+            // 
+            this._pbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbStatus.Location = new System.Drawing.Point(8, 624);
+            this._pbStatus.Name = "_pbStatus";
+            this._pbStatus.Size = new System.Drawing.Size(784, 23);
+            this._pbStatus.Step = 1;
+            this._pbStatus.TabIndex = 10;
+            // 
+            // _lblProgress
+            // 
+            this._lblProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblProgress.Location = new System.Drawing.Point(800, 627);
+            this._lblProgress.Name = "_lblProgress";
+            this._lblProgress.Size = new System.Drawing.Size(40, 16);
+            this._lblProgress.TabIndex = 11;
+            this._lblProgress.Text = "0%";
+            this._lblProgress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _lblMessages
+            // 
+            this._lblMessages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblMessages.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblMessages.ForeColor = System.Drawing.Color.Red;
+            this._lblMessages.Location = new System.Drawing.Point(5, 595);
+            this._lblMessages.Name = "_lblMessages";
+            this._lblMessages.Size = new System.Drawing.Size(900, 19);
+            this._lblMessages.TabIndex = 12;
+            this._lblMessages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblMessages.Visible = false;
+            // 
+            // _grpErrors
+            // 
+            this._grpErrors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpErrors.Controls.Add(this._dgErrors);
+            this._grpErrors.Location = new System.Drawing.Point(8, 161);
+            this._grpErrors.Name = "_grpErrors";
+            this._grpErrors.Size = new System.Drawing.Size(896, 453);
+            this._grpErrors.TabIndex = 14;
+            this._grpErrors.TabStop = false;
+            this._grpErrors.Text = "Errors";
+            // 
+            // _dgErrors
+            // 
+            this._dgErrors.DataMember = "";
+            this._dgErrors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dgErrors.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgErrors.Location = new System.Drawing.Point(3, 17);
+            this._dgErrors.Name = "_dgErrors";
+            this._dgErrors.Size = new System.Drawing.Size(890, 433);
+            this._dgErrors.TabIndex = 2;
+            // 
             // FRMImport
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(912, 654);
-            Controls.Add(_grpErrors);
-            Controls.Add(_lblMessages);
-            Controls.Add(_lblProgress);
-            Controls.Add(_pbStatus);
-            Controls.Add(_btnExport);
-            Controls.Add(_btnTemplateFile);
-            Controls.Add(_grpImporter);
-            MinimumSize = new Size(920, 688);
-            Name = "FRMImport";
-            Text = "Site Importer";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpImporter, 0);
-            Controls.SetChildIndex(_btnTemplateFile, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_pbStatus, 0);
-            Controls.SetChildIndex(_lblProgress, 0);
-            Controls.SetChildIndex(_lblMessages, 0);
-            Controls.SetChildIndex(_grpErrors, 0);
-            _grpImporter.ResumeLayout(false);
-            _grpImporter.PerformLayout();
-            _grpErrors.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgErrors).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(912, 654);
+            this.Controls.Add(this._grpErrors);
+            this.Controls.Add(this._lblMessages);
+            this.Controls.Add(this._lblProgress);
+            this.Controls.Add(this._pbStatus);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpImporter);
+            this.MinimumSize = new System.Drawing.Size(920, 688);
+            this.Name = "FRMImport";
+            this.Text = "Site Importer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpImporter.ResumeLayout(false);
+            this._grpImporter.PerformLayout();
+            this._grpErrors.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgErrors)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public IUserControl LoadedControl

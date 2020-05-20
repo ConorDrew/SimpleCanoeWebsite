@@ -126,57 +126,55 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnClose_Click);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _pnlAbsence = new Panel();
-            SuspendLayout();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._pnlAbsence = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
             // 
-            // btnCancel
+            // _btnCancel
             // 
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Font = new Font("Verdana", 8.0F);
-            _btnCancel.Location = new Point(8, 314);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(64, 23);
-            _btnCancel.TabIndex = 11;
-            _btnCancel.Text = "Cancel";
-            _btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnCancel.Location = new System.Drawing.Point(8, 314);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(64, 23);
+            this._btnCancel.TabIndex = 11;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnSave
+            // _btnSave
             // 
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.Font = new Font("Verdana", 8.0F);
-            _btnSave.Location = new Point(552, 314);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(64, 23);
-            _btnSave.TabIndex = 10;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnSave.Location = new System.Drawing.Point(552, 314);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(64, 23);
+            this._btnSave.TabIndex = 10;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // pnlAbsence
+            // _pnlAbsence
             // 
-            _pnlAbsence.Location = new Point(0, 53);
-            _pnlAbsence.Name = "pnlAbsence";
-            _pnlAbsence.Size = new Size(624, 249);
-            _pnlAbsence.TabIndex = 13;
+            this._pnlAbsence.Location = new System.Drawing.Point(0, 12);
+            this._pnlAbsence.Name = "_pnlAbsence";
+            this._pnlAbsence.Size = new System.Drawing.Size(624, 290);
+            this._pnlAbsence.TabIndex = 13;
             // 
             // FrmUserAbsence
             // 
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(628, 343);
-            Controls.Add(_pnlAbsence);
-            Controls.Add(_btnSave);
-            Controls.Add(_btnCancel);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "FrmUserAbsence";
-            Text = "User Absence";
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_pnlAbsence, 0);
-            ResumeLayout(false);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(628, 343);
+            this.Controls.Add(this._pnlAbsence);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._btnCancel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FrmUserAbsence";
+            this.Text = "User Absence";
+            this.ResumeLayout(false);
+
         }
 
         

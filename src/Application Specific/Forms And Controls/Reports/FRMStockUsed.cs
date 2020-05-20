@@ -403,225 +403,227 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpParts = new GroupBox();
-            _dgParts = new DataGrid();
-            _dgParts.DoubleClick += new EventHandler(dgParts_DoubleClick);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpFilter = new GroupBox();
-            _cboMonths = new ComboBox();
-            _cboMonths.SelectedIndexChanged += new EventHandler(cboMonths_SelectedIndexChanged);
-            _Label5 = new Label();
-            _txtName = new TextBox();
-            _txtName.TextChanged += new EventHandler(txtName_TextChanged);
-            _Label4 = new Label();
-            _txtNumber = new TextBox();
-            _txtNumber.TextChanged += new EventHandler(txtNumber_TextChanged);
-            _cboCategory = new ComboBox();
-            _cboCategory.SelectedIndexChanged += new EventHandler(cboCategory_SelectedIndexChanged);
-            _Label3 = new Label();
-            _Label2 = new Label();
-            _Label1 = new Label();
-            _txtReference = new TextBox();
-            _txtReference.TextChanged += new EventHandler(txtReference_TextChanged);
-            _Label6 = new Label();
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _chkQty = new CheckBox();
-            _chkQty.CheckedChanged += new EventHandler(chkQty_CheckedChanged);
-            _grpParts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgParts).BeginInit();
-            _grpFilter.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpParts
-            //
-            _grpParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpParts.Controls.Add(_dgParts);
-            _grpParts.Location = new Point(8, 149);
-            _grpParts.Name = "grpParts";
-            _grpParts.Size = new Size(697, 149);
-            _grpParts.TabIndex = 2;
-            _grpParts.TabStop = false;
-            _grpParts.Text = "Parts used";
-            //
-            // dgParts
-            //
-            _dgParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgParts.DataMember = "";
-            _dgParts.HeaderForeColor = SystemColors.ControlText;
-            _dgParts.Location = new Point(8, 19);
-            _dgParts.Name = "dgParts";
-            _dgParts.Size = new Size(681, 122);
-            _dgParts.TabIndex = 14;
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 306);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 3;
-            _btnExport.Text = "Export";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_chkQty);
-            _grpFilter.Controls.Add(_cboMonths);
-            _grpFilter.Controls.Add(_Label5);
-            _grpFilter.Controls.Add(_txtName);
-            _grpFilter.Controls.Add(_Label4);
-            _grpFilter.Controls.Add(_txtNumber);
-            _grpFilter.Controls.Add(_cboCategory);
-            _grpFilter.Controls.Add(_Label3);
-            _grpFilter.Controls.Add(_Label2);
-            _grpFilter.Controls.Add(_Label1);
-            _grpFilter.Controls.Add(_txtReference);
-            _grpFilter.Controls.Add(_Label6);
-            _grpFilter.Location = new Point(8, 38);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(697, 105);
-            _grpFilter.TabIndex = 1;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // cboMonths
-            //
-            _cboMonths.FormattingEnabled = true;
-            _cboMonths.Location = new Point(386, 72);
-            _cboMonths.Name = "cboMonths";
-            _cboMonths.Size = new Size(82, 21);
-            _cboMonths.TabIndex = 5;
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(474, 75);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(53, 18);
-            _Label5.TabIndex = 15;
-            _Label5.Text = "Months";
-            //
-            // txtName
-            //
-            _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtName.Location = new Point(73, 41);
-            _txtName.Name = "txtName";
-            _txtName.Size = new Size(395, 21);
-            _txtName.TabIndex = 2;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(6, 75);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(381, 18);
-            _Label4.TabIndex = 13;
-            _Label4.Text = "Show all parts not used on any job or customer order in the last";
-            //
-            // txtNumber
-            //
-            _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtNumber.Location = new Point(548, 40);
-            _txtNumber.Name = "txtNumber";
-            _txtNumber.Size = new Size(141, 21);
-            _txtNumber.TabIndex = 4;
-            //
-            // cboCategory
-            //
-            _cboCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboCategory.FormattingEnabled = true;
-            _cboCategory.Location = new Point(73, 14);
-            _cboCategory.Name = "cboCategory";
-            _cboCategory.Size = new Size(395, 21);
-            _cboCategory.TabIndex = 1;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(5, 17);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(88, 16);
-            _Label3.TabIndex = 12;
-            _Label3.Text = "Category";
-            //
-            // Label2
-            //
-            _Label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label2.Location = new Point(474, 17);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(67, 18);
-            _Label2.TabIndex = 11;
-            _Label2.Text = "Reference";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(6, 44);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(88, 16);
-            _Label1.TabIndex = 10;
-            _Label1.Text = "Name";
-            //
-            // txtReference
-            //
-            _txtReference.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtReference.Location = new Point(548, 12);
-            _txtReference.Name = "txtReference";
-            _txtReference.Size = new Size(141, 21);
-            _txtReference.TabIndex = 3;
-            //
-            // Label6
-            //
-            _Label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label6.Location = new Point(474, 40);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 16);
-            _Label6.TabIndex = 6;
-            _Label6.Text = "Number";
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(72, 306);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 4;
-            _btnReset.Text = "Reset";
-            //
-            // chkQty
-            //
-            _chkQty.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkQty.AutoSize = true;
-            _chkQty.Location = new Point(548, 72);
-            _chkQty.Name = "chkQty";
-            _chkQty.RightToLeft = RightToLeft.Yes;
-            _chkQty.Size = new Size(133, 17);
-            _chkQty.TabIndex = 16;
-            _chkQty.Text = "Show quantity of 0";
-            _chkQty.UseVisualStyleBackColor = true;
-            //
+            this._grpParts = new System.Windows.Forms.GroupBox();
+            this._dgParts = new System.Windows.Forms.DataGrid();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._chkQty = new System.Windows.Forms.CheckBox();
+            this._cboMonths = new System.Windows.Forms.ComboBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._txtNumber = new System.Windows.Forms.TextBox();
+            this._cboCategory = new System.Windows.Forms.ComboBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtReference = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._grpParts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgParts)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpParts
+            // 
+            this._grpParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpParts.Controls.Add(this._dgParts);
+            this._grpParts.Location = new System.Drawing.Point(8, 123);
+            this._grpParts.Name = "_grpParts";
+            this._grpParts.Size = new System.Drawing.Size(697, 175);
+            this._grpParts.TabIndex = 2;
+            this._grpParts.TabStop = false;
+            this._grpParts.Text = "Parts used";
+            // 
+            // _dgParts
+            // 
+            this._dgParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgParts.DataMember = "";
+            this._dgParts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgParts.Location = new System.Drawing.Point(8, 19);
+            this._dgParts.Name = "_dgParts";
+            this._dgParts.Size = new System.Drawing.Size(681, 148);
+            this._dgParts.TabIndex = 14;
+            this._dgParts.DoubleClick += new System.EventHandler(this.dgParts_DoubleClick);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 306);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 3;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._chkQty);
+            this._grpFilter.Controls.Add(this._cboMonths);
+            this._grpFilter.Controls.Add(this._Label5);
+            this._grpFilter.Controls.Add(this._txtName);
+            this._grpFilter.Controls.Add(this._Label4);
+            this._grpFilter.Controls.Add(this._txtNumber);
+            this._grpFilter.Controls.Add(this._cboCategory);
+            this._grpFilter.Controls.Add(this._Label3);
+            this._grpFilter.Controls.Add(this._Label2);
+            this._grpFilter.Controls.Add(this._Label1);
+            this._grpFilter.Controls.Add(this._txtReference);
+            this._grpFilter.Controls.Add(this._Label6);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(697, 105);
+            this._grpFilter.TabIndex = 1;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _chkQty
+            // 
+            this._chkQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkQty.AutoSize = true;
+            this._chkQty.Location = new System.Drawing.Point(548, 72);
+            this._chkQty.Name = "_chkQty";
+            this._chkQty.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._chkQty.Size = new System.Drawing.Size(133, 17);
+            this._chkQty.TabIndex = 16;
+            this._chkQty.Text = "Show quantity of 0";
+            this._chkQty.UseVisualStyleBackColor = true;
+            this._chkQty.CheckedChanged += new System.EventHandler(this.chkQty_CheckedChanged);
+            // 
+            // _cboMonths
+            // 
+            this._cboMonths.FormattingEnabled = true;
+            this._cboMonths.Location = new System.Drawing.Point(386, 72);
+            this._cboMonths.Name = "_cboMonths";
+            this._cboMonths.Size = new System.Drawing.Size(82, 21);
+            this._cboMonths.TabIndex = 5;
+            this._cboMonths.SelectedIndexChanged += new System.EventHandler(this.cboMonths_SelectedIndexChanged);
+            // 
+            // _Label5
+            // 
+            this._Label5.Location = new System.Drawing.Point(474, 75);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(53, 18);
+            this._Label5.TabIndex = 15;
+            this._Label5.Text = "Months";
+            // 
+            // _txtName
+            // 
+            this._txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtName.Location = new System.Drawing.Point(73, 41);
+            this._txtName.Name = "_txtName";
+            this._txtName.Size = new System.Drawing.Size(395, 21);
+            this._txtName.TabIndex = 2;
+            this._txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(6, 75);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(381, 18);
+            this._Label4.TabIndex = 13;
+            this._Label4.Text = "Show all parts not used on any job or customer order in the last";
+            // 
+            // _txtNumber
+            // 
+            this._txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNumber.Location = new System.Drawing.Point(548, 40);
+            this._txtNumber.Name = "_txtNumber";
+            this._txtNumber.Size = new System.Drawing.Size(141, 21);
+            this._txtNumber.TabIndex = 4;
+            this._txtNumber.TextChanged += new System.EventHandler(this.txtNumber_TextChanged);
+            // 
+            // _cboCategory
+            // 
+            this._cboCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboCategory.FormattingEnabled = true;
+            this._cboCategory.Location = new System.Drawing.Point(73, 14);
+            this._cboCategory.Name = "_cboCategory";
+            this._cboCategory.Size = new System.Drawing.Size(395, 21);
+            this._cboCategory.TabIndex = 1;
+            this._cboCategory.SelectedIndexChanged += new System.EventHandler(this.cboCategory_SelectedIndexChanged);
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(5, 17);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(88, 16);
+            this._Label3.TabIndex = 12;
+            this._Label3.Text = "Category";
+            // 
+            // _Label2
+            // 
+            this._Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label2.Location = new System.Drawing.Point(474, 17);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(67, 18);
+            this._Label2.TabIndex = 11;
+            this._Label2.Text = "Reference";
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(6, 44);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(88, 16);
+            this._Label1.TabIndex = 10;
+            this._Label1.Text = "Name";
+            // 
+            // _txtReference
+            // 
+            this._txtReference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtReference.Location = new System.Drawing.Point(548, 12);
+            this._txtReference.Name = "_txtReference";
+            this._txtReference.Size = new System.Drawing.Size(141, 21);
+            this._txtReference.TabIndex = 3;
+            this._txtReference.TextChanged += new System.EventHandler(this.txtReference_TextChanged);
+            // 
+            // _Label6
+            // 
+            this._Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label6.Location = new System.Drawing.Point(474, 40);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 16);
+            this._Label6.TabIndex = 6;
+            this._Label6.Text = "Number";
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(72, 306);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 4;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // FRMStockUsed
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(713, 336);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpParts);
-            Controls.Add(_btnReset);
-            MinimumSize = new Size(721, 370);
-            Name = "FRMStockUsed";
-            Text = "Stock Used Report";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpParts, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            _grpParts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgParts).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(713, 336);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpParts);
+            this.Controls.Add(this._btnReset);
+            this.MinimumSize = new System.Drawing.Size(721, 370);
+            this.Name = "FRMStockUsed";
+            this.Text = "Stock Used Report";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpParts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgParts)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

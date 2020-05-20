@@ -604,591 +604,599 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            _tabCtrlVisits = new TabControl();
-            _tabStandardVisit = new TabPage();
-            _GroupBox2 = new GroupBox();
-            _cboAppointment = new ComboBox();
-            _Label12 = new Label();
-            _lblAMPM = new Label();
-            _Label11 = new Label();
-            _Label10 = new Label();
-            _txtEndTimeMinutes = new TextBox();
-            _txtEndTimeMinutes.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
-            _txtEndTimeHours = new TextBox();
-            _txtEndTimeHours.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
-            _txtStartTimeMinutes = new TextBox();
-            _txtStartTimeMinutes.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
-            _txtStartTimeHours = new TextBox();
-            _txtStartTimeHours.TextChanged += new EventHandler(txtEndTimeHours_TextChanged);
-            _Label4 = new Label();
-            _Label3 = new Label();
-            _Label2 = new Label();
-            _Label1 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _GroupBox1 = new GroupBox();
-            _Label9 = new Label();
-            _Label6 = new Label();
-            _Label5 = new Label();
-            _Panel2 = new Panel();
-            _Panel1 = new Panel();
-            _picPlanner = new PictureBox();
-            _picPlanner.MouseUp += new MouseEventHandler(picPlanner_MouseUp);
-            _Label7 = new Label();
-            _Panel3 = new Panel();
-            _Panel4 = new Panel();
-            _Label8 = new Label();
-            _tabComplexVisit = new TabPage();
-            _GroupBox3 = new GroupBox();
-            _calComplexVisit = new Pabo.Calendar.MonthCalendar();
-            _calComplexVisit.MonthChanged += new Pabo.Calendar.MonthChangedEventHandler(DtpComplexVisit_MonthChanged);
-            _Label14 = new Label();
-            _Panel5 = new Panel();
-            _Label16 = new Label();
-            _Panel7 = new Panel();
-            _Panel8 = new Panel();
-            _Label17 = new Label();
-            _btnSaveComplex = new Button();
-            _btnSaveComplex.Click += new EventHandler(BtnSaveComplex_Click);
-            _btnCancel2 = new Button();
-            _btnCancel2.Click += new EventHandler(btnCancel_Click);
-            _GroupBox4 = new GroupBox();
-            _btnAdditionalVisit = new Button();
-            _btnAdditionalVisit.Click += new EventHandler(btnAdditionalVisit_Click);
-            _Panel9 = new Panel();
-            _pnlLayout = new TableLayoutPanel();
-            _Label13 = new Label();
-            _ttComplexVisits = new ToolTip(components);
-            _tabCtrlVisits.SuspendLayout();
-            _tabStandardVisit.SuspendLayout();
-            _GroupBox2.SuspendLayout();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_picPlanner).BeginInit();
-            _tabComplexVisit.SuspendLayout();
-            _GroupBox3.SuspendLayout();
-            _GroupBox4.SuspendLayout();
-            _Panel9.SuspendLayout();
-            SuspendLayout();
-            //
-            // tabCtrlVisits
-            //
-            _tabCtrlVisits.Controls.Add(_tabStandardVisit);
-            _tabCtrlVisits.Controls.Add(_tabComplexVisit);
-            _tabCtrlVisits.Location = new Point(0, 33);
-            _tabCtrlVisits.Name = "tabCtrlVisits";
-            _tabCtrlVisits.SelectedIndex = 0;
-            _tabCtrlVisits.Size = new Size(569, 450);
-            _tabCtrlVisits.TabIndex = 2;
-            //
-            // tabStandardVisit
-            //
-            _tabStandardVisit.Controls.Add(_GroupBox2);
-            _tabStandardVisit.Controls.Add(_GroupBox1);
-            _tabStandardVisit.Location = new Point(4, 22);
-            _tabStandardVisit.Name = "tabStandardVisit";
-            _tabStandardVisit.Padding = new Padding(3);
-            _tabStandardVisit.Size = new Size(561, 424);
-            _tabStandardVisit.TabIndex = 0;
-            _tabStandardVisit.Text = "Standard Visit";
-            _tabStandardVisit.UseVisualStyleBackColor = true;
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox2.Controls.Add(_cboAppointment);
-            _GroupBox2.Controls.Add(_Label12);
-            _GroupBox2.Controls.Add(_lblAMPM);
-            _GroupBox2.Controls.Add(_Label11);
-            _GroupBox2.Controls.Add(_Label10);
-            _GroupBox2.Controls.Add(_txtEndTimeMinutes);
-            _GroupBox2.Controls.Add(_txtEndTimeHours);
-            _GroupBox2.Controls.Add(_txtStartTimeMinutes);
-            _GroupBox2.Controls.Add(_txtStartTimeHours);
-            _GroupBox2.Controls.Add(_Label4);
-            _GroupBox2.Controls.Add(_Label3);
-            _GroupBox2.Controls.Add(_Label2);
-            _GroupBox2.Controls.Add(_Label1);
-            _GroupBox2.Controls.Add(_btnSave);
-            _GroupBox2.Controls.Add(_btnCancel);
-            _GroupBox2.Location = new Point(3, 298);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(552, 120);
-            _GroupBox2.TabIndex = 3;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Schedule Visit For";
-            //
-            // cboAppointment
-            //
-            _cboAppointment.FormattingEnabled = true;
-            _cboAppointment.Location = new Point(150, 86);
-            _cboAppointment.Name = "cboAppointment";
-            _cboAppointment.Size = new Size(210, 21);
-            _cboAppointment.TabIndex = 59;
-            //
-            // Label12
-            //
-            _Label12.Location = new Point(10, 89);
-            _Label12.Name = "Label12";
-            _Label12.Size = new Size(134, 18);
-            _Label12.TabIndex = 58;
-            _Label12.Text = "Appointment Type:";
-            //
-            // lblAMPM
-            //
-            _lblAMPM.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblAMPM.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblAMPM.ForeColor = Color.Red;
-            _lblAMPM.Location = new Point(410, 35);
-            _lblAMPM.Name = "lblAMPM";
-            _lblAMPM.Size = new Size(136, 17);
-            _lblAMPM.TabIndex = 57;
-            _lblAMPM.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(8, 48);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(176, 17);
-            _Label11.TabIndex = 56;
-            _Label11.Text = "Blank assumes \"start of day\"";
-            //
-            // Label10
-            //
-            _Label10.Location = new Point(200, 48);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(168, 17);
-            _Label10.TabIndex = 55;
-            _Label10.Text = "Blank assumes \"end of day\"";
-            //
-            // txtEndTimeMinutes
-            //
-            _txtEndTimeMinutes.Location = new Point(336, 21);
-            _txtEndTimeMinutes.Name = "txtEndTimeMinutes";
-            _txtEndTimeMinutes.Size = new Size(24, 21);
-            _txtEndTimeMinutes.TabIndex = 3;
-            //
-            // txtEndTimeHours
-            //
-            _txtEndTimeHours.Location = new Point(288, 21);
-            _txtEndTimeHours.Name = "txtEndTimeHours";
-            _txtEndTimeHours.Size = new Size(24, 21);
-            _txtEndTimeHours.TabIndex = 3;
-            //
-            // txtStartTimeMinutes
-            //
-            _txtStartTimeMinutes.Location = new Point(150, 21);
-            _txtStartTimeMinutes.Name = "txtStartTimeMinutes";
-            _txtStartTimeMinutes.Size = new Size(24, 21);
-            _txtStartTimeMinutes.TabIndex = 2;
-            //
-            // txtStartTimeHours
-            //
-            _txtStartTimeHours.Location = new Point(104, 21);
-            _txtStartTimeHours.Name = "txtStartTimeHours";
-            _txtStartTimeHours.Size = new Size(24, 21);
-            _txtStartTimeHours.TabIndex = 1;
-            //
-            // Label4
-            //
-            _Label4.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label4.Location = new Point(320, 24);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(8, 17);
-            _Label4.TabIndex = 4;
-            _Label4.Text = ":";
-            //
-            // Label3
-            //
-            _Label3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label3.Location = new Point(136, 24);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(8, 17);
-            _Label3.TabIndex = 54;
-            _Label3.Text = ":";
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(200, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(64, 17);
-            _Label2.TabIndex = 1;
-            _Label2.Text = "End Time";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 24);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(77, 17);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Start Time";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnSave.Location = new Point(396, 86);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(64, 23);
-            _btnSave.TabIndex = 4;
-            _btnSave.Text = "Ok";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnCancel.Location = new Point(482, 86);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(64, 23);
-            _btnCancel.TabIndex = 5;
-            _btnCancel.Text = "Cancel";
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_Label9);
-            _GroupBox1.Controls.Add(_Label6);
-            _GroupBox1.Controls.Add(_Label5);
-            _GroupBox1.Controls.Add(_Panel2);
-            _GroupBox1.Controls.Add(_Panel1);
-            _GroupBox1.Controls.Add(_picPlanner);
-            _GroupBox1.Controls.Add(_Label7);
-            _GroupBox1.Controls.Add(_Panel3);
-            _GroupBox1.Controls.Add(_Panel4);
-            _GroupBox1.Controls.Add(_Label8);
-            _GroupBox1.Location = new Point(3, 3);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(555, 289);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Planner";
-            //
-            // Label9
-            //
-            _Label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _Label9.Location = new Point(8, 217);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(533, 16);
-            _Label9.TabIndex = 16;
-            _Label9.Text = "Hold Shift and LEFT click period for START time or RIGHT click period for END tim" + "e";
-            //
-            // Label6
-            //
-            _Label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label6.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label6.Location = new Point(240, 265);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(248, 16);
-            _Label6.TabIndex = 15;
-            _Label6.Text = "NOT OK - Job or Absence overlap";
-            //
-            // Label5
-            //
-            _Label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label5.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label5.Location = new Point(32, 265);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(184, 16);
-            _Label5.TabIndex = 14;
-            _Label5.Text = "OK - No overlap";
-            //
-            // Panel2
-            //
-            _Panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel2.BackColor = Color.Salmon;
-            _Panel2.Location = new Point(216, 265);
-            _Panel2.Name = "Panel2";
-            _Panel2.Size = new Size(16, 16);
-            _Panel2.TabIndex = 13;
-            //
-            // Panel1
-            //
-            _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel1.BackColor = Color.LightGreen;
-            _Panel1.Location = new Point(8, 265);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(16, 16);
-            _Panel1.TabIndex = 12;
-            //
-            // picPlanner
-            //
-            _picPlanner.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _picPlanner.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
-            _picPlanner.BorderStyle = BorderStyle.FixedSingle;
-            _picPlanner.Location = new Point(8, 23);
-            _picPlanner.Name = "picPlanner";
-            _picPlanner.Size = new Size(541, 181);
-            _picPlanner.TabIndex = 0;
-            _picPlanner.TabStop = false;
-            //
-            // Label7
-            //
-            _Label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label7.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label7.Location = new Point(32, 241);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(168, 16);
-            _Label7.TabIndex = 11;
-            _Label7.Text = "Booked Schedule Period";
-            //
-            // Panel3
-            //
-            _Panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel3.BackColor = Color.LightSteelBlue;
-            _Panel3.Location = new Point(8, 241);
-            _Panel3.Name = "Panel3";
-            _Panel3.Size = new Size(16, 16);
-            _Panel3.TabIndex = 9;
-            //
-            // Panel4
-            //
-            _Panel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel4.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)), Conversions.ToInteger(Conversions.ToByte(224)));
-            _Panel4.Location = new Point(216, 241);
-            _Panel4.Name = "Panel4";
-            _Panel4.Size = new Size(16, 16);
-            _Panel4.TabIndex = 8;
-            //
-            // Label8
-            //
-            _Label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label8.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label8.Location = new Point(240, 241);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(176, 16);
-            _Label8.TabIndex = 10;
-            _Label8.Text = "Free Schedule Period";
-            //
-            // tabComplexVisit
-            //
-            _tabComplexVisit.Controls.Add(_GroupBox3);
-            _tabComplexVisit.Controls.Add(_btnSaveComplex);
-            _tabComplexVisit.Controls.Add(_btnCancel2);
-            _tabComplexVisit.Controls.Add(_GroupBox4);
-            _tabComplexVisit.Location = new Point(4, 22);
-            _tabComplexVisit.Name = "tabComplexVisit";
-            _tabComplexVisit.Padding = new Padding(3);
-            _tabComplexVisit.Size = new Size(561, 424);
-            _tabComplexVisit.TabIndex = 1;
-            _tabComplexVisit.Text = "Complex Visit";
-            _tabComplexVisit.UseVisualStyleBackColor = true;
-            //
-            // GroupBox3
-            //
-            _GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox3.Controls.Add(_calComplexVisit);
-            _GroupBox3.Controls.Add(_Label14);
-            _GroupBox3.Controls.Add(_Panel5);
-            _GroupBox3.Controls.Add(_Label16);
-            _GroupBox3.Controls.Add(_Panel7);
-            _GroupBox3.Controls.Add(_Panel8);
-            _GroupBox3.Controls.Add(_Label17);
-            _GroupBox3.Location = new Point(3, 3);
-            _GroupBox3.Name = "GroupBox3";
-            _GroupBox3.Size = new Size(555, 228);
-            _GroupBox3.TabIndex = 13;
-            _GroupBox3.TabStop = false;
-            _GroupBox3.Text = "Planner";
-            //
-            // calComplexVisit
-            //
-            _calComplexVisit.ActiveMonth.Month = 1;
-            _calComplexVisit.ActiveMonth.Year = 2018;
-            _calComplexVisit.BorderColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(197)), Conversions.ToInteger(Conversions.ToByte(198)), Conversions.ToInteger(Conversions.ToByte(214)));
-            _calComplexVisit.Culture = new System.Globalization.CultureInfo("en-GB");
-            _calComplexVisit.ExtendedSelectionKey = Pabo.Calendar.mcExtendedSelectionKey.Shift;
-            _calComplexVisit.Footer.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
-            _calComplexVisit.Header.BackColor1 = Color.Blue;
-            _calComplexVisit.Header.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
-            _calComplexVisit.Header.TextColor = Color.White;
-            _calComplexVisit.ImageList = null;
-            _calComplexVisit.Location = new Point(7, 23);
-            _calComplexVisit.MaxDate = new DateTime(2027, 5, 10, 12, 28, 13, 983);
-            _calComplexVisit.MinDate = new DateTime(2018, 1, 11, 0, 0, 0, 0);
-            _calComplexVisit.Month.BackgroundImage = null;
-            _calComplexVisit.Month.Colors.Focus.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(211)), Conversions.ToInteger(Conversions.ToByte(213)), Conversions.ToInteger(Conversions.ToByte(224)));
-            _calComplexVisit.Month.Colors.Focus.Border = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(197)), Conversions.ToInteger(Conversions.ToByte(198)), Conversions.ToInteger(Conversions.ToByte(214)));
-            _calComplexVisit.Month.Colors.Selected.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(128)), Conversions.ToInteger(Conversions.ToByte(128)), Conversions.ToInteger(Conversions.ToByte(255)));
-            _calComplexVisit.Month.Colors.Selected.Border = Color.Black;
-            _calComplexVisit.Month.Colors.Trailing.BackColor1 = Color.WhiteSmoke;
-            _calComplexVisit.Month.Colors.Trailing.Date = Color.DimGray;
-            _calComplexVisit.Month.Colors.Trailing.Text = Color.Transparent;
-            _calComplexVisit.Month.Colors.Weekend.BackColor1 = Color.DarkOrange;
-            _calComplexVisit.Month.DateFont = new Font("Microsoft Sans Serif", 8.25F);
-            _calComplexVisit.Month.TextFont = new Font("Microsoft Sans Serif", 8.25F);
-            _calComplexVisit.Name = "calComplexVisit";
-            _calComplexVisit.SelectionMode = Pabo.Calendar.mcSelectionMode.None;
-            _calComplexVisit.ShowFooter = false;
-            _calComplexVisit.Size = new Size(541, 168);
-            _calComplexVisit.TabIndex = 16;
-            _calComplexVisit.Weekdays.Font = new Font("Microsoft Sans Serif", 8.25F);
-            _calComplexVisit.Weekdays.TextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(177)), Conversions.ToInteger(Conversions.ToByte(179)), Conversions.ToInteger(Conversions.ToByte(200)));
-            _calComplexVisit.Weeknumbers.Font = new Font("Microsoft Sans Serif", 8.25F);
-            _calComplexVisit.Weeknumbers.TextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(177)), Conversions.ToInteger(Conversions.ToByte(179)), Conversions.ToInteger(Conversions.ToByte(200)));
-            //
-            // Label14
-            //
-            _Label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label14.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label14.Location = new Point(288, 199);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(248, 16);
-            _Label14.TabIndex = 15;
-            _Label14.Text = "NOT OK - Job or Absence overlap";
-            //
-            // Panel5
-            //
-            _Panel5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel5.BackColor = Color.Salmon;
-            _Panel5.Location = new Point(264, 199);
-            _Panel5.Name = "Panel5";
-            _Panel5.Size = new Size(16, 16);
-            _Panel5.TabIndex = 13;
-            //
-            // Label16
-            //
-            _Label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label16.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label16.Location = new Point(40, 199);
-            _Label16.Name = "Label16";
-            _Label16.Size = new Size(107, 14);
-            _Label16.TabIndex = 11;
-            _Label16.Text = "Selected Dates";
-            //
-            // Panel7
-            //
-            _Panel7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel7.BackColor = Color.LightSteelBlue;
-            _Panel7.Location = new Point(17, 197);
-            _Panel7.Name = "Panel7";
-            _Panel7.Size = new Size(16, 16);
-            _Panel7.TabIndex = 9;
-            //
-            // Panel8
-            //
-            _Panel8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel8.BackColor = Color.DarkOrange;
-            _Panel8.Location = new Point(160, 199);
-            _Panel8.Name = "Panel8";
-            _Panel8.Size = new Size(16, 16);
-            _Panel8.TabIndex = 8;
-            //
-            // Label17
-            //
-            _Label17.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label17.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label17.Location = new Point(184, 199);
-            _Label17.Name = "Label17";
-            _Label17.Size = new Size(71, 16);
-            _Label17.TabIndex = 10;
-            _Label17.Text = "Weekend";
-            //
-            // btnSaveComplex
-            //
-            _btnSaveComplex.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnSaveComplex.Location = new Point(397, 389);
-            _btnSaveComplex.Name = "btnSaveComplex";
-            _btnSaveComplex.Size = new Size(64, 23);
-            _btnSaveComplex.TabIndex = 4;
-            _btnSaveComplex.Text = "Ok";
-            //
-            // btnCancel2
-            //
-            _btnCancel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnCancel2.Location = new Point(490, 389);
-            _btnCancel2.Name = "btnCancel2";
-            _btnCancel2.Size = new Size(64, 23);
-            _btnCancel2.TabIndex = 5;
-            _btnCancel2.Text = "Cancel";
-            //
-            // GroupBox4
-            //
-            _GroupBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox4.Controls.Add(_btnAdditionalVisit);
-            _GroupBox4.Controls.Add(_Panel9);
-            _GroupBox4.Location = new Point(3, 237);
-            _GroupBox4.Name = "GroupBox4";
-            _GroupBox4.Size = new Size(555, 138);
-            _GroupBox4.TabIndex = 17;
-            _GroupBox4.TabStop = false;
-            _GroupBox4.Text = "Schedule Visit For";
-            //
-            // btnAdditionalVisit
-            //
-            _btnAdditionalVisit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAdditionalVisit.Location = new Point(505, 20);
-            _btnAdditionalVisit.Name = "btnAdditionalVisit";
-            _btnAdditionalVisit.Size = new Size(20, 22);
-            _btnAdditionalVisit.TabIndex = 66;
-            _btnAdditionalVisit.Tag = "";
-            _btnAdditionalVisit.Text = "+";
-            _ttComplexVisits.SetToolTip(_btnAdditionalVisit, "Add new visit");
-            //
-            // Panel9
-            //
-            _Panel9.AutoScroll = true;
-            _Panel9.Controls.Add(_pnlLayout);
-            _Panel9.Controls.Add(_Label13);
-            _Panel9.Dock = DockStyle.Fill;
-            _Panel9.Location = new Point(3, 17);
-            _Panel9.Name = "Panel9";
-            _Panel9.Size = new Size(549, 118);
-            _Panel9.TabIndex = 67;
-            //
-            // pnlLayout
-            //
-            _pnlLayout.AutoSize = true;
-            _pnlLayout.ColumnCount = 6;
-            _pnlLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 27.85714F));
-            _pnlLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 72.14286F));
-            _pnlLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 37.0F));
-            _pnlLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 108.0F));
-            _pnlLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45.0F));
-            _pnlLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 47.0F));
-            _pnlLayout.Location = new Point(12, 28);
-            _pnlLayout.Name = "pnlLayout";
-            _pnlLayout.RowCount = 1;
-            _pnlLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50.0F));
-            _pnlLayout.Size = new Size(371, 30);
-            _pnlLayout.TabIndex = 3;
-            //
-            // Label13
-            //
-            _Label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _Label13.Location = new Point(11, 4);
-            _Label13.Name = "Label13";
-            _Label13.Size = new Size(421, 21);
-            _Label13.TabIndex = 17;
-            _Label13.Text = "CLICK + TO ADD VISIT";
-            //
+            this.components = new System.ComponentModel.Container();
+            this._tabCtrlVisits = new System.Windows.Forms.TabControl();
+            this._tabStandardVisit = new System.Windows.Forms.TabPage();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._cboAppointment = new System.Windows.Forms.ComboBox();
+            this._Label12 = new System.Windows.Forms.Label();
+            this._lblAMPM = new System.Windows.Forms.Label();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._txtEndTimeMinutes = new System.Windows.Forms.TextBox();
+            this._txtEndTimeHours = new System.Windows.Forms.TextBox();
+            this._txtStartTimeMinutes = new System.Windows.Forms.TextBox();
+            this._txtStartTimeHours = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._Panel2 = new System.Windows.Forms.Panel();
+            this._Panel1 = new System.Windows.Forms.Panel();
+            this._picPlanner = new System.Windows.Forms.PictureBox();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._Panel3 = new System.Windows.Forms.Panel();
+            this._Panel4 = new System.Windows.Forms.Panel();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._tabComplexVisit = new System.Windows.Forms.TabPage();
+            this._GroupBox3 = new System.Windows.Forms.GroupBox();
+            this._calComplexVisit = new Pabo.Calendar.MonthCalendar();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._Panel5 = new System.Windows.Forms.Panel();
+            this._Label16 = new System.Windows.Forms.Label();
+            this._Panel7 = new System.Windows.Forms.Panel();
+            this._Panel8 = new System.Windows.Forms.Panel();
+            this._Label17 = new System.Windows.Forms.Label();
+            this._btnSaveComplex = new System.Windows.Forms.Button();
+            this._btnCancel2 = new System.Windows.Forms.Button();
+            this._GroupBox4 = new System.Windows.Forms.GroupBox();
+            this._btnAdditionalVisit = new System.Windows.Forms.Button();
+            this._Panel9 = new System.Windows.Forms.Panel();
+            this._pnlLayout = new System.Windows.Forms.TableLayoutPanel();
+            this._Label13 = new System.Windows.Forms.Label();
+            this._ttComplexVisits = new System.Windows.Forms.ToolTip(this.components);
+            this._tabCtrlVisits.SuspendLayout();
+            this._tabStandardVisit.SuspendLayout();
+            this._GroupBox2.SuspendLayout();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._picPlanner)).BeginInit();
+            this._tabComplexVisit.SuspendLayout();
+            this._GroupBox3.SuspendLayout();
+            this._GroupBox4.SuspendLayout();
+            this._Panel9.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _tabCtrlVisits
+            // 
+            this._tabCtrlVisits.Controls.Add(this._tabStandardVisit);
+            this._tabCtrlVisits.Controls.Add(this._tabComplexVisit);
+            this._tabCtrlVisits.Location = new System.Drawing.Point(0, 12);
+            this._tabCtrlVisits.Name = "_tabCtrlVisits";
+            this._tabCtrlVisits.SelectedIndex = 0;
+            this._tabCtrlVisits.Size = new System.Drawing.Size(569, 471);
+            this._tabCtrlVisits.TabIndex = 2;
+            // 
+            // _tabStandardVisit
+            // 
+            this._tabStandardVisit.Controls.Add(this._GroupBox2);
+            this._tabStandardVisit.Controls.Add(this._GroupBox1);
+            this._tabStandardVisit.Location = new System.Drawing.Point(4, 22);
+            this._tabStandardVisit.Name = "_tabStandardVisit";
+            this._tabStandardVisit.Padding = new System.Windows.Forms.Padding(3);
+            this._tabStandardVisit.Size = new System.Drawing.Size(561, 445);
+            this._tabStandardVisit.TabIndex = 0;
+            this._tabStandardVisit.Text = "Standard Visit";
+            this._tabStandardVisit.UseVisualStyleBackColor = true;
+            // 
+            // _GroupBox2
+            // 
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox2.Controls.Add(this._cboAppointment);
+            this._GroupBox2.Controls.Add(this._Label12);
+            this._GroupBox2.Controls.Add(this._lblAMPM);
+            this._GroupBox2.Controls.Add(this._Label11);
+            this._GroupBox2.Controls.Add(this._Label10);
+            this._GroupBox2.Controls.Add(this._txtEndTimeMinutes);
+            this._GroupBox2.Controls.Add(this._txtEndTimeHours);
+            this._GroupBox2.Controls.Add(this._txtStartTimeMinutes);
+            this._GroupBox2.Controls.Add(this._txtStartTimeHours);
+            this._GroupBox2.Controls.Add(this._Label4);
+            this._GroupBox2.Controls.Add(this._Label3);
+            this._GroupBox2.Controls.Add(this._Label2);
+            this._GroupBox2.Controls.Add(this._Label1);
+            this._GroupBox2.Controls.Add(this._btnSave);
+            this._GroupBox2.Controls.Add(this._btnCancel);
+            this._GroupBox2.Location = new System.Drawing.Point(3, 319);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(552, 120);
+            this._GroupBox2.TabIndex = 3;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Schedule Visit For";
+            // 
+            // _cboAppointment
+            // 
+            this._cboAppointment.FormattingEnabled = true;
+            this._cboAppointment.Location = new System.Drawing.Point(150, 86);
+            this._cboAppointment.Name = "_cboAppointment";
+            this._cboAppointment.Size = new System.Drawing.Size(210, 21);
+            this._cboAppointment.TabIndex = 59;
+            // 
+            // _Label12
+            // 
+            this._Label12.Location = new System.Drawing.Point(10, 89);
+            this._Label12.Name = "_Label12";
+            this._Label12.Size = new System.Drawing.Size(134, 18);
+            this._Label12.TabIndex = 58;
+            this._Label12.Text = "Appointment Type:";
+            // 
+            // _lblAMPM
+            // 
+            this._lblAMPM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblAMPM.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblAMPM.ForeColor = System.Drawing.Color.Red;
+            this._lblAMPM.Location = new System.Drawing.Point(410, 35);
+            this._lblAMPM.Name = "_lblAMPM";
+            this._lblAMPM.Size = new System.Drawing.Size(136, 17);
+            this._lblAMPM.TabIndex = 57;
+            this._lblAMPM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _Label11
+            // 
+            this._Label11.Location = new System.Drawing.Point(8, 48);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(176, 17);
+            this._Label11.TabIndex = 56;
+            this._Label11.Text = "Blank assumes \"start of day\"";
+            // 
+            // _Label10
+            // 
+            this._Label10.Location = new System.Drawing.Point(200, 48);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(168, 17);
+            this._Label10.TabIndex = 55;
+            this._Label10.Text = "Blank assumes \"end of day\"";
+            // 
+            // _txtEndTimeMinutes
+            // 
+            this._txtEndTimeMinutes.Location = new System.Drawing.Point(336, 21);
+            this._txtEndTimeMinutes.Name = "_txtEndTimeMinutes";
+            this._txtEndTimeMinutes.Size = new System.Drawing.Size(24, 21);
+            this._txtEndTimeMinutes.TabIndex = 3;
+            this._txtEndTimeMinutes.TextChanged += new System.EventHandler(this.txtEndTimeHours_TextChanged);
+            // 
+            // _txtEndTimeHours
+            // 
+            this._txtEndTimeHours.Location = new System.Drawing.Point(288, 21);
+            this._txtEndTimeHours.Name = "_txtEndTimeHours";
+            this._txtEndTimeHours.Size = new System.Drawing.Size(24, 21);
+            this._txtEndTimeHours.TabIndex = 3;
+            this._txtEndTimeHours.TextChanged += new System.EventHandler(this.txtEndTimeHours_TextChanged);
+            // 
+            // _txtStartTimeMinutes
+            // 
+            this._txtStartTimeMinutes.Location = new System.Drawing.Point(150, 21);
+            this._txtStartTimeMinutes.Name = "_txtStartTimeMinutes";
+            this._txtStartTimeMinutes.Size = new System.Drawing.Size(24, 21);
+            this._txtStartTimeMinutes.TabIndex = 2;
+            this._txtStartTimeMinutes.TextChanged += new System.EventHandler(this.txtEndTimeHours_TextChanged);
+            // 
+            // _txtStartTimeHours
+            // 
+            this._txtStartTimeHours.Location = new System.Drawing.Point(104, 21);
+            this._txtStartTimeHours.Name = "_txtStartTimeHours";
+            this._txtStartTimeHours.Size = new System.Drawing.Size(24, 21);
+            this._txtStartTimeHours.TabIndex = 1;
+            this._txtStartTimeHours.TextChanged += new System.EventHandler(this.txtEndTimeHours_TextChanged);
+            // 
+            // _Label4
+            // 
+            this._Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label4.Location = new System.Drawing.Point(320, 24);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(8, 17);
+            this._Label4.TabIndex = 4;
+            this._Label4.Text = ":";
+            // 
+            // _Label3
+            // 
+            this._Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label3.Location = new System.Drawing.Point(136, 24);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(8, 17);
+            this._Label3.TabIndex = 54;
+            this._Label3.Text = ":";
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(200, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(64, 17);
+            this._Label2.TabIndex = 1;
+            this._Label2.Text = "End Time";
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 24);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(77, 17);
+            this._Label1.TabIndex = 0;
+            this._Label1.Text = "Start Time";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Location = new System.Drawing.Point(396, 86);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(64, 23);
+            this._btnSave.TabIndex = 4;
+            this._btnSave.Text = "Ok";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCancel.Location = new System.Drawing.Point(482, 86);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(64, 23);
+            this._btnCancel.TabIndex = 5;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._Label9);
+            this._GroupBox1.Controls.Add(this._Label6);
+            this._GroupBox1.Controls.Add(this._Label5);
+            this._GroupBox1.Controls.Add(this._Panel2);
+            this._GroupBox1.Controls.Add(this._Panel1);
+            this._GroupBox1.Controls.Add(this._picPlanner);
+            this._GroupBox1.Controls.Add(this._Label7);
+            this._GroupBox1.Controls.Add(this._Panel3);
+            this._GroupBox1.Controls.Add(this._Panel4);
+            this._GroupBox1.Controls.Add(this._Label8);
+            this._GroupBox1.Location = new System.Drawing.Point(3, 3);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(555, 310);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Planner";
+            // 
+            // _Label9
+            // 
+            this._Label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label9.Location = new System.Drawing.Point(8, 238);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(533, 16);
+            this._Label9.TabIndex = 16;
+            this._Label9.Text = "Hold Shift and LEFT click period for START time or RIGHT click period for END tim" +
+    "e";
+            // 
+            // _Label6
+            // 
+            this._Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label6.Location = new System.Drawing.Point(240, 286);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(248, 16);
+            this._Label6.TabIndex = 15;
+            this._Label6.Text = "NOT OK - Job or Absence overlap";
+            // 
+            // _Label5
+            // 
+            this._Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label5.Location = new System.Drawing.Point(32, 286);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(184, 16);
+            this._Label5.TabIndex = 14;
+            this._Label5.Text = "OK - No overlap";
+            // 
+            // _Panel2
+            // 
+            this._Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel2.BackColor = System.Drawing.Color.Salmon;
+            this._Panel2.Location = new System.Drawing.Point(216, 286);
+            this._Panel2.Name = "_Panel2";
+            this._Panel2.Size = new System.Drawing.Size(16, 16);
+            this._Panel2.TabIndex = 13;
+            // 
+            // _Panel1
+            // 
+            this._Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel1.BackColor = System.Drawing.Color.LightGreen;
+            this._Panel1.Location = new System.Drawing.Point(8, 286);
+            this._Panel1.Name = "_Panel1";
+            this._Panel1.Size = new System.Drawing.Size(16, 16);
+            this._Panel1.TabIndex = 12;
+            // 
+            // _picPlanner
+            // 
+            this._picPlanner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._picPlanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._picPlanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._picPlanner.Location = new System.Drawing.Point(8, 23);
+            this._picPlanner.Name = "_picPlanner";
+            this._picPlanner.Size = new System.Drawing.Size(541, 202);
+            this._picPlanner.TabIndex = 0;
+            this._picPlanner.TabStop = false;
+            this._picPlanner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picPlanner_MouseUp);
+            // 
+            // _Label7
+            // 
+            this._Label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label7.Location = new System.Drawing.Point(32, 262);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(168, 16);
+            this._Label7.TabIndex = 11;
+            this._Label7.Text = "Booked Schedule Period";
+            // 
+            // _Panel3
+            // 
+            this._Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this._Panel3.Location = new System.Drawing.Point(8, 262);
+            this._Panel3.Name = "_Panel3";
+            this._Panel3.Size = new System.Drawing.Size(16, 16);
+            this._Panel3.TabIndex = 9;
+            // 
+            // _Panel4
+            // 
+            this._Panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._Panel4.Location = new System.Drawing.Point(216, 262);
+            this._Panel4.Name = "_Panel4";
+            this._Panel4.Size = new System.Drawing.Size(16, 16);
+            this._Panel4.TabIndex = 8;
+            // 
+            // _Label8
+            // 
+            this._Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label8.Location = new System.Drawing.Point(240, 262);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(176, 16);
+            this._Label8.TabIndex = 10;
+            this._Label8.Text = "Free Schedule Period";
+            // 
+            // _tabComplexVisit
+            // 
+            this._tabComplexVisit.Controls.Add(this._GroupBox3);
+            this._tabComplexVisit.Controls.Add(this._btnSaveComplex);
+            this._tabComplexVisit.Controls.Add(this._btnCancel2);
+            this._tabComplexVisit.Controls.Add(this._GroupBox4);
+            this._tabComplexVisit.Location = new System.Drawing.Point(4, 22);
+            this._tabComplexVisit.Name = "_tabComplexVisit";
+            this._tabComplexVisit.Padding = new System.Windows.Forms.Padding(3);
+            this._tabComplexVisit.Size = new System.Drawing.Size(561, 424);
+            this._tabComplexVisit.TabIndex = 1;
+            this._tabComplexVisit.Text = "Complex Visit";
+            this._tabComplexVisit.UseVisualStyleBackColor = true;
+            // 
+            // _GroupBox3
+            // 
+            this._GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox3.Controls.Add(this._calComplexVisit);
+            this._GroupBox3.Controls.Add(this._Label14);
+            this._GroupBox3.Controls.Add(this._Panel5);
+            this._GroupBox3.Controls.Add(this._Label16);
+            this._GroupBox3.Controls.Add(this._Panel7);
+            this._GroupBox3.Controls.Add(this._Panel8);
+            this._GroupBox3.Controls.Add(this._Label17);
+            this._GroupBox3.Location = new System.Drawing.Point(3, 3);
+            this._GroupBox3.Name = "_GroupBox3";
+            this._GroupBox3.Size = new System.Drawing.Size(555, 228);
+            this._GroupBox3.TabIndex = 13;
+            this._GroupBox3.TabStop = false;
+            this._GroupBox3.Text = "Planner";
+            // 
+            // _calComplexVisit
+            // 
+            this._calComplexVisit.ActiveMonth.Month = 1;
+            this._calComplexVisit.ActiveMonth.Year = 2018;
+            this._calComplexVisit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
+            this._calComplexVisit.Culture = new System.Globalization.CultureInfo("en-GB");
+            this._calComplexVisit.ExtendedSelectionKey = Pabo.Calendar.mcExtendedSelectionKey.Shift;
+            this._calComplexVisit.Footer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this._calComplexVisit.Header.BackColor1 = System.Drawing.Color.Blue;
+            this._calComplexVisit.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this._calComplexVisit.Header.TextColor = System.Drawing.Color.White;
+            this._calComplexVisit.ImageList = null;
+            this._calComplexVisit.Location = new System.Drawing.Point(7, 23);
+            this._calComplexVisit.MaxDate = new System.DateTime(2027, 5, 10, 12, 28, 13, 983);
+            this._calComplexVisit.MinDate = new System.DateTime(2018, 1, 11, 0, 0, 0, 0);
+            this._calComplexVisit.Month.BackgroundImage = null;
+            this._calComplexVisit.Month.Colors.Focus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(224)))));
+            this._calComplexVisit.Month.Colors.Focus.Border = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
+            this._calComplexVisit.Month.Colors.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this._calComplexVisit.Month.Colors.Selected.Border = System.Drawing.Color.Black;
+            this._calComplexVisit.Month.Colors.Trailing.BackColor1 = System.Drawing.Color.WhiteSmoke;
+            this._calComplexVisit.Month.Colors.Trailing.Date = System.Drawing.Color.DimGray;
+            this._calComplexVisit.Month.Colors.Trailing.Text = System.Drawing.Color.Transparent;
+            this._calComplexVisit.Month.Colors.Weekend.BackColor1 = System.Drawing.Color.DarkOrange;
+            this._calComplexVisit.Month.DateFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this._calComplexVisit.Month.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this._calComplexVisit.Name = "_calComplexVisit";
+            this._calComplexVisit.SelectionMode = Pabo.Calendar.mcSelectionMode.None;
+            this._calComplexVisit.ShowFooter = false;
+            this._calComplexVisit.Size = new System.Drawing.Size(541, 168);
+            this._calComplexVisit.TabIndex = 16;
+            this._calComplexVisit.Weekdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this._calComplexVisit.Weekdays.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(179)))), ((int)(((byte)(200)))));
+            this._calComplexVisit.Weeknumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this._calComplexVisit.Weeknumbers.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(179)))), ((int)(((byte)(200)))));
+            this._calComplexVisit.MonthChanged += new Pabo.Calendar.MonthChangedEventHandler(this.DtpComplexVisit_MonthChanged);
+            // 
+            // _Label14
+            // 
+            this._Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label14.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label14.Location = new System.Drawing.Point(288, 199);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(248, 16);
+            this._Label14.TabIndex = 15;
+            this._Label14.Text = "NOT OK - Job or Absence overlap";
+            // 
+            // _Panel5
+            // 
+            this._Panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel5.BackColor = System.Drawing.Color.Salmon;
+            this._Panel5.Location = new System.Drawing.Point(264, 199);
+            this._Panel5.Name = "_Panel5";
+            this._Panel5.Size = new System.Drawing.Size(16, 16);
+            this._Panel5.TabIndex = 13;
+            // 
+            // _Label16
+            // 
+            this._Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label16.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label16.Location = new System.Drawing.Point(40, 199);
+            this._Label16.Name = "_Label16";
+            this._Label16.Size = new System.Drawing.Size(107, 14);
+            this._Label16.TabIndex = 11;
+            this._Label16.Text = "Selected Dates";
+            // 
+            // _Panel7
+            // 
+            this._Panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel7.BackColor = System.Drawing.Color.LightSteelBlue;
+            this._Panel7.Location = new System.Drawing.Point(17, 197);
+            this._Panel7.Name = "_Panel7";
+            this._Panel7.Size = new System.Drawing.Size(16, 16);
+            this._Panel7.TabIndex = 9;
+            // 
+            // _Panel8
+            // 
+            this._Panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel8.BackColor = System.Drawing.Color.DarkOrange;
+            this._Panel8.Location = new System.Drawing.Point(160, 199);
+            this._Panel8.Name = "_Panel8";
+            this._Panel8.Size = new System.Drawing.Size(16, 16);
+            this._Panel8.TabIndex = 8;
+            // 
+            // _Label17
+            // 
+            this._Label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label17.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label17.Location = new System.Drawing.Point(184, 199);
+            this._Label17.Name = "_Label17";
+            this._Label17.Size = new System.Drawing.Size(71, 16);
+            this._Label17.TabIndex = 10;
+            this._Label17.Text = "Weekend";
+            // 
+            // _btnSaveComplex
+            // 
+            this._btnSaveComplex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSaveComplex.Location = new System.Drawing.Point(397, 389);
+            this._btnSaveComplex.Name = "_btnSaveComplex";
+            this._btnSaveComplex.Size = new System.Drawing.Size(64, 23);
+            this._btnSaveComplex.TabIndex = 4;
+            this._btnSaveComplex.Text = "Ok";
+            this._btnSaveComplex.Click += new System.EventHandler(this.BtnSaveComplex_Click);
+            // 
+            // _btnCancel2
+            // 
+            this._btnCancel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCancel2.Location = new System.Drawing.Point(490, 389);
+            this._btnCancel2.Name = "_btnCancel2";
+            this._btnCancel2.Size = new System.Drawing.Size(64, 23);
+            this._btnCancel2.TabIndex = 5;
+            this._btnCancel2.Text = "Cancel";
+            this._btnCancel2.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _GroupBox4
+            // 
+            this._GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox4.Controls.Add(this._btnAdditionalVisit);
+            this._GroupBox4.Controls.Add(this._Panel9);
+            this._GroupBox4.Location = new System.Drawing.Point(3, 237);
+            this._GroupBox4.Name = "_GroupBox4";
+            this._GroupBox4.Size = new System.Drawing.Size(555, 138);
+            this._GroupBox4.TabIndex = 17;
+            this._GroupBox4.TabStop = false;
+            this._GroupBox4.Text = "Schedule Visit For";
+            // 
+            // _btnAdditionalVisit
+            // 
+            this._btnAdditionalVisit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAdditionalVisit.Location = new System.Drawing.Point(505, 20);
+            this._btnAdditionalVisit.Name = "_btnAdditionalVisit";
+            this._btnAdditionalVisit.Size = new System.Drawing.Size(20, 22);
+            this._btnAdditionalVisit.TabIndex = 66;
+            this._btnAdditionalVisit.Tag = "";
+            this._btnAdditionalVisit.Text = "+";
+            this._ttComplexVisits.SetToolTip(this._btnAdditionalVisit, "Add new visit");
+            this._btnAdditionalVisit.Click += new System.EventHandler(this.btnAdditionalVisit_Click);
+            // 
+            // _Panel9
+            // 
+            this._Panel9.AutoScroll = true;
+            this._Panel9.Controls.Add(this._pnlLayout);
+            this._Panel9.Controls.Add(this._Label13);
+            this._Panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._Panel9.Location = new System.Drawing.Point(3, 17);
+            this._Panel9.Name = "_Panel9";
+            this._Panel9.Size = new System.Drawing.Size(549, 118);
+            this._Panel9.TabIndex = 67;
+            // 
+            // _pnlLayout
+            // 
+            this._pnlLayout.AutoSize = true;
+            this._pnlLayout.ColumnCount = 6;
+            this._pnlLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.85714F));
+            this._pnlLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.14286F));
+            this._pnlLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this._pnlLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this._pnlLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this._pnlLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this._pnlLayout.Location = new System.Drawing.Point(12, 28);
+            this._pnlLayout.Name = "_pnlLayout";
+            this._pnlLayout.RowCount = 1;
+            this._pnlLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this._pnlLayout.Size = new System.Drawing.Size(371, 30);
+            this._pnlLayout.TabIndex = 3;
+            // 
+            // _Label13
+            // 
+            this._Label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label13.Location = new System.Drawing.Point(11, 4);
+            this._Label13.Name = "_Label13";
+            this._Label13.Size = new System.Drawing.Size(421, 21);
+            this._Label13.TabIndex = 17;
+            this._Label13.Text = "CLICK + TO ADD VISIT";
+            // 
             // frmVisit
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(570, 487);
-            ControlBox = false;
-            Controls.Add(_tabCtrlVisits);
-            MaximizeBox = false;
-            MaximumSize = new Size(1000, 1000);
-            MinimizeBox = false;
-            MinimumSize = new Size(560, 450);
-            Name = "frmVisit";
-            Text = "Schedule Visit";
-            Controls.SetChildIndex(_tabCtrlVisits, 0);
-            _tabCtrlVisits.ResumeLayout(false);
-            _tabStandardVisit.ResumeLayout(false);
-            _GroupBox2.ResumeLayout(false);
-            _GroupBox2.PerformLayout();
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_picPlanner).EndInit();
-            _tabComplexVisit.ResumeLayout(false);
-            _GroupBox3.ResumeLayout(false);
-            _GroupBox4.ResumeLayout(false);
-            _Panel9.ResumeLayout(false);
-            _Panel9.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(570, 487);
+            this.ControlBox = false;
+            this.Controls.Add(this._tabCtrlVisits);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(560, 450);
+            this.Name = "frmVisit";
+            this.Text = "Schedule Visit";
+            this._tabCtrlVisits.ResumeLayout(false);
+            this._tabStandardVisit.ResumeLayout(false);
+            this._GroupBox2.ResumeLayout(false);
+            this._GroupBox2.PerformLayout();
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._picPlanner)).EndInit();
+            this._tabComplexVisit.ResumeLayout(false);
+            this._GroupBox3.ResumeLayout(false);
+            this._GroupBox4.ResumeLayout(false);
+            this._Panel9.ResumeLayout(false);
+            this._Panel9.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private bool isCopy = false;

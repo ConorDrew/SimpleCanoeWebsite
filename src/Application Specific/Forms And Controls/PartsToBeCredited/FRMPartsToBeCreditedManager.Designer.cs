@@ -37,224 +37,222 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpFilter = new GroupBox();
-            _Label5 = new Label();
-            _cboStatus = new ComboBox();
-            _cboStatus.SelectedIndexChanged += new EventHandler(cboStatus_SelectedIndexChanged);
-            _txtCreditReference = new TextBox();
-            _txtCreditReference.TextChanged += new EventHandler(txtCreditReference_TextChanged);
-            _Label4 = new Label();
-            _txtPart = new TextBox();
-            _txtPart.TextChanged += new EventHandler(txtPart_TextChanged);
-            _Label3 = new Label();
-            _txtSupplier = new TextBox();
-            _txtSupplier.TextChanged += new EventHandler(txtSupplier_TextChanged);
-            _Label2 = new Label();
-            _txtOrderReference = new TextBox();
-            _txtOrderReference.TextChanged += new EventHandler(txtOrderReference_TextChanged);
-            _Label1 = new Label();
-            _grpJobs = new GroupBox();
-            _dgCredits = new DataGrid();
-            _dgCredits.DoubleClick += new EventHandler(dgCredits_DoubleClick);
-            _dgCredits.MouseUp += new MouseEventHandler(dgCredits_MouseUp);
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _btnAddNew = new Button();
-            _btnAddNew.Click += new EventHandler(btnAddNew_Click);
-            _btnGenerateCreditDocument = new Button();
-            _btnGenerateCreditDocument.Click += new EventHandler(btnGenerateCreditDocument_Click);
-            _btnCreditAmount = new Button();
-            _btnCreditAmount.Click += new EventHandler(btnCreditAmount_Click);
-            _grpFilter.SuspendLayout();
-            _grpJobs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCredits).BeginInit();
-            SuspendLayout();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._cboStatus = new System.Windows.Forms.ComboBox();
+            this._txtCreditReference = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._txtPart = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtSupplier = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._txtOrderReference = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._grpJobs = new System.Windows.Forms.GroupBox();
+            this._dgCredits = new System.Windows.Forms.DataGrid();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._btnGenerateCreditDocument = new System.Windows.Forms.Button();
+            this._btnCreditAmount = new System.Windows.Forms.Button();
+            this._grpFilter.SuspendLayout();
+            this._grpJobs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCredits)).BeginInit();
+            this.SuspendLayout();
             // 
-            // grpFilter
+            // _grpFilter
             // 
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_Label5);
-            _grpFilter.Controls.Add(_cboStatus);
-            _grpFilter.Controls.Add(_txtCreditReference);
-            _grpFilter.Controls.Add(_Label4);
-            _grpFilter.Controls.Add(_txtPart);
-            _grpFilter.Controls.Add(_Label3);
-            _grpFilter.Controls.Add(_txtSupplier);
-            _grpFilter.Controls.Add(_Label2);
-            _grpFilter.Controls.Add(_txtOrderReference);
-            _grpFilter.Controls.Add(_Label1);
-            _grpFilter.Location = new Point(12, 38);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(859, 101);
-            _grpFilter.TabIndex = 1;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._Label5);
+            this._grpFilter.Controls.Add(this._cboStatus);
+            this._grpFilter.Controls.Add(this._txtCreditReference);
+            this._grpFilter.Controls.Add(this._Label4);
+            this._grpFilter.Controls.Add(this._txtPart);
+            this._grpFilter.Controls.Add(this._Label3);
+            this._grpFilter.Controls.Add(this._txtSupplier);
+            this._grpFilter.Controls.Add(this._Label2);
+            this._grpFilter.Controls.Add(this._txtOrderReference);
+            this._grpFilter.Controls.Add(this._Label1);
+            this._grpFilter.Location = new System.Drawing.Point(12, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(859, 101);
+            this._grpFilter.TabIndex = 1;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
             // 
-            // Label5
+            // _Label5
             // 
-            _Label5.AutoSize = true;
-            _Label5.Location = new Point(329, 44);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(43, 13);
-            _Label5.TabIndex = 9;
-            _Label5.Text = "Status";
+            this._Label5.AutoSize = true;
+            this._Label5.Location = new System.Drawing.Point(329, 44);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(43, 13);
+            this._Label5.TabIndex = 9;
+            this._Label5.Text = "Status";
             // 
-            // cboStatus
+            // _cboStatus
             // 
-            _cboStatus.FormattingEnabled = true;
-            _cboStatus.Location = new Point(439, 41);
-            _cboStatus.Name = "cboStatus";
-            _cboStatus.Size = new Size(329, 21);
-            _cboStatus.TabIndex = 0;
+            this._cboStatus.FormattingEnabled = true;
+            this._cboStatus.Location = new System.Drawing.Point(439, 41);
+            this._cboStatus.Name = "_cboStatus";
+            this._cboStatus.Size = new System.Drawing.Size(329, 21);
+            this._cboStatus.TabIndex = 0;
+            this._cboStatus.SelectedIndexChanged += new System.EventHandler(this.cboStatus_SelectedIndexChanged);
             // 
-            // txtCreditReference
+            // _txtCreditReference
             // 
-            _txtCreditReference.Location = new Point(439, 14);
-            _txtCreditReference.Name = "txtCreditReference";
-            _txtCreditReference.Size = new Size(206, 21);
-            _txtCreditReference.TabIndex = 8;
+            this._txtCreditReference.Location = new System.Drawing.Point(439, 14);
+            this._txtCreditReference.Name = "_txtCreditReference";
+            this._txtCreditReference.Size = new System.Drawing.Size(206, 21);
+            this._txtCreditReference.TabIndex = 8;
+            this._txtCreditReference.TextChanged += new System.EventHandler(this.txtCreditReference_TextChanged);
             // 
-            // Label4
+            // _Label4
             // 
-            _Label4.AutoSize = true;
-            _Label4.Location = new Point(329, 17);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(104, 13);
-            _Label4.TabIndex = 7;
-            _Label4.Text = "Credit Reference";
+            this._Label4.AutoSize = true;
+            this._Label4.Location = new System.Drawing.Point(329, 17);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(104, 13);
+            this._Label4.TabIndex = 7;
+            this._Label4.Text = "Credit Reference";
             // 
-            // txtPart
+            // _txtPart
             // 
-            _txtPart.Location = new Point(114, 68);
-            _txtPart.Name = "txtPart";
-            _txtPart.Size = new Size(206, 21);
-            _txtPart.TabIndex = 6;
+            this._txtPart.Location = new System.Drawing.Point(114, 68);
+            this._txtPart.Name = "_txtPart";
+            this._txtPart.Size = new System.Drawing.Size(206, 21);
+            this._txtPart.TabIndex = 6;
+            this._txtPart.TextChanged += new System.EventHandler(this.txtPart_TextChanged);
             // 
-            // Label3
+            // _Label3
             // 
-            _Label3.AutoSize = true;
-            _Label3.Location = new Point(6, 71);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(30, 13);
-            _Label3.TabIndex = 5;
-            _Label3.Text = "Part";
+            this._Label3.AutoSize = true;
+            this._Label3.Location = new System.Drawing.Point(6, 71);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(30, 13);
+            this._Label3.TabIndex = 5;
+            this._Label3.Text = "Part";
             // 
-            // txtSupplier
+            // _txtSupplier
             // 
-            _txtSupplier.Location = new Point(114, 41);
-            _txtSupplier.Name = "txtSupplier";
-            _txtSupplier.Size = new Size(206, 21);
-            _txtSupplier.TabIndex = 3;
+            this._txtSupplier.Location = new System.Drawing.Point(114, 41);
+            this._txtSupplier.Name = "_txtSupplier";
+            this._txtSupplier.Size = new System.Drawing.Size(206, 21);
+            this._txtSupplier.TabIndex = 3;
+            this._txtSupplier.TextChanged += new System.EventHandler(this.txtSupplier_TextChanged);
             // 
-            // Label2
+            // _Label2
             // 
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(6, 44);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(54, 13);
-            _Label2.TabIndex = 2;
-            _Label2.Text = "Supplier";
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(6, 44);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(54, 13);
+            this._Label2.TabIndex = 2;
+            this._Label2.Text = "Supplier";
             // 
-            // txtOrderReference
+            // _txtOrderReference
             // 
-            _txtOrderReference.Location = new Point(114, 14);
-            _txtOrderReference.Name = "txtOrderReference";
-            _txtOrderReference.Size = new Size(206, 21);
-            _txtOrderReference.TabIndex = 1;
+            this._txtOrderReference.Location = new System.Drawing.Point(114, 14);
+            this._txtOrderReference.Name = "_txtOrderReference";
+            this._txtOrderReference.Size = new System.Drawing.Size(206, 21);
+            this._txtOrderReference.TabIndex = 1;
+            this._txtOrderReference.TextChanged += new System.EventHandler(this.txtOrderReference_TextChanged);
             // 
-            // Label1
+            // _Label1
             // 
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(6, 17);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(102, 13);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Order Reference";
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(6, 17);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(102, 13);
+            this._Label1.TabIndex = 0;
+            this._Label1.Text = "Order Reference";
             // 
-            // grpJobs
+            // _grpJobs
             // 
-            _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpJobs.Controls.Add(_dgCredits);
-            _grpJobs.Location = new Point(12, 145);
-            _grpJobs.Name = "grpJobs";
-            _grpJobs.Size = new Size(859, 309);
-            _grpJobs.TabIndex = 2;
-            _grpJobs.TabStop = false;
-            _grpJobs.Text = "Double Click To View / Edit";
+            this._grpJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobs.Controls.Add(this._dgCredits);
+            this._grpJobs.Location = new System.Drawing.Point(12, 119);
+            this._grpJobs.Name = "_grpJobs";
+            this._grpJobs.Size = new System.Drawing.Size(859, 335);
+            this._grpJobs.TabIndex = 2;
+            this._grpJobs.TabStop = false;
+            this._grpJobs.Text = "Double Click To View / Edit";
             // 
-            // dgCredits
+            // _dgCredits
             // 
-            _dgCredits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgCredits.DataMember = "";
-            _dgCredits.HeaderForeColor = SystemColors.ControlText;
-            _dgCredits.Location = new Point(8, 20);
-            _dgCredits.Name = "dgCredits";
-            _dgCredits.Size = new Size(843, 281);
-            _dgCredits.TabIndex = 0;
+            this._dgCredits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgCredits.DataMember = "";
+            this._dgCredits.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgCredits.Location = new System.Drawing.Point(8, 20);
+            this._dgCredits.Name = "_dgCredits";
+            this._dgCredits.Size = new System.Drawing.Size(843, 307);
+            this._dgCredits.TabIndex = 0;
+            this._dgCredits.DoubleClick += new System.EventHandler(this.dgCredits_DoubleClick);
+            this._dgCredits.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgCredits_MouseUp);
             // 
-            // btnReset
+            // _btnReset
             // 
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(12, 460);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 3;
-            _btnReset.Text = "Reset";
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(12, 460);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 3;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // btnAddNew
+            // _btnAddNew
             // 
-            _btnAddNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnAddNew.Location = new Point(379, 460);
-            _btnAddNew.Name = "btnAddNew";
-            _btnAddNew.Size = new Size(162, 23);
-            _btnAddNew.TabIndex = 4;
-            _btnAddNew.Text = "Add New Part To Credit";
+            this._btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddNew.Location = new System.Drawing.Point(379, 460);
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.Size = new System.Drawing.Size(162, 23);
+            this._btnAddNew.TabIndex = 4;
+            this._btnAddNew.Text = "Add New Part To Credit";
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
-            // btnGenerateCreditDocument
+            // _btnGenerateCreditDocument
             // 
-            _btnGenerateCreditDocument.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnGenerateCreditDocument.Location = new Point(547, 460);
-            _btnGenerateCreditDocument.Name = "btnGenerateCreditDocument";
-            _btnGenerateCreditDocument.Size = new Size(176, 23);
-            _btnGenerateCreditDocument.TabIndex = 5;
-            _btnGenerateCreditDocument.Text = "Generate Credit Document";
+            this._btnGenerateCreditDocument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnGenerateCreditDocument.Location = new System.Drawing.Point(547, 460);
+            this._btnGenerateCreditDocument.Name = "_btnGenerateCreditDocument";
+            this._btnGenerateCreditDocument.Size = new System.Drawing.Size(176, 23);
+            this._btnGenerateCreditDocument.TabIndex = 5;
+            this._btnGenerateCreditDocument.Text = "Generate Credit Document";
+            this._btnGenerateCreditDocument.Click += new System.EventHandler(this.btnGenerateCreditDocument_Click);
             // 
-            // btnCreditAmount
+            // _btnCreditAmount
             // 
-            _btnCreditAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnCreditAmount.Location = new Point(729, 460);
-            _btnCreditAmount.Name = "btnCreditAmount";
-            _btnCreditAmount.Size = new Size(134, 23);
-            _btnCreditAmount.TabIndex = 0;
-            _btnCreditAmount.Text = "Add Credit Amount";
+            this._btnCreditAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreditAmount.Location = new System.Drawing.Point(729, 460);
+            this._btnCreditAmount.Name = "_btnCreditAmount";
+            this._btnCreditAmount.Size = new System.Drawing.Size(134, 23);
+            this._btnCreditAmount.TabIndex = 0;
+            this._btnCreditAmount.Text = "Add Credit Amount";
+            this._btnCreditAmount.Click += new System.EventHandler(this.btnCreditAmount_Click);
             // 
             // FRMPartsToBeCreditedManager
             // 
-            AutoScaleMode = AutoScaleMode.Inherit;
-            ClientSize = new Size(883, 485);
-            Controls.Add(_btnCreditAmount);
-            Controls.Add(_btnGenerateCreditDocument);
-            Controls.Add(_btnAddNew);
-            Controls.Add(_grpFilter);
-            Controls.Add(_grpJobs);
-            Controls.Add(_btnReset);
-            Name = "FRMPartsToBeCreditedManager";
-            Text = "Parts To Be Credited Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpJobs, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            Controls.SetChildIndex(_btnAddNew, 0);
-            Controls.SetChildIndex(_btnGenerateCreditDocument, 0);
-            Controls.SetChildIndex(_btnCreditAmount, 0);
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            _grpJobs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgCredits).EndInit();
-            Load += new EventHandler(FRMOrderManager_Load);
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(883, 485);
+            this.Controls.Add(this._btnCreditAmount);
+            this.Controls.Add(this._btnGenerateCreditDocument);
+            this.Controls.Add(this._btnAddNew);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._grpJobs);
+            this.Controls.Add(this._btnReset);
+            this.Name = "FRMPartsToBeCreditedManager";
+            this.Text = "Parts To Be Credited Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FRMOrderManager_Load);
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this._grpJobs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgCredits)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _grpFilter;

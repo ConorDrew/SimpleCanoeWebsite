@@ -37,172 +37,178 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _txtComments = new TextBox();
-            _Label1 = new Label();
-            _btnFindRecord = new Button();
-            _btnFindRecord.Click += new EventHandler(btnFindRecord_Click);
-            _txtSearch = new TextBox();
-            _dtpTo = new DateTimePicker();
-            _dtpFrom = new DateTimePicker();
-            _Label9 = new Label();
-            _Label8 = new Label();
-            _lblSearch = new Label();
-            _Label10 = new Label();
-            _cboType = new ComboBox();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._txtComments = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnFindRecord = new System.Windows.Forms.Button();
+            this._txtSearch = new System.Windows.Forms.TextBox();
+            this._dtpTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._lblSearch = new System.Windows.Forms.Label();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_btnSave);
-            _GroupBox1.Controls.Add(_txtComments);
-            _GroupBox1.Controls.Add(_Label1);
-            _GroupBox1.Controls.Add(_btnFindRecord);
-            _GroupBox1.Controls.Add(_txtSearch);
-            _GroupBox1.Controls.Add(_dtpTo);
-            _GroupBox1.Controls.Add(_dtpFrom);
-            _GroupBox1.Controls.Add(_Label9);
-            _GroupBox1.Controls.Add(_Label8);
-            _GroupBox1.Controls.Add(_lblSearch);
-            _GroupBox1.Controls.Add(_Label10);
-            _GroupBox1.Controls.Add(_cboType);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(531, 375);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "General Timesheet";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._btnSave);
+            this._GroupBox1.Controls.Add(this._txtComments);
+            this._GroupBox1.Controls.Add(this._Label1);
+            this._GroupBox1.Controls.Add(this._btnFindRecord);
+            this._GroupBox1.Controls.Add(this._txtSearch);
+            this._GroupBox1.Controls.Add(this._dtpTo);
+            this._GroupBox1.Controls.Add(this._dtpFrom);
+            this._GroupBox1.Controls.Add(this._Label9);
+            this._GroupBox1.Controls.Add(this._Label8);
+            this._GroupBox1.Controls.Add(this._lblSearch);
+            this._GroupBox1.Controls.Add(this._Label10);
+            this._GroupBox1.Controls.Add(this._cboType);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(531, 401);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "General Timesheet";
             // 
-            // btnSave
+            // _btnSave
             // 
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.Location = new Point(439, 334);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(75, 23);
-            _btnSave.TabIndex = 0;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Location = new System.Drawing.Point(439, 360);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 0;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtComments
+            // _txtComments
             // 
-            _txtComments.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtComments.Location = new Point(132, 128);
-            _txtComments.Multiline = true;
-            _txtComments.Name = "txtComments";
-            _txtComments.ScrollBars = ScrollBars.Vertical;
-            _txtComments.Size = new Size(382, 200);
-            _txtComments.TabIndex = 11;
+            this._txtComments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtComments.Location = new System.Drawing.Point(132, 128);
+            this._txtComments.Multiline = true;
+            this._txtComments.Name = "_txtComments";
+            this._txtComments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtComments.Size = new System.Drawing.Size(382, 226);
+            this._txtComments.TabIndex = 11;
             // 
-            // Label1
+            // _Label1
             // 
-            _Label1.Location = new Point(14, 131);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(112, 16);
-            _Label1.TabIndex = 10;
-            _Label1.Text = "Comments";
+            this._Label1.Location = new System.Drawing.Point(14, 131);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(112, 16);
+            this._Label1.TabIndex = 10;
+            this._Label1.Text = "Comments";
             // 
-            // btnFindRecord
+            // _btnFindRecord
             // 
-            _btnFindRecord.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindRecord.BackColor = Color.White;
-            _btnFindRecord.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindRecord.Location = new Point(482, 45);
-            _btnFindRecord.Name = "btnFindRecord";
-            _btnFindRecord.Size = new Size(32, 23);
-            _btnFindRecord.TabIndex = 4;
-            _btnFindRecord.Text = "...";
-            _btnFindRecord.UseVisualStyleBackColor = false;
+            this._btnFindRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindRecord.BackColor = System.Drawing.Color.White;
+            this._btnFindRecord.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindRecord.Location = new System.Drawing.Point(482, 45);
+            this._btnFindRecord.Name = "_btnFindRecord";
+            this._btnFindRecord.Size = new System.Drawing.Size(32, 23);
+            this._btnFindRecord.TabIndex = 4;
+            this._btnFindRecord.Text = "...";
+            this._btnFindRecord.UseVisualStyleBackColor = false;
+            this._btnFindRecord.Click += new System.EventHandler(this.btnFindRecord_Click);
             // 
-            // txtSearch
+            // _txtSearch
             // 
-            _txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSearch.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtSearch.Location = new Point(132, 47);
-            _txtSearch.Name = "txtSearch";
-            _txtSearch.ReadOnly = true;
-            _txtSearch.Size = new Size(344, 21);
-            _txtSearch.TabIndex = 3;
+            this._txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSearch.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtSearch.Location = new System.Drawing.Point(132, 47);
+            this._txtSearch.Name = "_txtSearch";
+            this._txtSearch.ReadOnly = true;
+            this._txtSearch.Size = new System.Drawing.Size(344, 21);
+            this._txtSearch.TabIndex = 3;
             // 
-            // dtpTo
+            // _dtpTo
             // 
-            _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _dtpTo.CustomFormat = "dd MMMM yyyy HH:mm";
-            _dtpTo.Format = DateTimePickerFormat.Custom;
-            _dtpTo.Location = new Point(132, 101);
-            _dtpTo.Name = "dtpTo";
-            _dtpTo.Size = new Size(382, 21);
-            _dtpTo.TabIndex = 9;
+            this._dtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpTo.CustomFormat = "dd MMMM yyyy HH:mm";
+            this._dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this._dtpTo.Location = new System.Drawing.Point(132, 101);
+            this._dtpTo.Name = "_dtpTo";
+            this._dtpTo.Size = new System.Drawing.Size(382, 21);
+            this._dtpTo.TabIndex = 9;
             // 
-            // dtpFrom
+            // _dtpFrom
             // 
-            _dtpFrom.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _dtpFrom.CustomFormat = "dd MMMM yyyy HH:mm";
-            _dtpFrom.Format = DateTimePickerFormat.Custom;
-            _dtpFrom.Location = new Point(132, 74);
-            _dtpFrom.Name = "dtpFrom";
-            _dtpFrom.Size = new Size(382, 21);
-            _dtpFrom.TabIndex = 7;
+            this._dtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpFrom.CustomFormat = "dd MMMM yyyy HH:mm";
+            this._dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this._dtpFrom.Location = new System.Drawing.Point(132, 74);
+            this._dtpFrom.Name = "_dtpFrom";
+            this._dtpFrom.Size = new System.Drawing.Size(382, 21);
+            this._dtpFrom.TabIndex = 7;
             // 
-            // Label9
+            // _Label9
             // 
-            _Label9.Location = new Point(14, 107);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(112, 16);
-            _Label9.TabIndex = 8;
-            _Label9.Text = "End Date Time";
+            this._Label9.Location = new System.Drawing.Point(14, 107);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(112, 16);
+            this._Label9.TabIndex = 8;
+            this._Label9.Text = "End Date Time";
             // 
-            // Label8
+            // _Label8
             // 
-            _Label8.Location = new Point(14, 80);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(112, 16);
-            _Label8.TabIndex = 6;
-            _Label8.Text = "Start Date Time";
+            this._Label8.Location = new System.Drawing.Point(14, 80);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(112, 16);
+            this._Label8.TabIndex = 6;
+            this._Label8.Text = "Start Date Time";
             // 
-            // lblSearch
+            // _lblSearch
             // 
-            _lblSearch.Location = new Point(14, 50);
-            _lblSearch.Name = "lblSearch";
-            _lblSearch.Size = new Size(112, 20);
-            _lblSearch.TabIndex = 2;
-            _lblSearch.Text = "Engineer";
+            this._lblSearch.Location = new System.Drawing.Point(14, 50);
+            this._lblSearch.Name = "_lblSearch";
+            this._lblSearch.Size = new System.Drawing.Size(112, 20);
+            this._lblSearch.TabIndex = 2;
+            this._lblSearch.Text = "Engineer";
             // 
-            // Label10
+            // _Label10
             // 
-            _Label10.Location = new Point(14, 23);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(48, 20);
-            _Label10.TabIndex = 0;
-            _Label10.Text = "Type";
+            this._Label10.Location = new System.Drawing.Point(14, 23);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(48, 20);
+            this._Label10.TabIndex = 0;
+            this._Label10.Text = "Type";
             // 
-            // cboType
+            // _cboType
             // 
-            _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(132, 20);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(382, 21);
-            _cboType.TabIndex = 1;
+            this._cboType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(132, 20);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(382, 21);
+            this._cboType.TabIndex = 1;
             // 
             // FRMEngineerTimesheet
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(561, 424);
-            Controls.Add(_GroupBox1);
-            Name = "FRMEngineerTimesheet";
-            Text = "Engineer Timesheet";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            Load += new EventHandler(FRMEngineerTimesheet_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(561, 424);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FRMEngineerTimesheet";
+            this.Text = "Engineer Timesheet";
+            this.Load += new System.EventHandler(this.FRMEngineerTimesheet_Load);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _GroupBox1;

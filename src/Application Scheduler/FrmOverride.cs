@@ -181,93 +181,93 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _TreeView1 = new TreeView();
-            _Label1 = new Label();
-            _GroupBox2 = new GroupBox();
-            _btnOk = new Button();
-            _btnOk.Click += new EventHandler(btnYes_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnNo_Click);
-            _GroupBox2.SuspendLayout();
-            SuspendLayout();
-            //
-            // TreeView1
-            //
-            _TreeView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _TreeView1.Font = new Font("Verdana", 8.0F);
-            _TreeView1.ImageIndex = -1;
-            _TreeView1.Location = new Point(8, 56);
-            _TreeView1.Name = "TreeView1";
-            _TreeView1.SelectedImageIndex = -1;
-            _TreeView1.Size = new Size(518, 392);
-            _TreeView1.TabIndex = 1;
-            //
-            // Label1
-            //
-            _Label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _Label1.Font = new Font("Verdana", 8.0F);
-            _Label1.Location = new Point(8, 24);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(501, 30);
-            _Label1.TabIndex = 1;
-            _Label1.Text = "The test you are trying to assign does not satisfy all the conditions of the engi" + "neer scheduler due to the reasons below.";
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox2.Controls.Add(_Label1);
-            _GroupBox2.Controls.Add(_TreeView1);
-            _GroupBox2.Font = new Font("Verdana", 8.0F);
-            _GroupBox2.Location = new Point(8, 40);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(538, 456);
-            _GroupBox2.TabIndex = 5;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Result";
-            //
-            // btnOk
-            //
-            _btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOk.UseVisualStyleBackColor = true;
-            _btnOk.Font = new Font("Verdana", 8.0F);
-            _btnOk.Location = new Point(472, 504);
-            _btnOk.Name = "btnOk";
-            _btnOk.Size = new Size(72, 23);
-            _btnOk.TabIndex = 3;
-            _btnOk.Text = "Continue";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.DialogResult = DialogResult.Cancel;
-            _btnCancel.UseVisualStyleBackColor = true;
-            _btnCancel.Font = new Font("Verdana", 8.0F);
-            _btnCancel.Location = new Point(8, 502);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(72, 23);
-            _btnCancel.TabIndex = 4;
-            _btnCancel.Text = "Cancel";
-            //
+            this._TreeView1 = new System.Windows.Forms.TreeView();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._btnOk = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._GroupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _TreeView1
+            // 
+            this._TreeView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._TreeView1.Font = new System.Drawing.Font("Verdana", 8F);
+            this._TreeView1.Location = new System.Drawing.Point(8, 56);
+            this._TreeView1.Name = "_TreeView1";
+            this._TreeView1.Size = new System.Drawing.Size(518, 420);
+            this._TreeView1.TabIndex = 1;
+            // 
+            // _Label1
+            // 
+            this._Label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label1.Font = new System.Drawing.Font("Verdana", 8F);
+            this._Label1.Location = new System.Drawing.Point(8, 24);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(501, 30);
+            this._Label1.TabIndex = 1;
+            this._Label1.Text = "The test you are trying to assign does not satisfy all the conditions of the engi" +
+    "neer scheduler due to the reasons below.";
+            // 
+            // _GroupBox2
+            // 
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox2.Controls.Add(this._Label1);
+            this._GroupBox2.Controls.Add(this._TreeView1);
+            this._GroupBox2.Font = new System.Drawing.Font("Verdana", 8F);
+            this._GroupBox2.Location = new System.Drawing.Point(8, 12);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(538, 484);
+            this._GroupBox2.TabIndex = 5;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Result";
+            // 
+            // _btnOk
+            // 
+            this._btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOk.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnOk.Location = new System.Drawing.Point(472, 504);
+            this._btnOk.Name = "_btnOk";
+            this._btnOk.Size = new System.Drawing.Size(72, 23);
+            this._btnOk.TabIndex = 3;
+            this._btnOk.Text = "Continue";
+            this._btnOk.UseVisualStyleBackColor = true;
+            this._btnOk.Click += new System.EventHandler(this.btnYes_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this._btnCancel.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnCancel.Location = new System.Drawing.Point(8, 502);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(72, 23);
+            this._btnCancel.TabIndex = 4;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Click += new System.EventHandler(this.btnNo_Click);
+            // 
             // FrmOverride
-            //
-            AcceptButton = _btnOk;
-            AutoScaleBaseSize = new Size(6, 14);
-            CancelButton = _btnCancel;
-            ClientSize = new Size(552, 534);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOk);
-            Controls.Add(_GroupBox2);
-            MinimizeBox = false;
-            MinimumSize = new Size(560, 568);
-            Name = "FrmOverride";
-            Text = "Are you sure you want to schedule this work here?";
-            Controls.SetChildIndex(_GroupBox2, 0);
-            Controls.SetChildIndex(_btnOk, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            _GroupBox2.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AcceptButton = this._btnOk;
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.CancelButton = this._btnCancel;
+            this.ClientSize = new System.Drawing.Size(552, 534);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOk);
+            this.Controls.Add(this._GroupBox2);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(560, 568);
+            this.Name = "FrmOverride";
+            this.Text = "Are you sure you want to schedule this work here?";
+            this._GroupBox2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         

@@ -249,120 +249,121 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpCharges = new GroupBox();
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _txtAmount = new TextBox();
-            _Label2 = new Label();
-            _cboChargeType = new ComboBox();
-            _Label1 = new Label();
-            _dgCharges = new DataGrid();
-            _dgCharges.Click += new EventHandler(dgCharges_Click);
-            _dgCharges.CurrentCellChanged += new EventHandler(dgCharges_Click);
-            _dgCharges.Click += new EventHandler(dgCharges_Click);
-            _dgCharges.CurrentCellChanged += new EventHandler(dgCharges_Click);
-            _grpCharges.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCharges).BeginInit();
-            SuspendLayout();
-            //
-            // grpCharges
-            //
-            _grpCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpCharges.Controls.Add(_btnDelete);
-            _grpCharges.Controls.Add(_btnSave);
-            _grpCharges.Controls.Add(_txtAmount);
-            _grpCharges.Controls.Add(_Label2);
-            _grpCharges.Controls.Add(_cboChargeType);
-            _grpCharges.Controls.Add(_Label1);
-            _grpCharges.Controls.Add(_dgCharges);
-            _grpCharges.Location = new Point(8, 40);
-            _grpCharges.Name = "grpCharges";
-            _grpCharges.Size = new Size(552, 272);
-            _grpCharges.TabIndex = 2;
-            _grpCharges.TabStop = false;
-            _grpCharges.Text = "Charges";
-            //
-            // btnDelete
-            //
-            _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDelete.Location = new Point(480, 208);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(64, 23);
-            _btnDelete.TabIndex = 5;
-            _btnDelete.Text = "Remove";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.Location = new Point(480, 240);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(64, 23);
-            _btnSave.TabIndex = 4;
-            _btnSave.Text = "Add";
-            //
-            // txtAmount
-            //
-            _txtAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtAmount.Location = new Point(400, 240);
-            _txtAmount.Name = "txtAmount";
-            _txtAmount.Size = new Size(72, 21);
-            _txtAmount.TabIndex = 3;
-            _txtAmount.Text = "";
-            //
-            // Label2
-            //
-            _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label2.Location = new Point(336, 240);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(56, 23);
-            _Label2.TabIndex = 3;
-            _Label2.Text = "Amount:";
-            //
-            // cboChargeType
-            //
-            _cboChargeType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _cboChargeType.Location = new Point(96, 240);
-            _cboChargeType.Name = "cboChargeType";
-            _cboChargeType.Size = new Size(232, 21);
-            _cboChargeType.TabIndex = 2;
-            //
-            // Label1
-            //
-            _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label1.Location = new Point(8, 240);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(88, 23);
-            _Label1.TabIndex = 1;
-            _Label1.Text = "Charge Type:";
-            //
-            // dgCharges
-            //
-            _dgCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgCharges.DataMember = "";
-            _dgCharges.HeaderForeColor = SystemColors.ControlText;
-            _dgCharges.Location = new Point(8, 25);
-            _dgCharges.Name = "dgCharges";
-            _dgCharges.Size = new Size(536, 175);
-            _dgCharges.TabIndex = 1;
-            //
+            this._grpCharges = new System.Windows.Forms.GroupBox();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._txtAmount = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._cboChargeType = new System.Windows.Forms.ComboBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._dgCharges = new System.Windows.Forms.DataGrid();
+            this._grpCharges.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCharges)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpCharges
+            // 
+            this._grpCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpCharges.Controls.Add(this._btnDelete);
+            this._grpCharges.Controls.Add(this._btnSave);
+            this._grpCharges.Controls.Add(this._txtAmount);
+            this._grpCharges.Controls.Add(this._Label2);
+            this._grpCharges.Controls.Add(this._cboChargeType);
+            this._grpCharges.Controls.Add(this._Label1);
+            this._grpCharges.Controls.Add(this._dgCharges);
+            this._grpCharges.Location = new System.Drawing.Point(8, 12);
+            this._grpCharges.Name = "_grpCharges";
+            this._grpCharges.Size = new System.Drawing.Size(552, 300);
+            this._grpCharges.TabIndex = 2;
+            this._grpCharges.TabStop = false;
+            this._grpCharges.Text = "Charges";
+            // 
+            // _btnDelete
+            // 
+            this._btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDelete.Location = new System.Drawing.Point(480, 236);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(64, 23);
+            this._btnDelete.TabIndex = 5;
+            this._btnDelete.Text = "Remove";
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Location = new System.Drawing.Point(480, 268);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(64, 23);
+            this._btnSave.TabIndex = 4;
+            this._btnSave.Text = "Add";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _txtAmount
+            // 
+            this._txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAmount.Location = new System.Drawing.Point(400, 268);
+            this._txtAmount.Name = "_txtAmount";
+            this._txtAmount.Size = new System.Drawing.Size(72, 21);
+            this._txtAmount.TabIndex = 3;
+            // 
+            // _Label2
+            // 
+            this._Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label2.Location = new System.Drawing.Point(336, 268);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(56, 23);
+            this._Label2.TabIndex = 3;
+            this._Label2.Text = "Amount:";
+            // 
+            // _cboChargeType
+            // 
+            this._cboChargeType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboChargeType.Location = new System.Drawing.Point(96, 268);
+            this._cboChargeType.Name = "_cboChargeType";
+            this._cboChargeType.Size = new System.Drawing.Size(232, 21);
+            this._cboChargeType.TabIndex = 2;
+            // 
+            // _Label1
+            // 
+            this._Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label1.Location = new System.Drawing.Point(8, 268);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(88, 23);
+            this._Label1.TabIndex = 1;
+            this._Label1.Text = "Charge Type:";
+            // 
+            // _dgCharges
+            // 
+            this._dgCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgCharges.DataMember = "";
+            this._dgCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgCharges.Location = new System.Drawing.Point(8, 25);
+            this._dgCharges.Name = "_dgCharges";
+            this._dgCharges.Size = new System.Drawing.Size(536, 203);
+            this._dgCharges.TabIndex = 1;
+            this._dgCharges.CurrentCellChanged += new System.EventHandler(this.dgCharges_Click);
+            this._dgCharges.Click += new System.EventHandler(this.dgCharges_Click);
+            // 
             // FRMOrderCharges
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(568, 318);
-            Controls.Add(_grpCharges);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(576, 352);
-            Name = "FRMOrderCharges";
-            Text = "Order Charges";
-            Controls.SetChildIndex(_grpCharges, 0);
-            _grpCharges.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgCharges).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(568, 318);
+            this.Controls.Add(this._grpCharges);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(576, 352);
+            this.Name = "FRMOrderCharges";
+            this.Text = "Order Charges";
+            this._grpCharges.ResumeLayout(false);
+            this._grpCharges.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCharges)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

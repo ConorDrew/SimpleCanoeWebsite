@@ -99,42 +99,42 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pnlMain = new Panel();
-            SuspendLayout();
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(9, 528);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 25);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
-            // pnlMain
-            //
-            _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlMain.Location = new Point(0, 32);
-            _pnlMain.Name = "pnlMain";
-            _pnlMain.Size = new Size(836, 488);
-            _pnlMain.TabIndex = 1;
-            //
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pnlMain = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(9, 528);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 25);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pnlMain
+            // 
+            this._pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlMain.Location = new System.Drawing.Point(0, 12);
+            this._pnlMain.Name = "_pnlMain";
+            this._pnlMain.Size = new System.Drawing.Size(836, 508);
+            this._pnlMain.TabIndex = 1;
+            // 
             // FRMCustomerScheduleOfRate
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(844, 566);
-            Controls.Add(_btnClose);
-            Controls.Add(_pnlMain);
-            MinimumSize = new Size(852, 600);
-            Name = "FRMCustomerScheduleOfRate";
-            Text = "System Schedule Of Rate : ID {0}";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_pnlMain, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(844, 566);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._pnlMain);
+            this.MinimumSize = new System.Drawing.Size(852, 600);
+            this.Name = "FRMCustomerScheduleOfRate";
+            this.Text = "System Schedule Of Rate : ID {0}";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.ResumeLayout(false);
+
         }
 
         

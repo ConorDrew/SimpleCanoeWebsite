@@ -176,96 +176,92 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _pnlMain = new Panel();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _btnViewJob = new Button();
-            _btnViewJob.Click += new EventHandler(btnViewJob_Click);
-            _btnViewSite = new Button();
-            _btnViewSite.Click += new EventHandler(btnViewSite_Click);
-            _btnConvert = new Button();
-            _btnConvert.Click += new EventHandler(btnConvert_Click);
-            SuspendLayout();
-            //
-            // pnlMain
-            //
-            _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlMain.Location = new Point(0, 32);
-            _pnlMain.Name = "pnlMain";
-            _pnlMain.Size = new Size(1184, 708);
-            _pnlMain.TabIndex = 1;
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Location = new Point(8, 747);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 23);
-            _btnSave.TabIndex = 2;
-            _btnSave.Text = "Save";
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(72, 747);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 23);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
-            // btnViewJob
-            //
-            _btnViewJob.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnViewJob.Location = new Point(808, 747);
-            _btnViewJob.Name = "btnViewJob";
-            _btnViewJob.Size = new Size(88, 24);
-            _btnViewJob.TabIndex = 5;
-            _btnViewJob.Text = "View Job";
-            _btnViewJob.Visible = false;
-            //
-            // btnViewSite
-            //
-            _btnViewSite.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnViewSite.Location = new Point(134, 747);
-            _btnViewSite.Name = "btnViewSite";
-            _btnViewSite.Size = new Size(100, 24);
-            _btnViewSite.TabIndex = 7;
-            _btnViewSite.Text = "View Property";
-            //
-            // btnConvert
-            //
-            _btnConvert.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnConvert.Location = new Point(1022, 747);
-            _btnConvert.Name = "btnConvert";
-            _btnConvert.Size = new Size(92, 23);
-            _btnConvert.TabIndex = 8;
-            _btnConvert.Text = "Convert";
-            //
+            this._pnlMain = new System.Windows.Forms.Panel();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._btnViewJob = new System.Windows.Forms.Button();
+            this._btnViewSite = new System.Windows.Forms.Button();
+            this._btnConvert = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // _pnlMain
+            // 
+            this._pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlMain.Location = new System.Drawing.Point(0, 12);
+            this._pnlMain.Name = "_pnlMain";
+            this._pnlMain.Size = new System.Drawing.Size(1184, 728);
+            this._pnlMain.TabIndex = 1;
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Location = new System.Drawing.Point(8, 747);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 23);
+            this._btnSave.TabIndex = 2;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(72, 747);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 23);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _btnViewJob
+            // 
+            this._btnViewJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnViewJob.Location = new System.Drawing.Point(808, 747);
+            this._btnViewJob.Name = "_btnViewJob";
+            this._btnViewJob.Size = new System.Drawing.Size(88, 24);
+            this._btnViewJob.TabIndex = 5;
+            this._btnViewJob.Text = "View Job";
+            this._btnViewJob.Visible = false;
+            this._btnViewJob.Click += new System.EventHandler(this.btnViewJob_Click);
+            // 
+            // _btnViewSite
+            // 
+            this._btnViewSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnViewSite.Location = new System.Drawing.Point(134, 747);
+            this._btnViewSite.Name = "_btnViewSite";
+            this._btnViewSite.Size = new System.Drawing.Size(100, 24);
+            this._btnViewSite.TabIndex = 7;
+            this._btnViewSite.Text = "View Property";
+            this._btnViewSite.Click += new System.EventHandler(this.btnViewSite_Click);
+            // 
+            // _btnConvert
+            // 
+            this._btnConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnConvert.Location = new System.Drawing.Point(1022, 747);
+            this._btnConvert.Name = "_btnConvert";
+            this._btnConvert.Size = new System.Drawing.Size(92, 23);
+            this._btnConvert.TabIndex = 8;
+            this._btnConvert.Text = "Convert";
+            this._btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+            // 
             // FRMQuoteJob
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1184, 781);
-            Controls.Add(_btnConvert);
-            Controls.Add(_btnViewSite);
-            Controls.Add(_btnViewJob);
-            Controls.Add(_btnClose);
-            Controls.Add(_btnSave);
-            Controls.Add(_pnlMain);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(1200, 820);
-            Name = "FRMQuoteJob";
-            Text = "Quote Job : ID {0}";
-            Controls.SetChildIndex(_pnlMain, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_btnViewJob, 0);
-            Controls.SetChildIndex(_btnViewSite, 0);
-            Controls.SetChildIndex(_btnConvert, 0);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1184, 781);
+            this.Controls.Add(this._btnConvert);
+            this.Controls.Add(this._btnViewSite);
+            this.Controls.Add(this._btnViewJob);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._pnlMain);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1200, 820);
+            this.Name = "FRMQuoteJob";
+            this.Text = "Quote Job : ID {0}";
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

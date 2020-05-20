@@ -37,353 +37,350 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpServices = new GroupBox();
-            _dgServicesDue = new DataGrid();
-            _dgServicesDue.MouseClick += new MouseEventHandler(dgServicesDue_MouseClick);
-            _btnResetFilters = new Button();
-            _btnResetFilters.Click += new EventHandler(btnResetFilters_Click);
-            _grpFilters = new GroupBox();
-            _chkIncludePatchChecks = new CheckBox();
-            _chkVoidProperty = new CheckBox();
-            _chkLastService = new CheckBox();
-            _txtTravelBetween = new TextBox();
-            _Label3 = new Label();
-            _txtMaxTravel = new TextBox();
-            _Label2 = new Label();
-            _chkLettersOnly = new CheckBox();
-            _chkLettersOnly.CheckedChanged += new EventHandler(chkLettersOnly_CheckedChanged);
-            _tbMinsPerDay = new TextBox();
-            _cboLetterNumber = new ComboBox();
-            _lbMinsPerDay = new Label();
-            _Label14 = new Label();
-            _btnFilter = new Button();
-            _btnFilter.Click += new EventHandler(btnFilter_Click);
-            _Label1 = new Label();
-            _dtpLetterCreateDate = new DateTimePicker();
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnFindCustomer_Click);
-            _txtCustomer = new TextBox();
-            _Label4 = new Label();
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnUnselect = new Button();
-            _btnUnselect.Click += new EventHandler(btnUnselect_Click);
-            _btnGenerateLetters = new Button();
-            _btnGenerateLetters.Click += new EventHandler(btnGenerateLetters_Click);
-            _btnReleaseLockedSites = new Button();
-            _btnReleaseLockedSites.Click += new EventHandler(btnReleaseLockedSites_Click);
-            _btnFindSite = new Button();
-            _btnFindSite.Click += new EventHandler(btnFindSite_Click);
-            _grpServices.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgServicesDue).BeginInit();
-            _grpFilters.SuspendLayout();
-            SuspendLayout();
+            this._grpServices = new System.Windows.Forms.GroupBox();
+            this._dgServicesDue = new System.Windows.Forms.DataGrid();
+            this._btnResetFilters = new System.Windows.Forms.Button();
+            this._grpFilters = new System.Windows.Forms.GroupBox();
+            this._chkIncludePatchChecks = new System.Windows.Forms.CheckBox();
+            this._chkVoidProperty = new System.Windows.Forms.CheckBox();
+            this._chkLastService = new System.Windows.Forms.CheckBox();
+            this._txtTravelBetween = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtMaxTravel = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._chkLettersOnly = new System.Windows.Forms.CheckBox();
+            this._tbMinsPerDay = new System.Windows.Forms.TextBox();
+            this._cboLetterNumber = new System.Windows.Forms.ComboBox();
+            this._lbMinsPerDay = new System.Windows.Forms.Label();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._btnFilter = new System.Windows.Forms.Button();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._dtpLetterCreateDate = new System.Windows.Forms.DateTimePicker();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnUnselect = new System.Windows.Forms.Button();
+            this._btnGenerateLetters = new System.Windows.Forms.Button();
+            this._btnReleaseLockedSites = new System.Windows.Forms.Button();
+            this._btnFindSite = new System.Windows.Forms.Button();
+            this._grpServices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgServicesDue)).BeginInit();
+            this._grpFilters.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // grpServices
+            // _grpServices
             // 
-            _grpServices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpServices.Controls.Add(_dgServicesDue);
-            _grpServices.Location = new Point(12, 180);
-            _grpServices.Name = "grpServices";
-            _grpServices.Size = new Size(1264, 383);
-            _grpServices.TabIndex = 3;
-            _grpServices.TabStop = false;
-            _grpServices.Text = "Services Due";
+            this._grpServices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpServices.Controls.Add(this._dgServicesDue);
+            this._grpServices.Location = new System.Drawing.Point(12, 155);
+            this._grpServices.Name = "_grpServices";
+            this._grpServices.Size = new System.Drawing.Size(1264, 408);
+            this._grpServices.TabIndex = 3;
+            this._grpServices.TabStop = false;
+            this._grpServices.Text = "Services Due";
             // 
-            // dgServicesDue
+            // _dgServicesDue
             // 
-            _dgServicesDue.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgServicesDue.DataMember = "";
-            _dgServicesDue.HeaderForeColor = SystemColors.ControlText;
-            _dgServicesDue.Location = new Point(16, 20);
-            _dgServicesDue.Name = "dgServicesDue";
-            _dgServicesDue.Size = new Size(1248, 355);
-            _dgServicesDue.TabIndex = 14;
+            this._dgServicesDue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgServicesDue.DataMember = "";
+            this._dgServicesDue.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgServicesDue.Location = new System.Drawing.Point(16, 20);
+            this._dgServicesDue.Name = "_dgServicesDue";
+            this._dgServicesDue.Size = new System.Drawing.Size(1248, 380);
+            this._dgServicesDue.TabIndex = 14;
+            this._dgServicesDue.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgServicesDue_MouseClick);
             // 
-            // btnResetFilters
+            // _btnResetFilters
             // 
-            _btnResetFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnResetFilters.Location = new Point(20, 569);
-            _btnResetFilters.Name = "btnResetFilters";
-            _btnResetFilters.Size = new Size(111, 23);
-            _btnResetFilters.TabIndex = 4;
-            _btnResetFilters.Text = "Reset Filters";
-            _btnResetFilters.UseVisualStyleBackColor = true;
+            this._btnResetFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnResetFilters.Location = new System.Drawing.Point(20, 569);
+            this._btnResetFilters.Name = "_btnResetFilters";
+            this._btnResetFilters.Size = new System.Drawing.Size(111, 23);
+            this._btnResetFilters.TabIndex = 4;
+            this._btnResetFilters.Text = "Reset Filters";
+            this._btnResetFilters.UseVisualStyleBackColor = true;
+            this._btnResetFilters.Click += new System.EventHandler(this.btnResetFilters_Click);
             // 
-            // grpFilters
+            // _grpFilters
             // 
-            _grpFilters.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilters.Controls.Add(_chkIncludePatchChecks);
-            _grpFilters.Controls.Add(_chkVoidProperty);
-            _grpFilters.Controls.Add(_chkLastService);
-            _grpFilters.Controls.Add(_txtTravelBetween);
-            _grpFilters.Controls.Add(_Label3);
-            _grpFilters.Controls.Add(_txtMaxTravel);
-            _grpFilters.Controls.Add(_Label2);
-            _grpFilters.Controls.Add(_chkLettersOnly);
-            _grpFilters.Controls.Add(_tbMinsPerDay);
-            _grpFilters.Controls.Add(_cboLetterNumber);
-            _grpFilters.Controls.Add(_lbMinsPerDay);
-            _grpFilters.Controls.Add(_Label14);
-            _grpFilters.Controls.Add(_btnFilter);
-            _grpFilters.Controls.Add(_Label1);
-            _grpFilters.Controls.Add(_dtpLetterCreateDate);
-            _grpFilters.Controls.Add(_btnFindCustomer);
-            _grpFilters.Controls.Add(_txtCustomer);
-            _grpFilters.Controls.Add(_Label4);
-            _grpFilters.Location = new Point(12, 38);
-            _grpFilters.Name = "grpFilters";
-            _grpFilters.Size = new Size(1264, 107);
-            _grpFilters.TabIndex = 5;
-            _grpFilters.TabStop = false;
-            _grpFilters.Text = "Filters";
+            this._grpFilters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilters.Controls.Add(this._chkIncludePatchChecks);
+            this._grpFilters.Controls.Add(this._chkVoidProperty);
+            this._grpFilters.Controls.Add(this._chkLastService);
+            this._grpFilters.Controls.Add(this._txtTravelBetween);
+            this._grpFilters.Controls.Add(this._Label3);
+            this._grpFilters.Controls.Add(this._txtMaxTravel);
+            this._grpFilters.Controls.Add(this._Label2);
+            this._grpFilters.Controls.Add(this._chkLettersOnly);
+            this._grpFilters.Controls.Add(this._tbMinsPerDay);
+            this._grpFilters.Controls.Add(this._cboLetterNumber);
+            this._grpFilters.Controls.Add(this._lbMinsPerDay);
+            this._grpFilters.Controls.Add(this._Label14);
+            this._grpFilters.Controls.Add(this._btnFilter);
+            this._grpFilters.Controls.Add(this._Label1);
+            this._grpFilters.Controls.Add(this._dtpLetterCreateDate);
+            this._grpFilters.Controls.Add(this._btnFindCustomer);
+            this._grpFilters.Controls.Add(this._txtCustomer);
+            this._grpFilters.Controls.Add(this._Label4);
+            this._grpFilters.Location = new System.Drawing.Point(12, 12);
+            this._grpFilters.Name = "_grpFilters";
+            this._grpFilters.Size = new System.Drawing.Size(1264, 107);
+            this._grpFilters.TabIndex = 5;
+            this._grpFilters.TabStop = false;
+            this._grpFilters.Text = "Filters";
             // 
-            // chkIncludePatchChecks
+            // _chkIncludePatchChecks
             // 
-            _chkIncludePatchChecks.AutoSize = true;
-            _chkIncludePatchChecks.Location = new Point(911, 78);
-            _chkIncludePatchChecks.Name = "chkIncludePatchChecks";
-            _chkIncludePatchChecks.Size = new Size(149, 17);
-            _chkIncludePatchChecks.TabIndex = 50;
-            _chkIncludePatchChecks.Text = "Include Patch Checks";
-            _chkIncludePatchChecks.UseVisualStyleBackColor = true;
+            this._chkIncludePatchChecks.AutoSize = true;
+            this._chkIncludePatchChecks.Location = new System.Drawing.Point(911, 78);
+            this._chkIncludePatchChecks.Name = "_chkIncludePatchChecks";
+            this._chkIncludePatchChecks.Size = new System.Drawing.Size(149, 17);
+            this._chkIncludePatchChecks.TabIndex = 50;
+            this._chkIncludePatchChecks.Text = "Include Patch Checks";
+            this._chkIncludePatchChecks.UseVisualStyleBackColor = true;
             // 
-            // chkVoidProperty
+            // _chkVoidProperty
             // 
-            _chkVoidProperty.AutoSize = true;
-            _chkVoidProperty.Checked = true;
-            _chkVoidProperty.CheckState = CheckState.Checked;
-            _chkVoidProperty.Location = new Point(755, 78);
-            _chkVoidProperty.Name = "chkVoidProperty";
-            _chkVoidProperty.Size = new Size(147, 17);
-            _chkVoidProperty.TabIndex = 49;
-            _chkVoidProperty.Text = "Show Void Properties";
-            _chkVoidProperty.UseVisualStyleBackColor = true;
+            this._chkVoidProperty.AutoSize = true;
+            this._chkVoidProperty.Checked = true;
+            this._chkVoidProperty.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._chkVoidProperty.Location = new System.Drawing.Point(755, 78);
+            this._chkVoidProperty.Name = "_chkVoidProperty";
+            this._chkVoidProperty.Size = new System.Drawing.Size(147, 17);
+            this._chkVoidProperty.TabIndex = 49;
+            this._chkVoidProperty.Text = "Show Void Properties";
+            this._chkVoidProperty.UseVisualStyleBackColor = true;
             // 
-            // chkLastService
+            // _chkLastService
             // 
-            _chkLastService.AutoSize = true;
-            _chkLastService.Location = new Point(755, 51);
-            _chkLastService.Name = "chkLastService";
-            _chkLastService.Size = new Size(150, 17);
-            _chkLastService.TabIndex = 48;
-            _chkLastService.Text = "Prioritise Last Service";
-            _chkLastService.UseVisualStyleBackColor = true;
+            this._chkLastService.AutoSize = true;
+            this._chkLastService.Location = new System.Drawing.Point(755, 51);
+            this._chkLastService.Name = "_chkLastService";
+            this._chkLastService.Size = new System.Drawing.Size(150, 17);
+            this._chkLastService.TabIndex = 48;
+            this._chkLastService.Text = "Prioritise Last Service";
+            this._chkLastService.UseVisualStyleBackColor = true;
             // 
-            // txtTravelBetween
+            // _txtTravelBetween
             // 
-            _txtTravelBetween.Cursor = Cursors.Default;
-            _txtTravelBetween.Location = new Point(686, 76);
-            _txtTravelBetween.Name = "txtTravelBetween";
-            _txtTravelBetween.Size = new Size(53, 21);
-            _txtTravelBetween.TabIndex = 46;
-            _txtTravelBetween.Text = "10";
+            this._txtTravelBetween.Cursor = System.Windows.Forms.Cursors.Default;
+            this._txtTravelBetween.Location = new System.Drawing.Point(686, 76);
+            this._txtTravelBetween.Name = "_txtTravelBetween";
+            this._txtTravelBetween.Size = new System.Drawing.Size(53, 21);
+            this._txtTravelBetween.TabIndex = 46;
+            this._txtTravelBetween.Text = "10";
             // 
-            // Label3
+            // _Label3
             // 
-            _Label3.AutoSize = true;
-            _Label3.Location = new Point(465, 79);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(206, 13);
-            _Label3.TabIndex = 45;
-            _Label3.Text = "Max Travel Between AM/PM (Miles)";
+            this._Label3.AutoSize = true;
+            this._Label3.Location = new System.Drawing.Point(465, 79);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(206, 13);
+            this._Label3.TabIndex = 45;
+            this._Label3.Text = "Max Travel Between AM/PM (Miles)";
             // 
-            // txtMaxTravel
+            // _txtMaxTravel
             // 
-            _txtMaxTravel.Location = new Point(390, 76);
-            _txtMaxTravel.Name = "txtMaxTravel";
-            _txtMaxTravel.Size = new Size(53, 21);
-            _txtMaxTravel.TabIndex = 44;
-            _txtMaxTravel.Text = "5";
+            this._txtMaxTravel.Location = new System.Drawing.Point(390, 76);
+            this._txtMaxTravel.Name = "_txtMaxTravel";
+            this._txtMaxTravel.Size = new System.Drawing.Size(53, 21);
+            this._txtMaxTravel.TabIndex = 44;
+            this._txtMaxTravel.Text = "5";
             // 
-            // Label2
+            // _Label2
             // 
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(210, 79);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(174, 13);
-            _Label2.TabIndex = 43;
-            _Label2.Text = "Max Travel Per Period (Miles)";
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(210, 79);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(174, 13);
+            this._Label2.TabIndex = 43;
+            this._Label2.Text = "Max Travel Per Period (Miles)";
             // 
-            // chkLettersOnly
+            // _chkLettersOnly
             // 
-            _chkLettersOnly.AutoSize = true;
-            _chkLettersOnly.Location = new Point(911, 51);
-            _chkLettersOnly.Name = "chkLettersOnly";
-            _chkLettersOnly.Size = new Size(161, 17);
-            _chkLettersOnly.TabIndex = 42;
-            _chkLettersOnly.Text = "Print Booked Visits only";
-            _chkLettersOnly.UseVisualStyleBackColor = true;
+            this._chkLettersOnly.AutoSize = true;
+            this._chkLettersOnly.Location = new System.Drawing.Point(911, 51);
+            this._chkLettersOnly.Name = "_chkLettersOnly";
+            this._chkLettersOnly.Size = new System.Drawing.Size(161, 17);
+            this._chkLettersOnly.TabIndex = 42;
+            this._chkLettersOnly.Text = "Print Booked Visits only";
+            this._chkLettersOnly.UseVisualStyleBackColor = true;
+            this._chkLettersOnly.CheckedChanged += new System.EventHandler(this.chkLettersOnly_CheckedChanged);
             // 
-            // tbMinsPerDay
+            // _tbMinsPerDay
             // 
-            _tbMinsPerDay.Location = new Point(142, 76);
-            _tbMinsPerDay.Name = "tbMinsPerDay";
-            _tbMinsPerDay.Size = new Size(53, 21);
-            _tbMinsPerDay.TabIndex = 5;
-            _tbMinsPerDay.Text = "275";
+            this._tbMinsPerDay.Location = new System.Drawing.Point(142, 76);
+            this._tbMinsPerDay.Name = "_tbMinsPerDay";
+            this._tbMinsPerDay.Size = new System.Drawing.Size(53, 21);
+            this._tbMinsPerDay.TabIndex = 5;
+            this._tbMinsPerDay.Text = "275";
             // 
-            // cboLetterNumber
+            // _cboLetterNumber
             // 
-            _cboLetterNumber.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboLetterNumber.Location = new Point(368, 50);
-            _cboLetterNumber.Name = "cboLetterNumber";
-            _cboLetterNumber.Size = new Size(371, 21);
-            _cboLetterNumber.TabIndex = 41;
+            this._cboLetterNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboLetterNumber.Location = new System.Drawing.Point(368, 50);
+            this._cboLetterNumber.Name = "_cboLetterNumber";
+            this._cboLetterNumber.Size = new System.Drawing.Size(371, 21);
+            this._cboLetterNumber.TabIndex = 41;
             // 
-            // lbMinsPerDay
+            // _lbMinsPerDay
             // 
-            _lbMinsPerDay.AutoSize = true;
-            _lbMinsPerDay.Location = new Point(6, 79);
-            _lbMinsPerDay.Name = "lbMinsPerDay";
-            _lbMinsPerDay.Size = new Size(132, 13);
-            _lbMinsPerDay.TabIndex = 4;
-            _lbMinsPerDay.Text = "Working Mins Per Day";
+            this._lbMinsPerDay.AutoSize = true;
+            this._lbMinsPerDay.Location = new System.Drawing.Point(6, 79);
+            this._lbMinsPerDay.Name = "_lbMinsPerDay";
+            this._lbMinsPerDay.Size = new System.Drawing.Size(132, 13);
+            this._lbMinsPerDay.TabIndex = 4;
+            this._lbMinsPerDay.Text = "Working Mins Per Day";
             // 
-            // Label14
+            // _Label14
             // 
-            _Label14.Location = new Point(296, 52);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(75, 16);
-            _Label14.TabIndex = 40;
-            _Label14.Text = "Letter No.";
+            this._Label14.Location = new System.Drawing.Point(296, 52);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(75, 16);
+            this._Label14.TabIndex = 40;
+            this._Label14.Text = "Letter No.";
             // 
-            // btnFilter
+            // _btnFilter
             // 
-            _btnFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFilter.Location = new Point(1181, 74);
-            _btnFilter.Name = "btnFilter";
-            _btnFilter.Size = new Size(75, 23);
-            _btnFilter.TabIndex = 30;
-            _btnFilter.Text = "Filter";
-            _btnFilter.UseVisualStyleBackColor = true;
+            this._btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFilter.Location = new System.Drawing.Point(1181, 74);
+            this._btnFilter.Name = "_btnFilter";
+            this._btnFilter.Size = new System.Drawing.Size(75, 23);
+            this._btnFilter.TabIndex = 30;
+            this._btnFilter.Text = "Filter";
+            this._btnFilter.UseVisualStyleBackColor = true;
+            this._btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
-            // Label1
+            // _Label1
             // 
-            _Label1.Location = new Point(6, 52);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(130, 16);
-            _Label1.TabIndex = 29;
-            _Label1.Text = "Letter Create Date";
+            this._Label1.Location = new System.Drawing.Point(6, 52);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(130, 16);
+            this._Label1.TabIndex = 29;
+            this._Label1.Text = "Letter Create Date";
             // 
-            // dtpLetterCreateDate
+            // _dtpLetterCreateDate
             // 
-            _dtpLetterCreateDate.Location = new Point(142, 50);
-            _dtpLetterCreateDate.Name = "dtpLetterCreateDate";
-            _dtpLetterCreateDate.Size = new Size(138, 21);
-            _dtpLetterCreateDate.TabIndex = 28;
+            this._dtpLetterCreateDate.Location = new System.Drawing.Point(142, 50);
+            this._dtpLetterCreateDate.Name = "_dtpLetterCreateDate";
+            this._dtpLetterCreateDate.Size = new System.Drawing.Size(138, 21);
+            this._dtpLetterCreateDate.TabIndex = 28;
             // 
-            // btnFindCustomer
+            // _btnFindCustomer
             // 
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.BackColor = Color.White;
-            _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindCustomer.Location = new Point(1224, 20);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 26;
-            _btnFindCustomer.Text = "...";
-            _btnFindCustomer.UseVisualStyleBackColor = false;
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.BackColor = System.Drawing.Color.White;
+            this._btnFindCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(1224, 20);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 26;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = false;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
             // 
-            // txtCustomer
+            // _txtCustomer
             // 
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtCustomer.Location = new Point(142, 22);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(1076, 21);
-            _txtCustomer.TabIndex = 25;
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtCustomer.Location = new System.Drawing.Point(142, 22);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(1076, 21);
+            this._txtCustomer.TabIndex = 25;
             // 
-            // Label4
+            // _Label4
             // 
-            _Label4.Location = new Point(6, 23);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 16);
-            _Label4.TabIndex = 27;
-            _Label4.Text = "Customer";
+            this._Label4.Location = new System.Drawing.Point(6, 23);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 16);
+            this._Label4.TabIndex = 27;
+            this._Label4.Text = "Customer";
             // 
-            // btnSelectAll
+            // _btnSelectAll
             // 
-            _btnSelectAll.Location = new Point(12, 151);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(119, 23);
-            _btnSelectAll.TabIndex = 6;
-            _btnSelectAll.Text = "Select All";
-            _btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Location = new System.Drawing.Point(12, 126);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(119, 23);
+            this._btnSelectAll.TabIndex = 6;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
             // 
-            // btnUnselect
+            // _btnUnselect
             // 
-            _btnUnselect.Location = new Point(154, 151);
-            _btnUnselect.Name = "btnUnselect";
-            _btnUnselect.Size = new Size(96, 23);
-            _btnUnselect.TabIndex = 7;
-            _btnUnselect.Text = "Unselect All";
-            _btnUnselect.UseVisualStyleBackColor = true;
+            this._btnUnselect.Location = new System.Drawing.Point(154, 126);
+            this._btnUnselect.Name = "_btnUnselect";
+            this._btnUnselect.Size = new System.Drawing.Size(96, 23);
+            this._btnUnselect.TabIndex = 7;
+            this._btnUnselect.Text = "Unselect All";
+            this._btnUnselect.UseVisualStyleBackColor = true;
+            this._btnUnselect.Click += new System.EventHandler(this.btnUnselect_Click);
             // 
-            // btnGenerateLetters
+            // _btnGenerateLetters
             // 
-            _btnGenerateLetters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnGenerateLetters.Location = new Point(1110, 569);
-            _btnGenerateLetters.Name = "btnGenerateLetters";
-            _btnGenerateLetters.Size = new Size(158, 23);
-            _btnGenerateLetters.TabIndex = 8;
-            _btnGenerateLetters.Text = "Generate Letters";
-            _btnGenerateLetters.UseVisualStyleBackColor = true;
+            this._btnGenerateLetters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnGenerateLetters.Location = new System.Drawing.Point(1110, 569);
+            this._btnGenerateLetters.Name = "_btnGenerateLetters";
+            this._btnGenerateLetters.Size = new System.Drawing.Size(158, 23);
+            this._btnGenerateLetters.TabIndex = 8;
+            this._btnGenerateLetters.Text = "Generate Letters";
+            this._btnGenerateLetters.UseVisualStyleBackColor = true;
+            this._btnGenerateLetters.Click += new System.EventHandler(this.btnGenerateLetters_Click);
             // 
-            // btnReleaseLockedSites
+            // _btnReleaseLockedSites
             // 
-            _btnReleaseLockedSites.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReleaseLockedSites.Location = new Point(137, 569);
-            _btnReleaseLockedSites.Name = "btnReleaseLockedSites";
-            _btnReleaseLockedSites.Size = new Size(139, 23);
-            _btnReleaseLockedSites.TabIndex = 9;
-            _btnReleaseLockedSites.Text = "Release Locked Sites";
-            _btnReleaseLockedSites.UseVisualStyleBackColor = true;
+            this._btnReleaseLockedSites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReleaseLockedSites.Location = new System.Drawing.Point(137, 569);
+            this._btnReleaseLockedSites.Name = "_btnReleaseLockedSites";
+            this._btnReleaseLockedSites.Size = new System.Drawing.Size(139, 23);
+            this._btnReleaseLockedSites.TabIndex = 9;
+            this._btnReleaseLockedSites.Text = "Release Locked Sites";
+            this._btnReleaseLockedSites.UseVisualStyleBackColor = true;
+            this._btnReleaseLockedSites.Click += new System.EventHandler(this.btnReleaseLockedSites_Click);
             // 
-            // btnFindSite
+            // _btnFindSite
             // 
-            _btnFindSite.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnFindSite.Location = new Point(285, 569);
-            _btnFindSite.Name = "btnFindSite";
-            _btnFindSite.Size = new Size(111, 23);
-            _btnFindSite.TabIndex = 47;
-            _btnFindSite.Text = "Find Site";
-            _btnFindSite.UseVisualStyleBackColor = true;
+            this._btnFindSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnFindSite.Location = new System.Drawing.Point(285, 569);
+            this._btnFindSite.Name = "_btnFindSite";
+            this._btnFindSite.Size = new System.Drawing.Size(111, 23);
+            this._btnFindSite.TabIndex = 47;
+            this._btnFindSite.Text = "Find Site";
+            this._btnFindSite.UseVisualStyleBackColor = true;
+            this._btnFindSite.Click += new System.EventHandler(this.btnFindSite_Click);
             // 
             // FRMLetterManagerMK3
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1288, 604);
-            Controls.Add(_btnFindSite);
-            Controls.Add(_btnReleaseLockedSites);
-            Controls.Add(_btnGenerateLetters);
-            Controls.Add(_btnUnselect);
-            Controls.Add(_btnSelectAll);
-            Controls.Add(_grpFilters);
-            Controls.Add(_btnResetFilters);
-            Controls.Add(_grpServices);
-            Name = "FRMLetterManagerMK3";
-            StartPosition = FormStartPosition.Manual;
-            Text = "Letter Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpServices, 0);
-            Controls.SetChildIndex(_btnResetFilters, 0);
-            Controls.SetChildIndex(_grpFilters, 0);
-            Controls.SetChildIndex(_btnSelectAll, 0);
-            Controls.SetChildIndex(_btnUnselect, 0);
-            Controls.SetChildIndex(_btnGenerateLetters, 0);
-            Controls.SetChildIndex(_btnReleaseLockedSites, 0);
-            Controls.SetChildIndex(_btnFindSite, 0);
-            _grpServices.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgServicesDue).EndInit();
-            _grpFilters.ResumeLayout(false);
-            _grpFilters.PerformLayout();
-            Load += new EventHandler(FRMLetterManagerMK3_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1288, 604);
+            this.Controls.Add(this._btnFindSite);
+            this.Controls.Add(this._btnReleaseLockedSites);
+            this.Controls.Add(this._btnGenerateLetters);
+            this.Controls.Add(this._btnUnselect);
+            this.Controls.Add(this._btnSelectAll);
+            this.Controls.Add(this._grpFilters);
+            this.Controls.Add(this._btnResetFilters);
+            this.Controls.Add(this._grpServices);
+            this.Name = "FRMLetterManagerMK3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Letter Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FRMLetterManagerMK3_Load);
+            this._grpServices.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgServicesDue)).EndInit();
+            this._grpFilters.ResumeLayout(false);
+            this._grpFilters.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _grpServices;

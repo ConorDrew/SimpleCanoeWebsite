@@ -477,320 +477,323 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpAudit = new GroupBox();
-            _dgIPTAudit = new DataGrid();
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpFilter = new GroupBox();
-            _Panel3 = new Panel();
-            _radToWarehouse = new RadioButton();
-            _radToWarehouse.CheckedChanged += new EventHandler(radToWarehouse_CheckedChanged);
-            _radToVan = new RadioButton();
-            _radToVan.CheckedChanged += new EventHandler(radToVan_CheckedChanged);
-            _Panel2 = new Panel();
-            _radFromWarehouse = new RadioButton();
-            _radFromWarehouse.CheckedChanged += new EventHandler(radFromWarehouse_CheckedChanged);
-            _radFromVan = new RadioButton();
-            _radFromVan.CheckedChanged += new EventHandler(radFromVan_CheckedChanged);
-            _Panel1 = new Panel();
-            _radParts = new RadioButton();
-            _radProducts = new RadioButton();
-            _radBoth = new RadioButton();
-            _btnRun = new Button();
-            _btnRun.Click += new EventHandler(btnRun_Click);
-            _cboTo = new ComboBox();
-            _Label4 = new Label();
-            _cboFrom = new ComboBox();
-            _Label3 = new Label();
-            _txtName = new TextBox();
-            _txtNumber = new TextBox();
-            _Label2 = new Label();
-            _Label1 = new Label();
-            _txtReference = new TextBox();
-            _Label6 = new Label();
-            _grpAudit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgIPTAudit).BeginInit();
-            _grpFilter.SuspendLayout();
-            _Panel3.SuspendLayout();
-            _Panel2.SuspendLayout();
-            _Panel1.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpAudit
-            //
-            _grpAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpAudit.Controls.Add(_dgIPTAudit);
-            _grpAudit.Location = new Point(8, 152);
-            _grpAudit.Name = "grpAudit";
-            _grpAudit.Size = new Size(841, 278);
-            _grpAudit.TabIndex = 1;
-            _grpAudit.TabStop = false;
-            _grpAudit.Text = "IPT Audit";
-            //
-            // dgIPTAudit
-            //
-            _dgIPTAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgIPTAudit.DataMember = "";
-            _dgIPTAudit.HeaderForeColor = SystemColors.ControlText;
-            _dgIPTAudit.Location = new Point(8, 19);
-            _dgIPTAudit.Name = "dgIPTAudit";
-            _dgIPTAudit.Size = new Size(825, 251);
-            _dgIPTAudit.TabIndex = 0;
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 438);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 2;
-            _btnExport.Text = "Export";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_Panel3);
-            _grpFilter.Controls.Add(_Panel2);
-            _grpFilter.Controls.Add(_Panel1);
-            _grpFilter.Controls.Add(_btnRun);
-            _grpFilter.Controls.Add(_cboTo);
-            _grpFilter.Controls.Add(_Label4);
-            _grpFilter.Controls.Add(_cboFrom);
-            _grpFilter.Controls.Add(_Label3);
-            _grpFilter.Controls.Add(_txtName);
-            _grpFilter.Controls.Add(_txtNumber);
-            _grpFilter.Controls.Add(_Label2);
-            _grpFilter.Controls.Add(_Label1);
-            _grpFilter.Controls.Add(_txtReference);
-            _grpFilter.Controls.Add(_Label6);
-            _grpFilter.Location = new Point(8, 38);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(841, 108);
-            _grpFilter.TabIndex = 0;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // Panel3
-            //
-            _Panel3.Controls.Add(_radToWarehouse);
-            _Panel3.Controls.Add(_radToVan);
-            _Panel3.Location = new Point(442, 50);
-            _Panel3.Name = "Panel3";
-            _Panel3.Size = new Size(196, 28);
-            _Panel3.TabIndex = 27;
-            //
-            // radToWarehouse
-            //
-            _radToWarehouse.AutoSize = true;
-            _radToWarehouse.Checked = true;
-            _radToWarehouse.Location = new Point(3, 3);
-            _radToWarehouse.Name = "radToWarehouse";
-            _radToWarehouse.Size = new Size(88, 17);
-            _radToWarehouse.TabIndex = 9;
-            _radToWarehouse.TabStop = true;
-            _radToWarehouse.Text = "Warehouse";
-            _radToWarehouse.UseVisualStyleBackColor = true;
-            //
-            // radToVan
-            //
-            _radToVan.AutoSize = true;
-            _radToVan.Location = new Point(98, 3);
-            _radToVan.Name = "radToVan";
-            _radToVan.Size = new Size(97, 17);
-            _radToVan.TabIndex = 10;
-            _radToVan.Text = "Stock Profile";
-            _radToVan.UseVisualStyleBackColor = true;
-            //
-            // Panel2
-            //
-            _Panel2.Controls.Add(_radFromWarehouse);
-            _Panel2.Controls.Add(_radFromVan);
-            _Panel2.Location = new Point(441, 19);
-            _Panel2.Name = "Panel2";
-            _Panel2.Size = new Size(197, 26);
-            _Panel2.TabIndex = 26;
-            //
-            // radFromWarehouse
-            //
-            _radFromWarehouse.AutoSize = true;
-            _radFromWarehouse.Checked = true;
-            _radFromWarehouse.Location = new Point(3, 3);
-            _radFromWarehouse.Name = "radFromWarehouse";
-            _radFromWarehouse.Size = new Size(88, 17);
-            _radFromWarehouse.TabIndex = 6;
-            _radFromWarehouse.TabStop = true;
-            _radFromWarehouse.Text = "Warehouse";
-            _radFromWarehouse.UseVisualStyleBackColor = true;
-            //
-            // radFromVan
-            //
-            _radFromVan.AutoSize = true;
-            _radFromVan.Location = new Point(100, 3);
-            _radFromVan.Name = "radFromVan";
-            _radFromVan.Size = new Size(97, 17);
-            _radFromVan.TabIndex = 7;
-            _radFromVan.Text = "Stock Profile";
-            _radFromVan.UseVisualStyleBackColor = true;
-            //
-            // Panel1
-            //
-            _Panel1.Controls.Add(_radParts);
-            _Panel1.Controls.Add(_radProducts);
-            _Panel1.Controls.Add(_radBoth);
-            _Panel1.Location = new Point(5, 17);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(82, 82);
-            _Panel1.TabIndex = 25;
-            //
-            // radParts
-            //
-            _radParts.AutoSize = true;
-            _radParts.Location = new Point(3, 3);
-            _radParts.Name = "radParts";
-            _radParts.Size = new Size(54, 17);
-            _radParts.TabIndex = 0;
-            _radParts.Text = "Parts";
-            _radParts.UseVisualStyleBackColor = true;
-            //
-            // radProducts
-            //
-            _radProducts.AutoSize = true;
-            _radProducts.Location = new Point(3, 33);
-            _radProducts.Name = "radProducts";
-            _radProducts.Size = new Size(74, 17);
-            _radProducts.TabIndex = 1;
-            _radProducts.Text = "Products";
-            _radProducts.UseVisualStyleBackColor = true;
-            //
-            // radBoth
-            //
-            _radBoth.AutoSize = true;
-            _radBoth.Checked = true;
-            _radBoth.Location = new Point(3, 60);
-            _radBoth.Name = "radBoth";
-            _radBoth.Size = new Size(51, 17);
-            _radBoth.TabIndex = 2;
-            _radBoth.TabStop = true;
-            _radBoth.Text = "Both";
-            _radBoth.UseVisualStyleBackColor = true;
-            //
-            // btnRun
-            //
-            _btnRun.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRun.Location = new Point(781, 78);
-            _btnRun.Name = "btnRun";
-            _btnRun.Size = new Size(52, 23);
-            _btnRun.TabIndex = 12;
-            _btnRun.Text = "Run";
-            _btnRun.UseVisualStyleBackColor = true;
-            //
-            // cboTo
-            //
-            _cboTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboTo.FormattingEnabled = true;
-            _cboTo.Location = new Point(644, 49);
-            _cboTo.Name = "cboTo";
-            _cboTo.Size = new Size(189, 21);
-            _cboTo.TabIndex = 11;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(358, 52);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(84, 18);
-            _Label4.TabIndex = 24;
-            _Label4.Text = "Moved To";
-            //
-            // cboFrom
-            //
-            _cboFrom.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboFrom.FormattingEnabled = true;
-            _cboFrom.Location = new Point(644, 22);
-            _cboFrom.Name = "cboFrom";
-            _cboFrom.Size = new Size(189, 21);
-            _cboFrom.TabIndex = 8;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(358, 25);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(84, 18);
-            _Label3.TabIndex = 20;
-            _Label3.Text = "Moved From";
-            //
-            // txtName
-            //
-            _txtName.Location = new Point(158, 49);
-            _txtName.Name = "txtName";
-            _txtName.Size = new Size(194, 21);
-            _txtName.TabIndex = 4;
-            //
-            // txtNumber
-            //
-            _txtNumber.Location = new Point(158, 22);
-            _txtNumber.Name = "txtNumber";
-            _txtNumber.Size = new Size(194, 21);
-            _txtNumber.TabIndex = 3;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(87, 79);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(67, 18);
-            _Label2.TabIndex = 11;
-            _Label2.Text = "Reference";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(87, 52);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(88, 16);
-            _Label1.TabIndex = 10;
-            _Label1.Text = "Name";
-            //
-            // txtReference
-            //
-            _txtReference.Location = new Point(158, 76);
-            _txtReference.Name = "txtReference";
-            _txtReference.Size = new Size(194, 21);
-            _txtReference.TabIndex = 5;
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(87, 22);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 16);
-            _Label6.TabIndex = 6;
-            _Label6.Text = "Number";
-            //
+            this._grpAudit = new System.Windows.Forms.GroupBox();
+            this._dgIPTAudit = new System.Windows.Forms.DataGrid();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._Panel3 = new System.Windows.Forms.Panel();
+            this._radToWarehouse = new System.Windows.Forms.RadioButton();
+            this._radToVan = new System.Windows.Forms.RadioButton();
+            this._Panel2 = new System.Windows.Forms.Panel();
+            this._radFromWarehouse = new System.Windows.Forms.RadioButton();
+            this._radFromVan = new System.Windows.Forms.RadioButton();
+            this._Panel1 = new System.Windows.Forms.Panel();
+            this._radParts = new System.Windows.Forms.RadioButton();
+            this._radProducts = new System.Windows.Forms.RadioButton();
+            this._radBoth = new System.Windows.Forms.RadioButton();
+            this._btnRun = new System.Windows.Forms.Button();
+            this._cboTo = new System.Windows.Forms.ComboBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._cboFrom = new System.Windows.Forms.ComboBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._txtNumber = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtReference = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._grpAudit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgIPTAudit)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            this._Panel3.SuspendLayout();
+            this._Panel2.SuspendLayout();
+            this._Panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpAudit
+            // 
+            this._grpAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpAudit.Controls.Add(this._dgIPTAudit);
+            this._grpAudit.Location = new System.Drawing.Point(8, 126);
+            this._grpAudit.Name = "_grpAudit";
+            this._grpAudit.Size = new System.Drawing.Size(841, 304);
+            this._grpAudit.TabIndex = 1;
+            this._grpAudit.TabStop = false;
+            this._grpAudit.Text = "IPT Audit";
+            // 
+            // _dgIPTAudit
+            // 
+            this._dgIPTAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgIPTAudit.DataMember = "";
+            this._dgIPTAudit.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgIPTAudit.Location = new System.Drawing.Point(8, 19);
+            this._dgIPTAudit.Name = "_dgIPTAudit";
+            this._dgIPTAudit.Size = new System.Drawing.Size(825, 277);
+            this._dgIPTAudit.TabIndex = 0;
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 438);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 2;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._Panel3);
+            this._grpFilter.Controls.Add(this._Panel2);
+            this._grpFilter.Controls.Add(this._Panel1);
+            this._grpFilter.Controls.Add(this._btnRun);
+            this._grpFilter.Controls.Add(this._cboTo);
+            this._grpFilter.Controls.Add(this._Label4);
+            this._grpFilter.Controls.Add(this._cboFrom);
+            this._grpFilter.Controls.Add(this._Label3);
+            this._grpFilter.Controls.Add(this._txtName);
+            this._grpFilter.Controls.Add(this._txtNumber);
+            this._grpFilter.Controls.Add(this._Label2);
+            this._grpFilter.Controls.Add(this._Label1);
+            this._grpFilter.Controls.Add(this._txtReference);
+            this._grpFilter.Controls.Add(this._Label6);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(841, 108);
+            this._grpFilter.TabIndex = 0;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _Panel3
+            // 
+            this._Panel3.Controls.Add(this._radToWarehouse);
+            this._Panel3.Controls.Add(this._radToVan);
+            this._Panel3.Location = new System.Drawing.Point(442, 50);
+            this._Panel3.Name = "_Panel3";
+            this._Panel3.Size = new System.Drawing.Size(196, 28);
+            this._Panel3.TabIndex = 27;
+            // 
+            // _radToWarehouse
+            // 
+            this._radToWarehouse.AutoSize = true;
+            this._radToWarehouse.Checked = true;
+            this._radToWarehouse.Location = new System.Drawing.Point(3, 3);
+            this._radToWarehouse.Name = "_radToWarehouse";
+            this._radToWarehouse.Size = new System.Drawing.Size(88, 17);
+            this._radToWarehouse.TabIndex = 9;
+            this._radToWarehouse.TabStop = true;
+            this._radToWarehouse.Text = "Warehouse";
+            this._radToWarehouse.UseVisualStyleBackColor = true;
+            this._radToWarehouse.CheckedChanged += new System.EventHandler(this.radToWarehouse_CheckedChanged);
+            // 
+            // _radToVan
+            // 
+            this._radToVan.AutoSize = true;
+            this._radToVan.Location = new System.Drawing.Point(98, 3);
+            this._radToVan.Name = "_radToVan";
+            this._radToVan.Size = new System.Drawing.Size(97, 17);
+            this._radToVan.TabIndex = 10;
+            this._radToVan.Text = "Stock Profile";
+            this._radToVan.UseVisualStyleBackColor = true;
+            this._radToVan.CheckedChanged += new System.EventHandler(this.radToVan_CheckedChanged);
+            // 
+            // _Panel2
+            // 
+            this._Panel2.Controls.Add(this._radFromWarehouse);
+            this._Panel2.Controls.Add(this._radFromVan);
+            this._Panel2.Location = new System.Drawing.Point(441, 19);
+            this._Panel2.Name = "_Panel2";
+            this._Panel2.Size = new System.Drawing.Size(197, 26);
+            this._Panel2.TabIndex = 26;
+            // 
+            // _radFromWarehouse
+            // 
+            this._radFromWarehouse.AutoSize = true;
+            this._radFromWarehouse.Checked = true;
+            this._radFromWarehouse.Location = new System.Drawing.Point(3, 3);
+            this._radFromWarehouse.Name = "_radFromWarehouse";
+            this._radFromWarehouse.Size = new System.Drawing.Size(88, 17);
+            this._radFromWarehouse.TabIndex = 6;
+            this._radFromWarehouse.TabStop = true;
+            this._radFromWarehouse.Text = "Warehouse";
+            this._radFromWarehouse.UseVisualStyleBackColor = true;
+            this._radFromWarehouse.CheckedChanged += new System.EventHandler(this.radFromWarehouse_CheckedChanged);
+            // 
+            // _radFromVan
+            // 
+            this._radFromVan.AutoSize = true;
+            this._radFromVan.Location = new System.Drawing.Point(100, 3);
+            this._radFromVan.Name = "_radFromVan";
+            this._radFromVan.Size = new System.Drawing.Size(97, 17);
+            this._radFromVan.TabIndex = 7;
+            this._radFromVan.Text = "Stock Profile";
+            this._radFromVan.UseVisualStyleBackColor = true;
+            this._radFromVan.CheckedChanged += new System.EventHandler(this.radFromVan_CheckedChanged);
+            // 
+            // _Panel1
+            // 
+            this._Panel1.Controls.Add(this._radParts);
+            this._Panel1.Controls.Add(this._radProducts);
+            this._Panel1.Controls.Add(this._radBoth);
+            this._Panel1.Location = new System.Drawing.Point(5, 17);
+            this._Panel1.Name = "_Panel1";
+            this._Panel1.Size = new System.Drawing.Size(82, 82);
+            this._Panel1.TabIndex = 25;
+            // 
+            // _radParts
+            // 
+            this._radParts.AutoSize = true;
+            this._radParts.Location = new System.Drawing.Point(3, 3);
+            this._radParts.Name = "_radParts";
+            this._radParts.Size = new System.Drawing.Size(54, 17);
+            this._radParts.TabIndex = 0;
+            this._radParts.Text = "Parts";
+            this._radParts.UseVisualStyleBackColor = true;
+            // 
+            // _radProducts
+            // 
+            this._radProducts.AutoSize = true;
+            this._radProducts.Location = new System.Drawing.Point(3, 33);
+            this._radProducts.Name = "_radProducts";
+            this._radProducts.Size = new System.Drawing.Size(74, 17);
+            this._radProducts.TabIndex = 1;
+            this._radProducts.Text = "Products";
+            this._radProducts.UseVisualStyleBackColor = true;
+            // 
+            // _radBoth
+            // 
+            this._radBoth.AutoSize = true;
+            this._radBoth.Checked = true;
+            this._radBoth.Location = new System.Drawing.Point(3, 60);
+            this._radBoth.Name = "_radBoth";
+            this._radBoth.Size = new System.Drawing.Size(51, 17);
+            this._radBoth.TabIndex = 2;
+            this._radBoth.TabStop = true;
+            this._radBoth.Text = "Both";
+            this._radBoth.UseVisualStyleBackColor = true;
+            // 
+            // _btnRun
+            // 
+            this._btnRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRun.Location = new System.Drawing.Point(781, 78);
+            this._btnRun.Name = "_btnRun";
+            this._btnRun.Size = new System.Drawing.Size(52, 23);
+            this._btnRun.TabIndex = 12;
+            this._btnRun.Text = "Run";
+            this._btnRun.UseVisualStyleBackColor = true;
+            this._btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // _cboTo
+            // 
+            this._cboTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboTo.FormattingEnabled = true;
+            this._cboTo.Location = new System.Drawing.Point(644, 49);
+            this._cboTo.Name = "_cboTo";
+            this._cboTo.Size = new System.Drawing.Size(189, 21);
+            this._cboTo.TabIndex = 11;
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(358, 52);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(84, 18);
+            this._Label4.TabIndex = 24;
+            this._Label4.Text = "Moved To";
+            // 
+            // _cboFrom
+            // 
+            this._cboFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboFrom.FormattingEnabled = true;
+            this._cboFrom.Location = new System.Drawing.Point(644, 22);
+            this._cboFrom.Name = "_cboFrom";
+            this._cboFrom.Size = new System.Drawing.Size(189, 21);
+            this._cboFrom.TabIndex = 8;
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(358, 25);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(84, 18);
+            this._Label3.TabIndex = 20;
+            this._Label3.Text = "Moved From";
+            // 
+            // _txtName
+            // 
+            this._txtName.Location = new System.Drawing.Point(158, 49);
+            this._txtName.Name = "_txtName";
+            this._txtName.Size = new System.Drawing.Size(194, 21);
+            this._txtName.TabIndex = 4;
+            // 
+            // _txtNumber
+            // 
+            this._txtNumber.Location = new System.Drawing.Point(158, 22);
+            this._txtNumber.Name = "_txtNumber";
+            this._txtNumber.Size = new System.Drawing.Size(194, 21);
+            this._txtNumber.TabIndex = 3;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(87, 79);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(67, 18);
+            this._Label2.TabIndex = 11;
+            this._Label2.Text = "Reference";
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(87, 52);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(88, 16);
+            this._Label1.TabIndex = 10;
+            this._Label1.Text = "Name";
+            // 
+            // _txtReference
+            // 
+            this._txtReference.Location = new System.Drawing.Point(158, 76);
+            this._txtReference.Name = "_txtReference";
+            this._txtReference.Size = new System.Drawing.Size(194, 21);
+            this._txtReference.TabIndex = 5;
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(87, 22);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 16);
+            this._Label6.TabIndex = 6;
+            this._Label6.Text = "Number";
+            // 
             // FRMStockMoved
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(857, 468);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpAudit);
-            MinimumSize = new Size(873, 506);
-            Name = "FRMStockMoved";
-            Text = "Stock Moved Report";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpAudit, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            _grpAudit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgIPTAudit).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            _Panel3.ResumeLayout(false);
-            _Panel3.PerformLayout();
-            _Panel2.ResumeLayout(false);
-            _Panel2.PerformLayout();
-            _Panel1.ResumeLayout(false);
-            _Panel1.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(857, 468);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpAudit);
+            this.MinimumSize = new System.Drawing.Size(873, 506);
+            this.Name = "FRMStockMoved";
+            this.Text = "Stock Moved Report";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpAudit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgIPTAudit)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this._Panel3.ResumeLayout(false);
+            this._Panel3.PerformLayout();
+            this._Panel2.ResumeLayout(false);
+            this._Panel2.PerformLayout();
+            this._Panel1.ResumeLayout(false);
+            this._Panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

@@ -341,321 +341,326 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJobSkills = new GroupBox();
-            _btnAdd = new Button();
-            _btnAdd.Click += new EventHandler(btnAdd_Click);
-            _cboJobSkill = new ComboBox();
-            _lblJobSkill = new Label();
-            _cboJobType = new ComboBox();
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _lblJobType = new Label();
-            _dgSkills = new DataGrid();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _grpSkillMatrix = new GroupBox();
-            _btnAddTypeSkill = new Button();
-            _btnAddTypeSkill.Click += new EventHandler(btnAddTypeSkill_Click);
-            _cboTypeSkill = new ComboBox();
-            _lblTypeSkill = new Label();
-            _cboSkillType = new ComboBox();
-            _cboSkillType.SelectedIndexChanged += new EventHandler(cboSkillType_SelectedIndexChanged);
-            _btnDeleteTypeSkill = new Button();
-            _btnDeleteTypeSkill.Click += new EventHandler(btnDeleteTypeSkill_Click);
-            _lblSkillType = new Label();
-            _dgSkillMatrix = new DataGrid();
-            _grpJobImportType = new GroupBox();
-            _txtSkillTypeName = new TextBox();
-            _lblSkillTypeName = new Label();
-            _cboSkillType1 = new ComboBox();
-            _lblSkillType1 = new Label();
-            _btnSaveSkillType = new Button();
-            _btnSaveSkillType.Click += new EventHandler(btnSaveSkillType_Click);
-            _grpJobSkills.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSkills).BeginInit();
-            _grpSkillMatrix.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSkillMatrix).BeginInit();
-            _grpJobImportType.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpJobSkills
-            //
-            _grpJobSkills.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpJobSkills.Controls.Add(_btnAdd);
-            _grpJobSkills.Controls.Add(_cboJobSkill);
-            _grpJobSkills.Controls.Add(_lblJobSkill);
-            _grpJobSkills.Controls.Add(_cboJobType);
-            _grpJobSkills.Controls.Add(_btnDelete);
-            _grpJobSkills.Controls.Add(_lblJobType);
-            _grpJobSkills.Controls.Add(_dgSkills);
-            _grpJobSkills.Location = new Point(8, 53);
-            _grpJobSkills.Name = "grpJobSkills";
-            _grpJobSkills.Size = new Size(1042, 321);
-            _grpJobSkills.TabIndex = 1;
-            _grpJobSkills.TabStop = false;
-            _grpJobSkills.Text = "Job Skills";
-            //
-            // btnAdd
-            //
-            _btnAdd.AccessibleDescription = "Save item";
-            _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAdd.Cursor = Cursors.Hand;
-            _btnAdd.ImageIndex = 1;
-            _btnAdd.Location = new Point(880, 18);
-            _btnAdd.Name = "btnAdd";
-            _btnAdd.Size = new Size(154, 23);
-            _btnAdd.TabIndex = 33;
-            _btnAdd.Text = "Add";
-            _btnAdd.UseVisualStyleBackColor = true;
-            //
-            // cboJobSkill
-            //
-            _cboJobSkill.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboJobSkill.FormattingEnabled = true;
-            _cboJobSkill.Location = new Point(333, 20);
-            _cboJobSkill.Name = "cboJobSkill";
-            _cboJobSkill.Size = new Size(541, 21);
-            _cboJobSkill.TabIndex = 32;
-            //
-            // lblJobSkill
-            //
-            _lblJobSkill.AutoSize = true;
-            _lblJobSkill.Location = new Point(296, 23);
-            _lblJobSkill.Name = "lblJobSkill";
-            _lblJobSkill.Size = new Size(31, 13);
-            _lblJobSkill.TabIndex = 31;
-            _lblJobSkill.Text = "Skill";
-            //
-            // cboJobType
-            //
-            _cboJobType.FormattingEnabled = true;
-            _cboJobType.Location = new Point(73, 20);
-            _cboJobType.Name = "cboJobType";
-            _cboJobType.Size = new Size(204, 21);
-            _cboJobType.TabIndex = 3;
-            //
-            // btnDelete
-            //
-            _btnDelete.AccessibleDescription = "Save item";
-            _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDelete.Cursor = Cursors.Hand;
-            _btnDelete.ImageIndex = 1;
-            _btnDelete.Location = new Point(880, 292);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(154, 23);
-            _btnDelete.TabIndex = 2;
-            _btnDelete.Text = "Delete";
-            _btnDelete.UseVisualStyleBackColor = true;
-            //
-            // lblJobType
-            //
-            _lblJobType.AutoSize = true;
-            _lblJobType.Location = new Point(12, 23);
-            _lblJobType.Name = "lblJobType";
-            _lblJobType.Size = new Size(57, 13);
-            _lblJobType.TabIndex = 2;
-            _lblJobType.Text = "Job Type";
-            //
-            // dgSkills
-            //
-            _dgSkills.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgSkills.DataMember = "";
-            _dgSkills.HeaderForeColor = SystemColors.ControlText;
-            _dgSkills.Location = new Point(8, 47);
-            _dgSkills.Name = "dgSkills";
-            _dgSkills.Size = new Size(1026, 239);
-            _dgSkills.TabIndex = 1;
-            //
-            // btnClose
-            //
-            _btnClose.AccessibleDescription = "Save item";
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Cursor = Cursors.Hand;
-            _btnClose.ImageIndex = 1;
-            _btnClose.Location = new Point(8, 621);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 23);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            _btnClose.UseVisualStyleBackColor = true;
-            //
-            // grpSkillMatrix
-            //
-            _grpSkillMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpSkillMatrix.Controls.Add(_btnAddTypeSkill);
-            _grpSkillMatrix.Controls.Add(_cboTypeSkill);
-            _grpSkillMatrix.Controls.Add(_lblTypeSkill);
-            _grpSkillMatrix.Controls.Add(_cboSkillType);
-            _grpSkillMatrix.Controls.Add(_btnDeleteTypeSkill);
-            _grpSkillMatrix.Controls.Add(_lblSkillType);
-            _grpSkillMatrix.Controls.Add(_dgSkillMatrix);
-            _grpSkillMatrix.Location = new Point(8, 391);
-            _grpSkillMatrix.Name = "grpSkillMatrix";
-            _grpSkillMatrix.Size = new Size(741, 224);
-            _grpSkillMatrix.TabIndex = 34;
-            _grpSkillMatrix.TabStop = false;
-            _grpSkillMatrix.Text = "Skills Matrix";
-            //
-            // btnAddTypeSkill
-            //
-            _btnAddTypeSkill.AccessibleDescription = "Save item";
-            _btnAddTypeSkill.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAddTypeSkill.Cursor = Cursors.Hand;
-            _btnAddTypeSkill.ImageIndex = 1;
-            _btnAddTypeSkill.Location = new Point(579, 18);
-            _btnAddTypeSkill.Name = "btnAddTypeSkill";
-            _btnAddTypeSkill.Size = new Size(154, 23);
-            _btnAddTypeSkill.TabIndex = 33;
-            _btnAddTypeSkill.Text = "Add";
-            _btnAddTypeSkill.UseVisualStyleBackColor = true;
-            //
-            // cboTypeSkill
-            //
-            _cboTypeSkill.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboTypeSkill.FormattingEnabled = true;
-            _cboTypeSkill.Location = new Point(333, 20);
-            _cboTypeSkill.Name = "cboTypeSkill";
-            _cboTypeSkill.Size = new Size(240, 21);
-            _cboTypeSkill.TabIndex = 32;
-            //
-            // lblTypeSkill
-            //
-            _lblTypeSkill.AutoSize = true;
-            _lblTypeSkill.Location = new Point(296, 23);
-            _lblTypeSkill.Name = "lblTypeSkill";
-            _lblTypeSkill.Size = new Size(31, 13);
-            _lblTypeSkill.TabIndex = 31;
-            _lblTypeSkill.Text = "Skill";
-            //
-            // cboSkillType
-            //
-            _cboSkillType.FormattingEnabled = true;
-            _cboSkillType.Location = new Point(73, 20);
-            _cboSkillType.Name = "cboSkillType";
-            _cboSkillType.Size = new Size(204, 21);
-            _cboSkillType.TabIndex = 3;
-            //
-            // btnDeleteTypeSkill
-            //
-            _btnDeleteTypeSkill.AccessibleDescription = "Save item";
-            _btnDeleteTypeSkill.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDeleteTypeSkill.Cursor = Cursors.Hand;
-            _btnDeleteTypeSkill.ImageIndex = 1;
-            _btnDeleteTypeSkill.Location = new Point(579, 195);
-            _btnDeleteTypeSkill.Name = "btnDeleteTypeSkill";
-            _btnDeleteTypeSkill.Size = new Size(154, 23);
-            _btnDeleteTypeSkill.TabIndex = 2;
-            _btnDeleteTypeSkill.Text = "Delete";
-            _btnDeleteTypeSkill.UseVisualStyleBackColor = true;
-            //
-            // lblSkillType
-            //
-            _lblSkillType.AutoSize = true;
-            _lblSkillType.Location = new Point(7, 23);
-            _lblSkillType.Name = "lblSkillType";
-            _lblSkillType.Size = new Size(62, 13);
-            _lblSkillType.TabIndex = 2;
-            _lblSkillType.Text = "Skill Type";
-            //
-            // dgSkillMatrix
-            //
-            _dgSkillMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgSkillMatrix.DataMember = "";
-            _dgSkillMatrix.HeaderForeColor = SystemColors.ControlText;
-            _dgSkillMatrix.Location = new Point(8, 47);
-            _dgSkillMatrix.Name = "dgSkillMatrix";
-            _dgSkillMatrix.Size = new Size(725, 142);
-            _dgSkillMatrix.TabIndex = 1;
-            //
-            // grpJobImportType
-            //
-            _grpJobImportType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _grpJobImportType.Controls.Add(_txtSkillTypeName);
-            _grpJobImportType.Controls.Add(_lblSkillTypeName);
-            _grpJobImportType.Controls.Add(_cboSkillType1);
-            _grpJobImportType.Controls.Add(_lblSkillType1);
-            _grpJobImportType.Controls.Add(_btnSaveSkillType);
-            _grpJobImportType.Location = new Point(755, 391);
-            _grpJobImportType.Name = "grpJobImportType";
-            _grpJobImportType.Size = new Size(287, 126);
-            _grpJobImportType.TabIndex = 35;
-            _grpJobImportType.TabStop = false;
-            _grpJobImportType.Text = "Skill Types";
-            //
-            // txtSkillTypeName
-            //
-            _txtSkillTypeName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSkillTypeName.Location = new Point(138, 60);
-            _txtSkillTypeName.MaxLength = 50;
-            _txtSkillTypeName.Name = "txtSkillTypeName";
-            _txtSkillTypeName.Size = new Size(142, 21);
-            _txtSkillTypeName.TabIndex = 18;
-            _txtSkillTypeName.Tag = "SystemScheduleOfRate.Code";
-            //
-            // lblSkillTypeName
-            //
-            _lblSkillTypeName.Location = new Point(11, 63);
-            _lblSkillTypeName.Name = "lblSkillTypeName";
-            _lblSkillTypeName.Size = new Size(100, 20);
-            _lblSkillTypeName.TabIndex = 17;
-            _lblSkillTypeName.Text = "Skill Type Name";
-            //
-            // cboSkillType1
-            //
-            _cboSkillType1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboSkillType1.Cursor = Cursors.Hand;
-            _cboSkillType1.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboSkillType1.Location = new Point(138, 26);
-            _cboSkillType1.Name = "cboSkillType1";
-            _cboSkillType1.Size = new Size(142, 21);
-            _cboSkillType1.TabIndex = 16;
-            _cboSkillType1.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
-            //
-            // lblSkillType1
-            //
-            _lblSkillType1.Location = new Point(11, 29);
-            _lblSkillType1.Name = "lblSkillType1";
-            _lblSkillType1.Size = new Size(118, 20);
-            _lblSkillType1.TabIndex = 15;
-            _lblSkillType1.Text = "Skill Type";
-            //
-            // btnSaveSkillType
-            //
-            _btnSaveSkillType.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSaveSkillType.Location = new Point(179, 97);
-            _btnSaveSkillType.Name = "btnSaveSkillType";
-            _btnSaveSkillType.Size = new Size(101, 23);
-            _btnSaveSkillType.TabIndex = 11;
-            _btnSaveSkillType.Text = "Save";
-            //
+            this._grpJobSkills = new System.Windows.Forms.GroupBox();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this._cboJobSkill = new System.Windows.Forms.ComboBox();
+            this._lblJobSkill = new System.Windows.Forms.Label();
+            this._cboJobType = new System.Windows.Forms.ComboBox();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._lblJobType = new System.Windows.Forms.Label();
+            this._dgSkills = new System.Windows.Forms.DataGrid();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._grpSkillMatrix = new System.Windows.Forms.GroupBox();
+            this._btnAddTypeSkill = new System.Windows.Forms.Button();
+            this._cboTypeSkill = new System.Windows.Forms.ComboBox();
+            this._lblTypeSkill = new System.Windows.Forms.Label();
+            this._cboSkillType = new System.Windows.Forms.ComboBox();
+            this._btnDeleteTypeSkill = new System.Windows.Forms.Button();
+            this._lblSkillType = new System.Windows.Forms.Label();
+            this._dgSkillMatrix = new System.Windows.Forms.DataGrid();
+            this._grpJobImportType = new System.Windows.Forms.GroupBox();
+            this._txtSkillTypeName = new System.Windows.Forms.TextBox();
+            this._lblSkillTypeName = new System.Windows.Forms.Label();
+            this._cboSkillType1 = new System.Windows.Forms.ComboBox();
+            this._lblSkillType1 = new System.Windows.Forms.Label();
+            this._btnSaveSkillType = new System.Windows.Forms.Button();
+            this._grpJobSkills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSkills)).BeginInit();
+            this._grpSkillMatrix.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSkillMatrix)).BeginInit();
+            this._grpJobImportType.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpJobSkills
+            // 
+            this._grpJobSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobSkills.Controls.Add(this._btnAdd);
+            this._grpJobSkills.Controls.Add(this._cboJobSkill);
+            this._grpJobSkills.Controls.Add(this._lblJobSkill);
+            this._grpJobSkills.Controls.Add(this._cboJobType);
+            this._grpJobSkills.Controls.Add(this._btnDelete);
+            this._grpJobSkills.Controls.Add(this._lblJobType);
+            this._grpJobSkills.Controls.Add(this._dgSkills);
+            this._grpJobSkills.Location = new System.Drawing.Point(8, 12);
+            this._grpJobSkills.Name = "_grpJobSkills";
+            this._grpJobSkills.Size = new System.Drawing.Size(1042, 362);
+            this._grpJobSkills.TabIndex = 1;
+            this._grpJobSkills.TabStop = false;
+            this._grpJobSkills.Text = "Job Skills";
+            // 
+            // _btnAdd
+            // 
+            this._btnAdd.AccessibleDescription = "Save item";
+            this._btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAdd.ImageIndex = 1;
+            this._btnAdd.Location = new System.Drawing.Point(880, 18);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(154, 23);
+            this._btnAdd.TabIndex = 33;
+            this._btnAdd.Text = "Add";
+            this._btnAdd.UseVisualStyleBackColor = true;
+            this._btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // _cboJobSkill
+            // 
+            this._cboJobSkill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboJobSkill.FormattingEnabled = true;
+            this._cboJobSkill.Location = new System.Drawing.Point(333, 20);
+            this._cboJobSkill.Name = "_cboJobSkill";
+            this._cboJobSkill.Size = new System.Drawing.Size(541, 21);
+            this._cboJobSkill.TabIndex = 32;
+            // 
+            // _lblJobSkill
+            // 
+            this._lblJobSkill.AutoSize = true;
+            this._lblJobSkill.Location = new System.Drawing.Point(296, 23);
+            this._lblJobSkill.Name = "_lblJobSkill";
+            this._lblJobSkill.Size = new System.Drawing.Size(31, 13);
+            this._lblJobSkill.TabIndex = 31;
+            this._lblJobSkill.Text = "Skill";
+            // 
+            // _cboJobType
+            // 
+            this._cboJobType.FormattingEnabled = true;
+            this._cboJobType.Location = new System.Drawing.Point(73, 20);
+            this._cboJobType.Name = "_cboJobType";
+            this._cboJobType.Size = new System.Drawing.Size(204, 21);
+            this._cboJobType.TabIndex = 3;
+            // 
+            // _btnDelete
+            // 
+            this._btnDelete.AccessibleDescription = "Save item";
+            this._btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnDelete.ImageIndex = 1;
+            this._btnDelete.Location = new System.Drawing.Point(880, 333);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(154, 23);
+            this._btnDelete.TabIndex = 2;
+            this._btnDelete.Text = "Delete";
+            this._btnDelete.UseVisualStyleBackColor = true;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // _lblJobType
+            // 
+            this._lblJobType.AutoSize = true;
+            this._lblJobType.Location = new System.Drawing.Point(12, 23);
+            this._lblJobType.Name = "_lblJobType";
+            this._lblJobType.Size = new System.Drawing.Size(57, 13);
+            this._lblJobType.TabIndex = 2;
+            this._lblJobType.Text = "Job Type";
+            // 
+            // _dgSkills
+            // 
+            this._dgSkills.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgSkills.DataMember = "";
+            this._dgSkills.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSkills.Location = new System.Drawing.Point(8, 47);
+            this._dgSkills.Name = "_dgSkills";
+            this._dgSkills.Size = new System.Drawing.Size(1026, 280);
+            this._dgSkills.TabIndex = 1;
+            // 
+            // _btnClose
+            // 
+            this._btnClose.AccessibleDescription = "Save item";
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnClose.ImageIndex = 1;
+            this._btnClose.Location = new System.Drawing.Point(8, 621);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 23);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _grpSkillMatrix
+            // 
+            this._grpSkillMatrix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpSkillMatrix.Controls.Add(this._btnAddTypeSkill);
+            this._grpSkillMatrix.Controls.Add(this._cboTypeSkill);
+            this._grpSkillMatrix.Controls.Add(this._lblTypeSkill);
+            this._grpSkillMatrix.Controls.Add(this._cboSkillType);
+            this._grpSkillMatrix.Controls.Add(this._btnDeleteTypeSkill);
+            this._grpSkillMatrix.Controls.Add(this._lblSkillType);
+            this._grpSkillMatrix.Controls.Add(this._dgSkillMatrix);
+            this._grpSkillMatrix.Location = new System.Drawing.Point(8, 391);
+            this._grpSkillMatrix.Name = "_grpSkillMatrix";
+            this._grpSkillMatrix.Size = new System.Drawing.Size(741, 224);
+            this._grpSkillMatrix.TabIndex = 34;
+            this._grpSkillMatrix.TabStop = false;
+            this._grpSkillMatrix.Text = "Skills Matrix";
+            // 
+            // _btnAddTypeSkill
+            // 
+            this._btnAddTypeSkill.AccessibleDescription = "Save item";
+            this._btnAddTypeSkill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddTypeSkill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAddTypeSkill.ImageIndex = 1;
+            this._btnAddTypeSkill.Location = new System.Drawing.Point(579, 18);
+            this._btnAddTypeSkill.Name = "_btnAddTypeSkill";
+            this._btnAddTypeSkill.Size = new System.Drawing.Size(154, 23);
+            this._btnAddTypeSkill.TabIndex = 33;
+            this._btnAddTypeSkill.Text = "Add";
+            this._btnAddTypeSkill.UseVisualStyleBackColor = true;
+            this._btnAddTypeSkill.Click += new System.EventHandler(this.btnAddTypeSkill_Click);
+            // 
+            // _cboTypeSkill
+            // 
+            this._cboTypeSkill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboTypeSkill.FormattingEnabled = true;
+            this._cboTypeSkill.Location = new System.Drawing.Point(333, 20);
+            this._cboTypeSkill.Name = "_cboTypeSkill";
+            this._cboTypeSkill.Size = new System.Drawing.Size(240, 21);
+            this._cboTypeSkill.TabIndex = 32;
+            // 
+            // _lblTypeSkill
+            // 
+            this._lblTypeSkill.AutoSize = true;
+            this._lblTypeSkill.Location = new System.Drawing.Point(296, 23);
+            this._lblTypeSkill.Name = "_lblTypeSkill";
+            this._lblTypeSkill.Size = new System.Drawing.Size(31, 13);
+            this._lblTypeSkill.TabIndex = 31;
+            this._lblTypeSkill.Text = "Skill";
+            // 
+            // _cboSkillType
+            // 
+            this._cboSkillType.FormattingEnabled = true;
+            this._cboSkillType.Location = new System.Drawing.Point(73, 20);
+            this._cboSkillType.Name = "_cboSkillType";
+            this._cboSkillType.Size = new System.Drawing.Size(204, 21);
+            this._cboSkillType.TabIndex = 3;
+            this._cboSkillType.SelectedIndexChanged += new System.EventHandler(this.cboSkillType_SelectedIndexChanged);
+            // 
+            // _btnDeleteTypeSkill
+            // 
+            this._btnDeleteTypeSkill.AccessibleDescription = "Save item";
+            this._btnDeleteTypeSkill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDeleteTypeSkill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnDeleteTypeSkill.ImageIndex = 1;
+            this._btnDeleteTypeSkill.Location = new System.Drawing.Point(579, 195);
+            this._btnDeleteTypeSkill.Name = "_btnDeleteTypeSkill";
+            this._btnDeleteTypeSkill.Size = new System.Drawing.Size(154, 23);
+            this._btnDeleteTypeSkill.TabIndex = 2;
+            this._btnDeleteTypeSkill.Text = "Delete";
+            this._btnDeleteTypeSkill.UseVisualStyleBackColor = true;
+            this._btnDeleteTypeSkill.Click += new System.EventHandler(this.btnDeleteTypeSkill_Click);
+            // 
+            // _lblSkillType
+            // 
+            this._lblSkillType.AutoSize = true;
+            this._lblSkillType.Location = new System.Drawing.Point(7, 23);
+            this._lblSkillType.Name = "_lblSkillType";
+            this._lblSkillType.Size = new System.Drawing.Size(62, 13);
+            this._lblSkillType.TabIndex = 2;
+            this._lblSkillType.Text = "Skill Type";
+            // 
+            // _dgSkillMatrix
+            // 
+            this._dgSkillMatrix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgSkillMatrix.DataMember = "";
+            this._dgSkillMatrix.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSkillMatrix.Location = new System.Drawing.Point(8, 47);
+            this._dgSkillMatrix.Name = "_dgSkillMatrix";
+            this._dgSkillMatrix.Size = new System.Drawing.Size(725, 142);
+            this._dgSkillMatrix.TabIndex = 1;
+            // 
+            // _grpJobImportType
+            // 
+            this._grpJobImportType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobImportType.Controls.Add(this._txtSkillTypeName);
+            this._grpJobImportType.Controls.Add(this._lblSkillTypeName);
+            this._grpJobImportType.Controls.Add(this._cboSkillType1);
+            this._grpJobImportType.Controls.Add(this._lblSkillType1);
+            this._grpJobImportType.Controls.Add(this._btnSaveSkillType);
+            this._grpJobImportType.Location = new System.Drawing.Point(755, 391);
+            this._grpJobImportType.Name = "_grpJobImportType";
+            this._grpJobImportType.Size = new System.Drawing.Size(287, 126);
+            this._grpJobImportType.TabIndex = 35;
+            this._grpJobImportType.TabStop = false;
+            this._grpJobImportType.Text = "Skill Types";
+            // 
+            // _txtSkillTypeName
+            // 
+            this._txtSkillTypeName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSkillTypeName.Location = new System.Drawing.Point(138, 60);
+            this._txtSkillTypeName.MaxLength = 50;
+            this._txtSkillTypeName.Name = "_txtSkillTypeName";
+            this._txtSkillTypeName.Size = new System.Drawing.Size(142, 21);
+            this._txtSkillTypeName.TabIndex = 18;
+            this._txtSkillTypeName.Tag = "SystemScheduleOfRate.Code";
+            // 
+            // _lblSkillTypeName
+            // 
+            this._lblSkillTypeName.Location = new System.Drawing.Point(11, 63);
+            this._lblSkillTypeName.Name = "_lblSkillTypeName";
+            this._lblSkillTypeName.Size = new System.Drawing.Size(100, 20);
+            this._lblSkillTypeName.TabIndex = 17;
+            this._lblSkillTypeName.Text = "Skill Type Name";
+            // 
+            // _cboSkillType1
+            // 
+            this._cboSkillType1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboSkillType1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboSkillType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboSkillType1.Location = new System.Drawing.Point(138, 26);
+            this._cboSkillType1.Name = "_cboSkillType1";
+            this._cboSkillType1.Size = new System.Drawing.Size(142, 21);
+            this._cboSkillType1.TabIndex = 16;
+            this._cboSkillType1.Tag = "SystemScheduleOfRate.ScheduleOfRatesCategoryID";
+            // 
+            // _lblSkillType1
+            // 
+            this._lblSkillType1.Location = new System.Drawing.Point(11, 29);
+            this._lblSkillType1.Name = "_lblSkillType1";
+            this._lblSkillType1.Size = new System.Drawing.Size(118, 20);
+            this._lblSkillType1.TabIndex = 15;
+            this._lblSkillType1.Text = "Skill Type";
+            // 
+            // _btnSaveSkillType
+            // 
+            this._btnSaveSkillType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSaveSkillType.Location = new System.Drawing.Point(179, 97);
+            this._btnSaveSkillType.Name = "_btnSaveSkillType";
+            this._btnSaveSkillType.Size = new System.Drawing.Size(101, 23);
+            this._btnSaveSkillType.TabIndex = 11;
+            this._btnSaveSkillType.Text = "Save";
+            this._btnSaveSkillType.Click += new System.EventHandler(this.btnSaveSkillType_Click);
+            // 
             // FRMJobSkills
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1058, 656);
-            Controls.Add(_grpJobImportType);
-            Controls.Add(_grpSkillMatrix);
-            Controls.Add(_btnClose);
-            Controls.Add(_grpJobSkills);
-            MinimumSize = new Size(793, 520);
-            Name = "FRMJobSkills";
-            Text = "Skills";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpJobSkills, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_grpSkillMatrix, 0);
-            Controls.SetChildIndex(_grpJobImportType, 0);
-            _grpJobSkills.ResumeLayout(false);
-            _grpJobSkills.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSkills).EndInit();
-            _grpSkillMatrix.ResumeLayout(false);
-            _grpSkillMatrix.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSkillMatrix).EndInit();
-            _grpJobImportType.ResumeLayout(false);
-            _grpJobImportType.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1058, 656);
+            this.Controls.Add(this._grpJobImportType);
+            this.Controls.Add(this._grpSkillMatrix);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._grpJobSkills);
+            this.MinimumSize = new System.Drawing.Size(793, 520);
+            this.Name = "FRMJobSkills";
+            this.Text = "Skills";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpJobSkills.ResumeLayout(false);
+            this._grpJobSkills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSkills)).EndInit();
+            this._grpSkillMatrix.ResumeLayout(false);
+            this._grpSkillMatrix.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSkillMatrix)).EndInit();
+            this._grpJobImportType.ResumeLayout(false);
+            this._grpJobImportType.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

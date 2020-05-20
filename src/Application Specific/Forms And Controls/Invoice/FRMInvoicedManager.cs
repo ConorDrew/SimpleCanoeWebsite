@@ -810,784 +810,802 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            _btnPrintOneItemOneInvoice = new Button();
-            _btnPrintOneItemOneInvoice.Click += new EventHandler(btnPrintOneItemOneInvoice_Click);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _grpFilter = new GroupBox();
-            _dtpExportedOn = new DateTimePicker();
-            _lblExportedOn = new Label();
-            _lblDept = new Label();
-            _cboDept = new ComboBox();
-            _lblSageMonth = new Label();
-            _txtSageMonth = new TextBox();
-            _txtSageMonth.DoubleClick += new EventHandler(txtSageMonth_TextChanged);
-            _lblRegion = new Label();
-            _cboRegion = new ComboBox();
-            _btnSearch = new Button();
-            _btnSearch.Click += new EventHandler(btnSearch_Click);
-            _cboExported = new ComboBox();
-            _cboExported.SelectedIndexChanged += new EventHandler(cboExportedToSage_SelectedIndexChanged);
-            _lblExported = new Label();
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnFindCustomer_Click);
-            _txtCustomer = new TextBox();
-            _lblCustomer = new Label();
-            _txtPostcode = new TextBox();
-            _txtPostcode.KeyDown += new KeyEventHandler(txtJobNumber_TextChanged);
-            _lblPostcode = new Label();
-            _btnFindSite = new Button();
-            _btnFindSite.Click += new EventHandler(btnFindSite_Click);
-            _txtSite = new TextBox();
-            _txtJobNumber = new TextBox();
-            _txtJobNumber.KeyDown += new KeyEventHandler(txtJobNumber_TextChanged);
-            _lblRefNo = new Label();
-            _lblProperty = new Label();
-            _lblType = new Label();
-            _cboType = new ComboBox();
-            _lblDateBetween = new Label();
-            _dtpRaisedFrom = new DateTimePicker();
-            _dtpRaisedTo = new DateTimePicker();
-            _lblDate = new Label();
-            _cboStatus = new ComboBox();
-            _lblStatus = new Label();
-            _lblInvoiceNumber = new Label();
-            _lblUser = new Label();
-            _cboUser = new ComboBox();
-            _txtInvoiceNumber = new TextBox();
-            _txtInvoiceNumber.KeyDown += new KeyEventHandler(txtJobNumber_TextChanged);
-            _chkExportedOn = new CheckBox();
-            _chkExportedOn.Click += new EventHandler(chkExportedOn_Click);
-            _grpInvoices = new GroupBox();
-            _btnSalesCredit = new Button();
-            _btnSalesCredit.Click += new EventHandler(btnSalesCredit_Click);
-            _btnChange = new Button();
-            _btnChange.Click += new EventHandler(btnChange_Click);
-            _dgInvoices = new DataGrid();
-            _dgInvoices.MouseUp += new MouseEventHandler(dgInvoices_MouseUp);
-            _dgInvoices.DoubleClick += new EventHandler(dgInvoices_DoubleClick);
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnDeselectAll = new Button();
-            _btnDeselectAll.Click += new EventHandler(btnDeselectAll_Click);
-            _lblInvoicePartPayed = new Label();
-            _lblInvoicePayed = new Label();
-            _lblGreenColour = new Label();
-            _lblGoldColour = new Label();
-            _lblInvoicedNotPayed = new Label();
-            _lblRedColour = new Label();
-            _btnView = new Button();
-            _btnView.Click += new EventHandler(btnView_Click);
-            _btnMarkAsNotExported = new Button();
-            _btnMarkAsNotExported.Click += new EventHandler(btnMarkAsNotExported_Click);
-            _btnGenVal = new Button();
-            _btnGenVal.Click += new EventHandler(btnGenNCCVal_Click);
-            _cmsValType = new ContextMenuStrip(components);
-            _tsmiNCCVal = new ToolStripMenuItem();
-            _tsmiNCCVal.Click += new EventHandler(tsmiNCCVal_Click);
-            _tsmiGenericVal = new ToolStripMenuItem();
-            _tsmiGenericVal.Click += new EventHandler(tsmiGenericVal_Click);
-            _tsmiSorVal = new ToolStripMenuItem();
-            _tsmiSorVal.Click += new EventHandler(tsmiSorVal_Click);
-            _cmsChange = new ContextMenuStrip(components);
-            _tsmiPaymentTerms = new ToolStripMenuItem();
-            _tsmiPaymentTerms.Click += new EventHandler(tsmiPaymentTerms_Click);
-            _tsmiInvoicedTotal = new ToolStripMenuItem();
-            _tsmiInvoicedTotal.Click += new EventHandler(tsmiInvoicedTotal_Click);
-            _tsmiVatRate = new ToolStripMenuItem();
-            _tsmiVatRate.Click += new EventHandler(tsmiVatRate_Click);
-            _tsmiAccountNumber = new ToolStripMenuItem();
-            _tsmiAccountNumber.Click += new EventHandler(tsmiAccountNumber_Click);
-            _tsmiOrderNo = new ToolStripMenuItem();
-            _tsmiOrderNo.Click += new EventHandler(tsmiOrderNo_Click);
-            _cmsSalesCredit = new ContextMenuStrip(components);
-            _tsmiIssue = new ToolStripMenuItem();
-            _tsmiIssue.Click += new EventHandler(tsmiIssue_Click);
-            _tsmiRemove = new ToolStripMenuItem();
-            _tsmiRemove.Click += new EventHandler(tsmiRemove_Click);
-            _tsmiBatchPrint = new ToolStripMenuItem();
-            _tsmiBatchPrint.Click += new EventHandler(tsmiBatchPrint_Click);
-            _cmsExportForAccounts = new ContextMenuStrip(components);
-            _tsmiSunExport = new ToolStripMenuItem();
-            _tsmiSunExport.Click += new EventHandler(tsmiSunExport_Click);
-            _tsmiSageExport = new ToolStripMenuItem();
-            _tsmiSageExport.Click += new EventHandler(tsmiSageExport_Click);
-            _btnExportToAccounts = new Button();
-            _btnExportToAccounts.Click += new EventHandler(btnExportToAccounts_Click);
-            _grpFilter.SuspendLayout();
-            _grpInvoices.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgInvoices).BeginInit();
-            _cmsValType.SuspendLayout();
-            _cmsChange.SuspendLayout();
-            _cmsSalesCredit.SuspendLayout();
-            _cmsExportForAccounts.SuspendLayout();
-            SuspendLayout();
-            //
-            // btnPrintOneItemOneInvoice
-            //
-            _btnPrintOneItemOneInvoice.AccessibleDescription = "Export Job List To Excel";
-            _btnPrintOneItemOneInvoice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnPrintOneItemOneInvoice.Location = new Point(125, 594);
-            _btnPrintOneItemOneInvoice.Name = "btnPrintOneItemOneInvoice";
-            _btnPrintOneItemOneInvoice.Size = new Size(141, 23);
-            _btnPrintOneItemOneInvoice.TabIndex = 27;
-            _btnPrintOneItemOneInvoice.Text = "Regenerate Invoice";
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 594);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 25;
-            _btnExport.Text = "Export";
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(67, 594);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(55, 23);
-            _btnReset.TabIndex = 26;
-            _btnReset.Text = "Reset";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_dtpExportedOn);
-            _grpFilter.Controls.Add(_lblExportedOn);
-            _grpFilter.Controls.Add(_lblDept);
-            _grpFilter.Controls.Add(_cboDept);
-            _grpFilter.Controls.Add(_lblSageMonth);
-            _grpFilter.Controls.Add(_txtSageMonth);
-            _grpFilter.Controls.Add(_lblRegion);
-            _grpFilter.Controls.Add(_cboRegion);
-            _grpFilter.Controls.Add(_btnSearch);
-            _grpFilter.Controls.Add(_cboExported);
-            _grpFilter.Controls.Add(_lblExported);
-            _grpFilter.Controls.Add(_btnFindCustomer);
-            _grpFilter.Controls.Add(_txtCustomer);
-            _grpFilter.Controls.Add(_lblCustomer);
-            _grpFilter.Controls.Add(_txtPostcode);
-            _grpFilter.Controls.Add(_lblPostcode);
-            _grpFilter.Controls.Add(_btnFindSite);
-            _grpFilter.Controls.Add(_txtSite);
-            _grpFilter.Controls.Add(_txtJobNumber);
-            _grpFilter.Controls.Add(_lblRefNo);
-            _grpFilter.Controls.Add(_lblProperty);
-            _grpFilter.Controls.Add(_lblType);
-            _grpFilter.Controls.Add(_cboType);
-            _grpFilter.Controls.Add(_lblDateBetween);
-            _grpFilter.Controls.Add(_dtpRaisedFrom);
-            _grpFilter.Controls.Add(_dtpRaisedTo);
-            _grpFilter.Controls.Add(_lblDate);
-            _grpFilter.Controls.Add(_cboStatus);
-            _grpFilter.Controls.Add(_lblStatus);
-            _grpFilter.Controls.Add(_lblInvoiceNumber);
-            _grpFilter.Controls.Add(_lblUser);
-            _grpFilter.Controls.Add(_cboUser);
-            _grpFilter.Controls.Add(_txtInvoiceNumber);
-            _grpFilter.Controls.Add(_chkExportedOn);
-            _grpFilter.Location = new Point(8, 32);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(1123, 236);
-            _grpFilter.TabIndex = 24;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // dtpExportedOn
-            //
-            _dtpExportedOn.Location = new Point(541, 163);
-            _dtpExportedOn.Name = "dtpExportedOn";
-            _dtpExportedOn.Size = new Size(186, 21);
-            _dtpExportedOn.TabIndex = 44;
-            //
-            // lblExportedOn
-            //
-            _lblExportedOn.Location = new Point(416, 164);
-            _lblExportedOn.Name = "lblExportedOn";
-            _lblExportedOn.Size = new Size(85, 16);
-            _lblExportedOn.TabIndex = 45;
-            _lblExportedOn.Text = "Exported On";
-            //
-            // lblDept
-            //
-            _lblDept.AutoSize = true;
-            _lblDept.Location = new Point(747, 166);
-            _lblDept.Name = "lblDept";
-            _lblDept.Size = new Size(76, 13);
-            _lblDept.TabIndex = 42;
-            _lblDept.Text = "Cost Centre";
-            //
-            // cboDept
-            //
-            _cboDept.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboDept.Location = new Point(845, 164);
-            _cboDept.Name = "cboDept";
-            _cboDept.Size = new Size(224, 21);
-            _cboDept.TabIndex = 43;
-            //
-            // lblSageMonth
-            //
-            _lblSageMonth.Location = new Point(416, 197);
-            _lblSageMonth.Name = "lblSageMonth";
-            _lblSageMonth.Size = new Size(98, 19);
-            _lblSageMonth.TabIndex = 40;
-            _lblSageMonth.Text = "Account Month";
-            //
-            // txtSageMonth
-            //
-            _txtSageMonth.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSageMonth.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtSageMonth.Location = new Point(520, 195);
-            _txtSageMonth.Name = "txtSageMonth";
-            _txtSageMonth.ReadOnly = true;
-            _txtSageMonth.Size = new Size(207, 21);
-            _txtSageMonth.TabIndex = 41;
-            //
-            // lblRegion
-            //
-            _lblRegion.Location = new Point(8, 198);
-            _lblRegion.Name = "lblRegion";
-            _lblRegion.Size = new Size(72, 16);
-            _lblRegion.TabIndex = 39;
-            _lblRegion.Text = "Region";
-            //
-            // cboRegion
-            //
-            _cboRegion.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboRegion.Location = new Point(160, 195);
-            _cboRegion.Name = "cboRegion";
-            _cboRegion.Size = new Size(248, 21);
-            _cboRegion.TabIndex = 38;
-            //
-            // btnSearch
-            //
-            _btnSearch.AccessibleDescription = "Export Job List To Excel";
-            _btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSearch.Location = new Point(981, 198);
-            _btnSearch.Name = "btnSearch";
-            _btnSearch.Size = new Size(88, 23);
-            _btnSearch.TabIndex = 30;
-            _btnSearch.Text = "Run Filter";
-            //
-            // cboExported
-            //
-            _cboExported.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboExported.Items.AddRange(new object[] { "Show All", "Exported", "Not Exported" });
-            _cboExported.Location = new Point(160, 161);
-            _cboExported.Name = "cboExported";
-            _cboExported.Size = new Size(248, 21);
-            _cboExported.TabIndex = 29;
-            //
-            // lblExported
-            //
-            _lblExported.Location = new Point(8, 164);
-            _lblExported.Name = "lblExported";
-            _lblExported.Size = new Size(122, 18);
-            _lblExported.TabIndex = 28;
-            _lblExported.Text = "Exported";
-            //
-            // btnFindCustomer
-            //
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.BackColor = Color.White;
-            _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindCustomer.Location = new Point(1077, 40);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 2;
-            _btnFindCustomer.Text = "...";
-            _btnFindCustomer.UseVisualStyleBackColor = false;
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtCustomer.Location = new Point(160, 40);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(909, 21);
-            _txtCustomer.TabIndex = 1;
-            //
-            // lblCustomer
-            //
-            _lblCustomer.Location = new Point(8, 40);
-            _lblCustomer.Name = "lblCustomer";
-            _lblCustomer.Size = new Size(64, 16);
-            _lblCustomer.TabIndex = 27;
-            _lblCustomer.Text = "Customer";
-            //
-            // txtPostcode
-            //
-            _txtPostcode.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtPostcode.Location = new Point(160, 88);
-            _txtPostcode.Name = "txtPostcode";
-            _txtPostcode.Size = new Size(248, 21);
-            _txtPostcode.TabIndex = 5;
-            //
-            // lblPostcode
-            //
-            _lblPostcode.Location = new Point(8, 88);
-            _lblPostcode.Name = "lblPostcode";
-            _lblPostcode.Size = new Size(64, 16);
-            _lblPostcode.TabIndex = 20;
-            _lblPostcode.Text = "Postcode";
-            //
-            // btnFindSite
-            //
-            _btnFindSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindSite.BackColor = Color.White;
-            _btnFindSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindSite.Location = new Point(1077, 64);
-            _btnFindSite.Name = "btnFindSite";
-            _btnFindSite.Size = new Size(32, 23);
-            _btnFindSite.TabIndex = 4;
-            _btnFindSite.Text = "...";
-            _btnFindSite.UseVisualStyleBackColor = false;
-            //
-            // txtSite
-            //
-            _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtSite.Location = new Point(160, 64);
-            _txtSite.Name = "txtSite";
-            _txtSite.ReadOnly = true;
-            _txtSite.Size = new Size(909, 21);
-            _txtSite.TabIndex = 3;
-            //
-            // txtJobNumber
-            //
-            _txtJobNumber.Location = new Point(160, 136);
-            _txtJobNumber.Name = "txtJobNumber";
-            _txtJobNumber.Size = new Size(248, 21);
-            _txtJobNumber.TabIndex = 9;
-            //
-            // lblRefNo
-            //
-            _lblRefNo.Location = new Point(8, 136);
-            _lblRefNo.Name = "lblRefNo";
-            _lblRefNo.Size = new Size(136, 16);
-            _lblRefNo.TabIndex = 6;
-            _lblRefNo.Text = "Job/Order/Contract No";
-            //
-            // lblProperty
-            //
-            _lblProperty.Location = new Point(8, 64);
-            _lblProperty.Name = "lblProperty";
-            _lblProperty.Size = new Size(64, 16);
-            _lblProperty.TabIndex = 2;
-            _lblProperty.Text = "Property";
-            //
-            // lblType
-            //
-            _lblType.Location = new Point(8, 112);
-            _lblType.Name = "lblType";
-            _lblType.Size = new Size(48, 16);
-            _lblType.TabIndex = 4;
-            _lblType.Text = "Type";
-            //
-            // cboType
-            //
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(160, 112);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(248, 21);
-            _cboType.TabIndex = 7;
-            //
-            // lblDateBetween
-            //
-            _lblDateBetween.Location = new Point(416, 16);
-            _lblDateBetween.Name = "lblDateBetween";
-            _lblDateBetween.Size = new Size(48, 16);
-            _lblDateBetween.TabIndex = 14;
-            _lblDateBetween.Text = "and";
-            //
-            // dtpRaisedFrom
-            //
-            _dtpRaisedFrom.Location = new Point(160, 16);
-            _dtpRaisedFrom.Name = "dtpRaisedFrom";
-            _dtpRaisedFrom.Size = new Size(248, 21);
-            _dtpRaisedFrom.TabIndex = 15;
-            //
-            // dtpRaisedTo
-            //
-            _dtpRaisedTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _dtpRaisedTo.Location = new Point(520, 16);
-            _dtpRaisedTo.Name = "dtpRaisedTo";
-            _dtpRaisedTo.Size = new Size(549, 21);
-            _dtpRaisedTo.TabIndex = 16;
-            //
-            // lblDate
-            //
-            _lblDate.Location = new Point(8, 16);
-            _lblDate.Name = "lblDate";
-            _lblDate.Size = new Size(136, 16);
-            _lblDate.TabIndex = 17;
-            _lblDate.Text = "Raised Date Between : ";
-            //
-            // cboStatus
-            //
-            _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStatus.Location = new Point(520, 88);
-            _cboStatus.Name = "cboStatus";
-            _cboStatus.Size = new Size(549, 21);
-            _cboStatus.TabIndex = 8;
-            //
-            // lblStatus
-            //
-            _lblStatus.Location = new Point(416, 90);
-            _lblStatus.Name = "lblStatus";
-            _lblStatus.Size = new Size(48, 16);
-            _lblStatus.TabIndex = 5;
-            _lblStatus.Text = "Status";
-            //
-            // lblInvoiceNumber
-            //
-            _lblInvoiceNumber.Location = new Point(416, 114);
-            _lblInvoiceNumber.Name = "lblInvoiceNumber";
-            _lblInvoiceNumber.Size = new Size(104, 16);
-            _lblInvoiceNumber.TabIndex = 10;
-            _lblInvoiceNumber.Text = "Invoice Number";
-            //
-            // lblUser
-            //
-            _lblUser.BackColor = Color.White;
-            _lblUser.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblUser.Location = new Point(416, 138);
-            _lblUser.Name = "lblUser";
-            _lblUser.Size = new Size(40, 16);
-            _lblUser.TabIndex = 12;
-            _lblUser.Text = "User";
-            //
-            // cboUser
-            //
-            _cboUser.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboUser.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboUser.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cboUser.ItemHeight = 13;
-            _cboUser.Location = new Point(520, 136);
-            _cboUser.Name = "cboUser";
-            _cboUser.Size = new Size(549, 21);
-            _cboUser.TabIndex = 13;
-            //
-            // txtInvoiceNumber
-            //
-            _txtInvoiceNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtInvoiceNumber.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtInvoiceNumber.Location = new Point(520, 112);
-            _txtInvoiceNumber.Name = "txtInvoiceNumber";
-            _txtInvoiceNumber.Size = new Size(549, 21);
-            _txtInvoiceNumber.TabIndex = 11;
-            //
-            // chkExportedOn
-            //
-            _chkExportedOn.AutoCheck = false;
-            _chkExportedOn.AutoSize = true;
-            _chkExportedOn.Location = new Point(520, 166);
-            _chkExportedOn.Name = "chkExportedOn";
-            _chkExportedOn.Size = new Size(30, 17);
-            _chkExportedOn.TabIndex = 46;
-            _chkExportedOn.Text = " ";
-            _chkExportedOn.UseVisualStyleBackColor = true;
-            //
-            // grpInvoices
-            //
-            _grpInvoices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpInvoices.Controls.Add(_btnSalesCredit);
-            _grpInvoices.Controls.Add(_btnChange);
-            _grpInvoices.Controls.Add(_dgInvoices);
-            _grpInvoices.Controls.Add(_btnSelectAll);
-            _grpInvoices.Controls.Add(_btnDeselectAll);
-            _grpInvoices.Controls.Add(_lblInvoicePartPayed);
-            _grpInvoices.Controls.Add(_lblInvoicePayed);
-            _grpInvoices.Controls.Add(_lblGreenColour);
-            _grpInvoices.Controls.Add(_lblGoldColour);
-            _grpInvoices.Controls.Add(_lblInvoicedNotPayed);
-            _grpInvoices.Controls.Add(_lblRedColour);
-            _grpInvoices.Location = new Point(8, 274);
-            _grpInvoices.Name = "grpInvoices";
-            _grpInvoices.Size = new Size(1123, 314);
-            _grpInvoices.TabIndex = 23;
-            _grpInvoices.TabStop = false;
-            _grpInvoices.Text = "Double Click To View / Add Payment Information";
-            //
-            // btnSalesCredit
-            //
-            _btnSalesCredit.AccessibleDescription = "";
-            _btnSalesCredit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnSalesCredit.Location = new Point(827, 24);
-            _btnSalesCredit.Name = "btnSalesCredit";
-            _btnSalesCredit.Size = new Size(148, 23);
-            _btnSalesCredit.TabIndex = 35;
-            _btnSalesCredit.Text = "Sales Credit";
-            //
-            // btnChange
-            //
-            _btnChange.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnChange.Location = new Point(981, 24);
-            _btnChange.Name = "btnChange";
-            _btnChange.Size = new Size(136, 23);
-            _btnChange.TabIndex = 27;
-            _btnChange.Text = "Change";
-            //
-            // dgInvoices
-            //
-            _dgInvoices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgInvoices.DataMember = "";
-            _dgInvoices.HeaderForeColor = SystemColors.ControlText;
-            _dgInvoices.Location = new Point(8, 72);
-            _dgInvoices.Name = "dgInvoices";
-            _dgInvoices.Size = new Size(1109, 232);
-            _dgInvoices.TabIndex = 14;
-            //
-            // btnSelectAll
-            //
-            _btnSelectAll.AccessibleDescription = "Export Job List To Excel";
-            _btnSelectAll.Location = new Point(8, 24);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(88, 23);
-            _btnSelectAll.TabIndex = 19;
-            _btnSelectAll.Text = "Select All";
-            //
-            // btnDeselectAll
-            //
-            _btnDeselectAll.Location = new Point(104, 24);
-            _btnDeselectAll.Name = "btnDeselectAll";
-            _btnDeselectAll.Size = new Size(88, 23);
-            _btnDeselectAll.TabIndex = 20;
-            _btnDeselectAll.Text = "Deselect All";
-            //
-            // lblInvoicePartPayed
-            //
-            _lblInvoicePartPayed.Location = new Point(259, 52);
-            _lblInvoicePartPayed.Name = "lblInvoicePartPayed";
-            _lblInvoicePartPayed.Size = new Size(224, 23);
-            _lblInvoicePartPayed.TabIndex = 26;
-            _lblInvoicePartPayed.Text = "Invoiced - Some Payments Received";
-            //
-            // lblInvoicePayed
-            //
-            _lblInvoicePayed.Location = new Point(515, 52);
-            _lblInvoicePayed.Name = "lblInvoicePayed";
-            _lblInvoicePayed.Size = new Size(120, 23);
-            _lblInvoicePayed.TabIndex = 25;
-            _lblInvoicePayed.Text = "Invoiced and Paid";
-            //
-            // lblGreenColour
-            //
-            _lblGreenColour.BackColor = Color.LightGreen;
-            _lblGreenColour.Location = new Point(491, 52);
-            _lblGreenColour.Name = "lblGreenColour";
-            _lblGreenColour.Size = new Size(23, 23);
-            _lblGreenColour.TabIndex = 24;
-            //
-            // lblGoldColour
-            //
-            _lblGoldColour.BackColor = Color.Gold;
-            _lblGoldColour.Location = new Point(235, 51);
-            _lblGoldColour.Name = "lblGoldColour";
-            _lblGoldColour.Size = new Size(23, 23);
-            _lblGoldColour.TabIndex = 23;
-            //
-            // lblInvoicedNotPayed
-            //
-            _lblInvoicedNotPayed.Location = new Point(35, 52);
-            _lblInvoicedNotPayed.Name = "lblInvoicedNotPayed";
-            _lblInvoicedNotPayed.Size = new Size(200, 23);
-            _lblInvoicedNotPayed.TabIndex = 22;
-            _lblInvoicedNotPayed.Text = "Invoiced - No Payments Received";
-            //
-            // lblRedColour
-            //
-            _lblRedColour.BackColor = Color.Red;
-            _lblRedColour.Location = new Point(11, 51);
-            _lblRedColour.Name = "lblRedColour";
-            _lblRedColour.Size = new Size(23, 23);
-            _lblRedColour.TabIndex = 21;
-            //
-            // btnView
-            //
-            _btnView.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnView.Location = new Point(561, 594);
-            _btnView.Name = "btnView";
-            _btnView.Size = new Size(59, 23);
-            _btnView.TabIndex = 29;
-            _btnView.Text = "View";
-            //
-            // btnMarkAsNotExported
-            //
-            _btnMarkAsNotExported.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMarkAsNotExported.CausesValidation = false;
-            _btnMarkAsNotExported.Location = new Point(813, 594);
-            _btnMarkAsNotExported.Name = "btnMarkAsNotExported";
-            _btnMarkAsNotExported.Size = new Size(146, 23);
-            _btnMarkAsNotExported.TabIndex = 31;
-            _btnMarkAsNotExported.Text = "Unmark Exports";
-            _btnMarkAsNotExported.UseVisualStyleBackColor = true;
-            //
-            // btnGenVal
-            //
-            _btnGenVal.AccessibleDescription = "";
-            _btnGenVal.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnGenVal.Location = new Point(270, 594);
-            _btnGenVal.Name = "btnGenVal";
-            _btnGenVal.Size = new Size(125, 23);
-            _btnGenVal.TabIndex = 32;
-            _btnGenVal.Text = "Generate Val";
-            //
-            // cmsValType
-            //
-            _cmsValType.Items.AddRange(new ToolStripItem[] { _tsmiNCCVal, _tsmiGenericVal, _tsmiSorVal });
-            _cmsValType.Name = "cmsValType";
-            _cmsValType.Size = new Size(115, 70);
-            //
-            // tsmiNCCVal
-            //
-            _tsmiNCCVal.Name = "tsmiNCCVal";
-            _tsmiNCCVal.Size = new Size(114, 22);
-            _tsmiNCCVal.Text = "NCC";
-            //
-            // tsmiGenericVal
-            //
-            _tsmiGenericVal.Name = "tsmiGenericVal";
-            _tsmiGenericVal.Size = new Size(114, 22);
-            _tsmiGenericVal.Text = "Generic";
-            //
-            // tsmiSorVal
-            //
-            _tsmiSorVal.Name = "tsmiSorVal";
-            _tsmiSorVal.Size = new Size(114, 22);
-            _tsmiSorVal.Text = "SOR";
-            //
-            // cmsChange
-            //
-            _cmsChange.Items.AddRange(new ToolStripItem[] { _tsmiPaymentTerms, _tsmiInvoicedTotal, _tsmiVatRate, _tsmiAccountNumber, _tsmiOrderNo });
-            _cmsChange.Name = "cmsChange";
-            _cmsChange.Size = new Size(167, 114);
-            //
-            // tsmiPaymentTerms
-            //
-            _tsmiPaymentTerms.Name = "tsmiPaymentTerms";
-            _tsmiPaymentTerms.Size = new Size(166, 22);
-            _tsmiPaymentTerms.Text = "Payment Terms";
-            //
-            // tsmiInvoicedTotal
-            //
-            _tsmiInvoicedTotal.Name = "tsmiInvoicedTotal";
-            _tsmiInvoicedTotal.Size = new Size(166, 22);
-            _tsmiInvoicedTotal.Text = "Invoiced Total";
-            //
-            // tsmiVatRate
-            //
-            _tsmiVatRate.Name = "tsmiVatRate";
-            _tsmiVatRate.Size = new Size(166, 22);
-            _tsmiVatRate.Text = "Vat Rate";
-            //
-            // tsmiAccountNumber
-            //
-            _tsmiAccountNumber.Name = "tsmiAccountNumber";
-            _tsmiAccountNumber.Size = new Size(166, 22);
-            _tsmiAccountNumber.Text = "Account Number";
-            //
-            // tsmiOrderNo
-            //
-            _tsmiOrderNo.Name = "tsmiOrderNo";
-            _tsmiOrderNo.Size = new Size(166, 22);
-            _tsmiOrderNo.Text = "Order No";
-            //
-            // cmsSalesCredit
-            //
-            _cmsSalesCredit.Items.AddRange(new ToolStripItem[] { _tsmiIssue, _tsmiRemove, _tsmiBatchPrint });
-            _cmsSalesCredit.Name = "ContextMenuStrip2";
-            _cmsSalesCredit.Size = new Size(197, 70);
-            //
-            // tsmiIssue
-            //
-            _tsmiIssue.Name = "tsmiIssue";
-            _tsmiIssue.Size = new Size(196, 22);
-            _tsmiIssue.Text = "Issue Sales Credit";
-            //
-            // tsmiRemove
-            //
-            _tsmiRemove.Name = "tsmiRemove";
-            _tsmiRemove.Size = new Size(196, 22);
-            _tsmiRemove.Text = "Remove Sales Credit";
-            //
-            // tsmiBatchPrint
-            //
-            _tsmiBatchPrint.Name = "tsmiBatchPrint";
-            _tsmiBatchPrint.Size = new Size(196, 22);
-            _tsmiBatchPrint.Text = "Batch Print Sales Credit";
-            //
-            // cmsExportForAccounts
-            //
-            _cmsExportForAccounts.Items.AddRange(new ToolStripItem[] { _tsmiSunExport, _tsmiSageExport });
-            _cmsExportForAccounts.Name = "cmsExportForAccounts";
-            _cmsExportForAccounts.Size = new Size(152, 48);
-            //
-            // tsmiSunExport
-            //
-            _tsmiSunExport.Name = "tsmiSunExport";
-            _tsmiSunExport.Size = new Size(151, 22);
-            _tsmiSunExport.Text = "Export To Sun";
-            //
-            // tsmiSageExport
-            //
-            _tsmiSageExport.Name = "tsmiSageExport";
-            _tsmiSageExport.Size = new Size(151, 22);
-            _tsmiSageExport.Text = "Export To Sage";
-            //
-            // btnExportToAccounts
-            //
-            _btnExportToAccounts.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnExportToAccounts.Location = new Point(965, 594);
-            _btnExportToAccounts.Name = "btnExportToAccounts";
-            _btnExportToAccounts.Size = new Size(166, 23);
-            _btnExportToAccounts.TabIndex = 35;
-            _btnExportToAccounts.Text = "Export To Accounts";
-            //
+            this.components = new System.ComponentModel.Container();
+            this._btnPrintOneItemOneInvoice = new System.Windows.Forms.Button();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._dtpExportedOn = new System.Windows.Forms.DateTimePicker();
+            this._lblExportedOn = new System.Windows.Forms.Label();
+            this._lblDept = new System.Windows.Forms.Label();
+            this._cboDept = new System.Windows.Forms.ComboBox();
+            this._lblSageMonth = new System.Windows.Forms.Label();
+            this._txtSageMonth = new System.Windows.Forms.TextBox();
+            this._lblRegion = new System.Windows.Forms.Label();
+            this._cboRegion = new System.Windows.Forms.ComboBox();
+            this._btnSearch = new System.Windows.Forms.Button();
+            this._cboExported = new System.Windows.Forms.ComboBox();
+            this._lblExported = new System.Windows.Forms.Label();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._lblCustomer = new System.Windows.Forms.Label();
+            this._txtPostcode = new System.Windows.Forms.TextBox();
+            this._lblPostcode = new System.Windows.Forms.Label();
+            this._btnFindSite = new System.Windows.Forms.Button();
+            this._txtSite = new System.Windows.Forms.TextBox();
+            this._txtJobNumber = new System.Windows.Forms.TextBox();
+            this._lblRefNo = new System.Windows.Forms.Label();
+            this._lblProperty = new System.Windows.Forms.Label();
+            this._lblType = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._lblDateBetween = new System.Windows.Forms.Label();
+            this._dtpRaisedFrom = new System.Windows.Forms.DateTimePicker();
+            this._dtpRaisedTo = new System.Windows.Forms.DateTimePicker();
+            this._lblDate = new System.Windows.Forms.Label();
+            this._cboStatus = new System.Windows.Forms.ComboBox();
+            this._lblStatus = new System.Windows.Forms.Label();
+            this._lblInvoiceNumber = new System.Windows.Forms.Label();
+            this._lblUser = new System.Windows.Forms.Label();
+            this._cboUser = new System.Windows.Forms.ComboBox();
+            this._txtInvoiceNumber = new System.Windows.Forms.TextBox();
+            this._chkExportedOn = new System.Windows.Forms.CheckBox();
+            this._grpInvoices = new System.Windows.Forms.GroupBox();
+            this._btnSalesCredit = new System.Windows.Forms.Button();
+            this._btnChange = new System.Windows.Forms.Button();
+            this._dgInvoices = new System.Windows.Forms.DataGrid();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnDeselectAll = new System.Windows.Forms.Button();
+            this._lblInvoicePartPayed = new System.Windows.Forms.Label();
+            this._lblInvoicePayed = new System.Windows.Forms.Label();
+            this._lblGreenColour = new System.Windows.Forms.Label();
+            this._lblGoldColour = new System.Windows.Forms.Label();
+            this._lblInvoicedNotPayed = new System.Windows.Forms.Label();
+            this._lblRedColour = new System.Windows.Forms.Label();
+            this._btnView = new System.Windows.Forms.Button();
+            this._btnMarkAsNotExported = new System.Windows.Forms.Button();
+            this._btnGenVal = new System.Windows.Forms.Button();
+            this._cmsValType = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._tsmiNCCVal = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiGenericVal = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiSorVal = new System.Windows.Forms.ToolStripMenuItem();
+            this._cmsChange = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._tsmiPaymentTerms = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiInvoicedTotal = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiVatRate = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiAccountNumber = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiOrderNo = new System.Windows.Forms.ToolStripMenuItem();
+            this._cmsSalesCredit = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._tsmiIssue = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiRemove = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiBatchPrint = new System.Windows.Forms.ToolStripMenuItem();
+            this._cmsExportForAccounts = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._tsmiSunExport = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiSageExport = new System.Windows.Forms.ToolStripMenuItem();
+            this._btnExportToAccounts = new System.Windows.Forms.Button();
+            this._grpFilter.SuspendLayout();
+            this._grpInvoices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoices)).BeginInit();
+            this._cmsValType.SuspendLayout();
+            this._cmsChange.SuspendLayout();
+            this._cmsSalesCredit.SuspendLayout();
+            this._cmsExportForAccounts.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _btnPrintOneItemOneInvoice
+            // 
+            this._btnPrintOneItemOneInvoice.AccessibleDescription = "Export Job List To Excel";
+            this._btnPrintOneItemOneInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnPrintOneItemOneInvoice.Location = new System.Drawing.Point(125, 594);
+            this._btnPrintOneItemOneInvoice.Name = "_btnPrintOneItemOneInvoice";
+            this._btnPrintOneItemOneInvoice.Size = new System.Drawing.Size(141, 23);
+            this._btnPrintOneItemOneInvoice.TabIndex = 27;
+            this._btnPrintOneItemOneInvoice.Text = "Regenerate Invoice";
+            this._btnPrintOneItemOneInvoice.Click += new System.EventHandler(this.btnPrintOneItemOneInvoice_Click);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 594);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 25;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(67, 594);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(55, 23);
+            this._btnReset.TabIndex = 26;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._dtpExportedOn);
+            this._grpFilter.Controls.Add(this._lblExportedOn);
+            this._grpFilter.Controls.Add(this._lblDept);
+            this._grpFilter.Controls.Add(this._cboDept);
+            this._grpFilter.Controls.Add(this._lblSageMonth);
+            this._grpFilter.Controls.Add(this._txtSageMonth);
+            this._grpFilter.Controls.Add(this._lblRegion);
+            this._grpFilter.Controls.Add(this._cboRegion);
+            this._grpFilter.Controls.Add(this._btnSearch);
+            this._grpFilter.Controls.Add(this._cboExported);
+            this._grpFilter.Controls.Add(this._lblExported);
+            this._grpFilter.Controls.Add(this._btnFindCustomer);
+            this._grpFilter.Controls.Add(this._txtCustomer);
+            this._grpFilter.Controls.Add(this._lblCustomer);
+            this._grpFilter.Controls.Add(this._txtPostcode);
+            this._grpFilter.Controls.Add(this._lblPostcode);
+            this._grpFilter.Controls.Add(this._btnFindSite);
+            this._grpFilter.Controls.Add(this._txtSite);
+            this._grpFilter.Controls.Add(this._txtJobNumber);
+            this._grpFilter.Controls.Add(this._lblRefNo);
+            this._grpFilter.Controls.Add(this._lblProperty);
+            this._grpFilter.Controls.Add(this._lblType);
+            this._grpFilter.Controls.Add(this._cboType);
+            this._grpFilter.Controls.Add(this._lblDateBetween);
+            this._grpFilter.Controls.Add(this._dtpRaisedFrom);
+            this._grpFilter.Controls.Add(this._dtpRaisedTo);
+            this._grpFilter.Controls.Add(this._lblDate);
+            this._grpFilter.Controls.Add(this._cboStatus);
+            this._grpFilter.Controls.Add(this._lblStatus);
+            this._grpFilter.Controls.Add(this._lblInvoiceNumber);
+            this._grpFilter.Controls.Add(this._lblUser);
+            this._grpFilter.Controls.Add(this._cboUser);
+            this._grpFilter.Controls.Add(this._txtInvoiceNumber);
+            this._grpFilter.Controls.Add(this._chkExportedOn);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(1123, 236);
+            this._grpFilter.TabIndex = 24;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _dtpExportedOn
+            // 
+            this._dtpExportedOn.Location = new System.Drawing.Point(541, 163);
+            this._dtpExportedOn.Name = "_dtpExportedOn";
+            this._dtpExportedOn.Size = new System.Drawing.Size(186, 21);
+            this._dtpExportedOn.TabIndex = 44;
+            // 
+            // _lblExportedOn
+            // 
+            this._lblExportedOn.Location = new System.Drawing.Point(416, 164);
+            this._lblExportedOn.Name = "_lblExportedOn";
+            this._lblExportedOn.Size = new System.Drawing.Size(85, 16);
+            this._lblExportedOn.TabIndex = 45;
+            this._lblExportedOn.Text = "Exported On";
+            // 
+            // _lblDept
+            // 
+            this._lblDept.AutoSize = true;
+            this._lblDept.Location = new System.Drawing.Point(747, 166);
+            this._lblDept.Name = "_lblDept";
+            this._lblDept.Size = new System.Drawing.Size(76, 13);
+            this._lblDept.TabIndex = 42;
+            this._lblDept.Text = "Cost Centre";
+            // 
+            // _cboDept
+            // 
+            this._cboDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboDept.Location = new System.Drawing.Point(845, 164);
+            this._cboDept.Name = "_cboDept";
+            this._cboDept.Size = new System.Drawing.Size(224, 21);
+            this._cboDept.TabIndex = 43;
+            // 
+            // _lblSageMonth
+            // 
+            this._lblSageMonth.Location = new System.Drawing.Point(416, 197);
+            this._lblSageMonth.Name = "_lblSageMonth";
+            this._lblSageMonth.Size = new System.Drawing.Size(98, 19);
+            this._lblSageMonth.TabIndex = 40;
+            this._lblSageMonth.Text = "Account Month";
+            // 
+            // _txtSageMonth
+            // 
+            this._txtSageMonth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSageMonth.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtSageMonth.Location = new System.Drawing.Point(520, 195);
+            this._txtSageMonth.Name = "_txtSageMonth";
+            this._txtSageMonth.ReadOnly = true;
+            this._txtSageMonth.Size = new System.Drawing.Size(207, 21);
+            this._txtSageMonth.TabIndex = 41;
+            this._txtSageMonth.DoubleClick += new System.EventHandler(this.txtSageMonth_TextChanged);
+            // 
+            // _lblRegion
+            // 
+            this._lblRegion.Location = new System.Drawing.Point(8, 198);
+            this._lblRegion.Name = "_lblRegion";
+            this._lblRegion.Size = new System.Drawing.Size(72, 16);
+            this._lblRegion.TabIndex = 39;
+            this._lblRegion.Text = "Region";
+            // 
+            // _cboRegion
+            // 
+            this._cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboRegion.Location = new System.Drawing.Point(160, 195);
+            this._cboRegion.Name = "_cboRegion";
+            this._cboRegion.Size = new System.Drawing.Size(248, 21);
+            this._cboRegion.TabIndex = 38;
+            // 
+            // _btnSearch
+            // 
+            this._btnSearch.AccessibleDescription = "Export Job List To Excel";
+            this._btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSearch.Location = new System.Drawing.Point(981, 198);
+            this._btnSearch.Name = "_btnSearch";
+            this._btnSearch.Size = new System.Drawing.Size(88, 23);
+            this._btnSearch.TabIndex = 30;
+            this._btnSearch.Text = "Run Filter";
+            this._btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // _cboExported
+            // 
+            this._cboExported.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboExported.Items.AddRange(new object[] {
+            "Show All",
+            "Exported",
+            "Not Exported"});
+            this._cboExported.Location = new System.Drawing.Point(160, 161);
+            this._cboExported.Name = "_cboExported";
+            this._cboExported.Size = new System.Drawing.Size(248, 21);
+            this._cboExported.TabIndex = 29;
+            this._cboExported.SelectedIndexChanged += new System.EventHandler(this.cboExportedToSage_SelectedIndexChanged);
+            // 
+            // _lblExported
+            // 
+            this._lblExported.Location = new System.Drawing.Point(8, 164);
+            this._lblExported.Name = "_lblExported";
+            this._lblExported.Size = new System.Drawing.Size(122, 18);
+            this._lblExported.TabIndex = 28;
+            this._lblExported.Text = "Exported";
+            // 
+            // _btnFindCustomer
+            // 
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.BackColor = System.Drawing.Color.White;
+            this._btnFindCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(1077, 40);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 2;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = false;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
+            // 
+            // _txtCustomer
+            // 
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtCustomer.Location = new System.Drawing.Point(160, 40);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(909, 21);
+            this._txtCustomer.TabIndex = 1;
+            // 
+            // _lblCustomer
+            // 
+            this._lblCustomer.Location = new System.Drawing.Point(8, 40);
+            this._lblCustomer.Name = "_lblCustomer";
+            this._lblCustomer.Size = new System.Drawing.Size(64, 16);
+            this._lblCustomer.TabIndex = 27;
+            this._lblCustomer.Text = "Customer";
+            // 
+            // _txtPostcode
+            // 
+            this._txtPostcode.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtPostcode.Location = new System.Drawing.Point(160, 88);
+            this._txtPostcode.Name = "_txtPostcode";
+            this._txtPostcode.Size = new System.Drawing.Size(248, 21);
+            this._txtPostcode.TabIndex = 5;
+            this._txtPostcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtJobNumber_TextChanged);
+            // 
+            // _lblPostcode
+            // 
+            this._lblPostcode.Location = new System.Drawing.Point(8, 88);
+            this._lblPostcode.Name = "_lblPostcode";
+            this._lblPostcode.Size = new System.Drawing.Size(64, 16);
+            this._lblPostcode.TabIndex = 20;
+            this._lblPostcode.Text = "Postcode";
+            // 
+            // _btnFindSite
+            // 
+            this._btnFindSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindSite.BackColor = System.Drawing.Color.White;
+            this._btnFindSite.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindSite.Location = new System.Drawing.Point(1077, 64);
+            this._btnFindSite.Name = "_btnFindSite";
+            this._btnFindSite.Size = new System.Drawing.Size(32, 23);
+            this._btnFindSite.TabIndex = 4;
+            this._btnFindSite.Text = "...";
+            this._btnFindSite.UseVisualStyleBackColor = false;
+            this._btnFindSite.Click += new System.EventHandler(this.btnFindSite_Click);
+            // 
+            // _txtSite
+            // 
+            this._txtSite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSite.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtSite.Location = new System.Drawing.Point(160, 64);
+            this._txtSite.Name = "_txtSite";
+            this._txtSite.ReadOnly = true;
+            this._txtSite.Size = new System.Drawing.Size(909, 21);
+            this._txtSite.TabIndex = 3;
+            // 
+            // _txtJobNumber
+            // 
+            this._txtJobNumber.Location = new System.Drawing.Point(160, 136);
+            this._txtJobNumber.Name = "_txtJobNumber";
+            this._txtJobNumber.Size = new System.Drawing.Size(248, 21);
+            this._txtJobNumber.TabIndex = 9;
+            this._txtJobNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtJobNumber_TextChanged);
+            // 
+            // _lblRefNo
+            // 
+            this._lblRefNo.Location = new System.Drawing.Point(8, 136);
+            this._lblRefNo.Name = "_lblRefNo";
+            this._lblRefNo.Size = new System.Drawing.Size(136, 16);
+            this._lblRefNo.TabIndex = 6;
+            this._lblRefNo.Text = "Job/Order/Contract No";
+            // 
+            // _lblProperty
+            // 
+            this._lblProperty.Location = new System.Drawing.Point(8, 64);
+            this._lblProperty.Name = "_lblProperty";
+            this._lblProperty.Size = new System.Drawing.Size(64, 16);
+            this._lblProperty.TabIndex = 2;
+            this._lblProperty.Text = "Property";
+            // 
+            // _lblType
+            // 
+            this._lblType.Location = new System.Drawing.Point(8, 112);
+            this._lblType.Name = "_lblType";
+            this._lblType.Size = new System.Drawing.Size(48, 16);
+            this._lblType.TabIndex = 4;
+            this._lblType.Text = "Type";
+            // 
+            // _cboType
+            // 
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(160, 112);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(248, 21);
+            this._cboType.TabIndex = 7;
+            // 
+            // _lblDateBetween
+            // 
+            this._lblDateBetween.Location = new System.Drawing.Point(416, 16);
+            this._lblDateBetween.Name = "_lblDateBetween";
+            this._lblDateBetween.Size = new System.Drawing.Size(48, 16);
+            this._lblDateBetween.TabIndex = 14;
+            this._lblDateBetween.Text = "and";
+            // 
+            // _dtpRaisedFrom
+            // 
+            this._dtpRaisedFrom.Location = new System.Drawing.Point(160, 16);
+            this._dtpRaisedFrom.Name = "_dtpRaisedFrom";
+            this._dtpRaisedFrom.Size = new System.Drawing.Size(248, 21);
+            this._dtpRaisedFrom.TabIndex = 15;
+            // 
+            // _dtpRaisedTo
+            // 
+            this._dtpRaisedTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpRaisedTo.Location = new System.Drawing.Point(520, 16);
+            this._dtpRaisedTo.Name = "_dtpRaisedTo";
+            this._dtpRaisedTo.Size = new System.Drawing.Size(549, 21);
+            this._dtpRaisedTo.TabIndex = 16;
+            // 
+            // _lblDate
+            // 
+            this._lblDate.Location = new System.Drawing.Point(8, 16);
+            this._lblDate.Name = "_lblDate";
+            this._lblDate.Size = new System.Drawing.Size(136, 16);
+            this._lblDate.TabIndex = 17;
+            this._lblDate.Text = "Raised Date Between : ";
+            // 
+            // _cboStatus
+            // 
+            this._cboStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStatus.Location = new System.Drawing.Point(520, 88);
+            this._cboStatus.Name = "_cboStatus";
+            this._cboStatus.Size = new System.Drawing.Size(549, 21);
+            this._cboStatus.TabIndex = 8;
+            // 
+            // _lblStatus
+            // 
+            this._lblStatus.Location = new System.Drawing.Point(416, 90);
+            this._lblStatus.Name = "_lblStatus";
+            this._lblStatus.Size = new System.Drawing.Size(48, 16);
+            this._lblStatus.TabIndex = 5;
+            this._lblStatus.Text = "Status";
+            // 
+            // _lblInvoiceNumber
+            // 
+            this._lblInvoiceNumber.Location = new System.Drawing.Point(416, 114);
+            this._lblInvoiceNumber.Name = "_lblInvoiceNumber";
+            this._lblInvoiceNumber.Size = new System.Drawing.Size(104, 16);
+            this._lblInvoiceNumber.TabIndex = 10;
+            this._lblInvoiceNumber.Text = "Invoice Number";
+            // 
+            // _lblUser
+            // 
+            this._lblUser.BackColor = System.Drawing.Color.White;
+            this._lblUser.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblUser.Location = new System.Drawing.Point(416, 138);
+            this._lblUser.Name = "_lblUser";
+            this._lblUser.Size = new System.Drawing.Size(40, 16);
+            this._lblUser.TabIndex = 12;
+            this._lblUser.Text = "User";
+            // 
+            // _cboUser
+            // 
+            this._cboUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboUser.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cboUser.ItemHeight = 13;
+            this._cboUser.Location = new System.Drawing.Point(520, 136);
+            this._cboUser.Name = "_cboUser";
+            this._cboUser.Size = new System.Drawing.Size(549, 21);
+            this._cboUser.TabIndex = 13;
+            // 
+            // _txtInvoiceNumber
+            // 
+            this._txtInvoiceNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtInvoiceNumber.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtInvoiceNumber.Location = new System.Drawing.Point(520, 112);
+            this._txtInvoiceNumber.Name = "_txtInvoiceNumber";
+            this._txtInvoiceNumber.Size = new System.Drawing.Size(549, 21);
+            this._txtInvoiceNumber.TabIndex = 11;
+            this._txtInvoiceNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtJobNumber_TextChanged);
+            // 
+            // _chkExportedOn
+            // 
+            this._chkExportedOn.AutoCheck = false;
+            this._chkExportedOn.AutoSize = true;
+            this._chkExportedOn.Location = new System.Drawing.Point(520, 166);
+            this._chkExportedOn.Name = "_chkExportedOn";
+            this._chkExportedOn.Size = new System.Drawing.Size(30, 17);
+            this._chkExportedOn.TabIndex = 46;
+            this._chkExportedOn.Text = " ";
+            this._chkExportedOn.UseVisualStyleBackColor = true;
+            this._chkExportedOn.Click += new System.EventHandler(this.chkExportedOn_Click);
+            // 
+            // _grpInvoices
+            // 
+            this._grpInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpInvoices.Controls.Add(this._btnSalesCredit);
+            this._grpInvoices.Controls.Add(this._btnChange);
+            this._grpInvoices.Controls.Add(this._dgInvoices);
+            this._grpInvoices.Controls.Add(this._btnSelectAll);
+            this._grpInvoices.Controls.Add(this._btnDeselectAll);
+            this._grpInvoices.Controls.Add(this._lblInvoicePartPayed);
+            this._grpInvoices.Controls.Add(this._lblInvoicePayed);
+            this._grpInvoices.Controls.Add(this._lblGreenColour);
+            this._grpInvoices.Controls.Add(this._lblGoldColour);
+            this._grpInvoices.Controls.Add(this._lblInvoicedNotPayed);
+            this._grpInvoices.Controls.Add(this._lblRedColour);
+            this._grpInvoices.Location = new System.Drawing.Point(8, 254);
+            this._grpInvoices.Name = "_grpInvoices";
+            this._grpInvoices.Size = new System.Drawing.Size(1123, 334);
+            this._grpInvoices.TabIndex = 23;
+            this._grpInvoices.TabStop = false;
+            this._grpInvoices.Text = "Double Click To View / Add Payment Information";
+            // 
+            // _btnSalesCredit
+            // 
+            this._btnSalesCredit.AccessibleDescription = "";
+            this._btnSalesCredit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSalesCredit.Location = new System.Drawing.Point(827, 24);
+            this._btnSalesCredit.Name = "_btnSalesCredit";
+            this._btnSalesCredit.Size = new System.Drawing.Size(148, 23);
+            this._btnSalesCredit.TabIndex = 35;
+            this._btnSalesCredit.Text = "Sales Credit";
+            this._btnSalesCredit.Click += new System.EventHandler(this.btnSalesCredit_Click);
+            // 
+            // _btnChange
+            // 
+            this._btnChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnChange.Location = new System.Drawing.Point(981, 24);
+            this._btnChange.Name = "_btnChange";
+            this._btnChange.Size = new System.Drawing.Size(136, 23);
+            this._btnChange.TabIndex = 27;
+            this._btnChange.Text = "Change";
+            this._btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // _dgInvoices
+            // 
+            this._dgInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgInvoices.DataMember = "";
+            this._dgInvoices.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgInvoices.Location = new System.Drawing.Point(8, 72);
+            this._dgInvoices.Name = "_dgInvoices";
+            this._dgInvoices.Size = new System.Drawing.Size(1109, 252);
+            this._dgInvoices.TabIndex = 14;
+            this._dgInvoices.DoubleClick += new System.EventHandler(this.dgInvoices_DoubleClick);
+            this._dgInvoices.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgInvoices_MouseUp);
+            // 
+            // _btnSelectAll
+            // 
+            this._btnSelectAll.AccessibleDescription = "Export Job List To Excel";
+            this._btnSelectAll.Location = new System.Drawing.Point(8, 24);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(88, 23);
+            this._btnSelectAll.TabIndex = 19;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // _btnDeselectAll
+            // 
+            this._btnDeselectAll.Location = new System.Drawing.Point(104, 24);
+            this._btnDeselectAll.Name = "_btnDeselectAll";
+            this._btnDeselectAll.Size = new System.Drawing.Size(88, 23);
+            this._btnDeselectAll.TabIndex = 20;
+            this._btnDeselectAll.Text = "Deselect All";
+            this._btnDeselectAll.Click += new System.EventHandler(this.btnDeselectAll_Click);
+            // 
+            // _lblInvoicePartPayed
+            // 
+            this._lblInvoicePartPayed.Location = new System.Drawing.Point(259, 52);
+            this._lblInvoicePartPayed.Name = "_lblInvoicePartPayed";
+            this._lblInvoicePartPayed.Size = new System.Drawing.Size(224, 23);
+            this._lblInvoicePartPayed.TabIndex = 26;
+            this._lblInvoicePartPayed.Text = "Invoiced - Some Payments Received";
+            // 
+            // _lblInvoicePayed
+            // 
+            this._lblInvoicePayed.Location = new System.Drawing.Point(515, 52);
+            this._lblInvoicePayed.Name = "_lblInvoicePayed";
+            this._lblInvoicePayed.Size = new System.Drawing.Size(120, 23);
+            this._lblInvoicePayed.TabIndex = 25;
+            this._lblInvoicePayed.Text = "Invoiced and Paid";
+            // 
+            // _lblGreenColour
+            // 
+            this._lblGreenColour.BackColor = System.Drawing.Color.LightGreen;
+            this._lblGreenColour.Location = new System.Drawing.Point(491, 52);
+            this._lblGreenColour.Name = "_lblGreenColour";
+            this._lblGreenColour.Size = new System.Drawing.Size(23, 23);
+            this._lblGreenColour.TabIndex = 24;
+            // 
+            // _lblGoldColour
+            // 
+            this._lblGoldColour.BackColor = System.Drawing.Color.Gold;
+            this._lblGoldColour.Location = new System.Drawing.Point(235, 51);
+            this._lblGoldColour.Name = "_lblGoldColour";
+            this._lblGoldColour.Size = new System.Drawing.Size(23, 23);
+            this._lblGoldColour.TabIndex = 23;
+            // 
+            // _lblInvoicedNotPayed
+            // 
+            this._lblInvoicedNotPayed.Location = new System.Drawing.Point(35, 52);
+            this._lblInvoicedNotPayed.Name = "_lblInvoicedNotPayed";
+            this._lblInvoicedNotPayed.Size = new System.Drawing.Size(200, 23);
+            this._lblInvoicedNotPayed.TabIndex = 22;
+            this._lblInvoicedNotPayed.Text = "Invoiced - No Payments Received";
+            // 
+            // _lblRedColour
+            // 
+            this._lblRedColour.BackColor = System.Drawing.Color.Red;
+            this._lblRedColour.Location = new System.Drawing.Point(11, 51);
+            this._lblRedColour.Name = "_lblRedColour";
+            this._lblRedColour.Size = new System.Drawing.Size(23, 23);
+            this._lblRedColour.TabIndex = 21;
+            // 
+            // _btnView
+            // 
+            this._btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnView.Location = new System.Drawing.Point(561, 594);
+            this._btnView.Name = "_btnView";
+            this._btnView.Size = new System.Drawing.Size(59, 23);
+            this._btnView.TabIndex = 29;
+            this._btnView.Text = "View";
+            this._btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // _btnMarkAsNotExported
+            // 
+            this._btnMarkAsNotExported.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMarkAsNotExported.CausesValidation = false;
+            this._btnMarkAsNotExported.Location = new System.Drawing.Point(813, 594);
+            this._btnMarkAsNotExported.Name = "_btnMarkAsNotExported";
+            this._btnMarkAsNotExported.Size = new System.Drawing.Size(146, 23);
+            this._btnMarkAsNotExported.TabIndex = 31;
+            this._btnMarkAsNotExported.Text = "Unmark Exports";
+            this._btnMarkAsNotExported.UseVisualStyleBackColor = true;
+            this._btnMarkAsNotExported.Click += new System.EventHandler(this.btnMarkAsNotExported_Click);
+            // 
+            // _btnGenVal
+            // 
+            this._btnGenVal.AccessibleDescription = "";
+            this._btnGenVal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnGenVal.Location = new System.Drawing.Point(270, 594);
+            this._btnGenVal.Name = "_btnGenVal";
+            this._btnGenVal.Size = new System.Drawing.Size(125, 23);
+            this._btnGenVal.TabIndex = 32;
+            this._btnGenVal.Text = "Generate Val";
+            this._btnGenVal.Click += new System.EventHandler(this.btnGenNCCVal_Click);
+            // 
+            // _cmsValType
+            // 
+            this._cmsValType.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._tsmiNCCVal,
+            this._tsmiGenericVal,
+            this._tsmiSorVal});
+            this._cmsValType.Name = "cmsValType";
+            this._cmsValType.Size = new System.Drawing.Size(115, 70);
+            // 
+            // _tsmiNCCVal
+            // 
+            this._tsmiNCCVal.Name = "_tsmiNCCVal";
+            this._tsmiNCCVal.Size = new System.Drawing.Size(114, 22);
+            this._tsmiNCCVal.Text = "NCC";
+            this._tsmiNCCVal.Click += new System.EventHandler(this.tsmiNCCVal_Click);
+            // 
+            // _tsmiGenericVal
+            // 
+            this._tsmiGenericVal.Name = "_tsmiGenericVal";
+            this._tsmiGenericVal.Size = new System.Drawing.Size(114, 22);
+            this._tsmiGenericVal.Text = "Generic";
+            this._tsmiGenericVal.Click += new System.EventHandler(this.tsmiGenericVal_Click);
+            // 
+            // _tsmiSorVal
+            // 
+            this._tsmiSorVal.Name = "_tsmiSorVal";
+            this._tsmiSorVal.Size = new System.Drawing.Size(114, 22);
+            this._tsmiSorVal.Text = "SOR";
+            this._tsmiSorVal.Click += new System.EventHandler(this.tsmiSorVal_Click);
+            // 
+            // _cmsChange
+            // 
+            this._cmsChange.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._tsmiPaymentTerms,
+            this._tsmiInvoicedTotal,
+            this._tsmiVatRate,
+            this._tsmiAccountNumber,
+            this._tsmiOrderNo});
+            this._cmsChange.Name = "cmsChange";
+            this._cmsChange.Size = new System.Drawing.Size(167, 114);
+            // 
+            // _tsmiPaymentTerms
+            // 
+            this._tsmiPaymentTerms.Name = "_tsmiPaymentTerms";
+            this._tsmiPaymentTerms.Size = new System.Drawing.Size(166, 22);
+            this._tsmiPaymentTerms.Text = "Payment Terms";
+            this._tsmiPaymentTerms.Click += new System.EventHandler(this.tsmiPaymentTerms_Click);
+            // 
+            // _tsmiInvoicedTotal
+            // 
+            this._tsmiInvoicedTotal.Name = "_tsmiInvoicedTotal";
+            this._tsmiInvoicedTotal.Size = new System.Drawing.Size(166, 22);
+            this._tsmiInvoicedTotal.Text = "Invoiced Total";
+            this._tsmiInvoicedTotal.Click += new System.EventHandler(this.tsmiInvoicedTotal_Click);
+            // 
+            // _tsmiVatRate
+            // 
+            this._tsmiVatRate.Name = "_tsmiVatRate";
+            this._tsmiVatRate.Size = new System.Drawing.Size(166, 22);
+            this._tsmiVatRate.Text = "Vat Rate";
+            this._tsmiVatRate.Click += new System.EventHandler(this.tsmiVatRate_Click);
+            // 
+            // _tsmiAccountNumber
+            // 
+            this._tsmiAccountNumber.Name = "_tsmiAccountNumber";
+            this._tsmiAccountNumber.Size = new System.Drawing.Size(166, 22);
+            this._tsmiAccountNumber.Text = "Account Number";
+            this._tsmiAccountNumber.Click += new System.EventHandler(this.tsmiAccountNumber_Click);
+            // 
+            // _tsmiOrderNo
+            // 
+            this._tsmiOrderNo.Name = "_tsmiOrderNo";
+            this._tsmiOrderNo.Size = new System.Drawing.Size(166, 22);
+            this._tsmiOrderNo.Text = "Order No";
+            this._tsmiOrderNo.Click += new System.EventHandler(this.tsmiOrderNo_Click);
+            // 
+            // _cmsSalesCredit
+            // 
+            this._cmsSalesCredit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._tsmiIssue,
+            this._tsmiRemove,
+            this._tsmiBatchPrint});
+            this._cmsSalesCredit.Name = "ContextMenuStrip2";
+            this._cmsSalesCredit.Size = new System.Drawing.Size(197, 70);
+            // 
+            // _tsmiIssue
+            // 
+            this._tsmiIssue.Name = "_tsmiIssue";
+            this._tsmiIssue.Size = new System.Drawing.Size(196, 22);
+            this._tsmiIssue.Text = "Issue Sales Credit";
+            this._tsmiIssue.Click += new System.EventHandler(this.tsmiIssue_Click);
+            // 
+            // _tsmiRemove
+            // 
+            this._tsmiRemove.Name = "_tsmiRemove";
+            this._tsmiRemove.Size = new System.Drawing.Size(196, 22);
+            this._tsmiRemove.Text = "Remove Sales Credit";
+            this._tsmiRemove.Click += new System.EventHandler(this.tsmiRemove_Click);
+            // 
+            // _tsmiBatchPrint
+            // 
+            this._tsmiBatchPrint.Name = "_tsmiBatchPrint";
+            this._tsmiBatchPrint.Size = new System.Drawing.Size(196, 22);
+            this._tsmiBatchPrint.Text = "Batch Print Sales Credit";
+            this._tsmiBatchPrint.Click += new System.EventHandler(this.tsmiBatchPrint_Click);
+            // 
+            // _cmsExportForAccounts
+            // 
+            this._cmsExportForAccounts.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._tsmiSunExport,
+            this._tsmiSageExport});
+            this._cmsExportForAccounts.Name = "cmsExportForAccounts";
+            this._cmsExportForAccounts.Size = new System.Drawing.Size(152, 48);
+            // 
+            // _tsmiSunExport
+            // 
+            this._tsmiSunExport.Name = "_tsmiSunExport";
+            this._tsmiSunExport.Size = new System.Drawing.Size(151, 22);
+            this._tsmiSunExport.Text = "Export To Sun";
+            this._tsmiSunExport.Click += new System.EventHandler(this.tsmiSunExport_Click);
+            // 
+            // _tsmiSageExport
+            // 
+            this._tsmiSageExport.Name = "_tsmiSageExport";
+            this._tsmiSageExport.Size = new System.Drawing.Size(151, 22);
+            this._tsmiSageExport.Text = "Export To Sage";
+            this._tsmiSageExport.Click += new System.EventHandler(this.tsmiSageExport_Click);
+            // 
+            // _btnExportToAccounts
+            // 
+            this._btnExportToAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnExportToAccounts.Location = new System.Drawing.Point(965, 594);
+            this._btnExportToAccounts.Name = "_btnExportToAccounts";
+            this._btnExportToAccounts.Size = new System.Drawing.Size(166, 23);
+            this._btnExportToAccounts.TabIndex = 35;
+            this._btnExportToAccounts.Text = "Export To Accounts";
+            this._btnExportToAccounts.Click += new System.EventHandler(this.btnExportToAccounts_Click);
+            // 
             // FRMInvoicedManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1137, 626);
-            Controls.Add(_btnExportToAccounts);
-            Controls.Add(_btnGenVal);
-            Controls.Add(_btnMarkAsNotExported);
-            Controls.Add(_btnView);
-            Controls.Add(_btnPrintOneItemOneInvoice);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnReset);
-            Controls.Add(_grpInvoices);
-            Name = "FRMInvoicedManager";
-            Text = "Invoiced Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpInvoices, 0);
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_btnPrintOneItemOneInvoice, 0);
-            Controls.SetChildIndex(_btnView, 0);
-            Controls.SetChildIndex(_btnMarkAsNotExported, 0);
-            Controls.SetChildIndex(_btnGenVal, 0);
-            Controls.SetChildIndex(_btnExportToAccounts, 0);
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            _grpInvoices.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgInvoices).EndInit();
-            _cmsValType.ResumeLayout(false);
-            _cmsChange.ResumeLayout(false);
-            _cmsSalesCredit.ResumeLayout(false);
-            _cmsExportForAccounts.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1137, 626);
+            this.Controls.Add(this._btnExportToAccounts);
+            this.Controls.Add(this._btnGenVal);
+            this.Controls.Add(this._btnMarkAsNotExported);
+            this.Controls.Add(this._btnView);
+            this.Controls.Add(this._btnPrintOneItemOneInvoice);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnReset);
+            this.Controls.Add(this._grpInvoices);
+            this.Name = "FRMInvoicedManager";
+            this.Text = "Invoiced Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this._grpInvoices.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoices)).EndInit();
+            this._cmsValType.ResumeLayout(false);
+            this._cmsChange.ResumeLayout(false);
+            this._cmsSalesCredit.ResumeLayout(false);
+            this._cmsExportForAccounts.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

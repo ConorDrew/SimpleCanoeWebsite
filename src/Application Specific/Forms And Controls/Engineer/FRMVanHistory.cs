@@ -94,47 +94,49 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpHistory = new GroupBox();
-            _dgHistory = new DataGrid();
-            _grpHistory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgHistory).BeginInit();
-            SuspendLayout();
-            //
-            // grpHistory
-            //
-            _grpHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpHistory.Controls.Add(_dgHistory);
-            _grpHistory.Location = new Point(8, 40);
-            _grpHistory.Name = "grpHistory";
-            _grpHistory.Size = new Size(856, 440);
-            _grpHistory.TabIndex = 1;
-            _grpHistory.TabStop = false;
-            _grpHistory.Text = "History";
-            //
-            // dgHistory
-            //
-            _dgHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgHistory.DataMember = "";
-            _dgHistory.HeaderForeColor = SystemColors.ControlText;
-            _dgHistory.Location = new Point(8, 24);
-            _dgHistory.Name = "dgHistory";
-            _dgHistory.Size = new Size(840, 405);
-            _dgHistory.TabIndex = 1;
-            //
+            this._grpHistory = new System.Windows.Forms.GroupBox();
+            this._dgHistory = new System.Windows.Forms.DataGrid();
+            this._grpHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgHistory)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpHistory
+            // 
+            this._grpHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpHistory.Controls.Add(this._dgHistory);
+            this._grpHistory.Location = new System.Drawing.Point(8, 12);
+            this._grpHistory.Name = "_grpHistory";
+            this._grpHistory.Size = new System.Drawing.Size(856, 468);
+            this._grpHistory.TabIndex = 1;
+            this._grpHistory.TabStop = false;
+            this._grpHistory.Text = "History";
+            // 
+            // _dgHistory
+            // 
+            this._dgHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgHistory.DataMember = "";
+            this._dgHistory.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgHistory.Location = new System.Drawing.Point(8, 24);
+            this._dgHistory.Name = "_dgHistory";
+            this._dgHistory.Size = new System.Drawing.Size(840, 433);
+            this._dgHistory.TabIndex = 1;
+            // 
             // FRMVanHistory
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(872, 486);
-            Controls.Add(_grpHistory);
-            MinimumSize = new Size(880, 520);
-            Name = "FRMVanHistory";
-            Text = "Stock Profile History For Engineer : {0}";
-            Controls.SetChildIndex(_grpHistory, 0);
-            _grpHistory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgHistory).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(872, 486);
+            this.Controls.Add(this._grpHistory);
+            this.MinimumSize = new System.Drawing.Size(880, 520);
+            this.Name = "FRMVanHistory";
+            this.Text = "Stock Profile History For Engineer : {0}";
+            this._grpHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgHistory)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

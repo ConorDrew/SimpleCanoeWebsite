@@ -193,142 +193,143 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnUpdate = new Button();
-            _btnUpdate.Click += new EventHandler(btnUpdate_Click);
-            _grpNewDetails = new GroupBox();
-            _Label2 = new Label();
-            _Label3 = new Label();
-            _txtNewPassword = new TextBox();
-            _txtConfirm = new TextBox();
-            _grpCurrentDetails = new GroupBox();
-            _txtPassword = new TextBox();
-            _Label1 = new Label();
-            _grpNewDetails.SuspendLayout();
-            _grpCurrentDetails.SuspendLayout();
-            SuspendLayout();
-            //
-            // btnUpdate
-            //
-            _btnUpdate.AccessibleDescription = "Update the override password";
-            _btnUpdate.Cursor = Cursors.Hand;
-            _btnUpdate.UseVisualStyleBackColor = true;
-            _btnUpdate.Location = new Point(336, 208);
-            _btnUpdate.Name = "btnUpdate";
-            _btnUpdate.Size = new Size(56, 23);
-            _btnUpdate.TabIndex = 37;
-            _btnUpdate.Text = "Update";
-            //
-            // grpNewDetails
-            //
-            _grpNewDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpNewDetails.Controls.Add(_Label2);
-            _grpNewDetails.Controls.Add(_Label3);
-            _grpNewDetails.Controls.Add(_txtNewPassword);
-            _grpNewDetails.Controls.Add(_txtConfirm);
-            _grpNewDetails.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _grpNewDetails.Location = new Point(8, 104);
-            _grpNewDetails.Name = "grpNewDetails";
-            _grpNewDetails.Size = new Size(384, 96);
-            _grpNewDetails.TabIndex = 39;
-            _grpNewDetails.TabStop = false;
-            _grpNewDetails.Text = "New Details";
-            //
-            // Label2
-            //
-            _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label2.Location = new Point(16, 32);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(64, 16);
-            _Label2.TabIndex = 17;
-            _Label2.Text = "Password ";
-            //
-            // Label3
-            //
-            _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label3.Location = new Point(16, 64);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(64, 16);
-            _Label3.TabIndex = 19;
-            _Label3.Text = "Confirm ";
-            //
-            // txtNewPassword
-            //
-            _txtNewPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtNewPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtNewPassword.Location = new Point(112, 32);
-            _txtNewPassword.MaxLength = 50;
-            _txtNewPassword.Name = "txtNewPassword";
-            _txtNewPassword.PasswordChar = (char)42;
-            _txtNewPassword.Size = new Size(265, 21);
-            _txtNewPassword.TabIndex = 2;
-            //
-            // txtConfirm
-            //
-            _txtConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtConfirm.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtConfirm.Location = new Point(112, 64);
-            _txtConfirm.MaxLength = 50;
-            _txtConfirm.Name = "txtConfirm";
-            _txtConfirm.PasswordChar = (char)42;
-            _txtConfirm.Size = new Size(265, 21);
-            _txtConfirm.TabIndex = 3;
-            //
-            // grpCurrentDetails
-            //
-            _grpCurrentDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpCurrentDetails.Controls.Add(_txtPassword);
-            _grpCurrentDetails.Controls.Add(_Label1);
-            _grpCurrentDetails.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _grpCurrentDetails.Location = new Point(8, 40);
-            _grpCurrentDetails.Name = "grpCurrentDetails";
-            _grpCurrentDetails.Size = new Size(384, 56);
-            _grpCurrentDetails.TabIndex = 38;
-            _grpCurrentDetails.TabStop = false;
-            _grpCurrentDetails.Text = "Current Details";
-            //
-            // txtPassword
-            //
-            _txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtPassword.Location = new Point(112, 24);
-            _txtPassword.MaxLength = 50;
-            _txtPassword.Name = "txtPassword";
-            _txtPassword.PasswordChar = (char)42;
-            _txtPassword.Size = new Size(264, 21);
-            _txtPassword.TabIndex = 1;
-            //
-            // Label1
-            //
-            _Label1.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label1.Location = new Point(16, 24);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(64, 16);
-            _Label1.TabIndex = 20;
-            _Label1.Text = "Password ";
-            //
+            this._btnUpdate = new System.Windows.Forms.Button();
+            this._grpNewDetails = new System.Windows.Forms.GroupBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtNewPassword = new System.Windows.Forms.TextBox();
+            this._txtConfirm = new System.Windows.Forms.TextBox();
+            this._grpCurrentDetails = new System.Windows.Forms.GroupBox();
+            this._txtPassword = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._grpNewDetails.SuspendLayout();
+            this._grpCurrentDetails.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _btnUpdate
+            // 
+            this._btnUpdate.AccessibleDescription = "Update the override password";
+            this._btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnUpdate.Location = new System.Drawing.Point(332, 180);
+            this._btnUpdate.Name = "_btnUpdate";
+            this._btnUpdate.Size = new System.Drawing.Size(56, 23);
+            this._btnUpdate.TabIndex = 37;
+            this._btnUpdate.Text = "Update";
+            this._btnUpdate.UseVisualStyleBackColor = true;
+            this._btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // _grpNewDetails
+            // 
+            this._grpNewDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpNewDetails.Controls.Add(this._Label2);
+            this._grpNewDetails.Controls.Add(this._Label3);
+            this._grpNewDetails.Controls.Add(this._txtNewPassword);
+            this._grpNewDetails.Controls.Add(this._txtConfirm);
+            this._grpNewDetails.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._grpNewDetails.Location = new System.Drawing.Point(4, 76);
+            this._grpNewDetails.Name = "_grpNewDetails";
+            this._grpNewDetails.Size = new System.Drawing.Size(380, 94);
+            this._grpNewDetails.TabIndex = 39;
+            this._grpNewDetails.TabStop = false;
+            this._grpNewDetails.Text = "New Details";
+            // 
+            // _Label2
+            // 
+            this._Label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label2.Location = new System.Drawing.Point(20, 32);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(64, 16);
+            this._Label2.TabIndex = 17;
+            this._Label2.Text = "Password ";
+            // 
+            // _Label3
+            // 
+            this._Label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label3.Location = new System.Drawing.Point(20, 64);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(64, 16);
+            this._Label3.TabIndex = 19;
+            this._Label3.Text = "Confirm ";
+            // 
+            // _txtNewPassword
+            // 
+            this._txtNewPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNewPassword.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtNewPassword.Location = new System.Drawing.Point(116, 32);
+            this._txtNewPassword.MaxLength = 50;
+            this._txtNewPassword.Name = "_txtNewPassword";
+            this._txtNewPassword.PasswordChar = '*';
+            this._txtNewPassword.Size = new System.Drawing.Size(258, 21);
+            this._txtNewPassword.TabIndex = 2;
+            // 
+            // _txtConfirm
+            // 
+            this._txtConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtConfirm.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtConfirm.Location = new System.Drawing.Point(116, 64);
+            this._txtConfirm.MaxLength = 50;
+            this._txtConfirm.Name = "_txtConfirm";
+            this._txtConfirm.PasswordChar = '*';
+            this._txtConfirm.Size = new System.Drawing.Size(258, 21);
+            this._txtConfirm.TabIndex = 3;
+            // 
+            // _grpCurrentDetails
+            // 
+            this._grpCurrentDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpCurrentDetails.Controls.Add(this._txtPassword);
+            this._grpCurrentDetails.Controls.Add(this._Label1);
+            this._grpCurrentDetails.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._grpCurrentDetails.Location = new System.Drawing.Point(4, 12);
+            this._grpCurrentDetails.Name = "_grpCurrentDetails";
+            this._grpCurrentDetails.Size = new System.Drawing.Size(380, 54);
+            this._grpCurrentDetails.TabIndex = 38;
+            this._grpCurrentDetails.TabStop = false;
+            this._grpCurrentDetails.Text = "Current Details";
+            // 
+            // _txtPassword
+            // 
+            this._txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPassword.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtPassword.Location = new System.Drawing.Point(116, 24);
+            this._txtPassword.MaxLength = 50;
+            this._txtPassword.Name = "_txtPassword";
+            this._txtPassword.PasswordChar = '*';
+            this._txtPassword.Size = new System.Drawing.Size(258, 21);
+            this._txtPassword.TabIndex = 1;
+            // 
+            // _Label1
+            // 
+            this._Label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label1.Location = new System.Drawing.Point(20, 24);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(64, 16);
+            this._Label1.TabIndex = 20;
+            this._Label1.Text = "Password ";
+            // 
             // FRMChangeOverridePassword_Service
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(392, 233);
-            Controls.Add(_btnUpdate);
-            Controls.Add(_grpNewDetails);
-            Controls.Add(_grpCurrentDetails);
-            MaximizeBox = false;
-            MaximumSize = new Size(408, 272);
-            MinimizeBox = false;
-            MinimumSize = new Size(408, 272);
-            Name = "FRMChangeOverridePassword_Service";
-            Text = "Service Override Password";
-            Controls.SetChildIndex(_grpCurrentDetails, 0);
-            Controls.SetChildIndex(_grpNewDetails, 0);
-            Controls.SetChildIndex(_btnUpdate, 0);
-            _grpNewDetails.ResumeLayout(false);
-            _grpNewDetails.PerformLayout();
-            _grpCurrentDetails.ResumeLayout(false);
-            _grpCurrentDetails.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(392, 214);
+            this.Controls.Add(this._btnUpdate);
+            this.Controls.Add(this._grpNewDetails);
+            this.Controls.Add(this._grpCurrentDetails);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FRMChangeOverridePassword_Service";
+            this.Text = "Service Override Password";
+            this._grpNewDetails.ResumeLayout(false);
+            this._grpNewDetails.PerformLayout();
+            this._grpCurrentDetails.ResumeLayout(false);
+            this._grpCurrentDetails.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

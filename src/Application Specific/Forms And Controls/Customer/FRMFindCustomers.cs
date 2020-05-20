@@ -139,11 +139,11 @@ namespace FSM
             this._grpCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dgCustomers)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // _grpCustomers
-            //
-            this._grpCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._grpCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._grpCustomers.Controls.Add(this._txtFilter);
             this._grpCustomers.Controls.Add(this._lblCustomerName);
@@ -152,73 +152,73 @@ namespace FSM
             this._grpCustomers.Controls.Add(this._btnSelectAll);
             this._grpCustomers.Controls.Add(this._dgCustomers);
             this._grpCustomers.Font = new System.Drawing.Font("Verdana", 8F);
-            this._grpCustomers.Location = new System.Drawing.Point(8, 32);
+            this._grpCustomers.Location = new System.Drawing.Point(8, 12);
             this._grpCustomers.Name = "_grpCustomers";
-            this._grpCustomers.Size = new System.Drawing.Size(661, 428);
+            this._grpCustomers.Size = new System.Drawing.Size(661, 448);
             this._grpCustomers.TabIndex = 10;
             this._grpCustomers.TabStop = false;
             this._grpCustomers.Text = "Customer to Add";
-            //
+            // 
             // _txtFilter
-            //
-            this._txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this._txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._txtFilter.Location = new System.Drawing.Point(118, 31);
             this._txtFilter.Name = "_txtFilter";
             this._txtFilter.Size = new System.Drawing.Size(219, 20);
             this._txtFilter.TabIndex = 49;
             this._txtFilter.TextChanged += new System.EventHandler(this.TxtFilter_TextChanged);
-            //
+            // 
             // _lblCustomerName
-            //
+            // 
             this._lblCustomerName.Location = new System.Drawing.Point(7, 34);
             this._lblCustomerName.Name = "_lblCustomerName";
             this._lblCustomerName.Size = new System.Drawing.Size(105, 20);
             this._lblCustomerName.TabIndex = 48;
             this._lblCustomerName.Text = "Customer Name";
-            //
+            // 
             // _btnOk
-            //
+            // 
             this._btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnOk.Font = new System.Drawing.Font("Verdana", 8F);
-            this._btnOk.Location = new System.Drawing.Point(588, 394);
+            this._btnOk.Location = new System.Drawing.Point(588, 414);
             this._btnOk.Name = "_btnOk";
             this._btnOk.Size = new System.Drawing.Size(64, 23);
             this._btnOk.TabIndex = 4;
             this._btnOk.Text = "Ok";
             this._btnOk.UseVisualStyleBackColor = true;
             this._btnOk.Click += new System.EventHandler(this.BtnOk_Click);
-            //
+            // 
             // _btnClearAll
-            //
+            // 
             this._btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnClearAll.Font = new System.Drawing.Font("Verdana", 8F);
-            this._btnClearAll.Location = new System.Drawing.Point(80, 394);
+            this._btnClearAll.Location = new System.Drawing.Point(80, 414);
             this._btnClearAll.Name = "_btnClearAll";
             this._btnClearAll.Size = new System.Drawing.Size(64, 23);
             this._btnClearAll.TabIndex = 3;
             this._btnClearAll.Text = "Clear All";
             this._btnClearAll.UseVisualStyleBackColor = true;
             this._btnClearAll.Click += new System.EventHandler(this.BtnClearAll_Click);
-            //
+            // 
             // _btnSelectAll
-            //
+            // 
             this._btnSelectAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._btnSelectAll.Font = new System.Drawing.Font("Verdana", 8F);
-            this._btnSelectAll.Location = new System.Drawing.Point(10, 394);
+            this._btnSelectAll.Location = new System.Drawing.Point(10, 414);
             this._btnSelectAll.Name = "_btnSelectAll";
             this._btnSelectAll.Size = new System.Drawing.Size(64, 23);
             this._btnSelectAll.TabIndex = 2;
             this._btnSelectAll.Text = "Select All";
             this._btnSelectAll.UseVisualStyleBackColor = true;
             this._btnSelectAll.Click += new System.EventHandler(this.BtnSelectAll_Click);
-            //
+            // 
             // _dgCustomers
-            //
+            // 
             this._dgCustomers.AllowNavigation = false;
             this._dgCustomers.AlternatingBackColor = System.Drawing.Color.GhostWhite;
-            this._dgCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this._dgCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._dgCustomers.BackgroundColor = System.Drawing.Color.White;
             this._dgCustomers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -242,12 +242,12 @@ namespace FSM
             this._dgCustomers.RowHeadersVisible = false;
             this._dgCustomers.SelectionBackColor = System.Drawing.Color.Teal;
             this._dgCustomers.SelectionForeColor = System.Drawing.Color.PaleGreen;
-            this._dgCustomers.Size = new System.Drawing.Size(642, 313);
+            this._dgCustomers.Size = new System.Drawing.Size(642, 333);
             this._dgCustomers.TabIndex = 1;
             this._dgCustomers.MouseUp += new System.Windows.Forms.MouseEventHandler(this._dgCustomers_MouseUp);
-            //
+            // 
             // FRMFindCustomers
-            //
+            // 
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.ClientSize = new System.Drawing.Size(672, 461);
             this.Controls.Add(this._grpCustomers);
@@ -257,11 +257,11 @@ namespace FSM
             this.MinimumSize = new System.Drawing.Size(688, 400);
             this.Name = "FRMFindCustomers";
             this.Text = "Customers";
-            this.Controls.SetChildIndex(this._grpCustomers, 0);
             this._grpCustomers.ResumeLayout(false);
             this._grpCustomers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dgCustomers)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private DataView _dvCustomers;

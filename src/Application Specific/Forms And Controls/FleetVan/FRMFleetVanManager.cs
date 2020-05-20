@@ -510,405 +510,403 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpFaultsFilter = new GroupBox();
-            _btnSearchFault = new Button();
-            _btnSearchFault.Click += new EventHandler(btnSearchFault_Click);
-            _dtpResolvedTo = new DateTimePicker();
-            _dtpResolvedFrom = new DateTimePicker();
-            _lblResolvedTo = new Label();
-            _lblResolvedFrom = new Label();
-            _chkResolved = new CheckBox();
-            _dtpFaultTo = new DateTimePicker();
-            _dtpFaultFrom = new DateTimePicker();
-            _lblFaultTo = new Label();
-            _lblFaultFrom = new Label();
-            _chkFaultDate = new CheckBox();
-            _cboFaultType = new ComboBox();
-            _lblFaultType = new Label();
-            _grpFaultDG = new GroupBox();
-            _dgFaults = new DataGrid();
-            _dgFaults.DoubleClick += new EventHandler(dgFaults_DoubleClick);
-            _grpEngineerFilter = new GroupBox();
-            _btnfindEngineer = new Button();
-            _btnfindEngineer.Click += new EventHandler(btnfindEngineer_Click);
-            _txtEngineer = new TextBox();
-            _lblEngineer = new Label();
-            _btnSearchEngineer = new Button();
-            _btnSearchEngineer.Click += new EventHandler(btnSearchEngineer_Click);
-            _dtpEngineerTo = new DateTimePicker();
-            _dtpEngineerFrom = new DateTimePicker();
-            _lblEngineerTo = new Label();
-            _lblEngineerFrom = new Label();
-            _grpEngineerHistory = new GroupBox();
-            _dgEngineerHistory = new DataGrid();
-            _grpFilter = new GroupBox();
-            _lblRegistration = new Label();
-            _btnfindVan = new Button();
-            _btnfindVan.Click += new EventHandler(btnfindVan_Click);
-            _txtVanReg = new TextBox();
-            _btnClear = new Button();
-            _btnClear.Click += new EventHandler(btnClear_Click);
-            _grpFaultsFilter.SuspendLayout();
-            _grpFaultDG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgFaults).BeginInit();
-            _grpEngineerFilter.SuspendLayout();
-            _grpEngineerHistory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEngineerHistory).BeginInit();
-            _grpFilter.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpFaultsFilter
-            //
-            _grpFaultsFilter.Controls.Add(_btnSearchFault);
-            _grpFaultsFilter.Controls.Add(_dtpResolvedTo);
-            _grpFaultsFilter.Controls.Add(_dtpResolvedFrom);
-            _grpFaultsFilter.Controls.Add(_lblResolvedTo);
-            _grpFaultsFilter.Controls.Add(_lblResolvedFrom);
-            _grpFaultsFilter.Controls.Add(_chkResolved);
-            _grpFaultsFilter.Controls.Add(_dtpFaultTo);
-            _grpFaultsFilter.Controls.Add(_dtpFaultFrom);
-            _grpFaultsFilter.Controls.Add(_lblFaultTo);
-            _grpFaultsFilter.Controls.Add(_lblFaultFrom);
-            _grpFaultsFilter.Controls.Add(_chkFaultDate);
-            _grpFaultsFilter.Controls.Add(_cboFaultType);
-            _grpFaultsFilter.Controls.Add(_lblFaultType);
-            _grpFaultsFilter.FlatStyle = FlatStyle.System;
-            _grpFaultsFilter.Location = new Point(8, 107);
-            _grpFaultsFilter.Name = "grpFaultsFilter";
-            _grpFaultsFilter.Size = new Size(842, 169);
-            _grpFaultsFilter.TabIndex = 3;
-            _grpFaultsFilter.TabStop = false;
-            _grpFaultsFilter.Text = "Filter Faults";
-            //
-            // btnSearchFault
-            //
-            _btnSearchFault.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSearchFault.Location = new Point(766, 140);
-            _btnSearchFault.Name = "btnSearchFault";
-            _btnSearchFault.Size = new Size(70, 23);
-            _btnSearchFault.TabIndex = 78;
-            _btnSearchFault.Text = "Run Filter";
-            //
-            // dtpResolvedTo
-            //
-            _dtpResolvedTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpResolvedTo.Location = new Point(325, 103);
-            _dtpResolvedTo.Name = "dtpResolvedTo";
-            _dtpResolvedTo.Size = new Size(156, 21);
-            _dtpResolvedTo.TabIndex = 77;
-            //
-            // dtpResolvedFrom
-            //
-            _dtpResolvedFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpResolvedFrom.Location = new Point(325, 72);
-            _dtpResolvedFrom.Name = "dtpResolvedFrom";
-            _dtpResolvedFrom.Size = new Size(156, 21);
-            _dtpResolvedFrom.TabIndex = 76;
-            //
-            // lblResolvedTo
-            //
-            _lblResolvedTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblResolvedTo.Location = new Point(271, 108);
-            _lblResolvedTo.Name = "lblResolvedTo";
-            _lblResolvedTo.Size = new Size(48, 16);
-            _lblResolvedTo.TabIndex = 74;
-            _lblResolvedTo.Text = "To";
-            //
-            // lblResolvedFrom
-            //
-            _lblResolvedFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblResolvedFrom.Location = new Point(271, 77);
-            _lblResolvedFrom.Name = "lblResolvedFrom";
-            _lblResolvedFrom.Size = new Size(48, 16);
-            _lblResolvedFrom.TabIndex = 73;
-            _lblResolvedFrom.Text = "From";
-            //
-            // chkResolved
-            //
-            _chkResolved.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkResolved.Cursor = Cursors.Hand;
-            _chkResolved.FlatStyle = FlatStyle.System;
-            _chkResolved.Location = new Point(274, 48);
-            _chkResolved.Name = "chkResolved";
-            _chkResolved.Size = new Size(112, 24);
-            _chkResolved.TabIndex = 75;
-            _chkResolved.Text = "Resolved Date";
-            //
-            // dtpFaultTo
-            //
-            _dtpFaultTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpFaultTo.Location = new Point(61, 104);
-            _dtpFaultTo.Name = "dtpFaultTo";
-            _dtpFaultTo.Size = new Size(156, 21);
-            _dtpFaultTo.TabIndex = 72;
-            //
-            // dtpFaultFrom
-            //
-            _dtpFaultFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpFaultFrom.Location = new Point(61, 73);
-            _dtpFaultFrom.Name = "dtpFaultFrom";
-            _dtpFaultFrom.Size = new Size(156, 21);
-            _dtpFaultFrom.TabIndex = 71;
-            //
-            // lblFaultTo
-            //
-            _lblFaultTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblFaultTo.Location = new Point(7, 109);
-            _lblFaultTo.Name = "lblFaultTo";
-            _lblFaultTo.Size = new Size(48, 16);
-            _lblFaultTo.TabIndex = 69;
-            _lblFaultTo.Text = "To";
-            //
-            // lblFaultFrom
-            //
-            _lblFaultFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblFaultFrom.Location = new Point(7, 78);
-            _lblFaultFrom.Name = "lblFaultFrom";
-            _lblFaultFrom.Size = new Size(48, 16);
-            _lblFaultFrom.TabIndex = 68;
-            _lblFaultFrom.Text = "From";
-            //
-            // chkFaultDate
-            //
-            _chkFaultDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkFaultDate.Cursor = Cursors.Hand;
-            _chkFaultDate.FlatStyle = FlatStyle.System;
-            _chkFaultDate.Location = new Point(10, 48);
-            _chkFaultDate.Name = "chkFaultDate";
-            _chkFaultDate.Size = new Size(80, 24);
-            _chkFaultDate.TabIndex = 70;
-            _chkFaultDate.Text = "Fault Date";
-            //
-            // cboFaultType
-            //
-            _cboFaultType.Cursor = Cursors.Hand;
-            _cboFaultType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboFaultType.Location = new Point(108, 20);
-            _cboFaultType.Name = "cboFaultType";
-            _cboFaultType.Size = new Size(171, 21);
-            _cboFaultType.TabIndex = 32;
-            _cboFaultType.Tag = "";
-            //
-            // lblFaultType
-            //
-            _lblFaultType.Location = new Point(6, 23);
-            _lblFaultType.Name = "lblFaultType";
-            _lblFaultType.Size = new Size(96, 20);
-            _lblFaultType.TabIndex = 33;
-            _lblFaultType.Text = "Fault Type";
-            //
-            // grpFaultDG
-            //
-            _grpFaultDG.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpFaultDG.Controls.Add(_dgFaults);
-            _grpFaultDG.FlatStyle = FlatStyle.System;
-            _grpFaultDG.Location = new Point(8, 282);
-            _grpFaultDG.Name = "grpFaultDG";
-            _grpFaultDG.Size = new Size(842, 420);
-            _grpFaultDG.TabIndex = 14;
-            _grpFaultDG.TabStop = false;
-            _grpFaultDG.Text = "Faults";
-            //
-            // dgFaults
-            //
-            _dgFaults.DataMember = "";
-            _dgFaults.Dock = DockStyle.Fill;
-            _dgFaults.HeaderForeColor = SystemColors.ControlText;
-            _dgFaults.Location = new Point(3, 17);
-            _dgFaults.Name = "dgFaults";
-            _dgFaults.Size = new Size(836, 400);
-            _dgFaults.TabIndex = 45;
-            //
-            // grpEngineerFilter
-            //
-            _grpEngineerFilter.Controls.Add(_btnfindEngineer);
-            _grpEngineerFilter.Controls.Add(_txtEngineer);
-            _grpEngineerFilter.Controls.Add(_lblEngineer);
-            _grpEngineerFilter.Controls.Add(_btnSearchEngineer);
-            _grpEngineerFilter.Controls.Add(_dtpEngineerTo);
-            _grpEngineerFilter.Controls.Add(_dtpEngineerFrom);
-            _grpEngineerFilter.Controls.Add(_lblEngineerTo);
-            _grpEngineerFilter.Controls.Add(_lblEngineerFrom);
-            _grpEngineerFilter.FlatStyle = FlatStyle.System;
-            _grpEngineerFilter.Location = new Point(856, 107);
-            _grpEngineerFilter.Name = "grpEngineerFilter";
-            _grpEngineerFilter.Size = new Size(639, 169);
-            _grpEngineerFilter.TabIndex = 14;
-            _grpEngineerFilter.TabStop = false;
-            _grpEngineerFilter.Text = "Filter Engineer";
-            //
-            // btnfindEngineer
-            //
-            _btnfindEngineer.BackColor = Color.White;
-            _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnfindEngineer.Location = new Point(316, 18);
-            _btnfindEngineer.Name = "btnfindEngineer";
-            _btnfindEngineer.Size = new Size(32, 23);
-            _btnfindEngineer.TabIndex = 84;
-            _btnfindEngineer.Text = "...";
-            _btnfindEngineer.UseVisualStyleBackColor = false;
-            //
-            // txtEngineer
-            //
-            _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtEngineer.Location = new Point(100, 20);
-            _txtEngineer.Name = "txtEngineer";
-            _txtEngineer.ReadOnly = true;
-            _txtEngineer.Size = new Size(201, 21);
-            _txtEngineer.TabIndex = 83;
-            //
-            // lblEngineer
-            //
-            _lblEngineer.Location = new Point(6, 23);
-            _lblEngineer.Name = "lblEngineer";
-            _lblEngineer.Size = new Size(85, 20);
-            _lblEngineer.TabIndex = 85;
-            _lblEngineer.Text = "Engineer";
-            //
-            // btnSearchEngineer
-            //
-            _btnSearchEngineer.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSearchEngineer.Location = new Point(563, 140);
-            _btnSearchEngineer.Name = "btnSearchEngineer";
-            _btnSearchEngineer.Size = new Size(70, 23);
-            _btnSearchEngineer.TabIndex = 79;
-            _btnSearchEngineer.Text = "Run Filter";
-            //
-            // dtpEngineerTo
-            //
-            _dtpEngineerTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpEngineerTo.Location = new Point(66, 99);
-            _dtpEngineerTo.Name = "dtpEngineerTo";
-            _dtpEngineerTo.Size = new Size(156, 21);
-            _dtpEngineerTo.TabIndex = 82;
-            //
-            // dtpEngineerFrom
-            //
-            _dtpEngineerFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpEngineerFrom.Location = new Point(66, 63);
-            _dtpEngineerFrom.Name = "dtpEngineerFrom";
-            _dtpEngineerFrom.Size = new Size(156, 21);
-            _dtpEngineerFrom.TabIndex = 81;
-            //
-            // lblEngineerTo
-            //
-            _lblEngineerTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblEngineerTo.Location = new Point(12, 104);
-            _lblEngineerTo.Name = "lblEngineerTo";
-            _lblEngineerTo.Size = new Size(48, 16);
-            _lblEngineerTo.TabIndex = 79;
-            _lblEngineerTo.Text = "To";
-            //
-            // lblEngineerFrom
-            //
-            _lblEngineerFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblEngineerFrom.Location = new Point(12, 68);
-            _lblEngineerFrom.Name = "lblEngineerFrom";
-            _lblEngineerFrom.Size = new Size(48, 16);
-            _lblEngineerFrom.TabIndex = 78;
-            _lblEngineerFrom.Text = "From";
-            //
-            // grpEngineerHistory
-            //
-            _grpEngineerHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpEngineerHistory.Controls.Add(_dgEngineerHistory);
-            _grpEngineerHistory.FlatStyle = FlatStyle.System;
-            _grpEngineerHistory.Location = new Point(856, 282);
-            _grpEngineerHistory.Name = "grpEngineerHistory";
-            _grpEngineerHistory.Size = new Size(639, 420);
-            _grpEngineerHistory.TabIndex = 46;
-            _grpEngineerHistory.TabStop = false;
-            _grpEngineerHistory.Text = "Engineers";
-            //
-            // dgEngineerHistory
-            //
-            _dgEngineerHistory.DataMember = "";
-            _dgEngineerHistory.Dock = DockStyle.Fill;
-            _dgEngineerHistory.HeaderForeColor = SystemColors.ControlText;
-            _dgEngineerHistory.Location = new Point(3, 17);
-            _dgEngineerHistory.Name = "dgEngineerHistory";
-            _dgEngineerHistory.Size = new Size(633, 400);
-            _dgEngineerHistory.TabIndex = 45;
-            //
-            // grpFilter
-            //
-            _grpFilter.Controls.Add(_btnClear);
-            _grpFilter.Controls.Add(_lblRegistration);
-            _grpFilter.Controls.Add(_btnfindVan);
-            _grpFilter.Controls.Add(_txtVanReg);
-            _grpFilter.FlatStyle = FlatStyle.System;
-            _grpFilter.Location = new Point(8, 38);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(1484, 63);
-            _grpFilter.TabIndex = 40;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // lblRegistration
-            //
-            _lblRegistration.AutoSize = true;
-            _lblRegistration.Location = new Point(6, 22);
-            _lblRegistration.Name = "lblRegistration";
-            _lblRegistration.Size = new Size(80, 13);
-            _lblRegistration.TabIndex = 42;
-            _lblRegistration.Text = "Registration:";
-            //
-            // btnfindVan
-            //
-            _btnfindVan.BackColor = Color.White;
-            _btnfindVan.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnfindVan.Location = new Point(324, 17);
-            _btnfindVan.Name = "btnfindVan";
-            _btnfindVan.Size = new Size(32, 23);
-            _btnfindVan.TabIndex = 41;
-            _btnfindVan.Text = "...";
-            _btnfindVan.UseVisualStyleBackColor = false;
-            //
-            // txtVanReg
-            //
-            _txtVanReg.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtVanReg.Location = new Point(108, 19);
-            _txtVanReg.Name = "txtVanReg";
-            _txtVanReg.ReadOnly = true;
-            _txtVanReg.Size = new Size(201, 21);
-            _txtVanReg.TabIndex = 40;
-            //
-            // btnClear
-            //
-            _btnClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnClear.Location = new Point(1408, 17);
-            _btnClear.Name = "btnClear";
-            _btnClear.Size = new Size(70, 23);
-            _btnClear.TabIndex = 79;
-            _btnClear.Text = "Clear";
-            //
+            this._grpFaultsFilter = new System.Windows.Forms.GroupBox();
+            this._btnSearchFault = new System.Windows.Forms.Button();
+            this._dtpResolvedTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpResolvedFrom = new System.Windows.Forms.DateTimePicker();
+            this._lblResolvedTo = new System.Windows.Forms.Label();
+            this._lblResolvedFrom = new System.Windows.Forms.Label();
+            this._chkResolved = new System.Windows.Forms.CheckBox();
+            this._dtpFaultTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFaultFrom = new System.Windows.Forms.DateTimePicker();
+            this._lblFaultTo = new System.Windows.Forms.Label();
+            this._lblFaultFrom = new System.Windows.Forms.Label();
+            this._chkFaultDate = new System.Windows.Forms.CheckBox();
+            this._cboFaultType = new System.Windows.Forms.ComboBox();
+            this._lblFaultType = new System.Windows.Forms.Label();
+            this._grpFaultDG = new System.Windows.Forms.GroupBox();
+            this._dgFaults = new System.Windows.Forms.DataGrid();
+            this._grpEngineerFilter = new System.Windows.Forms.GroupBox();
+            this._btnfindEngineer = new System.Windows.Forms.Button();
+            this._txtEngineer = new System.Windows.Forms.TextBox();
+            this._lblEngineer = new System.Windows.Forms.Label();
+            this._btnSearchEngineer = new System.Windows.Forms.Button();
+            this._dtpEngineerTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpEngineerFrom = new System.Windows.Forms.DateTimePicker();
+            this._lblEngineerTo = new System.Windows.Forms.Label();
+            this._lblEngineerFrom = new System.Windows.Forms.Label();
+            this._grpEngineerHistory = new System.Windows.Forms.GroupBox();
+            this._dgEngineerHistory = new System.Windows.Forms.DataGrid();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._btnClear = new System.Windows.Forms.Button();
+            this._lblRegistration = new System.Windows.Forms.Label();
+            this._btnfindVan = new System.Windows.Forms.Button();
+            this._txtVanReg = new System.Windows.Forms.TextBox();
+            this._grpFaultsFilter.SuspendLayout();
+            this._grpFaultDG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgFaults)).BeginInit();
+            this._grpEngineerFilter.SuspendLayout();
+            this._grpEngineerHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineerHistory)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpFaultsFilter
+            // 
+            this._grpFaultsFilter.Controls.Add(this._btnSearchFault);
+            this._grpFaultsFilter.Controls.Add(this._dtpResolvedTo);
+            this._grpFaultsFilter.Controls.Add(this._dtpResolvedFrom);
+            this._grpFaultsFilter.Controls.Add(this._lblResolvedTo);
+            this._grpFaultsFilter.Controls.Add(this._lblResolvedFrom);
+            this._grpFaultsFilter.Controls.Add(this._chkResolved);
+            this._grpFaultsFilter.Controls.Add(this._dtpFaultTo);
+            this._grpFaultsFilter.Controls.Add(this._dtpFaultFrom);
+            this._grpFaultsFilter.Controls.Add(this._lblFaultTo);
+            this._grpFaultsFilter.Controls.Add(this._lblFaultFrom);
+            this._grpFaultsFilter.Controls.Add(this._chkFaultDate);
+            this._grpFaultsFilter.Controls.Add(this._cboFaultType);
+            this._grpFaultsFilter.Controls.Add(this._lblFaultType);
+            this._grpFaultsFilter.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpFaultsFilter.Location = new System.Drawing.Point(8, 81);
+            this._grpFaultsFilter.Name = "_grpFaultsFilter";
+            this._grpFaultsFilter.Size = new System.Drawing.Size(842, 169);
+            this._grpFaultsFilter.TabIndex = 3;
+            this._grpFaultsFilter.TabStop = false;
+            this._grpFaultsFilter.Text = "Filter Faults";
+            // 
+            // _btnSearchFault
+            // 
+            this._btnSearchFault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSearchFault.Location = new System.Drawing.Point(766, 140);
+            this._btnSearchFault.Name = "_btnSearchFault";
+            this._btnSearchFault.Size = new System.Drawing.Size(70, 23);
+            this._btnSearchFault.TabIndex = 78;
+            this._btnSearchFault.Text = "Run Filter";
+            this._btnSearchFault.Click += new System.EventHandler(this.btnSearchFault_Click);
+            // 
+            // _dtpResolvedTo
+            // 
+            this._dtpResolvedTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpResolvedTo.Location = new System.Drawing.Point(325, 103);
+            this._dtpResolvedTo.Name = "_dtpResolvedTo";
+            this._dtpResolvedTo.Size = new System.Drawing.Size(156, 21);
+            this._dtpResolvedTo.TabIndex = 77;
+            // 
+            // _dtpResolvedFrom
+            // 
+            this._dtpResolvedFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpResolvedFrom.Location = new System.Drawing.Point(325, 72);
+            this._dtpResolvedFrom.Name = "_dtpResolvedFrom";
+            this._dtpResolvedFrom.Size = new System.Drawing.Size(156, 21);
+            this._dtpResolvedFrom.TabIndex = 76;
+            // 
+            // _lblResolvedTo
+            // 
+            this._lblResolvedTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblResolvedTo.Location = new System.Drawing.Point(271, 108);
+            this._lblResolvedTo.Name = "_lblResolvedTo";
+            this._lblResolvedTo.Size = new System.Drawing.Size(48, 16);
+            this._lblResolvedTo.TabIndex = 74;
+            this._lblResolvedTo.Text = "To";
+            // 
+            // _lblResolvedFrom
+            // 
+            this._lblResolvedFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblResolvedFrom.Location = new System.Drawing.Point(271, 77);
+            this._lblResolvedFrom.Name = "_lblResolvedFrom";
+            this._lblResolvedFrom.Size = new System.Drawing.Size(48, 16);
+            this._lblResolvedFrom.TabIndex = 73;
+            this._lblResolvedFrom.Text = "From";
+            // 
+            // _chkResolved
+            // 
+            this._chkResolved.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkResolved.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkResolved.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._chkResolved.Location = new System.Drawing.Point(274, 48);
+            this._chkResolved.Name = "_chkResolved";
+            this._chkResolved.Size = new System.Drawing.Size(112, 24);
+            this._chkResolved.TabIndex = 75;
+            this._chkResolved.Text = "Resolved Date";
+            // 
+            // _dtpFaultTo
+            // 
+            this._dtpFaultTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpFaultTo.Location = new System.Drawing.Point(61, 104);
+            this._dtpFaultTo.Name = "_dtpFaultTo";
+            this._dtpFaultTo.Size = new System.Drawing.Size(156, 21);
+            this._dtpFaultTo.TabIndex = 72;
+            // 
+            // _dtpFaultFrom
+            // 
+            this._dtpFaultFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpFaultFrom.Location = new System.Drawing.Point(61, 73);
+            this._dtpFaultFrom.Name = "_dtpFaultFrom";
+            this._dtpFaultFrom.Size = new System.Drawing.Size(156, 21);
+            this._dtpFaultFrom.TabIndex = 71;
+            // 
+            // _lblFaultTo
+            // 
+            this._lblFaultTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblFaultTo.Location = new System.Drawing.Point(7, 109);
+            this._lblFaultTo.Name = "_lblFaultTo";
+            this._lblFaultTo.Size = new System.Drawing.Size(48, 16);
+            this._lblFaultTo.TabIndex = 69;
+            this._lblFaultTo.Text = "To";
+            // 
+            // _lblFaultFrom
+            // 
+            this._lblFaultFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblFaultFrom.Location = new System.Drawing.Point(7, 78);
+            this._lblFaultFrom.Name = "_lblFaultFrom";
+            this._lblFaultFrom.Size = new System.Drawing.Size(48, 16);
+            this._lblFaultFrom.TabIndex = 68;
+            this._lblFaultFrom.Text = "From";
+            // 
+            // _chkFaultDate
+            // 
+            this._chkFaultDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkFaultDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkFaultDate.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._chkFaultDate.Location = new System.Drawing.Point(10, 48);
+            this._chkFaultDate.Name = "_chkFaultDate";
+            this._chkFaultDate.Size = new System.Drawing.Size(80, 24);
+            this._chkFaultDate.TabIndex = 70;
+            this._chkFaultDate.Text = "Fault Date";
+            // 
+            // _cboFaultType
+            // 
+            this._cboFaultType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboFaultType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboFaultType.Location = new System.Drawing.Point(108, 20);
+            this._cboFaultType.Name = "_cboFaultType";
+            this._cboFaultType.Size = new System.Drawing.Size(171, 21);
+            this._cboFaultType.TabIndex = 32;
+            this._cboFaultType.Tag = "";
+            // 
+            // _lblFaultType
+            // 
+            this._lblFaultType.Location = new System.Drawing.Point(6, 23);
+            this._lblFaultType.Name = "_lblFaultType";
+            this._lblFaultType.Size = new System.Drawing.Size(96, 20);
+            this._lblFaultType.TabIndex = 33;
+            this._lblFaultType.Text = "Fault Type";
+            // 
+            // _grpFaultDG
+            // 
+            this._grpFaultDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpFaultDG.Controls.Add(this._dgFaults);
+            this._grpFaultDG.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpFaultDG.Location = new System.Drawing.Point(8, 256);
+            this._grpFaultDG.Name = "_grpFaultDG";
+            this._grpFaultDG.Size = new System.Drawing.Size(842, 446);
+            this._grpFaultDG.TabIndex = 14;
+            this._grpFaultDG.TabStop = false;
+            this._grpFaultDG.Text = "Faults";
+            // 
+            // _dgFaults
+            // 
+            this._dgFaults.DataMember = "";
+            this._dgFaults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dgFaults.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgFaults.Location = new System.Drawing.Point(3, 17);
+            this._dgFaults.Name = "_dgFaults";
+            this._dgFaults.Size = new System.Drawing.Size(836, 426);
+            this._dgFaults.TabIndex = 45;
+            this._dgFaults.DoubleClick += new System.EventHandler(this.dgFaults_DoubleClick);
+            // 
+            // _grpEngineerFilter
+            // 
+            this._grpEngineerFilter.Controls.Add(this._btnfindEngineer);
+            this._grpEngineerFilter.Controls.Add(this._txtEngineer);
+            this._grpEngineerFilter.Controls.Add(this._lblEngineer);
+            this._grpEngineerFilter.Controls.Add(this._btnSearchEngineer);
+            this._grpEngineerFilter.Controls.Add(this._dtpEngineerTo);
+            this._grpEngineerFilter.Controls.Add(this._dtpEngineerFrom);
+            this._grpEngineerFilter.Controls.Add(this._lblEngineerTo);
+            this._grpEngineerFilter.Controls.Add(this._lblEngineerFrom);
+            this._grpEngineerFilter.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpEngineerFilter.Location = new System.Drawing.Point(856, 81);
+            this._grpEngineerFilter.Name = "_grpEngineerFilter";
+            this._grpEngineerFilter.Size = new System.Drawing.Size(639, 169);
+            this._grpEngineerFilter.TabIndex = 14;
+            this._grpEngineerFilter.TabStop = false;
+            this._grpEngineerFilter.Text = "Filter Engineer";
+            // 
+            // _btnfindEngineer
+            // 
+            this._btnfindEngineer.BackColor = System.Drawing.Color.White;
+            this._btnfindEngineer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnfindEngineer.Location = new System.Drawing.Point(316, 18);
+            this._btnfindEngineer.Name = "_btnfindEngineer";
+            this._btnfindEngineer.Size = new System.Drawing.Size(32, 23);
+            this._btnfindEngineer.TabIndex = 84;
+            this._btnfindEngineer.Text = "...";
+            this._btnfindEngineer.UseVisualStyleBackColor = false;
+            this._btnfindEngineer.Click += new System.EventHandler(this.btnfindEngineer_Click);
+            // 
+            // _txtEngineer
+            // 
+            this._txtEngineer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtEngineer.Location = new System.Drawing.Point(100, 20);
+            this._txtEngineer.Name = "_txtEngineer";
+            this._txtEngineer.ReadOnly = true;
+            this._txtEngineer.Size = new System.Drawing.Size(201, 21);
+            this._txtEngineer.TabIndex = 83;
+            // 
+            // _lblEngineer
+            // 
+            this._lblEngineer.Location = new System.Drawing.Point(6, 23);
+            this._lblEngineer.Name = "_lblEngineer";
+            this._lblEngineer.Size = new System.Drawing.Size(85, 20);
+            this._lblEngineer.TabIndex = 85;
+            this._lblEngineer.Text = "Engineer";
+            // 
+            // _btnSearchEngineer
+            // 
+            this._btnSearchEngineer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSearchEngineer.Location = new System.Drawing.Point(563, 140);
+            this._btnSearchEngineer.Name = "_btnSearchEngineer";
+            this._btnSearchEngineer.Size = new System.Drawing.Size(70, 23);
+            this._btnSearchEngineer.TabIndex = 79;
+            this._btnSearchEngineer.Text = "Run Filter";
+            this._btnSearchEngineer.Click += new System.EventHandler(this.btnSearchEngineer_Click);
+            // 
+            // _dtpEngineerTo
+            // 
+            this._dtpEngineerTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpEngineerTo.Location = new System.Drawing.Point(66, 99);
+            this._dtpEngineerTo.Name = "_dtpEngineerTo";
+            this._dtpEngineerTo.Size = new System.Drawing.Size(156, 21);
+            this._dtpEngineerTo.TabIndex = 82;
+            // 
+            // _dtpEngineerFrom
+            // 
+            this._dtpEngineerFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpEngineerFrom.Location = new System.Drawing.Point(66, 63);
+            this._dtpEngineerFrom.Name = "_dtpEngineerFrom";
+            this._dtpEngineerFrom.Size = new System.Drawing.Size(156, 21);
+            this._dtpEngineerFrom.TabIndex = 81;
+            // 
+            // _lblEngineerTo
+            // 
+            this._lblEngineerTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblEngineerTo.Location = new System.Drawing.Point(12, 104);
+            this._lblEngineerTo.Name = "_lblEngineerTo";
+            this._lblEngineerTo.Size = new System.Drawing.Size(48, 16);
+            this._lblEngineerTo.TabIndex = 79;
+            this._lblEngineerTo.Text = "To";
+            // 
+            // _lblEngineerFrom
+            // 
+            this._lblEngineerFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblEngineerFrom.Location = new System.Drawing.Point(12, 68);
+            this._lblEngineerFrom.Name = "_lblEngineerFrom";
+            this._lblEngineerFrom.Size = new System.Drawing.Size(48, 16);
+            this._lblEngineerFrom.TabIndex = 78;
+            this._lblEngineerFrom.Text = "From";
+            // 
+            // _grpEngineerHistory
+            // 
+            this._grpEngineerHistory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpEngineerHistory.Controls.Add(this._dgEngineerHistory);
+            this._grpEngineerHistory.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpEngineerHistory.Location = new System.Drawing.Point(856, 256);
+            this._grpEngineerHistory.Name = "_grpEngineerHistory";
+            this._grpEngineerHistory.Size = new System.Drawing.Size(639, 446);
+            this._grpEngineerHistory.TabIndex = 46;
+            this._grpEngineerHistory.TabStop = false;
+            this._grpEngineerHistory.Text = "Engineers";
+            // 
+            // _dgEngineerHistory
+            // 
+            this._dgEngineerHistory.DataMember = "";
+            this._dgEngineerHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dgEngineerHistory.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgEngineerHistory.Location = new System.Drawing.Point(3, 17);
+            this._dgEngineerHistory.Name = "_dgEngineerHistory";
+            this._dgEngineerHistory.Size = new System.Drawing.Size(633, 426);
+            this._dgEngineerHistory.TabIndex = 45;
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Controls.Add(this._btnClear);
+            this._grpFilter.Controls.Add(this._lblRegistration);
+            this._grpFilter.Controls.Add(this._btnfindVan);
+            this._grpFilter.Controls.Add(this._txtVanReg);
+            this._grpFilter.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(1484, 63);
+            this._grpFilter.TabIndex = 40;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _btnClear
+            // 
+            this._btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnClear.Location = new System.Drawing.Point(1408, 17);
+            this._btnClear.Name = "_btnClear";
+            this._btnClear.Size = new System.Drawing.Size(70, 23);
+            this._btnClear.TabIndex = 79;
+            this._btnClear.Text = "Clear";
+            this._btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // _lblRegistration
+            // 
+            this._lblRegistration.AutoSize = true;
+            this._lblRegistration.Location = new System.Drawing.Point(6, 22);
+            this._lblRegistration.Name = "_lblRegistration";
+            this._lblRegistration.Size = new System.Drawing.Size(80, 13);
+            this._lblRegistration.TabIndex = 42;
+            this._lblRegistration.Text = "Registration:";
+            // 
+            // _btnfindVan
+            // 
+            this._btnfindVan.BackColor = System.Drawing.Color.White;
+            this._btnfindVan.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnfindVan.Location = new System.Drawing.Point(324, 17);
+            this._btnfindVan.Name = "_btnfindVan";
+            this._btnfindVan.Size = new System.Drawing.Size(32, 23);
+            this._btnfindVan.TabIndex = 41;
+            this._btnfindVan.Text = "...";
+            this._btnfindVan.UseVisualStyleBackColor = false;
+            this._btnfindVan.Click += new System.EventHandler(this.btnfindVan_Click);
+            // 
+            // _txtVanReg
+            // 
+            this._txtVanReg.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtVanReg.Location = new System.Drawing.Point(108, 19);
+            this._txtVanReg.Name = "_txtVanReg";
+            this._txtVanReg.ReadOnly = true;
+            this._txtVanReg.Size = new System.Drawing.Size(201, 21);
+            this._txtVanReg.TabIndex = 40;
+            // 
             // FRMFleetVanManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1502, 714);
-            Controls.Add(_grpFilter);
-            Controls.Add(_grpEngineerHistory);
-            Controls.Add(_grpEngineerFilter);
-            Controls.Add(_grpFaultDG);
-            Controls.Add(_grpFaultsFilter);
-            Name = "FRMFleetVanManager";
-            Text = "Fleet Van Mileage Import";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpFaultsFilter, 0);
-            Controls.SetChildIndex(_grpFaultDG, 0);
-            Controls.SetChildIndex(_grpEngineerFilter, 0);
-            Controls.SetChildIndex(_grpEngineerHistory, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            _grpFaultsFilter.ResumeLayout(false);
-            _grpFaultDG.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgFaults).EndInit();
-            _grpEngineerFilter.ResumeLayout(false);
-            _grpEngineerFilter.PerformLayout();
-            _grpEngineerHistory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgEngineerHistory).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1502, 714);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._grpEngineerHistory);
+            this.Controls.Add(this._grpEngineerFilter);
+            this.Controls.Add(this._grpFaultDG);
+            this.Controls.Add(this._grpFaultsFilter);
+            this.Name = "FRMFleetVanManager";
+            this.Text = "Fleet Van Mileage Import";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpFaultsFilter.ResumeLayout(false);
+            this._grpFaultDG.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgFaults)).EndInit();
+            this._grpEngineerFilter.ResumeLayout(false);
+            this._grpEngineerFilter.PerformLayout();
+            this._grpEngineerHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineerHistory)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public IUserControl LoadedControl

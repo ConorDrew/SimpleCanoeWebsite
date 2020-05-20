@@ -163,141 +163,137 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _lblFilter = new Label();
-            _txtFilter = new TextBox();
-            _txtFilter.TextChanged += new EventHandler(txtFilter_TextChanged);
-            _grpResults = new GroupBox();
-            _dgvParts = new DataGridView();
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _lblPreferredSupplier = new Label();
-            _pnlGreen = new Panel();
-            _btnSearch = new Button();
-            _btnSearch.Click += new EventHandler(btnSearch_Click);
-            _grpResults.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvParts).BeginInit();
-            SuspendLayout();
-            //
-            // lblFilter
-            //
-            _lblFilter.Location = new Point(8, 40);
-            _lblFilter.Name = "lblFilter";
-            _lblFilter.Size = new Size(100, 24);
-            _lblFilter.TabIndex = 2;
-            _lblFilter.Text = "Filter By Name";
-            //
-            // txtFilter
-            //
-            _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtFilter.Location = new Point(104, 40);
-            _txtFilter.Name = "txtFilter";
-            _txtFilter.Size = new Size(562, 21);
-            _txtFilter.TabIndex = 1;
-            //
-            // grpResults
-            //
-            _grpResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpResults.Controls.Add(_dgvParts);
-            _grpResults.Location = new Point(8, 68);
-            _grpResults.Name = "grpResults";
-            _grpResults.Size = new Size(793, 377);
-            _grpResults.TabIndex = 4;
-            _grpResults.TabStop = false;
-            _grpResults.Text = "Select record and click OK";
-            //
-            // dgvParts
-            //
-            _dgvParts.AllowUserToAddRows = false;
-            _dgvParts.AllowUserToDeleteRows = false;
-            _dgvParts.AllowUserToOrderColumns = true;
-            _dgvParts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgvParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvParts.Location = new Point(8, 20);
-            _dgvParts.Name = "dgvParts";
-            _dgvParts.ReadOnly = true;
-            _dgvParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dgvParts.Size = new Size(777, 351);
-            _dgvParts.TabIndex = 0;
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(745, 451);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(56, 23);
-            _btnOK.TabIndex = 3;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(8, 451);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(56, 23);
-            _btnCancel.TabIndex = 4;
-            _btnCancel.Text = "Cancel";
-            //
-            // lblPreferredSupplier
-            //
-            _lblPreferredSupplier.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblPreferredSupplier.Location = new Point(95, 456);
-            _lblPreferredSupplier.Name = "lblPreferredSupplier";
-            _lblPreferredSupplier.Size = new Size(175, 24);
-            _lblPreferredSupplier.TabIndex = 7;
-            _lblPreferredSupplier.Text = "Preferred Supplier";
-            //
-            // pnlGreen
-            //
-            _pnlGreen.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _pnlGreen.BackColor = Color.LightGreen;
-            _pnlGreen.Location = new Point(70, 454);
-            _pnlGreen.Name = "pnlGreen";
-            _pnlGreen.Size = new Size(19, 20);
-            _pnlGreen.TabIndex = 8;
-            //
-            // btnSearch
-            //
-            _btnSearch.Location = new Point(673, 39);
-            _btnSearch.Name = "btnSearch";
-            _btnSearch.Size = new Size(128, 23);
-            _btnSearch.TabIndex = 9;
-            _btnSearch.Text = "Search";
-            _btnSearch.UseVisualStyleBackColor = true;
-            //
+            this._lblFilter = new System.Windows.Forms.Label();
+            this._txtFilter = new System.Windows.Forms.TextBox();
+            this._grpResults = new System.Windows.Forms.GroupBox();
+            this._dgvParts = new System.Windows.Forms.DataGridView();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._lblPreferredSupplier = new System.Windows.Forms.Label();
+            this._pnlGreen = new System.Windows.Forms.Panel();
+            this._btnSearch = new System.Windows.Forms.Button();
+            this._grpResults.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvParts)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _lblFilter
+            // 
+            this._lblFilter.Location = new System.Drawing.Point(8, 11);
+            this._lblFilter.Name = "_lblFilter";
+            this._lblFilter.Size = new System.Drawing.Size(100, 24);
+            this._lblFilter.TabIndex = 2;
+            this._lblFilter.Text = "Filter By Name";
+            // 
+            // _txtFilter
+            // 
+            this._txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtFilter.Location = new System.Drawing.Point(104, 11);
+            this._txtFilter.Name = "_txtFilter";
+            this._txtFilter.Size = new System.Drawing.Size(562, 21);
+            this._txtFilter.TabIndex = 1;
+            this._txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            // 
+            // _grpResults
+            // 
+            this._grpResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpResults.Controls.Add(this._dgvParts);
+            this._grpResults.Location = new System.Drawing.Point(8, 39);
+            this._grpResults.Name = "_grpResults";
+            this._grpResults.Size = new System.Drawing.Size(793, 406);
+            this._grpResults.TabIndex = 4;
+            this._grpResults.TabStop = false;
+            this._grpResults.Text = "Select record and click OK";
+            // 
+            // _dgvParts
+            // 
+            this._dgvParts.AllowUserToAddRows = false;
+            this._dgvParts.AllowUserToDeleteRows = false;
+            this._dgvParts.AllowUserToOrderColumns = true;
+            this._dgvParts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvParts.Location = new System.Drawing.Point(8, 20);
+            this._dgvParts.Name = "_dgvParts";
+            this._dgvParts.ReadOnly = true;
+            this._dgvParts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._dgvParts.Size = new System.Drawing.Size(777, 380);
+            this._dgvParts.TabIndex = 0;
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(745, 451);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(56, 23);
+            this._btnOK.TabIndex = 3;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(8, 451);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(56, 23);
+            this._btnCancel.TabIndex = 4;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _lblPreferredSupplier
+            // 
+            this._lblPreferredSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblPreferredSupplier.Location = new System.Drawing.Point(95, 456);
+            this._lblPreferredSupplier.Name = "_lblPreferredSupplier";
+            this._lblPreferredSupplier.Size = new System.Drawing.Size(175, 24);
+            this._lblPreferredSupplier.TabIndex = 7;
+            this._lblPreferredSupplier.Text = "Preferred Supplier";
+            // 
+            // _pnlGreen
+            // 
+            this._pnlGreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._pnlGreen.BackColor = System.Drawing.Color.LightGreen;
+            this._pnlGreen.Location = new System.Drawing.Point(70, 454);
+            this._pnlGreen.Name = "_pnlGreen";
+            this._pnlGreen.Size = new System.Drawing.Size(19, 20);
+            this._pnlGreen.TabIndex = 8;
+            // 
+            // _btnSearch
+            // 
+            this._btnSearch.Location = new System.Drawing.Point(673, 10);
+            this._btnSearch.Name = "_btnSearch";
+            this._btnSearch.Size = new System.Drawing.Size(128, 23);
+            this._btnSearch.TabIndex = 9;
+            this._btnSearch.Text = "Search";
+            this._btnSearch.UseVisualStyleBackColor = true;
+            this._btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // FRMFindPart
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(809, 481);
-            ControlBox = false;
-            Controls.Add(_btnSearch);
-            Controls.Add(_pnlGreen);
-            Controls.Add(_lblPreferredSupplier);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            Controls.Add(_grpResults);
-            Controls.Add(_txtFilter);
-            Controls.Add(_lblFilter);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(704, 392);
-            Name = "FRMFindPart";
-            Text = "Find {0}";
-            Controls.SetChildIndex(_lblFilter, 0);
-            Controls.SetChildIndex(_txtFilter, 0);
-            Controls.SetChildIndex(_grpResults, 0);
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_lblPreferredSupplier, 0);
-            Controls.SetChildIndex(_pnlGreen, 0);
-            Controls.SetChildIndex(_btnSearch, 0);
-            _grpResults.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgvParts).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(809, 481);
+            this.ControlBox = false;
+            this.Controls.Add(this._btnSearch);
+            this.Controls.Add(this._pnlGreen);
+            this.Controls.Add(this._lblPreferredSupplier);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.Controls.Add(this._grpResults);
+            this.Controls.Add(this._txtFilter);
+            this.Controls.Add(this._lblFilter);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(704, 392);
+            this.Name = "FRMFindPart";
+            this.Text = "Find {0}";
+            this._grpResults.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgvParts)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         public void LoadMe(object sender, EventArgs e)

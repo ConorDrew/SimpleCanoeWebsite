@@ -368,205 +368,206 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpItems = new GroupBox();
-            _dgManager = new DataGrid();
-            _dgManager.Click += new EventHandler(dgManager_Click);
-            _dgManager.CurrentCellChanged += new EventHandler(dgManager_Click);
-            _dgManager.Click += new EventHandler(dgManager_Click);
-            _dgManager.CurrentCellChanged += new EventHandler(dgManager_Click);
-            _btnAddNew = new Button();
-            _btnAddNew.Click += new EventHandler(btnAddNew_Click);
-            _Label1 = new Label();
-            _cboType = new ComboBox();
-            _cboType.SelectedIndexChanged += new EventHandler(cboType_SelectedIndexChanged);
-            _grpDetails = new GroupBox();
-            _cbxShowOnJob = new CheckBox();
-            _txtPercentageRate = new TextBox();
-            _lblPercentageRate = new Label();
-            _Label3 = new Label();
-            _txtName = new TextBox();
-            _txtDescription = new TextBox();
-            _Label2 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _grpItems.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgManager).BeginInit();
-            _grpDetails.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpItems
-            //
-            _grpItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpItems.Controls.Add(_dgManager);
-            _grpItems.Controls.Add(_btnAddNew);
-            _grpItems.Location = new Point(8, 72);
-            _grpItems.Name = "grpItems";
-            _grpItems.Size = new Size(368, 416);
-            _grpItems.TabIndex = 5;
-            _grpItems.TabStop = false;
-            _grpItems.Text = "Items";
-            //
-            // dgManager
-            //
-            _dgManager.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgManager.DataMember = "";
-            _dgManager.HeaderForeColor = SystemColors.ControlText;
-            _dgManager.Location = new Point(8, 53);
-            _dgManager.Name = "dgManager";
-            _dgManager.Size = new Size(352, 355);
-            _dgManager.TabIndex = 3;
-            //
-            // btnAddNew
-            //
-            _btnAddNew.AccessibleDescription = "Add new item";
-            _btnAddNew.Cursor = Cursors.Hand;
-            _btnAddNew.UseVisualStyleBackColor = true;
-            _btnAddNew.Location = new Point(8, 24);
-            _btnAddNew.Name = "btnAddNew";
-            _btnAddNew.Size = new Size(48, 23);
-            _btnAddNew.TabIndex = 2;
-            _btnAddNew.Text = "New";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 45);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(72, 23);
-            _Label1.TabIndex = 4;
-            _Label1.Text = "Select Type";
-            //
-            // cboType
-            //
-            _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboType.Cursor = Cursors.Hand;
-            _cboType.DisplayMember = "Description";
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(88, 45);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(288, 21);
-            _cboType.TabIndex = 1;
-            _cboType.ValueMember = "Value";
-            //
-            // grpDetails
-            //
-            _grpDetails.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _grpDetails.Controls.Add(_cbxShowOnJob);
-            _grpDetails.Controls.Add(_txtPercentageRate);
-            _grpDetails.Controls.Add(_lblPercentageRate);
-            _grpDetails.Controls.Add(_Label3);
-            _grpDetails.Controls.Add(_txtName);
-            _grpDetails.Controls.Add(_txtDescription);
-            _grpDetails.Controls.Add(_Label2);
-            _grpDetails.Controls.Add(_btnSave);
-            _grpDetails.Location = new Point(384, 40);
-            _grpDetails.Name = "grpDetails";
-            _grpDetails.Size = new Size(392, 216);
-            _grpDetails.TabIndex = 7;
-            _grpDetails.TabStop = false;
-            _grpDetails.Text = "Details";
-            //
-            // cbxShowOnJob
-            //
-            _cbxShowOnJob.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _cbxShowOnJob.AutoSize = true;
-            _cbxShowOnJob.Location = new Point(208, 188);
-            _cbxShowOnJob.Name = "cbxShowOnJob";
-            _cbxShowOnJob.Size = new Size(98, 17);
-            _cbxShowOnJob.TabIndex = 10;
-            _cbxShowOnJob.Text = "Show on Job";
-            _cbxShowOnJob.TextAlign = ContentAlignment.MiddleRight;
-            _cbxShowOnJob.UseVisualStyleBackColor = true;
-            //
-            // txtPercentageRate
-            //
-            _txtPercentageRate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtPercentageRate.Location = new Point(104, 184);
-            _txtPercentageRate.MaxLength = 255;
-            _txtPercentageRate.Name = "txtPercentageRate";
-            _txtPercentageRate.Size = new Size(87, 21);
-            _txtPercentageRate.TabIndex = 9;
-            _txtPercentageRate.Visible = false;
-            //
-            // lblPercentageRate
-            //
-            _lblPercentageRate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblPercentageRate.Location = new Point(6, 184);
-            _lblPercentageRate.Name = "lblPercentageRate";
-            _lblPercentageRate.Size = new Size(72, 21);
-            _lblPercentageRate.TabIndex = 8;
-            _lblPercentageRate.Text = "Rate (%)";
-            _lblPercentageRate.Visible = false;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 56);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(72, 23);
-            _Label3.TabIndex = 6;
-            _Label3.Text = "Description";
-            //
-            // txtName
-            //
-            _txtName.Location = new Point(104, 24);
-            _txtName.MaxLength = 255;
-            _txtName.Name = "txtName";
-            _txtName.Size = new Size(280, 21);
-            _txtName.TabIndex = 5;
-            //
-            // txtDescription
-            //
-            _txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtDescription.Location = new Point(104, 56);
-            _txtDescription.Multiline = true;
-            _txtDescription.Name = "txtDescription";
-            _txtDescription.ScrollBars = ScrollBars.Vertical;
-            _txtDescription.Size = new Size(280, 120);
-            _txtDescription.TabIndex = 6;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(48, 23);
-            _Label2.TabIndex = 5;
-            _Label2.Text = "Name";
-            //
-            // btnSave
-            //
-            _btnSave.AccessibleDescription = "Save item";
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Cursor = Cursors.Hand;
-            _btnSave.UseVisualStyleBackColor = true;
-            _btnSave.ImageIndex = 1;
-            _btnSave.Location = new Point(336, 184);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(48, 23);
-            _btnSave.TabIndex = 7;
-            _btnSave.Text = "Save";
-            //
+            this._grpItems = new System.Windows.Forms.GroupBox();
+            this._dgManager = new System.Windows.Forms.DataGrid();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._grpDetails = new System.Windows.Forms.GroupBox();
+            this._cbxShowOnJob = new System.Windows.Forms.CheckBox();
+            this._txtPercentageRate = new System.Windows.Forms.TextBox();
+            this._lblPercentageRate = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._txtDescription = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._grpItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgManager)).BeginInit();
+            this._grpDetails.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpItems
+            // 
+            this._grpItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpItems.Controls.Add(this._dgManager);
+            this._grpItems.Controls.Add(this._btnAddNew);
+            this._grpItems.Location = new System.Drawing.Point(8, 39);
+            this._grpItems.Name = "_grpItems";
+            this._grpItems.Size = new System.Drawing.Size(368, 449);
+            this._grpItems.TabIndex = 5;
+            this._grpItems.TabStop = false;
+            this._grpItems.Text = "Items";
+            // 
+            // _dgManager
+            // 
+            this._dgManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgManager.DataMember = "";
+            this._dgManager.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgManager.Location = new System.Drawing.Point(8, 53);
+            this._dgManager.Name = "_dgManager";
+            this._dgManager.Size = new System.Drawing.Size(352, 388);
+            this._dgManager.TabIndex = 3;
+            this._dgManager.CurrentCellChanged += new System.EventHandler(this.dgManager_Click);
+            this._dgManager.Click += new System.EventHandler(this.dgManager_Click);
+            // 
+            // _btnAddNew
+            // 
+            this._btnAddNew.AccessibleDescription = "Add new item";
+            this._btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAddNew.Location = new System.Drawing.Point(8, 24);
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.Size = new System.Drawing.Size(48, 23);
+            this._btnAddNew.TabIndex = 2;
+            this._btnAddNew.Text = "New";
+            this._btnAddNew.UseVisualStyleBackColor = true;
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 12);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(72, 23);
+            this._Label1.TabIndex = 4;
+            this._Label1.Text = "Select Type";
+            // 
+            // _cboType
+            // 
+            this._cboType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboType.DisplayMember = "Description";
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(88, 12);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(288, 21);
+            this._cboType.TabIndex = 1;
+            this._cboType.ValueMember = "Value";
+            this._cboType.SelectedIndexChanged += new System.EventHandler(this.cboType_SelectedIndexChanged);
+            // 
+            // _grpDetails
+            // 
+            this._grpDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpDetails.Controls.Add(this._cbxShowOnJob);
+            this._grpDetails.Controls.Add(this._txtPercentageRate);
+            this._grpDetails.Controls.Add(this._lblPercentageRate);
+            this._grpDetails.Controls.Add(this._Label3);
+            this._grpDetails.Controls.Add(this._txtName);
+            this._grpDetails.Controls.Add(this._txtDescription);
+            this._grpDetails.Controls.Add(this._Label2);
+            this._grpDetails.Controls.Add(this._btnSave);
+            this._grpDetails.Location = new System.Drawing.Point(384, 12);
+            this._grpDetails.Name = "_grpDetails";
+            this._grpDetails.Size = new System.Drawing.Size(392, 244);
+            this._grpDetails.TabIndex = 7;
+            this._grpDetails.TabStop = false;
+            this._grpDetails.Text = "Details";
+            // 
+            // _cbxShowOnJob
+            // 
+            this._cbxShowOnJob.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cbxShowOnJob.AutoSize = true;
+            this._cbxShowOnJob.Location = new System.Drawing.Point(208, 216);
+            this._cbxShowOnJob.Name = "_cbxShowOnJob";
+            this._cbxShowOnJob.Size = new System.Drawing.Size(98, 17);
+            this._cbxShowOnJob.TabIndex = 10;
+            this._cbxShowOnJob.Text = "Show on Job";
+            this._cbxShowOnJob.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._cbxShowOnJob.UseVisualStyleBackColor = true;
+            // 
+            // _txtPercentageRate
+            // 
+            this._txtPercentageRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtPercentageRate.Location = new System.Drawing.Point(104, 212);
+            this._txtPercentageRate.MaxLength = 255;
+            this._txtPercentageRate.Name = "_txtPercentageRate";
+            this._txtPercentageRate.Size = new System.Drawing.Size(87, 21);
+            this._txtPercentageRate.TabIndex = 9;
+            this._txtPercentageRate.Visible = false;
+            // 
+            // _lblPercentageRate
+            // 
+            this._lblPercentageRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblPercentageRate.Location = new System.Drawing.Point(6, 212);
+            this._lblPercentageRate.Name = "_lblPercentageRate";
+            this._lblPercentageRate.Size = new System.Drawing.Size(72, 21);
+            this._lblPercentageRate.TabIndex = 8;
+            this._lblPercentageRate.Text = "Rate (%)";
+            this._lblPercentageRate.Visible = false;
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(8, 56);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(72, 23);
+            this._Label3.TabIndex = 6;
+            this._Label3.Text = "Description";
+            // 
+            // _txtName
+            // 
+            this._txtName.Location = new System.Drawing.Point(104, 24);
+            this._txtName.MaxLength = 255;
+            this._txtName.Name = "_txtName";
+            this._txtName.Size = new System.Drawing.Size(280, 21);
+            this._txtName.TabIndex = 5;
+            // 
+            // _txtDescription
+            // 
+            this._txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtDescription.Location = new System.Drawing.Point(104, 56);
+            this._txtDescription.Multiline = true;
+            this._txtDescription.Name = "_txtDescription";
+            this._txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtDescription.Size = new System.Drawing.Size(280, 148);
+            this._txtDescription.TabIndex = 6;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(8, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(48, 23);
+            this._Label2.TabIndex = 5;
+            this._Label2.Text = "Name";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.AccessibleDescription = "Save item";
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnSave.ImageIndex = 1;
+            this._btnSave.Location = new System.Drawing.Point(336, 212);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(48, 23);
+            this._btnSave.TabIndex = 7;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FRMTypeMakeModel
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(784, 494);
-            Controls.Add(_grpDetails);
-            Controls.Add(_grpItems);
-            Controls.Add(_Label1);
-            Controls.Add(_cboType);
-            MinimumSize = new Size(792, 528);
-            Name = "FRMTypeMakeModel";
-            Text = "Picklists / Settings";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_cboType, 0);
-            Controls.SetChildIndex(_Label1, 0);
-            Controls.SetChildIndex(_grpItems, 0);
-            Controls.SetChildIndex(_grpDetails, 0);
-            _grpItems.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgManager).EndInit();
-            _grpDetails.ResumeLayout(false);
-            _grpDetails.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(784, 494);
+            this.Controls.Add(this._grpDetails);
+            this.Controls.Add(this._grpItems);
+            this.Controls.Add(this._Label1);
+            this.Controls.Add(this._cboType);
+            this.MinimumSize = new System.Drawing.Size(792, 528);
+            this.Name = "FRMTypeMakeModel";
+            this.Text = "Picklists / Settings";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpItems.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgManager)).EndInit();
+            this._grpDetails.ResumeLayout(false);
+            this._grpDetails.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

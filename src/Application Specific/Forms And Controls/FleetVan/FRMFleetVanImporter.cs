@@ -173,112 +173,114 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpExcelFile = new GroupBox();
-            _Label2 = new Label();
-            _btnImport = new Button();
-            _btnImport.Click += new EventHandler(btnImport_Click);
-            _btnFindExcelFile = new Button();
-            _btnFindExcelFile.Click += new EventHandler(btnFindExcelFile_Click);
-            _txtExcelFile = new TextBox();
-            _grpFailedImports = new GroupBox();
-            _dgFailedImports = new DataGrid();
-            _grpExcelFile.SuspendLayout();
-            _grpFailedImports.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgFailedImports).BeginInit();
-            SuspendLayout();
-            //
-            // grpExcelFile
-            //
-            _grpExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpExcelFile.Controls.Add(_Label2);
-            _grpExcelFile.Controls.Add(_btnImport);
-            _grpExcelFile.Controls.Add(_btnFindExcelFile);
-            _grpExcelFile.Controls.Add(_txtExcelFile);
-            _grpExcelFile.FlatStyle = FlatStyle.System;
-            _grpExcelFile.Location = new Point(8, 40);
-            _grpExcelFile.Name = "grpExcelFile";
-            _grpExcelFile.Size = new Size(655, 64);
-            _grpExcelFile.TabIndex = 3;
-            _grpExcelFile.TabStop = false;
-            _grpExcelFile.Text = "Select file to import";
-            //
-            // Label2
-            //
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(6, 22);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(31, 13);
-            _Label2.TabIndex = 13;
-            _Label2.Text = "File:";
-            //
-            // btnImport
-            //
-            _btnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnImport.Enabled = false;
-            _btnImport.FlatStyle = FlatStyle.System;
-            _btnImport.Location = new Point(574, 17);
-            _btnImport.Name = "btnImport";
-            _btnImport.Size = new Size(64, 23);
-            _btnImport.TabIndex = 7;
-            _btnImport.Text = "Import";
-            //
-            // btnFindExcelFile
-            //
-            _btnFindExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindExcelFile.FlatStyle = FlatStyle.System;
-            _btnFindExcelFile.Location = new Point(536, 17);
-            _btnFindExcelFile.Name = "btnFindExcelFile";
-            _btnFindExcelFile.Size = new Size(32, 23);
-            _btnFindExcelFile.TabIndex = 5;
-            _btnFindExcelFile.Text = "...";
-            //
-            // txtExcelFile
-            //
-            _txtExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtExcelFile.Location = new Point(50, 19);
-            _txtExcelFile.Name = "txtExcelFile";
-            _txtExcelFile.ReadOnly = true;
-            _txtExcelFile.Size = new Size(480, 21);
-            _txtExcelFile.TabIndex = 4;
-            //
-            // grpFailedImports
-            //
-            _grpFailedImports.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFailedImports.Controls.Add(_dgFailedImports);
-            _grpFailedImports.FlatStyle = FlatStyle.System;
-            _grpFailedImports.Location = new Point(8, 110);
-            _grpFailedImports.Name = "grpFailedImports";
-            _grpFailedImports.Size = new Size(655, 477);
-            _grpFailedImports.TabIndex = 14;
-            _grpFailedImports.TabStop = false;
-            _grpFailedImports.Text = "Failed Imports";
-            //
-            // dgFailedImports
-            //
-            _dgFailedImports.DataMember = "";
-            _dgFailedImports.Dock = DockStyle.Fill;
-            _dgFailedImports.HeaderForeColor = SystemColors.ControlText;
-            _dgFailedImports.Location = new Point(3, 17);
-            _dgFailedImports.Name = "dgFailedImports";
-            _dgFailedImports.Size = new Size(649, 457);
-            _dgFailedImports.TabIndex = 45;
-            //
+            this._grpExcelFile = new System.Windows.Forms.GroupBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnImport = new System.Windows.Forms.Button();
+            this._btnFindExcelFile = new System.Windows.Forms.Button();
+            this._txtExcelFile = new System.Windows.Forms.TextBox();
+            this._grpFailedImports = new System.Windows.Forms.GroupBox();
+            this._dgFailedImports = new System.Windows.Forms.DataGrid();
+            this._grpExcelFile.SuspendLayout();
+            this._grpFailedImports.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgFailedImports)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpExcelFile
+            // 
+            this._grpExcelFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpExcelFile.Controls.Add(this._Label2);
+            this._grpExcelFile.Controls.Add(this._btnImport);
+            this._grpExcelFile.Controls.Add(this._btnFindExcelFile);
+            this._grpExcelFile.Controls.Add(this._txtExcelFile);
+            this._grpExcelFile.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpExcelFile.Location = new System.Drawing.Point(8, 12);
+            this._grpExcelFile.Name = "_grpExcelFile";
+            this._grpExcelFile.Size = new System.Drawing.Size(655, 64);
+            this._grpExcelFile.TabIndex = 3;
+            this._grpExcelFile.TabStop = false;
+            this._grpExcelFile.Text = "Select file to import";
+            // 
+            // _Label2
+            // 
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(6, 22);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(31, 13);
+            this._Label2.TabIndex = 13;
+            this._Label2.Text = "File:";
+            // 
+            // _btnImport
+            // 
+            this._btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnImport.Enabled = false;
+            this._btnImport.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._btnImport.Location = new System.Drawing.Point(574, 17);
+            this._btnImport.Name = "_btnImport";
+            this._btnImport.Size = new System.Drawing.Size(64, 23);
+            this._btnImport.TabIndex = 7;
+            this._btnImport.Text = "Import";
+            this._btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // _btnFindExcelFile
+            // 
+            this._btnFindExcelFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindExcelFile.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._btnFindExcelFile.Location = new System.Drawing.Point(536, 17);
+            this._btnFindExcelFile.Name = "_btnFindExcelFile";
+            this._btnFindExcelFile.Size = new System.Drawing.Size(32, 23);
+            this._btnFindExcelFile.TabIndex = 5;
+            this._btnFindExcelFile.Text = "...";
+            this._btnFindExcelFile.Click += new System.EventHandler(this.btnFindExcelFile_Click);
+            // 
+            // _txtExcelFile
+            // 
+            this._txtExcelFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtExcelFile.Location = new System.Drawing.Point(50, 19);
+            this._txtExcelFile.Name = "_txtExcelFile";
+            this._txtExcelFile.ReadOnly = true;
+            this._txtExcelFile.Size = new System.Drawing.Size(480, 21);
+            this._txtExcelFile.TabIndex = 4;
+            // 
+            // _grpFailedImports
+            // 
+            this._grpFailedImports.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFailedImports.Controls.Add(this._dgFailedImports);
+            this._grpFailedImports.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpFailedImports.Location = new System.Drawing.Point(8, 82);
+            this._grpFailedImports.Name = "_grpFailedImports";
+            this._grpFailedImports.Size = new System.Drawing.Size(655, 505);
+            this._grpFailedImports.TabIndex = 14;
+            this._grpFailedImports.TabStop = false;
+            this._grpFailedImports.Text = "Failed Imports";
+            // 
+            // _dgFailedImports
+            // 
+            this._dgFailedImports.DataMember = "";
+            this._dgFailedImports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dgFailedImports.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgFailedImports.Location = new System.Drawing.Point(3, 17);
+            this._dgFailedImports.Name = "_dgFailedImports";
+            this._dgFailedImports.Size = new System.Drawing.Size(649, 485);
+            this._dgFailedImports.TabIndex = 45;
+            // 
             // FRMFleetVanImporter
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(671, 599);
-            Controls.Add(_grpFailedImports);
-            Controls.Add(_grpExcelFile);
-            Name = "FRMFleetVanImporter";
-            Text = "Fleet Van Mileage Import";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpExcelFile, 0);
-            Controls.SetChildIndex(_grpFailedImports, 0);
-            _grpExcelFile.ResumeLayout(false);
-            _grpExcelFile.PerformLayout();
-            _grpFailedImports.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgFailedImports).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(671, 599);
+            this.Controls.Add(this._grpFailedImports);
+            this.Controls.Add(this._grpExcelFile);
+            this.Name = "FRMFleetVanImporter";
+            this.Text = "Fleet Van Mileage Import";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpExcelFile.ResumeLayout(false);
+            this._grpExcelFile.PerformLayout();
+            this._grpFailedImports.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgFailedImports)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public IUserControl LoadedControl

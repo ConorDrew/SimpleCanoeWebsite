@@ -125,84 +125,81 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pnlMain = new Panel();
-            _btnPrivateNotes = new Button();
-            _btnPrivateNotes.Click += new EventHandler(btnReset_Click);
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click_1);
-            _btnSaveProg = new Button();
-            _btnSaveProg.Click += new EventHandler(Button1_Click);
-            SuspendLayout();
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(12, 724);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(87, 25);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
-            // pnlMain
-            //
-            _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlMain.Location = new Point(0, 32);
-            _pnlMain.Name = "pnlMain";
-            _pnlMain.Size = new Size(926, 685);
-            _pnlMain.TabIndex = 1;
-            //
-            // btnPrivateNotes
-            //
-            _btnPrivateNotes.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnPrivateNotes.Location = new Point(380, 724);
-            _btnPrivateNotes.Name = "btnPrivateNotes";
-            _btnPrivateNotes.Size = new Size(123, 25);
-            _btnPrivateNotes.TabIndex = 4;
-            _btnPrivateNotes.Text = "Private Notes";
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(709, 724);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(87, 25);
-            _btnReset.TabIndex = 5;
-            _btnReset.Text = "Restart";
-            //
-            // btnSaveProg
-            //
-            _btnSaveProg.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSaveProg.Location = new Point(802, 724);
-            _btnSaveProg.Name = "btnSaveProg";
-            _btnSaveProg.Size = new Size(122, 25);
-            _btnSaveProg.TabIndex = 6;
-            _btnSaveProg.Text = "Save Progress";
-            _btnSaveProg.Visible = false;
-            //
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pnlMain = new System.Windows.Forms.Panel();
+            this._btnPrivateNotes = new System.Windows.Forms.Button();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._btnSaveProg = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(12, 724);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(87, 25);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pnlMain
+            // 
+            this._pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlMain.Location = new System.Drawing.Point(0, 12);
+            this._pnlMain.Name = "_pnlMain";
+            this._pnlMain.Size = new System.Drawing.Size(926, 705);
+            this._pnlMain.TabIndex = 1;
+            // 
+            // _btnPrivateNotes
+            // 
+            this._btnPrivateNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnPrivateNotes.Location = new System.Drawing.Point(380, 724);
+            this._btnPrivateNotes.Name = "_btnPrivateNotes";
+            this._btnPrivateNotes.Size = new System.Drawing.Size(123, 25);
+            this._btnPrivateNotes.TabIndex = 4;
+            this._btnPrivateNotes.Text = "Private Notes";
+            this._btnPrivateNotes.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(709, 724);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(87, 25);
+            this._btnReset.TabIndex = 5;
+            this._btnReset.Text = "Restart";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click_1);
+            // 
+            // _btnSaveProg
+            // 
+            this._btnSaveProg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSaveProg.Location = new System.Drawing.Point(802, 724);
+            this._btnSaveProg.Name = "_btnSaveProg";
+            this._btnSaveProg.Size = new System.Drawing.Size(122, 25);
+            this._btnSaveProg.TabIndex = 6;
+            this._btnSaveProg.Text = "Save Progress";
+            this._btnSaveProg.Visible = false;
+            this._btnSaveProg.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // FRMJobWizard
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(934, 761);
-            Controls.Add(_btnSaveProg);
-            Controls.Add(_btnReset);
-            Controls.Add(_btnPrivateNotes);
-            Controls.Add(_btnClose);
-            Controls.Add(_pnlMain);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(950, 733);
-            Name = "FRMJobWizard";
-            Text = "Job Wizard";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_pnlMain, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_btnPrivateNotes, 0);
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_btnSaveProg, 0);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(934, 761);
+            this.Controls.Add(this._btnSaveProg);
+            this.Controls.Add(this._btnReset);
+            this.Controls.Add(this._btnPrivateNotes);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._pnlMain);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(950, 733);
+            this.Name = "FRMJobWizard";
+            this.Text = "Job Wizard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

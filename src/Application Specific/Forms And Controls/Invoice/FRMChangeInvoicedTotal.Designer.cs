@@ -37,170 +37,171 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _txtInvoicedTotal = new TextBox();
-            _Label2 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _txtPassword = new TextBox();
-            _txtPassword.TextChanged += new EventHandler(txtPassword_TextChanged);
-            _Label1 = new Label();
-            _Label3 = new Label();
-            _txtAccount = new TextBox();
-            _Label4 = new Label();
-            _txtNominal = new TextBox();
-            _Label5 = new Label();
-            _txtDept = new TextBox();
-            _Label6 = new Label();
-            _dtpTaxDate = new DateTimePicker();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dtpTaxDate = new System.Windows.Forms.DateTimePicker();
+            this._txtDept = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._txtNominal = new System.Windows.Forms.TextBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._txtAccount = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtInvoicedTotal = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._txtPassword = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_dtpTaxDate);
-            _GroupBox1.Controls.Add(_txtDept);
-            _GroupBox1.Controls.Add(_Label6);
-            _GroupBox1.Controls.Add(_txtNominal);
-            _GroupBox1.Controls.Add(_Label5);
-            _GroupBox1.Controls.Add(_txtAccount);
-            _GroupBox1.Controls.Add(_Label4);
-            _GroupBox1.Controls.Add(_Label3);
-            _GroupBox1.Controls.Add(_txtInvoicedTotal);
-            _GroupBox1.Controls.Add(_Label2);
-            _GroupBox1.Controls.Add(_btnSave);
-            _GroupBox1.Controls.Add(_txtPassword);
-            _GroupBox1.Controls.Add(_Label1);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(502, 263);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Change Invoiced Total";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dtpTaxDate);
+            this._GroupBox1.Controls.Add(this._txtDept);
+            this._GroupBox1.Controls.Add(this._Label6);
+            this._GroupBox1.Controls.Add(this._txtNominal);
+            this._GroupBox1.Controls.Add(this._Label5);
+            this._GroupBox1.Controls.Add(this._txtAccount);
+            this._GroupBox1.Controls.Add(this._Label4);
+            this._GroupBox1.Controls.Add(this._Label3);
+            this._GroupBox1.Controls.Add(this._txtInvoicedTotal);
+            this._GroupBox1.Controls.Add(this._Label2);
+            this._GroupBox1.Controls.Add(this._btnSave);
+            this._GroupBox1.Controls.Add(this._txtPassword);
+            this._GroupBox1.Controls.Add(this._Label1);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(502, 289);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Change Invoiced Total";
             // 
-            // txtInvoicedTotal
+            // _dtpTaxDate
             // 
-            _txtInvoicedTotal.Location = new Point(194, 195);
-            _txtInvoicedTotal.Name = "txtInvoicedTotal";
-            _txtInvoicedTotal.Size = new Size(291, 21);
-            _txtInvoicedTotal.TabIndex = 3;
+            this._dtpTaxDate.Location = new System.Drawing.Point(194, 68);
+            this._dtpTaxDate.Name = "_dtpTaxDate";
+            this._dtpTaxDate.Size = new System.Drawing.Size(291, 21);
+            this._dtpTaxDate.TabIndex = 13;
             // 
-            // Label2
+            // _txtDept
             // 
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(6, 203);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(87, 13);
-            _Label2.TabIndex = 2;
-            _Label2.Text = "Invoiced Total";
+            this._txtDept.Location = new System.Drawing.Point(194, 149);
+            this._txtDept.Name = "_txtDept";
+            this._txtDept.Size = new System.Drawing.Size(291, 21);
+            this._txtDept.TabIndex = 12;
             // 
-            // btnSave
+            // _Label6
             // 
-            _btnSave.Enabled = false;
-            _btnSave.Location = new Point(410, 234);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(75, 23);
-            _btnSave.TabIndex = 4;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
+            this._Label6.AutoSize = true;
+            this._Label6.Location = new System.Drawing.Point(6, 152);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(75, 13);
+            this._Label6.TabIndex = 11;
+            this._Label6.Text = "Department";
             // 
-            // txtPassword
+            // _txtNominal
             // 
-            _txtPassword.Location = new Point(194, 27);
-            _txtPassword.Name = "txtPassword";
-            _txtPassword.PasswordChar = (char)42;
-            _txtPassword.Size = new Size(291, 21);
-            _txtPassword.TabIndex = 1;
-            _txtPassword.UseSystemPasswordChar = true;
+            this._txtNominal.Location = new System.Drawing.Point(194, 122);
+            this._txtNominal.Name = "_txtNominal";
+            this._txtNominal.Size = new System.Drawing.Size(291, 21);
+            this._txtNominal.TabIndex = 10;
             // 
-            // Label1
+            // _Label5
             // 
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(6, 30);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(169, 13);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Enter the override password";
+            this._Label5.AutoSize = true;
+            this._Label5.Location = new System.Drawing.Point(6, 130);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(53, 13);
+            this._Label5.TabIndex = 9;
+            this._Label5.Text = "Nominal";
             // 
-            // Label3
+            // _txtAccount
             // 
-            _Label3.AutoSize = true;
-            _Label3.Location = new Point(6, 76);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(58, 13);
-            _Label3.TabIndex = 5;
-            _Label3.Text = "Tax Date";
+            this._txtAccount.Location = new System.Drawing.Point(194, 95);
+            this._txtAccount.Name = "_txtAccount";
+            this._txtAccount.Size = new System.Drawing.Size(291, 21);
+            this._txtAccount.TabIndex = 8;
             // 
-            // txtAccount
+            // _Label4
             // 
-            _txtAccount.Location = new Point(194, 95);
-            _txtAccount.Name = "txtAccount";
-            _txtAccount.Size = new Size(291, 21);
-            _txtAccount.TabIndex = 8;
+            this._Label4.AutoSize = true;
+            this._Label4.Location = new System.Drawing.Point(6, 103);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(52, 13);
+            this._Label4.TabIndex = 7;
+            this._Label4.Text = "Account";
             // 
-            // Label4
+            // _Label3
             // 
-            _Label4.AutoSize = true;
-            _Label4.Location = new Point(6, 103);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(52, 13);
-            _Label4.TabIndex = 7;
-            _Label4.Text = "Account";
+            this._Label3.AutoSize = true;
+            this._Label3.Location = new System.Drawing.Point(6, 76);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(58, 13);
+            this._Label3.TabIndex = 5;
+            this._Label3.Text = "Tax Date";
             // 
-            // txtNominal
+            // _txtInvoicedTotal
             // 
-            _txtNominal.Location = new Point(194, 122);
-            _txtNominal.Name = "txtNominal";
-            _txtNominal.Size = new Size(291, 21);
-            _txtNominal.TabIndex = 10;
+            this._txtInvoicedTotal.Location = new System.Drawing.Point(194, 195);
+            this._txtInvoicedTotal.Name = "_txtInvoicedTotal";
+            this._txtInvoicedTotal.Size = new System.Drawing.Size(291, 21);
+            this._txtInvoicedTotal.TabIndex = 3;
             // 
-            // Label5
+            // _Label2
             // 
-            _Label5.AutoSize = true;
-            _Label5.Location = new Point(6, 130);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(53, 13);
-            _Label5.TabIndex = 9;
-            _Label5.Text = "Nominal";
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(6, 203);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(87, 13);
+            this._Label2.TabIndex = 2;
+            this._Label2.Text = "Invoiced Total";
             // 
-            // txtDept
+            // _btnSave
             // 
-            _txtDept.Location = new Point(194, 149);
-            _txtDept.Name = "txtDept";
-            _txtDept.Size = new Size(291, 21);
-            _txtDept.TabIndex = 12;
+            this._btnSave.Enabled = false;
+            this._btnSave.Location = new System.Drawing.Point(410, 234);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 4;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // Label6
+            // _txtPassword
             // 
-            _Label6.AutoSize = true;
-            _Label6.Location = new Point(6, 152);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(75, 13);
-            _Label6.TabIndex = 11;
-            _Label6.Text = "Department";
+            this._txtPassword.Location = new System.Drawing.Point(194, 27);
+            this._txtPassword.Name = "_txtPassword";
+            this._txtPassword.PasswordChar = '*';
+            this._txtPassword.Size = new System.Drawing.Size(291, 21);
+            this._txtPassword.TabIndex = 1;
+            this._txtPassword.UseSystemPasswordChar = true;
+            this._txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
-            // dtpTaxDate
+            // _Label1
             // 
-            _dtpTaxDate.Location = new Point(194, 68);
-            _dtpTaxDate.Name = "dtpTaxDate";
-            _dtpTaxDate.Size = new Size(291, 21);
-            _dtpTaxDate.TabIndex = 13;
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(6, 30);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(169, 13);
+            this._Label1.TabIndex = 0;
+            this._Label1.Text = "Enter the override password";
             // 
             // FRMChangeInvoicedTotal
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(526, 313);
-            Controls.Add(_GroupBox1);
-            Name = "FRMChangeInvoicedTotal";
-            Text = "Change Invoiced Total";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            Load += new EventHandler(FRMChangeInvoicedTotal_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(526, 313);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FRMChangeInvoicedTotal";
+            this.Text = "Change Invoiced Total";
+            this.Load += new System.EventHandler(this.FRMChangeInvoicedTotal_Load);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         void IForm.LoadMe(object sender, EventArgs e)

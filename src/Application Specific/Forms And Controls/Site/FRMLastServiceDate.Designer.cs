@@ -37,85 +37,86 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _dtpActualServiceDate = new DateTimePicker();
-            _lblActualServiceDate = new Label();
-            _Label2 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _dtpLastServiceDate = new DateTimePicker();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dtpActualServiceDate = new System.Windows.Forms.DateTimePicker();
+            this._lblActualServiceDate = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._dtpLastServiceDate = new System.Windows.Forms.DateTimePicker();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_dtpActualServiceDate);
-            _GroupBox1.Controls.Add(_lblActualServiceDate);
-            _GroupBox1.Controls.Add(_Label2);
-            _GroupBox1.Controls.Add(_btnSave);
-            _GroupBox1.Controls.Add(_dtpLastServiceDate);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(319, 118);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Change Last Service Date";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dtpActualServiceDate);
+            this._GroupBox1.Controls.Add(this._lblActualServiceDate);
+            this._GroupBox1.Controls.Add(this._Label2);
+            this._GroupBox1.Controls.Add(this._btnSave);
+            this._GroupBox1.Controls.Add(this._dtpLastServiceDate);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(319, 144);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Change Last Service Date";
             // 
-            // dtpActualServiceDate
+            // _dtpActualServiceDate
             // 
-            _dtpActualServiceDate.Location = new Point(173, 43);
-            _dtpActualServiceDate.Name = "dtpActualServiceDate";
-            _dtpActualServiceDate.Size = new Size(139, 21);
-            _dtpActualServiceDate.TabIndex = 140;
+            this._dtpActualServiceDate.Location = new System.Drawing.Point(173, 43);
+            this._dtpActualServiceDate.Name = "_dtpActualServiceDate";
+            this._dtpActualServiceDate.Size = new System.Drawing.Size(139, 21);
+            this._dtpActualServiceDate.TabIndex = 140;
             // 
-            // lblActualServiceDate
+            // _lblActualServiceDate
             // 
-            _lblActualServiceDate.Location = new Point(6, 49);
-            _lblActualServiceDate.Name = "lblActualServiceDate";
-            _lblActualServiceDate.Size = new Size(124, 20);
-            _lblActualServiceDate.TabIndex = 139;
-            _lblActualServiceDate.Text = "Service Date";
+            this._lblActualServiceDate.Location = new System.Drawing.Point(6, 49);
+            this._lblActualServiceDate.Name = "_lblActualServiceDate";
+            this._lblActualServiceDate.Size = new System.Drawing.Size(124, 20);
+            this._lblActualServiceDate.TabIndex = 139;
+            this._lblActualServiceDate.Text = "Service Date";
             // 
-            // Label2
+            // _Label2
             // 
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(6, 23);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(108, 13);
-            _Label2.TabIndex = 138;
-            _Label2.Text = "Service Due Date";
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(6, 23);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(108, 13);
+            this._Label2.TabIndex = 138;
+            this._Label2.Text = "Service Due Date";
             // 
-            // btnSave
+            // _btnSave
             // 
-            _btnSave.Location = new Point(237, 79);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(75, 23);
-            _btnSave.TabIndex = 137;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Location = new System.Drawing.Point(237, 79);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 137;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dtpLastServiceDate
+            // _dtpLastServiceDate
             // 
-            _dtpLastServiceDate.Location = new Point(173, 17);
-            _dtpLastServiceDate.Name = "dtpLastServiceDate";
-            _dtpLastServiceDate.Size = new Size(139, 21);
-            _dtpLastServiceDate.TabIndex = 136;
+            this._dtpLastServiceDate.Location = new System.Drawing.Point(173, 17);
+            this._dtpLastServiceDate.Name = "_dtpLastServiceDate";
+            this._dtpLastServiceDate.Size = new System.Drawing.Size(139, 21);
+            this._dtpLastServiceDate.TabIndex = 136;
             // 
             // FRMLastServiceDate
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(343, 168);
-            Controls.Add(_GroupBox1);
-            Name = "FRMLastServiceDate";
-            Text = "Change Last Service Date";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            Load += new EventHandler(FRMLastServiceDate_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(343, 168);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FRMLastServiceDate";
+            this.Text = "Change Last Service Date";
+            this.Load += new System.EventHandler(this.FRMLastServiceDate_Load);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _GroupBox1;

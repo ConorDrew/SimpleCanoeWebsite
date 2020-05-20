@@ -151,75 +151,75 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnSave_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnClose_Click);
-            _grpLocations = new GroupBox();
-            _dgLocations = new DataGrid();
-            _dgLocations.MouseUp += new MouseEventHandler(dgLocations_MouseUp);
-            _grpLocations.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgLocations).BeginInit();
-            SuspendLayout();
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(856, 444);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(60, 25);
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(12, 444);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(56, 25);
-            _btnCancel.TabIndex = 7;
-            _btnCancel.Text = "Cancel";
-            //
-            // grpLocations
-            //
-            _grpLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpLocations.Controls.Add(_dgLocations);
-            _grpLocations.Location = new Point(12, 38);
-            _grpLocations.Name = "grpLocations";
-            _grpLocations.Size = new Size(904, 400);
-            _grpLocations.TabIndex = 3;
-            _grpLocations.TabStop = false;
-            _grpLocations.Text = "Select location to replenish from : {0}";
-            //
-            // dgLocations
-            //
-            _dgLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgLocations.DataMember = "";
-            _dgLocations.HeaderForeColor = SystemColors.ControlText;
-            _dgLocations.Location = new Point(9, 20);
-            _dgLocations.Name = "dgLocations";
-            _dgLocations.Size = new Size(889, 374);
-            _dgLocations.TabIndex = 1;
-            //
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._grpLocations = new System.Windows.Forms.GroupBox();
+            this._dgLocations = new System.Windows.Forms.DataGrid();
+            this._grpLocations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgLocations)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(856, 444);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(60, 25);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(12, 444);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(56, 25);
+            this._btnCancel.TabIndex = 7;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _grpLocations
+            // 
+            this._grpLocations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpLocations.Controls.Add(this._dgLocations);
+            this._grpLocations.Location = new System.Drawing.Point(12, 12);
+            this._grpLocations.Name = "_grpLocations";
+            this._grpLocations.Size = new System.Drawing.Size(904, 426);
+            this._grpLocations.TabIndex = 3;
+            this._grpLocations.TabStop = false;
+            this._grpLocations.Text = "Select location to replenish from : {0}";
+            // 
+            // _dgLocations
+            // 
+            this._dgLocations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgLocations.DataMember = "";
+            this._dgLocations.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgLocations.Location = new System.Drawing.Point(9, 20);
+            this._dgLocations.Name = "_dgLocations";
+            this._dgLocations.Size = new System.Drawing.Size(889, 400);
+            this._dgLocations.TabIndex = 1;
+            this._dgLocations.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgLocations_MouseUp);
+            // 
             // FRMSelectLocation
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(928, 481);
-            ControlBox = false;
-            Controls.Add(_grpLocations);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            MinimumSize = new Size(825, 420);
-            Name = "FRMSelectLocation";
-            Text = "Replenish from...";
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_grpLocations, 0);
-            _grpLocations.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgLocations).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(928, 481);
+            this.ControlBox = false;
+            this.Controls.Add(this._grpLocations);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.MinimumSize = new System.Drawing.Size(825, 420);
+            this.Name = "FRMSelectLocation";
+            this.Text = "Replenish from...";
+            this._grpLocations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgLocations)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

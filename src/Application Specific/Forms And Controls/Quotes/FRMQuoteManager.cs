@@ -482,289 +482,294 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJobs = new GroupBox();
-            _dgQuotes = new DataGrid();
-            _dgQuotes.DoubleClick += new EventHandler(dgQuotes_DoubleClick);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpFilter = new GroupBox();
-            _btnFindSite = new Button();
-            _btnFindSite.Click += new EventHandler(btnFindSite_Click);
-            _txtSite = new TextBox();
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnFindCustomer_Click);
-            _txtCustomer = new TextBox();
-            _Label1 = new Label();
-            _dtpTo = new DateTimePicker();
-            _dtpTo.ValueChanged += new EventHandler(dtpTo_ValueChanged);
-            _dtpFrom = new DateTimePicker();
-            _dtpFrom.ValueChanged += new EventHandler(dtpFrom_ValueChanged);
-            _txtReference = new TextBox();
-            _txtReference.TextChanged += new EventHandler(txtReference_TextChanged);
-            _Label9 = new Label();
-            _Label8 = new Label();
-            _chkQuoteDate = new CheckBox();
-            _chkQuoteDate.CheckedChanged += new EventHandler(chkQuoteDate_CheckedChanged);
-            _Label6 = new Label();
-            _Label2 = new Label();
-            _Label10 = new Label();
-            _cboType = new ComboBox();
-            _cboType.SelectedIndexChanged += new EventHandler(cboType_SelectedIndexChanged);
-            _Label11 = new Label();
-            _cboStatus = new ComboBox();
-            _cboStatus.SelectedIndexChanged += new EventHandler(cboStatus_SelectedIndexChanged);
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _grpJobs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgQuotes).BeginInit();
-            _grpFilter.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpJobs
-            //
-            _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpJobs.Controls.Add(_dgQuotes);
-            _grpJobs.Location = new Point(8, 232);
-            _grpJobs.Name = "grpJobs";
-            _grpJobs.Size = new Size(784, 224);
-            _grpJobs.TabIndex = 2;
-            _grpJobs.TabStop = false;
-            _grpJobs.Text = "Double Click To View / Edit";
-            //
-            // dgQuotes
-            //
-            _dgQuotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgQuotes.DataMember = "";
-            _dgQuotes.HeaderForeColor = SystemColors.ControlText;
-            _dgQuotes.Location = new Point(8, 27);
-            _dgQuotes.Name = "dgQuotes";
-            _dgQuotes.Size = new Size(768, 189);
-            _dgQuotes.TabIndex = 9;
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 464);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 10;
-            _btnExport.Text = "Export";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_btnFindSite);
-            _grpFilter.Controls.Add(_txtSite);
-            _grpFilter.Controls.Add(_btnFindCustomer);
-            _grpFilter.Controls.Add(_txtCustomer);
-            _grpFilter.Controls.Add(_Label1);
-            _grpFilter.Controls.Add(_dtpTo);
-            _grpFilter.Controls.Add(_dtpFrom);
-            _grpFilter.Controls.Add(_txtReference);
-            _grpFilter.Controls.Add(_Label9);
-            _grpFilter.Controls.Add(_Label8);
-            _grpFilter.Controls.Add(_chkQuoteDate);
-            _grpFilter.Controls.Add(_Label6);
-            _grpFilter.Controls.Add(_Label2);
-            _grpFilter.Controls.Add(_Label10);
-            _grpFilter.Controls.Add(_cboType);
-            _grpFilter.Controls.Add(_Label11);
-            _grpFilter.Controls.Add(_cboStatus);
-            _grpFilter.Location = new Point(8, 40);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(784, 184);
-            _grpFilter.TabIndex = 1;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // btnFindSite
-            //
-            _btnFindSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindSite.BackColor = Color.White;
-            _btnFindSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindSite.Location = new Point(736, 88);
-            _btnFindSite.Name = "btnFindSite";
-            _btnFindSite.Size = new Size(32, 23);
-            _btnFindSite.TabIndex = 15;
-            _btnFindSite.Text = "...";
-            _btnFindSite.UseVisualStyleBackColor = false;
-            //
-            // txtSite
-            //
-            _txtSite.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSite.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtSite.Location = new Point(104, 88);
-            _txtSite.Name = "txtSite";
-            _txtSite.ReadOnly = true;
-            _txtSite.Size = new Size(624, 21);
-            _txtSite.TabIndex = 14;
-            //
-            // btnFindCustomer
-            //
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.BackColor = Color.White;
-            _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindCustomer.Location = new Point(736, 56);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 13;
-            _btnFindCustomer.Text = "...";
-            _btnFindCustomer.UseVisualStyleBackColor = false;
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtCustomer.Location = new Point(104, 56);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(624, 21);
-            _txtCustomer.TabIndex = 12;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 56);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(64, 16);
-            _Label1.TabIndex = 11;
-            _Label1.Text = "Customer";
-            //
-            // dtpTo
-            //
-            _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpTo.Location = new Point(592, 152);
-            _dtpTo.Name = "dtpTo";
-            _dtpTo.Size = new Size(184, 21);
-            _dtpTo.TabIndex = 8;
-            //
-            // dtpFrom
-            //
-            _dtpFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpFrom.Location = new Point(592, 121);
-            _dtpFrom.Name = "dtpFrom";
-            _dtpFrom.Size = new Size(184, 21);
-            _dtpFrom.TabIndex = 7;
-            //
-            // txtReference
-            //
-            _txtReference.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtReference.Location = new Point(104, 121);
-            _txtReference.Name = "txtReference";
-            _txtReference.Size = new Size(312, 21);
-            _txtReference.TabIndex = 4;
-            //
-            // Label9
-            //
-            _Label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label9.Location = new Point(536, 153);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(48, 16);
-            _Label9.TabIndex = 10;
-            _Label9.Text = "To";
-            //
-            // Label8
-            //
-            _Label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label8.Location = new Point(536, 121);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(48, 16);
-            _Label8.TabIndex = 9;
-            _Label8.Text = "From";
-            //
-            // chkQuoteDate
-            //
-            _chkQuoteDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkQuoteDate.Cursor = Cursors.Hand;
-            _chkQuoteDate.UseVisualStyleBackColor = true;
-            _chkQuoteDate.Location = new Point(424, 121);
-            _chkQuoteDate.Name = "chkQuoteDate";
-            _chkQuoteDate.Size = new Size(104, 24);
-            _chkQuoteDate.TabIndex = 6;
-            _chkQuoteDate.Text = "Quote Date";
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(8, 120);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 16);
-            _Label6.TabIndex = 6;
-            _Label6.Text = "Reference";
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 88);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(64, 16);
-            _Label2.TabIndex = 2;
-            _Label2.Text = "Property";
-            //
-            // Label10
-            //
-            _Label10.Location = new Point(8, 24);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(48, 16);
-            _Label10.TabIndex = 4;
-            _Label10.Text = "Type";
-            //
-            // cboType
-            //
-            _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(104, 25);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(312, 21);
-            _cboType.TabIndex = 1;
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(8, 152);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(48, 16);
-            _Label11.TabIndex = 5;
-            _Label11.Text = "Status";
-            //
-            // cboStatus
-            //
-            _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStatus.Location = new Point(104, 153);
-            _cboStatus.Name = "cboStatus";
-            _cboStatus.Size = new Size(312, 21);
-            _cboStatus.TabIndex = 5;
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(72, 464);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 11;
-            _btnReset.Text = "Reset";
-            //
+            this._grpJobs = new System.Windows.Forms.GroupBox();
+            this._dgQuotes = new System.Windows.Forms.DataGrid();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._btnFindSite = new System.Windows.Forms.Button();
+            this._txtSite = new System.Windows.Forms.TextBox();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._dtpTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this._txtReference = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._chkQuoteDate = new System.Windows.Forms.CheckBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._cboStatus = new System.Windows.Forms.ComboBox();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._grpJobs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgQuotes)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpJobs
+            // 
+            this._grpJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobs.Controls.Add(this._dgQuotes);
+            this._grpJobs.Location = new System.Drawing.Point(8, 202);
+            this._grpJobs.Name = "_grpJobs";
+            this._grpJobs.Size = new System.Drawing.Size(784, 254);
+            this._grpJobs.TabIndex = 2;
+            this._grpJobs.TabStop = false;
+            this._grpJobs.Text = "Double Click To View / Edit";
+            // 
+            // _dgQuotes
+            // 
+            this._dgQuotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgQuotes.DataMember = "";
+            this._dgQuotes.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgQuotes.Location = new System.Drawing.Point(8, 27);
+            this._dgQuotes.Name = "_dgQuotes";
+            this._dgQuotes.Size = new System.Drawing.Size(768, 219);
+            this._dgQuotes.TabIndex = 9;
+            this._dgQuotes.DoubleClick += new System.EventHandler(this.dgQuotes_DoubleClick);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 464);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 10;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._btnFindSite);
+            this._grpFilter.Controls.Add(this._txtSite);
+            this._grpFilter.Controls.Add(this._btnFindCustomer);
+            this._grpFilter.Controls.Add(this._txtCustomer);
+            this._grpFilter.Controls.Add(this._Label1);
+            this._grpFilter.Controls.Add(this._dtpTo);
+            this._grpFilter.Controls.Add(this._dtpFrom);
+            this._grpFilter.Controls.Add(this._txtReference);
+            this._grpFilter.Controls.Add(this._Label9);
+            this._grpFilter.Controls.Add(this._Label8);
+            this._grpFilter.Controls.Add(this._chkQuoteDate);
+            this._grpFilter.Controls.Add(this._Label6);
+            this._grpFilter.Controls.Add(this._Label2);
+            this._grpFilter.Controls.Add(this._Label10);
+            this._grpFilter.Controls.Add(this._cboType);
+            this._grpFilter.Controls.Add(this._Label11);
+            this._grpFilter.Controls.Add(this._cboStatus);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(784, 184);
+            this._grpFilter.TabIndex = 1;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _btnFindSite
+            // 
+            this._btnFindSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindSite.BackColor = System.Drawing.Color.White;
+            this._btnFindSite.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindSite.Location = new System.Drawing.Point(736, 88);
+            this._btnFindSite.Name = "_btnFindSite";
+            this._btnFindSite.Size = new System.Drawing.Size(32, 23);
+            this._btnFindSite.TabIndex = 15;
+            this._btnFindSite.Text = "...";
+            this._btnFindSite.UseVisualStyleBackColor = false;
+            this._btnFindSite.Click += new System.EventHandler(this.btnFindSite_Click);
+            // 
+            // _txtSite
+            // 
+            this._txtSite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSite.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtSite.Location = new System.Drawing.Point(104, 88);
+            this._txtSite.Name = "_txtSite";
+            this._txtSite.ReadOnly = true;
+            this._txtSite.Size = new System.Drawing.Size(624, 21);
+            this._txtSite.TabIndex = 14;
+            // 
+            // _btnFindCustomer
+            // 
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.BackColor = System.Drawing.Color.White;
+            this._btnFindCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(736, 56);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 13;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = false;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
+            // 
+            // _txtCustomer
+            // 
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtCustomer.Location = new System.Drawing.Point(104, 56);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(624, 21);
+            this._txtCustomer.TabIndex = 12;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 56);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(64, 16);
+            this._Label1.TabIndex = 11;
+            this._Label1.Text = "Customer";
+            // 
+            // _dtpTo
+            // 
+            this._dtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpTo.Location = new System.Drawing.Point(592, 152);
+            this._dtpTo.Name = "_dtpTo";
+            this._dtpTo.Size = new System.Drawing.Size(184, 21);
+            this._dtpTo.TabIndex = 8;
+            this._dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
+            // 
+            // _dtpFrom
+            // 
+            this._dtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpFrom.Location = new System.Drawing.Point(592, 121);
+            this._dtpFrom.Name = "_dtpFrom";
+            this._dtpFrom.Size = new System.Drawing.Size(184, 21);
+            this._dtpFrom.TabIndex = 7;
+            this._dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
+            // 
+            // _txtReference
+            // 
+            this._txtReference.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtReference.Location = new System.Drawing.Point(104, 121);
+            this._txtReference.Name = "_txtReference";
+            this._txtReference.Size = new System.Drawing.Size(312, 21);
+            this._txtReference.TabIndex = 4;
+            this._txtReference.TextChanged += new System.EventHandler(this.txtReference_TextChanged);
+            // 
+            // _Label9
+            // 
+            this._Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label9.Location = new System.Drawing.Point(536, 153);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(48, 16);
+            this._Label9.TabIndex = 10;
+            this._Label9.Text = "To";
+            // 
+            // _Label8
+            // 
+            this._Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label8.Location = new System.Drawing.Point(536, 121);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(48, 16);
+            this._Label8.TabIndex = 9;
+            this._Label8.Text = "From";
+            // 
+            // _chkQuoteDate
+            // 
+            this._chkQuoteDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkQuoteDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkQuoteDate.Location = new System.Drawing.Point(424, 121);
+            this._chkQuoteDate.Name = "_chkQuoteDate";
+            this._chkQuoteDate.Size = new System.Drawing.Size(104, 24);
+            this._chkQuoteDate.TabIndex = 6;
+            this._chkQuoteDate.Text = "Quote Date";
+            this._chkQuoteDate.UseVisualStyleBackColor = true;
+            this._chkQuoteDate.CheckedChanged += new System.EventHandler(this.chkQuoteDate_CheckedChanged);
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(8, 120);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 16);
+            this._Label6.TabIndex = 6;
+            this._Label6.Text = "Reference";
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(8, 88);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(64, 16);
+            this._Label2.TabIndex = 2;
+            this._Label2.Text = "Property";
+            // 
+            // _Label10
+            // 
+            this._Label10.Location = new System.Drawing.Point(8, 24);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(48, 16);
+            this._Label10.TabIndex = 4;
+            this._Label10.Text = "Type";
+            // 
+            // _cboType
+            // 
+            this._cboType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(104, 25);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(312, 21);
+            this._cboType.TabIndex = 1;
+            this._cboType.SelectedIndexChanged += new System.EventHandler(this.cboType_SelectedIndexChanged);
+            // 
+            // _Label11
+            // 
+            this._Label11.Location = new System.Drawing.Point(8, 152);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(48, 16);
+            this._Label11.TabIndex = 5;
+            this._Label11.Text = "Status";
+            // 
+            // _cboStatus
+            // 
+            this._cboStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStatus.Location = new System.Drawing.Point(104, 153);
+            this._cboStatus.Name = "_cboStatus";
+            this._cboStatus.Size = new System.Drawing.Size(312, 21);
+            this._cboStatus.TabIndex = 5;
+            this._cboStatus.SelectedIndexChanged += new System.EventHandler(this.cboStatus_SelectedIndexChanged);
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(72, 464);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 11;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // FRMQuoteManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(800, 494);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpJobs);
-            Controls.Add(_btnReset);
-            MinimumSize = new Size(808, 528);
-            Name = "FRMQuoteManager";
-            Text = "Quote Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpJobs, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            _grpJobs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgQuotes).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(800, 494);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpJobs);
+            this.Controls.Add(this._btnReset);
+            this.MinimumSize = new System.Drawing.Size(808, 528);
+            this.Name = "FRMQuoteManager";
+            this.Text = "Quote Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpJobs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgQuotes)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

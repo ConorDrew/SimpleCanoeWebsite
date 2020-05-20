@@ -37,116 +37,117 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _Label2 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _txtPassword = new TextBox();
-            _txtPassword.TextChanged += new EventHandler(txtPassword_TextChanged);
-            _Label1 = new Label();
-            _cboPaymentTerm = new ComboBox();
-            _cboPaymentTerm.SelectedIndexChanged += new EventHandler(cboPaymentTerm_SelectedIndexChanged);
-            _cboPaidBy = new ComboBox();
-            _lblPaidBy = new Label();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._cboPaidBy = new System.Windows.Forms.ComboBox();
+            this._lblPaidBy = new System.Windows.Forms.Label();
+            this._cboPaymentTerm = new System.Windows.Forms.ComboBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._txtPassword = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_cboPaidBy);
-            _GroupBox1.Controls.Add(_lblPaidBy);
-            _GroupBox1.Controls.Add(_cboPaymentTerm);
-            _GroupBox1.Controls.Add(_Label2);
-            _GroupBox1.Controls.Add(_btnSave);
-            _GroupBox1.Controls.Add(_txtPassword);
-            _GroupBox1.Controls.Add(_Label1);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(502, 189);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Change Invoiced Total";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._cboPaidBy);
+            this._GroupBox1.Controls.Add(this._lblPaidBy);
+            this._GroupBox1.Controls.Add(this._cboPaymentTerm);
+            this._GroupBox1.Controls.Add(this._Label2);
+            this._GroupBox1.Controls.Add(this._btnSave);
+            this._GroupBox1.Controls.Add(this._txtPassword);
+            this._GroupBox1.Controls.Add(this._Label1);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(502, 215);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Change Invoiced Total";
             // 
-            // Label2
+            // _cboPaidBy
             // 
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(6, 61);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(90, 13);
-            _Label2.TabIndex = 2;
-            _Label2.Text = "Payment Term";
+            this._cboPaidBy.FormattingEnabled = true;
+            this._cboPaidBy.Location = new System.Drawing.Point(194, 90);
+            this._cboPaidBy.Name = "_cboPaidBy";
+            this._cboPaidBy.Size = new System.Drawing.Size(291, 21);
+            this._cboPaidBy.TabIndex = 7;
+            this._cboPaidBy.Visible = false;
             // 
-            // btnSave
+            // _lblPaidBy
             // 
-            _btnSave.Enabled = false;
-            _btnSave.Location = new Point(410, 160);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(75, 23);
-            _btnSave.TabIndex = 4;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
+            this._lblPaidBy.AutoSize = true;
+            this._lblPaidBy.Location = new System.Drawing.Point(6, 93);
+            this._lblPaidBy.Name = "_lblPaidBy";
+            this._lblPaidBy.Size = new System.Drawing.Size(50, 13);
+            this._lblPaidBy.TabIndex = 6;
+            this._lblPaidBy.Text = "Paid By";
+            this._lblPaidBy.Visible = false;
             // 
-            // txtPassword
+            // _cboPaymentTerm
             // 
-            _txtPassword.Location = new Point(194, 27);
-            _txtPassword.Name = "txtPassword";
-            _txtPassword.PasswordChar = (char)42;
-            _txtPassword.Size = new Size(291, 21);
-            _txtPassword.TabIndex = 1;
-            _txtPassword.UseSystemPasswordChar = true;
+            this._cboPaymentTerm.Enabled = false;
+            this._cboPaymentTerm.FormattingEnabled = true;
+            this._cboPaymentTerm.Location = new System.Drawing.Point(194, 58);
+            this._cboPaymentTerm.Name = "_cboPaymentTerm";
+            this._cboPaymentTerm.Size = new System.Drawing.Size(291, 21);
+            this._cboPaymentTerm.TabIndex = 5;
+            this._cboPaymentTerm.SelectedIndexChanged += new System.EventHandler(this.cboPaymentTerm_SelectedIndexChanged);
             // 
-            // Label1
+            // _Label2
             // 
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(6, 30);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(169, 13);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Enter the override password";
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(6, 61);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(90, 13);
+            this._Label2.TabIndex = 2;
+            this._Label2.Text = "Payment Term";
             // 
-            // cboPaymentTerm
+            // _btnSave
             // 
-            _cboPaymentTerm.Enabled = false;
-            _cboPaymentTerm.FormattingEnabled = true;
-            _cboPaymentTerm.Location = new Point(194, 58);
-            _cboPaymentTerm.Name = "cboPaymentTerm";
-            _cboPaymentTerm.Size = new Size(291, 21);
-            _cboPaymentTerm.TabIndex = 5;
+            this._btnSave.Enabled = false;
+            this._btnSave.Location = new System.Drawing.Point(410, 186);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 4;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // cboPaidBy
+            // _txtPassword
             // 
-            _cboPaidBy.FormattingEnabled = true;
-            _cboPaidBy.Location = new Point(194, 90);
-            _cboPaidBy.Name = "cboPaidBy";
-            _cboPaidBy.Size = new Size(291, 21);
-            _cboPaidBy.TabIndex = 7;
-            _cboPaidBy.Visible = false;
+            this._txtPassword.Location = new System.Drawing.Point(194, 27);
+            this._txtPassword.Name = "_txtPassword";
+            this._txtPassword.PasswordChar = '*';
+            this._txtPassword.Size = new System.Drawing.Size(291, 21);
+            this._txtPassword.TabIndex = 1;
+            this._txtPassword.UseSystemPasswordChar = true;
+            this._txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
-            // lblPaidBy
+            // _Label1
             // 
-            _lblPaidBy.AutoSize = true;
-            _lblPaidBy.Location = new Point(6, 93);
-            _lblPaidBy.Name = "lblPaidBy";
-            _lblPaidBy.Size = new Size(50, 13);
-            _lblPaidBy.TabIndex = 6;
-            _lblPaidBy.Text = "Paid By";
-            _lblPaidBy.Visible = false;
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(6, 30);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(169, 13);
+            this._Label1.TabIndex = 0;
+            this._Label1.Text = "Enter the override password";
             // 
             // FRMChangePaymentTerms
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(526, 239);
-            Controls.Add(_GroupBox1);
-            Name = "FRMChangePaymentTerms";
-            Text = "Change Invoiced Total";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            Load += new EventHandler(FRMChangeInvoicedTotal_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(526, 239);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FRMChangePaymentTerms";
+            this.Text = "Change Invoiced Total";
+            this.Load += new System.EventHandler(this.FRMChangeInvoicedTotal_Load);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         void IForm.LoadMe(object sender, EventArgs e)

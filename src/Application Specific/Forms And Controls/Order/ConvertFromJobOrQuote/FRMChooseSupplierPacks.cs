@@ -147,61 +147,60 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _Label1 = new Label();
-            _cboPacks = new ComboBox();
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            SuspendLayout();
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 40);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(248, 23);
-            _Label1.TabIndex = 2;
-            _Label1.Text = "Item available in the following amounts:";
-            //
-            // cboPacks
-            //
-            _cboPacks.Location = new Point(256, 40);
-            _cboPacks.Name = "cboPacks";
-            _cboPacks.Size = new Size(240, 21);
-            _cboPacks.TabIndex = 3;
-            //
-            // btnOK
-            //
-            _btnOK.Location = new Point(416, 72);
-            _btnOK.Name = "btnOK";
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.Location = new Point(8, 72);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.TabIndex = 5;
-            _btnCancel.Text = "Cancel";
-            //
+            this._Label1 = new System.Windows.Forms.Label();
+            this._cboPacks = new System.Windows.Forms.ComboBox();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(5, 21);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(248, 23);
+            this._Label1.TabIndex = 2;
+            this._Label1.Text = "Item available in the following amounts:";
+            // 
+            // _cboPacks
+            // 
+            this._cboPacks.Location = new System.Drawing.Point(253, 21);
+            this._cboPacks.Name = "_cboPacks";
+            this._cboPacks.Size = new System.Drawing.Size(240, 21);
+            this._cboPacks.TabIndex = 3;
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Location = new System.Drawing.Point(416, 72);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Location = new System.Drawing.Point(8, 72);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 5;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FRMChooseSupplierPacks
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(504, 102);
-            ControlBox = false;
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            Controls.Add(_cboPacks);
-            Controls.Add(_Label1);
-            MaximumSize = new Size(512, 136);
-            MinimumSize = new Size(512, 136);
-            Name = "FRMChooseSupplierPacks";
-            Text = "Choose Packs";
-            Controls.SetChildIndex(_Label1, 0);
-            Controls.SetChildIndex(_cboPacks, 0);
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(496, 97);
+            this.ControlBox = false;
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.Controls.Add(this._cboPacks);
+            this.Controls.Add(this._Label1);
+            this.MaximumSize = new System.Drawing.Size(512, 136);
+            this.MinimumSize = new System.Drawing.Size(512, 136);
+            this.Name = "FRMChooseSupplierPacks";
+            this.Text = "Choose Packs";
+            this.ResumeLayout(false);
+
         }
 
         

@@ -351,295 +351,284 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _btnSendEmailToSite = new Button();
-            _btnSendEmailToSite.Click += new EventHandler(btnSendEmailToSite_Click);
-            _txtName = new TextBox();
-            _Label3 = new Label();
-            _txtAddress1 = new TextBox();
-            _lblAddress1 = new Label();
-            _txtAddress2 = new TextBox();
-            _lblAddress2 = new Label();
-            _txtAddress3 = new TextBox();
-            _lblAddress3 = new Label();
-            _txtAddress4 = new TextBox();
-            _lblTown = new Label();
-            _txtAddress5 = new TextBox();
-            _lblCounty = new Label();
-            _txtPostcode = new TextBox();
-            _lblPostcode = new Label();
-            _txtTelephoneNum = new TextBox();
-            _lblTelephoneNum = new Label();
-            _txtFaxNum = new TextBox();
-            _lblFaxNum = new Label();
-            _txtEmailAddress = new TextBox();
-            _lblEmailAddress = new Label();
-            SuspendLayout();
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(10, 290);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 25);
-            _btnClose.TabIndex = 12;
-            _btnClose.Text = "Close";
-            //
-            // btnSendEmailToSite
-            //
-            _btnSendEmailToSite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnSendEmailToSite.Location = new Point(541, 264);
-            _btnSendEmailToSite.Name = "btnSendEmailToSite";
-            _btnSendEmailToSite.Size = new Size(75, 23);
-            _btnSendEmailToSite.TabIndex = 11;
-            _btnSendEmailToSite.Text = "Email";
-            //
-            // txtName
-            //
-            _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtName.Location = new Point(105, 45);
-            _txtName.MaxLength = 255;
-            _txtName.Name = "txtName";
-            _txtName.ReadOnly = true;
-            _txtName.Size = new Size(511, 21);
-            _txtName.TabIndex = 1;
-            _txtName.Tag = "";
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(7, 45);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(64, 20);
-            _Label3.TabIndex = 23;
-            _Label3.Text = "Name";
-            //
-            // txtAddress1
-            //
-            _txtAddress1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAddress1.Location = new Point(105, 69);
-            _txtAddress1.MaxLength = 255;
-            _txtAddress1.Name = "txtAddress1";
-            _txtAddress1.ReadOnly = true;
-            _txtAddress1.Size = new Size(511, 21);
-            _txtAddress1.TabIndex = 2;
-            _txtAddress1.Tag = "Site.Address1";
-            //
-            // lblAddress1
-            //
-            _lblAddress1.Location = new Point(7, 69);
-            _lblAddress1.Name = "lblAddress1";
-            _lblAddress1.Size = new Size(67, 20);
-            _lblAddress1.TabIndex = 26;
-            _lblAddress1.Text = "Address 1";
-            //
-            // txtAddress2
-            //
-            _txtAddress2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAddress2.Location = new Point(105, 93);
-            _txtAddress2.MaxLength = 255;
-            _txtAddress2.Name = "txtAddress2";
-            _txtAddress2.ReadOnly = true;
-            _txtAddress2.Size = new Size(511, 21);
-            _txtAddress2.TabIndex = 3;
-            _txtAddress2.Tag = "Site.Address2";
-            //
-            // lblAddress2
-            //
-            _lblAddress2.Location = new Point(7, 93);
-            _lblAddress2.Name = "lblAddress2";
-            _lblAddress2.Size = new Size(72, 20);
-            _lblAddress2.TabIndex = 28;
-            _lblAddress2.Text = "Address 2";
-            //
-            // txtAddress3
-            //
-            _txtAddress3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAddress3.Location = new Point(105, 117);
-            _txtAddress3.MaxLength = 255;
-            _txtAddress3.Name = "txtAddress3";
-            _txtAddress3.ReadOnly = true;
-            _txtAddress3.Size = new Size(511, 21);
-            _txtAddress3.TabIndex = 4;
-            _txtAddress3.Tag = "Site.Address3";
-            //
-            // lblAddress3
-            //
-            _lblAddress3.Location = new Point(7, 117);
-            _lblAddress3.Name = "lblAddress3";
-            _lblAddress3.Size = new Size(64, 20);
-            _lblAddress3.TabIndex = 32;
-            _lblAddress3.Text = "Address 3";
-            //
-            // txtAddress4
-            //
-            _txtAddress4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAddress4.Location = new Point(105, 141);
-            _txtAddress4.MaxLength = 100;
-            _txtAddress4.Name = "txtAddress4";
-            _txtAddress4.ReadOnly = true;
-            _txtAddress4.Size = new Size(511, 21);
-            _txtAddress4.TabIndex = 5;
-            _txtAddress4.Tag = "Site.Town";
-            //
-            // lblTown
-            //
-            _lblTown.Location = new Point(7, 141);
-            _lblTown.Name = "lblTown";
-            _lblTown.Size = new Size(67, 20);
-            _lblTown.TabIndex = 35;
-            _lblTown.Text = "Address 4";
-            //
-            // txtAddress5
-            //
-            _txtAddress5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAddress5.Location = new Point(105, 165);
-            _txtAddress5.MaxLength = 100;
-            _txtAddress5.Name = "txtAddress5";
-            _txtAddress5.ReadOnly = true;
-            _txtAddress5.Size = new Size(511, 21);
-            _txtAddress5.TabIndex = 6;
-            _txtAddress5.Tag = "Site.County";
-            //
-            // lblCounty
-            //
-            _lblCounty.Location = new Point(7, 165);
-            _lblCounty.Name = "lblCounty";
-            _lblCounty.Size = new Size(64, 20);
-            _lblCounty.TabIndex = 37;
-            _lblCounty.Text = "Address 5";
-            //
-            // txtPostcode
-            //
-            _txtPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPostcode.Location = new Point(105, 189);
-            _txtPostcode.MaxLength = 10;
-            _txtPostcode.Name = "txtPostcode";
-            _txtPostcode.ReadOnly = true;
-            _txtPostcode.Size = new Size(511, 21);
-            _txtPostcode.TabIndex = 7;
-            _txtPostcode.Tag = "Site.Postcode";
-            //
-            // lblPostcode
-            //
-            _lblPostcode.Location = new Point(7, 189);
-            _lblPostcode.Name = "lblPostcode";
-            _lblPostcode.Size = new Size(67, 20);
-            _lblPostcode.TabIndex = 40;
-            _lblPostcode.Text = "Postcode";
-            //
-            // txtTelephoneNum
-            //
-            _txtTelephoneNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtTelephoneNum.Location = new Point(105, 213);
-            _txtTelephoneNum.MaxLength = 50;
-            _txtTelephoneNum.Name = "txtTelephoneNum";
-            _txtTelephoneNum.ReadOnly = true;
-            _txtTelephoneNum.Size = new Size(511, 21);
-            _txtTelephoneNum.TabIndex = 8;
-            _txtTelephoneNum.Tag = "Site.TelephoneNum";
-            //
-            // lblTelephoneNum
-            //
-            _lblTelephoneNum.Location = new Point(7, 213);
-            _lblTelephoneNum.Name = "lblTelephoneNum";
-            _lblTelephoneNum.Size = new Size(107, 20);
-            _lblTelephoneNum.TabIndex = 41;
-            _lblTelephoneNum.Text = "Tel";
-            //
-            // txtFaxNum
-            //
-            _txtFaxNum.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtFaxNum.Location = new Point(105, 237);
-            _txtFaxNum.MaxLength = 50;
-            _txtFaxNum.Name = "txtFaxNum";
-            _txtFaxNum.ReadOnly = true;
-            _txtFaxNum.Size = new Size(511, 21);
-            _txtFaxNum.TabIndex = 9;
-            _txtFaxNum.Tag = "Site.FaxNum";
-            //
-            // lblFaxNum
-            //
-            _lblFaxNum.Location = new Point(7, 237);
-            _lblFaxNum.Name = "lblFaxNum";
-            _lblFaxNum.Size = new Size(72, 20);
-            _lblFaxNum.TabIndex = 42;
-            _lblFaxNum.Text = "Fax";
-            //
-            // txtEmailAddress
-            //
-            _txtEmailAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtEmailAddress.Location = new Point(105, 263);
-            _txtEmailAddress.MaxLength = 100;
-            _txtEmailAddress.Name = "txtEmailAddress";
-            _txtEmailAddress.ReadOnly = true;
-            _txtEmailAddress.Size = new Size(430, 21);
-            _txtEmailAddress.TabIndex = 10;
-            _txtEmailAddress.Tag = "Site.EmailAddress";
-            //
-            // lblEmailAddress
-            //
-            _lblEmailAddress.Location = new Point(7, 261);
-            _lblEmailAddress.Name = "lblEmailAddress";
-            _lblEmailAddress.Size = new Size(99, 20);
-            _lblEmailAddress.TabIndex = 43;
-            _lblEmailAddress.Text = "Email Address";
-            //
-            // frmCandidateAssessment
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(628, 327);
-            Controls.Add(_btnSendEmailToSite);
-            Controls.Add(_txtName);
-            Controls.Add(_Label3);
-            Controls.Add(_txtAddress1);
-            Controls.Add(_lblAddress1);
-            Controls.Add(_txtAddress2);
-            Controls.Add(_lblAddress2);
-            Controls.Add(_txtAddress3);
-            Controls.Add(_lblAddress3);
-            Controls.Add(_txtAddress4);
-            Controls.Add(_lblTown);
-            Controls.Add(_txtAddress5);
-            Controls.Add(_lblCounty);
-            Controls.Add(_txtPostcode);
-            Controls.Add(_lblPostcode);
-            Controls.Add(_txtTelephoneNum);
-            Controls.Add(_lblTelephoneNum);
-            Controls.Add(_txtFaxNum);
-            Controls.Add(_lblFaxNum);
-            Controls.Add(_txtEmailAddress);
-            Controls.Add(_lblEmailAddress);
-            Controls.Add(_btnClose);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(636, 361);
-            Name = "frmCandidateAssessment";
-            Text = "Property : ID {0}";
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_lblEmailAddress, 0);
-            Controls.SetChildIndex(_txtEmailAddress, 0);
-            Controls.SetChildIndex(_lblFaxNum, 0);
-            Controls.SetChildIndex(_txtFaxNum, 0);
-            Controls.SetChildIndex(_lblTelephoneNum, 0);
-            Controls.SetChildIndex(_txtTelephoneNum, 0);
-            Controls.SetChildIndex(_lblPostcode, 0);
-            Controls.SetChildIndex(_txtPostcode, 0);
-            Controls.SetChildIndex(_lblCounty, 0);
-            Controls.SetChildIndex(_txtAddress5, 0);
-            Controls.SetChildIndex(_lblTown, 0);
-            Controls.SetChildIndex(_txtAddress4, 0);
-            Controls.SetChildIndex(_lblAddress3, 0);
-            Controls.SetChildIndex(_txtAddress3, 0);
-            Controls.SetChildIndex(_lblAddress2, 0);
-            Controls.SetChildIndex(_txtAddress2, 0);
-            Controls.SetChildIndex(_lblAddress1, 0);
-            Controls.SetChildIndex(_txtAddress1, 0);
-            Controls.SetChildIndex(_Label3, 0);
-            Controls.SetChildIndex(_txtName, 0);
-            Controls.SetChildIndex(_btnSendEmailToSite, 0);
-            ResumeLayout(false);
-            PerformLayout();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._btnSendEmailToSite = new System.Windows.Forms.Button();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtAddress1 = new System.Windows.Forms.TextBox();
+            this._lblAddress1 = new System.Windows.Forms.Label();
+            this._txtAddress2 = new System.Windows.Forms.TextBox();
+            this._lblAddress2 = new System.Windows.Forms.Label();
+            this._txtAddress3 = new System.Windows.Forms.TextBox();
+            this._lblAddress3 = new System.Windows.Forms.Label();
+            this._txtAddress4 = new System.Windows.Forms.TextBox();
+            this._lblTown = new System.Windows.Forms.Label();
+            this._txtAddress5 = new System.Windows.Forms.TextBox();
+            this._lblCounty = new System.Windows.Forms.Label();
+            this._txtPostcode = new System.Windows.Forms.TextBox();
+            this._lblPostcode = new System.Windows.Forms.Label();
+            this._txtTelephoneNum = new System.Windows.Forms.TextBox();
+            this._lblTelephoneNum = new System.Windows.Forms.Label();
+            this._txtFaxNum = new System.Windows.Forms.TextBox();
+            this._lblFaxNum = new System.Windows.Forms.Label();
+            this._txtEmailAddress = new System.Windows.Forms.TextBox();
+            this._lblEmailAddress = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(10, 285);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 25);
+            this._btnClose.TabIndex = 12;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _btnSendEmailToSite
+            // 
+            this._btnSendEmailToSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSendEmailToSite.Location = new System.Drawing.Point(541, 232);
+            this._btnSendEmailToSite.Name = "_btnSendEmailToSite";
+            this._btnSendEmailToSite.Size = new System.Drawing.Size(75, 23);
+            this._btnSendEmailToSite.TabIndex = 11;
+            this._btnSendEmailToSite.Text = "Email";
+            this._btnSendEmailToSite.Click += new System.EventHandler(this.btnSendEmailToSite_Click);
+            // 
+            // _txtName
+            // 
+            this._txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtName.Location = new System.Drawing.Point(105, 13);
+            this._txtName.MaxLength = 255;
+            this._txtName.Name = "_txtName";
+            this._txtName.ReadOnly = true;
+            this._txtName.Size = new System.Drawing.Size(511, 21);
+            this._txtName.TabIndex = 1;
+            this._txtName.Tag = "";
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(7, 13);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(64, 20);
+            this._Label3.TabIndex = 23;
+            this._Label3.Text = "Name";
+            // 
+            // _txtAddress1
+            // 
+            this._txtAddress1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAddress1.Location = new System.Drawing.Point(105, 37);
+            this._txtAddress1.MaxLength = 255;
+            this._txtAddress1.Name = "_txtAddress1";
+            this._txtAddress1.ReadOnly = true;
+            this._txtAddress1.Size = new System.Drawing.Size(511, 21);
+            this._txtAddress1.TabIndex = 2;
+            this._txtAddress1.Tag = "Site.Address1";
+            // 
+            // _lblAddress1
+            // 
+            this._lblAddress1.Location = new System.Drawing.Point(7, 37);
+            this._lblAddress1.Name = "_lblAddress1";
+            this._lblAddress1.Size = new System.Drawing.Size(67, 20);
+            this._lblAddress1.TabIndex = 26;
+            this._lblAddress1.Text = "Address 1";
+            // 
+            // _txtAddress2
+            // 
+            this._txtAddress2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAddress2.Location = new System.Drawing.Point(105, 61);
+            this._txtAddress2.MaxLength = 255;
+            this._txtAddress2.Name = "_txtAddress2";
+            this._txtAddress2.ReadOnly = true;
+            this._txtAddress2.Size = new System.Drawing.Size(511, 21);
+            this._txtAddress2.TabIndex = 3;
+            this._txtAddress2.Tag = "Site.Address2";
+            // 
+            // _lblAddress2
+            // 
+            this._lblAddress2.Location = new System.Drawing.Point(7, 61);
+            this._lblAddress2.Name = "_lblAddress2";
+            this._lblAddress2.Size = new System.Drawing.Size(72, 20);
+            this._lblAddress2.TabIndex = 28;
+            this._lblAddress2.Text = "Address 2";
+            // 
+            // _txtAddress3
+            // 
+            this._txtAddress3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAddress3.Location = new System.Drawing.Point(105, 85);
+            this._txtAddress3.MaxLength = 255;
+            this._txtAddress3.Name = "_txtAddress3";
+            this._txtAddress3.ReadOnly = true;
+            this._txtAddress3.Size = new System.Drawing.Size(511, 21);
+            this._txtAddress3.TabIndex = 4;
+            this._txtAddress3.Tag = "Site.Address3";
+            // 
+            // _lblAddress3
+            // 
+            this._lblAddress3.Location = new System.Drawing.Point(7, 85);
+            this._lblAddress3.Name = "_lblAddress3";
+            this._lblAddress3.Size = new System.Drawing.Size(64, 20);
+            this._lblAddress3.TabIndex = 32;
+            this._lblAddress3.Text = "Address 3";
+            // 
+            // _txtAddress4
+            // 
+            this._txtAddress4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAddress4.Location = new System.Drawing.Point(105, 109);
+            this._txtAddress4.MaxLength = 100;
+            this._txtAddress4.Name = "_txtAddress4";
+            this._txtAddress4.ReadOnly = true;
+            this._txtAddress4.Size = new System.Drawing.Size(511, 21);
+            this._txtAddress4.TabIndex = 5;
+            this._txtAddress4.Tag = "Site.Town";
+            // 
+            // _lblTown
+            // 
+            this._lblTown.Location = new System.Drawing.Point(7, 109);
+            this._lblTown.Name = "_lblTown";
+            this._lblTown.Size = new System.Drawing.Size(67, 20);
+            this._lblTown.TabIndex = 35;
+            this._lblTown.Text = "Address 4";
+            // 
+            // _txtAddress5
+            // 
+            this._txtAddress5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAddress5.Location = new System.Drawing.Point(105, 133);
+            this._txtAddress5.MaxLength = 100;
+            this._txtAddress5.Name = "_txtAddress5";
+            this._txtAddress5.ReadOnly = true;
+            this._txtAddress5.Size = new System.Drawing.Size(511, 21);
+            this._txtAddress5.TabIndex = 6;
+            this._txtAddress5.Tag = "Site.County";
+            // 
+            // _lblCounty
+            // 
+            this._lblCounty.Location = new System.Drawing.Point(7, 133);
+            this._lblCounty.Name = "_lblCounty";
+            this._lblCounty.Size = new System.Drawing.Size(64, 20);
+            this._lblCounty.TabIndex = 37;
+            this._lblCounty.Text = "Address 5";
+            // 
+            // _txtPostcode
+            // 
+            this._txtPostcode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPostcode.Location = new System.Drawing.Point(105, 157);
+            this._txtPostcode.MaxLength = 10;
+            this._txtPostcode.Name = "_txtPostcode";
+            this._txtPostcode.ReadOnly = true;
+            this._txtPostcode.Size = new System.Drawing.Size(511, 21);
+            this._txtPostcode.TabIndex = 7;
+            this._txtPostcode.Tag = "Site.Postcode";
+            // 
+            // _lblPostcode
+            // 
+            this._lblPostcode.Location = new System.Drawing.Point(7, 157);
+            this._lblPostcode.Name = "_lblPostcode";
+            this._lblPostcode.Size = new System.Drawing.Size(67, 20);
+            this._lblPostcode.TabIndex = 40;
+            this._lblPostcode.Text = "Postcode";
+            // 
+            // _txtTelephoneNum
+            // 
+            this._txtTelephoneNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTelephoneNum.Location = new System.Drawing.Point(105, 181);
+            this._txtTelephoneNum.MaxLength = 50;
+            this._txtTelephoneNum.Name = "_txtTelephoneNum";
+            this._txtTelephoneNum.ReadOnly = true;
+            this._txtTelephoneNum.Size = new System.Drawing.Size(511, 21);
+            this._txtTelephoneNum.TabIndex = 8;
+            this._txtTelephoneNum.Tag = "Site.TelephoneNum";
+            // 
+            // _lblTelephoneNum
+            // 
+            this._lblTelephoneNum.Location = new System.Drawing.Point(7, 181);
+            this._lblTelephoneNum.Name = "_lblTelephoneNum";
+            this._lblTelephoneNum.Size = new System.Drawing.Size(107, 20);
+            this._lblTelephoneNum.TabIndex = 41;
+            this._lblTelephoneNum.Text = "Tel";
+            // 
+            // _txtFaxNum
+            // 
+            this._txtFaxNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtFaxNum.Location = new System.Drawing.Point(105, 205);
+            this._txtFaxNum.MaxLength = 50;
+            this._txtFaxNum.Name = "_txtFaxNum";
+            this._txtFaxNum.ReadOnly = true;
+            this._txtFaxNum.Size = new System.Drawing.Size(511, 21);
+            this._txtFaxNum.TabIndex = 9;
+            this._txtFaxNum.Tag = "Site.FaxNum";
+            // 
+            // _lblFaxNum
+            // 
+            this._lblFaxNum.Location = new System.Drawing.Point(7, 205);
+            this._lblFaxNum.Name = "_lblFaxNum";
+            this._lblFaxNum.Size = new System.Drawing.Size(72, 20);
+            this._lblFaxNum.TabIndex = 42;
+            this._lblFaxNum.Text = "Fax";
+            // 
+            // _txtEmailAddress
+            // 
+            this._txtEmailAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtEmailAddress.Location = new System.Drawing.Point(105, 231);
+            this._txtEmailAddress.MaxLength = 100;
+            this._txtEmailAddress.Name = "_txtEmailAddress";
+            this._txtEmailAddress.ReadOnly = true;
+            this._txtEmailAddress.Size = new System.Drawing.Size(430, 21);
+            this._txtEmailAddress.TabIndex = 10;
+            this._txtEmailAddress.Tag = "Site.EmailAddress";
+            // 
+            // _lblEmailAddress
+            // 
+            this._lblEmailAddress.Location = new System.Drawing.Point(7, 229);
+            this._lblEmailAddress.Name = "_lblEmailAddress";
+            this._lblEmailAddress.Size = new System.Drawing.Size(99, 20);
+            this._lblEmailAddress.TabIndex = 43;
+            this._lblEmailAddress.Text = "Email Address";
+            // 
+            // FRMSitePopup
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(628, 322);
+            this.Controls.Add(this._btnSendEmailToSite);
+            this.Controls.Add(this._txtName);
+            this.Controls.Add(this._Label3);
+            this.Controls.Add(this._txtAddress1);
+            this.Controls.Add(this._lblAddress1);
+            this.Controls.Add(this._txtAddress2);
+            this.Controls.Add(this._lblAddress2);
+            this.Controls.Add(this._txtAddress3);
+            this.Controls.Add(this._lblAddress3);
+            this.Controls.Add(this._txtAddress4);
+            this.Controls.Add(this._lblTown);
+            this.Controls.Add(this._txtAddress5);
+            this.Controls.Add(this._lblCounty);
+            this.Controls.Add(this._txtPostcode);
+            this.Controls.Add(this._lblPostcode);
+            this.Controls.Add(this._txtTelephoneNum);
+            this.Controls.Add(this._lblTelephoneNum);
+            this.Controls.Add(this._txtFaxNum);
+            this.Controls.Add(this._lblFaxNum);
+            this.Controls.Add(this._txtEmailAddress);
+            this.Controls.Add(this._lblEmailAddress);
+            this.Controls.Add(this._btnClose);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(636, 361);
+            this.Name = "FRMSitePopup";
+            this.Text = "Property : ID {0}";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         public void LoadMe(object sender, EventArgs e)

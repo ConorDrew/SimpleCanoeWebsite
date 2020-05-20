@@ -196,96 +196,92 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _lblHeading = new Label();
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _radPartsDespatched = new RadioButton();
-            _radPartsDespatched.CheckedChanged += new EventHandler(radPartsDespatched_CheckedChanged);
-            _cboEngineer = new ComboBox();
-            _radReadyToSchedule = new RadioButton();
-            SuspendLayout();
-            //
-            // lblHeading
-            //
-            _lblHeading.Location = new Point(8, 40);
-            _lblHeading.Name = "lblHeading";
-            _lblHeading.Size = new Size(410, 36);
-            _lblHeading.TabIndex = 2;
-            _lblHeading.Text = "This order related to the visit '{0}' is waiting for parts. Please select the sta" + "tus and engineer you would be despatching the parts to:";
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(343, 145);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(75, 23);
-            _btnOK.TabIndex = 3;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(11, 145);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(101, 23);
-            _btnCancel.TabIndex = 4;
-            _btnCancel.Text = "Do Not Update";
-            //
-            // radPartsDespatched
-            //
-            _radPartsDespatched.AutoSize = true;
-            _radPartsDespatched.Location = new Point(11, 79);
-            _radPartsDespatched.Name = "radPartsDespatched";
-            _radPartsDespatched.Size = new Size(119, 17);
-            _radPartsDespatched.TabIndex = 0;
-            _radPartsDespatched.Text = "Parts Depatched";
-            _radPartsDespatched.UseVisualStyleBackColor = true;
-            //
-            // cboEngineer
-            //
-            _cboEngineer.FormattingEnabled = true;
-            _cboEngineer.Location = new Point(154, 78);
-            _cboEngineer.Name = "cboEngineer";
-            _cboEngineer.Size = new Size(264, 21);
-            _cboEngineer.TabIndex = 1;
-            //
-            // radReadyToSchedule
-            //
-            _radReadyToSchedule.AutoSize = true;
-            _radReadyToSchedule.Checked = true;
-            _radReadyToSchedule.Location = new Point(11, 112);
-            _radReadyToSchedule.Name = "radReadyToSchedule";
-            _radReadyToSchedule.Size = new Size(135, 17);
-            _radReadyToSchedule.TabIndex = 2;
-            _radReadyToSchedule.TabStop = true;
-            _radReadyToSchedule.Text = "Ready To Schedule";
-            _radReadyToSchedule.UseVisualStyleBackColor = true;
-            //
+            this._lblHeading = new System.Windows.Forms.Label();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._radPartsDespatched = new System.Windows.Forms.RadioButton();
+            this._cboEngineer = new System.Windows.Forms.ComboBox();
+            this._radReadyToSchedule = new System.Windows.Forms.RadioButton();
+            this.SuspendLayout();
+            // 
+            // _lblHeading
+            // 
+            this._lblHeading.Location = new System.Drawing.Point(8, 14);
+            this._lblHeading.Name = "_lblHeading";
+            this._lblHeading.Size = new System.Drawing.Size(410, 36);
+            this._lblHeading.TabIndex = 2;
+            this._lblHeading.Text = "This order related to the visit \'{0}\' is waiting for parts. Please select the sta" +
+    "tus and engineer you would be despatching the parts to:";
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(343, 145);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 3;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(11, 145);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(101, 23);
+            this._btnCancel.TabIndex = 4;
+            this._btnCancel.Text = "Do Not Update";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _radPartsDespatched
+            // 
+            this._radPartsDespatched.AutoSize = true;
+            this._radPartsDespatched.Location = new System.Drawing.Point(11, 53);
+            this._radPartsDespatched.Name = "_radPartsDespatched";
+            this._radPartsDespatched.Size = new System.Drawing.Size(119, 17);
+            this._radPartsDespatched.TabIndex = 0;
+            this._radPartsDespatched.Text = "Parts Depatched";
+            this._radPartsDespatched.UseVisualStyleBackColor = true;
+            this._radPartsDespatched.CheckedChanged += new System.EventHandler(this.radPartsDespatched_CheckedChanged);
+            // 
+            // _cboEngineer
+            // 
+            this._cboEngineer.FormattingEnabled = true;
+            this._cboEngineer.Location = new System.Drawing.Point(154, 52);
+            this._cboEngineer.Name = "_cboEngineer";
+            this._cboEngineer.Size = new System.Drawing.Size(264, 21);
+            this._cboEngineer.TabIndex = 1;
+            // 
+            // _radReadyToSchedule
+            // 
+            this._radReadyToSchedule.AutoSize = true;
+            this._radReadyToSchedule.Checked = true;
+            this._radReadyToSchedule.Location = new System.Drawing.Point(11, 86);
+            this._radReadyToSchedule.Name = "_radReadyToSchedule";
+            this._radReadyToSchedule.Size = new System.Drawing.Size(134, 17);
+            this._radReadyToSchedule.TabIndex = 2;
+            this._radReadyToSchedule.TabStop = true;
+            this._radReadyToSchedule.Text = "Ready To Schedule";
+            this._radReadyToSchedule.UseVisualStyleBackColor = true;
+            // 
             // FRMPickDespatchDetails
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(422, 174);
-            ControlBox = false;
-            Controls.Add(_radReadyToSchedule);
-            Controls.Add(_cboEngineer);
-            Controls.Add(_radPartsDespatched);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            Controls.Add(_lblHeading);
-            MaximumSize = new Size(438, 212);
-            MinimumSize = new Size(438, 212);
-            Name = "FRMPickDespatchDetails";
-            Text = "Update Visit";
-            Controls.SetChildIndex(_lblHeading, 0);
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_radPartsDespatched, 0);
-            Controls.SetChildIndex(_cboEngineer, 0);
-            Controls.SetChildIndex(_radReadyToSchedule, 0);
-            ResumeLayout(false);
-            PerformLayout();
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(422, 173);
+            this.ControlBox = false;
+            this.Controls.Add(this._radReadyToSchedule);
+            this.Controls.Add(this._cboEngineer);
+            this.Controls.Add(this._radPartsDespatched);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.Controls.Add(this._lblHeading);
+            this.MaximumSize = new System.Drawing.Size(438, 212);
+            this.MinimumSize = new System.Drawing.Size(438, 212);
+            this.Name = "FRMPickDespatchDetails";
+            this.Text = "Update Visit";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         

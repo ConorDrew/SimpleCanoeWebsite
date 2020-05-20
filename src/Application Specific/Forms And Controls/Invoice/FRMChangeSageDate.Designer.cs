@@ -52,9 +52,9 @@ namespace FSM
             this._GroupBox1.Controls.Add(this._dtpTaxDate);
             this._GroupBox1.Controls.Add(this._Label3);
             this._GroupBox1.Controls.Add(this._btnSave);
-            this._GroupBox1.Location = new System.Drawing.Point(12, 38);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
             this._GroupBox1.Name = "_GroupBox1";
-            this._GroupBox1.Size = new System.Drawing.Size(502, 97);
+            this._GroupBox1.Size = new System.Drawing.Size(502, 96);
             this._GroupBox1.TabIndex = 0;
             this._GroupBox1.TabStop = false;
             this._GroupBox1.Text = "Change Invoiced Total";
@@ -90,12 +90,11 @@ namespace FSM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 147);
+            this.ClientSize = new System.Drawing.Size(526, 120);
             this.Controls.Add(this._GroupBox1);
             this.Name = "FRMChangeSageDate";
             this.Text = "Change Sage Date";
             this.Load += new System.EventHandler(this.FRMChangeInvoicedTotal_Load);
-            this.Controls.SetChildIndex(this._GroupBox1, 0);
             this._GroupBox1.ResumeLayout(false);
             this._GroupBox1.PerformLayout();
             this.ResumeLayout(false);

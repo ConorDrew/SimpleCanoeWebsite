@@ -184,84 +184,86 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _grpOptions = new GroupBox();
-            _lblDetails = new Label();
-            _dgLocations = new DataGrid();
-            _grpOptions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgLocations).BeginInit();
-            SuspendLayout();
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(480, 512);
-            _btnOK.Name = "btnOK";
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(8, 512);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.TabIndex = 6;
-            _btnCancel.Text = "Cancel";
-            //
-            // grpOptions
-            //
-            _grpOptions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpOptions.Controls.Add(_dgLocations);
-            _grpOptions.Location = new Point(8, 64);
-            _grpOptions.Name = "grpOptions";
-            _grpOptions.Size = new Size(544, 440);
-            _grpOptions.TabIndex = 7;
-            _grpOptions.TabStop = false;
-            _grpOptions.Text = "Enter amount to distribute to each location";
-            //
-            // lblDetails
-            //
-            _lblDetails.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _lblDetails.Location = new Point(8, 40);
-            _lblDetails.Name = "lblDetails";
-            _lblDetails.Size = new Size(544, 23);
-            _lblDetails.TabIndex = 8;
-            _lblDetails.Text = "PARTPRODUCTDETAILS";
-            //
-            // dgLocations
-            //
-            _dgLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgLocations.DataMember = "";
-            _dgLocations.HeaderForeColor = SystemColors.ControlText;
-            _dgLocations.Location = new Point(8, 24);
-            _dgLocations.Name = "dgLocations";
-            _dgLocations.Size = new Size(528, 408);
-            _dgLocations.TabIndex = 2;
-            //
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._grpOptions = new System.Windows.Forms.GroupBox();
+            this._dgLocations = new System.Windows.Forms.DataGrid();
+            this._lblDetails = new System.Windows.Forms.Label();
+            this._grpOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgLocations)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(480, 512);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(8, 512);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 6;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _grpOptions
+            // 
+            this._grpOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpOptions.Controls.Add(this._dgLocations);
+            this._grpOptions.Location = new System.Drawing.Point(8, 36);
+            this._grpOptions.Name = "_grpOptions";
+            this._grpOptions.Size = new System.Drawing.Size(544, 468);
+            this._grpOptions.TabIndex = 7;
+            this._grpOptions.TabStop = false;
+            this._grpOptions.Text = "Enter amount to distribute to each location";
+            // 
+            // _dgLocations
+            // 
+            this._dgLocations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgLocations.DataMember = "";
+            this._dgLocations.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgLocations.Location = new System.Drawing.Point(8, 24);
+            this._dgLocations.Name = "_dgLocations";
+            this._dgLocations.Size = new System.Drawing.Size(528, 436);
+            this._dgLocations.TabIndex = 2;
+            // 
+            // _lblDetails
+            // 
+            this._lblDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblDetails.Location = new System.Drawing.Point(8, 9);
+            this._lblDetails.Name = "_lblDetails";
+            this._lblDetails.Size = new System.Drawing.Size(544, 24);
+            this._lblDetails.TabIndex = 8;
+            this._lblDetails.Text = "PARTPRODUCTDETAILS";
+            // 
             // FRMDistributeAllocated
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(560, 542);
-            ControlBox = false;
-            Controls.Add(_lblDetails);
-            Controls.Add(_grpOptions);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            MinimumSize = new Size(568, 576);
-            Name = "FRMDistributeAllocated";
-            Text = "Part / Product Manager";
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_grpOptions, 0);
-            Controls.SetChildIndex(_lblDetails, 0);
-            _grpOptions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgLocations).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(560, 542);
+            this.ControlBox = false;
+            this.Controls.Add(this._lblDetails);
+            this.Controls.Add(this._grpOptions);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.MinimumSize = new System.Drawing.Size(568, 576);
+            this.Name = "FRMDistributeAllocated";
+            this.Text = "Part / Product Manager";
+            this._grpOptions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgLocations)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

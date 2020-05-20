@@ -438,280 +438,283 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _radWarehouseCurrent = new RadioButton();
-            _radWarehouseCurrent.CheckedChanged += new EventHandler(radWarehouseCurrent_CheckedChanged);
-            _radVanCurrent = new RadioButton();
-            _radVanCurrent.CheckedChanged += new EventHandler(radVanCurrent_CheckedChanged);
-            _Label5 = new Label();
-            _cboLocationCurrent = new ComboBox();
-            _cboLocationCurrent.SelectedIndexChanged += new EventHandler(cboLocationCurrent_SelectedIndexChanged);
-            _grpCurrent = new GroupBox();
-            _grpNew = new GroupBox();
-            _radWarehouseNew = new RadioButton();
-            _radWarehouseNew.CheckedChanged += new EventHandler(radWarehouseNew_CheckedChanged);
-            _Label1 = new Label();
-            _radVanNew = new RadioButton();
-            _radVanNew.CheckedChanged += new EventHandler(radVanNew_CheckedChanged);
-            _cboLocationNew = new ComboBox();
-            _grpItems = new GroupBox();
-            _Label4 = new Label();
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnDeselectAll = new Button();
-            _btnDeselectAll.Click += new EventHandler(btnDeselectAll_Click);
-            _txtFilter = new TextBox();
-            _txtFilter.TextChanged += new EventHandler(txtFilter_TextChanged);
-            _Label3 = new Label();
-            _txtQuantity = new TextBox();
-            _txtQuantity.GotFocus += new EventHandler(txtQuantity_GotFocus);
-            _txtQuantity.Validating += new System.ComponentModel.CancelEventHandler(txtQuantity_Validating);
-            _Label2 = new Label();
-            _dgItems = new DataGrid();
-            _dgItems.DoubleClick += new EventHandler(dgItems_DoubleClick);
-            _dgItems.Click += new EventHandler(dgItems_Click);
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _btnMove = new Button();
-            _btnMove.Click += new EventHandler(btnMove_Click);
-            _grpCurrent.SuspendLayout();
-            _grpNew.SuspendLayout();
-            _grpItems.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgItems).BeginInit();
-            SuspendLayout();
-            //
-            // radWarehouseCurrent
-            //
-            _radWarehouseCurrent.Checked = true;
-            _radWarehouseCurrent.Location = new Point(8, 20);
-            _radWarehouseCurrent.Name = "radWarehouseCurrent";
-            _radWarehouseCurrent.Size = new Size(96, 26);
-            _radWarehouseCurrent.TabIndex = 1;
-            _radWarehouseCurrent.TabStop = true;
-            _radWarehouseCurrent.Text = "Warehouse";
-            //
-            // radVanCurrent
-            //
-            _radVanCurrent.Location = new Point(110, 20);
-            _radVanCurrent.Name = "radVanCurrent";
-            _radVanCurrent.Size = new Size(99, 26);
-            _radVanCurrent.TabIndex = 2;
-            _radVanCurrent.Text = "Stock Profile";
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(214, 25);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(24, 23);
-            _Label5.TabIndex = 7;
-            _Label5.Text = ">";
-            //
-            // cboLocationCurrent
-            //
-            _cboLocationCurrent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboLocationCurrent.Location = new Point(247, 25);
-            _cboLocationCurrent.Name = "cboLocationCurrent";
-            _cboLocationCurrent.Size = new Size(337, 21);
-            _cboLocationCurrent.TabIndex = 3;
-            //
-            // grpCurrent
-            //
-            _grpCurrent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpCurrent.Controls.Add(_radWarehouseCurrent);
-            _grpCurrent.Controls.Add(_Label5);
-            _grpCurrent.Controls.Add(_radVanCurrent);
-            _grpCurrent.Controls.Add(_cboLocationCurrent);
-            _grpCurrent.Location = new Point(4, 38);
-            _grpCurrent.Name = "grpCurrent";
-            _grpCurrent.Size = new Size(592, 58);
-            _grpCurrent.TabIndex = 1;
-            _grpCurrent.TabStop = false;
-            _grpCurrent.Text = "Select current stock location";
-            //
-            // grpNew
-            //
-            _grpNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _grpNew.Controls.Add(_radWarehouseNew);
-            _grpNew.Controls.Add(_Label1);
-            _grpNew.Controls.Add(_radVanNew);
-            _grpNew.Controls.Add(_cboLocationNew);
-            _grpNew.Location = new Point(4, 337);
-            _grpNew.Name = "grpNew";
-            _grpNew.Size = new Size(592, 58);
-            _grpNew.TabIndex = 3;
-            _grpNew.TabStop = false;
-            _grpNew.Text = "Select new stock location";
-            //
-            // radWarehouseNew
-            //
-            _radWarehouseNew.Checked = true;
-            _radWarehouseNew.Location = new Point(8, 20);
-            _radWarehouseNew.Name = "radWarehouseNew";
-            _radWarehouseNew.Size = new Size(96, 26);
-            _radWarehouseNew.TabIndex = 1;
-            _radWarehouseNew.TabStop = true;
-            _radWarehouseNew.Text = "Warehouse";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(214, 23);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(24, 23);
-            _Label1.TabIndex = 7;
-            _Label1.Text = ">";
-            //
-            // radVanNew
-            //
-            _radVanNew.Location = new Point(110, 20);
-            _radVanNew.Name = "radVanNew";
-            _radVanNew.Size = new Size(98, 26);
-            _radVanNew.TabIndex = 2;
-            _radVanNew.Text = "Stock Profile";
-            //
-            // cboLocationNew
-            //
-            _cboLocationNew.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboLocationNew.Location = new Point(247, 25);
-            _cboLocationNew.Name = "cboLocationNew";
-            _cboLocationNew.Size = new Size(337, 21);
-            _cboLocationNew.TabIndex = 3;
-            //
-            // grpItems
-            //
-            _grpItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpItems.Controls.Add(_Label4);
-            _grpItems.Controls.Add(_btnSelectAll);
-            _grpItems.Controls.Add(_btnDeselectAll);
-            _grpItems.Controls.Add(_txtFilter);
-            _grpItems.Controls.Add(_Label3);
-            _grpItems.Controls.Add(_txtQuantity);
-            _grpItems.Controls.Add(_Label2);
-            _grpItems.Controls.Add(_dgItems);
-            _grpItems.Location = new Point(4, 102);
-            _grpItems.Name = "grpItems";
-            _grpItems.Size = new Size(592, 229);
-            _grpItems.TabIndex = 2;
-            _grpItems.TabStop = false;
-            _grpItems.Text = "Select item to move";
-            //
-            // Label4
-            //
-            _Label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label4.Location = new Point(295, 201);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(255, 14);
-            _Label4.TabIndex = 23;
-            _Label4.Text = "The current quantity will be moved across";
-            _Label4.Visible = false;
-            //
-            // btnSelectAll
-            //
-            _btnSelectAll.AccessibleDescription = "Export Job List To Excel";
-            _btnSelectAll.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnSelectAll.Location = new Point(400, 18);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(88, 23);
-            _btnSelectAll.TabIndex = 21;
-            _btnSelectAll.Text = "Select All";
-            //
-            // btnDeselectAll
-            //
-            _btnDeselectAll.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnDeselectAll.Location = new Point(496, 18);
-            _btnDeselectAll.Name = "btnDeselectAll";
-            _btnDeselectAll.Size = new Size(88, 23);
-            _btnDeselectAll.TabIndex = 22;
-            _btnDeselectAll.Text = "Deselect All";
-            //
-            // txtFilter
-            //
-            _txtFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtFilter.Location = new Point(48, 20);
-            _txtFilter.Name = "txtFilter";
-            _txtFilter.Size = new Size(335, 21);
-            _txtFilter.TabIndex = 1;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(4, 23);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(51, 18);
-            _Label3.TabIndex = 3;
-            _Label3.Text = "Filter";
-            //
-            // txtQuantity
-            //
-            _txtQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtQuantity.Location = new Point(189, 198);
-            _txtQuantity.Name = "txtQuantity";
-            _txtQuantity.Size = new Size(100, 21);
-            _txtQuantity.TabIndex = 3;
-            _txtQuantity.Text = "1";
-            //
-            // Label2
-            //
-            _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label2.Location = new Point(6, 201);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(177, 16);
-            _Label2.TabIndex = 1;
-            _Label2.Text = "Enter quantity being moved";
-            //
-            // dgItems
-            //
-            _dgItems.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgItems.DataMember = "";
-            _dgItems.HeaderForeColor = SystemColors.ControlText;
-            _dgItems.Location = new Point(6, 47);
-            _dgItems.Name = "dgItems";
-            _dgItems.Size = new Size(580, 145);
-            _dgItems.TabIndex = 2;
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(4, 401);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(59, 23);
-            _btnClose.TabIndex = 5;
-            _btnClose.Text = "Close";
-            _btnClose.UseVisualStyleBackColor = true;
-            //
-            // btnMove
-            //
-            _btnMove.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnMove.Location = new Point(537, 401);
-            _btnMove.Name = "btnMove";
-            _btnMove.Size = new Size(59, 23);
-            _btnMove.TabIndex = 4;
-            _btnMove.Text = "Move";
-            _btnMove.UseVisualStyleBackColor = true;
-            //
+            this._radWarehouseCurrent = new System.Windows.Forms.RadioButton();
+            this._radVanCurrent = new System.Windows.Forms.RadioButton();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._cboLocationCurrent = new System.Windows.Forms.ComboBox();
+            this._grpCurrent = new System.Windows.Forms.GroupBox();
+            this._grpNew = new System.Windows.Forms.GroupBox();
+            this._radWarehouseNew = new System.Windows.Forms.RadioButton();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._radVanNew = new System.Windows.Forms.RadioButton();
+            this._cboLocationNew = new System.Windows.Forms.ComboBox();
+            this._grpItems = new System.Windows.Forms.GroupBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnDeselectAll = new System.Windows.Forms.Button();
+            this._txtFilter = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtQuantity = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._dgItems = new System.Windows.Forms.DataGrid();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._btnMove = new System.Windows.Forms.Button();
+            this._grpCurrent.SuspendLayout();
+            this._grpNew.SuspendLayout();
+            this._grpItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgItems)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _radWarehouseCurrent
+            // 
+            this._radWarehouseCurrent.Checked = true;
+            this._radWarehouseCurrent.Location = new System.Drawing.Point(8, 20);
+            this._radWarehouseCurrent.Name = "_radWarehouseCurrent";
+            this._radWarehouseCurrent.Size = new System.Drawing.Size(96, 26);
+            this._radWarehouseCurrent.TabIndex = 1;
+            this._radWarehouseCurrent.TabStop = true;
+            this._radWarehouseCurrent.Text = "Warehouse";
+            this._radWarehouseCurrent.CheckedChanged += new System.EventHandler(this.radWarehouseCurrent_CheckedChanged);
+            // 
+            // _radVanCurrent
+            // 
+            this._radVanCurrent.Location = new System.Drawing.Point(110, 20);
+            this._radVanCurrent.Name = "_radVanCurrent";
+            this._radVanCurrent.Size = new System.Drawing.Size(99, 26);
+            this._radVanCurrent.TabIndex = 2;
+            this._radVanCurrent.Text = "Stock Profile";
+            this._radVanCurrent.CheckedChanged += new System.EventHandler(this.radVanCurrent_CheckedChanged);
+            // 
+            // _Label5
+            // 
+            this._Label5.Location = new System.Drawing.Point(214, 25);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(24, 23);
+            this._Label5.TabIndex = 7;
+            this._Label5.Text = ">";
+            // 
+            // _cboLocationCurrent
+            // 
+            this._cboLocationCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboLocationCurrent.Location = new System.Drawing.Point(247, 25);
+            this._cboLocationCurrent.Name = "_cboLocationCurrent";
+            this._cboLocationCurrent.Size = new System.Drawing.Size(337, 21);
+            this._cboLocationCurrent.TabIndex = 3;
+            this._cboLocationCurrent.SelectedIndexChanged += new System.EventHandler(this.cboLocationCurrent_SelectedIndexChanged);
+            // 
+            // _grpCurrent
+            // 
+            this._grpCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpCurrent.Controls.Add(this._radWarehouseCurrent);
+            this._grpCurrent.Controls.Add(this._Label5);
+            this._grpCurrent.Controls.Add(this._radVanCurrent);
+            this._grpCurrent.Controls.Add(this._cboLocationCurrent);
+            this._grpCurrent.Location = new System.Drawing.Point(4, 12);
+            this._grpCurrent.Name = "_grpCurrent";
+            this._grpCurrent.Size = new System.Drawing.Size(592, 58);
+            this._grpCurrent.TabIndex = 1;
+            this._grpCurrent.TabStop = false;
+            this._grpCurrent.Text = "Select current stock location";
+            // 
+            // _grpNew
+            // 
+            this._grpNew.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpNew.Controls.Add(this._radWarehouseNew);
+            this._grpNew.Controls.Add(this._Label1);
+            this._grpNew.Controls.Add(this._radVanNew);
+            this._grpNew.Controls.Add(this._cboLocationNew);
+            this._grpNew.Location = new System.Drawing.Point(4, 337);
+            this._grpNew.Name = "_grpNew";
+            this._grpNew.Size = new System.Drawing.Size(592, 58);
+            this._grpNew.TabIndex = 3;
+            this._grpNew.TabStop = false;
+            this._grpNew.Text = "Select new stock location";
+            // 
+            // _radWarehouseNew
+            // 
+            this._radWarehouseNew.Checked = true;
+            this._radWarehouseNew.Location = new System.Drawing.Point(8, 20);
+            this._radWarehouseNew.Name = "_radWarehouseNew";
+            this._radWarehouseNew.Size = new System.Drawing.Size(96, 26);
+            this._radWarehouseNew.TabIndex = 1;
+            this._radWarehouseNew.TabStop = true;
+            this._radWarehouseNew.Text = "Warehouse";
+            this._radWarehouseNew.CheckedChanged += new System.EventHandler(this.radWarehouseNew_CheckedChanged);
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(214, 23);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(24, 23);
+            this._Label1.TabIndex = 7;
+            this._Label1.Text = ">";
+            // 
+            // _radVanNew
+            // 
+            this._radVanNew.Location = new System.Drawing.Point(110, 20);
+            this._radVanNew.Name = "_radVanNew";
+            this._radVanNew.Size = new System.Drawing.Size(98, 26);
+            this._radVanNew.TabIndex = 2;
+            this._radVanNew.Text = "Stock Profile";
+            this._radVanNew.CheckedChanged += new System.EventHandler(this.radVanNew_CheckedChanged);
+            // 
+            // _cboLocationNew
+            // 
+            this._cboLocationNew.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboLocationNew.Location = new System.Drawing.Point(247, 25);
+            this._cboLocationNew.Name = "_cboLocationNew";
+            this._cboLocationNew.Size = new System.Drawing.Size(337, 21);
+            this._cboLocationNew.TabIndex = 3;
+            // 
+            // _grpItems
+            // 
+            this._grpItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpItems.Controls.Add(this._Label4);
+            this._grpItems.Controls.Add(this._btnSelectAll);
+            this._grpItems.Controls.Add(this._btnDeselectAll);
+            this._grpItems.Controls.Add(this._txtFilter);
+            this._grpItems.Controls.Add(this._Label3);
+            this._grpItems.Controls.Add(this._txtQuantity);
+            this._grpItems.Controls.Add(this._Label2);
+            this._grpItems.Controls.Add(this._dgItems);
+            this._grpItems.Location = new System.Drawing.Point(4, 76);
+            this._grpItems.Name = "_grpItems";
+            this._grpItems.Size = new System.Drawing.Size(592, 255);
+            this._grpItems.TabIndex = 2;
+            this._grpItems.TabStop = false;
+            this._grpItems.Text = "Select item to move";
+            // 
+            // _Label4
+            // 
+            this._Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label4.Location = new System.Drawing.Point(295, 227);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(255, 14);
+            this._Label4.TabIndex = 23;
+            this._Label4.Text = "The current quantity will be moved across";
+            this._Label4.Visible = false;
+            // 
+            // _btnSelectAll
+            // 
+            this._btnSelectAll.AccessibleDescription = "Export Job List To Excel";
+            this._btnSelectAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSelectAll.Location = new System.Drawing.Point(400, 18);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(88, 23);
+            this._btnSelectAll.TabIndex = 21;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // _btnDeselectAll
+            // 
+            this._btnDeselectAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDeselectAll.Location = new System.Drawing.Point(496, 18);
+            this._btnDeselectAll.Name = "_btnDeselectAll";
+            this._btnDeselectAll.Size = new System.Drawing.Size(88, 23);
+            this._btnDeselectAll.TabIndex = 22;
+            this._btnDeselectAll.Text = "Deselect All";
+            this._btnDeselectAll.Click += new System.EventHandler(this.btnDeselectAll_Click);
+            // 
+            // _txtFilter
+            // 
+            this._txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtFilter.Location = new System.Drawing.Point(48, 20);
+            this._txtFilter.Name = "_txtFilter";
+            this._txtFilter.Size = new System.Drawing.Size(335, 21);
+            this._txtFilter.TabIndex = 1;
+            this._txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(4, 23);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(51, 18);
+            this._Label3.TabIndex = 3;
+            this._Label3.Text = "Filter";
+            // 
+            // _txtQuantity
+            // 
+            this._txtQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtQuantity.Location = new System.Drawing.Point(189, 224);
+            this._txtQuantity.Name = "_txtQuantity";
+            this._txtQuantity.Size = new System.Drawing.Size(100, 21);
+            this._txtQuantity.TabIndex = 3;
+            this._txtQuantity.Text = "1";
+            this._txtQuantity.GotFocus += new System.EventHandler(this.txtQuantity_GotFocus);
+            this._txtQuantity.Validating += new System.ComponentModel.CancelEventHandler(this.txtQuantity_Validating);
+            // 
+            // _Label2
+            // 
+            this._Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label2.Location = new System.Drawing.Point(6, 227);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(177, 16);
+            this._Label2.TabIndex = 1;
+            this._Label2.Text = "Enter quantity being moved";
+            // 
+            // _dgItems
+            // 
+            this._dgItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgItems.DataMember = "";
+            this._dgItems.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgItems.Location = new System.Drawing.Point(6, 47);
+            this._dgItems.Name = "_dgItems";
+            this._dgItems.Size = new System.Drawing.Size(580, 171);
+            this._dgItems.TabIndex = 2;
+            this._dgItems.Click += new System.EventHandler(this.dgItems_Click);
+            this._dgItems.DoubleClick += new System.EventHandler(this.dgItems_DoubleClick);
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(4, 401);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(59, 23);
+            this._btnClose.TabIndex = 5;
+            this._btnClose.Text = "Close";
+            this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _btnMove
+            // 
+            this._btnMove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnMove.Location = new System.Drawing.Point(537, 401);
+            this._btnMove.Name = "_btnMove";
+            this._btnMove.Size = new System.Drawing.Size(59, 23);
+            this._btnMove.TabIndex = 4;
+            this._btnMove.Text = "Move";
+            this._btnMove.UseVisualStyleBackColor = true;
+            this._btnMove.Click += new System.EventHandler(this.btnMove_Click);
+            // 
             // FRMStockMove
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(601, 435);
-            Controls.Add(_btnMove);
-            Controls.Add(_btnClose);
-            Controls.Add(_grpItems);
-            Controls.Add(_grpNew);
-            Controls.Add(_grpCurrent);
-            MinimumSize = new Size(609, 469);
-            Name = "FRMStockMove";
-            Text = "Internal Parts Transfer";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpCurrent, 0);
-            Controls.SetChildIndex(_grpNew, 0);
-            Controls.SetChildIndex(_grpItems, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_btnMove, 0);
-            _grpCurrent.ResumeLayout(false);
-            _grpNew.ResumeLayout(false);
-            _grpItems.ResumeLayout(false);
-            _grpItems.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgItems).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(601, 435);
+            this.Controls.Add(this._btnMove);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._grpItems);
+            this.Controls.Add(this._grpNew);
+            this.Controls.Add(this._grpCurrent);
+            this.MinimumSize = new System.Drawing.Size(609, 469);
+            this.Name = "FRMStockMove";
+            this.Text = "Internal Parts Transfer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpCurrent.ResumeLayout(false);
+            this._grpNew.ResumeLayout(false);
+            this._grpItems.ResumeLayout(false);
+            this._grpItems.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgItems)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

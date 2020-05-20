@@ -248,117 +248,124 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _gpbStandardSentences = new GroupBox();
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _btnAddNew = new Button();
-            _btnAddNew.Click += new EventHandler(btnAddNew_Click);
-            _dgStandardSentences = new DataGrid();
-            _dgStandardSentences.Click += new EventHandler(dgStandardSentences_Click);
-            _gpbEditAdd = new GroupBox();
-            _txtSentence = new TextBox();
-            _Label1 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _gpbStandardSentences.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgStandardSentences).BeginInit();
-            _gpbEditAdd.SuspendLayout();
-            SuspendLayout();
-            //
-            // gpbStandardSentences
-            //
-            _gpbStandardSentences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _gpbStandardSentences.Controls.Add(_btnDelete);
-            _gpbStandardSentences.Controls.Add(_btnAddNew);
-            _gpbStandardSentences.Controls.Add(_dgStandardSentences);
-            _gpbStandardSentences.Location = new Point(8, 40);
-            _gpbStandardSentences.Name = "gpbStandardSentences";
-            _gpbStandardSentences.Size = new Size(608, 448);
-            _gpbStandardSentences.TabIndex = 2;
-            _gpbStandardSentences.TabStop = false;
-            _gpbStandardSentences.Text = "Standard Sentences";
-            //
-            // btnDelete
-            //
-            _btnDelete.Location = new Point(520, 16);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.TabIndex = 2;
-            _btnDelete.Text = "Delete";
-            _btnDelete.Visible = false;
-            //
-            // btnAddNew
-            //
-            _btnAddNew.Location = new Point(8, 16);
-            _btnAddNew.Name = "btnAddNew";
-            _btnAddNew.TabIndex = 1;
-            _btnAddNew.Text = "Add New";
-            //
-            // dgStandardSentences
-            //
-            _dgStandardSentences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgStandardSentences.DataMember = "";
-            _dgStandardSentences.HeaderForeColor = SystemColors.ControlText;
-            _dgStandardSentences.Location = new Point(8, 42);
-            _dgStandardSentences.Name = "dgStandardSentences";
-            _dgStandardSentences.Size = new Size(592, 398);
-            _dgStandardSentences.TabIndex = 0;
-            //
-            // gpbEditAdd
-            //
-            _gpbEditAdd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gpbEditAdd.Controls.Add(_txtSentence);
-            _gpbEditAdd.Controls.Add(_Label1);
-            _gpbEditAdd.Controls.Add(_btnSave);
-            _gpbEditAdd.Location = new Point(624, 40);
-            _gpbEditAdd.Name = "gpbEditAdd";
-            _gpbEditAdd.Size = new Size(224, 448);
-            _gpbEditAdd.TabIndex = 3;
-            _gpbEditAdd.TabStop = false;
-            _gpbEditAdd.Text = "Add/Edit";
-            //
-            // txtSentence
-            //
-            _txtSentence.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSentence.Location = new Point(8, 42);
-            _txtSentence.Multiline = true;
-            _txtSentence.Name = "txtSentence";
-            _txtSentence.ScrollBars = ScrollBars.Vertical;
-            _txtSentence.Size = new Size(208, 256);
-            _txtSentence.TabIndex = 0;
-            _txtSentence.Text = "";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 24);
-            _Label1.Name = "Label1";
-            _Label1.TabIndex = 1;
-            _Label1.Text = "Sentence";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnSave.Location = new Point(136, 306);
-            _btnSave.Name = "btnSave";
-            _btnSave.TabIndex = 3;
-            _btnSave.Text = "Save";
-            //
+            this._gpbStandardSentences = new System.Windows.Forms.GroupBox();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._dgStandardSentences = new System.Windows.Forms.DataGrid();
+            this._gpbEditAdd = new System.Windows.Forms.GroupBox();
+            this._txtSentence = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._gpbStandardSentences.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgStandardSentences)).BeginInit();
+            this._gpbEditAdd.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _gpbStandardSentences
+            // 
+            this._gpbStandardSentences.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._gpbStandardSentences.Controls.Add(this._btnDelete);
+            this._gpbStandardSentences.Controls.Add(this._btnAddNew);
+            this._gpbStandardSentences.Controls.Add(this._dgStandardSentences);
+            this._gpbStandardSentences.Location = new System.Drawing.Point(8, 12);
+            this._gpbStandardSentences.Name = "_gpbStandardSentences";
+            this._gpbStandardSentences.Size = new System.Drawing.Size(608, 476);
+            this._gpbStandardSentences.TabIndex = 2;
+            this._gpbStandardSentences.TabStop = false;
+            this._gpbStandardSentences.Text = "Standard Sentences";
+            // 
+            // _btnDelete
+            // 
+            this._btnDelete.Location = new System.Drawing.Point(520, 16);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(75, 23);
+            this._btnDelete.TabIndex = 2;
+            this._btnDelete.Text = "Delete";
+            this._btnDelete.Visible = false;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // _btnAddNew
+            // 
+            this._btnAddNew.Location = new System.Drawing.Point(8, 16);
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.Size = new System.Drawing.Size(75, 23);
+            this._btnAddNew.TabIndex = 1;
+            this._btnAddNew.Text = "Add New";
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // _dgStandardSentences
+            // 
+            this._dgStandardSentences.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgStandardSentences.DataMember = "";
+            this._dgStandardSentences.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgStandardSentences.Location = new System.Drawing.Point(8, 42);
+            this._dgStandardSentences.Name = "_dgStandardSentences";
+            this._dgStandardSentences.Size = new System.Drawing.Size(592, 426);
+            this._dgStandardSentences.TabIndex = 0;
+            this._dgStandardSentences.Click += new System.EventHandler(this.dgStandardSentences_Click);
+            // 
+            // _gpbEditAdd
+            // 
+            this._gpbEditAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbEditAdd.Controls.Add(this._txtSentence);
+            this._gpbEditAdd.Controls.Add(this._Label1);
+            this._gpbEditAdd.Controls.Add(this._btnSave);
+            this._gpbEditAdd.Location = new System.Drawing.Point(624, 12);
+            this._gpbEditAdd.Name = "_gpbEditAdd";
+            this._gpbEditAdd.Size = new System.Drawing.Size(224, 476);
+            this._gpbEditAdd.TabIndex = 3;
+            this._gpbEditAdd.TabStop = false;
+            this._gpbEditAdd.Text = "Add/Edit";
+            // 
+            // _txtSentence
+            // 
+            this._txtSentence.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSentence.Location = new System.Drawing.Point(8, 42);
+            this._txtSentence.Multiline = true;
+            this._txtSentence.Name = "_txtSentence";
+            this._txtSentence.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtSentence.Size = new System.Drawing.Size(208, 256);
+            this._txtSentence.TabIndex = 0;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 24);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(100, 23);
+            this._Label1.TabIndex = 1;
+            this._Label1.Text = "Sentence";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Location = new System.Drawing.Point(136, 306);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 3;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FRMStandardSentences
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(856, 494);
-            Controls.Add(_gpbEditAdd);
-            Controls.Add(_gpbStandardSentences);
-            Name = "FRMStandardSentences";
-            Text = "Standard Sentences";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_gpbStandardSentences, 0);
-            Controls.SetChildIndex(_gpbEditAdd, 0);
-            _gpbStandardSentences.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgStandardSentences).EndInit();
-            _gpbEditAdd.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(856, 494);
+            this.Controls.Add(this._gpbEditAdd);
+            this.Controls.Add(this._gpbStandardSentences);
+            this.Name = "FRMStandardSentences";
+            this.Text = "Standard Sentences";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._gpbStandardSentences.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgStandardSentences)).EndInit();
+            this._gpbEditAdd.ResumeLayout(false);
+            this._gpbEditAdd.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         

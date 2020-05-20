@@ -527,252 +527,255 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _lblName = new Label();
-            _lblNumber = new Label();
-            _Label3 = new Label();
-            _lblSupplier = new Label();
-            _lblQty = new Label();
-            _Label7 = new Label();
-            _Label8 = new Label();
-            _txtName = new TextBox();
-            _txtNumber = new TextBox();
-            _txtQtyInPack = new TextBox();
-            _txtSupplierCode = new TextBox();
-            _txtSellPrice = new TextBox();
-            _txtAmount = new TextBox();
-            _btnAddToOrder = new Button();
-            _btnAddToOrder.Click += new EventHandler(btnAddToOrder_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _txtBuyPrice = new TextBox();
-            _Label6 = new Label();
-            _GroupBox1 = new GroupBox();
-            _txtSupplier = new TextBox();
-            _GroupBox2 = new GroupBox();
-            _GroupBox1.SuspendLayout();
-            _GroupBox2.SuspendLayout();
-            SuspendLayout();
-            //
-            // lblName
-            //
-            _lblName.Location = new Point(8, 24);
-            _lblName.Name = "lblName";
-            _lblName.Size = new Size(120, 23);
-            _lblName.TabIndex = 2;
-            _lblName.Text = "Name:";
-            //
-            // lblNumber
-            //
-            _lblNumber.Location = new Point(8, 56);
-            _lblNumber.Name = "lblNumber";
-            _lblNumber.Size = new Size(120, 23);
-            _lblNumber.TabIndex = 3;
-            _lblNumber.Text = "Number:";
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 24);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(104, 23);
-            _Label3.TabIndex = 4;
-            _Label3.Text = "Supplier Code:";
-            //
-            // lblSupplier
-            //
-            _lblSupplier.Location = new Point(8, 88);
-            _lblSupplier.Name = "lblSupplier";
-            _lblSupplier.Size = new Size(80, 24);
-            _lblSupplier.TabIndex = 5;
-            _lblSupplier.Text = "Supplier:";
-            //
-            // lblQty
-            //
-            _lblQty.Location = new Point(8, 120);
-            _lblQty.Name = "lblQty";
-            _lblQty.Size = new Size(120, 23);
-            _lblQty.TabIndex = 6;
-            _lblQty.Text = "Quantity In Pack:";
-            //
-            // Label7
-            //
-            _Label7.Location = new Point(8, 88);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(88, 23);
-            _Label7.TabIndex = 8;
-            _Label7.Text = "Sell Price:";
-            //
-            // Label8
-            //
-            _Label8.Location = new Point(8, 120);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(104, 24);
-            _Label8.TabIndex = 9;
-            _Label8.Text = "Amount to add:";
-            //
-            // txtName
-            //
-            _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtName.Enabled = false;
-            _txtName.Location = new Point(128, 24);
-            _txtName.Name = "txtName";
-            _txtName.ReadOnly = true;
-            _txtName.Size = new Size(296, 21);
-            _txtName.TabIndex = 1;
-            _txtName.Text = "";
-            //
-            // txtNumber
-            //
-            _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtNumber.Enabled = false;
-            _txtNumber.Location = new Point(128, 58);
-            _txtNumber.Name = "txtNumber";
-            _txtNumber.ReadOnly = true;
-            _txtNumber.Size = new Size(296, 21);
-            _txtNumber.TabIndex = 2;
-            _txtNumber.Text = "";
-            //
-            // txtQtyInPack
-            //
-            _txtQtyInPack.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtQtyInPack.Enabled = false;
-            _txtQtyInPack.Location = new Point(128, 122);
-            _txtQtyInPack.Name = "txtQtyInPack";
-            _txtQtyInPack.ReadOnly = true;
-            _txtQtyInPack.Size = new Size(296, 21);
-            _txtQtyInPack.TabIndex = 4;
-            _txtQtyInPack.Text = "";
-            //
-            // txtSupplierCode
-            //
-            _txtSupplierCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSupplierCode.Location = new Point(128, 24);
-            _txtSupplierCode.Name = "txtSupplierCode";
-            _txtSupplierCode.Size = new Size(296, 21);
-            _txtSupplierCode.TabIndex = 5;
-            _txtSupplierCode.Text = "";
-            //
-            // txtSellPrice
-            //
-            _txtSellPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSellPrice.Location = new Point(128, 90);
-            _txtSellPrice.Name = "txtSellPrice";
-            _txtSellPrice.Size = new Size(296, 21);
-            _txtSellPrice.TabIndex = 7;
-            _txtSellPrice.Text = "";
-            //
-            // txtAmount
-            //
-            _txtAmount.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtAmount.Location = new Point(128, 122);
-            _txtAmount.Name = "txtAmount";
-            _txtAmount.Size = new Size(168, 21);
-            _txtAmount.TabIndex = 8;
-            _txtAmount.Text = "";
-            //
-            // btnAddToOrder
-            //
-            _btnAddToOrder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAddToOrder.Location = new Point(304, 122);
-            _btnAddToOrder.Name = "btnAddToOrder";
-            _btnAddToOrder.Size = new Size(56, 23);
-            _btnAddToOrder.TabIndex = 9;
-            _btnAddToOrder.Text = "Add";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnCancel.Location = new Point(368, 122);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(56, 23);
-            _btnCancel.TabIndex = 10;
-            _btnCancel.Text = "Cancel";
-            //
-            // txtBuyPrice
-            //
-            _txtBuyPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtBuyPrice.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtBuyPrice.Location = new Point(128, 58);
-            _txtBuyPrice.Name = "txtBuyPrice";
-            _txtBuyPrice.Size = new Size(296, 21);
-            _txtBuyPrice.TabIndex = 6;
-            _txtBuyPrice.Text = "";
-            //
-            // Label6
-            //
-            _Label6.BackColor = Color.White;
-            _Label6.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label6.Location = new Point(8, 56);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 23);
-            _Label6.TabIndex = 7;
-            _Label6.Text = "Buy Price:";
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox1.Controls.Add(_lblName);
-            _GroupBox1.Controls.Add(_lblNumber);
-            _GroupBox1.Controls.Add(_txtName);
-            _GroupBox1.Controls.Add(_txtNumber);
-            _GroupBox1.Controls.Add(_lblSupplier);
-            _GroupBox1.Controls.Add(_txtSupplier);
-            _GroupBox1.Controls.Add(_lblQty);
-            _GroupBox1.Controls.Add(_txtQtyInPack);
-            _GroupBox1.Location = new Point(8, 40);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(432, 152);
-            _GroupBox1.TabIndex = 20;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Request Details";
-            //
-            // txtSupplier
-            //
-            _txtSupplier.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtSupplier.Enabled = false;
-            _txtSupplier.Location = new Point(128, 90);
-            _txtSupplier.Name = "txtSupplier";
-            _txtSupplier.ReadOnly = true;
-            _txtSupplier.Size = new Size(296, 21);
-            _txtSupplier.TabIndex = 3;
-            _txtSupplier.Text = "";
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox2.Controls.Add(_Label3);
-            _GroupBox2.Controls.Add(_txtSupplierCode);
-            _GroupBox2.Controls.Add(_txtBuyPrice);
-            _GroupBox2.Controls.Add(_txtSellPrice);
-            _GroupBox2.Controls.Add(_Label6);
-            _GroupBox2.Controls.Add(_Label7);
-            _GroupBox2.Controls.Add(_Label8);
-            _GroupBox2.Controls.Add(_txtAmount);
-            _GroupBox2.Controls.Add(_btnAddToOrder);
-            _GroupBox2.Controls.Add(_btnCancel);
-            _GroupBox2.Location = new Point(8, 200);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(432, 152);
-            _GroupBox2.TabIndex = 21;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Order Details";
-            //
+            this._lblName = new System.Windows.Forms.Label();
+            this._lblNumber = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._lblSupplier = new System.Windows.Forms.Label();
+            this._lblQty = new System.Windows.Forms.Label();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._txtNumber = new System.Windows.Forms.TextBox();
+            this._txtQtyInPack = new System.Windows.Forms.TextBox();
+            this._txtSupplierCode = new System.Windows.Forms.TextBox();
+            this._txtSellPrice = new System.Windows.Forms.TextBox();
+            this._txtAmount = new System.Windows.Forms.TextBox();
+            this._btnAddToOrder = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._txtBuyPrice = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._txtSupplier = new System.Windows.Forms.TextBox();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._GroupBox1.SuspendLayout();
+            this._GroupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _lblName
+            // 
+            this._lblName.Location = new System.Drawing.Point(8, 24);
+            this._lblName.Name = "_lblName";
+            this._lblName.Size = new System.Drawing.Size(120, 23);
+            this._lblName.TabIndex = 2;
+            this._lblName.Text = "Name:";
+            // 
+            // _lblNumber
+            // 
+            this._lblNumber.Location = new System.Drawing.Point(8, 56);
+            this._lblNumber.Name = "_lblNumber";
+            this._lblNumber.Size = new System.Drawing.Size(120, 23);
+            this._lblNumber.TabIndex = 3;
+            this._lblNumber.Text = "Number:";
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(8, 24);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(104, 23);
+            this._Label3.TabIndex = 4;
+            this._Label3.Text = "Supplier Code:";
+            // 
+            // _lblSupplier
+            // 
+            this._lblSupplier.Location = new System.Drawing.Point(8, 88);
+            this._lblSupplier.Name = "_lblSupplier";
+            this._lblSupplier.Size = new System.Drawing.Size(80, 24);
+            this._lblSupplier.TabIndex = 5;
+            this._lblSupplier.Text = "Supplier:";
+            // 
+            // _lblQty
+            // 
+            this._lblQty.Location = new System.Drawing.Point(8, 120);
+            this._lblQty.Name = "_lblQty";
+            this._lblQty.Size = new System.Drawing.Size(120, 23);
+            this._lblQty.TabIndex = 6;
+            this._lblQty.Text = "Quantity In Pack:";
+            // 
+            // _Label7
+            // 
+            this._Label7.Location = new System.Drawing.Point(8, 88);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(88, 23);
+            this._Label7.TabIndex = 8;
+            this._Label7.Text = "Sell Price:";
+            // 
+            // _Label8
+            // 
+            this._Label8.Location = new System.Drawing.Point(8, 120);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(104, 24);
+            this._Label8.TabIndex = 9;
+            this._Label8.Text = "Amount to add:";
+            // 
+            // _txtName
+            // 
+            this._txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtName.Enabled = false;
+            this._txtName.Location = new System.Drawing.Point(128, 24);
+            this._txtName.Name = "_txtName";
+            this._txtName.ReadOnly = true;
+            this._txtName.Size = new System.Drawing.Size(296, 21);
+            this._txtName.TabIndex = 1;
+            // 
+            // _txtNumber
+            // 
+            this._txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNumber.Enabled = false;
+            this._txtNumber.Location = new System.Drawing.Point(128, 58);
+            this._txtNumber.Name = "_txtNumber";
+            this._txtNumber.ReadOnly = true;
+            this._txtNumber.Size = new System.Drawing.Size(296, 21);
+            this._txtNumber.TabIndex = 2;
+            // 
+            // _txtQtyInPack
+            // 
+            this._txtQtyInPack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtQtyInPack.Enabled = false;
+            this._txtQtyInPack.Location = new System.Drawing.Point(128, 122);
+            this._txtQtyInPack.Name = "_txtQtyInPack";
+            this._txtQtyInPack.ReadOnly = true;
+            this._txtQtyInPack.Size = new System.Drawing.Size(296, 21);
+            this._txtQtyInPack.TabIndex = 4;
+            // 
+            // _txtSupplierCode
+            // 
+            this._txtSupplierCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSupplierCode.Location = new System.Drawing.Point(128, 24);
+            this._txtSupplierCode.Name = "_txtSupplierCode";
+            this._txtSupplierCode.Size = new System.Drawing.Size(296, 21);
+            this._txtSupplierCode.TabIndex = 5;
+            // 
+            // _txtSellPrice
+            // 
+            this._txtSellPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSellPrice.Location = new System.Drawing.Point(128, 90);
+            this._txtSellPrice.Name = "_txtSellPrice";
+            this._txtSellPrice.Size = new System.Drawing.Size(296, 21);
+            this._txtSellPrice.TabIndex = 7;
+            // 
+            // _txtAmount
+            // 
+            this._txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAmount.Location = new System.Drawing.Point(128, 122);
+            this._txtAmount.Name = "_txtAmount";
+            this._txtAmount.Size = new System.Drawing.Size(168, 21);
+            this._txtAmount.TabIndex = 8;
+            // 
+            // _btnAddToOrder
+            // 
+            this._btnAddToOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAddToOrder.Location = new System.Drawing.Point(304, 122);
+            this._btnAddToOrder.Name = "_btnAddToOrder";
+            this._btnAddToOrder.Size = new System.Drawing.Size(56, 23);
+            this._btnAddToOrder.TabIndex = 9;
+            this._btnAddToOrder.Text = "Add";
+            this._btnAddToOrder.Click += new System.EventHandler(this.btnAddToOrder_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCancel.Location = new System.Drawing.Point(368, 122);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(56, 23);
+            this._btnCancel.TabIndex = 10;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _txtBuyPrice
+            // 
+            this._txtBuyPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtBuyPrice.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtBuyPrice.Location = new System.Drawing.Point(128, 58);
+            this._txtBuyPrice.Name = "_txtBuyPrice";
+            this._txtBuyPrice.Size = new System.Drawing.Size(296, 21);
+            this._txtBuyPrice.TabIndex = 6;
+            // 
+            // _Label6
+            // 
+            this._Label6.BackColor = System.Drawing.Color.White;
+            this._Label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label6.Location = new System.Drawing.Point(8, 56);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 23);
+            this._Label6.TabIndex = 7;
+            this._Label6.Text = "Buy Price:";
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._lblName);
+            this._GroupBox1.Controls.Add(this._lblNumber);
+            this._GroupBox1.Controls.Add(this._txtName);
+            this._GroupBox1.Controls.Add(this._txtNumber);
+            this._GroupBox1.Controls.Add(this._lblSupplier);
+            this._GroupBox1.Controls.Add(this._txtSupplier);
+            this._GroupBox1.Controls.Add(this._lblQty);
+            this._GroupBox1.Controls.Add(this._txtQtyInPack);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(432, 180);
+            this._GroupBox1.TabIndex = 20;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Request Details";
+            // 
+            // _txtSupplier
+            // 
+            this._txtSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSupplier.Enabled = false;
+            this._txtSupplier.Location = new System.Drawing.Point(128, 90);
+            this._txtSupplier.Name = "_txtSupplier";
+            this._txtSupplier.ReadOnly = true;
+            this._txtSupplier.Size = new System.Drawing.Size(296, 21);
+            this._txtSupplier.TabIndex = 3;
+            // 
+            // _GroupBox2
+            // 
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox2.Controls.Add(this._Label3);
+            this._GroupBox2.Controls.Add(this._txtSupplierCode);
+            this._GroupBox2.Controls.Add(this._txtBuyPrice);
+            this._GroupBox2.Controls.Add(this._txtSellPrice);
+            this._GroupBox2.Controls.Add(this._Label6);
+            this._GroupBox2.Controls.Add(this._Label7);
+            this._GroupBox2.Controls.Add(this._Label8);
+            this._GroupBox2.Controls.Add(this._txtAmount);
+            this._GroupBox2.Controls.Add(this._btnAddToOrder);
+            this._GroupBox2.Controls.Add(this._btnCancel);
+            this._GroupBox2.Location = new System.Drawing.Point(8, 200);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(432, 152);
+            this._GroupBox2.TabIndex = 21;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Order Details";
+            // 
             // FRMAddtoOrder
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(448, 358);
-            Controls.Add(_GroupBox2);
-            Controls.Add(_GroupBox1);
-            MaximizeBox = false;
-            MaximumSize = new Size(456, 392);
-            MinimizeBox = false;
-            MinimumSize = new Size(456, 392);
-            Name = "FRMAddtoOrder";
-            Text = "Add Item to Order";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_GroupBox2, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox2.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(440, 353);
+            this.Controls.Add(this._GroupBox2);
+            this.Controls.Add(this._GroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(456, 392);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(456, 392);
+            this.Name = "FRMAddtoOrder";
+            this.Text = "Add Item to Order";
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this._GroupBox2.ResumeLayout(false);
+            this._GroupBox2.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

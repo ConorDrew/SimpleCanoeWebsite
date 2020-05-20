@@ -149,69 +149,67 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pnlMain = new Panel();
-            _btnPrint = new Button();
-            _btnPrint.Click += new EventHandler(btnPrint_Click);
-            SuspendLayout();
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Location = new Point(8, 656);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 25);
-            _btnSave.TabIndex = 2;
-            _btnSave.Text = "Save";
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(72, 656);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 25);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
-            // pnlMain
-            //
-            _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlMain.Location = new Point(0, 32);
-            _pnlMain.Name = "pnlMain";
-            _pnlMain.Size = new Size(784, 616);
-            _pnlMain.TabIndex = 1;
-            //
-            // btnPrint
-            //
-            _btnPrint.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPrint.Location = new Point(728, 656);
-            _btnPrint.Name = "btnPrint";
-            _btnPrint.Size = new Size(56, 25);
-            _btnPrint.TabIndex = 4;
-            _btnPrint.Text = "Print";
-            //
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pnlMain = new System.Windows.Forms.Panel();
+            this._btnPrint = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Location = new System.Drawing.Point(8, 656);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 25);
+            this._btnSave.TabIndex = 2;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(72, 656);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 25);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pnlMain
+            // 
+            this._pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlMain.Location = new System.Drawing.Point(0, 12);
+            this._pnlMain.Name = "_pnlMain";
+            this._pnlMain.Size = new System.Drawing.Size(784, 636);
+            this._pnlMain.TabIndex = 1;
+            // 
+            // _btnPrint
+            // 
+            this._btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrint.Location = new System.Drawing.Point(728, 656);
+            this._btnPrint.Name = "_btnPrint";
+            this._btnPrint.Size = new System.Drawing.Size(56, 25);
+            this._btnPrint.TabIndex = 4;
+            this._btnPrint.Text = "Print";
+            this._btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // FRMContractOriginal
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(792, 694);
-            Controls.Add(_btnPrint);
-            Controls.Add(_btnClose);
-            Controls.Add(_btnSave);
-            Controls.Add(_pnlMain);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(800, 728);
-            Name = "FRMContractOriginal";
-            Text = "Contract : ID {0}";
-            Controls.SetChildIndex(_pnlMain, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_btnPrint, 0);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(792, 694);
+            this.Controls.Add(this._btnPrint);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._pnlMain);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(800, 728);
+            this.Name = "FRMContractOriginal";
+            this.Text = "Contract : ID {0}";
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

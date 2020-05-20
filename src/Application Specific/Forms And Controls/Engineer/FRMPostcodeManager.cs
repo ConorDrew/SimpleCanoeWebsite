@@ -126,67 +126,66 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpEngineers = new GroupBox();
-            _dgEngineers = new DataGrid();
-            _dgEngineers.Click += new EventHandler(dgEngineers_Clicks);
-            _dgEngineers.DoubleClick += new EventHandler(dgEngineers_Clicks);
-            _dgEngineers.Click += new EventHandler(dgEngineers_Clicks);
-            _dgEngineers.DoubleClick += new EventHandler(dgEngineers_Clicks);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _grpEngineers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEngineers).BeginInit();
-            SuspendLayout();
-            //
-            // grpEngineers
-            //
-            _grpEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpEngineers.Controls.Add(_dgEngineers);
-            _grpEngineers.Location = new Point(8, 40);
-            _grpEngineers.Name = "grpEngineers";
-            _grpEngineers.Size = new Size(344, 408);
-            _grpEngineers.TabIndex = 1;
-            _grpEngineers.TabStop = false;
-            _grpEngineers.Text = "Tick those engineers associated to this new postcode";
-            //
-            // dgEngineers
-            //
-            _dgEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgEngineers.DataMember = "";
-            _dgEngineers.HeaderForeColor = SystemColors.ControlText;
-            _dgEngineers.Location = new Point(8, 25);
-            _dgEngineers.Name = "dgEngineers";
-            _dgEngineers.Size = new Size(328, 375);
-            _dgEngineers.TabIndex = 0;
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Location = new Point(8, 456);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 23);
-            _btnSave.TabIndex = 2;
-            _btnSave.Text = "Save";
-            //
+            this._grpEngineers = new System.Windows.Forms.GroupBox();
+            this._dgEngineers = new System.Windows.Forms.DataGrid();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._grpEngineers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineers)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpEngineers
+            // 
+            this._grpEngineers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpEngineers.Controls.Add(this._dgEngineers);
+            this._grpEngineers.Location = new System.Drawing.Point(8, 12);
+            this._grpEngineers.Name = "_grpEngineers";
+            this._grpEngineers.Size = new System.Drawing.Size(344, 436);
+            this._grpEngineers.TabIndex = 1;
+            this._grpEngineers.TabStop = false;
+            this._grpEngineers.Text = "Tick those engineers associated to this new postcode";
+            // 
+            // _dgEngineers
+            // 
+            this._dgEngineers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgEngineers.DataMember = "";
+            this._dgEngineers.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgEngineers.Location = new System.Drawing.Point(8, 25);
+            this._dgEngineers.Name = "_dgEngineers";
+            this._dgEngineers.Size = new System.Drawing.Size(328, 403);
+            this._dgEngineers.TabIndex = 0;
+            this._dgEngineers.Click += new System.EventHandler(this.dgEngineers_Clicks);
+            this._dgEngineers.DoubleClick += new System.EventHandler(this.dgEngineers_Clicks);
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Location = new System.Drawing.Point(8, 456);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 23);
+            this._btnSave.TabIndex = 2;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FRMPostcodeManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(360, 486);
-            Controls.Add(_btnSave);
-            Controls.Add(_grpEngineers);
-            MaximizeBox = false;
-            MaximumSize = new Size(368, 520);
-            MinimizeBox = false;
-            MinimumSize = new Size(368, 520);
-            Name = "FRMPostcodeManager";
-            Text = "Postcode Manager";
-            Controls.SetChildIndex(_grpEngineers, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            _grpEngineers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgEngineers).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(352, 481);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._grpEngineers);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(368, 520);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(368, 520);
+            this.Name = "FRMPostcodeManager";
+            this.Text = "Postcode Manager";
+            this._grpEngineers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineers)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

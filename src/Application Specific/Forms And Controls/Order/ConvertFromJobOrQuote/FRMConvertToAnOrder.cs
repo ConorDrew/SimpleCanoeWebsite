@@ -575,412 +575,406 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJob = new GroupBox();
-            _dgEngineerVisits = new DataGrid();
-            _grpPartsAndProducts = new GroupBox();
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _btnRemove = new Button();
-            _btnRemove.Click += new EventHandler(btnRemove_Click);
-            _dgPartsAndProducts = new DataGrid();
-            _dgPartsAndProducts.CurrentCellChanged += new EventHandler(dgPartsAndProducts_CurrentCellChanged);
-            _btnAddProduct = new Button();
-            _btnAddProduct.Click += new EventHandler(btnAddProduct_Click);
-            _btnAddPart = new Button();
-            _btnAddPart.Click += new EventHandler(btnAddPart_Click);
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _lblinformation = new Label();
-            _chkAwaiting = new CheckBox();
-            _chkAwaiting.CheckedChanged += new EventHandler(chkAwaiting_CheckedChanged);
-            _chkConfirmed = new CheckBox();
-            _chkConfirmed.CheckedChanged += new EventHandler(chkConfirmed_CheckedChanged);
-            _Label1 = new Label();
-            _dtpDeadline = new DateTimePicker();
-            _Label2 = new Label();
-            _TabControl1 = new TabControl();
-            _TabPage1 = new TabPage();
-            _TabPage2 = new TabPage();
-            _grpCharges = new GroupBox();
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _btnChargesSave = new Button();
-            _btnChargesSave.Click += new EventHandler(btnChargesSave_Click);
-            _txtAmount = new TextBox();
-            _Label3 = new Label();
-            _cboChargeType = new ComboBox();
-            _Label4 = new Label();
-            _dgCharges = new DataGrid();
-            _dgCharges.Click += new EventHandler(dgCharges_Click);
-            _dgCharges.CurrentCellChanged += new EventHandler(dgCharges_Click);
-            _dgCharges.Click += new EventHandler(dgCharges_Click);
-            _dgCharges.CurrentCellChanged += new EventHandler(dgCharges_Click);
-            _Label17 = new Label();
-            _txtDepartment = new TextBox();
-            _chkDoNotConsolidate = new CheckBox();
-            _grpJob.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEngineerVisits).BeginInit();
-            _grpPartsAndProducts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgPartsAndProducts).BeginInit();
-            _TabControl1.SuspendLayout();
-            _TabPage1.SuspendLayout();
-            _TabPage2.SuspendLayout();
-            _grpCharges.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCharges).BeginInit();
-            SuspendLayout();
-            //
-            // grpJob
-            //
-            _grpJob.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpJob.Controls.Add(_dgEngineerVisits);
-            _grpJob.Location = new Point(8, 40);
-            _grpJob.Name = "grpJob";
-            _grpJob.Size = new Size(976, 152);
-            _grpJob.TabIndex = 1;
-            _grpJob.TabStop = false;
-            _grpJob.Text = "More than one engineer visit exists for this job, please select the visit to assi" + "gn this order to and click OK";
-            //
-            // dgEngineerVisits
-            //
-            _dgEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgEngineerVisits.DataMember = "";
-            _dgEngineerVisits.HeaderForeColor = SystemColors.ControlText;
-            _dgEngineerVisits.Location = new Point(8, 30);
-            _dgEngineerVisits.Name = "dgEngineerVisits";
-            _dgEngineerVisits.Size = new Size(960, 114);
-            _dgEngineerVisits.TabIndex = 1;
-            //
-            // grpPartsAndProducts
-            //
-            _grpPartsAndProducts.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _grpPartsAndProducts.Controls.Add(_btnExport);
-            _grpPartsAndProducts.Controls.Add(_btnRemove);
-            _grpPartsAndProducts.Controls.Add(_dgPartsAndProducts);
-            _grpPartsAndProducts.Controls.Add(_btnAddProduct);
-            _grpPartsAndProducts.Controls.Add(_btnAddPart);
-            _grpPartsAndProducts.Location = new Point(0, 0);
-            _grpPartsAndProducts.Name = "grpPartsAndProducts";
-            _grpPartsAndProducts.Size = new Size(968, 275);
-            _grpPartsAndProducts.TabIndex = 2;
-            _grpPartsAndProducts.TabStop = false;
-            _grpPartsAndProducts.Text = "Parts && Products";
-            //
-            // btnExport
-            //
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(198, 243);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(88, 23);
-            _btnExport.TabIndex = 9;
-            _btnExport.Text = "Export";
-            //
-            // btnRemove
-            //
-            _btnRemove.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRemove.Location = new Point(788, 241);
-            _btnRemove.Name = "btnRemove";
-            _btnRemove.Size = new Size(164, 23);
-            _btnRemove.TabIndex = 8;
-            _btnRemove.Text = "Remove Part / Product";
-            //
-            // dgPartsAndProducts
-            //
-            _dgPartsAndProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgPartsAndProducts.DataMember = "";
-            _dgPartsAndProducts.HeaderForeColor = SystemColors.ControlText;
-            _dgPartsAndProducts.Location = new Point(8, 20);
-            _dgPartsAndProducts.Name = "dgPartsAndProducts";
-            _dgPartsAndProducts.Size = new Size(952, 215);
-            _dgPartsAndProducts.TabIndex = 3;
-            //
-            // btnAddProduct
-            //
-            _btnAddProduct.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddProduct.Location = new Point(104, 243);
-            _btnAddProduct.Name = "btnAddProduct";
-            _btnAddProduct.Size = new Size(88, 23);
-            _btnAddProduct.TabIndex = 6;
-            _btnAddProduct.Text = "Add Product";
-            //
-            // btnAddPart
-            //
-            _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddPart.Location = new Point(8, 243);
-            _btnAddPart.Name = "btnAddPart";
-            _btnAddPart.Size = new Size(88, 23);
-            _btnAddPart.TabIndex = 7;
-            _btnAddPart.Text = "Add Part";
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.Location = new Point(928, 536);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 23);
-            _btnSave.TabIndex = 4;
-            _btnSave.Text = "Save";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(8, 536);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(56, 23);
-            _btnCancel.TabIndex = 5;
-            _btnCancel.Text = "Cancel";
-            //
-            // lblinformation
-            //
-            _lblinformation.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblinformation.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblinformation.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblinformation.Location = new Point(328, 536);
-            _lblinformation.Name = "lblinformation";
-            _lblinformation.Size = new Size(600, 24);
-            _lblinformation.TabIndex = 8;
-            _lblinformation.TextAlign = ContentAlignment.MiddleCenter;
-            //
-            // chkAwaiting
-            //
-            _chkAwaiting.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _chkAwaiting.AutoSize = true;
-            _chkAwaiting.Location = new Point(91, 508);
-            _chkAwaiting.Name = "chkAwaiting";
-            _chkAwaiting.Size = new Size(152, 17);
-            _chkAwaiting.TabIndex = 9;
-            _chkAwaiting.Text = "Awaiting Confirmation";
-            _chkAwaiting.UseVisualStyleBackColor = true;
-            //
-            // chkConfirmed
-            //
-            _chkConfirmed.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _chkConfirmed.AutoSize = true;
-            _chkConfirmed.Location = new Point(249, 508);
-            _chkConfirmed.Name = "chkConfirmed";
-            _chkConfirmed.Size = new Size(86, 17);
-            _chkConfirmed.TabIndex = 10;
-            _chkConfirmed.Text = "Confirmed";
-            _chkConfirmed.UseVisualStyleBackColor = true;
-            //
-            // Label1
-            //
-            _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(5, 508);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(80, 13);
-            _Label1.TabIndex = 11;
-            _Label1.Text = "Order Status";
-            //
-            // dtpDeadline
-            //
-            _dtpDeadline.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _dtpDeadline.CustomFormat = "dddd dd MMMM yyyy";
-            _dtpDeadline.Format = DateTimePickerFormat.Custom;
-            _dtpDeadline.Location = new Point(456, 508);
-            _dtpDeadline.Name = "dtpDeadline";
-            _dtpDeadline.Size = new Size(244, 21);
-            _dtpDeadline.TabIndex = 12;
-            //
-            // Label2
-            //
-            _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(341, 509);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(109, 13);
-            _Label2.TabIndex = 13;
-            _Label2.Text = "Delivery Deadline";
-            //
-            // TabControl1
-            //
-            _TabControl1.Controls.Add(_TabPage1);
-            _TabControl1.Controls.Add(_TabPage2);
-            _TabControl1.Location = new Point(8, 198);
-            _TabControl1.Name = "TabControl1";
-            _TabControl1.SelectedIndex = 0;
-            _TabControl1.Size = new Size(976, 304);
-            _TabControl1.TabIndex = 14;
-            //
-            // TabPage1
-            //
-            _TabPage1.Controls.Add(_grpPartsAndProducts);
-            _TabPage1.Location = new Point(4, 22);
-            _TabPage1.Name = "TabPage1";
-            _TabPage1.Padding = new Padding(3);
-            _TabPage1.Size = new Size(968, 278);
-            _TabPage1.TabIndex = 0;
-            _TabPage1.Text = "Parts & Products";
-            _TabPage1.UseVisualStyleBackColor = true;
-            //
-            // TabPage2
-            //
-            _TabPage2.Controls.Add(_grpCharges);
-            _TabPage2.Location = new Point(4, 22);
-            _TabPage2.Name = "TabPage2";
-            _TabPage2.Padding = new Padding(3);
-            _TabPage2.Size = new Size(968, 278);
-            _TabPage2.TabIndex = 1;
-            _TabPage2.Text = "Charges";
-            _TabPage2.UseVisualStyleBackColor = true;
-            //
-            // grpCharges
-            //
-            _grpCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpCharges.Controls.Add(_btnDelete);
-            _grpCharges.Controls.Add(_btnChargesSave);
-            _grpCharges.Controls.Add(_txtAmount);
-            _grpCharges.Controls.Add(_Label3);
-            _grpCharges.Controls.Add(_cboChargeType);
-            _grpCharges.Controls.Add(_Label4);
-            _grpCharges.Controls.Add(_dgCharges);
-            _grpCharges.Location = new Point(6, 0);
-            _grpCharges.Name = "grpCharges";
-            _grpCharges.Size = new Size(956, 272);
-            _grpCharges.TabIndex = 3;
-            _grpCharges.TabStop = false;
-            _grpCharges.Text = "Charges";
-            //
-            // btnDelete
-            //
-            _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDelete.Location = new Point(884, 208);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(64, 23);
-            _btnDelete.TabIndex = 5;
-            _btnDelete.Text = "Remove";
-            //
-            // btnChargesSave
-            //
-            _btnChargesSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnChargesSave.Location = new Point(884, 240);
-            _btnChargesSave.Name = "btnChargesSave";
-            _btnChargesSave.Size = new Size(64, 23);
-            _btnChargesSave.TabIndex = 4;
-            _btnChargesSave.Text = "Add";
-            //
-            // txtAmount
-            //
-            _txtAmount.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _txtAmount.Location = new Point(804, 240);
-            _txtAmount.Name = "txtAmount";
-            _txtAmount.Size = new Size(72, 21);
-            _txtAmount.TabIndex = 3;
-            //
-            // Label3
-            //
-            _Label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label3.Location = new Point(740, 240);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(56, 23);
-            _Label3.TabIndex = 3;
-            _Label3.Text = "Amount:";
-            //
-            // cboChargeType
-            //
-            _cboChargeType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _cboChargeType.Location = new Point(96, 240);
-            _cboChargeType.Name = "cboChargeType";
-            _cboChargeType.Size = new Size(636, 21);
-            _cboChargeType.TabIndex = 2;
-            //
-            // Label4
-            //
-            _Label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label4.Location = new Point(8, 240);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(88, 23);
-            _Label4.TabIndex = 1;
-            _Label4.Text = "Charge Type:";
-            //
-            // dgCharges
-            //
-            _dgCharges.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgCharges.DataMember = "";
-            _dgCharges.HeaderForeColor = SystemColors.ControlText;
-            _dgCharges.Location = new Point(8, 25);
-            _dgCharges.Name = "dgCharges";
-            _dgCharges.Size = new Size(940, 175);
-            _dgCharges.TabIndex = 1;
-            //
-            // Label17
-            //
-            _Label17.Location = new Point(705, 508);
-            _Label17.Name = "Label17";
-            _Label17.Size = new Size(38, 20);
-            _Label17.TabIndex = 70;
-            _Label17.Text = "Dept";
-            //
-            // txtDepartment
-            //
-            _txtDepartment.Location = new Point(749, 511);
-            _txtDepartment.MaxLength = 100;
-            _txtDepartment.Name = "txtDepartment";
-            _txtDepartment.Size = new Size(131, 21);
-            _txtDepartment.TabIndex = 69;
-            _txtDepartment.Tag = "";
-            //
-            // chkDoNotConsolidate
-            //
-            _chkDoNotConsolidate.AutoSize = true;
-            _chkDoNotConsolidate.Location = new Point(91, 540);
-            _chkDoNotConsolidate.Name = "chkDoNotConsolidate";
-            _chkDoNotConsolidate.Size = new Size(136, 17);
-            _chkDoNotConsolidate.TabIndex = 71;
-            _chkDoNotConsolidate.Text = "Do Not Consolidate";
-            _chkDoNotConsolidate.UseVisualStyleBackColor = true;
-            //
+            this._grpJob = new System.Windows.Forms.GroupBox();
+            this._dgEngineerVisits = new System.Windows.Forms.DataGrid();
+            this._grpPartsAndProducts = new System.Windows.Forms.GroupBox();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._btnRemove = new System.Windows.Forms.Button();
+            this._dgPartsAndProducts = new System.Windows.Forms.DataGrid();
+            this._btnAddProduct = new System.Windows.Forms.Button();
+            this._btnAddPart = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._lblinformation = new System.Windows.Forms.Label();
+            this._chkAwaiting = new System.Windows.Forms.CheckBox();
+            this._chkConfirmed = new System.Windows.Forms.CheckBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._dtpDeadline = new System.Windows.Forms.DateTimePicker();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._TabControl1 = new System.Windows.Forms.TabControl();
+            this._TabPage1 = new System.Windows.Forms.TabPage();
+            this._TabPage2 = new System.Windows.Forms.TabPage();
+            this._grpCharges = new System.Windows.Forms.GroupBox();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._btnChargesSave = new System.Windows.Forms.Button();
+            this._txtAmount = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._cboChargeType = new System.Windows.Forms.ComboBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._dgCharges = new System.Windows.Forms.DataGrid();
+            this._Label17 = new System.Windows.Forms.Label();
+            this._txtDepartment = new System.Windows.Forms.TextBox();
+            this._chkDoNotConsolidate = new System.Windows.Forms.CheckBox();
+            this._grpJob.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineerVisits)).BeginInit();
+            this._grpPartsAndProducts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsAndProducts)).BeginInit();
+            this._TabControl1.SuspendLayout();
+            this._TabPage1.SuspendLayout();
+            this._TabPage2.SuspendLayout();
+            this._grpCharges.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCharges)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpJob
+            // 
+            this._grpJob.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJob.Controls.Add(this._dgEngineerVisits);
+            this._grpJob.Location = new System.Drawing.Point(8, 12);
+            this._grpJob.Name = "_grpJob";
+            this._grpJob.Size = new System.Drawing.Size(976, 152);
+            this._grpJob.TabIndex = 1;
+            this._grpJob.TabStop = false;
+            this._grpJob.Text = "More than one engineer visit exists for this job, please select the visit to assi" +
+    "gn this order to and click OK";
+            // 
+            // _dgEngineerVisits
+            // 
+            this._dgEngineerVisits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgEngineerVisits.DataMember = "";
+            this._dgEngineerVisits.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgEngineerVisits.Location = new System.Drawing.Point(8, 30);
+            this._dgEngineerVisits.Name = "_dgEngineerVisits";
+            this._dgEngineerVisits.Size = new System.Drawing.Size(960, 114);
+            this._dgEngineerVisits.TabIndex = 1;
+            // 
+            // _grpPartsAndProducts
+            // 
+            this._grpPartsAndProducts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpPartsAndProducts.Controls.Add(this._btnExport);
+            this._grpPartsAndProducts.Controls.Add(this._btnRemove);
+            this._grpPartsAndProducts.Controls.Add(this._dgPartsAndProducts);
+            this._grpPartsAndProducts.Controls.Add(this._btnAddProduct);
+            this._grpPartsAndProducts.Controls.Add(this._btnAddPart);
+            this._grpPartsAndProducts.Location = new System.Drawing.Point(0, 6);
+            this._grpPartsAndProducts.Name = "_grpPartsAndProducts";
+            this._grpPartsAndProducts.Size = new System.Drawing.Size(968, 297);
+            this._grpPartsAndProducts.TabIndex = 2;
+            this._grpPartsAndProducts.TabStop = false;
+            this._grpPartsAndProducts.Text = "Parts && Products";
+            // 
+            // _btnExport
+            // 
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(198, 265);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(88, 23);
+            this._btnExport.TabIndex = 9;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _btnRemove
+            // 
+            this._btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRemove.Location = new System.Drawing.Point(788, 263);
+            this._btnRemove.Name = "_btnRemove";
+            this._btnRemove.Size = new System.Drawing.Size(164, 23);
+            this._btnRemove.TabIndex = 8;
+            this._btnRemove.Text = "Remove Part / Product";
+            this._btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // _dgPartsAndProducts
+            // 
+            this._dgPartsAndProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgPartsAndProducts.DataMember = "";
+            this._dgPartsAndProducts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgPartsAndProducts.Location = new System.Drawing.Point(8, 20);
+            this._dgPartsAndProducts.Name = "_dgPartsAndProducts";
+            this._dgPartsAndProducts.Size = new System.Drawing.Size(952, 237);
+            this._dgPartsAndProducts.TabIndex = 3;
+            this._dgPartsAndProducts.CurrentCellChanged += new System.EventHandler(this.dgPartsAndProducts_CurrentCellChanged);
+            // 
+            // _btnAddProduct
+            // 
+            this._btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddProduct.Location = new System.Drawing.Point(104, 265);
+            this._btnAddProduct.Name = "_btnAddProduct";
+            this._btnAddProduct.Size = new System.Drawing.Size(88, 23);
+            this._btnAddProduct.TabIndex = 6;
+            this._btnAddProduct.Text = "Add Product";
+            this._btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // _btnAddPart
+            // 
+            this._btnAddPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddPart.Location = new System.Drawing.Point(8, 265);
+            this._btnAddPart.Name = "_btnAddPart";
+            this._btnAddPart.Size = new System.Drawing.Size(88, 23);
+            this._btnAddPart.TabIndex = 7;
+            this._btnAddPart.Text = "Add Part";
+            this._btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Location = new System.Drawing.Point(928, 536);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 23);
+            this._btnSave.TabIndex = 4;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(8, 536);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(56, 23);
+            this._btnCancel.TabIndex = 5;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _lblinformation
+            // 
+            this._lblinformation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblinformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this._lblinformation.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblinformation.Location = new System.Drawing.Point(328, 536);
+            this._lblinformation.Name = "_lblinformation";
+            this._lblinformation.Size = new System.Drawing.Size(600, 24);
+            this._lblinformation.TabIndex = 8;
+            this._lblinformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _chkAwaiting
+            // 
+            this._chkAwaiting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._chkAwaiting.AutoSize = true;
+            this._chkAwaiting.Location = new System.Drawing.Point(91, 508);
+            this._chkAwaiting.Name = "_chkAwaiting";
+            this._chkAwaiting.Size = new System.Drawing.Size(152, 17);
+            this._chkAwaiting.TabIndex = 9;
+            this._chkAwaiting.Text = "Awaiting Confirmation";
+            this._chkAwaiting.UseVisualStyleBackColor = true;
+            this._chkAwaiting.CheckedChanged += new System.EventHandler(this.chkAwaiting_CheckedChanged);
+            // 
+            // _chkConfirmed
+            // 
+            this._chkConfirmed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._chkConfirmed.AutoSize = true;
+            this._chkConfirmed.Location = new System.Drawing.Point(249, 508);
+            this._chkConfirmed.Name = "_chkConfirmed";
+            this._chkConfirmed.Size = new System.Drawing.Size(86, 17);
+            this._chkConfirmed.TabIndex = 10;
+            this._chkConfirmed.Text = "Confirmed";
+            this._chkConfirmed.UseVisualStyleBackColor = true;
+            this._chkConfirmed.CheckedChanged += new System.EventHandler(this.chkConfirmed_CheckedChanged);
+            // 
+            // _Label1
+            // 
+            this._Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(5, 508);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(80, 13);
+            this._Label1.TabIndex = 11;
+            this._Label1.Text = "Order Status";
+            // 
+            // _dtpDeadline
+            // 
+            this._dtpDeadline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._dtpDeadline.CustomFormat = "dddd dd MMMM yyyy";
+            this._dtpDeadline.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this._dtpDeadline.Location = new System.Drawing.Point(456, 508);
+            this._dtpDeadline.Name = "_dtpDeadline";
+            this._dtpDeadline.Size = new System.Drawing.Size(244, 21);
+            this._dtpDeadline.TabIndex = 12;
+            // 
+            // _Label2
+            // 
+            this._Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(341, 509);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(109, 13);
+            this._Label2.TabIndex = 13;
+            this._Label2.Text = "Delivery Deadline";
+            // 
+            // _TabControl1
+            // 
+            this._TabControl1.Controls.Add(this._TabPage1);
+            this._TabControl1.Controls.Add(this._TabPage2);
+            this._TabControl1.Location = new System.Drawing.Point(8, 170);
+            this._TabControl1.Name = "_TabControl1";
+            this._TabControl1.SelectedIndex = 0;
+            this._TabControl1.Size = new System.Drawing.Size(976, 332);
+            this._TabControl1.TabIndex = 14;
+            // 
+            // _TabPage1
+            // 
+            this._TabPage1.Controls.Add(this._grpPartsAndProducts);
+            this._TabPage1.Location = new System.Drawing.Point(4, 22);
+            this._TabPage1.Name = "_TabPage1";
+            this._TabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this._TabPage1.Size = new System.Drawing.Size(968, 306);
+            this._TabPage1.TabIndex = 0;
+            this._TabPage1.Text = "Parts & Products";
+            this._TabPage1.UseVisualStyleBackColor = true;
+            // 
+            // _TabPage2
+            // 
+            this._TabPage2.Controls.Add(this._grpCharges);
+            this._TabPage2.Location = new System.Drawing.Point(4, 22);
+            this._TabPage2.Name = "_TabPage2";
+            this._TabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this._TabPage2.Size = new System.Drawing.Size(968, 278);
+            this._TabPage2.TabIndex = 1;
+            this._TabPage2.Text = "Charges";
+            this._TabPage2.UseVisualStyleBackColor = true;
+            // 
+            // _grpCharges
+            // 
+            this._grpCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpCharges.Controls.Add(this._btnDelete);
+            this._grpCharges.Controls.Add(this._btnChargesSave);
+            this._grpCharges.Controls.Add(this._txtAmount);
+            this._grpCharges.Controls.Add(this._Label3);
+            this._grpCharges.Controls.Add(this._cboChargeType);
+            this._grpCharges.Controls.Add(this._Label4);
+            this._grpCharges.Controls.Add(this._dgCharges);
+            this._grpCharges.Location = new System.Drawing.Point(6, 0);
+            this._grpCharges.Name = "_grpCharges";
+            this._grpCharges.Size = new System.Drawing.Size(956, 272);
+            this._grpCharges.TabIndex = 3;
+            this._grpCharges.TabStop = false;
+            this._grpCharges.Text = "Charges";
+            // 
+            // _btnDelete
+            // 
+            this._btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDelete.Location = new System.Drawing.Point(884, 208);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(64, 23);
+            this._btnDelete.TabIndex = 5;
+            this._btnDelete.Text = "Remove";
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // _btnChargesSave
+            // 
+            this._btnChargesSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnChargesSave.Location = new System.Drawing.Point(884, 240);
+            this._btnChargesSave.Name = "_btnChargesSave";
+            this._btnChargesSave.Size = new System.Drawing.Size(64, 23);
+            this._btnChargesSave.TabIndex = 4;
+            this._btnChargesSave.Text = "Add";
+            this._btnChargesSave.Click += new System.EventHandler(this.btnChargesSave_Click);
+            // 
+            // _txtAmount
+            // 
+            this._txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtAmount.Location = new System.Drawing.Point(804, 240);
+            this._txtAmount.Name = "_txtAmount";
+            this._txtAmount.Size = new System.Drawing.Size(72, 21);
+            this._txtAmount.TabIndex = 3;
+            // 
+            // _Label3
+            // 
+            this._Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label3.Location = new System.Drawing.Point(740, 240);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(56, 23);
+            this._Label3.TabIndex = 3;
+            this._Label3.Text = "Amount:";
+            // 
+            // _cboChargeType
+            // 
+            this._cboChargeType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboChargeType.Location = new System.Drawing.Point(96, 240);
+            this._cboChargeType.Name = "_cboChargeType";
+            this._cboChargeType.Size = new System.Drawing.Size(636, 21);
+            this._cboChargeType.TabIndex = 2;
+            // 
+            // _Label4
+            // 
+            this._Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label4.Location = new System.Drawing.Point(8, 240);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(88, 23);
+            this._Label4.TabIndex = 1;
+            this._Label4.Text = "Charge Type:";
+            // 
+            // _dgCharges
+            // 
+            this._dgCharges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgCharges.DataMember = "";
+            this._dgCharges.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgCharges.Location = new System.Drawing.Point(8, 25);
+            this._dgCharges.Name = "_dgCharges";
+            this._dgCharges.Size = new System.Drawing.Size(940, 175);
+            this._dgCharges.TabIndex = 1;
+            this._dgCharges.CurrentCellChanged += new System.EventHandler(this.dgCharges_Click);
+            this._dgCharges.Click += new System.EventHandler(this.dgCharges_Click);
+            // 
+            // _Label17
+            // 
+            this._Label17.Location = new System.Drawing.Point(705, 508);
+            this._Label17.Name = "_Label17";
+            this._Label17.Size = new System.Drawing.Size(38, 20);
+            this._Label17.TabIndex = 70;
+            this._Label17.Text = "Dept";
+            // 
+            // _txtDepartment
+            // 
+            this._txtDepartment.Location = new System.Drawing.Point(749, 511);
+            this._txtDepartment.MaxLength = 100;
+            this._txtDepartment.Name = "_txtDepartment";
+            this._txtDepartment.Size = new System.Drawing.Size(131, 21);
+            this._txtDepartment.TabIndex = 69;
+            this._txtDepartment.Tag = "";
+            // 
+            // _chkDoNotConsolidate
+            // 
+            this._chkDoNotConsolidate.AutoSize = true;
+            this._chkDoNotConsolidate.Location = new System.Drawing.Point(91, 540);
+            this._chkDoNotConsolidate.Name = "_chkDoNotConsolidate";
+            this._chkDoNotConsolidate.Size = new System.Drawing.Size(136, 17);
+            this._chkDoNotConsolidate.TabIndex = 71;
+            this._chkDoNotConsolidate.Text = "Do Not Consolidate";
+            this._chkDoNotConsolidate.UseVisualStyleBackColor = true;
+            // 
             // FRMConvertToAnOrder
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(992, 566);
-            ControlBox = false;
-            Controls.Add(_chkDoNotConsolidate);
-            Controls.Add(_Label17);
-            Controls.Add(_txtDepartment);
-            Controls.Add(_TabControl1);
-            Controls.Add(_Label2);
-            Controls.Add(_dtpDeadline);
-            Controls.Add(_Label1);
-            Controls.Add(_chkConfirmed);
-            Controls.Add(_chkAwaiting);
-            Controls.Add(_lblinformation);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnSave);
-            Controls.Add(_grpJob);
-            Name = "FRMConvertToAnOrder";
-            Text = "Convert to an order";
-            Controls.SetChildIndex(_grpJob, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_lblinformation, 0);
-            Controls.SetChildIndex(_chkAwaiting, 0);
-            Controls.SetChildIndex(_chkConfirmed, 0);
-            Controls.SetChildIndex(_Label1, 0);
-            Controls.SetChildIndex(_dtpDeadline, 0);
-            Controls.SetChildIndex(_Label2, 0);
-            Controls.SetChildIndex(_TabControl1, 0);
-            Controls.SetChildIndex(_txtDepartment, 0);
-            Controls.SetChildIndex(_Label17, 0);
-            Controls.SetChildIndex(_chkDoNotConsolidate, 0);
-            _grpJob.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgEngineerVisits).EndInit();
-            _grpPartsAndProducts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgPartsAndProducts).EndInit();
-            _TabControl1.ResumeLayout(false);
-            _TabPage1.ResumeLayout(false);
-            _TabPage2.ResumeLayout(false);
-            _grpCharges.ResumeLayout(false);
-            _grpCharges.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgCharges).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(992, 566);
+            this.ControlBox = false;
+            this.Controls.Add(this._chkDoNotConsolidate);
+            this.Controls.Add(this._Label17);
+            this.Controls.Add(this._txtDepartment);
+            this.Controls.Add(this._TabControl1);
+            this.Controls.Add(this._Label2);
+            this.Controls.Add(this._dtpDeadline);
+            this.Controls.Add(this._Label1);
+            this.Controls.Add(this._chkConfirmed);
+            this.Controls.Add(this._chkAwaiting);
+            this.Controls.Add(this._lblinformation);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._grpJob);
+            this.Name = "FRMConvertToAnOrder";
+            this.Text = "Convert to an order";
+            this._grpJob.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineerVisits)).EndInit();
+            this._grpPartsAndProducts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgPartsAndProducts)).EndInit();
+            this._TabControl1.ResumeLayout(false);
+            this._TabPage1.ResumeLayout(false);
+            this._TabPage2.ResumeLayout(false);
+            this._grpCharges.ResumeLayout(false);
+            this._grpCharges.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgCharges)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         private void LoadMe(object sender, EventArgs e)

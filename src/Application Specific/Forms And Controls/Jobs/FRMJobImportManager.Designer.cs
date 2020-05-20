@@ -37,291 +37,291 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            _grpJobs = new GroupBox();
-            _dgJobs = new DataGrid();
-            _dgJobs.Click += new EventHandler(dgJobs_Click);
-            _btnResetFilters = new Button();
-            _btnResetFilters.Click += new EventHandler(btnResetFilters_Click);
-            _grpFilters = new GroupBox();
-            _chkSortPostcode = new CheckBox();
-            _cboJobType = new ComboBox();
-            _lblJobType = new Label();
-            _txtJobsPerDay = new TextBox();
-            _cboLetterNumber = new ComboBox();
-            _lblJobsPerDay = new Label();
-            _Label14 = new Label();
-            _btnFilter = new Button();
-            _btnFilter.Click += new EventHandler(btnFilter_Click);
-            _Label1 = new Label();
-            _dtpLetterCreateDate = new DateTimePicker();
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnUnselect = new Button();
-            _btnUnselect.Click += new EventHandler(btnUnselect_Click);
-            _btnGenerateLetters = new Button();
-            _btnGenerateLetters.Click += new EventHandler(btnGenerateLetters_Click);
-            _chkScheduleJobs = new CheckBox();
-            _btnFindSite = new Button();
-            _btnFindSite.Click += new EventHandler(btnFindSite_Click);
-            _cmsAction = new ContextMenuStrip(components);
-            _tsmiDeleteSite = new ToolStripMenuItem();
-            _tsmiDeleteSite.Click += new EventHandler(tsmiDeleteSite_Click);
-            _tsmiCreateJob = new ToolStripMenuItem();
-            _tsmiCreateJob.Click += new EventHandler(tsmiCreateJob_Click);
-            _grpJobs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgJobs).BeginInit();
-            _grpFilters.SuspendLayout();
-            _cmsAction.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this._grpJobs = new System.Windows.Forms.GroupBox();
+            this._dgJobs = new System.Windows.Forms.DataGrid();
+            this._btnResetFilters = new System.Windows.Forms.Button();
+            this._grpFilters = new System.Windows.Forms.GroupBox();
+            this._chkSortPostcode = new System.Windows.Forms.CheckBox();
+            this._cboJobType = new System.Windows.Forms.ComboBox();
+            this._lblJobType = new System.Windows.Forms.Label();
+            this._txtJobsPerDay = new System.Windows.Forms.TextBox();
+            this._cboLetterNumber = new System.Windows.Forms.ComboBox();
+            this._lblJobsPerDay = new System.Windows.Forms.Label();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._btnFilter = new System.Windows.Forms.Button();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._dtpLetterCreateDate = new System.Windows.Forms.DateTimePicker();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnUnselect = new System.Windows.Forms.Button();
+            this._btnGenerateLetters = new System.Windows.Forms.Button();
+            this._chkScheduleJobs = new System.Windows.Forms.CheckBox();
+            this._btnFindSite = new System.Windows.Forms.Button();
+            this._cmsAction = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._tsmiDeleteSite = new System.Windows.Forms.ToolStripMenuItem();
+            this._tsmiCreateJob = new System.Windows.Forms.ToolStripMenuItem();
+            this._grpJobs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobs)).BeginInit();
+            this._grpFilters.SuspendLayout();
+            this._cmsAction.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // grpJobs
+            // _grpJobs
             // 
-            _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpJobs.Controls.Add(_dgJobs);
-            _grpJobs.Location = new Point(12, 154);
-            _grpJobs.Name = "grpJobs";
-            _grpJobs.Size = new Size(962, 271);
-            _grpJobs.TabIndex = 3;
-            _grpJobs.TabStop = false;
-            _grpJobs.Text = "Jobs";
+            this._grpJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobs.Controls.Add(this._dgJobs);
+            this._grpJobs.Location = new System.Drawing.Point(12, 128);
+            this._grpJobs.Name = "_grpJobs";
+            this._grpJobs.Size = new System.Drawing.Size(962, 297);
+            this._grpJobs.TabIndex = 3;
+            this._grpJobs.TabStop = false;
+            this._grpJobs.Text = "Jobs";
             // 
-            // dgJobs
+            // _dgJobs
             // 
-            _dgJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgJobs.DataMember = "";
-            _dgJobs.HeaderForeColor = SystemColors.ControlText;
-            _dgJobs.Location = new Point(8, 20);
-            _dgJobs.Name = "dgJobs";
-            _dgJobs.Size = new Size(946, 243);
-            _dgJobs.TabIndex = 14;
+            this._dgJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgJobs.DataMember = "";
+            this._dgJobs.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgJobs.Location = new System.Drawing.Point(8, 20);
+            this._dgJobs.Name = "_dgJobs";
+            this._dgJobs.Size = new System.Drawing.Size(946, 269);
+            this._dgJobs.TabIndex = 14;
+            this._dgJobs.Click += new System.EventHandler(this.dgJobs_Click);
             // 
-            // btnResetFilters
+            // _btnResetFilters
             // 
-            _btnResetFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnResetFilters.Location = new Point(20, 431);
-            _btnResetFilters.Name = "btnResetFilters";
-            _btnResetFilters.Size = new Size(111, 23);
-            _btnResetFilters.TabIndex = 4;
-            _btnResetFilters.Text = "Reset Filters";
-            _btnResetFilters.UseVisualStyleBackColor = true;
+            this._btnResetFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnResetFilters.Location = new System.Drawing.Point(20, 431);
+            this._btnResetFilters.Name = "_btnResetFilters";
+            this._btnResetFilters.Size = new System.Drawing.Size(111, 23);
+            this._btnResetFilters.TabIndex = 4;
+            this._btnResetFilters.Text = "Reset Filters";
+            this._btnResetFilters.UseVisualStyleBackColor = true;
+            this._btnResetFilters.Click += new System.EventHandler(this.btnResetFilters_Click);
             // 
-            // grpFilters
+            // _grpFilters
             // 
-            _grpFilters.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilters.Controls.Add(_chkSortPostcode);
-            _grpFilters.Controls.Add(_cboJobType);
-            _grpFilters.Controls.Add(_lblJobType);
-            _grpFilters.Controls.Add(_txtJobsPerDay);
-            _grpFilters.Controls.Add(_cboLetterNumber);
-            _grpFilters.Controls.Add(_lblJobsPerDay);
-            _grpFilters.Controls.Add(_Label14);
-            _grpFilters.Controls.Add(_btnFilter);
-            _grpFilters.Controls.Add(_Label1);
-            _grpFilters.Controls.Add(_dtpLetterCreateDate);
-            _grpFilters.Location = new Point(12, 38);
-            _grpFilters.Name = "grpFilters";
-            _grpFilters.Size = new Size(962, 81);
-            _grpFilters.TabIndex = 5;
-            _grpFilters.TabStop = false;
-            _grpFilters.Text = "Filters";
+            this._grpFilters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilters.Controls.Add(this._chkSortPostcode);
+            this._grpFilters.Controls.Add(this._cboJobType);
+            this._grpFilters.Controls.Add(this._lblJobType);
+            this._grpFilters.Controls.Add(this._txtJobsPerDay);
+            this._grpFilters.Controls.Add(this._cboLetterNumber);
+            this._grpFilters.Controls.Add(this._lblJobsPerDay);
+            this._grpFilters.Controls.Add(this._Label14);
+            this._grpFilters.Controls.Add(this._btnFilter);
+            this._grpFilters.Controls.Add(this._Label1);
+            this._grpFilters.Controls.Add(this._dtpLetterCreateDate);
+            this._grpFilters.Location = new System.Drawing.Point(12, 12);
+            this._grpFilters.Name = "_grpFilters";
+            this._grpFilters.Size = new System.Drawing.Size(962, 81);
+            this._grpFilters.TabIndex = 5;
+            this._grpFilters.TabStop = false;
+            this._grpFilters.Text = "Filters";
             // 
-            // chkSortPostcode
+            // _chkSortPostcode
             // 
-            _chkSortPostcode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkSortPostcode.AutoSize = true;
-            _chkSortPostcode.Checked = true;
-            _chkSortPostcode.CheckState = CheckState.Checked;
-            _chkSortPostcode.Location = new Point(440, 49);
-            _chkSortPostcode.Name = "chkSortPostcode";
-            _chkSortPostcode.Size = new Size(123, 17);
-            _chkSortPostcode.TabIndex = 46;
-            _chkSortPostcode.Text = "Sort by postcode";
-            _chkSortPostcode.UseVisualStyleBackColor = true;
+            this._chkSortPostcode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkSortPostcode.AutoSize = true;
+            this._chkSortPostcode.Checked = true;
+            this._chkSortPostcode.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._chkSortPostcode.Location = new System.Drawing.Point(440, 49);
+            this._chkSortPostcode.Name = "_chkSortPostcode";
+            this._chkSortPostcode.Size = new System.Drawing.Size(123, 17);
+            this._chkSortPostcode.TabIndex = 46;
+            this._chkSortPostcode.Text = "Sort by postcode";
+            this._chkSortPostcode.UseVisualStyleBackColor = true;
             // 
-            // cboJobType
+            // _cboJobType
             // 
-            _cboJobType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboJobType.Cursor = Cursors.Hand;
-            _cboJobType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboJobType.Location = new Point(258, 47);
-            _cboJobType.Name = "cboJobType";
-            _cboJobType.Size = new Size(167, 21);
-            _cboJobType.TabIndex = 43;
-            _cboJobType.Tag = "Site.RegionID";
+            this._cboJobType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboJobType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboJobType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboJobType.Location = new System.Drawing.Point(258, 47);
+            this._cboJobType.Name = "_cboJobType";
+            this._cboJobType.Size = new System.Drawing.Size(167, 21);
+            this._cboJobType.TabIndex = 43;
+            this._cboJobType.Tag = "Site.RegionID";
             // 
-            // lblJobType
+            // _lblJobType
             // 
-            _lblJobType.AutoSize = true;
-            _lblJobType.Location = new Point(178, 50);
-            _lblJobType.Name = "lblJobType";
-            _lblJobType.Size = new Size(62, 13);
-            _lblJobType.TabIndex = 42;
-            _lblJobType.Text = "Job Type:";
+            this._lblJobType.AutoSize = true;
+            this._lblJobType.Location = new System.Drawing.Point(178, 50);
+            this._lblJobType.Name = "_lblJobType";
+            this._lblJobType.Size = new System.Drawing.Size(62, 13);
+            this._lblJobType.TabIndex = 42;
+            this._lblJobType.Text = "Job Type:";
             // 
-            // txtJobsPerDay
+            // _txtJobsPerDay
             // 
-            _txtJobsPerDay.Location = new Point(94, 47);
-            _txtJobsPerDay.Name = "txtJobsPerDay";
-            _txtJobsPerDay.Size = new Size(53, 21);
-            _txtJobsPerDay.TabIndex = 5;
-            _txtJobsPerDay.Text = "32";
+            this._txtJobsPerDay.Location = new System.Drawing.Point(94, 47);
+            this._txtJobsPerDay.Name = "_txtJobsPerDay";
+            this._txtJobsPerDay.Size = new System.Drawing.Size(53, 21);
+            this._txtJobsPerDay.TabIndex = 5;
+            this._txtJobsPerDay.Text = "32";
             // 
-            // cboLetterNumber
+            // _cboLetterNumber
             // 
-            _cboLetterNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboLetterNumber.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboLetterNumber.Location = new Point(424, 14);
-            _cboLetterNumber.Name = "cboLetterNumber";
-            _cboLetterNumber.Size = new Size(324, 21);
-            _cboLetterNumber.TabIndex = 41;
+            this._cboLetterNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboLetterNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboLetterNumber.Location = new System.Drawing.Point(424, 14);
+            this._cboLetterNumber.Name = "_cboLetterNumber";
+            this._cboLetterNumber.Size = new System.Drawing.Size(324, 21);
+            this._cboLetterNumber.TabIndex = 41;
             // 
-            // lblJobsPerDay
+            // _lblJobsPerDay
             // 
-            _lblJobsPerDay.AutoSize = true;
-            _lblJobsPerDay.Location = new Point(6, 50);
-            _lblJobsPerDay.Name = "lblJobsPerDay";
-            _lblJobsPerDay.Size = new Size(82, 13);
-            _lblJobsPerDay.TabIndex = 4;
-            _lblJobsPerDay.Text = "Jobs Per Day";
+            this._lblJobsPerDay.AutoSize = true;
+            this._lblJobsPerDay.Location = new System.Drawing.Point(6, 50);
+            this._lblJobsPerDay.Name = "_lblJobsPerDay";
+            this._lblJobsPerDay.Size = new System.Drawing.Size(82, 13);
+            this._lblJobsPerDay.TabIndex = 4;
+            this._lblJobsPerDay.Text = "Jobs Per Day";
             // 
-            // Label14
+            // _Label14
             // 
-            _Label14.Location = new Point(360, 18);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(96, 16);
-            _Label14.TabIndex = 40;
-            _Label14.Text = "Letter No.";
+            this._Label14.Location = new System.Drawing.Point(360, 18);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(96, 16);
+            this._Label14.TabIndex = 40;
+            this._Label14.Text = "Letter No.";
             // 
-            // btnFilter
+            // _btnFilter
             // 
-            _btnFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFilter.Location = new Point(879, 39);
-            _btnFilter.Name = "btnFilter";
-            _btnFilter.Size = new Size(75, 23);
-            _btnFilter.TabIndex = 30;
-            _btnFilter.Text = "Filter";
-            _btnFilter.UseVisualStyleBackColor = true;
+            this._btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFilter.Location = new System.Drawing.Point(879, 39);
+            this._btnFilter.Name = "_btnFilter";
+            this._btnFilter.Size = new System.Drawing.Size(75, 23);
+            this._btnFilter.TabIndex = 30;
+            this._btnFilter.Text = "Filter";
+            this._btnFilter.UseVisualStyleBackColor = true;
+            this._btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
-            // Label1
+            // _Label1
             // 
-            _Label1.Location = new Point(6, 17);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(130, 16);
-            _Label1.TabIndex = 29;
-            _Label1.Text = "Letter Create Date";
+            this._Label1.Location = new System.Drawing.Point(6, 17);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(130, 16);
+            this._Label1.TabIndex = 29;
+            this._Label1.Text = "Letter Create Date";
             // 
-            // dtpLetterCreateDate
+            // _dtpLetterCreateDate
             // 
-            _dtpLetterCreateDate.Location = new Point(142, 12);
-            _dtpLetterCreateDate.Name = "dtpLetterCreateDate";
-            _dtpLetterCreateDate.Size = new Size(200, 21);
-            _dtpLetterCreateDate.TabIndex = 28;
+            this._dtpLetterCreateDate.Location = new System.Drawing.Point(142, 12);
+            this._dtpLetterCreateDate.Name = "_dtpLetterCreateDate";
+            this._dtpLetterCreateDate.Size = new System.Drawing.Size(200, 21);
+            this._dtpLetterCreateDate.TabIndex = 28;
             // 
-            // btnSelectAll
+            // _btnSelectAll
             // 
-            _btnSelectAll.Location = new Point(12, 125);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(119, 23);
-            _btnSelectAll.TabIndex = 6;
-            _btnSelectAll.Text = "Select All";
-            _btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Location = new System.Drawing.Point(12, 99);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(119, 23);
+            this._btnSelectAll.TabIndex = 6;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
             // 
-            // btnUnselect
+            // _btnUnselect
             // 
-            _btnUnselect.Location = new Point(154, 125);
-            _btnUnselect.Name = "btnUnselect";
-            _btnUnselect.Size = new Size(96, 23);
-            _btnUnselect.TabIndex = 7;
-            _btnUnselect.Text = "Unselect All";
-            _btnUnselect.UseVisualStyleBackColor = true;
+            this._btnUnselect.Location = new System.Drawing.Point(154, 99);
+            this._btnUnselect.Name = "_btnUnselect";
+            this._btnUnselect.Size = new System.Drawing.Size(96, 23);
+            this._btnUnselect.TabIndex = 7;
+            this._btnUnselect.Text = "Unselect All";
+            this._btnUnselect.UseVisualStyleBackColor = true;
+            this._btnUnselect.Click += new System.EventHandler(this.btnUnselect_Click);
             // 
-            // btnGenerateLetters
+            // _btnGenerateLetters
             // 
-            _btnGenerateLetters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnGenerateLetters.Location = new Point(808, 431);
-            _btnGenerateLetters.Name = "btnGenerateLetters";
-            _btnGenerateLetters.Size = new Size(158, 23);
-            _btnGenerateLetters.TabIndex = 8;
-            _btnGenerateLetters.Text = "Generate Jobs";
-            _btnGenerateLetters.UseVisualStyleBackColor = true;
+            this._btnGenerateLetters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnGenerateLetters.Location = new System.Drawing.Point(808, 431);
+            this._btnGenerateLetters.Name = "_btnGenerateLetters";
+            this._btnGenerateLetters.Size = new System.Drawing.Size(158, 23);
+            this._btnGenerateLetters.TabIndex = 8;
+            this._btnGenerateLetters.Text = "Generate Jobs";
+            this._btnGenerateLetters.UseVisualStyleBackColor = true;
+            this._btnGenerateLetters.Click += new System.EventHandler(this.btnGenerateLetters_Click);
             // 
-            // chkScheduleJobs
+            // _chkScheduleJobs
             // 
-            _chkScheduleJobs.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkScheduleJobs.AutoSize = true;
-            _chkScheduleJobs.Checked = true;
-            _chkScheduleJobs.CheckState = CheckState.Checked;
-            _chkScheduleJobs.Location = new Point(867, 131);
-            _chkScheduleJobs.Name = "chkScheduleJobs";
-            _chkScheduleJobs.Size = new Size(107, 17);
-            _chkScheduleJobs.TabIndex = 45;
-            _chkScheduleJobs.Text = "Schedule Jobs";
-            _chkScheduleJobs.UseVisualStyleBackColor = true;
+            this._chkScheduleJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkScheduleJobs.AutoSize = true;
+            this._chkScheduleJobs.Checked = true;
+            this._chkScheduleJobs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._chkScheduleJobs.Location = new System.Drawing.Point(867, 105);
+            this._chkScheduleJobs.Name = "_chkScheduleJobs";
+            this._chkScheduleJobs.Size = new System.Drawing.Size(107, 17);
+            this._chkScheduleJobs.TabIndex = 45;
+            this._chkScheduleJobs.Text = "Schedule Jobs";
+            this._chkScheduleJobs.UseVisualStyleBackColor = true;
             // 
-            // btnFindSite
+            // _btnFindSite
             // 
-            _btnFindSite.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnFindSite.Location = new Point(137, 431);
-            _btnFindSite.Name = "btnFindSite";
-            _btnFindSite.Size = new Size(111, 23);
-            _btnFindSite.TabIndex = 46;
-            _btnFindSite.Text = "Find Site";
-            _btnFindSite.UseVisualStyleBackColor = true;
+            this._btnFindSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnFindSite.Location = new System.Drawing.Point(137, 431);
+            this._btnFindSite.Name = "_btnFindSite";
+            this._btnFindSite.Size = new System.Drawing.Size(111, 23);
+            this._btnFindSite.TabIndex = 46;
+            this._btnFindSite.Text = "Find Site";
+            this._btnFindSite.UseVisualStyleBackColor = true;
+            this._btnFindSite.Click += new System.EventHandler(this.btnFindSite_Click);
             // 
-            // cmsAction
+            // _cmsAction
             // 
-            _cmsAction.Items.AddRange(new ToolStripItem[] { _tsmiDeleteSite, _tsmiCreateJob });
-            _cmsAction.Name = "cmsAction";
-            _cmsAction.Size = new Size(130, 48);
+            this._cmsAction.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._tsmiDeleteSite,
+            this._tsmiCreateJob});
+            this._cmsAction.Name = "cmsAction";
+            this._cmsAction.Size = new System.Drawing.Size(130, 48);
             // 
-            // tsmiDeleteSite
+            // _tsmiDeleteSite
             // 
-            _tsmiDeleteSite.Name = "tsmiDeleteSite";
-            _tsmiDeleteSite.Size = new Size(129, 22);
-            _tsmiDeleteSite.Text = "Delete Site";
+            this._tsmiDeleteSite.Name = "_tsmiDeleteSite";
+            this._tsmiDeleteSite.Size = new System.Drawing.Size(129, 22);
+            this._tsmiDeleteSite.Text = "Delete Site";
+            this._tsmiDeleteSite.Click += new System.EventHandler(this.tsmiDeleteSite_Click);
             // 
-            // tsmiCreateJob
+            // _tsmiCreateJob
             // 
-            _tsmiCreateJob.Name = "tsmiCreateJob";
-            _tsmiCreateJob.Size = new Size(129, 22);
-            _tsmiCreateJob.Text = "Create Job";
+            this._tsmiCreateJob.Name = "_tsmiCreateJob";
+            this._tsmiCreateJob.Size = new System.Drawing.Size(129, 22);
+            this._tsmiCreateJob.Text = "Create Job";
+            this._tsmiCreateJob.Click += new System.EventHandler(this.tsmiCreateJob_Click);
             // 
             // FRMJobImportManager
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(986, 466);
-            Controls.Add(_btnFindSite);
-            Controls.Add(_chkScheduleJobs);
-            Controls.Add(_btnGenerateLetters);
-            Controls.Add(_btnUnselect);
-            Controls.Add(_btnSelectAll);
-            Controls.Add(_grpFilters);
-            Controls.Add(_btnResetFilters);
-            Controls.Add(_grpJobs);
-            Name = "FRMJobImportManager";
-            StartPosition = FormStartPosition.Manual;
-            Text = "Letter Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpJobs, 0);
-            Controls.SetChildIndex(_btnResetFilters, 0);
-            Controls.SetChildIndex(_grpFilters, 0);
-            Controls.SetChildIndex(_btnSelectAll, 0);
-            Controls.SetChildIndex(_btnUnselect, 0);
-            Controls.SetChildIndex(_btnGenerateLetters, 0);
-            Controls.SetChildIndex(_chkScheduleJobs, 0);
-            Controls.SetChildIndex(_btnFindSite, 0);
-            _grpJobs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgJobs).EndInit();
-            _grpFilters.ResumeLayout(false);
-            _grpFilters.PerformLayout();
-            _cmsAction.ResumeLayout(false);
-            Load += new EventHandler(FRMJobManager_Load);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(986, 466);
+            this.Controls.Add(this._btnFindSite);
+            this.Controls.Add(this._chkScheduleJobs);
+            this.Controls.Add(this._btnGenerateLetters);
+            this.Controls.Add(this._btnUnselect);
+            this.Controls.Add(this._btnSelectAll);
+            this.Controls.Add(this._grpFilters);
+            this.Controls.Add(this._btnResetFilters);
+            this.Controls.Add(this._grpJobs);
+            this.Name = "FRMJobImportManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Letter Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FRMJobManager_Load);
+            this._grpJobs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobs)).EndInit();
+            this._grpFilters.ResumeLayout(false);
+            this._grpFilters.PerformLayout();
+            this._cmsAction.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         void IForm.LoadMe(object sender, EventArgs e)

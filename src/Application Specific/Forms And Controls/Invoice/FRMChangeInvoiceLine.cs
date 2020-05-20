@@ -143,89 +143,84 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _lblAmount = new Label();
-            _txtAmount = new TextBox();
-            _lblVatRate = new Label();
-            _cboInvoiceTaxCodeNew = new ComboBox();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click_1);
-            SuspendLayout();
-            //
-            // lblAmount
-            //
-            _lblAmount.AutoSize = true;
-            _lblAmount.Location = new Point(12, 66);
-            _lblAmount.Name = "lblAmount";
-            _lblAmount.Size = new Size(51, 13);
-            _lblAmount.TabIndex = 1;
-            _lblAmount.Text = "Amount";
-            //
-            // txtAmount
-            //
-            _txtAmount.Location = new Point(89, 63);
-            _txtAmount.Name = "txtAmount";
-            _txtAmount.Size = new Size(192, 21);
-            _txtAmount.TabIndex = 2;
-            //
-            // lblVatRate
-            //
-            _lblVatRate.AutoSize = true;
-            _lblVatRate.Location = new Point(12, 108);
-            _lblVatRate.Name = "lblVatRate";
-            _lblVatRate.Size = new Size(55, 13);
-            _lblVatRate.TabIndex = 3;
-            _lblVatRate.Text = "Vat Rate";
-            //
-            // cboInvoiceTaxCodeNew
-            //
-            _cboInvoiceTaxCodeNew.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboInvoiceTaxCodeNew.Location = new Point(89, 105);
-            _cboInvoiceTaxCodeNew.Name = "cboInvoiceTaxCodeNew";
-            _cboInvoiceTaxCodeNew.Size = new Size(83, 21);
-            _cboInvoiceTaxCodeNew.TabIndex = 108;
-            //
-            // btnSave
-            //
-            _btnSave.Location = new Point(206, 145);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(75, 23);
-            _btnSave.TabIndex = 109;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
-            //
-            // btnCancel
-            //
-            _btnCancel.Location = new Point(15, 145);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(75, 23);
-            _btnCancel.TabIndex = 110;
-            _btnCancel.Text = "Cancel";
-            _btnCancel.UseVisualStyleBackColor = true;
-            //
+            this._lblAmount = new System.Windows.Forms.Label();
+            this._txtAmount = new System.Windows.Forms.TextBox();
+            this._lblVatRate = new System.Windows.Forms.Label();
+            this._cboInvoiceTaxCodeNew = new System.Windows.Forms.ComboBox();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // _lblAmount
+            // 
+            this._lblAmount.AutoSize = true;
+            this._lblAmount.Location = new System.Drawing.Point(12, 16);
+            this._lblAmount.Name = "_lblAmount";
+            this._lblAmount.Size = new System.Drawing.Size(51, 13);
+            this._lblAmount.TabIndex = 1;
+            this._lblAmount.Text = "Amount";
+            // 
+            // _txtAmount
+            // 
+            this._txtAmount.Location = new System.Drawing.Point(89, 13);
+            this._txtAmount.Name = "_txtAmount";
+            this._txtAmount.Size = new System.Drawing.Size(192, 21);
+            this._txtAmount.TabIndex = 2;
+            // 
+            // _lblVatRate
+            // 
+            this._lblVatRate.AutoSize = true;
+            this._lblVatRate.Location = new System.Drawing.Point(12, 58);
+            this._lblVatRate.Name = "_lblVatRate";
+            this._lblVatRate.Size = new System.Drawing.Size(55, 13);
+            this._lblVatRate.TabIndex = 3;
+            this._lblVatRate.Text = "Vat Rate";
+            // 
+            // _cboInvoiceTaxCodeNew
+            // 
+            this._cboInvoiceTaxCodeNew.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboInvoiceTaxCodeNew.Location = new System.Drawing.Point(89, 55);
+            this._cboInvoiceTaxCodeNew.Name = "_cboInvoiceTaxCodeNew";
+            this._cboInvoiceTaxCodeNew.Size = new System.Drawing.Size(83, 21);
+            this._cboInvoiceTaxCodeNew.TabIndex = 108;
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Location = new System.Drawing.Point(206, 95);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 109;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Location = new System.Drawing.Point(15, 95);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 110;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.UseVisualStyleBackColor = true;
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            // 
             // FRMChangeInvoiceLine
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(304, 180);
-            ControlBox = false;
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnSave);
-            Controls.Add(_cboInvoiceTaxCodeNew);
-            Controls.Add(_lblVatRate);
-            Controls.Add(_txtAmount);
-            Controls.Add(_lblAmount);
-            MaximumSize = new Size(1000, 1000);
-            Name = "FRMChangeInvoiceLine";
-            Text = "Update";
-            Controls.SetChildIndex(_lblAmount, 0);
-            Controls.SetChildIndex(_txtAmount, 0);
-            Controls.SetChildIndex(_lblVatRate, 0);
-            Controls.SetChildIndex(_cboInvoiceTaxCodeNew, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            ResumeLayout(false);
-            PerformLayout();
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(304, 130);
+            this.ControlBox = false;
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._cboInvoiceTaxCodeNew);
+            this.Controls.Add(this._lblVatRate);
+            this.Controls.Add(this._txtAmount);
+            this.Controls.Add(this._lblAmount);
+            this.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.Name = "FRMChangeInvoiceLine";
+            this.Text = "Update";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         public void LoadMe(object sender, EventArgs e)

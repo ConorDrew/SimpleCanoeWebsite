@@ -290,227 +290,224 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpEngineerInfo = new GroupBox();
-            _txtManager = new TextBox();
-            _txtDepartment = new TextBox();
-            _txtEngineerGroup = new TextBox();
-            _txtRegion = new TextBox();
-            _txtPhone = new TextBox();
-            _txtName = new TextBox();
-            _lblEngGroup = new Label();
-            _lblRegion = new Label();
-            _lblDepartment = new Label();
-            _lblTelNum = new Label();
-            _lblManName = new Label();
-            _lblName = new Label();
-            _grpPostcodes = new GroupBox();
-            _txtPostcode = new TextBox();
-            _grpQualifications = new GroupBox();
-            _txtQual = new TextBox();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _grpEngineerInfo.SuspendLayout();
-            _grpPostcodes.SuspendLayout();
-            _grpQualifications.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpEngineerInfo
-            //
-            _grpEngineerInfo.Controls.Add(_txtManager);
-            _grpEngineerInfo.Controls.Add(_txtDepartment);
-            _grpEngineerInfo.Controls.Add(_txtEngineerGroup);
-            _grpEngineerInfo.Controls.Add(_txtRegion);
-            _grpEngineerInfo.Controls.Add(_txtPhone);
-            _grpEngineerInfo.Controls.Add(_txtName);
-            _grpEngineerInfo.Controls.Add(_lblEngGroup);
-            _grpEngineerInfo.Controls.Add(_lblRegion);
-            _grpEngineerInfo.Controls.Add(_lblDepartment);
-            _grpEngineerInfo.Controls.Add(_lblTelNum);
-            _grpEngineerInfo.Controls.Add(_lblManName);
-            _grpEngineerInfo.Controls.Add(_lblName);
-            _grpEngineerInfo.Enabled = false;
-            _grpEngineerInfo.Location = new Point(0, 53);
-            _grpEngineerInfo.Name = "grpEngineerInfo";
-            _grpEngineerInfo.Size = new Size(829, 146);
-            _grpEngineerInfo.TabIndex = 1;
-            _grpEngineerInfo.TabStop = false;
-            _grpEngineerInfo.Text = "Engineer Information";
-            //
-            // txtManager
-            //
-            _txtManager.Enabled = false;
-            _txtManager.Location = new Point(560, 31);
-            _txtManager.Name = "txtManager";
-            _txtManager.Size = new Size(247, 21);
-            _txtManager.TabIndex = 64;
-            //
-            // txtDepartment
-            //
-            _txtDepartment.Enabled = false;
-            _txtDepartment.Location = new Point(560, 60);
-            _txtDepartment.Name = "txtDepartment";
-            _txtDepartment.Size = new Size(247, 21);
-            _txtDepartment.TabIndex = 63;
-            //
-            // txtEngineerGroup
-            //
-            _txtEngineerGroup.Enabled = false;
-            _txtEngineerGroup.Location = new Point(560, 90);
-            _txtEngineerGroup.Name = "txtEngineerGroup";
-            _txtEngineerGroup.Size = new Size(247, 21);
-            _txtEngineerGroup.TabIndex = 62;
-            //
-            // txtRegion
-            //
-            _txtRegion.Enabled = false;
-            _txtRegion.Location = new Point(120, 90);
-            _txtRegion.Name = "txtRegion";
-            _txtRegion.Size = new Size(247, 21);
-            _txtRegion.TabIndex = 61;
-            //
-            // txtPhone
-            //
-            _txtPhone.Enabled = false;
-            _txtPhone.Location = new Point(120, 60);
-            _txtPhone.Name = "txtPhone";
-            _txtPhone.Size = new Size(247, 21);
-            _txtPhone.TabIndex = 8;
-            //
-            // txtName
-            //
-            _txtName.Enabled = false;
-            _txtName.Location = new Point(120, 31);
-            _txtName.Name = "txtName";
-            _txtName.Size = new Size(247, 21);
-            _txtName.TabIndex = 6;
-            //
-            // lblEngGroup
-            //
-            _lblEngGroup.AutoSize = true;
-            _lblEngGroup.Location = new Point(453, 93);
-            _lblEngGroup.Name = "lblEngGroup";
-            _lblEngGroup.Size = new Size(101, 13);
-            _lblEngGroup.TabIndex = 5;
-            _lblEngGroup.Text = "Engineer Group:";
-            //
-            // lblRegion
-            //
-            _lblRegion.AutoSize = true;
-            _lblRegion.Location = new Point(12, 93);
-            _lblRegion.Name = "lblRegion";
-            _lblRegion.Size = new Size(51, 13);
-            _lblRegion.TabIndex = 4;
-            _lblRegion.Text = "Region:";
-            //
-            // lblDepartment
-            //
-            _lblDepartment.AutoSize = true;
-            _lblDepartment.Location = new Point(453, 63);
-            _lblDepartment.Name = "lblDepartment";
-            _lblDepartment.Size = new Size(80, 13);
-            _lblDepartment.TabIndex = 3;
-            _lblDepartment.Text = "Department:";
-            //
-            // lblTelNum
-            //
-            _lblTelNum.AutoSize = true;
-            _lblTelNum.Location = new Point(12, 63);
-            _lblTelNum.Name = "lblTelNum";
-            _lblTelNum.Size = new Size(96, 13);
-            _lblTelNum.TabIndex = 2;
-            _lblTelNum.Text = "Phone Number:";
-            //
-            // lblManName
-            //
-            _lblManName.AutoSize = true;
-            _lblManName.Location = new Point(453, 34);
-            _lblManName.Name = "lblManName";
-            _lblManName.Size = new Size(61, 13);
-            _lblManName.TabIndex = 1;
-            _lblManName.Text = "Manager:";
-            //
-            // lblName
-            //
-            _lblName.AutoSize = true;
-            _lblName.Location = new Point(12, 34);
-            _lblName.Name = "lblName";
-            _lblName.Size = new Size(45, 13);
-            _lblName.TabIndex = 0;
-            _lblName.Text = "Name:";
-            //
-            // grpPostcodes
-            //
-            _grpPostcodes.Controls.Add(_txtPostcode);
-            _grpPostcodes.Location = new Point(0, 205);
-            _grpPostcodes.Name = "grpPostcodes";
-            _grpPostcodes.Size = new Size(829, 159);
-            _grpPostcodes.TabIndex = 2;
-            _grpPostcodes.TabStop = false;
-            _grpPostcodes.Text = "Postcodes";
-            //
-            // txtPostcode
-            //
-            _txtPostcode.Location = new Point(15, 25);
-            _txtPostcode.Multiline = true;
-            _txtPostcode.Name = "txtPostcode";
-            _txtPostcode.ReadOnly = true;
-            _txtPostcode.ScrollBars = ScrollBars.Vertical;
-            _txtPostcode.Size = new Size(792, 116);
-            _txtPostcode.TabIndex = 0;
-            //
-            // grpQualifications
-            //
-            _grpQualifications.Controls.Add(_txtQual);
-            _grpQualifications.Location = new Point(0, 370);
-            _grpQualifications.Name = "grpQualifications";
-            _grpQualifications.Size = new Size(829, 159);
-            _grpQualifications.TabIndex = 3;
-            _grpQualifications.TabStop = false;
-            _grpQualifications.Text = "Qualifications";
-            //
-            // txtQual
-            //
-            _txtQual.Location = new Point(15, 25);
-            _txtQual.Multiline = true;
-            _txtQual.Name = "txtQual";
-            _txtQual.ReadOnly = true;
-            _txtQual.ScrollBars = ScrollBars.Vertical;
-            _txtQual.Size = new Size(792, 116);
-            _txtQual.TabIndex = 0;
-            //
-            // btnClose
-            //
-            _btnClose.Location = new Point(15, 532);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(75, 23);
-            _btnClose.TabIndex = 4;
-            _btnClose.Text = "Close";
-            _btnClose.UseVisualStyleBackColor = true;
-            //
+            this._grpEngineerInfo = new System.Windows.Forms.GroupBox();
+            this._txtManager = new System.Windows.Forms.TextBox();
+            this._txtDepartment = new System.Windows.Forms.TextBox();
+            this._txtEngineerGroup = new System.Windows.Forms.TextBox();
+            this._txtRegion = new System.Windows.Forms.TextBox();
+            this._txtPhone = new System.Windows.Forms.TextBox();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._lblEngGroup = new System.Windows.Forms.Label();
+            this._lblRegion = new System.Windows.Forms.Label();
+            this._lblDepartment = new System.Windows.Forms.Label();
+            this._lblTelNum = new System.Windows.Forms.Label();
+            this._lblManName = new System.Windows.Forms.Label();
+            this._lblName = new System.Windows.Forms.Label();
+            this._grpPostcodes = new System.Windows.Forms.GroupBox();
+            this._txtPostcode = new System.Windows.Forms.TextBox();
+            this._grpQualifications = new System.Windows.Forms.GroupBox();
+            this._txtQual = new System.Windows.Forms.TextBox();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._grpEngineerInfo.SuspendLayout();
+            this._grpPostcodes.SuspendLayout();
+            this._grpQualifications.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpEngineerInfo
+            // 
+            this._grpEngineerInfo.Controls.Add(this._txtManager);
+            this._grpEngineerInfo.Controls.Add(this._txtDepartment);
+            this._grpEngineerInfo.Controls.Add(this._txtEngineerGroup);
+            this._grpEngineerInfo.Controls.Add(this._txtRegion);
+            this._grpEngineerInfo.Controls.Add(this._txtPhone);
+            this._grpEngineerInfo.Controls.Add(this._txtName);
+            this._grpEngineerInfo.Controls.Add(this._lblEngGroup);
+            this._grpEngineerInfo.Controls.Add(this._lblRegion);
+            this._grpEngineerInfo.Controls.Add(this._lblDepartment);
+            this._grpEngineerInfo.Controls.Add(this._lblTelNum);
+            this._grpEngineerInfo.Controls.Add(this._lblManName);
+            this._grpEngineerInfo.Controls.Add(this._lblName);
+            this._grpEngineerInfo.Enabled = false;
+            this._grpEngineerInfo.Location = new System.Drawing.Point(0, 12);
+            this._grpEngineerInfo.Name = "_grpEngineerInfo";
+            this._grpEngineerInfo.Size = new System.Drawing.Size(829, 137);
+            this._grpEngineerInfo.TabIndex = 1;
+            this._grpEngineerInfo.TabStop = false;
+            this._grpEngineerInfo.Text = "Engineer Information";
+            // 
+            // _txtManager
+            // 
+            this._txtManager.Enabled = false;
+            this._txtManager.Location = new System.Drawing.Point(560, 31);
+            this._txtManager.Name = "_txtManager";
+            this._txtManager.Size = new System.Drawing.Size(247, 21);
+            this._txtManager.TabIndex = 64;
+            // 
+            // _txtDepartment
+            // 
+            this._txtDepartment.Enabled = false;
+            this._txtDepartment.Location = new System.Drawing.Point(560, 60);
+            this._txtDepartment.Name = "_txtDepartment";
+            this._txtDepartment.Size = new System.Drawing.Size(247, 21);
+            this._txtDepartment.TabIndex = 63;
+            // 
+            // _txtEngineerGroup
+            // 
+            this._txtEngineerGroup.Enabled = false;
+            this._txtEngineerGroup.Location = new System.Drawing.Point(560, 90);
+            this._txtEngineerGroup.Name = "_txtEngineerGroup";
+            this._txtEngineerGroup.Size = new System.Drawing.Size(247, 21);
+            this._txtEngineerGroup.TabIndex = 62;
+            // 
+            // _txtRegion
+            // 
+            this._txtRegion.Enabled = false;
+            this._txtRegion.Location = new System.Drawing.Point(120, 90);
+            this._txtRegion.Name = "_txtRegion";
+            this._txtRegion.Size = new System.Drawing.Size(247, 21);
+            this._txtRegion.TabIndex = 61;
+            // 
+            // _txtPhone
+            // 
+            this._txtPhone.Enabled = false;
+            this._txtPhone.Location = new System.Drawing.Point(120, 60);
+            this._txtPhone.Name = "_txtPhone";
+            this._txtPhone.Size = new System.Drawing.Size(247, 21);
+            this._txtPhone.TabIndex = 8;
+            // 
+            // _txtName
+            // 
+            this._txtName.Enabled = false;
+            this._txtName.Location = new System.Drawing.Point(120, 31);
+            this._txtName.Name = "_txtName";
+            this._txtName.Size = new System.Drawing.Size(247, 21);
+            this._txtName.TabIndex = 6;
+            // 
+            // _lblEngGroup
+            // 
+            this._lblEngGroup.AutoSize = true;
+            this._lblEngGroup.Location = new System.Drawing.Point(453, 93);
+            this._lblEngGroup.Name = "_lblEngGroup";
+            this._lblEngGroup.Size = new System.Drawing.Size(101, 13);
+            this._lblEngGroup.TabIndex = 5;
+            this._lblEngGroup.Text = "Engineer Group:";
+            // 
+            // _lblRegion
+            // 
+            this._lblRegion.AutoSize = true;
+            this._lblRegion.Location = new System.Drawing.Point(12, 93);
+            this._lblRegion.Name = "_lblRegion";
+            this._lblRegion.Size = new System.Drawing.Size(51, 13);
+            this._lblRegion.TabIndex = 4;
+            this._lblRegion.Text = "Region:";
+            // 
+            // _lblDepartment
+            // 
+            this._lblDepartment.AutoSize = true;
+            this._lblDepartment.Location = new System.Drawing.Point(453, 63);
+            this._lblDepartment.Name = "_lblDepartment";
+            this._lblDepartment.Size = new System.Drawing.Size(80, 13);
+            this._lblDepartment.TabIndex = 3;
+            this._lblDepartment.Text = "Department:";
+            // 
+            // _lblTelNum
+            // 
+            this._lblTelNum.AutoSize = true;
+            this._lblTelNum.Location = new System.Drawing.Point(12, 63);
+            this._lblTelNum.Name = "_lblTelNum";
+            this._lblTelNum.Size = new System.Drawing.Size(96, 13);
+            this._lblTelNum.TabIndex = 2;
+            this._lblTelNum.Text = "Phone Number:";
+            // 
+            // _lblManName
+            // 
+            this._lblManName.AutoSize = true;
+            this._lblManName.Location = new System.Drawing.Point(453, 34);
+            this._lblManName.Name = "_lblManName";
+            this._lblManName.Size = new System.Drawing.Size(61, 13);
+            this._lblManName.TabIndex = 1;
+            this._lblManName.Text = "Manager:";
+            // 
+            // _lblName
+            // 
+            this._lblName.AutoSize = true;
+            this._lblName.Location = new System.Drawing.Point(12, 34);
+            this._lblName.Name = "_lblName";
+            this._lblName.Size = new System.Drawing.Size(45, 13);
+            this._lblName.TabIndex = 0;
+            this._lblName.Text = "Name:";
+            // 
+            // _grpPostcodes
+            // 
+            this._grpPostcodes.Controls.Add(this._txtPostcode);
+            this._grpPostcodes.Location = new System.Drawing.Point(0, 155);
+            this._grpPostcodes.Name = "_grpPostcodes";
+            this._grpPostcodes.Size = new System.Drawing.Size(829, 209);
+            this._grpPostcodes.TabIndex = 2;
+            this._grpPostcodes.TabStop = false;
+            this._grpPostcodes.Text = "Postcodes";
+            // 
+            // _txtPostcode
+            // 
+            this._txtPostcode.Location = new System.Drawing.Point(15, 25);
+            this._txtPostcode.Multiline = true;
+            this._txtPostcode.Name = "_txtPostcode";
+            this._txtPostcode.ReadOnly = true;
+            this._txtPostcode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtPostcode.Size = new System.Drawing.Size(792, 178);
+            this._txtPostcode.TabIndex = 0;
+            // 
+            // _grpQualifications
+            // 
+            this._grpQualifications.Controls.Add(this._txtQual);
+            this._grpQualifications.Location = new System.Drawing.Point(0, 370);
+            this._grpQualifications.Name = "_grpQualifications";
+            this._grpQualifications.Size = new System.Drawing.Size(829, 159);
+            this._grpQualifications.TabIndex = 3;
+            this._grpQualifications.TabStop = false;
+            this._grpQualifications.Text = "Qualifications";
+            // 
+            // _txtQual
+            // 
+            this._txtQual.Location = new System.Drawing.Point(15, 25);
+            this._txtQual.Multiline = true;
+            this._txtQual.Name = "_txtQual";
+            this._txtQual.ReadOnly = true;
+            this._txtQual.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this._txtQual.Size = new System.Drawing.Size(792, 116);
+            this._txtQual.TabIndex = 0;
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Location = new System.Drawing.Point(15, 532);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(75, 23);
+            this._btnClose.TabIndex = 4;
+            this._btnClose.Text = "Close";
+            this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FRMViewEngineer
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(829, 561);
-            Controls.Add(_btnClose);
-            Controls.Add(_grpQualifications);
-            Controls.Add(_grpPostcodes);
-            Controls.Add(_grpEngineerInfo);
-            MaximumSize = new Size(845, 600);
-            MinimizeBox = false;
-            MinimumSize = new Size(845, 600);
-            Name = "FRMViewEngineer";
-            Text = "Viewing Engineer : ";
-            Controls.SetChildIndex(_grpEngineerInfo, 0);
-            Controls.SetChildIndex(_grpPostcodes, 0);
-            Controls.SetChildIndex(_grpQualifications, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            _grpEngineerInfo.ResumeLayout(false);
-            _grpEngineerInfo.PerformLayout();
-            _grpPostcodes.ResumeLayout(false);
-            _grpPostcodes.PerformLayout();
-            _grpQualifications.ResumeLayout(false);
-            _grpQualifications.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(829, 561);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._grpQualifications);
+            this.Controls.Add(this._grpPostcodes);
+            this.Controls.Add(this._grpEngineerInfo);
+            this.MaximumSize = new System.Drawing.Size(845, 600);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(845, 600);
+            this.Name = "FRMViewEngineer";
+            this.Text = "Viewing Engineer : ";
+            this._grpEngineerInfo.ResumeLayout(false);
+            this._grpEngineerInfo.PerformLayout();
+            this._grpPostcodes.ResumeLayout(false);
+            this._grpPostcodes.PerformLayout();
+            this._grpQualifications.ResumeLayout(false);
+            this._grpQualifications.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private void LoadMe(object sender, EventArgs e)

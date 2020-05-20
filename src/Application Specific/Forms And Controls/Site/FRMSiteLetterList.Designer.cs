@@ -37,59 +37,60 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _dgLetters = new DataGrid();
-            _btnSelect = new Button();
-            _btnSelect.Click += new EventHandler(btnSelect_Click);
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgLetters).BeginInit();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._btnSelect = new System.Windows.Forms.Button();
+            this._dgLetters = new System.Windows.Forms.DataGrid();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgLetters)).BeginInit();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Controls.Add(_btnSelect);
-            _GroupBox1.Controls.Add(_dgLetters);
-            _GroupBox1.Location = new Point(8, 40);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(512, 328);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Letters";
+            this._GroupBox1.Controls.Add(this._btnSelect);
+            this._GroupBox1.Controls.Add(this._dgLetters);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(512, 356);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Letters";
             // 
-            // dgLetters
+            // _btnSelect
             // 
-            _dgLetters.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgLetters.DataMember = "";
-            _dgLetters.HeaderForeColor = SystemColors.ControlText;
-            _dgLetters.Location = new Point(8, 16);
-            _dgLetters.Name = "dgLetters";
-            _dgLetters.Size = new Size(496, 272);
-            _dgLetters.TabIndex = 2;
+            this._btnSelect.Location = new System.Drawing.Point(429, 322);
+            this._btnSelect.Name = "_btnSelect";
+            this._btnSelect.Size = new System.Drawing.Size(75, 23);
+            this._btnSelect.TabIndex = 3;
+            this._btnSelect.Text = "Select";
+            this._btnSelect.UseVisualStyleBackColor = true;
+            this._btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // btnSelect
+            // _dgLetters
             // 
-            _btnSelect.Location = new Point(424, 296);
-            _btnSelect.Name = "btnSelect";
-            _btnSelect.Size = new Size(75, 23);
-            _btnSelect.TabIndex = 3;
-            _btnSelect.Text = "Select";
-            _btnSelect.UseVisualStyleBackColor = true;
+            this._dgLetters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgLetters.DataMember = "";
+            this._dgLetters.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgLetters.Location = new System.Drawing.Point(8, 16);
+            this._dgLetters.Name = "_dgLetters";
+            this._dgLetters.Size = new System.Drawing.Size(496, 300);
+            this._dgLetters.TabIndex = 2;
             // 
             // FRMSiteLetterList
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(528, 382);
-            Controls.Add(_GroupBox1);
-            Name = "FRMSiteLetterList";
-            RightToLeftLayout = true;
-            Text = "Site Letter List";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgLetters).EndInit();
-            Load += new EventHandler(FRMSiteLetterList_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(528, 382);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FRMSiteLetterList";
+            this.RightToLeftLayout = true;
+            this.Text = "Site Letter List";
+            this.Load += new System.EventHandler(this.FRMSiteLetterList_Load);
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgLetters)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _GroupBox1;

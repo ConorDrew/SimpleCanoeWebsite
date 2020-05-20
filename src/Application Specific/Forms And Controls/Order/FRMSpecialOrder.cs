@@ -206,164 +206,164 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _gpbSpecialOrder = new GroupBox();
-            _txtQuantity = new TextBox();
-            _lblQuantity = new Label();
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _btnAddPart = new Button();
-            _btnAddPart.Click += new EventHandler(btnAddPart_Click);
-            _txtPrice = new TextBox();
-            _lblPrice = new Label();
-            _txtSupplier = new TextBox();
-            _lblSupplier = new Label();
-            _txtSPN = new TextBox();
-            _lblPartCode = new Label();
-            _txtPartName = new TextBox();
-            _lblPartName = new Label();
-            _gpbSpecialOrder.SuspendLayout();
-            SuspendLayout();
-            //
-            // gpbSpecialOrder
-            //
-            _gpbSpecialOrder.Controls.Add(_txtQuantity);
-            _gpbSpecialOrder.Controls.Add(_lblQuantity);
-            _gpbSpecialOrder.Controls.Add(_btnCancel);
-            _gpbSpecialOrder.Controls.Add(_btnAddPart);
-            _gpbSpecialOrder.Controls.Add(_txtPrice);
-            _gpbSpecialOrder.Controls.Add(_lblPrice);
-            _gpbSpecialOrder.Controls.Add(_txtSupplier);
-            _gpbSpecialOrder.Controls.Add(_lblSupplier);
-            _gpbSpecialOrder.Controls.Add(_txtSPN);
-            _gpbSpecialOrder.Controls.Add(_lblPartCode);
-            _gpbSpecialOrder.Controls.Add(_txtPartName);
-            _gpbSpecialOrder.Controls.Add(_lblPartName);
-            _gpbSpecialOrder.Location = new Point(12, 38);
-            _gpbSpecialOrder.Name = "gpbSpecialOrder";
-            _gpbSpecialOrder.Size = new Size(449, 183);
-            _gpbSpecialOrder.TabIndex = 17;
-            _gpbSpecialOrder.TabStop = false;
-            _gpbSpecialOrder.Text = "Special Order";
-            //
-            // txtQuantity
-            //
-            _txtQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtQuantity.Location = new Point(95, 103);
-            _txtQuantity.Name = "txtQuantity";
-            _txtQuantity.Size = new Size(112, 21);
-            _txtQuantity.TabIndex = 45;
-            //
-            // lblQuantity
-            //
-            _lblQuantity.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblQuantity.Location = new Point(11, 106);
-            _lblQuantity.Name = "lblQuantity";
-            _lblQuantity.Size = new Size(78, 18);
-            _lblQuantity.TabIndex = 52;
-            _lblQuantity.Text = "Quantity";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(14, 148);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(88, 24);
-            _btnCancel.TabIndex = 47;
-            _btnCancel.Text = "Cancel";
-            //
-            // btnAddPart
-            //
-            _btnAddPart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnAddPart.Location = new Point(367, 148);
-            _btnAddPart.Name = "btnAddPart";
-            _btnAddPart.Size = new Size(71, 24);
-            _btnAddPart.TabIndex = 46;
-            _btnAddPart.Text = "Add";
-            //
-            // txtPrice
-            //
-            _txtPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtPrice.Location = new Point(326, 62);
-            _txtPrice.Name = "txtPrice";
-            _txtPrice.Size = new Size(112, 21);
-            _txtPrice.TabIndex = 44;
-            //
-            // lblPrice
-            //
-            _lblPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblPrice.Location = new Point(242, 65);
-            _lblPrice.Name = "lblPrice";
-            _lblPrice.Size = new Size(78, 18);
-            _lblPrice.TabIndex = 51;
-            _lblPrice.Text = "Price";
-            //
-            // txtSupplier
-            //
-            _txtSupplier.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtSupplier.Enabled = false;
-            _txtSupplier.Location = new Point(95, 62);
-            _txtSupplier.Name = "txtSupplier";
-            _txtSupplier.Size = new Size(112, 21);
-            _txtSupplier.TabIndex = 43;
-            //
-            // lblSupplier
-            //
-            _lblSupplier.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblSupplier.Location = new Point(11, 65);
-            _lblSupplier.Name = "lblSupplier";
-            _lblSupplier.Size = new Size(78, 18);
-            _lblSupplier.TabIndex = 50;
-            _lblSupplier.Text = "Supplier";
-            //
-            // txtSPN
-            //
-            _txtSPN.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtSPN.Location = new Point(326, 18);
-            _txtSPN.Name = "txtSPN";
-            _txtSPN.Size = new Size(112, 21);
-            _txtSPN.TabIndex = 42;
-            //
-            // lblPartCode
-            //
-            _lblPartCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblPartCode.Location = new Point(242, 21);
-            _lblPartCode.Name = "lblPartCode";
-            _lblPartCode.Size = new Size(78, 18);
-            _lblPartCode.TabIndex = 49;
-            _lblPartCode.Text = "Part Code";
-            //
-            // txtPartName
-            //
-            _txtPartName.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _txtPartName.Location = new Point(95, 18);
-            _txtPartName.Name = "txtPartName";
-            _txtPartName.Size = new Size(112, 21);
-            _txtPartName.TabIndex = 41;
-            //
-            // lblPartName
-            //
-            _lblPartName.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblPartName.Location = new Point(11, 21);
-            _lblPartName.Name = "lblPartName";
-            _lblPartName.Size = new Size(78, 18);
-            _lblPartName.TabIndex = 48;
-            _lblPartName.Text = "Part Name";
-            //
+            this._gpbSpecialOrder = new System.Windows.Forms.GroupBox();
+            this._txtQuantity = new System.Windows.Forms.TextBox();
+            this._lblQuantity = new System.Windows.Forms.Label();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._btnAddPart = new System.Windows.Forms.Button();
+            this._txtPrice = new System.Windows.Forms.TextBox();
+            this._lblPrice = new System.Windows.Forms.Label();
+            this._txtSupplier = new System.Windows.Forms.TextBox();
+            this._lblSupplier = new System.Windows.Forms.Label();
+            this._txtSPN = new System.Windows.Forms.TextBox();
+            this._lblPartCode = new System.Windows.Forms.Label();
+            this._txtPartName = new System.Windows.Forms.TextBox();
+            this._lblPartName = new System.Windows.Forms.Label();
+            this._gpbSpecialOrder.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _gpbSpecialOrder
+            // 
+            this._gpbSpecialOrder.Controls.Add(this._txtQuantity);
+            this._gpbSpecialOrder.Controls.Add(this._lblQuantity);
+            this._gpbSpecialOrder.Controls.Add(this._btnCancel);
+            this._gpbSpecialOrder.Controls.Add(this._btnAddPart);
+            this._gpbSpecialOrder.Controls.Add(this._txtPrice);
+            this._gpbSpecialOrder.Controls.Add(this._lblPrice);
+            this._gpbSpecialOrder.Controls.Add(this._txtSupplier);
+            this._gpbSpecialOrder.Controls.Add(this._lblSupplier);
+            this._gpbSpecialOrder.Controls.Add(this._txtSPN);
+            this._gpbSpecialOrder.Controls.Add(this._lblPartCode);
+            this._gpbSpecialOrder.Controls.Add(this._txtPartName);
+            this._gpbSpecialOrder.Controls.Add(this._lblPartName);
+            this._gpbSpecialOrder.Location = new System.Drawing.Point(12, 12);
+            this._gpbSpecialOrder.Name = "_gpbSpecialOrder";
+            this._gpbSpecialOrder.Size = new System.Drawing.Size(449, 209);
+            this._gpbSpecialOrder.TabIndex = 17;
+            this._gpbSpecialOrder.TabStop = false;
+            this._gpbSpecialOrder.Text = "Special Order";
+            // 
+            // _txtQuantity
+            // 
+            this._txtQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtQuantity.Location = new System.Drawing.Point(95, 116);
+            this._txtQuantity.Name = "_txtQuantity";
+            this._txtQuantity.Size = new System.Drawing.Size(112, 21);
+            this._txtQuantity.TabIndex = 45;
+            // 
+            // _lblQuantity
+            // 
+            this._lblQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblQuantity.Location = new System.Drawing.Point(11, 119);
+            this._lblQuantity.Name = "_lblQuantity";
+            this._lblQuantity.Size = new System.Drawing.Size(78, 18);
+            this._lblQuantity.TabIndex = 52;
+            this._lblQuantity.Text = "Quantity";
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(14, 174);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(88, 24);
+            this._btnCancel.TabIndex = 47;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _btnAddPart
+            // 
+            this._btnAddPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnAddPart.Location = new System.Drawing.Point(367, 174);
+            this._btnAddPart.Name = "_btnAddPart";
+            this._btnAddPart.Size = new System.Drawing.Size(71, 24);
+            this._btnAddPart.TabIndex = 46;
+            this._btnAddPart.Text = "Add";
+            this._btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
+            // 
+            // _txtPrice
+            // 
+            this._txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtPrice.Location = new System.Drawing.Point(326, 75);
+            this._txtPrice.Name = "_txtPrice";
+            this._txtPrice.Size = new System.Drawing.Size(112, 21);
+            this._txtPrice.TabIndex = 44;
+            // 
+            // _lblPrice
+            // 
+            this._lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblPrice.Location = new System.Drawing.Point(242, 78);
+            this._lblPrice.Name = "_lblPrice";
+            this._lblPrice.Size = new System.Drawing.Size(78, 18);
+            this._lblPrice.TabIndex = 51;
+            this._lblPrice.Text = "Price";
+            // 
+            // _txtSupplier
+            // 
+            this._txtSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtSupplier.Enabled = false;
+            this._txtSupplier.Location = new System.Drawing.Point(95, 75);
+            this._txtSupplier.Name = "_txtSupplier";
+            this._txtSupplier.Size = new System.Drawing.Size(112, 21);
+            this._txtSupplier.TabIndex = 43;
+            // 
+            // _lblSupplier
+            // 
+            this._lblSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblSupplier.Location = new System.Drawing.Point(11, 78);
+            this._lblSupplier.Name = "_lblSupplier";
+            this._lblSupplier.Size = new System.Drawing.Size(78, 18);
+            this._lblSupplier.TabIndex = 50;
+            this._lblSupplier.Text = "Supplier";
+            // 
+            // _txtSPN
+            // 
+            this._txtSPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtSPN.Location = new System.Drawing.Point(326, 31);
+            this._txtSPN.Name = "_txtSPN";
+            this._txtSPN.Size = new System.Drawing.Size(112, 21);
+            this._txtSPN.TabIndex = 42;
+            // 
+            // _lblPartCode
+            // 
+            this._lblPartCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblPartCode.Location = new System.Drawing.Point(242, 34);
+            this._lblPartCode.Name = "_lblPartCode";
+            this._lblPartCode.Size = new System.Drawing.Size(78, 18);
+            this._lblPartCode.TabIndex = 49;
+            this._lblPartCode.Text = "Part Code";
+            // 
+            // _txtPartName
+            // 
+            this._txtPartName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._txtPartName.Location = new System.Drawing.Point(95, 31);
+            this._txtPartName.Name = "_txtPartName";
+            this._txtPartName.Size = new System.Drawing.Size(112, 21);
+            this._txtPartName.TabIndex = 41;
+            // 
+            // _lblPartName
+            // 
+            this._lblPartName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblPartName.Location = new System.Drawing.Point(11, 34);
+            this._lblPartName.Name = "_lblPartName";
+            this._lblPartName.Size = new System.Drawing.Size(78, 18);
+            this._lblPartName.TabIndex = 48;
+            this._lblPartName.Text = "Part Name";
+            // 
             // FRMSpecialOrder
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            BackColor = SystemColors.Window;
-            ClientSize = new Size(471, 228);
-            ControlBox = false;
-            Controls.Add(_gpbSpecialOrder);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "FRMSpecialOrder";
-            Text = "Orders - Special Order";
-            Controls.SetChildIndex(_gpbSpecialOrder, 0);
-            _gpbSpecialOrder.ResumeLayout(false);
-            _gpbSpecialOrder.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(471, 228);
+            this.ControlBox = false;
+            this.Controls.Add(this._gpbSpecialOrder);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FRMSpecialOrder";
+            this.Text = "Orders - Special Order";
+            this._gpbSpecialOrder.ResumeLayout(false);
+            this._gpbSpecialOrder.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private int _supplierCode = 0;

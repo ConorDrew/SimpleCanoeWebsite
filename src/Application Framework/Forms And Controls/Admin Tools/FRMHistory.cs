@@ -216,111 +216,107 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _dgHistory = new DataGrid();
-            _Panel1 = new Panel();
-            _Label1 = new Label();
-            _btnClear = new Button();
-            _btnClear.Click += new EventHandler(btnClear_Click);
-            _Label2 = new Label();
-            _Label3 = new Label();
-            _cboFilter = new ComboBox();
-            _cboFilter.SelectedIndexChanged += new EventHandler(cboFilter_SelectedIndexChanged);
-            ((System.ComponentModel.ISupportInitialize)_dgHistory).BeginInit();
-            SuspendLayout();
-            //
-            // dgHistory
-            //
-            _dgHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgHistory.DataMember = "";
-            _dgHistory.HeaderForeColor = SystemColors.ControlText;
-            _dgHistory.Location = new Point(8, 40);
-            _dgHistory.Name = "dgHistory";
-            _dgHistory.Size = new Size(752, 432);
-            _dgHistory.TabIndex = 1;
-            //
-            // Panel1
-            //
-            _Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Panel1.BackColor = Color.Red;
-            _Panel1.Location = new Point(8, 488);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(16, 16);
-            _Panel1.TabIndex = 19;
-            //
-            // Label1
-            //
-            _Label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label1.Location = new Point(32, 488);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(168, 16);
-            _Label1.TabIndex = 18;
-            _Label1.Text = "Out of hours login recorded.";
-            //
-            // btnClear
-            //
-            _btnClear.AccessibleDescription = "Clear system interaction history";
-            _btnClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnClear.Cursor = Cursors.Hand;
-            _btnClear.UseVisualStyleBackColor = true;
-            _btnClear.Location = new Point(712, 480);
-            _btnClear.Name = "btnClear";
-            _btnClear.Size = new Size(48, 23);
-            _btnClear.TabIndex = 3;
-            _btnClear.Text = "Clear";
-            //
-            // Label2
-            //
-            _Label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Label2.Location = new Point(216, 488);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(64, 16);
-            _Label2.TabIndex = 20;
-            _Label2.Text = "Show last ";
-            //
-            // Label3
-            //
-            _Label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _Label3.Location = new Point(360, 488);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(64, 16);
-            _Label3.TabIndex = 21;
-            _Label3.Text = "Records";
-            //
-            // cboFilter
-            //
-            _cboFilter.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _cboFilter.Location = new Point(280, 484);
-            _cboFilter.Name = "cboFilter";
-            _cboFilter.Size = new Size(80, 21);
-            _cboFilter.TabIndex = 2;
-            _cboFilter.Text = "ComboBox1";
-            //
+            this._dgHistory = new System.Windows.Forms.DataGrid();
+            this._Panel1 = new System.Windows.Forms.Panel();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnClear = new System.Windows.Forms.Button();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._cboFilter = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this._dgHistory)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _dgHistory
+            // 
+            this._dgHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgHistory.DataMember = "";
+            this._dgHistory.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgHistory.Location = new System.Drawing.Point(8, 12);
+            this._dgHistory.Name = "_dgHistory";
+            this._dgHistory.Size = new System.Drawing.Size(752, 460);
+            this._dgHistory.TabIndex = 1;
+            // 
+            // _Panel1
+            // 
+            this._Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Panel1.BackColor = System.Drawing.Color.Red;
+            this._Panel1.Location = new System.Drawing.Point(8, 488);
+            this._Panel1.Name = "_Panel1";
+            this._Panel1.Size = new System.Drawing.Size(16, 16);
+            this._Panel1.TabIndex = 19;
+            // 
+            // _Label1
+            // 
+            this._Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label1.Location = new System.Drawing.Point(32, 488);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(168, 16);
+            this._Label1.TabIndex = 18;
+            this._Label1.Text = "Out of hours login recorded.";
+            // 
+            // _btnClear
+            // 
+            this._btnClear.AccessibleDescription = "Clear system interaction history";
+            this._btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnClear.Location = new System.Drawing.Point(712, 480);
+            this._btnClear.Name = "_btnClear";
+            this._btnClear.Size = new System.Drawing.Size(48, 23);
+            this._btnClear.TabIndex = 3;
+            this._btnClear.Text = "Clear";
+            this._btnClear.UseVisualStyleBackColor = true;
+            this._btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // _Label2
+            // 
+            this._Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Label2.Location = new System.Drawing.Point(216, 488);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(64, 16);
+            this._Label2.TabIndex = 20;
+            this._Label2.Text = "Show last ";
+            // 
+            // _Label3
+            // 
+            this._Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label3.Location = new System.Drawing.Point(360, 488);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(64, 16);
+            this._Label3.TabIndex = 21;
+            this._Label3.Text = "Records";
+            // 
+            // _cboFilter
+            // 
+            this._cboFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboFilter.Location = new System.Drawing.Point(280, 484);
+            this._cboFilter.Name = "_cboFilter";
+            this._cboFilter.Size = new System.Drawing.Size(80, 21);
+            this._cboFilter.TabIndex = 2;
+            this._cboFilter.Text = "ComboBox1";
+            this._cboFilter.SelectedIndexChanged += new System.EventHandler(this.cboFilter_SelectedIndexChanged);
+            // 
             // FRMHistory
-            //
-            AcceptButton = _btnClear;
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(768, 510);
-            Controls.Add(_cboFilter);
-            Controls.Add(_Label3);
-            Controls.Add(_Label2);
-            Controls.Add(_btnClear);
-            Controls.Add(_Panel1);
-            Controls.Add(_Label1);
-            Controls.Add(_dgHistory);
-            MinimumSize = new Size(776, 544);
-            Name = "FRMHistory";
-            Text = "System History";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_dgHistory, 0);
-            Controls.SetChildIndex(_Label1, 0);
-            Controls.SetChildIndex(_Panel1, 0);
-            Controls.SetChildIndex(_btnClear, 0);
-            Controls.SetChildIndex(_Label2, 0);
-            Controls.SetChildIndex(_Label3, 0);
-            Controls.SetChildIndex(_cboFilter, 0);
-            ((System.ComponentModel.ISupportInitialize)_dgHistory).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AcceptButton = this._btnClear;
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(768, 510);
+            this.Controls.Add(this._cboFilter);
+            this.Controls.Add(this._Label3);
+            this.Controls.Add(this._Label2);
+            this.Controls.Add(this._btnClear);
+            this.Controls.Add(this._Panel1);
+            this.Controls.Add(this._Label1);
+            this.Controls.Add(this._dgHistory);
+            this.MinimumSize = new System.Drawing.Size(776, 544);
+            this.Name = "FRMHistory";
+            this.Text = "System History";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this._dgHistory)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

@@ -383,188 +383,195 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _lblItemName = new Label();
-            _txtName = new TextBox();
-            _txtNumber = new TextBox();
-            _lblItemNumber = new Label();
-            _Label3 = new Label();
-            _Label4 = new Label();
-            _Label5 = new Label();
-            _txtQuantityPreviouslyReceived = new TextBox();
-            _txtTotalquantity = new TextBox();
-            _txtQuantityInput = new TextBox();
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _Label6 = new Label();
-            _txtLocation = new TextBox();
-            _GroupBox1 = new GroupBox();
-            _GroupBox2 = new GroupBox();
-            _GroupBox1.SuspendLayout();
-            _GroupBox2.SuspendLayout();
-            SuspendLayout();
-            //
-            // lblItemName
-            //
-            _lblItemName.Location = new Point(16, 24);
-            _lblItemName.Name = "lblItemName";
-            _lblItemName.Size = new Size(96, 23);
-            _lblItemName.TabIndex = 2;
-            _lblItemName.Text = "Item Name:";
-            //
-            // txtName
-            //
-            _txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtName.Location = new Point(136, 26);
-            _txtName.Name = "txtName";
-            _txtName.ReadOnly = true;
-            _txtName.Size = new Size(288, 21);
-            _txtName.TabIndex = 1;
-            //
-            // txtNumber
-            //
-            _txtNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtNumber.Location = new Point(136, 56);
-            _txtNumber.Name = "txtNumber";
-            _txtNumber.ReadOnly = true;
-            _txtNumber.Size = new Size(288, 21);
-            _txtNumber.TabIndex = 2;
-            //
-            // lblItemNumber
-            //
-            _lblItemNumber.Location = new Point(16, 56);
-            _lblItemNumber.Name = "lblItemNumber";
-            _lblItemNumber.Size = new Size(96, 23);
-            _lblItemNumber.TabIndex = 4;
-            _lblItemNumber.Text = "Item Number:";
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(16, 120);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(100, 23);
-            _Label3.TabIndex = 6;
-            _Label3.Text = "Total Ordered:";
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(16, 152);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(104, 23);
-            _Label4.TabIndex = 7;
-            _Label4.Text = "Total Received :";
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(15, 24);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(124, 23);
-            _Label5.TabIndex = 8;
-            _Label5.Text = "Quantity Received:";
-            //
-            // txtQuantityPreviouslyReceived
-            //
-            _txtQuantityPreviouslyReceived.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtQuantityPreviouslyReceived.Location = new Point(136, 154);
-            _txtQuantityPreviouslyReceived.Name = "txtQuantityPreviouslyReceived";
-            _txtQuantityPreviouslyReceived.ReadOnly = true;
-            _txtQuantityPreviouslyReceived.Size = new Size(288, 21);
-            _txtQuantityPreviouslyReceived.TabIndex = 5;
-            //
-            // txtTotalquantity
-            //
-            _txtTotalquantity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtTotalquantity.Location = new Point(136, 122);
-            _txtTotalquantity.Name = "txtTotalquantity";
-            _txtTotalquantity.ReadOnly = true;
-            _txtTotalquantity.Size = new Size(288, 21);
-            _txtTotalquantity.TabIndex = 4;
-            //
-            // txtQuantityInput
-            //
-            _txtQuantityInput.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtQuantityInput.Location = new Point(136, 24);
-            _txtQuantityInput.Name = "txtQuantityInput";
-            _txtQuantityInput.Size = new Size(224, 21);
-            _txtQuantityInput.TabIndex = 6;
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(368, 24);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(56, 23);
-            _btnOK.TabIndex = 7;
-            _btnOK.Text = "OK";
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(16, 88);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(72, 23);
-            _Label6.TabIndex = 14;
-            _Label6.Text = "Order For:";
-            //
-            // txtLocation
-            //
-            _txtLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtLocation.Location = new Point(136, 90);
-            _txtLocation.Name = "txtLocation";
-            _txtLocation.ReadOnly = true;
-            _txtLocation.Size = new Size(288, 21);
-            _txtLocation.TabIndex = 3;
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox1.Controls.Add(_lblItemNumber);
-            _GroupBox1.Controls.Add(_lblItemName);
-            _GroupBox1.Controls.Add(_Label6);
-            _GroupBox1.Controls.Add(_Label3);
-            _GroupBox1.Controls.Add(_txtNumber);
-            _GroupBox1.Controls.Add(_txtLocation);
-            _GroupBox1.Controls.Add(_txtName);
-            _GroupBox1.Controls.Add(_Label4);
-            _GroupBox1.Controls.Add(_txtTotalquantity);
-            _GroupBox1.Controls.Add(_txtQuantityPreviouslyReceived);
-            _GroupBox1.Location = new Point(8, 40);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(432, 184);
-            _GroupBox1.TabIndex = 16;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Stock Details";
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox2.Controls.Add(_txtQuantityInput);
-            _GroupBox2.Controls.Add(_btnOK);
-            _GroupBox2.Controls.Add(_Label5);
-            _GroupBox2.Location = new Point(8, 232);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(432, 56);
-            _GroupBox2.TabIndex = 17;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Stock Received";
-            //
+            this._lblItemName = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._txtNumber = new System.Windows.Forms.TextBox();
+            this._lblItemNumber = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._txtQuantityPreviouslyReceived = new System.Windows.Forms.TextBox();
+            this._txtTotalquantity = new System.Windows.Forms.TextBox();
+            this._txtQuantityInput = new System.Windows.Forms.TextBox();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._txtLocation = new System.Windows.Forms.TextBox();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._GroupBox1.SuspendLayout();
+            this._GroupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _lblItemName
+            // 
+            this._lblItemName.Location = new System.Drawing.Point(16, 24);
+            this._lblItemName.Name = "_lblItemName";
+            this._lblItemName.Size = new System.Drawing.Size(96, 23);
+            this._lblItemName.TabIndex = 2;
+            this._lblItemName.Text = "Item Name:";
+            // 
+            // _txtName
+            // 
+            this._txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtName.Location = new System.Drawing.Point(136, 26);
+            this._txtName.Name = "_txtName";
+            this._txtName.ReadOnly = true;
+            this._txtName.Size = new System.Drawing.Size(288, 21);
+            this._txtName.TabIndex = 1;
+            // 
+            // _txtNumber
+            // 
+            this._txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNumber.Location = new System.Drawing.Point(136, 56);
+            this._txtNumber.Name = "_txtNumber";
+            this._txtNumber.ReadOnly = true;
+            this._txtNumber.Size = new System.Drawing.Size(288, 21);
+            this._txtNumber.TabIndex = 2;
+            // 
+            // _lblItemNumber
+            // 
+            this._lblItemNumber.Location = new System.Drawing.Point(16, 56);
+            this._lblItemNumber.Name = "_lblItemNumber";
+            this._lblItemNumber.Size = new System.Drawing.Size(96, 23);
+            this._lblItemNumber.TabIndex = 4;
+            this._lblItemNumber.Text = "Item Number:";
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(16, 120);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(100, 23);
+            this._Label3.TabIndex = 6;
+            this._Label3.Text = "Total Ordered:";
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(16, 152);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(104, 23);
+            this._Label4.TabIndex = 7;
+            this._Label4.Text = "Total Received :";
+            // 
+            // _Label5
+            // 
+            this._Label5.Location = new System.Drawing.Point(15, 24);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(124, 23);
+            this._Label5.TabIndex = 8;
+            this._Label5.Text = "Quantity Received:";
+            // 
+            // _txtQuantityPreviouslyReceived
+            // 
+            this._txtQuantityPreviouslyReceived.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtQuantityPreviouslyReceived.Location = new System.Drawing.Point(136, 154);
+            this._txtQuantityPreviouslyReceived.Name = "_txtQuantityPreviouslyReceived";
+            this._txtQuantityPreviouslyReceived.ReadOnly = true;
+            this._txtQuantityPreviouslyReceived.Size = new System.Drawing.Size(288, 21);
+            this._txtQuantityPreviouslyReceived.TabIndex = 5;
+            // 
+            // _txtTotalquantity
+            // 
+            this._txtTotalquantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTotalquantity.Location = new System.Drawing.Point(136, 122);
+            this._txtTotalquantity.Name = "_txtTotalquantity";
+            this._txtTotalquantity.ReadOnly = true;
+            this._txtTotalquantity.Size = new System.Drawing.Size(288, 21);
+            this._txtTotalquantity.TabIndex = 4;
+            // 
+            // _txtQuantityInput
+            // 
+            this._txtQuantityInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtQuantityInput.Location = new System.Drawing.Point(136, 24);
+            this._txtQuantityInput.Name = "_txtQuantityInput";
+            this._txtQuantityInput.Size = new System.Drawing.Size(224, 21);
+            this._txtQuantityInput.TabIndex = 6;
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(368, 24);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(56, 23);
+            this._btnOK.TabIndex = 7;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(16, 88);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(72, 23);
+            this._Label6.TabIndex = 14;
+            this._Label6.Text = "Order For:";
+            // 
+            // _txtLocation
+            // 
+            this._txtLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtLocation.Location = new System.Drawing.Point(136, 90);
+            this._txtLocation.Name = "_txtLocation";
+            this._txtLocation.ReadOnly = true;
+            this._txtLocation.Size = new System.Drawing.Size(288, 21);
+            this._txtLocation.TabIndex = 3;
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._lblItemNumber);
+            this._GroupBox1.Controls.Add(this._lblItemName);
+            this._GroupBox1.Controls.Add(this._Label6);
+            this._GroupBox1.Controls.Add(this._Label3);
+            this._GroupBox1.Controls.Add(this._txtNumber);
+            this._GroupBox1.Controls.Add(this._txtLocation);
+            this._GroupBox1.Controls.Add(this._txtName);
+            this._GroupBox1.Controls.Add(this._Label4);
+            this._GroupBox1.Controls.Add(this._txtTotalquantity);
+            this._GroupBox1.Controls.Add(this._txtQuantityPreviouslyReceived);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(432, 212);
+            this._GroupBox1.TabIndex = 16;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Stock Details";
+            // 
+            // _GroupBox2
+            // 
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox2.Controls.Add(this._txtQuantityInput);
+            this._GroupBox2.Controls.Add(this._btnOK);
+            this._GroupBox2.Controls.Add(this._Label5);
+            this._GroupBox2.Location = new System.Drawing.Point(8, 232);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(432, 56);
+            this._GroupBox2.TabIndex = 17;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Stock Received";
+            // 
             // FRMReceiveStock
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(448, 302);
-            Controls.Add(_GroupBox2);
-            Controls.Add(_GroupBox1);
-            MaximizeBox = false;
-            MaximumSize = new Size(456, 336);
-            MinimizeBox = false;
-            MinimumSize = new Size(456, 336);
-            Name = "FRMReceiveStock";
-            Text = "Stock Received Manager";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_GroupBox2, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            _GroupBox2.ResumeLayout(false);
-            _GroupBox2.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(440, 297);
+            this.Controls.Add(this._GroupBox2);
+            this.Controls.Add(this._GroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(456, 336);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(456, 336);
+            this.Name = "FRMReceiveStock";
+            this.Text = "Stock Received Manager";
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this._GroupBox2.ResumeLayout(false);
+            this._GroupBox2.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

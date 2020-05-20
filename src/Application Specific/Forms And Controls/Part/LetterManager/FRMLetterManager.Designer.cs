@@ -37,217 +37,217 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpServices = new GroupBox();
-            _dgServicesDue = new DataGrid();
-            _dgServicesDue.MouseUp += new MouseEventHandler(dgServicesDue_MouseUp);
-            _btnResetFilters = new Button();
-            _btnResetFilters.Click += new EventHandler(btnResetFilters_Click);
-            _grpFilters = new GroupBox();
-            _tbMinsPerDay = new TextBox();
-            _cboLetterNumber = new ComboBox();
-            _lbMinsPerDay = new Label();
-            _Label14 = new Label();
-            _btnFilter = new Button();
-            _btnFilter.Click += new EventHandler(btnFilter_Click);
-            _Label1 = new Label();
-            _dtpLetterCreateDate = new DateTimePicker();
-            _txtCustomer = new TextBox();
-            _Label4 = new Label();
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnUnselect = new Button();
-            _btnUnselect.Click += new EventHandler(btnUnselect_Click);
-            _btnGenerateLetters = new Button();
-            _btnGenerateLetters.Click += new EventHandler(btnGenerateLetters_Click);
-            _grpServices.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgServicesDue).BeginInit();
-            _grpFilters.SuspendLayout();
-            SuspendLayout();
+            this._grpServices = new System.Windows.Forms.GroupBox();
+            this._dgServicesDue = new System.Windows.Forms.DataGrid();
+            this._btnResetFilters = new System.Windows.Forms.Button();
+            this._grpFilters = new System.Windows.Forms.GroupBox();
+            this._tbMinsPerDay = new System.Windows.Forms.TextBox();
+            this._cboLetterNumber = new System.Windows.Forms.ComboBox();
+            this._lbMinsPerDay = new System.Windows.Forms.Label();
+            this._Label14 = new System.Windows.Forms.Label();
+            this._btnFilter = new System.Windows.Forms.Button();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._dtpLetterCreateDate = new System.Windows.Forms.DateTimePicker();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnUnselect = new System.Windows.Forms.Button();
+            this._btnGenerateLetters = new System.Windows.Forms.Button();
+            this._grpServices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgServicesDue)).BeginInit();
+            this._grpFilters.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // grpServices
+            // _grpServices
             // 
-            _grpServices.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpServices.Controls.Add(_dgServicesDue);
-            _grpServices.Location = new Point(12, 180);
-            _grpServices.Name = "grpServices";
-            _grpServices.Size = new Size(962, 245);
-            _grpServices.TabIndex = 3;
-            _grpServices.TabStop = false;
-            _grpServices.Text = "Services Due";
+            this._grpServices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpServices.Controls.Add(this._dgServicesDue);
+            this._grpServices.Location = new System.Drawing.Point(12, 154);
+            this._grpServices.Name = "_grpServices";
+            this._grpServices.Size = new System.Drawing.Size(962, 271);
+            this._grpServices.TabIndex = 3;
+            this._grpServices.TabStop = false;
+            this._grpServices.Text = "Services Due";
             // 
-            // dgServicesDue
+            // _dgServicesDue
             // 
-            _dgServicesDue.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgServicesDue.DataMember = "";
-            _dgServicesDue.HeaderForeColor = SystemColors.ControlText;
-            _dgServicesDue.Location = new Point(8, 20);
-            _dgServicesDue.Name = "dgServicesDue";
-            _dgServicesDue.Size = new Size(946, 217);
-            _dgServicesDue.TabIndex = 14;
+            this._dgServicesDue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgServicesDue.DataMember = "";
+            this._dgServicesDue.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgServicesDue.Location = new System.Drawing.Point(8, 20);
+            this._dgServicesDue.Name = "_dgServicesDue";
+            this._dgServicesDue.Size = new System.Drawing.Size(946, 243);
+            this._dgServicesDue.TabIndex = 14;
+            this._dgServicesDue.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgServicesDue_MouseUp);
             // 
-            // btnResetFilters
+            // _btnResetFilters
             // 
-            _btnResetFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnResetFilters.Location = new Point(20, 431);
-            _btnResetFilters.Name = "btnResetFilters";
-            _btnResetFilters.Size = new Size(111, 23);
-            _btnResetFilters.TabIndex = 4;
-            _btnResetFilters.Text = "Reset Filters";
-            _btnResetFilters.UseVisualStyleBackColor = true;
+            this._btnResetFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnResetFilters.Location = new System.Drawing.Point(20, 431);
+            this._btnResetFilters.Name = "_btnResetFilters";
+            this._btnResetFilters.Size = new System.Drawing.Size(111, 23);
+            this._btnResetFilters.TabIndex = 4;
+            this._btnResetFilters.Text = "Reset Filters";
+            this._btnResetFilters.UseVisualStyleBackColor = true;
+            this._btnResetFilters.Click += new System.EventHandler(this.btnResetFilters_Click);
             // 
-            // grpFilters
+            // _grpFilters
             // 
-            _grpFilters.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilters.Controls.Add(_tbMinsPerDay);
-            _grpFilters.Controls.Add(_cboLetterNumber);
-            _grpFilters.Controls.Add(_lbMinsPerDay);
-            _grpFilters.Controls.Add(_Label14);
-            _grpFilters.Controls.Add(_btnFilter);
-            _grpFilters.Controls.Add(_Label1);
-            _grpFilters.Controls.Add(_dtpLetterCreateDate);
-            _grpFilters.Controls.Add(_txtCustomer);
-            _grpFilters.Controls.Add(_Label4);
-            _grpFilters.Location = new Point(12, 38);
-            _grpFilters.Name = "grpFilters";
-            _grpFilters.Size = new Size(962, 107);
-            _grpFilters.TabIndex = 5;
-            _grpFilters.TabStop = false;
-            _grpFilters.Text = "Filters";
+            this._grpFilters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilters.Controls.Add(this._tbMinsPerDay);
+            this._grpFilters.Controls.Add(this._cboLetterNumber);
+            this._grpFilters.Controls.Add(this._lbMinsPerDay);
+            this._grpFilters.Controls.Add(this._Label14);
+            this._grpFilters.Controls.Add(this._btnFilter);
+            this._grpFilters.Controls.Add(this._Label1);
+            this._grpFilters.Controls.Add(this._dtpLetterCreateDate);
+            this._grpFilters.Controls.Add(this._txtCustomer);
+            this._grpFilters.Controls.Add(this._Label4);
+            this._grpFilters.Location = new System.Drawing.Point(12, 12);
+            this._grpFilters.Name = "_grpFilters";
+            this._grpFilters.Size = new System.Drawing.Size(962, 107);
+            this._grpFilters.TabIndex = 5;
+            this._grpFilters.TabStop = false;
+            this._grpFilters.Text = "Filters";
             // 
-            // tbMinsPerDay
+            // _tbMinsPerDay
             // 
-            _tbMinsPerDay.Location = new Point(142, 76);
-            _tbMinsPerDay.Name = "tbMinsPerDay";
-            _tbMinsPerDay.Size = new Size(53, 21);
-            _tbMinsPerDay.TabIndex = 5;
-            _tbMinsPerDay.Text = "400";
+            this._tbMinsPerDay.Location = new System.Drawing.Point(142, 76);
+            this._tbMinsPerDay.Name = "_tbMinsPerDay";
+            this._tbMinsPerDay.Size = new System.Drawing.Size(53, 21);
+            this._tbMinsPerDay.TabIndex = 5;
+            this._tbMinsPerDay.Text = "400";
             // 
-            // cboLetterNumber
+            // _cboLetterNumber
             // 
-            _cboLetterNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboLetterNumber.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboLetterNumber.Location = new Point(415, 49);
-            _cboLetterNumber.Name = "cboLetterNumber";
-            _cboLetterNumber.Size = new Size(324, 21);
-            _cboLetterNumber.TabIndex = 41;
+            this._cboLetterNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboLetterNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboLetterNumber.Location = new System.Drawing.Point(415, 49);
+            this._cboLetterNumber.Name = "_cboLetterNumber";
+            this._cboLetterNumber.Size = new System.Drawing.Size(324, 21);
+            this._cboLetterNumber.TabIndex = 41;
             // 
-            // lbMinsPerDay
+            // _lbMinsPerDay
             // 
-            _lbMinsPerDay.AutoSize = true;
-            _lbMinsPerDay.Location = new Point(6, 79);
-            _lbMinsPerDay.Name = "lbMinsPerDay";
-            _lbMinsPerDay.Size = new Size(132, 13);
-            _lbMinsPerDay.TabIndex = 4;
-            _lbMinsPerDay.Text = "Working Mins Per Day";
+            this._lbMinsPerDay.AutoSize = true;
+            this._lbMinsPerDay.Location = new System.Drawing.Point(6, 79);
+            this._lbMinsPerDay.Name = "_lbMinsPerDay";
+            this._lbMinsPerDay.Size = new System.Drawing.Size(132, 13);
+            this._lbMinsPerDay.TabIndex = 4;
+            this._lbMinsPerDay.Text = "Working Mins Per Day";
             // 
-            // Label14
+            // _Label14
             // 
-            _Label14.Location = new Point(351, 53);
-            _Label14.Name = "Label14";
-            _Label14.Size = new Size(96, 16);
-            _Label14.TabIndex = 40;
-            _Label14.Text = "Letter No.";
+            this._Label14.Location = new System.Drawing.Point(351, 53);
+            this._Label14.Name = "_Label14";
+            this._Label14.Size = new System.Drawing.Size(96, 16);
+            this._Label14.TabIndex = 40;
+            this._Label14.Text = "Letter No.";
             // 
-            // btnFilter
+            // _btnFilter
             // 
-            _btnFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFilter.Location = new Point(879, 74);
-            _btnFilter.Name = "btnFilter";
-            _btnFilter.Size = new Size(75, 23);
-            _btnFilter.TabIndex = 30;
-            _btnFilter.Text = "Filter";
-            _btnFilter.UseVisualStyleBackColor = true;
+            this._btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFilter.Location = new System.Drawing.Point(879, 74);
+            this._btnFilter.Name = "_btnFilter";
+            this._btnFilter.Size = new System.Drawing.Size(75, 23);
+            this._btnFilter.TabIndex = 30;
+            this._btnFilter.Text = "Filter";
+            this._btnFilter.UseVisualStyleBackColor = true;
+            this._btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
-            // Label1
+            // _Label1
             // 
-            _Label1.Location = new Point(6, 55);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(130, 16);
-            _Label1.TabIndex = 29;
-            _Label1.Text = "Letter Create Date";
+            this._Label1.Location = new System.Drawing.Point(6, 55);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(130, 16);
+            this._Label1.TabIndex = 29;
+            this._Label1.Text = "Letter Create Date";
             // 
-            // dtpLetterCreateDate
+            // _dtpLetterCreateDate
             // 
-            _dtpLetterCreateDate.Location = new Point(142, 50);
-            _dtpLetterCreateDate.Name = "dtpLetterCreateDate";
-            _dtpLetterCreateDate.Size = new Size(200, 21);
-            _dtpLetterCreateDate.TabIndex = 28;
+            this._dtpLetterCreateDate.Location = new System.Drawing.Point(142, 50);
+            this._dtpLetterCreateDate.Name = "_dtpLetterCreateDate";
+            this._dtpLetterCreateDate.Size = new System.Drawing.Size(200, 21);
+            this._dtpLetterCreateDate.TabIndex = 28;
             // 
-            // txtCustomer
+            // _txtCustomer
             // 
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtCustomer.Location = new Point(142, 22);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(774, 21);
-            _txtCustomer.TabIndex = 25;
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtCustomer.Location = new System.Drawing.Point(142, 22);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(774, 21);
+            this._txtCustomer.TabIndex = 25;
             // 
-            // Label4
+            // _Label4
             // 
-            _Label4.Location = new Point(6, 23);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 16);
-            _Label4.TabIndex = 27;
-            _Label4.Text = "Customer";
+            this._Label4.Location = new System.Drawing.Point(6, 23);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 16);
+            this._Label4.TabIndex = 27;
+            this._Label4.Text = "Customer";
             // 
-            // btnSelectAll
+            // _btnSelectAll
             // 
-            _btnSelectAll.Location = new Point(12, 151);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(75, 23);
-            _btnSelectAll.TabIndex = 6;
-            _btnSelectAll.Text = "Select All";
-            _btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Location = new System.Drawing.Point(12, 125);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(75, 23);
+            this._btnSelectAll.TabIndex = 6;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
             // 
-            // btnUnselect
+            // _btnUnselect
             // 
-            _btnUnselect.Location = new Point(93, 151);
-            _btnUnselect.Name = "btnUnselect";
-            _btnUnselect.Size = new Size(96, 23);
-            _btnUnselect.TabIndex = 7;
-            _btnUnselect.Text = "Unselect All";
-            _btnUnselect.UseVisualStyleBackColor = true;
+            this._btnUnselect.Location = new System.Drawing.Point(93, 125);
+            this._btnUnselect.Name = "_btnUnselect";
+            this._btnUnselect.Size = new System.Drawing.Size(96, 23);
+            this._btnUnselect.TabIndex = 7;
+            this._btnUnselect.Text = "Unselect All";
+            this._btnUnselect.UseVisualStyleBackColor = true;
+            this._btnUnselect.Click += new System.EventHandler(this.btnUnselect_Click);
             // 
-            // btnGenerateLetters
+            // _btnGenerateLetters
             // 
-            _btnGenerateLetters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnGenerateLetters.Location = new Point(808, 431);
-            _btnGenerateLetters.Name = "btnGenerateLetters";
-            _btnGenerateLetters.Size = new Size(158, 23);
-            _btnGenerateLetters.TabIndex = 8;
-            _btnGenerateLetters.Text = "Generate Letters";
-            _btnGenerateLetters.UseVisualStyleBackColor = true;
+            this._btnGenerateLetters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnGenerateLetters.Location = new System.Drawing.Point(808, 431);
+            this._btnGenerateLetters.Name = "_btnGenerateLetters";
+            this._btnGenerateLetters.Size = new System.Drawing.Size(158, 23);
+            this._btnGenerateLetters.TabIndex = 8;
+            this._btnGenerateLetters.Text = "Generate Letters";
+            this._btnGenerateLetters.UseVisualStyleBackColor = true;
+            this._btnGenerateLetters.Click += new System.EventHandler(this.btnGenerateLetters_Click);
             // 
             // FRMLetterManager
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(986, 466);
-            Controls.Add(_btnGenerateLetters);
-            Controls.Add(_btnUnselect);
-            Controls.Add(_btnSelectAll);
-            Controls.Add(_grpFilters);
-            Controls.Add(_btnResetFilters);
-            Controls.Add(_grpServices);
-            Name = "FRMLetterManager";
-            StartPosition = FormStartPosition.Manual;
-            Text = "Letter Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpServices, 0);
-            Controls.SetChildIndex(_btnResetFilters, 0);
-            Controls.SetChildIndex(_grpFilters, 0);
-            Controls.SetChildIndex(_btnSelectAll, 0);
-            Controls.SetChildIndex(_btnUnselect, 0);
-            Controls.SetChildIndex(_btnGenerateLetters, 0);
-            _grpServices.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgServicesDue).EndInit();
-            _grpFilters.ResumeLayout(false);
-            _grpFilters.PerformLayout();
-            Load += new EventHandler(FRMJobManager_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(986, 466);
+            this.Controls.Add(this._btnGenerateLetters);
+            this.Controls.Add(this._btnUnselect);
+            this.Controls.Add(this._btnSelectAll);
+            this.Controls.Add(this._grpFilters);
+            this.Controls.Add(this._btnResetFilters);
+            this.Controls.Add(this._grpServices);
+            this.Name = "FRMLetterManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Letter Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FRMJobManager_Load);
+            this._grpServices.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgServicesDue)).EndInit();
+            this._grpFilters.ResumeLayout(false);
+            this._grpFilters.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _grpServices;

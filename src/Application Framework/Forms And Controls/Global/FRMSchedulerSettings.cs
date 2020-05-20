@@ -154,144 +154,147 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJobTypeColours = new GroupBox();
-            _btnSaveJobColour = new Button();
-            _btnSaveJobColour.Click += new EventHandler(btnSaveJobColour_Click);
-            _btnDeleteJobColour = new Button();
-            _btnDeleteJobColour.Click += new EventHandler(btnDeleteJobColour_Click);
-            _cboColour = new ComboBox();
-            _cboColour.DrawItem += new DrawItemEventHandler(cboColour_DrawItem);
-            _lblColour = new Label();
-            _cboJobType = new ComboBox();
-            _lblJobType = new Label();
-            _dgJobTypeColours = new DataGrid();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _grpJobTypeColours.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgJobTypeColours).BeginInit();
-            SuspendLayout();
-            //
-            // grpJobTypeColours
-            //
-            _grpJobTypeColours.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _grpJobTypeColours.Controls.Add(_btnSaveJobColour);
-            _grpJobTypeColours.Controls.Add(_btnDeleteJobColour);
-            _grpJobTypeColours.Controls.Add(_cboColour);
-            _grpJobTypeColours.Controls.Add(_lblColour);
-            _grpJobTypeColours.Controls.Add(_cboJobType);
-            _grpJobTypeColours.Controls.Add(_lblJobType);
-            _grpJobTypeColours.Controls.Add(_dgJobTypeColours);
-            _grpJobTypeColours.Location = new Point(12, 57);
-            _grpJobTypeColours.Name = "grpJobTypeColours";
-            _grpJobTypeColours.Size = new Size(316, 536);
-            _grpJobTypeColours.TabIndex = 1;
-            _grpJobTypeColours.TabStop = false;
-            _grpJobTypeColours.Text = "Job Type Colours";
-            //
-            // btnSaveJobColour
-            //
-            _btnSaveJobColour.AccessibleDescription = "Save item";
-            _btnSaveJobColour.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSaveJobColour.Cursor = Cursors.Hand;
-            _btnSaveJobColour.ImageIndex = 1;
-            _btnSaveJobColour.Location = new Point(7, 506);
-            _btnSaveJobColour.Name = "btnSaveJobColour";
-            _btnSaveJobColour.Size = new Size(94, 24);
-            _btnSaveJobColour.TabIndex = 9;
-            _btnSaveJobColour.Text = "Save";
-            _btnSaveJobColour.UseVisualStyleBackColor = true;
-            //
-            // btnDeleteJobColour
-            //
-            _btnDeleteJobColour.AccessibleDescription = "Save item";
-            _btnDeleteJobColour.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDeleteJobColour.Cursor = Cursors.Hand;
-            _btnDeleteJobColour.ImageIndex = 1;
-            _btnDeleteJobColour.Location = new Point(215, 506);
-            _btnDeleteJobColour.Name = "btnDeleteJobColour";
-            _btnDeleteJobColour.Size = new Size(93, 24);
-            _btnDeleteJobColour.TabIndex = 8;
-            _btnDeleteJobColour.Text = "Delete";
-            _btnDeleteJobColour.UseVisualStyleBackColor = true;
-            //
-            // cboColour
-            //
-            _cboColour.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboColour.DrawMode = DrawMode.OwnerDrawFixed;
-            _cboColour.FormattingEnabled = true;
-            _cboColour.Location = new Point(85, 50);
-            _cboColour.Name = "cboColour";
-            _cboColour.Size = new Size(223, 22);
-            _cboColour.TabIndex = 7;
-            //
-            // lblColour
-            //
-            _lblColour.AutoSize = true;
-            _lblColour.Location = new Point(10, 54);
-            _lblColour.Name = "lblColour";
-            _lblColour.Size = new Size(45, 13);
-            _lblColour.TabIndex = 6;
-            _lblColour.Text = "Colour";
-            //
-            // cboJobType
-            //
-            _cboJobType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboJobType.FormattingEnabled = true;
-            _cboJobType.Location = new Point(85, 20);
-            _cboJobType.Name = "cboJobType";
-            _cboJobType.Size = new Size(223, 21);
-            _cboJobType.TabIndex = 5;
-            //
-            // lblJobType
-            //
-            _lblJobType.AutoSize = true;
-            _lblJobType.Location = new Point(10, 25);
-            _lblJobType.Name = "lblJobType";
-            _lblJobType.Size = new Size(57, 13);
-            _lblJobType.TabIndex = 4;
-            _lblJobType.Text = "Job Type";
-            //
-            // dgJobTypeColours
-            //
-            _dgJobTypeColours.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgJobTypeColours.DataMember = "";
-            _dgJobTypeColours.HeaderForeColor = SystemColors.ControlText;
-            _dgJobTypeColours.Location = new Point(7, 92);
-            _dgJobTypeColours.Name = "dgJobTypeColours";
-            _dgJobTypeColours.Size = new Size(301, 408);
-            _dgJobTypeColours.TabIndex = 2;
-            //
-            // btnClose
-            //
-            _btnClose.AccessibleDescription = "Save item";
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Cursor = Cursors.Hand;
-            _btnClose.ImageIndex = 1;
-            _btnClose.Location = new Point(12, 599);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(68, 26);
-            _btnClose.TabIndex = 4;
-            _btnClose.Text = "Close";
-            _btnClose.UseVisualStyleBackColor = true;
-            //
+            this._grpJobTypeColours = new System.Windows.Forms.GroupBox();
+            this._btnSaveJobColour = new System.Windows.Forms.Button();
+            this._btnDeleteJobColour = new System.Windows.Forms.Button();
+            this._cboColour = new System.Windows.Forms.ComboBox();
+            this._lblColour = new System.Windows.Forms.Label();
+            this._cboJobType = new System.Windows.Forms.ComboBox();
+            this._lblJobType = new System.Windows.Forms.Label();
+            this._dgJobTypeColours = new System.Windows.Forms.DataGrid();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._grpJobTypeColours.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobTypeColours)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpJobTypeColours
+            // 
+            this._grpJobTypeColours.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._grpJobTypeColours.Controls.Add(this._btnSaveJobColour);
+            this._grpJobTypeColours.Controls.Add(this._btnDeleteJobColour);
+            this._grpJobTypeColours.Controls.Add(this._cboColour);
+            this._grpJobTypeColours.Controls.Add(this._lblColour);
+            this._grpJobTypeColours.Controls.Add(this._cboJobType);
+            this._grpJobTypeColours.Controls.Add(this._lblJobType);
+            this._grpJobTypeColours.Controls.Add(this._dgJobTypeColours);
+            this._grpJobTypeColours.Location = new System.Drawing.Point(12, 12);
+            this._grpJobTypeColours.Name = "_grpJobTypeColours";
+            this._grpJobTypeColours.Size = new System.Drawing.Size(316, 581);
+            this._grpJobTypeColours.TabIndex = 1;
+            this._grpJobTypeColours.TabStop = false;
+            this._grpJobTypeColours.Text = "Job Type Colours";
+            // 
+            // _btnSaveJobColour
+            // 
+            this._btnSaveJobColour.AccessibleDescription = "Save item";
+            this._btnSaveJobColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSaveJobColour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnSaveJobColour.ImageIndex = 1;
+            this._btnSaveJobColour.Location = new System.Drawing.Point(7, 551);
+            this._btnSaveJobColour.Name = "_btnSaveJobColour";
+            this._btnSaveJobColour.Size = new System.Drawing.Size(94, 24);
+            this._btnSaveJobColour.TabIndex = 9;
+            this._btnSaveJobColour.Text = "Save";
+            this._btnSaveJobColour.UseVisualStyleBackColor = true;
+            this._btnSaveJobColour.Click += new System.EventHandler(this.btnSaveJobColour_Click);
+            // 
+            // _btnDeleteJobColour
+            // 
+            this._btnDeleteJobColour.AccessibleDescription = "Save item";
+            this._btnDeleteJobColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDeleteJobColour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnDeleteJobColour.ImageIndex = 1;
+            this._btnDeleteJobColour.Location = new System.Drawing.Point(215, 551);
+            this._btnDeleteJobColour.Name = "_btnDeleteJobColour";
+            this._btnDeleteJobColour.Size = new System.Drawing.Size(93, 24);
+            this._btnDeleteJobColour.TabIndex = 8;
+            this._btnDeleteJobColour.Text = "Delete";
+            this._btnDeleteJobColour.UseVisualStyleBackColor = true;
+            this._btnDeleteJobColour.Click += new System.EventHandler(this.btnDeleteJobColour_Click);
+            // 
+            // _cboColour
+            // 
+            this._cboColour.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboColour.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this._cboColour.FormattingEnabled = true;
+            this._cboColour.Location = new System.Drawing.Point(85, 50);
+            this._cboColour.Name = "_cboColour";
+            this._cboColour.Size = new System.Drawing.Size(223, 22);
+            this._cboColour.TabIndex = 7;
+            this._cboColour.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboColour_DrawItem);
+            // 
+            // _lblColour
+            // 
+            this._lblColour.AutoSize = true;
+            this._lblColour.Location = new System.Drawing.Point(10, 54);
+            this._lblColour.Name = "_lblColour";
+            this._lblColour.Size = new System.Drawing.Size(45, 13);
+            this._lblColour.TabIndex = 6;
+            this._lblColour.Text = "Colour";
+            // 
+            // _cboJobType
+            // 
+            this._cboJobType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboJobType.FormattingEnabled = true;
+            this._cboJobType.Location = new System.Drawing.Point(85, 20);
+            this._cboJobType.Name = "_cboJobType";
+            this._cboJobType.Size = new System.Drawing.Size(223, 21);
+            this._cboJobType.TabIndex = 5;
+            // 
+            // _lblJobType
+            // 
+            this._lblJobType.AutoSize = true;
+            this._lblJobType.Location = new System.Drawing.Point(10, 25);
+            this._lblJobType.Name = "_lblJobType";
+            this._lblJobType.Size = new System.Drawing.Size(57, 13);
+            this._lblJobType.TabIndex = 4;
+            this._lblJobType.Text = "Job Type";
+            // 
+            // _dgJobTypeColours
+            // 
+            this._dgJobTypeColours.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgJobTypeColours.DataMember = "";
+            this._dgJobTypeColours.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgJobTypeColours.Location = new System.Drawing.Point(7, 92);
+            this._dgJobTypeColours.Name = "_dgJobTypeColours";
+            this._dgJobTypeColours.Size = new System.Drawing.Size(301, 453);
+            this._dgJobTypeColours.TabIndex = 2;
+            // 
+            // _btnClose
+            // 
+            this._btnClose.AccessibleDescription = "Save item";
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnClose.ImageIndex = 1;
+            this._btnClose.Location = new System.Drawing.Point(12, 599);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(68, 26);
+            this._btnClose.TabIndex = 4;
+            this._btnClose.Text = "Close";
+            this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FRMSchedulerSettings
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            BackColor = Color.White;
-            ClientSize = new Size(690, 636);
-            Controls.Add(_btnClose);
-            Controls.Add(_grpJobTypeColours);
-            MinimumSize = new Size(706, 675);
-            Name = "FRMSchedulerSettings";
-            Text = "Settings";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpJobTypeColours, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            _grpJobTypeColours.ResumeLayout(false);
-            _grpJobTypeColours.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgJobTypeColours).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(690, 636);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._grpJobTypeColours);
+            this.MinimumSize = new System.Drawing.Size(706, 675);
+            this.Name = "FRMSchedulerSettings";
+            this.Text = "Settings";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpJobTypeColours.ResumeLayout(false);
+            this._grpJobTypeColours.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobTypeColours)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

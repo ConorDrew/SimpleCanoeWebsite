@@ -94,46 +94,48 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _dgAuditTrail = new DataGrid();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAuditTrail).BeginInit();
-            SuspendLayout();
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_dgAuditTrail);
-            _GroupBox1.Location = new Point(10, 40);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(477, 336);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            //
-            // dgAuditTrail
-            //
-            _dgAuditTrail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAuditTrail.DataMember = "";
-            _dgAuditTrail.HeaderForeColor = SystemColors.ControlText;
-            _dgAuditTrail.Location = new Point(10, 19);
-            _dgAuditTrail.Name = "dgAuditTrail";
-            _dgAuditTrail.Size = new Size(458, 309);
-            _dgAuditTrail.TabIndex = 0;
-            //
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dgAuditTrail = new System.Windows.Forms.DataGrid();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAuditTrail)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dgAuditTrail);
+            this._GroupBox1.Location = new System.Drawing.Point(10, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(477, 364);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            // 
+            // _dgAuditTrail
+            // 
+            this._dgAuditTrail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAuditTrail.DataMember = "";
+            this._dgAuditTrail.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgAuditTrail.Location = new System.Drawing.Point(10, 19);
+            this._dgAuditTrail.Name = "_dgAuditTrail";
+            this._dgAuditTrail.Size = new System.Drawing.Size(458, 337);
+            this._dgAuditTrail.TabIndex = 0;
+            // 
             // FRMSiteCustomerAudit
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(496, 385);
-            Controls.Add(_GroupBox1);
-            Name = "FRMSiteCustomerAudit";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Site Customer Audit";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgAuditTrail).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(496, 385);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FRMSiteCustomerAudit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Site Customer Audit";
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgAuditTrail)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

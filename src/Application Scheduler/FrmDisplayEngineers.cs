@@ -327,218 +327,224 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpMain = new GroupBox();
-            _txtQualificationFilter = new TextBox();
-            _txtQualificationFilter.TextChanged += new EventHandler(filterChange);
-            _lblQualification = new Label();
-            _btnClearFilters = new Button();
-            _btnClearFilters.Click += new EventHandler(btnClearFilters_Click);
-            _cboRegionID = new ComboBox();
-            _cboRegionID.SelectedIndexChanged += new EventHandler(filterChange);
-            _lblRegion = new Label();
-            _txtPostcodeFilter = new TextBox();
-            _txtPostcodeFilter.TextChanged += new EventHandler(filterChange);
-            _lblPostcode = new Label();
-            _txtNameFilter = new TextBox();
-            _txtNameFilter.TextChanged += new EventHandler(filterChange);
-            _lblEngineerName = new Label();
-            _cboEngineerGroup = new ComboBox();
-            _cboEngineerGroup.SelectedIndexChanged += new EventHandler(cboEngineerGroup_SelectedIndexChanged);
-            _Label24 = new Label();
-            _btnOk = new Button();
-            _btnOk.Click += new EventHandler(btnOk_Click);
-            _btnClearAll = new Button();
-            _btnClearAll.Click += new EventHandler(btnClearAll_Click);
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _dgEngineers = new DataGrid();
-            _dgEngineers.Click += new EventHandler(dgEngineers_Click);
-            _dgEngineers.MouseDoubleClick += new MouseEventHandler(dgEngineers_MouseDoubleClick);
-            _grpMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEngineers).BeginInit();
-            SuspendLayout();
-            //
-            // grpMain
-            //
-            _grpMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpMain.Controls.Add(_txtQualificationFilter);
-            _grpMain.Controls.Add(_lblQualification);
-            _grpMain.Controls.Add(_btnClearFilters);
-            _grpMain.Controls.Add(_cboRegionID);
-            _grpMain.Controls.Add(_lblRegion);
-            _grpMain.Controls.Add(_txtPostcodeFilter);
-            _grpMain.Controls.Add(_lblPostcode);
-            _grpMain.Controls.Add(_txtNameFilter);
-            _grpMain.Controls.Add(_lblEngineerName);
-            _grpMain.Controls.Add(_cboEngineerGroup);
-            _grpMain.Controls.Add(_Label24);
-            _grpMain.Controls.Add(_btnOk);
-            _grpMain.Controls.Add(_btnClearAll);
-            _grpMain.Controls.Add(_btnSelectAll);
-            _grpMain.Controls.Add(_dgEngineers);
-            _grpMain.Font = new Font("Verdana", 8.0F);
-            _grpMain.Location = new Point(8, 32);
-            _grpMain.Name = "grpMain";
-            _grpMain.Size = new Size(661, 529);
-            _grpMain.TabIndex = 10;
-            _grpMain.TabStop = false;
-            _grpMain.Text = "Engineers to Display";
-            //
-            // txtQualificationFilter
-            //
-            _txtQualificationFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtQualificationFilter.Location = new Point(121, 93);
-            _txtQualificationFilter.Name = "txtQualificationFilter";
-            _txtQualificationFilter.Size = new Size(426, 20);
-            _txtQualificationFilter.TabIndex = 5;
-            //
-            // lblQualification
-            //
-            _lblQualification.Location = new Point(9, 93);
-            _lblQualification.Name = "lblQualification";
-            _lblQualification.Size = new Size(93, 20);
-            _lblQualification.TabIndex = 57;
-            _lblQualification.Text = "Qualification";
-            //
-            // btnClearFilters
-            //
-            _btnClearFilters.Location = new Point(553, 93);
-            _btnClearFilters.Name = "btnClearFilters";
-            _btnClearFilters.Size = new Size(99, 23);
-            _btnClearFilters.TabIndex = 6;
-            _btnClearFilters.Text = "Clear Filters";
-            _btnClearFilters.UseVisualStyleBackColor = true;
-            //
-            // cboRegionID
-            //
-            _cboRegionID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboRegionID.Cursor = Cursors.Hand;
-            _cboRegionID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboRegionID.Location = new Point(121, 62);
-            _cboRegionID.Name = "cboRegionID";
-            _cboRegionID.Size = new Size(188, 21);
-            _cboRegionID.TabIndex = 3;
-            _cboRegionID.Tag = "";
-            //
-            // lblRegion
-            //
-            _lblRegion.Location = new Point(9, 64);
-            _lblRegion.Name = "lblRegion";
-            _lblRegion.Size = new Size(105, 20);
-            _lblRegion.TabIndex = 54;
-            _lblRegion.Text = "Region";
-            //
-            // txtPostcodeFilter
-            //
-            _txtPostcodeFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtPostcodeFilter.Location = new Point(433, 62);
-            _txtPostcodeFilter.Name = "txtPostcodeFilter";
-            _txtPostcodeFilter.Size = new Size(219, 20);
-            _txtPostcodeFilter.TabIndex = 4;
-            //
-            // lblPostcode
-            //
-            _lblPostcode.Location = new Point(327, 62);
-            _lblPostcode.Name = "lblPostcode";
-            _lblPostcode.Size = new Size(93, 20);
-            _lblPostcode.TabIndex = 52;
-            _lblPostcode.Text = "Postcode";
-            //
-            // txtNameFilter
-            //
-            _txtNameFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtNameFilter.Location = new Point(433, 34);
-            _txtNameFilter.Name = "txtNameFilter";
-            _txtNameFilter.Size = new Size(219, 20);
-            _txtNameFilter.TabIndex = 2;
-            //
-            // lblEngineerName
-            //
-            _lblEngineerName.Location = new Point(327, 34);
-            _lblEngineerName.Name = "lblEngineerName";
-            _lblEngineerName.Size = new Size(105, 20);
-            _lblEngineerName.TabIndex = 48;
-            _lblEngineerName.Text = "Engineer Name";
-            //
-            // cboEngineerGroup
-            //
-            _cboEngineerGroup.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboEngineerGroup.Cursor = Cursors.Hand;
-            _cboEngineerGroup.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboEngineerGroup.Location = new Point(121, 32);
-            _cboEngineerGroup.Name = "cboEngineerGroup";
-            _cboEngineerGroup.Size = new Size(188, 21);
-            _cboEngineerGroup.TabIndex = 1;
-            _cboEngineerGroup.Tag = "";
-            //
-            // Label24
-            //
-            _Label24.Location = new Point(9, 34);
-            _Label24.Name = "Label24";
-            _Label24.Size = new Size(105, 20);
-            _Label24.TabIndex = 47;
-            _Label24.Text = "Engineer Group";
-            //
-            // btnOk
-            //
-            _btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOk.Font = new Font("Verdana", 8.0F);
-            _btnOk.Location = new Point(588, 495);
-            _btnOk.Name = "btnOk";
-            _btnOk.Size = new Size(64, 23);
-            _btnOk.TabIndex = 9;
-            _btnOk.Text = "Ok";
-            _btnOk.UseVisualStyleBackColor = true;
-            //
-            // btnClearAll
-            //
-            _btnClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClearAll.Font = new Font("Verdana", 8.0F);
-            _btnClearAll.Location = new Point(80, 495);
-            _btnClearAll.Name = "btnClearAll";
-            _btnClearAll.Size = new Size(64, 23);
-            _btnClearAll.TabIndex = 8;
-            _btnClearAll.Text = "Clear All";
-            _btnClearAll.UseVisualStyleBackColor = true;
-            //
-            // btnSelectAll
-            //
-            _btnSelectAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSelectAll.Font = new Font("Verdana", 8.0F);
-            _btnSelectAll.Location = new Point(10, 495);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(64, 23);
-            _btnSelectAll.TabIndex = 7;
-            _btnSelectAll.Text = "Select All";
-            _btnSelectAll.UseVisualStyleBackColor = true;
-            //
-            // dgEngineers
-            //
-            _dgEngineers.DataMember = "";
-            _dgEngineers.HeaderForeColor = SystemColors.ControlText;
-            _dgEngineers.Location = new Point(10, 128);
-            _dgEngineers.Name = "dgEngineers";
-            _dgEngineers.Size = new Size(645, 353);
-            _dgEngineers.TabIndex = 50;
-            _dgEngineers.TabStop = false;
-            //
+            this._grpMain = new System.Windows.Forms.GroupBox();
+            this._txtQualificationFilter = new System.Windows.Forms.TextBox();
+            this._lblQualification = new System.Windows.Forms.Label();
+            this._btnClearFilters = new System.Windows.Forms.Button();
+            this._cboRegionID = new System.Windows.Forms.ComboBox();
+            this._lblRegion = new System.Windows.Forms.Label();
+            this._txtPostcodeFilter = new System.Windows.Forms.TextBox();
+            this._lblPostcode = new System.Windows.Forms.Label();
+            this._txtNameFilter = new System.Windows.Forms.TextBox();
+            this._lblEngineerName = new System.Windows.Forms.Label();
+            this._cboEngineerGroup = new System.Windows.Forms.ComboBox();
+            this._Label24 = new System.Windows.Forms.Label();
+            this._btnOk = new System.Windows.Forms.Button();
+            this._btnClearAll = new System.Windows.Forms.Button();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._dgEngineers = new System.Windows.Forms.DataGrid();
+            this._grpMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineers)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpMain
+            // 
+            this._grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpMain.Controls.Add(this._txtQualificationFilter);
+            this._grpMain.Controls.Add(this._lblQualification);
+            this._grpMain.Controls.Add(this._btnClearFilters);
+            this._grpMain.Controls.Add(this._cboRegionID);
+            this._grpMain.Controls.Add(this._lblRegion);
+            this._grpMain.Controls.Add(this._txtPostcodeFilter);
+            this._grpMain.Controls.Add(this._lblPostcode);
+            this._grpMain.Controls.Add(this._txtNameFilter);
+            this._grpMain.Controls.Add(this._lblEngineerName);
+            this._grpMain.Controls.Add(this._cboEngineerGroup);
+            this._grpMain.Controls.Add(this._Label24);
+            this._grpMain.Controls.Add(this._btnOk);
+            this._grpMain.Controls.Add(this._btnClearAll);
+            this._grpMain.Controls.Add(this._btnSelectAll);
+            this._grpMain.Controls.Add(this._dgEngineers);
+            this._grpMain.Font = new System.Drawing.Font("Verdana", 8F);
+            this._grpMain.Location = new System.Drawing.Point(8, 12);
+            this._grpMain.Name = "_grpMain";
+            this._grpMain.Size = new System.Drawing.Size(661, 549);
+            this._grpMain.TabIndex = 10;
+            this._grpMain.TabStop = false;
+            this._grpMain.Text = "Engineers to Display";
+            // 
+            // _txtQualificationFilter
+            // 
+            this._txtQualificationFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtQualificationFilter.Location = new System.Drawing.Point(121, 93);
+            this._txtQualificationFilter.Name = "_txtQualificationFilter";
+            this._txtQualificationFilter.Size = new System.Drawing.Size(426, 20);
+            this._txtQualificationFilter.TabIndex = 5;
+            this._txtQualificationFilter.TextChanged += new System.EventHandler(this.filterChange);
+            // 
+            // _lblQualification
+            // 
+            this._lblQualification.Location = new System.Drawing.Point(9, 93);
+            this._lblQualification.Name = "_lblQualification";
+            this._lblQualification.Size = new System.Drawing.Size(93, 20);
+            this._lblQualification.TabIndex = 57;
+            this._lblQualification.Text = "Qualification";
+            // 
+            // _btnClearFilters
+            // 
+            this._btnClearFilters.Location = new System.Drawing.Point(553, 93);
+            this._btnClearFilters.Name = "_btnClearFilters";
+            this._btnClearFilters.Size = new System.Drawing.Size(99, 23);
+            this._btnClearFilters.TabIndex = 6;
+            this._btnClearFilters.Text = "Clear Filters";
+            this._btnClearFilters.UseVisualStyleBackColor = true;
+            this._btnClearFilters.Click += new System.EventHandler(this.btnClearFilters_Click);
+            // 
+            // _cboRegionID
+            // 
+            this._cboRegionID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboRegionID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboRegionID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboRegionID.Location = new System.Drawing.Point(121, 62);
+            this._cboRegionID.Name = "_cboRegionID";
+            this._cboRegionID.Size = new System.Drawing.Size(188, 21);
+            this._cboRegionID.TabIndex = 3;
+            this._cboRegionID.Tag = "";
+            this._cboRegionID.SelectedIndexChanged += new System.EventHandler(this.filterChange);
+            // 
+            // _lblRegion
+            // 
+            this._lblRegion.Location = new System.Drawing.Point(9, 64);
+            this._lblRegion.Name = "_lblRegion";
+            this._lblRegion.Size = new System.Drawing.Size(105, 20);
+            this._lblRegion.TabIndex = 54;
+            this._lblRegion.Text = "Region";
+            // 
+            // _txtPostcodeFilter
+            // 
+            this._txtPostcodeFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtPostcodeFilter.Location = new System.Drawing.Point(433, 62);
+            this._txtPostcodeFilter.Name = "_txtPostcodeFilter";
+            this._txtPostcodeFilter.Size = new System.Drawing.Size(219, 20);
+            this._txtPostcodeFilter.TabIndex = 4;
+            this._txtPostcodeFilter.TextChanged += new System.EventHandler(this.filterChange);
+            // 
+            // _lblPostcode
+            // 
+            this._lblPostcode.Location = new System.Drawing.Point(327, 62);
+            this._lblPostcode.Name = "_lblPostcode";
+            this._lblPostcode.Size = new System.Drawing.Size(93, 20);
+            this._lblPostcode.TabIndex = 52;
+            this._lblPostcode.Text = "Postcode";
+            // 
+            // _txtNameFilter
+            // 
+            this._txtNameFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNameFilter.Location = new System.Drawing.Point(433, 34);
+            this._txtNameFilter.Name = "_txtNameFilter";
+            this._txtNameFilter.Size = new System.Drawing.Size(219, 20);
+            this._txtNameFilter.TabIndex = 2;
+            this._txtNameFilter.TextChanged += new System.EventHandler(this.filterChange);
+            // 
+            // _lblEngineerName
+            // 
+            this._lblEngineerName.Location = new System.Drawing.Point(327, 34);
+            this._lblEngineerName.Name = "_lblEngineerName";
+            this._lblEngineerName.Size = new System.Drawing.Size(105, 20);
+            this._lblEngineerName.TabIndex = 48;
+            this._lblEngineerName.Text = "Engineer Name";
+            // 
+            // _cboEngineerGroup
+            // 
+            this._cboEngineerGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboEngineerGroup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboEngineerGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboEngineerGroup.Location = new System.Drawing.Point(121, 32);
+            this._cboEngineerGroup.Name = "_cboEngineerGroup";
+            this._cboEngineerGroup.Size = new System.Drawing.Size(188, 21);
+            this._cboEngineerGroup.TabIndex = 1;
+            this._cboEngineerGroup.Tag = "";
+            this._cboEngineerGroup.SelectedIndexChanged += new System.EventHandler(this.cboEngineerGroup_SelectedIndexChanged);
+            // 
+            // _Label24
+            // 
+            this._Label24.Location = new System.Drawing.Point(9, 34);
+            this._Label24.Name = "_Label24";
+            this._Label24.Size = new System.Drawing.Size(105, 20);
+            this._Label24.TabIndex = 47;
+            this._Label24.Text = "Engineer Group";
+            // 
+            // _btnOk
+            // 
+            this._btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOk.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnOk.Location = new System.Drawing.Point(588, 515);
+            this._btnOk.Name = "_btnOk";
+            this._btnOk.Size = new System.Drawing.Size(64, 23);
+            this._btnOk.TabIndex = 9;
+            this._btnOk.Text = "Ok";
+            this._btnOk.UseVisualStyleBackColor = true;
+            this._btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // _btnClearAll
+            // 
+            this._btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClearAll.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnClearAll.Location = new System.Drawing.Point(80, 515);
+            this._btnClearAll.Name = "_btnClearAll";
+            this._btnClearAll.Size = new System.Drawing.Size(64, 23);
+            this._btnClearAll.TabIndex = 8;
+            this._btnClearAll.Text = "Clear All";
+            this._btnClearAll.UseVisualStyleBackColor = true;
+            this._btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
+            // _btnSelectAll
+            // 
+            this._btnSelectAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSelectAll.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnSelectAll.Location = new System.Drawing.Point(10, 515);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(64, 23);
+            this._btnSelectAll.TabIndex = 7;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // _dgEngineers
+            // 
+            this._dgEngineers.DataMember = "";
+            this._dgEngineers.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgEngineers.Location = new System.Drawing.Point(10, 128);
+            this._dgEngineers.Name = "_dgEngineers";
+            this._dgEngineers.Size = new System.Drawing.Size(645, 381);
+            this._dgEngineers.TabIndex = 50;
+            this._dgEngineers.TabStop = false;
+            this._dgEngineers.Click += new System.EventHandler(this.dgEngineers_Click);
+            this._dgEngineers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgEngineers_MouseDoubleClick);
+            // 
             // FrmDisplayEngineers
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(672, 562);
-            Controls.Add(_grpMain);
-            MaximizeBox = false;
-            MaximumSize = new Size(688, 601);
-            MinimizeBox = false;
-            MinimumSize = new Size(688, 601);
-            Name = "FrmDisplayEngineers";
-            Text = "Display Engineers";
-            Controls.SetChildIndex(_grpMain, 0);
-            _grpMain.ResumeLayout(false);
-            _grpMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEngineers).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(672, 562);
+            this.Controls.Add(this._grpMain);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(688, 601);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(688, 601);
+            this.Name = "FrmDisplayEngineers";
+            this.Text = "Display Engineers";
+            this._grpMain.ResumeLayout(false);
+            this._grpMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineers)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         private string engineersPostcodes;

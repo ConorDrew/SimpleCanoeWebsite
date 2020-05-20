@@ -36,88 +36,90 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _GroupBox1 = new GroupBox();
-            _Label2 = new Label();
-            _txtQtyToReturn = new TextBox();
-            _txtQtyAvailable = new TextBox();
-            _Label1 = new Label();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._txtQtyToReturn = new System.Windows.Forms.TextBox();
+            this._txtQtyAvailable = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // btnOK
+            // _btnOK
             // 
-            _btnOK.Location = new Point(298, 52);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(75, 23);
-            _btnOK.TabIndex = 2;
-            _btnOK.Text = "OK";
-            _btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Location = new System.Drawing.Point(298, 52);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 2;
+            this._btnOK.Text = "OK";
+            this._btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Controls.Add(_Label2);
-            _GroupBox1.Controls.Add(_txtQtyToReturn);
-            _GroupBox1.Controls.Add(_btnOK);
-            _GroupBox1.Controls.Add(_txtQtyAvailable);
-            _GroupBox1.Controls.Add(_Label1);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(384, 91);
-            _GroupBox1.TabIndex = 3;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Return part to the supplier for credit?";
+            this._GroupBox1.Controls.Add(this._Label2);
+            this._GroupBox1.Controls.Add(this._txtQtyToReturn);
+            this._GroupBox1.Controls.Add(this._btnOK);
+            this._GroupBox1.Controls.Add(this._txtQtyAvailable);
+            this._GroupBox1.Controls.Add(this._Label1);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(384, 91);
+            this._GroupBox1.TabIndex = 3;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Return part to the supplier for credit?";
             // 
-            // Label2
+            // _Label2
             // 
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(6, 57);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(115, 13);
-            _Label2.TabIndex = 3;
-            _Label2.Text = "Quantity To Return";
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(6, 57);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(114, 13);
+            this._Label2.TabIndex = 3;
+            this._Label2.Text = "Quantity To Return";
             // 
-            // txtQtyToReturn
+            // _txtQtyToReturn
             // 
-            _txtQtyToReturn.Location = new Point(123, 54);
-            _txtQtyToReturn.Name = "txtQtyToReturn";
-            _txtQtyToReturn.Size = new Size(100, 21);
-            _txtQtyToReturn.TabIndex = 2;
-            _txtQtyToReturn.Text = "0";
-            _txtQtyToReturn.TextAlign = HorizontalAlignment.Right;
+            this._txtQtyToReturn.Location = new System.Drawing.Point(123, 54);
+            this._txtQtyToReturn.Name = "_txtQtyToReturn";
+            this._txtQtyToReturn.Size = new System.Drawing.Size(100, 21);
+            this._txtQtyToReturn.TabIndex = 2;
+            this._txtQtyToReturn.Text = "0";
+            this._txtQtyToReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtQtyAvailable
+            // _txtQtyAvailable
             // 
-            _txtQtyAvailable.Location = new Point(123, 27);
-            _txtQtyAvailable.Name = "txtQtyAvailable";
-            _txtQtyAvailable.ReadOnly = true;
-            _txtQtyAvailable.Size = new Size(100, 21);
-            _txtQtyAvailable.TabIndex = 1;
-            _txtQtyAvailable.TextAlign = HorizontalAlignment.Right;
+            this._txtQtyAvailable.Location = new System.Drawing.Point(123, 27);
+            this._txtQtyAvailable.Name = "_txtQtyAvailable";
+            this._txtQtyAvailable.ReadOnly = true;
+            this._txtQtyAvailable.Size = new System.Drawing.Size(100, 21);
+            this._txtQtyAvailable.TabIndex = 1;
+            this._txtQtyAvailable.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Label1
+            // _Label1
             // 
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(6, 30);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(111, 13);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Quantity Available";
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(6, 30);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(111, 13);
+            this._Label1.TabIndex = 0;
+            this._Label1.Text = "Quantity Available";
             // 
             // FRMAddPartToBeCredited
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(406, 136);
-            ControlBox = false;
-            Controls.Add(_GroupBox1);
-            Name = "FRMAddPartToBeCredited";
-            Text = "Add Part To Be Credited";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(406, 113);
+            this.ControlBox = false;
+            this.Controls.Add(this._GroupBox1);
+            this.MaximumSize = new System.Drawing.Size(422, 152);
+            this.MinimumSize = new System.Drawing.Size(422, 152);
+            this.Name = "FRMAddPartToBeCredited";
+            this.Text = "Add Part To Be Credited";
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private Button _btnOK;

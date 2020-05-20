@@ -196,92 +196,91 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pnlMain = new Panel();
-            _chkSuper = new CheckBox();
-            _cboEngineer = new ComboBox();
-            _Label1 = new Label();
-            _pnlMain.SuspendLayout();
-            SuspendLayout();
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Location = new Point(8, 95);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(56, 25);
-            _btnSave.TabIndex = 2;
-            _btnSave.Text = "Save";
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(72, 95);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 25);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
-            // pnlMain
-            //
-            _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlMain.Controls.Add(_chkSuper);
-            _pnlMain.Controls.Add(_cboEngineer);
-            _pnlMain.Controls.Add(_Label1);
-            _pnlMain.Location = new Point(0, 32);
-            _pnlMain.Name = "pnlMain";
-            _pnlMain.Size = new Size(613, 57);
-            _pnlMain.TabIndex = 1;
-            //
-            // chkSuper
-            //
-            _chkSuper.AutoSize = true;
-            _chkSuper.Location = new Point(417, 20);
-            _chkSuper.Name = "chkSuper";
-            _chkSuper.Size = new Size(88, 17);
-            _chkSuper.TabIndex = 2;
-            _chkSuper.Text = "Supervisor";
-            _chkSuper.UseVisualStyleBackColor = true;
-            //
-            // cboEngineer
-            //
-            _cboEngineer.FormattingEnabled = true;
-            _cboEngineer.Location = new Point(116, 18);
-            _cboEngineer.Name = "cboEngineer";
-            _cboEngineer.Size = new Size(284, 21);
-            _cboEngineer.TabIndex = 1;
-            //
-            // Label1
-            //
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(48, 21);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(62, 13);
-            _Label1.TabIndex = 0;
-            _Label1.Text = "Engineer:";
-            //
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pnlMain = new System.Windows.Forms.Panel();
+            this._chkSuper = new System.Windows.Forms.CheckBox();
+            this._cboEngineer = new System.Windows.Forms.ComboBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._pnlMain.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Location = new System.Drawing.Point(8, 80);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(56, 25);
+            this._btnSave.TabIndex = 2;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(72, 80);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 25);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pnlMain
+            // 
+            this._pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlMain.Controls.Add(this._chkSuper);
+            this._pnlMain.Controls.Add(this._cboEngineer);
+            this._pnlMain.Controls.Add(this._Label1);
+            this._pnlMain.Location = new System.Drawing.Point(8, 12);
+            this._pnlMain.Name = "_pnlMain";
+            this._pnlMain.Size = new System.Drawing.Size(613, 62);
+            this._pnlMain.TabIndex = 1;
+            // 
+            // _chkSuper
+            // 
+            this._chkSuper.AutoSize = true;
+            this._chkSuper.Location = new System.Drawing.Point(417, 20);
+            this._chkSuper.Name = "_chkSuper";
+            this._chkSuper.Size = new System.Drawing.Size(88, 17);
+            this._chkSuper.TabIndex = 2;
+            this._chkSuper.Text = "Supervisor";
+            this._chkSuper.UseVisualStyleBackColor = true;
+            // 
+            // _cboEngineer
+            // 
+            this._cboEngineer.FormattingEnabled = true;
+            this._cboEngineer.Location = new System.Drawing.Point(116, 18);
+            this._cboEngineer.Name = "_cboEngineer";
+            this._cboEngineer.Size = new System.Drawing.Size(284, 21);
+            this._cboEngineer.TabIndex = 1;
+            // 
+            // _Label1
+            // 
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(48, 21);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(62, 13);
+            this._Label1.TabIndex = 0;
+            this._Label1.Text = "Engineer:";
+            // 
             // FRMEngineerRaiseJob
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(621, 133);
-            Controls.Add(_btnClose);
-            Controls.Add(_btnSave);
-            Controls.Add(_pnlMain);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(629, 100);
-            Name = "FRMEngineerRaiseJob";
-            Text = "Engineer : ID {0}";
-            Controls.SetChildIndex(_pnlMain, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            _pnlMain.ResumeLayout(false);
-            _pnlMain.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(621, 118);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._pnlMain);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(629, 100);
+            this.Name = "FRMEngineerRaiseJob";
+            this.Text = "Engineer : ID {0}";
+            this._pnlMain.ResumeLayout(false);
+            this._pnlMain.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private void FRMEngineer_Load(object sender, EventArgs e)

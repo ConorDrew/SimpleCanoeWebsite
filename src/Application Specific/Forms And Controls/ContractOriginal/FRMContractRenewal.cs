@@ -424,252 +424,255 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _gpbContract = new GroupBox();
-            _gpbInvoiceAddress = new GroupBox();
-            _dgInvoiceAddress = new DataGrid();
-            _cboInvoiceFrequencyID = new ComboBox();
-            _cboInvoiceFrequencyID.SelectedIndexChanged += new EventHandler(cboInvoiceFrequencyID_SelectedIndexChanged);
-            _lblInvoiceFrequencyID = new Label();
-            _Label6 = new Label();
-            _Label5 = new Label();
-            _dtpInvoiceDate = new DateTimePicker();
-            _Label4 = new Label();
-            _Label3 = new Label();
-            _Label2 = new Label();
-            _Label1 = new Label();
-            _txtNewPrice = new TextBox();
-            _dtpStartDate = new DateTimePicker();
-            _dtpStartDate.ValueChanged += new EventHandler(dtpStartDate_ValueChanged);
-            _dtpEndDate = new DateTimePicker();
-            _txtPercentMarkup = new TextBox();
-            _txtPercentMarkup.TextChanged += new EventHandler(txtPercentMarkup_TextChanged);
-            _btnCreateContract = new Button();
-            _btnCreateContract.Click += new EventHandler(btnCreateContract_Click);
-            _dgFirstVisitDates = new DataGrid();
-            _gpbSites = new GroupBox();
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _gpbContract.SuspendLayout();
-            _gpbInvoiceAddress.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddress).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_dgFirstVisitDates).BeginInit();
-            _gpbSites.SuspendLayout();
-            SuspendLayout();
-            //
-            // gpbContract
-            //
-            _gpbContract.Controls.Add(_gpbInvoiceAddress);
-            _gpbContract.Controls.Add(_cboInvoiceFrequencyID);
-            _gpbContract.Controls.Add(_lblInvoiceFrequencyID);
-            _gpbContract.Controls.Add(_Label6);
-            _gpbContract.Controls.Add(_Label5);
-            _gpbContract.Controls.Add(_dtpInvoiceDate);
-            _gpbContract.Controls.Add(_Label4);
-            _gpbContract.Controls.Add(_Label3);
-            _gpbContract.Controls.Add(_Label2);
-            _gpbContract.Controls.Add(_Label1);
-            _gpbContract.Controls.Add(_txtNewPrice);
-            _gpbContract.Controls.Add(_dtpStartDate);
-            _gpbContract.Controls.Add(_dtpEndDate);
-            _gpbContract.Controls.Add(_txtPercentMarkup);
-            _gpbContract.Location = new Point(6, 38);
-            _gpbContract.Name = "gpbContract";
-            _gpbContract.Size = new Size(908, 185);
-            _gpbContract.TabIndex = 2;
-            _gpbContract.TabStop = false;
-            _gpbContract.Text = "Contract";
-            //
-            // gpbInvoiceAddress
-            //
-            _gpbInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _gpbInvoiceAddress.Controls.Add(_dgInvoiceAddress);
-            _gpbInvoiceAddress.Location = new Point(350, 15);
-            _gpbInvoiceAddress.Name = "gpbInvoiceAddress";
-            _gpbInvoiceAddress.Size = new Size(539, 162);
-            _gpbInvoiceAddress.TabIndex = 16;
-            _gpbInvoiceAddress.TabStop = false;
-            _gpbInvoiceAddress.Text = "Invoice Address";
-            //
-            // dgInvoiceAddress
-            //
-            _dgInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgInvoiceAddress.DataMember = "";
-            _dgInvoiceAddress.HeaderForeColor = SystemColors.ControlText;
-            _dgInvoiceAddress.Location = new Point(8, 20);
-            _dgInvoiceAddress.Name = "dgInvoiceAddress";
-            _dgInvoiceAddress.Size = new Size(523, 134);
-            _dgInvoiceAddress.TabIndex = 0;
-            //
-            // cboInvoiceFrequencyID
-            //
-            _cboInvoiceFrequencyID.Cursor = Cursors.Hand;
-            _cboInvoiceFrequencyID.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboInvoiceFrequencyID.Location = new Point(123, 154);
-            _cboInvoiceFrequencyID.Name = "cboInvoiceFrequencyID";
-            _cboInvoiceFrequencyID.Size = new Size(195, 21);
-            _cboInvoiceFrequencyID.TabIndex = 15;
-            _cboInvoiceFrequencyID.Tag = "Contract.InvoiceFrequencyID";
-            //
-            // lblInvoiceFrequencyID
-            //
-            _lblInvoiceFrequencyID.Location = new Point(8, 157);
-            _lblInvoiceFrequencyID.Name = "lblInvoiceFrequencyID";
-            _lblInvoiceFrequencyID.Size = new Size(132, 20);
-            _lblInvoiceFrequencyID.TabIndex = 14;
-            _lblInvoiceFrequencyID.Text = "Invoice Frequency";
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(8, 43);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(80, 23);
-            _Label6.TabIndex = 12;
-            _Label6.Text = "New Price";
-            _Label6.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(8, 125);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(93, 23);
-            _Label5.TabIndex = 11;
-            _Label5.Text = "Invoice Date";
-            _Label5.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // dtpInvoiceDate
-            //
-            _dtpInvoiceDate.Location = new Point(123, 126);
-            _dtpInvoiceDate.Name = "dtpInvoiceDate";
-            _dtpInvoiceDate.Size = new Size(195, 21);
-            _dtpInvoiceDate.TabIndex = 10;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(8, 98);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 23);
-            _Label4.TabIndex = 9;
-            _Label4.Text = "End Date";
-            _Label4.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 71);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(100, 23);
-            _Label3.TabIndex = 8;
-            _Label3.Text = "Start Date";
-            _Label3.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(324, 15);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(30, 23);
-            _Label2.TabIndex = 7;
-            _Label2.Text = "%";
-            _Label2.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 15);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(100, 23);
-            _Label1.TabIndex = 6;
-            _Label1.Text = "Markup Amount";
-            _Label1.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // txtNewPrice
-            //
-            _txtNewPrice.Location = new Point(123, 45);
-            _txtNewPrice.Name = "txtNewPrice";
-            _txtNewPrice.Size = new Size(195, 21);
-            _txtNewPrice.TabIndex = 5;
-            //
-            // dtpStartDate
-            //
-            _dtpStartDate.Location = new Point(123, 72);
-            _dtpStartDate.Name = "dtpStartDate";
-            _dtpStartDate.Size = new Size(195, 21);
-            _dtpStartDate.TabIndex = 2;
-            //
-            // dtpEndDate
-            //
-            _dtpEndDate.Location = new Point(123, 99);
-            _dtpEndDate.Name = "dtpEndDate";
-            _dtpEndDate.Size = new Size(195, 21);
-            _dtpEndDate.TabIndex = 1;
-            //
-            // txtPercentMarkup
-            //
-            _txtPercentMarkup.Location = new Point(123, 17);
-            _txtPercentMarkup.Name = "txtPercentMarkup";
-            _txtPercentMarkup.Size = new Size(195, 21);
-            _txtPercentMarkup.TabIndex = 0;
-            //
-            // btnCreateContract
-            //
-            _btnCreateContract.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnCreateContract.Location = new Point(790, 251);
-            _btnCreateContract.Name = "btnCreateContract";
-            _btnCreateContract.Size = new Size(112, 23);
-            _btnCreateContract.TabIndex = 4;
-            _btnCreateContract.Text = "Create Contract";
-            //
-            // dgFirstVisitDates
-            //
-            _dgFirstVisitDates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgFirstVisitDates.DataMember = "";
-            _dgFirstVisitDates.HeaderForeColor = SystemColors.ControlText;
-            _dgFirstVisitDates.Location = new Point(8, 24);
-            _dgFirstVisitDates.Name = "dgFirstVisitDates";
-            _dgFirstVisitDates.Size = new Size(894, 221);
-            _dgFirstVisitDates.TabIndex = 3;
-            //
-            // gpbSites
-            //
-            _gpbSites.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gpbSites.Controls.Add(_btnCancel);
-            _gpbSites.Controls.Add(_dgFirstVisitDates);
-            _gpbSites.Controls.Add(_btnCreateContract);
-            _gpbSites.Location = new Point(6, 229);
-            _gpbSites.Name = "gpbSites";
-            _gpbSites.Size = new Size(908, 281);
-            _gpbSites.TabIndex = 3;
-            _gpbSites.TabStop = false;
-            _gpbSites.Text = "Properties - Enter Dates";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(8, 251);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(75, 23);
-            _btnCancel.TabIndex = 5;
-            _btnCancel.Text = "Cancel";
-            //
+            this._gpbContract = new System.Windows.Forms.GroupBox();
+            this._gpbInvoiceAddress = new System.Windows.Forms.GroupBox();
+            this._dgInvoiceAddress = new System.Windows.Forms.DataGrid();
+            this._cboInvoiceFrequencyID = new System.Windows.Forms.ComboBox();
+            this._lblInvoiceFrequencyID = new System.Windows.Forms.Label();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._dtpInvoiceDate = new System.Windows.Forms.DateTimePicker();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtNewPrice = new System.Windows.Forms.TextBox();
+            this._dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this._dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this._txtPercentMarkup = new System.Windows.Forms.TextBox();
+            this._btnCreateContract = new System.Windows.Forms.Button();
+            this._dgFirstVisitDates = new System.Windows.Forms.DataGrid();
+            this._gpbSites = new System.Windows.Forms.GroupBox();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._gpbContract.SuspendLayout();
+            this._gpbInvoiceAddress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgFirstVisitDates)).BeginInit();
+            this._gpbSites.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _gpbContract
+            // 
+            this._gpbContract.Controls.Add(this._gpbInvoiceAddress);
+            this._gpbContract.Controls.Add(this._cboInvoiceFrequencyID);
+            this._gpbContract.Controls.Add(this._lblInvoiceFrequencyID);
+            this._gpbContract.Controls.Add(this._Label6);
+            this._gpbContract.Controls.Add(this._Label5);
+            this._gpbContract.Controls.Add(this._dtpInvoiceDate);
+            this._gpbContract.Controls.Add(this._Label4);
+            this._gpbContract.Controls.Add(this._Label3);
+            this._gpbContract.Controls.Add(this._Label2);
+            this._gpbContract.Controls.Add(this._Label1);
+            this._gpbContract.Controls.Add(this._txtNewPrice);
+            this._gpbContract.Controls.Add(this._dtpStartDate);
+            this._gpbContract.Controls.Add(this._dtpEndDate);
+            this._gpbContract.Controls.Add(this._txtPercentMarkup);
+            this._gpbContract.Location = new System.Drawing.Point(6, 12);
+            this._gpbContract.Name = "_gpbContract";
+            this._gpbContract.Size = new System.Drawing.Size(908, 192);
+            this._gpbContract.TabIndex = 2;
+            this._gpbContract.TabStop = false;
+            this._gpbContract.Text = "Contract";
+            // 
+            // _gpbInvoiceAddress
+            // 
+            this._gpbInvoiceAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbInvoiceAddress.Controls.Add(this._dgInvoiceAddress);
+            this._gpbInvoiceAddress.Location = new System.Drawing.Point(350, 15);
+            this._gpbInvoiceAddress.Name = "_gpbInvoiceAddress";
+            this._gpbInvoiceAddress.Size = new System.Drawing.Size(539, 162);
+            this._gpbInvoiceAddress.TabIndex = 16;
+            this._gpbInvoiceAddress.TabStop = false;
+            this._gpbInvoiceAddress.Text = "Invoice Address";
+            // 
+            // _dgInvoiceAddress
+            // 
+            this._dgInvoiceAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgInvoiceAddress.DataMember = "";
+            this._dgInvoiceAddress.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgInvoiceAddress.Location = new System.Drawing.Point(8, 20);
+            this._dgInvoiceAddress.Name = "_dgInvoiceAddress";
+            this._dgInvoiceAddress.Size = new System.Drawing.Size(523, 134);
+            this._dgInvoiceAddress.TabIndex = 0;
+            // 
+            // _cboInvoiceFrequencyID
+            // 
+            this._cboInvoiceFrequencyID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboInvoiceFrequencyID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboInvoiceFrequencyID.Location = new System.Drawing.Point(123, 154);
+            this._cboInvoiceFrequencyID.Name = "_cboInvoiceFrequencyID";
+            this._cboInvoiceFrequencyID.Size = new System.Drawing.Size(195, 21);
+            this._cboInvoiceFrequencyID.TabIndex = 15;
+            this._cboInvoiceFrequencyID.Tag = "Contract.InvoiceFrequencyID";
+            this._cboInvoiceFrequencyID.SelectedIndexChanged += new System.EventHandler(this.cboInvoiceFrequencyID_SelectedIndexChanged);
+            // 
+            // _lblInvoiceFrequencyID
+            // 
+            this._lblInvoiceFrequencyID.Location = new System.Drawing.Point(8, 157);
+            this._lblInvoiceFrequencyID.Name = "_lblInvoiceFrequencyID";
+            this._lblInvoiceFrequencyID.Size = new System.Drawing.Size(132, 20);
+            this._lblInvoiceFrequencyID.TabIndex = 14;
+            this._lblInvoiceFrequencyID.Text = "Invoice Frequency";
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(8, 43);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(80, 23);
+            this._Label6.TabIndex = 12;
+            this._Label6.Text = "New Price";
+            this._Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _Label5
+            // 
+            this._Label5.Location = new System.Drawing.Point(8, 125);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(93, 23);
+            this._Label5.TabIndex = 11;
+            this._Label5.Text = "Invoice Date";
+            this._Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _dtpInvoiceDate
+            // 
+            this._dtpInvoiceDate.Location = new System.Drawing.Point(123, 126);
+            this._dtpInvoiceDate.Name = "_dtpInvoiceDate";
+            this._dtpInvoiceDate.Size = new System.Drawing.Size(195, 21);
+            this._dtpInvoiceDate.TabIndex = 10;
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(8, 98);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 23);
+            this._Label4.TabIndex = 9;
+            this._Label4.Text = "End Date";
+            this._Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(8, 71);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(100, 23);
+            this._Label3.TabIndex = 8;
+            this._Label3.Text = "Start Date";
+            this._Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(324, 15);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(30, 23);
+            this._Label2.TabIndex = 7;
+            this._Label2.Text = "%";
+            this._Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 15);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(100, 23);
+            this._Label1.TabIndex = 6;
+            this._Label1.Text = "Markup Amount";
+            this._Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _txtNewPrice
+            // 
+            this._txtNewPrice.Location = new System.Drawing.Point(123, 45);
+            this._txtNewPrice.Name = "_txtNewPrice";
+            this._txtNewPrice.Size = new System.Drawing.Size(195, 21);
+            this._txtNewPrice.TabIndex = 5;
+            // 
+            // _dtpStartDate
+            // 
+            this._dtpStartDate.Location = new System.Drawing.Point(123, 72);
+            this._dtpStartDate.Name = "_dtpStartDate";
+            this._dtpStartDate.Size = new System.Drawing.Size(195, 21);
+            this._dtpStartDate.TabIndex = 2;
+            this._dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
+            // 
+            // _dtpEndDate
+            // 
+            this._dtpEndDate.Location = new System.Drawing.Point(123, 99);
+            this._dtpEndDate.Name = "_dtpEndDate";
+            this._dtpEndDate.Size = new System.Drawing.Size(195, 21);
+            this._dtpEndDate.TabIndex = 1;
+            // 
+            // _txtPercentMarkup
+            // 
+            this._txtPercentMarkup.Location = new System.Drawing.Point(123, 17);
+            this._txtPercentMarkup.Name = "_txtPercentMarkup";
+            this._txtPercentMarkup.Size = new System.Drawing.Size(195, 21);
+            this._txtPercentMarkup.TabIndex = 0;
+            this._txtPercentMarkup.TextChanged += new System.EventHandler(this.txtPercentMarkup_TextChanged);
+            // 
+            // _btnCreateContract
+            // 
+            this._btnCreateContract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnCreateContract.Location = new System.Drawing.Point(790, 270);
+            this._btnCreateContract.Name = "_btnCreateContract";
+            this._btnCreateContract.Size = new System.Drawing.Size(112, 23);
+            this._btnCreateContract.TabIndex = 4;
+            this._btnCreateContract.Text = "Create Contract";
+            this._btnCreateContract.Click += new System.EventHandler(this.btnCreateContract_Click);
+            // 
+            // _dgFirstVisitDates
+            // 
+            this._dgFirstVisitDates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgFirstVisitDates.DataMember = "";
+            this._dgFirstVisitDates.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgFirstVisitDates.Location = new System.Drawing.Point(8, 24);
+            this._dgFirstVisitDates.Name = "_dgFirstVisitDates";
+            this._dgFirstVisitDates.Size = new System.Drawing.Size(894, 240);
+            this._dgFirstVisitDates.TabIndex = 3;
+            // 
+            // _gpbSites
+            // 
+            this._gpbSites.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbSites.Controls.Add(this._btnCancel);
+            this._gpbSites.Controls.Add(this._dgFirstVisitDates);
+            this._gpbSites.Controls.Add(this._btnCreateContract);
+            this._gpbSites.Location = new System.Drawing.Point(6, 210);
+            this._gpbSites.Name = "_gpbSites";
+            this._gpbSites.Size = new System.Drawing.Size(908, 300);
+            this._gpbSites.TabIndex = 3;
+            this._gpbSites.TabStop = false;
+            this._gpbSites.Text = "Properties - Enter Dates";
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(8, 270);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 5;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FRMContractRenewal
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(928, 509);
-            ControlBox = false;
-            Controls.Add(_gpbSites);
-            Controls.Add(_gpbContract);
-            MinimumSize = new Size(928, 529);
-            Name = "FRMContractRenewal";
-            Text = "Contract Renewal";
-            Controls.SetChildIndex(_gpbContract, 0);
-            Controls.SetChildIndex(_gpbSites, 0);
-            _gpbContract.ResumeLayout(false);
-            _gpbContract.PerformLayout();
-            _gpbInvoiceAddress.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddress).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_dgFirstVisitDates).EndInit();
-            _gpbSites.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(928, 509);
+            this.ControlBox = false;
+            this.Controls.Add(this._gpbSites);
+            this.Controls.Add(this._gpbContract);
+            this.MinimumSize = new System.Drawing.Size(928, 529);
+            this.Name = "FRMContractRenewal";
+            this.Text = "Contract Renewal";
+            this._gpbContract.ResumeLayout(false);
+            this._gpbContract.PerformLayout();
+            this._gpbInvoiceAddress.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgFirstVisitDates)).EndInit();
+            this._gpbSites.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

@@ -317,153 +317,155 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _btnAddNew = new Button();
-            _btnAddNew.Click += new EventHandler(btnAddNew_Click);
-            _dgVATRates = new DataGrid();
-            _dgVATRates.Click += new EventHandler(dgVATRates_Click);
-            _grpDetails = new GroupBox();
-            _dtpVATDate = new DateTimePicker();
-            _Label1 = new Label();
-            _txtVATRate = new TextBox();
-            _Label2 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _Label3 = new Label();
-            _txtCode = new TextBox();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgVATRates).BeginInit();
-            _grpDetails.SuspendLayout();
-            SuspendLayout();
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_btnAddNew);
-            _GroupBox1.Controls.Add(_dgVATRates);
-            _GroupBox1.Location = new Point(8, 40);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(512, 328);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "VAT Rates";
-            //
-            // btnAddNew
-            //
-            _btnAddNew.AccessibleDescription = "Add new item";
-            _btnAddNew.Cursor = Cursors.Hand;
-            _btnAddNew.UseVisualStyleBackColor = true;
-            _btnAddNew.Location = new Point(8, 16);
-            _btnAddNew.Name = "btnAddNew";
-            _btnAddNew.Size = new Size(48, 24);
-            _btnAddNew.TabIndex = 0;
-            _btnAddNew.Text = "New";
-            //
-            // dgVATRates
-            //
-            _dgVATRates.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgVATRates.DataMember = "";
-            _dgVATRates.HeaderForeColor = SystemColors.ControlText;
-            _dgVATRates.Location = new Point(8, 52);
-            _dgVATRates.Name = "dgVATRates";
-            _dgVATRates.Size = new Size(496, 268);
-            _dgVATRates.TabIndex = 1;
-            //
-            // grpDetails
-            //
-            _grpDetails.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _grpDetails.Controls.Add(_txtCode);
-            _grpDetails.Controls.Add(_Label3);
-            _grpDetails.Controls.Add(_dtpVATDate);
-            _grpDetails.Controls.Add(_Label1);
-            _grpDetails.Controls.Add(_txtVATRate);
-            _grpDetails.Controls.Add(_Label2);
-            _grpDetails.Controls.Add(_btnSave);
-            _grpDetails.Location = new Point(8, 374);
-            _grpDetails.Name = "grpDetails";
-            _grpDetails.Size = new Size(512, 106);
-            _grpDetails.TabIndex = 1;
-            _grpDetails.TabStop = false;
-            _grpDetails.Text = "Details";
-            //
-            // dtpVATDate
-            //
-            _dtpVATDate.Location = new Point(120, 48);
-            _dtpVATDate.Name = "dtpVATDate";
-            _dtpVATDate.Size = new Size(328, 21);
-            _dtpVATDate.TabIndex = 1;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 48);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(120, 23);
-            _Label1.TabIndex = 8;
-            _Label1.Text = "From Date";
-            //
-            // txtVATRate
-            //
-            _txtVATRate.Location = new Point(120, 24);
-            _txtVATRate.MaxLength = 255;
-            _txtVATRate.Name = "txtVATRate";
-            _txtVATRate.Size = new Size(328, 21);
-            _txtVATRate.TabIndex = 0;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(120, 23);
-            _Label2.TabIndex = 5;
-            _Label2.Text = "Rate Amount (%)";
-            //
-            // btnSave
-            //
-            _btnSave.AccessibleDescription = "Save item";
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Cursor = Cursors.Hand;
-            _btnSave.UseVisualStyleBackColor = true;
-            _btnSave.ImageIndex = 1;
-            _btnSave.Location = new Point(456, 74);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(48, 23);
-            _btnSave.TabIndex = 3;
-            _btnSave.Text = "Save";
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 72);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(120, 23);
-            _Label3.TabIndex = 10;
-            _Label3.Text = "Code";
-            //
-            // txtCode
-            //
-            _txtCode.Location = new Point(120, 75);
-            _txtCode.MaxLength = 5;
-            _txtCode.Name = "txtCode";
-            _txtCode.Size = new Size(328, 21);
-            _txtCode.TabIndex = 2;
-            //
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._dgVATRates = new System.Windows.Forms.DataGrid();
+            this._grpDetails = new System.Windows.Forms.GroupBox();
+            this._txtCode = new System.Windows.Forms.TextBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._dtpVATDate = new System.Windows.Forms.DateTimePicker();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtVATRate = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgVATRates)).BeginInit();
+            this._grpDetails.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._btnAddNew);
+            this._GroupBox1.Controls.Add(this._dgVATRates);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(512, 356);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "VAT Rates";
+            // 
+            // _btnAddNew
+            // 
+            this._btnAddNew.AccessibleDescription = "Add new item";
+            this._btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAddNew.Location = new System.Drawing.Point(8, 16);
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.Size = new System.Drawing.Size(48, 24);
+            this._btnAddNew.TabIndex = 0;
+            this._btnAddNew.Text = "New";
+            this._btnAddNew.UseVisualStyleBackColor = true;
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // _dgVATRates
+            // 
+            this._dgVATRates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgVATRates.DataMember = "";
+            this._dgVATRates.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgVATRates.Location = new System.Drawing.Point(8, 52);
+            this._dgVATRates.Name = "_dgVATRates";
+            this._dgVATRates.Size = new System.Drawing.Size(496, 296);
+            this._dgVATRates.TabIndex = 1;
+            this._dgVATRates.Click += new System.EventHandler(this.dgVATRates_Click);
+            // 
+            // _grpDetails
+            // 
+            this._grpDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpDetails.Controls.Add(this._txtCode);
+            this._grpDetails.Controls.Add(this._Label3);
+            this._grpDetails.Controls.Add(this._dtpVATDate);
+            this._grpDetails.Controls.Add(this._Label1);
+            this._grpDetails.Controls.Add(this._txtVATRate);
+            this._grpDetails.Controls.Add(this._Label2);
+            this._grpDetails.Controls.Add(this._btnSave);
+            this._grpDetails.Location = new System.Drawing.Point(8, 374);
+            this._grpDetails.Name = "_grpDetails";
+            this._grpDetails.Size = new System.Drawing.Size(512, 106);
+            this._grpDetails.TabIndex = 1;
+            this._grpDetails.TabStop = false;
+            this._grpDetails.Text = "Details";
+            // 
+            // _txtCode
+            // 
+            this._txtCode.Location = new System.Drawing.Point(120, 75);
+            this._txtCode.MaxLength = 5;
+            this._txtCode.Name = "_txtCode";
+            this._txtCode.Size = new System.Drawing.Size(328, 21);
+            this._txtCode.TabIndex = 2;
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(8, 72);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(120, 23);
+            this._Label3.TabIndex = 10;
+            this._Label3.Text = "Code";
+            // 
+            // _dtpVATDate
+            // 
+            this._dtpVATDate.Location = new System.Drawing.Point(120, 48);
+            this._dtpVATDate.Name = "_dtpVATDate";
+            this._dtpVATDate.Size = new System.Drawing.Size(328, 21);
+            this._dtpVATDate.TabIndex = 1;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 48);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(120, 23);
+            this._Label1.TabIndex = 8;
+            this._Label1.Text = "From Date";
+            // 
+            // _txtVATRate
+            // 
+            this._txtVATRate.Location = new System.Drawing.Point(120, 24);
+            this._txtVATRate.MaxLength = 255;
+            this._txtVATRate.Name = "_txtVATRate";
+            this._txtVATRate.Size = new System.Drawing.Size(328, 21);
+            this._txtVATRate.TabIndex = 0;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(8, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(120, 23);
+            this._Label2.TabIndex = 5;
+            this._Label2.Text = "Rate Amount (%)";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.AccessibleDescription = "Save item";
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnSave.ImageIndex = 1;
+            this._btnSave.Location = new System.Drawing.Point(456, 74);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(48, 23);
+            this._btnSave.TabIndex = 3;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FRMVATRates
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(528, 486);
-            Controls.Add(_GroupBox1);
-            Controls.Add(_grpDetails);
-            Name = "FRMVATRates";
-            Text = "VAT Rates";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpDetails, 0);
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgVATRates).EndInit();
-            _grpDetails.ResumeLayout(false);
-            _grpDetails.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(528, 486);
+            this.Controls.Add(this._GroupBox1);
+            this.Controls.Add(this._grpDetails);
+            this.Name = "FRMVATRates";
+            this.Text = "VAT Rates";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgVATRates)).EndInit();
+            this._grpDetails.ResumeLayout(false);
+            this._grpDetails.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         

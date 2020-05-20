@@ -298,148 +298,150 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _btnAddNew = new Button();
-            _btnAddNew.Click += new EventHandler(btnAddNew_Click);
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _dgManager = new DataGrid();
-            _dgManager.Click += new EventHandler(dgManager_Click);
-            _grpDetails = new GroupBox();
-            _cboCategory = new ComboBox();
-            _Label1 = new Label();
-            _txtName = new TextBox();
-            _Label2 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgManager).BeginInit();
-            _grpDetails.SuspendLayout();
-            SuspendLayout();
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_btnAddNew);
-            _GroupBox1.Controls.Add(_btnDelete);
-            _GroupBox1.Controls.Add(_dgManager);
-            _GroupBox1.Location = new Point(8, 40);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(780, 344);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Part Categories Mapping";
-            //
-            // btnAddNew
-            //
-            _btnAddNew.AccessibleDescription = "Add new item";
-            _btnAddNew.Cursor = Cursors.Hand;
-            _btnAddNew.UseVisualStyleBackColor = true;
-            _btnAddNew.Location = new Point(8, 16);
-            _btnAddNew.Name = "btnAddNew";
-            _btnAddNew.Size = new Size(48, 24);
-            _btnAddNew.TabIndex = 5;
-            _btnAddNew.Text = "New";
-            //
-            // btnDelete
-            //
-            _btnDelete.AccessibleDescription = "Delete item";
-            _btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnDelete.Cursor = Cursors.Hand;
-            _btnDelete.UseVisualStyleBackColor = true;
-            _btnDelete.Location = new Point(724, 18);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(48, 24);
-            _btnDelete.TabIndex = 6;
-            _btnDelete.Text = "Delete";
-            //
-            // dgManager
-            //
-            _dgManager.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgManager.DataMember = "";
-            _dgManager.HeaderForeColor = SystemColors.ControlText;
-            _dgManager.Location = new Point(8, 49);
-            _dgManager.Name = "dgManager";
-            _dgManager.Size = new Size(764, 287);
-            _dgManager.TabIndex = 0;
-            //
-            // grpDetails
-            //
-            _grpDetails.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _grpDetails.Controls.Add(_cboCategory);
-            _grpDetails.Controls.Add(_Label1);
-            _grpDetails.Controls.Add(_txtName);
-            _grpDetails.Controls.Add(_Label2);
-            _grpDetails.Controls.Add(_btnSave);
-            _grpDetails.Location = new Point(8, 384);
-            _grpDetails.Name = "grpDetails";
-            _grpDetails.Size = new Size(780, 56);
-            _grpDetails.TabIndex = 8;
-            _grpDetails.TabStop = false;
-            _grpDetails.Text = "Details";
-            //
-            // cboCategory
-            //
-            _cboCategory.Location = new Point(409, 21);
-            _cboCategory.Name = "cboCategory";
-            _cboCategory.Size = new Size(306, 21);
-            _cboCategory.TabIndex = 9;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(357, 24);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(80, 23);
-            _Label1.TabIndex = 8;
-            _Label1.Text = "Map To";
-            //
-            // txtName
-            //
-            _txtName.Location = new Point(79, 21);
-            _txtName.MaxLength = 255;
-            _txtName.Name = "txtName";
-            _txtName.Size = new Size(265, 21);
-            _txtName.TabIndex = 5;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(80, 23);
-            _Label2.TabIndex = 5;
-            _Label2.Text = "Map From";
-            //
-            // btnSave
-            //
-            _btnSave.AccessibleDescription = "Save item";
-            _btnSave.Cursor = Cursors.Hand;
-            _btnSave.UseVisualStyleBackColor = true;
-            _btnSave.ImageIndex = 1;
-            _btnSave.Location = new Point(721, 19);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(48, 23);
-            _btnSave.TabIndex = 7;
-            _btnSave.Text = "Save";
-            //
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._dgManager = new System.Windows.Forms.DataGrid();
+            this._grpDetails = new System.Windows.Forms.GroupBox();
+            this._cboCategory = new System.Windows.Forms.ComboBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtName = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgManager)).BeginInit();
+            this._grpDetails.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._btnAddNew);
+            this._GroupBox1.Controls.Add(this._btnDelete);
+            this._GroupBox1.Controls.Add(this._dgManager);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(780, 372);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Part Categories Mapping";
+            // 
+            // _btnAddNew
+            // 
+            this._btnAddNew.AccessibleDescription = "Add new item";
+            this._btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAddNew.Location = new System.Drawing.Point(8, 16);
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.Size = new System.Drawing.Size(48, 24);
+            this._btnAddNew.TabIndex = 5;
+            this._btnAddNew.Text = "New";
+            this._btnAddNew.UseVisualStyleBackColor = true;
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // _btnDelete
+            // 
+            this._btnDelete.AccessibleDescription = "Delete item";
+            this._btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnDelete.Location = new System.Drawing.Point(724, 18);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(48, 24);
+            this._btnDelete.TabIndex = 6;
+            this._btnDelete.Text = "Delete";
+            this._btnDelete.UseVisualStyleBackColor = true;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // _dgManager
+            // 
+            this._dgManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgManager.DataMember = "";
+            this._dgManager.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgManager.Location = new System.Drawing.Point(8, 49);
+            this._dgManager.Name = "_dgManager";
+            this._dgManager.Size = new System.Drawing.Size(764, 315);
+            this._dgManager.TabIndex = 0;
+            this._dgManager.Click += new System.EventHandler(this.dgManager_Click);
+            // 
+            // _grpDetails
+            // 
+            this._grpDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpDetails.Controls.Add(this._cboCategory);
+            this._grpDetails.Controls.Add(this._Label1);
+            this._grpDetails.Controls.Add(this._txtName);
+            this._grpDetails.Controls.Add(this._Label2);
+            this._grpDetails.Controls.Add(this._btnSave);
+            this._grpDetails.Location = new System.Drawing.Point(8, 384);
+            this._grpDetails.Name = "_grpDetails";
+            this._grpDetails.Size = new System.Drawing.Size(780, 56);
+            this._grpDetails.TabIndex = 8;
+            this._grpDetails.TabStop = false;
+            this._grpDetails.Text = "Details";
+            // 
+            // _cboCategory
+            // 
+            this._cboCategory.Location = new System.Drawing.Point(409, 21);
+            this._cboCategory.Name = "_cboCategory";
+            this._cboCategory.Size = new System.Drawing.Size(306, 21);
+            this._cboCategory.TabIndex = 9;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(357, 24);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(80, 23);
+            this._Label1.TabIndex = 8;
+            this._Label1.Text = "Map To";
+            // 
+            // _txtName
+            // 
+            this._txtName.Location = new System.Drawing.Point(79, 21);
+            this._txtName.MaxLength = 255;
+            this._txtName.Name = "_txtName";
+            this._txtName.Size = new System.Drawing.Size(265, 21);
+            this._txtName.TabIndex = 5;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(8, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(80, 23);
+            this._Label2.TabIndex = 5;
+            this._Label2.Text = "Map From";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.AccessibleDescription = "Save item";
+            this._btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnSave.ImageIndex = 1;
+            this._btnSave.Location = new System.Drawing.Point(721, 19);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(48, 23);
+            this._btnSave.TabIndex = 7;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FRMPartCategories
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(796, 454);
-            Controls.Add(_GroupBox1);
-            Controls.Add(_grpDetails);
-            MinimumSize = new Size(496, 488);
-            Name = "FRMPartCategories";
-            Text = "Part Categories";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpDetails, 0);
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgManager).EndInit();
-            _grpDetails.ResumeLayout(false);
-            _grpDetails.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(796, 454);
+            this.Controls.Add(this._GroupBox1);
+            this.Controls.Add(this._grpDetails);
+            this.MinimumSize = new System.Drawing.Size(496, 488);
+            this.Name = "FRMPartCategories";
+            this.Text = "Part Categories";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgManager)).EndInit();
+            this._grpDetails.ResumeLayout(false);
+            this._grpDetails.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         

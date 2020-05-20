@@ -642,465 +642,467 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpFilter = new GroupBox();
-            _cbxDoNotRenew = new CheckBox();
-            _Label2 = new Label();
-            _CboRenewal = new ComboBox();
-            _Label13 = new Label();
-            _cboRegion = new ComboBox();
-            _btnResetFilters = new Button();
-            _btnSearch = new Button();
-            _btnSearch.Click += new EventHandler(btnSearch_Click);
-            _Label1 = new Label();
-            _cboInvoiceFrequency = new ComboBox();
-            _chxStartedBetween = new CheckBox();
-            _chxStartedBetween.CheckedChanged += new EventHandler(chxStartedBetween_CheckedChanged);
-            _cbxCancelledDate = new CheckBox();
-            _cbxCancelledDate.CheckedChanged += new EventHandler(cbxCancelledDate_CheckedChanged);
-            _cbxAllVisitsComplete = new CheckBox();
-            _cbxAllVisitsComplete.CheckedChanged += new EventHandler(cbxAllVisitsComplete_CheckedChanged);
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnFindCustomer_Click);
-            _txtCustomer = new TextBox();
-            _Label4 = new Label();
-            _dtpTo = new DateTimePicker();
-            _dtpFrom = new DateTimePicker();
-            _txtContractReference = new TextBox();
-            _Label9 = new Label();
-            _cbxContractExpiryDate = new CheckBox();
-            _cbxContractExpiryDate.CheckedChanged += new EventHandler(cbxContractExpiryDate_CheckedChanged);
-            _Label6 = new Label();
-            _cboType = new ComboBox();
-            _Label11 = new Label();
-            _cboStatus = new ComboBox();
-            _Label10 = new Label();
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpContracts = new GroupBox();
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _btnDeselectAll = new Button();
-            _btnDeselectAll.Click += new EventHandler(btnDeselectAll_Click);
-            _dgContracts = new DataGrid();
-            _dgContracts.DoubleClick += new EventHandler(dgContracts_DoubleClick);
-            _dgContracts.MouseUp += new MouseEventHandler(dgContracts_MouseUp);
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _btnRenew = new Button();
-            _btnRenew.Click += new EventHandler(btnRenew_Click);
-            _btnPrintExpiryLetter = new Button();
-            _btnPrintExpiryLetter.Click += new EventHandler(btnPrintExpiryLetter_Click);
-            _pbStatus = new ProgressBar();
-            _btnActivate = new Button();
-            _btnActivate.Click += new EventHandler(btnActivate_Click);
-            _btnDeActive = new Button();
-            _btnDeActive.Click += new EventHandler(btnDeActive_Click);
-            _grpFilter.SuspendLayout();
-            _grpContracts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgContracts).BeginInit();
-            SuspendLayout();
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_cbxDoNotRenew);
-            _grpFilter.Controls.Add(_Label2);
-            _grpFilter.Controls.Add(_CboRenewal);
-            _grpFilter.Controls.Add(_Label13);
-            _grpFilter.Controls.Add(_cboRegion);
-            _grpFilter.Controls.Add(_btnResetFilters);
-            _grpFilter.Controls.Add(_btnSearch);
-            _grpFilter.Controls.Add(_Label1);
-            _grpFilter.Controls.Add(_cboInvoiceFrequency);
-            _grpFilter.Controls.Add(_chxStartedBetween);
-            _grpFilter.Controls.Add(_cbxCancelledDate);
-            _grpFilter.Controls.Add(_cbxAllVisitsComplete);
-            _grpFilter.Controls.Add(_btnFindCustomer);
-            _grpFilter.Controls.Add(_txtCustomer);
-            _grpFilter.Controls.Add(_Label4);
-            _grpFilter.Controls.Add(_dtpTo);
-            _grpFilter.Controls.Add(_dtpFrom);
-            _grpFilter.Controls.Add(_txtContractReference);
-            _grpFilter.Controls.Add(_Label9);
-            _grpFilter.Controls.Add(_cbxContractExpiryDate);
-            _grpFilter.Controls.Add(_Label6);
-            _grpFilter.Controls.Add(_cboType);
-            _grpFilter.Controls.Add(_Label11);
-            _grpFilter.Controls.Add(_cboStatus);
-            _grpFilter.Controls.Add(_Label10);
-            _grpFilter.Location = new Point(8, 32);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(882, 206);
-            _grpFilter.TabIndex = 17;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // cbxDoNotRenew
-            //
-            _cbxDoNotRenew.BackColor = Color.White;
-            _cbxDoNotRenew.Cursor = Cursors.Hand;
-            _cbxDoNotRenew.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cbxDoNotRenew.Location = new Point(104, 149);
-            _cbxDoNotRenew.Name = "cbxDoNotRenew";
-            _cbxDoNotRenew.Size = new Size(192, 24);
-            _cbxDoNotRenew.TabIndex = 40;
-            _cbxDoNotRenew.Text = "Also Show Do Not renew ";
-            _cbxDoNotRenew.UseVisualStyleBackColor = false;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(532, 148);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(74, 16);
-            _Label2.TabIndex = 39;
-            _Label2.Text = "Renewed";
-            //
-            // CboRenewal
-            //
-            _CboRenewal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _CboRenewal.DropDownStyle = ComboBoxStyle.DropDownList;
-            _CboRenewal.Location = new Point(659, 145);
-            _CboRenewal.Name = "CboRenewal";
-            _CboRenewal.Size = new Size(167, 21);
-            _CboRenewal.TabIndex = 38;
-            //
-            // Label13
-            //
-            _Label13.Location = new Point(532, 121);
-            _Label13.Name = "Label13";
-            _Label13.Size = new Size(49, 16);
-            _Label13.TabIndex = 37;
-            _Label13.Text = "Region";
-            //
-            // cboRegion
-            //
-            _cboRegion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboRegion.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboRegion.Location = new Point(659, 118);
-            _cboRegion.Name = "cboRegion";
-            _cboRegion.Size = new Size(167, 21);
-            _cboRegion.TabIndex = 36;
-            //
-            // btnResetFilters
-            //
-            _btnResetFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnResetFilters.Location = new Point(651, 171);
-            _btnResetFilters.Name = "btnResetFilters";
-            _btnResetFilters.Size = new Size(96, 23);
-            _btnResetFilters.TabIndex = 31;
-            _btnResetFilters.Text = "Reset Filters";
-            _btnResetFilters.UseVisualStyleBackColor = true;
-            //
-            // btnSearch
-            //
-            _btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSearch.Location = new Point(753, 171);
-            _btnSearch.Name = "btnSearch";
-            _btnSearch.Size = new Size(75, 23);
-            _btnSearch.TabIndex = 30;
-            _btnSearch.Text = "Search";
-            _btnSearch.UseVisualStyleBackColor = true;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(532, 94);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(120, 19);
-            _Label1.TabIndex = 29;
-            _Label1.Text = "Invoice Frequency";
-            //
-            // cboInvoiceFrequency
-            //
-            _cboInvoiceFrequency.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboInvoiceFrequency.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboInvoiceFrequency.Location = new Point(659, 91);
-            _cboInvoiceFrequency.Name = "cboInvoiceFrequency";
-            _cboInvoiceFrequency.Size = new Size(167, 21);
-            _cboInvoiceFrequency.TabIndex = 28;
-            //
-            // chxStartedBetween
-            //
-            _chxStartedBetween.BackColor = Color.White;
-            _chxStartedBetween.Cursor = Cursors.Hand;
-            _chxStartedBetween.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _chxStartedBetween.Location = new Point(104, 86);
-            _chxStartedBetween.Name = "chxStartedBetween";
-            _chxStartedBetween.Size = new Size(192, 24);
-            _chxStartedBetween.TabIndex = 27;
-            _chxStartedBetween.Text = "Contract Started between";
-            _chxStartedBetween.UseVisualStyleBackColor = false;
-            //
-            // cbxCancelledDate
-            //
-            _cbxCancelledDate.BackColor = Color.White;
-            _cbxCancelledDate.Cursor = Cursors.Hand;
-            _cbxCancelledDate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cbxCancelledDate.Location = new Point(104, 128);
-            _cbxCancelledDate.Name = "cbxCancelledDate";
-            _cbxCancelledDate.Size = new Size(192, 24);
-            _cbxCancelledDate.TabIndex = 26;
-            _cbxCancelledDate.Text = "Contract Cancelled between";
-            _cbxCancelledDate.UseVisualStyleBackColor = false;
-            //
-            // cbxAllVisitsComplete
-            //
-            _cbxAllVisitsComplete.Location = new Point(104, 111);
-            _cbxAllVisitsComplete.Name = "cbxAllVisitsComplete";
-            _cbxAllVisitsComplete.Size = new Size(192, 16);
-            _cbxAllVisitsComplete.TabIndex = 25;
-            _cbxAllVisitsComplete.Text = "All Visits Complete";
-            //
-            // btnFindCustomer
-            //
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.BackColor = Color.White;
-            _btnFindCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnFindCustomer.Location = new Point(834, 16);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 2;
-            _btnFindCustomer.Text = "...";
-            _btnFindCustomer.UseVisualStyleBackColor = false;
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtCustomer.Location = new Point(104, 16);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(722, 21);
-            _txtCustomer.TabIndex = 1;
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(8, 19);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 16);
-            _Label4.TabIndex = 24;
-            _Label4.Text = "Customer";
-            //
-            // dtpTo
-            //
-            _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _dtpTo.Location = new Point(576, 64);
-            _dtpTo.Name = "dtpTo";
-            _dtpTo.Size = new Size(250, 21);
-            _dtpTo.TabIndex = 13;
-            //
-            // dtpFrom
-            //
-            _dtpFrom.Location = new Point(328, 64);
-            _dtpFrom.Name = "dtpFrom";
-            _dtpFrom.Size = new Size(184, 21);
-            _dtpFrom.TabIndex = 12;
-            //
-            // txtContractReference
-            //
-            _txtContractReference.Location = new Point(104, 40);
-            _txtContractReference.Name = "txtContractReference";
-            _txtContractReference.Size = new Size(184, 21);
-            _txtContractReference.TabIndex = 9;
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(520, 64);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(48, 16);
-            _Label9.TabIndex = 10;
-            _Label9.Text = "And";
-            //
-            // cbxContractExpiryDate
-            //
-            _cbxContractExpiryDate.BackColor = Color.White;
-            _cbxContractExpiryDate.Cursor = Cursors.Hand;
-            _cbxContractExpiryDate.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cbxContractExpiryDate.Location = new Point(104, 64);
-            _cbxContractExpiryDate.Name = "cbxContractExpiryDate";
-            _cbxContractExpiryDate.Size = new Size(176, 24);
-            _cbxContractExpiryDate.TabIndex = 11;
-            _cbxContractExpiryDate.Text = "Contract Expiries between";
-            _cbxContractExpiryDate.UseVisualStyleBackColor = false;
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(8, 40);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 16);
-            _Label6.TabIndex = 6;
-            _Label6.Text = "Contract Ref.";
-            //
-            // cboType
-            //
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(328, 40);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(184, 21);
-            _cboType.TabIndex = 7;
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(520, 40);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(48, 16);
-            _Label11.TabIndex = 5;
-            _Label11.Text = "Status";
-            //
-            // cboStatus
-            //
-            _cboStatus.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStatus.Location = new Point(576, 40);
-            _cboStatus.Name = "cboStatus";
-            _cboStatus.Size = new Size(250, 21);
-            _cboStatus.TabIndex = 8;
-            //
-            // Label10
-            //
-            _Label10.BackColor = Color.White;
-            _Label10.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label10.Location = new Point(292, 40);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(48, 16);
-            _Label10.TabIndex = 4;
-            _Label10.Text = "Type";
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 544);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 19;
-            _btnExport.Text = "Export";
-            //
-            // grpContracts
-            //
-            _grpContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpContracts.Controls.Add(_btnSelectAll);
-            _grpContracts.Controls.Add(_btnDeselectAll);
-            _grpContracts.Controls.Add(_dgContracts);
-            _grpContracts.Location = new Point(8, 244);
-            _grpContracts.Name = "grpContracts";
-            _grpContracts.Size = new Size(882, 294);
-            _grpContracts.TabIndex = 18;
-            _grpContracts.TabStop = false;
-            _grpContracts.Text = "Double Click To View / Edit";
-            //
-            // btnSelectAll
-            //
-            _btnSelectAll.AccessibleDescription = "Export Job List To Excel";
-            _btnSelectAll.Location = new Point(8, 13);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(88, 23);
-            _btnSelectAll.TabIndex = 21;
-            _btnSelectAll.Text = "Select All";
-            //
-            // btnDeselectAll
-            //
-            _btnDeselectAll.Location = new Point(104, 13);
-            _btnDeselectAll.Name = "btnDeselectAll";
-            _btnDeselectAll.Size = new Size(88, 23);
-            _btnDeselectAll.TabIndex = 22;
-            _btnDeselectAll.Text = "Deselect All";
-            //
-            // dgContracts
-            //
-            _dgContracts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgContracts.DataMember = "";
-            _dgContracts.HeaderForeColor = SystemColors.ControlText;
-            _dgContracts.Location = new Point(8, 42);
-            _dgContracts.Name = "dgContracts";
-            _dgContracts.Size = new Size(866, 244);
-            _dgContracts.TabIndex = 14;
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(72, 544);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 20;
-            _btnReset.Text = "Reset";
-            //
-            // btnRenew
-            //
-            _btnRenew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnRenew.Location = new Point(136, 544);
-            _btnRenew.Name = "btnRenew";
-            _btnRenew.Size = new Size(56, 23);
-            _btnRenew.TabIndex = 21;
-            _btnRenew.Text = "Renew";
-            //
-            // btnPrintExpiryLetter
-            //
-            _btnPrintExpiryLetter.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPrintExpiryLetter.Location = new Point(746, 544);
-            _btnPrintExpiryLetter.Name = "btnPrintExpiryLetter";
-            _btnPrintExpiryLetter.Size = new Size(136, 23);
-            _btnPrintExpiryLetter.TabIndex = 22;
-            _btnPrintExpiryLetter.Text = "Print Expiry Letters";
-            //
-            // pbStatus
-            //
-            _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _pbStatus.Location = new Point(373, 544);
-            _pbStatus.Name = "pbStatus";
-            _pbStatus.Size = new Size(365, 23);
-            _pbStatus.TabIndex = 23;
-            //
-            // btnActivate
-            //
-            _btnActivate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnActivate.Location = new Point(198, 544);
-            _btnActivate.Name = "btnActivate";
-            _btnActivate.Size = new Size(74, 23);
-            _btnActivate.TabIndex = 24;
-            _btnActivate.Text = "Activate";
-            //
-            // btnDeActive
-            //
-            _btnDeActive.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnDeActive.Location = new Point(278, 544);
-            _btnDeActive.Name = "btnDeActive";
-            _btnDeActive.Size = new Size(89, 23);
-            _btnDeActive.TabIndex = 25;
-            _btnDeActive.Text = "Deactivate";
-            //
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._cbxDoNotRenew = new System.Windows.Forms.CheckBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._CboRenewal = new System.Windows.Forms.ComboBox();
+            this._Label13 = new System.Windows.Forms.Label();
+            this._cboRegion = new System.Windows.Forms.ComboBox();
+            this._btnResetFilters = new System.Windows.Forms.Button();
+            this._btnSearch = new System.Windows.Forms.Button();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._cboInvoiceFrequency = new System.Windows.Forms.ComboBox();
+            this._chxStartedBetween = new System.Windows.Forms.CheckBox();
+            this._cbxCancelledDate = new System.Windows.Forms.CheckBox();
+            this._cbxAllVisitsComplete = new System.Windows.Forms.CheckBox();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._dtpTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this._txtContractReference = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._cbxContractExpiryDate = new System.Windows.Forms.CheckBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._cboStatus = new System.Windows.Forms.ComboBox();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpContracts = new System.Windows.Forms.GroupBox();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._btnDeselectAll = new System.Windows.Forms.Button();
+            this._dgContracts = new System.Windows.Forms.DataGrid();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._btnRenew = new System.Windows.Forms.Button();
+            this._btnPrintExpiryLetter = new System.Windows.Forms.Button();
+            this._pbStatus = new System.Windows.Forms.ProgressBar();
+            this._btnActivate = new System.Windows.Forms.Button();
+            this._btnDeActive = new System.Windows.Forms.Button();
+            this._grpFilter.SuspendLayout();
+            this._grpContracts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgContracts)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._cbxDoNotRenew);
+            this._grpFilter.Controls.Add(this._Label2);
+            this._grpFilter.Controls.Add(this._CboRenewal);
+            this._grpFilter.Controls.Add(this._Label13);
+            this._grpFilter.Controls.Add(this._cboRegion);
+            this._grpFilter.Controls.Add(this._btnResetFilters);
+            this._grpFilter.Controls.Add(this._btnSearch);
+            this._grpFilter.Controls.Add(this._Label1);
+            this._grpFilter.Controls.Add(this._cboInvoiceFrequency);
+            this._grpFilter.Controls.Add(this._chxStartedBetween);
+            this._grpFilter.Controls.Add(this._cbxCancelledDate);
+            this._grpFilter.Controls.Add(this._cbxAllVisitsComplete);
+            this._grpFilter.Controls.Add(this._btnFindCustomer);
+            this._grpFilter.Controls.Add(this._txtCustomer);
+            this._grpFilter.Controls.Add(this._Label4);
+            this._grpFilter.Controls.Add(this._dtpTo);
+            this._grpFilter.Controls.Add(this._dtpFrom);
+            this._grpFilter.Controls.Add(this._txtContractReference);
+            this._grpFilter.Controls.Add(this._Label9);
+            this._grpFilter.Controls.Add(this._cbxContractExpiryDate);
+            this._grpFilter.Controls.Add(this._Label6);
+            this._grpFilter.Controls.Add(this._cboType);
+            this._grpFilter.Controls.Add(this._Label11);
+            this._grpFilter.Controls.Add(this._cboStatus);
+            this._grpFilter.Controls.Add(this._Label10);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(882, 209);
+            this._grpFilter.TabIndex = 17;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _cbxDoNotRenew
+            // 
+            this._cbxDoNotRenew.BackColor = System.Drawing.Color.White;
+            this._cbxDoNotRenew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cbxDoNotRenew.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cbxDoNotRenew.Location = new System.Drawing.Point(104, 149);
+            this._cbxDoNotRenew.Name = "_cbxDoNotRenew";
+            this._cbxDoNotRenew.Size = new System.Drawing.Size(192, 24);
+            this._cbxDoNotRenew.TabIndex = 40;
+            this._cbxDoNotRenew.Text = "Also Show Do Not renew ";
+            this._cbxDoNotRenew.UseVisualStyleBackColor = false;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(532, 148);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(74, 16);
+            this._Label2.TabIndex = 39;
+            this._Label2.Text = "Renewed";
+            // 
+            // _CboRenewal
+            // 
+            this._CboRenewal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._CboRenewal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._CboRenewal.Location = new System.Drawing.Point(659, 145);
+            this._CboRenewal.Name = "_CboRenewal";
+            this._CboRenewal.Size = new System.Drawing.Size(167, 21);
+            this._CboRenewal.TabIndex = 38;
+            // 
+            // _Label13
+            // 
+            this._Label13.Location = new System.Drawing.Point(532, 121);
+            this._Label13.Name = "_Label13";
+            this._Label13.Size = new System.Drawing.Size(49, 16);
+            this._Label13.TabIndex = 37;
+            this._Label13.Text = "Region";
+            // 
+            // _cboRegion
+            // 
+            this._cboRegion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboRegion.Location = new System.Drawing.Point(659, 118);
+            this._cboRegion.Name = "_cboRegion";
+            this._cboRegion.Size = new System.Drawing.Size(167, 21);
+            this._cboRegion.TabIndex = 36;
+            // 
+            // _btnResetFilters
+            // 
+            this._btnResetFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnResetFilters.Location = new System.Drawing.Point(651, 174);
+            this._btnResetFilters.Name = "_btnResetFilters";
+            this._btnResetFilters.Size = new System.Drawing.Size(96, 23);
+            this._btnResetFilters.TabIndex = 31;
+            this._btnResetFilters.Text = "Reset Filters";
+            this._btnResetFilters.UseVisualStyleBackColor = true;
+            // 
+            // _btnSearch
+            // 
+            this._btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSearch.Location = new System.Drawing.Point(753, 174);
+            this._btnSearch.Name = "_btnSearch";
+            this._btnSearch.Size = new System.Drawing.Size(75, 23);
+            this._btnSearch.TabIndex = 30;
+            this._btnSearch.Text = "Search";
+            this._btnSearch.UseVisualStyleBackColor = true;
+            this._btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(532, 94);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(120, 19);
+            this._Label1.TabIndex = 29;
+            this._Label1.Text = "Invoice Frequency";
+            // 
+            // _cboInvoiceFrequency
+            // 
+            this._cboInvoiceFrequency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboInvoiceFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboInvoiceFrequency.Location = new System.Drawing.Point(659, 91);
+            this._cboInvoiceFrequency.Name = "_cboInvoiceFrequency";
+            this._cboInvoiceFrequency.Size = new System.Drawing.Size(167, 21);
+            this._cboInvoiceFrequency.TabIndex = 28;
+            // 
+            // _chxStartedBetween
+            // 
+            this._chxStartedBetween.BackColor = System.Drawing.Color.White;
+            this._chxStartedBetween.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chxStartedBetween.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._chxStartedBetween.Location = new System.Drawing.Point(104, 86);
+            this._chxStartedBetween.Name = "_chxStartedBetween";
+            this._chxStartedBetween.Size = new System.Drawing.Size(192, 24);
+            this._chxStartedBetween.TabIndex = 27;
+            this._chxStartedBetween.Text = "Contract Started between";
+            this._chxStartedBetween.UseVisualStyleBackColor = false;
+            this._chxStartedBetween.CheckedChanged += new System.EventHandler(this.chxStartedBetween_CheckedChanged);
+            // 
+            // _cbxCancelledDate
+            // 
+            this._cbxCancelledDate.BackColor = System.Drawing.Color.White;
+            this._cbxCancelledDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cbxCancelledDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cbxCancelledDate.Location = new System.Drawing.Point(104, 128);
+            this._cbxCancelledDate.Name = "_cbxCancelledDate";
+            this._cbxCancelledDate.Size = new System.Drawing.Size(192, 24);
+            this._cbxCancelledDate.TabIndex = 26;
+            this._cbxCancelledDate.Text = "Contract Cancelled between";
+            this._cbxCancelledDate.UseVisualStyleBackColor = false;
+            this._cbxCancelledDate.CheckedChanged += new System.EventHandler(this.cbxCancelledDate_CheckedChanged);
+            // 
+            // _cbxAllVisitsComplete
+            // 
+            this._cbxAllVisitsComplete.Location = new System.Drawing.Point(104, 111);
+            this._cbxAllVisitsComplete.Name = "_cbxAllVisitsComplete";
+            this._cbxAllVisitsComplete.Size = new System.Drawing.Size(192, 16);
+            this._cbxAllVisitsComplete.TabIndex = 25;
+            this._cbxAllVisitsComplete.Text = "All Visits Complete";
+            this._cbxAllVisitsComplete.CheckedChanged += new System.EventHandler(this.cbxAllVisitsComplete_CheckedChanged);
+            // 
+            // _btnFindCustomer
+            // 
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.BackColor = System.Drawing.Color.White;
+            this._btnFindCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(834, 16);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 2;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = false;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
+            // 
+            // _txtCustomer
+            // 
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtCustomer.Location = new System.Drawing.Point(104, 16);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(722, 21);
+            this._txtCustomer.TabIndex = 1;
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(8, 19);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 16);
+            this._Label4.TabIndex = 24;
+            this._Label4.Text = "Customer";
+            // 
+            // _dtpTo
+            // 
+            this._dtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpTo.Location = new System.Drawing.Point(576, 64);
+            this._dtpTo.Name = "_dtpTo";
+            this._dtpTo.Size = new System.Drawing.Size(250, 21);
+            this._dtpTo.TabIndex = 13;
+            // 
+            // _dtpFrom
+            // 
+            this._dtpFrom.Location = new System.Drawing.Point(328, 64);
+            this._dtpFrom.Name = "_dtpFrom";
+            this._dtpFrom.Size = new System.Drawing.Size(184, 21);
+            this._dtpFrom.TabIndex = 12;
+            // 
+            // _txtContractReference
+            // 
+            this._txtContractReference.Location = new System.Drawing.Point(104, 40);
+            this._txtContractReference.Name = "_txtContractReference";
+            this._txtContractReference.Size = new System.Drawing.Size(184, 21);
+            this._txtContractReference.TabIndex = 9;
+            // 
+            // _Label9
+            // 
+            this._Label9.Location = new System.Drawing.Point(520, 64);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(48, 16);
+            this._Label9.TabIndex = 10;
+            this._Label9.Text = "And";
+            // 
+            // _cbxContractExpiryDate
+            // 
+            this._cbxContractExpiryDate.BackColor = System.Drawing.Color.White;
+            this._cbxContractExpiryDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cbxContractExpiryDate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cbxContractExpiryDate.Location = new System.Drawing.Point(104, 64);
+            this._cbxContractExpiryDate.Name = "_cbxContractExpiryDate";
+            this._cbxContractExpiryDate.Size = new System.Drawing.Size(176, 24);
+            this._cbxContractExpiryDate.TabIndex = 11;
+            this._cbxContractExpiryDate.Text = "Contract Expiries between";
+            this._cbxContractExpiryDate.UseVisualStyleBackColor = false;
+            this._cbxContractExpiryDate.CheckedChanged += new System.EventHandler(this.cbxContractExpiryDate_CheckedChanged);
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(8, 40);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 16);
+            this._Label6.TabIndex = 6;
+            this._Label6.Text = "Contract Ref.";
+            // 
+            // _cboType
+            // 
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(328, 40);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(184, 21);
+            this._cboType.TabIndex = 7;
+            // 
+            // _Label11
+            // 
+            this._Label11.Location = new System.Drawing.Point(520, 40);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(48, 16);
+            this._Label11.TabIndex = 5;
+            this._Label11.Text = "Status";
+            // 
+            // _cboStatus
+            // 
+            this._cboStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStatus.Location = new System.Drawing.Point(576, 40);
+            this._cboStatus.Name = "_cboStatus";
+            this._cboStatus.Size = new System.Drawing.Size(250, 21);
+            this._cboStatus.TabIndex = 8;
+            // 
+            // _Label10
+            // 
+            this._Label10.BackColor = System.Drawing.Color.White;
+            this._Label10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label10.Location = new System.Drawing.Point(292, 40);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(48, 16);
+            this._Label10.TabIndex = 4;
+            this._Label10.Text = "Type";
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 544);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 19;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpContracts
+            // 
+            this._grpContracts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpContracts.Controls.Add(this._btnSelectAll);
+            this._grpContracts.Controls.Add(this._btnDeselectAll);
+            this._grpContracts.Controls.Add(this._dgContracts);
+            this._grpContracts.Location = new System.Drawing.Point(8, 227);
+            this._grpContracts.Name = "_grpContracts";
+            this._grpContracts.Size = new System.Drawing.Size(882, 311);
+            this._grpContracts.TabIndex = 18;
+            this._grpContracts.TabStop = false;
+            this._grpContracts.Text = "Double Click To View / Edit";
+            // 
+            // _btnSelectAll
+            // 
+            this._btnSelectAll.AccessibleDescription = "Export Job List To Excel";
+            this._btnSelectAll.Location = new System.Drawing.Point(8, 13);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(88, 23);
+            this._btnSelectAll.TabIndex = 21;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // _btnDeselectAll
+            // 
+            this._btnDeselectAll.Location = new System.Drawing.Point(104, 13);
+            this._btnDeselectAll.Name = "_btnDeselectAll";
+            this._btnDeselectAll.Size = new System.Drawing.Size(88, 23);
+            this._btnDeselectAll.TabIndex = 22;
+            this._btnDeselectAll.Text = "Deselect All";
+            this._btnDeselectAll.Click += new System.EventHandler(this.btnDeselectAll_Click);
+            // 
+            // _dgContracts
+            // 
+            this._dgContracts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgContracts.DataMember = "";
+            this._dgContracts.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgContracts.Location = new System.Drawing.Point(8, 42);
+            this._dgContracts.Name = "_dgContracts";
+            this._dgContracts.Size = new System.Drawing.Size(866, 261);
+            this._dgContracts.TabIndex = 14;
+            this._dgContracts.DoubleClick += new System.EventHandler(this.dgContracts_DoubleClick);
+            this._dgContracts.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgContracts_MouseUp);
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(72, 544);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 20;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // _btnRenew
+            // 
+            this._btnRenew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnRenew.Location = new System.Drawing.Point(136, 544);
+            this._btnRenew.Name = "_btnRenew";
+            this._btnRenew.Size = new System.Drawing.Size(56, 23);
+            this._btnRenew.TabIndex = 21;
+            this._btnRenew.Text = "Renew";
+            this._btnRenew.Click += new System.EventHandler(this.btnRenew_Click);
+            // 
+            // _btnPrintExpiryLetter
+            // 
+            this._btnPrintExpiryLetter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPrintExpiryLetter.Location = new System.Drawing.Point(746, 544);
+            this._btnPrintExpiryLetter.Name = "_btnPrintExpiryLetter";
+            this._btnPrintExpiryLetter.Size = new System.Drawing.Size(136, 23);
+            this._btnPrintExpiryLetter.TabIndex = 22;
+            this._btnPrintExpiryLetter.Text = "Print Expiry Letters";
+            this._btnPrintExpiryLetter.Click += new System.EventHandler(this.btnPrintExpiryLetter_Click);
+            // 
+            // _pbStatus
+            // 
+            this._pbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbStatus.Location = new System.Drawing.Point(373, 544);
+            this._pbStatus.Name = "_pbStatus";
+            this._pbStatus.Size = new System.Drawing.Size(365, 23);
+            this._pbStatus.TabIndex = 23;
+            // 
+            // _btnActivate
+            // 
+            this._btnActivate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnActivate.Location = new System.Drawing.Point(198, 544);
+            this._btnActivate.Name = "_btnActivate";
+            this._btnActivate.Size = new System.Drawing.Size(74, 23);
+            this._btnActivate.TabIndex = 24;
+            this._btnActivate.Text = "Activate";
+            this._btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
+            // 
+            // _btnDeActive
+            // 
+            this._btnDeActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnDeActive.Location = new System.Drawing.Point(278, 544);
+            this._btnDeActive.Name = "_btnDeActive";
+            this._btnDeActive.Size = new System.Drawing.Size(89, 23);
+            this._btnDeActive.TabIndex = 25;
+            this._btnDeActive.Text = "Deactivate";
+            this._btnDeActive.Click += new System.EventHandler(this.btnDeActive_Click);
+            // 
             // FRMContractManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(898, 574);
-            Controls.Add(_btnDeActive);
-            Controls.Add(_btnActivate);
-            Controls.Add(_pbStatus);
-            Controls.Add(_btnPrintExpiryLetter);
-            Controls.Add(_btnRenew);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpContracts);
-            Controls.Add(_btnReset);
-            MinimumSize = new Size(808, 528);
-            Name = "FRMContractManager";
-            Text = "Contract Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpContracts, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            Controls.SetChildIndex(_btnRenew, 0);
-            Controls.SetChildIndex(_btnPrintExpiryLetter, 0);
-            Controls.SetChildIndex(_pbStatus, 0);
-            Controls.SetChildIndex(_btnActivate, 0);
-            Controls.SetChildIndex(_btnDeActive, 0);
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            _grpContracts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgContracts).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(898, 574);
+            this.Controls.Add(this._btnDeActive);
+            this.Controls.Add(this._btnActivate);
+            this.Controls.Add(this._pbStatus);
+            this.Controls.Add(this._btnPrintExpiryLetter);
+            this.Controls.Add(this._btnRenew);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpContracts);
+            this.Controls.Add(this._btnReset);
+            this.MinimumSize = new System.Drawing.Size(808, 528);
+            this.Name = "FRMContractManager";
+            this.Text = "Contract Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this._grpContracts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgContracts)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

@@ -346,220 +346,220 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _grpHO = new GroupBox();
-            _chkHO = new CheckBox();
-            _txtHO = new TextBox();
-            _grpProperty = new GroupBox();
-            _chkProperty = new CheckBox();
-            _txtProperty = new TextBox();
-            _grpInvoiceAddress = new GroupBox();
-            _btnAdd = new Button();
-            _btnAdd.Click += new EventHandler(btnAdd_Click);
-            _dgInvoiceAddresses = new DataGrid();
-            _chkInvoiceAddress = new CheckBox();
-            _grpDept = new GroupBox();
-            _chkDept = new CheckBox();
-            _cboDept = new ComboBox();
-            _grpHO.SuspendLayout();
-            _grpProperty.SuspendLayout();
-            _grpInvoiceAddress.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).BeginInit();
-            _grpDept.SuspendLayout();
-            SuspendLayout();
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(1185, 515);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(75, 23);
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(8, 515);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(75, 23);
-            _btnCancel.TabIndex = 6;
-            _btnCancel.Text = "Cancel";
-            //
-            // grpHO
-            //
-            _grpHO.Controls.Add(_chkHO);
-            _grpHO.Controls.Add(_txtHO);
-            _grpHO.Location = new Point(8, 38);
-            _grpHO.Name = "grpHO";
-            _grpHO.Size = new Size(411, 232);
-            _grpHO.TabIndex = 7;
-            _grpHO.TabStop = false;
-            _grpHO.Text = "Head Office";
-            //
-            // chkHO
-            //
-            _chkHO.AutoSize = true;
-            _chkHO.Location = new Point(6, 20);
-            _chkHO.Name = "chkHO";
-            _chkHO.Size = new Size(61, 17);
-            _chkHO.TabIndex = 1;
-            _chkHO.Text = "Select";
-            _chkHO.UseVisualStyleBackColor = true;
-            //
-            // txtHO
-            //
-            _txtHO.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtHO.Location = new Point(6, 43);
-            _txtHO.Multiline = true;
-            _txtHO.Name = "txtHO";
-            _txtHO.ReadOnly = true;
-            _txtHO.ScrollBars = ScrollBars.Both;
-            _txtHO.Size = new Size(399, 183);
-            _txtHO.TabIndex = 0;
-            //
-            // grpProperty
-            //
-            _grpProperty.Controls.Add(_chkProperty);
-            _grpProperty.Controls.Add(_txtProperty);
-            _grpProperty.Location = new Point(425, 38);
-            _grpProperty.Name = "grpProperty";
-            _grpProperty.Size = new Size(411, 232);
-            _grpProperty.TabIndex = 8;
-            _grpProperty.TabStop = false;
-            _grpProperty.Text = "Property";
-            //
-            // chkProperty
-            //
-            _chkProperty.AutoSize = true;
-            _chkProperty.Location = new Point(6, 20);
-            _chkProperty.Name = "chkProperty";
-            _chkProperty.Size = new Size(61, 17);
-            _chkProperty.TabIndex = 1;
-            _chkProperty.Text = "Select";
-            _chkProperty.UseVisualStyleBackColor = true;
-            //
-            // txtProperty
-            //
-            _txtProperty.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtProperty.Location = new Point(6, 43);
-            _txtProperty.Multiline = true;
-            _txtProperty.Name = "txtProperty";
-            _txtProperty.ReadOnly = true;
-            _txtProperty.ScrollBars = ScrollBars.Both;
-            _txtProperty.Size = new Size(399, 183);
-            _txtProperty.TabIndex = 0;
-            //
-            // grpInvoiceAddress
-            //
-            _grpInvoiceAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpInvoiceAddress.Controls.Add(_btnAdd);
-            _grpInvoiceAddress.Controls.Add(_dgInvoiceAddresses);
-            _grpInvoiceAddress.Controls.Add(_chkInvoiceAddress);
-            _grpInvoiceAddress.Location = new Point(8, 276);
-            _grpInvoiceAddress.Name = "grpInvoiceAddress";
-            _grpInvoiceAddress.Size = new Size(1248, 233);
-            _grpInvoiceAddress.TabIndex = 9;
-            _grpInvoiceAddress.TabStop = false;
-            _grpInvoiceAddress.Text = "Invoice Address";
-            //
-            // btnAdd
-            //
-            _btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnAdd.Location = new Point(1167, 16);
-            _btnAdd.Name = "btnAdd";
-            _btnAdd.Size = new Size(75, 23);
-            _btnAdd.TabIndex = 11;
-            _btnAdd.Text = "Add";
-            _btnAdd.UseVisualStyleBackColor = true;
-            //
-            // dgInvoiceAddresses
-            //
-            _dgInvoiceAddresses.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgInvoiceAddresses.DataMember = "";
-            _dgInvoiceAddresses.HeaderForeColor = SystemColors.ControlText;
-            _dgInvoiceAddresses.Location = new Point(6, 43);
-            _dgInvoiceAddresses.Name = "dgInvoiceAddresses";
-            _dgInvoiceAddresses.Size = new Size(1236, 184);
-            _dgInvoiceAddresses.TabIndex = 10;
-            //
-            // chkInvoiceAddress
-            //
-            _chkInvoiceAddress.AutoSize = true;
-            _chkInvoiceAddress.Location = new Point(6, 20);
-            _chkInvoiceAddress.Name = "chkInvoiceAddress";
-            _chkInvoiceAddress.Size = new Size(61, 17);
-            _chkInvoiceAddress.TabIndex = 1;
-            _chkInvoiceAddress.Text = "Select";
-            _chkInvoiceAddress.UseVisualStyleBackColor = true;
-            //
-            // grpDept
-            //
-            _grpDept.Controls.Add(_cboDept);
-            _grpDept.Controls.Add(_chkDept);
-            _grpDept.Location = new Point(842, 38);
-            _grpDept.Name = "grpDept";
-            _grpDept.Size = new Size(408, 232);
-            _grpDept.TabIndex = 9;
-            _grpDept.TabStop = false;
-            _grpDept.Text = "Department";
-            //
-            // chkDept
-            //
-            _chkDept.AutoSize = true;
-            _chkDept.Location = new Point(6, 20);
-            _chkDept.Name = "chkDept";
-            _chkDept.Size = new Size(61, 17);
-            _chkDept.TabIndex = 1;
-            _chkDept.Text = "Select";
-            _chkDept.UseVisualStyleBackColor = true;
-            //
-            // cboDept
-            //
-            _cboDept.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboDept.FormattingEnabled = true;
-            _cboDept.Location = new Point(93, 18);
-            _cboDept.Name = "cboDept";
-            _cboDept.Size = new Size(309, 21);
-            _cboDept.TabIndex = 33;
-            //
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._grpHO = new System.Windows.Forms.GroupBox();
+            this._chkHO = new System.Windows.Forms.CheckBox();
+            this._txtHO = new System.Windows.Forms.TextBox();
+            this._grpProperty = new System.Windows.Forms.GroupBox();
+            this._chkProperty = new System.Windows.Forms.CheckBox();
+            this._txtProperty = new System.Windows.Forms.TextBox();
+            this._grpInvoiceAddress = new System.Windows.Forms.GroupBox();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this._dgInvoiceAddresses = new System.Windows.Forms.DataGrid();
+            this._chkInvoiceAddress = new System.Windows.Forms.CheckBox();
+            this._grpDept = new System.Windows.Forms.GroupBox();
+            this._cboDept = new System.Windows.Forms.ComboBox();
+            this._chkDept = new System.Windows.Forms.CheckBox();
+            this._grpHO.SuspendLayout();
+            this._grpProperty.SuspendLayout();
+            this._grpInvoiceAddress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddresses)).BeginInit();
+            this._grpDept.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(1185, 515);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(8, 515);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 6;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _grpHO
+            // 
+            this._grpHO.Controls.Add(this._chkHO);
+            this._grpHO.Controls.Add(this._txtHO);
+            this._grpHO.Location = new System.Drawing.Point(8, 12);
+            this._grpHO.Name = "_grpHO";
+            this._grpHO.Size = new System.Drawing.Size(411, 258);
+            this._grpHO.TabIndex = 7;
+            this._grpHO.TabStop = false;
+            this._grpHO.Text = "Head Office";
+            // 
+            // _chkHO
+            // 
+            this._chkHO.AutoSize = true;
+            this._chkHO.Location = new System.Drawing.Point(6, 20);
+            this._chkHO.Name = "_chkHO";
+            this._chkHO.Size = new System.Drawing.Size(61, 17);
+            this._chkHO.TabIndex = 1;
+            this._chkHO.Text = "Select";
+            this._chkHO.UseVisualStyleBackColor = true;
+            // 
+            // _txtHO
+            // 
+            this._txtHO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtHO.Location = new System.Drawing.Point(6, 43);
+            this._txtHO.Multiline = true;
+            this._txtHO.Name = "_txtHO";
+            this._txtHO.ReadOnly = true;
+            this._txtHO.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this._txtHO.Size = new System.Drawing.Size(399, 209);
+            this._txtHO.TabIndex = 0;
+            // 
+            // _grpProperty
+            // 
+            this._grpProperty.Controls.Add(this._chkProperty);
+            this._grpProperty.Controls.Add(this._txtProperty);
+            this._grpProperty.Location = new System.Drawing.Point(425, 12);
+            this._grpProperty.Name = "_grpProperty";
+            this._grpProperty.Size = new System.Drawing.Size(411, 258);
+            this._grpProperty.TabIndex = 8;
+            this._grpProperty.TabStop = false;
+            this._grpProperty.Text = "Property";
+            // 
+            // _chkProperty
+            // 
+            this._chkProperty.AutoSize = true;
+            this._chkProperty.Location = new System.Drawing.Point(6, 20);
+            this._chkProperty.Name = "_chkProperty";
+            this._chkProperty.Size = new System.Drawing.Size(61, 17);
+            this._chkProperty.TabIndex = 1;
+            this._chkProperty.Text = "Select";
+            this._chkProperty.UseVisualStyleBackColor = true;
+            // 
+            // _txtProperty
+            // 
+            this._txtProperty.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtProperty.Location = new System.Drawing.Point(6, 43);
+            this._txtProperty.Multiline = true;
+            this._txtProperty.Name = "_txtProperty";
+            this._txtProperty.ReadOnly = true;
+            this._txtProperty.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this._txtProperty.Size = new System.Drawing.Size(399, 209);
+            this._txtProperty.TabIndex = 0;
+            // 
+            // _grpInvoiceAddress
+            // 
+            this._grpInvoiceAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpInvoiceAddress.Controls.Add(this._btnAdd);
+            this._grpInvoiceAddress.Controls.Add(this._dgInvoiceAddresses);
+            this._grpInvoiceAddress.Controls.Add(this._chkInvoiceAddress);
+            this._grpInvoiceAddress.Location = new System.Drawing.Point(8, 276);
+            this._grpInvoiceAddress.Name = "_grpInvoiceAddress";
+            this._grpInvoiceAddress.Size = new System.Drawing.Size(1248, 233);
+            this._grpInvoiceAddress.TabIndex = 9;
+            this._grpInvoiceAddress.TabStop = false;
+            this._grpInvoiceAddress.Text = "Invoice Address";
+            // 
+            // _btnAdd
+            // 
+            this._btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAdd.Location = new System.Drawing.Point(1167, 16);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(75, 23);
+            this._btnAdd.TabIndex = 11;
+            this._btnAdd.Text = "Add";
+            this._btnAdd.UseVisualStyleBackColor = true;
+            this._btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // _dgInvoiceAddresses
+            // 
+            this._dgInvoiceAddresses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgInvoiceAddresses.DataMember = "";
+            this._dgInvoiceAddresses.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgInvoiceAddresses.Location = new System.Drawing.Point(6, 43);
+            this._dgInvoiceAddresses.Name = "_dgInvoiceAddresses";
+            this._dgInvoiceAddresses.Size = new System.Drawing.Size(1236, 184);
+            this._dgInvoiceAddresses.TabIndex = 10;
+            // 
+            // _chkInvoiceAddress
+            // 
+            this._chkInvoiceAddress.AutoSize = true;
+            this._chkInvoiceAddress.Location = new System.Drawing.Point(6, 20);
+            this._chkInvoiceAddress.Name = "_chkInvoiceAddress";
+            this._chkInvoiceAddress.Size = new System.Drawing.Size(61, 17);
+            this._chkInvoiceAddress.TabIndex = 1;
+            this._chkInvoiceAddress.Text = "Select";
+            this._chkInvoiceAddress.UseVisualStyleBackColor = true;
+            // 
+            // _grpDept
+            // 
+            this._grpDept.Controls.Add(this._cboDept);
+            this._grpDept.Controls.Add(this._chkDept);
+            this._grpDept.Location = new System.Drawing.Point(842, 12);
+            this._grpDept.Name = "_grpDept";
+            this._grpDept.Size = new System.Drawing.Size(408, 258);
+            this._grpDept.TabIndex = 9;
+            this._grpDept.TabStop = false;
+            this._grpDept.Text = "Department";
+            // 
+            // _cboDept
+            // 
+            this._cboDept.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboDept.FormattingEnabled = true;
+            this._cboDept.Location = new System.Drawing.Point(93, 18);
+            this._cboDept.Name = "_cboDept";
+            this._cboDept.Size = new System.Drawing.Size(309, 21);
+            this._cboDept.TabIndex = 33;
+            // 
+            // _chkDept
+            // 
+            this._chkDept.AutoSize = true;
+            this._chkDept.Location = new System.Drawing.Point(6, 20);
+            this._chkDept.Name = "_chkDept";
+            this._chkDept.Size = new System.Drawing.Size(61, 17);
+            this._chkDept.TabIndex = 1;
+            this._chkDept.Text = "Select";
+            this._chkDept.UseVisualStyleBackColor = true;
+            // 
             // FRMSelectInvoiceAddress
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1265, 545);
-            ControlBox = false;
-            Controls.Add(_grpDept);
-            Controls.Add(_grpInvoiceAddress);
-            Controls.Add(_grpProperty);
-            Controls.Add(_grpHO);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            MinimumSize = new Size(853, 530);
-            Name = "FRMSelectInvoiceAddress";
-            Text = "Select an address for the invoice";
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_grpHO, 0);
-            Controls.SetChildIndex(_grpProperty, 0);
-            Controls.SetChildIndex(_grpInvoiceAddress, 0);
-            Controls.SetChildIndex(_grpDept, 0);
-            _grpHO.ResumeLayout(false);
-            _grpHO.PerformLayout();
-            _grpProperty.ResumeLayout(false);
-            _grpProperty.PerformLayout();
-            _grpInvoiceAddress.ResumeLayout(false);
-            _grpInvoiceAddress.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).EndInit();
-            _grpDept.ResumeLayout(false);
-            _grpDept.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1265, 545);
+            this.ControlBox = false;
+            this.Controls.Add(this._grpDept);
+            this.Controls.Add(this._grpInvoiceAddress);
+            this.Controls.Add(this._grpProperty);
+            this.Controls.Add(this._grpHO);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.MinimumSize = new System.Drawing.Size(853, 530);
+            this.Name = "FRMSelectInvoiceAddress";
+            this.Text = "Select an address for the invoice";
+            this._grpHO.ResumeLayout(false);
+            this._grpHO.PerformLayout();
+            this._grpProperty.ResumeLayout(false);
+            this._grpProperty.PerformLayout();
+            this._grpInvoiceAddress.ResumeLayout(false);
+            this._grpInvoiceAddress.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddresses)).EndInit();
+            this._grpDept.ResumeLayout(false);
+            this._grpDept.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

@@ -122,63 +122,64 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJobAudit = new GroupBox();
-            _dgJobAudits = new DataGrid();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _grpJobAudit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgJobAudits).BeginInit();
-            SuspendLayout();
-            //
-            // grpJobAudit
-            //
-            _grpJobAudit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpJobAudit.Controls.Add(_dgJobAudits);
-            _grpJobAudit.Location = new Point(10, 40);
-            _grpJobAudit.Name = "grpJobAudit";
-            _grpJobAudit.Size = new Size(837, 400);
-            _grpJobAudit.TabIndex = 3;
-            _grpJobAudit.TabStop = false;
-            _grpJobAudit.Text = "Job Audit Trail";
-            //
-            // dgJobAudits
-            //
-            _dgJobAudits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgJobAudits.DataMember = "";
-            _dgJobAudits.HeaderForeColor = SystemColors.ControlText;
-            _dgJobAudits.Location = new Point(10, 18);
-            _dgJobAudits.Name = "dgJobAudits";
-            _dgJobAudits.Size = new Size(817, 374);
-            _dgJobAudits.TabIndex = 14;
-            //
-            // btnClose
-            //
-            _btnClose.AccessibleDescription = "Export Job List To Excel";
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.UseVisualStyleBackColor = true;
-            _btnClose.Location = new Point(10, 454);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(67, 25);
-            _btnClose.TabIndex = 16;
-            _btnClose.Text = "Close";
-            //
+            this._grpJobAudit = new System.Windows.Forms.GroupBox();
+            this._dgJobAudits = new System.Windows.Forms.DataGrid();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._grpJobAudit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobAudits)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpJobAudit
+            // 
+            this._grpJobAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobAudit.Controls.Add(this._dgJobAudits);
+            this._grpJobAudit.Location = new System.Drawing.Point(10, 12);
+            this._grpJobAudit.Name = "_grpJobAudit";
+            this._grpJobAudit.Size = new System.Drawing.Size(837, 428);
+            this._grpJobAudit.TabIndex = 3;
+            this._grpJobAudit.TabStop = false;
+            this._grpJobAudit.Text = "Job Audit Trail";
+            // 
+            // _dgJobAudits
+            // 
+            this._dgJobAudits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgJobAudits.DataMember = "";
+            this._dgJobAudits.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgJobAudits.Location = new System.Drawing.Point(10, 18);
+            this._dgJobAudits.Name = "_dgJobAudits";
+            this._dgJobAudits.Size = new System.Drawing.Size(817, 402);
+            this._dgJobAudits.TabIndex = 14;
+            // 
+            // _btnClose
+            // 
+            this._btnClose.AccessibleDescription = "Export Job List To Excel";
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(10, 454);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(67, 25);
+            this._btnClose.TabIndex = 16;
+            this._btnClose.Text = "Close";
+            this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FRMJobAudit
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(856, 486);
-            Controls.Add(_btnClose);
-            Controls.Add(_grpJobAudit);
-            MaximumSize = new Size(864, 520);
-            MinimumSize = new Size(864, 520);
-            Name = "FRMJobAudit";
-            Text = "Job Audit";
-            Controls.SetChildIndex(_grpJobAudit, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            _grpJobAudit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgJobAudits).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(848, 481);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._grpJobAudit);
+            this.MaximumSize = new System.Drawing.Size(864, 520);
+            this.MinimumSize = new System.Drawing.Size(864, 520);
+            this.Name = "FRMJobAudit";
+            this.Text = "Job Audit";
+            this._grpJobAudit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgJobAudits)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

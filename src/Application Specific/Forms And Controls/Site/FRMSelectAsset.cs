@@ -168,101 +168,100 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _Label1 = new Label();
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _GroupBox1 = new GroupBox();
-            _dgAssets = new DataGrid();
-            _dgAssets.DoubleClick += new EventHandler(dgAssets_DoubleClick);
-            _btnNoAsset = new Button();
-            _btnNoAsset.Click += new EventHandler(btnNoAsset_Click);
-            _chkCERT2 = new CheckBox();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAssets).BeginInit();
-            SuspendLayout();
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(16, 40);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(320, 24);
-            _Label1.TabIndex = 2;
-            _Label1.Text = "Please select an Appliance to be serviced";
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(480, 312);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(75, 23);
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_dgAssets);
-            _GroupBox1.Location = new Point(8, 64);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(544, 243);
-            _GroupBox1.TabIndex = 5;
-            _GroupBox1.TabStop = false;
-            //
-            // dgAssets
-            //
-            _dgAssets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAssets.DataMember = "";
-            _dgAssets.HeaderForeColor = SystemColors.ControlText;
-            _dgAssets.Location = new Point(8, 18);
-            _dgAssets.Name = "dgAssets";
-            _dgAssets.Size = new Size(528, 217);
-            _dgAssets.TabIndex = 0;
-            //
-            // btnNoAsset
-            //
-            _btnNoAsset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnNoAsset.Location = new Point(8, 312);
-            _btnNoAsset.Name = "btnNoAsset";
-            _btnNoAsset.Size = new Size(94, 23);
-            _btnNoAsset.TabIndex = 6;
-            _btnNoAsset.Text = "No Appliance";
-            _btnNoAsset.Visible = false;
-            //
-            // chkCERT2
-            //
-            _chkCERT2.AutoSize = true;
-            _chkCERT2.Location = new Point(229, 316);
-            _chkCERT2.Name = "chkCERT2";
-            _chkCERT2.Size = new Size(91, 17);
-            _chkCERT2.TabIndex = 7;
-            _chkCERT2.Text = "Certificate?";
-            _chkCERT2.UseVisualStyleBackColor = true;
-            _chkCERT2.Checked = true;
-            //
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dgAssets = new System.Windows.Forms.DataGrid();
+            this._btnNoAsset = new System.Windows.Forms.Button();
+            this._chkCERT2 = new System.Windows.Forms.CheckBox();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(16, 13);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(320, 39);
+            this._Label1.TabIndex = 2;
+            this._Label1.Text = "Please select an Appliance to be serviced";
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(480, 312);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dgAssets);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 37);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(544, 270);
+            this._GroupBox1.TabIndex = 5;
+            this._GroupBox1.TabStop = false;
+            // 
+            // _dgAssets
+            // 
+            this._dgAssets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAssets.DataMember = "";
+            this._dgAssets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgAssets.Location = new System.Drawing.Point(8, 18);
+            this._dgAssets.Name = "_dgAssets";
+            this._dgAssets.Size = new System.Drawing.Size(528, 244);
+            this._dgAssets.TabIndex = 0;
+            this._dgAssets.DoubleClick += new System.EventHandler(this.dgAssets_DoubleClick);
+            // 
+            // _btnNoAsset
+            // 
+            this._btnNoAsset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnNoAsset.Location = new System.Drawing.Point(8, 312);
+            this._btnNoAsset.Name = "_btnNoAsset";
+            this._btnNoAsset.Size = new System.Drawing.Size(94, 23);
+            this._btnNoAsset.TabIndex = 6;
+            this._btnNoAsset.Text = "No Appliance";
+            this._btnNoAsset.Visible = false;
+            this._btnNoAsset.Click += new System.EventHandler(this.btnNoAsset_Click);
+            // 
+            // _chkCERT2
+            // 
+            this._chkCERT2.AutoSize = true;
+            this._chkCERT2.Checked = true;
+            this._chkCERT2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._chkCERT2.Location = new System.Drawing.Point(229, 316);
+            this._chkCERT2.Name = "_chkCERT2";
+            this._chkCERT2.Size = new System.Drawing.Size(91, 17);
+            this._chkCERT2.TabIndex = 7;
+            this._chkCERT2.Text = "Certificate?";
+            this._chkCERT2.UseVisualStyleBackColor = true;
+            // 
             // FRMSelectAsset
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(560, 342);
-            ControlBox = false;
-            Controls.Add(_chkCERT2);
-            Controls.Add(_btnNoAsset);
-            Controls.Add(_GroupBox1);
-            Controls.Add(_btnOK);
-            Controls.Add(_Label1);
-            MinimumSize = new Size(568, 376);
-            Name = "FRMSelectAsset";
-            Text = "Select an Appliance";
-            Controls.SetChildIndex(_Label1, 0);
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_btnNoAsset, 0);
-            Controls.SetChildIndex(_chkCERT2, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgAssets).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(560, 342);
+            this.ControlBox = false;
+            this.Controls.Add(this._chkCERT2);
+            this.Controls.Add(this._btnNoAsset);
+            this.Controls.Add(this._GroupBox1);
+            this.Controls.Add(this._btnOK);
+            this.Controls.Add(this._Label1);
+            this.MinimumSize = new System.Drawing.Size(568, 376);
+            this.Name = "FRMSelectAsset";
+            this.Text = "Select an Appliance";
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgAssets)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         public void LoadMe(object sender, EventArgs e)

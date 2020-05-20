@@ -101,96 +101,96 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMLogin));
-            _grpLoginDetails = new GroupBox();
-            _btnLogin = new Button();
-            _btnLogin.Click += new EventHandler(btnLogin_Click);
-            _Label2 = new Label();
-            _Label3 = new Label();
-            _txtUserName = new TextBox();
-            _txtPassword = new TextBox();
-            _grpLoginDetails.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpLoginDetails
-            //
-            _grpLoginDetails.Controls.Add(_btnLogin);
-            _grpLoginDetails.Controls.Add(_Label2);
-            _grpLoginDetails.Controls.Add(_Label3);
-            _grpLoginDetails.Controls.Add(_txtUserName);
-            _grpLoginDetails.Controls.Add(_txtPassword);
-            _grpLoginDetails.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _grpLoginDetails.Location = new Point(8, 40);
-            _grpLoginDetails.Name = "grpLoginDetails";
-            _grpLoginDetails.Size = new Size(392, 128);
-            _grpLoginDetails.TabIndex = 12;
-            _grpLoginDetails.TabStop = false;
-            _grpLoginDetails.Text = "Enter Login Details";
-            //
-            // btnLogin
-            //
-            _btnLogin.AccessibleDescription = "Login to application";
-            _btnLogin.Cursor = Cursors.Hand;
-            _btnLogin.Location = new Point(96, 96);
-            _btnLogin.Name = "btnLogin";
-            _btnLogin.Size = new Size(56, 23);
-            _btnLogin.TabIndex = 3;
-            _btnLogin.Text = "Login";
-            _btnLogin.UseVisualStyleBackColor = true;
-            //
-            // Label2
-            //
-            _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label2.Location = new Point(16, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(80, 16);
-            _Label2.TabIndex = 1;
-            _Label2.Text = "Username";
-            //
-            // Label3
-            //
-            _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label3.Location = new Point(16, 64);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(80, 23);
-            _Label3.TabIndex = 2;
-            _Label3.Text = "Password";
-            //
-            // txtUserName
-            //
-            _txtUserName.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtUserName.Location = new Point(96, 22);
-            _txtUserName.MaxLength = 50;
-            _txtUserName.Name = "txtUserName";
-            _txtUserName.Size = new Size(288, 21);
-            _txtUserName.TabIndex = 1;
-            //
-            // txtPassword
-            //
-            _txtPassword.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtPassword.Location = new Point(96, 62);
-            _txtPassword.MaxLength = 50;
-            _txtPassword.Name = "txtPassword";
-            _txtPassword.PasswordChar = (char)42;
-            _txtPassword.Size = new Size(288, 21);
-            _txtPassword.TabIndex = 2;
-            //
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMLogin));
+            this._grpLoginDetails = new System.Windows.Forms.GroupBox();
+            this._btnLogin = new System.Windows.Forms.Button();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._txtUserName = new System.Windows.Forms.TextBox();
+            this._txtPassword = new System.Windows.Forms.TextBox();
+            this._grpLoginDetails.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpLoginDetails
+            // 
+            this._grpLoginDetails.Controls.Add(this._btnLogin);
+            this._grpLoginDetails.Controls.Add(this._Label2);
+            this._grpLoginDetails.Controls.Add(this._Label3);
+            this._grpLoginDetails.Controls.Add(this._txtUserName);
+            this._grpLoginDetails.Controls.Add(this._txtPassword);
+            this._grpLoginDetails.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._grpLoginDetails.Location = new System.Drawing.Point(8, 12);
+            this._grpLoginDetails.Name = "_grpLoginDetails";
+            this._grpLoginDetails.Size = new System.Drawing.Size(392, 129);
+            this._grpLoginDetails.TabIndex = 12;
+            this._grpLoginDetails.TabStop = false;
+            this._grpLoginDetails.Text = "Enter Login Details";
+            // 
+            // _btnLogin
+            // 
+            this._btnLogin.AccessibleDescription = "Login to application";
+            this._btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnLogin.Location = new System.Drawing.Point(168, 95);
+            this._btnLogin.Name = "_btnLogin";
+            this._btnLogin.Size = new System.Drawing.Size(56, 23);
+            this._btnLogin.TabIndex = 3;
+            this._btnLogin.Text = "Login";
+            this._btnLogin.UseVisualStyleBackColor = true;
+            this._btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // _Label2
+            // 
+            this._Label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label2.Location = new System.Drawing.Point(16, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(80, 16);
+            this._Label2.TabIndex = 1;
+            this._Label2.Text = "Username";
+            // 
+            // _Label3
+            // 
+            this._Label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label3.Location = new System.Drawing.Point(16, 64);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(80, 23);
+            this._Label3.TabIndex = 2;
+            this._Label3.Text = "Password";
+            // 
+            // _txtUserName
+            // 
+            this._txtUserName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtUserName.Location = new System.Drawing.Point(96, 22);
+            this._txtUserName.MaxLength = 50;
+            this._txtUserName.Name = "_txtUserName";
+            this._txtUserName.Size = new System.Drawing.Size(288, 21);
+            this._txtUserName.TabIndex = 1;
+            // 
+            // _txtPassword
+            // 
+            this._txtPassword.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtPassword.Location = new System.Drawing.Point(96, 62);
+            this._txtPassword.MaxLength = 50;
+            this._txtPassword.Name = "_txtPassword";
+            this._txtPassword.PasswordChar = '*';
+            this._txtPassword.Size = new System.Drawing.Size(288, 21);
+            this._txtPassword.TabIndex = 2;
+            // 
             // FRMLogin
-            //
-            AcceptButton = _btnLogin;
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(400, 169);
-            Controls.Add(_grpLoginDetails);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
-            MaximumSize = new Size(416, 208);
-            MinimizeBox = false;
-            MinimumSize = new Size(416, 208);
-            Name = "FRMLogin";
-            Controls.SetChildIndex(_grpLoginDetails, 0);
-            _grpLoginDetails.ResumeLayout(false);
-            _grpLoginDetails.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AcceptButton = this._btnLogin;
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(400, 144);
+            this.Controls.Add(this._grpLoginDetails);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(416, 183);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(416, 183);
+            this.Name = "FRMLogin";
+            this._grpLoginDetails.ResumeLayout(false);
+            this._grpLoginDetails.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

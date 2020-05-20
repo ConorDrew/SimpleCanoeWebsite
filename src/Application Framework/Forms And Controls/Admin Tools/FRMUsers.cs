@@ -689,363 +689,361 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpUsers = new GroupBox();
-            _dgUsers = new DataGrid();
-            _dgUsers.Click += new EventHandler(dgUsers_Click);
-            _dgUsers.CurrentCellChanged += new EventHandler(dgUsers_Click);
-            _dgUsers.Click += new EventHandler(dgUsers_Click);
-            _dgUsers.CurrentCellChanged += new EventHandler(dgUsers_Click);
-            _btnAddNew = new Button();
-            _btnAddNew.Click += new EventHandler(btnAddNew_Click);
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _grpDetails = new GroupBox();
-            _cboDEG = new ComboBox();
-            _Label7 = new Label();
-            _chkSDV = new CheckBox();
-            _Label6 = new Label();
-            _txtEmailAddress = new TextBox();
-            _chkAdmin = new CheckBox();
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _txtConfirm = new TextBox();
-            _txtPassword = new TextBox();
-            _txtUserName = new TextBox();
-            _chkEnabled = new CheckBox();
-            _Label4 = new Label();
-            _Label3 = new Label();
-            _Label1 = new Label();
-            _txtFullName = new TextBox();
-            _Label2 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _GroupBox1 = new GroupBox();
-            _dgSecurityUserModules = new DataGrid();
-            _dgSecurityUserModules.Click += new EventHandler(dgSecurityUserModules_Click);
-            _btnPopulateNewSecurityModules = new Button();
-            _btnPopulateNewSecurityModules.Click += new EventHandler(btnPopulateNewSecurityModules_Click);
-            _grpUserRegions = new GroupBox();
-            _dgUserRegions = new DataGrid();
-            _dgUserRegions.Click += new EventHandler(dgUserRegions_Click);
-            _grpUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgUsers).BeginInit();
-            _grpDetails.SuspendLayout();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgSecurityUserModules).BeginInit();
-            _grpUserRegions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgUserRegions).BeginInit();
-            SuspendLayout();
-            //
-            // grpUsers
-            //
-            _grpUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpUsers.Controls.Add(_dgUsers);
-            _grpUsers.Controls.Add(_btnAddNew);
-            _grpUsers.Controls.Add(_btnDelete);
-            _grpUsers.FlatStyle = FlatStyle.System;
-            _grpUsers.Location = new Point(8, 40);
-            _grpUsers.Name = "grpUsers";
-            _grpUsers.Size = new Size(312, 547);
-            _grpUsers.TabIndex = 6;
-            _grpUsers.TabStop = false;
-            _grpUsers.Text = "Users";
-            //
-            // dgUsers
-            //
-            _dgUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgUsers.DataMember = "";
-            _dgUsers.HeaderForeColor = SystemColors.ControlText;
-            _dgUsers.Location = new Point(8, 57);
-            _dgUsers.Name = "dgUsers";
-            _dgUsers.Size = new Size(296, 482);
-            _dgUsers.TabIndex = 2;
-            //
-            // btnAddNew
-            //
-            _btnAddNew.AccessibleDescription = "Add new user";
-            _btnAddNew.Cursor = Cursors.Hand;
-            _btnAddNew.Location = new Point(8, 24);
-            _btnAddNew.Name = "btnAddNew";
-            _btnAddNew.Size = new Size(48, 23);
-            _btnAddNew.TabIndex = 1;
-            _btnAddNew.Text = "New";
-            _btnAddNew.UseVisualStyleBackColor = true;
-            //
-            // btnDelete
-            //
-            _btnDelete.AccessibleDescription = "Delete user";
-            _btnDelete.Cursor = Cursors.Hand;
-            _btnDelete.Location = new Point(62, 24);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(59, 23);
-            _btnDelete.TabIndex = 3;
-            _btnDelete.Text = "Delete";
-            _btnDelete.UseVisualStyleBackColor = true;
-            //
-            // grpDetails
-            //
-            _grpDetails.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _grpDetails.Controls.Add(_cboDEG);
-            _grpDetails.Controls.Add(_Label7);
-            _grpDetails.Controls.Add(_chkSDV);
-            _grpDetails.Controls.Add(_Label6);
-            _grpDetails.Controls.Add(_txtEmailAddress);
-            _grpDetails.Controls.Add(_chkAdmin);
-            _grpDetails.Controls.Add(_btnReset);
-            _grpDetails.Controls.Add(_txtConfirm);
-            _grpDetails.Controls.Add(_txtPassword);
-            _grpDetails.Controls.Add(_txtUserName);
-            _grpDetails.Controls.Add(_chkEnabled);
-            _grpDetails.Controls.Add(_Label4);
-            _grpDetails.Controls.Add(_Label3);
-            _grpDetails.Controls.Add(_Label1);
-            _grpDetails.Controls.Add(_txtFullName);
-            _grpDetails.Controls.Add(_Label2);
-            _grpDetails.FlatStyle = FlatStyle.System;
-            _grpDetails.Location = new Point(328, 40);
-            _grpDetails.Name = "grpDetails";
-            _grpDetails.Size = new Size(457, 244);
-            _grpDetails.TabIndex = 8;
-            _grpDetails.TabStop = false;
-            _grpDetails.Text = "Details";
-            //
-            // cboDEG
-            //
-            _cboDEG.Cursor = Cursors.Hand;
-            _cboDEG.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboDEG.Location = new Point(127, 208);
-            _cboDEG.Name = "cboDEG";
-            _cboDEG.Size = new Size(324, 21);
-            _cboDEG.TabIndex = 20;
-            //
-            // Label7
-            //
-            _Label7.AutoSize = true;
-            _Label7.Location = new Point(9, 211);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(112, 13);
-            _Label7.TabIndex = 19;
-            _Label7.Text = "Default Eng Group";
-            //
-            // chkSDV
-            //
-            _chkSDV.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _chkSDV.Location = new Point(300, 150);
-            _chkSDV.Name = "chkSDV";
-            _chkSDV.Size = new Size(149, 24);
-            _chkSDV.TabIndex = 17;
-            _chkSDV.Text = "Scheduler Day View";
-            //
-            // Label6
-            //
-            _Label6.AutoSize = true;
-            _Label6.Location = new Point(9, 184);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(38, 13);
-            _Label6.TabIndex = 16;
-            _Label6.Text = "Email";
-            //
-            // txtEmailAddress
-            //
-            _txtEmailAddress.Location = new Point(127, 181);
-            _txtEmailAddress.Name = "txtEmailAddress";
-            _txtEmailAddress.Size = new Size(322, 21);
-            _txtEmailAddress.TabIndex = 15;
-            //
-            // chkAdmin
-            //
-            _chkAdmin.Location = new Point(182, 151);
-            _chkAdmin.Name = "chkAdmin";
-            _chkAdmin.Size = new Size(63, 24);
-            _chkAdmin.TabIndex = 14;
-            _chkAdmin.Text = "Admin";
-            //
-            // btnReset
-            //
-            _btnReset.AccessibleDescription = "Reset the users password";
-            _btnReset.Cursor = Cursors.Hand;
-            _btnReset.Location = new Point(399, 86);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(48, 23);
-            _btnReset.TabIndex = 7;
-            _btnReset.Text = "Reset";
-            _btnReset.UseVisualStyleBackColor = true;
-            //
-            // txtConfirm
-            //
-            _txtConfirm.Location = new Point(127, 120);
-            _txtConfirm.MaxLength = 50;
-            _txtConfirm.Name = "txtConfirm";
-            _txtConfirm.PasswordChar = (char)42;
-            _txtConfirm.Size = new Size(322, 21);
-            _txtConfirm.TabIndex = 8;
-            //
-            // txtPassword
-            //
-            _txtPassword.Location = new Point(127, 88);
-            _txtPassword.MaxLength = 50;
-            _txtPassword.Name = "txtPassword";
-            _txtPassword.PasswordChar = (char)42;
-            _txtPassword.Size = new Size(266, 21);
-            _txtPassword.TabIndex = 6;
-            //
-            // txtUserName
-            //
-            _txtUserName.Location = new Point(127, 56);
-            _txtUserName.MaxLength = 50;
-            _txtUserName.Name = "txtUserName";
-            _txtUserName.Size = new Size(322, 21);
-            _txtUserName.TabIndex = 5;
-            //
-            // chkEnabled
-            //
-            _chkEnabled.Checked = true;
-            _chkEnabled.CheckState = CheckState.Checked;
-            _chkEnabled.Location = new Point(12, 150);
-            _chkEnabled.Name = "chkEnabled";
-            _chkEnabled.Size = new Size(113, 24);
-            _chkEnabled.TabIndex = 10;
-            _chkEnabled.Text = "Logon Enabled";
-            //
-            // Label4
-            //
-            _Label4.Location = new Point(8, 120);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 16);
-            _Label4.TabIndex = 10;
-            _Label4.Text = "Confirm";
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 88);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(64, 16);
-            _Label3.TabIndex = 9;
-            _Label3.Text = "Password";
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(8, 56);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(74, 16);
-            _Label1.TabIndex = 8;
-            _Label1.Text = "Username";
-            //
-            // txtFullName
-            //
-            _txtFullName.Location = new Point(127, 24);
-            _txtFullName.MaxLength = 255;
-            _txtFullName.Name = "txtFullName";
-            _txtFullName.Size = new Size(322, 21);
-            _txtFullName.TabIndex = 4;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(8, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(64, 16);
-            _Label2.TabIndex = 5;
-            _Label2.Text = "Full Name";
-            //
-            // btnSave
-            //
-            _btnSave.AccessibleDescription = "Save user details";
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSave.Cursor = Cursors.Hand;
-            _btnSave.Location = new Point(737, 564);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(48, 23);
-            _btnSave.TabIndex = 11;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _GroupBox1.Controls.Add(_dgSecurityUserModules);
-            _GroupBox1.FlatStyle = FlatStyle.System;
-            _GroupBox1.Location = new Point(326, 504);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(459, 54);
-            _GroupBox1.TabIndex = 12;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Module Access";
-            //
-            // dgSecurityUserModules
-            //
-            _dgSecurityUserModules.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgSecurityUserModules.DataMember = "";
-            _dgSecurityUserModules.HeaderForeColor = SystemColors.ControlText;
-            _dgSecurityUserModules.Location = new Point(8, 20);
-            _dgSecurityUserModules.Name = "dgSecurityUserModules";
-            _dgSecurityUserModules.Size = new Size(443, 26);
-            _dgSecurityUserModules.TabIndex = 2;
-            //
-            // btnPopulateNewSecurityModules
-            //
-            _btnPopulateNewSecurityModules.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnPopulateNewSecurityModules.Location = new Point(536, 564);
-            _btnPopulateNewSecurityModules.Name = "btnPopulateNewSecurityModules";
-            _btnPopulateNewSecurityModules.Size = new Size(195, 23);
-            _btnPopulateNewSecurityModules.TabIndex = 13;
-            _btnPopulateNewSecurityModules.Text = "Populate New Security Modules";
-            _btnPopulateNewSecurityModules.UseVisualStyleBackColor = true;
-            //
-            // grpUserRegions
-            //
-            _grpUserRegions.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _grpUserRegions.Controls.Add(_dgUserRegions);
-            _grpUserRegions.FlatStyle = FlatStyle.System;
-            _grpUserRegions.Location = new Point(328, 290);
-            _grpUserRegions.Name = "grpUserRegions";
-            _grpUserRegions.Size = new Size(459, 208);
-            _grpUserRegions.TabIndex = 13;
-            _grpUserRegions.TabStop = false;
-            _grpUserRegions.Text = "User Regions";
-            //
-            // dgUserRegions
-            //
-            _dgUserRegions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgUserRegions.DataMember = "";
-            _dgUserRegions.HeaderForeColor = SystemColors.ControlText;
-            _dgUserRegions.Location = new Point(8, 20);
-            _dgUserRegions.Name = "dgUserRegions";
-            _dgUserRegions.Size = new Size(443, 180);
-            _dgUserRegions.TabIndex = 2;
-            //
+            this._grpUsers = new System.Windows.Forms.GroupBox();
+            this._dgUsers = new System.Windows.Forms.DataGrid();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._grpDetails = new System.Windows.Forms.GroupBox();
+            this._cboDEG = new System.Windows.Forms.ComboBox();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._chkSDV = new System.Windows.Forms.CheckBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._txtEmailAddress = new System.Windows.Forms.TextBox();
+            this._chkAdmin = new System.Windows.Forms.CheckBox();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._txtConfirm = new System.Windows.Forms.TextBox();
+            this._txtPassword = new System.Windows.Forms.TextBox();
+            this._txtUserName = new System.Windows.Forms.TextBox();
+            this._chkEnabled = new System.Windows.Forms.CheckBox();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtFullName = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dgSecurityUserModules = new System.Windows.Forms.DataGrid();
+            this._btnPopulateNewSecurityModules = new System.Windows.Forms.Button();
+            this._grpUserRegions = new System.Windows.Forms.GroupBox();
+            this._dgUserRegions = new System.Windows.Forms.DataGrid();
+            this._grpUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgUsers)).BeginInit();
+            this._grpDetails.SuspendLayout();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSecurityUserModules)).BeginInit();
+            this._grpUserRegions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgUserRegions)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpUsers
+            // 
+            this._grpUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpUsers.Controls.Add(this._dgUsers);
+            this._grpUsers.Controls.Add(this._btnAddNew);
+            this._grpUsers.Controls.Add(this._btnDelete);
+            this._grpUsers.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpUsers.Location = new System.Drawing.Point(8, 12);
+            this._grpUsers.Name = "_grpUsers";
+            this._grpUsers.Size = new System.Drawing.Size(312, 575);
+            this._grpUsers.TabIndex = 6;
+            this._grpUsers.TabStop = false;
+            this._grpUsers.Text = "Users";
+            // 
+            // _dgUsers
+            // 
+            this._dgUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgUsers.DataMember = "";
+            this._dgUsers.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgUsers.Location = new System.Drawing.Point(8, 57);
+            this._dgUsers.Name = "_dgUsers";
+            this._dgUsers.Size = new System.Drawing.Size(296, 510);
+            this._dgUsers.TabIndex = 2;
+            this._dgUsers.CurrentCellChanged += new System.EventHandler(this.dgUsers_Click);
+            this._dgUsers.Click += new System.EventHandler(this.dgUsers_Click);
+            // 
+            // _btnAddNew
+            // 
+            this._btnAddNew.AccessibleDescription = "Add new user";
+            this._btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAddNew.Location = new System.Drawing.Point(8, 24);
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.Size = new System.Drawing.Size(48, 23);
+            this._btnAddNew.TabIndex = 1;
+            this._btnAddNew.Text = "New";
+            this._btnAddNew.UseVisualStyleBackColor = true;
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // _btnDelete
+            // 
+            this._btnDelete.AccessibleDescription = "Delete user";
+            this._btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnDelete.Location = new System.Drawing.Point(62, 24);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(59, 23);
+            this._btnDelete.TabIndex = 3;
+            this._btnDelete.Text = "Delete";
+            this._btnDelete.UseVisualStyleBackColor = true;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // _grpDetails
+            // 
+            this._grpDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpDetails.Controls.Add(this._cboDEG);
+            this._grpDetails.Controls.Add(this._Label7);
+            this._grpDetails.Controls.Add(this._chkSDV);
+            this._grpDetails.Controls.Add(this._Label6);
+            this._grpDetails.Controls.Add(this._txtEmailAddress);
+            this._grpDetails.Controls.Add(this._chkAdmin);
+            this._grpDetails.Controls.Add(this._btnReset);
+            this._grpDetails.Controls.Add(this._txtConfirm);
+            this._grpDetails.Controls.Add(this._txtPassword);
+            this._grpDetails.Controls.Add(this._txtUserName);
+            this._grpDetails.Controls.Add(this._chkEnabled);
+            this._grpDetails.Controls.Add(this._Label4);
+            this._grpDetails.Controls.Add(this._Label3);
+            this._grpDetails.Controls.Add(this._Label1);
+            this._grpDetails.Controls.Add(this._txtFullName);
+            this._grpDetails.Controls.Add(this._Label2);
+            this._grpDetails.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpDetails.Location = new System.Drawing.Point(328, 12);
+            this._grpDetails.Name = "_grpDetails";
+            this._grpDetails.Size = new System.Drawing.Size(457, 272);
+            this._grpDetails.TabIndex = 8;
+            this._grpDetails.TabStop = false;
+            this._grpDetails.Text = "Details";
+            // 
+            // _cboDEG
+            // 
+            this._cboDEG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboDEG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboDEG.Location = new System.Drawing.Point(127, 208);
+            this._cboDEG.Name = "_cboDEG";
+            this._cboDEG.Size = new System.Drawing.Size(324, 21);
+            this._cboDEG.TabIndex = 20;
+            // 
+            // _Label7
+            // 
+            this._Label7.AutoSize = true;
+            this._Label7.Location = new System.Drawing.Point(9, 211);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(112, 13);
+            this._Label7.TabIndex = 19;
+            this._Label7.Text = "Default Eng Group";
+            // 
+            // _chkSDV
+            // 
+            this._chkSDV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._chkSDV.Location = new System.Drawing.Point(300, 150);
+            this._chkSDV.Name = "_chkSDV";
+            this._chkSDV.Size = new System.Drawing.Size(149, 24);
+            this._chkSDV.TabIndex = 17;
+            this._chkSDV.Text = "Scheduler Day View";
+            // 
+            // _Label6
+            // 
+            this._Label6.AutoSize = true;
+            this._Label6.Location = new System.Drawing.Point(9, 184);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(38, 13);
+            this._Label6.TabIndex = 16;
+            this._Label6.Text = "Email";
+            // 
+            // _txtEmailAddress
+            // 
+            this._txtEmailAddress.Location = new System.Drawing.Point(127, 181);
+            this._txtEmailAddress.Name = "_txtEmailAddress";
+            this._txtEmailAddress.Size = new System.Drawing.Size(322, 21);
+            this._txtEmailAddress.TabIndex = 15;
+            // 
+            // _chkAdmin
+            // 
+            this._chkAdmin.Location = new System.Drawing.Point(182, 151);
+            this._chkAdmin.Name = "_chkAdmin";
+            this._chkAdmin.Size = new System.Drawing.Size(63, 24);
+            this._chkAdmin.TabIndex = 14;
+            this._chkAdmin.Text = "Admin";
+            // 
+            // _btnReset
+            // 
+            this._btnReset.AccessibleDescription = "Reset the users password";
+            this._btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnReset.Location = new System.Drawing.Point(399, 86);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(48, 23);
+            this._btnReset.TabIndex = 7;
+            this._btnReset.Text = "Reset";
+            this._btnReset.UseVisualStyleBackColor = true;
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // _txtConfirm
+            // 
+            this._txtConfirm.Location = new System.Drawing.Point(127, 120);
+            this._txtConfirm.MaxLength = 50;
+            this._txtConfirm.Name = "_txtConfirm";
+            this._txtConfirm.PasswordChar = '*';
+            this._txtConfirm.Size = new System.Drawing.Size(322, 21);
+            this._txtConfirm.TabIndex = 8;
+            // 
+            // _txtPassword
+            // 
+            this._txtPassword.Location = new System.Drawing.Point(127, 88);
+            this._txtPassword.MaxLength = 50;
+            this._txtPassword.Name = "_txtPassword";
+            this._txtPassword.PasswordChar = '*';
+            this._txtPassword.Size = new System.Drawing.Size(266, 21);
+            this._txtPassword.TabIndex = 6;
+            // 
+            // _txtUserName
+            // 
+            this._txtUserName.Location = new System.Drawing.Point(127, 56);
+            this._txtUserName.MaxLength = 50;
+            this._txtUserName.Name = "_txtUserName";
+            this._txtUserName.Size = new System.Drawing.Size(322, 21);
+            this._txtUserName.TabIndex = 5;
+            // 
+            // _chkEnabled
+            // 
+            this._chkEnabled.Checked = true;
+            this._chkEnabled.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._chkEnabled.Location = new System.Drawing.Point(12, 150);
+            this._chkEnabled.Name = "_chkEnabled";
+            this._chkEnabled.Size = new System.Drawing.Size(113, 24);
+            this._chkEnabled.TabIndex = 10;
+            this._chkEnabled.Text = "Logon Enabled";
+            // 
+            // _Label4
+            // 
+            this._Label4.Location = new System.Drawing.Point(8, 120);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 16);
+            this._Label4.TabIndex = 10;
+            this._Label4.Text = "Confirm";
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(8, 88);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(64, 16);
+            this._Label3.TabIndex = 9;
+            this._Label3.Text = "Password";
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(8, 56);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(74, 16);
+            this._Label1.TabIndex = 8;
+            this._Label1.Text = "Username";
+            // 
+            // _txtFullName
+            // 
+            this._txtFullName.Location = new System.Drawing.Point(127, 24);
+            this._txtFullName.MaxLength = 255;
+            this._txtFullName.Name = "_txtFullName";
+            this._txtFullName.Size = new System.Drawing.Size(322, 21);
+            this._txtFullName.TabIndex = 4;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(8, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(64, 16);
+            this._Label2.TabIndex = 5;
+            this._Label2.Text = "Full Name";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.AccessibleDescription = "Save user details";
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnSave.Location = new System.Drawing.Point(737, 564);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(48, 23);
+            this._btnSave.TabIndex = 11;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dgSecurityUserModules);
+            this._GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._GroupBox1.Location = new System.Drawing.Point(326, 504);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(459, 54);
+            this._GroupBox1.TabIndex = 12;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Module Access";
+            // 
+            // _dgSecurityUserModules
+            // 
+            this._dgSecurityUserModules.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgSecurityUserModules.DataMember = "";
+            this._dgSecurityUserModules.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSecurityUserModules.Location = new System.Drawing.Point(8, 20);
+            this._dgSecurityUserModules.Name = "_dgSecurityUserModules";
+            this._dgSecurityUserModules.Size = new System.Drawing.Size(443, 26);
+            this._dgSecurityUserModules.TabIndex = 2;
+            this._dgSecurityUserModules.Click += new System.EventHandler(this.dgSecurityUserModules_Click);
+            // 
+            // _btnPopulateNewSecurityModules
+            // 
+            this._btnPopulateNewSecurityModules.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnPopulateNewSecurityModules.Location = new System.Drawing.Point(536, 564);
+            this._btnPopulateNewSecurityModules.Name = "_btnPopulateNewSecurityModules";
+            this._btnPopulateNewSecurityModules.Size = new System.Drawing.Size(195, 23);
+            this._btnPopulateNewSecurityModules.TabIndex = 13;
+            this._btnPopulateNewSecurityModules.Text = "Populate New Security Modules";
+            this._btnPopulateNewSecurityModules.UseVisualStyleBackColor = true;
+            this._btnPopulateNewSecurityModules.Click += new System.EventHandler(this.btnPopulateNewSecurityModules_Click);
+            // 
+            // _grpUserRegions
+            // 
+            this._grpUserRegions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpUserRegions.Controls.Add(this._dgUserRegions);
+            this._grpUserRegions.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpUserRegions.Location = new System.Drawing.Point(328, 290);
+            this._grpUserRegions.Name = "_grpUserRegions";
+            this._grpUserRegions.Size = new System.Drawing.Size(459, 208);
+            this._grpUserRegions.TabIndex = 13;
+            this._grpUserRegions.TabStop = false;
+            this._grpUserRegions.Text = "User Regions";
+            // 
+            // _dgUserRegions
+            // 
+            this._dgUserRegions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgUserRegions.DataMember = "";
+            this._dgUserRegions.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgUserRegions.Location = new System.Drawing.Point(8, 20);
+            this._dgUserRegions.Name = "_dgUserRegions";
+            this._dgUserRegions.Size = new System.Drawing.Size(443, 180);
+            this._dgUserRegions.TabIndex = 2;
+            this._dgUserRegions.Click += new System.EventHandler(this.dgUserRegions_Click);
+            // 
             // FRMUsers
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(793, 593);
-            Controls.Add(_grpUserRegions);
-            Controls.Add(_btnPopulateNewSecurityModules);
-            Controls.Add(_GroupBox1);
-            Controls.Add(_grpDetails);
-            Controls.Add(_grpUsers);
-            Controls.Add(_btnSave);
-            MinimumSize = new Size(800, 576);
-            Name = "FRMUsers";
-            Text = "Users";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_grpUsers, 0);
-            Controls.SetChildIndex(_grpDetails, 0);
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_btnPopulateNewSecurityModules, 0);
-            Controls.SetChildIndex(_grpUserRegions, 0);
-            _grpUsers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgUsers).EndInit();
-            _grpDetails.ResumeLayout(false);
-            _grpDetails.PerformLayout();
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgSecurityUserModules).EndInit();
-            _grpUserRegions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgUserRegions).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(793, 593);
+            this.Controls.Add(this._grpUserRegions);
+            this.Controls.Add(this._btnPopulateNewSecurityModules);
+            this.Controls.Add(this._GroupBox1);
+            this.Controls.Add(this._grpDetails);
+            this.Controls.Add(this._grpUsers);
+            this.Controls.Add(this._btnSave);
+            this.MinimumSize = new System.Drawing.Size(800, 576);
+            this.Name = "FRMUsers";
+            this.Text = "Users";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpUsers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgUsers)).EndInit();
+            this._grpDetails.ResumeLayout(false);
+            this._grpDetails.PerformLayout();
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgSecurityUserModules)).EndInit();
+            this._grpUserRegions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgUserRegions)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

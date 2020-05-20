@@ -37,56 +37,57 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _txtAdditionalNotes = new TextBox();
-            _GroupBox1.SuspendLayout();
-            SuspendLayout();
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._txtAdditionalNotes = new System.Windows.Forms.TextBox();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._GroupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // GroupBox1
+            // _GroupBox1
             // 
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_txtAdditionalNotes);
-            _GroupBox1.Controls.Add(_btnSave);
-            _GroupBox1.Location = new Point(12, 38);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(504, 118);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Please Detail Additional Access/Appointment Info";
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._txtAdditionalNotes);
+            this._GroupBox1.Controls.Add(this._btnSave);
+            this._GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(504, 144);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Please Detail Additional Access/Appointment Info";
             // 
-            // btnSave
+            // _txtAdditionalNotes
             // 
-            _btnSave.Location = new Point(423, 89);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(75, 23);
-            _btnSave.TabIndex = 3;
-            _btnSave.Text = "Save";
-            _btnSave.UseVisualStyleBackColor = true;
+            this._txtAdditionalNotes.Location = new System.Drawing.Point(6, 20);
+            this._txtAdditionalNotes.Multiline = true;
+            this._txtAdditionalNotes.Name = "_txtAdditionalNotes";
+            this._txtAdditionalNotes.Size = new System.Drawing.Size(492, 89);
+            this._txtAdditionalNotes.TabIndex = 4;
             // 
-            // txtAdditionalNotes
+            // _btnSave
             // 
-            _txtAdditionalNotes.Location = new Point(6, 20);
-            _txtAdditionalNotes.Multiline = true;
-            _txtAdditionalNotes.Name = "txtAdditionalNotes";
-            _txtAdditionalNotes.Size = new Size(492, 49);
-            _txtAdditionalNotes.TabIndex = 4;
+            this._btnSave.Location = new System.Drawing.Point(423, 115);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(75, 23);
+            this._btnSave.TabIndex = 3;
+            this._btnSave.Text = "Save";
+            this._btnSave.UseVisualStyleBackColor = true;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmAdditionalNotes
             // 
-            AutoScaleDimensions = new SizeF(7.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(528, 168);
-            Controls.Add(_GroupBox1);
-            Name = "FrmAdditionalNotes";
-            Text = "Add Access/Appointment Info";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            _GroupBox1.ResumeLayout(false);
-            _GroupBox1.PerformLayout();
-            Load += new EventHandler(FRMLastServiceDate_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(528, 168);
+            this.Controls.Add(this._GroupBox1);
+            this.Name = "FrmAdditionalNotes";
+            this.Text = "Add Access/Appointment Info";
+            this.Load += new System.EventHandler(this.FRMLastServiceDate_Load);
+            this._GroupBox1.ResumeLayout(false);
+            this._GroupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         private GroupBox _GroupBox1;

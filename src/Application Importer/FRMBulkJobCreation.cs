@@ -417,319 +417,320 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpExcelFile = new GroupBox();
-            _lblVisitDate = new Label();
-            _dtpVisitDate = new DateTimePicker();
-            _txtEngineer = new TextBox();
-            _btnFindEngineer = new Button();
-            _btnFindEngineer.Click += new EventHandler(btnFindEngineer_Click);
-            _lblEngineer = new Label();
-            _txtCustomer = new TextBox();
-            _btnFindCustomer = new Button();
-            _btnFindCustomer.Click += new EventHandler(btnFindCustomer_Click);
-            _lblCustomer = new Label();
-            _cboJobType = new ComboBox();
-            _lblJobType = new Label();
-            _lblFile = new Label();
-            _btnImport = new Button();
-            _btnImport.Click += new EventHandler(btnImport_Click);
-            _btnFindExcelFile = new Button();
-            _btnFindExcelFile.Click += new EventHandler(btnFindExcelFile_Click);
-            _txtExcelFile = new TextBox();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pbStatus = new ProgressBar();
-            _lblProgress = new Label();
-            _lblMessages = new Label();
-            _grpFailedImports = new GroupBox();
-            _dgFailedImports = new DataGrid();
-            _btnExportFailed = new Button();
-            _btnExportFailed.Click += new EventHandler(btnExportFailed_Click);
-            _lblVisitNotes = new Label();
-            _txtNotes = new RichTextBox();
-            _grpExcelFile.SuspendLayout();
-            _grpFailedImports.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgFailedImports).BeginInit();
-            SuspendLayout();
-            //
-            // grpExcelFile
-            //
-            _grpExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpExcelFile.Controls.Add(_txtNotes);
-            _grpExcelFile.Controls.Add(_lblVisitNotes);
-            _grpExcelFile.Controls.Add(_lblVisitDate);
-            _grpExcelFile.Controls.Add(_dtpVisitDate);
-            _grpExcelFile.Controls.Add(_txtEngineer);
-            _grpExcelFile.Controls.Add(_btnFindEngineer);
-            _grpExcelFile.Controls.Add(_lblEngineer);
-            _grpExcelFile.Controls.Add(_txtCustomer);
-            _grpExcelFile.Controls.Add(_btnFindCustomer);
-            _grpExcelFile.Controls.Add(_lblCustomer);
-            _grpExcelFile.Controls.Add(_cboJobType);
-            _grpExcelFile.Controls.Add(_lblJobType);
-            _grpExcelFile.Controls.Add(_lblFile);
-            _grpExcelFile.Controls.Add(_btnImport);
-            _grpExcelFile.Controls.Add(_btnFindExcelFile);
-            _grpExcelFile.Controls.Add(_txtExcelFile);
-            _grpExcelFile.FlatStyle = FlatStyle.System;
-            _grpExcelFile.Location = new Point(8, 40);
-            _grpExcelFile.Name = "grpExcelFile";
-            _grpExcelFile.Size = new Size(896, 159);
-            _grpExcelFile.TabIndex = 3;
-            _grpExcelFile.TabStop = false;
-            _grpExcelFile.Text = "Select data file to import";
-            //
-            // lblVisitDate
-            //
-            _lblVisitDate.AutoSize = true;
-            _lblVisitDate.Location = new Point(9, 60);
-            _lblVisitDate.Name = "lblVisitDate";
-            _lblVisitDate.Size = new Size(67, 13);
-            _lblVisitDate.TabIndex = 45;
-            _lblVisitDate.Text = "Visit Date:";
-            //
-            // dtpVisitDate
-            //
-            _dtpVisitDate.Location = new Point(89, 54);
-            _dtpVisitDate.Name = "dtpVisitDate";
-            _dtpVisitDate.Size = new Size(151, 21);
-            _dtpVisitDate.TabIndex = 44;
-            //
-            // txtEngineer
-            //
-            _txtEngineer.Location = new Point(324, 54);
-            _txtEngineer.Name = "txtEngineer";
-            _txtEngineer.ReadOnly = true;
-            _txtEngineer.Size = new Size(168, 21);
-            _txtEngineer.TabIndex = 43;
-            //
-            // btnFindEngineer
-            //
-            _btnFindEngineer.Location = new Point(498, 54);
-            _btnFindEngineer.Name = "btnFindEngineer";
-            _btnFindEngineer.Size = new Size(32, 23);
-            _btnFindEngineer.TabIndex = 42;
-            _btnFindEngineer.Text = "...";
-            _btnFindEngineer.UseVisualStyleBackColor = true;
-            //
-            // lblEngineer
-            //
-            _lblEngineer.AutoSize = true;
-            _lblEngineer.Location = new Point(256, 59);
-            _lblEngineer.Name = "lblEngineer";
-            _lblEngineer.Size = new Size(62, 13);
-            _lblEngineer.TabIndex = 41;
-            _lblEngineer.Text = "Engineer:";
-            //
-            // txtCustomer
-            //
-            _txtCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtCustomer.Location = new Point(616, 56);
-            _txtCustomer.Name = "txtCustomer";
-            _txtCustomer.ReadOnly = true;
-            _txtCustomer.Size = new Size(236, 21);
-            _txtCustomer.TabIndex = 40;
-            //
-            // btnFindCustomer
-            //
-            _btnFindCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindCustomer.Location = new Point(858, 54);
-            _btnFindCustomer.Name = "btnFindCustomer";
-            _btnFindCustomer.Size = new Size(32, 23);
-            _btnFindCustomer.TabIndex = 39;
-            _btnFindCustomer.Text = "...";
-            _btnFindCustomer.UseVisualStyleBackColor = true;
-            //
-            // lblCustomer
-            //
-            _lblCustomer.AutoSize = true;
-            _lblCustomer.Location = new Point(536, 59);
-            _lblCustomer.Name = "lblCustomer";
-            _lblCustomer.Size = new Size(74, 13);
-            _lblCustomer.TabIndex = 38;
-            _lblCustomer.Text = "Customers:";
-            //
-            // cboJobType
-            //
-            _cboJobType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _cboJobType.Cursor = Cursors.Hand;
-            _cboJobType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboJobType.Location = new Point(653, 20);
-            _cboJobType.Name = "cboJobType";
-            _cboJobType.Size = new Size(158, 21);
-            _cboJobType.TabIndex = 35;
-            _cboJobType.Tag = "Site.RegionID";
-            //
-            // lblJobType
-            //
-            _lblJobType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _lblJobType.AutoSize = true;
-            _lblJobType.Location = new Point(585, 23);
-            _lblJobType.Name = "lblJobType";
-            _lblJobType.Size = new Size(62, 13);
-            _lblJobType.TabIndex = 19;
-            _lblJobType.Text = "Job Type:";
-            //
-            // lblFile
-            //
-            _lblFile.AutoSize = true;
-            _lblFile.Location = new Point(6, 23);
-            _lblFile.Name = "lblFile";
-            _lblFile.Size = new Size(31, 13);
-            _lblFile.TabIndex = 13;
-            _lblFile.Text = "File:";
-            //
-            // btnImport
-            //
-            _btnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnImport.Enabled = false;
-            _btnImport.FlatStyle = FlatStyle.System;
-            _btnImport.Location = new Point(826, 18);
-            _btnImport.Name = "btnImport";
-            _btnImport.Size = new Size(64, 23);
-            _btnImport.TabIndex = 7;
-            _btnImport.Text = "Import";
-            //
-            // btnFindExcelFile
-            //
-            _btnFindExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _btnFindExcelFile.FlatStyle = FlatStyle.System;
-            _btnFindExcelFile.Location = new Point(539, 18);
-            _btnFindExcelFile.Name = "btnFindExcelFile";
-            _btnFindExcelFile.Size = new Size(32, 23);
-            _btnFindExcelFile.TabIndex = 5;
-            _btnFindExcelFile.Text = "...";
-            //
-            // txtExcelFile
-            //
-            _txtExcelFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtExcelFile.Location = new Point(43, 20);
-            _txtExcelFile.Name = "txtExcelFile";
-            _txtExcelFile.ReadOnly = true;
-            _txtExcelFile.Size = new Size(487, 21);
-            _txtExcelFile.TabIndex = 4;
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnClose.FlatStyle = FlatStyle.System;
-            _btnClose.Location = new Point(848, 624);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 23);
-            _btnClose.TabIndex = 9;
-            _btnClose.Text = "Close";
-            //
-            // pbStatus
-            //
-            _pbStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _pbStatus.Location = new Point(8, 624);
-            _pbStatus.Name = "pbStatus";
-            _pbStatus.Size = new Size(784, 23);
-            _pbStatus.Step = 1;
-            _pbStatus.TabIndex = 10;
-            //
-            // lblProgress
-            //
-            _lblProgress.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _lblProgress.Location = new Point(800, 627);
-            _lblProgress.Name = "lblProgress";
-            _lblProgress.Size = new Size(40, 16);
-            _lblProgress.TabIndex = 11;
-            _lblProgress.Text = "0%";
-            _lblProgress.TextAlign = ContentAlignment.MiddleRight;
-            //
-            // lblMessages
-            //
-            _lblMessages.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _lblMessages.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblMessages.ForeColor = Color.Red;
-            _lblMessages.Location = new Point(5, 595);
-            _lblMessages.Name = "lblMessages";
-            _lblMessages.Size = new Size(787, 19);
-            _lblMessages.TabIndex = 12;
-            _lblMessages.TextAlign = ContentAlignment.MiddleLeft;
-            _lblMessages.Visible = false;
-            //
-            // grpFailedImports
-            //
-            _grpFailedImports.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpFailedImports.Controls.Add(_dgFailedImports);
-            _grpFailedImports.FlatStyle = FlatStyle.System;
-            _grpFailedImports.Location = new Point(8, 205);
-            _grpFailedImports.Name = "grpFailedImports";
-            _grpFailedImports.Size = new Size(896, 377);
-            _grpFailedImports.TabIndex = 15;
-            _grpFailedImports.TabStop = false;
-            _grpFailedImports.Text = "Failed Jobs";
-            //
-            // dgFailedImports
-            //
-            _dgFailedImports.DataMember = "";
-            _dgFailedImports.Dock = DockStyle.Fill;
-            _dgFailedImports.HeaderForeColor = SystemColors.ControlText;
-            _dgFailedImports.Location = new Point(3, 17);
-            _dgFailedImports.Name = "dgFailedImports";
-            _dgFailedImports.Size = new Size(890, 357);
-            _dgFailedImports.TabIndex = 45;
-            //
-            // btnExportFailed
-            //
-            _btnExportFailed.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnExportFailed.FlatStyle = FlatStyle.System;
-            _btnExportFailed.Location = new Point(800, 593);
-            _btnExportFailed.Name = "btnExportFailed";
-            _btnExportFailed.Size = new Size(104, 23);
-            _btnExportFailed.TabIndex = 16;
-            _btnExportFailed.Text = "Export Failures";
-            _btnExportFailed.Visible = false;
-            //
-            // lblVisitNotes
-            //
-            _lblVisitNotes.AutoSize = true;
-            _lblVisitNotes.Location = new Point(9, 97);
-            _lblVisitNotes.Name = "lblVisitNotes";
-            _lblVisitNotes.Size = new Size(72, 13);
-            _lblVisitNotes.TabIndex = 46;
-            _lblVisitNotes.Text = "Visit Notes:";
-            //
-            // txtNotes
-            //
-            _txtNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _txtNotes.Location = new Point(89, 94);
-            _txtNotes.Name = "txtNotes";
-            _txtNotes.Size = new Size(801, 50);
-            _txtNotes.TabIndex = 47;
-            _txtNotes.Text = "";
-            //
+            this._grpExcelFile = new System.Windows.Forms.GroupBox();
+            this._txtNotes = new System.Windows.Forms.RichTextBox();
+            this._lblVisitNotes = new System.Windows.Forms.Label();
+            this._lblVisitDate = new System.Windows.Forms.Label();
+            this._dtpVisitDate = new System.Windows.Forms.DateTimePicker();
+            this._txtEngineer = new System.Windows.Forms.TextBox();
+            this._btnFindEngineer = new System.Windows.Forms.Button();
+            this._lblEngineer = new System.Windows.Forms.Label();
+            this._txtCustomer = new System.Windows.Forms.TextBox();
+            this._btnFindCustomer = new System.Windows.Forms.Button();
+            this._lblCustomer = new System.Windows.Forms.Label();
+            this._cboJobType = new System.Windows.Forms.ComboBox();
+            this._lblJobType = new System.Windows.Forms.Label();
+            this._lblFile = new System.Windows.Forms.Label();
+            this._btnImport = new System.Windows.Forms.Button();
+            this._btnFindExcelFile = new System.Windows.Forms.Button();
+            this._txtExcelFile = new System.Windows.Forms.TextBox();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pbStatus = new System.Windows.Forms.ProgressBar();
+            this._lblProgress = new System.Windows.Forms.Label();
+            this._lblMessages = new System.Windows.Forms.Label();
+            this._grpFailedImports = new System.Windows.Forms.GroupBox();
+            this._dgFailedImports = new System.Windows.Forms.DataGrid();
+            this._btnExportFailed = new System.Windows.Forms.Button();
+            this._grpExcelFile.SuspendLayout();
+            this._grpFailedImports.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgFailedImports)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpExcelFile
+            // 
+            this._grpExcelFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpExcelFile.Controls.Add(this._txtNotes);
+            this._grpExcelFile.Controls.Add(this._lblVisitNotes);
+            this._grpExcelFile.Controls.Add(this._lblVisitDate);
+            this._grpExcelFile.Controls.Add(this._dtpVisitDate);
+            this._grpExcelFile.Controls.Add(this._txtEngineer);
+            this._grpExcelFile.Controls.Add(this._btnFindEngineer);
+            this._grpExcelFile.Controls.Add(this._lblEngineer);
+            this._grpExcelFile.Controls.Add(this._txtCustomer);
+            this._grpExcelFile.Controls.Add(this._btnFindCustomer);
+            this._grpExcelFile.Controls.Add(this._lblCustomer);
+            this._grpExcelFile.Controls.Add(this._cboJobType);
+            this._grpExcelFile.Controls.Add(this._lblJobType);
+            this._grpExcelFile.Controls.Add(this._lblFile);
+            this._grpExcelFile.Controls.Add(this._btnImport);
+            this._grpExcelFile.Controls.Add(this._btnFindExcelFile);
+            this._grpExcelFile.Controls.Add(this._txtExcelFile);
+            this._grpExcelFile.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpExcelFile.Location = new System.Drawing.Point(8, 12);
+            this._grpExcelFile.Name = "_grpExcelFile";
+            this._grpExcelFile.Size = new System.Drawing.Size(896, 187);
+            this._grpExcelFile.TabIndex = 3;
+            this._grpExcelFile.TabStop = false;
+            this._grpExcelFile.Text = "Select data file to import";
+            // 
+            // _txtNotes
+            // 
+            this._txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtNotes.Location = new System.Drawing.Point(89, 94);
+            this._txtNotes.Name = "_txtNotes";
+            this._txtNotes.Size = new System.Drawing.Size(801, 78);
+            this._txtNotes.TabIndex = 47;
+            this._txtNotes.Text = "";
+            // 
+            // _lblVisitNotes
+            // 
+            this._lblVisitNotes.AutoSize = true;
+            this._lblVisitNotes.Location = new System.Drawing.Point(9, 97);
+            this._lblVisitNotes.Name = "_lblVisitNotes";
+            this._lblVisitNotes.Size = new System.Drawing.Size(72, 13);
+            this._lblVisitNotes.TabIndex = 46;
+            this._lblVisitNotes.Text = "Visit Notes:";
+            // 
+            // _lblVisitDate
+            // 
+            this._lblVisitDate.AutoSize = true;
+            this._lblVisitDate.Location = new System.Drawing.Point(9, 60);
+            this._lblVisitDate.Name = "_lblVisitDate";
+            this._lblVisitDate.Size = new System.Drawing.Size(67, 13);
+            this._lblVisitDate.TabIndex = 45;
+            this._lblVisitDate.Text = "Visit Date:";
+            // 
+            // _dtpVisitDate
+            // 
+            this._dtpVisitDate.Location = new System.Drawing.Point(89, 54);
+            this._dtpVisitDate.Name = "_dtpVisitDate";
+            this._dtpVisitDate.Size = new System.Drawing.Size(151, 21);
+            this._dtpVisitDate.TabIndex = 44;
+            // 
+            // _txtEngineer
+            // 
+            this._txtEngineer.Location = new System.Drawing.Point(324, 54);
+            this._txtEngineer.Name = "_txtEngineer";
+            this._txtEngineer.ReadOnly = true;
+            this._txtEngineer.Size = new System.Drawing.Size(168, 21);
+            this._txtEngineer.TabIndex = 43;
+            // 
+            // _btnFindEngineer
+            // 
+            this._btnFindEngineer.Location = new System.Drawing.Point(498, 54);
+            this._btnFindEngineer.Name = "_btnFindEngineer";
+            this._btnFindEngineer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindEngineer.TabIndex = 42;
+            this._btnFindEngineer.Text = "...";
+            this._btnFindEngineer.UseVisualStyleBackColor = true;
+            this._btnFindEngineer.Click += new System.EventHandler(this.btnFindEngineer_Click);
+            // 
+            // _lblEngineer
+            // 
+            this._lblEngineer.AutoSize = true;
+            this._lblEngineer.Location = new System.Drawing.Point(256, 59);
+            this._lblEngineer.Name = "_lblEngineer";
+            this._lblEngineer.Size = new System.Drawing.Size(62, 13);
+            this._lblEngineer.TabIndex = 41;
+            this._lblEngineer.Text = "Engineer:";
+            // 
+            // _txtCustomer
+            // 
+            this._txtCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtCustomer.Location = new System.Drawing.Point(616, 56);
+            this._txtCustomer.Name = "_txtCustomer";
+            this._txtCustomer.ReadOnly = true;
+            this._txtCustomer.Size = new System.Drawing.Size(236, 21);
+            this._txtCustomer.TabIndex = 40;
+            // 
+            // _btnFindCustomer
+            // 
+            this._btnFindCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindCustomer.Location = new System.Drawing.Point(858, 54);
+            this._btnFindCustomer.Name = "_btnFindCustomer";
+            this._btnFindCustomer.Size = new System.Drawing.Size(32, 23);
+            this._btnFindCustomer.TabIndex = 39;
+            this._btnFindCustomer.Text = "...";
+            this._btnFindCustomer.UseVisualStyleBackColor = true;
+            this._btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
+            // 
+            // _lblCustomer
+            // 
+            this._lblCustomer.AutoSize = true;
+            this._lblCustomer.Location = new System.Drawing.Point(536, 59);
+            this._lblCustomer.Name = "_lblCustomer";
+            this._lblCustomer.Size = new System.Drawing.Size(74, 13);
+            this._lblCustomer.TabIndex = 38;
+            this._lblCustomer.Text = "Customers:";
+            // 
+            // _cboJobType
+            // 
+            this._cboJobType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboJobType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._cboJobType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboJobType.Location = new System.Drawing.Point(653, 20);
+            this._cboJobType.Name = "_cboJobType";
+            this._cboJobType.Size = new System.Drawing.Size(158, 21);
+            this._cboJobType.TabIndex = 35;
+            this._cboJobType.Tag = "Site.RegionID";
+            // 
+            // _lblJobType
+            // 
+            this._lblJobType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblJobType.AutoSize = true;
+            this._lblJobType.Location = new System.Drawing.Point(585, 23);
+            this._lblJobType.Name = "_lblJobType";
+            this._lblJobType.Size = new System.Drawing.Size(62, 13);
+            this._lblJobType.TabIndex = 19;
+            this._lblJobType.Text = "Job Type:";
+            // 
+            // _lblFile
+            // 
+            this._lblFile.AutoSize = true;
+            this._lblFile.Location = new System.Drawing.Point(6, 23);
+            this._lblFile.Name = "_lblFile";
+            this._lblFile.Size = new System.Drawing.Size(31, 13);
+            this._lblFile.TabIndex = 13;
+            this._lblFile.Text = "File:";
+            // 
+            // _btnImport
+            // 
+            this._btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnImport.Enabled = false;
+            this._btnImport.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._btnImport.Location = new System.Drawing.Point(826, 18);
+            this._btnImport.Name = "_btnImport";
+            this._btnImport.Size = new System.Drawing.Size(64, 23);
+            this._btnImport.TabIndex = 7;
+            this._btnImport.Text = "Import";
+            this._btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // _btnFindExcelFile
+            // 
+            this._btnFindExcelFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnFindExcelFile.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._btnFindExcelFile.Location = new System.Drawing.Point(539, 18);
+            this._btnFindExcelFile.Name = "_btnFindExcelFile";
+            this._btnFindExcelFile.Size = new System.Drawing.Size(32, 23);
+            this._btnFindExcelFile.TabIndex = 5;
+            this._btnFindExcelFile.Text = "...";
+            this._btnFindExcelFile.Click += new System.EventHandler(this.btnFindExcelFile_Click);
+            // 
+            // _txtExcelFile
+            // 
+            this._txtExcelFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtExcelFile.Location = new System.Drawing.Point(43, 20);
+            this._txtExcelFile.Name = "_txtExcelFile";
+            this._txtExcelFile.ReadOnly = true;
+            this._txtExcelFile.Size = new System.Drawing.Size(487, 21);
+            this._txtExcelFile.TabIndex = 4;
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._btnClose.Location = new System.Drawing.Point(848, 624);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 23);
+            this._btnClose.TabIndex = 9;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pbStatus
+            // 
+            this._pbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pbStatus.Location = new System.Drawing.Point(8, 624);
+            this._pbStatus.Name = "_pbStatus";
+            this._pbStatus.Size = new System.Drawing.Size(784, 23);
+            this._pbStatus.Step = 1;
+            this._pbStatus.TabIndex = 10;
+            // 
+            // _lblProgress
+            // 
+            this._lblProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblProgress.Location = new System.Drawing.Point(800, 627);
+            this._lblProgress.Name = "_lblProgress";
+            this._lblProgress.Size = new System.Drawing.Size(40, 16);
+            this._lblProgress.TabIndex = 11;
+            this._lblProgress.Text = "0%";
+            this._lblProgress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _lblMessages
+            // 
+            this._lblMessages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblMessages.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblMessages.ForeColor = System.Drawing.Color.Red;
+            this._lblMessages.Location = new System.Drawing.Point(5, 595);
+            this._lblMessages.Name = "_lblMessages";
+            this._lblMessages.Size = new System.Drawing.Size(787, 19);
+            this._lblMessages.TabIndex = 12;
+            this._lblMessages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._lblMessages.Visible = false;
+            // 
+            // _grpFailedImports
+            // 
+            this._grpFailedImports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFailedImports.Controls.Add(this._dgFailedImports);
+            this._grpFailedImports.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._grpFailedImports.Location = new System.Drawing.Point(8, 205);
+            this._grpFailedImports.Name = "_grpFailedImports";
+            this._grpFailedImports.Size = new System.Drawing.Size(896, 377);
+            this._grpFailedImports.TabIndex = 15;
+            this._grpFailedImports.TabStop = false;
+            this._grpFailedImports.Text = "Failed Jobs";
+            // 
+            // _dgFailedImports
+            // 
+            this._dgFailedImports.DataMember = "";
+            this._dgFailedImports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dgFailedImports.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgFailedImports.Location = new System.Drawing.Point(3, 17);
+            this._dgFailedImports.Name = "_dgFailedImports";
+            this._dgFailedImports.Size = new System.Drawing.Size(890, 357);
+            this._dgFailedImports.TabIndex = 45;
+            // 
+            // _btnExportFailed
+            // 
+            this._btnExportFailed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnExportFailed.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._btnExportFailed.Location = new System.Drawing.Point(800, 593);
+            this._btnExportFailed.Name = "_btnExportFailed";
+            this._btnExportFailed.Size = new System.Drawing.Size(104, 23);
+            this._btnExportFailed.TabIndex = 16;
+            this._btnExportFailed.Text = "Export Failures";
+            this._btnExportFailed.Visible = false;
+            this._btnExportFailed.Click += new System.EventHandler(this.btnExportFailed_Click);
+            // 
             // FRMBulkJobCreation
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(912, 654);
-            Controls.Add(_btnExportFailed);
-            Controls.Add(_grpFailedImports);
-            Controls.Add(_lblMessages);
-            Controls.Add(_lblProgress);
-            Controls.Add(_pbStatus);
-            Controls.Add(_btnClose);
-            Controls.Add(_grpExcelFile);
-            MinimumSize = new Size(920, 688);
-            Name = "FRMBulkJobCreation";
-            Text = "Bulk Create Jobs";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_grpExcelFile, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_pbStatus, 0);
-            Controls.SetChildIndex(_lblProgress, 0);
-            Controls.SetChildIndex(_lblMessages, 0);
-            Controls.SetChildIndex(_grpFailedImports, 0);
-            Controls.SetChildIndex(_btnExportFailed, 0);
-            _grpExcelFile.ResumeLayout(false);
-            _grpExcelFile.PerformLayout();
-            _grpFailedImports.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgFailedImports).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(912, 654);
+            this.Controls.Add(this._btnExportFailed);
+            this.Controls.Add(this._grpFailedImports);
+            this.Controls.Add(this._lblMessages);
+            this.Controls.Add(this._lblProgress);
+            this.Controls.Add(this._pbStatus);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._grpExcelFile);
+            this.MinimumSize = new System.Drawing.Size(920, 688);
+            this.Name = "FRMBulkJobCreation";
+            this.Text = "Bulk Create Jobs";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpExcelFile.ResumeLayout(false);
+            this._grpExcelFile.PerformLayout();
+            this._grpFailedImports.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgFailedImports)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public IUserControl LoadedControl

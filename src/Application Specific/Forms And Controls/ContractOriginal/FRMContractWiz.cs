@@ -151,87 +151,84 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _pnlMain = new Panel();
-            _Button1 = new Button();
-            _Button1.Click += new EventHandler(Button1_Click);
-            _btnReprintExpiry = new Button();
-            _btnReprintExpiry.Click += new EventHandler(btnReprintExpiry_Click);
-            SuspendLayout();
-            //
-            // btnSave
-            //
-            _btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnSave.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnSave.Location = new Point(905, 734);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(171, 25);
-            _btnSave.TabIndex = 2;
-            _btnSave.Text = "Create Contract";
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnClose.Location = new Point(12, 734);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(56, 25);
-            _btnClose.TabIndex = 3;
-            _btnClose.Text = "Close";
-            //
-            // pnlMain
-            //
-            _pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _pnlMain.Location = new Point(0, 32);
-            _pnlMain.Name = "pnlMain";
-            _pnlMain.Size = new Size(1076, 693);
-            _pnlMain.TabIndex = 1;
-            //
-            // Button1
-            //
-            _Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _Button1.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Button1.Location = new Point(714, 734);
-            _Button1.Name = "Button1";
-            _Button1.Size = new Size(171, 25);
-            _Button1.TabIndex = 4;
-            _Button1.Text = "Print Documentation";
-            //
-            // btnReprintExpiry
-            //
-            _btnReprintExpiry.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReprintExpiry.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnReprintExpiry.Location = new Point(522, 731);
-            _btnReprintExpiry.Name = "btnReprintExpiry";
-            _btnReprintExpiry.Size = new Size(171, 25);
-            _btnReprintExpiry.TabIndex = 5;
-            _btnReprintExpiry.Text = "Print Expiry";
-            //
+            this._btnSave = new System.Windows.Forms.Button();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._pnlMain = new System.Windows.Forms.Panel();
+            this._Button1 = new System.Windows.Forms.Button();
+            this._btnReprintExpiry = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnSave.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnSave.Location = new System.Drawing.Point(905, 734);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(171, 25);
+            this._btnSave.TabIndex = 2;
+            this._btnSave.Text = "Create Contract";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnClose.Location = new System.Drawing.Point(12, 734);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(56, 25);
+            this._btnClose.TabIndex = 3;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _pnlMain
+            // 
+            this._pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._pnlMain.Location = new System.Drawing.Point(0, 12);
+            this._pnlMain.Name = "_pnlMain";
+            this._pnlMain.Size = new System.Drawing.Size(1076, 713);
+            this._pnlMain.TabIndex = 1;
+            // 
+            // _Button1
+            // 
+            this._Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._Button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Button1.Location = new System.Drawing.Point(714, 734);
+            this._Button1.Name = "_Button1";
+            this._Button1.Size = new System.Drawing.Size(171, 25);
+            this._Button1.TabIndex = 4;
+            this._Button1.Text = "Print Documentation";
+            this._Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // _btnReprintExpiry
+            // 
+            this._btnReprintExpiry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReprintExpiry.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnReprintExpiry.Location = new System.Drawing.Point(522, 731);
+            this._btnReprintExpiry.Name = "_btnReprintExpiry";
+            this._btnReprintExpiry.Size = new System.Drawing.Size(171, 25);
+            this._btnReprintExpiry.TabIndex = 5;
+            this._btnReprintExpiry.Text = "Print Expiry";
+            this._btnReprintExpiry.Click += new System.EventHandler(this.btnReprintExpiry_Click);
+            // 
             // FRMContractWiz
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1084, 771);
-            Controls.Add(_btnReprintExpiry);
-            Controls.Add(_Button1);
-            Controls.Add(_btnClose);
-            Controls.Add(_btnSave);
-            Controls.Add(_pnlMain);
-            MaximizeBox = false;
-            MaximumSize = new Size(1100, 810);
-            MinimizeBox = false;
-            MinimumSize = new Size(1100, 810);
-            Name = "FRMContractWiz";
-            Text = "Contract : ID {0}";
-            Controls.SetChildIndex(_pnlMain, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            Controls.SetChildIndex(_Button1, 0);
-            Controls.SetChildIndex(_btnReprintExpiry, 0);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1084, 771);
+            this.Controls.Add(this._btnReprintExpiry);
+            this.Controls.Add(this._Button1);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._pnlMain);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1100, 810);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1100, 810);
+            this.Name = "FRMContractWiz";
+            this.Text = "Contract : ID {0}";
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

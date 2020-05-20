@@ -327,281 +327,279 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpJobs = new GroupBox();
-            _dgTimesheets = new DataGrid();
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpFilter = new GroupBox();
-            _cboDept = new ComboBox();
-            _cboDept.SelectedIndexChanged += new EventHandler(cboDept_Changed);
-            _lblDept = new Label();
-            _btnClearAll = new Button();
-            _btnClearAll.Click += new EventHandler(btnClearAll_Click);
-            _btnSelectAll = new Button();
-            _btnSelectAll.Click += new EventHandler(btnSelectAll_Click);
-            _dgEngineers = new DataGrid();
-            _dgEngineers.Click += new EventHandler(dgEngineers_Clicks);
-            _dgEngineers.DoubleClick += new EventHandler(dgEngineers_Clicks);
-            _dgEngineers.Click += new EventHandler(dgEngineers_Clicks);
-            _dgEngineers.DoubleClick += new EventHandler(dgEngineers_Clicks);
-            _btnRunReport = new Button();
-            _btnRunReport.Click += new EventHandler(btnRunReport_Click);
-            _Label4 = new Label();
-            _dtpTo = new DateTimePicker();
-            _dtpFrom = new DateTimePicker();
-            _txtJobNumber = new TextBox();
-            _Label9 = new Label();
-            _Label8 = new Label();
-            _Label6 = new Label();
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _btnSummary = new Button();
-            _btnSummary.Click += new EventHandler(btnSummary_Click);
-            _grpJobs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgTimesheets).BeginInit();
-            _grpFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEngineers).BeginInit();
-            SuspendLayout();
-            //
-            // grpJobs
-            //
-            _grpJobs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpJobs.Controls.Add(_dgTimesheets);
-            _grpJobs.Location = new Point(8, 239);
-            _grpJobs.Name = "grpJobs";
-            _grpJobs.Size = new Size(844, 409);
-            _grpJobs.TabIndex = 2;
-            _grpJobs.TabStop = false;
-            _grpJobs.Text = "Double Click To View / Edit";
-            //
-            // dgTimesheets
-            //
-            _dgTimesheets.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgTimesheets.DataMember = "";
-            _dgTimesheets.HeaderForeColor = SystemColors.ControlText;
-            _dgTimesheets.Location = new Point(8, 19);
-            _dgTimesheets.Name = "dgTimesheets";
-            _dgTimesheets.Size = new Size(828, 382);
-            _dgTimesheets.TabIndex = 14;
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 656);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 15;
-            _btnExport.Text = "Export";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_cboDept);
-            _grpFilter.Controls.Add(_lblDept);
-            _grpFilter.Controls.Add(_btnClearAll);
-            _grpFilter.Controls.Add(_btnSelectAll);
-            _grpFilter.Controls.Add(_dgEngineers);
-            _grpFilter.Controls.Add(_btnRunReport);
-            _grpFilter.Controls.Add(_Label4);
-            _grpFilter.Controls.Add(_dtpTo);
-            _grpFilter.Controls.Add(_dtpFrom);
-            _grpFilter.Controls.Add(_txtJobNumber);
-            _grpFilter.Controls.Add(_Label9);
-            _grpFilter.Controls.Add(_Label8);
-            _grpFilter.Controls.Add(_Label6);
-            _grpFilter.Location = new Point(8, 32);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(844, 201);
-            _grpFilter.TabIndex = 1;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // cboDept
-            //
-            _cboDept.Location = new Point(367, 35);
-            _cboDept.Name = "cboDept";
-            _cboDept.Size = new Size(126, 21);
-            _cboDept.TabIndex = 30;
-            //
-            // lblDept
-            //
-            _lblDept.BackColor = Color.White;
-            _lblDept.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblDept.Location = new Point(364, 16);
-            _lblDept.Name = "lblDept";
-            _lblDept.Size = new Size(103, 16);
-            _lblDept.TabIndex = 29;
-            _lblDept.Text = "Department";
-            //
-            // btnClearAll
-            //
-            _btnClearAll.Font = new Font("Verdana", 8.0F);
-            _btnClearAll.Location = new Point(148, 11);
-            _btnClearAll.Name = "btnClearAll";
-            _btnClearAll.Size = new Size(64, 23);
-            _btnClearAll.TabIndex = 28;
-            _btnClearAll.Text = "Clear All";
-            _btnClearAll.UseVisualStyleBackColor = true;
-            //
-            // btnSelectAll
-            //
-            _btnSelectAll.Font = new Font("Verdana", 8.0F);
-            _btnSelectAll.Location = new Point(78, 11);
-            _btnSelectAll.Name = "btnSelectAll";
-            _btnSelectAll.Size = new Size(64, 23);
-            _btnSelectAll.TabIndex = 27;
-            _btnSelectAll.Text = "Select All";
-            _btnSelectAll.UseVisualStyleBackColor = true;
-            //
-            // dgEngineers
-            //
-            _dgEngineers.AllowNavigation = false;
-            _dgEngineers.AlternatingBackColor = Color.GhostWhite;
-            _dgEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            _dgEngineers.BackgroundColor = Color.White;
-            _dgEngineers.BorderStyle = BorderStyle.FixedSingle;
-            _dgEngineers.CaptionBackColor = Color.RoyalBlue;
-            _dgEngineers.CaptionForeColor = Color.White;
-            _dgEngineers.CaptionText = "Engineers";
-            _dgEngineers.CaptionVisible = false;
-            _dgEngineers.DataMember = "";
-            _dgEngineers.Font = new Font("Verdana", 8.0F);
-            _dgEngineers.ForeColor = Color.MidnightBlue;
-            _dgEngineers.GridLineColor = Color.RoyalBlue;
-            _dgEngineers.HeaderBackColor = Color.MidnightBlue;
-            _dgEngineers.HeaderFont = new Font("Tahoma", 8.0F, FontStyle.Bold);
-            _dgEngineers.HeaderForeColor = Color.Lavender;
-            _dgEngineers.LinkColor = Color.Teal;
-            _dgEngineers.Location = new Point(11, 35);
-            _dgEngineers.Name = "dgEngineers";
-            _dgEngineers.ParentRowsBackColor = Color.Lavender;
-            _dgEngineers.ParentRowsForeColor = Color.MidnightBlue;
-            _dgEngineers.ParentRowsVisible = false;
-            _dgEngineers.RowHeadersVisible = false;
-            _dgEngineers.SelectionBackColor = Color.Teal;
-            _dgEngineers.SelectionForeColor = Color.PaleGreen;
-            _dgEngineers.Size = new Size(350, 141);
-            _dgEngineers.TabIndex = 26;
-            //
-            // btnRunReport
-            //
-            _btnRunReport.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRunReport.Location = new Point(747, 172);
-            _btnRunReport.Name = "btnRunReport";
-            _btnRunReport.Size = new Size(91, 23);
-            _btnRunReport.TabIndex = 25;
-            _btnRunReport.Text = "Run Report";
-            //
-            // Label4
-            //
-            _Label4.BackColor = Color.White;
-            _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label4.Location = new Point(8, 16);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(64, 16);
-            _Label4.TabIndex = 24;
-            _Label4.Text = "Engineers";
-            //
-            // dtpTo
-            //
-            _dtpTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpTo.Location = new Point(686, 47);
-            _dtpTo.Name = "dtpTo";
-            _dtpTo.Size = new Size(144, 21);
-            _dtpTo.TabIndex = 13;
-            //
-            // dtpFrom
-            //
-            _dtpFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _dtpFrom.Location = new Point(686, 20);
-            _dtpFrom.Name = "dtpFrom";
-            _dtpFrom.Size = new Size(144, 21);
-            _dtpFrom.TabIndex = 12;
-            //
-            // txtJobNumber
-            //
-            _txtJobNumber.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _txtJobNumber.Location = new Point(686, 74);
-            _txtJobNumber.Name = "txtJobNumber";
-            _txtJobNumber.Size = new Size(144, 21);
-            _txtJobNumber.TabIndex = 9;
-            //
-            // Label9
-            //
-            _Label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label9.Location = new Point(654, 52);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(24, 16);
-            _Label9.TabIndex = 10;
-            _Label9.Text = "To";
-            _Label9.TextAlign = ContentAlignment.TopRight;
-            //
-            // Label8
-            //
-            _Label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label8.Location = new Point(592, 25);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(88, 16);
-            _Label8.TabIndex = 9;
-            _Label8.Text = "Date From";
-            _Label8.TextAlign = ContentAlignment.TopRight;
-            //
-            // Label6
-            //
-            _Label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _Label6.Location = new Point(592, 79);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 16);
-            _Label6.TabIndex = 6;
-            _Label6.Text = "Job Number";
-            _Label6.TextAlign = ContentAlignment.TopRight;
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(72, 656);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 16;
-            _btnReset.Text = "Reset";
-            //
-            // btnSummary
-            //
-            _btnSummary.AccessibleDescription = "Export Job List To Excel";
-            _btnSummary.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSummary.Location = new Point(755, 656);
-            _btnSummary.Name = "btnSummary";
-            _btnSummary.Size = new Size(89, 23);
-            _btnSummary.TabIndex = 17;
-            _btnSummary.Text = "Summary";
-            //
+            this._grpJobs = new System.Windows.Forms.GroupBox();
+            this._dgTimesheets = new System.Windows.Forms.DataGrid();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._cboDept = new System.Windows.Forms.ComboBox();
+            this._lblDept = new System.Windows.Forms.Label();
+            this._btnClearAll = new System.Windows.Forms.Button();
+            this._btnSelectAll = new System.Windows.Forms.Button();
+            this._dgEngineers = new System.Windows.Forms.DataGrid();
+            this._btnRunReport = new System.Windows.Forms.Button();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._dtpTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this._txtJobNumber = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._btnSummary = new System.Windows.Forms.Button();
+            this._grpJobs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheets)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineers)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpJobs
+            // 
+            this._grpJobs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpJobs.Controls.Add(this._dgTimesheets);
+            this._grpJobs.Location = new System.Drawing.Point(8, 219);
+            this._grpJobs.Name = "_grpJobs";
+            this._grpJobs.Size = new System.Drawing.Size(844, 429);
+            this._grpJobs.TabIndex = 2;
+            this._grpJobs.TabStop = false;
+            this._grpJobs.Text = "Double Click To View / Edit";
+            // 
+            // _dgTimesheets
+            // 
+            this._dgTimesheets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgTimesheets.DataMember = "";
+            this._dgTimesheets.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgTimesheets.Location = new System.Drawing.Point(8, 19);
+            this._dgTimesheets.Name = "_dgTimesheets";
+            this._dgTimesheets.Size = new System.Drawing.Size(828, 402);
+            this._dgTimesheets.TabIndex = 14;
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 656);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 15;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._cboDept);
+            this._grpFilter.Controls.Add(this._lblDept);
+            this._grpFilter.Controls.Add(this._btnClearAll);
+            this._grpFilter.Controls.Add(this._btnSelectAll);
+            this._grpFilter.Controls.Add(this._dgEngineers);
+            this._grpFilter.Controls.Add(this._btnRunReport);
+            this._grpFilter.Controls.Add(this._Label4);
+            this._grpFilter.Controls.Add(this._dtpTo);
+            this._grpFilter.Controls.Add(this._dtpFrom);
+            this._grpFilter.Controls.Add(this._txtJobNumber);
+            this._grpFilter.Controls.Add(this._Label9);
+            this._grpFilter.Controls.Add(this._Label8);
+            this._grpFilter.Controls.Add(this._Label6);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(844, 201);
+            this._grpFilter.TabIndex = 1;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _cboDept
+            // 
+            this._cboDept.Location = new System.Drawing.Point(367, 35);
+            this._cboDept.Name = "_cboDept";
+            this._cboDept.Size = new System.Drawing.Size(126, 21);
+            this._cboDept.TabIndex = 30;
+            this._cboDept.SelectedIndexChanged += new System.EventHandler(this.cboDept_Changed);
+            // 
+            // _lblDept
+            // 
+            this._lblDept.BackColor = System.Drawing.Color.White;
+            this._lblDept.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblDept.Location = new System.Drawing.Point(364, 16);
+            this._lblDept.Name = "_lblDept";
+            this._lblDept.Size = new System.Drawing.Size(103, 16);
+            this._lblDept.TabIndex = 29;
+            this._lblDept.Text = "Department";
+            // 
+            // _btnClearAll
+            // 
+            this._btnClearAll.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnClearAll.Location = new System.Drawing.Point(148, 11);
+            this._btnClearAll.Name = "_btnClearAll";
+            this._btnClearAll.Size = new System.Drawing.Size(64, 23);
+            this._btnClearAll.TabIndex = 28;
+            this._btnClearAll.Text = "Clear All";
+            this._btnClearAll.UseVisualStyleBackColor = true;
+            this._btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
+            // _btnSelectAll
+            // 
+            this._btnSelectAll.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnSelectAll.Location = new System.Drawing.Point(78, 11);
+            this._btnSelectAll.Name = "_btnSelectAll";
+            this._btnSelectAll.Size = new System.Drawing.Size(64, 23);
+            this._btnSelectAll.TabIndex = 27;
+            this._btnSelectAll.Text = "Select All";
+            this._btnSelectAll.UseVisualStyleBackColor = true;
+            this._btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // _dgEngineers
+            // 
+            this._dgEngineers.AllowNavigation = false;
+            this._dgEngineers.AlternatingBackColor = System.Drawing.Color.GhostWhite;
+            this._dgEngineers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this._dgEngineers.BackgroundColor = System.Drawing.Color.White;
+            this._dgEngineers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._dgEngineers.CaptionBackColor = System.Drawing.Color.RoyalBlue;
+            this._dgEngineers.CaptionForeColor = System.Drawing.Color.White;
+            this._dgEngineers.CaptionText = "Engineers";
+            this._dgEngineers.CaptionVisible = false;
+            this._dgEngineers.DataMember = "";
+            this._dgEngineers.Font = new System.Drawing.Font("Verdana", 8F);
+            this._dgEngineers.ForeColor = System.Drawing.Color.MidnightBlue;
+            this._dgEngineers.GridLineColor = System.Drawing.Color.RoyalBlue;
+            this._dgEngineers.HeaderBackColor = System.Drawing.Color.MidnightBlue;
+            this._dgEngineers.HeaderFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this._dgEngineers.HeaderForeColor = System.Drawing.Color.Lavender;
+            this._dgEngineers.LinkColor = System.Drawing.Color.Teal;
+            this._dgEngineers.Location = new System.Drawing.Point(11, 35);
+            this._dgEngineers.Name = "_dgEngineers";
+            this._dgEngineers.ParentRowsBackColor = System.Drawing.Color.Lavender;
+            this._dgEngineers.ParentRowsForeColor = System.Drawing.Color.MidnightBlue;
+            this._dgEngineers.ParentRowsVisible = false;
+            this._dgEngineers.RowHeadersVisible = false;
+            this._dgEngineers.SelectionBackColor = System.Drawing.Color.Teal;
+            this._dgEngineers.SelectionForeColor = System.Drawing.Color.PaleGreen;
+            this._dgEngineers.Size = new System.Drawing.Size(350, 141);
+            this._dgEngineers.TabIndex = 26;
+            this._dgEngineers.Click += new System.EventHandler(this.dgEngineers_Clicks);
+            this._dgEngineers.DoubleClick += new System.EventHandler(this.dgEngineers_Clicks);
+            // 
+            // _btnRunReport
+            // 
+            this._btnRunReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRunReport.Location = new System.Drawing.Point(747, 172);
+            this._btnRunReport.Name = "_btnRunReport";
+            this._btnRunReport.Size = new System.Drawing.Size(91, 23);
+            this._btnRunReport.TabIndex = 25;
+            this._btnRunReport.Text = "Run Report";
+            this._btnRunReport.Click += new System.EventHandler(this.btnRunReport_Click);
+            // 
+            // _Label4
+            // 
+            this._Label4.BackColor = System.Drawing.Color.White;
+            this._Label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label4.Location = new System.Drawing.Point(8, 16);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(64, 16);
+            this._Label4.TabIndex = 24;
+            this._Label4.Text = "Engineers";
+            // 
+            // _dtpTo
+            // 
+            this._dtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpTo.Location = new System.Drawing.Point(686, 47);
+            this._dtpTo.Name = "_dtpTo";
+            this._dtpTo.Size = new System.Drawing.Size(144, 21);
+            this._dtpTo.TabIndex = 13;
+            // 
+            // _dtpFrom
+            // 
+            this._dtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._dtpFrom.Location = new System.Drawing.Point(686, 20);
+            this._dtpFrom.Name = "_dtpFrom";
+            this._dtpFrom.Size = new System.Drawing.Size(144, 21);
+            this._dtpFrom.TabIndex = 12;
+            // 
+            // _txtJobNumber
+            // 
+            this._txtJobNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtJobNumber.Location = new System.Drawing.Point(686, 74);
+            this._txtJobNumber.Name = "_txtJobNumber";
+            this._txtJobNumber.Size = new System.Drawing.Size(144, 21);
+            this._txtJobNumber.TabIndex = 9;
+            // 
+            // _Label9
+            // 
+            this._Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label9.Location = new System.Drawing.Point(654, 52);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(24, 16);
+            this._Label9.TabIndex = 10;
+            this._Label9.Text = "To";
+            this._Label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // _Label8
+            // 
+            this._Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label8.Location = new System.Drawing.Point(592, 25);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(88, 16);
+            this._Label8.TabIndex = 9;
+            this._Label8.Text = "Date From";
+            this._Label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // _Label6
+            // 
+            this._Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._Label6.Location = new System.Drawing.Point(592, 79);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 16);
+            this._Label6.TabIndex = 6;
+            this._Label6.Text = "Job Number";
+            this._Label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(72, 656);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 16;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // _btnSummary
+            // 
+            this._btnSummary.AccessibleDescription = "Export Job List To Excel";
+            this._btnSummary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSummary.Location = new System.Drawing.Point(755, 656);
+            this._btnSummary.Name = "_btnSummary";
+            this._btnSummary.Size = new System.Drawing.Size(89, 23);
+            this._btnSummary.TabIndex = 17;
+            this._btnSummary.Text = "Summary";
+            this._btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
+            // 
             // FRMEngineerTimesheetReport
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(860, 686);
-            Controls.Add(_btnSummary);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpJobs);
-            Controls.Add(_btnReset);
-            MinimumSize = new Size(808, 528);
-            Name = "FRMEngineerTimesheetReport";
-            Text = "Engineer Timesheet Report";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpJobs, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            Controls.SetChildIndex(_btnSummary, 0);
-            _grpJobs.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgTimesheets).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgEngineers).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(860, 686);
+            this.Controls.Add(this._btnSummary);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpJobs);
+            this.Controls.Add(this._btnReset);
+            this.MinimumSize = new System.Drawing.Size(808, 528);
+            this.Name = "FRMEngineerTimesheetReport";
+            this.Text = "Engineer Timesheet Report";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpJobs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgTimesheets)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgEngineers)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

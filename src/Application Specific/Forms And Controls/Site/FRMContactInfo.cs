@@ -299,188 +299,174 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnOK = new Button();
-            _txtTelephoneNum = new TextBox();
-            _lblTelephoneNum = new Label();
-            _txtEmailAddress = new TextBox();
-            _lblEmailAddress = new Label();
-            _txtFaxNum = new TextBox();
-            _lblFaxNum = new Label();
-            _txtHeadOffice = new TextBox();
-            _Label9 = new Label();
-            _txtCustomerName = new TextBox();
-            _Label2 = new Label();
-            _txtSiteName = new TextBox();
-            _Label1 = new Label();
-            _btnSave = new Button();
-            _btnSave.Click += new EventHandler(btnSave_Click);
-            _grpSite = new GroupBox();
-            SuspendLayout();
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(595, 236);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(75, 23);
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            //
-            // txtTelephoneNum
-            //
-            _txtTelephoneNum.Location = new Point(125, 152);
-            _txtTelephoneNum.MaxLength = 50;
-            _txtTelephoneNum.Name = "txtTelephoneNum";
-            _txtTelephoneNum.Size = new Size(132, 21);
-            _txtTelephoneNum.TabIndex = 101;
-            _txtTelephoneNum.Tag = "Site.TelephoneNum";
-            //
-            // lblTelephoneNum
-            //
-            _lblTelephoneNum.Location = new Point(24, 155);
-            _lblTelephoneNum.Name = "lblTelephoneNum";
-            _lblTelephoneNum.Size = new Size(48, 20);
-            _lblTelephoneNum.TabIndex = 107;
-            _lblTelephoneNum.Text = "Tel";
-            //
-            // txtEmailAddress
-            //
-            _txtEmailAddress.Location = new Point(125, 182);
-            _txtEmailAddress.MaxLength = 100;
-            _txtEmailAddress.Name = "txtEmailAddress";
-            _txtEmailAddress.Size = new Size(223, 21);
-            _txtEmailAddress.TabIndex = 103;
-            _txtEmailAddress.Tag = "Site.EmailAddress";
-            //
-            // lblEmailAddress
-            //
-            _lblEmailAddress.Location = new Point(24, 185);
-            _lblEmailAddress.Name = "lblEmailAddress";
-            _lblEmailAddress.Size = new Size(98, 20);
-            _lblEmailAddress.TabIndex = 106;
-            _lblEmailAddress.Text = "Email Address";
-            //
-            // txtFaxNum
-            //
-            _txtFaxNum.Location = new Point(362, 154);
-            _txtFaxNum.MaxLength = 50;
-            _txtFaxNum.Name = "txtFaxNum";
-            _txtFaxNum.Size = new Size(145, 21);
-            _txtFaxNum.TabIndex = 102;
-            _txtFaxNum.Tag = "Site.FaxNum";
-            //
-            // lblFaxNum
-            //
-            _lblFaxNum.Location = new Point(288, 155);
-            _lblFaxNum.Name = "lblFaxNum";
-            _lblFaxNum.Size = new Size(50, 20);
-            _lblFaxNum.TabIndex = 104;
-            _lblFaxNum.Text = "Mobile";
-            //
-            // txtHeadOffice
-            //
-            _txtHeadOffice.Location = new Point(125, 91);
-            _txtHeadOffice.Name = "txtHeadOffice";
-            _txtHeadOffice.ReadOnly = true;
-            _txtHeadOffice.Size = new Size(382, 21);
-            _txtHeadOffice.TabIndex = 109;
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(24, 89);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(80, 23);
-            _Label9.TabIndex = 113;
-            _Label9.Text = "Head Office:";
-            //
-            // txtCustomerName
-            //
-            _txtCustomerName.Location = new Point(125, 62);
-            _txtCustomerName.Name = "txtCustomerName";
-            _txtCustomerName.ReadOnly = true;
-            _txtCustomerName.Size = new Size(382, 21);
-            _txtCustomerName.TabIndex = 108;
-            //
-            // Label2
-            //
-            _Label2.Location = new Point(24, 122);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(80, 23);
-            _Label2.TabIndex = 112;
-            _Label2.Text = "Property:";
-            //
-            // txtSiteName
-            //
-            _txtSiteName.Location = new Point(125, 120);
-            _txtSiteName.Name = "txtSiteName";
-            _txtSiteName.ReadOnly = true;
-            _txtSiteName.Size = new Size(382, 21);
-            _txtSiteName.TabIndex = 110;
-            //
-            // Label1
-            //
-            _Label1.Location = new Point(24, 62);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(80, 23);
-            _Label1.TabIndex = 111;
-            _Label1.Text = "Customer:";
-            //
-            // btnSave
-            //
-            _btnSave.Location = new Point(426, 243);
-            _btnSave.Name = "btnSave";
-            _btnSave.Size = new Size(109, 30);
-            _btnSave.TabIndex = 105;
-            _btnSave.Text = "Save";
-            //
-            // grpSite
-            //
-            _grpSite.Location = new Point(6, 38);
-            _grpSite.Name = "grpSite";
-            _grpSite.Size = new Size(529, 188);
-            _grpSite.TabIndex = 114;
-            _grpSite.TabStop = false;
-            _grpSite.Text = "Site ";
-            //
+            this._btnOK = new System.Windows.Forms.Button();
+            this._txtTelephoneNum = new System.Windows.Forms.TextBox();
+            this._lblTelephoneNum = new System.Windows.Forms.Label();
+            this._txtEmailAddress = new System.Windows.Forms.TextBox();
+            this._lblEmailAddress = new System.Windows.Forms.Label();
+            this._txtFaxNum = new System.Windows.Forms.TextBox();
+            this._lblFaxNum = new System.Windows.Forms.Label();
+            this._txtHeadOffice = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._txtCustomerName = new System.Windows.Forms.TextBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._txtSiteName = new System.Windows.Forms.TextBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._grpSite = new System.Windows.Forms.GroupBox();
+            this.SuspendLayout();
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(595, 210);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            // 
+            // _txtTelephoneNum
+            // 
+            this._txtTelephoneNum.Location = new System.Drawing.Point(125, 126);
+            this._txtTelephoneNum.MaxLength = 50;
+            this._txtTelephoneNum.Name = "_txtTelephoneNum";
+            this._txtTelephoneNum.Size = new System.Drawing.Size(132, 21);
+            this._txtTelephoneNum.TabIndex = 101;
+            this._txtTelephoneNum.Tag = "Site.TelephoneNum";
+            // 
+            // _lblTelephoneNum
+            // 
+            this._lblTelephoneNum.Location = new System.Drawing.Point(24, 129);
+            this._lblTelephoneNum.Name = "_lblTelephoneNum";
+            this._lblTelephoneNum.Size = new System.Drawing.Size(48, 20);
+            this._lblTelephoneNum.TabIndex = 107;
+            this._lblTelephoneNum.Text = "Tel";
+            // 
+            // _txtEmailAddress
+            // 
+            this._txtEmailAddress.Location = new System.Drawing.Point(125, 156);
+            this._txtEmailAddress.MaxLength = 100;
+            this._txtEmailAddress.Name = "_txtEmailAddress";
+            this._txtEmailAddress.Size = new System.Drawing.Size(223, 21);
+            this._txtEmailAddress.TabIndex = 103;
+            this._txtEmailAddress.Tag = "Site.EmailAddress";
+            // 
+            // _lblEmailAddress
+            // 
+            this._lblEmailAddress.Location = new System.Drawing.Point(24, 159);
+            this._lblEmailAddress.Name = "_lblEmailAddress";
+            this._lblEmailAddress.Size = new System.Drawing.Size(98, 20);
+            this._lblEmailAddress.TabIndex = 106;
+            this._lblEmailAddress.Text = "Email Address";
+            // 
+            // _txtFaxNum
+            // 
+            this._txtFaxNum.Location = new System.Drawing.Point(362, 128);
+            this._txtFaxNum.MaxLength = 50;
+            this._txtFaxNum.Name = "_txtFaxNum";
+            this._txtFaxNum.Size = new System.Drawing.Size(145, 21);
+            this._txtFaxNum.TabIndex = 102;
+            this._txtFaxNum.Tag = "Site.FaxNum";
+            // 
+            // _lblFaxNum
+            // 
+            this._lblFaxNum.Location = new System.Drawing.Point(288, 129);
+            this._lblFaxNum.Name = "_lblFaxNum";
+            this._lblFaxNum.Size = new System.Drawing.Size(50, 20);
+            this._lblFaxNum.TabIndex = 104;
+            this._lblFaxNum.Text = "Mobile";
+            // 
+            // _txtHeadOffice
+            // 
+            this._txtHeadOffice.Location = new System.Drawing.Point(125, 65);
+            this._txtHeadOffice.Name = "_txtHeadOffice";
+            this._txtHeadOffice.ReadOnly = true;
+            this._txtHeadOffice.Size = new System.Drawing.Size(382, 21);
+            this._txtHeadOffice.TabIndex = 109;
+            // 
+            // _Label9
+            // 
+            this._Label9.Location = new System.Drawing.Point(24, 63);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(80, 23);
+            this._Label9.TabIndex = 113;
+            this._Label9.Text = "Head Office:";
+            // 
+            // _txtCustomerName
+            // 
+            this._txtCustomerName.Location = new System.Drawing.Point(125, 36);
+            this._txtCustomerName.Name = "_txtCustomerName";
+            this._txtCustomerName.ReadOnly = true;
+            this._txtCustomerName.Size = new System.Drawing.Size(382, 21);
+            this._txtCustomerName.TabIndex = 108;
+            // 
+            // _Label2
+            // 
+            this._Label2.Location = new System.Drawing.Point(24, 96);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(80, 23);
+            this._Label2.TabIndex = 112;
+            this._Label2.Text = "Property:";
+            // 
+            // _txtSiteName
+            // 
+            this._txtSiteName.Location = new System.Drawing.Point(125, 94);
+            this._txtSiteName.Name = "_txtSiteName";
+            this._txtSiteName.ReadOnly = true;
+            this._txtSiteName.Size = new System.Drawing.Size(382, 21);
+            this._txtSiteName.TabIndex = 110;
+            // 
+            // _Label1
+            // 
+            this._Label1.Location = new System.Drawing.Point(24, 36);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(80, 23);
+            this._Label1.TabIndex = 111;
+            this._Label1.Text = "Customer:";
+            // 
+            // _btnSave
+            // 
+            this._btnSave.Location = new System.Drawing.Point(426, 217);
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.Size = new System.Drawing.Size(109, 30);
+            this._btnSave.TabIndex = 105;
+            this._btnSave.Text = "Save";
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // _grpSite
+            // 
+            this._grpSite.Location = new System.Drawing.Point(6, 12);
+            this._grpSite.Name = "_grpSite";
+            this._grpSite.Size = new System.Drawing.Size(529, 188);
+            this._grpSite.TabIndex = 114;
+            this._grpSite.TabStop = false;
+            this._grpSite.Text = "Site ";
+            // 
             // FRMContactInfo
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(547, 288);
-            Controls.Add(_txtHeadOffice);
-            Controls.Add(_Label9);
-            Controls.Add(_txtCustomerName);
-            Controls.Add(_Label2);
-            Controls.Add(_txtSiteName);
-            Controls.Add(_Label1);
-            Controls.Add(_txtTelephoneNum);
-            Controls.Add(_lblTelephoneNum);
-            Controls.Add(_txtEmailAddress);
-            Controls.Add(_lblEmailAddress);
-            Controls.Add(_btnSave);
-            Controls.Add(_txtFaxNum);
-            Controls.Add(_lblFaxNum);
-            Controls.Add(_btnOK);
-            Controls.Add(_grpSite);
-            MinimumSize = new Size(1, 1);
-            Name = "FRMContactInfo";
-            Text = "Site Contact Information";
-            Controls.SetChildIndex(_grpSite, 0);
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_lblFaxNum, 0);
-            Controls.SetChildIndex(_txtFaxNum, 0);
-            Controls.SetChildIndex(_btnSave, 0);
-            Controls.SetChildIndex(_lblEmailAddress, 0);
-            Controls.SetChildIndex(_txtEmailAddress, 0);
-            Controls.SetChildIndex(_lblTelephoneNum, 0);
-            Controls.SetChildIndex(_txtTelephoneNum, 0);
-            Controls.SetChildIndex(_Label1, 0);
-            Controls.SetChildIndex(_txtSiteName, 0);
-            Controls.SetChildIndex(_Label2, 0);
-            Controls.SetChildIndex(_txtCustomerName, 0);
-            Controls.SetChildIndex(_Label9, 0);
-            Controls.SetChildIndex(_txtHeadOffice, 0);
-            ResumeLayout(false);
-            PerformLayout();
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(547, 288);
+            this.Controls.Add(this._txtHeadOffice);
+            this.Controls.Add(this._Label9);
+            this.Controls.Add(this._txtCustomerName);
+            this.Controls.Add(this._Label2);
+            this.Controls.Add(this._txtSiteName);
+            this.Controls.Add(this._Label1);
+            this.Controls.Add(this._txtTelephoneNum);
+            this.Controls.Add(this._lblTelephoneNum);
+            this.Controls.Add(this._txtEmailAddress);
+            this.Controls.Add(this._lblEmailAddress);
+            this.Controls.Add(this._btnSave);
+            this.Controls.Add(this._txtFaxNum);
+            this.Controls.Add(this._lblFaxNum);
+            this.Controls.Add(this._btnOK);
+            this.Controls.Add(this._grpSite);
+            this.MinimumSize = new System.Drawing.Size(1, 1);
+            this.Name = "FRMContactInfo";
+            this.Text = "Site Contact Information";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         public void LoadMe(object sender, EventArgs e)

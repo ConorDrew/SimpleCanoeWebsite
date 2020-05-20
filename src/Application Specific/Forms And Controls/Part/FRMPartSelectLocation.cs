@@ -194,75 +194,74 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnClose_Click);
-            _grpLocations = new GroupBox();
-            _dgvLocations = new DataGridView();
-            _dgvLocations.SelectionChanged += new EventHandler(dgvLocations_SelectionChanged);
-            _grpLocations.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgvLocations).BeginInit();
-            SuspendLayout();
-            //
-            // btnOK
-            //
-            _btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnOK.Location = new Point(856, 444);
-            _btnOK.Name = "btnOK";
-            _btnOK.Size = new Size(60, 25);
-            _btnOK.TabIndex = 4;
-            _btnOK.Text = "OK";
-            //
-            // btnCancel
-            //
-            _btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnCancel.Location = new Point(12, 444);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(56, 25);
-            _btnCancel.TabIndex = 7;
-            _btnCancel.Text = "Cancel";
-            //
-            // grpLocations
-            //
-            _grpLocations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpLocations.Controls.Add(_dgvLocations);
-            _grpLocations.Location = new Point(12, 38);
-            _grpLocations.Name = "grpLocations";
-            _grpLocations.Size = new Size(904, 400);
-            _grpLocations.TabIndex = 3;
-            _grpLocations.TabStop = false;
-            _grpLocations.Text = "Select location to add to : {0}";
-            //
-            // dgvLocations
-            //
-            _dgvLocations.AllowUserToAddRows = false;
-            _dgvLocations.AllowUserToDeleteRows = false;
-            _dgvLocations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgvLocations.Location = new Point(7, 21);
-            _dgvLocations.Name = "dgvLocations";
-            _dgvLocations.ReadOnly = true;
-            _dgvLocations.Size = new Size(891, 373);
-            _dgvLocations.TabIndex = 0;
-            //
+            this._btnOK = new System.Windows.Forms.Button();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._grpLocations = new System.Windows.Forms.GroupBox();
+            this._dgvLocations = new System.Windows.Forms.DataGridView();
+            this._grpLocations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvLocations)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnOK.Location = new System.Drawing.Point(856, 444);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(60, 25);
+            this._btnOK.TabIndex = 4;
+            this._btnOK.Text = "OK";
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnCancel.Location = new System.Drawing.Point(12, 444);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(56, 25);
+            this._btnCancel.TabIndex = 7;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // _grpLocations
+            // 
+            this._grpLocations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpLocations.Controls.Add(this._dgvLocations);
+            this._grpLocations.Location = new System.Drawing.Point(12, 12);
+            this._grpLocations.Name = "_grpLocations";
+            this._grpLocations.Size = new System.Drawing.Size(904, 426);
+            this._grpLocations.TabIndex = 3;
+            this._grpLocations.TabStop = false;
+            this._grpLocations.Text = "Select location to add to : {0}";
+            // 
+            // _dgvLocations
+            // 
+            this._dgvLocations.AllowUserToAddRows = false;
+            this._dgvLocations.AllowUserToDeleteRows = false;
+            this._dgvLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgvLocations.Location = new System.Drawing.Point(7, 21);
+            this._dgvLocations.Name = "_dgvLocations";
+            this._dgvLocations.ReadOnly = true;
+            this._dgvLocations.Size = new System.Drawing.Size(891, 399);
+            this._dgvLocations.TabIndex = 0;
+            this._dgvLocations.SelectionChanged += new System.EventHandler(this.dgvLocations_SelectionChanged);
+            // 
             // FRMPartSelectLocation
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(928, 481);
-            ControlBox = false;
-            Controls.Add(_grpLocations);
-            Controls.Add(_btnCancel);
-            Controls.Add(_btnOK);
-            MinimumSize = new Size(825, 420);
-            Name = "FRMPartSelectLocation";
-            Text = "Add Van Stock Part to ...";
-            Controls.SetChildIndex(_btnOK, 0);
-            Controls.SetChildIndex(_btnCancel, 0);
-            Controls.SetChildIndex(_grpLocations, 0);
-            _grpLocations.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgvLocations).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(928, 481);
+            this.ControlBox = false;
+            this.Controls.Add(this._grpLocations);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnOK);
+            this.MinimumSize = new System.Drawing.Size(825, 420);
+            this.Name = "FRMPartSelectLocation";
+            this.Text = "Add Van Stock Part to ...";
+            this._grpLocations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgvLocations)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

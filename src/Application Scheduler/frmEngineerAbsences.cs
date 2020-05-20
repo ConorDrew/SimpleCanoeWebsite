@@ -444,279 +444,282 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _dgAbsences = new DataGrid();
-            _dgAbsences.DoubleClick += new EventHandler(dgAbsences_DoubleClick);
-            _Search = new GroupBox();
-            _Label5 = new Label();
-            _cboUsers = new ComboBox();
-            _Label2 = new Label();
-            _dtTo = new DateTimePicker();
-            _dtFrom = new DateTimePicker();
-            _Label4 = new Label();
-            _Label3 = new Label();
-            _cboType = new ComboBox();
-            _btnShowResults = new Button();
-            _btnShowResults.Click += new EventHandler(btnShowResults_Click);
-            _Label1 = new Label();
-            _cboEngineers = new ComboBox();
-            _btnNew = new Button();
-            _btnNew.Click += new EventHandler(btnNew_Click);
-            _mnuAbsenceType = new ContextMenu();
-            _mnuEngineerAbsence = new MenuItem();
-            _mnuEngineerAbsence.Click += new EventHandler(mnuEngineerAbsence_Click);
-            _mnuUserAbsence = new MenuItem();
-            _mnuUserAbsence.Click += new EventHandler(mnuUserAbsence_Click);
-            _btnDelete = new Button();
-            _btnDelete.Click += new EventHandler(btnDelete_Click);
-            _mnuBlockOfAbsences = new MenuItem();
-            _mnuBlockOfAbsences.Click += new EventHandler(mnuBlockOfAbsences_Click);
-            _MenuItem2 = new MenuItem();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgAbsences).BeginInit();
-            _Search.SuspendLayout();
-            SuspendLayout();
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_dgAbsences);
-            _GroupBox1.Font = new Font("Verdana", 8.0F);
-            _GroupBox1.Location = new Point(8, 192);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(741, 216);
-            _GroupBox1.TabIndex = 0;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Double click to edit";
-            //
-            // dgAbsences
-            //
-            _dgAbsences.AllowNavigation = false;
-            _dgAbsences.AlternatingBackColor = Color.GhostWhite;
-            _dgAbsences.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgAbsences.BackgroundColor = Color.White;
-            _dgAbsences.BorderStyle = BorderStyle.FixedSingle;
-            _dgAbsences.CaptionBackColor = Color.RoyalBlue;
-            _dgAbsences.CaptionForeColor = Color.White;
-            _dgAbsences.CaptionVisible = false;
-            _dgAbsences.DataMember = "";
-            _dgAbsences.Font = new Font("Verdana", 8.0F);
-            _dgAbsences.ForeColor = Color.MidnightBlue;
-            _dgAbsences.GridLineColor = Color.RoyalBlue;
-            _dgAbsences.HeaderBackColor = Color.MidnightBlue;
-            _dgAbsences.HeaderFont = new Font("Tahoma", 8.0F, FontStyle.Bold);
-            _dgAbsences.HeaderForeColor = Color.Lavender;
-            _dgAbsences.LinkColor = Color.Teal;
-            _dgAbsences.Location = new Point(10, 17);
-            _dgAbsences.Name = "dgAbsences";
-            _dgAbsences.ParentRowsBackColor = Color.Lavender;
-            _dgAbsences.ParentRowsForeColor = Color.MidnightBlue;
-            _dgAbsences.ParentRowsVisible = false;
-            _dgAbsences.RowHeadersVisible = false;
-            _dgAbsences.SelectionBackColor = Color.Teal;
-            _dgAbsences.SelectionForeColor = Color.PaleGreen;
-            _dgAbsences.Size = new Size(722, 190);
-            _dgAbsences.TabIndex = 7;
-            //
-            // Search
-            //
-            _Search.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _Search.Controls.Add(_Label5);
-            _Search.Controls.Add(_cboUsers);
-            _Search.Controls.Add(_Label2);
-            _Search.Controls.Add(_dtTo);
-            _Search.Controls.Add(_dtFrom);
-            _Search.Controls.Add(_Label4);
-            _Search.Controls.Add(_Label3);
-            _Search.Controls.Add(_cboType);
-            _Search.Controls.Add(_btnShowResults);
-            _Search.Controls.Add(_Label1);
-            _Search.Controls.Add(_cboEngineers);
-            _Search.Font = new Font("Verdana", 8.0F);
-            _Search.Location = new Point(8, 40);
-            _Search.Name = "Search";
-            _Search.Size = new Size(741, 144);
-            _Search.TabIndex = 1;
-            _Search.TabStop = false;
-            _Search.Text = "Search";
-            //
-            // Label5
-            //
-
-            _Label5.Font = new Font("Verdana", 8.0F);
-            _Label5.Location = new Point(16, 52);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(96, 17);
-            _Label5.TabIndex = 24;
-            _Label5.Text = "User:";
-            //
-            // cboUsers
-            //
-            _cboUsers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboUsers.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboUsers.Font = new Font("Verdana", 8.0F);
-            _cboUsers.Location = new Point(112, 48);
-            _cboUsers.Name = "cboUsers";
-            _cboUsers.Size = new Size(624, 21);
-            _cboUsers.TabIndex = 2;
-            //
-            // Label2
-            //
-
-            _Label2.Font = new Font("Verdana", 8.0F);
-            _Label2.Location = new Point(16, 112);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(80, 18);
-            _Label2.TabIndex = 22;
-            _Label2.Text = "Absent From";
-            //
-            // dtTo
-            //
-            _dtTo.Font = new Font("Verdana", 8.0F);
-            _dtTo.Format = DateTimePickerFormat.Short;
-            _dtTo.Location = new Point(304, 112);
-            _dtTo.Name = "dtTo";
-            _dtTo.Size = new Size(152, 20);
-            _dtTo.TabIndex = 5;
-            //
-            // dtFrom
-            //
-            _dtFrom.Font = new Font("Verdana", 8.0F);
-            _dtFrom.Format = DateTimePickerFormat.Short;
-            _dtFrom.Location = new Point(112, 112);
-            _dtFrom.Name = "dtFrom";
-            _dtFrom.Size = new Size(152, 20);
-            _dtFrom.TabIndex = 4;
-            _dtFrom.Value = new DateTime(2007, 9, 14, 0, 0, 0, 0);
-            //
-            // Label4
-            //
-            _Label4.Font = new Font("Verdana", 8.0F);
-            _Label4.Location = new Point(272, 112);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(32, 18);
-            _Label4.TabIndex = 19;
-            _Label4.Text = "To";
-            //
-            // Label3
-            //
-
-            _Label3.Font = new Font("Verdana", 8.0F);
-            _Label3.Location = new Point(16, 80);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(96, 17);
-            _Label3.TabIndex = 18;
-            _Label3.Text = "Absence Type:";
-            //
-            // cboType
-            //
-            _cboType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Font = new Font("Verdana", 8.0F);
-            _cboType.Location = new Point(112, 80);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(624, 21);
-            _cboType.TabIndex = 3;
-            //
-            // btnShowResults
-            //
-            _btnShowResults.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnShowResults.UseVisualStyleBackColor = true;
-            _btnShowResults.Font = new Font("Verdana", 8.0F);
-            _btnShowResults.Location = new Point(670, 112);
-            _btnShowResults.Name = "btnShowResults";
-            _btnShowResults.Size = new Size(64, 23);
-            _btnShowResults.TabIndex = 6;
-            _btnShowResults.Text = "Show";
-            //
-            // Label1
-            //
-
-            _Label1.Font = new Font("Verdana", 8.0F);
-            _Label1.Location = new Point(16, 24);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(96, 17);
-            _Label1.TabIndex = 1;
-            _Label1.Text = "Engineer:";
-            //
-            // cboEngineers
-            //
-            _cboEngineers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _cboEngineers.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboEngineers.Font = new Font("Verdana", 8.0F);
-            _cboEngineers.Location = new Point(112, 19);
-            _cboEngineers.Name = "cboEngineers";
-            _cboEngineers.Size = new Size(624, 21);
-            _cboEngineers.TabIndex = 1;
-            //
-            // btnNew
-            //
-            _btnNew.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnNew.ContextMenu = _mnuAbsenceType;
-            _btnNew.UseVisualStyleBackColor = true;
-            _btnNew.Font = new Font("Verdana", 8.0F);
-            _btnNew.Location = new Point(8, 416);
-            _btnNew.Name = "btnNew";
-            _btnNew.Size = new Size(64, 23);
-            _btnNew.TabIndex = 8;
-            _btnNew.Text = "Add New";
-            //
-            // mnuAbsenceType
-            //
-            _mnuAbsenceType.MenuItems.AddRange(new MenuItem[] { _mnuEngineerAbsence, _mnuUserAbsence, _MenuItem2, _mnuBlockOfAbsences });
-            //
-            // mnuEngineerAbsence
-            //
-            _mnuEngineerAbsence.Index = 0;
-            _mnuEngineerAbsence.Text = "Engineer Absence";
-            //
-            // mnuUserAbsence
-            //
-            _mnuUserAbsence.Index = 1;
-            _mnuUserAbsence.Text = "User Absence";
-            //
-            // btnDelete
-            //
-            _btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnDelete.UseVisualStyleBackColor = true;
-            _btnDelete.Font = new Font("Verdana", 8.0F);
-            _btnDelete.Location = new Point(688, 416);
-            _btnDelete.Name = "btnDelete";
-            _btnDelete.Size = new Size(64, 23);
-            _btnDelete.TabIndex = 9;
-            _btnDelete.Text = "Delete";
-            //
-            // mnuBlockOfAbsences
-            //
-            _mnuBlockOfAbsences.Index = 3;
-            _mnuBlockOfAbsences.Text = "Block of Absences";
-            //
-            // MenuItem2
-            //
-            _MenuItem2.Index = 2;
-            _MenuItem2.Text = "-";
-            //
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dgAbsences = new System.Windows.Forms.DataGrid();
+            this._Search = new System.Windows.Forms.GroupBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._cboUsers = new System.Windows.Forms.ComboBox();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._dtTo = new System.Windows.Forms.DateTimePicker();
+            this._dtFrom = new System.Windows.Forms.DateTimePicker();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._btnShowResults = new System.Windows.Forms.Button();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._cboEngineers = new System.Windows.Forms.ComboBox();
+            this._btnNew = new System.Windows.Forms.Button();
+            this._mnuAbsenceType = new System.Windows.Forms.ContextMenu();
+            this._mnuEngineerAbsence = new System.Windows.Forms.MenuItem();
+            this._mnuUserAbsence = new System.Windows.Forms.MenuItem();
+            this._MenuItem2 = new System.Windows.Forms.MenuItem();
+            this._mnuBlockOfAbsences = new System.Windows.Forms.MenuItem();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgAbsences)).BeginInit();
+            this._Search.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dgAbsences);
+            this._GroupBox1.Font = new System.Drawing.Font("Verdana", 8F);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 160);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(741, 248);
+            this._GroupBox1.TabIndex = 0;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Double click to edit";
+            // 
+            // _dgAbsences
+            // 
+            this._dgAbsences.AllowNavigation = false;
+            this._dgAbsences.AlternatingBackColor = System.Drawing.Color.GhostWhite;
+            this._dgAbsences.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgAbsences.BackgroundColor = System.Drawing.Color.White;
+            this._dgAbsences.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._dgAbsences.CaptionBackColor = System.Drawing.Color.RoyalBlue;
+            this._dgAbsences.CaptionForeColor = System.Drawing.Color.White;
+            this._dgAbsences.CaptionVisible = false;
+            this._dgAbsences.DataMember = "";
+            this._dgAbsences.Font = new System.Drawing.Font("Verdana", 8F);
+            this._dgAbsences.ForeColor = System.Drawing.Color.MidnightBlue;
+            this._dgAbsences.GridLineColor = System.Drawing.Color.RoyalBlue;
+            this._dgAbsences.HeaderBackColor = System.Drawing.Color.MidnightBlue;
+            this._dgAbsences.HeaderFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this._dgAbsences.HeaderForeColor = System.Drawing.Color.Lavender;
+            this._dgAbsences.LinkColor = System.Drawing.Color.Teal;
+            this._dgAbsences.Location = new System.Drawing.Point(10, 17);
+            this._dgAbsences.Name = "_dgAbsences";
+            this._dgAbsences.ParentRowsBackColor = System.Drawing.Color.Lavender;
+            this._dgAbsences.ParentRowsForeColor = System.Drawing.Color.MidnightBlue;
+            this._dgAbsences.ParentRowsVisible = false;
+            this._dgAbsences.RowHeadersVisible = false;
+            this._dgAbsences.SelectionBackColor = System.Drawing.Color.Teal;
+            this._dgAbsences.SelectionForeColor = System.Drawing.Color.PaleGreen;
+            this._dgAbsences.Size = new System.Drawing.Size(722, 222);
+            this._dgAbsences.TabIndex = 7;
+            this._dgAbsences.DoubleClick += new System.EventHandler(this.dgAbsences_DoubleClick);
+            // 
+            // _Search
+            // 
+            this._Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._Search.Controls.Add(this._Label5);
+            this._Search.Controls.Add(this._cboUsers);
+            this._Search.Controls.Add(this._Label2);
+            this._Search.Controls.Add(this._dtTo);
+            this._Search.Controls.Add(this._dtFrom);
+            this._Search.Controls.Add(this._Label4);
+            this._Search.Controls.Add(this._Label3);
+            this._Search.Controls.Add(this._cboType);
+            this._Search.Controls.Add(this._btnShowResults);
+            this._Search.Controls.Add(this._Label1);
+            this._Search.Controls.Add(this._cboEngineers);
+            this._Search.Font = new System.Drawing.Font("Verdana", 8F);
+            this._Search.Location = new System.Drawing.Point(8, 12);
+            this._Search.Name = "_Search";
+            this._Search.Size = new System.Drawing.Size(741, 142);
+            this._Search.TabIndex = 1;
+            this._Search.TabStop = false;
+            this._Search.Text = "Search";
+            // 
+            // _Label5
+            // 
+            this._Label5.Font = new System.Drawing.Font("Verdana", 8F);
+            this._Label5.Location = new System.Drawing.Point(16, 52);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(96, 17);
+            this._Label5.TabIndex = 24;
+            this._Label5.Text = "User:";
+            // 
+            // _cboUsers
+            // 
+            this._cboUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboUsers.Font = new System.Drawing.Font("Verdana", 8F);
+            this._cboUsers.Location = new System.Drawing.Point(112, 48);
+            this._cboUsers.Name = "_cboUsers";
+            this._cboUsers.Size = new System.Drawing.Size(624, 21);
+            this._cboUsers.TabIndex = 2;
+            // 
+            // _Label2
+            // 
+            this._Label2.Font = new System.Drawing.Font("Verdana", 8F);
+            this._Label2.Location = new System.Drawing.Point(16, 112);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(80, 18);
+            this._Label2.TabIndex = 22;
+            this._Label2.Text = "Absent From";
+            // 
+            // _dtTo
+            // 
+            this._dtTo.Font = new System.Drawing.Font("Verdana", 8F);
+            this._dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this._dtTo.Location = new System.Drawing.Point(304, 112);
+            this._dtTo.Name = "_dtTo";
+            this._dtTo.Size = new System.Drawing.Size(152, 20);
+            this._dtTo.TabIndex = 5;
+            // 
+            // _dtFrom
+            // 
+            this._dtFrom.Font = new System.Drawing.Font("Verdana", 8F);
+            this._dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this._dtFrom.Location = new System.Drawing.Point(112, 112);
+            this._dtFrom.Name = "_dtFrom";
+            this._dtFrom.Size = new System.Drawing.Size(152, 20);
+            this._dtFrom.TabIndex = 4;
+            this._dtFrom.Value = new System.DateTime(2007, 9, 14, 0, 0, 0, 0);
+            // 
+            // _Label4
+            // 
+            this._Label4.Font = new System.Drawing.Font("Verdana", 8F);
+            this._Label4.Location = new System.Drawing.Point(272, 112);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(32, 18);
+            this._Label4.TabIndex = 19;
+            this._Label4.Text = "To";
+            // 
+            // _Label3
+            // 
+            this._Label3.Font = new System.Drawing.Font("Verdana", 8F);
+            this._Label3.Location = new System.Drawing.Point(16, 80);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(96, 17);
+            this._Label3.TabIndex = 18;
+            this._Label3.Text = "Absence Type:";
+            // 
+            // _cboType
+            // 
+            this._cboType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Font = new System.Drawing.Font("Verdana", 8F);
+            this._cboType.Location = new System.Drawing.Point(112, 80);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(624, 21);
+            this._cboType.TabIndex = 3;
+            // 
+            // _btnShowResults
+            // 
+            this._btnShowResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnShowResults.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnShowResults.Location = new System.Drawing.Point(670, 110);
+            this._btnShowResults.Name = "_btnShowResults";
+            this._btnShowResults.Size = new System.Drawing.Size(64, 23);
+            this._btnShowResults.TabIndex = 6;
+            this._btnShowResults.Text = "Show";
+            this._btnShowResults.UseVisualStyleBackColor = true;
+            this._btnShowResults.Click += new System.EventHandler(this.btnShowResults_Click);
+            // 
+            // _Label1
+            // 
+            this._Label1.Font = new System.Drawing.Font("Verdana", 8F);
+            this._Label1.Location = new System.Drawing.Point(16, 24);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(96, 17);
+            this._Label1.TabIndex = 1;
+            this._Label1.Text = "Engineer:";
+            // 
+            // _cboEngineers
+            // 
+            this._cboEngineers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._cboEngineers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboEngineers.Font = new System.Drawing.Font("Verdana", 8F);
+            this._cboEngineers.Location = new System.Drawing.Point(112, 19);
+            this._cboEngineers.Name = "_cboEngineers";
+            this._cboEngineers.Size = new System.Drawing.Size(624, 21);
+            this._cboEngineers.TabIndex = 1;
+            // 
+            // _btnNew
+            // 
+            this._btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnNew.ContextMenu = this._mnuAbsenceType;
+            this._btnNew.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnNew.Location = new System.Drawing.Point(8, 416);
+            this._btnNew.Name = "_btnNew";
+            this._btnNew.Size = new System.Drawing.Size(64, 23);
+            this._btnNew.TabIndex = 8;
+            this._btnNew.Text = "Add New";
+            this._btnNew.UseVisualStyleBackColor = true;
+            this._btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // _mnuAbsenceType
+            // 
+            this._mnuAbsenceType.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._mnuEngineerAbsence,
+            this._mnuUserAbsence,
+            this._MenuItem2,
+            this._mnuBlockOfAbsences});
+            // 
+            // _mnuEngineerAbsence
+            // 
+            this._mnuEngineerAbsence.Index = 0;
+            this._mnuEngineerAbsence.Text = "Engineer Absence";
+            this._mnuEngineerAbsence.Click += new System.EventHandler(this.mnuEngineerAbsence_Click);
+            // 
+            // _mnuUserAbsence
+            // 
+            this._mnuUserAbsence.Index = 1;
+            this._mnuUserAbsence.Text = "User Absence";
+            this._mnuUserAbsence.Click += new System.EventHandler(this.mnuUserAbsence_Click);
+            // 
+            // _MenuItem2
+            // 
+            this._MenuItem2.Index = 2;
+            this._MenuItem2.Text = "-";
+            // 
+            // _mnuBlockOfAbsences
+            // 
+            this._mnuBlockOfAbsences.Index = 3;
+            this._mnuBlockOfAbsences.Text = "Block of Absences";
+            this._mnuBlockOfAbsences.Click += new System.EventHandler(this.mnuBlockOfAbsences_Click);
+            // 
+            // _btnDelete
+            // 
+            this._btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnDelete.Font = new System.Drawing.Font("Verdana", 8F);
+            this._btnDelete.Location = new System.Drawing.Point(688, 416);
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Size = new System.Drawing.Size(64, 23);
+            this._btnDelete.TabIndex = 9;
+            this._btnDelete.Text = "Delete";
+            this._btnDelete.UseVisualStyleBackColor = true;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmAbsences
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(760, 446);
-            Controls.Add(_btnDelete);
-            Controls.Add(_btnNew);
-            Controls.Add(_Search);
-            Controls.Add(_GroupBox1);
-            MinimumSize = new Size(768, 480);
-            Name = "frmAbsences";
-            Text = "Absences";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_Search, 0);
-            Controls.SetChildIndex(_btnNew, 0);
-            Controls.SetChildIndex(_btnDelete, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgAbsences).EndInit();
-            _Search.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(760, 446);
+            this.Controls.Add(this._btnDelete);
+            this.Controls.Add(this._btnNew);
+            this.Controls.Add(this._Search);
+            this.Controls.Add(this._GroupBox1);
+            this.MinimumSize = new System.Drawing.Size(768, 480);
+            this.Name = "frmAbsences";
+            this.Text = "Absences";
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgAbsences)).EndInit();
+            this._Search.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         private DataView _dvAbsences = new DataView();

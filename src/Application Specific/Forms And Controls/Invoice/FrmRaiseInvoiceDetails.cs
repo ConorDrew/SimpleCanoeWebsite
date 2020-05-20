@@ -196,87 +196,90 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _gpbRaiseInvoice = new GroupBox();
-            _dgInvoiceAddresses = new DataGrid();
-            _dgInvoiceAddresses.Click += new EventHandler(dgInvoiceAddresses_Click);
-            _dtpRaiseInvoiceOn = new DateTimePicker();
-            _lblRaiseInvoiceOn = new Label();
-            _lblInvoiceAddress = new Label();
-            _btnOK = new Button();
-            _btnOK.Click += new EventHandler(btnOK_Click);
-            _gpbRaiseInvoice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).BeginInit();
-            SuspendLayout();
-            //
-            // gpbRaiseInvoice
-            //
-            _gpbRaiseInvoice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _gpbRaiseInvoice.Controls.Add(_dgInvoiceAddresses);
-            _gpbRaiseInvoice.Controls.Add(_dtpRaiseInvoiceOn);
-            _gpbRaiseInvoice.Controls.Add(_lblRaiseInvoiceOn);
-            _gpbRaiseInvoice.Controls.Add(_lblInvoiceAddress);
-            _gpbRaiseInvoice.Controls.Add(_btnOK);
-            _gpbRaiseInvoice.Location = new Point(8, 32);
-            _gpbRaiseInvoice.Name = "gpbRaiseInvoice";
-            _gpbRaiseInvoice.Size = new Size(512, 240);
-            _gpbRaiseInvoice.TabIndex = 2;
-            _gpbRaiseInvoice.TabStop = false;
-            _gpbRaiseInvoice.Text = "Raise Invoice";
-            //
-            // dgInvoiceAddresses
-            //
-            _dgInvoiceAddresses.DataMember = "";
-            _dgInvoiceAddresses.HeaderForeColor = SystemColors.ControlText;
-            _dgInvoiceAddresses.Location = new Point(16, 64);
-            _dgInvoiceAddresses.Name = "dgInvoiceAddresses";
-            _dgInvoiceAddresses.Size = new Size(488, 136);
-            _dgInvoiceAddresses.TabIndex = 7;
-            //
-            // dtpRaiseInvoiceOn
-            //
-            _dtpRaiseInvoiceOn.Format = DateTimePickerFormat.Short;
-            _dtpRaiseInvoiceOn.Location = new Point(136, 24);
-            _dtpRaiseInvoiceOn.Name = "dtpRaiseInvoiceOn";
-            _dtpRaiseInvoiceOn.Size = new Size(120, 21);
-            _dtpRaiseInvoiceOn.TabIndex = 6;
-            //
-            // lblRaiseInvoiceOn
-            //
-            _lblRaiseInvoiceOn.Location = new Point(16, 24);
-            _lblRaiseInvoiceOn.Name = "lblRaiseInvoiceOn";
-            _lblRaiseInvoiceOn.Size = new Size(112, 23);
-            _lblRaiseInvoiceOn.TabIndex = 5;
-            _lblRaiseInvoiceOn.Text = "Raise Invoice On:";
-            _lblRaiseInvoiceOn.TextAlign = ContentAlignment.MiddleLeft;
-            //
-            // lblInvoiceAddress
-            //
-            _lblInvoiceAddress.Location = new Point(16, 48);
-            _lblInvoiceAddress.Name = "lblInvoiceAddress";
-            _lblInvoiceAddress.TabIndex = 8;
-            _lblInvoiceAddress.Text = "Invoice Address";
-            //
-            // btnOK
-            //
-            _btnOK.UseVisualStyleBackColor = true;
-            _btnOK.Location = new Point(216, 208);
-            _btnOK.Name = "btnOK";
-            _btnOK.TabIndex = 3;
-            _btnOK.Text = "OK";
-            //
+            this._gpbRaiseInvoice = new System.Windows.Forms.GroupBox();
+            this._dgInvoiceAddresses = new System.Windows.Forms.DataGrid();
+            this._dtpRaiseInvoiceOn = new System.Windows.Forms.DateTimePicker();
+            this._lblRaiseInvoiceOn = new System.Windows.Forms.Label();
+            this._lblInvoiceAddress = new System.Windows.Forms.Label();
+            this._btnOK = new System.Windows.Forms.Button();
+            this._gpbRaiseInvoice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddresses)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _gpbRaiseInvoice
+            // 
+            this._gpbRaiseInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._gpbRaiseInvoice.Controls.Add(this._dgInvoiceAddresses);
+            this._gpbRaiseInvoice.Controls.Add(this._dtpRaiseInvoiceOn);
+            this._gpbRaiseInvoice.Controls.Add(this._lblRaiseInvoiceOn);
+            this._gpbRaiseInvoice.Controls.Add(this._lblInvoiceAddress);
+            this._gpbRaiseInvoice.Controls.Add(this._btnOK);
+            this._gpbRaiseInvoice.Location = new System.Drawing.Point(8, 12);
+            this._gpbRaiseInvoice.Name = "_gpbRaiseInvoice";
+            this._gpbRaiseInvoice.Size = new System.Drawing.Size(512, 260);
+            this._gpbRaiseInvoice.TabIndex = 2;
+            this._gpbRaiseInvoice.TabStop = false;
+            this._gpbRaiseInvoice.Text = "Raise Invoice";
+            // 
+            // _dgInvoiceAddresses
+            // 
+            this._dgInvoiceAddresses.DataMember = "";
+            this._dgInvoiceAddresses.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgInvoiceAddresses.Location = new System.Drawing.Point(16, 64);
+            this._dgInvoiceAddresses.Name = "_dgInvoiceAddresses";
+            this._dgInvoiceAddresses.Size = new System.Drawing.Size(488, 161);
+            this._dgInvoiceAddresses.TabIndex = 7;
+            this._dgInvoiceAddresses.Click += new System.EventHandler(this.dgInvoiceAddresses_Click);
+            // 
+            // _dtpRaiseInvoiceOn
+            // 
+            this._dtpRaiseInvoiceOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this._dtpRaiseInvoiceOn.Location = new System.Drawing.Point(136, 24);
+            this._dtpRaiseInvoiceOn.Name = "_dtpRaiseInvoiceOn";
+            this._dtpRaiseInvoiceOn.Size = new System.Drawing.Size(120, 21);
+            this._dtpRaiseInvoiceOn.TabIndex = 6;
+            // 
+            // _lblRaiseInvoiceOn
+            // 
+            this._lblRaiseInvoiceOn.Location = new System.Drawing.Point(16, 24);
+            this._lblRaiseInvoiceOn.Name = "_lblRaiseInvoiceOn";
+            this._lblRaiseInvoiceOn.Size = new System.Drawing.Size(112, 23);
+            this._lblRaiseInvoiceOn.TabIndex = 5;
+            this._lblRaiseInvoiceOn.Text = "Raise Invoice On:";
+            this._lblRaiseInvoiceOn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _lblInvoiceAddress
+            // 
+            this._lblInvoiceAddress.Location = new System.Drawing.Point(16, 48);
+            this._lblInvoiceAddress.Name = "_lblInvoiceAddress";
+            this._lblInvoiceAddress.Size = new System.Drawing.Size(100, 23);
+            this._lblInvoiceAddress.TabIndex = 8;
+            this._lblInvoiceAddress.Text = "Invoice Address";
+            // 
+            // _btnOK
+            // 
+            this._btnOK.Location = new System.Drawing.Point(219, 231);
+            this._btnOK.Name = "_btnOK";
+            this._btnOK.Size = new System.Drawing.Size(75, 23);
+            this._btnOK.TabIndex = 3;
+            this._btnOK.Text = "OK";
+            this._btnOK.UseVisualStyleBackColor = true;
+            this._btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // FrmRaiseInvoiceDetails
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(528, 278);
-            ControlBox = false;
-            Controls.Add(_gpbRaiseInvoice);
-            Name = "FrmRaiseInvoiceDetails";
-            Text = "Raise Invoice";
-            Controls.SetChildIndex(_gpbRaiseInvoice, 0);
-            _gpbRaiseInvoice.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgInvoiceAddresses).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(528, 278);
+            this.ControlBox = false;
+            this.Controls.Add(this._gpbRaiseInvoice);
+            this.Name = "FrmRaiseInvoiceDetails";
+            this.Text = "Raise Invoice";
+            this._gpbRaiseInvoice.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgInvoiceAddresses)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         

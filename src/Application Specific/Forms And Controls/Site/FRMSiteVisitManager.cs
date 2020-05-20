@@ -453,289 +453,289 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpEngineerVisits = new GroupBox();
-            _dgVisits = new DataGrid();
-            _dgVisits.DoubleClick += new EventHandler(dgVisits_DoubleClick);
-            _btnExport = new Button();
-            _btnExport.Click += new EventHandler(btnExport_Click);
-            _grpFilter = new GroupBox();
-            _btnSearch = new Button();
-            _btnSearch.Click += new EventHandler(btnSearch_Click);
-            _Label12 = new Label();
-            _cboOutcome = new ComboBox();
-            _btnfindEngineer = new Button();
-            _btnfindEngineer.Click += new EventHandler(btnfindEngineer_Click);
-            _txtEngineer = new TextBox();
-            _Label5 = new Label();
-            _dtpTo = new DateTimePicker();
-            _dtpFrom = new DateTimePicker();
-            _txtJobNumber = new TextBox();
-            _Label9 = new Label();
-            _Label8 = new Label();
-            _chkVisitDate = new CheckBox();
-            _chkVisitDate.CheckedChanged += new EventHandler(chkVisitDate_CheckedChanged);
-            _Label6 = new Label();
-            _cboType = new ComboBox();
-            _Label11 = new Label();
-            _cboDefinition = new ComboBox();
-            _cboStatus = new ComboBox();
-            _Label3 = new Label();
-            _Label10 = new Label();
-            _btnReset = new Button();
-            _btnReset.Click += new EventHandler(btnReset_Click);
-            _grpEngineerVisits.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgVisits).BeginInit();
-            _grpFilter.SuspendLayout();
-            SuspendLayout();
-            //
-            // grpEngineerVisits
-            //
-            _grpEngineerVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpEngineerVisits.Controls.Add(_dgVisits);
-            _grpEngineerVisits.Location = new Point(8, 173);
-            _grpEngineerVisits.Name = "grpEngineerVisits";
-            _grpEngineerVisits.Size = new Size(976, 407);
-            _grpEngineerVisits.TabIndex = 2;
-            _grpEngineerVisits.TabStop = false;
-            _grpEngineerVisits.Text = "Double Click To View / Edit";
-            //
-            // dgVisits
-            //
-            _dgVisits.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgVisits.DataMember = "";
-            _dgVisits.HeaderForeColor = SystemColors.ControlText;
-            _dgVisits.Location = new Point(8, 20);
-            _dgVisits.Name = "dgVisits";
-            _dgVisits.Size = new Size(960, 379);
-            _dgVisits.TabIndex = 14;
-            //
-            // btnExport
-            //
-            _btnExport.AccessibleDescription = "Export Job List To Excel";
-            _btnExport.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnExport.Location = new Point(8, 586);
-            _btnExport.Name = "btnExport";
-            _btnExport.Size = new Size(56, 23);
-            _btnExport.TabIndex = 15;
-            _btnExport.Text = "Export";
-            //
-            // grpFilter
-            //
-            _grpFilter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _grpFilter.Controls.Add(_btnSearch);
-            _grpFilter.Controls.Add(_Label12);
-            _grpFilter.Controls.Add(_cboOutcome);
-            _grpFilter.Controls.Add(_btnfindEngineer);
-            _grpFilter.Controls.Add(_txtEngineer);
-            _grpFilter.Controls.Add(_Label5);
-            _grpFilter.Controls.Add(_dtpTo);
-            _grpFilter.Controls.Add(_dtpFrom);
-            _grpFilter.Controls.Add(_txtJobNumber);
-            _grpFilter.Controls.Add(_Label9);
-            _grpFilter.Controls.Add(_Label8);
-            _grpFilter.Controls.Add(_chkVisitDate);
-            _grpFilter.Controls.Add(_Label6);
-            _grpFilter.Controls.Add(_cboType);
-            _grpFilter.Controls.Add(_Label11);
-            _grpFilter.Controls.Add(_cboDefinition);
-            _grpFilter.Controls.Add(_cboStatus);
-            _grpFilter.Controls.Add(_Label3);
-            _grpFilter.Controls.Add(_Label10);
-            _grpFilter.Location = new Point(8, 32);
-            _grpFilter.Name = "grpFilter";
-            _grpFilter.Size = new Size(976, 135);
-            _grpFilter.TabIndex = 1;
-            _grpFilter.TabStop = false;
-            _grpFilter.Text = "Filter";
-            //
-            // btnSearch
-            //
-            _btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnSearch.Location = new Point(898, 106);
-            _btnSearch.Name = "btnSearch";
-            _btnSearch.Size = new Size(70, 23);
-            _btnSearch.TabIndex = 33;
-            _btnSearch.Text = "Run Filter";
-            //
-            // Label12
-            //
-            _Label12.Location = new Point(304, 77);
-            _Label12.Name = "Label12";
-            _Label12.Size = new Size(62, 22);
-            _Label12.TabIndex = 31;
-            _Label12.Text = "Outcome";
-            //
-            // cboOutcome
-            //
-            _cboOutcome.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboOutcome.Location = new Point(377, 74);
-            _cboOutcome.Name = "cboOutcome";
-            _cboOutcome.Size = new Size(184, 21);
-            _cboOutcome.TabIndex = 32;
-            //
-            // btnfindEngineer
-            //
-            _btnfindEngineer.BackColor = Color.White;
-            _btnfindEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnfindEngineer.Location = new Point(258, 20);
-            _btnfindEngineer.Name = "btnfindEngineer";
-            _btnfindEngineer.Size = new Size(32, 23);
-            _btnfindEngineer.TabIndex = 29;
-            _btnfindEngineer.Text = "...";
-            _btnfindEngineer.UseVisualStyleBackColor = false;
-            //
-            // txtEngineer
-            //
-            _txtEngineer.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtEngineer.Location = new Point(68, 20);
-            _txtEngineer.Name = "txtEngineer";
-            _txtEngineer.ReadOnly = true;
-            _txtEngineer.Size = new Size(184, 21);
-            _txtEngineer.TabIndex = 28;
-            //
-            // Label5
-            //
-            _Label5.Location = new Point(7, 19);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(70, 16);
-            _Label5.TabIndex = 30;
-            _Label5.Text = "Engineer";
-            //
-            // dtpTo
-            //
-            _dtpTo.Location = new Point(621, 78);
-            _dtpTo.Name = "dtpTo";
-            _dtpTo.Size = new Size(155, 21);
-            _dtpTo.TabIndex = 13;
-            //
-            // dtpFrom
-            //
-            _dtpFrom.Location = new Point(621, 47);
-            _dtpFrom.Name = "dtpFrom";
-            _dtpFrom.Size = new Size(155, 21);
-            _dtpFrom.TabIndex = 12;
-            //
-            // txtJobNumber
-            //
-            _txtJobNumber.Location = new Point(377, 20);
-            _txtJobNumber.Name = "txtJobNumber";
-            _txtJobNumber.Size = new Size(184, 21);
-            _txtJobNumber.TabIndex = 9;
-            //
-            // Label9
-            //
-            _Label9.Location = new Point(565, 79);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(48, 16);
-            _Label9.TabIndex = 10;
-            _Label9.Text = "To";
-            //
-            // Label8
-            //
-            _Label8.Location = new Point(565, 47);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(48, 16);
-            _Label8.TabIndex = 9;
-            _Label8.Text = "From";
-            //
-            // chkVisitDate
-            //
-            _chkVisitDate.Cursor = Cursors.Hand;
-            _chkVisitDate.UseVisualStyleBackColor = true;
-            _chkVisitDate.Location = new Point(567, 18);
-            _chkVisitDate.Name = "chkVisitDate";
-            _chkVisitDate.Size = new Size(80, 24);
-            _chkVisitDate.TabIndex = 11;
-            _chkVisitDate.Text = "Visit Date";
-            //
-            // Label6
-            //
-            _Label6.Location = new Point(304, 21);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 16);
-            _Label6.TabIndex = 6;
-            _Label6.Text = "Job Number";
-            //
-            // cboType
-            //
-            _cboType.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboType.Location = new Point(377, 47);
-            _cboType.Name = "cboType";
-            _cboType.Size = new Size(184, 21);
-            _cboType.TabIndex = 7;
-            //
-            // Label11
-            //
-            _Label11.Location = new Point(8, 77);
-            _Label11.Name = "Label11";
-            _Label11.Size = new Size(48, 22);
-            _Label11.TabIndex = 5;
-            _Label11.Text = "Status";
-            //
-            // cboDefinition
-            //
-            _cboDefinition.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboDefinition.Location = new Point(68, 47);
-            _cboDefinition.Name = "cboDefinition";
-            _cboDefinition.Size = new Size(184, 21);
-            _cboDefinition.TabIndex = 6;
-            //
-            // cboStatus
-            //
-            _cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboStatus.Location = new Point(68, 74);
-            _cboStatus.Name = "cboStatus";
-            _cboStatus.Size = new Size(184, 21);
-            _cboStatus.TabIndex = 8;
-            //
-            // Label3
-            //
-            _Label3.Location = new Point(8, 50);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(72, 16);
-            _Label3.TabIndex = 3;
-            _Label3.Text = "Definition";
-            //
-            // Label10
-            //
-            _Label10.Location = new Point(304, 47);
-            _Label10.Name = "Label10";
-            _Label10.Size = new Size(55, 22);
-            _Label10.TabIndex = 4;
-            _Label10.Text = "Type";
-            //
-            // btnReset
-            //
-            _btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnReset.Location = new Point(72, 586);
-            _btnReset.Name = "btnReset";
-            _btnReset.Size = new Size(56, 23);
-            _btnReset.TabIndex = 16;
-            _btnReset.Text = "Reset";
-            //
+            this._grpEngineerVisits = new System.Windows.Forms.GroupBox();
+            this._dgVisits = new System.Windows.Forms.DataGrid();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._grpFilter = new System.Windows.Forms.GroupBox();
+            this._btnSearch = new System.Windows.Forms.Button();
+            this._Label12 = new System.Windows.Forms.Label();
+            this._cboOutcome = new System.Windows.Forms.ComboBox();
+            this._btnfindEngineer = new System.Windows.Forms.Button();
+            this._txtEngineer = new System.Windows.Forms.TextBox();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._dtpTo = new System.Windows.Forms.DateTimePicker();
+            this._dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this._txtJobNumber = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._chkVisitDate = new System.Windows.Forms.CheckBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._cboType = new System.Windows.Forms.ComboBox();
+            this._Label11 = new System.Windows.Forms.Label();
+            this._cboDefinition = new System.Windows.Forms.ComboBox();
+            this._cboStatus = new System.Windows.Forms.ComboBox();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label10 = new System.Windows.Forms.Label();
+            this._btnReset = new System.Windows.Forms.Button();
+            this._grpEngineerVisits.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgVisits)).BeginInit();
+            this._grpFilter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _grpEngineerVisits
+            // 
+            this._grpEngineerVisits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpEngineerVisits.Controls.Add(this._dgVisits);
+            this._grpEngineerVisits.Location = new System.Drawing.Point(8, 153);
+            this._grpEngineerVisits.Name = "_grpEngineerVisits";
+            this._grpEngineerVisits.Size = new System.Drawing.Size(976, 427);
+            this._grpEngineerVisits.TabIndex = 2;
+            this._grpEngineerVisits.TabStop = false;
+            this._grpEngineerVisits.Text = "Double Click To View / Edit";
+            // 
+            // _dgVisits
+            // 
+            this._dgVisits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgVisits.DataMember = "";
+            this._dgVisits.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgVisits.Location = new System.Drawing.Point(8, 20);
+            this._dgVisits.Name = "_dgVisits";
+            this._dgVisits.Size = new System.Drawing.Size(960, 399);
+            this._dgVisits.TabIndex = 14;
+            this._dgVisits.DoubleClick += new System.EventHandler(this.dgVisits_DoubleClick);
+            // 
+            // _btnExport
+            // 
+            this._btnExport.AccessibleDescription = "Export Job List To Excel";
+            this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnExport.Location = new System.Drawing.Point(8, 586);
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.Size = new System.Drawing.Size(56, 23);
+            this._btnExport.TabIndex = 15;
+            this._btnExport.Text = "Export";
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // _grpFilter
+            // 
+            this._grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpFilter.Controls.Add(this._btnSearch);
+            this._grpFilter.Controls.Add(this._Label12);
+            this._grpFilter.Controls.Add(this._cboOutcome);
+            this._grpFilter.Controls.Add(this._btnfindEngineer);
+            this._grpFilter.Controls.Add(this._txtEngineer);
+            this._grpFilter.Controls.Add(this._Label5);
+            this._grpFilter.Controls.Add(this._dtpTo);
+            this._grpFilter.Controls.Add(this._dtpFrom);
+            this._grpFilter.Controls.Add(this._txtJobNumber);
+            this._grpFilter.Controls.Add(this._Label9);
+            this._grpFilter.Controls.Add(this._Label8);
+            this._grpFilter.Controls.Add(this._chkVisitDate);
+            this._grpFilter.Controls.Add(this._Label6);
+            this._grpFilter.Controls.Add(this._cboType);
+            this._grpFilter.Controls.Add(this._Label11);
+            this._grpFilter.Controls.Add(this._cboDefinition);
+            this._grpFilter.Controls.Add(this._cboStatus);
+            this._grpFilter.Controls.Add(this._Label3);
+            this._grpFilter.Controls.Add(this._Label10);
+            this._grpFilter.Location = new System.Drawing.Point(8, 12);
+            this._grpFilter.Name = "_grpFilter";
+            this._grpFilter.Size = new System.Drawing.Size(976, 135);
+            this._grpFilter.TabIndex = 1;
+            this._grpFilter.TabStop = false;
+            this._grpFilter.Text = "Filter";
+            // 
+            // _btnSearch
+            // 
+            this._btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnSearch.Location = new System.Drawing.Point(898, 106);
+            this._btnSearch.Name = "_btnSearch";
+            this._btnSearch.Size = new System.Drawing.Size(70, 23);
+            this._btnSearch.TabIndex = 33;
+            this._btnSearch.Text = "Run Filter";
+            this._btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // _Label12
+            // 
+            this._Label12.Location = new System.Drawing.Point(304, 77);
+            this._Label12.Name = "_Label12";
+            this._Label12.Size = new System.Drawing.Size(62, 22);
+            this._Label12.TabIndex = 31;
+            this._Label12.Text = "Outcome";
+            // 
+            // _cboOutcome
+            // 
+            this._cboOutcome.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboOutcome.Location = new System.Drawing.Point(377, 74);
+            this._cboOutcome.Name = "_cboOutcome";
+            this._cboOutcome.Size = new System.Drawing.Size(184, 21);
+            this._cboOutcome.TabIndex = 32;
+            // 
+            // _btnfindEngineer
+            // 
+            this._btnfindEngineer.BackColor = System.Drawing.Color.White;
+            this._btnfindEngineer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnfindEngineer.Location = new System.Drawing.Point(258, 20);
+            this._btnfindEngineer.Name = "_btnfindEngineer";
+            this._btnfindEngineer.Size = new System.Drawing.Size(32, 23);
+            this._btnfindEngineer.TabIndex = 29;
+            this._btnfindEngineer.Text = "...";
+            this._btnfindEngineer.UseVisualStyleBackColor = false;
+            this._btnfindEngineer.Click += new System.EventHandler(this.btnfindEngineer_Click);
+            // 
+            // _txtEngineer
+            // 
+            this._txtEngineer.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtEngineer.Location = new System.Drawing.Point(68, 20);
+            this._txtEngineer.Name = "_txtEngineer";
+            this._txtEngineer.ReadOnly = true;
+            this._txtEngineer.Size = new System.Drawing.Size(184, 21);
+            this._txtEngineer.TabIndex = 28;
+            // 
+            // _Label5
+            // 
+            this._Label5.Location = new System.Drawing.Point(7, 19);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(70, 16);
+            this._Label5.TabIndex = 30;
+            this._Label5.Text = "Engineer";
+            // 
+            // _dtpTo
+            // 
+            this._dtpTo.Location = new System.Drawing.Point(621, 78);
+            this._dtpTo.Name = "_dtpTo";
+            this._dtpTo.Size = new System.Drawing.Size(155, 21);
+            this._dtpTo.TabIndex = 13;
+            // 
+            // _dtpFrom
+            // 
+            this._dtpFrom.Location = new System.Drawing.Point(621, 47);
+            this._dtpFrom.Name = "_dtpFrom";
+            this._dtpFrom.Size = new System.Drawing.Size(155, 21);
+            this._dtpFrom.TabIndex = 12;
+            // 
+            // _txtJobNumber
+            // 
+            this._txtJobNumber.Location = new System.Drawing.Point(377, 20);
+            this._txtJobNumber.Name = "_txtJobNumber";
+            this._txtJobNumber.Size = new System.Drawing.Size(184, 21);
+            this._txtJobNumber.TabIndex = 9;
+            // 
+            // _Label9
+            // 
+            this._Label9.Location = new System.Drawing.Point(565, 79);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(48, 16);
+            this._Label9.TabIndex = 10;
+            this._Label9.Text = "To";
+            // 
+            // _Label8
+            // 
+            this._Label8.Location = new System.Drawing.Point(565, 47);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(48, 16);
+            this._Label8.TabIndex = 9;
+            this._Label8.Text = "From";
+            // 
+            // _chkVisitDate
+            // 
+            this._chkVisitDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._chkVisitDate.Location = new System.Drawing.Point(567, 18);
+            this._chkVisitDate.Name = "_chkVisitDate";
+            this._chkVisitDate.Size = new System.Drawing.Size(80, 24);
+            this._chkVisitDate.TabIndex = 11;
+            this._chkVisitDate.Text = "Visit Date";
+            this._chkVisitDate.UseVisualStyleBackColor = true;
+            this._chkVisitDate.CheckedChanged += new System.EventHandler(this.chkVisitDate_CheckedChanged);
+            // 
+            // _Label6
+            // 
+            this._Label6.Location = new System.Drawing.Point(304, 21);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 16);
+            this._Label6.TabIndex = 6;
+            this._Label6.Text = "Job Number";
+            // 
+            // _cboType
+            // 
+            this._cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboType.Location = new System.Drawing.Point(377, 47);
+            this._cboType.Name = "_cboType";
+            this._cboType.Size = new System.Drawing.Size(184, 21);
+            this._cboType.TabIndex = 7;
+            // 
+            // _Label11
+            // 
+            this._Label11.Location = new System.Drawing.Point(8, 77);
+            this._Label11.Name = "_Label11";
+            this._Label11.Size = new System.Drawing.Size(48, 22);
+            this._Label11.TabIndex = 5;
+            this._Label11.Text = "Status";
+            // 
+            // _cboDefinition
+            // 
+            this._cboDefinition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboDefinition.Location = new System.Drawing.Point(68, 47);
+            this._cboDefinition.Name = "_cboDefinition";
+            this._cboDefinition.Size = new System.Drawing.Size(184, 21);
+            this._cboDefinition.TabIndex = 6;
+            // 
+            // _cboStatus
+            // 
+            this._cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboStatus.Location = new System.Drawing.Point(68, 74);
+            this._cboStatus.Name = "_cboStatus";
+            this._cboStatus.Size = new System.Drawing.Size(184, 21);
+            this._cboStatus.TabIndex = 8;
+            // 
+            // _Label3
+            // 
+            this._Label3.Location = new System.Drawing.Point(8, 50);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(72, 16);
+            this._Label3.TabIndex = 3;
+            this._Label3.Text = "Definition";
+            // 
+            // _Label10
+            // 
+            this._Label10.Location = new System.Drawing.Point(304, 47);
+            this._Label10.Name = "_Label10";
+            this._Label10.Size = new System.Drawing.Size(55, 22);
+            this._Label10.TabIndex = 4;
+            this._Label10.Text = "Type";
+            // 
+            // _btnReset
+            // 
+            this._btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnReset.Location = new System.Drawing.Point(72, 586);
+            this._btnReset.Name = "_btnReset";
+            this._btnReset.Size = new System.Drawing.Size(56, 23);
+            this._btnReset.TabIndex = 16;
+            this._btnReset.Text = "Reset";
+            this._btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // FRMSiteVisitManager
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(992, 616);
-            Controls.Add(_grpFilter);
-            Controls.Add(_btnExport);
-            Controls.Add(_grpEngineerVisits);
-            Controls.Add(_btnReset);
-            MinimumSize = new Size(1000, 528);
-            Name = "FRMSiteVisitManager";
-            Text = "Site Visit Manager";
-            WindowState = FormWindowState.Maximized;
-            Controls.SetChildIndex(_btnReset, 0);
-            Controls.SetChildIndex(_grpEngineerVisits, 0);
-            Controls.SetChildIndex(_btnExport, 0);
-            Controls.SetChildIndex(_grpFilter, 0);
-            _grpEngineerVisits.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgVisits).EndInit();
-            _grpFilter.ResumeLayout(false);
-            _grpFilter.PerformLayout();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(992, 616);
+            this.Controls.Add(this._grpFilter);
+            this.Controls.Add(this._btnExport);
+            this.Controls.Add(this._grpEngineerVisits);
+            this.Controls.Add(this._btnReset);
+            this.MinimumSize = new System.Drawing.Size(1000, 528);
+            this.Name = "FRMSiteVisitManager";
+            this.Text = "Site Visit Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this._grpEngineerVisits.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgVisits)).EndInit();
+            this._grpFilter.ResumeLayout(false);
+            this._grpFilter.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

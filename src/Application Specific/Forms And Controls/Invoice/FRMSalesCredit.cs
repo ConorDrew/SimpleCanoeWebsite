@@ -501,254 +501,255 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _grpSystemScheduleOfRate = new GroupBox();
-            _grpSystemScheduleOfRate.Enter += new EventHandler(grpSystemScheduleOfRate_Enter);
-            _Label7 = new Label();
-            _DateTimePicker1 = new DateTimePicker();
-            _dgRates = new DataGridView();
-            _dgRates.CellEndEdit += new DataGridViewCellEventHandler(dgvParts_CellEndEdit);
-            _txtAfter = new TextBox();
-            _txtCredit = new TextBox();
-            _txtInvoiced = new TextBox();
-            _txtExRef = new TextBox();
-            _cboUser = new ComboBox();
-            _Label1 = new Label();
-            _txtReason = new TextBox();
-            _btnCancel = new Button();
-            _btnCancel.Click += new EventHandler(btnCancel_Click);
-            _btnAdd = new Button();
-            _btnAdd.Click += new EventHandler(btnAdd_Click);
-            _Label3 = new Label();
-            _Label2 = new Label();
-            _Label5 = new Label();
-            _Label4 = new Label();
-            _Label6 = new Label();
-            _txtNominal = new TextBox();
-            _Label8 = new Label();
-            _txtDept = new TextBox();
-            _Label9 = new Label();
-            _grpSystemScheduleOfRate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgRates).BeginInit();
-            SuspendLayout();
-            //
-            // grpSystemScheduleOfRate
-            //
-            _grpSystemScheduleOfRate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _grpSystemScheduleOfRate.Controls.Add(_txtDept);
-            _grpSystemScheduleOfRate.Controls.Add(_Label9);
-            _grpSystemScheduleOfRate.Controls.Add(_txtNominal);
-            _grpSystemScheduleOfRate.Controls.Add(_Label8);
-            _grpSystemScheduleOfRate.Controls.Add(_Label7);
-            _grpSystemScheduleOfRate.Controls.Add(_DateTimePicker1);
-            _grpSystemScheduleOfRate.Controls.Add(_dgRates);
-            _grpSystemScheduleOfRate.Controls.Add(_txtAfter);
-            _grpSystemScheduleOfRate.Controls.Add(_txtCredit);
-            _grpSystemScheduleOfRate.Controls.Add(_txtInvoiced);
-            _grpSystemScheduleOfRate.Controls.Add(_txtExRef);
-            _grpSystemScheduleOfRate.Controls.Add(_cboUser);
-            _grpSystemScheduleOfRate.Controls.Add(_Label1);
-            _grpSystemScheduleOfRate.Controls.Add(_txtReason);
-            _grpSystemScheduleOfRate.Controls.Add(_btnCancel);
-            _grpSystemScheduleOfRate.Controls.Add(_btnAdd);
-            _grpSystemScheduleOfRate.Controls.Add(_Label3);
-            _grpSystemScheduleOfRate.Controls.Add(_Label2);
-            _grpSystemScheduleOfRate.Controls.Add(_Label5);
-            _grpSystemScheduleOfRate.Controls.Add(_Label4);
-            _grpSystemScheduleOfRate.Controls.Add(_Label6);
-            _grpSystemScheduleOfRate.Location = new Point(8, 32);
-            _grpSystemScheduleOfRate.Name = "grpSystemScheduleOfRate";
-            _grpSystemScheduleOfRate.Size = new Size(632, 432);
-            _grpSystemScheduleOfRate.TabIndex = 2;
-            _grpSystemScheduleOfRate.TabStop = false;
-            _grpSystemScheduleOfRate.Text = "Credit Details";
-            //
-            // Label7
-            //
-            _Label7.AutoSize = true;
-            _Label7.Location = new Point(6, 287);
-            _Label7.Name = "Label7";
-            _Label7.Size = new Size(88, 13);
-            _Label7.TabIndex = 49;
-            _Label7.Text = "Date of Credit";
-            //
-            // DateTimePicker1
-            //
-            _DateTimePicker1.Location = new Point(9, 303);
-            _DateTimePicker1.Name = "DateTimePicker1";
-            _DateTimePicker1.Size = new Size(324, 21);
-            _DateTimePicker1.TabIndex = 48;
-            //
-            // dgRates
-            //
-            _dgRates.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            _dgRates.Location = new Point(6, 20);
-            _dgRates.Name = "dgRates";
-            _dgRates.Size = new Size(620, 170);
-            _dgRates.TabIndex = 47;
-            //
-            // txtAfter
-            //
-            _txtAfter.Location = new Point(495, 306);
-            _txtAfter.Name = "txtAfter";
-            _txtAfter.ReadOnly = true;
-            _txtAfter.Size = new Size(112, 21);
-            _txtAfter.TabIndex = 45;
-            //
-            // txtCredit
-            //
-            _txtCredit.Location = new Point(495, 262);
-            _txtCredit.Name = "txtCredit";
-            _txtCredit.ReadOnly = true;
-            _txtCredit.Size = new Size(112, 21);
-            _txtCredit.TabIndex = 43;
-            //
-            // txtInvoiced
-            //
-            _txtInvoiced.Location = new Point(495, 221);
-            _txtInvoiced.Name = "txtInvoiced";
-            _txtInvoiced.ReadOnly = true;
-            _txtInvoiced.Size = new Size(112, 21);
-            _txtInvoiced.TabIndex = 41;
-            //
-            // txtExRef
-            //
-            _txtExRef.Location = new Point(233, 262);
-            _txtExRef.Name = "txtExRef";
-            _txtExRef.Size = new Size(100, 21);
-            _txtExRef.TabIndex = 39;
-            //
-            // cboUser
-            //
-            _cboUser.FormattingEnabled = true;
-            _cboUser.Location = new Point(9, 221);
-            _cboUser.Name = "cboUser";
-            _cboUser.Size = new Size(324, 21);
-            _cboUser.TabIndex = 37;
-            //
-            // Label1
-            //
-            _Label1.AutoSize = true;
-            _Label1.Location = new Point(6, 332);
-            _Label1.Name = "Label1";
-            _Label1.Size = new Size(110, 13);
-            _Label1.TabIndex = 36;
-            _Label1.Text = "Reason For Credit";
-            //
-            // txtReason
-            //
-            _txtReason.Location = new Point(8, 350);
-            _txtReason.Multiline = true;
-            _txtReason.Name = "txtReason";
-            _txtReason.Size = new Size(611, 40);
-            _txtReason.TabIndex = 35;
-            //
-            // btnCancel
-            //
-            _btnCancel.Location = new Point(8, 400);
-            _btnCancel.Name = "btnCancel";
-            _btnCancel.Size = new Size(75, 23);
-            _btnCancel.TabIndex = 34;
-            _btnCancel.Text = "Cancel";
-            //
-            // btnAdd
-            //
-            _btnAdd.Location = new Point(518, 400);
-            _btnAdd.Name = "btnAdd";
-            _btnAdd.Size = new Size(101, 23);
-            _btnAdd.TabIndex = 33;
-            _btnAdd.Text = "Create Credit";
-            //
-            // Label3
-            //
-            _Label3.AutoSize = true;
-            _Label3.Location = new Point(231, 246);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(44, 13);
-            _Label3.TabIndex = 40;
-            _Label3.Text = "Ex Ref";
-            //
-            // Label2
-            //
-            _Label2.AutoSize = true;
-            _Label2.Location = new Point(6, 203);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(86, 13);
-            _Label2.TabIndex = 38;
-            _Label2.Text = "Requested By";
-            //
-            // Label5
-            //
-            _Label5.AutoSize = true;
-            _Label5.Location = new Point(505, 247);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(87, 13);
-            _Label5.TabIndex = 44;
-            _Label5.Text = "Total Credited";
-            //
-            // Label4
-            //
-            _Label4.AutoSize = true;
-            _Label4.Location = new Point(479, 203);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(145, 13);
-            _Label4.TabIndex = 42;
-            _Label4.Text = "Total Originally Invoiced";
-            //
-            // Label6
-            //
-            _Label6.AutoSize = true;
-            _Label6.Location = new Point(474, 287);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(150, 13);
-            _Label6.TabIndex = 46;
-            _Label6.Text = "Total Invoice after Credit";
-            //
-            // txtNominal
-            //
-            _txtNominal.Location = new Point(9, 263);
-            _txtNominal.Name = "txtNominal";
-            _txtNominal.Size = new Size(100, 21);
-            _txtNominal.TabIndex = 50;
-            //
-            // Label8
-            //
-            _Label8.AutoSize = true;
-            _Label8.Location = new Point(7, 247);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(53, 13);
-            _Label8.TabIndex = 51;
-            _Label8.Text = "Nominal";
-            //
-            // txtDept
-            //
-            _txtDept.Location = new Point(121, 263);
-            _txtDept.Name = "txtDept";
-            _txtDept.Size = new Size(100, 21);
-            _txtDept.TabIndex = 52;
-            //
-            // Label9
-            //
-            _Label9.AutoSize = true;
-            _Label9.Location = new Point(119, 247);
-            _Label9.Name = "Label9";
-            _Label9.Size = new Size(34, 13);
-            _Label9.TabIndex = 53;
-            _Label9.Text = "Dept";
-            //
+            this._grpSystemScheduleOfRate = new System.Windows.Forms.GroupBox();
+            this._txtDept = new System.Windows.Forms.TextBox();
+            this._Label9 = new System.Windows.Forms.Label();
+            this._txtNominal = new System.Windows.Forms.TextBox();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._Label7 = new System.Windows.Forms.Label();
+            this._DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this._dgRates = new System.Windows.Forms.DataGridView();
+            this._txtAfter = new System.Windows.Forms.TextBox();
+            this._txtCredit = new System.Windows.Forms.TextBox();
+            this._txtInvoiced = new System.Windows.Forms.TextBox();
+            this._txtExRef = new System.Windows.Forms.TextBox();
+            this._cboUser = new System.Windows.Forms.ComboBox();
+            this._Label1 = new System.Windows.Forms.Label();
+            this._txtReason = new System.Windows.Forms.TextBox();
+            this._btnCancel = new System.Windows.Forms.Button();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._grpSystemScheduleOfRate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgRates)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // _grpSystemScheduleOfRate
+            // 
+            this._grpSystemScheduleOfRate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._grpSystemScheduleOfRate.Controls.Add(this._txtDept);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label9);
+            this._grpSystemScheduleOfRate.Controls.Add(this._txtNominal);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label8);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label7);
+            this._grpSystemScheduleOfRate.Controls.Add(this._DateTimePicker1);
+            this._grpSystemScheduleOfRate.Controls.Add(this._dgRates);
+            this._grpSystemScheduleOfRate.Controls.Add(this._txtAfter);
+            this._grpSystemScheduleOfRate.Controls.Add(this._txtCredit);
+            this._grpSystemScheduleOfRate.Controls.Add(this._txtInvoiced);
+            this._grpSystemScheduleOfRate.Controls.Add(this._txtExRef);
+            this._grpSystemScheduleOfRate.Controls.Add(this._cboUser);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label1);
+            this._grpSystemScheduleOfRate.Controls.Add(this._txtReason);
+            this._grpSystemScheduleOfRate.Controls.Add(this._btnCancel);
+            this._grpSystemScheduleOfRate.Controls.Add(this._btnAdd);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label3);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label2);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label5);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label4);
+            this._grpSystemScheduleOfRate.Controls.Add(this._Label6);
+            this._grpSystemScheduleOfRate.Location = new System.Drawing.Point(8, 12);
+            this._grpSystemScheduleOfRate.Name = "_grpSystemScheduleOfRate";
+            this._grpSystemScheduleOfRate.Size = new System.Drawing.Size(632, 452);
+            this._grpSystemScheduleOfRate.TabIndex = 2;
+            this._grpSystemScheduleOfRate.TabStop = false;
+            this._grpSystemScheduleOfRate.Text = "Credit Details";
+            this._grpSystemScheduleOfRate.Enter += new System.EventHandler(this.grpSystemScheduleOfRate_Enter);
+            // 
+            // _txtDept
+            // 
+            this._txtDept.Location = new System.Drawing.Point(121, 263);
+            this._txtDept.Name = "_txtDept";
+            this._txtDept.Size = new System.Drawing.Size(100, 21);
+            this._txtDept.TabIndex = 52;
+            // 
+            // _Label9
+            // 
+            this._Label9.AutoSize = true;
+            this._Label9.Location = new System.Drawing.Point(119, 247);
+            this._Label9.Name = "_Label9";
+            this._Label9.Size = new System.Drawing.Size(34, 13);
+            this._Label9.TabIndex = 53;
+            this._Label9.Text = "Dept";
+            // 
+            // _txtNominal
+            // 
+            this._txtNominal.Location = new System.Drawing.Point(9, 263);
+            this._txtNominal.Name = "_txtNominal";
+            this._txtNominal.Size = new System.Drawing.Size(100, 21);
+            this._txtNominal.TabIndex = 50;
+            // 
+            // _Label8
+            // 
+            this._Label8.AutoSize = true;
+            this._Label8.Location = new System.Drawing.Point(7, 247);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(53, 13);
+            this._Label8.TabIndex = 51;
+            this._Label8.Text = "Nominal";
+            // 
+            // _Label7
+            // 
+            this._Label7.AutoSize = true;
+            this._Label7.Location = new System.Drawing.Point(6, 287);
+            this._Label7.Name = "_Label7";
+            this._Label7.Size = new System.Drawing.Size(88, 13);
+            this._Label7.TabIndex = 49;
+            this._Label7.Text = "Date of Credit";
+            // 
+            // _DateTimePicker1
+            // 
+            this._DateTimePicker1.Location = new System.Drawing.Point(9, 303);
+            this._DateTimePicker1.Name = "_DateTimePicker1";
+            this._DateTimePicker1.Size = new System.Drawing.Size(324, 21);
+            this._DateTimePicker1.TabIndex = 48;
+            // 
+            // _dgRates
+            // 
+            this._dgRates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dgRates.Location = new System.Drawing.Point(6, 20);
+            this._dgRates.Name = "_dgRates";
+            this._dgRates.Size = new System.Drawing.Size(620, 170);
+            this._dgRates.TabIndex = 47;
+            this._dgRates.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParts_CellEndEdit);
+            // 
+            // _txtAfter
+            // 
+            this._txtAfter.Location = new System.Drawing.Point(495, 306);
+            this._txtAfter.Name = "_txtAfter";
+            this._txtAfter.ReadOnly = true;
+            this._txtAfter.Size = new System.Drawing.Size(112, 21);
+            this._txtAfter.TabIndex = 45;
+            // 
+            // _txtCredit
+            // 
+            this._txtCredit.Location = new System.Drawing.Point(495, 262);
+            this._txtCredit.Name = "_txtCredit";
+            this._txtCredit.ReadOnly = true;
+            this._txtCredit.Size = new System.Drawing.Size(112, 21);
+            this._txtCredit.TabIndex = 43;
+            // 
+            // _txtInvoiced
+            // 
+            this._txtInvoiced.Location = new System.Drawing.Point(495, 221);
+            this._txtInvoiced.Name = "_txtInvoiced";
+            this._txtInvoiced.ReadOnly = true;
+            this._txtInvoiced.Size = new System.Drawing.Size(112, 21);
+            this._txtInvoiced.TabIndex = 41;
+            // 
+            // _txtExRef
+            // 
+            this._txtExRef.Location = new System.Drawing.Point(233, 262);
+            this._txtExRef.Name = "_txtExRef";
+            this._txtExRef.Size = new System.Drawing.Size(100, 21);
+            this._txtExRef.TabIndex = 39;
+            // 
+            // _cboUser
+            // 
+            this._cboUser.FormattingEnabled = true;
+            this._cboUser.Location = new System.Drawing.Point(9, 221);
+            this._cboUser.Name = "_cboUser";
+            this._cboUser.Size = new System.Drawing.Size(324, 21);
+            this._cboUser.TabIndex = 37;
+            // 
+            // _Label1
+            // 
+            this._Label1.AutoSize = true;
+            this._Label1.Location = new System.Drawing.Point(6, 332);
+            this._Label1.Name = "_Label1";
+            this._Label1.Size = new System.Drawing.Size(110, 13);
+            this._Label1.TabIndex = 36;
+            this._Label1.Text = "Reason For Credit";
+            // 
+            // _txtReason
+            // 
+            this._txtReason.Location = new System.Drawing.Point(8, 350);
+            this._txtReason.Multiline = true;
+            this._txtReason.Name = "_txtReason";
+            this._txtReason.Size = new System.Drawing.Size(611, 40);
+            this._txtReason.TabIndex = 35;
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Location = new System.Drawing.Point(8, 400);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 23);
+            this._btnCancel.TabIndex = 34;
+            this._btnCancel.Text = "Cancel";
+            this._btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // _btnAdd
+            // 
+            this._btnAdd.Location = new System.Drawing.Point(518, 400);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(101, 23);
+            this._btnAdd.TabIndex = 33;
+            this._btnAdd.Text = "Create Credit";
+            this._btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // _Label3
+            // 
+            this._Label3.AutoSize = true;
+            this._Label3.Location = new System.Drawing.Point(231, 246);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(44, 13);
+            this._Label3.TabIndex = 40;
+            this._Label3.Text = "Ex Ref";
+            // 
+            // _Label2
+            // 
+            this._Label2.AutoSize = true;
+            this._Label2.Location = new System.Drawing.Point(6, 203);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(86, 13);
+            this._Label2.TabIndex = 38;
+            this._Label2.Text = "Requested By";
+            // 
+            // _Label5
+            // 
+            this._Label5.AutoSize = true;
+            this._Label5.Location = new System.Drawing.Point(505, 247);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(87, 13);
+            this._Label5.TabIndex = 44;
+            this._Label5.Text = "Total Credited";
+            // 
+            // _Label4
+            // 
+            this._Label4.AutoSize = true;
+            this._Label4.Location = new System.Drawing.Point(479, 203);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(145, 13);
+            this._Label4.TabIndex = 42;
+            this._Label4.Text = "Total Originally Invoiced";
+            // 
+            // _Label6
+            // 
+            this._Label6.AutoSize = true;
+            this._Label6.Location = new System.Drawing.Point(474, 287);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(150, 13);
+            this._Label6.TabIndex = 46;
+            this._Label6.Text = "Total Invoice after Credit";
+            // 
             // FRMSalesCredit
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(648, 470);
-            Controls.Add(_grpSystemScheduleOfRate);
-            MinimumSize = new Size(656, 504);
-            Name = "FRMSalesCredit";
-            Text = "Property Schedule Of Rates List";
-            Controls.SetChildIndex(_grpSystemScheduleOfRate, 0);
-            _grpSystemScheduleOfRate.ResumeLayout(false);
-            _grpSystemScheduleOfRate.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgRates).EndInit();
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(648, 470);
+            this.Controls.Add(this._grpSystemScheduleOfRate);
+            this.MinimumSize = new System.Drawing.Size(656, 504);
+            this.Name = "FRMSalesCredit";
+            this.Text = "Property Schedule Of Rates List";
+            this._grpSystemScheduleOfRate.ResumeLayout(false);
+            this._grpSystemScheduleOfRate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgRates)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)

@@ -405,304 +405,303 @@ namespace FSM
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            _GroupBox1 = new GroupBox();
-            _dgStockReplenishment = new DataGrid();
-            _dgStockReplenishment.MouseUp += new MouseEventHandler(dgStockReplenishment_MouseUp);
-            _btnToMinimum = new Button();
-            _btnToMinimum.Click += new EventHandler(btnToMinimum_Click);
-            _btnToRecommended = new Button();
-            _btnToRecommended.Click += new EventHandler(btnToRecommended_Click);
-            _chkRecommended = new CheckBox();
-            _chkMinimum = new CheckBox();
-            _lblNumberOfItems = new Label();
-            _Label2 = new Label();
-            _Panel1 = new Panel();
-            _Panel2 = new Panel();
-            _Panel3 = new Panel();
-            _Label3 = new Label();
-            _Label4 = new Label();
-            _Panel4 = new Panel();
-            _Label5 = new Label();
-            _GroupBox2 = new GroupBox();
-            _btnRunFilter = new Button();
-            _btnRunFilter.Click += new EventHandler(btnRunFilter_Click);
-            _chkIncludeVans = new CheckBox();
-            _txtItem = new TextBox();
-            _txtLocation = new TextBox();
-            _Label6 = new Label();
-            _Label8 = new Label();
-            _GroupBox3 = new GroupBox();
-            _btnClose = new Button();
-            _btnClose.Click += new EventHandler(btnClose_Click);
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_dgStockReplenishment).BeginInit();
-            _GroupBox2.SuspendLayout();
-            _GroupBox3.SuspendLayout();
-            SuspendLayout();
-            //
-            // GroupBox1
-            //
-            _GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _GroupBox1.Controls.Add(_dgStockReplenishment);
-            _GroupBox1.Location = new Point(8, 204);
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.Size = new Size(992, 488);
-            _GroupBox1.TabIndex = 2;
-            _GroupBox1.TabStop = false;
-            _GroupBox1.Text = "Tick those combinations you wish to update";
-            //
-            // dgStockReplenishment
-            //
-            _dgStockReplenishment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _dgStockReplenishment.DataMember = "";
-            _dgStockReplenishment.HeaderForeColor = SystemColors.ControlText;
-            _dgStockReplenishment.Location = new Point(8, 25);
-            _dgStockReplenishment.Name = "dgStockReplenishment";
-            _dgStockReplenishment.Size = new Size(976, 455);
-            _dgStockReplenishment.TabIndex = 7;
-            //
-            // btnToMinimum
-            //
-            _btnToMinimum.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnToMinimum.Location = new Point(432, 700);
-            _btnToMinimum.Name = "btnToMinimum";
-            _btnToMinimum.Size = new Size(280, 23);
-            _btnToMinimum.TabIndex = 3;
-            _btnToMinimum.Text = "Bring amounts up to minimum quantities";
-            //
-            // btnToRecommended
-            //
-            _btnToRecommended.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnToRecommended.Location = new Point(720, 700);
-            _btnToRecommended.Name = "btnToRecommended";
-            _btnToRecommended.Size = new Size(280, 23);
-            _btnToRecommended.TabIndex = 4;
-            _btnToRecommended.Text = "Bring amounts up to maximum quantities";
-            //
-            // chkRecommended
-            //
-            _chkRecommended.Location = new Point(10, 76);
-            _chkRecommended.Name = "chkRecommended";
-            _chkRecommended.Size = new Size(271, 24);
-            _chkRecommended.TabIndex = 2;
-            _chkRecommended.Text = "Items where amount is below maximum";
-            //
-            // chkMinimum
-            //
-            _chkMinimum.Checked = true;
-            _chkMinimum.CheckState = CheckState.Checked;
-            _chkMinimum.Location = new Point(10, 103);
-            _chkMinimum.Name = "chkMinimum";
-            _chkMinimum.Size = new Size(256, 24);
-            _chkMinimum.TabIndex = 3;
-            _chkMinimum.Text = "Items where amount is below minimum";
-            //
-            // lblNumberOfItems
-            //
-            _lblNumberOfItems.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _lblNumberOfItems.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            _lblNumberOfItems.Font = new Font("Verdana", 10.0F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _lblNumberOfItems.Location = new Point(85, 700);
-            _lblNumberOfItems.Name = "lblNumberOfItems";
-            _lblNumberOfItems.Size = new Size(341, 24);
-            _lblNumberOfItems.TabIndex = 7;
-            _lblNumberOfItems.TextAlign = ContentAlignment.MiddleCenter;
-            //
-            // Label2
-            //
-            _Label2.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label2.Location = new Point(32, 24);
-            _Label2.Name = "Label2";
-            _Label2.Size = new Size(425, 16);
-            _Label2.TabIndex = 9;
-            _Label2.Text = "Amount ABOVE or EQUAL to both minimum and the maximum quantities";
-            //
-            // Panel1
-            //
-            _Panel1.BackColor = Color.Yellow;
-            _Panel1.Location = new Point(8, 54);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(16, 16);
-            _Panel1.TabIndex = 10;
-            //
-            // Panel2
-            //
-            _Panel2.BackColor = Color.Salmon;
-            _Panel2.Location = new Point(8, 82);
-            _Panel2.Name = "Panel2";
-            _Panel2.Size = new Size(16, 16);
-            _Panel2.TabIndex = 11;
-            //
-            // Panel3
-            //
-            _Panel3.BackColor = Color.LightGreen;
-            _Panel3.Location = new Point(8, 24);
-            _Panel3.Name = "Panel3";
-            _Panel3.Size = new Size(16, 16);
-            _Panel3.TabIndex = 12;
-            //
-            // Label3
-            //
-            _Label3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label3.Location = new Point(32, 54);
-            _Label3.Name = "Label3";
-            _Label3.Size = new Size(425, 16);
-            _Label3.TabIndex = 13;
-            _Label3.Text = "Amount ABOVE or EQUAL to minimum but BELOW maximum quantities";
-            //
-            // Label4
-            //
-            _Label4.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label4.Location = new Point(32, 82);
-            _Label4.Name = "Label4";
-            _Label4.Size = new Size(376, 16);
-            _Label4.TabIndex = 14;
-            _Label4.Text = "Amount BELOW both minimum and the maximum quantities";
-            //
-            // Panel4
-            //
-            _Panel4.BackColor = Color.LightBlue;
-            _Panel4.Location = new Point(8, 109);
-            _Panel4.Name = "Panel4";
-            _Panel4.Size = new Size(16, 16);
-            _Panel4.TabIndex = 15;
-            //
-            // Label5
-            //
-            _Label5.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label5.Location = new Point(32, 109);
-            _Label5.Name = "Label5";
-            _Label5.Size = new Size(376, 16);
-            _Label5.TabIndex = 16;
-            _Label5.Text = "A quantity is on order to replenish stock";
-            //
-            // GroupBox2
-            //
-            _GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _GroupBox2.Controls.Add(_btnRunFilter);
-            _GroupBox2.Controls.Add(_chkIncludeVans);
-            _GroupBox2.Controls.Add(_txtItem);
-            _GroupBox2.Controls.Add(_txtLocation);
-            _GroupBox2.Controls.Add(_Label6);
-            _GroupBox2.Controls.Add(_Label8);
-            _GroupBox2.Controls.Add(_chkRecommended);
-            _GroupBox2.Controls.Add(_chkMinimum);
-            _GroupBox2.Location = new Point(8, 40);
-            _GroupBox2.Name = "GroupBox2";
-            _GroupBox2.Size = new Size(479, 158);
-            _GroupBox2.TabIndex = 0;
-            _GroupBox2.TabStop = false;
-            _GroupBox2.Text = "Filters";
-            //
-            // btnRunFilter
-            //
-            _btnRunFilter.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _btnRunFilter.Location = new Point(388, 128);
-            _btnRunFilter.Name = "btnRunFilter";
-            _btnRunFilter.Size = new Size(85, 23);
-            _btnRunFilter.TabIndex = 12;
-            _btnRunFilter.Text = "Filter";
-            _btnRunFilter.UseVisualStyleBackColor = true;
-            //
-            // chkIncludeVans
-            //
-            _chkIncludeVans.Location = new Point(10, 128);
-            _chkIncludeVans.Name = "chkIncludeVans";
-            _chkIncludeVans.Size = new Size(256, 24);
-            _chkIncludeVans.TabIndex = 11;
-            _chkIncludeVans.Text = "Include Vans";
-            //
-            // txtItem
-            //
-            _txtItem.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtItem.Location = new Point(80, 49);
-            _txtItem.Name = "txtItem";
-            _txtItem.Size = new Size(393, 21);
-            _txtItem.TabIndex = 1;
-            //
-            // txtLocation
-            //
-            _txtLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _txtLocation.Location = new Point(80, 21);
-            _txtLocation.Name = "txtLocation";
-            _txtLocation.Size = new Size(393, 21);
-            _txtLocation.TabIndex = 0;
-            //
-            // Label6
-            //
-            _Label6.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label6.Location = new Point(10, 49);
-            _Label6.Name = "Label6";
-            _Label6.Size = new Size(88, 23);
-            _Label6.TabIndex = 10;
-            _Label6.Text = "Item";
-            //
-            // Label8
-            //
-            _Label8.Font = new Font("Verdana", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _Label8.Location = new Point(10, 23);
-            _Label8.Name = "Label8";
-            _Label8.Size = new Size(88, 23);
-            _Label8.TabIndex = 7;
-            _Label8.Text = "Location";
-            //
-            // GroupBox3
-            //
-            _GroupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _GroupBox3.Controls.Add(_Panel1);
-            _GroupBox3.Controls.Add(_Panel3);
-            _GroupBox3.Controls.Add(_Panel4);
-            _GroupBox3.Controls.Add(_Panel2);
-            _GroupBox3.Controls.Add(_Label2);
-            _GroupBox3.Controls.Add(_Label3);
-            _GroupBox3.Controls.Add(_Label4);
-            _GroupBox3.Controls.Add(_Label5);
-            _GroupBox3.Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _GroupBox3.Location = new Point(493, 40);
-            _GroupBox3.Name = "GroupBox3";
-            _GroupBox3.Size = new Size(507, 158);
-            _GroupBox3.TabIndex = 1;
-            _GroupBox3.TabStop = false;
-            _GroupBox3.Text = "KEY";
-            //
-            // btnClose
-            //
-            _btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _btnClose.Location = new Point(8, 700);
-            _btnClose.Name = "btnClose";
-            _btnClose.Size = new Size(64, 23);
-            _btnClose.TabIndex = 5;
-            _btnClose.Text = "Close";
-            //
+            this._GroupBox1 = new System.Windows.Forms.GroupBox();
+            this._dgStockReplenishment = new System.Windows.Forms.DataGrid();
+            this._btnToMinimum = new System.Windows.Forms.Button();
+            this._btnToRecommended = new System.Windows.Forms.Button();
+            this._chkRecommended = new System.Windows.Forms.CheckBox();
+            this._chkMinimum = new System.Windows.Forms.CheckBox();
+            this._lblNumberOfItems = new System.Windows.Forms.Label();
+            this._Label2 = new System.Windows.Forms.Label();
+            this._Panel1 = new System.Windows.Forms.Panel();
+            this._Panel2 = new System.Windows.Forms.Panel();
+            this._Panel3 = new System.Windows.Forms.Panel();
+            this._Label3 = new System.Windows.Forms.Label();
+            this._Label4 = new System.Windows.Forms.Label();
+            this._Panel4 = new System.Windows.Forms.Panel();
+            this._Label5 = new System.Windows.Forms.Label();
+            this._GroupBox2 = new System.Windows.Forms.GroupBox();
+            this._btnRunFilter = new System.Windows.Forms.Button();
+            this._chkIncludeVans = new System.Windows.Forms.CheckBox();
+            this._txtItem = new System.Windows.Forms.TextBox();
+            this._txtLocation = new System.Windows.Forms.TextBox();
+            this._Label6 = new System.Windows.Forms.Label();
+            this._Label8 = new System.Windows.Forms.Label();
+            this._GroupBox3 = new System.Windows.Forms.GroupBox();
+            this._btnClose = new System.Windows.Forms.Button();
+            this._GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgStockReplenishment)).BeginInit();
+            this._GroupBox2.SuspendLayout();
+            this._GroupBox3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _GroupBox1
+            // 
+            this._GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox1.Controls.Add(this._dgStockReplenishment);
+            this._GroupBox1.Location = new System.Drawing.Point(8, 170);
+            this._GroupBox1.Name = "_GroupBox1";
+            this._GroupBox1.Size = new System.Drawing.Size(992, 522);
+            this._GroupBox1.TabIndex = 2;
+            this._GroupBox1.TabStop = false;
+            this._GroupBox1.Text = "Tick those combinations you wish to update";
+            // 
+            // _dgStockReplenishment
+            // 
+            this._dgStockReplenishment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._dgStockReplenishment.DataMember = "";
+            this._dgStockReplenishment.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgStockReplenishment.Location = new System.Drawing.Point(8, 25);
+            this._dgStockReplenishment.Name = "_dgStockReplenishment";
+            this._dgStockReplenishment.Size = new System.Drawing.Size(976, 489);
+            this._dgStockReplenishment.TabIndex = 7;
+            this._dgStockReplenishment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgStockReplenishment_MouseUp);
+            // 
+            // _btnToMinimum
+            // 
+            this._btnToMinimum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnToMinimum.Location = new System.Drawing.Point(432, 700);
+            this._btnToMinimum.Name = "_btnToMinimum";
+            this._btnToMinimum.Size = new System.Drawing.Size(280, 23);
+            this._btnToMinimum.TabIndex = 3;
+            this._btnToMinimum.Text = "Bring amounts up to minimum quantities";
+            this._btnToMinimum.Click += new System.EventHandler(this.btnToMinimum_Click);
+            // 
+            // _btnToRecommended
+            // 
+            this._btnToRecommended.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnToRecommended.Location = new System.Drawing.Point(720, 700);
+            this._btnToRecommended.Name = "_btnToRecommended";
+            this._btnToRecommended.Size = new System.Drawing.Size(280, 23);
+            this._btnToRecommended.TabIndex = 4;
+            this._btnToRecommended.Text = "Bring amounts up to maximum quantities";
+            this._btnToRecommended.Click += new System.EventHandler(this.btnToRecommended_Click);
+            // 
+            // _chkRecommended
+            // 
+            this._chkRecommended.Location = new System.Drawing.Point(10, 76);
+            this._chkRecommended.Name = "_chkRecommended";
+            this._chkRecommended.Size = new System.Drawing.Size(271, 24);
+            this._chkRecommended.TabIndex = 2;
+            this._chkRecommended.Text = "Items where amount is below maximum";
+            // 
+            // _chkMinimum
+            // 
+            this._chkMinimum.Checked = true;
+            this._chkMinimum.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._chkMinimum.Location = new System.Drawing.Point(10, 103);
+            this._chkMinimum.Name = "_chkMinimum";
+            this._chkMinimum.Size = new System.Drawing.Size(256, 24);
+            this._chkMinimum.TabIndex = 3;
+            this._chkMinimum.Text = "Items where amount is below minimum";
+            // 
+            // _lblNumberOfItems
+            // 
+            this._lblNumberOfItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._lblNumberOfItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this._lblNumberOfItems.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblNumberOfItems.Location = new System.Drawing.Point(85, 700);
+            this._lblNumberOfItems.Name = "_lblNumberOfItems";
+            this._lblNumberOfItems.Size = new System.Drawing.Size(341, 24);
+            this._lblNumberOfItems.TabIndex = 7;
+            this._lblNumberOfItems.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _Label2
+            // 
+            this._Label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label2.Location = new System.Drawing.Point(32, 24);
+            this._Label2.Name = "_Label2";
+            this._Label2.Size = new System.Drawing.Size(425, 16);
+            this._Label2.TabIndex = 9;
+            this._Label2.Text = "Amount ABOVE or EQUAL to both minimum and the maximum quantities";
+            // 
+            // _Panel1
+            // 
+            this._Panel1.BackColor = System.Drawing.Color.Yellow;
+            this._Panel1.Location = new System.Drawing.Point(8, 54);
+            this._Panel1.Name = "_Panel1";
+            this._Panel1.Size = new System.Drawing.Size(16, 16);
+            this._Panel1.TabIndex = 10;
+            // 
+            // _Panel2
+            // 
+            this._Panel2.BackColor = System.Drawing.Color.Salmon;
+            this._Panel2.Location = new System.Drawing.Point(8, 82);
+            this._Panel2.Name = "_Panel2";
+            this._Panel2.Size = new System.Drawing.Size(16, 16);
+            this._Panel2.TabIndex = 11;
+            // 
+            // _Panel3
+            // 
+            this._Panel3.BackColor = System.Drawing.Color.LightGreen;
+            this._Panel3.Location = new System.Drawing.Point(8, 24);
+            this._Panel3.Name = "_Panel3";
+            this._Panel3.Size = new System.Drawing.Size(16, 16);
+            this._Panel3.TabIndex = 12;
+            // 
+            // _Label3
+            // 
+            this._Label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label3.Location = new System.Drawing.Point(32, 54);
+            this._Label3.Name = "_Label3";
+            this._Label3.Size = new System.Drawing.Size(425, 16);
+            this._Label3.TabIndex = 13;
+            this._Label3.Text = "Amount ABOVE or EQUAL to minimum but BELOW maximum quantities";
+            // 
+            // _Label4
+            // 
+            this._Label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label4.Location = new System.Drawing.Point(32, 82);
+            this._Label4.Name = "_Label4";
+            this._Label4.Size = new System.Drawing.Size(376, 16);
+            this._Label4.TabIndex = 14;
+            this._Label4.Text = "Amount BELOW both minimum and the maximum quantities";
+            // 
+            // _Panel4
+            // 
+            this._Panel4.BackColor = System.Drawing.Color.LightBlue;
+            this._Panel4.Location = new System.Drawing.Point(8, 109);
+            this._Panel4.Name = "_Panel4";
+            this._Panel4.Size = new System.Drawing.Size(16, 16);
+            this._Panel4.TabIndex = 15;
+            // 
+            // _Label5
+            // 
+            this._Label5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label5.Location = new System.Drawing.Point(32, 109);
+            this._Label5.Name = "_Label5";
+            this._Label5.Size = new System.Drawing.Size(376, 16);
+            this._Label5.TabIndex = 16;
+            this._Label5.Text = "A quantity is on order to replenish stock";
+            // 
+            // _GroupBox2
+            // 
+            this._GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox2.Controls.Add(this._btnRunFilter);
+            this._GroupBox2.Controls.Add(this._chkIncludeVans);
+            this._GroupBox2.Controls.Add(this._txtItem);
+            this._GroupBox2.Controls.Add(this._txtLocation);
+            this._GroupBox2.Controls.Add(this._Label6);
+            this._GroupBox2.Controls.Add(this._Label8);
+            this._GroupBox2.Controls.Add(this._chkRecommended);
+            this._GroupBox2.Controls.Add(this._chkMinimum);
+            this._GroupBox2.Location = new System.Drawing.Point(8, 12);
+            this._GroupBox2.Name = "_GroupBox2";
+            this._GroupBox2.Size = new System.Drawing.Size(479, 152);
+            this._GroupBox2.TabIndex = 0;
+            this._GroupBox2.TabStop = false;
+            this._GroupBox2.Text = "Filters";
+            // 
+            // _btnRunFilter
+            // 
+            this._btnRunFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnRunFilter.Location = new System.Drawing.Point(388, 122);
+            this._btnRunFilter.Name = "_btnRunFilter";
+            this._btnRunFilter.Size = new System.Drawing.Size(85, 23);
+            this._btnRunFilter.TabIndex = 12;
+            this._btnRunFilter.Text = "Filter";
+            this._btnRunFilter.UseVisualStyleBackColor = true;
+            this._btnRunFilter.Click += new System.EventHandler(this.btnRunFilter_Click);
+            // 
+            // _chkIncludeVans
+            // 
+            this._chkIncludeVans.Location = new System.Drawing.Point(10, 128);
+            this._chkIncludeVans.Name = "_chkIncludeVans";
+            this._chkIncludeVans.Size = new System.Drawing.Size(256, 24);
+            this._chkIncludeVans.TabIndex = 11;
+            this._chkIncludeVans.Text = "Include Vans";
+            // 
+            // _txtItem
+            // 
+            this._txtItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtItem.Location = new System.Drawing.Point(80, 49);
+            this._txtItem.Name = "_txtItem";
+            this._txtItem.Size = new System.Drawing.Size(393, 21);
+            this._txtItem.TabIndex = 1;
+            // 
+            // _txtLocation
+            // 
+            this._txtLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtLocation.Location = new System.Drawing.Point(80, 21);
+            this._txtLocation.Name = "_txtLocation";
+            this._txtLocation.Size = new System.Drawing.Size(393, 21);
+            this._txtLocation.TabIndex = 0;
+            // 
+            // _Label6
+            // 
+            this._Label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label6.Location = new System.Drawing.Point(10, 49);
+            this._Label6.Name = "_Label6";
+            this._Label6.Size = new System.Drawing.Size(88, 23);
+            this._Label6.TabIndex = 10;
+            this._Label6.Text = "Item";
+            // 
+            // _Label8
+            // 
+            this._Label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._Label8.Location = new System.Drawing.Point(10, 23);
+            this._Label8.Name = "_Label8";
+            this._Label8.Size = new System.Drawing.Size(88, 23);
+            this._Label8.TabIndex = 7;
+            this._Label8.Text = "Location";
+            // 
+            // _GroupBox3
+            // 
+            this._GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._GroupBox3.Controls.Add(this._Panel1);
+            this._GroupBox3.Controls.Add(this._Panel3);
+            this._GroupBox3.Controls.Add(this._Panel4);
+            this._GroupBox3.Controls.Add(this._Panel2);
+            this._GroupBox3.Controls.Add(this._Label2);
+            this._GroupBox3.Controls.Add(this._Label3);
+            this._GroupBox3.Controls.Add(this._Label4);
+            this._GroupBox3.Controls.Add(this._Label5);
+            this._GroupBox3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._GroupBox3.Location = new System.Drawing.Point(493, 12);
+            this._GroupBox3.Name = "_GroupBox3";
+            this._GroupBox3.Size = new System.Drawing.Size(507, 152);
+            this._GroupBox3.TabIndex = 1;
+            this._GroupBox3.TabStop = false;
+            this._GroupBox3.Text = "KEY";
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnClose.Location = new System.Drawing.Point(8, 700);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(64, 23);
+            this._btnClose.TabIndex = 5;
+            this._btnClose.Text = "Close";
+            this._btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FRMStockReplenishment
-            //
-            AutoScaleBaseSize = new Size(6, 14);
-            ClientSize = new Size(1008, 730);
-            Controls.Add(_btnClose);
-            Controls.Add(_GroupBox3);
-            Controls.Add(_GroupBox2);
-            Controls.Add(_lblNumberOfItems);
-            Controls.Add(_btnToRecommended);
-            Controls.Add(_btnToMinimum);
-            Controls.Add(_GroupBox1);
-            MinimumSize = new Size(832, 544);
-            Name = "FRMStockReplenishment";
-            Text = "Stock Replenishment";
-            Controls.SetChildIndex(_GroupBox1, 0);
-            Controls.SetChildIndex(_btnToMinimum, 0);
-            Controls.SetChildIndex(_btnToRecommended, 0);
-            Controls.SetChildIndex(_lblNumberOfItems, 0);
-            Controls.SetChildIndex(_GroupBox2, 0);
-            Controls.SetChildIndex(_GroupBox3, 0);
-            Controls.SetChildIndex(_btnClose, 0);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_dgStockReplenishment).EndInit();
-            _GroupBox2.ResumeLayout(false);
-            _GroupBox2.PerformLayout();
-            _GroupBox3.ResumeLayout(false);
-            ResumeLayout(false);
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.Controls.Add(this._btnClose);
+            this.Controls.Add(this._GroupBox3);
+            this.Controls.Add(this._GroupBox2);
+            this.Controls.Add(this._lblNumberOfItems);
+            this.Controls.Add(this._btnToRecommended);
+            this.Controls.Add(this._btnToMinimum);
+            this.Controls.Add(this._GroupBox1);
+            this.MinimumSize = new System.Drawing.Size(832, 544);
+            this.Name = "FRMStockReplenishment";
+            this.Text = "Stock Replenishment";
+            this._GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgStockReplenishment)).EndInit();
+            this._GroupBox2.ResumeLayout(false);
+            this._GroupBox2.PerformLayout();
+            this._GroupBox3.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         public void LoadMe(object sender, EventArgs e)
