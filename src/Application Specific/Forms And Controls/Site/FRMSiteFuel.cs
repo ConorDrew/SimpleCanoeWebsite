@@ -90,6 +90,21 @@ namespace FSM
 
         private Label _lblFuel;
 
+        internal Label lblSite
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _lblSite;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                _lblSite = value;
+            }
+        }
+
         private ComboBox _cboFuel;
 
         internal ComboBox cboFuel

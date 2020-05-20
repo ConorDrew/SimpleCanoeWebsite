@@ -12,7 +12,6 @@ namespace FSM
         {
             // This call is required by the Windows Form Designer.
             InitializeComponent();
-            Load();
 
             // Add any initialization after the InitializeComponent() call
 
@@ -302,9 +301,9 @@ namespace FSM
             this.ImageContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nav_Logo)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // _pnlButtons
-            // 
+            //
             this._pnlButtons.Controls.Add(this._btnVan);
             this._pnlButtons.Controls.Add(this._btnReports);
             this._pnlButtons.Controls.Add(this._btnInvoicing);
@@ -317,9 +316,9 @@ namespace FSM
             this._pnlButtons.Name = "_pnlButtons";
             this._pnlButtons.Size = new System.Drawing.Size(169, 224);
             this._pnlButtons.TabIndex = 1;
-            // 
+            //
             // _btnVan
-            // 
+            //
             this._btnVan.AutoScroll = true;
             this._btnVan.BackColor = System.Drawing.Color.White;
             this._btnVan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnVan.BackgroundImage")));
@@ -334,9 +333,9 @@ namespace FSM
             this._btnVan.Name = "_btnVan";
             this._btnVan.Size = new System.Drawing.Size(169, 32);
             this._btnVan.TabIndex = 8;
-            // 
+            //
             // _btnReports
-            // 
+            //
             this._btnReports.AutoScroll = true;
             this._btnReports.BackColor = System.Drawing.Color.White;
             this._btnReports.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnReports.BackgroundImage")));
@@ -351,9 +350,9 @@ namespace FSM
             this._btnReports.Name = "_btnReports";
             this._btnReports.Size = new System.Drawing.Size(169, 32);
             this._btnReports.TabIndex = 7;
-            // 
+            //
             // _btnInvoicing
-            // 
+            //
             this._btnInvoicing.AutoScroll = true;
             this._btnInvoicing.BackColor = System.Drawing.Color.White;
             this._btnInvoicing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnInvoicing.BackgroundImage")));
@@ -368,9 +367,9 @@ namespace FSM
             this._btnInvoicing.Name = "_btnInvoicing";
             this._btnInvoicing.Size = new System.Drawing.Size(169, 32);
             this._btnInvoicing.TabIndex = 6;
-            // 
+            //
             // _btnJobs
-            // 
+            //
             this._btnJobs.AutoScroll = true;
             this._btnJobs.BackColor = System.Drawing.Color.White;
             this._btnJobs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnJobs.BackgroundImage")));
@@ -385,9 +384,9 @@ namespace FSM
             this._btnJobs.Name = "_btnJobs";
             this._btnJobs.Size = new System.Drawing.Size(169, 32);
             this._btnJobs.TabIndex = 5;
-            // 
+            //
             // _btnStaff
-            // 
+            //
             this._btnStaff.AutoScroll = true;
             this._btnStaff.BackColor = System.Drawing.Color.White;
             this._btnStaff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnStaff.BackgroundImage")));
@@ -402,9 +401,9 @@ namespace FSM
             this._btnStaff.Name = "_btnStaff";
             this._btnStaff.Size = new System.Drawing.Size(169, 32);
             this._btnStaff.TabIndex = 4;
-            // 
+            //
             // _btnSpares
-            // 
+            //
             this._btnSpares.AutoScroll = true;
             this._btnSpares.BackColor = System.Drawing.Color.White;
             this._btnSpares.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnSpares.BackgroundImage")));
@@ -419,9 +418,9 @@ namespace FSM
             this._btnSpares.Name = "_btnSpares";
             this._btnSpares.Size = new System.Drawing.Size(169, 32);
             this._btnSpares.TabIndex = 3;
-            // 
+            //
             // _btnCustomer
-            // 
+            //
             this._btnCustomer.AutoScroll = true;
             this._btnCustomer.BackColor = System.Drawing.Color.White;
             this._btnCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnCustomer.BackgroundImage")));
@@ -436,9 +435,9 @@ namespace FSM
             this._btnCustomer.Name = "_btnCustomer";
             this._btnCustomer.Size = new System.Drawing.Size(169, 32);
             this._btnCustomer.TabIndex = 0;
-            // 
+            //
             // _Splitter1
-            // 
+            //
             this._Splitter1.BackColor = System.Drawing.Color.Silver;
             this._Splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this._Splitter1.Enabled = false;
@@ -447,17 +446,17 @@ namespace FSM
             this._Splitter1.Size = new System.Drawing.Size(169, 5);
             this._Splitter1.TabIndex = 2;
             this._Splitter1.TabStop = false;
-            // 
+            //
             // _pnlSearch
-            // 
+            //
             this._pnlSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
             this._pnlSearch.Location = new System.Drawing.Point(0, 456);
             this._pnlSearch.Name = "_pnlSearch";
             this._pnlSearch.Size = new System.Drawing.Size(169, 115);
             this._pnlSearch.TabIndex = 3;
-            // 
+            //
             // _pnlMenu
-            // 
+            //
             this._pnlMenu.AutoScroll = true;
             this._pnlMenu.Controls.Add(this._pnlSubMenu);
             this._pnlMenu.Controls.Add(this._Label1);
@@ -468,9 +467,9 @@ namespace FSM
             this._pnlMenu.Name = "_pnlMenu";
             this._pnlMenu.Size = new System.Drawing.Size(169, 287);
             this._pnlMenu.TabIndex = 4;
-            // 
+            //
             // _pnlSubMenu
-            // 
+            //
             this._pnlSubMenu.AutoScroll = true;
             this._pnlSubMenu.AutoSize = true;
             this._pnlSubMenu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -478,9 +477,9 @@ namespace FSM
             this._pnlSubMenu.Name = "_pnlSubMenu";
             this._pnlSubMenu.Size = new System.Drawing.Size(169, 237);
             this._pnlSubMenu.TabIndex = 6;
-            // 
+            //
             // _Label1
-            // 
+            //
             this._Label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this._Label1.Dock = System.Windows.Forms.DockStyle.Top;
             this._Label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -490,9 +489,9 @@ namespace FSM
             this._Label1.Size = new System.Drawing.Size(169, 16);
             this._Label1.TabIndex = 5;
             this._Label1.Text = "Please select option";
-            // 
+            //
             // _pnlHeader
-            // 
+            //
             this._pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this._pnlHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_pnlHeader.BackgroundImage")));
             this._pnlHeader.Controls.Add(this._Label2);
@@ -502,9 +501,9 @@ namespace FSM
             this._pnlHeader.Name = "_pnlHeader";
             this._pnlHeader.Size = new System.Drawing.Size(169, 34);
             this._pnlHeader.TabIndex = 4;
-            // 
+            //
             // _Label2
-            // 
+            //
             this._Label2.BackColor = System.Drawing.Color.Transparent;
             this._Label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._Label2.ForeColor = System.Drawing.Color.White;
@@ -514,9 +513,9 @@ namespace FSM
             this._Label2.TabIndex = 29;
             this._Label2.Text = ">>";
             this._Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
+            //
             // _lblTitle
-            // 
+            //
             this._lblTitle.BackColor = System.Drawing.Color.Transparent;
             this._lblTitle.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblTitle.ForeColor = System.Drawing.Color.White;
@@ -526,18 +525,18 @@ namespace FSM
             this._lblTitle.TabIndex = 28;
             this._lblTitle.Text = "HOME";
             this._lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
+            //
             // ImageContainer
-            // 
+            //
             this.ImageContainer.Controls.Add(this.Nav_Logo);
             this.ImageContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.ImageContainer.Location = new System.Drawing.Point(0, 0);
             this.ImageContainer.Name = "ImageContainer";
             this.ImageContainer.Size = new System.Drawing.Size(169, 169);
             this.ImageContainer.TabIndex = 1;
-            // 
+            //
             // Nav_Logo
-            // 
+            //
             this.Nav_Logo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nav_Logo.Location = new System.Drawing.Point(0, 0);
             this.Nav_Logo.Name = "Nav_Logo";
@@ -545,9 +544,9 @@ namespace FSM
             this.Nav_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Nav_Logo.TabIndex = 0;
             this.Nav_Logo.TabStop = false;
-            // 
+            //
             // UCSideBar
-            // 
+            //
             this.AutoScroll = false;
             this.Controls.Add(this._pnlMenu);
             this.Controls.Add(this.ImageContainer);
@@ -556,6 +555,7 @@ namespace FSM
             this.Controls.Add(this._pnlButtons);
             this.Name = "UCSideBar";
             this.Size = new System.Drawing.Size(169, 800);
+            this.Load += new System.EventHandler(this.UCSideBar_Load);
             this._pnlButtons.ResumeLayout(false);
             this._pnlMenu.ResumeLayout(false);
             this._pnlMenu.PerformLayout();
@@ -563,7 +563,6 @@ namespace FSM
             this.ImageContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Nav_Logo)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private void MenuSelectionChanged(Entity.Sys.Enums.MenuTypes MenuType)
@@ -571,7 +570,7 @@ namespace FSM
             Navigation.Navigate(MenuType);
         }
 
-        private void Load()
+        private void UCSideBar_Load(object sender, System.EventArgs e)
         {
             if (App.IsRFT)
             {
