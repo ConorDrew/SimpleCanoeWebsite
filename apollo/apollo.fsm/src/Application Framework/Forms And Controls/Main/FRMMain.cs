@@ -1,0 +1,3066 @@
+﻿using FSM.Entity.Sys;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Windows.Forms;
+
+namespace FSM
+{
+    public class FRMMain : FRMBaseForm, IForm
+    {
+        public FRMMain() : base()
+        {
+            base.Load += FRMMenu_Load;
+            base.Closing += FRMMenu_Closing;
+            base.KeyDown += FRMMenu_KeyDown;
+
+            // This call is required by the Windows Form Designer.
+            InitializeComponent();
+
+            // Add any initialization after the InitializeComponent() call
+        }
+
+        // Form overrides dispose to clean up the component list.
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (!(components is null))
+                {
+                    components.Dispose();
+                }
+            }
+
+            base.Dispose(disposing);
+        }
+
+        // Required by the Windows Form Designer
+        private System.ComponentModel.IContainer components;
+
+        // NOTE: The following procedure is required by the Windows Form Designer
+        // It can be modified using the Windows Form Designer.
+        // Do not modify it using the code editor.
+        private MainMenu _MnuMainNav;
+
+        private MenuItem _mnuFile;
+
+        private MenuItem _mnuChangeLogin;
+
+        private MenuItem _MenuItem3;
+
+        private MenuItem _mnuLogout;
+
+        private StatusBar _infoBar;
+
+        internal StatusBar infoBar
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _infoBar;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_infoBar != null)
+                {
+                }
+
+                _infoBar = value;
+                if (_infoBar != null)
+                {
+                }
+            }
+        }
+
+        private MenuItem _mnuSetup;
+
+        private MenuItem _mnuReports;
+
+        private Panel _pnlMiddle;
+
+        internal Panel pnlMiddle
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _pnlMiddle;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_pnlMiddle != null)
+                {
+                    _pnlMiddle.Resize -= pnlMiddle_Resize;
+                }
+
+                _pnlMiddle = value;
+                if (_pnlMiddle != null)
+                {
+                    _pnlMiddle.Resize += pnlMiddle_Resize;
+                }
+            }
+        }
+
+        private Panel _pnlButtons;
+
+        private Panel _pnlMiddleTitle;
+
+        private Button _btnCloseMiddle;
+
+        private DataGrid _dgSearchResults;
+
+        internal DataGrid dgSearchResults
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _dgSearchResults;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_dgSearchResults != null)
+                {
+                    _dgSearchResults.Click -= dgSearchResults_Click;
+                    _dgSearchResults.CurrentCellChanged -= dgSearchResults_Click;
+                    _dgSearchResults.DoubleClick -= dgSearchResults_DoubleClick;
+                }
+
+                _dgSearchResults = value;
+                if (_dgSearchResults != null)
+                {
+                    _dgSearchResults.Click += dgSearchResults_Click;
+                    _dgSearchResults.CurrentCellChanged += dgSearchResults_Click;
+                    _dgSearchResults.DoubleClick += dgSearchResults_DoubleClick;
+                }
+            }
+        }
+
+        private Splitter _splitLeftAndMiddle;
+
+        private Splitter _splitMiddleTop;
+
+        private Splitter _splitMiddleBottom;
+
+        private Panel _pnlLeft;
+
+        internal Panel pnlLeft
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _pnlLeft;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_pnlLeft != null)
+                {
+                }
+
+                _pnlLeft = value;
+                if (_pnlLeft != null)
+                {
+                }
+            }
+        }
+
+        private Label _lblMiddleTitle;
+
+        internal Label lblMiddleTitle
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _lblMiddleTitle;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_lblMiddleTitle != null)
+                {
+                }
+
+                _lblMiddleTitle = value;
+                if (_lblMiddleTitle != null)
+                {
+                }
+            }
+        }
+
+        private Button _btnDelete;
+
+        internal Button btnDelete
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _btnDelete;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_btnDelete != null)
+                {
+                    _btnDelete.Click -= btnDelete_Click;
+                }
+
+                _btnDelete = value;
+                if (_btnDelete != null)
+                {
+                    _btnDelete.Click += btnDelete_Click;
+                }
+            }
+        }
+
+        private Button _btnAddNew;
+
+        internal Button btnAddNew
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _btnAddNew;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_btnAddNew != null)
+                {
+                    _btnAddNew.Click -= btnAddNew_Click;
+                }
+
+                _btnAddNew = value;
+                if (_btnAddNew != null)
+                {
+                    _btnAddNew.Click += btnAddNew_Click;
+                }
+            }
+        }
+
+        private Panel _pnlRight;
+
+        internal Panel pnlRight
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _pnlRight;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_pnlRight != null)
+                {
+                }
+
+                _pnlRight = value;
+                if (_pnlRight != null)
+                {
+                }
+            }
+        }
+
+        private Panel _pnleHeaderRight;
+
+        private Label _lblRightTitle;
+
+        internal Label lblRightTitle
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _lblRightTitle;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_lblRightTitle != null)
+                {
+                }
+
+                _lblRightTitle = value;
+                if (_lblRightTitle != null)
+                {
+                }
+            }
+        }
+
+        private Button _btnCloseRight;
+
+        private Splitter _Splitter1;
+
+        private Panel _pnlContent;
+
+        internal Panel pnlContent
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _pnlContent;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_pnlContent != null)
+                {
+                }
+
+                _pnlContent = value;
+                if (_pnlContent != null)
+                {
+                }
+            }
+        }
+
+        private Panel _pnlButtonsRight;
+
+        private Button _btnSave;
+
+        internal Button btnSave
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _btnSave;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_btnSave != null)
+                {
+                    _btnSave.Click -= btnSave_Click;
+                }
+
+                _btnSave = value;
+                if (_btnSave != null)
+                {
+                    _btnSave.Click += btnSave_Click;
+                }
+            }
+        }
+
+        private Splitter _Splitter2;
+
+        private MenuItem _mnuCustomers;
+
+        private MenuItem _mnuSpares;
+
+        private MenuItem _mnuStaff;
+
+        private MenuItem _mnuJobs;
+
+        private MenuItem _mnuInvoicing;
+
+        private MenuItem _mnuScheduler;
+
+        private Button _btnHQ;
+
+        internal Button btnHQ
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _btnHQ;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_btnHQ != null)
+                {
+                    _btnHQ.Click -= btnHQ_Click;
+                }
+
+                _btnHQ = value;
+                if (_btnHQ != null)
+                {
+                    _btnHQ.Click += btnHQ_Click;
+                }
+            }
+        }
+
+        private Button _btnExport;
+
+        internal Button btnExport
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _btnExport;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_btnExport != null)
+                {
+                    _btnExport.Click -= btnExport_Click;
+                }
+
+                _btnExport = value;
+                if (_btnExport != null)
+                {
+                    _btnExport.Click += btnExport_Click;
+                }
+            }
+        }
+
+        private MenuItem _mnuVan;
+
+        private MenuItem _mnuNpPrint;
+
+        internal MenuItem mnuNpPrint
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _mnuNpPrint;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_mnuNpPrint != null)
+                {
+                }
+
+                _mnuNpPrint = value;
+                if (_mnuNpPrint != null)
+                {
+                }
+            }
+        }
+
+        private MenuItem _mnuUpstairs;
+
+        private MenuItem _mnuDownstairs;
+
+        private TableLayoutPanel _ContainerMiddlePanelBtns;
+
+        private Splitter _splitMiddleAndRight;
+
+        internal Splitter splitMiddleAndRight
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _splitMiddleAndRight;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_splitMiddleAndRight != null)
+                {
+                }
+
+                _splitMiddleAndRight = value;
+                if (_splitMiddleAndRight != null)
+                {
+                }
+            }
+        }
+
+        private Button _btnGoBack;
+
+        internal Button btnGoBack
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _btnGoBack;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_btnGoBack != null)
+                {
+                    _btnGoBack.Click -= btnGoBack_Click;
+                }
+
+                _btnGoBack = value;
+                if (_btnGoBack != null)
+                {
+                    _btnGoBack.Click += btnGoBack_Click;
+                }
+            }
+        }
+
+        [DebuggerStepThrough()]
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMMain));
+            this._MnuMainNav = new System.Windows.Forms.MainMenu(this.components);
+            this._mnuFile = new System.Windows.Forms.MenuItem();
+            this._mnuChangeLogin = new System.Windows.Forms.MenuItem();
+            this._MenuItem3 = new System.Windows.Forms.MenuItem();
+            this._mnuLogout = new System.Windows.Forms.MenuItem();
+            this._mnuCustomers = new System.Windows.Forms.MenuItem();
+            this._mnuSpares = new System.Windows.Forms.MenuItem();
+            this._mnuStaff = new System.Windows.Forms.MenuItem();
+            this._mnuJobs = new System.Windows.Forms.MenuItem();
+            this._mnuScheduler = new System.Windows.Forms.MenuItem();
+            this._mnuInvoicing = new System.Windows.Forms.MenuItem();
+            this._mnuReports = new System.Windows.Forms.MenuItem();
+            this._mnuVan = new System.Windows.Forms.MenuItem();
+            this._mnuSetup = new System.Windows.Forms.MenuItem();
+            this._mnuNpPrint = new System.Windows.Forms.MenuItem();
+            this._mnuUpstairs = new System.Windows.Forms.MenuItem();
+            this._mnuDownstairs = new System.Windows.Forms.MenuItem();
+            this._infoBar = new System.Windows.Forms.StatusBar();
+            this._pnlLeft = new System.Windows.Forms.Panel();
+            this._splitLeftAndMiddle = new System.Windows.Forms.Splitter();
+            this._pnlMiddle = new System.Windows.Forms.Panel();
+            this._dgSearchResults = new System.Windows.Forms.DataGrid();
+            this._splitMiddleTop = new System.Windows.Forms.Splitter();
+            this._pnlMiddleTitle = new System.Windows.Forms.Panel();
+            this._btnCloseMiddle = new System.Windows.Forms.Button();
+            this._lblMiddleTitle = new System.Windows.Forms.Label();
+            this._splitMiddleBottom = new System.Windows.Forms.Splitter();
+            this._pnlButtons = new System.Windows.Forms.Panel();
+            this._ContainerMiddlePanelBtns = new System.Windows.Forms.TableLayoutPanel();
+            this._btnExport = new System.Windows.Forms.Button();
+            this._btnAddNew = new System.Windows.Forms.Button();
+            this._btnDelete = new System.Windows.Forms.Button();
+            this._pnlRight = new System.Windows.Forms.Panel();
+            this._Splitter2 = new System.Windows.Forms.Splitter();
+            this._pnlContent = new System.Windows.Forms.Panel();
+            this._Splitter1 = new System.Windows.Forms.Splitter();
+            this._pnleHeaderRight = new System.Windows.Forms.Panel();
+            this._btnHQ = new System.Windows.Forms.Button();
+            this._btnCloseRight = new System.Windows.Forms.Button();
+            this._lblRightTitle = new System.Windows.Forms.Label();
+            this._pnlButtonsRight = new System.Windows.Forms.Panel();
+            this._btnGoBack = new System.Windows.Forms.Button();
+            this._btnSave = new System.Windows.Forms.Button();
+            this._splitMiddleAndRight = new System.Windows.Forms.Splitter();
+            this._pnlMiddle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgSearchResults)).BeginInit();
+            this._pnlMiddleTitle.SuspendLayout();
+            this._pnlButtons.SuspendLayout();
+            this._ContainerMiddlePanelBtns.SuspendLayout();
+            this._pnlRight.SuspendLayout();
+            this._pnleHeaderRight.SuspendLayout();
+            this._pnlButtonsRight.SuspendLayout();
+            this.SuspendLayout();
+            //
+            // _MnuMainNav
+            //
+            this._MnuMainNav.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._mnuFile,
+            this._mnuCustomers,
+            this._mnuSpares,
+            this._mnuStaff,
+            this._mnuJobs,
+            this._mnuScheduler,
+            this._mnuInvoicing,
+            this._mnuReports,
+            this._mnuVan,
+            this._mnuSetup,
+            this._mnuNpPrint});
+            //
+            // _mnuFile
+            //
+            this._mnuFile.Index = 0;
+            this._mnuFile.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._mnuChangeLogin,
+            this._MenuItem3,
+            this._mnuLogout});
+            resources.ApplyResources(this._mnuFile, "_mnuFile");
+            //
+            // _mnuChangeLogin
+            //
+            this._mnuChangeLogin.Index = 0;
+            resources.ApplyResources(this._mnuChangeLogin, "_mnuChangeLogin");
+            this._mnuChangeLogin.Click += new System.EventHandler(this.mnuChangeLogin_Click);
+            //
+            // _MenuItem3
+            //
+            this._MenuItem3.Index = 1;
+            resources.ApplyResources(this._MenuItem3, "_MenuItem3");
+            //
+            // _mnuLogout
+            //
+            this._mnuLogout.Index = 2;
+            resources.ApplyResources(this._mnuLogout, "_mnuLogout");
+            this._mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
+            //
+            // _mnuCustomers
+            //
+            this._mnuCustomers.Index = 1;
+            resources.ApplyResources(this._mnuCustomers, "_mnuCustomers");
+            this._mnuCustomers.Click += new System.EventHandler(this.mnuCustomers_Click);
+            //
+            // _mnuSpares
+            //
+            this._mnuSpares.Index = 2;
+            resources.ApplyResources(this._mnuSpares, "_mnuSpares");
+            this._mnuSpares.Click += new System.EventHandler(this.mnuSpares_Click);
+            //
+            // _mnuStaff
+            //
+            this._mnuStaff.Index = 3;
+            resources.ApplyResources(this._mnuStaff, "_mnuStaff");
+            this._mnuStaff.Click += new System.EventHandler(this.mnuStaff_Click);
+            //
+            // _mnuJobs
+            //
+            this._mnuJobs.Index = 4;
+            resources.ApplyResources(this._mnuJobs, "_mnuJobs");
+            this._mnuJobs.Click += new System.EventHandler(this.mnuJobs_Click);
+            //
+            // _mnuScheduler
+            //
+            this._mnuScheduler.Index = 5;
+            resources.ApplyResources(this._mnuScheduler, "_mnuScheduler");
+            this._mnuScheduler.Click += new System.EventHandler(this.mnuScheduler_Click);
+            //
+            // _mnuInvoicing
+            //
+            this._mnuInvoicing.Index = 6;
+            resources.ApplyResources(this._mnuInvoicing, "_mnuInvoicing");
+            this._mnuInvoicing.Click += new System.EventHandler(this.mnuInvoicing_Click);
+            //
+            // _mnuReports
+            //
+            this._mnuReports.Index = 7;
+            resources.ApplyResources(this._mnuReports, "_mnuReports");
+            this._mnuReports.Click += new System.EventHandler(this.mnuReports_Click);
+            //
+            // _mnuVan
+            //
+            this._mnuVan.Index = 8;
+            resources.ApplyResources(this._mnuVan, "_mnuVan");
+            this._mnuVan.Click += new System.EventHandler(this.mnuVan_Click);
+            //
+            // _mnuSetup
+            //
+            this._mnuSetup.Index = 9;
+            resources.ApplyResources(this._mnuSetup, "_mnuSetup");
+            this._mnuSetup.Click += new System.EventHandler(this.mnuSetup_Click);
+            //
+            // _mnuNpPrint
+            //
+            this._mnuNpPrint.Index = 10;
+            this._mnuNpPrint.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this._mnuUpstairs,
+            this._mnuDownstairs});
+            resources.ApplyResources(this._mnuNpPrint, "_mnuNpPrint");
+            //
+            // _mnuUpstairs
+            //
+            this._mnuUpstairs.Index = 0;
+            resources.ApplyResources(this._mnuUpstairs, "_mnuUpstairs");
+            this._mnuUpstairs.Click += new System.EventHandler(this.mnuUpstairs_Click);
+            //
+            // _mnuDownstairs
+            //
+            this._mnuDownstairs.Index = 1;
+            resources.ApplyResources(this._mnuDownstairs, "_mnuDownstairs");
+            this._mnuDownstairs.Click += new System.EventHandler(this.mnuDownstairs_Click);
+            //
+            // _infoBar
+            //
+            resources.ApplyResources(this._infoBar, "_infoBar");
+            this._infoBar.Name = "_infoBar";
+            this._infoBar.SizingGrip = false;
+            //
+            // _pnlLeft
+            //
+            this._pnlLeft.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this._pnlLeft, "_pnlLeft");
+            this._pnlLeft.Name = "_pnlLeft";
+            //
+            // _splitLeftAndMiddle
+            //
+            this._splitLeftAndMiddle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            resources.ApplyResources(this._splitLeftAndMiddle, "_splitLeftAndMiddle");
+            this._splitLeftAndMiddle.Name = "_splitLeftAndMiddle";
+            this._splitLeftAndMiddle.TabStop = false;
+            //
+            // _pnlMiddle
+            //
+            this._pnlMiddle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._pnlMiddle.Controls.Add(this._dgSearchResults);
+            this._pnlMiddle.Controls.Add(this._splitMiddleTop);
+            this._pnlMiddle.Controls.Add(this._pnlMiddleTitle);
+            this._pnlMiddle.Controls.Add(this._splitMiddleBottom);
+            this._pnlMiddle.Controls.Add(this._pnlButtons);
+            resources.ApplyResources(this._pnlMiddle, "_pnlMiddle");
+            this._pnlMiddle.Name = "_pnlMiddle";
+            this._pnlMiddle.Resize += new System.EventHandler(this.pnlMiddle_Resize);
+            //
+            // _dgSearchResults
+            //
+            this._dgSearchResults.DataMember = "";
+            resources.ApplyResources(this._dgSearchResults, "_dgSearchResults");
+            this._dgSearchResults.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this._dgSearchResults.Name = "_dgSearchResults";
+            this._dgSearchResults.CurrentCellChanged += new System.EventHandler(this.dgSearchResults_Click);
+            this._dgSearchResults.Click += new System.EventHandler(this.dgSearchResults_Click);
+            this._dgSearchResults.DoubleClick += new System.EventHandler(this.dgSearchResults_DoubleClick);
+            //
+            // _splitMiddleTop
+            //
+            this._splitMiddleTop.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._splitMiddleTop, "_splitMiddleTop");
+            this._splitMiddleTop.Name = "_splitMiddleTop";
+            this._splitMiddleTop.TabStop = false;
+            //
+            // _pnlMiddleTitle
+            //
+            resources.ApplyResources(this._pnlMiddleTitle, "_pnlMiddleTitle");
+            this._pnlMiddleTitle.Controls.Add(this._btnCloseMiddle);
+            this._pnlMiddleTitle.Controls.Add(this._lblMiddleTitle);
+            this._pnlMiddleTitle.Name = "_pnlMiddleTitle";
+            //
+            // _btnCloseMiddle
+            //
+            resources.ApplyResources(this._btnCloseMiddle, "_btnCloseMiddle");
+            this._btnCloseMiddle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnCloseMiddle.Name = "_btnCloseMiddle";
+            this._btnCloseMiddle.Click += new System.EventHandler(this.btnCloseMiddle_Click);
+            //
+            // _lblMiddleTitle
+            //
+            this._lblMiddleTitle.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this._lblMiddleTitle, "_lblMiddleTitle");
+            this._lblMiddleTitle.ForeColor = System.Drawing.Color.White;
+            this._lblMiddleTitle.Name = "_lblMiddleTitle";
+            //
+            // _splitMiddleBottom
+            //
+            this._splitMiddleBottom.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._splitMiddleBottom, "_splitMiddleBottom");
+            this._splitMiddleBottom.Name = "_splitMiddleBottom";
+            this._splitMiddleBottom.TabStop = false;
+            //
+            // _pnlButtons
+            //
+            this._pnlButtons.BackColor = System.Drawing.Color.White;
+            this._pnlButtons.Controls.Add(this._ContainerMiddlePanelBtns);
+            resources.ApplyResources(this._pnlButtons, "_pnlButtons");
+            this._pnlButtons.Name = "_pnlButtons";
+            //
+            // _ContainerMiddlePanelBtns
+            //
+            resources.ApplyResources(this._ContainerMiddlePanelBtns, "_ContainerMiddlePanelBtns");
+            this._ContainerMiddlePanelBtns.Controls.Add(this._btnExport, 2, 0);
+            this._ContainerMiddlePanelBtns.Controls.Add(this._btnAddNew, 0, 0);
+            this._ContainerMiddlePanelBtns.Controls.Add(this._btnDelete, 1, 0);
+            this._ContainerMiddlePanelBtns.Name = "_ContainerMiddlePanelBtns";
+            //
+            // _btnExport
+            //
+            resources.ApplyResources(this._btnExport, "_btnExport");
+            this._btnExport.BackColor = System.Drawing.SystemColors.Control;
+            this._btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnExport.Name = "_btnExport";
+            this._btnExport.UseVisualStyleBackColor = false;
+            this._btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            //
+            // _btnAddNew
+            //
+            resources.ApplyResources(this._btnAddNew, "_btnAddNew");
+            this._btnAddNew.BackColor = System.Drawing.SystemColors.Control;
+            this._btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnAddNew.Name = "_btnAddNew";
+            this._btnAddNew.UseVisualStyleBackColor = false;
+            this._btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            //
+            // _btnDelete
+            //
+            resources.ApplyResources(this._btnDelete, "_btnDelete");
+            this._btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this._btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.UseVisualStyleBackColor = false;
+            this._btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            //
+            // _pnlRight
+            //
+            resources.ApplyResources(this._pnlRight, "_pnlRight");
+            this._pnlRight.BackColor = System.Drawing.Color.White;
+            this._pnlRight.Controls.Add(this._Splitter2);
+            this._pnlRight.Controls.Add(this._pnlContent);
+            this._pnlRight.Controls.Add(this._Splitter1);
+            this._pnlRight.Controls.Add(this._pnleHeaderRight);
+            this._pnlRight.Controls.Add(this._pnlButtonsRight);
+            this._pnlRight.Name = "_pnlRight";
+            //
+            // _Splitter2
+            //
+            this._Splitter2.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._Splitter2, "_Splitter2");
+            this._Splitter2.Name = "_Splitter2";
+            this._Splitter2.TabStop = false;
+            //
+            // _pnlContent
+            //
+            this._pnlContent.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this._pnlContent, "_pnlContent");
+            this._pnlContent.Name = "_pnlContent";
+            //
+            // _Splitter1
+            //
+            this._Splitter1.BackColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this._Splitter1, "_Splitter1");
+            this._Splitter1.Name = "_Splitter1";
+            this._Splitter1.TabStop = false;
+            //
+            // _pnleHeaderRight
+            //
+            resources.ApplyResources(this._pnleHeaderRight, "_pnleHeaderRight");
+            this._pnleHeaderRight.Controls.Add(this._btnHQ);
+            this._pnleHeaderRight.Controls.Add(this._btnCloseRight);
+            this._pnleHeaderRight.Controls.Add(this._lblRightTitle);
+            this._pnleHeaderRight.Name = "_pnleHeaderRight";
+            //
+            // _btnHQ
+            //
+            resources.ApplyResources(this._btnHQ, "_btnHQ");
+            this._btnHQ.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnHQ.Name = "_btnHQ";
+            this._btnHQ.Click += new System.EventHandler(this.btnHQ_Click);
+            //
+            // _btnCloseRight
+            //
+            resources.ApplyResources(this._btnCloseRight, "_btnCloseRight");
+            this._btnCloseRight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnCloseRight.Name = "_btnCloseRight";
+            this._btnCloseRight.Click += new System.EventHandler(this.btnCloseRight_Click);
+            //
+            // _lblRightTitle
+            //
+            this._lblRightTitle.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this._lblRightTitle, "_lblRightTitle");
+            this._lblRightTitle.ForeColor = System.Drawing.Color.White;
+            this._lblRightTitle.Name = "_lblRightTitle";
+            //
+            // _pnlButtonsRight
+            //
+            this._pnlButtonsRight.BackColor = System.Drawing.Color.White;
+            this._pnlButtonsRight.Controls.Add(this._btnGoBack);
+            this._pnlButtonsRight.Controls.Add(this._btnSave);
+            resources.ApplyResources(this._pnlButtonsRight, "_pnlButtonsRight");
+            this._pnlButtonsRight.Name = "_pnlButtonsRight";
+            //
+            // _btnGoBack
+            //
+            this._btnGoBack.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this._btnGoBack, "_btnGoBack");
+            this._btnGoBack.Name = "_btnGoBack";
+            this._btnGoBack.UseVisualStyleBackColor = false;
+            this._btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            //
+            // _btnSave
+            //
+            resources.ApplyResources(this._btnSave, "_btnSave");
+            this._btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this._btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnSave.Name = "_btnSave";
+            this._btnSave.UseVisualStyleBackColor = false;
+            this._btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            //
+            // _splitMiddleAndRight
+            //
+            resources.ApplyResources(this._splitMiddleAndRight, "_splitMiddleAndRight");
+            this._splitMiddleAndRight.Name = "_splitMiddleAndRight";
+            this._splitMiddleAndRight.TabStop = false;
+            //
+            // FRMMain
+            //
+            resources.ApplyResources(this, "$this");
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this._splitMiddleAndRight);
+            this.Controls.Add(this._pnlRight);
+            this.Controls.Add(this._pnlMiddle);
+            this.Controls.Add(this._splitLeftAndMiddle);
+            this.Controls.Add(this._pnlLeft);
+            this.Controls.Add(this._infoBar);
+            this.IsMdiContainer = true;
+            this.Menu = this._MnuMainNav;
+            this.Name = "FRMMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FRMMain_Load);
+            this._pnlMiddle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgSearchResults)).EndInit();
+            this._pnlMiddleTitle.ResumeLayout(false);
+            this._pnlButtons.ResumeLayout(false);
+            this._ContainerMiddlePanelBtns.ResumeLayout(false);
+            this._pnlRight.ResumeLayout(false);
+            this._pnleHeaderRight.ResumeLayout(false);
+            this._pnlButtonsRight.ResumeLayout(false);
+            this.ResumeLayout(false);
+        }
+
+        public void LoadMe(object sender, EventArgs e)
+        {
+            LoadForm(sender, e, this);
+            var menu = new UCSideBar();
+            menu.Dock = DockStyle.Fill;
+            pnlLeft.Controls.Add(menu);
+            _FormButtons = new ArrayList();
+            LoopControls(this);
+            SetupButtonMouseOvers();
+            UpdateMessage();
+            mnuNpPrint.Visible = App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.NeopostPrint);
+        }
+
+        public IUserControl LoadedControl
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public void ResetMe(int newID)
+        {
+        }
+
+        private ArrayList _FormButtons = null;
+
+        public ArrayList FormButtons
+        {
+            get
+            {
+                return _FormButtons;
+            }
+
+            set
+            {
+                _FormButtons = value;
+            }
+        }
+
+        public UCSideBar MenuBar
+        {
+            get
+            {
+                return (UCSideBar)pnlLeft.Controls[0];
+            }
+        }
+
+        private Enums.MenuTypes _SelectedMenu = Enums.MenuTypes.NONE;
+
+        public Enums.MenuTypes SelectedMenu
+        {
+            get
+            {
+                return _SelectedMenu;
+            }
+
+            set
+            {
+                _SelectedMenu = value;
+            }
+        }
+
+        private Enums.PageViewing _Page = Enums.PageViewing.NONE;
+
+        public Enums.PageViewing Page
+        {
+            get
+            {
+                return _Page;
+            }
+
+            set
+            {
+                _Page = value;
+            }
+        }
+
+        private DataView _dvSearchResults;
+
+        private DataView SearchResults
+        {
+            get
+            {
+                return _dvSearchResults;
+            }
+
+            set
+            {
+                _dvSearchResults = value;
+                _dvSearchResults.Table.TableName = Enums.TableNames.NOT_IN_DATABASE_TBLSearchResults.ToString();
+                _dvSearchResults.AllowNew = false;
+                _dvSearchResults.AllowEdit = false;
+                _dvSearchResults.AllowDelete = false;
+                dgSearchResults.DataSource = SearchResults;
+            }
+        }
+
+        private DataRow SelectedSearchResultDataRow
+        {
+            get
+            {
+                if (!(dgSearchResults.CurrentRowIndex == -1))
+                {
+                    return SearchResults[dgSearchResults.CurrentRowIndex].Row;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+        private bool _Exporting = false;
+
+        private bool Exporting
+        {
+            get
+            {
+                return _Exporting;
+            }
+
+            set
+            {
+                _Exporting = value;
+            }
+        }
+
+        private string _SearchText = string.Empty;
+
+        public string SearchText
+        {
+            get
+            {
+                return _SearchText;
+            }
+
+            set
+            {
+                _SearchText = value;
+            }
+        }
+
+        private void FRMMenu_Load(object sender, EventArgs e)
+        {
+            LoadMe(sender, e);
+        }
+
+        private void FRMMenu_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            App.Logout();
+        }
+
+        private void FRMMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Escape)
+                {
+                    App.Logout();
+                }
+            }
+            catch (Exception ex)
+            {
+                App.ShowMessage("Action cannot be completed : " + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mnuChangeLogin_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.NONE);
+            App.ShowForm(typeof(FRMChangePassword), false, null);
+        }
+
+        private void mnuLogout_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.NONE);
+            App.Logout();
+        }
+
+        private void mnuCustomers_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.Customers);
+        }
+
+        private void mnuSpares_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.Spares);
+        }
+
+        private void mnuStaff_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.Staff);
+        }
+
+        private void mnuJobs_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.Jobs);
+        }
+
+        private void mnuScheduler_Click(object sender, EventArgs e)
+        {
+            var schedulerMain = new frmSchedulerMain();
+            schedulerMain.Show();
+        }
+
+        private void mnuInvoicing_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.Invoicing);
+        }
+
+        private void mnuReports_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.Reports);
+        }
+
+        private void mnuVan_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.FleetVan);
+        }
+
+        private void mnuSetup_Click(object sender, EventArgs e)
+        {
+            Navigation.Navigate(Enums.MenuTypes.Setup);
+        }
+
+        private void btnCloseMiddle_Click(object sender, EventArgs e)
+        {
+            Navigation.Close_Middle();
+            App.CurrentCustomerID = 0;
+            App.CurrentPropertyID = 0;
+        }
+
+        private void btnCloseRight_Click(object sender, EventArgs e)
+        {
+            Navigation.Close_Right();
+        }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete();
+        }
+
+        private void dgSearchResults_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            View();
+            Cursor = Cursors.Default;
+        }
+
+        private void dgSearchResults_DoubleClick(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Open();
+            Cursor = Cursors.Default;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            if (Page == Enums.PageViewing.Asset)
+            {
+                int assetsPropertyID = ((Entity.Assets.Asset)((IUserControl)pnlContent.Controls[0]).LoadedItem).PropertyID;
+                SetSearchResults(App.DB.Sites.GetAll_Light_New(App.loggedInUser.UserID), Enums.PageViewing.Property, false, false);
+                SearchResults.RowFilter = "SiteID =" + assetsPropertyID;
+                dgSearchResults.Select(0);
+                dgSearchResults_Click(sender, e);
+            }
+            else if (Page == Enums.PageViewing.Property)
+            {
+                int PropertyCustID = ((Entity.Sites.Site)((IUserControl)pnlContent.Controls[0]).LoadedItem).CustomerID;
+                SetSearchResults(App.DB.Customer.Customer_GetAll_Light(App.loggedInUser.UserID), Enums.PageViewing.Customer, false, false);
+                SearchResults.RowFilter = "CustomerID =" + PropertyCustID;
+                dgSearchResults.Select(0);
+                dgSearchResults_Click(sender, e);
+            }
+            else
+            {
+                btnGoBack.Visible = false;
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            var switchExpr = Page;
+            switch (switchExpr)
+            {
+                case Enums.PageViewing.Engineer:
+                    {
+                        var exportData = new DataTable();
+                        exportData.Columns.Add("Name");
+                        exportData.Columns.Add("Department");
+                        exportData.Columns.Add("EngineerID");
+                        exportData.Columns.Add("Region");
+                        exportData.Columns.Add("TelephoneNum");
+                        exportData.Columns.Add("Technician");
+                        exportData.Columns.Add("Supervisor");
+                        foreach (DataRowView dr in (DataView)dgSearchResults.DataSource)
+                        {
+                            var newRw = exportData.NewRow();
+                            newRw["Name"] = dr["Name"];
+                            newRw["Department"] = dr["Department"];
+                            newRw["EngineerID"] = dr["EngineerID"];
+                            newRw["Region"] = dr["Region"];
+                            newRw["TelephoneNum"] = dr["TelephoneNum"];
+                            newRw["Technician"] = dr["Technician"];
+                            newRw["Supervisor"] = dr["Supervisor"];
+                            exportData.Rows.Add(newRw);
+                        }
+
+                        ExportHelper.Export(exportData, "Engineers", Enums.ExportType.XLS);
+                        break;
+                    }
+
+                case Enums.PageViewing.Property:
+                    {
+                        Exporting = true;
+                        var exportData = new DataTable();
+                        exportData.Columns.Add("Customer");
+                        exportData.Columns.Add("Name");
+                        exportData.Columns.Add("Address 1");
+                        exportData.Columns.Add("Address 2");
+                        exportData.Columns.Add("Address 3");
+                        exportData.Columns.Add("Postcode");
+                        exportData.Columns.Add("Telephone");
+                        exportData.Columns.Add("Mobile");
+                        exportData.Columns.Add("Email");
+                        exportData.Columns.Add("Date added to system", Type.GetType("System.DateTime"));
+                        exportData.Columns.Add("SiteFuel");
+                        exportData.Columns.Add("PolicyNumber");
+                        exportData.Columns.Add("LastServiceDate");
+                        foreach (DataRowView dr in (DataView)dgSearchResults.DataSource)
+                        {
+                            var newRw = exportData.NewRow();
+                            newRw["Customer"] = dr["CustomerName"];
+                            newRw["Name"] = dr["Name"];
+                            newRw["Address 1"] = dr["Address1"];
+                            newRw["Address 2"] = dr["Address2"];
+                            newRw["Address 3"] = dr["Address3"];
+                            newRw["Postcode"] = dr["Postcode"];
+                            newRw["Telephone"] = dr["TelephoneNum"];
+                            newRw["Mobile"] = dr["FaxNum"];
+                            newRw["Email"] = dr["EmailAddress"];
+                            newRw["Date added to system"] = Conversions.ToDate(Strings.Format(dr["SiteAddedOnDateTime"], "dd/MM/yyyy"));
+                            newRw["SiteFuel"] = dr["SiteFuel"];
+                            newRw["PolicyNumber"] = dr["PolicyNumber"];
+                            newRw["LastServiceDate"] = dr["LastServiceDate"];
+                            exportData.Rows.Add(newRw);
+                        }
+
+                        ExportHelper.Export(exportData, "Properties", Enums.ExportType.XLS);
+                        Exporting = false;
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVan:
+                    {
+                        var dv = App.DB.FleetVan.GetAll();
+                        ExportHelper.Export(dv.Table, "Fleet Vans", Enums.ExportType.XLS);
+                        break;
+                    }
+            }
+        }
+
+        private void LoopControls(Control controlToLoop)
+        {
+            foreach (Control control in controlToLoop.Controls)
+            {
+                if ((control.GetType().Name ?? "") == "TabControl")
+                {
+                    LoopControls(control);
+                }
+                else if ((control.GetType().Name ?? "") == "TabPage")
+                {
+                    ((TabPage)control).BackColor = Color.White;
+                    LoopControls(control);
+                }
+                else if ((control.GetType().Name ?? "") == "GroupBox")
+                {
+                    ((GroupBox)control).FlatStyle = FlatStyle.System;
+                    LoopControls(control);
+                }
+                else if ((control.GetType().Name ?? "") == "Panel")
+                {
+                    LoopControls(control);
+                }
+                else if ((control.GetType().Name ?? "") == "Button")
+                {
+                    ((Button)control).FlatStyle = FlatStyle.Standard;
+                    ((Button)control).Cursor = Cursors.Hand;
+                    ((Button)control).UseVisualStyleBackColor = false;
+                    ((Button)control).BackColor = SystemColors.Control;
+                    ((Button)control).AccessibleDescription = ((Button)control).Text;
+                    FormButtons.Add(control);
+                }
+                else if ((control.GetType().Name ?? "") == "ComboBox")
+                {
+                    ((ComboBox)control).DropDownStyle = ComboBoxStyle.DropDownList;
+                    ((ComboBox)control).Cursor = Cursors.Hand;
+                }
+                else if ((control.GetType().Name ?? "") == "CheckBox")
+                {
+                    ((CheckBox)control).FlatStyle = FlatStyle.System;
+                    ((CheckBox)control).Cursor = Cursors.Hand;
+                }
+                else if ((control.GetType().Name ?? "") == "NumericUpDown")
+                {
+                    ((NumericUpDown)control).Cursor = Cursors.Hand;
+                }
+                else if ((control.GetType().Name ?? "") == "DataGrid")
+                {
+                    Helper.SetUpDataGrid((DataGrid)control);
+                    var tStyle = ((DataGrid)control).TableStyles[0];
+                    tStyle.ReadOnly = true;
+                    tStyle.MappingName = Enums.TableNames.NO_TABLE.ToString();
+                    ((DataGrid)control).TableStyles.Add(tStyle);
+                }
+                else if ((control.GetType().Name ?? "") == "UCButton")
+                {
+                    ((Button)control).FlatStyle = FlatStyle.Standard;
+                    ((Button)control).Cursor = Cursors.Hand;
+                    ((Button)control).UseVisualStyleBackColor = false;
+                    ((Button)control).BackColor = SystemColors.Control;
+                    ((Button)control).AccessibleDescription = ((Button)control).Text;
+                    FormButtons.Add(control);
+                }
+                else if (control.GetType().IsSubclassOf(typeof(UCBase)))
+                {
+                    LoopControls((UCBase)control);
+                }
+            }
+        }
+
+        private void SetupButtonMouseOvers()
+        {
+            foreach (object btn in FormButtons)
+                ((Button)btn).MouseHover += CreateHover;
+        }
+
+        private void CreateHover(object sender, EventArgs e)
+        {
+            Button argbtn = (Button)sender;
+            Helper.Setup_Button(ref argbtn, ((Button)sender).AccessibleDescription);
+        }
+
+        public void SetSearchResults(DataView dv, Enums.PageViewing pageIn, bool FromASave, bool FromADelete = false, string ExtraText = "")
+        {
+            SetupSearchResultsDataGrid(dv, pageIn, FromASave, FromADelete, ExtraText);
+        }
+
+        public void UpdateMessage()
+        {
+            Text = App.TheSystem.Configuration.CompanyName + " " + Text + " v." + App.TheSystem.Configuration.SystemVersion;
+            infoBar.Text = "Welcome " + App.loggedInUser.Fullname + ". " + App.DB.User.LastLogon(App.loggedInUser.UserID);
+            var switchExpr = App.TheSystem.Configuration.DBName;
+            switch (switchExpr)
+            {
+                case Enums.DataBaseName.RftFsm_Beta:
+                case Enums.DataBaseName.GaswayServicesFSM_Beta:
+                case Enums.DataBaseName.BlueflameServicesFsm_Beta:
+                    {
+                        infoBar.Text += " THIS IS THE BETA DATABASE";
+                        if (pnlLeft.Controls.Count > 0)
+                        {
+                            foreach (UCSideBar pnlLeft in pnlLeft.Controls)
+                                pnlLeft.BackColor = Color.LightGoldenrodYellow;
+                        }
+
+                        break;
+                    }
+            }
+        }
+
+        private void SetupSearchResultsDataGrid(DataView dv, Enums.PageViewing pageIn, bool FromASave = true, bool FromADelete = false, string ExtraText = "")
+        {
+            if (FromASave)
+            {
+                pnlRight.Visible = true;
+            }
+            else if (FromADelete)
+            {
+                App.MainForm.pnlRight.Visible = false;
+                App.MainForm.pnlContent.Controls.Clear();
+            }
+            else if (!Navigation.Close_Right())
+            {
+                return;
+            }
+
+            Page = pageIn;
+            var tStyle = dgSearchResults.TableStyles[0];
+            tStyle.GridColumnStyles.Clear();
+            btnAddNew.Enabled = true;
+            btnDelete.Visible = true;
+            btnAddNew.Visible = true;
+            btnGoBack.Visible = false;
+            btnExport.Visible = false;
+            btnHQ.Visible = false;
+            var switchExpr = Page;
+            switch (switchExpr)
+            {
+                case Enums.PageViewing.Customer:
+                    {
+                        var CustomerName = new DataGridLabelColumn();
+                        CustomerName.Format = "";
+                        CustomerName.FormatInfo = null;
+                        CustomerName.HeaderText = "Name";
+                        CustomerName.MappingName = "Name";
+                        CustomerName.ReadOnly = true;
+                        CustomerName.Width = 200;
+                        CustomerName.NullText = "";
+                        tStyle.GridColumnStyles.Add(CustomerName);
+                        var AccountNumber = new DataGridLabelColumn();
+                        AccountNumber.Format = "";
+                        AccountNumber.FormatInfo = null;
+                        AccountNumber.HeaderText = "Account Number";
+                        AccountNumber.MappingName = "AccountNumber";
+                        AccountNumber.ReadOnly = true;
+                        AccountNumber.Width = 140;
+                        AccountNumber.NullText = "";
+                        tStyle.GridColumnStyles.Add(AccountNumber);
+                        var Region = new DataGridLabelColumn();
+                        Region.Format = "";
+                        Region.FormatInfo = null;
+                        Region.HeaderText = "Region";
+                        Region.MappingName = "Region";
+                        Region.ReadOnly = true;
+                        Region.Width = 140;
+                        Region.NullText = "";
+                        tStyle.GridColumnStyles.Add(Region);
+                        lblMiddleTitle.Text = "Customers";
+                        break;
+                    }
+
+                case Enums.PageViewing.Property:
+                    {
+                        btnHQ.Visible = true;
+                        btnGoBack.Text = "Go to Customer";
+                        btnGoBack.Visible = true;
+                        btnExport.Visible = false;
+                        var Name = new DataGridLabelColumn();
+                        Name.Format = "";
+                        Name.FormatInfo = null;
+                        Name.HeaderText = "Name";
+                        Name.MappingName = "Name";
+                        Name.ReadOnly = true;
+                        Name.Width = 100;
+                        Name.NullText = "";
+                        tStyle.GridColumnStyles.Add(Name);
+                        var Address1 = new DataGridLabelColumn();
+                        Address1.Format = "";
+                        Address1.FormatInfo = null;
+                        Address1.HeaderText = "Address 1";
+                        Address1.MappingName = "Address1";
+                        Address1.ReadOnly = true;
+                        Address1.Width = 100;
+                        Address1.NullText = "";
+                        tStyle.GridColumnStyles.Add(Address1);
+                        var Address2 = new DataGridLabelColumn();
+                        Address2.Format = "";
+                        Address2.FormatInfo = null;
+                        Address2.HeaderText = "Address 2";
+                        Address2.MappingName = "Address2";
+                        Address2.ReadOnly = true;
+                        Address2.Width = 100;
+                        Address2.NullText = "";
+                        tStyle.GridColumnStyles.Add(Address2);
+                        var Postcode = new DataGridLabelColumn();
+                        Postcode.Format = "";
+                        Postcode.FormatInfo = null;
+                        Postcode.HeaderText = "Postcode";
+                        Postcode.MappingName = "Postcode";
+                        Postcode.ReadOnly = true;
+                        Postcode.Width = 75;
+                        Postcode.NullText = "";
+                        tStyle.GridColumnStyles.Add(Postcode);
+                        var HeadOffice = new DataGridLabelColumn();
+                        HeadOffice.Format = "";
+                        HeadOffice.FormatInfo = null;
+                        HeadOffice.HeaderText = "HO";
+                        HeadOffice.MappingName = "HeadOfficeResult";
+                        HeadOffice.ReadOnly = true;
+                        HeadOffice.Width = 75;
+                        HeadOffice.NullText = "";
+                        tStyle.GridColumnStyles.Add(HeadOffice);
+                        var Region = new DataGridLabelColumn();
+                        Region.Format = "";
+                        Region.FormatInfo = null;
+                        Region.HeaderText = "Region";
+                        Region.MappingName = "Region";
+                        Region.ReadOnly = true;
+                        Region.Width = 100;
+                        Region.NullText = "";
+                        tStyle.GridColumnStyles.Add(Region);
+                        var SiteFuel = new DataGridLabelColumn();
+                        SiteFuel.Format = "";
+                        SiteFuel.FormatInfo = null;
+                        SiteFuel.HeaderText = "SiteFuel";
+                        SiteFuel.MappingName = "SiteFuel";
+                        SiteFuel.ReadOnly = true;
+                        SiteFuel.Width = 100;
+                        SiteFuel.NullText = "";
+                        tStyle.GridColumnStyles.Add(SiteFuel);
+                        var PolicyNumber = new DataGridLabelColumn();
+                        PolicyNumber.Format = "";
+                        PolicyNumber.FormatInfo = null;
+                        PolicyNumber.HeaderText = "PolicyNumber";
+                        PolicyNumber.MappingName = "PolicyNumber";
+                        PolicyNumber.ReadOnly = true;
+                        PolicyNumber.Width = 100;
+                        PolicyNumber.NullText = "";
+                        tStyle.GridColumnStyles.Add(PolicyNumber);
+                        var LastServiceDate = new DataGridLabelColumn();
+                        LastServiceDate.Format = "";
+                        LastServiceDate.FormatInfo = null;
+                        LastServiceDate.HeaderText = "Last Service Date";
+                        LastServiceDate.MappingName = "LastServiceDate";
+                        LastServiceDate.ReadOnly = true;
+                        LastServiceDate.Width = 100;
+                        LastServiceDate.NullText = "";
+                        tStyle.GridColumnStyles.Add(LastServiceDate);
+                        if (ExtraText.Trim().Length > 0)
+                        {
+                            lblMiddleTitle.Text = "Properties For " + ExtraText;
+                        }
+                        else
+                        {
+                            lblMiddleTitle.Text = "Properties";
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Asset:
+                    {
+                        btnGoBack.Text = "Go to Property";
+                        btnGoBack.Visible = true;
+                        var Product = new DataGridLabelColumn();
+                        Product.Format = "";
+                        Product.FormatInfo = null;
+                        Product.HeaderText = "Product";
+                        Product.MappingName = "Product";
+                        Product.ReadOnly = true;
+                        Product.Width = 150;
+                        Product.NullText = "";
+                        tStyle.GridColumnStyles.Add(Product);
+                        var Location = new DataGridLabelColumn();
+                        Location.Format = "";
+                        Location.FormatInfo = null;
+                        Location.HeaderText = "Location";
+                        Location.MappingName = "Location";
+                        Location.ReadOnly = true;
+                        Location.Width = 100;
+                        Location.NullText = "";
+                        tStyle.GridColumnStyles.Add(Location);
+                        var SerialNum = new DataGridLabelColumn();
+                        SerialNum.Format = "";
+                        SerialNum.FormatInfo = null;
+                        SerialNum.HeaderText = "Serial";
+                        SerialNum.MappingName = "SerialNum";
+                        SerialNum.ReadOnly = true;
+                        SerialNum.Width = 150;
+                        SerialNum.NullText = "";
+                        tStyle.GridColumnStyles.Add(SerialNum);
+                        if (ExtraText.Trim().Length > 0)
+                        {
+                            lblMiddleTitle.Text = "Appliances For " + ExtraText;
+                        }
+                        else
+                        {
+                            lblMiddleTitle.Text = "Appliances";
+                        }
+
+                        if (App.ViewingAllAssets)
+                        {
+                            btnAddNew.Enabled = false;
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Part:
+                    {
+                        var PartName = new DataGridLabelColumn();
+                        PartName.Format = "";
+                        PartName.FormatInfo = null;
+                        PartName.HeaderText = "Name";
+                        PartName.MappingName = "Name";
+                        PartName.ReadOnly = true;
+                        PartName.Width = 130;
+                        PartName.NullText = "";
+                        tStyle.GridColumnStyles.Add(PartName);
+                        var PartNumber = new DataGridLabelColumn();
+                        PartNumber.Format = "";
+                        PartNumber.FormatInfo = null;
+                        PartNumber.HeaderText = "Number (MPN)";
+                        PartNumber.MappingName = "Number";
+                        PartNumber.ReadOnly = true;
+                        PartNumber.Width = 130;
+                        PartNumber.NullText = "";
+                        tStyle.GridColumnStyles.Add(PartNumber);
+                        var PartReference = new DataGridLabelColumn();
+                        PartReference.Format = "";
+                        PartReference.FormatInfo = null;
+                        PartReference.HeaderText = "Reference";
+                        PartReference.MappingName = "Reference";
+                        PartReference.ReadOnly = true;
+                        PartReference.Width = 130;
+                        PartReference.NullText = "";
+                        tStyle.GridColumnStyles.Add(PartReference);
+                        var Quantity = new DataGridLabelColumn();
+                        Quantity.Format = "";
+                        Quantity.FormatInfo = null;
+                        Quantity.HeaderText = "Qty";
+                        Quantity.MappingName = "WarehouseQuantity";
+                        Quantity.ReadOnly = true;
+                        Quantity.Width = 50;
+                        Quantity.NullText = "";
+                        tStyle.GridColumnStyles.Add(Quantity);
+                        var UnitType = new DataGridLabelColumn();
+                        UnitType.Format = "";
+                        UnitType.FormatInfo = null;
+                        UnitType.HeaderText = "Unit Type";
+                        UnitType.MappingName = "UnitType";
+                        UnitType.ReadOnly = true;
+                        UnitType.Width = 130;
+                        UnitType.NullText = "";
+                        tStyle.GridColumnStyles.Add(UnitType);
+                        var SellPrice = new DataGridLabelColumn();
+                        SellPrice.Format = "C";
+                        SellPrice.FormatInfo = null;
+                        SellPrice.HeaderText = "Sell Price";
+                        SellPrice.MappingName = "SellPrice";
+                        SellPrice.ReadOnly = true;
+                        SellPrice.Width = 120;
+                        SellPrice.NullText = "";
+                        tStyle.GridColumnStyles.Add(SellPrice);
+                        lblMiddleTitle.Text = "Parts";
+                        break;
+                    }
+
+                case Enums.PageViewing.PartPack:
+                    {
+                        var PartName = new DataGridLabelColumn();
+                        PartName.Format = "";
+                        PartName.FormatInfo = null;
+                        PartName.HeaderText = "Pack Name";
+                        PartName.MappingName = "PackName";
+                        PartName.ReadOnly = true;
+                        PartName.Width = 250;
+                        PartName.NullText = "";
+                        tStyle.GridColumnStyles.Add(PartName);
+                        lblMiddleTitle.Text = "Part Packs";
+                        break;
+                    }
+
+                case Enums.PageViewing.Product:
+                    {
+                        var ProductName = new DataGridLabelColumn();
+                        ProductName.Format = "";
+                        ProductName.FormatInfo = null;
+                        ProductName.HeaderText = "Description";
+                        ProductName.MappingName = "typemakemodel";
+                        ProductName.ReadOnly = true;
+                        ProductName.Width = 200;
+                        ProductName.NullText = "";
+                        tStyle.GridColumnStyles.Add(ProductName);
+                        var ProductNumber = new DataGridLabelColumn();
+                        ProductNumber.Format = "";
+                        ProductNumber.FormatInfo = null;
+                        ProductNumber.HeaderText = "GC Number";
+                        ProductNumber.MappingName = "Number";
+                        ProductNumber.ReadOnly = true;
+                        ProductNumber.Width = 120;
+                        ProductNumber.NullText = "";
+                        tStyle.GridColumnStyles.Add(ProductNumber);
+                        var ProductReference = new DataGridLabelColumn();
+                        ProductReference.Format = "";
+                        ProductReference.FormatInfo = null;
+                        ProductReference.HeaderText = "Reference";
+                        ProductReference.MappingName = "Reference";
+                        ProductReference.ReadOnly = true;
+                        ProductReference.Width = 120;
+                        ProductReference.NullText = "";
+                        tStyle.GridColumnStyles.Add(ProductReference);
+                        lblMiddleTitle.Text = "Products";
+                        break;
+                    }
+
+                case Enums.PageViewing.Supplier:
+                    {
+                        var SupplierName = new DataGridLabelColumn();
+                        SupplierName.Format = "";
+                        SupplierName.FormatInfo = null;
+                        SupplierName.HeaderText = "Name";
+                        SupplierName.MappingName = "Name";
+                        SupplierName.ReadOnly = true;
+                        SupplierName.Width = 120;
+                        SupplierName.NullText = "";
+                        tStyle.GridColumnStyles.Add(SupplierName);
+                        var Address1 = new DataGridLabelColumn();
+                        Address1.Format = "";
+                        Address1.FormatInfo = null;
+                        Address1.HeaderText = "Address 1";
+                        Address1.MappingName = "Address1";
+                        Address1.ReadOnly = true;
+                        Address1.Width = 100;
+                        Address1.NullText = "";
+                        tStyle.GridColumnStyles.Add(Address1);
+                        var Postcode = new DataGridLabelColumn();
+                        Postcode.Format = "";
+                        Postcode.FormatInfo = null;
+                        Postcode.HeaderText = "Postcode";
+                        Postcode.MappingName = "Postcode";
+                        Postcode.ReadOnly = true;
+                        Postcode.Width = 100;
+                        Postcode.NullText = "";
+                        tStyle.GridColumnStyles.Add(Postcode);
+                        var Tel = new DataGridLabelColumn();
+                        Tel.Format = "";
+                        Tel.FormatInfo = null;
+                        Tel.HeaderText = "Tel";
+                        Tel.MappingName = "TelephoneNum";
+                        Tel.ReadOnly = true;
+                        Tel.Width = 100;
+                        Tel.NullText = "";
+                        tStyle.GridColumnStyles.Add(Tel);
+                        lblMiddleTitle.Text = "Suppliers";
+                        break;
+                    }
+
+                case Enums.PageViewing.Engineer:
+                    {
+                        var Name = new DataGridLabelColumn();
+                        Name.Format = "";
+                        Name.FormatInfo = null;
+                        Name.HeaderText = "Name";
+                        Name.MappingName = "Name";
+                        Name.ReadOnly = true;
+                        Name.Width = 160;
+                        Name.NullText = "";
+                        tStyle.GridColumnStyles.Add(Name);
+                        var PDAID = new DataGridLabelColumn();
+                        PDAID.Format = "";
+                        PDAID.FormatInfo = null;
+                        PDAID.HeaderText = "Engineer ID";
+                        PDAID.MappingName = "EngineerID";
+                        PDAID.ReadOnly = true;
+                        PDAID.Width = 80;
+                        PDAID.NullText = "";
+                        tStyle.GridColumnStyles.Add(PDAID);
+                        var Region = new DataGridLabelColumn();
+                        Region.Format = "";
+                        Region.FormatInfo = null;
+                        Region.HeaderText = "Region";
+                        Region.MappingName = "Region";
+                        Region.ReadOnly = true;
+                        Region.Width = 120;
+                        Region.NullText = "";
+                        tStyle.GridColumnStyles.Add(Region);
+                        var TelNum = new DataGridLabelColumn();
+                        TelNum.Format = "";
+                        TelNum.FormatInfo = null;
+                        TelNum.HeaderText = "Telephone Number";
+                        TelNum.MappingName = "TelephoneNum";
+                        TelNum.ReadOnly = true;
+                        TelNum.Width = 120;
+                        TelNum.NullText = "";
+                        tStyle.GridColumnStyles.Add(TelNum);
+                        var technician = new DataGridLabelColumn();
+                        technician.Format = "";
+                        technician.FormatInfo = null;
+                        technician.HeaderText = "Technician";
+                        technician.MappingName = "Technician";
+                        technician.ReadOnly = true;
+                        technician.Width = 100;
+                        technician.NullText = "";
+                        tStyle.GridColumnStyles.Add(technician);
+                        var supervisor = new DataGridLabelColumn();
+                        supervisor.Format = "";
+                        supervisor.FormatInfo = null;
+                        supervisor.HeaderText = "Supervisor";
+                        supervisor.MappingName = "Supervisor";
+                        supervisor.ReadOnly = true;
+                        supervisor.Width = 100;
+                        supervisor.NullText = "";
+                        tStyle.GridColumnStyles.Add(supervisor);
+                        lblMiddleTitle.Text = "Engineers";
+                        btnExport.Visible = true;
+                        break;
+                    }
+
+                case Enums.PageViewing.Equipment:
+                    {
+                        var Name = new DataGridLabelColumn();
+                        Name.Format = "";
+                        Name.FormatInfo = null;
+                        Name.HeaderText = "Equipment";
+                        Name.MappingName = "Name";
+                        Name.ReadOnly = true;
+                        Name.Width = 160;
+                        Name.NullText = "";
+                        tStyle.GridColumnStyles.Add(Name);
+                        var Region = new DataGridLabelColumn();
+                        Region.Format = "";
+                        Region.FormatInfo = null;
+                        Region.HeaderText = "Serial";
+                        Region.MappingName = "SerialNumber";
+                        Region.ReadOnly = true;
+                        Region.Width = 120;
+                        Region.NullText = "";
+                        tStyle.GridColumnStyles.Add(Region);
+                        var Warranty = new DataGridLabelColumn();
+                        Warranty.Format = "";
+                        Warranty.FormatInfo = null;
+                        Warranty.HeaderText = "Warranty";
+                        Warranty.MappingName = "WarrantyEndDate";
+                        Warranty.ReadOnly = true;
+                        Warranty.Width = 120;
+                        Warranty.NullText = "";
+                        tStyle.GridColumnStyles.Add(Warranty);
+                        lblMiddleTitle.Text = "Equipment";
+                        btnExport.Visible = true;
+                        break;
+                    }
+
+                case Enums.PageViewing.Subcontractor:
+                    {
+                        var Name = new DataGridLabelColumn();
+                        Name.Format = "";
+                        Name.FormatInfo = null;
+                        Name.HeaderText = "Name";
+                        Name.MappingName = "Name";
+                        Name.ReadOnly = true;
+                        Name.Width = 160;
+                        Name.NullText = "";
+                        tStyle.GridColumnStyles.Add(Name);
+                        var Region = new DataGridLabelColumn();
+                        Region.Format = "";
+                        Region.FormatInfo = null;
+                        Region.HeaderText = "Region";
+                        Region.MappingName = "Region";
+                        Region.ReadOnly = true;
+                        Region.Width = 120;
+                        Region.NullText = "";
+                        tStyle.GridColumnStyles.Add(Region);
+                        var Address1 = new DataGridLabelColumn();
+                        Address1.Format = "";
+                        Address1.FormatInfo = null;
+                        Address1.HeaderText = "Address1";
+                        Address1.MappingName = "Address1";
+                        Address1.ReadOnly = true;
+                        Address1.Width = 80;
+                        Address1.NullText = "";
+                        tStyle.GridColumnStyles.Add(Address1);
+                        var Postcode = new DataGridLabelColumn();
+                        Postcode.Format = "";
+                        Postcode.FormatInfo = null;
+                        Postcode.HeaderText = "Postcode";
+                        Postcode.MappingName = "Postcode";
+                        Postcode.ReadOnly = true;
+                        Postcode.Width = 80;
+                        Postcode.NullText = "";
+                        tStyle.GridColumnStyles.Add(Postcode);
+                        var TelNum = new DataGridLabelColumn();
+                        TelNum.Format = "";
+                        TelNum.FormatInfo = null;
+                        TelNum.HeaderText = "Telephone Number";
+                        TelNum.MappingName = "TelephoneNum";
+                        TelNum.ReadOnly = true;
+                        TelNum.Width = 120;
+                        TelNum.NullText = "";
+                        tStyle.GridColumnStyles.Add(TelNum);
+                        lblMiddleTitle.Text = "Subcontractors";
+                        break;
+                    }
+
+                case Enums.PageViewing.StockProfile:
+                    {
+                        var Registration = new DataGridLabelColumn();
+                        Registration.Format = "";
+                        Registration.FormatInfo = null;
+                        Registration.HeaderText = "Profile Name";
+                        Registration.MappingName = "Registration";
+                        Registration.ReadOnly = true;
+                        Registration.Width = 200;
+                        Registration.NullText = "";
+                        tStyle.GridColumnStyles.Add(Registration);
+                        var department = new DataGridLabelColumn();
+                        department.Format = "";
+                        department.FormatInfo = null;
+                        department.HeaderText = "Department";
+                        department.MappingName = "Department";
+                        department.ReadOnly = true;
+                        department.Width = 100;
+                        department.NullText = "";
+                        tStyle.GridColumnStyles.Add(department);
+                        lblMiddleTitle.Text = "Stock Profiles";
+                        btnExport.Visible = true;
+                        btnDelete.Visible = true;
+                        break;
+                    }
+
+                case Enums.PageViewing.Warehouse:
+                    {
+                        var Name = new DataGridLabelColumn();
+                        Name.Format = "";
+                        Name.FormatInfo = null;
+                        Name.HeaderText = "Name";
+                        Name.MappingName = "Name";
+                        Name.ReadOnly = true;
+                        Name.Width = 100;
+                        Name.NullText = "";
+                        tStyle.GridColumnStyles.Add(Name);
+                        var Size = new DataGridLabelColumn();
+                        Size.Format = "";
+                        Size.FormatInfo = null;
+                        Size.HeaderText = "Size";
+                        Size.MappingName = "Size";
+                        Size.ReadOnly = true;
+                        Size.Width = 80;
+                        Size.NullText = "";
+                        tStyle.GridColumnStyles.Add(Size);
+                        var Address1 = new DataGridLabelColumn();
+                        Address1.Format = "";
+                        Address1.FormatInfo = null;
+                        Address1.HeaderText = "Address 1";
+                        Address1.MappingName = "Address1";
+                        Address1.ReadOnly = true;
+                        Address1.Width = 100;
+                        Address1.NullText = "";
+                        tStyle.GridColumnStyles.Add(Address1);
+                        var Address2 = new DataGridLabelColumn();
+                        Address2.Format = "";
+                        Address2.FormatInfo = null;
+                        Address2.HeaderText = "Address 2";
+                        Address2.MappingName = "Address2";
+                        Address2.ReadOnly = true;
+                        Address2.Width = 100;
+                        Address2.NullText = "";
+                        tStyle.GridColumnStyles.Add(Address2);
+                        var Postcode = new DataGridLabelColumn();
+                        Postcode.Format = "";
+                        Postcode.FormatInfo = null;
+                        Postcode.HeaderText = "Postcode";
+                        Postcode.MappingName = "Postcode";
+                        Postcode.ReadOnly = true;
+                        Postcode.Width = 75;
+                        Postcode.NullText = "";
+                        tStyle.GridColumnStyles.Add(Postcode);
+                        lblMiddleTitle.Text = "Warehouses";
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVan:
+                    {
+                        var registration = new DataGridLabelColumn();
+                        registration.Format = "";
+                        registration.FormatInfo = null;
+                        registration.HeaderText = "Registration";
+                        registration.MappingName = "Registration";
+                        registration.ReadOnly = true;
+                        registration.Width = 100;
+                        registration.NullText = "";
+                        tStyle.GridColumnStyles.Add(registration);
+                        var make = new DataGridLabelColumn();
+                        make.Format = "";
+                        make.FormatInfo = null;
+                        make.HeaderText = "Engineer";
+                        make.MappingName = "Name";
+                        make.ReadOnly = true;
+                        make.Width = 200;
+                        make.NullText = "";
+                        tStyle.GridColumnStyles.Add(make);
+                        lblMiddleTitle.Text = "Fleet Vans";
+                        btnExport.Visible = true;
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVanType:
+                    {
+                        var make = new DataGridLabelColumn();
+                        make.Format = "";
+                        make.FormatInfo = null;
+                        make.HeaderText = "Make";
+                        make.MappingName = "Make";
+                        make.ReadOnly = true;
+                        make.Width = 140;
+                        make.NullText = "";
+                        tStyle.GridColumnStyles.Add(make);
+                        var model = new DataGridLabelColumn();
+                        model.Format = "";
+                        model.FormatInfo = null;
+                        model.HeaderText = "Model";
+                        model.MappingName = "Model";
+                        model.ReadOnly = true;
+                        model.Width = 210;
+                        model.NullText = "";
+                        tStyle.GridColumnStyles.Add(model);
+                        lblMiddleTitle.Text = "Van Types";
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetEquipment:
+                    {
+                        var name = new DataGridLabelColumn();
+                        name.Format = "";
+                        name.FormatInfo = null;
+                        name.HeaderText = "Name";
+                        name.MappingName = "Name";
+                        name.ReadOnly = true;
+                        name.Width = 140;
+                        name.NullText = "";
+                        tStyle.GridColumnStyles.Add(name);
+                        var cost = new DataGridLabelColumn();
+                        cost.Format = "C";
+                        cost.FormatInfo = null;
+                        cost.HeaderText = "Cost";
+                        cost.MappingName = "Cost";
+                        cost.ReadOnly = true;
+                        cost.Width = 210;
+                        cost.NullText = "";
+                        tStyle.GridColumnStyles.Add(cost);
+                        lblMiddleTitle.Text = "Fleet Equipment";
+                        break;
+                    }
+
+                case Enums.PageViewing.UserQuals:
+                    {
+                        var fullName = new DataGridLabelColumn();
+                        fullName.Format = "";
+                        fullName.FormatInfo = null;
+                        fullName.HeaderText = "Name";
+                        fullName.MappingName = "FullName";
+                        fullName.ReadOnly = true;
+                        fullName.Width = 125;
+                        fullName.NullText = "";
+                        tStyle.GridColumnStyles.Add(fullName);
+                        lblMiddleTitle.Text = "Users";
+                        btnAddNew.Visible = false;
+                        btnDelete.Visible = false;
+                        btnExport.Visible = false;
+                        break;
+                    }
+            }
+
+            tStyle.ReadOnly = true;
+            tStyle.MappingName = Enums.TableNames.NOT_IN_DATABASE_TBLSearchResults.ToString();
+            // Me.dgSearchResults.TableStyles.Add(tStyle)
+
+            pnlMiddle.Visible = true;
+            SearchResults = dv;
+            if (Page == Enums.PageViewing.Property)
+            {
+                if (!FromADelete)
+                {
+                    if (!(App.CurrentPropertyID == 0))
+                    {
+                        int rwCnt = 0;
+                        foreach (DataRow row in SearchResults.Table.Rows)
+                        {
+                            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(row["SiteID"], App.CurrentPropertyID, false)))
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                rwCnt += 1;
+                            }
+                        }
+
+                        dgSearchResults.CurrentRowIndex = rwCnt;
+                    }
+                }
+            }
+        }
+
+        private void btnHQ_Click(object sender, EventArgs e)
+        {
+            var TheHQ = App.DB.Sites.Get(SelectedSearchResultDataRow["CustomerID"], Entity.Sites.SiteSQL.GetBy.CustomerHq);
+            if (TheHQ is null || !TheHQ.Exists)
+            {
+                App.ShowMessage("No head office has been assigned", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (TheHQ.SiteID == Helper.MakeIntegerValid(SelectedSearchResultDataRow["SiteID"]))
+            {
+                App.ShowMessage("This site is the head office", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            App.ShowForm(typeof(FRMSitePopup), true, new object[] { TheHQ.SiteID });
+        }
+
+        private void Add()
+        {
+            var switchExpr = Page;
+            switch (switchExpr)
+            {
+                case Enums.PageViewing.Customer:
+                    {
+                        App.ShowForm(typeof(FRMCustomer), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.Property:
+                    {
+                        var custCheck = App.DB.Customer.Customer_Get(App.CurrentCustomerID);
+                        if (custCheck is object)
+                        {
+                            if (custCheck.Status == (int)Enums.CustomerStatus.OnHold)
+                            {
+                                App.ShowMessage("Customer On Hold.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+
+                        App.ShowForm(typeof(FRMSite), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.Asset:
+                    {
+                        App.ShowForm(typeof(FRMAsset), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.Subcontractor:
+                    {
+                        App.ShowForm(typeof(FRMSubcontractor), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.Supplier:
+                    {
+                        var _ssmList = new List<Enums.SecuritySystemModules>();
+                        _ssmList.Add(Enums.SecuritySystemModules.Finance);
+                        _ssmList.Add(Enums.SecuritySystemModules.Compliance);
+                        if (App.loggedInUser.HasAccessToMulitpleModules(_ssmList))
+                        {
+                            App.ShowForm(typeof(FRMSupplier), true, null);
+                        }
+                        else
+                        {
+                            string msg = "You do not have the necessary security permissions." + Constants.vbCrLf;
+                            msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                            throw new System.Security.SecurityException(msg);
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Product:
+                    {
+                        App.ShowForm(typeof(FRMProduct), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.Part:
+                    {
+                        if (App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.CreateParts) == false)
+                        {
+                            string msg = "You do not have the necessary security permissions to access this feature." + Constants.vbCrLf;
+                            msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                            throw new System.Security.SecurityException(msg);
+                        }
+                        else
+                        {
+                            // If EnterOverridePassword() Then
+                            App.ShowForm(typeof(FRMPart), true, null);
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.PartPack:
+                    {
+                        Enums.SecuritySystemModules ssm;
+                        ssm = Enums.SecuritySystemModules.CreateParts;
+                        if (App.loggedInUser.HasAccessToModule(ssm) == false)
+                        {
+                            string msg = "You do not have the necessary security permissions to access this feature." + Constants.vbCrLf;
+                            msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                            throw new System.Security.SecurityException(msg);
+                        }
+                        else
+                        {
+                            // If EnterOverridePassword() Then
+                            App.ShowForm(typeof(FRMPartPack), true, null);
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Engineer:
+                    {
+                        App.ShowForm(typeof(FRMEngineer), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.StockProfile:
+                    {
+                        App.ShowForm(typeof(FRMVan), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVan:
+                    {
+                        App.ShowForm(typeof(FRMFleetVan), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVanType:
+                    {
+                        App.ShowForm(typeof(FRMFleetVanType), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetEquipment:
+                    {
+                        App.ShowForm(typeof(FRMFleetEquipment), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.Equipment:
+                    {
+                        App.ShowForm(typeof(FRMEquipment), true, null);
+                        break;
+                    }
+
+                case Enums.PageViewing.Warehouse:
+                    {
+                        App.ShowForm(typeof(FRMWarehouse), true, null);
+                        break;
+                    }
+            }
+        }
+
+        private void Delete()
+        {
+            if (SelectedSearchResultDataRow is null)
+            {
+                return;
+            }
+
+            if (App.ShowMessage("You are about to delete an item." + Constants.vbCrLf + Constants.vbCrLf + "Do you wish to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+            }
+            else
+            {
+                return;
+            }
+
+            if (!App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.IT))
+            {
+                string msg = "You do not have the necessary security permissions to access this feature." + Constants.vbCrLf;
+                msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                throw new System.Security.SecurityException(msg);
+                return;
+            }
+
+            var switchExpr = Page;
+            switch (switchExpr)
+            {
+                case Enums.PageViewing.Supplier:
+                    {
+                        App.DB.Supplier.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["SupplierID"]));
+                        SetSearchResults(App.DB.Supplier.Supplier_GetAll(), Enums.PageViewing.Supplier, false, true);
+                        break;
+                    }
+
+                case Enums.PageViewing.Customer:
+                    {
+                        int customerID = Helper.MakeIntegerValid(SelectedSearchResultDataRow["CustomerID"]);
+
+                        // check if the customer has active sites if so then we can't delete
+                        if (App.DB.Customer.Customer_GetActiveSiteCount(customerID) == 0)
+                        {
+                            App.DB.Customer.Delete(customerID);
+                            SetSearchResults(App.DB.Customer.Customer_GetAll_Light(App.loggedInUser.UserID), Enums.PageViewing.Customer, false, true);
+                        }
+                        else
+                        {
+                            App.ShowMessage("This customer has active sites so cannot be deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Property:
+                    {
+                        // SHOULD NOT BE ABLE TO DELETE A SITE IF IT HAS ACTIVE JOBS OR ORDERS
+                        if (App.DB.Sites.Site_CanItBeDeleted(Helper.MakeIntegerValid(SelectedSearchResultDataRow["SiteID"])).Table.Rows.Count > 0)
+                        {
+                            if (App.ShowMessage("This site has active jobs or orders" + Constants.vbCrLf + Constants.vbCrLf + "Do you wish to continue?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                            {
+                                return;
+                            }
+                        }
+
+                        App.DB.Job.Job_Delete_BySite(Conversions.ToInteger(SelectedSearchResultDataRow["SiteID"]));
+                        App.DB.Sites.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["SiteID"]));
+                        if (App.CurrentCustomerID == 0)
+                        {
+                            SetSearchResults(App.DB.Sites.GetAll_Light_New(App.loggedInUser.UserID), Enums.PageViewing.Property, false, true);
+                        }
+                        else
+                        {
+                            var cust = new Entity.Customers.Customer();
+                            cust = App.DB.Customer.Customer_Get(App.CurrentCustomerID);
+                            SetSearchResults(App.DB.Sites.GetForCustomer_Light(App.CurrentCustomerID, App.loggedInUser.UserID), Enums.PageViewing.Property, false, true, cust.Name + " (" + cust.AccountNumber + ")");
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Asset:
+                    {
+                        App.DB.Asset.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["AssetID"]));
+                        if (App.CurrentPropertyID == 0)
+                        {
+                            SetSearchResults(App.DB.Asset.Asset_GetAll(App.loggedInUser.UserID), Enums.PageViewing.Asset, false, true);
+                        }
+                        else
+                        {
+                            var site = new Entity.Sites.Site();
+                            site = App.DB.Sites.Get(App.CurrentPropertyID);
+                            var cust = new Entity.Customers.Customer();
+                            cust = App.DB.Customer.Customer_Get(site.CustomerID);
+                            SetSearchResults(App.DB.Asset.Asset_GetForSite(App.CurrentPropertyID), Enums.PageViewing.Asset, false, true, site.Address1 + ", " + site.Postcode + " (" + cust.AccountNumber + ")");
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Product:
+                    {
+                        App.DB.Product.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["ProductID"]));
+                        SetSearchResults(App.DB.Product.Product_GetAll(), Enums.PageViewing.Product, false, true);
+                        break;
+                    }
+
+                case Enums.PageViewing.Part:
+                    {
+                        int partID = Helper.MakeIntegerValid(SelectedSearchResultDataRow["PartID"]);
+                        var suppliers = App.DB.PartSupplier.Get_ByPartID(partID);
+                        var stockList = App.DB.Part.Stock_Get_Locations(partID);
+                        if (suppliers.Table.Rows.Count > 0 & stockList.Table.Rows.Count > 0)
+                        {
+                            App.ShowMessage("This part has active suppliers and stock so cannot be deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+
+                        App.DB.Part.Delete(partID);
+                        ISearchControl ctrl = (ISearchControl)MenuBar.pnlSearch.Controls[0];
+                        if (ctrl is object)
+                            ctrl.Search();
+                        break;
+                    }
+                // SetSearchResults(DB.Part.Part_GetAll, Entity.Sys.Enums.PageViewing.Part, False, True)
+                case Enums.PageViewing.PartPack:
+                    {
+                        App.DB.ExecuteScalar(Conversions.ToString("DELETE FROM tblPartPack WHERE PackID = " + SelectedSearchResultDataRow["PackID"]));
+                        SetSearchResults(App.DB.Part.PartPack_GetAll(), Enums.PageViewing.PartPack, false, true);
+                        break;
+                    }
+
+                case Enums.PageViewing.Engineer:
+                    {
+                        int engineerId = Helper.MakeIntegerValid(SelectedSearchResultDataRow["EngineerID"]);
+                        var dvJobs = App.DB.EngineerVisits.Get_ByEngineerIdAndStatusEnumId(engineerId, Conversions.ToInteger(Enums.VisitStatus.Scheduled));
+                        dvJobs.Table.Merge(App.DB.EngineerVisits.Get_ByEngineerIdAndStatusEnumId(engineerId, Conversions.ToInteger(Enums.VisitStatus.Downloaded)).Table);
+                        if (dvJobs.Count > 1)
+                        {
+                            App.ShowMessage("This engineer has jobs that are scheduled/downloaded so cannot be deleted!" + Constants.vbCrLf + Constants.vbCrLf + "An export of their jobs will follow!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ExportHelper.Export(dvJobs.Table, "Jobs", Enums.ExportType.XLS);
+                            return;
+                        }
+                        else
+                        {
+                            App.DB.Engineer.Delete(engineerId);
+                            SetSearchResults(App.DB.Engineer.Engineer_GetAll_NoSub(), Enums.PageViewing.Engineer, false, true);
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.Equipment:
+                    {
+                        App.DB.Engineer.DeleteEquipment(Helper.MakeIntegerValid(SelectedSearchResultDataRow["EquipmentID"]));
+                        SetSearchResults(App.DB.Engineer.Equipment_GetAll(), Enums.PageViewing.Equipment, false, true);
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVanType:
+                    {
+                        App.DB.FleetVanType.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanTypeID"]));
+                        SetSearchResults(App.DB.FleetVanType.GetAll(), Enums.PageViewing.FleetVanType, false, true);
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetEquipment:
+                    {
+                        int equipmentID = Helper.MakeIntegerValid(SelectedSearchResultDataRow["EquipmentID"]);
+                        if (App.DB.FleetEquipment.GetActiveCount(equipmentID) == 0)
+                        {
+                            App.DB.FleetEquipment.Delete(equipmentID);
+                            SetSearchResults(App.DB.FleetEquipment.GetAll(), Enums.PageViewing.FleetEquipment, false, true);
+                        }
+                        else
+                        {
+                            App.ShowMessage("This equipment is still in use by vans", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVan:
+                    {
+                        App.ShowMessage("Vans cannot be deleted, only returned", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                case Enums.PageViewing.Subcontractor:
+                    {
+                        App.DB.SubContractor.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["SubcontractorID"]));
+                        SetSearchResults(App.DB.SubContractor.Subcontractor_GetAll(), Enums.PageViewing.Subcontractor, false, true);
+                        break;
+                    }
+
+                case Enums.PageViewing.StockProfile:
+                    {
+                        App.DB.Van.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]));
+                        SetSearchResults(App.DB.Van.Van_GetAll(true), Enums.PageViewing.StockProfile, false, true);
+                        break;
+                    }
+
+                case Enums.PageViewing.Warehouse:
+                    {
+                        App.DB.Warehouse.Delete(Helper.MakeIntegerValid(SelectedSearchResultDataRow["WarehouseID"]));
+                        SetSearchResults(App.DB.Warehouse.Warehouse_GetAll(), Enums.PageViewing.Warehouse, false, true);
+                        break;
+                    }
+            }
+        }
+
+        public void View()
+        {
+            if (Exporting)
+            {
+                return;
+            }
+
+            if (SelectedSearchResultDataRow is null)
+            {
+                return;
+            }
+
+            IUserControl ctrl = null;
+            if (!(Page == Enums.PageViewing.Property))
+            {
+                SearchText = "";
+            }
+
+            var switchExpr = Page;
+            switch (switchExpr)
+            {
+                case Enums.PageViewing.Supplier:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["SupplierID"]) == ((Entity.Suppliers.Supplier)((IUserControl)pnlContent.Controls[0]).LoadedItem).SupplierID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Supplier";
+                        ctrl = new UCSupplier();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["SupplierID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Customer:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["CustomerID"]) == ((Entity.Customers.Customer)((IUserControl)pnlContent.Controls[0]).LoadedItem).CustomerID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Customer";
+                        ctrl = new UCCustomer();
+                        App.CurrentCustomerID = Helper.MakeIntegerValid(SelectedSearchResultDataRow["CustomerID"]);
+                        ctrl.Populate(App.CurrentCustomerID);
+                        break;
+                    }
+
+                case Enums.PageViewing.Property:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["SiteID"]) == ((Entity.Sites.Site)((IUserControl)pnlContent.Controls[0]).LoadedItem).SiteID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        var oCust = new Entity.Customers.Customer();
+                        oCust = App.DB.Customer.Customer_Get_ForSiteID(Conversions.ToInteger(SelectedSearchResultDataRow["SiteID"]));
+                        lblRightTitle.Text = "Manage Property for Customer: " + oCust.Name + ", Acc: " + oCust.AccountNumber;
+                        ctrl = new UCSite();
+                        App.CurrentPropertyID = Helper.MakeIntegerValid(SelectedSearchResultDataRow["SiteID"]);
+                        ctrl.Populate(App.CurrentPropertyID);
+                        break;
+                    }
+
+                case Enums.PageViewing.Asset:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["AssetID"]) == ((Entity.Assets.Asset)((IUserControl)pnlContent.Controls[0]).LoadedItem).AssetID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        var oProperty = new Entity.Sites.Site();
+                        oProperty = App.DB.Sites.Get(SelectedSearchResultDataRow["AssetID"], Entity.Sites.SiteSQL.GetBy.Asset);
+                        var oCust = new Entity.Customers.Customer();
+                        oCust = App.DB.Customer.Customer_Get_ForSiteID(oProperty.SiteID);
+                        lblRightTitle.Text = "Manage Appliance for Property: " + oProperty.Name + ", " + oProperty.Postcode + ", Customer: " + oCust.Name + ", Acc: " + oCust.AccountNumber;
+                        ctrl = new UCAsset();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["AssetID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Contact:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["ContactID"]) == ((Entity.Contacts.Contact)((IUserControl)pnlContent.Controls[0]).LoadedItem).ContactID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Contact";
+                        ctrl = new UCContact();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["ContactID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Part:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["PartID"]) == ((Entity.Parts.Part)((IUserControl)pnlContent.Controls[0]).LoadedItem).PartID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Part";
+                        ctrl = new UCPart();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["PartID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.PartPack:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["PackID"]) == ((UCPartPack)pnlContent.Controls[0]).PackID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Part Pack";
+                        ctrl = new UCPartPack();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["PackID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Product:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["ProductID"]) == ((Entity.Products.Product)((IUserControl)pnlContent.Controls[0]).LoadedItem).ProductID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Product";
+                        ctrl = new UCProduct();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["ProductID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Engineer:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["EngineerID"]) == ((Entity.Engineers.Engineer)((IUserControl)pnlContent.Controls[0]).LoadedItem).EngineerID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Engineer";
+                        ctrl = new UCEngineer();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["EngineerID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Subcontractor:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["SubcontractorID"]) == ((Entity.Subcontractors.Subcontractor)((IUserControl)pnlContent.Controls[0]).LoadedItem).SubcontractorID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Subcontractor";
+                        ctrl = new UCSubcontractor();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["SubcontractorID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.StockProfile:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]) == ((Entity.Vans.Van)((IUserControl)pnlContent.Controls[0]).LoadedItem).VanID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Van Stock Profiles";
+                        ctrl = new UCVan();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Equipment:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["EquipmentID"]) == ((Entity.Engineers.Equipment)((IUserControl)pnlContent.Controls[0]).LoadedItem).EquipmentID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Equipment";
+                        ctrl = new UCEquipment();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["EquipmentID"]));
+                        break;
+                    }
+
+                case var @case when @case == Enums.PageViewing.StockProfile:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]) == ((Entity.Vans.Van)((IUserControl)pnlContent.Controls[0]).LoadedItem).VanID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Profiles";
+                        ctrl = new UCVan();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVan:
+                    {
+                        if (App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.Fleet) == false)
+                        {
+                            string msg = "You do not have the necessary security permissions to access this feature." + Constants.vbCrLf;
+                            msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                            throw new System.Security.SecurityException(msg);
+                        }
+
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]) == ((Entity.FleetVans.FleetVan)((IUserControl)pnlContent.Controls[0]).LoadedItem).VanID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Van";
+                        ctrl = new UCFleetVan();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetVanType:
+                    {
+                        if (App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.Fleet) == false)
+                        {
+                            string msg = "You do not have the necessary security permissions to access this feature." + Constants.vbCrLf;
+                            msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                            throw new System.Security.SecurityException(msg);
+                        }
+
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanTypeID"]) == ((Entity.FleetVans.FleetVanType)((IUserControl)pnlContent.Controls[0]).LoadedItem).VanTypeID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Van Type";
+                        ctrl = new UCFleetVanType();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanTypeID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.FleetEquipment:
+                    {
+                        if (App.loggedInUser.HasAccessToModule(Enums.SecuritySystemModules.Fleet) == false)
+                        {
+                            string msg = "You do not have the necessary security permissions to access this feature." + Constants.vbCrLf;
+                            msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                            throw new System.Security.SecurityException(msg);
+                        }
+
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["EquipmentID"]) == ((Entity.FleetVans.FleetEquipment)((IUserControl)pnlContent.Controls[0]).LoadedItem).EquipmentID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Equipment";
+                        ctrl = new UCFleetEquipment();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["EquipmentID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.Warehouse:
+                    {
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["WarehouseID"]) == ((Entity.Warehouses.Warehouse)((IUserControl)pnlContent.Controls[0]).LoadedItem).WarehouseID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage Warehouse";
+                        ctrl = new UCWarehouse();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["WarehouseID"]));
+                        break;
+                    }
+
+                case Enums.PageViewing.UserQuals:
+                    {
+                        var _ssmList = new List<Enums.SecuritySystemModules>() { Enums.SecuritySystemModules.Compliance, Enums.SecuritySystemModules.IT };
+                        if (App.loggedInUser.HasAccessToMulitpleModules(_ssmList) == false)
+                        {
+                            string msg = "You do not have the necessary security permissions to access this feature." + Constants.vbCrLf;
+                            msg += "Contact your administrator if you think this is wrong or you need the permissions changing.";
+                            throw new System.Security.SecurityException(msg);
+                        }
+
+                        if (pnlRight.Visible)
+                        {
+                            if (pnlContent.Controls.Count > 0)
+                            {
+                                if (Helper.MakeIntegerValid(SelectedSearchResultDataRow["UserID"]) == ((Entity.Users.User)((IUserControl)pnlContent.Controls[0]).LoadedItem).UserID)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+
+                        lblRightTitle.Text = "Manage User";
+                        ctrl = new UCUserQualification();
+                        ctrl.Populate(Helper.MakeIntegerValid(SelectedSearchResultDataRow["UserID"]));
+                        break;
+                    }
+            }
+
+            ctrl.RecordsChanged += App.MainForm.SetSearchResults;
+            pnlContent.Controls.Clear();
+            pnlContent.Controls.Add((Control)ctrl);
+            Navigation.Show_Right();
+        }
+
+        private void Open()
+        {
+            if (SelectedSearchResultDataRow is null)
+            {
+                return;
+            }
+
+            var switchExpr = Page;
+            switch (switchExpr)
+            {
+                case Enums.PageViewing.Supplier:
+                    {
+                        App.ShowForm(typeof(FRMSupplier), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["SupplierID"]) });
+                        break;
+                    }
+
+                case Enums.PageViewing.Customer:
+                    {
+                        App.ShowForm(typeof(FRMCustomer), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["CustomerID"]) });
+                        break;
+                    }
+
+                case Enums.PageViewing.Property:
+                    {
+                        App.ShowForm(typeof(FRMSite), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["SiteID"]) });
+                        break;
+                    }
+
+                case Enums.PageViewing.Asset:
+                    {
+                        App.ShowForm(typeof(FRMAsset), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["AssetID"]) });
+                        break;
+                    }
+
+                case Enums.PageViewing.Product:
+                    {
+                        App.ShowForm(typeof(FRMProduct), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["ProductID"]), false });
+                        break;
+                    }
+
+                case Enums.PageViewing.Part:
+                    {
+                        App.ShowForm(typeof(FRMPart), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["PartID"]), false });
+                        break;
+                    }
+
+                case Enums.PageViewing.Engineer:
+                    {
+                        App.ShowForm(typeof(FRMEngineer), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["EngineerID"]) });
+                        break;
+                    }
+
+                case Enums.PageViewing.Subcontractor:
+                    {
+                        App.ShowForm(typeof(FRMSubcontractor), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["SubcontractorID"]) });
+                        break;
+                    }
+
+                case Enums.PageViewing.StockProfile:
+                    {
+                        App.ShowForm(typeof(FRMVan), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["VanID"]) });
+                        break;
+                    }
+
+                case Enums.PageViewing.Warehouse:
+                    {
+                        App.ShowForm(typeof(FRMWarehouse), true, new object[] { Helper.MakeIntegerValid(SelectedSearchResultDataRow["WarehouseID"]) });
+                        break;
+                    }
+            }
+        }
+
+        private void Save()
+        {
+            ((IUserControl)pnlContent.Controls[0]).Save();
+        }
+
+        public void RefreshEntity(int id, string IDColumnName = "")
+        {
+            if (string.IsNullOrEmpty(IDColumnName))
+            {
+                if (SearchResults is object)
+                {
+                    if (SearchResults.Table.Rows.Count == 1)
+                    {
+                        dgSearchResults.Select(0);
+                    }
+                }
+            }
+            else
+            {
+                int index = 0;
+                foreach (DataRow row in ((DataView)dgSearchResults.DataSource).Table.Rows)
+                {
+                    if (Conversions.ToInteger(row[IDColumnName]) == id)
+                    {
+                        dgSearchResults.CurrentRowIndex = index;
+                        break;
+                    }
+                    else
+                    {
+                        index += 1;
+                    }
+                }
+            }
+
+            View();
+            if (pnlContent.Controls.Count > 0)
+            {
+                ((IUserControl)pnlContent.Controls[0]).Populate(id);
+            }
+        }
+
+        private void mnuUpstairs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dlg = new OpenFileDialog();
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    var tempfile = new FileInfo(dlg.FileName);
+                    if ((Path.GetExtension(tempfile.Name) ?? "") != ".docx")
+                        throw new Exception("Incorrect File Format");
+                    var pdfFile = new FileInfo(PrintHelper.ToPdf(tempfile.FullName));
+                    if ((Path.GetExtension(pdfFile.Name) ?? "") != ".pdf")
+                        throw new Exception("Error converting to pdf");
+                    string filePath = @"\\PHOCAS.gasway.co.uk\Aggregator_IO\Inputs\Upstairs Documents\";
+                    string fileType = Path.GetExtension(pdfFile.Name);
+                    File.Copy(pdfFile.FullName, filePath + pdfFile.Name.Replace(fileType, "_" + DateAndTime.Now.ToString("ddMMyyHHmmss") + fileType));
+                    File.Delete(pdfFile.FullName);
+                    App.ShowMessage("File successfully copy to Upstairs Printer! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cursor.Current = Cursors.Default;
+                }
+            }
+            catch (Exception ex)
+            {
+                App.ShowMessage("File data could not be printed : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void mnuDownstairs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dlg = new OpenFileDialog();
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    var tempfile = new FileInfo(dlg.FileName);
+                    if ((Path.GetExtension(tempfile.Name) ?? "") != ".docx")
+                        throw new Exception("Incorrect File Format");
+                    var pdfFile = new FileInfo(PrintHelper.ToPdf(tempfile.FullName));
+                    if ((Path.GetExtension(pdfFile.Name) ?? "") != ".pdf")
+                        throw new Exception("Error converting to pdf");
+                    string filePath = @"\\PHOCAS.gasway.co.uk\Aggregator_IO\Inputs\Downstairs Documents\";
+                    string fileType = Path.GetExtension(pdfFile.Name);
+                    File.Copy(pdfFile.FullName, filePath + pdfFile.Name.Replace(fileType, "_" + DateAndTime.Now.ToString("ddMMyyHHmmss") + fileType));
+                    File.Delete(pdfFile.FullName);
+                    App.ShowMessage("File successfully copy to Downstairs Printer! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                App.ShowMessage("File data could not be printed : " + Constants.vbCrLf + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pnlMiddle_Resize(object sender, EventArgs e)
+        {
+            int width = pnlMiddle.Width;
+            if (App.MainForm is object)
+            {
+                Navigation.ResponsiveUI();
+            }
+
+            Navigation.Show_Right();
+        }
+
+        private void FRMMain_Load(object sender, EventArgs e)
+        {
+        }
+    }
+}
