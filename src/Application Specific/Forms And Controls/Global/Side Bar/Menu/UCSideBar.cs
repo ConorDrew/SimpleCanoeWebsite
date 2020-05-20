@@ -451,30 +451,32 @@ namespace FSM
             // _pnlSearch
             // 
             this._pnlSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this._pnlSearch.Location = new System.Drawing.Point(0, 501);
+            this._pnlSearch.Location = new System.Drawing.Point(0, 456);
             this._pnlSearch.Name = "_pnlSearch";
-            this._pnlSearch.Size = new System.Drawing.Size(169, 70);
+            this._pnlSearch.Size = new System.Drawing.Size(169, 115);
             this._pnlSearch.TabIndex = 3;
             // 
             // _pnlMenu
             // 
+            this._pnlMenu.AutoScroll = true;
             this._pnlMenu.Controls.Add(this._pnlSubMenu);
             this._pnlMenu.Controls.Add(this._Label1);
             this._pnlMenu.Controls.Add(this._pnlHeader);
-            this._pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this._pnlMenu.Location = new System.Drawing.Point(0, 143);
+            this._pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pnlMenu.Location = new System.Drawing.Point(0, 169);
+            this._pnlMenu.MinimumSize = new System.Drawing.Size(0, 200);
             this._pnlMenu.Name = "_pnlMenu";
-            this._pnlMenu.Size = new System.Drawing.Size(169, 273);
+            this._pnlMenu.Size = new System.Drawing.Size(169, 287);
             this._pnlMenu.TabIndex = 4;
             // 
             // _pnlSubMenu
             // 
             this._pnlSubMenu.AutoScroll = true;
             this._pnlSubMenu.AutoSize = true;
-            this._pnlSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this._pnlSubMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this._pnlSubMenu.Location = new System.Drawing.Point(0, 50);
             this._pnlSubMenu.Name = "_pnlSubMenu";
-            this._pnlSubMenu.Size = new System.Drawing.Size(169, 0);
+            this._pnlSubMenu.Size = new System.Drawing.Size(169, 237);
             this._pnlSubMenu.TabIndex = 6;
             // 
             // _Label1
@@ -531,7 +533,7 @@ namespace FSM
             this.ImageContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.ImageContainer.Location = new System.Drawing.Point(0, 0);
             this.ImageContainer.Name = "ImageContainer";
-            this.ImageContainer.Size = new System.Drawing.Size(169, 143);
+            this.ImageContainer.Size = new System.Drawing.Size(169, 169);
             this.ImageContainer.TabIndex = 1;
             // 
             // Nav_Logo
@@ -539,13 +541,14 @@ namespace FSM
             this.Nav_Logo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nav_Logo.Location = new System.Drawing.Point(0, 0);
             this.Nav_Logo.Name = "Nav_Logo";
-            this.Nav_Logo.Size = new System.Drawing.Size(169, 143);
+            this.Nav_Logo.Size = new System.Drawing.Size(169, 169);
             this.Nav_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Nav_Logo.TabIndex = 0;
             this.Nav_Logo.TabStop = false;
             // 
             // UCSideBar
             // 
+            this.AutoScroll = false;
             this.Controls.Add(this._pnlMenu);
             this.Controls.Add(this.ImageContainer);
             this.Controls.Add(this._pnlSearch);
